@@ -608,16 +608,43 @@ dir="rtl" style="text-align: right;">
 </section>
 
 <!-- قسم التكوين والتعليم المهنيين  -->
-<section 
-dir="rtl" style="text-align: right;">
-  <h2 id="toggle-10" onclick="toggleSection('auto-entrepreneur', this)" style="cursor: pointer; background-color: #a52a2a; color: white;">
-    <span><i class="fas fa-user-gear" style="color: #006400;"></i> التكوين والتعليم المهنيين  <span class="count"></span></span>
+<section dir="rtl" style="text-align: right;">
+  <h2 id="toggle-10" onclick="toggleSection('vocational-section', this)" style="cursor: pointer; background-color: #006233; color: white; padding: 10px; border-radius: 8px;">
+    <span><i class="fas fa-user-gear" style="color: white; margin-left: 6px;"></i> التكوين والتعليم المهنيين <span class="count"></span></span>
     <span class="toggle-icon" style="float: left;">▶</span>
   </h2>
-  <ul id="auto-entrepreneur" style="display: block; list-style: none; padding: 0; line-height: 2;">
-    <li><i class="fas fa-tools" style="color: #006400;"></i> <a href="https://www.takwin.dz/" target="_blank">التسجيل في التكوين والتعليم المهنيين</a></li>
-    <li><i class="fas fa-clipboard-check" style="color: #006400;"></i> <a href="https://takwin.dz/ProfessionalExams" target="_blank">تسجيلات في الإمتحانات المهنية وفق الرزنامة الرسمية</a></li>
-  </ul>
+
+  <div id="vocational-section" style="display: none; text-align: right; padding-right: 20px; font-family: Arial, sans-serif; color: #006400;">
+
+    <!-- فرع التسجيلات -->
+    <h3 onclick="toggleSection('voc-sub1', this)" style="cursor: pointer; background-color: #f0faf6; color: #006233; padding: 8px; border-radius: 6px;">
+      <span><i class="fas fa-tools" style="color: #006400; margin-left: 6px;"></i> التسجيلات <span class="count"></span></span>
+      <span class="toggle-icon" style="float: left;">▶</span>
+    </h3>
+    <ul id="voc-sub1" style="display: block; list-style: none; line-height: 2;">
+      <li>
+        <i class="fas fa-user-plus" style="color: #006400; margin-left: 6px;"></i>
+        <a href="https://www.takwin.dz/" target="_blank" style="text-decoration: none; color: #006400;">
+          التسجيل في التكوين والتعليم المهنيين
+        </a>
+      </li>
+    </ul>
+
+    <!-- فرع الإمتحانات المهنية -->
+    <h3 onclick="toggleSection('voc-sub2', this)" style="cursor: pointer; background-color: #f0faf6; color: #006233; padding: 8px; border-radius: 6px; margin-top: 10px;">
+      <span><i class="fas fa-clipboard-check" style="color: #006400; margin-left: 6px;"></i> الإمتحانات المهنية <span class="count"></span></span>
+      <span class="toggle-icon" style="float: left;">▶</span>
+    </h3>
+    <ul id="voc-sub2" style="display: block; list-style: none; line-height: 2;">
+      <li>
+        <i class="fas fa-calendar-alt" style="color: #006400; margin-left: 6px;"></i>
+        <a href="https://takwin.dz/ProfessionalExams" target="_blank" style="text-decoration: none; color: #006400;">
+          تسجيلات في الإمتحانات المهنية وفق الرزنامة الرسمية
+        </a>
+      </li>
+    </ul>
+
+  </div>
 </section>
 
 <!-- قسم القضاء -->
@@ -639,8 +666,7 @@ dir="rtl" style="text-align: right;">
   </ul>
 </section>
 
-<!-- قسم العقار -->
-<section 
+<!-- قسم العقار --><section 
 dir="rtl" style="text-align: right;">
   <h2 id="toggle-9" onclick="toggleSection('real-estate-section', this)" style="cursor: pointer; background-color: #a52a2a; color: white; padding: 10px; border-radius: 8px;">
     <span><i class="fas fa-map-marked-alt" style="color: white;"></i> الخدمات العقارية <span class="count"></span></span>
@@ -690,6 +716,58 @@ dir="rtl" style="text-align: right;">
   </ul>
 </section>
 
+<!-- قسم الخدمات الجبائية الإليكترونية -->
+<section dir="rtl" style="text-align: right;">
+  <h2 id="toggle-9" onclick="toggleSection('real-estate-section', this)" style="cursor: pointer; background-color: #a52a2a; color: white; padding: 10px; border-radius: 8px;">
+    <span><i class="fas fa-file-invoice-dollar" style="color: white; margin-left: 8px;"></i> خدمات جبائية إلكترونية <span class="count"></span></span>
+    <span class="toggle-icon" style="float: left;">▶</span>
+  </h2>
+
+  <div id="real-estate-section" style="display: none; padding: 10px 20px; direction: rtl; font-family: Arial, sans-serif; color: #006400;">
+
+    <!-- فرع بطاقة التعريف وجواز السفر -->
+    <h3 onclick="toggleSection('public-sector', this)" style="cursor: pointer; background-color: #f0faf6; color: #006400; padding: 8px; border-radius: 6px; text-align: right;">
+      <span><i class="fas fa-id-card" style="color: #006400; margin-left: 6px;"></i> بطاقة التعريف وجواز السفر البيومتريين <span class="count"></span></span>
+      <span class="toggle-icon" style="float: left;">▶</span>
+    </h3>
+    <ul id="public-sector" style="display: none; list-style: none; padding: 0; margin-right: 10px; line-height: 2;">
+      <li>
+        <i class="fas fa-stamp" style="color: #006400; margin-left: 6px;"></i>
+        <a href="https://tabioucom.mf.gov.dz/accueil" target="_blank" style="text-decoration: none; color: #006400;">
+          إقتناء حقوق الطابع الجبائي
+        </a>
+      </li>
+      <li>
+        <i class="fas fa-redo" style="color: #006400; margin-left: 6px;"></i>
+        <a href="https://tabioucom.mf.gov.dz/accueil" target="_blank" style="text-decoration: none; color: #006400;">
+          إعادة إقتناء حقوق الطابع الجبائي
+        </a>
+      </li>
+    </ul>
+
+    <!-- فرع قسيمة السيارات -->
+    <h3 onclick="toggleSection('pro-sector', this)" style="cursor: pointer; background-color: #f0faf6; color: #006400; padding: 8px; border-radius: 6px; text-align: right; margin-top: 15px;">
+      <span><i class="fas fa-car-side" style="color: #006400; margin-left: 6px;"></i> قسيمة السيارات <span class="count"></span></span>
+      <span class="toggle-icon" style="float: left;">▶</span>
+    </h3>
+    <ul id="pro-sector" style="display: none; list-style: none; padding: 0; margin-right: 10px; line-height: 2;">
+      <li>
+        <i class="fas fa-receipt" style="color: #006400; margin-left: 6px;"></i>
+        <a href="https://qassimatouka.mf.gov.dz/accueil" target="_blank" style="text-decoration: none; color: #006400;">
+          إقتناء قسيمة السيارات
+        </a>
+      </li>
+      <li>
+        <i class="fas fa-redo" style="color: #006400; margin-left: 6px;"></i>
+        <a href="https://qassimatouka.mf.gov.dz/accueil" target="_blank" style="text-decoration: none; color: #006400;">
+          إعادة إصدار قسيمة السيارات
+        </a>
+      </li>
+    </ul>
+
+  </div>
+</section>
+
 <!-- قسم الوكالة الوطنية للتشغيل -->
 <section 
 dir="rtl" style="text-align: right;">
@@ -734,44 +812,79 @@ dir="rtl" style="text-align: right;">
 </section>
 
 <!-- قسم الضمان الاجتماعي -->
-<section
- dir="rtl" style="text-align: right; background-color: #f0faf6; border: 1px solid #cde7da; margin-top: 20px;">
-  <h2 style="background-color: #006233; color: white; padding: 12px; cursor: pointer;" onclick="toggleSection('social-security')">
-    <span><i class="fas fa-shield-heart" style="color: white;"></i> الضمان الإجتماعي للعمال الأجراء وغير الأجراء والمتقاعدين <span class="count"></span></span>
+<section 
+dir="rtl" style="text-align: right; background-color: white; border: 1px solid #cde7da; margin-top: 20px; color: #006400; font-family: Arial, sans-serif;">
+  <h2 onclick="toggleSection('social-security')" style="cursor: pointer; background-color: #006233; color: white; padding: 12px;">
+    <span><i class="fas fa-shield-heart" style="color: white; margin-left: 6px;"></i> الضمان الإجتماعي للعمال الأجراء وغير الأجراء والمتقاعدين <span class="count"></span></span>
     <span class="toggle-icon" style="float: left;">▶</span>
   </h2>
 
   <div id="social-security" style="display: none; padding: 10px 20px;">
 
     <!-- CNAS -->
-    <h3 onclick="toggleSublist('cnas-list')" style="cursor: pointer; padding: 8px;">
-      <span><i class="fas fa-people-group" style="color: #006400;"></i> الصندوق الوطني للضمان الاجتماعي للعمال الأجراء <span class="count"></span></span>
+    <h3 onclick="toggleSublist('cnas-list')" style="cursor: pointer; background-color: #f0faf6; color: #006233; padding: 8px; border-radius: 6px;">
+      <span><i class="fas fa-people-group" style="color: #006400; margin-left: 6px;"></i> الصندوق الوطني للضمان الاجتماعي للعمال الأجراء <span class="count"></span></span>
       <span class="toggle-icon" style="float: left;">▶</span>
     </h3>
     <ul id="cnas-list" style="display: none; list-style: none; padding: 0 20px; line-height: 2;">
-      <li><i class="fas fa-id-card" style="color: #006400;"></i> <a href="https://elhanaa.cnas.dz/" target="_blank">شهادة الإنتساب - CNAS</a></li>
-      <li><i class="fas fa-user-slash" style="color: #006400;"></i> <a href="https://elhanaa.cnas.dz/attestation_no_affiliation.xhtml" target="_blank">شهادة عدم الإنتساب - CNAS</a></li>
-      <li><i class="fas fa-mobile-screen-button" style="color: #006400;"></i> <a href="https://play.google.com/store/apps/details?id=dz.cnas.mobile_elhanaa&amp;hl=ar" target="_blank">تحميل تطبيق فضاء الهناء - CNAS</a></li>
+      <li>
+        <i class="fas fa-id-card" style="color: #006400; margin-left: 6px;"></i>
+        <a href="https://elhanaa.cnas.dz/" target="_blank" style="text-decoration: none; color: #006400;">
+          شهادة الإنتساب - CNAS
+        </a>
+      </li>
+      <li>
+        <i class="fas fa-user-slash" style="color: #006400; margin-left: 6px;"></i>
+        <a href="https://elhanaa.cnas.dz/attestation_no_affiliation.xhtml" target="_blank" style="text-decoration: none; color: #006400;">
+          شهادة عدم الإنتساب - CNAS
+        </a>
+      </li>
+      <li>
+        <i class="fas fa-mobile-screen-button" style="color: #006400; margin-left: 6px;"></i>
+        <a href="https://play.google.com/store/apps/details?id=dz.cnas.mobile_elhanaa&amp;hl=ar" target="_blank" style="text-decoration: none; color: #006400;">
+          تحميل تطبيق فضاء الهناء - CNAS
+        </a>
+      </li>
     </ul>
 
     <!-- CASNOS -->
-    <h3 onclick="toggleSublist('casnos-list')" style="cursor: pointer; padding: 8px;">
-      <span><i class="fas fa-user-tie" style="color: #006400;"></i> الصندوق الوطني للضمان الاجتماعي لغير الأجراء <span class="count"></span></span>
+    <h3 onclick="toggleSublist('casnos-list')" style="cursor: pointer; background-color: #f0faf6; color: #006233; padding: 8px; border-radius: 6px; margin-top: 10px;">
+      <span><i class="fas fa-user-tie" style="color: #006400; margin-left: 6px;"></i> الصندوق الوطني للضمان الاجتماعي لغير الأجراء <span class="count"></span></span>
       <span class="toggle-icon" style="float: left;">▶</span>
     </h3>
     <ul id="casnos-list" style="display: none; list-style: none; padding: 0 20px; line-height: 2;">
-      <li><i class="fas fa-user-slash" style="color: #006400;"></i> <a href="https://damancom.casnos.dz/non-affiliation" target="_blank">شهادة عدم الإنتساب - CASNOS</a></li>
-      <li><i class="fas fa-id-card" style="color: #006400;"></i> <a href="https://damancom.casnos.dz/auth/login/assure" target="_blank">شهادة الإنتساب - CASNOS</a></li>
-      <li><i class="fas fa-file-signature" style="color: #006400;"></i> <a href="https://damancom.casnos.dz/affiliation" target="_blank">طلب الإنتساب - CASNOS</a></li>
+      <li>
+        <i class="fas fa-user-slash" style="color: #006400; margin-left: 6px;"></i>
+        <a href="https://damancom.casnos.dz/non-affiliation" target="_blank" style="text-decoration: none; color: #006400;">
+          شهادة عدم الإنتساب - CASNOS
+        </a>
+      </li>
+      <li>
+        <i class="fas fa-id-card" style="color: #006400; margin-left: 6px;"></i>
+        <a href="https://damancom.casnos.dz/auth/login/assure" target="_blank" style="text-decoration: none; color: #006400;">
+          شهادة الإنتساب - CASNOS
+        </a>
+      </li>
+      <li>
+        <i class="fas fa-file-signature" style="color: #006400; margin-left: 6px;"></i>
+        <a href="https://damancom.casnos.dz/affiliation" target="_blank" style="text-decoration: none; color: #006400;">
+          طلب الإنتساب - CASNOS
+        </a>
+      </li>
     </ul>
 
     <!-- CNR -->
-    <h3 onclick="toggleSublist('cnr-list')" style="cursor: pointer; padding: 8px;">
-      <span><i class="fas fa-person-cane" style="color: #006400;"></i> الصندوق الوطني للتقاعد <span class="count"></span></span>
+    <h3 onclick="toggleSublist('cnr-list')" style="cursor: pointer; background-color: #f0faf6; color: #006233; padding: 8px; border-radius: 6px; margin-top: 10px;">
+      <span><i class="fas fa-person-cane" style="color: #006400; margin-left: 6px;"></i> الصندوق الوطني للتقاعد <span class="count"></span></span>
       <span class="toggle-icon" style="float: left;">▶</span>
     </h3>
     <ul id="cnr-list" style="display: none; list-style: none; padding: 0 20px; line-height: 2;">
-      <li><i class="fas fa-mobile-screen-button" style="color: #006400;"></i> <a href="https://play.google.com/store/apps/details?id=dz.cnr.cnr" target="_blank">تحميل تطبيق المتقاعد - CNR</a></li>
+      <li>
+        <i class="fas fa-mobile-screen-button" style="color: #006400; margin-left: 6px;"></i>
+        <a href="https://play.google.com/store/apps/details?id=dz.cnr.cnr" target="_blank" style="text-decoration: none; color: #006400;">
+          تحميل تطبيق المتقاعد - CNR
+        </a>
+      </li>
     </ul>
 
   </div>
