@@ -8,6 +8,9 @@
 <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/imadtbn/dz_portal/refs/heads/main/icone.png" />
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
 <link href="manifest.json" rel="manifest"/>
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#006233">
+
 <style>
     body {
       margin: 0;
@@ -984,5 +987,17 @@ document.getElementById("searchInput").addEventListener("input", function () {
     section.style.display = text.includes(query) ? "block" : "none";
   });
 });
+
+<script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('sw.js')
+      .then(function(reg) {
+        console.log("Service Worker Registered", reg);
+      }).catch(function(err) {
+        console.log("Service Worker registration failed", err);
+      });
+  }
+</script>
+
 </script></body>
 </html>
