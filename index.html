@@ -1,0 +1,878 @@
+<!DOCTYPE html>
+
+<html dir="rtl" lang="ar">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>البوابة الجزائرية للخدمات الإليكترونية</title>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+<link href="manifest.json" rel="manifest"/>
+<style>
+    body {
+      margin: 0;
+      font-family: Arial, 'Tahoma', sans-serif;
+      background-color: #f9f9f9;
+      color: #222;
+    }
+    header, footer {
+      background-color: #006233;
+      color: white;
+      padding: 10px;
+      text-align: center;
+    }
+    .branding {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .branding img {
+      order: 1;
+      width: 32px;
+      height: auto;
+    }
+    .branding i {
+      order: -1;
+      font-size: 24px;
+    }
+    .branding h1 {
+      margin: 0;
+      font-size: 1.4em;
+      font-weight: bold;
+    }
+
+    section {
+      background-color: white;
+      margin: 10px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+
+    section h2 {
+      font-size: 1em;
+      color: #006233;
+      margin: 0;
+      padding: 10px;
+      background-color: #e6f2ec;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    section h2:hover {
+      background-color: #cde7da;
+    }
+
+    section h2 .toggle-icon {
+      transition: transform 0.4s ease;
+      font-size: 1em;
+    }
+
+    section h2.open .toggle-icon {
+      transform: rotate(90deg);
+    }
+
+    ul {
+      list-style: none;
+      padding: 0 10px;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.6s ease, opacity 0.6s ease;
+      opacity: 0;
+    }
+
+    ul.show {
+      max-height: 1000px;
+      opacity: 1;
+    }
+
+    li {
+      padding: 6px 0;
+      border-bottom: 1px dashed #ccc;
+    }
+
+    a {
+      text-decoration: none;
+      color: #b30000;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    #scrollTopBtn {
+      position: fixed;
+      bottom: 80px;
+      left: 20px;
+      background-color: #006233;
+      color: white;
+      border: none;
+      padding: 12px 16px;
+      border-radius: 50%;
+      font-size: 20px;
+      cursor: pointer;
+      display: none;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+      z-index: 9999;
+    }
+
+    #searchBox {
+      max-width: 500px;
+      margin: 20px auto;
+      display: flex;
+      justify-content: center;
+    }
+
+    #searchInput {
+      width: 100%;
+      padding: 10px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 1em;
+    }
+
+    @media (max-width: 768px) {
+      .branding h1 {
+        font-size: 1em;
+      }
+    }
+  
+@media (max-width: 768px) {
+  body {
+    font-size: 0.95em;
+  }
+  header h1 {
+    font-size: 1.1em;
+  }
+  section h2, section h3 {
+    font-size: 1em;
+    padding: 8px;
+  }
+  ul li {
+    font-size: 0.95em;
+    padding: 4px 0;
+  }
+  #searchInput {
+    font-size: 0.95em;
+    padding: 8px;
+  }
+}
+</style>
+<style>
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #121212;
+    color: #ffffff;
+  }
+  header, footer {
+    background-color: #1f1f1f;
+    color: #ffffff;
+  }
+  section {
+    background-color: #1e1e1e;
+    border-color: #444;
+  }
+  section h2, section h3 {
+    background-color: #2c2c2c;
+    color: #aaffaa;
+  }
+  a {
+    color: #ff8080;
+  }
+  a:hover {
+    color: #ff4d4d;
+  }
+  #scrollTopBtn {
+    background-color: #333;
+    color: white;
+  }
+}
+</style><style>
+/* Visual Enhancements */
+body {
+  font-family: Arial, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  background-color: #f7f9fa;
+  color: #222;
+}
+
+section {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  border-radius: 12px;
+  padding: 12px;
+  margin: 16px auto;
+  max-width: 900px;
+  transition: transform 0.2s ease;
+}
+
+section:hover {
+  transform: scale(1.005);
+}
+
+section h2, section h3 {
+  border-radius: 8px;
+  padding: 12px 16px;
+  font-size: 1.05em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: inset 0 -1px 0 rgba(0,0,0,0.05);
+}
+
+ul li {
+  padding: 8px 4px;
+  border-bottom: 1px dashed #ccc;
+  transition: background 0.2s ease;
+}
+
+ul li:hover {
+  background-color: #f0f0f0;
+}
+
+a {
+  text-decoration: none;
+  color: #00695c;
+  font-weight: bold;
+}
+
+a:hover {
+  color: #004d40;
+}
+
+.count {
+  font-weight: normal;
+  font-size: 0.9em;
+  color: #555;
+}
+
+.toggle-icon {
+  font-size: 1.1em;
+  margin-right: 10px;
+  color: #888;
+}
+
+#searchBox {
+  margin: 20px auto;
+  text-align: center;
+}
+
+#searchInput {
+  padding: 10px;
+  width: 90%;
+  max-width: 600px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+#scrollTopBtn {
+  background-color: #00695c;
+  border: none;
+  font-size: 20px;
+  padding: 12px;
+  border-radius: 50%;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+</style><style>
+a {
+  color: #b30000;
+}
+a:hover {
+  color: #880000;
+}
+section ul li {
+  color: #880000;
+}
+</style><style>
+a {
+  color: #b30000;
+  text-decoration: none;
+}
+a:hover {
+  color: #880000;
+  text-decoration: underline;
+}
+.toggle-icon, section h2 i, section h3 i {
+  color: #006233 !important;
+}
+</style><style>
+a {
+  color: #a52a2a;
+  text-decoration: none;
+}
+a:hover {
+  color: #880000;
+  text-decoration: underline;
+}
+section h2 i, section h3 i, .toggle-icon, .count {
+  color: #a52a2a !important;
+}
+</style><style>
+body {
+  background-color: #f7fdf9;
+  font-family: Arial, Tahoma, sans-serif;
+  color: #333;
+}
+
+section {
+  background-color: #ffffff;
+  border: 1px solid #cde7da;
+  border-radius: 12px;
+  padding: 16px;
+  margin: 20px auto;
+  box-shadow: 0 2px 6px rgba(0, 98, 51, 0.08);
+  transition: transform 0.3s ease;
+  max-width: 900px;
+}
+
+section:hover {
+  transform: scale(1.005);
+}
+
+section h2 {
+  background-color: #f0faf6 !important;
+  color: #a52a2a !important;
+  padding: 12px 16px;
+  font-size: 1.05em;
+  border-radius: 10px;
+  box-shadow: inset 0 -1px 0 rgba(0,0,0,0.05);
+}
+
+section ul li {
+  padding: 8px 4px;
+  border-bottom: 1px dashed #ccc;
+  transition: background 0.2s ease;
+}
+
+section ul li:hover {
+  background-color: #fdf5f5;
+}
+
+a {
+  color: #a52a2a;
+  font-weight: bold;
+}
+a:hover {
+  color: #880000;
+  text-decoration: underline;
+}
+
+.toggle-icon, .count, section h2 i {
+  color: #a52a2a !important;
+}
+
+#searchInput {
+  padding: 10px;
+  width: 90%;
+  max-width: 600px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  font-size: 1em;
+}
+
+#scrollTopBtn {
+  background-color: #006233;
+  color: white;
+  border: none;
+  padding: 12px 16px;
+  border-radius: 50%;
+  font-size: 20px;
+  cursor: pointer;
+  display: none;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+  z-index: 9999;
+}
+</style><style>
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+@keyframes wobble {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(3deg); }
+  75% { transform: rotate(-3deg); }
+}
+
+div[style*="border-radius"] i:hover {
+  animation: pulse 0.6s ease-in-out infinite;
+}
+</style></head>
+
+<body>
+<header 
+style="; position: sticky; top: 0; z-index: 1000;">
+<div class="branding" dir="rtl" style="text-align: right;">
+<i class="fas fa-globe"></i>
+<h1>البوابة الجزائرية للخدمات الإليكترونية</h1>
+<img alt="علم الجزائر" src="https://upload.wikimedia.org/wikipedia/commons/7/77/Flag_of_Algeria.svg"/>
+</div>
+<div dir="rtl" id="searchBox" style="text-align: right;">
+<input id="searchInput" placeholder="ابحث هنا داخل الصفحة..." type="text"/>
+</div>
+</header>
+
+<!-- قسم الكلمة الترحيبية -->
+<section 
+dir="rtl" style="text-align: center; background-color: #e6f2ec; margin-top: 10px;">
+  <div style="padding: 20px;">
+    <div style="width: 80px; height: 80px; border-radius: 50%; background-color: #e6f2ec; display: flex; align-items: center; justify-content: center; margin: 15px auto; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease;">
+      <i class="fas fa-cogs" style="font-size: 32px; color: #006233;"></i>
+    </div>
+
+    <div style="font-size: 1em; color: #006233; margin-top: 8px; font-weight: bold;">
+      الخدمات الرقمية بين يديك
+    </div>
+
+    <h2 style="color: #006233; font-size: 1.6em; margin: 14px auto 10px auto; font-weight: bold; text-align: center; text-shadow: 0 1px 1px rgba(0,0,0,0.1);">
+      مرحبًا بكم في البوابة الجزائرية للخدمات الإلكترونية
+    </h2>   
+  
+    <p style="font-size: 0.95em; color: #333; max-width: 500px; margin: 8px auto;">
+      توفر لكم هذه المنصة الوصول إلى مجموعة شاملة من الخدمات الرقمية عن بُعد بسهولة وأمان، دون الحاجة إلى التنقل.
+    </p>
+
+    <p style="font-size: 0.9em; color: #444; max-width: 600px; margin: 10px auto;">
+      تهدف هذه البوابة إلى تسهيل الوصول إلى الخدمات العمومية الرقمية وتمكين المواطنين من تنفيذ معاملاتهم الإدارية، المالية، والصحية عن بُعد بطريقة آمنة وسريعة.
+    </p>
+
+    <div style="margin-top: 20px; font-size: 0.95em; color: #006233; font-weight: bold;">
+      📊 عدد الأقسام: 15 | عدد الخدمات المدرجة: 90 خدمة رقمية
+    </div>
+  </div>
+</section>
+
+<!-- قسم الدفع الإلكتروني -->
+<section 
+dir="rtl" style="text-align: right;">
+  <h2 id="toggle-payment" onclick="toggleSection('payment-links', this)" style="cursor: pointer; background-color: #a52a2a; color: white; padding: 10px; border-radius: 8px;">
+    <span><i class="fas fa-file-invoice-dollar" style="color: white;"></i> خدمات الدفع الإلكتروني للفواتير <span class="count"></span></span>
+    <span class="toggle-icon" style="float: left;">▶</span>
+  </h2>
+  <ul id="payment-links" style="display: none; list-style: none; padding-right: 20px; line-height: 2; text-align: right;">
+    <li><i class="fas fa-tint" style="color: green;"></i> <a href="https://www.ade.dz/e-paiement/" target="_blank">فاتورة الجزائرية للمياه (ADE)</a></li>
+    <li><i class="fas fa-mobile-alt" style="color: green;"></i> <a href="https://play.google.com/store/apps/details?id=com.ade.adese&amp;hl=ar" target="_blank">تحميل تطبيق Miyahimob</a></li>
+    <li><i class="fas fa-bolt" style="color: green;"></i> <a href="https://epayement.elit.dz/payementFacture.xhtml" target="_blank">فاتورة الكهرباء والغاز</a></li>
+    <li><i class="fas fa-tint" style="color: green;"></i> <a href="https://baridinet.poste.dz/seaal" target="_blank">فاتورة المياه (سيال)</a></li>
+    <li><i class="fas fa-phone" style="color: green;"></i> <a href="https://paiement.algerietelecom.dz/index.php?p=facture_paiement" target="_blank">فاتورة الهاتف الثابت والأنترنت</a></li>
+    <li><i class="fas fa-home" style="color: green;"></i> <a href="https://www.aadlgestimmo.dz/epayement/View/index.php" target="_blank">فاتورة كراء عدل</a></li>
+    <li><i class="fas fa-building" style="color: green;"></i> <a href="https://www.opgiconstantine.dz/" target="_blank">فاتورة كراء OPGI</a></li>
+    <li><i class="fas fa-file-invoice-dollar" style="color: green;"></i> <a href="https://epay.education.dz/auth" target="_blank"> منصة الدفع اﻹلكتروني لوزارة التربية الوطنية في إمتحان شهادة التعليم المتوسط و البكالوريا (BEM - BAC) </a></li>
+  </ul>
+</section>
+
+<!-- قسم شحن الهاتف -->
+<section 
+dir="rtl" style="text-align: right;">
+  <h2 id="toggle-2" onclick="toggleSection('recharge-links', this)" style="cursor: pointer; background-color: #a52a2a; color: white; padding: 10px; border-radius: 8px;">
+    <span><i class="fas fa-money-check-alt" style="color: white;"></i> خدمات تعبئة الهاتف النقال <span class="count"></span></span>
+    <span class="toggle-icon" style="float: left;">▶</span>
+  </h2>
+  <ul id="recharge-links" style="display: none; list-style: none; padding-right: 20px; line-height: 2; text-align: right;">
+    <li><i class="fas fa-mobile-alt" style="color: green;"></i> <a href="https://e-paiement.mobilis.dz/" target="_blank">تعبئة الرصيد - موبيليس</a></li>
+    <li><i class="fas fa-mobile-alt" style="color: green;"></i> <a href="https://moncompte.djezzy.dz/ar/guest/recharge" target="_blank">تعبئة الرصيد - جازي</a></li>
+    <li><i class="fas fa-mobile-alt" style="color: green;"></i> <a href="http://estorm.ooredoo.dz/" target="_blank">تعبئة الرصيد - أوريدو</a></li>
+  </ul>
+</section>
+
+<!-- قسم خدمات بريد الجزائر -->
+<section
+ dir="rtl" style="text-align: right;">
+  <h2 id="toggle-3" onclick="toggleSection('post-links', this)" style="cursor: pointer; background-color: #a52a2a; color: white; padding: 10px; border-radius: 8px;">
+    <span><i class="fas fa-envelope" style="color: white;"></i> خدمات بريد الجزائر <span class="count"></span></span>
+    <span class="toggle-icon" style="float: left;">▶</span>
+  </h2>
+  <ul id="post-links" style="display: none; text-align: right; padding-right: 20px;">
+    <li><i class="fas fa-user-plus" style="color: green;"></i> <a href="https://ccpnet.poste.dz/init" target="_blank">فتح حساب بريدي</a></li>
+    <li><i class="fas fa-wallet" style="color: green;"></i> <a href="https://eccp.poste.dz/login" target="_blank">الاطلاع على رصيد الحساب الجاري (CCP)</a></li>
+    <li><i class="fas fa-credit-card" style="color: green;"></i> <a href="https://eccp.poste.dz/commande-edahabia" target="_blank">طلب البطاقة الذهبية وتتبعها</a></li>
+    <li><i class="fas fa-globe" style="color: green;"></i> <a href="https://baridiweb.poste.dz/" target="_blank">خدمة بريدي واب (BaridiWeb)</a></li>
+    <li><i class="fab fa-android" style="color: green;"></i> <a href="https://play.google.com/store/apps/details?id=ru.bpc.mobilebank.bpc&amp;hl=ar" target="_blank">تحميل تطبيق بريدي موب (BaridiMob)</a></li>
+    <li><i class="fas fa-box" style="color: green;"></i> <a href="https://aptracking.poste.dz/" target="_blank">تتبع الطرود البريدية</a></li>
+  </ul>
+</section>
+
+<!-- قسم الخدمات الصحية -->
+<section
+ dir="rtl" style="text-align: right;">
+  <h2 id="toggle-4" onclick="toggleSection('health-links', this)" style="cursor: pointer; background-color: #a52a2a; color: white; padding: 10px; border-radius: 8px;">
+    <span><i class="fas fa-notes-medical" style="color: white;"></i> الخدمات الصحية <span class="count"></span></span>
+    <span class="toggle-icon" style="float: left;">▶</span>
+  </h2>
+  <ul id="health-links" style="display: none; list-style: none; padding-right: 20px; line-height: 2; text-align: right;">
+    <li><i class="fas fa-clinic-medical" style="color: green;"></i> <a href="https://etabib.dz/" target="_blank">العيادة الرقمية</a></li>
+    <li><i class="fas fa-mobile-alt" style="color: green;"></i> <a href="https://play.google.com/store/apps/details?id=dz.sebrou.docts_guide.app&amp;hl=ar" target="_blank">تحميل تطبيق "أطباء الجزائر"</a></li>
+    <li><i class="fas fa-mobile-alt" style="color: green;"></i> <a href="https://play.google.com/store/apps/details?id=com.algerian.doctor&amp;hl=ar" target="_blank">تحميل تطبيق "الطبيب الجزائري"</a></li>
+    <li><i class="fas fa-mobile-alt" style="color: green;"></i> <a href="https://play.google.com/store/apps/details?id=com.dz.bank.blood.nabilsoft.bankblooddz&amp;hl=ar" target="_blank">تحميل تطبيق "بنك الدم الجزائري"</a></li>
+  </ul>
+</section>
+
+<!-- قسم الخدمات الإدارية -->
+<section
+ dir="rtl" style="text-align: right;">
+  <h2 id="toggle-5" onclick="toggleSection('admin-links', this)" style="cursor: pointer; background-color: #006233; color: white; padding: 10px; border-radius: 8px;">
+    <span><i class="fas fa-id-card" style="color: white;"></i> خدمات إدارية <span class="count"></span></span>
+    <span class="toggle-icon" style="float: left;">▶</span>
+  </h2>
+  <ul id="admin-links" style="display: none; list-style: none; padding-right: 20px; line-height: 2; text-align: right;">
+    <li><i class="fas fa-baby" style="color: green;"></i> <a href="https://etatcivil.interieur.gov.dz/" target="_blank">استخراج شهادة الميلاد</a></li>
+    <li><i class="fas fa-ring" style="color: green;"></i> <a href="https://etatcivil.interieur.gov.dz/ActeMariage/" target="_blank">استخراج عقد الزواج</a></li>
+    <li><i class="fas fa-file-alt" style="color: green;"></i> <a href="https://etatcivil.interieur.gov.dz/ActeDeces/" target="_blank">استخراج شهادة الوفاة</a></li>
+    <li><i class="fas fa-id-card-alt" style="color: green;"></i> <a href="https://passeport.interieur.gov.dz/Ar/DemandeCNIBE/Demander%20la%20carte%20d'identit%C3%A9%20en%20ligne" target="_blank">طلب بطاقة التعريف البيومترية</a></li>
+    <li><i class="fas fa-passport" style="color: green;"></i> <a href="https://passeport.interieur.gov.dz/Ar/Inscription/BaBou" target="_blank">طلب جواز السفر البيومتري</a></li>
+    <li><i class="fas fa-desktop" style="color: green;"></i> <a href="https://prestations.interieur.gov.dz/guichet/" target="_blank">الشباك عن بعد</a></li>
+    <li><i class="fas fa-envelope-open-text" style="color: green;"></i> <a href="https://www.interieur.gov.dz/index.php/ar/component/annuaire/?view=contacter_nous_ar" target="_blank">العرائض والشكاوى – الجماعات المحلية</a></li>
+  </ul>
+</section>
+
+<!-- قسم التأمينات العامة -->
+<section 
+dir="rtl" style="text-align: right;">
+  <h2 id="toggle-6" onclick="toggleSection('insurance-links', this)" style="cursor: pointer; background-color: #a52a2a; color: white; padding: 10px; border-radius: 8px;">
+    <span><i class="fas fa-shield-alt" style="color: white;"></i> التأمين على الممتلكات <span class="count"></span></span>
+    <span class="toggle-icon" style="float: left;">▶</span>
+  </h2>
+  <ul id="insurance-links" style="display: none; list-style: none; padding-right: 20px; line-height: 2; text-align: right;">
+    <li><i class="fas fa-shield-alt" style="color: green;"></i> <a href="https://www.saa.dz/ar/" target="_blank">التأمين عبر SAA</a></li>
+    <li><i class="fas fa-shield-alt" style="color: green;"></i> <a href="https://www.caat.dz/index.php/ar" target="_blank">التأمين عبر CAAT</a></li>
+    <li><i class="fas fa-shield-alt" style="color: green;"></i> <a href="https://www.caarama.dz/ar-coming-soon/coming-soon.html" target="_blank">التأمين عبر CAARAMA</a></li>
+    <li><i class="fas fa-shield-alt" style="color: green;"></i> <a href="https://www.macirvie.com/ar" target="_blank">التأمين عبر Macir Vie</a></li>
+    <li><i class="fas fa-shield-alt" style="color: green;"></i> <a href="https://www.amana.dz/#/" target="_blank">التأمين عبر Amana</a></li>
+  </ul>
+</section>
+
+<!-- قسم التربية والتعليم والخدمات الجامعية -->
+<section 
+dir="rtl" style="text-align: right;">
+  <h2 id="toggle-7" onclick="toggleSection('education-section', this)" style="cursor: pointer; background-color: #006233; color: white; padding: 10px; border-radius: 8px;">
+    <span><i class="fas fa-laptop-house" style="color: white;"></i> التربية والتعليم والخدمات الجامعية <span class="count"></span></span>
+    <span class="toggle-icon" style="float: left;">▶</span>
+  </h2>
+
+  <div id="education-section" style="display: none; text-align: right; padding-right: 20px;">
+
+    <!-- قسم خدمات الأستاذ -->
+    <h3 onclick="toggleSection('teacher-subsection', this)" style="cursor: pointer; background-color: #f0faf6; color: #006233; padding: 8px; border-radius: 6px;">
+      <span><i class="fas fa-chalkboard-teacher"></i> خدمات الأستاذ <span class="count"></span></span>
+      <span class="toggle-icon" style="float: left;">▶</span>
+    </h3>
+    <ul id="teacher-subsection" style="display: block; list-style: none; line-height: 2;">
+      <li><i class="fas fa-chalkboard-teacher" style="color: #006400;"></i> <a href="https://ostad.education.dz/auth" target="_blank">فضاء الأستاذ - المنصة الرقمية</a></li>
+      <li><i class="fas fa-chalkboard-teacher" style="color: #006400;"></i> <a href="https://tawdif.education.dz/" target="_blank">المنصة الرقمية لتوظيف الأساتذة المتعاقدين</a></li>
+      <li><i class="fas fa-briefcase" style="color: #006400;"></i> <a href="https://concour.onec.dz/" target="_blank">المنصة الرقمية للتوظيف</a></li>
+    </ul>
+
+    <!-- قسم خدمات الأولياء والتلاميذ -->
+    <h3 onclick="toggleSection('parents-subsection', this)" style="cursor: pointer; background-color: #f0faf6; color: #006233; padding: 8px; border-radius: 6px;">
+      <span><i class="fas fa-users"></i> خدمات الأولياء والتلاميذ <span class="count"></span></span>
+      <span class="toggle-icon" style="float: left;">▶</span>
+    </h3>
+    <ul id="parents-subsection" style="display: block; list-style: none; line-height: 2;">
+      <li><i class="fas fa-user-shield" style="color: #006400;"></i> <a href="https://awlyaa.education.dz/login" target="_blank">فضاء أولياء التلاميذ</a></li>
+      <li><i class="fas fa-credit-card" style="color: #006400;"></i> <a href="https://epay.education.dz/auth" target="_blank">منصة الدفع الإلكتروني لوزارة التربية الوطنية في امتحانات BEM وBAC</a></li>
+      <li><i class="fas fa-file-signature" style="color: #006400;"></i> <a href="https://bem.onec.dz/" target="_blank">التسجيل في امتحان شهادة التعليم المتوسط</a></li>
+      <li><i class="fas fa-file-signature" style="color: #006400;"></i> <a href="https://bac.onec.dz/" target="_blank">التسجيل في امتحان البكالوريا</a></li>
+    </ul>
+
+    <!-- قسم التعليم والتكوين عن بعد -->
+    <h3 onclick="toggleSection('distance-subsection', this)" style="cursor: pointer; background-color: #f0faf6; color: #006233; padding: 8px; border-radius: 6px;">
+      <span><i class="fas fa-wifi"></i> التعليم والتكوين عن بعد <span class="count"></span></span>
+      <span class="toggle-icon" style="float: left;">▶</span>
+    </h3>
+    <ul id="distance-subsection" style="display: block; list-style: none; line-height: 2;">
+      <li><i class="fas fa-laptop-house" style="color: #006400;"></i> <a href="https://awlyaa.education.dz/login" target="_blank">التسجيل في التعليم و التكوين عن بعد</a></li>
+      <li><i class="fas fa-award" style="color: #006400;"></i> <a href="https://www.onefd.edu.dz/att_niv_2025/" target="_blank">استخراج شهادة إثبات المستوى للسنة الدراسية 2025/2024</a></li>
+    </ul>
+
+    <!-- قسم خدمات الجامعات -->
+    <h3 onclick="toggleSection('university-subsection', this)" style="cursor: pointer; background-color: #f0faf6; color: #006233; padding: 8px; border-radius: 6px;">
+      <span><i class="fas fa-university"></i> خدمات جامعية - كل ما يحتاجه الطالب <span class="count"></span></span>
+      <span class="toggle-icon" style="float: left;">▶</span>
+    </h3>
+    <ul id="university-subsection" style="display: block; list-style: none; line-height: 2;">
+      <li><i class="fas fa-university" style="color: #006400;"></i> <a href="https://www.orientation-esi.dz/" target="_blank">التسجيل الأولي الجامعي</a></li>
+      <li><i class="fas fa-bed" style="color: #006400;"></i> <a href="https://progres.mesrs.dz/webonou/" target="_blank">طلبات الإيواء</a></li>
+      <li><i class="fas fa-exchange-alt" style="color: #006400;"></i> <a href="https://progres.mesrs.dz/webetu" target="_blank">التحويلات الجامعية</a></li>
+      <li><i class="fas fa-graduation-cap" style="color: #006400;"></i> <a href="http://www.preinscriptions.ufc.dz/#" target="_blank">التسجيلات الأولية في الليسانس والماستر 2025/2026</a></li>
+      <li><i class="fas fa-bus" style="color: #006400;"></i> <a href="https://play.google.com/store/apps/details?id=com.mesrs.mybus.mybusapp&amp;hl=ar" target="_blank">تحميل تطبيق MYBUS لتسهيل تنقلات الطلبة</a></li>
+    </ul>
+
+  </div>
+</section>
+
+<!-- قسم التكوين والتعليم المهنيين  -->
+<section 
+dir="rtl" style="text-align: right;">
+  <h2 id="toggle-10" onclick="toggleSection('auto-entrepreneur', this)" style="cursor: pointer; background-color: #a52a2a; color: white;">
+    <span><i class="fas fa-user-gear" style="color: #006400;"></i> التكوين والتعليم المهنيين  <span class="count"></span></span>
+    <span class="toggle-icon" style="float: left;">▶</span>
+  </h2>
+  <ul id="auto-entrepreneur" style="display: block; list-style: none; padding: 0; line-height: 2;">
+    <li><i class="fas fa-tools" style="color: #006400;"></i> <a href="https://www.takwin.dz/" target="_blank">التسجيل في التكوين والتعليم المهنيين</a></li>
+    <li><i class="fas fa-clipboard-check" style="color: #006400;"></i> <a href="https://takwin.dz/ProfessionalExams" target="_blank">تسجيلات في الإمتحانات المهنية وفق الرزنامة الرسمية</a></li>
+  </ul>
+</section>
+
+<!-- قسم القضاء -->
+<section
+ dir="rtl" style="text-align: right;">
+  <h2 id="toggle-8" style="cursor: pointer; background-color: #a52a2a; color: white;">
+    <span><i class="fas fa-balance-scale" style="color: #006400;"></i> خدمات مع العدالة <span class="count"></span></span>
+    <span class="toggle-icon" style="float: left;">▶</span>
+  </h2>
+
+  <ul id="justice-links" style="display: none; text-align: right; list-style: none; padding: 0; line-height: 2;">
+    <li><i class="fas fa-file-alt" style="color: #006400;"></i> <a href="https://e-casier.mjustice.dz/" target="_blank">استخراج صحيفة السوابق القضائية</a></li>
+    <li><i class="fas fa-passport" style="color: #006400;"></i> <a href="https://portail.mjustice.dz/remote/login?lang=fr" target="_blank">استخراج الجنسية الجزائرية</a></li>
+    <li><i class="fas fa-archive" style="color: #006400;"></i> <a href="https://www.mjustice.dz/ar/archive/" target="_blank">طلب مستخرج الوجود بالسجن إبان الثورة</a></li>
+    <li><i class="fas fa-file-contract" style="color: #006400;"></i> <a href="https://www.mjustice.dz/ar/tr-ch/" target="_blank">طلب نسخة من عقود المحاكم</a></li>
+    <li><i class="fas fa-user-lock" style="color: #006400;"></i> <a href="https://ziyarati.mjustice.dz/" target="_blank">رخص الاتصال بالمحبوسين</a></li>
+    <li><i class="fas fa-gavel" style="color: #006400;"></i> <a href="https://e-nyaba.mjustice.dz/nouvelle_plainte.php" target="_blank">النيابة الإلكترونية - تسجيل شكوى</a></li>
+    <li><i class="fas fa-search" style="color: #006400;"></i> <a href="https://e-nyaba.mjustice.dz/login.php" target="_blank">النيابة الإلكترونية - متابعة شكوى</a></li>
+  </ul>
+</section>
+
+<!-- قسم العقار -->
+<section 
+dir="rtl" style="text-align: right;">
+  <h2 id="toggle-9" onclick="toggleSection('real-estate-section', this)" style="cursor: pointer; background-color: #a52a2a; color: white; padding: 10px; border-radius: 8px;">
+    <span><i class="fas fa-map-marked-alt" style="color: white;"></i> الخدمات العقارية <span class="count"></span></span>
+    <span class="toggle-icon" style="float: left;">▶</span>
+  </h2>
+
+  <div id="real-estate-section" style="display: none;">
+
+    <!-- قسم عام -->
+    <h3 onclick="toggleSection('public-sector', this)" style="cursor: pointer; background-color: #f0faf6; color: #006233; padding: 8px; border-radius: 6px;">
+      <span><i class="fas fa-globe" style="color: #006400;"></i> البوابة الجغرافية للبيانات الوطنية للعقار - فضاء عام <span class="count"></span></span>
+      <span class="toggle-icon" style="float: left;">▶</span>
+    </h3>
+    <ul id="public-sector" style="display: none; list-style: none; padding: 0; line-height: 2;">
+      <li><i class="fas fa-file-alt" style="color: #006400;"></i> <a href="https://fadaeldjazair.mf.gov.dz/mission-documentaire/index_public_35.html" target="_blank">معطايات مسحية</a></li>
+      <li><i class="fas fa-file-invoice" style="color: #006400;"></i> <a href="https://fadaeldjazair.mf.gov.dz/recherche2" target="_blank">طلب مستخرج المصفوفة المسحية CC11</a></li>
+      <li><i class="fas fa-file-invoice-dollar" style="color: #006400;"></i> <a href="https://fadaeldjazair.mf.gov.dz/delivrance_automatique/recherche.php" target="_blank">طلب مستخرج من حالة القسم CC12</a></li>
+      <li><i class="fas fa-info-circle" style="color: #006400;"></i> <a href="https://fadaeldjazair.mf.gov.dz/recherche4" target="_blank">طلب معلومات ذات طابع مسحي CC14</a></li>
+      <li><i class="fas fa-file-signature" style="color: #006400;"></i> <a href="https://fadaeldjazair.mf.gov.dz/recherche5" target="_blank">طلب مستخرج المصفوفة المسحية CC15</a></li>
+      <li><i class="fas fa-book" style="color: #006400;"></i> <a href="https://fadaeldjazair.mf.gov.dz/lf/demander_lf" target="_blank">طلب الدفتر العقاري</a></li>
+      <li><i class="fas fa-tasks" style="color: #006400;"></i> <a href="https://fadaeldjazair.mf.gov.dz/lf/suividemande" target="_blank">متابعة طلب الدفتر العقاري</a></li>
+    </ul>
+
+    <!-- قسم خاص -->
+    <h3 onclick="toggleSection('pro-sector', this)" style="cursor: pointer; background-color: #f0faf6; color: #006233; padding: 8px; border-radius: 6px;">
+      <span><i class="fas fa-lock" style="color: #006400;"></i> البوابة الجغرافية للبيانات الوطنية للعقار - فضاء خاص <span class="count"></span></span>
+      <span class="toggle-icon" style="float: left;">▶</span>
+    </h3>
+    <ul id="pro-sector" style="display: none; list-style: none; padding: 0; line-height: 2;">
+      <li><i class="fas fa-user-cog" style="color: #006400;"></i> <a href="https://fadaeldjazair.mf.gov.dz/login2" target="_blank">فضاء المحافظ العقاري</a></li>
+      <li><i class="fas fa-user-tie" style="color: #006400;"></i> <a href="https://fadaeldjazair.mf.gov.dz/login1" target="_blank">فضاء خاص بالمفتشين العقاريين</a></li>
+      <li><i class="fas fa-user-edit" style="color: #006400;"></i> <a href="https://fadaeldjazair.mf.gov.dz/login" target="_blank">فضاء خاص بالموثقين</a></li>
+    </ul>
+
+  </div>
+</section>
+
+<!-- قسم الوكالة الوطنية للمقاول الذاتي -->
+<section
+ dir="rtl" style="text-align: right;">
+  <h2 id="toggle-10" onclick="toggleSection('auto-entrepreneur', this)" style="cursor: pointer; background-color: #a52a2a; color: white;">
+    <span><i class="fas fa-user-gear" style="color: #006400;"></i> الوكالة الوطنية للمقاول الذاتي <span class="count"></span></span>
+    <span class="toggle-icon" style="float: left;">▶</span>
+  </h2>
+  <ul id="auto-entrepreneur" style="display: none; list-style: none; padding: 0; line-height: 2;">
+    <li><i class="fas fa-id-badge" style="color: #006400;"></i> <a href="https://anae.dz/user/ae/register" target="_blank">طلب بطاقة المقاول الذاتي</a></li>
+  </ul>
+</section>
+
+<!-- قسم الوكالة الوطنية للتشغيل -->
+<section 
+dir="rtl" style="text-align: right;">
+  <h2 id="toggle-11" onclick="toggleSection('anem-links', this)" style="cursor: pointer; background-color: #a52a2a; color: white;">
+    <span><i class="fas fa-briefcase" style="color: #006400;"></i> الوكالة الوطنية للتشغيل - ANEM <span class="count"></span></span>
+    <span class="toggle-icon" style="float: left;">▶</span>
+  </h2>
+  <ul id="anem-links" style="display: none; list-style: none; padding: 0; line-height: 2;">
+    <li><i class="fas fa-money-check-alt" style="color: #006400;"></i> <a href="https://minha.anem.dz/pre_inscription" target="_blank">التسجيل في منحة البطالة</a></li>
+    <li><i class="fas fa-user-clock" style="color: #006400;"></i> <a href="https://wassitonline.anem.dz/postulation/prolongationDemande" target="_blank">تمديد طلب العمل</a></li>
+    <li><i class="fas fa-search" style="color: #006400;"></i> <a href="https://auth.anem.dz/Account/Login" target="_blank">فرصتي – التقدم لعروض العمل</a></li>
+    <li><i class="fas fa-bullhorn" style="color: #006400;"></i> <a href="https://www.anem.dz/opportunites/ar.html" target="_blank">فرص عمل وإعلانات</a></li>
+    <li><i class="fas fa-mobile-alt" style="color: #006400;"></i> <a href="https://www.anem.dz/app_mobile/Name.apk" target="_blank">تحميل تطبيق ANEM-Dz</a></li>
+    <li><i class="fas fa-map-marked" style="color: #006400;"></i> <a href="https://www.anem.dz/app_mobile/Mon_agence.apk" target="_blank">تحميل تطبيق Mon Agence للبحث عن وكالة</a></li>
+    <li><i class="fas fa-clipboard-list" style="color: #006400;"></i> <a href="https://www.anem.dz/app_mobile/Mon_offre.apk" target="_blank">تحميل تطبيق Mon Offre لعروض العمل</a></li>
+  </ul>
+</section>
+
+<!-- قسم النقل -->
+<section
+ dir="rtl" style="text-align: right;">
+  <h2 id="toggle-12" onclick="toggleSection('transport-section', this)" style="cursor: pointer; background-color: #a52a2a; color: white;">
+    <span><i class="fas fa-bus" style="color: #006400;"></i> النقل وحجز تذاكر السفر <span class="count"></span></span>
+    <span class="toggle-icon" style="float: left;">▶</span>
+  </h2>
+
+  <ul id="transport-section" style="display: none; list-style: none; padding: 0; line-height: 2;">
+    <li><i class="fas fa-plane-departure" style="color: #006400;"></i> <a href="https://airalgerie.dz/ar/%d8%a7%d9%84%d8%ad%d8%ac%d8%b2/" target="_blank">حجز تذاكر السفر عبر الخطوط الجوية الجزائرية</a></li>
+    
+    <li><i class="fas fa-plane-arrival" style="color: #006400;"></i> <a href="https://tassiliairlines.dz/" target="_blank">حجز تذاكر السفر عبر طيران الطاسيلي</a></li>
+    
+    <li><i class="fas fa-subway" style="color: #006400;"></i> <a href="https://play.google.com/store/apps/details?id=dz.setram.AppEtwassel" target="_blank">تحميل تطبيق "تواصل" للترامواي</a></li>
+    
+    <li><i class="fas fa-bus-simple" style="color: #006400;"></i> <a href="https://play.google.com/store/apps/details?id=com.sogral.mobile&amp;hl=ar" target="_blank">تحميل تطبيق "محطتي" للخطوط البرية سوقرال SOGRAL</a></li>
+    
+    <li><i class="fas fa-ship" style="color: #006400;"></i> <a href="https://afs.algerieferries.dz/booking/step1" target="_blank">حجز تذاكر السفر عبر المؤسسة الوطنية للنقل البحري للمسافرين</a></li>
+    
+    <li><i class="fas fa-train-subway" style="color: #006400;"></i> <a href="https://www.sntf.dz/index.php/" target="_blank">مواقيت سير القطارات في الجزائر (SNTF)</a></li>
+    
+    <li><i class="fas fa-bus-alt" style="color: #006400;"></i> <a href="https://play.google.com/store/apps/details?id=dz.etusa.etusa_mob&amp;hl=ar" target="_blank">تحميل تطبيق "Etusa Mob" لمؤسسة النقل الحضري وشبه الحضري</a></li>
+  </ul>
+</section>
+
+<!-- قسم الضمان الاجتماعي -->
+<section
+ dir="rtl" style="text-align: right; background-color: #f0faf6; border: 1px solid #cde7da; margin-top: 20px;">
+  <h2 style="background-color: #006233; color: white; padding: 12px; cursor: pointer;" onclick="toggleSection('social-security')">
+    <span><i class="fas fa-shield-heart" style="color: white;"></i> الضمان الإجتماعي للعمال الأجراء وغير الأجراء والمتقاعدين <span class="count"></span></span>
+    <span class="toggle-icon" style="float: left;">▶</span>
+  </h2>
+
+  <div id="social-security" style="display: none; padding: 10px 20px;">
+
+    <!-- CNAS -->
+    <h3 onclick="toggleSublist('cnas-list')" style="cursor: pointer; padding: 8px;">
+      <span><i class="fas fa-people-group" style="color: #006400;"></i> الصندوق الوطني للضمان الاجتماعي للعمال الأجراء <span class="count"></span></span>
+      <span class="toggle-icon" style="float: left;">▶</span>
+    </h3>
+    <ul id="cnas-list" style="display: none; list-style: none; padding: 0 20px; line-height: 2;">
+      <li><i class="fas fa-id-card" style="color: #006400;"></i> <a href="https://elhanaa.cnas.dz/" target="_blank">شهادة الإنتساب - CNAS</a></li>
+      <li><i class="fas fa-user-slash" style="color: #006400;"></i> <a href="https://elhanaa.cnas.dz/attestation_no_affiliation.xhtml" target="_blank">شهادة عدم الإنتساب - CNAS</a></li>
+      <li><i class="fas fa-mobile-screen-button" style="color: #006400;"></i> <a href="https://play.google.com/store/apps/details?id=dz.cnas.mobile_elhanaa&amp;hl=ar" target="_blank">تحميل تطبيق فضاء الهناء - CNAS</a></li>
+    </ul>
+
+    <!-- CASNOS -->
+    <h3 onclick="toggleSublist('casnos-list')" style="cursor: pointer; padding: 8px;">
+      <span><i class="fas fa-user-tie" style="color: #006400;"></i> الصندوق الوطني للضمان الاجتماعي لغير الأجراء <span class="count"></span></span>
+      <span class="toggle-icon" style="float: left;">▶</span>
+    </h3>
+    <ul id="casnos-list" style="display: none; list-style: none; padding: 0 20px; line-height: 2;">
+      <li><i class="fas fa-user-slash" style="color: #006400;"></i> <a href="https://damancom.casnos.dz/non-affiliation" target="_blank">شهادة عدم الإنتساب - CASNOS</a></li>
+      <li><i class="fas fa-id-card" style="color: #006400;"></i> <a href="https://damancom.casnos.dz/auth/login/assure" target="_blank">شهادة الإنتساب - CASNOS</a></li>
+      <li><i class="fas fa-file-signature" style="color: #006400;"></i> <a href="https://damancom.casnos.dz/affiliation" target="_blank">طلب الإنتساب - CASNOS</a></li>
+    </ul>
+
+    <!-- CNR -->
+    <h3 onclick="toggleSublist('cnr-list')" style="cursor: pointer; padding: 8px;">
+      <span><i class="fas fa-person-cane" style="color: #006400;"></i> الصندوق الوطني للتقاعد <span class="count"></span></span>
+      <span class="toggle-icon" style="float: left;">▶</span>
+    </h3>
+    <ul id="cnr-list" style="display: none; list-style: none; padding: 0 20px; line-height: 2;">
+      <li><i class="fas fa-mobile-screen-button" style="color: #006400;"></i> <a href="https://play.google.com/store/apps/details?id=dz.cnr.cnr" target="_blank">تحميل تطبيق المتقاعد - CNR</a></li>
+    </ul>
+
+  </div>
+</section>
+
+<!-- قسم أرقام الطوارئ -->
+<section 
+dir="rtl" style="text-align: right;">
+  <h2 dir="rtl" id="toggle-14" onclick="toggleSection('emergency-numbers', this)" style="cursor: pointer; background-color: #a52a2a; color: white;">
+    <span><i class="fas fa-phone-volume" style="color: #006400;"></i> أرقام الطوارئ والخدمات <span class="count"></span></span>
+    <span class="toggle-icon" style="float: left;">▶</span>
+  </h2>
+
+  <ul dir="rtl" id="emergency-numbers" style="display: none; list-style: none; padding: 0; line-height: 2; text-align: right;">
+    <li><i class="fas fa-shield-alt" style="color: #006400;"></i> <strong>الشرطة:</strong> <a href="tel:1548">1548</a></li>
+    <li><i class="fas fa-mobile" style="color: #006400;"></i> <a href="https://play.google.com/store/apps/details?id=allochorta.algeriepolice.dz&amp;hl=ar" target="_blank">تحميل تطبيق ألو الشرطة</a></li>
+    <li><i class="fas fa-user-shield" style="color: #006400;"></i> <strong>الدرك الوطني:</strong> <a href="tel:1055">1055</a></li>
+    <li><i class="fas fa-user-shield" style="color: #006400;"></i> <a href="https://ppgn.mdn.dz/" target="_blank">شكوى مسبقة ومعلومات عن بعد للدرك الوطني</a></li>
+    <li><i class="fas fa-water" style="color: #006400;"></i> <strong>حراس السواحل:</strong> <a href="tel:1054">1054</a></li>
+    <li><i class="fas fa-fire" style="color: #006400;"></i> <strong>الحماية المدنية:</strong> <a href="tel:1021">1021</a></li>
+    <li><i class="fas fa-building" style="color: #006400;"></i> <strong>وزارة الداخلية:</strong> <a href="tel:1100">1100</a></li>
+    <li><i class="fas fa-building" style="color: #006400;"></i> <strong>وزارة العمل والتشغيل والضمان الإجتماعي:</strong> <a href="tel:3010">3010</a></li>
+  </ul>
+</section>
+
+<!-- قسم معلومات الاتصال -->
+<section
+ dir="rtl" style="text-align: right; background-color: #f0faf6; border: 1px solid #cde7da;">
+  <h2 style="background-color: #006233; color: white; cursor: default;">
+    <span><i class="fas fa-address-book" style="color: white;"></i> معلومات الاتصال</span>
+  </h2>
+  <ul id="contact-info" style="display: block; list-style: none; padding-right: 20px; line-height: 2;">
+    <li><i class="fas fa-envelope" style="color: #006400;"></i> البريد الإلكتروني: <a href="mailto:tabaniimadeddine@gmail.com">tabaniimadeddine@gmail.com</a></li>
+    <li><i class="fas fa-phone" style="color: #006400;"></i> الهاتف: <a href="tel:+21300000000">213697743721+</a></li>
+    <li><i class="fas fa-map-marker-alt" style="color: #006400;"></i> العنوان: الجزائر العاصمة</li>
+    <li><i class="fab fa-facebook" style="color: #006400;"></i> <a href="https://www.f.com/" target="_blank">صفحتنا على فايسبوك</a></li>
+  </ul>
+</section>
+
+<!-- الفوتر -->
+<footer>
+<div dir="rtl" style="display: flex; justify-content: center; align-items: center; gap: 12px; text-align: right;">
+<i class="fas fa-cogs"></i><span>© 2025 البوابة الجزائرية للخدمات الإليكترونية</span>
+<img alt="علم الجزائر" src="https://upload.wikimedia.org/wikipedia/commons/7/77/Flag_of_Algeria.svg" style="height: 22px;"/>
+</div>
+</footer>
+
+<!-- زر الرجوع للأعلى -->
+<button 
+id="scrollTopBtn" onclick="scrollToTop()" title="العودة للأعلى">↑
+</button>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const headers = document.querySelectorAll("section h2, section h3");
+  headers.forEach((header, index) => {
+    const nextElement = header.nextElementSibling;
+    if (nextElement && (nextElement.tagName === "UL" || nextElement.tagName === "DIV")) {
+      header.id = header.id || "header-" + index;
+      nextElement.id = nextElement.id || "content-" + index;
+
+      const toggle = () => {
+        const isVisible = nextElement.classList.toggle("show");
+        nextElement.style.display = isVisible ? "block" : "none";
+        header.classList.toggle("open", isVisible);
+      };
+
+      header.addEventListener("click", toggle);
+
+      // Count items if UL
+      const countSpan = header.querySelector(".count");
+      if (countSpan && nextElement.tagName === "UL") {
+        const items = nextElement.querySelectorAll("li");
+        countSpan.textContent = ` (${items.length} خدمة)`;
+      }
+
+      // Nested ULs in DIVs (e.g., الضمان الاجتماعي)
+      if (countSpan && nextElement.tagName === "DIV") {
+        const totalItems = nextElement.querySelectorAll("ul li").length;
+        countSpan.textContent = ` (${totalItems} خدمة)`;
+      }
+    }
+  });
+});
+
+window.onscroll = function () {
+  const btn = document.getElementById("scrollTopBtn");
+  btn.style.display = (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) ? "block" : "none";
+};
+
+function scrollToTop() {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+document.getElementById("searchInput").addEventListener("input", function () {
+  const query = this.value.toLowerCase().trim();
+  const sections = document.querySelectorAll("section");
+  sections.forEach(section => {
+    const text = section.innerText.toLowerCase();
+    section.style.display = text.includes(query) ? "block" : "none";
+  });
+});
+</script></body>
+</html>
