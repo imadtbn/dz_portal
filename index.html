@@ -4,21 +4,82 @@
 <head>
 <meta charset="utf-8"/>
  
- <script type="application/ld+json">
+<script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "WebSite",
-  "name": "البوابة الجزائرية للخدمات الإلكترونية",
-  "url": "https://imadtbn.github.io/dz_portal/",
-  "inLanguage": "ar-DZ",
-  "description": "موقع شامل يوفر روابط مباشرة لجميع الخدمات الإلكترونية الجزائرية: إدارية، تعليمية، جبائية، إجتماعية، وغيرها.",
-  "publisher": {
-    "@type": "GovernmentOrganization",
-    "name": "الجمهورية الجزائرية الديمقراطية الشعبية",
-    "url": "https://imadtbn.github.io/dz_portal/"
-  }
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://imadtbn.github.io/dz_portal/#website",
+      "url": "https://imadtbn.github.io/dz_portal/",
+      "name": "البوابة الجزائرية للخدمات الإلكترونية",
+      "inLanguage": "ar-DZ",
+      "description": "موقع موحد يضم روابط إلى جميع الخدمات الإلكترونية الحكومية الجزائرية: التعليم، الجباية، العدالة، البريد، وغيرها."
+    },
+    {
+      "@type": "GovernmentOrganization",
+      "@id": "https://imadtbn.github.io/dz_portal/#organization",
+      "name": "الجمهورية الجزائرية الديمقراطية الشعبية",
+      "url": "https://www.el-mouradia.dz/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://imadtbn.github.io/dz_portal/logo.png"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+213",
+        "contactType": "خدمة المواطنين"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "DZ"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://imadtbn.github.io/dz_portal/#webpage",
+      "url": "https://imadtbn.github.io/dz_portal/",
+      "name": "الصفحة الرئيسية",
+      "isPartOf": {
+        "@id": "https://imadtbn.github.io/dz_portal/#website"
+      },
+      "about": {
+        "@id": "https://imadtbn.github.io/dz_portal/#organization"
+      },
+      "inLanguage": "ar-DZ"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "الرئيسية",
+          "item": "https://imadtbn.github.io/dz_portal/"
+        }
+      ]
+    },
+    {
+      "@type": "Service",
+      "serviceType": "خدمات إلكترونية حكومية",
+      "provider": {
+        "@type": "GovernmentOrganization",
+        "name": "الجمهورية الجزائرية"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "الجزائر"
+      },
+      "availableChannel": {
+        "@type": "ServiceChannel",
+        "serviceUrl": "https://imadtbn.github.io/dz_portal/",
+        "availableLanguage": ["ar", "fr"]
+      }
+    }
+  ]
 }
 </script>
+
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>البوابة الجزائرية للخدمات الإليكترونية</title>
  
