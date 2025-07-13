@@ -1129,29 +1129,39 @@ document.getElementById("searchInput").addEventListener("input", function () {
 
 </script>
 
+<!-- إظهار وإخفاء زر تثبيت التطبيق -->
 
 <script>
+  const installButton = document.getElementById('install-button');
+
+  // إخفاء الزر إذا كان التطبيق مثبتًا بالفعل
+  if (window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone === true) {
+    installButton.style.display = 'none';
+  }
+
   let deferredPrompt;
 
   window.addEventListener('beforeinstallprompt', (e) => {
+    // منع النافذة التلقائية
     e.preventDefault();
     deferredPrompt = e;
-    document.getElementById('install-button').style.display = 'inline-block';
+    installButton.style.display = 'inline-block'; // إظهار الزر عند توفر التثبيت
+
+    installButton.addEventListener('click', () => {
+      installButton.style.display = 'none'; // إخفاء الزر بعد النقر
+      deferredPrompt.prompt();
+      deferredPrompt.userChoice.then((choiceResult) => {
+        if (choiceResult.outcome !== 'accepted') {
+          installButton.style.display = 'inline-block'; // إعادة إظهار الزر إذا لم يوافق المستخدم
+        }
+        deferredPrompt = null;
+      });
+    });
   });
 
-  document.getElementById('install-button').addEventListener('click', async () => {
-    if (deferredPrompt) {
-      deferredPrompt.prompt();
-      const choiceResult = await deferredPrompt.userChoice;
-      if (choiceResult.outcome === 'accepted') {
-        console.log('✅ تم تثبيت التطبيق');
-      } else {
-        console.log('❌ تم رفض التثبيت');
-      }
-      deferredPrompt = null;
-    } else {
-      alert("⚠️ التثبيت غير مدعوم حالياً. جرّب من متصفح آخر أو تحقق من الاتصال الآمن HTTPS.");
-    }
+  // التحقق من تغيير الوضع بعد التثبيت (مثلاً عند إعادة فتح التطبيق)
+  window.addEventListener('appinstalled', () => {
+    installButton.style.display = 'none';
   });
 </script>
 
