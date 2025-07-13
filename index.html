@@ -2,6 +2,20 @@
 
 <html dir="rtl" lang="ar">
 <head>
+ <!-- السكربت الخاص بتسجيل الـ Service Worker -->
+ <script>
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', function () {
+      navigator.serviceWorker.register('service-worker.js')
+        .then(function (registration) {
+          console.log('✅ تم تسجيل Service Worker:', registration.scope);
+        }, function (err) {
+          console.log('❌ فشل تسجيل Service Worker:', err);
+        });
+    });
+  }
+</script>
+
 <meta charset="utf-8"/>
  
 <script type="application/ld+json">
@@ -89,6 +103,9 @@
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
 <link href="manifest.json" rel="manifest"/>
 <link rel="manifest" href="manifest.json">
+
+ <link rel="manifest" href="manifest.webmanifest" type="application/manifest+json">
+
 <meta name="theme-color" content="#006233">
 
     <!-- قسم اظهار الصفحة في محركات البحث -->
@@ -1098,18 +1115,6 @@ document.getElementById("searchInput").addEventListener("input", function () {
 });
 
 </script>
-<!-- السكربت الخاص بتسجيل الـ Service Worker -->
-<script>
-  if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('sw.js')
-      .then(function(reg) {
-        console.log("Service Worker Registered", reg);
-      }).catch(function(err) {
-        console.log("Service Worker registration failed", err);
-      });
-  }
-</script>
-    
-</script>
+
 </body>
 </html>
