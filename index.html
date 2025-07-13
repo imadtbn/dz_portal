@@ -1134,32 +1134,28 @@ document.getElementById("searchInput").addEventListener("input", function () {
 <script>
   let deferredPrompt;
 
-  window.addEventListener('DOMContentLoaded', function () {
-    const installBtn = document.getElementById('install-button');
+  window.addEventListener('beforeinstallprompt', (e) => {
+    e.preventDefault();
+    deferredPrompt = e;
+    document.getElementById('install-button').style.display = 'inline-block';
+  });
 
-    window.addEventListener('beforeinstallprompt', (e) => {
-      e.preventDefault();
-      deferredPrompt = e;
-      installBtn.style.display = 'inline-block';
-    });
-
-    if (installBtn) {
-      installBtn.addEventListener('click', async () => {
-        if (deferredPrompt) {
-          deferredPrompt.prompt();
-          const { outcome } = await deferredPrompt.userChoice;
-          if (outcome === 'accepted') {
-            console.log('✅ تم تثبيت التطبيق');
-            installBtn.style.display = 'none';
-          } else {
-            console.log('❌ تم إلغاء التثبيت');
-          }
-          deferredPrompt = null;
-        }
-      });
+  document.getElementById('install-button').addEventListener('click', async () => {
+    if (deferredPrompt) {
+      deferredPrompt.prompt();
+      const choiceResult = await deferredPrompt.userChoice;
+      if (choiceResult.outcome === 'accepted') {
+        console.log('✅ تم تثبيت التطبيق');
+      } else {
+        console.log('❌ تم رفض التثبيت');
+      }
+      deferredPrompt = null;
+    } else {
+      alert("⚠️ التثبيت غير مدعوم حالياً. جرّب من متصفح آخر أو تحقق من الاتصال الآمن HTTPS.");
     }
   });
 </script>
+
 
 </body>
 </html>
