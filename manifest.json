@@ -2,7 +2,7 @@
   "name": "البوابة الجزائرية للخدمات الإلكترونية",
   "short_name": "DZ Portal",
   "lang": "ar",
-  "start_url": "./index.html",
+  "start_url": "./"
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#006233",
