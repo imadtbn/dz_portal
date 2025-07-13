@@ -16,6 +16,34 @@
   }
 </script>
 
+ <script>
+  let deferredPrompt;
+  const installBtn = document.getElementById('install-button');
+
+  // مراقبة الحدث قبل التثبيت
+  window.addEventListener('beforeinstallprompt', (e) => {
+    e.preventDefault();
+    deferredPrompt = e;
+    installBtn.style.display = 'inline-block'; // عرض الزر
+  });
+
+  // عند النقر على زر التثبيت
+  installBtn.addEventListener('click', async () => {
+    if (deferredPrompt) {
+      deferredPrompt.prompt(); // إظهار نافذة التثبيت
+      const { outcome } = await deferredPrompt.userChoice;
+      if (outcome === 'accepted') {
+        console.log('✅ تم تثبيت التطبيق');
+        installBtn.style.display = 'none';
+      } else {
+        console.log('❌ تم إلغاء التثبيت');
+      }
+      deferredPrompt = null;
+    }
+  });
+</script>
+
+
 <meta charset="utf-8"/>
  
 <script type="application/ld+json">
@@ -546,6 +574,10 @@ style="; position: sticky; top: 0; z-index: 1000;">
 <div dir="rtl" id="searchBox" style="text-align: right;">
 <input id="searchInput" placeholder="ابحث هنا داخل الصفحة..." type="text"/>
 </div>
+ <button id="install-button" style="display: none; background-color: #006233; color: white; border: none; padding: 10px 20px; border-radius: 8px; font-size: 16px; cursor: pointer;">
+  📲 تثبيت التطبيق
+</button>
+
 </header>
 
 <section dir="rtl" style="text-align: center; background-color: #e6f2ec; margin-top: 10px;">
