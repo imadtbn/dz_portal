@@ -554,11 +554,10 @@ style="; position: sticky; top: 0; z-index: 1000;">
  
 </div>
 
+<!-- زر تثبيت التطبيق مع أيقونة Font Awesome -->
 <button id="install-button" style="background-color: #d40000; color: white; padding: 10px 15px; border: none; border-radius: 5px; font-size: 16px; cursor: pointer;">
-  📲 تثبيت التطبيق
+  <i class="fas fa-download" style="margin-left: 5px;"></i> تثبيت التطبيق
 </button>
-
-
 
 </header>
 
@@ -699,7 +698,7 @@ dir="rtl" style="text-align: right;">
 
     <!-- قسم خدمات الأستاذ -->
     <h3 onclick="toggleSection('teacher-subsection', this)" style="cursor: pointer; background-color: #f0faf6; color: #006233; padding: 8px; border-radius: 6px;">
-      <span><i class="fas fa-chalkboard-teacher"></i> خدمات الأستاذ <span class="count"></span></span>
+      <span><i class="fas fa-chalkboard-teacher"></i> فضاء الأستاذ <span class="count"></span></span>
       <span class="toggle-icon" style="float: left;">▶</span>
     </h3>
     <ul id="teacher-subsection" style="display: block; list-style: none; line-height: 2;">
@@ -710,7 +709,7 @@ dir="rtl" style="text-align: right;">
 
     <!-- قسم خدمات الأولياء والتلاميذ -->
     <h3 onclick="toggleSection('parents-subsection', this)" style="cursor: pointer; background-color: #f0faf6; color: #006233; padding: 8px; border-radius: 6px;">
-      <span><i class="fas fa-users"></i> خدمات الأولياء والتلاميذ <span class="count"></span></span>
+      <span><i class="fas fa-users"></i> فضاء الأولياء والتلميذ <span class="count"></span></span>
       <span class="toggle-icon" style="float: left;">▶</span>
     </h3>
     <ul id="parents-subsection" style="display: block; list-style: none; line-height: 2;">
@@ -722,7 +721,7 @@ dir="rtl" style="text-align: right;">
 
     <!-- قسم التعليم والتكوين عن بعد -->
     <h3 onclick="toggleSection('distance-subsection', this)" style="cursor: pointer; background-color: #f0faf6; color: #006233; padding: 8px; border-radius: 6px;">
-      <span><i class="fas fa-wifi"></i> التعليم والتكوين (بالمراسلة) <span class="count"></span></span>
+      <span><i class="fas fa-wifi"></i> التعليم والتكوين عن بعد (بالمراسلة) <span class="count"></span></span>
       <span class="toggle-icon" style="float: left;">▶</span>
     </h3>
     <ul id="distance-subsection" style="display: block; list-style: none; line-height: 2;">
@@ -738,14 +737,8 @@ dir="rtl" style="text-align: right;">
   <span class="toggle-icon" style="float: left;">▶</span>
 </h3>
 <ul id="parents-subsection" style="display: block; list-style: none; line-height: 2;">
-  <li>
-    <i class="fas fa-graduation-cap" style="color: #006400;"></i>
-    <a href="https://bem.onec.dz/" target="_blank">نتائج امتحان شهادة التعليم المتوسط</a>
-  </li>
-  <li>
-    <i class="fas fa-certificate" style="color: #006400;"></i>
-    <a href="https://bac.onec.dz/" target="_blank">نتائج امتحان شهادة البكالوريا</a>
-  </li>
+  <li><i class="fas fa-graduation-cap" style="color: #006400;"></i><a href="https://bem.onec.dz/" target="_blank">نتائج امتحان شهادة التعليم المتوسط</a></li>
+  <li><i class="fas fa-certificate" style="color: #006400;"></i><a href="https://bac.onec.dz/" target="_blank">نتائج امتحان شهادة البكالوريا</a></li>
 </ul>
 
     <!-- قسم خدمات الجامعات -->
