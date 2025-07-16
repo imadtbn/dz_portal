@@ -1127,6 +1127,39 @@ dir="rtl" style="text-align: right; background-color: white; border: 1px solid #
     <li><i class="fab fa-facebook" style="color: #006400;"></i> <a href="https://www.f.com/" target="_blank">صفحتنا على فايسبوك</a></li>
   </ul>
 </section>
+
+ <!-- قسم التعليقات -->
+<section id="comments" dir="rtl" style="background-color: #f9f9f9; padding: 20px; margin-top: 30px;">
+  <h2 style="color: #006233; margin-bottom: 15px;">💬 آراء الزوار</h2>
+  
+  <form onsubmit="submitComment(event)" style="margin-bottom: 20px;">
+    <input type="text" id="name" placeholder="الاسم" required style="width: 100%; padding: 8px; margin-bottom: 10px;" />
+    <textarea id="message" placeholder="اترك تعليقك هنا..." required style="width: 100%; padding: 8px; height: 100px;"></textarea>
+    <button type="submit" style="background-color: #006233; color: white; padding: 10px 20px; border: none; cursor: pointer;">إرسال</button>
+  </form>
+  
+  <div id="commentList" style="border-top: 1px solid #ccc; padding-top: 15px;"></div>
+</section>
+
+<script>
+  function submitComment(event) {
+    event.preventDefault();
+    const name = document.getElementById("name").value;
+    const msg = document.getElementById("message").value;
+    const commentList = document.getElementById("commentList");
+
+    const commentBox = document.createElement("div");
+    commentBox.style.borderBottom = "1px solid #ddd";
+    commentBox.style.padding = "10px 0";
+    commentBox.innerHTML = `<strong>${name}</strong><p>${msg}</p>`;
+
+    commentList.prepend(commentBox);
+
+    document.getElementById("name").value = "";
+    document.getElementById("message").value = "";
+  }
+</script>
+
  
 <!-- الفوتر -->
 <footer>
