@@ -574,13 +574,13 @@ style="; position: sticky; top: 0; z-index: 1000;">
 </div>
 
 <style>
-@keyframes scroll-left {
-  0%   { transform: translateX(100%); }
-  100% { transform: translateX(-100%); }
+@keyframes scroll-right {
+  0%   { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
 }
 
 .news-ticker {
-  animation: scroll-left 90s linear infinite;
+  animation: scroll-right 90s linear infinite;
 }
 
 .news-ticker:hover {
@@ -590,7 +590,7 @@ style="; position: sticky; top: 0; z-index: 1000;">
 </style>
 
 <script>
-// إيقاف الحركة عند اللمس في الهاتف
+// دعم الوقوف عند لمس الشريط على الجوال
 const ticker = document.getElementById('newsTicker');
 
 ticker.addEventListener('touchstart', () => {
@@ -601,6 +601,7 @@ ticker.addEventListener('touchend', () => {
   ticker.style.animationPlayState = 'running';
 });
 </script>
+
 
 </header>
 
