@@ -1213,6 +1213,47 @@ dir="rtl" style="text-align: right; background-color: white; border: 1px solid #
   </ul>
 </section>
 
+ <!-- قسم التعليقات -->
+<section id="comments" style="direction: rtl; padding: 20px; background-color: #f9f9f9;">
+  <h2>💬 أضف تعليقك</h2>
+  <form id="commentForm" onsubmit="submitComment(); return false;">
+    <label for="name">الاسم:</label><br>
+    <input type="text" id="name" name="name" required style="width:100%; padding:6px;"><br><br>
+    
+    <label for="comment">التعليق:</label><br>
+    <textarea id="comment" name="comment" rows="4" required style="width:100%; padding:6px;"></textarea><br><br>
+    
+    <button type="submit" style="background-color:green; color:white; border:none; padding:10px 20px; border-radius:5px;">📩 إرسال</button>
+  </form>
+  <div id="responseMsg" style="margin-top:10px;"></div>
+</section>
+
+<script>
+  const scriptURL = "https://script.google.com/macros/s/AKfycbz_O8QqYnO_sxGjMduX8O3i7mSVE8-O2dEq9927GWxiDjar6US8mtFgTNhCnRBBzVGY/exec";
+
+  function submitComment() {
+    const name = document.getElementById("name").value.trim();
+    const comment = document.getElementById("comment").value.trim();
+
+    if (!name || !comment) return;
+
+    fetch(scriptURL, {
+      method: 'POST',
+      body: JSON.stringify({ name: name, comment: comment }),
+      headers: {
+        "Content-Type": "application/json"
+      }
+    })
+    .then(response => {
+      document.getElementById("responseMsg").innerHTML = "<span style='color:green;'>✅ تم إرسال تعليقك بنجاح</span>";
+      document.getElementById("commentForm").reset();
+    })
+    .catch(error => {
+      document.getElementById("responseMsg").innerHTML = "<span style='color:red;'>❌ حدث خطأ أثناء الإرسال</span>";
+    });
+  }
+</script>
+
 <script>
   function submitComment(event) {
     event.preventDefault();
