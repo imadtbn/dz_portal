@@ -1213,8 +1213,13 @@ dir="rtl" style="text-align: right; background-color: white; border: 1px solid #
   </ul>
 </section>
 
-<!-- قسم التعليقات -->
-<section id="comments" style="direction: rtl; padding: 20px; background-color: #f9f9f9;">
+<!-- زر تبديل عرض/إخفاء قسم التعليقات -->
+<button id="toggleCommentsBtn" style="margin: 20px 0; padding:10px 15px; background-color:blue; color:white; border:none; border-radius:5px;">
+  عرض التعليقات السابقة
+</button>
+
+<!-- قسم التعليقات (مخفي افتراضيًا) -->
+<section id="comments" style="direction: rtl; padding: 20px; background-color: #f9f9f9; display: none;">
   <h2>💬 أضف تعليقك أو استفسارك</h2>
   <form id="commentForm" onsubmit="submitComment(); return false;">
     <label for="name">الاسم:</label><br>
@@ -1223,14 +1228,36 @@ dir="rtl" style="text-align: right; background-color: white; border: 1px solid #
     <label for="comment">التعليق:</label><br>
     <textarea id="comment" name="comment" rows="4" required style="width:100%; padding:6px;"></textarea><br><br>
     
-    <button type="submit" style="background-color:green; color:white; border:none; padding:10px 20px; border-radius:5px;">📩 إرسال</button>
+    <button type="submit" style="background-color:green; color:white; border:none; padding:10px 20px; border-radius:5px;">
+      📩 إرسال
+    </button>
   </form>
+  
   <div id="responseMsg" style="margin-top:10px;"></div>
+  
+  <hr>
+  <h3>📝 التعليقات السابقة:</h3>
+  <div id="commentList" style="margin-top:10px;"></div>
 </section>
 
 <script>
-  const scriptURL = "https://script.google.com/macros/s/AKfycbz_O8QqYnO_sxGjMduX8O3i7mSVE8-O2dEq9927GWxiDjar6US8mtFgTNhCnRBBzVGY/exec";
+  // رابط Web App من Google Apps Script
+  const scriptURL = "https://script.google.com/macros/s/AKfycbwrRLlg-dnWMWbSW-pPGit573P7hZwmXGgbzfpe5SYiX6zr5rUOEvvdW_l1fXcxZGo/exec";
 
+  // التعامل مع زر التبديل لإظهار/إخفاء قسم التعليقات
+  document.getElementById("toggleCommentsBtn").addEventListener("click", function() {
+    const commentsSection = document.getElementById("comments");
+    if (commentsSection.style.display === "none") {
+      commentsSection.style.display = "block";
+      loadComments();  // تحميل التعليقات عند الإظهار
+      this.textContent = "إخفاء التعليقات السابقة";
+    } else {
+      commentsSection.style.display = "none";
+      this.textContent = "عرض التعليقات السابقة";
+    }
+  });
+
+  // دالة إرسال التعليق
   function submitComment() {
     const name = document.getElementById("name").value.trim();
     const comment = document.getElementById("comment").value.trim();
@@ -1244,16 +1271,45 @@ dir="rtl" style="text-align: right; background-color: white; border: 1px solid #
         "Content-Type": "application/json"
       }
     })
-    .then(response => {
+    .then(response => response.json())
+    .then(data => {
       document.getElementById("responseMsg").innerHTML = "<span style='color:green;'>✅ تم إرسال تعليقك بنجاح</span>";
       document.getElementById("commentForm").reset();
+      loadComments();  // تحديث قائمة التعليقات بعد الإرسال
     })
     .catch(error => {
       document.getElementById("responseMsg").innerHTML = "<span style='color:red;'>❌ حدث خطأ أثناء الإرسال</span>";
     });
   }
-</script>
 
+  // دالة لتحميل وعرض التعليقات السابقة من Google Sheets
+  function loadComments() {
+    fetch(scriptURL, {
+      method: 'GET'
+    })
+    .then(response => response.json())
+    .then(data => {
+      const commentList = document.getElementById("commentList");
+      commentList.innerHTML = "";  // تفريغ القائمة قبل عرض التعليقات
+      // يتم عرض التعليقات بترتيب عكسي بحيث يظهر الأحدث أولاً
+      data.reverse().forEach(item => {
+        const commentBox = document.createElement("div");
+        commentBox.style.marginBottom = "15px";
+        commentBox.style.padding = "10px";
+        commentBox.style.border = "1px solid #ccc";
+        commentBox.style.backgroundColor = "#fff";
+        const date = new Date(item["التاريخ"]);
+        commentBox.innerHTML = `<strong>👤 ${item["الاسم"]}</strong>
+          <span style="color:gray; font-size:0.8em;">(${date.toLocaleString()})</span><br>
+          ${item["التعليق"]}`;
+        commentList.appendChild(commentBox);
+      });
+    })
+    .catch(error => {
+      console.error("Error loading comments:", error);
+    });
+  }
+</script>
 
 <script>
   function submitComment(event) {
