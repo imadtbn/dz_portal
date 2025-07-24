@@ -1213,73 +1213,60 @@ dir="rtl" style="text-align: right; background-color: white; border: 1px solid #
   </ul>
 </section>
 
- <!-- قسم التعليقات والإستفسارات -->
-<section id="comments-section" dir="rtl" style="margin-top: 30px;">
-
-  <h2 onclick="toggleSection('comments-content', this)" style="cursor:pointer; background-color: #388e3c; color: white; padding: 15px; border-radius: 10px;">
-    🗨️ التعليقات والاستفسارات
-  </h2>
-
-  <div id="comments-content" style="display: none; padding: 20px; background-color: #e8f5e9; border-radius: 15px;">
-    <form id="commentForm" onsubmit="submitComment(event)" style="max-width: 600px; margin: auto;">
-
+<!-- ✅ قسم التعليقات -->
+<section id="comment-section">
+  <h2 onclick="toggleComments()">💬 التعليقات والاستفسارات</h2>
+  <div class="comment-form" id="commentForm">
+    <form id="form">
       <label for="name">الاسم الكامل:</label>
-      <input type="text" id="name" required style="width: 100%; padding: 10px; margin-bottom: 15px; border-radius: 8px; border: 1px solid #ccc;">
+      <input type="text" id="name" name="name" required>
 
       <label for="email">البريد الإلكتروني:</label>
-      <input type="email" id="email" required style="width: 100%; padding: 10px; margin-bottom: 15px; border-radius: 8px; border: 1px solid #ccc;">
+      <input type="email" id="email" name="email" required>
 
-      <label for="comment">التعليق أو الاستفسار:</label>
-      <textarea id="comment" rows="5" required style="width: 100%; padding: 10px; margin-bottom: 15px; border-radius: 8px; border: 1px solid #ccc;"></textarea>
+      <label for="message">تعليقك أو استفسارك:</label>
+      <textarea id="message" name="message" rows="4" required></textarea>
 
-      <button type="submit" style="background-color: #43a047; color: white; border: none; padding: 10px 20px; border-radius: 8px;">📤 إرسال</button>
-
-      <div id="statusMessage" style="margin-top: 15px; text-align: center; color: #2e7d32; font-weight: bold;"></div>
+      <button type="submit">📨 إرسال التعليق</button>
+      <div class="success-message" id="successMsg"></div>
     </form>
   </div>
 </section>
 
 <script>
-  // إظهار/إخفاء القسم عند الضغط على العنوان
-  function toggleSection(id, header) {
-    var content = document.getElementById(id);
-    if (content.style.display === "none") {
-      content.style.display = "block";
-    } else {
-      content.style.display = "none";
-    }
+  function toggleComments() {
+    const form = document.getElementById('commentForm');
+    form.style.display = form.style.display === 'none' ? 'block' : 'none';
   }
 
-  // إرسال البيانات إلى Google Sheets
-  async function submitComment(event) {
-    event.preventDefault();
+  document.getElementById('form').addEventListener('submit', function(e) {
+    e.preventDefault();
 
-    const name = document.getElementById("name").value.trim();
-    const email = document.getElementById("email").value.trim();
-    const comment = document.getElementById("comment").value.trim();
-    const status = document.getElementById("statusMessage");
+    const scriptURL = 'https://script.google.com/macros/s/AKfycby04ImyuI3a1EYjARpvTSqME8q4y5dchZNFRKqMsIWmx5Xh7fA6f31zVPwCV7-1l9UMnA/exec'; // ← 🔁 استبدله برابط Web App الخاص بك
 
-    try {
-      const response = await fetch("https://script.google.com/macros/s/AKfycby04ImyuI3a1EYjARpvTSqME8q4y5dchZNFRKqMsIWmx5Xh7fA6f31zVPwCV7-1l9UMnA/exec", {
-        method: "POST",
-        body: JSON.stringify({ name, email, comment }),
-        headers: { "Content-Type": "application/json" },
-      });
+    const formData = {
+      name: document.getElementById('name').value,
+      email: document.getElementById('email').value,
+      message: document.getElementById('message').value
+    };
 
-      if (response.ok) {
-        status.textContent = "✅ تم إرسال تعليقك بنجاح. شكرًا لك!";
-        document.getElementById("commentForm").reset();
-      } else {
-        status.textContent = "❌ حدث خطأ أثناء الإرسال. حاول لاحقًا.";
-      }
-    } catch (error) {
-      status.textContent = "❌ فشل في الاتصال بالخادم.";
-    }
-  }
+    fetch(scriptURL, {
+      method: 'POST',
+      body: JSON.stringify(formData),
+      headers: { 'Content-Type': 'application/json' }
+    })
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('successMsg').textContent = "✅ تم إرسال تعليقك بنجاح";
+      document.getElementById('form').reset();
+    })
+    .catch(error => {
+      document.getElementById('successMsg').textContent = "❌ حدث خطأ أثناء الإرسال";
+    });
+  });
 </script>
-
-
-<!-- الفوتر -->
+ 
+ <!-- الفوتر -->
 <footer>
 <div dir="rtl" style="display: flex; justify-content: center; align-items: center; gap: 12px; text-align: right;">
 <i class="fas fa-cogs"></i><span>© 2025 البوابة الجزائرية للخدمات الرقمية</span>
