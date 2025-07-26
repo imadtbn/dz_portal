@@ -1217,7 +1217,7 @@ dir="rtl" style="text-align: right; background-color: white; border: 1px solid #
 <section id="comments-section" dir="rtl" style="margin-top: 30px;">
 
   <h2 onclick="toggleSection('comments-content', this)" style="cursor:pointer; background-color: #388e3c; color: white; padding: 15px; border-radius: 10px;">
-    🗨️ التعليقات والاستفسارات
+    <i class="fas fa-comments"></i> التعليقات والاستفسارات
   </h2>
 
   <div id="comments-content" style="display: none; padding: 20px; background-color: #e8f5e9; border-radius: 15px;">
@@ -1232,12 +1232,15 @@ dir="rtl" style="text-align: right; background-color: white; border: 1px solid #
       <label for="comment">التعليق أو الاستفسار:</label>
       <textarea id="comment" rows="5" required style="width: 100%; padding: 10px; margin-bottom: 15px; border-radius: 8px; border: 1px solid #ccc;"></textarea>
 
-      <button type="submit" style="background-color: #43a047; color: white; border: none; padding: 10px 20px; border-radius: 8px;">📤 إرسال</button>
+      <button type="submit" style="background-color: #43a047; color: white; border: none; padding: 10px 20px; border-radius: 8px; font-size: 16px;">
+        <i class="fas fa-paper-plane"></i> إرسال
+      </button>
 
       <div id="statusMessage" style="margin-top: 15px; text-align: center; color: #2e7d32; font-weight: bold;"></div>
     </form>
   </div>
 </section>
+
 
 <script>
   // إظهار/إخفاء القسم عند الضغط على العنوان
@@ -1260,7 +1263,7 @@ dir="rtl" style="text-align: right; background-color: white; border: 1px solid #
     const status = document.getElementById("statusMessage");
 
     try {
-      const response = await fetch("https://script.google.com/macros/s/AKfycbzJmN_3axIibQ-nRE3DRthZIZrNHYQg_ymev4pwlEQ9oS2X0zZhNb_xKXo7_Dh5obMxBw/exec", {
+      const response = await fetch("https://script.google.com/macros/s/AKfycbyDRWzeCJfieCHy9iCvy0PV3LmZTMRU5sGbBC_yD_HYyIn7SXOgrEhMTGX3V3jDA2He6w/exec", {
         method: "POST",
         body: JSON.stringify({ name, email, comment }),
         headers: { "Content-Type": "application/json" },
