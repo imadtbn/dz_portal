@@ -1289,6 +1289,7 @@ dir="rtl" style="text-align: right; background-color: white; border: 1px solid #
     }
   }
 
+<script>
   // إرسال البيانات إلى Google Sheets
   async function submitComment(event) {
     event.preventDefault();
@@ -1298,11 +1299,17 @@ dir="rtl" style="text-align: right; background-color: white; border: 1px solid #
     const comment = document.getElementById("comment").value.trim();
     const status = document.getElementById("statusMessage");
 
+    // التحقق من الإدخال
+    if (!name || !email || !comment) {
+      status.textContent = "❗ الرجاء ملء جميع الحقول.";
+      return;
+    }
+
     try {
       const response = await fetch("https://script.google.com/macros/s/AKfycbwe3tRUEQ9eY9oDRmj8_IcAg3U4WZbKXeUofjFDMq_DJhdGn2nIlFYxqlNBo9RnTUFR7g/exec", {
         method: "POST",
-        body: JSON.stringify({ name, email, comment }),
         headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name, email, comment }),
       });
 
       if (response.ok) {
@@ -1316,7 +1323,6 @@ dir="rtl" style="text-align: right; background-color: white; border: 1px solid #
     }
   }
 </script>
-
  
  <!-- الفوتر -->
 <footer>
