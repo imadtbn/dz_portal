@@ -1216,9 +1216,12 @@ dir="rtl" style="text-align: right; background-color: white; border: 1px solid #
 <!-- قسم التعليقات والإستفسارات -->
 <section id="comments-section" dir="rtl" style="margin-top: 30px;">
 
-  <h2 dir="rtl" onclick="toggleSection('comments-content', this)" style="cursor:pointer; background-color: #388e3c; color: white; padding: 15px; border-radius: 10px; text-align: left;">
-    <i class="fas fa-comments"></i> التعليقات والاستفسارات
-  </h2>
+<h2 dir="rtl"
+    style="direction: rtl; text-align: right; background-color: #388e3c; color: white; padding: 15px; border-radius: 10px; cursor: pointer;"
+    onclick="toggleSection('comments-content', this)">
+  <i class="fas fa-comments"></i> التعليقات والاستفسارات
+</h2>
+
 
   <div id="comments-content" style="display: none; padding: 20px; background-color: #e8f5e9; border-radius: 15px;">
     <form id="commentForm" onsubmit="submitComment(event)" style="max-width: 600px; margin: auto;" dir="rtl">
