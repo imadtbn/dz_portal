@@ -1215,82 +1215,47 @@ dir="rtl" style="text-align: right; background-color: white; border: 1px solid #
 
 <!-- قسم التعليقات والاستفسارات -->
 <section dir="rtl" style="text-align: right;">
-  <h2 dir="rtl" id="toggle-14" onclick="toggleSection('emergency-numbers', this)" style="cursor: pointer; background-color: #a52a2a; color: white;">
-    <span><i class="fas fa-comments" style="color: #006400;"></i> التعليقات والاستفسارات </span>
+  <h2 onclick="toggleSection('comments-content', this)" style="cursor: pointer; background-color: #a52a2a; color: white; padding: 10px; border-radius: 8px;">
+    <span><i class="fas fa-comments" style="color: #006400;"></i> التعليقات والاستفسارات</span>
     <span class="toggle-icon" style="float: left;">▶</span>
   </h2>
 
   <div id="comments-content" style="display: none; background-color: #f9f9f9; padding: 25px; border-radius: 12px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); font-family: Arial;">
-
-    <form onsubmit="submitComment(event)">
+    <form id="commentForm" onsubmit="submitComment(event)">
       <label for="name"><i class="fas fa-user"></i> الاسم الكامل:</label>
       <input type="text" id="name" required style="width:100%; padding:10px; margin:10px 0; border:1px solid #ccc; border-radius:8px;">
 
       <label for="email"><i class="fas fa-envelope"></i> البريد الإلكتروني:</label>
       <input type="email" id="email" required style="width:100%; padding:10px; margin:10px 0; border:1px solid #ccc; border-radius:8px;">
 
-      <label for="message"><i class="fas fa-comment-dots"></i> الرسالة:</label>
-      <textarea id="message" required rows="4" style="width:100%; padding:10px; margin:10px 0; border:1px solid #ccc; border-radius:8px;"></textarea>
+      <label for="comment"><i class="fas fa-comment-dots"></i> الرسالة:</label>
+      <textarea id="comment" required rows="4" style="width:100%; padding:10px; margin:10px 0; border:1px solid #ccc; border-radius:8px;"></textarea>
 
       <button type="submit" style="background-color:#4caf50; color:white; border:none; padding:12px 20px; border-radius:8px; cursor:pointer; font-size:16px;">
         <i class="fas fa-paper-plane"></i> إرسال التعليق
       </button>
+
+      <p id="statusMessage" style="margin-top: 15px; color: #a52a2a;"></p>
     </form>
 
     <div id="commentList" style="margin-top:30px;"></div>
   </div>
 </section>
 
-<!-- سكربت التحكم -->
+<!-- السكربت -->
 <script>
   function toggleSection(id, header) {
     const section = document.getElementById(id);
+    const icon = header.querySelector('.toggle-icon');
     if (section.style.display === "none") {
       section.style.display = "block";
-      header.innerHTML = '<i class="fas fa-chevron-up"></i> إخفاء التعليقات والاستفسارات';
+      icon.textContent = "▼";
     } else {
       section.style.display = "none";
-      header.innerHTML = '<i class="fas fa-comments"></i> التعليقات والاستفسارات';
+      icon.textContent = "▶";
     }
   }
 
-  function submitComment(event) {
-    event.preventDefault();
-    const name = document.getElementById("name").value;
-    const email = document.getElementById("email").value;
-    const msg = document.getElementById("message").value;
-
-    const commentBox = document.createElement("div");
-    commentBox.style.borderBottom = "1px solid #ddd";
-    commentBox.style.padding = "10px 0";
-    commentBox.innerHTML = `
-      <strong><i class="fas fa-user"></i> ${name}</strong> |
-      <em><i class="fas fa-envelope"></i> ${email}</em><br>
-      <p style="margin-top:5px;"><i class="fas fa-comment"></i> ${msg}</p>
-    `;
-
-    document.getElementById("commentList").appendChild(commentBox);
-    event.target.reset();
-  }
-</script>
-
-  <div id="commentList" style="margin-top:30px;"></div>
-</section>
-
-
-<script>
-  // إظهار/إخفاء القسم عند الضغط على العنوان
-  function toggleSection(id, header) {
-    var content = document.getElementById(id);
-    if (content.style.display === "none") {
-      content.style.display = "block";
-    } else {
-      content.style.display = "none";
-    }
-  }
-
-<script>
-  // إرسال البيانات إلى Google Sheets
   async function submitComment(event) {
     event.preventDefault();
 
@@ -1299,7 +1264,6 @@ dir="rtl" style="text-align: right; background-color: white; border: 1px solid #
     const comment = document.getElementById("comment").value.trim();
     const status = document.getElementById("statusMessage");
 
-    // التحقق من الإدخال
     if (!name || !email || !comment) {
       status.textContent = "❗ الرجاء ملء جميع الحقول.";
       return;
@@ -1315,12 +1279,25 @@ dir="rtl" style="text-align: right; background-color: white; border: 1px solid #
       if (response.ok) {
         status.textContent = "✅ تم إرسال تعليقك بنجاح. شكرًا لك!";
         document.getElementById("commentForm").reset();
+        addCommentToList(name, email, comment);
       } else {
         status.textContent = "❌ حدث خطأ أثناء الإرسال. حاول لاحقًا.";
       }
     } catch (error) {
       status.textContent = "❌ فشل في الاتصال بالخادم.";
     }
+  }
+
+  function addCommentToList(name, email, comment) {
+    const commentBox = document.createElement("div");
+    commentBox.style.borderBottom = "1px solid #ddd";
+    commentBox.style.padding = "10px 0";
+    commentBox.innerHTML = `
+      <strong><i class="fas fa-user"></i> ${name}</strong> |
+      <em><i class="fas fa-envelope"></i> ${email}</em><br>
+      <p style="margin-top:5px;"><i class="fas fa-comment"></i> ${comment}</p>
+    `;
+    document.getElementById("commentList").appendChild(commentBox);
   }
 </script>
  
