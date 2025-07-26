@@ -748,7 +748,7 @@ dir="rtl" style="text-align: right;">
     <ul id="teacher-subsection" style="display: block; list-style: none; line-height: 2;">
       <li><i class="fas fa-chalkboard-teacher" style="color: #006400;"></i> <a href="https://ostad.education.dz/auth" target="_blank">فضاء الأستاذ - المنصة الرقمية</a></li>
       <li><i class="fas fa-clipboard-check" style="color: #006400;"></i> <a href="https://taqiim.education.dz/" target="_blank">فضاء الأستاذ - تقييم المكتسبات</a></li>
-      <li><i class="fas fa-chalkboard-teacher" style="color: #006400;"></i> <a href="https://tawdif.education.dz/" target="_blank">المنصة الرقمية لتوظيف الأساتذة المتعاقدين</a></li>
+      <li><i class="fas fa-chalkboard-teacher" style="unicolor: #006400;"></i> <a href="https://tawdif.education.dz/" target="_blank">المنصة الرقمية لتوظيف الأساتذة المتعاقدين</a></li>
       <li><i class="fas fa-briefcase" style="color: #006400;"></i> <a href="https://concour.onec.dz/" target="_blank">المنصة الرقمية للتوظيف</a></li>
     </ul>
 
@@ -1213,36 +1213,27 @@ dir="rtl" style="text-align: right; background-color: white; border: 1px solid #
   </ul>
 </section>
 
-<!-- قسم التعليقات والإستفسارات -->
-<section id="comments-section" dir="rtl" style="margin-top: 30px;">
+<!-- قسم التعليقات والاستفسارات -->
+<section id="comments-section" dir="rtl" style="margin: 40px auto; max-width: 700px; background-color: #f9f9f9; border-radius: 12px; padding: 25px; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
+  <h2 style="background-color: #4caf50; color: white; padding: 12px 20px; border-radius: 8px; font-size: 22px; margin-bottom: 20px;">
+    💬 التعليقات والاستفسارات
+  </h2>
 
-<h2 dir="rtl"
-    style="direction: rtl; text-align: right; background-color: #388e3c; color: white; padding: 15px; border-radius: 10px; cursor: pointer;"
-    onclick="toggleSection('comments-content', this)">
-  <i class="fas fa-comments"></i> التعليقات والاستفسارات
-</h2>
+  <form onsubmit="submitComment(event)">
+    <label for="name">الاسم الكامل:</label>
+    <input type="text" id="name" required style="width:100%; padding:10px; margin:10px 0; border:1px solid #ccc; border-radius:8px; font-family: Arial;">
 
+    <label for="message">الرسالة:</label>
+    <textarea id="message" required rows="4" style="width:100%; padding:10px; margin:10px 0; border:1px solid #ccc; border-radius:8px; font-family: Arial;"></textarea>
 
-  <div id="comments-content" style="display: none; padding: 20px; background-color: #e8f5e9; border-radius: 15px;">
-    <form id="commentForm" onsubmit="submitComment(event)" style="max-width: 600px; margin: auto;" dir="rtl">
+    <button type="submit" style="background-color:#4caf50; color:white; border:none; padding:12px 20px; border-radius:8px; cursor:pointer; font-size:16px;">
+      ✉️ إرسال التعليق
+    </button>
+  </form>
 
-      <label for="name" style="display: block; text-align: right;">الاسم الكامل:</label>
-      <input type="text" id="name" required style="width: 100%; padding: 10px; margin-bottom: 15px; border-radius: 8px; border: 1px solid #ccc; direction: rtl; text-align: right;">
-
-      <label for="email" style="display: block; text-align: right;">البريد الإلكتروني:</label>
-      <input type="email" id="email" required style="width: 100%; padding: 10px; margin-bottom: 15px; border-radius: 8px; border: 1px solid #ccc; direction: rtl; text-align: right;">
-
-      <label for="comment" style="display: block; text-align: right;">التعليق أو الاستفسار:</label>
-      <textarea id="comment" rows="5" required style="width: 100%; padding: 10px; margin-bottom: 15px; border-radius: 8px; border: 1px solid #ccc; direction: rtl; text-align: right;"></textarea>
-
-      <button type="submit" style="background-color: #43a047; color: white; border: none; padding: 10px 20px; border-radius: 8px; font-size: 16px;">
-        <i class="fas fa-paper-plane"></i> إرسال
-      </button>
-
-      <div id="statusMessage" style="margin-top: 15px; text-align: center; color: #2e7d32; font-weight: bold;"></div>
-    </form>
-  </div>
+  <div id="commentList" style="margin-top:30px;"></div>
 </section>
+
 
 <script>
   // إظهار/إخفاء القسم عند الضغط على العنوان
