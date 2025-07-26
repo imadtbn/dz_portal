@@ -1212,24 +1212,65 @@ dir="rtl" style="text-align: right; background-color: white; border: 1px solid #
     <li><i class="fab fa-facebook" style="color: #006400;"></i> <a href="https://www.f.com/" target="_blank">صفحتنا على فايسبوك</a></li>
   </ul>
 </section>
-
 <!-- قسم التعليقات والاستفسارات -->
-<section id="comments-section" dir="rtl" style="margin: 40px auto; max-width: 700px; background-color: #f9f9f9; border-radius: 12px; padding: 25px; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
-  <h2 style="background-color: #4caf50; color: white; padding: 12px 20px; border-radius: 8px; font-size: 22px; margin-bottom: 20px;">
-    💬 التعليقات والاستفسارات
+<section id="comments-section" dir="rtl" style="margin: 40px auto; max-width: 700px;">
+  <h2 onclick="toggleSection('comments-content', this)" style="cursor:pointer; background-color: #4caf50; color: white; padding: 12px 20px; border-radius: 8px; font-size: 22px;">
+    <i class="fas fa-comments"></i> التعليقات والاستفسارات
   </h2>
 
-  <form onsubmit="submitComment(event)">
-    <label for="name">الاسم الكامل:</label>
-    <input type="text" id="name" required style="width:100%; padding:10px; margin:10px 0; border:1px solid #ccc; border-radius:8px; font-family: Arial;">
+  <div id="comments-content" style="display: none; background-color: #f9f9f9; padding: 25px; border-radius: 12px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); font-family: Arial;">
 
-    <label for="message">الرسالة:</label>
-    <textarea id="message" required rows="4" style="width:100%; padding:10px; margin:10px 0; border:1px solid #ccc; border-radius:8px; font-family: Arial;"></textarea>
+    <form onsubmit="submitComment(event)">
+      <label for="name"><i class="fas fa-user"></i> الاسم الكامل:</label>
+      <input type="text" id="name" required style="width:100%; padding:10px; margin:10px 0; border:1px solid #ccc; border-radius:8px;">
 
-    <button type="submit" style="background-color:#4caf50; color:white; border:none; padding:12px 20px; border-radius:8px; cursor:pointer; font-size:16px;">
-      ✉️ إرسال التعليق
-    </button>
-  </form>
+      <label for="email"><i class="fas fa-envelope"></i> البريد الإلكتروني:</label>
+      <input type="email" id="email" required style="width:100%; padding:10px; margin:10px 0; border:1px solid #ccc; border-radius:8px;">
+
+      <label for="message"><i class="fas fa-comment-dots"></i> الرسالة:</label>
+      <textarea id="message" required rows="4" style="width:100%; padding:10px; margin:10px 0; border:1px solid #ccc; border-radius:8px;"></textarea>
+
+      <button type="submit" style="background-color:#4caf50; color:white; border:none; padding:12px 20px; border-radius:8px; cursor:pointer; font-size:16px;">
+        <i class="fas fa-paper-plane"></i> إرسال التعليق
+      </button>
+    </form>
+
+    <div id="commentList" style="margin-top:30px;"></div>
+  </div>
+</section>
+
+<!-- سكربت التحكم -->
+<script>
+  function toggleSection(id, header) {
+    const section = document.getElementById(id);
+    if (section.style.display === "none") {
+      section.style.display = "block";
+      header.innerHTML = '<i class="fas fa-chevron-up"></i> إخفاء التعليقات والاستفسارات';
+    } else {
+      section.style.display = "none";
+      header.innerHTML = '<i class="fas fa-comments"></i> التعليقات والاستفسارات';
+    }
+  }
+
+  function submitComment(event) {
+    event.preventDefault();
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const msg = document.getElementById("message").value;
+
+    const commentBox = document.createElement("div");
+    commentBox.style.borderBottom = "1px solid #ddd";
+    commentBox.style.padding = "10px 0";
+    commentBox.innerHTML = `
+      <strong><i class="fas fa-user"></i> ${name}</strong> |
+      <em><i class="fas fa-envelope"></i> ${email}</em><br>
+      <p style="margin-top:5px;"><i class="fas fa-comment"></i> ${msg}</p>
+    `;
+
+    document.getElementById("commentList").appendChild(commentBox);
+    event.target.reset();
+  }
+</script>
 
   <div id="commentList" style="margin-top:30px;"></div>
 </section>
