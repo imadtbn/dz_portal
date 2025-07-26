@@ -1213,31 +1213,33 @@ dir="rtl" style="text-align: right; background-color: white; border: 1px solid #
   </ul>
 </section>
 
-<!-- قسم التعليقات والاستفسارات -->
+<!-- قسم التعليقات والإستفسارات -->
 <section dir="rtl" style="text-align: right;">
   <h2 onclick="toggleSection('comments-content', this)" style="cursor: pointer; background-color: #a52a2a; color: white; padding: 10px; border-radius: 8px;">
     <span><i class="fas fa-comments" style="color: #006400;"></i> التعليقات والاستفسارات</span>
     <span class="toggle-icon" style="float: left;">▶</span>
   </h2>
 
-  <div id="comments-content" style="display: none; background-color: #f9f9f9; padding: 25px; border-radius: 12px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); font-family: Arial;">
-    <form id="commentForm" onsubmit="submitComment(event)">
+  <div id="comments-content" style="display: none; background-color: #f9f9f9; padding: 25px; border-radius: 12px; font-family: Arial;">
+    <form id="commentForm" action="https://docs.google.com/forms/d/e/1FAIpQLSe07UIELQ6JopTEmEF4VDVIm1n24S6ICOBLpFbb0Bg96-0KVA/formResponse" method="POST" target="hidden_iframe" onsubmit="formSubmitted();">
+      
       <label for="name"><i class="fas fa-user"></i> الاسم الكامل:</label>
-      <input type="text" id="name" required style="width:100%; padding:10px; margin:10px 0; border:1px solid #ccc; border-radius:8px;">
+      <input name="entry.884464217" type="text" id="name" required style="width:100%; padding:10px; margin:10px 0; border:1px solid #ccc; border-radius:8px;">
 
       <label for="email"><i class="fas fa-envelope"></i> البريد الإلكتروني:</label>
-      <input type="email" id="email" required style="width:100%; padding:10px; margin:10px 0; border:1px solid #ccc; border-radius:8px;">
+      <input name="entry.500401844" type="email" id="email" required style="width:100%; padding:10px; margin:10px 0; border:1px solid #ccc; border-radius:8px;">
 
       <label for="comment"><i class="fas fa-comment-dots"></i> الرسالة:</label>
-      <textarea id="comment" required rows="4" style="width:100%; padding:10px; margin:10px 0; border:1px solid #ccc; border-radius:8px;"></textarea>
+      <textarea name="entry.2136485942" id="comment" required rows="4" style="width:100%; padding:10px; margin:10px 0; border:1px solid #ccc; border-radius:8px;"></textarea>
 
       <button type="submit" style="background-color:#4caf50; color:white; border:none; padding:12px 20px; border-radius:8px; cursor:pointer; font-size:16px;">
         <i class="fas fa-paper-plane"></i> إرسال التعليق
       </button>
-
+      
       <p id="statusMessage" style="margin-top: 15px; color: #a52a2a;"></p>
     </form>
 
+    <iframe name="hidden_iframe" style="display:none;" onload="onIframeLoad();"></iframe>
     <div id="commentList" style="margin-top:30px;"></div>
   </div>
 </section>
@@ -1256,52 +1258,19 @@ dir="rtl" style="text-align: right; background-color: white; border: 1px solid #
     }
   }
 
-  async function submitComment(event) {
-    event.preventDefault();
-
-    const name = document.getElementById("name").value.trim();
-    const email = document.getElementById("email").value.trim();
-    const comment = document.getElementById("comment").value.trim();
-    const status = document.getElementById("statusMessage");
-
-    if (!name || !email || !comment) {
-      status.textContent = "❗ الرجاء ملء جميع الحقول.";
-      return;
-    }
-
-    try {
- const response = await fetch("https://script.google.com/macros/s/AKfycbyUWHZ62VU0jMJzG7ts7ChW72jocq-fNw_RNfkVL-8WsVcg-rhccTzE1HZTZdH-4AzqcQ/exec", {
-  method: "POST",
-  headers: { "Content-Type": "application/json" },
-  body: JSON.stringify({ name, email, comment }),
-});
-
-
-      if (response.ok) {
-        status.textContent = "✅ تم إرسال تعليقك بنجاح. شكرًا لك!";
-        document.getElementById("commentForm").reset();
-        addCommentToList(name, email, comment);
-      } else {
-        status.textContent = "❌ حدث خطأ أثناء الإرسال. حاول لاحقًا.";
-      }
-    } catch (error) {
-      status.textContent = "❌ فشل في الاتصال بالخادم.";
-    }
+  function formSubmitted() {
+    document.getElementById("statusMessage").innerHTML = "⏳ يتم الآن إرسال التعليق...";
   }
 
-  function addCommentToList(name, email, comment) {
-    const commentBox = document.createElement("div");
-    commentBox.style.borderBottom = "1px solid #ddd";
-    commentBox.style.padding = "10px 0";
-    commentBox.innerHTML = `
-      <strong><i class="fas fa-user"></i> ${name}</strong> |
-      <em><i class="fas fa-envelope"></i> ${email}</em><br>
-      <p style="margin-top:5px;"><i class="fas fa-comment"></i> ${comment}</p>
-    `;
-    document.getElementById("commentList").appendChild(commentBox);
+  function onIframeLoad() {
+    const form = document.getElementById("commentForm");
+    if (form) {
+      document.getElementById("statusMessage").innerHTML = "✅ تم إرسال تعليقك بنجاح. شكرًا لك!";
+      form.reset();
+    }
   }
 </script>
- 
+
  <!-- الفوتر -->
 <footer>
 <div dir="rtl" style="display: flex; justify-content: center; align-items: center; gap: 12px; text-align: right;">
