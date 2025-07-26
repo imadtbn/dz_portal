@@ -1271,58 +1271,6 @@ dir="rtl" style="text-align: right; background-color: white; border: 1px solid #
   }
 </script>
 
- <!-- مكان عرض التعليقات -->
-<div id="latest-comments" dir="rtl" style="margin-top: 30px; padding: 10px; background: #f1f1f1; border-radius: 10px;">
-  <h3>🗣️ آخر 5 تعليقات</h3>
-  <div id="comments-container">جارٍ التحميل...</div>
-</div>
-
-<!-- Google Visualization API -->
-<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-<script>
-  google.charts.load('current', {'packages':['table']});
-  google.charts.setOnLoadCallback(drawComments);
-
-  function drawComments() {
-    const query = new google.visualization.Query(
-      'https://docs.google.com/spreadsheets/d/1YV3UrEJXIGl04SR7kRBOP8yvLXJ0sIwUMXzpkEo3GD4/gviz/tq?sheet=ردود النموذج 1'
-    );
-
-    // ترتيب تنازلي حسب التاريخ وأخذ 5 فقط
-    query.setQuery('SELECT A, B, C, D ORDER BY A DESC LIMIT 5');
-    query.send(handleQueryResponse);
-  }
-
-  function handleQueryResponse(response) {
-    if (response.isError()) {
-      document.getElementById('comments-container').innerText = '❌ تعذر تحميل التعليقات.';
-      return;
-    }
-
-    const data = response.getDataTable();
-    let html = '';
-
-    for (let i = 0; i < data.getNumberOfRows(); i++) {
-      const date = new Date(data.getValue(i, 0)).toLocaleString();
-      const name = data.getValue(i, 1);
-      const email = data.getValue(i, 2);
-      const comment = data.getValue(i, 3);
-
-      html += `
-        <div style="border-bottom:1px solid #ccc; padding:10px 0;">
-          <strong><i class="fas fa-user"></i> ${name}</strong>
-          <em style="color:gray; font-size:small;"><i class="fas fa-envelope"></i> ${email}</em><br>
-          <span>${comment}</span><br>
-          <span style="font-size:small; color:#777;">🕒 ${date}</span>
-        </div>
-      `;
-    }
-
-    document.getElementById('comments-container').innerHTML = html;
-  }
-</script>
-
-
  <!-- الفوتر -->
 <footer>
 <div dir="rtl" style="display: flex; justify-content: center; align-items: center; gap: 12px; text-align: right;">
