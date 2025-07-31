@@ -1,17 +1,6 @@
 <!DOCTYPE html>
 <html dir="rtl" lang="ar">
 <head>
-
-<script>
-  // فتح جميع الروابط الخارجية في نافذة جديدة
-  document.querySelectorAll('a[href^="http"]').forEach(function(link) {
-    // التحقق من أن الرابط ليس داخليًا لموقعك
-    if (!link.href.includes(location.hostname)) {
-      link.setAttribute('target', '_blank');
-      link.setAttribute('rel', 'noopener noreferrer');
-    }
-  });
-</script>
  
  <!-- السكربت الخاص بتسجيل الـ Service Worker -->
  <script>
