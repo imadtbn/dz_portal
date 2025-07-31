@@ -1279,20 +1279,30 @@ dir="rtl" style="text-align: right; background-color: white; border: 1px solid #
   }
 </script>
 
-
-<!-- عداد زيارات وهمي -->
-<div id="visit-counter" style="font-family: Arial, sans-serif; background-color: #e8f5e9; color: #006400; padding: 10px 20px; margin-top: 30px; border-radius: 12px; width: fit-content; margin-right: auto; margin-left: auto; box-shadow: 0 2px 6px rgba(0,0,0,0.1); direction: rtl;">
+<!-- عداد الزيارات المتسارع -->
+<div id="visit-counter" style="font-family: Arial, sans-serif; background-color: #e8f5e9; color: #006400; padding: 10px 20px; margin-top: 30px; border-radius: 12px; width: fit-content; margin: 20px auto; box-shadow: 0 2px 6px rgba(0,0,0,0.1); direction: rtl; font-size: 18px;">
   👁️ عدد الزيارات: <span id="fake-counter">0</span>
 </div>
 
 <script>
-  // نحفظ العداد مؤقتًا في localStorage حتى لا يُعاد من البداية عند كل تحديث
-  let counter = localStorage.getItem('fakeVisitCount') || Math.floor(Math.random() * 500 + 100); // رقم ابتدائي وهمي بين 100 و600
-  counter = parseInt(counter) + Math.floor(Math.random() * 5 + 1); // نزيده بزيادة وهمية
+  // توليد رقم ابتدائي وهمي
+  let counter = localStorage.getItem('fakeVisitCount') || Math.floor(Math.random() * 1000 + 500);
+  counter = parseInt(counter);
 
-  document.getElementById('fake-counter').textContent = counter.toLocaleString('ar-EG'); // تنسيق الرقم بالعربية
-
+  // تحديث محلي للحفاظ على التزايد في نفس المتصفح
   localStorage.setItem('fakeVisitCount', counter);
+
+  // تحديث الرقم على الصفحة
+  const counterEl = document.getElementById('fake-counter');
+  counterEl.textContent = counter.toLocaleString('en-US');
+
+  // عداد متسارع وهمي يزيد الرقم كل ثانية
+  setInterval(() => {
+    const increment = Math.floor(Math.random() * 5 + 1); // زيادة عشوائية بين 1 و5
+    counter += increment;
+    counterEl.textContent = counter.toLocaleString('en-US');
+    localStorage.setItem('fakeVisitCount', counter);
+  }, 1200); // كل 1.2 ثانية تقريبًا
 </script>
 
  <!-- الفوتر -->
