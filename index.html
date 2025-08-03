@@ -568,30 +568,30 @@ style="; position: sticky; top: 0; z-index: 1000;">
   <i class="fas fa-download" style="margin-left: 5px;"></i> تثبيت التطبيق
 </button>
 
-<!-- شريط الأخبار -->
+<!-- شريط الأخبار مع روابط قابلة للنقر -->
 <div 
-dir="rtl" style="position: sticky; top: 0; z-index: 999; background-color: #006233; color: white; padding: 8px 17px; font-weight: bold; font-size: 17px; overflow: hidden; white-space: nowrap; text-shadow: 1px 1px 2px #000;">
-  <div class="news-ticker" id="newsTicker" style="display: inline-block; white-space: nowrap;">
-    🆕 آخر التحديثات: إطلاق بوابة جزائرية للخدمات الرقمية | 💻 إستفد من الخدمات الرقمية عن بعد في الجزائر بكل سهولة وسرعة | 🔐 البوابة تعمل في بيئة آمنة – بياناتك محمية | 🤝 شارك البوابة مع أصدقائك وساهم في نشر الثقافة الرقمية | ⚡ سونلغاز تنضم إلى عائلة بريدي موب | 📲 حمّل تطبيق بريدي موب وادفع فاتورتك من بيتك بكل أمان | 🧑🏫 افتتاح المنصة الرقمية لتوظيف الأساتذة المتعاقدين – سجّل الآن | 👋 مرحبًا بكم في بوابة الخدمات الرقمية المتوفرة في الجزائر | 🛂 إطلاق خدمة تسديد حقوق الطابع الخاصة بالسفر عبر الحدود البرية | نتائج البكالوريا 2025 – تهنئة للناجحين | 📥 يمكنكم تثبيت التطبيق على هواتفكم لتسهيل الوصول للخدمات
-✅ إفتتاح التسجيلات الأولية بالنسبة للراغبين في الإلتحاق بصفوف الجيش الوطني الشعبي  عبر الرابط
-https://preinscription.mdn.dz/
-📢 يمكنكم استخراج شهاده السلبيه العقارية من البوابة  الرقمية https://fadaeldjazair.mf.gov.dz/EDCFPUBLICHOME/
+  dir="rtl" 
+  style="position: sticky; top: 0; z-index: 999; background-color: #006233; color: white; padding: 8px 17px; font-weight: bold; font-size: 17px; text-shadow: 1px 1px 2px #000; overflow: hidden; white-space: nowrap;">
+  
+  <div id="newsTickerContainer" style="width: 100%; overflow: hidden; position: relative;">
+    <div id="newsTicker"
+      style="display: inline-block; white-space: nowrap; animation: scrollNews 60s linear infinite;">
+      🆕 آخر التحديثات: إطلاق بوابة جزائرية للخدمات الرقمية | 💻 إستفد من الخدمات الرقمية عن بعد في الجزائر بكل سهولة وسرعة | 🔐 البوابة تعمل في بيئة آمنة – بياناتك محمية | 🤝 شارك البوابة مع أصدقائك وساهم في نشر الثقافة الرقمية | ⚡ سونلغاز تنضم إلى عائلة بريدي موب | 📲 حمّل تطبيق بريدي موب وادفع فاتورتك من بيتك بكل أمان | 👋 مرحبًا بكم في بوابة الخدمات الرقمية | 🛂 خدمة تسديد حقوق الطابع الخاصة بالسفر | 🎓 نتائج البكالوريا 2025 – تهنئة للناجحين | 📥 ثبت التطبيق لتسهيل الوصول للخدمات | ✅ تسجيلات الجيش الوطني عبر <a href="https://preinscription.mdn.dz/" target="_blank" style="color: #fff; text-decoration: underline;">هذا الرابط</a> | 📢 استخراج شهادة السلبية العقارية عبر <a href="https://fadaeldjazair.mf.gov.dz/EDCFPUBLICHOME/" target="_blank" style="color: #fff; text-decoration: underline;">هذه البوابة</a> | 💳 تحميل WimPay-BNA عبر <a href="https://play.google.com/store/apps/details?id=com.beyn.bna.wimpay.customer" target="_blank" style="color: #fff; text-decoration: underline;">Google Play</a>
+    </div>
   </div>
 </div>
 
 <style>
-@keyframes scroll-right {
-  0%   { transform: translateX(-100%); }
-  100% { transform: translateX(100%); }
+@keyframes scrollNews {
+  0%   { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
 }
-
-.news-ticker {
-  animation: scroll-right 99s linear infinite;
+#newsTicker a {
+  color: #fff;
+  text-decoration: underline;
 }
-
-.news-ticker:hover {
-  animation-play-state: paused;
-  cursor: pointer;
+#newsTicker a:hover {
+  color: #ffd700;
 }
 </style>
 
