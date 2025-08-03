@@ -633,7 +633,7 @@ dir="rtl" style="text-align: center; background-color: #fbf4f3; margin-top: 10px
     </p>
 
 <div style="margin-top: 20px; font-size: 0.95em; color: #006233; font-weight: bold;">
-      📊 عدد الأقسام: 20 | عدد الخدمات المدرجة: 135 خدمة رقمية
+      📊 عدد الأقسام: 21 | عدد الخدمات المدرجة: 140 خدمة رقمية
     </div>
  
 </section>
@@ -825,17 +825,16 @@ dir="rtl" style="text-align: right;">
   </ul>
 </section>
 
-<!-- قسم التربية والتعليم والخدمات الجامعية -->
-<section 
-dir="rtl" style="text-align: right;">
-  <h2 id="toggle-7" onclick="toggleSection('education-section', this)" style="cursor: pointer; background-color: #006233; color: white; padding: 10px; border-radius: 8px;">
-    <span><i class="fas fa-laptop-house" style="color: white;"></i> التربية والتعليم والخدمات الجامعية <span class="count"></span></span>
+<!-- قسم التربية والتعليم -->
+<section dir="rtl" style="text-align: right;">
+  <h2 id="toggle-education" onclick="toggleSection('education-section', this)" style="cursor: pointer; background-color: #006233; color: white; padding: 10px; border-radius: 8px;">
+    <span><i class="fas fa-laptop-house" style="color: white;"></i> التربية والتعليم <span class="count"></span></span>
     <span class="toggle-icon" style="float: left;">▶</span>
   </h2>
 
   <div id="education-section" style="display: none; text-align: right; padding-right: 20px;">
 
-    <!-- قسم خدمات الأستاذ -->
+    <!-- فضاء الأستاذ -->
     <h3 onclick="toggleSection('teacher-subsection', this)" style="cursor: pointer; background-color: #f0faf6; color: #006233; padding: 8px; border-radius: 6px;">
       <span><i class="fas fa-chalkboard-teacher"></i> فضاء الأستاذ <span class="count"></span></span>
       <span class="toggle-icon" style="float: left;">▶</span>
@@ -843,59 +842,65 @@ dir="rtl" style="text-align: right;">
     <ul id="teacher-subsection" style="display: block; list-style: none; line-height: 2;">
       <li><i class="fas fa-chalkboard-teacher" style="color: #006400;"></i> <a href="https://ostad.education.dz/auth" target="_blank">فضاء الأستاذ - المنصة الرقمية</a></li>
       <li><i class="fas fa-clipboard-check" style="color: #006400;"></i> <a href="https://taqiim.education.dz/" target="_blank">فضاء الأستاذ - تقييم المكتسبات</a></li>
-      <li><i class="fas fa-chalkboard-teacher" style="unicolor: #006400;"></i> <a href="https://tawdif.education.dz/" target="_blank">المنصة الرقمية لتوظيف الأساتذة المتعاقدين</a></li>
+      <li><i class="fas fa-chalkboard-teacher" style="color: #006400;"></i> <a href="https://tawdif.education.dz/" target="_blank">توظيف الأساتذة المتعاقدين</a></li>
       <li><i class="fas fa-briefcase" style="color: #006400;"></i> <a href="https://concour.onec.dz/" target="_blank">المنصة الرقمية للتوظيف</a></li>
     </ul>
 
-    <!-- قسم خدمات الأولياء والتلاميذ -->
+    <!-- فضاء الأولياء والتلاميذ -->
     <h3 onclick="toggleSection('parents-subsection', this)" style="cursor: pointer; background-color: #f0faf6; color: #006233; padding: 8px; border-radius: 6px;">
       <span><i class="fas fa-users"></i> فضاء الأولياء والتلميذ <span class="count"></span></span>
       <span class="toggle-icon" style="float: left;">▶</span>
     </h3>
     <ul id="parents-subsection" style="display: block; list-style: none; line-height: 2;">
       <li><i class="fas fa-user-shield" style="color: #006400;"></i> <a href="https://awlyaa.education.dz/login" target="_blank">فضاء أولياء التلاميذ</a></li>
-      <li><i class="fas fa-file-alt" style="color: #006400;"></i> <a href="https://www.dzexams.com/" target="_blank">موقع تحضير الفروض والاختبارات</a></li>
-      <li><i class="fas fa-credit-card" style="color: #006400;"></i> <a href="https://epay.education.dz/auth" target="_blank">منصة الدفع الإلكتروني لوزارة التربية الوطنية في امتحانات BEM وBAC</a></li>
-      <li><i class="fas fa-file-signature" style="color: #006400;"></i> <a href="https://bem.onec.dz/" target="_blank">التسجيل في امتحان شهادة التعليم المتوسط</a></li>
-      <li><i class="fas fa-file-signature" style="color: #006400;"></i> <a href="https://bac.onec.dz/" target="_blank">التسجيل في امتحان البكالوريا</a></li>
+      <li><i class="fas fa-file-alt" style="color: #006400;"></i> <a href="https://www.dzexams.com/" target="_blank">تحضير الفروض والاختبارات</a></li>
+      <li><i class="fas fa-credit-card" style="color: #006400;"></i> <a href="https://epay.education.dz/auth" target="_blank">الدفع الإلكتروني للـ BEM و BAC</a></li>
+      <li><i class="fas fa-file-signature" style="color: #006400;"></i> <a href="https://bem.onec.dz/" target="_blank">تسجيل شهادة التعليم المتوسط</a></li>
+      <li><i class="fas fa-file-signature" style="color: #006400;"></i> <a href="https://bac.onec.dz/" target="_blank">تسجيل شهادة البكالوريا</a></li>
     </ul>
 
-    <!-- قسم التعليم والتكوين عن بعد -->
+    <!-- التعليم والتكوين عن بعد -->
     <h3 onclick="toggleSection('distance-subsection', this)" style="cursor: pointer; background-color: #f0faf6; color: #006233; padding: 8px; border-radius: 6px;">
-      <span><i class="fas fa-wifi"></i> التعليم والتكوين عن بعد (بالمراسلة) <span class="count"></span></span>
+      <span><i class="fas fa-wifi"></i> التعليم والتكوين عن بعد <span class="count"></span></span>
       <span class="toggle-icon" style="float: left;">▶</span>
     </h3>
     <ul id="distance-subsection" style="display: block; list-style: none; line-height: 2;">
-      <li><i class="fas fa-laptop-house" style="color: #006400;"></i> <a href="https://awlyaa.education.dz/login" target="_blank">التسجيل في التعليم و التكوين عن بعد</a></li>
-      <li><i class="fas fa-award" style="color: #006400;"></i> <a href="https://www.onefd.edu.dz/att_niv_2025/" target="_blank">استخراج شهادة إثبات المستوى للسنة الدراسية 2025/2024</a></li>
+      <li><i class="fas fa-laptop-house" style="color: #006400;"></i> <a href="https://awlyaa.education.dz/login" target="_blank">التسجيل في التعليم عن بعد</a></li>
+      <li><i class="fas fa-award" style="color: #006400;"></i> <a href="https://www.onefd.edu.dz/att_niv_2025/" target="_blank">شهادة إثبات المستوى 2024/2025</a></li>
     </ul>
 
-
-        <!-- قسم الامتحانات والنتائج -->
-    
- <h3 onclick="toggleSection('parents-subsection', this)" style="cursor: pointer; background-color: #f0faf6; color: #006233; padding: 8px; border-radius: 6px;">
-  <span><i class="fas fa-users"></i> نتائج الامتحانات عن بعد (BEM-BAC) <span class="count"></span></span>
-  <span class="toggle-icon" style="float: left;">▶</span>
-</h3>
-<ul id="parents-subsection" style="display: block; list-style: none; line-height: 2;">
-  <li><i class="fas fa-graduation-cap" style="color: #006400;"></i><a href="https://bem.onec.dz/" target="_blank">نتائج امتحان شهادة التعليم المتوسط</a></li>
-  <li><i class="fas fa-certificate" style="color: #006400;"></i><a href="https://bac.onec.dz/" target="_blank">نتائج امتحان شهادة البكالوريا</a></li>
-</ul>
-
-    <!-- قسم خدمات الجامعات -->
-    <h3 onclick="toggleSection('university-subsection', this)" style="cursor: pointer; background-color: #f0faf6; color: #006233; padding: 8px; border-radius: 6px;">
-      <span><i class="fas fa-university"></i> خدمات جامعية - كل ما يحتاجه الطالب <span class="count"></span></span>
+    <!-- نتائج الامتحانات -->
+    <h3 onclick="toggleSection('exam-results', this)" style="cursor: pointer; background-color: #f0faf6; color: #006233; padding: 8px; border-radius: 6px;">
+      <span><i class="fas fa-graduation-cap"></i> نتائج الامتحانات الوطنية <span class="count"></span></span>
       <span class="toggle-icon" style="float: left;">▶</span>
     </h3>
-    <ul id="university-subsection" style="display: block; list-style: none; line-height: 2;">
-      <li><i class="fas fa-university" style="color: #006400;"></i> <a href="https://www.orientation-esi.dz/" target="_blank">التسجيل الأولي الجامعي</a></li>
-      <li><i class="fas fa-bed" style="color: #006400;"></i> <a href="https://progres.mesrs.dz/webonou/" target="_blank">طلبات الإيواء</a></li>
-      <li><i class="fas fa-exchange-alt" style="color: #006400;"></i> <a href="https://progres.mesrs.dz/webetu" target="_blank">التحويلات الجامعية</a></li>
-      <li><i class="fas fa-graduation-cap" style="color: #006400;"></i> <a href="http://www.preinscriptions.ufc.dz/#" target="_blank">التسجيلات الأولية في الليسانس والماستر 2025/2026</a></li>
-      <li><i class="fas fa-bus" style="color: #006400;"></i> <a href="https://play.google.com/store/apps/details?id=com.mesrs.mybus.mybusapp&amp;hl=ar" target="_blank">تحميل تطبيق MYBUS لتسهيل تنقلات الطلبة</a></li>
+    <ul id="exam-results" style="display: block; list-style: none; line-height: 2;">
+      <li><i class="fas fa-graduation-cap" style="color: #006400;"></i> <a href="https://bem.onec.dz/" target="_blank">نتائج شهادة التعليم المتوسط</a></li>
+      <li><i class="fas fa-certificate" style="color: #006400;"></i> <a href="https://bac.onec.dz/" target="_blank">نتائج شهادة البكالوريا</a></li>
     </ul>
 
   </div>
+</section>
+
+<!-- قسم الخدمات الجامعية -->
+<section
+ dir="rtl" style="text-align: right;">
+  <h2 id="toggle-8" style="cursor: pointer; background-color: #a52a2a; color: white;">
+    <span><i class="fas fa-user-graduate" style="color: #006400;"></i> الخدمات الجامعية وكل ما يحتاجه الطالب <span class="count"></span></span>
+    <span class="toggle-icon" style="float: left;">▶</span>
+  </h2>
+
+  <ul style="list-style: none; line-height: 2; padding: 0;">
+    <li><i class="fas fa-user-plus" style="color: #006400;"></i> <a href="https://www.orientation-esi.dz/" target="_blank">التسجيل الأولي الجامعي</a></li>
+    <li><i class="fas fa-sign-in-alt" style="color: #006400;"></i> <a href="https://progres.mesrs.dz/webfve/login.xhtml" target="_blank">منصة Progres</a></li>
+    <li><i class="fas fa-credit-card" style="color: #006400;"></i> <a href="https://progres.mesrs.dz/epaiement/epaiementI.xhtml" target="_blank">دفع حقوق إعادة التّسجيل</a></li>
+    <li><i class="fas fa-home" style="color: #006400;"></i> <a href="https://progres.mesrs.dz/epaiement/epaiementH.xhtml" target="_blank">دفع حقوق الإيواء</a></li>
+    <li><i class="fas fa-building" style="color: #006400;"></i> <a href="https://progres.mesrs.dz/webonou/" target="_blank">طلبات الإيواء</a></li>
+    <li><i class="fab fa-android" style="color: #006400;"></i> <a href="https://play.google.com/store/apps/details?id=app.progres.webetu&hl=ar" target="_blank">تحميل تطبيق Progres</a></li>
+    <li><i class="fas fa-random" style="color: #006400;"></i> <a href="https://progres.mesrs.dz/webetu" target="_blank">التحويلات الجامعية</a></li>
+    <li><i class="fas fa-file-signature" style="color: #006400;"></i> <a href="http://www.preinscriptions.ufc.dz/#" target="_blank">تسجيلات الليسانس والماستر 2025/2026</a></li>
+    <li><i class="fas fa-bus-alt" style="color: #006400;"></i> <a href="https://play.google.com/store/apps/details?id=com.mesrs.mybus.mybusapp&amp;hl=ar" target="_blank">تحميل تطبيق MYBUS</a></li>
+  </ul>
 </section>
 
 <!-- قسم التكوين والتعليم المهنيين  -->
