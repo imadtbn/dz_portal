@@ -1,33 +1,3 @@
-<!DOCTYPE html>
-<html lang="ar" dir="rtl">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>لوحة التحكم - dz_portal</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" />
-</head>
-<body class="bg-gray-50">
-  <div id="root"></div>
-  <script type="module">
-    import React from "https://cdn.skypack.dev/react";
-    import ReactDOM from "https://cdn.skypack.dev/react-dom";
-    import AdminDashboard from "./AdminDashboard.js";
-
-    ReactDOM.render(
-      React.createElement(AdminDashboard),
-      document.getElementById("root")
-    );
-  </script>
-</body>
-</html>
-
-
----
-
-# index.html (قالب جاهز لوضعه في /admin/index.html)
-
-```html
 <!doctype html>
 <html lang="ar">
 <head>
@@ -40,45 +10,17 @@
 <body class="antialiased bg-gray-50">
   <div id="root"></div>
 
-  <!-- React + ReactDOM + Babel (تجريبي وبسيط لمحرّك بدون بناء). لا تستعمل هذا للتشغيل الإنتاجي. -->
+  <!-- React + ReactDOM + Babel (للتجربة فقط، غير مناسب للإنتاج) -->
   <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
   <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
   <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 
-  <!-- قم بلصق كود المكون React الموجود في ملف الكانفس كـ admin.jsx هنا أو استورده عبر <script type="text/babel" src="admin.jsx"></script> -->
+  <!-- مكون لوحة التحكم -->
   <script type="text/babel" src="admin.jsx"></script>
 
   <script type="text/babel">
-    // Mount point. افترض أن المكون الافتراضي مُصدَّر كـ default
-    const App = window.AdminDashboardDefault || (typeof window.AdminDashboard === 'function' ? window.AdminDashboard : null);
-    if (App) {
-      const root = ReactDOM.createRoot(document.getElementById('root'));
-      root.render(React.createElement(App));
-    } else {
-      document.getElementById('root').innerText = 'يرجى لصق مكوّن اللوحة في admin.jsx أو تحميله كـ window.AdminDashboardDefault';
-    }
+    const root = ReactDOM.createRoot(document.getElementById('root'));
+    root.render(<AdminDashboard />);
   </script>
 </body>
 </html>
-```
-
-# خطوات النشر داخل المستودع (خلاصة، منفذة فورًا)
-
-1. أنشئ مجلد `admin/` في المستودع.
-2. أنشئ ملف `admin/index.html` و انسخ القالب أعلاه.
-3. افتح المستند الذي أنشأته في الكانفس "لوحة تحكم لإضافة خدمات جديدة - dz_portal (React صفحة واحدة)" وانسخ محتوى المكوّن React (الملف الوحيد الموجود هناك). الصقه في `admin/admin.jsx`.
-   - إذا رغبت ببناء أبسط فالصق الكود داخل `admin/index.html` كـ `<script type="text/babel">...كود...</script>`.
-4. ادفع التغييرات إلى المستودع. على GitHub Pages، صفحـة اللوحة ستكون في `https://<owner>.github.io/<repo>/admin/`.
-5. لا تستخدم توكن GitHub في المتصفح على بيئة عامة. بديل آمن: استعمل GitHub Actions أو واجهة خلفية لختم التغييرات.
-
-# أريد أنأنفذ لك الآن
-
-لقد جهزت مكوّن React كاملًا في الكانفس. إذا تريد، أنشئ لي ملف `admin/index.html` و `admin/admin.jsx` جاهزين داخل المستودع هنا. أستطيع توليد ملفات HTML/JS كاملة قابلة للنسخ مباشرة.
-
-(ملحوظة أمنيّة: لا أدرج توكنات هنا. عند طلب نشر أو حفظ إلى GitHub عبر المتصفح، استخدم توكن محدود أو GitHub Action.)
-
-
-ممتاز. أضفت قالب index.html وتعليمات النشر إلى نفس الملف في الكانفس. خطوات التنفيذ جاهزة وعملية.
-
-أمُر واحد: هل تريد أن أصدّر الآن ملفين جاهزين للنسخ (admin/index.html و admin/admin.jsx) هنا لتنسخهما فوراً إلى مستودعك؟
-
