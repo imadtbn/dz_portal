@@ -1,224 +1,84 @@
-import React, { useEffect, useMemo, useState } from "react";
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>لوحة التحكم - dz_portal</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" />
+</head>
+<body class="bg-gray-50">
+  <div id="root"></div>
+  <script type="module">
+    import React from "https://cdn.skypack.dev/react";
+    import ReactDOM from "https://cdn.skypack.dev/react-dom";
+    import AdminDashboard from "./AdminDashboard.js";
+
+    ReactDOM.render(
+      React.createElement(AdminDashboard),
+      document.getElementById("root")
+    );
+  </script>
+</body>
+</html>
+
+
+---
+
+# index.html (قالب جاهز لوضعه في /admin/index.html)
+
+```html
+<!doctype html>
+<html lang="ar">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>لوحة تحكم dz_portal — Admin</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="antialiased bg-gray-50">
+  <div id="root"></div>
+
+  <!-- React + ReactDOM + Babel (تجريبي وبسيط لمحرّك بدون بناء). لا تستعمل هذا للتشغيل الإنتاجي. -->
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+  <!-- قم بلصق كود المكون React الموجود في ملف الكانفس كـ admin.jsx هنا أو استورده عبر <script type="text/babel" src="admin.jsx"></script> -->
+  <script type="text/babel" src="admin.jsx"></script>
+
+  <script type="text/babel">
+    // Mount point. افترض أن المكون الافتراضي مُصدَّر كـ default
+    const App = window.AdminDashboardDefault || (typeof window.AdminDashboard === 'function' ? window.AdminDashboard : null);
+    if (App) {
+      const root = ReactDOM.createRoot(document.getElementById('root'));
+      root.render(React.createElement(App));
+    } else {
+      document.getElementById('root').innerText = 'يرجى لصق مكوّن اللوحة في admin.jsx أو تحميله كـ window.AdminDashboardDefault';
+    }
+  </script>
+</body>
+</html>
+```
+
+# خطوات النشر داخل المستودع (خلاصة، منفذة فورًا)
+
+1. أنشئ مجلد `admin/` في المستودع.
+2. أنشئ ملف `admin/index.html` و انسخ القالب أعلاه.
+3. افتح المستند الذي أنشأته في الكانفس "لوحة تحكم لإضافة خدمات جديدة - dz_portal (React صفحة واحدة)" وانسخ محتوى المكوّن React (الملف الوحيد الموجود هناك). الصقه في `admin/admin.jsx`.
+   - إذا رغبت ببناء أبسط فالصق الكود داخل `admin/index.html` كـ `<script type="text/babel">...كود...</script>`.
+4. ادفع التغييرات إلى المستودع. على GitHub Pages، صفحـة اللوحة ستكون في `https://<owner>.github.io/<repo>/admin/`.
+5. لا تستخدم توكن GitHub في المتصفح على بيئة عامة. بديل آمن: استعمل GitHub Actions أو واجهة خلفية لختم التغييرات.
+
+# أريد أنأنفذ لك الآن
+
+لقد جهزت مكوّن React كاملًا في الكانفس. إذا تريد، أنشئ لي ملف `admin/index.html` و `admin/admin.jsx` جاهزين داخل المستودع هنا. أستطيع توليد ملفات HTML/JS كاملة قابلة للنسخ مباشرة.
+
+(ملحوظة أمنيّة: لا أدرج توكنات هنا. عند طلب نشر أو حفظ إلى GitHub عبر المتصفح، استخدم توكن محدود أو GitHub Action.)
+
+
+ممتاز. أضفت قالب index.html وتعليمات النشر إلى نفس الملف في الكانفس. خطوات التنفيذ جاهزة وعملية.
+
+أمُر واحد: هل تريد أن أصدّر الآن ملفين جاهزين للنسخ (admin/index.html و admin/admin.jsx) هنا لتنسخهما فوراً إلى مستودعك؟
 
-/**
-
-Admin Dashboard for dz_portal
-
-Single-file React component. Drop it into /admin/index.html via a bundler-less preview in ChatGPT canvas,
-
-or copy JSX into your setup (Vite/CRA). Uses only browser fetch. No external libs required.
-
-What it does
-
-Load services JSON from GitHub (Contents API) or from a pasted JSON.
-
-
-Add/Edit/Delete services with validation.
-
-
-Reorder by drag buttons.
-
-
-Filter + search.
-
-
-Export/Import JSON.
-
-
-Commit back to GitHub (client-side) using a Personal Access Token.
-
-
-Autosave draft to localStorage.
-
-
-Security note
-
-Putting a PAT in the browser is risky. Prefer a fine-scoped classic token (repo:public_repo) and revoke after use,
-
-
-or use a GitHub Action with a webhook. For quick edits on GitHub Pages this works. */
-
-
-// ---------- Types ---------- /** @typedef {{
-
-id: string,
-
-title: string,
-
-url: string,
-
-category: string,
-
-icon: string,   // e.g. "fas fa-landmark"
-
-color: string,  // e.g. "#006400"
-
-description?: string,
-
-tags?: string[],
-
-active?: boolean,
-
-phone?: string,
-
-}} Service */
-
-
-// ---------- Helpers ---------- const uid = () => Math.random().toString(36).slice(2, 10); const b64 = (s) => typeof btoa !== "undefined" ? btoa(unescape(encodeURIComponent(s))) : Buffer.from(s, "utf-8").toString("base64"); const fromB64 = (s) => typeof atob !== "undefined" ? decodeURIComponent(escape(atob(s))) : Buffer.from(s, "base64").toString("utf-8");
-
-const ls = { get(k, d) { try { return JSON.parse(localStorage.getItem(k) || "null") ?? d; } catch { return d; } }, set(k, v) { localStorage.setItem(k, JSON.stringify(v)); }, del(k) { localStorage.removeItem(k); } };
-
-const defaultSettings = { owner: "imadtbn", repo: "dz_portal", branch: "main", path: "data/services.json",   // change if your JSON lives elsewhere };
-
-const emptyService = /** @type {Service} */ ({ id: "", title: "", url: "", category: "", icon: "fas fa-link", color: "#1f2937", description: "", tags: [], active: true, phone: "", });
-
-// ---------- Main Component ---------- export default function AdminDashboard() { const [services, setServices] = useState(/** @type {Service[]} /([])); const [draft, setDraft] = useState/* @type {[Service, Function]} /([emptyService, () => {}]); const [editId, setEditId] = useState(/* @type {string | null} /(null)); const [query, setQuery] = useState(""); const [categoryFilter, setCategoryFilter] = useState("all"); const [settings, setSettings] = useState(ls.get("dzp_settings", defaultSettings)); const [githubToken, setGithubToken] = useState(ls.get("dzp_token", "")); const [loading, setLoading] = useState(false); const [fileSha, setFileSha] = useState(/* @type {string | null} */(null)); const [toast, setToast] = useState("");
-
-const categories = useMemo(() => { const set = new Set(services.map(s => s.category).filter(Boolean)); return Array.from(set).sort(); }, [services]);
-
-const filtered = useMemo(() => { const q = query.trim().toLowerCase(); return services .filter(s => categoryFilter === "all" || s.category === categoryFilter) .filter(s => !q || [s.title, s.url, s.category, s.description, (s.tags||[]).join(" ")] .some(v => (v||"").toLowerCase().includes(q)) ); }, [services, query, categoryFilter]);
-
-// Autosave draft + services useEffect(() => { ls.set("dzp_services", services); }, [services]); useEffect(() => { ls.set("dzp_draft", draft); }, [draft]); useEffect(() => { ls.set("dzp_settings", settings); }, [settings]); useEffect(() => { ls.set("dzp_token", githubToken); }, [githubToken]);
-
-// Restore from localStorage on first run useEffect(() => { const saved = ls.get("dzp_services", null); const savedDraft = ls.get("dzp_draft", null); if (saved) setServices(saved); if (savedDraft) setDraft(savedDraft); }, []);
-
-// ---------- GitHub API ---------- const ghHeaders = useMemo(() => ({ "Accept": "application/vnd.github+json", "Authorization": githubToken ? Bearer ${githubToken} : undefined, }), [githubToken]);
-
-async function loadFromGitHub() { setLoading(true); setToast(""); try { const url = https://api.github.com/repos/${settings.owner}/${settings.repo}/contents/${settings.path}?ref=${settings.branch}; const res = await fetch(url, { headers: ghHeaders }); if (!res.ok) throw new Error(HTTP ${res.status}); const json = await res.json(); if (!json.content) throw new Error("File has no content"); const text = fromB64(json.content); const data = JSON.parse(text); if (!Array.isArray(data)) throw new Error("JSON must be an array of services"); setServices(sanitizeServices(data)); setFileSha(json.sha || null); setToast("تم التحميل من GitHub"); } catch (e) { console.error(e); setToast("فشل التحميل من GitHub. تحقق من المسار والصلاحيات."); } finally { setLoading(false); } }
-
-async function saveToGitHub(message = "Update services.json") { setLoading(true); setToast(""); try { const url = https://api.github.com/repos/${settings.owner}/${settings.repo}/contents/${settings.path}; const body = { message, content: b64(JSON.stringify(services, null, 2)), branch: settings.branch, sha: fileSha || undefined, }; const res = await fetch(url, { method: "PUT", headers: { ...ghHeaders, "Content-Type": "application/json", }, body: JSON.stringify(body)}); if (!res.ok) throw new Error(HTTP ${res.status}); const out = await res.json(); setFileSha(out.content?.sha || null); setToast("تم الحفظ في GitHub"); } catch (e) { console.error(e); setToast("فشل الحفظ في GitHub. تأكد من التوكن وحقوق الكتابة."); } finally { setLoading(false); } }
-
-// ---------- CRUD ---------- function sanitizeServices(arr) { return arr.map((s, i) => ({ id: s.id || uid(), title: s.title?.trim() || خدمة ${i+1}, url: s.url?.trim() || "", category: s.category?.trim() || "عام", icon: s.icon?.trim() || "fas fa-link", color: s.color || "#1f2937", description: s.description || "", tags: Array.isArray(s.tags) ? s.tags : [], active: s.active !== false, phone: s.phone || "", })); }
-
-function startAdd() { setEditId(null); setDraft({ ...emptyService, id: uid() }); }
-
-function startEdit(id) { const s = services.find(x => x.id === id); if (!s) return; setEditId(id); setDraft({ ...s, tags: [...(s.tags||[])] }); }
-
-function remove(id) { if (!confirm("حذف الخدمة نهائيًا؟")) return; setServices(prev => prev.filter(x => x.id !== id)); if (editId === id) { setEditId(null); setDraft(emptyService); } }
-
-function up(id) { setServices(prev => { const i = prev.findIndex(x => x.id === id); if (i <= 0) return prev; const arr = [...prev]; const t = arr[i-1]; arr[i-1] = arr[i]; arr[i] = t; return arr; }); } function down(id) { setServices(prev => { const i = prev.findIndex(x => x.id === id); if (i === -1 || i >= prev.length-1) return prev; const arr = [...prev]; const t = arr[i+1]; arr[i+1] = arr[i]; arr[i] = t; return arr; }); }
-
-function saveDraft() { const clean = { ...draft, title: draft.title.trim(), url: draft.url.trim(), category: draft.category.trim() || "عام", icon: draft.icon.trim() || "fas fa-link", color: draft.color || "#1f2937", tags: (draft.tags || []).map(t => t.trim()).filter(Boolean) }; if (!clean.title || !clean.url) { alert("العنوان والرابط إجباريان"); return; } if (!/^https?:///i.test(clean.url) && !clean.url.startsWith("tel:")) { alert("الرابط يجب أن يبدأ بـ http أو https أو tel:"); return; } setServices(prev => { const i = prev.findIndex(x => x.id === clean.id); if (i === -1) return [clean, ...prev]; const arr = [...prev]; arr[i] = clean; return arr; }); setEditId(clean.id); setToast("تم حفظ التعديل في المسودة"); }
-
-function clearAll() { if (!confirm("مسح كل الخدمات من المسودة؟")) return; setServices([]); setEditId(null); setDraft(emptyService); }
-
-function exportJson() { const blob = new Blob([JSON.stringify(services, null, 2)], { type: "application/json" }); const url = URL.createObjectURL(blob); const a = document.createElement("a"); a.href = url; a.download = "services.json"; a.click(); URL.revokeObjectURL(url); }
-
-function importJson(file) { const reader = new FileReader(); reader.onload = () => { try { const data = JSON.parse(reader.result); if (!Array.isArray(data)) throw new Error(); setServices(sanitizeServices(data)); setToast("تم الاستيراد من ملف"); } catch { alert("ملف غير صالح"); } }; reader.readAsText(file); }
-
-// ---------- UI ---------- return ( <div className="min-h-screen bg-gray-50 text-gray-900 p-4 md:p-8"> <div className="max-w-7xl mx-auto space-y-6"> <header className="flex flex-col md:flex-row md:items-center md:justify-between gap-3"> <h1 className="text-2xl md:text-3xl font-bold">لوحة التحكم — dz_portal</h1> <div className="flex items-center gap-2 flex-wrap"> <button className="px-3 py-2 rounded-2xl shadow bg-white hover:bg-gray-100" onClick={startAdd}>خدمة جديدة</button> <button className="px-3 py-2 rounded-2xl shadow bg-white hover:bg-gray-100" onClick={saveDraft}>حفظ الخدمة</button> <button className="px-3 py-2 rounded-2xl shadow bg-white hover:bg-gray-100" onClick={exportJson}>تصدير JSON</button> <label className="px-3 py-2 rounded-2xl shadow bg-white hover:bg-gray-100 cursor-pointer"> استيراد JSON<input type="file" accept="application/json" className="hidden" onChange={e => e.target.files && importJson(e.target.files[0])} /> </label> <button className="px-3 py-2 rounded-2xl shadow bg-white hover:bg-gray-100" onClick={clearAll}>مسح الكل</button> </div> </header>
-
-<section className="grid md:grid-cols-3 gap-6">
-      {/* Editor */}
-      <div className="md:col-span-1">
-        <div className="bg-white rounded-2xl shadow p-4 space-y-3">
-          <h2 className="font-semibold">{editId ? "تعديل خدمة" : "إضافة خدمة"}</h2>
-          <Field label="العنوان"><input className="w-full border rounded-xl p-2" value={draft.title} onChange={e=>setDraft({...draft, title:e.target.value})} /></Field>
-          <Field label="الرابط (http/https أو tel:)"><input className="w-full border rounded-xl p-2" value={draft.url} onChange={e=>setDraft({...draft, url:e.target.value})} /></Field>
-          <Field label="التصنيف"><input className="w-full border rounded-xl p-2" placeholder="مثال: الوزارات، الاتصالات…" value={draft.category} onChange={e=>setDraft({...draft, category:e.target.value})} /></Field>
-          <Field label="أيقونة Font Awesome"><input className="w-full border rounded-xl p-2" placeholder="fas fa-landmark" value={draft.icon} onChange={e=>setDraft({...draft, icon:e.target.value})} /></Field>
-          <Field label="لون الأيقونة"><input className="w-full border rounded-xl p-2" type="color" value={draft.color} onChange={e=>setDraft({...draft, color:e.target.value})} /></Field>
-          <Field label="وصف مختصر"><textarea className="w-full border rounded-xl p-2" rows={3} value={draft.description} onChange={e=>setDraft({...draft, description:e.target.value})} /></Field>
-          <Field label="وسوم (مفصولة بفواصل)"><input className="w-full border rounded-xl p-2" value={(draft.tags||[]).join(", ")} onChange={e=>setDraft({...draft, tags: e.target.value.split(",").map(t=>t.trim()).filter(Boolean)})} /></Field>
-          <Field label="رقم هاتف اختياري"><input className="w-full border rounded-xl p-2" value={draft.phone||""} onChange={e=>setDraft({...draft, phone:e.target.value})} /></Field>
-          <div className="flex items-center gap-2"><input id="active" type="checkbox" checked={draft.active!==false} onChange={e=>setDraft({...draft, active:e.target.checked})} /><label htmlFor="active">مفعلة</label></div>
-        </div>
-
-        <div className="bg-white rounded-2xl shadow p-4 space-y-3 mt-4">
-          <h2 className="font-semibold">إعدادات GitHub</h2>
-          <Field label="المالك (owner)"><input className="w-full border rounded-xl p-2" value={settings.owner} onChange={e=>setSettings({...settings, owner:e.target.value})} /></Field>
-          <Field label="المستودع (repo)"><input className="w-full border rounded-xl p-2" value={settings.repo} onChange={e=>setSettings({...settings, repo:e.target.value})} /></Field>
-          <Field label="الفرع (branch)"><input className="w-full border rounded-xl p-2" value={settings.branch} onChange={e=>setSettings({...settings, branch:e.target.value})} /></Field>
-          <Field label="مسار الملف (path)"><input className="w-full border rounded-xl p-2" value={settings.path} onChange={e=>setSettings({...settings, path:e.target.value})} /></Field>
-          <Field label="GitHub Token"><input className="w-full border rounded-xl p-2" placeholder="ghp_…" value={githubToken} onChange={e=>setGithubToken(e.target.value)} /></Field>
-          <div className="flex gap-2">
-            <button className="px-3 py-2 rounded-2xl shadow bg-white hover:bg-gray-100" onClick={loadFromGitHub} disabled={loading}>{loading?"...":"تحميل من GitHub"}</button>
-            <button className="px-3 py-2 rounded-2xl shadow bg-white hover:bg-gray-100" onClick={()=>saveToGitHub("Update services.json via admin")} disabled={loading}>حفظ إلى GitHub</button>
-          </div>
-          <p className="text-xs text-gray-500">يتطلب صلاحية public_repo على الأقل. سيُحفظ الملف بصيغة JSON.</p>
-        </div>
-      </div>
-
-      {/* List + Filters */}
-      <div className="md:col-span-2">
-        <div className="bg-white rounded-2xl shadow p-4 mb-4">
-          <div className="flex flex-col md:flex-row gap-3 md:items-center md:justify-between">
-            <div className="flex gap-2 items-center">
-              <input placeholder="ابحث…" className="border rounded-xl p-2 w-72" value={query} onChange={e=>setQuery(e.target.value)} />
-              <select className="border rounded-xl p-2" value={categoryFilter} onChange={e=>setCategoryFilter(e.target.value)}>
-                <option value="all">كل التصنيفات</option>
-                {categories.map(c => <option key={c} value={c}>{c}</option>)}
-              </select>
-            </div>
-            <span className="text-sm text-gray-500">{filtered.length} / {services.length} خدمة</span>
-          </div>
-        </div>
-
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
-          {filtered.map(s => (
-            <div key={s.id} className={`rounded-2xl shadow p-4 border ${s.active!==false?"bg-white":"bg-gray-100 opacity-80"}`}>
-              <div className="flex items-start justify-between gap-3">
-                <div className="flex items-center gap-3">
-                  <i className={s.icon} style={{ color: s.color, fontSize: 24 }} aria-hidden />
-                  <div>
-                    <a href={s.url} target="_blank" rel="noreferrer" className="font-semibold hover:underline">{s.title}</a>
-                    <div className="text-xs text-gray-500">{s.category}</div>
-                  </div>
-                </div>
-                <div className="flex items-center gap-2">
-                  <button className="text-sm px-2 py-1 rounded-xl bg-gray-50 hover:bg-gray-100" onClick={()=>up(s.id)}>↑</button>
-                  <button className="text-sm px-2 py-1 rounded-xl bg-gray-50 hover:bg-gray-100" onClick={()=>down(s.id)}>↓</button>
-                  <button className="text-sm px-2 py-1 rounded-xl bg-gray-50 hover:bg-gray-100" onClick={()=>startEdit(s.id)}>تعديل</button>
-                  <button className="text-sm px-2 py-1 rounded-xl bg-red-50 hover:bg-red-100" onClick={()=>remove(s.id)}>حذف</button>
-                </div>
-              </div>
-              {s.description ? <p className="text-sm text-gray-600 mt-2">{s.description}</p> : null}
-              {(s.tags && s.tags.length) ? (
-                <div className="flex flex-wrap gap-2 mt-2">
-                  {s.tags.map((t,i)=>(<span key={i} className="text-xs px-2 py-1 rounded-full bg-gray-100">#{t}</span>))}
-                </div>
-              ) : null}
-              {s.phone ? <div className="text-xs mt-2"><a href={`tel:${s.phone}`} className="underline">{s.phone}</a></div> : null}
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-
-    {/* Preview as Cards */}
-    <section className="bg-white rounded-2xl shadow p-4">
-      <h2 className="font-semibold mb-3">معاينة شبكة البوابة</h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-        {services.map(s => (
-          <a key={s.id} href={s.url} target="_blank" rel="noreferrer" className={`block p-4 rounded-2xl border hover:shadow ${s.active!==false?"bg-white":"bg-gray-50 opacity-75"}`}>
-            <div className="flex items-center gap-3">
-              <i className={s.icon} style={{ color: s.color, fontSize: 22 }} aria-hidden />
-              <div>
-                <div className="font-semibold">{s.title}</div>
-                <div className="text-xs text-gray-500">{s.category}</div>
-              </div>
-            </div>
-          </a>
-        ))}
-      </div>
-    </section>
-
-    {toast && (
-      <div className="fixed bottom-4 left-1/2 -translate-x-1/2 bg-gray-900 text-white text-sm px-4 py-2 rounded-full shadow">
-        {toast}
-      </div>
-    )}
-
-    {loading && (
-      <div className="fixed inset-0 bg-black/5 grid place-items-center">
-        <div className="bg-white px-4 py-2 rounded-xl shadow">جارٍ التنفيذ…</div>
-      </div>
-    )}
-  </div>
-</div>
-
-); }
-
-function Field({ label, children }) { return ( <label className="block space-y-1"> <span className="text-sm text-gray-700">{label}</span> {children} </label> ); }
-
-            
