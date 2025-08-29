@@ -1030,6 +1030,62 @@
         
         // تهيئة أولية
         renderServicesTable();
+
+// في ملف admin.html، استبدال دالة saveService بـ:
+function saveService(service) {
+  let services = JSON.parse(localStorage.getItem('portalServices')) || [];
+  
+  if (service.id) {
+    // تعديل خدمة موجودة
+    const index = services.findIndex(s => s.id === service.id);
+    if (index !== -1) {
+      services[index] = service;
+    }
+  } else {
+    // إضافة خدمة جديدة
+    service.id = Date.now();
+    services.push(service);
+  }
+  
+  localStorage.setItem('portalServices', JSON.stringify(services));
+  return service.id;
+}
+
+// واستبدال دالة deleteService بـ:
+function deleteService(id) {
+  let services = JSON.parse(localStorage.getItem('portalServices')) || [];
+  services = services.filter(service => service.id !== id);
+  localStorage.setItem('portalServices', JSON.stringify(services));
+}
+
+// واستبدال دالة loadServices بـ:
+function loadServices() {
+  const services = JSON.parse(localStorage.getItem('portalServices')) || [];
+  const servicesContainer = document.getElementById('servicesContainer');
+  servicesContainer.innerHTML = '';
+  
+  services.forEach(service => {
+    addServiceToUI(service);
+  });
+  
+  // تحديث الإحصائيات
+  updateStats(services);
+}
+
+// وإضافة دالة updateStats:
+function updateStats(services) {
+  document.getElementById('totalServices').textContent = services.length;
+  
+  // حساب عدد الخدمات حسب الأقسام
+  const categories = {};
+  services.forEach(service => {
+    categories[service.category] = (categories[service.category] || 0) + 1;
+  });
+  
+  // يمكنك عرض هذه الإحصائيات في لوحة التحكم
+  console.log("الخدمات حسب الأقسام:", categories);
+}
+
     </script>
 </body>
 </html>
