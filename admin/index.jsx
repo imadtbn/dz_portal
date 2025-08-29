@@ -1,260 +1,108 @@
 // admin/admin.jsx
-import React, { useEffect, useMemo, useState } from "react";
+const { useState, useEffect } = React;
 
-/**
- * Admin Dashboard for dz_portal
- * لإضافة/تعديل/حذف الخدمات وحفظها في JSON على GitHub
- */
-
-// ---------- Helpers ----------
-const uid = () => Math.random().toString(36).slice(2, 10);
-const b64 = (s) =>
-  typeof btoa !== "undefined"
-    ? btoa(unescape(encodeURIComponent(s)))
-    : Buffer.from(s, "utf-8").toString("base64");
-const fromB64 = (s) =>
-  typeof atob !== "undefined"
-    ? decodeURIComponent(escape(atob(s)))
-    : Buffer.from(s, "base64").toString("utf-8");
-
-const ls = {
-  get(k, d) {
-    try {
-      return JSON.parse(localStorage.getItem(k) || "null") ?? d;
-    } catch {
-      return d;
-    }
-  },
-  set(k, v) {
-    localStorage.setItem(k, JSON.stringify(v));
-  },
-  del(k) {
-    localStorage.removeItem(k);
-  },
-};
-
-const defaultSettings = {
-  owner: "imadtbn",
-  repo: "dz_portal",
-  branch: "main",
-  path: "data/services.json",
-};
-
-const emptyService = {
-  id: "",
-  title: "",
-  url: "",
-  category: "",
-  icon: "fas fa-link",
-  color: "#1f2937",
-  description: "",
-  tags: [],
-  active: true,
-  phone: "",
-};
-
-// ---------- Component ----------
-export default function AdminDashboard() {
+function AdminDashboard() {
   const [services, setServices] = useState([]);
-  const [draft, setDraft] = useState(emptyService);
-  const [editId, setEditId] = useState(null);
-  const [query, setQuery] = useState("");
-  const [categoryFilter, setCategoryFilter] = useState("all");
-  const [settings, setSettings] = useState(ls.get("dzp_settings", defaultSettings));
-  const [githubToken, setGithubToken] = useState(ls.get("dzp_token", ""));
-  const [loading, setLoading] = useState(false);
-  const [fileSha, setFileSha] = useState(null);
-  const [toast, setToast] = useState("");
+  const [newService, setNewService] = useState({
+    id: "",
+    title: "",
+    url: "",
+    category: "",
+    icon: "",
+    color: "",
+    description: "",
+    tags: "",
+    active: true,
+    phone: ""
+  });
 
-  const categories = useMemo(() => {
-    const set = new Set(services.map((s) => s.category).filter(Boolean));
-    return Array.from(set).sort();
-  }, [services]);
-
-  const filtered = useMemo(() => {
-    const q = query.trim().toLowerCase();
-    return services
-      .filter((s) => categoryFilter === "all" || s.category === categoryFilter)
-      .filter((s) =>
-        !q
-          ? true
-          : [s.title, s.url, s.category, s.description, (s.tags || []).join(" ")]
-              .some((v) => (v || "").toLowerCase().includes(q))
-      );
-  }, [services, query, categoryFilter]);
-
-  // Autosave
+  // تحميل البيانات من ملف JSON
   useEffect(() => {
-    ls.set("dzp_services", services);
-  }, [services]);
-  useEffect(() => {
-    ls.set("dzp_draft", draft);
-  }, [draft]);
-  useEffect(() => {
-    ls.set("dzp_settings", settings);
-  }, [settings]);
-  useEffect(() => {
-    ls.set("dzp_token", githubToken);
-  }, [githubToken]);
-
-  useEffect(() => {
-    const saved = ls.get("dzp_services", null);
-    const savedDraft = ls.get("dzp_draft", null);
-    if (saved) setServices(saved);
-    if (savedDraft) setDraft(savedDraft);
+    fetch("../data/services.json")
+      .then(res => res.json())
+      .then(data => setServices(data))
+      .catch(() => setServices([]));
   }, []);
 
-  // ---------- CRUD ----------
-  function sanitizeServices(arr) {
-    return arr.map((s, i) => ({
-      id: s.id || uid(),
-      title: s.title?.trim() || `خدمة ${i + 1}`,
-      url: s.url?.trim() || "",
-      category: s.category?.trim() || "عام",
-      icon: s.icon?.trim() || "fas fa-link",
-      color: s.color || "#1f2937",
-      description: s.description || "",
-      tags: Array.isArray(s.tags) ? s.tags : [],
-      active: s.active !== false,
-      phone: s.phone || "",
-    }));
-  }
-
-  function startAdd() {
-    setEditId(null);
-    setDraft({ ...emptyService, id: uid() });
-  }
-
-  function startEdit(id) {
-    const s = services.find((x) => x.id === id);
-    if (!s) return;
-    setEditId(id);
-    setDraft({ ...s, tags: [...(s.tags || [])] });
-  }
-
-  function remove(id) {
-    if (!confirm("حذف الخدمة؟")) return;
-    setServices((prev) => prev.filter((x) => x.id !== id));
-    if (editId === id) {
-      setEditId(null);
-      setDraft(emptyService);
-    }
-  }
-
-  function up(id) {
-    setServices((prev) => {
-      const i = prev.findIndex((x) => x.id === id);
-      if (i <= 0) return prev;
-      const arr = [...prev];
-      [arr[i - 1], arr[i]] = [arr[i], arr[i - 1]];
-      return arr;
+  // إضافة خدمة جديدة
+  const addService = () => {
+    if (!newService.id || !newService.title) return;
+    setServices([...services, { ...newService, tags: newService.tags.split(",") }]);
+    setNewService({
+      id: "",
+      title: "",
+      url: "",
+      category: "",
+      icon: "",
+      color: "",
+      description: "",
+      tags: "",
+      active: true,
+      phone: ""
     });
-  }
-  function down(id) {
-    setServices((prev) => {
-      const i = prev.findIndex((x) => x.id === id);
-      if (i === -1 || i >= prev.length - 1) return prev;
-      const arr = [...prev];
-      [arr[i], arr[i + 1]] = [arr[i + 1], arr[i]];
-      return arr;
-    });
-  }
+  };
 
-  function saveDraftService() {
-    const clean = {
-      ...draft,
-      title: draft.title.trim(),
-      url: draft.url.trim(),
-      category: draft.category.trim() || "عام",
-      icon: draft.icon.trim() || "fas fa-link",
-      color: draft.color || "#1f2937",
-      tags: (draft.tags || []).map((t) => t.trim()).filter(Boolean),
-    };
-    if (!clean.title || !clean.url) {
-      alert("العنوان والرابط إجباريان");
-      return;
-    }
-    if (!/^https?:\\/\\//i.test(clean.url) && !clean.url.startsWith("tel:")) {
-      alert("الرابط يجب أن يبدأ بـ http أو https أو tel:");
-      return;
-    }
-    setServices((prev) => {
-      const i = prev.findIndex((x) => x.id === clean.id);
-      if (i === -1) return [clean, ...prev];
-      const arr = [...prev];
-      arr[i] = clean;
-      return arr;
-    });
-    setEditId(clean.id);
-    setToast("تم الحفظ");
-  }
+  // حذف خدمة
+  const deleteService = (id) => {
+    setServices(services.filter(s => s.id !== id));
+  };
 
-  // ---------- UI ----------
+  // حفظ الملف المعدل محليًا (تصدير JSON)
+  const exportJSON = () => {
+    const blob = new Blob([JSON.stringify(services, null, 2)], { type: "application/json" });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = "services.json";
+    a.click();
+    URL.revokeObjectURL(url);
+  };
+
   return (
-    <div className="min-h-screen bg-gray-50 text-gray-900 p-4">
-      <div className="max-w-6xl mx-auto space-y-6">
-        <header className="flex justify-between items-center">
-          <h1 className="text-xl font-bold">لوحة التحكم — dz_portal</h1>
-          <div className="flex gap-2">
-            <button onClick={startAdd}>جديد</button>
-            <button onClick={saveDraftService}>حفظ</button>
-          </div>
-        </header>
+    <div className="p-6 max-w-4xl mx-auto">
+      <h1 className="text-2xl font-bold mb-4">لوحة تحكم الخدمات</h1>
 
-        <section className="grid grid-cols-3 gap-6">
-          {/* النموذج */}
-          <div className="col-span-1 space-y-2 bg-white p-3 rounded-xl shadow">
-            <Field label="العنوان">
-              <input
-                value={draft.title}
-                onChange={(e) => setDraft({ ...draft, title: e.target.value })}
-              />
-            </Field>
-            <Field label="الرابط">
-              <input
-                value={draft.url}
-                onChange={(e) => setDraft({ ...draft, url: e.target.value })}
-              />
-            </Field>
-            <Field label="التصنيف">
-              <input
-                value={draft.category}
-                onChange={(e) =>
-                  setDraft({ ...draft, category: e.target.value })
-                }
-              />
-            </Field>
-          </div>
-
-          {/* القائمة */}
-          <div className="col-span-2 space-y-2">
-            {filtered.map((s) => (
-              <div key={s.id} className="p-3 bg-white rounded-xl shadow flex justify-between">
-                <div>
-                  <div className="font-semibold">{s.title}</div>
-                  <div className="text-sm text-gray-500">{s.url}</div>
-                </div>
-                <div className="flex gap-1">
-                  <button onClick={() => up(s.id)}>↑</button>
-                  <button onClick={() => down(s.id)}>↓</button>
-                  <button onClick={() => startEdit(s.id)}>تعديل</button>
-                  <button onClick={() => remove(s.id)}>حذف</button>
-                </div>
-              </div>
-            ))}
-          </div>
-        </section>
-        {toast && <div className="p-2 bg-green-100">{toast}</div>}
+      <div className="bg-white p-4 rounded-xl shadow mb-6">
+        <h2 className="font-semibold mb-2">إضافة خدمة جديدة</h2>
+        <div className="grid grid-cols-2 gap-3">
+          <input className="border p-2 rounded" placeholder="id" value={newService.id}
+            onChange={e => setNewService({ ...newService, id: e.target.value })} />
+          <input className="border p-2 rounded" placeholder="العنوان" value={newService.title}
+            onChange={e => setNewService({ ...newService, title: e.target.value })} />
+          <input className="border p-2 rounded" placeholder="الرابط أو الهاتف" value={newService.url}
+            onChange={e => setNewService({ ...newService, url: e.target.value })} />
+          <input className="border p-2 rounded" placeholder="الفئة" value={newService.category}
+            onChange={e => setNewService({ ...newService, category: e.target.value })} />
+          <input className="border p-2 rounded" placeholder="أيقونة (FontAwesome)" value={newService.icon}
+            onChange={e => setNewService({ ...newService, icon: e.target.value })} />
+          <input className="border p-2 rounded" placeholder="اللون (#HEX)" value={newService.color}
+            onChange={e => setNewService({ ...newService, color: e.target.value })} />
+          <input className="border p-2 rounded col-span-2" placeholder="الوصف" value={newService.description}
+            onChange={e => setNewService({ ...newService, description: e.target.value })} />
+          <input className="border p-2 rounded col-span-2" placeholder="الكلمات المفتاحية مفصولة بفواصل"
+            value={newService.tags}
+            onChange={e => setNewService({ ...newService, tags: e.target.value })} />
+        </div>
+        <button className="mt-3 bg-green-600 text-white px-4 py-2 rounded" onClick={addService}>
+          إضافة
+        </button>
       </div>
-    </div>
-  );
-}
 
-function Field({ label, children }) {
-  return (
-    <label className="block">
-      <div className="text-sm">{label}</div>
-      {children}
-    </label>
+      <div className="bg-white p-4 rounded-xl shadow">
+        <h2 className="font-semibold mb-2">قائمة الخدمات</h2>
+        <ul>
+          {services.map(s => (
+            <li key={s.id} className="flex justify-between items-center border-b py-2">
+              <span><i className={`${s.icon}`} style={{ color: s.color }}></i> {s.title}</span>
+              <button className="text-red-600" onClick={() => deleteService(s.id)}>حذف</button>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <button className="mt-4 bg-blue-600 text-white px-4 py-2 rounded" onClick={exportJSON}>
+        تصدير JSON
+      </button>
+    </div>
   );
 }
