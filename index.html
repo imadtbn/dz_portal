@@ -1697,6 +1697,77 @@ document.getElementById("searchInput").addEventListener("input", function () {
   window.addEventListener('appinstalled', () => {
     installButton.style.display = 'none';
   });
+
+<!-- في نهاية ملف index.html قبل </body> -->
+
+// دالة لتحميل الخدمات من localStorage
+function loadServicesFromStorage() {
+  const services = JSON.parse(localStorage.getItem('portalServices')) || [];
+  
+  // تجميع الخدمات حسب الأقسام
+  const servicesByCategory = {};
+  services.forEach(service => {
+    if (!servicesByCategory[service.category]) {
+      servicesByCategory[service.category] = [];
+    }
+    servicesByCategory[service.category].push(service);
+  });
+  
+  // عرض الخدمات في الأقسام المناسبة
+  Object.keys(servicesByCategory).forEach(category => {
+    const section = document.getElementById(category);
+    if (section) {
+      const ul = section.querySelector('ul');
+      if (ul) {
+        // مسح المحتوى الحالي (اختياري)
+        // ul.innerHTML = '';
+        
+        // إضافة الخدمات الجديدة
+        servicesByCategory[category].forEach(service => {
+          const li = document.createElement('li');
+          li.innerHTML = `
+            <i class="${service.icon}" style="color: ${service.color || '#006400'};"></i>
+            <a href="${service.url}" target="_blank">${service.name}</a>
+            ${service.description ? `<br><small>${service.description}</small>` : ''}
+          `;
+          ul.appendChild(li);
+        });
+      }
+    }
+  });
+}
+
+// تحميل الخدمات عند بدء التشغيل
+document.addEventListener('DOMContentLoaded', function() {
+  loadServicesFromStorage();
+  
+  // إضافة زر للذهاب إلى لوحة التحكم إذا لم يكن موجوداً
+  const header = document.querySelector('header');
+  if (header && !document.getElementById('adminPanelBtn')) {
+    const adminBtn = document.createElement('button');
+    adminBtn.id = 'adminPanelBtn';
+    adminBtn.innerHTML = '<i class="fas fa-cogs"></i> لوحة التحكم';
+    adminBtn.style.cssText = `
+      background-color: #a52a2a;
+      color: white;
+      border: none;
+      padding: 8px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-right: 10px;
+    `;
+    adminBtn.onclick = function() {
+      window.location.href = 'admin.html';
+    };
+    
+    const branding = document.querySelector('.branding');
+    if (branding) {
+      header.insertBefore(adminBtn, branding);
+    }
+  }
+});
+
+
 </script>
  </body>
 </html>
