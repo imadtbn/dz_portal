@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>لوحة تحكم البوابة الجزائرية للخدمات الرقمية</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+    <style>
+        body {
+            font-family: Arial, Tahoma, sans-serif;
+            background-color: #f7fdf9;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+            direction: rtl;
+        }
+        
+        header {
+            background-color: #006233;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .admin-panel {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        
+        .form-section {
+            flex: 1;
+            min-width: 300px;
+            background-color: #f0faf6;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid #cde7da;
+        }
+        
+        .services-list {
+            flex: 1;
+            min-width: 300px;
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            max-height: 600px;
+            overflow-y: auto;
+        }
+        
+        h2 {
+            color: #006233;
+            border-bottom: 2px solid #a52a2a;
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+        
+        .form-group {
+            margin-bottom: 15px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #006233;
+        }
+        
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+        
+        button {
+            background-color: #006233;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 10px;
+            width: 100%;
+        }
+        
+        button:hover {
+            background-color: #004d26;
+        }
+        
+        .service-item {
+            background-color: white;
+            padding: 15px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border-left: 4px solid #a52a2a;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        
+        .service-title {
+            font-weight: bold;
+            color: #006233;
+            margin-bottom: 5px;
+        }
+        
+        .service-link {
+            color: #a52a2a;
+            text-decoration: none;
+        }
+        
+        .service-link:hover {
+            text-decoration: underline;
+        }
+        
+        .service-category {
+            background-color: #e6f2ec;
+            padding: 3px 8px;
+            border-radius: 3px;
+            font-size: 12px;
+            color: #006233;
+            display: inline-block;
+            margin-top: 5px;
+        }
+        
+        .delete-btn {
+            background-color: #d40000;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 3px;
+            cursor: pointer;
+            margin-top: 10px;
+            width: auto;
+            font-size: 14px;
+        }
+        
+        .delete-btn:hover {
+            background-color: #a30000;
+        }
+        
+        .notification {
+            position: fixed;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #4caf50;
+            color: white;
+            padding: 15px 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+            z-index: 1000;
+            display: none;
+        }
+        
+        .back-btn {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #006233;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        
+        .back-btn:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <a href="index.html" class="back-btn">
+        <i class="fas fa-arrow-right"></i> العودة إلى البوابة الرئيسية
+    </a>
+    
+    <header>
+        <h1>لوحة تحكم البوابة الجزائرية للخدمات الرقمية</h1>
+        <p>من هنا يمكنك إضافة وتعديل وإدارة الخدمات المعروضة في البوابة</p>
+    </header>
+    
+    <div class="container">
+        <div class="admin-panel">
+            <div class="form-section">
+                <h2><i class="fas fa-plus-circle"></i> إضافة خدمة جديدة</h2>
+                
+                <form id="serviceForm">
+                    <div class="form-group">
+                        <label for="serviceName">اسم الخدمة:</label>
+                        <input type="text" id="serviceName" required placeholder="مثال: فاتورة الكهرباء والغاز">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="serviceUrl">رابط الخدمة:</label>
+                        <input type="url" id="serviceUrl" required placeholder="مثال: https://epayement.elit.dz/payementFacture.xhtml">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="serviceIcon">أيقونة الخدمة (اختياري):</label>
+                        <select id="serviceIcon">
+                            <option value="fas fa-file-invoice-dollar">فاتورة</option>
+                            <option value="fas fa-money-check-alt">دفع</option>
+                            <option value="fas fa-mobile-alt">هاتف</option>
+                            <option value="fas fa-envelope">بريد</option>
+                            <option value="fas fa-id-card">هوية</option>
+                            <option value="fas fa-passport">جواز سفر</option>
+                            <option value="fas fa-graduation-cap">تعليم</option>
+                            <option value="fas fa-user-graduate">جامعة</option>
+                            <option value="fas fa-user-gear">مهني</option>
+                            <option value="fas fa-map-marked-alt">عقار</option>
+                            <option value="fas fa-shield-alt">تأمين</option>
+                            <option value="fas fa-notes-medical">صحة</option>
+                            <option value="fas fa-balance-scale">عدالة</option>
+                            <option value="fas fa-bus">نقل</option>
+                            <option value="fas fa-briefcase">تشغيل</option>
+                            <option value="fas fa-building">وكالات</option>
+                            <option value="fas fa-phone-volume">طوارئ</option>
+                            <option value="fas fa-tint">مياه</option>
+                            <option value="fas fa-bolt">كهرباء</option>
+                            <option value="fas fa-globe">إنترنت</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="serviceColor">لون الأيقونة:</label>
+                        <input type="color" id="serviceColor" value="#006400">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="serviceCategory">القسم:</label>
+                        <select id="serviceCategory" required>
+                            <option value="payment-links">خدمات الدفع الإلكتروني</option>
+                            <option value="recharge-links">تعبئة الهاتف النقال</option>
+                            <option value="post-links">بريد الجزائر</option>
+                            <option value="real-estate-section">إتصالات الجزائر</option>
+                            <option value="admin-links">الإدارة المحلية</option>
+                            <option value="education-section">التربية والتعليم</option>
+                            <option value="auto-entrepreneur">الخدمات الجامعية</option>
+                            <option value="vocational-section">التكوين المهني</option>
+                            <option value="real-estate-section">خدمات عقارية</option>
+                            <option value="social-security">الضمان الاجتماعي</option>
+                            <option value="justice-links">الخدمات القضائية</option>
+                            <option value="transport-section">النقل وحجز التذاكر</option>
+                            <option value="anem-links">الوكالة الوطنية للتشغيل</option>
+                            <option value="emergency-numbers">فضاءات ووكالات</option>
+                            <option value="insurance-links">خدمات التأمين</option>
+                            <option value="health-links">الخدمات الصحية</option>
+                            <option value="emergency-numbers">أرقام الطوارئ</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="serviceDescription">وصف الخدمة (اختياري):</label>
+                        <textarea id="serviceDescription" rows="3" placeholder="وصف مختصر عن الخدمة..."></textarea>
+                    </div>
+                    
+                    <button type="submit"><i class="fas fa-save"></i> حفظ الخدمة</button>
+                </form>
+            </div>
+            
+            <div class="services-list">
+                <h2><i class="fas fa-list"></i> الخدمات المضافة</h2>
+                <div id="servicesContainer">
+                    <!-- سيتم عرض الخدمات هنا -->
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div id="notification" class="notification">
+        <i class="fas fa-check-circle"></i> تم حفظ الخدمة بنجاح!
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // تحميل الخدمات المحفوظة عند بدء التشغيل
+            loadServices();
+            
+            // إضافة خدمة جديدة عند تقديم النموذج
+            document.getElementById('serviceForm').addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                const service = {
+                    id: Date.now(), // استخدام الطابع الزمني كمعرف فريد
+                    name: document.getElementById('serviceName').value,
+                    url: document.getElementById('serviceUrl').value,
+                    icon: document.getElementById('serviceIcon').value,
+                    color: document.getElementById('serviceColor').value,
+                    category: document.getElementById('serviceCategory').value,
+                    description: document.getElementById('serviceDescription').value
+                };
+                
+                saveService(service);
+                addServiceToUI(service);
+                
+                // إظهار إشعار النجاح
+                showNotification('تم إضافة الخدمة بنجاح!');
+                
+                // إعادة تعيين النموذج
+                document.getElementById('serviceForm').reset();
+            });
+        });
+        
+        // دالة لحفظ الخدمة في localStorage
+        function saveService(service) {
+            let services = JSON.parse(localStorage.getItem('portalServices')) || [];
+            services.push(service);
+            localStorage.setItem('portalServices', JSON.stringify(services));
+        }
+        
+        // دالة لتحميل الخدمات من localStorage
+        function loadServices() {
+            const services = JSON.parse(localStorage.getItem('portalServices')) || [];
+            services.forEach(service => addServiceToUI(service));
+        }
+        
+        // دالة لإضافة الخدمة إلى واجهة المستخدم
+        function addServiceToUI(service) {
+            const servicesContainer = document.getElementById('servicesContainer');
+            
+            const serviceItem = document.createElement('div');
+            serviceItem.className = 'service-item';
+            serviceItem.dataset.id = service.id;
+            
+            serviceItem.innerHTML = `
+                <div class="service-title">
+                    <i class="${service.icon}" style="color: ${service.color}; margin-left: 5px;"></i>
+                    ${service.name}
+                </div>
+                <div>
+                    <a href="${service.url}" target="_blank" class="service-link">${service.url}</a>
+                </div>
+                ${service.description ? `<div>${service.description}</div>` : ''}
+                <div class="service-category">${getCategoryName(service.category)}</div>
+                <button class="delete-btn" onclick="deleteService(${service.id})">
+                    <i class="fas fa-trash"></i> حذف
+                </button>
+            `;
+            
+            servicesContainer.appendChild(serviceItem);
+        }
+        
+        // دالة للحصول على اسم القسم
+        function getCategoryName(categoryId) {
+            const categories = {
+                'payment-links': 'خدمات الدفع الإلكتروني',
+                'recharge-links': 'تعبئة الهاتف النقال',
+                'post-links': 'بريد الجزائر',
+                'real-estate-section': 'إتصالات الجزائر',
+                'admin-links': 'الإدارة المحلية',
+                'education-section': 'التربية والتعليم',
+                'auto-entrepreneur': 'الخدمات الجامعية',
+                'vocational-section': 'التكوين المهني',
+                'social-security': 'الضمان الاجتماعي',
+                'justice-links': 'الخدمات القضائية',
+                'transport-section': 'النقل وحجز التذاكر',
+                'anem-links': 'الوكالة الوطنية للتشغيل',
+                'emergency-numbers': 'فضاءات ووكالات',
+                'insurance-links': 'خدمات التأمين',
+                'health-links': 'الخدمات الصحية'
+            };
+            
+            return categories[categoryId] || categoryId;
+        }
+        
+        // دالة لحذف الخدمة
+        function deleteService(id) {
+            if (confirm('هل أنت متأكد من أنك تريد حذف هذه الخدمة؟')) {
+                // حذف من localStorage
+                let services = JSON.parse(localStorage.getItem('portalServices')) || [];
+                services = services.filter(service => service.id !== id);
+                localStorage.setItem('portalServices', JSON.stringify(services));
+                
+                // حذف من واجهة المستخدم
+                const serviceElement = document.querySelector(`.service-item[data-id="${id}"]`);
+                if (serviceElement) {
+                    serviceElement.remove();
+                }
+                
+                showNotification('تم حذف الخدمة بنجاح!');
+            }
+        }
+        
+        // دالة لعرض الإشعارات
+        function showNotification(message) {
+            const notification = document.getElementById('notification');
+            notification.innerHTML = `<i class="fas fa-check-circle"></i> ${message}`;
+            notification.style.display = 'block';
+            
+            setTimeout(() => {
+                notification.style.display = 'none';
+            }, 3000);
+        }
+    </script>
+</body>
+</html>
