@@ -1484,6 +1484,41 @@ dir="rtl" style="text-align: right;">
   </ul>
 </section>
 
+ <script>
+document.addEventListener("DOMContentLoaded", function () {
+  const section = document.getElementById("emergency-numbers");
+  const countSpan = document.querySelector("#toggle-14 .count");
+
+  function updateCount() {
+    if (section && countSpan) {
+      const items = section.querySelectorAll("li").length;
+      countSpan.textContent = `(${items})`;
+    }
+  }
+
+  // تحديث أولي
+  updateCount();
+
+  // مراقبة التغييرات
+  const observer = new MutationObserver(updateCount);
+  observer.observe(section, { childList: true, subtree: false });
+
+  // وظيفة الطي/الفتح
+  window.toggleSection = function (id, header) {
+    const content = document.getElementById(id);
+    const icon = header.querySelector(".toggle-icon");
+    if (content.style.display === "none") {
+      content.style.display = "block";
+      icon.textContent = "▼";
+    } else {
+      content.style.display = "none";
+      icon.textContent = "▶";
+    }
+  };
+});
+</script>
+
+
 <!-- قسم معلومات الاتصال -->
 <section dir="rtl" style="text-align: right;">
   <h2 id="toggle-14" onclick="toggleSection('contact-info', this)" 
@@ -1647,39 +1682,6 @@ dir="rtl" style="text-align: right;">
 </div>
 
 <script>
-  // عــــــــــــــداد
- document.addEventListener("DOMContentLoaded", function () {
-  const section = document.getElementById("emergency-numbers");
-  const countSpan = document.querySelector("#toggle-14 .count");
-
-  function updateCount() {
-    if (section && countSpan) {
-      const items = section.querySelectorAll("li").length;
-      countSpan.textContent = `(${items})`;
-    }
-  }
-
-  // تحديث أولي
-  updateCount();
-
-  // مراقبة التغييرات
-  const observer = new MutationObserver(updateCount);
-  observer.observe(section, { childList: true, subtree: false });
-
-  // وظيفة الطي/الفتح
-  window.toggleSection = function (id, header) {
-    const content = document.getElementById(id);
-    const icon = header.querySelector(".toggle-icon");
-    if (content.style.display === "none") {
-      content.style.display = "block";
-      icon.textContent = "▼";
-    } else {
-      content.style.display = "none";
-      icon.textContent = "▶";
-    }
-  };
-});
- 
   // أرقام وهمية ابتدائية
   let daily = Math.floor(Math.random() * 10000 + 1000);  // زيارات اليوم
   let total = 3000000 + Math.floor(Math.random() * 50000); // إجمالي الزيارات
