@@ -1562,6 +1562,72 @@ dir="rtl" style="text-align: right;">
   }
 </script>
 
+   <!-- قسم الاشتراك في التحديثات -->
+  <section dir="rtl"
+    style="text-align: center; margin: 20px auto; padding: 15px; background-color: #f0faf6; border-radius: 10px; max-width: 500px;">
+    <h2 style="color: #006233;">📩 اشترك لتصلك آخر التحديثات</h2>
+
+    <!-- نموذج Google Form -->
+    <form
+      action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSeRLTtPk1EI19nDKoV_dGMoR33Yy-5yA2sEi8Ylm5Z-S6X6yQ/formResponse"
+      method="POST" target="hidden_iframe" onsubmit="showSubscribeMsg()">
+      <input type="email" name="entry.1093766077" placeholder="أدخل بريدك الإلكتروني" required
+        style="padding: 10px; width: 70%; border: 1px solid #ccc; border-radius: 6px;">
+      <button type="submit"
+        style="background-color: #006233; color: white; padding: 10px 15px; border: none; border-radius: 6px; cursor: pointer;">
+        اشتراك
+      </button>
+    </form>
+
+    <iframe name="hidden_iframe" style="display:none;"></iframe>
+    <p id="subscribeMsg" style="color: #006233; margin-top: 10px; font-size: 0.9em;"></p>
+  </section>
+
+  <script>
+    function showSubscribeMsg() {
+      document.getElementById("subscribeMsg").textContent = "✅ تم تسجيل بريدك بنجاح. ستصلك آخر التحديثات.";
+    }
+  </script>
+
+  <!-- عنصر الإشعارات -->
+  <div id="notificationBox"
+    style="position: fixed; bottom: 20px; left: 20px; background: #006233; color: white; padding: 12px 16px; border-radius: 8px; display: none; box-shadow: 0 2px 6px rgba(0,0,0,0.3); z-index:9999;">
+    🔔 إشعار جديد
+  </div>
+
+  <script>
+    let lastMsg = "";
+
+    // رابط الـ API من Google Apps Script
+    const apiUrl = "https://script.google.com/macros/s/AKfycbwap_0FcirukQreMhIVn1PS0kSEzoxPFrNKn1u94yR7z1l-ndxADsFNlx50CPePvs6j/exec";
+
+    async function checkUpdates() {
+      try {
+        const res = await fetch(apiUrl + "?t=" + Date.now()); // منع الكاش
+        const data = await res.json();
+        if (data.message && data.message !== lastMsg) {
+          lastMsg = data.message;
+          showNotification(data.message);
+        }
+      } catch (e) {
+        console.error("خطأ في جلب التحديثات", e);
+      }
+    }
+
+    function showNotification(msg) {
+      const box = document.getElementById("notificationBox");
+      box.textContent = "🔔 " + msg;
+      box.style.display = "block";
+      setTimeout(() => { box.style.display = "none"; }, 6000);
+    }
+
+    // تحقق كل دقيقة
+    setInterval(checkUpdates, 60000);
+
+    // جلب أول مرة عند تحميل الصفحة
+    checkUpdates();
+  </script>
+
 <!-- عداد الزيارات بأسلوب احترافي وألوان متناسقة مع البوابة -->
 <div
  style="text-align: center; font-family: Arial, sans-serif; margin-top: 40px; direction: rtl;">
@@ -1598,7 +1664,7 @@ dir="rtl" style="text-align: right;">
 
     dailyEl.textContent = daily.toLocaleString('en-US');
     totalEl.textContent = total.toLocaleString('en-US');
-  }, 1200); // كل 1.2 ثانية
+  }, 1200); // كل 3.2 ثانية
 </script>
 
  <!-- الفوتر -->
