@@ -1475,6 +1475,17 @@ dir="rtl" style="text-align: right;">
     </ul>
   </section>
  
+ <script>
+document.addEventListener("DOMContentLoaded", function () {
+  const section = document.getElementById("emergency-numbers");
+  const countSpan = document.querySelector("#toggle-14 .count");
+  if (section && countSpan) {
+    const items = section.querySelectorAll("li");
+    countSpan.textContent = "(" + items.length + ")";
+  }
+});
+</script>
+ 
 <!-- قسم معلومات الاتصال -->
 <section dir="rtl" style="text-align: right;">
   <h2 id="toggle-14" onclick="toggleSection('contact-info', this)" 
