@@ -1317,6 +1317,7 @@ dir="rtl" style="text-align: right;">
   </ul>
 </section>
 
+
 <!-- قسم الخدمات الطوارئ -->
 <section dir="rtl" style="text-align: right;">
   <h2 id="toggle-4" onclick="toggleSection('health-links', this)"
@@ -1416,12 +1417,122 @@ dir="rtl" style="text-align: right;">
 </section>
 
 <script>
+// =======================
+// (1) أرقام الزيارات الوهمية + عداد متسارع
+// =======================
+let daily = Math.floor(Math.random() * 10000 + 1000);  // زيارات اليوم
+let total = 3000000 + Math.floor(Math.random() * 50000); // إجمالي الزيارات
+
+const dailyEl = document.getElementById('daily-visits');
+const totalEl = document.getElementById('total-visits');
+
+setInterval(() => {
+  let dailyIncrement = Math.floor(Math.random() * 10 + 1);
+  let totalIncrement = Math.floor(Math.random() * 20 + 1);
+
+  daily += dailyIncrement;
+  total += totalIncrement;
+
+  dailyEl.textContent = daily.toLocaleString('en-US');
+  totalEl.textContent = total.toLocaleString('en-US');
+}, 1200); // كل 1.2 ثانية
+
+// =======================
+// (2) إظهار/إخفاء الأقسام + عداد العناصر
+// =======================
 document.addEventListener("DOMContentLoaded", function () {
-  const section = document.querySelector("#health-links");
-  const countSpan = document.querySelector("#toggle-4 .count");
-  if (section && countSpan) {
-    countSpan.textContent = section.querySelectorAll("li").length;
+  const headers = document.querySelectorAll("section h2, section h3");
+
+  headers.forEach((header, index) => {
+    const nextElement = header.nextElementSibling;
+
+    if (nextElement && (nextElement.tagName === "UL" || nextElement.tagName === "DIV")) {
+      // إنشاء معرفات تلقائية
+      header.id = header.id || "header-" + index;
+      nextElement.id = nextElement.id || "content-" + index;
+
+      // وظيفة الفتح/الإغلاق
+      header.addEventListener("click", () => {
+        const isVisible = nextElement.classList.toggle("show");
+        nextElement.style.display = isVisible ? "block" : "none";
+        header.classList.toggle("open", isVisible);
+      });
+
+      // وظيفة تحديث العداد
+      const updateCount = () => {
+        const countSpan = header.querySelector(".count");
+        if (!countSpan) return;
+
+        let totalItems = 0;
+        if (nextElement.tagName === "UL") {
+          totalItems = nextElement.querySelectorAll("li").length;
+        } else if (nextElement.tagName === "DIV") {
+          totalItems = nextElement.querySelectorAll("ul li").length;
+        }
+        countSpan.textContent = ` (${totalItems} خدمة)`;
+      };
+
+      // تحديث أولي
+      updateCount();
+
+      // مراقبة أي تغيير
+      const observer = new MutationObserver(updateCount);
+      observer.observe(nextElement, { childList: true, subtree: true });
+    }
+  });
+});
+
+// =======================
+// (3) زر الصعود إلى الأعلى
+// =======================
+window.onscroll = function () {
+  const btn = document.getElementById("scrollTopBtn");
+  if (btn) {
+    btn.style.display = (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) ? "block" : "none";
   }
+};
+
+function scrollToTop() {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+// =======================
+// (4) البحث في الأقسام
+// =======================
+document.getElementById("searchInput")?.addEventListener("input", function () {
+  const query = this.value.toLowerCase().trim();
+  const sections = document.querySelectorAll("section");
+  sections.forEach(section => {
+    const text = section.innerText.toLowerCase();
+    section.style.display = text.includes(query) ? "block" : "none";
+  });
+});
+
+// =======================
+// (5) زر تثبيت التطبيق PWA
+// =======================
+const installButton = document.getElementById('install-button');
+let deferredPrompt;
+
+window.addEventListener('beforeinstallprompt', (e) => {
+  e.preventDefault();
+  deferredPrompt = e;
+  installButton.style.display = 'inline-block';
+
+  installButton.addEventListener('click', () => {
+    installButton.style.display = 'none';
+    deferredPrompt.prompt();
+    deferredPrompt.userChoice.then((choiceResult) => {
+      if (choiceResult.outcome !== 'accepted') {
+        installButton.style.display = 'inline-block';
+      }
+      deferredPrompt = null;
+    });
+  });
+});
+
+window.addEventListener('appinstalled', () => {
+  installButton.style.display = 'none';
 });
 </script>
 
