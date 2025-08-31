@@ -1316,23 +1316,20 @@ dir="rtl" style="text-align: right;">
 </section>
 
 <!-- قسم أرقام الطوارئ -->
-<section
- dir="rtl" style="text-align: right;">
+<section dir="rtl" style="text-align: right;">
   <h2
     id="toggle-14"
-    onclick="toggleSection('emergency-numbers', this)"
     style="cursor: pointer; background-color: #a52a2a; color: white;"
   >
     <span>
       <i class="fas fa-phone-volume" style="color: #006400;"></i>
       أرقام الطوارئ والخدمات <span class="count"></span>
     </span>
-    <span class="toggle-icon" style="float: left;">▶</span>
   </h2>
 
   <ul
     id="emergency-numbers"
-    style="display: none; list-style: none; padding: 0; line-height: 2; text-align: right;"
+    style="display: block; list-style: none; padding: 0; line-height: 2; text-align: right;"
   >
 
    <li>
@@ -1482,7 +1479,18 @@ dir="rtl" style="text-align: right;">
 </li>
   </ul>
 </section>
-
+ 
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const section = document.getElementById("emergency-numbers");
+  const countSpan = document.querySelector("#toggle-14 .count");
+  if (section && countSpan) {
+    const items = section.querySelectorAll("li");
+    countSpan.textContent = "(" + items.length + ")";
+  }
+});
+</script>
+ 
 <!-- قسم معلومات الاتصال -->
 <section dir="rtl" style="text-align: right;">
   <h2 id="toggle-14" onclick="toggleSection('contact-info', this)" 
