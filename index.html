@@ -969,6 +969,8 @@ dir="rtl" style="text-align: right;">
   </ul>
 </section>
 
+
+
 <!-- قسم التكوين والتعليم المهنيين  -->
 <section
  dir="rtl" style="text-align: right;">
@@ -1145,7 +1147,7 @@ dir="rtl" style="text-align: right; background-color: white; border: 1px solid #
 
     <!-- فرع بطاقة التعريف وجواز السفر -->
     <h3 onclick="toggleSection('public-sector', this)" style="cursor: pointer; background-color: #f0faf6; color: #006400; padding: 8px; border-radius: 6px; text-align: right;">
-      <span><i class="fas fa-id-card" style="color: #006400; margin-left: 6px;"></i>جواز السفر، بطاقة التعريف، رخصة السياقة، عقود النقل - السفر، رسم على استهلاك الوقود للسيارات والشاحنات.<span class="count"></span></span>
+      <span><i class="fas fa-id-card" style="color: #006400; margin-left: 6px;"></i>، بطاقة التعريف، رخصة السياقة، جواز السفر، عقود النقل والسفر<span class="count"></span></span>
       <span class="toggle-icon" style="float: left;">▶</span>
     </h3>
     <ul id="public-sector" style="display: none; list-style: none; padding: 0; margin-right: 10px; line-height: 2;">
@@ -1316,192 +1318,172 @@ dir="rtl" style="text-align: right;">
 </section>
 
 <!-- قسم أرقام الطوارئ -->
-<section dir="rtl" style="text-align: right;">
-  <h2 id="toggle-14" style="background-color: #a52a2a; color: white; padding:6px;">
+<section
+ dir="rtl" style="text-align: right;">
+  <h2
+    id="toggle-14"
+    onclick="toggleSection('emergency-numbers', this)"
+    style="cursor: pointer; background-color: #a52a2a; color: white;"
+  >
     <span>
       <i class="fas fa-phone-volume" style="color: #006400;"></i>
       أرقام الطوارئ والخدمات <span class="count"></span>
     </span>
+    <span class="toggle-icon" style="float: left;">▶</span>
   </h2>
 
-  <ul id="emergency-numbers"
-      style="display:block; list-style:none; padding:0; line-height:2; text-align:right;">
-    <li>
-        <i class="fas fa-user-shield" style="color:#006400;"></i>
-        <strong>الدرك الوطني:</strong> <a href="tel:1055">1055</a>
-      </li>
+  <ul
+    id="emergency-numbers"
+    style="display: none; list-style: none; padding: 0; line-height: 2; text-align: right;"
+  >
+  <li>
+  <i class="fas fa-landmark" style="color:#006400;"></i>
+  <strong>وزارة الداخلية:</strong> <a href="tel:1100">1100</a>
+</li>
 
-      <li>
-        <i class="fas fa-globe" style="color:#006400;"></i>
-        <a href="https://ppgn.mdn.dz/" target="_blank">
-          شكوى مسبقة ومعلومات عن بعد للدرك الوطني
-        </a>
-      </li>
+<li>
+  <i class="fas fa-briefcase" style="color:#006400;"></i>
+  <strong>وزارة العمل والتشغيل والضمان الاجتماعي:</strong> <a href="tel:3010">3010</a>
+</li>
 
-      <li>
-        <i class="fas fa-water" style="color:#006400;"></i>
-        <strong>حراس السواحل:</strong> <a href="tel:1054">1054</a>
-      </li>
+<li>
+  <i class="fas fa-store" style="color:#006400;"></i>
+  <strong>وزارة التجارة:</strong> <a href="tel:1020">1020</a>
+</li>
 
-      <li>
-        <i class="fas fa-shield-alt" style="color:#006400;"></i>
-        <strong>الشرطة:</strong> <a href="tel:1548">1548</a>
-      </li>
+<li>
+  <i class="fas fa-user-tie" style="color:#006400;"></i>
+  <strong>الوكالة الوطنية للتشغيل:</strong> <a href="tel:3005">3005</a>
+</li>
 
-      <li>
-        <i class="fas fa-exclamation-triangle" style="color:#006400;"></i>
-        <strong>الشرطة - حالات الاختطاف:</strong> <a href="tel:104">104</a>
-      </li>
+<li>
+  <i class="fas fa-file-signature" style="color:#006400;"></i>
+  <a href="https://wassit.dz/ar/register#" target="_blank">
+    تواصل مع وسيط الجمهورية – شكوى، عريضة، إلخ.
+  </a>
+</li>
 
-      <li>
-        <i class="fas fa-mobile-alt" style="color:#006400;"></i>
-        <a href="https://play.google.com/store/apps/details?id=allochorta.algeriepolice.dz&hl=ar" target="_blank">
-          تحميل تطبيق ألو الشرطة
-        </a>
-      </li>
+<li>
+  <i class="fas fa-building" style="color:#006400;"></i>
+  <strong>المديرية العامة للأملاك الوطنية:</strong> <a href="tel:3020">3020</a>
+</li>
 
-      <li>
-        <i class="fas fa-fire-extinguisher" style="color:#006400;"></i>
-        <strong>الحماية المدنية:</strong> <a href="tel:1021">1021</a>
-      </li>
+<li>
+  <i class="fas fa-user-shield" style="color:#006400;"></i>
+  <strong>الدرك الوطني:</strong> <a href="tel:1055">1055</a>
+</li>
 
-      <li>
-        <i class="fas fa-landmark" style="color:#006400;"></i>
-        <strong>وزارة الداخلية:</strong> <a href="tel:1100">1100</a>
-      </li>
+<li>
+  <i class="fas fa-globe" style="color:#006400;"></i>
+  <a href="https://ppgn.mdn.dz/" target="_blank">
+    شكوى مسبقة ومعلومات عن بعد للدرك الوطني
+  </a>
+</li>
 
-      <li>
-        <i class="fas fa-briefcase" style="color:#006400;"></i>
-        <strong>وزارة العمل والتشغيل والضمان الاجتماعي:</strong> <a href="tel:3010">3010</a>
-      </li>
+<li>
+  <i class="fas fa-water" style="color:#006400;"></i>
+  <strong>حراس السواحل:</strong> <a href="tel:1054">1054</a>
+</li>
 
-      <li>
-        <i class="fas fa-store" style="color:#006400;"></i>
-        <strong>وزارة التجارة:</strong> <a href="tel:1020">1020</a>
-      </li>
+<li>
+  <i class="fas fa-shield-alt" style="color:#006400;"></i>
+  <strong>الشرطة:</strong> <a href="tel:1548">1548</a>
+</li>
 
-      <li>
-        <i class="fas fa-user-tie" style="color:#006400;"></i>
-        <strong>الوكالة الوطنية للتشغيل:</strong> <a href="tel:3005">3005</a>
-      </li>
+<li>
+  <i class="fas fa-exclamation-triangle" style="color:#006400;"></i>
+  <strong>الشرطة - حالات الاختطاف:</strong> <a href="tel:104">104</a>
+</li>
 
-      <li>
-        <i class="fas fa-file-signature" style="color:#006400;"></i>
-        <a href="https://wassit.dz/ar/register#" target="_blank">
-          تواصل مع وسيط الجمهورية – شكوى، عريضة، إلخ.
-        </a>
-      </li>
+<li>
+  <i class="fas fa-mobile-alt" style="color:#006400;"></i>
+  <a href="https://play.google.com/store/apps/details?id=allochorta.algeriepolice.dz&hl=ar" target="_blank">
+    تحميل تطبيق ألو الشرطة
+  </a>
+</li>
 
-      <li>
-        <i class="fas fa-building" style="color:#006400;"></i>
-        <strong>المديرية العامة للأملاك الوطنية:</strong> <a href="tel:3020">3020</a>
-      </li>
+<li>
+  <i class="fas fa-fire-extinguisher" style="color:#006400;"></i>
+  <strong>الحماية المدنية:</strong> <a href="tel:1021">1021</a>
+</li>
 
-      <li>
-        <i class="fas fa-gavel" style="color:#006400;"></i>
-        <strong>وزارة العدل الجزائرية:</strong> <a href="tel:1078">1078</a>
-      </li>
+<li>
+  <i class="fas fa-gavel" style="color:#006400;"></i>
+  <strong>وزارة العدل الجزائرية:</strong> <a href="tel:1078">1078</a>
+</li>
 
-      <li>
-        <i class="fas fa-school" style="color:#006400;"></i>
-        <strong>وزارة التربية:</strong> <a href="tel:1075">1075</a>
-      </li>
+<li>
+  <i class="fas fa-school" style="color:#006400;"></i>
+  <strong>وزارة التربية:</strong> <a href="tel:1075">1075</a>
+</li>
 
-      <li>
-        <i class="fas fa-hospital" style="color:#006400;"></i>
-        <strong>وزارة الصحة:</strong> <a href="tel:3030">3030</a>
-      </li>
+<li>
+  <i class="fas fa-hospital" style="color:#006400;"></i>
+  <strong>وزارة الصحة:</strong> <a href="tel:3030">3030</a>
+</li>
 
-      <li>
-        <i class="fas fa-dolly" style="color:#006400;"></i>
-        <strong>الجمارك الجزائرية:</strong> <a href="tel:1023">1023</a>
-      </li>
+<li>
+  <i class="fas fa-dolly" style="color:#006400;"></i>
+  <strong>الجمارك الجزائرية:</strong> <a href="tel:1023">1023</a>
+</li>
 
-      <li>
-        <i class="fas fa-shopping-cart" style="color:#006400;"></i>
-        <strong>منظمة حماية وإرشاد المستهلك:</strong> <a href="tel:3311">3311</a>
-      </li>
+<li>
+  <i class="fas fa-shopping-cart" style="color:#006400;"></i>
+  <strong>منظمة حماية وإرشاد المستهلك:</strong> <a href="tel:3311">3311</a>
+</li>
 
-      <li>
-        <i class="fas fa-child" style="color:#006400;"></i>
-        <strong>الهيئة الوطنية لحماية وترقية الطفولة:</strong> <a href="tel:1111">1111</a>
-      </li>
+<li>
+  <i class="fas fa-child" style="color:#006400;"></i>
+  <strong>الهيئة الوطنية لحماية وترقية الطفولة:</strong> <a href="tel:1111">1111</a>
+</li>
 
-      <li>
-        <i class="fas fa-tree" style="color:#006400;"></i>
-        <strong>محافظة الغابات:</strong> <a href="tel:1070">1070</a>
-      </li>
+<li>
+  <i class="fas fa-tree" style="color:#006400;"></i>
+  <strong>محافظة الغابات:</strong> <a href="tel:1070">1070</a>
+</li>
 
-      <li>
-        <i class="fas fa-envelope" style="color:#006400;"></i>
-        <strong>بريد الجزائر:</strong> <a href="tel:1530">1530</a>
-      </li>
+<li>
+  <i class="fas fa-envelope" style="color:#006400;"></i>
+  <strong>بريد الجزائر:</strong> <a href="tel:1530">1530</a>
+</li>
 
-      <li>
-        <i class="fas fa-phone-square" style="color:#006400;"></i>
-        <strong>اتصالات الجزائر:</strong> <a href="tel:12">12</a>
-      </li>
+<li>
+  <i class="fas fa-phone-square" style="color:#006400;"></i>
+  <strong>اتصالات الجزائر:</strong> <a href="tel:12">12</a>
+</li>
 
-      <li>
-        <i class="fas fa-bolt" style="color:#006400;"></i>
-        <strong>سونلغاز – الكهرباء والغاز:</strong> <a href="tel:3303">3303</a>
-      </li>
+<li>
+  <i class="fas fa-bolt" style="color:#006400;"></i>
+  <strong>سونلغاز – الكهرباء والغاز:</strong> <a href="tel:3303">3303</a>
+</li>
 
-      <li>
-        <i class="fas fa-tint" style="color:#006400;"></i>
-        <strong>الجزائرية للمياه:</strong> <a href="tel:1593">1593</a>
-      </li>
+<li>
+  <i class="fas fa-tint" style="color:#006400;"></i>
+  <strong>الجزائرية للمياه:</strong> <a href="tel:1593">1593</a>
+</li>
 
-      <li>
-        <i class="fas fa-recycle" style="color:#006400;"></i>
-        <strong>سيال للماء والتطهير:</strong> <a href="tel:1594">1594</a>
-      </li>
+<li>
+  <i class="fas fa-recycle" style="color:#006400;"></i>
+  <strong>سيال للماء والتطهير:</strong> <a href="tel:1594">1594</a>
+</li>
 
-      <li>
-        <i class="fas fa-home" style="color:#006400;"></i>
-        <strong>وكالة عدل للسكن:</strong> <a href="tel:3040">3040</a>
-      </li>
+<li>
+  <i class="fas fa-home" style="color:#006400;"></i>
+  <strong>وكالة عدل للسكن:</strong> <a href="tel:3040">3040</a>
+</li>
 
-      <li>
-        <i class="fas fa-gas-pump" style="color:#006400;"></i>
-        <strong>نفطال:</strong> <a href="tel:3305">3305</a>
-      </li>
+<li>
+  <i class="fas fa-gas-pump" style="color:#006400;"></i>
+  <strong>نفطال:</strong> <a href="tel:3305">3305</a>
+</li>
 
-      <li>
-        <i class="fas fa-tools" style="color:#006400;"></i>
-        <strong>خدماتي لتصليح الأجهزة الكهرومنزلية:</strong> <a href="tel:3075">3075</a>
-      </li>
+<li>
+  <i class="fas fa-tools" style="color:#006400;"></i>
+  <strong>خدماتي لتصليح الأجهزة الكهرومنزلية:</strong> <a href="tel:3075">3075</a>
+</li>
+  </ul>
+</section>
 
-    </ul>
-  </section>
- 
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-  // تفعيل التبديل بين الإظهار والإخفاء
-  window.toggleSection = function(id, header) {
-    const section = document.getElementById(id);
-    if (!section) return;
-    const isVisible = section.classList.contains("show");
-    document.querySelectorAll("ul, div").forEach(el => el.classList.remove("show"));
-    if (!isVisible) section.classList.add("show");
-    header.classList.toggle("open", !isVisible);
-  };
-
-  // عد العناصر داخل كل قائمة أو قسم
-  document.querySelectorAll("section h2, section h3").forEach(header => {
-    const nextEl = header.nextElementSibling;
-    if (nextEl) {
-      let items = nextEl.querySelectorAll("li, a[href^='tel']").length;
-      if (items > 0) {
-        const countSpan = header.querySelector(".count");
-        if (countSpan) countSpan.textContent = `(${items})`;
-      }
-    }
-  });
-});
-</script>
-
- 
 <!-- قسم معلومات الاتصال -->
 <section dir="rtl" style="text-align: right;">
   <h2 id="toggle-14" onclick="toggleSection('contact-info', this)" 
@@ -1579,72 +1561,6 @@ dir="rtl" style="text-align: right;">
     }
   }
 </script>
-
- <!-- قسم الاشتراك في التحديثات -->
-  <section dir="rtl"
-    style="text-align: center; margin: 20px auto; padding: 15px; background-color: #f0faf6; border-radius: 10px; max-width: 500px;">
-    <h2 style="color: #006233;">📩 اشترك لتصلك آخر التحديثات</h2>
-
-    <!-- نموذج Google Form -->
-    <form
-      action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSeRLTtPk1EI19nDKoV_dGMoR33Yy-5yA2sEi8Ylm5Z-S6X6yQ/formResponse"
-      method="POST" target="hidden_iframe" onsubmit="showSubscribeMsg()">
-      <input type="email" name="entry.1093766077" placeholder="أدخل بريدك الإلكتروني" required
-        style="padding: 10px; width: 70%; border: 1px solid #ccc; border-radius: 6px;">
-      <button type="submit"
-        style="background-color: #006233; color: white; padding: 10px 15px; border: none; border-radius: 6px; cursor: pointer;">
-        اشتراك
-      </button>
-    </form>
-
-    <iframe name="hidden_iframe" style="display:none;"></iframe>
-    <p id="subscribeMsg" style="color: #006233; margin-top: 10px; font-size: 0.9em;"></p>
-  </section>
-
-  <script>
-    function showSubscribeMsg() {
-      document.getElementById("subscribeMsg").textContent = "✅ تم تسجيل بريدك بنجاح. ستصلك آخر التحديثات.";
-    }
-  </script>
-
-  <!-- عنصر الإشعارات -->
-  <div id="notificationBox"
-    style="position: fixed; bottom: 20px; left: 20px; background: #006233; color: white; padding: 12px 16px; border-radius: 8px; display: none; box-shadow: 0 2px 6px rgba(0,0,0,0.3); z-index:9999;">
-    🔔 إشعار جديد
-  </div>
-
-  <script>
-    let lastMsg = "";
-
-    // رابط الـ API من Google Apps Script
-    const apiUrl = "https://script.google.com/macros/s/AKfycbwap_0FcirukQreMhIVn1PS0kSEzoxPFrNKn1u94yR7z1l-ndxADsFNlx50CPePvs6j/exec";
-
-    async function checkUpdates() {
-      try {
-        const res = await fetch(apiUrl + "?t=" + Date.now()); // منع الكاش
-        const data = await res.json();
-        if (data.message && data.message !== lastMsg) {
-          lastMsg = data.message;
-          showNotification(data.message);
-        }
-      } catch (e) {
-        console.error("خطأ في جلب التحديثات", e);
-      }
-    }
-
-    function showNotification(msg) {
-      const box = document.getElementById("notificationBox");
-      box.textContent = "🔔 " + msg;
-      box.style.display = "block";
-      setTimeout(() => { box.style.display = "none"; }, 6000);
-    }
-
-    // تحقق كل دقيقة
-    setInterval(checkUpdates, 60000);
-
-    // جلب أول مرة عند تحميل الصفحة
-    checkUpdates();
-  </script>
 
 <!-- عداد الزيارات بأسلوب احترافي وألوان متناسقة مع البوابة -->
 <div
