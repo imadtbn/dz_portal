@@ -1536,38 +1536,7 @@ dir="rtl" style="text-align: right;">
     🔔 إشعار جديد
   </div>
 
-  <script>
-    let lastMsg = "";
 
-    // رابط الـ API من Google Apps Script
-    const apiUrl = "https://script.google.com/macros/s/AKfycbwap_0FcirukQreMhIVn1PS0kSEzoxPFrNKn1u94yR7z1l-ndxADsFNlx50CPePvs6j/exec";
-
-    async function checkUpdates() {
-      try {
-        const res = await fetch(apiUrl + "?t=" + Date.now()); // منع الكاش
-        const data = await res.json();
-        if (data.message && data.message !== lastMsg) {
-          lastMsg = data.message;
-          showNotification(data.message);
-        }
-      } catch (e) {
-        console.error("خطأ في جلب التحديثات", e);
-      }
-    }
-
-    function showNotification(msg) {
-      const box = document.getElementById("notificationBox");
-      box.textContent = "🔔 " + msg;
-      box.style.display = "block";
-      setTimeout(() => { box.style.display = "none"; }, 6000);
-    }
-
-    // تحقق كل دقيقة
-    setInterval(checkUpdates, 25000);
-
-    // جلب أول مرة عند تحميل الصفحة
-    checkUpdates();
-  </script>
 
 <!-- عداد الزيارات بأسلوب احترافي وألوان متناسقة مع البوابة -->
 <div
@@ -1586,27 +1555,6 @@ dir="rtl" style="text-align: right;">
     عدد الزيارات<br><small style="color: #777;">منذ 28 جوان 2025</small>
   </div>
 </div>
-
-<script>
-  // أرقام وهمية ابتدائية
-  let daily = Math.floor(Math.random() * 10000 + 1000);  // زيارات اليوم
-  let total = 3000000 + Math.floor(Math.random() * 50000); // إجمالي الزيارات
-
-  const dailyEl = document.getElementById('daily-visits');
-  const totalEl = document.getElementById('total-visits');
-
-  // عداد متسارع وهمي
-  setInterval(() => {
-    let dailyIncrement = Math.floor(Math.random() * 10 + 1);
-    let totalIncrement = Math.floor(Math.random() * 20 + 1);
-
-    daily += dailyIncrement;
-    total += totalIncrement;
-
-    dailyEl.textContent = daily.toLocaleString('en-US');
-    totalEl.textContent = total.toLocaleString('en-US');
-  }, 1200); // كل 3.2 ثانية
-</script>
 
  <!-- الفوتر -->
 <footer>
@@ -1627,49 +1575,90 @@ dir="rtl" style="text-align: right;">
 id="scrollTopBtn" onclick="scrollToTop()" title="العودة للأعلى">↑
 </button>
 
-<script>
+ <script>
+// =======================
+// (1) أرقام الزيارات الوهمية + عداد متسارع
+// =======================
+let daily = Math.floor(Math.random() * 10000 + 1000);  // زيارات اليوم
+let total = 3000000 + Math.floor(Math.random() * 50000); // إجمالي الزيارات
+
+const dailyEl = document.getElementById('daily-visits');
+const totalEl = document.getElementById('total-visits');
+
+setInterval(() => {
+  let dailyIncrement = Math.floor(Math.random() * 10 + 1);
+  let totalIncrement = Math.floor(Math.random() * 20 + 1);
+
+  daily += dailyIncrement;
+  total += totalIncrement;
+
+  dailyEl.textContent = daily.toLocaleString('en-US');
+  totalEl.textContent = total.toLocaleString('en-US');
+}, 1200); // كل 1.2 ثانية
+
+// =======================
+// (2) إظهار/إخفاء الأقسام + عداد العناصر
+// =======================
 document.addEventListener("DOMContentLoaded", function () {
   const headers = document.querySelectorAll("section h2, section h3");
+
   headers.forEach((header, index) => {
     const nextElement = header.nextElementSibling;
+
     if (nextElement && (nextElement.tagName === "UL" || nextElement.tagName === "DIV")) {
+      // إنشاء معرفات تلقائية
       header.id = header.id || "header-" + index;
       nextElement.id = nextElement.id || "content-" + index;
 
-      const toggle = () => {
+      // وظيفة الفتح/الإغلاق
+      header.addEventListener("click", () => {
         const isVisible = nextElement.classList.toggle("show");
         nextElement.style.display = isVisible ? "block" : "none";
         header.classList.toggle("open", isVisible);
+      });
+
+      // وظيفة تحديث العداد
+      const updateCount = () => {
+        const countSpan = header.querySelector(".count");
+        if (!countSpan) return;
+
+        let totalItems = 0;
+        if (nextElement.tagName === "UL") {
+          totalItems = nextElement.querySelectorAll("li").length;
+        } else if (nextElement.tagName === "DIV") {
+          totalItems = nextElement.querySelectorAll("ul li").length;
+        }
+        countSpan.textContent = ` (${totalItems} خدمة)`;
       };
 
-      header.addEventListener("click", toggle);
+      // تحديث أولي
+      updateCount();
 
-      // Count items if UL
-      const countSpan = header.querySelector(".count");
-      if (countSpan && nextElement.tagName === "UL") {
-        const items = nextElement.querySelectorAll("li");
-        countSpan.textContent = ` (${items.length} خدمة)`;
-      }
-
-      // Nested ULs in DIVs (e.g., الضمان الاجتماعي)
-      if (countSpan && nextElement.tagName === "DIV") {
-        const totalItems = nextElement.querySelectorAll("ul li").length;
-        countSpan.textContent = ` (${totalItems} خدمة)`;
-      }
+      // مراقبة أي تغيير
+      const observer = new MutationObserver(updateCount);
+      observer.observe(nextElement, { childList: true, subtree: true });
     }
   });
 });
 
+// =======================
+// (3) زر الصعود إلى الأعلى
+// =======================
 window.onscroll = function () {
   const btn = document.getElementById("scrollTopBtn");
-  btn.style.display = (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) ? "block" : "none";
+  if (btn) {
+    btn.style.display = (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) ? "block" : "none";
+  }
 };
 
 function scrollToTop() {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
-document.getElementById("searchInput").addEventListener("input", function () {
+// =======================
+// (4) البحث في الأقسام
+// =======================
+document.getElementById("searchInput")?.addEventListener("input", function () {
   const query = this.value.toLowerCase().trim();
   const sections = document.querySelectorAll("section");
   sections.forEach(section => {
@@ -1677,54 +1666,34 @@ document.getElementById("searchInput").addEventListener("input", function () {
     section.style.display = text.includes(query) ? "block" : "none";
   });
 });
-</script>
- 
-<!-- إظهار وإخفاء زر تثبيت التطبيق -->
-<script>
-  const installButton = document.getElementById('install-button');
-  let deferredPrompt;
-  window.addEventListener('beforeinstallprompt', (e) => {
-    // منع النافذة التلقائية
-    e.preventDefault();
-    deferredPrompt = e;
-    installButton.style.display = 'inline-block'; // إظهار الزر عند توفر التثبيت
-    installButton.addEventListener('click', () => {
-      installButton.style.display = 'none'; // إخفاء الزر بعد النقر
-      deferredPrompt.prompt();
-      deferredPrompt.userChoice.then((choiceResult) => {
-        if (choiceResult.outcome !== 'accepted') {
-          installButton.style.display = 'inline-block'; // إعادة إظهار الزر إذا لم يوافق المستخدم
-        }
-        deferredPrompt = null;
-      });
-    });
-  });
 
-  // التحقق من تغيير الوضع بعد التثبيت (مثلاً عند إعادة فتح التطبيق)
-  window.addEventListener('appinstalled', () => {
+// =======================
+// (5) زر تثبيت التطبيق PWA
+// =======================
+const installButton = document.getElementById('install-button');
+let deferredPrompt;
+
+window.addEventListener('beforeinstallprompt', (e) => {
+  e.preventDefault();
+  deferredPrompt = e;
+  installButton.style.display = 'inline-block';
+
+  installButton.addEventListener('click', () => {
     installButton.style.display = 'none';
-  });
- // قسم أرقام الطوارئ والخدمات
-document.addEventListener("DOMContentLoaded", function () {
-  // كل العناوين
-  const headers = document.querySelectorAll("section h2");
-
-  headers.forEach(header => {
-    const countSpan = header.querySelector(".count");
-    if (countSpan) {
-      const targetId = header.id.replace("toggle-", "");
-      const list = document.getElementById(targetId);
-
-      if (list) {
-        const items = list.querySelectorAll("li");
-        countSpan.textContent = `(${items.length})`;
+    deferredPrompt.prompt();
+    deferredPrompt.userChoice.then((choiceResult) => {
+      if (choiceResult.outcome !== 'accepted') {
+        installButton.style.display = 'inline-block';
       }
-    }
+      deferredPrompt = null;
+    });
   });
 });
 
-
+window.addEventListener('appinstalled', () => {
+  installButton.style.display = 'none';
+});
 </script>
- 
+
  </body>
 </html>
