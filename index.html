@@ -1318,17 +1318,18 @@ dir="rtl" style="text-align: right;">
 </section>
 
 <!-- قسم الخدمات الطوارئ -->
-<section
- dir="rtl" style="text-align: right;">
-  <h2 id="toggle-4" onclick="toggleSection('health-links', this)" style="cursor: pointer; background-color: #a52a2a; color: white; padding: 10px; border-radius: 8px;">
-    <span><i class="fas fa-notes-medical" style="color: white;"></i> ارقام هاتف و خدمات عن بعد<span class="count"></span></span>
+<section dir="rtl" style="text-align: right;">
+  <h2 id="toggle-4" onclick="toggleSection('health-links', this)"
+      style="cursor: pointer; background-color: #a52a2a; color: white; padding: 10px; border-radius: 8px;">
+    <span>
+      <i class="fas fa-notes-medical" style="color: white;"></i> 
+      ارقام هاتف و خدمات عن بعد (<span class="count"></span>)
+    </span>
     <span class="toggle-icon" style="float: left;">▶</span>
   </h2>
-  <ul id="health-links" style="display: none; list-style: none; padding-right: 20px; line-height: 2; text-align: right;">
-<li><i class="fas fa-book-medical" style="color: green;"></i> 
 
- 
-  <li><i class="fas fa-user-shield" style="color: green;"></i> 
+  <ul id="health-links" style="display: none; list-style: none; padding-right: 20px; line-height: 2; text-align: right;">
+    <li><i class="fas fa-user-shield" style="color: green;"></i> 
         <strong>الدرك الوطني:</strong> <a href="tel:1055">1055</a></li>
 
     <li><i class="fas fa-globe" style="color: green;"></i> 
@@ -1349,7 +1350,7 @@ dir="rtl" style="text-align: right;">
     <li><i class="fas fa-fire-extinguisher" style="color: green;"></i> 
         <strong>الحماية المدنية:</strong> <a href="tel:1021">1021</a></li>
 
-<li><i class="fas fa-landmark" style="color: green;"></i> 
+    <li><i class="fas fa-landmark" style="color: green;"></i> 
         <strong>وزارة الداخلية:</strong> <a href="tel:1100">1100</a></li>
 
     <li><i class="fas fa-briefcase" style="color: green;"></i> 
@@ -1366,8 +1367,6 @@ dir="rtl" style="text-align: right;">
 
     <li><i class="fas fa-building" style="color: green;"></i> 
         <strong>الأملاك الوطنية:</strong> <a href="tel:3020">3020</a></li>
-
-  
 
     <li><i class="fas fa-gavel" style="color: green;"></i> 
         <strong>وزارة العدل:</strong> <a href="tel:1078">1078</a></li>
@@ -1415,6 +1414,16 @@ dir="rtl" style="text-align: right;">
         <strong>خدماتي:</strong> <a href="tel:3075">3075</a></li>
   </ul>
 </section>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const section = document.querySelector("#health-links");
+  const countSpan = document.querySelector("#toggle-4 .count");
+  if (section && countSpan) {
+    countSpan.textContent = section.querySelectorAll("li").length;
+  }
+});
+</script>
 
 <!-- قسم معلومات الاتصال -->
 <section dir="rtl" style="text-align: right;">
