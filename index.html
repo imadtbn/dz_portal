@@ -1475,16 +1475,32 @@ dir="rtl" style="text-align: right;">
     </ul>
   </section>
  
- <script>
+<script>
 document.addEventListener("DOMContentLoaded", function () {
-  const section = document.getElementById("emergency-numbers");
-  const countSpan = document.querySelector("#toggle-14 .count");
-  if (section && countSpan) {
-    const items = section.querySelectorAll("li");
-    countSpan.textContent = "(" + items.length + ")";
-  }
+  // تفعيل التبديل بين الإظهار والإخفاء
+  window.toggleSection = function(id, header) {
+    const section = document.getElementById(id);
+    if (!section) return;
+    const isVisible = section.classList.contains("show");
+    document.querySelectorAll("ul, div").forEach(el => el.classList.remove("show"));
+    if (!isVisible) section.classList.add("show");
+    header.classList.toggle("open", !isVisible);
+  };
+
+  // عد العناصر داخل كل قائمة أو قسم
+  document.querySelectorAll("section h2, section h3").forEach(header => {
+    const nextEl = header.nextElementSibling;
+    if (nextEl) {
+      let items = nextEl.querySelectorAll("li, a[href^='tel']").length;
+      if (items > 0) {
+        const countSpan = header.querySelector(".count");
+        if (countSpan) countSpan.textContent = `(${items})`;
+      }
+    }
+  });
 });
 </script>
+
  
 <!-- قسم معلومات الاتصال -->
 <section dir="rtl" style="text-align: right;">
