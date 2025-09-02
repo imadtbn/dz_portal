@@ -19,7 +19,7 @@
 
   <meta charset="utf-8" />
 
-  <script type="application/ld+json">
+<script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@graph": [
@@ -28,8 +28,15 @@
       "@id": "https://imadtbn.github.io/dz_portal/#website",
       "url": "https://imadtbn.github.io/dz_portal/",
       "name": "البوابة الجزائرية للخدمات الرقمية",
+      "alternateName": "DZ e-Services Portal",
       "inLanguage": "ar-DZ",
-      "description": "موقع موحد يضم روابط إلى جميع الخدمات الإلكترونية الرقمية الحكومية الجزائرية: التعليم، الجباية، العدالة، البريد، وغيرها."
+      "description": "موقع موحد يضم روابط إلى جميع الخدمات الإلكترونية الرقمية الحكومية الجزائرية: التعليم، الجباية، العدالة، البريد، وغيرها.",
+      "image": "https://imadtbn.github.io/dz_portal/preview.png",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://imadtbn.github.io/dz_portal/?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
     },
     {
       "@type": "GovernmentOrganization",
@@ -43,12 +50,17 @@
       "contactPoint": {
         "@type": "ContactPoint",
         "telephone": "+213",
-        "contactType": "خدمة المواطنين"
+        "contactType": "خدمة المواطنين",
+        "areaServed": "DZ",
+        "availableLanguage": ["ar", "fr"]
       },
       "address": {
         "@type": "PostalAddress",
         "addressCountry": "DZ"
-      }
+      },
+      "sameAs": [
+        "https://www.el-mouradia.dz/"
+      ]
     },
     {
       "@type": "WebPage",
@@ -61,7 +73,8 @@
       "about": {
         "@id": "https://imadtbn.github.io/dz_portal/#organization"
       },
-      "inLanguage": "ar-DZ"
+      "inLanguage": "ar-DZ",
+      "image": "https://imadtbn.github.io/dz_portal/preview.png"
     },
     {
       "@type": "BreadcrumbList",
