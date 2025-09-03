@@ -2,7 +2,344 @@
 <html dir="rtl" lang="ar">
 
 <head>
+<style>
+  .chatbot-container {
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    z-index: 10000;
+    font-family: Arial, Tahoma, sans-serif;
+  }
 
+  .chatbot-button {
+    width: 60px;
+    height: 60px;
+    background: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+    border: 1px solid #ddd;
+    animation: pulse 2s infinite;
+  }
+
+  .chatbot-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.25);
+  }
+
+  .chatbot-button i {
+    color: #006233;
+    font-size: 28px;
+  }
+
+  @keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.15); }
+    100% { transform: scale(1); }
+  }
+
+  .chatbot-window {
+    width: 90vw;
+    max-width: 400px;
+    height: 70vh;
+    max-height: 550px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+    display: none;
+    flex-direction: column;
+    overflow: hidden;
+    border: 1px solid #cde7da;
+  }
+
+  #chatMessages {
+    flex: 1;
+    padding: 12px;
+    overflow-y: auto;
+    background: #f9f9f9;
+    display: flex;
+    flex-direction: column;
+    scroll-behavior: smooth;
+  }
+
+  .message {
+    max-width: 85%;
+    padding: 10px 14px;
+    margin: 6px 0;
+    border-radius: 14px;
+    font-size: 15px;
+    line-height: 1.5;
+    word-wrap: break-word;
+  }
+
+  .user-message {
+    background: #006233;
+    color: white;
+    align-self: flex-end;
+    border-bottom-right-radius: 2px;
+  }
+
+  .bot-message {
+    background: #e5e5ea;
+    color: #111;
+    align-self: flex-start;
+    border-bottom-left-radius: 2px;
+  }
+
+  .chatbot-input {
+    display: flex;
+    border-top: 1px solid #ddd;
+  }
+
+  .chatbot-input input {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    outline: none;
+    font-size: 15px;
+  }
+
+  .chatbot-input button {
+    background: none;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+  }
+
+  .chatbot-input button i {
+    color: #006233;
+    font-size: 22px;
+  }
+
+  .search-result {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 6px 0;
+    font-size: 14px;
+    line-height: 1.4;
+    transition: all 0.2s ease;
+  }
+  .search-result a {
+    font-weight: bold;
+    color: #006233;
+    text-decoration: none;
+  }
+  .search-result a:hover {
+    text-decoration: underline;
+  }
+
+  .quick-replies {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 6px;
+  }
+  .quick-reply {
+    background: #f0f0f0;
+    border: 1px solid #ddd;
+    border-radius: 14px;
+    padding: 6px 12px;
+    font-size: 13px;
+    cursor: pointer;
+  }
+  .quick-reply:hover {
+    background: #006233;
+    color: white;
+  }
+
+  /* جعل البوت متجاوب مع الشاشات الصغيرة */
+  @media screen and (max-width: 480px) {
+    .chatbot-window {
+      width: 95vw;
+      height: 75vh;
+    }
+    .message {
+      font-size: 14px;
+      padding: 8px 10px;
+    }
+    .chatbot-input input {
+      font-size: 14px;
+    }
+  }
+</style>
+
+<div class="chatbot-container">
+  <div class="chatbot-window" id="chatWindow">
+    <div id="chatMessages"></div>
+    <div class="chatbot-input">
+      <input type="text" id="userInput" placeholder="اكتب رسالتك...">
+      <button id="sendMessage"><i class="fas fa-paper-plane"></i></button>
+    </div>
+  </div>
+
+  <div class="chatbot-button" id="chatButton">
+    <i class="fas fa-robot"></i>
+  </div>
+</div>
+
+<script>
+const chatButton = document.getElementById("chatButton");
+const chatWindow = document.getElementById("chatWindow");
+const sendMessageBtn = document.getElementById("sendMessage");
+const userInput = document.getElementById("userInput");
+const chatMessages = document.getElementById("chatMessages");
+
+// ضع مفاتيحك هنا
+const OPENAI_KEY = "ضع_مفتاح_OpenAI";
+const GOOGLE_KEY = "ضع_مفتاح_Google_CSE"; 
+const GOOGLE_CX = "ضع_معرف_محرك_البحث"; 
+
+chatButton.addEventListener("click", () => {
+  chatWindow.style.display = chatWindow.style.display === "flex" ? "none" : "flex";
+
+  if(chatMessages.children.length === 0){
+    appendMessage("مرحباً 👋 أنا بوت المساعدة، يمكنك طرح أي سؤال وسأبحث لك عن الإجابة.", "bot");
+    showQuickReplies("عام");
+  }
+});
+
+sendMessageBtn.addEventListener("click", sendMessage);
+userInput.addEventListener("keypress", e => { if(e.key==="Enter") sendMessage(); });
+
+function appendMessage(text,type="bot"){
+  const msg=document.createElement("div");
+  msg.classList.add("message",type==="user"?"user-message":"bot-message");
+  msg.innerHTML=text;
+  chatMessages.appendChild(msg);
+  chatMessages.scrollTop=chatMessages.scrollHeight;
+  return msg;
+}
+
+function showQuickReplies(context="عام"){
+  const container=document.createElement("div");
+  container.classList.add("quick-replies");
+
+  let options=[];
+  switch(context){
+    case "تعليم": options=["موقع وزارة التعليم العالي 🎓","نتائج البكالوريا 📊","الخدمات الجامعية 🏫"]; break;
+    case "صحة": options=["موقع وزارة الصحة 🏥","التلقيحات 💉","أرقام الطوارئ الطبية 🚑"]; break;
+    case "بريد": options=["موقع بريد الجزائر 📮","حساب CCP 💳","تتبع الطرود 📦"]; break;
+    case "طوارئ": options=["الشرطة 1548 👮‍♂️","الحماية المدنية 14 🚒","الدرك الوطني 1055 🚔"]; break;
+    default: options=["الدفع الإلكتروني 💳","بريد الجزائر 📮","أرقام الطوارئ 🚨","التعليم 🎓","الصحة 🏥"];
+  }
+
+  options.forEach(opt=>{
+    const btn=document.createElement("div");
+    btn.classList.add("quick-reply");
+    btn.textContent=opt;
+    btn.onclick=()=>{appendMessage(opt,"user"); processMessage(opt); container.remove();};
+    container.appendChild(btn);
+  });
+
+  chatMessages.appendChild(container);
+  chatMessages.scrollTop=chatMessages.scrollHeight;
+}
+
+function detectContext(query){
+  if(/تعليم|جامعة|مدرسة|بكالوريا/i.test(query)) return "تعليم";
+  if(/صحة|مستشفى|طبيب|لقاح/i.test(query)) return "صحة";
+  if(/بريد|CCP|طرود|إرسال/i.test(query)) return "بريد";
+  if(/طوارئ|شرطة|درك|إسعاف/i.test(query)) return "طوارئ";
+  return "عام";
+}
+
+async function sendMessage(){
+  const text=userInput.value.trim();
+  if(!text) return;
+  appendMessage(text,"user");
+  userInput.value="";
+  processMessage(text);
+}
+
+function searchInPage(query){
+  const textNodes=[];
+  const walker=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT,null,false);
+  while(walker.nextNode()){if(walker.currentNode.nodeValue.toLowerCase().includes(query.toLowerCase())) textNodes.push(walker.currentNode);}
+  return textNodes.slice(0,3).map((node,i)=>{
+    const parent=node.parentElement;
+    const id=`localResult-${Date.now()}-${i}`;
+    parent.setAttribute("id",id);
+    const fullText=node.nodeValue.trim();
+    const index=fullText.toLowerCase().indexOf(query.toLowerCase());
+    const start=Math.max(0,index-40);
+    const end=Math.min(fullText.length,index+query.length+40);
+    const snippet=fullText.substring(start,end);
+    return {id,snippet};
+  });
+}
+
+async function processMessage(query){
+  const context=detectContext(query);
+
+  // البحث داخل الصفحة
+  const localResults=searchInPage(query);
+  if(localResults.length>0){
+    appendMessage("📄 نتائج من داخل الصفحة:");
+    localResults.forEach(r=>{
+      const resultHTML=`<div class="search-result">
+        <a href="#${r.id}" onclick="document.getElementById('${r.id}').scrollIntoView({behavior:'smooth',block:'center'});">
+          ${r.snippet}...
+        </a>
+      </div>`;
+      appendMessage(resultHTML);
+    });
+    showQuickReplies(context);
+    return;
+  }
+
+  // ChatGPT
+  const gptResponse=await askGPT(query);
+  if(gptResponse && !gptResponse.startsWith("❌")){
+    appendMessage(gptResponse);
+    showQuickReplies(context);
+    return;
+  }
+
+  // Google (مواقع رسمية)
+  const googleResults=await searchGoogle(query+" site:.dz");
+  if(googleResults.length>0){
+    appendMessage("🔎 نتائج من المواقع الرسمية الجزائرية:");
+    googleResults.forEach(r=>{
+      const resultHTML=`<div class="search-result">
+        <a href="${r.link}" target="_blank">${r.title}</a>
+        <p>${r.snippet}</p>
+      </div>`;
+      appendMessage(resultHTML);
+    });
+  } else appendMessage("❌ لم أجد أي نتيجة رسمية.");
+
+  showQuickReplies(context);
+}
+
+async function askGPT(query){
+  if(!OPENAI_KEY) return "❌ لم يتم إعداد OpenAI API.";
+  try{
+    const res=await fetch("https://api.openai.com/v1/chat/completions",{
+      method:"POST",
+      headers:{"Content-Type":"application/json","Authorization":`Bearer ${OPENAI_KEY}`},
+      body:JSON.stringify({model:"gpt-3.5-turbo",messages:[{role:"user",content:query}]})
+    });
+    const data=await res.json();
+    return data.choices?.[0]?.message?.content || "❌ لا توجد إجابة.";
+  } catch{return "❌ خطأ في الاتصال بـ ChatGPT.";}
+}
+
+async function searchGoogle(query){
+  if(!GOOGLE_KEY||!GOOGLE_CX) return [];
+  try{
+    const url=`https://www.googleapis.com/customsearch/v1?key=${GOOGLE_KEY}&cx=${GOOGLE_CX}&q=${encodeURIComponent(query)}`;
+    const res=await fetch(url);
+    const data=await res.json();
+    return data.items?.slice(0,5).map(r=>({title:r.title,link:r.link,snippet:r.snippet}))||[];
+  } catch{return [];}
+}
+</script>
   <!-- السكربت الخاص بتسجيل الـ Service Worker -->
   <script>
     if ('serviceWorker' in navigator) {
@@ -510,350 +847,7 @@ CNAS, CASNOS, الضمان الاجتماعي, بطاقة شفاء, شهادة �
     </div>
 
   </header>
-<style>
-  .chatbot-container {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    z-index: 10000;
-    font-family: Arial, Tahoma, sans-serif;
-  }
 
-  .chatbot-button {
-    width: 60px;
-    height: 60px;
-    background: #ffffff;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-    transition: all 0.3s ease;
-    border: 1px solid #ddd;
-    animation: pulse 2s infinite;
-  }
-
-  .chatbot-button:hover {
-    transform: scale(1.1);
-    box-shadow: 0 6px 14px rgba(0,0,0,0.25);
-  }
-
-  .chatbot-button i {
-    color: #006233;
-    font-size: 28px;
-  }
-
-  @keyframes pulse {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.15); }
-    100% { transform: scale(1); }
-  }
-
-  .chatbot-window {
-    width: 360px;
-    height: 480px;
-    background-color: white;
-    border-radius: 15px;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
-    display: none;
-    flex-direction: column;
-    overflow: hidden;
-    margin-bottom: 15px;
-    border: 1px solid #cde7da;
-  }
-
-  #chatMessages {
-    flex: 1;
-    padding: 10px;
-    overflow-y: auto;
-    background: #f9f9f9;
-    display: flex;
-    flex-direction: column;
-  }
-
-  .message {
-    max-width: 80%;
-    padding: 8px 12px;
-    margin: 6px 0;
-    border-radius: 12px;
-    font-size: 14px;
-    line-height: 1.4;
-    word-wrap: break-word;
-  }
-
-  .user-message {
-    background: #006233;
-    color: white;
-    align-self: flex-end;
-    border-bottom-right-radius: 2px;
-  }
-
-  .bot-message {
-    background: #e5e5ea;
-    color: #000;
-    align-self: flex-start;
-    border-bottom-left-radius: 2px;
-  }
-
-  .chatbot-input {
-    display: flex;
-    border-top: 1px solid #ddd;
-  }
-
-  .chatbot-input input {
-    flex: 1;
-    padding: 10px;
-    border: none;
-    outline: none;
-  }
-
-  .chatbot-input button {
-    background: none;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-  }
-
-  .chatbot-input button i {
-    color: #006233;
-    font-size: 20px;
-  }
-
-  .search-result {
-    background: #fff;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 8px;
-    margin: 5px 0;
-    font-size: 13px;
-  }
-  .search-result a {
-    font-weight: bold;
-    color: #006233;
-    text-decoration: none;
-    cursor: pointer;
-  }
-  .search-result a:hover {
-    text-decoration: underline;
-  }
-
-  .quick-replies {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 6px;
-    margin-top: 6px;
-  }
-  .quick-reply {
-    background: #f0f0f0;
-    border: 1px solid #ddd;
-    border-radius: 12px;
-    padding: 4px 10px;
-    font-size: 12px;
-    cursor: pointer;
-  }
-  .quick-reply:hover {
-    background: #006233;
-    color: white;
-  }
-</style>
-
-<div class="chatbot-container">
-  <div class="chatbot-window" id="chatWindow">
-    <div id="chatMessages"></div>
-    <div class="chatbot-input">
-      <input type="text" id="userInput" placeholder="اكتب رسالتك...">
-      <button id="sendMessage"><i class="fas fa-paper-plane"></i></button>
-    </div>
-  </div>
-
-  <div class="chatbot-button" id="chatButton">
-    <i class="fas fa-robot"></i>
-  </div>
-</div>
-
-<script>
-const chatButton = document.getElementById("chatButton");
-const chatWindow = document.getElementById("chatWindow");
-const sendMessageBtn = document.getElementById("sendMessage");
-const userInput = document.getElementById("userInput");
-const chatMessages = document.getElementById("chatMessages");
-
-// ضع مفتاحك هنا
-const OPENAI_KEY = "ضع_مفتاح_OpenAI";
-const GOOGLE_KEY = "ضع_مفتاح_Google_CSE"; 
-const GOOGLE_CX = "ضع_معرف_محرك_البحث"; 
-
-chatButton.addEventListener("click", () => {
-  chatWindow.style.display = chatWindow.style.display === "flex" ? "none" : "flex";
-
-  // رسالة ترحيبية عند أول فتح البوت
-  if (chatMessages.children.length === 0) {
-    appendMessage("مرحباً 👋 أنا بوت المساعدة، يمكنك طرح أي سؤال وسأبحث لك عن الإجابة.", "bot");
-    showQuickReplies("عام");
-  }
-});
-
-sendMessageBtn.addEventListener("click", sendMessage);
-userInput.addEventListener("keypress", e => { if (e.key === "Enter") sendMessage(); });
-
-function appendMessage(text, type = "bot") {
-  const msg = document.createElement("div");
-  msg.classList.add("message", type === "user" ? "user-message" : "bot-message");
-  msg.innerHTML = text;
-  chatMessages.appendChild(msg);
-  chatMessages.scrollTop = chatMessages.scrollHeight;
-  return msg;
-}
-
-function showQuickReplies(context = "عام") {
-  const container = document.createElement("div");
-  container.classList.add("quick-replies");
-
-  let options = [];
-  switch(context) {
-    case "تعليم":
-      options = ["موقع وزارة التعليم العالي 🎓","نتائج البكالوريا 📊","الخدمات الجامعية 🏫"];
-      break;
-    case "صحة":
-      options = ["موقع وزارة الصحة 🏥","التلقيحات 💉","أرقام الطوارئ الطبية 🚑"];
-      break;
-    case "بريد":
-      options = ["موقع بريد الجزائر 📮","حساب CCP 💳","تتبع الطرود 📦"];
-      break;
-    case "طوارئ":
-      options = ["الشرطة 1548 👮‍♂️","الحماية المدنية 14 🚒","الدرك الوطني 1055 🚔"];
-      break;
-    default:
-      options = ["الدفع الإلكتروني 💳","بريد الجزائر 📮","أرقام الطوارئ 🚨","التعليم 🎓","الصحة 🏥"];
-  }
-
-  options.forEach(opt => {
-    const btn = document.createElement("div");
-    btn.classList.add("quick-reply");
-    btn.textContent = opt;
-    btn.onclick = () => {
-      appendMessage(opt, "user");
-      processMessage(opt);
-      container.remove();
-    };
-    container.appendChild(btn);
-  });
-
-  chatMessages.appendChild(container);
-  chatMessages.scrollTop = chatMessages.scrollHeight;
-}
-
-function detectContext(query) {
-  if (/تعليم|جامعة|مدرسة|بكالوريا/i.test(query)) return "تعليم";
-  if (/صحة|مستشفى|طبيب|لقاح/i.test(query)) return "صحة";
-  if (/بريد|CCP|طرود|إرسال/i.test(query)) return "بريد";
-  if (/طوارئ|شرطة|درك|إسعاف/i.test(query)) return "طوارئ";
-  return "عام";
-}
-
-async function sendMessage() {
-  const text = userInput.value.trim();
-  if (!text) return;
-  appendMessage(text, "user");
-  userInput.value = "";
-  processMessage(text);
-}
-
-// البحث داخل الصفحة
-function searchInPage(query) {
-  const textNodes = [];
-  const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, null, false);
-  while(walker.nextNode()){
-    if(walker.currentNode.nodeValue.toLowerCase().includes(query.toLowerCase())){
-      textNodes.push(walker.currentNode);
-    }
-  }
-  return textNodes.slice(0,3).map((node,i)=>{
-    const parent = node.parentElement;
-    const id = `localResult-${Date.now()}-${i}`;
-    parent.setAttribute("id", id);
-    const fullText = node.nodeValue.trim();
-    const index = fullText.toLowerCase().indexOf(query.toLowerCase());
-    const start = Math.max(0,index-40);
-    const end = Math.min(fullText.length,index+query.length+40);
-    const snippet = fullText.substring(start,end);
-    return {id,snippet};
-  });
-}
-
-async function processMessage(query){
-  const context = detectContext(query);
-
-  // أولاً: البحث داخل الصفحة
-  const localResults = searchInPage(query);
-  if(localResults.length>0){
-    appendMessage("📄 نتائج من داخل الصفحة:");
-    localResults.forEach(r=>{
-      const resultHTML = `<div class="search-result">
-        <a href="#${r.id}" onclick="document.getElementById('${r.id}').scrollIntoView({behavior:'smooth',block:'center'});">
-          ${r.snippet}...
-        </a>
-      </div>`;
-      appendMessage(resultHTML);
-    });
-    showQuickReplies(context);
-    return;
-  }
-
-  // ثانياً: ChatGPT
-  const gptResponse = await askGPT(query);
-  if(gptResponse && !gptResponse.startsWith("❌")){
-    appendMessage(gptResponse);
-    showQuickReplies(context);
-    return;
-  }
-
-  // ثالثاً: Google Search (مواقع رسمية جزائرية)
-  const googleResults = await searchGoogle(query + " site:.dz");
-  if(googleResults.length>0){
-    appendMessage("🔎 نتائج من المواقع الرسمية الجزائرية:");
-    googleResults.forEach(r=>{
-      const resultHTML = `<div class="search-result">
-        <a href="${r.link}" target="_blank">${r.title}</a>
-        <p>${r.snippet}</p>
-      </div>`;
-      appendMessage(resultHTML);
-    });
-  } else {
-    appendMessage("❌ لم أجد أي نتيجة رسمية.");
-  }
-
-  showQuickReplies(context);
-}
-
-async function askGPT(query){
-  if(!OPENAI_KEY) return "❌ لم يتم إعداد OpenAI API.";
-  try{
-    const res = await fetch("https://api.openai.com/v1/chat/completions",{
-      method:"POST",
-      headers:{"Content-Type":"application/json","Authorization":`Bearer ${OPENAI_KEY}`},
-      body:JSON.stringify({model:"gpt-3.5-turbo",messages:[{role:"user",content:query}]})
-    });
-    const data = await res.json();
-    return data.choices?.[0]?.message?.content || "❌ لا توجد إجابة.";
-  } catch {
-    return "❌ خطأ في الاتصال بـ ChatGPT.";
-  }
-}
-
-async function searchGoogle(query){
-  if(!GOOGLE_KEY || !GOOGLE_CX) return [];
-  try{
-    const url=`https://www.googleapis.com/customsearch/v1?key=${GOOGLE_KEY}&cx=${GOOGLE_CX}&q=${encodeURIComponent(query)}`;
-    const res = await fetch(url);
-    const data = await res.json();
-    return data.items?.slice(0,5).map(r=>({title:r.title,link:r.link,snippet:r.snippet})) || [];
-  } catch {
-    return [];
-  }
-}
-</script>
 
   <!-- قسم الترحيب -->
   <section dir="rtl" style="text-align: center; background-color: #fbf4f3; margin-top: 10px;">
