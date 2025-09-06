@@ -1,0 +1,46 @@
+name: Generate Sitemap
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Generate sitemap
+        run: |
+          echo '<?xml version="1.0" encoding="UTF-8"?>' > sitemap.xml
+          echo '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">' >> sitemap.xml
+          
+          # الصفحة الرئيسية
+          echo "  <url>" >> sitemap.xml
+          echo "    <loc>https://imadtbn.github.io/dz_portal/</loc>" >> sitemap.xml
+          echo "    <lastmod>$(date -u +"%Y-%m-%dT%H:%M:%SZ")</lastmod>" >> sitemap.xml
+          echo "    <changefreq>weekly</changefreq>" >> sitemap.xml
+          echo "    <priority>1.0</priority>" >> sitemap.xml
+          echo "  </url>" >> sitemap.xml
+
+          # باقي الملفات HTML
+          for file in $(find . -name "*.html" ! -path "./node_modules/*"); do
+            url="https://imadtbn.github.io/dz_portal/${file#./}"
+            lastmod=$(date -u +"%Y-%m-%dT%H:%M:%SZ" -r "$file")
+            echo "  <url>" >> sitemap.xml
+            echo "    <loc>$url</loc>" >> sitemap.xml
+            echo "    <lastmod>$lastmod</lastmod>" >> sitemap.xml
+            echo "    <changefreq>weekly</changefreq>" >> sitemap.xml
+            echo "    <priority>0.8</priority>" >> sitemap.xml
+            echo "  </url>" >> sitemap.xml
+          done
+
+          echo '</urlset>' >> sitemap.xml
+
+      - name: Commit sitemap
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add sitemap.xml
+          git commit -m "Update sitemap.xml automatically" || echo "No changes"
+          git push
