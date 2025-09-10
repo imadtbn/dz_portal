@@ -148,64 +148,257 @@
   <!-- CSS داخلي -->
   <style>
     /* 🎨 إعدادات عامة للصفحة */
-body{margin:0;font-family:Arial,Tahoma,sans-serif;background-color:#f7fdf9;color:#333;line-height:1.6}
-header,footer{background-color:#006233;color:#fff;padding:10px;text-align:center}
+    body {
+      margin: 0;
+      font-family: Arial, Tahoma, sans-serif;
+      background-color: #f7fdf9;
+      color: #333;
+      line-height: 1.6
+    }
 
-/* 👤 الهوية (الشعار + العنوان) */
-.branding{display:flex;align-items:center;justify-content:center;gap:10px;flex-wrap:wrap}
-.branding img{width:32px;height:auto}
-.branding i{font-size:24px}
-.branding h1{margin:0;font-size:1.4em;font-weight:700}
+    header,
+    footer {
+      background-color: #006233;
+      color: #fff;
+      padding: 10px;
+      text-align: center
+    }
 
-/* 📦 أقسام الموقع */
-section{background:#fff;border:1px solid #cde7da;border-radius:12px;padding:16px;margin:20px auto;max-width:900px;box-shadow:0 2px 6px rgba(0,98,51,.08);transition:transform .3s ease}
-section:hover{transform:scale(1.005)}
-section h2,section h3{background:#f0faf6!important;color:#a52a2a!important;padding:12px 16px;font-size:1.05em;border-radius:10px;box-shadow:inset 0 -1px 0 rgba(0,0,0,.05);cursor:pointer;display:flex;justify-content:space-between;align-items:center;transition:background-color .3s ease}
-section h2:hover{background:#cde7da}
-section h2 .toggle-icon{transition:transform .4s ease;font-size:1em}
-section h2.open .toggle-icon{transform:rotate(90deg)}
+    /* 👤 الهوية (الشعار + العنوان) */
+    .branding {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap
+    }
 
-/* 📋 القوائم الداخلية */
-ul{list-style:none;padding:0 10px;max-height:0;overflow:hidden;transition:max-height .6s ease,opacity .6s ease;opacity:0}
-ul.show{max-height:1000px;opacity:1}
-section ul li{padding:8px 4px;border-bottom:1px dashed #ccc;transition:background .2s ease;color:#880000;word-wrap:break-word}
-section ul li:hover{background:#fdf5f5}
+    .branding img {
+      width: 32px;
+      height: auto
+    }
 
-/* 🔗 الروابط */
-a{color:#a52a2a;font-weight:700;text-decoration:none}
-a:hover{color:#880000;text-decoration:underline}
-.toggle-icon,.count,section h2 i,section h3 i{color:#a52a2a!important}
+    .branding i {
+      font-size: 24px
+    }
 
-/* 🔍 البحث */
-#searchBox{max-width:500px;margin:20px auto;display:flex;justify-content:center}
-#searchInput{width:90%;max-width:600px;padding:10px;border-radius:10px;border:1px solid #ccc;box-shadow:0 2px 4px rgba(0,0,0,.1);font-size:1em}
+    .branding h1 {
+      margin: 0;
+      font-size: 1.4em;
+      font-weight: 700
+    }
 
-/* ⬆️ زر العودة للأعلى */
-#scrollTopBtn{position:fixed;bottom:80px;left:20px;background:#006233;color:#fff;border:none;padding:12px 16px;border-radius:50%;font-size:20px;cursor:pointer;display:none;box-shadow:0 2px 5px rgba(0,0,0,.3);z-index:9999}
+    /* 📦 أقسام الموقع */
+    section {
+      background: #fff;
+      border: 1px solid #cde7da;
+      border-radius: 12px;
+      padding: 16px;
+      margin: 20px auto;
+      max-width: 900px;
+      box-shadow: 0 2px 6px rgba(0, 98, 51, .08);
+      transition: transform .3s ease
+    }
 
-/* 📱 تحسين العرض على الهواتف */
-@media(max-width:768px){
- body{font-size:.95em}
- .branding h1{font-size:1em}
- header h1{font-size:1.1em}
- section h2,section h3{font-size:1em;padding:8px}
- ul li{font-size:.95em;padding:4px 0}
- #searchInput{font-size:.95em;padding:8px}
- #scrollTopBtn{font-size:24px;padding:14px}
-}
+    section:hover {
+      transform: scale(1.005)
+    }
 
-/* ✨ مؤثرات */
-@keyframes pulse{0%{transform:scale(1)}50%{transform:scale(1.1)}100%{transform:scale(1)}}
-div[style*="border-radius"] i:hover{animation:pulse .6s ease-in-out infinite}
-#install-button:hover{background-color:#880000}
-button:hover{background-color:#a30000}
+    section h2,
+    section h3 {
+      background: #f0faf6 !important;
+      color: #a52a2a !important;
+      padding: 12px 16px;
+      font-size: 1.05em;
+      border-radius: 10px;
+      box-shadow: inset 0 -1px 0 rgba(0, 0, 0, .05);
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: background-color .3s ease
+    }
 
-/* 📰 شريط الأخبار (يمين ➝ يسار) */
-@keyframes scrollNewsRTL{0%{transform:translateX(100%)}100%{transform:translateX(-100%)}}
-#newsTickerContainer:hover #newsTicker{animation-play-state:paused}
-#newsTicker a{color:#fff;text-decoration:underline}
-#newsTicker a:hover{color:#ffd700}
+    section h2:hover {
+      background: #cde7da
+    }
 
+    section h2 .toggle-icon {
+      transition: transform .4s ease;
+      font-size: 1em
+    }
+
+    section h2.open .toggle-icon {
+      transform: rotate(90deg)
+    }
+
+    /* 📋 القوائم الداخلية */
+    ul {
+      list-style: none;
+      padding: 0 10px;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height .6s ease, opacity .6s ease;
+      opacity: 0
+    }
+
+    ul.show {
+      max-height: 1000px;
+      opacity: 1
+    }
+
+    section ul li {
+      padding: 8px 4px;
+      border-bottom: 1px dashed #ccc;
+      transition: background .2s ease;
+      color: #880000;
+      word-wrap: break-word
+    }
+
+    section ul li:hover {
+      background: #fdf5f5
+    }
+
+    /* 🔗 الروابط */
+    a {
+      color: #a52a2a;
+      font-weight: 700;
+      text-decoration: none
+    }
+
+    a:hover {
+      color: #880000;
+      text-decoration: underline
+    }
+
+    .toggle-icon,
+    .count,
+    section h2 i,
+    section h3 i {
+      color: #a52a2a !important
+    }
+
+    /* 🔍 البحث */
+    #searchBox {
+      max-width: 500px;
+      margin: 20px auto;
+      display: flex;
+      justify-content: center
+    }
+
+    #searchInput {
+      width: 90%;
+      max-width: 600px;
+      padding: 10px;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, .1);
+      font-size: 1em
+    }
+
+    /* ⬆️ زر العودة للأعلى */
+    #scrollTopBtn {
+      position: fixed;
+      bottom: 80px;
+      left: 20px;
+      background: #006233;
+      color: #fff;
+      border: none;
+      padding: 12px 16px;
+      border-radius: 50%;
+      font-size: 20px;
+      cursor: pointer;
+      display: none;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, .3);
+      z-index: 9999
+    }
+
+    /* 📱 تحسين العرض على الهواتف */
+    @media(max-width:768px) {
+      body {
+        font-size: .95em
+      }
+
+      .branding h1 {
+        font-size: 1em
+      }
+
+      header h1 {
+        font-size: 1.1em
+      }
+
+      section h2,
+      section h3 {
+        font-size: 1em;
+        padding: 8px
+      }
+
+      ul li {
+        font-size: .95em;
+        padding: 4px 0
+      }
+
+      #searchInput {
+        font-size: .95em;
+        padding: 8px
+      }
+
+      #scrollTopBtn {
+        font-size: 24px;
+        padding: 14px
+      }
+    }
+
+    /* ✨ مؤثرات */
+    @keyframes pulse {
+      0% {
+        transform: scale(1)
+      }
+
+      50% {
+        transform: scale(1.1)
+      }
+
+      100% {
+        transform: scale(1)
+      }
+    }
+
+    div[style*="border-radius"] i:hover {
+      animation: pulse .6s ease-in-out infinite
+    }
+
+    #install-button:hover {
+      background-color: #880000
+    }
+
+    button:hover {
+      background-color: #a30000
+    }
+
+    /* 📰 شريط الأخبار (يمين ➝ يسار) */
+    @keyframes scrollNewsRTL {
+      0% {
+        transform: translateX(100%)
+      }
+
+      100% {
+        transform: translateX(-100%)
+      }
+    }
+
+    #newsTickerContainer:hover #newsTicker {
+      animation-play-state: paused
+    }
+
+    #newsTicker a {
+      color: #fff;
+      text-decoration: underline
+    }
+
+    #newsTicker a:hover {
+      color: #ffd700
+    }
   </style>
 
 </head>
@@ -390,74 +583,78 @@ button:hover{background-color:#a30000}
     </ul>
   </section>
 
-<!-- قسم تعبئة الهاتف -->
-<section dir="rtl" style="text-align: right;">
-	<h2 dir="rtl" id="toggle-recharge" onclick="toggleSection('recharge-section', this)"
-		style="cursor: pointer; background-color: #a52a2a; color: white; padding: 10px; border-radius: 8px;">
-	  <span><i class="fas fa-money-check-alt" style="color: #006400;"></i> خدمات تعبئة الهاتف النقال
-		<span class="count"></span></span>
-	  <span class="toggle-icon" style="float: left;">▶</span>
-	</h2>
-  
-	<ul dir="rtl" id="recharge-section"
-		style="display: none; list-style: none; padding: 0; line-height: 2; text-align: right;">
-  
-	  <!-- موبيليس -->
-	  <li>
-		<img src="https://upload.wikimedia.org/wikipedia/commons/6/6f/Mobilis_Logo.png" alt="Mobilis Logo" style="height:20px; margin-left:6px;">
-		<a href="https://e-paiement.mobilis.dz/" target="_blank"><strong>تعبئة الرصيد - موبيليس</strong></a>
-		<div style="margin-top:5px; padding-right:20px;">
-		  <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
-		  <strong>مصلحة خدمة الزبائن - موبيليس:</strong>
-		  <a href="tel:666">666</a>
-		</div>
-		<a href="https://play.google.com/store/apps/details?id=dz.mobilis.my.mobilis" target="_blank">
-		  <img src="https://upload.wikimedia.org/wikipedia/commons/d/d7/Android_robot.svg" alt="MyMobilis App Logo" style="height:20px; margin-left:6px;">
-		  تحميل تطبيق MyMobilis
-		</a>
-	  </li>
-  
-	  <!-- جازي -->
-	  <li>
-		<img src="https://upload.wikimedia.org/wikipedia/commons/2/21/Djezzy_logo.png" alt="Djezzy Logo" style="height:20px; margin-left:6px;">
-		<a href="https://moncompte.djezzy.dz/ar/guest/recharge" target="_blank"><strong>تعبئة الرصيد - جازي</strong></a>
-		<div style="margin-top:5px; padding-right:20px;">
-		  <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
-		  <strong>مصلحة خدمة الزبائن - جازي:</strong>
-		  <a href="tel:777">777</a>
-		</div>
-		<a href="https://play.google.com/store/apps/details?id=dz.djezzy.app" target="_blank">
-		  <img src="https://upload.wikimedia.org/wikipedia/commons/d/d7/Android_robot.svg" alt="Djezzy App Logo" style="height:20px; margin-left:6px;">
-		  تحميل تطبيق Djezzy
-		</a>
-	  </li>
-  
-	  <!-- أوريدو -->
-	  <li>
-		<img src="https://upload.wikimedia.org/wikipedia/commons/5/55/Ooredoo_Logo.png" alt="Ooredoo Logo" style="height:20px; margin-left:6px;">
-		<a href="http://estorm.ooredoo.dz/" target="_blank"><strong>تعبئة الرصيد - أوريدو</strong></a>
-		<div style="margin-top:5px; padding-right:20px;">
-		  <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
-		  <strong>مصلحة خدمة الزبائن - أوريدو:</strong>
-		  <a href="tel:333">333</a>
-		</div>
-		<a href="https://play.google.com/store/apps/details?id=com.ooredoo.mcare.android" target="_blank">
-		  <img src="https://upload.wikimedia.org/wikipedia/commons/d/d7/Android_robot.svg" alt="Ooredoo App Logo" style="height:20px; margin-left:6px;">
-		  تحميل تطبيق Ooredoo
-		</a>
-	  </li>
-  
-	</ul>
+  <!-- قسم تعبئة الهاتف -->
+  <section dir="rtl" style="text-align: right;">
+    <h2 dir="rtl" id="toggle-recharge" onclick="toggleSection('recharge-section', this)"
+      style="cursor: pointer; background-color: #a52a2a; color: white; padding: 10px; border-radius: 8px;">
+      <span><i class="fas fa-money-check-alt" style="color: #006400;"></i> خدمات تعبئة الهاتف النقال
+        <span class="count"></span></span>
+      <span class="toggle-icon" style="float: left;">▶</span>
+    </h2>
+
+    <ul dir="rtl" id="recharge-section"
+      style="display: none; list-style: none; padding: 0; line-height: 2; text-align: right;">
+
+      <!-- موبيليس -->
+      <li>
+        <img src="https://mobilis.dz/storage/2107/dsgdfht.png" alt="Mobilis Logo" style="height:20px; margin-left:6px;">
+        <a href="https://e-paiement.mobilis.dz/" target="_blank"><strong>تعبئة الرصيد - موبيليس</strong></a>
+        <div style="margin-top:5px; padding-right:20px;">
+          <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
+          <strong>مصلحة خدمة الزبائن - موبيليس:</strong>
+          <a href="tel:666">666</a>
+        </div>
+        <a href="https://play.google.com/store/search?q=mobispace&c=apps&hl=ar" target="_blank">
+          <img src="https://2h.ae/vLUo" alt="MyMobilis App Logo" style="height:20px; margin-left:6px;">
+          تحميل تطبيق MobiSpace
+        </a>
+      </li>
+
+      <!-- جازي -->
+      <li>
+        <img src="https://moncompte.djezzy.dz/static/img/selfservice/djezzy.0826d53fae6a.png" alt="Djezzy Logo"
+          style="height:20px; margin-left:6px;">
+        <a href="https://moncompte.djezzy.dz/ar/guest/recharge" target="_blank"><strong>تعبئة الرصيد - جازي</strong></a>
+        <div style="margin-top:5px; padding-right:20px;">
+          <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
+          <strong>مصلحة خدمة الزبائن - جازي:</strong>
+          <a href="tel:777">777</a>
+        </div>
+        <a href="https://play.google.com/store/apps/details?id=com.djezzy.internet" target="_blank">
+          <img src="https://2h.ae/qFDv" alt="Djezzy App Logo" style="height:20px; margin-left:6px;">
+          تحميل تطبيق Djezzy
+        </a>
+      </li>
+
+      <!-- أوريدو -->
+      <li>
+        <img src="https://2h.ae/cUyC" alt="Ooredoo Logo" style="height:20px; margin-left:6px;">
+        <a href="http://estorm.ooredoo.dz/" target="_blank"><strong>تعبئة الرصيد - أوريدو</strong></a>
+        <div style="margin-top:5px; padding-right:20px;">
+          <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
+          <strong>مصلحة خدمة الزبائن - أوريدو:</strong>
+          <a href="tel:333">333</a>
+        </div>
+        <a href="https://play.google.com/store/apps/details?id=com.algeria.selfcare.app.android&pli=1" target="_blank">
+          <img src="https://2h.ae/LlNw" alt="Ooredoo App Logo" style="height:20px; margin-left:6px;">
+          تحميل تطبيق My Ooredoo Algeria
+        </a>
+      </li>
+
+    </ul>
   </section>
-  
+
   <!-- قسم خدمات بريد الجزائر -->
   <section dir="rtl" style="text-align: right;">
     <h2 id="toggle-post" onclick="toggleSection('post-section', this)"
       style="cursor: pointer; background-color: #a52a2a; color: white; padding: 10px; border-radius: 8px;">
-      <span><i class="fas fa-envelope" style="color: white; margin-left:6px;"></i>
-        خدمات بريد الجزائر <span class="count"></span></span>
+      <span>
+        <img src="https://eccp.poste.dz/img/logo-round.png" alt="poste Logo" style="height:28px; margin-left:6px;">
+        خدمات بريد الجزائر <span class="count"></span>
+      </span>
       <span class="toggle-icon" style="float: left;">▶</span>
     </h2>
+
 
     <ul id="post-section" style="display: none; list-style: none; padding: 0 20px; line-height: 2; text-align: right;">
       <li>
@@ -502,7 +699,9 @@ button:hover{background-color:#a30000}
   <section dir="rtl" style="text-align: right;">
     <h2 id="toggle-telecom" onclick="toggleSection('telecom-section', this)"
       style="cursor: pointer; background-color: #a52a2a; color: white; padding: 10px; border-radius: 8px;">
-      <span><i class="fas fa-network-wired" style="color: white; margin-left:6px;"></i>
+      <span> <img src="https://www.algerietelecom.dz/assets/front/img/logo.svg" alt="telecom Logo"
+          style="height:28px; margin-left:6px;">
+
         خدمات إتصالات الجزائر <span class="count"></span></span>
       <span class="toggle-icon" style="float: left;">▶</span>
     </h2>
@@ -618,7 +817,7 @@ button:hover{background-color:#a30000}
   <section dir="rtl" style="text-align: right;">
     <h2 id="toggle-education" onclick="toggleSection('education-section', this)"
       style="cursor: pointer; background-color: #a52a2a; color: white; padding: 10px; border-radius: 8px;">
-      <span><i class="fas fa-laptop-house" style="color: white; margin-left:6px;"></i>
+      <span> <img src="https://2h.ae/Dvaz" alt="education Logo" style="height:28px; margin-left:6px;">
         التربية والتعليم <span class="count"></span></span>
       <span class="toggle-icon" style="float: left;">▶</span>
     </h2>
@@ -716,7 +915,8 @@ button:hover{background-color:#a30000}
   <section dir="rtl" style="text-align: right;">
     <h2 id="toggle-10" onclick="toggleSection('university-services', this)"
       style="cursor: pointer; background-color: #a52a2a; color: white;">
-      <span><i class="fas fa-user-graduate" style="color: #006400;"></i> الخدمات الجامعية
+      <span><img src="https://www.esi.dz/wp-content/uploads/2021/04/ESI-Logo-BG-e1627076162748.png"
+          alt="university Logo" style="height:28px; margin-left:6px;"> الخدمات الجامعية
         <span class="count"></span></span>
       <span class="toggle-icon" style="float: left;">▶</span>
     </h2>
@@ -754,7 +954,7 @@ button:hover{background-color:#a30000}
     <div style="margin-top:10px; padding-right:5px;">
       <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
       <strong>وزارة التعليم العالي:</strong>
-      <a href="tel:1077">1077</a>
+      <a href="tel:+213 23 93 91 32">+213 23 93 91 32</a>
     </div>
   </section>
 
@@ -762,7 +962,7 @@ button:hover{background-color:#a30000}
   <section dir="rtl" style="text-align: right;">
     <h2 id="toggle-vocational" onclick="toggleSection('vocational-section', this)"
       style="cursor: pointer; background-color: #a52a2a; color: white; padding: 10px; border-radius: 8px;">
-      <span><i class="fas fa-user-gear" style="color: white; margin-left:6px;"></i>
+      <span><img src="https://2h.ae/kghR" alt="vocational Logo" style="height:28px; margin-left:6px;">
         التكوين والتعليم المهنيين <span class="count"></span>
       </span>
       <span class="toggle-icon" style="float: left;">▶</span>
@@ -801,7 +1001,7 @@ button:hover{background-color:#a30000}
     <!-- رقم الهاتف أسفل القسم -->
     <div style="margin-top:10px; padding:8px; background-color:#f9f9f9; border-top:1px solid #ddd;">
       <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
-      <strong>هاتف وزارة التكوين والتعليم المهنيين:</strong> <a href="tel:1076">1076</a>
+      <strong>هاتف وزارة التكوين والتعليم المهنيين:</strong> <a href="tel:66 52 25 023">66 52 25 023</a>
     </div>
   </section>
 
@@ -809,7 +1009,8 @@ button:hover{background-color:#a30000}
   <section dir="rtl" style="text-align: right;">
     <h2 id="toggle-admin" onclick="toggleSection('admin-section', this)"
       style="cursor: pointer; background-color: #006233; color: white; padding: 10px; border-radius: 8px;">
-      <span><i class="fas fa-id-card" style="color: white; margin-left:6px;"></i>
+      <span><img src="https://communes-vertes.org/wp-content/themes/neve-child/img/logo-miclat.png" alt="admin Logo"
+          style="height:28px; margin-left:6px;">
         خدمات الإدارة المحلية <span class="count"></span></span>
       <span class="toggle-icon" style="float: left;">▶</span>
     </h2>
@@ -875,7 +1076,8 @@ button:hover{background-color:#a30000}
   <section dir="rtl" style="text-align: right;">
     <h2 id="toggle-realestate" onclick="toggleSection('real-estate-section', this)"
       style="cursor: pointer; background-color: #a52a2a; color: white; padding: 10px; border-radius: 8px;">
-      <span><i class="fas fa-map-marked-alt" style="color: white;"></i>
+      <span><img src="https://fadaeldjazair.mf.gov.dz/EDCFPUBLICHOME/source/LOGO_DGDN_2.png" alt="realestate Logo"
+          style="height:28px; margin-left:6px;">
         خدمات عقارية - البوابة الجغرافية للبيانات الوطنية للعقار
         <span class="count"></span>
       </span>
@@ -957,7 +1159,7 @@ button:hover{background-color:#a30000}
     <div style="margin-top:10px; padding:8px; background-color:#f9f9f9; border-top:1px solid #ddd;">
       <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
       <strong>هاتف المديرية العامة للأملاك الوطنية:</strong>
-      <a href="tel:3020">3020</a>
+      <a href="tel:+213 21 59 51 51">+213 21 59 51 51</a>
     </div>
   </section>
 
@@ -965,8 +1167,9 @@ button:hover{background-color:#a30000}
   <section dir="rtl" style="text-align: right;">
     <h2 id="social-security" onclick="toggleSection('real-estate-section', this)"
       style="cursor: pointer; background-color: #a52a2a; color: white; padding: 10px; border-radius: 8px;">
-      <span><i class="fas fa-shield-heart" style="color: white; margin-left: 6px;"></i>
-        الضمان الإجتماعي للعمال الأجراء وغير الأجراء والمتقاعدين <span class="count"></span>
+      <span><img src="https://www.mtess.gov.dz/ijra-at/img/logomtess.1bb30a8e.png" alt="social-security Logo"
+          style="height:28px; margin-left:6px;">
+        وزارة العمل و التشغيل و الضمان الاجتماعي <span class="count"></span>
       </span>
       <span class="toggle-icon" style="float: left;">▶</span>
     </h2>
@@ -976,7 +1179,8 @@ button:hover{background-color:#a30000}
       <!-- CNAS -->
       <h3 onclick="toggleSublist('cnas-list')"
         style="cursor: pointer; background-color: #f0faf6; color: #006233; padding: 8px; border-radius: 6px;">
-        <span><i class="fas fa-people-group" style="color: #006400; margin-left: 6px;"></i>
+        <span><img src="https://cnas.dz/wp-content/themes/cnas/assets/img/fixedSvgCnasLogoYKnew.png" alt="cnas Logo"
+            style="height:28px; margin-left:6px;">
           الصندوق الوطني للضمان الاجتماعي للعمال الأجراء <span class="count"></span>
         </span>
         <span class="toggle-icon" style="float: left;">▶</span>
@@ -998,7 +1202,9 @@ button:hover{background-color:#a30000}
       <!-- CASNOS -->
       <h3 onclick="toggleSublist('casnos-list')"
         style="cursor: pointer; background-color: #f0faf6; color: #006233; padding: 8px; border-radius: 6px; margin-top: 10px;">
-        <span><i class="fas fa-user-tie" style="color: #006400; margin-left: 6px;"></i>
+        <span><img
+            src="https://upload.wikimedia.org/wikipedia/fr/thumb/0/05/CASNOS_logo.png/960px-CASNOS_logo.png?20230505142736"
+            alt="casnos Logo" style="height:28px; margin-left:6px;">
           الصندوق الوطني للضمان الاجتماعي لغير الأجراء <span class="count"></span>
         </span>
         <span class="toggle-icon" style="float: left;">▶</span>
@@ -1018,7 +1224,8 @@ button:hover{background-color:#a30000}
       <!-- CNR -->
       <h3 onclick="toggleSublist('cnr-list')"
         style="cursor: pointer; background-color: #f0faf6; color: #006233; padding: 8px; border-radius: 6px; margin-top: 10px;">
-        <span><i class="fas fa-person-cane" style="color: #006400; margin-left: 6px;"></i>
+        <span><img src="https://upload.wikimedia.org/wikipedia/fr/0/0c/CNAR_logo.png" alt="cnr Logo"
+            style="height:28px; margin-left:6px;">
           الصندوق الوطني للتقاعد <span class="count"></span>
         </span>
         <span class="toggle-icon" style="float: left;">▶</span>
@@ -1044,7 +1251,8 @@ button:hover{background-color:#a30000}
   <section dir="rtl" style="text-align: right;">
     <h2 id="toggle-tax" onclick="toggleSection('tax-section', this)"
       style="cursor: pointer; background-color: #a52a2a; color: white; padding: 10px; border-radius: 8px;">
-      <span><i class="fas fa-file-invoice-dollar" style="color: white; margin-left: 8px;"></i>
+      <span><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTGizW91cfHyw8vNBHytKN8lKZNzfUWqZjpQ&s"
+          alt="tax Logo" style="height:28px; margin-left:6px;">
         خدمات جبائية إلكترونية <span class="count"></span>
       </span>
       <span class="toggle-icon" style="float: left;">▶</span>
@@ -1102,7 +1310,8 @@ button:hover{background-color:#a30000}
   <section dir="rtl" style="text-align: right;">
     <h2 id="toggle-8"
       style="cursor: pointer; background-color: #a52a2a; color: white; padding: 10px; border-radius: 8px;">
-      <span><i class="fas fa-balance-scale" style="color: #ffffff; margin-left:6px;"></i>
+      <span><img src="https://www.mjustice.dz/wp-content/uploads/2019/12/logo-mj1.png" alt="justice Logo"
+          style="height:28px; margin-left:6px;">
         خدمات مع العدالة <span class="count"></span>
       </span>
       <span class="toggle-icon" style="float: left;">▶</span>
@@ -1204,7 +1413,8 @@ button:hover{background-color:#a30000}
   <section dir="rtl" style="text-align: right;">
     <h2 id="toggle-11" onclick="toggleSection('anem-links', this)"
       style="cursor: pointer; background-color: #a52a2a; color: white; padding: 10px; border-radius: 8px;">
-      <span><i class="fas fa-briefcase" style="color: #ffffff; margin-left:6px;"></i>
+      <span><img src="https://www.anem.dz/assets/img/anemlogo.png" alt="anem Logo"
+          style="height:28px; margin-left:6px;">
         الوكالة الوطنية للتشغيل - ANEM <span class="count"></span>
       </span>
       <span class="toggle-icon" style="float: left;">▶</span>
@@ -1243,14 +1453,15 @@ button:hover{background-color:#a30000}
     </div>
   </section>
 
- <!-- قسم الخدمات الصحية -->
+
+  <!-- قسم الخدمات الصحية -->
   <section dir="rtl" style="text-align: right;">
     <h2 id="toggle-4" onclick="toggleSection('health-links', this)"
       style="cursor: pointer; background-color: #a52a2a; color: white; padding: 10px; border-radius: 8px;">
-      <span><i class="fas fa-notes-medical" style="color: white;"></i> الخدمات الصحية <span class="count"></span></span>
+      <span><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxpcTJf37sr4FquWZKj8lt0-gKl4RLWAzwTA&s"
+          alt="health Logo" style="height:28px; margin-left:6px;"> الخدمات الصحية <span class="count"></span></span>
       <span class="toggle-icon" style="float: left;">▶</span>
     </h2>
-
     <ul id="health-links"
       style="display: none; list-style: none; padding-right: 20px; line-height: 2; text-align: right;">
       <li><i class="fas fa-book-medical" style="color: green;"></i>
@@ -1287,72 +1498,81 @@ button:hover{background-color:#a30000}
     </div>
   </section>
 
-  <!-- قسم وزارة التجارة والجمارك -->
+  <!-- قسم وزارة التجارة -->
   <section dir="rtl" style="text-align: right;">
     <h2 id="toggle-commerce" onclick="toggleSection('commerce-section', this)"
       style="cursor: pointer; background-color: #a52a2a; color: white; padding: 10px; border-radius: 8px;">
-      <span><i class="fas fa-shield-heart" style="color: white; margin-left:6px;"></i>
-        خدمات وزارة التجارة والجمارك <span class="count"></span></span>
+      <span><img src="https://2h.ae/VqNE" alt="commerce Logo" style="height:28px; margin-left:6px;">
+        خدمات وزارة التجارة الجزائرية <span class="count"></span></span>
       <span class="toggle-icon" style="float: left;">▶</span>
     </h2>
 
-    <div id="commerce-section" style="display: none; padding: 10px 20px;">
-      <!-- وزارة التجارة -->
-      <h3 onclick="toggleSublist('commerce-list')"
-        style="cursor: pointer; background-color: #f0faf6; color: #006233; padding: 8px; border-radius: 6px;">
-        <span><i class="fas fa-briefcase" style="color: #006400; margin-left: 6px;"></i> وزارة التجارة <span
-            class="count"></span></span>
-        <span class="toggle-icon" style="float: left;">▶</span>
-      </h3>
-      <ul id="commerce-list" style="display: none; list-style: none; padding: 0 20px; line-height: 2;">
-        <li><i class="fas fa-chart-line" style="color: #006400; margin-left: 6px;"></i>
-          <a href="https://fspe.commerce.gov.dz/" target="_blank">المنصة الرقمية لتسيير الصندوق الخاص لترقية
-            الصادرات</a>
-        </li>
-        <li><i class="fas fa-money-check-alt" style="color: #006400; margin-left: 6px;"></i>
-          <a href="https://mfdgi.gov.dz/portailpublic_ar/" target="_blank">فضاء التصريح والدفع الإلكترونيين - جباية
-            تيك</a>
-        </li>
-        <li><i class="fas fa-headset" style="color: #006400; margin-left: 6px;"></i>
-          <a href="https://www.commerce.gov.dz/ar/ecrire-a-la-cellule-d-ecoute/" target="_blank">خلية الإصغاء لوزارة
-            التجارة</a>
-        </li>
-      </ul>
+    <ul id="commerce-section" style="display: none; list-style: none; padding: 0; line-height: 2;">
+      <li>
+        <i class="fas fa-chart-line" style="color: #006400;"></i>
+        <a href="https://fspe.commerce.gov.dz/" target="_blank">المنصة الرقمية لتسيير الصندوق الخاص لترقية الصادرات</a>
+      </li>
+      <li>
+        <i class="fas fa-money-check-alt" style="color: #006400;"></i>
+        <a href="https://mfdgi.gov.dz/portailpublic_ar/" target="_blank">فضاء التصريح والدفع الإلكترونيين - جباية
+          تيك</a>
+      </li>
+      <li>
+        <i class="fas fa-headset" style="color: #006400;"></i>
+        <a href="https://www.commerce.gov.dz/ar/ecrire-a-la-cellule-d-ecoute/" target="_blank">خلية الإصغاء لوزارة
+          التجارة</a>
+      </li>
+    </ul>
 
-      <!-- الجمارك الجزائرية -->
-      <h3 onclick="toggleSublist('customs-list')"
-        style="cursor: pointer; background-color: #f0faf6; color: #006233; padding: 8px; border-radius: 6px; margin-top: 10px;">
-        <span><i class="fas fa-warehouse" style="color: #006400; margin-left: 6px;"></i> الجمارك الجزائرية <span
-            class="count"></span></span>
-        <span class="toggle-icon" style="float: left;">▶</span>
-      </h3>
-      <ul id="customs-list" style="display: none; list-style: none; padding: 0 20px; line-height: 2;">
-        <li><i class="fas fa-file-contract" style="color: #006400; margin-left: 6px;"></i>
-          <a href="https://douane.gov.dz/rtc/" target="_blank">المعلومة التعريفية الملزمة - RTC</a>
-        </li>
-        <li><i class="fas fa-headphones-alt" style="color: #006400; margin-left: 6px;"></i>
-          <a href="https://www.douane.gov.dz/spip.php?rubrique53" target="_blank">خلية الإستماع للجمارك الجزائرية</a>
-        </li>
-      </ul>
-    </div>
-
-    <!-- أرقام الهواتف أسفل القسم -->
-    <div style="margin-top:10px; padding:8px; background-color:#f9f9f9; border-top:1px solid #ddd;">
+    <!-- رقم الهاتف أسفل القسم -->
+    <div style="margin-top:10px; padding-right:5px;">
       <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
       <strong>هاتف وزارة التجارة:</strong> <a href="tel:1020">1020</a>
     </div>
-    <div style="margin-top:5px; padding:8px; background-color:#f9f9f9; border-top:1px solid #ddd;">
-      <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
-      <strong>هاتف الجمارك الجزائرية:</strong> <a href="tel:1023">1023</a>
-    </div>
   </section>
+
+
+  <!-- قسم الجمارك الجزائرية -->
+  <section dir="rtl" style="text-align: right;">
+    <h2 id="toggle-11" onclick="toggleSection('customs-section', this)"
+      style="cursor: pointer; background-color: #a52a2a; color: white; padding: 10px; border-radius: 8px;">
+      <span><img src="https://www.douane.gov.dz/local/cache-vignettes/L132xH189/siteoff0-76911.png" alt="customs Logo"
+          style="height:28px; margin-left:6px;">
+        الجمارك الجزائرية <span class="count"></span></span>
+      <span class="toggle-icon" style="float: left;">▶</span>
+    </h2>
+
+    <ul id="customs-section" style="display: none; list-style: none; padding: 0; line-height: 2;">
+      <li>
+        <i class="fas fa-file-contract" style="color: #006400;"></i>
+        <a href="https://douane.gov.dz/rtc/" target="_blank">المعلومة التعريفية الملزمة - RTC</a>
+      </li>
+      <li>
+        <i class="fas fa-headphones-alt" style="color: #006400;"></i>
+        <a href="https://www.douane.gov.dz/spip.php?rubrique53" target="_blank">خلية الإستماع للجمارك الجزائرية</a>
+      </li>
+      <li>
+        <i class="fas fa-info-circle" style="color: #006400;"></i>
+        <a href="https://www.douane.gov.dz/?lang=ar" target="_blank">الموقع الرسمي للجمارك الجزائرية</a>
+      </li>
+    </ul>
+
+    <!-- رقم الهاتف أسفل القسم -->
+    <div style="margin-top:10px; padding-right:5px;">
+      <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
+      <strong>هاتف الجمارك الجزائرية:</strong>
+      <a href="tel:1023">1023</a>
+    </div>
+
+  </section>
+
 
   <!-- قسم الوكالة الوطنية للمقاول الذاتي -->
   <section dir="rtl" style="text-align: right;">
     <h2 id="toggle-10" onclick="toggleSection('auto-entrepreneur', this)"
       style="cursor: pointer; background-color: #a52a2a; color: white;">
-      <span><i class="fas fa-user-gear" style="color: #006400;"></i> الوكالة الوطنية للمقاول الذاتي <span
-          class="count"></span></span>
+      <span><img src="https://anae.dz/static/register/images/mkesm_logo.png" alt="auto-entrepreneur Logo"
+          style="height:28px; margin-left:6px;"> الوكالة الوطنية للمقاول الذاتي <span class="count"></span></span>
       <span class="toggle-icon" style="float: left;">▶</span>
     </h2>
 
@@ -1371,545 +1591,566 @@ button:hover{background-color:#a30000}
     </div>
   </section>
 
-    <!-- قسم فضاءات ووكالات -->
-    <section dir="rtl" style="text-align: right;">
-      <h2 dir="rtl" id="toggle-14" onclick="toggleSection('agencies-section', this)"
-        style="cursor: pointer; background-color: #a52a2a; color: white;">
-        <span><i class="fas fa-building" style="color: #006400;"></i> فضاءات ووكالات
-          <span class="count"></span></span>
+  <!-- قسم فضاءات ووكالات -->
+  <section dir="rtl" style="text-align: right;">
+    <h2 dir="rtl" id="toggle-14" onclick="toggleSection('agencies-section', this)"
+      style="cursor: pointer; background-color: #a52a2a; color: white;">
+      <span><i class="fas fa-building" style="color: #006400;"></i> فضاءات ووكالات
+        <span class="count"></span></span>
+      <span class="toggle-icon" style="float: left;">▶</span>
+    </h2>
+
+    <ul dir="rtl" id="agencies-section"
+      style="display: none; list-style: none; padding: 0; line-height: 2; text-align: right;">
+
+      <!-- اتصالات الجزائر -->
+      <li>
+        <img src="https://www.algerietelecom.dz/assets/front/img/logo.svg" alt="telecom Logo"
+          style="height:28px; margin-left:6px;">
+        <a href="https://client.at.dz/ar" target="_blank">فضاء الزبائن لإتصالات الجزائر</a>
+        <div style="margin-top:5px; padding-right:20px;">
+          <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
+          <strong>هاتف اتصالات الجزائر:</strong>
+          <a href="tel:12">12</a>
+        </div>
+      </li>
+
+      <!-- الجزائرية للمياه -->
+      <li>
+        <img src="https://www.ade.dz//storage/app/media/logo.png" alt="ADE Logo" style="height:28px; margin-left:6px;">
+        <a href="https://www.ade.dz/login" target="_blank">فضاء الزبائن للجزائرية للمياه</a>
+        <div style="margin-top:5px; padding-right:20px;">
+          <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
+          <strong>هاتف الجزائرية للمياه:</strong>
+          <a href="tel:1594">1594</a>
+        </div>
+      </li>
+
+      <!-- سونلغاز -->
+      <li>
+        <img src="https://www.sonelgaz.dz/template/images/sonelgaz.png" alt="sonelgaz Logo"
+          style="height:28px; margin-left:6px;">
+        <a href="https://www.sonelgaz.dz/ar/category/espace-clients-ar" target="_blank">
+          فضاء الزبائن سونلغاز للكهرباء والغاز</a>
+        <div style="margin-top:5px; padding-right:20px;">
+          <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
+          <strong>هاتف سونلغاز:</strong>
+          <a href="tel:3303">3303</a>
+        </div>
+      </li>
+
+      <!-- سيال -->
+      <li>
+        <img src="https://vinybusiness.com/wp-content/uploads/2023/03/seaal.png" alt="seaal Logo"
+          style="height:28px; margin-left:6px;">
+        <a href="https://wakalati.seaal.dz/" target="_blank">فضاء الزبائن سيال للماء والتطهير</a>
+        <div style="margin-top:5px; padding-right:20px;">
+          <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
+          <strong>هاتف سيال:</strong>
+          <a href="tel:1594">1594</a>
+        </div>
+      </li>
+
+      <!-- تطبيق سيال -->
+      <li>
+        <i class="fas fa-mobile-alt" style="color: #006400;"></i>
+        <a href="https://wakalati.seaal.dz/" target="_blank">تحميل تطبيق WAKALATI لسيال</a>
+      </li>
+
+      <!-- نفطال -->
+      <li>
+        <i class="fas fa-gas-pump" style="color: #006400;"></i>
+        <a href="https://play.google.com/store/apps/details?id=com.naftal.apps.naftalkhadamat&hl=AR"
+          target="_blank">تحميل تطبيق نفطال خدمات</a>
+        <div style="margin-top:5px; padding-right:20px;">
+          <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
+          <strong>هاتف نفطال:</strong>
+          <a href="tel:3305">3305</a>
+        </div>
+      </li>
+
+    </ul>
+  </section>
+
+  <!-- قسم وكالات التأمين -->
+  <section dir="rtl" style="text-align: right;">
+    <h2 id="insurance-header" onclick="toggleSection('insurance-section', this)"
+      style="cursor: pointer; background-color: #a52a2a; color: white; padding: 10px; border-radius: 8px;">
+      <span><i class="fas fa-shield-alt" style="color: white; margin-left:6px;"></i>
+        وكالات التأمينات <span class="count"></span></span>
+      <span class="toggle-icon" style="float: left;">▶</span>
+    </h2>
+
+    <div id="insurance-section" style="display: none; padding: 10px 20px;">
+
+      <!-- التأمينات العمومية -->
+      <h3 onclick="toggleSection('public-insurance', this)"
+        style="cursor: pointer; background-color: #f0faf6; color: #006233; padding: 8px; border-radius: 6px;">
+        <span><i class="fas fa-landmark" style="color:#006400; margin-left:6px;"></i>
+          شركات التأمين العمومية <span class="count"></span></span>
         <span class="toggle-icon" style="float: left;">▶</span>
-      </h2>
-  
-      <ul dir="rtl" id="agencies-section"
-        style="display: none; list-style: none; padding: 0; line-height: 2; text-align: right;">
-  
-        <!-- اتصالات الجزائر -->
+      </h3>
+      <ul id="public-insurance" style="display: none; list-style: none; padding: 0 20px; line-height: 2;">
         <li>
-          <i class="fas fa-wifi" style="color: #006400;"></i>
-          <a href="https://client.at.dz/ar" target="_blank">فضاء الزبائن لإتصالات الجزائر</a>
-          <div style="margin-top:5px; padding-right:20px;">
+          <i class="fas fag" style="color:#006400; margin-left:6px;"></i>
+          <img src="https://www.saa.dz/templates/default/assets/img/6e0d4-logo.svg" alt="SAA Logo"
+            style="height:28px; margin-left:6px;">
+          <a href="https://www.saa.dz/" target="_blank">الشركة الجزائرية للتأمينات (SAA)</a>
+          <div style="margin-top:5px; padding-right:25px;">
             <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
-            <strong>هاتف اتصالات الجزائر:</strong>
-            <a href="tel:12">12</a>
+            <a href="tel:021 22 50 00" style="color:#006400; text-decoration:none;">021 22 50 00</a>
           </div>
         </li>
-  
-        <!-- الجزائرية للمياه -->
         <li>
-          <i class="fas fa-tint" style="color: #006400;"></i>
-          <a href="https://www.ade.dz/login" target="_blank">فضاء الزبائن للجزائرية للمياه</a>
-          <div style="margin-top:5px; padding-right:20px;">
+          <i class="fas fa-building" style="color:#006400; margin-left:6px;"></i>
+          <img src="https://www.algerie-eco.com/wp-content/uploads/2022/11/caar-logo.png" alt="CAAR Logo"
+            style="height:28px; margin-left:6px;">
+          <a href="https://www.caart.com.dz/" target="_blank">الشركة المركزية لإعادة التأمين (CAAR)</a>
+          <div style="margin-top:5px; padding-right:25px;">
             <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
-            <strong>هاتف الجزائرية للمياه:</strong>
-            <a href="tel:1594">1594</a>
+            <a href="tel:xxxx" style="color:#006400; text-decoration:none;">xxxx</a>
           </div>
         </li>
-  
-        <!-- سونلغاز -->
         <li>
-          <i class="fas fa-bolt" style="color: #006400;"></i>
-          <a href="https://www.sonelgaz.dz/ar/category/espace-clients-ar" target="_blank">
-            فضاء الزبائن سونلغاز للكهرباء والغاز</a>
-          <div style="margin-top:5px; padding-right:20px;">
+          <i class="fas fa-building" style="color:#006400; margin-left:6px;"></i>
+          <img src="xxxx" alt="CAAR RE Logo" style="height:28px; margin-left:6px;">
+          <a href="http://www.caare.dz/" target="_blank">شركة إعادة التأمين الجزائرية (CAAR RE)</a>
+          <div style="margin-top:5px; padding-right:25px;">
             <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
-            <strong>هاتف سونلغاز:</strong>
-            <a href="tel:3303">3303</a>
+            <a href="tel:xxxx" style="color:#006400; text-decoration:none;">xxxx</a>
           </div>
         </li>
-  
-        <!-- سيال -->
         <li>
-          <i class="fas fa-recycle" style="color: #006400;"></i>
-          <a href="https://wakalati.seaal.dz/" target="_blank">فضاء الزبائن سيال للماء والتطهير</a>
-          <div style="margin-top:5px; padding-right:20px;">
+          <i class="fas h" style="color:#006400; margin-left:6px;"></i>
+          <img src="https://www.caarama.dz/images/logo.png" alt="CAARAMA Logo" style="height:28px; margin-left:6px;">
+          <a href="https://www.caarama.dz/" target="_blank">شركة التأمين على السيارات (CAARAMA)</a>
+          <div style="margin-top:5px; padding-right:25px;">
             <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
-            <strong>هاتف سيال:</strong>
-            <a href="tel:1594">1594</a>
+            <a href="tel:(213) 23 56 91 08/09/10" style="color:#006400; text-decoration:none;">(213) 23 56 91
+              08/09/10</a>
           </div>
         </li>
-  
-        <!-- تطبيق سيال -->
+
+
         <li>
-          <i class="fas fa-mobile-alt" style="color: #006400;"></i>
-          <a href="https://wakalati.seaal.dz/" target="_blank">تحميل تطبيق WAKALATI لسيال</a>
-        </li>
-  
-        <!-- نفطال -->
-        <li>
-          <i class="fas fa-gas-pump" style="color: #006400;"></i>
-          <a href="https://wakalati.seaal.dz/" target="_blank">تحميل تطبيق نفطال خدمات</a>
-          <div style="margin-top:5px; padding-right:20px;">
+          <i class="fas fa-umbrella" style="color:#006400; margin-left:6px;"></i>
+          <img src="xxxx" alt="2A Logo" style="height:28px; margin-left:6px;">
+          <a href="https://www.2a-assurances.com/" target="_blank">شركة التأمين 2A Assurances</a>
+          <div style="margin-top:5px; padding-right:25px;">
             <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
-            <strong>هاتف نفطال:</strong>
-            <a href="tel:3305">3305</a>
+            <a href="tel:xxxx" style="color:#006400; text-decoration:none;">xxxx</a>
           </div>
         </li>
-  
       </ul>
-    </section>
-  
-<!-- قسم وكالات التأمين -->
-<section dir="rtl" style="text-align: right;">
-	<h2 id="insurance-header" onclick="toggleSection('insurance-section', this)"
-		style="cursor: pointer; background-color: #a52a2a; color: white; padding: 10px; border-radius: 8px;">
-	  <span><i class="fas fa-shield-alt" style="color: white; margin-left:6px;"></i>
-		وكالات التأمينات <span class="count"></span></span>
-	  <span class="toggle-icon" style="float: left;">▶</span>
-	</h2>
-  
-	<div id="insurance-section" style="display: none; padding: 10px 20px;">
-  
-	  <!-- التأمينات العمومية -->
-	  <h3 onclick="toggleSection('public-insurance', this)"
-		  style="cursor: pointer; background-color: #f0faf6; color: #006233; padding: 8px; border-radius: 6px;">
-		<span><i class="fas fa-landmark" style="color:#006400; margin-left:6px;"></i>
-		  شركات التأمين العمومية <span class="count"></span></span>
-		<span class="toggle-icon" style="float: left;">▶</span>
-	  </h3>
-	  <ul id="public-insurance" style="display: none; list-style: none; padding: 0 20px; line-height: 2;">
-		<li>
-		  <i class="fas fag" style="color:#006400; margin-left:6px;"></i>
-		  <img src="https://www.saa.dz/templates/default/assets/img/6e0d4-logo.svg" alt="SAA Logo" style="height:28px; margin-left:6px;">
-		  <a href="https://www.saa.dz/" target="_blank">الشركة الجزائرية للتأمينات (SAA)</a>
-		  <div style="margin-top:5px; padding-right:25px;">
-			<i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
-			<a href="tel:021 22 50 00" style="color:#006400; text-decoration:none;">021 22 50 00</a>
-		  </div>
-		</li>
-		<li>
-		  <i class="fas fa-building" style="color:#006400; margin-left:6px;"></i>
-		  <img src="https://www.algerie-eco.com/wp-content/uploads/2022/11/caar-logo.png" alt="CAAR Logo" style="height:28px; margin-left:6px;">
-		  <a href="https://www.caart.com.dz/" target="_blank">الشركة المركزية لإعادة التأمين (CAAR)</a>
-		  <div style="margin-top:5px; padding-right:25px;">
-			<i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
-			<a href="tel:xxxx" style="color:#006400; text-decoration:none;">xxxx</a>
-		  </div>
-		</li>
-		<li>
-		  <i class="fas fa-building" style="color:#006400; margin-left:6px;"></i>
-		  <img src="xxxx" alt="CAAR RE Logo" style="height:28px; margin-left:6px;">
-		  <a href="http://www.caare.dz/" target="_blank">شركة إعادة التأمين الجزائرية (CAAR RE)</a>
-		  <div style="margin-top:5px; padding-right:25px;">
-			<i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
-			<a href="tel:xxxx" style="color:#006400; text-decoration:none;">xxxx</a>
-		  </div>
-		</li>
-		<li>
-		  <i class="fas h" style="color:#006400; margin-left:6px;"></i>
-		  <img src="https://www.caarama.dz/images/logo.png" alt="CAARAMA Logo" style="height:28px; margin-left:6px;">
-		  <a href="https://www.caarama.dz/" target="_blank">شركة التأمين على السيارات (CAARAMA)</a>
-		  <div style="margin-top:5px; padding-right:25px;">
-			<i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
-			<a href="tel:(213) 23 56 91 08/09/10" style="color:#006400; text-decoration:none;">(213) 23 56 91 08/09/10</a>
-		  </div>
-		</li>
 
+      <!-- التأمينات الخاصة -->
+      <h3 onclick="toggleSection('private-insurance', this)"
+        style="cursor: pointer; background-color: #f0faf6; color: #006233; padding: 8px; border-radius: 6px; margin-top: 10px;">
+        <span><i class="fas fa-building" style="color:#006400; margin-left:6px;"></i>
+          شركات التأمين الخاصة / المختلطة <span class="count"></span></span>
+        <span class="toggle-icon" style="float: left;">▶</span>
+      </h3>
+      <ul id="private-insurance" style="display: none; list-style: none; padding: 0 20px; line-height: 2;">
+        <li>
+          <img src="https://iconape.com/wp-content/png_logo_vector/alliance-assurances-logo.png" alt="Alliance Logo"
+            style="height:28px; margin-left:6px;">
+          <a href="https://www.allianceassurances.com.dz/#/" target="_blank">أليانس للتأمينات (Alliance Assurances)</a>
+          <div style="margin-top:5px; padding-right:25px;">
+            <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
+            <a href="tel:3315" style="color:#006400; text-decoration:none;">3315</a>
+            <br>📲 <a href="https://play.google.com/store/apps/details?id=com.blink.myalliance" target="_blank">تطبيق
+              MyAlliance</a>
+          </div>
+        </li>
+        <li>
+          <i class="fas fa-building" style="color:#006400; margin-left:6px;"></i>
+          <img src="https://seeklogo.com/images/S/salama-assurance-logo-1385D58B2C-seeklogo.com.png" alt="Salama Logo"
+            style="height:28px; margin-left:6px;">
+          <a href="http://www.salama-assurances.com/" target="_blank">سلامة للتأمينات (Salama Assurances)</a>
+          <div style="margin-top:5px; padding-right:25px;">
+            <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
+            <a href="tel:xxxx" style="color:#006400; text-decoration:none;">xxxx</a>
+          </div>
+        </li>
+        <li>
+          <i class="fas fa-building" style="color:#006400; margin-left:6px;"></i>
+          <img src="xxxx" alt="Trust Logo" style="height:28px; margin-left:6px;">
+          <a href="https://www.trustalgerie.com/" target="_blank">ترست الجزائر للتأمينات (Trust Algeria)</a>
+          <div style="margin-top:5px; padding-right:25px;">
+            <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
+            <a href="tel:xxxx" style="color:#006400; text-decoration:none;">xxxx</a>
+          </div>
+        </li>
+        <li>
+          <i class="fas fa-building" style="color:#006400; margin-left:6px;"></i>
+          <img src="xxxx" alt="Amana Logo" style="height:28px; margin-left:6px;">
+          <a href="http://www.amana.dz/" target="_blank">أمانة للتأمينات (Amana Assurances)</a>
+          <div style="margin-top:5px; padding-right:25px;">
+            <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
+            <a href="tel:xxxx" style="color:#006400; text-decoration:none;">xxxx</a>
+          </div>
+        </li>
+        <li>
+          <i class="fas fa-building" style="color:#006400; margin-left:6px;"></i>
+          <img src="https://www.macirvie.com/assets/images/logo.png" alt="Macir Vie Logo"
+            style="height:28px; margin-left:6px;">
+          <a href="https://www.macirvie.com/" target="_blank">ماكير في للتأمين على الحياة (Macir Vie)</a>
+          <div style="margin-top:5px; padding-right:25px;">
+            <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
+            <a href="tel:xxxx" style="color:#006400; text-decoration:none;">xxxx</a>
+            <br>📲 <a href="https://play.google.com/store/apps/details?id=com.macirvie.app" target="_blank">تطبيق
+              Android</a>
+          </div>
+        </li>
+      </ul>
 
-		<li>
-		  <i class="fas fa-umbrella" style="color:#006400; margin-left:6px;"></i>
-		  <img src="xxxx" alt="2A Logo" style="height:28px; margin-left:6px;">
-		  <a href="https://www.2a-assurances.com/" target="_blank">شركة التأمين 2A Assurances</a>
-		  <div style="margin-top:5px; padding-right:25px;">
-			<i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
-			<a href="tel:xxxx" style="color:#006400; text-decoration:none;">xxxx</a>
-		  </div>
-		</li>
-	  </ul>
-  
-	  <!-- التأمينات الخاصة -->
-	  <h3 onclick="toggleSection('private-insurance', this)"
-		  style="cursor: pointer; background-color: #f0faf6; color: #006233; padding: 8px; border-radius: 6px; margin-top: 10px;">
-		<span><i class="fas fa-building" style="color:#006400; margin-left:6px;"></i>
-		  شركات التأمين الخاصة / المختلطة <span class="count"></span></span>
-		<span class="toggle-icon" style="float: left;">▶</span>
-	  </h3>
-	  <ul id="private-insurance" style="display: none; list-style: none; padding: 0 20px; line-height: 2;">
-		<li>
-		  <i class="fas fa-building" style="color:#006400; margin-left:6px;"></i>
-		  <img src="https://iconape.com/wp-content/png_logo_vector/alliance-assurances-logo.png" alt="Alliance Logo" style="height:28px; margin-left:6px;">
-		  <a href="https://www.allianceassurances.com.dz/" target="_blank">أليانس للتأمينات (Alliance Assurances)</a>
-		  <div style="margin-top:5px; padding-right:25px;">
-			<i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
-			<a href="tel:xxxx" style="color:#006400; text-decoration:none;">xxxx</a>
-			<br>📲 <a href="https://play.google.com/store/apps/details?id=dz.alliance.assurances" target="_blank">تطبيق Android</a>
-		  </div>
-		</li>
-		<li>
-		  <i class="fas fa-building" style="color:#006400; margin-left:6px;"></i>
-		  <img src="https://seeklogo.com/images/S/salama-assurance-logo-1385D58B2C-seeklogo.com.png" alt="Salama Logo" style="height:28px; margin-left:6px;">
-		  <a href="http://www.salama-assurances.com/" target="_blank">سلامة للتأمينات (Salama Assurances)</a>
-		  <div style="margin-top:5px; padding-right:25px;">
-			<i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
-			<a href="tel:xxxx" style="color:#006400; text-decoration:none;">xxxx</a>
-		  </div>
-		</li>
-		<li>
-		  <i class="fas fa-building" style="color:#006400; margin-left:6px;"></i>
-		  <img src="xxxx" alt="Trust Logo" style="height:28px; margin-left:6px;">
-		  <a href="https://www.trustalgerie.com/" target="_blank">ترست الجزائر للتأمينات (Trust Algeria)</a>
-		  <div style="margin-top:5px; padding-right:25px;">
-			<i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
-			<a href="tel:xxxx" style="color:#006400; text-decoration:none;">xxxx</a>
-		  </div>
-		</li>
-		<li>
-		  <i class="fas fa-building" style="color:#006400; margin-left:6px;"></i>
-		  <img src="xxxx" alt="Amana Logo" style="height:28px; margin-left:6px;">
-		  <a href="http://www.amana.dz/" target="_blank">أمانة للتأمينات (Amana Assurances)</a>
-		  <div style="margin-top:5px; padding-right:25px;">
-			<i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
-			<a href="tel:xxxx" style="color:#006400; text-decoration:none;">xxxx</a>
-		  </div>
-		</li>
-		<li>
-		  <i class="fas fa-building" style="color:#006400; margin-left:6px;"></i>
-		  <img src="https://www.macirvie.com/assets/images/logo.png" alt="Macir Vie Logo" style="height:28px; margin-left:6px;">
-		  <a href="https://www.macirvie.com/" target="_blank">ماكير في للتأمين على الحياة (Macir Vie)</a>
-		  <div style="margin-top:5px; padding-right:25px;">
-			<i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
-			<a href="tel:xxxx" style="color:#006400; text-decoration:none;">xxxx</a>
-			<br>📲 <a href="https://play.google.com/store/apps/details?id=com.macirvie.app" target="_blank">تطبيق Android</a>
-		  </div>
-		</li>
-	  </ul>
-  
-	  <!-- التأمينات الأجنبية -->
-	  <h3 onclick="toggleSection('foreign-insurance', this)"
-		  style="cursor: pointer; background-color: #f0faf6; color: #006233; padding: 8px; border-radius: 6px; margin-top: 10px;">
-		<span><i class="fas fa-globe" style="color:#006400; margin-left:6px;"></i>
-		  شركات التأمين الأجنبية <span class="count"></span></span>
-		<span class="toggle-icon" style="float: left;">▶</span>
-	  </h3>
-	  <ul id="foreign-insurance" style="display: none; list-style: none; padding: 0 20px; line-height: 2;">
-		<li>
-		  <i class="fas fa-building" style="color:#006400; margin-left:6px;"></i>
-		  <img src="https://www.axa.dz/themes/custom/axa/logo.svg" alt="AXA Logo" style="height:28px; margin-left:6px;">
-		  <a href="https://www.axa.dz/" target="_blank">أكسا للتأمينات (AXA Assurances Algérie)</a>
-		  <div style="margin-top:5px; padding-right:25px;">
-			<i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
-			<a href="tel:xxxx" style="color:#006400; text-decoration:none;">xxxx</a>
-			<br>📲 <a href="https://play.google.com/store/apps/details?id=dz.axa.assurances" target="_blank">تطبيق Android</a>
-		  </div>
-		</li>
-		<li>
-		  <i class="fas fa-building" style="color:#006400; margin-left:6px;"></i>
-		  <img src="xxxx" alt="Cardif Logo" style="height:28px; margin-left:6px;">
-		  <a href="https://www.cardif.dz/" target="_blank">كارديف للتأمينات (Cardif Algérie - BNP Paribas)</a>
-		  <div style="margin-top:5px; padding-right:25px;">
-			<i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
-			<a href="tel:xxxx" style="color:#006400; text-decoration:none;">xxxx</a>
-		  </div>
-		</li>
-		<li>
-		  <i class="fas fa-building" style="color:#006400; margin-left:6px;"></i>
-		  <img src="xxxx" alt="Generali Logo" style="height:28px; margin-left:6px;">
-		  <a href="http://www.generali.com/" target="_blank">جنرالي للتأمينات (Generali Algérie)</a>
-		  <div style="margin-top:5px; padding-right:25px;">
-			<i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
-			<a href="tel:xxxx" style="color:#006400; text-decoration:none;">xxxx</a>
-		  </div>
-		</li>
-	  </ul>
-  
-	</div>
+      <!-- التأمينات الأجنبية -->
+      <h3 onclick="toggleSection('foreign-insurance', this)"
+        style="cursor: pointer; background-color: #f0faf6; color: #006233; padding: 8px; border-radius: 6px; margin-top: 10px;">
+        <span><i class="fas fa-globe" style="color:#006400; margin-left:6px;"></i>
+          شركات التأمين الأجنبية <span class="count"></span></span>
+        <span class="toggle-icon" style="float: left;">▶</span>
+      </h3>
+      <ul id="foreign-insurance" style="display: none; list-style: none; padding: 0 20px; line-height: 2;">
+        <li>
+          <img src="https://www.axa.dz/themes/custom/axa/logo.svg" alt="AXA Logo" style="height:28px; margin-left:6px;">
+          <a href="https://www.axa.dz/" target="_blank">أكسا للتأمينات (AXA Assurances Algérie)</a>
+          <div style="margin-top:5px; padding-right:25px;">
+            <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
+            <a href="tel:xxxx" style="color:#006400; text-decoration:none;">xxxx</a>
+            <br>📲 <a href="https://play.google.com/store/apps/details?id=dz.axa.assurances" target="_blank">تطبيق
+              Android</a>
+          </div>
+        </li>
+        <li>
+          <img src="xxxx" alt="Cardif Logo" style="height:28px; margin-left:6px;">
+          <a href="https://www.cardif.dz/" target="_blank">كارديف للتأمينات (Cardif Algérie - BNP Paribas)</a>
+          <div style="margin-top:5px; padding-right:25px;">
+            <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
+            <a href="tel:xxxx" style="color:#006400; text-decoration:none;">xxxx</a>
+          </div>
+        </li>
+        <li>
+          <img src="xxxx" alt="Generali Logo" style="height:28px; margin-left:6px;">
+          <a href="http://www.generali.com/" target="_blank">جنرالي للتأمينات (Generali Algérie)</a>
+          <div style="margin-top:5px; padding-right:25px;">
+            <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
+            <a href="tel:xxxx" style="color:#006400; text-decoration:none;">xxxx</a>
+          </div>
+        </li>
+      </ul>
+
+    </div>
   </section>
-  
 
-<!-- قسم الخدمات البنكية -->
-<section dir="rtl" style="text-align: right;">
-	<h2 id="toggle-banks" onclick="toggleSection('banks-section', this)"
-	  style="cursor: pointer; background-color: #a52a2a; color: white; padding: 10px; border-radius: 8px;">
-	  <span><i class="fas fa-university" style="color: white; margin-left:6px;"></i>
-		الخدمات البنكية <span class="count"></span></span>
-	  <span class="toggle-icon" style="float: left;">▶</span>
-	</h2>
-  
-	<div id="banks-section" style="display: none; padding: 10px 20px;">
-  
-	  <!-- البنوك العمومية -->
-	  <h3 onclick="toggleSection('public-banks', this)"
-		style="cursor: pointer; background-color: #f0faf6; color: #006233; padding: 8px; border-radius: 6px;">
-		<span><i class="fas fa-landmark" style="color: #006400; margin-left:6px;"></i>
-		  البنوك العمومية <span class="count"></span></span>
-		<span class="toggle-icon" style="float: left;">▶</span>
-	  </h3>
-	  <ul id="public-banks" style="display: none; list-style: none; padding: 0 20px; line-height: 2;">
-  
-		<li>
-		  <i class="fas fa-landmark" style="color:#006400; margin-left:6px;"></i>
-		  <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/BNA_Logo.png" alt="BNA Logo" style="height:28px; margin-left:6px;">
-		  <a href="https://www.bna.dz/fr/banque-a-distance/" target="_blank">Banque Nationale d’Algérie (BNA)</a>
-		  <div style="margin-top:5px; padding-right:25px;">
-			<i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
-			<a href="tel:xxxx" style="color:#006400; text-decoration:none;">xxxx</a>
-		  </div>
-		</li>
-  
-		<li>
-		  <i class="fas fa-globe-americas" style="color:#006400; margin-left:6px;"></i>
-		  <img src="https://upload.wikimedia.org/wikipedia/commons/7/70/BEA_Logo.png" alt="BEA Logo" style="height:28px; margin-left:6px;">
-		  <a href="https://bea.dz/" target="_blank">Banque Extérieure d’Algérie (BEA)</a>
-		  <div style="margin-top:5px; padding-right:25px;">
-			<i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
-			<a href="tel:xxxx" style="color:#006400; text-decoration:none;">xxxx</a>
-		  </div>
-		</li>
-  
-		<li>
-		  <i class="fas fa-seedling" style="color:#006400; margin-left:6px;"></i>
-		  <img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/BADR_Bank_Logo.png" alt="BADR Logo" style="height:28px; margin-left:6px;">
-		  <a href="https://www.badrbank.dz/" target="_blank">Banque de l’Agriculture et du Développement Rural (BADR)</a>
-		  <div style="margin-top:5px; padding-right:25px;">
-			<i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
-			<a href="tel:xxxx" style="color:#006400; text-decoration:none;">xxxx</a>
-		  </div>
-		</li>
-  
-		<li>
-		  <i class="fas fa-city" style="color:#006400; margin-left:6px;"></i>
-		  <img src="xxxx" alt="BDL Logo" style="height:28px; margin-left:6px;">
-		  <a href="#">Banque de Développement Local (BDL)</a>
-		  <div style="margin-top:5px; padding-right:25px;">
-			<i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
-			<a href="tel:xxxx" style="color:#006400; text-decoration:none;">xxxx</a>
-		  </div>
-		</li>
-  
-		<li>
-		  <i class="fas fa-hand-holding-usd" style="color:#006400; margin-left:6px;"></i>
-		  <img src="xxxx" alt="CPA Logo" style="height:28px; margin-left:6px;">
-		  <a href="#">Crédit Populaire d’Algérie (CPA)</a>
-		  <div style="margin-top:5px; padding-right:25px;">
-			<i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
-			<a href="tel:xxxx" style="color:#006400; text-decoration:none;">xxxx</a>
-		  </div>
-		</li>
-  
-		<li>
-		  <i class="fas fa-piggy-bank" style="color:#006400; margin-left:6px;"></i>
-		  <img src="xxxx" alt="CNEP Logo" style="height:28px; margin-left:6px;">
-		  <a href="#">CNEP Banque</a>
-		  <div style="margin-top:5px; padding-right:25px;">
-			<i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
-			<a href="tel:xxxx" style="color:#006400; text-decoration:none;">xxxx</a>
-		  </div>
-		</li>
-  
-		<li>
-		  <i class="fas fa-home" style="color:#006400; margin-left:6px;"></i>
-		  <img src="xxxx" alt="BNH Logo" style="height:28px; margin-left:6px;">
-		  <a href="#">Banque Nationale de l’Habitat (BNH)</a>
-		  <div style="margin-top:5px; padding-right:25px;">
-			<i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
-			<a href="tel:xxxx" style="color:#006400; text-decoration:none;">xxxx</a>
-		  </div>
-		</li>
-  
-	  </ul>
-  
-	  <!-- البنوك الخاصة/الأجنبية -->
-	  <h3 onclick="toggleSection('private-banks', this)"
-		style="cursor: pointer; background-color: #f0faf6; color: #006233; padding: 8px; border-radius: 6px; margin-top: 10px;">
-		<span><i class="fas fa-building" style="color: #006400; margin-left:6px;"></i>
-		  البنوك الخاصة / الأجنبية <span class="count"></span></span>
-		<span class="toggle-icon" style="float: left;">▶</span>
-	  </h3>
-	  <ul id="private-banks" style="display: none; list-style: none; padding: 0 20px; line-height: 2;">
-  
-		<li>
-		  <i class="fas fa-building" style="color:#006400; margin-left:6px;"></i>
-		  <img src="xxxx" alt="AGB Logo" style="height:28px; margin-left:6px;">
-		  <a href="https://www.agb.dz/" target="_blank">Gulf Bank Algeria (AGB)</a>
-		  <div style="margin-top:5px; padding-right:25px;">
-			<i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
-			<a href="tel:xxxx" style="color:#006400; text-decoration:none;">xxxx</a>
-		  </div>
-		</li>
-  
-		<li>
-		  <i class="fas fa-coins" style="color:#006400; margin-left:6px;"></i>
-		  <img src="xxxx" alt="AlBaraka Logo" style="height:28px; margin-left:6px;">
-		  <a href="#">Banque Al Baraka d’Algérie</a>
-		  <div style="margin-top:5px; padding-right:25px;">
-			<i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
-			<a href="tel:xxxx" style="color:#006400; text-decoration:none;">xxxx</a>
-		  </div>
-		</li>
-  
-		<li>
-		  <i class="fas fa-university" style="color:#006400; margin-left:6px;"></i>
-		  <img src="xxxx" alt="ABC Logo" style="height:28px; margin-left:6px;">
-		  <a href="#">Arab Banking Corporation Algérie (ABC)</a>
-		  <div style="margin-top:5px; padding-right:25px;">
-			<i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
-			<a href="tel:xxxx" style="color:#006400; text-decoration:none;">xxxx</a>
-		  </div>
-		</li>
-  
-		<li>
-			<i class="fas fa-chart-line" style="color:#006400; margin-left:6px;"></i>
-			<img src="xxxx" alt="Natixis Logo" style="height:28px; margin-left:6px;">
-			<a href="#">Natixis Algérie</a>
-			<div style="margin-top:5px; padding-right:25px;">
-			  <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
-			  <a href="tel:xxxx" style="color:#006400; text-decoration:none;">xxxx</a>
-			</div>
-		  </li>
-	
-		  <li>
-			<i class="fas fa-landmark-alt" style="color:#006400; margin-left:6px;"></i>
-			<img src="xxxx" alt="Société Générale Logo" style="height:28px; margin-left:6px;">
-			<a href="#">Société Générale Algérie</a>
-			<div style="margin-top:5px; padding-right:25px;">
-			  <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
-			  <a href="tel:xxxx" style="color:#006400; text-decoration:none;">xxxx</a>
-			</div>
-		  </li>
-	
-		  <li>
-			<i class="fas fa-globe" style="color:#006400; margin-left:6px;"></i>
-			<img src="xxxx" alt="Citibank Logo" style="height:28px; margin-left:6px;">
-			<a href="#">Citibank N.A. Algérie</a>
-			<div style="margin-top:5px; padding-right:25px;">
-			  <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
-			  <a href="tel:xxxx" style="color:#006400; text-decoration:none;">xxxx</a>
-			</div>
-		  </li>
-	
-		  <li>
-			<i class="fas fa-building-columns" style="color:#006400; margin-left:6px;"></i>
-			<img src="xxxx" alt="Arab Bank PLC Logo" style="height:28px; margin-left:6px;">
-			<a href="#">Arab Bank PLC Algérie</a>
-			<div style="margin-top:5px; padding-right:25px;">
-			  <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
-			  <a href="tel:xxxx" style="color:#006400; text-decoration:none;">xxxx</a>
-			</div>
-		  </li>
-	
-		  <li>
-			<i class="fas fa-bank" style="color:#006400; margin-left:6px;"></i>
-			<img src="xxxx" alt="BNP Paribas Logo" style="height:28px; margin-left:6px;">
-			<a href="#">BNP Paribas El Djazair</a>
-			<div style="margin-top:5px; padding-right:25px;">
-			  <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
-			  <a href="tel:xxxx" style="color:#006400; text-decoration:none;">xxxx</a>
-			</div>
-		  </li>
-	
-		  <li>
-			<i class="fas fa-shield-alt" style="color:#006400; margin-left:6px;"></i>
-			<img src="xxxx" alt="HSBC Logo" style="height:28px; margin-left:6px;">
-			<a href="#">HSBC Algeria</a>
-			<div style="margin-top:5px; padding-right:25px;">
-			  <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
-			  <a href="tel:xxxx" style="color:#006400; text-decoration:none;">xxxx</a>
-			</div>
-		  </li>
-	
-		  <li>
-			<i class="fas fa-building-user" style="color:#006400; margin-left:6px;"></i>
-			<img src="xxxx" alt="Fransabank Logo" style="height:28px; margin-left:6px;">
-			<a href="#">Fransabank El Djazair</a>
-			<div style="margin-top:5px; padding-right:25px;">
-			  <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
-			  <a href="tel:xxxx" style="color:#006400; text-decoration:none;">xxxx</a>
-			</div>
-		  </li>
-			
-	  </ul>
-  
-	</div>
-  </section>
-  
-<!-- قسم أرقام الطوارئ -->
-<section dir="rtl" style="text-align: right;">
-	<h2 id="toggle-14" onclick="toggleSection('emergency-numbers', this)"
-		style="cursor: pointer; background-color: #a52a2a; color: white; padding: 10px; border-radius: 8px;">
-	  <span>
-		<i class="fas fa-phone-volume" style="color: #006400; margin-left:6px;"></i>
-		أرقام الطوارئ والخدمات <span class="count"></span>
-	  </span>
-	  <span class="toggle-icon" style="float: left;">▶</span>
-	</h2>
-  
-	<ul id="emergency-numbers" style="display: none; list-style: none; padding: 0 20px; line-height: 2;">
-  
-	  <!-- أرقام الطوارئ الأساسية مع أيقونات وفصل بين الهاتف والموقع -->
-	  <li>
-		<img src="https://www.mdn.dz/site_cgn/images/logo_gn.jpg" alt="الدرك الوطني Logo" style="height:20px; margin-left:6px;">
-		<a href="https://www.mdn.dz/site_cgn/index.php" target="_blank"><strong>الدرك الوطني</strong></a> 
-		- <a href="tel:1055"><strong>1055</strong></a>
-	  </li>
-	  <li>
-		<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQv7dgCYIFbjDXChdGGoXXYqQLB0i5e_ub5HVCg3GyZTdtLl7ZliQZTh6Y0RJw1ZyP66_M&usqp=CAU" alt="الشرطة Logo" style="height:20px; margin-left:6px;">
-		<a href="https://www.algeriepolice.dz/" target="_blank"><strong>الشرطة الجزائرية</strong></a> 
-		- <a href="tel:1548"><strong>1548</strong></a>
-	  </li>
-	  <li>
-		<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIwZEbCS45UgZl9nBZ2RCUJ9_eEuKrW23bCg&s" alt="الشرطة حالات الاختطاف Logo" style="height:20px; margin-left:6px;">
-		<a href="https://www.police.dz/" target="_blank"><strong>الشرطة - حالات الاختطاف</strong></a> 
-		- <a href="tel:104"><strong>104</strong></a>
-	  </li>
-	  <li>
-		<img src="https://dgpc.dz/wp-content/uploads/2024/03/logo-pc.svg" alt="الحماية المدنية Logo" style="height:20px; margin-left:6px;">
-		<a href="https://dgpc.dz/" target="_blank"><strong>الحماية المدنية</strong></a> 
-		- <a href="tel:1021"><strong>1021</strong></a>
-	  </li>
-	  <li>
-		<img src="https://www.mdn.dz/site_cfn/images/CFN2.png" alt="حراس السواحل Logo" style="height:20px; margin-left:6px;">
-		<a href="https://www.mdn.dz/site_cfn/index.php" target="_blank"><strong>حراس السواحل</strong></a> 
-		- <a href="tel:1054"><strong>1054</strong></a>
-	  </li>
-  
-	  <!-- فاصل -->
-	  <li style="border-top: 1px solid #ccc; margin: 8px 0;"></li>
-  
-	  <!-- خدمات إلكترونية وتطبيقات -->
-	  <li>
-		<img src="https://www.mdn.dz/site_cgn/images/ppgn.jpg" alt="PPGN Logo" style="height:20px; margin-left:6px;">
-		<a href="https://ppgn.mdn.dz/" target="_blank"><strong>شكوى مسبقة ومعلومات عن بعد للدرك الوطني</strong></a>
-	  </li>
-	  <li>
-		<img src="https://www.mdn.dz/site_cgn/images/tariki.jpg" alt="Facebook Logo" style="height:20px; margin-left:6px;">
-		<a href="https://www.facebook.com/tariki.GN/" target="_blank"><strong>مركز الإعلام و تنسيق المرور للدرك الوطني - طريقي</strong></a>
-	  </li>
-	  <li>
-		<img src="https://play-lh.googleusercontent.com/-pN1qF-YfLqWeCeSHEm62MZsZ-U4juobRaCjzBUHLDMqY2DSZ1HJuPY6kIPy6hKWtsbq=w240-h480-rw" alt="Android App Logo" style="height:20px; margin-left:6px;">
-		<a href="https://play.google.com/store/apps/details?id=allochorta.algeriepolice.dz&hl=ar" target="_blank"><strong>تحميل تطبيق ألو الشرطة</strong></a>
-	  </li>
-	  <li>
-		<img src="https://wassit.dz/assets/images/Logomediateurdelarpublique.png" alt="Wassit Logo" style="height:20px; margin-left:6px;">
-		<a href="https://wassit.dz/ar/register#" target="_blank"><strong>تواصل مع وسيط الجمهورية – شكوى، عريضة، إلخ.</strong></a>
-	  </li>
-  
-	  <!-- خدمات أخرى بأرقام الهاتف مع شعار -->
+  <!-- قسم الخدمات البنكية -->
+  <section dir="rtl" style="text-align: right;">
+    <h2 id="toggle-banks" onclick="toggleSection('banks-section', this)"
+      style="cursor: pointer; background-color: #a52a2a; color: white; padding: 10px; border-radius: 8px;">
+      <span><i class="fas fa-university" style="color: white; margin-left:6px;"></i>
+        الخدمات البنكية <span class="count"></span></span>
+      <span class="toggle-icon" style="float: left;">▶</span>
+    </h2>
 
-	  <li>
-		<img src="https://apoce.org/wp-content/themes/apoce/assets/images/logo2.png" alt="منظمة حماية المستهلك Logo" style="height:20px; margin-left:6px;">
-		<a href="https://apoce.org/" target="_blank"><strong>منظمة حماية وإرشاد المستهلك</strong></a> 
-		- <a href="tel:3311">3311</a>
-	  </li>
-	  <li>
-		<img src="https://onppe.dz/images/logo.png" alt="حماية الطفل Logo" style="height:20px; margin-left:6px;">
-		<a href="https://onppe.dz/index.php/ar/" target="_blank"><strong>الهيئة الوطنية لحماية وترقية الطفولة</strong></a> 
-		- <a href="tel:1111">1111</a>
-	  </li>
-	  <li>
-		<img src="https://upload.wikimedia.org/wikipedia/fr/c/c5/Direction_g%C3%A9n%C3%A9rale_des_for%C3%AAts.png" alt="محافظة الغابات Logo" style="height:20px; margin-left:6px;">
-		<a href="http://www.dgf.org.dz/ar" target="_blank"><strong>محافظة الغابات</strong></a> 
-		- <a href="tel:1070">1070</a>
-	  </li>
-	  <li>
-		<img src="https://www.khadamaty.dz/wp-content/uploads/2020/12/service_apres_vente_khadamaty_ar.png" alt="خدماتي Logo" style="height:20px; margin-left:6px;">
-		<a href="https://www.khadamaty.dz/?lang=ar" target="_blank"><strong>خدماتي لتصليح الأجهزة الكهرومنزلية</strong></a> 
-		- <a href="tel:3075">3075</a>
-	  </li>
-	  
-  
-	</ul>
+    <div id="banks-section" style="display: none; padding: 10px 20px;">
+
+      <!-- البنوك العمومية -->
+      <h3 onclick="toggleSection('public-banks', this)"
+        style="cursor: pointer; background-color: #f0faf6; color: #006233; padding: 8px; border-radius: 6px;">
+        <span><i class="fas fa-landmark" style="color: #006400; margin-left:6px;"></i>
+          البنوك العمومية <span class="count"></span></span>
+        <span class="toggle-icon" style="float: left;">▶</span>
+      </h3>
+      <ul id="public-banks" style="display: none; list-style: none; padding: 0 20px; line-height: 2;">
+
+        <li>
+          <img src="https://entrenous.dz/wp-content/uploads/2022/12/4-17.jpg" alt="BNA Logo"
+            style="height:28px; margin-left:6px;">
+          <a href="https://www.bna.dz/ar" target="_blank">البنك الوطني الجزائري (BNA)</a>
+          <div style="margin-top:5px; padding-right:25px;">
+            <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
+            <a href="tel:3306" style="color:#006400; text-decoration:none;">3306</a>
+          </div>
+        </li>
+
+        <li>
+          <img src="https://www.bea.dz/img/1642x.png" alt="BEA Logo" style="height:28px; margin-left:6px;">
+          <a href="https://bea.dz/" target="_blank">بنك الجزائر الخارجي (BEA)</a>
+          <div style="margin-top:5px; padding-right:25px;">
+            <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
+            <a href="tel:xxxx" style="color:#006400; text-decoration:none;">xxxx</a>
+          </div>
+        </li>
+
+        <li>
+          <img
+            src="https://www.algeriayp.com/img/dz/a/1698743641-83-badr-banque-de-l-agriculture-du-developpement-rural.jpg"
+            alt="BADR Logo" style="height:28px; margin-left:6px;">
+          <a href="https://www.badrbank.dz/" target="_blank">بنك الفلاحة والتنمية الريفية
+            (BADR)</a>
+          <div style="margin-top:5px; padding-right:25px;">
+            <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
+            <a href="tel:+21321989323" style="color:#006400; text-decoration:none;">+21321989323</a>
+          </div>
+        </li>
+
+        <li>
+          <img src="https://www.bdl.dz/wp-content/uploads/2024/07/LOGO-ACRONYME-OFFICIEL-640x1024.png" alt="BDL Logo"
+            style="height:28px; margin-left:6px;">
+          <a href="https://www.bdl.dz/">بنك التنمية المحلية (BDL)</a>
+          <div style="margin-top:5px; padding-right:25px;">
+            <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
+            <a href="tel:3312 " style="color:#006400; text-decoration:none;">3312 </a>
+          </div>
+        </li>
+
+        <li>
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvXZ1KkvNgucnSd_TFc7sz1EyZF4HsUc_RKw&s"
+            alt="CPA Logo" style="height:28px; margin-left:6px;">
+          <a href="https://www.cpa-bank.dz/index.php/ar">القرض الشعبي الجزائري (CPA)</a>
+          <div style="margin-top:5px; padding-right:25px;">
+            <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
+            <a href="tel:021 64 15 15" style="color:#006400; text-decoration:none;">021 64 15 15</a>
+          </div>
+        </li>
+
+        <li>
+          <img
+            src="https://www.cnepbanque.dz/web/wp-content/themes/cnep/assets/images/logo-caisse-nationale-depargne-et-de-prevoyance-banque-1.svg"
+            alt="CNEP Logo" style="height:28px; margin-left:6px;">
+          <a href="https://www.cnepbanque.dz/web/ar/accueil-arabe/"> الصندوق الوطني للتوفير و الاحتياط - بنك CNEP
+            Banque</a>
+          <div style="margin-top:5px; padding-right:25px;">
+            <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
+            <a href="tel:18 61 36 023" style="color:#006400; text-decoration:none;">18 61 36 023</a>
+          </div>
+        </li>
+
+        <li>
+          <img src="https://2h.ae/EJMK" alt="BNH Logo" style="height:28px; margin-left:6px;">
+          <a href="https://bnh.dz/">البنك الوطني للإسكان (BNH)</a>
+          <div style="margin-top:5px; padding-right:25px;">
+            <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
+            <a href="tel:021-98-02-00" style="color:#006400; text-decoration:none;">021-98-02-00</a>
+          </div>
+        </li>
+
+      </ul>
+
+      <!-- البنوك الخاصة/الأجنبية -->
+      <h3 onclick="toggleSection('private-banks', this)"
+        style="cursor: pointer; background-color: #f0faf6; color: #006233; padding: 8px; border-radius: 6px; margin-top: 10px;">
+        <span><i class="fas fa-building" style="color: #006400; margin-left:6px;"></i>
+          البنوك الخاصة / الأجنبية <span class="count"></span></span>
+        <span class="toggle-icon" style="float: left;">▶</span>
+      </h3>
+      <ul id="private-banks" style="display: none; list-style: none; padding: 0 20px; line-height: 2;">
+
+        <li>
+          <img src="https://lh3.googleusercontent.com/p/AF1QipOyqtlABaA_3SSYO_j93JX-foI1PpwLQCuiyW2Y=w1024-k"
+            alt="AGB Logo" style="height:28px; margin-left:6px;">
+          <a href="https://www.agb.dz/" target="_blank">بنك الخليج الجزائر (AGB)</a>
+          <div style="margin-top:5px; padding-right:25px;">
+            <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
+            <a href="tel:3340" style="color:#006400; text-decoration:none;">3340</a>
+          </div>
+        </li>
+
+        <li>
+          <img src="https://www.albaraka-bank.dz/wp-content/uploads/2025/04/baraka-logo-fr-1-133x62.png"
+            alt="AlBaraka Logo" style="height:28px; margin-left:6px;">
+          <a href="https://2h.ae/idol">بنك البركة الجزائري</a>
+          <div style="margin-top:5px; padding-right:25px;">
+            <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
+            <a href="tel:+213 661 900 832" style="color:#006400; text-decoration:none;">+213 661 900 832</a>
+          </div>
+        </li>
+
+        <li>
+          <img src="https://www.comparebanks.co.uk/wp-content/uploads/2021/04/logo-_0149_ABC-International-Bank.png"
+            alt="ABC Logo" style="height:28px; margin-left:6px;">
+          <a href="https://www.bank-abc.com/ar/CountrySites/Algeria">بنك ABC الجزائر (ABC)</a>
+          <div style="margin-top:5px; padding-right:25px;">
+            <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
+            <a href="tel:+213 021 9876 00​​ " style="color:#006400; text-decoration:none;">+213 021 9876 00​​</a>
+          </div>
+        </li>
+
+        <li>
+          <img src="https://pbs.twimg.com/profile_images/1174700633800302593/2OVvG3Ql_400x400.jpg" alt="Natixis Logo"
+            style="height:28px; margin-left:6px;">
+          <a href="https://ebanking.algerie.natixis.com/ebanking/index.ebk">Natixis Algérie</a>
+          <div style="margin-top:5px; padding-right:25px;">
+            <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
+            <a href="tel:xxxx" style="color:#006400; text-decoration:none;">xxxx</a>
+          </div>
+        </li>
+
+        <li>
+          <img
+            src="https://www.algerie360.com/wp-content/uploads/2015/06/societe-generale-algerie-investit-la-totalite-de-ses-benefices-dans-le-pays-affirme-le-president-de-son-directoire.jpg"
+            alt="Société Générale Logo" style="height:28px; margin-left:6px;">
+          <a href="https://societegenerale.dz/fr/">Société Générale Algérie</a>
+          <div style="margin-top:5px; padding-right:25px;">
+            <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
+            <a href="tel:(+213) 21 45 11 55 " style="color:#006400; text-decoration:none;">(+213) 21 45 11 55 </a>
+          </div>
+        </li>
+
+        <li>
+          <img
+            src="https://cdn.prod.website-files.com/64199d190fc7afa82666d89c/6491bec5ad7d6bb174b7c2a8_citibank-1.webp"
+            alt="Citibank Logo" style="height:28px; margin-left:6px;">
+          <a href="https://www.citigroup.com/global/about-us/global-presence/algeria">Citibank N.A. Algérie</a>
+          <div style="margin-top:5px; padding-right:25px;">
+            <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
+            <a href="tel: +213 21 98 19 00" style="color:#006400; text-decoration:none;"> +213 21 98 19 00</a>
+          </div>
+        </li>
+
+        <li>
+          <img
+            src="https://emploitic.com/images/logos/arn:eu-west-1:oss::cfe1ca0ff05b246e17f37c8e:logo:6629959fb5d95b734536692b"
+            alt="Arab Bank PLC Logo" style="height:28px; margin-left:6px;">
+          <a href="https://2h.ae/OqxW">البنك العربي</a>
+          <div style="margin-top:5px; padding-right:25px;">
+            <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
+            <a href="tel:50 86 60 21 (0) 213
+" style="color:#006400; text-decoration:none;">50 86 60 21 (0) 213
+            </a>
+          </div>
+        </li>
+
+        <li>
+          <img src="https://www.bank-of-algeria.dz/stoodroa/2022/11/HSBC-copie.png" alt="HSBC Logo"
+            style="height:28px; margin-left:6px;">
+          <a href="https://www.business.algeria.hsbc.com/">HSBC Algeria</a>
+          <div style="margin-top:5px; padding-right:25px;">
+            <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
+            <a href="tel:+213 (0) 23 98 28 00" style="color:#006400; text-decoration:none;">+213 (0) 23 98 28 00</a>
+          </div>
+        </li>
+
+        <li>
+          <img src="https://2h.ae/SFEO" alt="Fransabank Logo" style="height:28px; margin-left:6px;">
+          <a href="https://2h.ae/wuTt">Fransabank El Djazair</a>
+          <div style="margin-top:5px; padding-right:25px;">
+            <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
+            <a href="tel:200 999 021 (213+)" style="color:#006400; text-decoration:none;">200 999 021 (213+)</a>
+          </div>
+        </li>
+
+      </ul>
+
+    </div>
   </section>
-  
-   <!-- قسم معلومات الاتصال -->
+
+  <!-- قسم أرقام الطوارئ -->
+  <section dir="rtl" style="text-align: right;">
+    <h2 id="toggle-14" onclick="toggleSection('emergency-numbers', this)"
+      style="cursor: pointer; background-color: #a52a2a; color: white; padding: 10px; border-radius: 8px;">
+      <span>
+        <i class="fas fa-phone-volume" style="color: #006400; margin-left:6px;"></i>
+        أرقام الطوارئ والخدمات <span class="count"></span>
+      </span>
+      <span class="toggle-icon" style="float: left;">▶</span>
+    </h2>
+
+    <ul id="emergency-numbers" style="display: none; list-style: none; padding: 0 20px; line-height: 2;">
+
+      <!-- أرقام الطوارئ الأساسية مع أيقونات وفصل بين الهاتف والموقع -->
+      <li>
+        <img src="https://www.mdn.dz/site_cgn/images/logo_gn.jpg" alt="الدرك الوطني Logo"
+          style="height:20px; margin-left:6px;">
+        <a href="https://www.mdn.dz/site_cgn/index.php" target="_blank"><strong>الدرك الوطني</strong></a>
+        - <a href="tel:1055"><strong>1055</strong></a>
+      </li>
+      <li>
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQv7dgCYIFbjDXChdGGoXXYqQLB0i5e_ub5HVCg3GyZTdtLl7ZliQZTh6Y0RJw1ZyP66_M&usqp=CAU"
+          alt="الشرطة Logo" style="height:20px; margin-left:6px;">
+        <a href="https://www.algeriepolice.dz/" target="_blank"><strong>الشرطة الجزائرية</strong></a>
+        - <a href="tel:1548"><strong>1548</strong></a>
+      </li>
+      <li>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIwZEbCS45UgZl9nBZ2RCUJ9_eEuKrW23bCg&s"
+          alt="الشرطة حالات الاختطاف Logo" style="height:20px; margin-left:6px;">
+        <a href="https://www.police.dz/" target="_blank"><strong>الشرطة - حالات الاختطاف</strong></a>
+        - <a href="tel:104"><strong>104</strong></a>
+      </li>
+      <li>
+        <img src="https://dgpc.dz/wp-content/uploads/2024/03/logo-pc.svg" alt="الحماية المدنية Logo"
+          style="height:20px; margin-left:6px;">
+        <a href="https://dgpc.dz/" target="_blank"><strong>الحماية المدنية</strong></a>
+        - <a href="tel:1021"><strong>1021</strong></a>
+      </li>
+      <li>
+        <img src="https://www.mdn.dz/site_cfn/images/CFN2.png" alt="حراس السواحل Logo"
+          style="height:20px; margin-left:6px;">
+        <a href="https://www.mdn.dz/site_cfn/index.php" target="_blank"><strong>حراس السواحل</strong></a>
+        - <a href="tel:1054"><strong>1054</strong></a>
+      </li>
+
+      <!-- فاصل -->
+      <li style="border-top: 1px solid #ccc; margin: 8px 0;"></li>
+
+      <!-- خدمات إلكترونية وتطبيقات -->
+      <li>
+        <img src="https://www.mdn.dz/site_cgn/images/ppgn.jpg" alt="PPGN Logo" style="height:20px; margin-left:6px;">
+        <a href="https://ppgn.mdn.dz/" target="_blank"><strong>شكوى مسبقة ومعلومات عن بعد للدرك الوطني</strong></a>
+      </li>
+      <li>
+        <img src="https://www.mdn.dz/site_cgn/images/tariki.jpg" alt="Facebook Logo"
+          style="height:20px; margin-left:6px;">
+        <a href="https://www.facebook.com/tariki.GN/" target="_blank"><strong>مركز الإعلام و تنسيق المرور للدرك الوطني -
+            طريقي</strong></a>
+      </li>
+      <li>
+        <img
+          src="https://play-lh.googleusercontent.com/-pN1qF-YfLqWeCeSHEm62MZsZ-U4juobRaCjzBUHLDMqY2DSZ1HJuPY6kIPy6hKWtsbq=w240-h480-rw"
+          alt="Android App Logo" style="height:20px; margin-left:6px;">
+        <a href="https://play.google.com/store/apps/details?id=allochorta.algeriepolice.dz&hl=ar"
+          target="_blank"><strong>تحميل تطبيق ألو الشرطة</strong></a>
+      </li>
+      <li>
+        <img src="https://wassit.dz/assets/images/Logomediateurdelarpublique.png" alt="Wassit Logo"
+          style="height:20px; margin-left:6px;">
+        <a href="https://wassit.dz/ar/register#" target="_blank"><strong>تواصل مع وسيط الجمهورية – شكوى، عريضة،
+            إلخ.</strong></a>
+      </li>
+
+      <!-- خدمات أخرى بأرقام الهاتف مع شعار -->
+
+      <li>
+        <img src="https://apoce.org/wp-content/themes/apoce/assets/images/logo2.png" alt="منظمة حماية المستهلك Logo"
+          style="height:20px; margin-left:6px;">
+        <a href="https://apoce.org/" target="_blank"><strong>منظمة حماية وإرشاد المستهلك</strong></a>
+        - <a href="tel:3311">3311</a>
+      </li>
+      <li>
+        <img src="https://onppe.dz/images/logo.png" alt="حماية الطفل Logo" style="height:20px; margin-left:6px;">
+        <a href="https://onppe.dz/index.php/ar/" target="_blank"><strong>الهيئة الوطنية لحماية وترقية
+            الطفولة</strong></a>
+        - <a href="tel:1111">1111</a>
+      </li>
+      <li>
+        <img src="https://upload.wikimedia.org/wikipedia/fr/c/c5/Direction_g%C3%A9n%C3%A9rale_des_for%C3%AAts.png"
+          alt="محافظة الغابات Logo" style="height:20px; margin-left:6px;">
+        <a href="http://www.dgf.org.dz/ar" target="_blank"><strong>محافظة الغابات</strong></a>
+        - <a href="tel:1070">1070</a>
+      </li>
+      <li>
+        <img src="https://2h.ae/PFeA" alt="خدماتي Logo" style="height:20px; margin-left:6px;">
+        <a href="https://www.khadamaty.dz/?lang=ar" target="_blank"><strong>خدماتي لتصليح الأجهزة
+            الكهرومنزلية</strong></a>
+        - <a href="tel:3075">3075</a>
+      </li>
+
+
+    </ul>
+  </section>
+
+  <!-- قسم معلومات الاتصال -->
   <section dir="rtl" style="text-align: right;">
     <h2 id="toggle-14" onclick="toggleSection('contact-info', this)"
       style="cursor: pointer; background-color: #a52a2a; color: white; padding: 10px; border-radius: 8px;">
@@ -2039,9 +2280,7 @@ button:hover{background-color:#a30000}
   </button>
 
   <script>
-    /* =======================
-       1. زر تثبيت التطبيق PWA
-       ======================= */
+    /* ==========     1. زر تثبيت التطبيق PWA   ======================= */
     const installButton = document.getElementById('install-button');
     let deferredPrompt;
 
