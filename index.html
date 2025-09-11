@@ -24,79 +24,390 @@
   <title>البوابة الجزائرية للخدمات الرقمية</title>
 
   <!-- Structured Data -->
-  <script type="application/ld+json">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
     {
-      "@context": "https://schema.org",
-      "@graph": [
+      "@type": "WebSite",
+      "@id": "https://imadtbn.github.io/dz_portal/#website",
+      "url": "https://imadtbn.github.io/dz_portal/",
+      "name": "البوابة الجزائرية للخدمات الرقمية",
+      "alternateName": "DZ e-Services Portal",
+      "inLanguage": "ar-DZ",
+      "description": "موقع موحد يضم روابط إلى جميع الخدمات الإلكترونية الرقمية الحكومية الجزائرية: التعليم، الجباية، العدالة، البريد، وغيرها.",
+      "image": "https://imadtbn.github.io/dz_portal/preview.png",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://imadtbn.github.io/dz_portal/?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "الرئيسية", "item": "https://imadtbn.github.io/dz_portal/" },
+        { "@type": "ListItem", "position": 2, "name": "الخدمات الرقمية", "item": "https://imadtbn.github.io/dz_portal/digital" },
+        { "@type": "ListItem", "position": 3, "name": "خدمات الدفع الإلكتروني", "item": "https://imadtbn.github.io/dz_portal/digital/e-payment" },
+        { "@type": "ListItem", "position": 4, "name": "تعبئة الهاتف", "item": "https://imadtbn.github.io/dz_portal/digital/mobile-recharge" },
+        { "@type": "ListItem", "position": 5, "name": "بريد الجزائر", "item": "https://imadtbn.github.io/dz_portal/digital/algerie-poste" }
+      ]
+    },
+    {
+      "@type": "GovernmentOrganization",
+      "@id": "https://imadtbn.github.io/dz_portal/#organization",
+      "name": "الجمهورية الجزائرية الديمقراطية الشعبية",
+      "url": "https://www.el-mouradia.dz/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://imadtbn.github.io/dz_portal/logo.png"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+213",
+        "contactType": "خدمة المواطنين",
+        "areaServed": "DZ",
+        "availableLanguage": ["ar", "fr"]
+      },
+      "address": { "@type": "PostalAddress", "addressCountry": "DZ" },
+      "sameAs": ["https://www.el-mouradia.dz/"]
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://imadtbn.github.io/dz_portal/#webpage",
+      "url": "https://imadtbn.github.io/dz_portal/",
+      "name": "الصفحة الرئيسية",
+      "isPartOf": { "@id": "https://imadtbn.github.io/dz_portal/#website" },
+      "about": { "@id": "https://imadtbn.github.io/dz_portal/#organization" },
+      "inLanguage": "ar-DZ",
+      "image": "https://imadtbn.github.io/dz_portal/preview.png"
+    },
+    {
+      "@type": "Service",
+      "serviceType": "خدمات إلكترونية حكومية",
+      "provider": { "@type": "GovernmentOrganization", "name": "الجمهورية الجزائرية" },
+      "areaServed": { "@type": "Country", "name": "الجزائر" },
+      "availableChannel": {
+        "@type": "ServiceChannel",
+        "serviceUrl": "https://imadtbn.github.io/dz_portal/",
+        "availableLanguage": ["ar", "fr"]
+      }
+    },
+    {
+      "@type": "ItemList",
+      "name": "قائمة الخدمات الرقمية الحكومية الجزائرية",
+      "description": "تضم هذه القائمة كافة الخدمات الرقمية الحكومية المتاحة في الجزائر",
+      "numberOfItems": 25,
+      "itemListElement": [
         {
-          "@type": "WebSite",
-          "@id": "https://imadtbn.github.io/dz_portal/#website",
-          "url": "https://imadtbn.github.io/dz_portal/",
-          "name": "البوابة الجزائرية للخدمات الرقمية",
-          "alternateName": "DZ e-Services Portal",
-          "inLanguage": "ar-DZ",
-          "description": "موقع موحد يضم روابط إلى جميع الخدمات الإلكترونية الرقمية الحكومية الجزائرية: التعليم، الجباية، العدالة، البريد، وغيرها.",
-          "image": "https://imadtbn.github.io/dz_portal/preview.png",
-          "potentialAction": {
-            "@type": "SearchAction",
-            "target": "https://imadtbn.github.io/dz_portal/?q={search_term_string}",
-            "query-input": "required name=search_term_string"
-          }
-        },
-        {
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            { "@type": "ListItem", "position": 1, "name": "الرئيسية", "item": "https://imadtbn.github.io/dz_portal/" },
-            { "@type": "ListItem", "position": 2, "name": "الخدمات الرقمية", "item": "https://imadtbn.github.io/dz_portal/digital" },
-            { "@type": "ListItem", "position": 3, "name": "خدمات الدفع الإلكتروني", "item": "https://imadtbn.github.io/dz_portal/digital/e-payment" },
-            { "@type": "ListItem", "position": 4, "name": "تعبئة الهاتف", "item": "https://imadtbn.github.io/dz_portal/digital/mobile-recharge" },
-            { "@type": "ListItem", "position": 5, "name": "بريد الجزائر", "item": "https://imadtbn.github.io/dz_portal/digital/algerie-poste" }
-          ]
-        },
-        {
-          "@type": "GovernmentOrganization",
-          "@id": "https://imadtbn.github.io/dz_portal/#organization",
-          "name": "الجمهورية الجزائرية الديمقراطية الشعبية",
-          "url": "https://www.el-mouradia.dz/",
-          "logo": {
-            "@type": "ImageObject",
-            "url": "https://imadtbn.github.io/dz_portal/logo.png"
+          "@type": "Service",
+          "name": "خدمات الدفع الإلكتروني للفواتير",
+          "url": "https://imadtbn.github.io/dz_portal/#toggle-payment",
+          "provider": {
+            "@type": "Organization",
+            "name": "الجزائرية للمياه (ADE)"
           },
           "contactPoint": {
             "@type": "ContactPoint",
-            "telephone": "+213",
-            "contactType": "خدمة المواطنين",
-            "areaServed": "DZ",
-            "availableLanguage": ["ar", "fr"]
-          },
-          "address": { "@type": "PostalAddress", "addressCountry": "DZ" },
-          "sameAs": ["https://www.el-mouradia.dz/"]
-        },
-        {
-          "@type": "WebPage",
-          "@id": "https://imadtbn.github.io/dz_portal/#webpage",
-          "url": "https://imadtbn.github.io/dz_portal/",
-          "name": "الصفحة الرئيسية",
-          "isPartOf": { "@id": "https://imadtbn.github.io/dz_portal/#website" },
-          "about": { "@id": "https://imadtbn.github.io/dz_portal/#organization" },
-          "inLanguage": "ar-DZ",
-          "image": "https://imadtbn.github.io/dz_portal/preview.png"
+            "telephone": "+213-1592",
+            "contactType": "خدمة العملاء"
+          }
         },
         {
           "@type": "Service",
-          "serviceType": "خدمات إلكترونية حكومية",
-          "provider": { "@type": "GovernmentOrganization", "name": "الجمهورية الجزائرية" },
-          "areaServed": { "@type": "Country", "name": "الجزائر" },
-          "availableChannel": {
-            "@type": "ServiceChannel",
-            "serviceUrl": "https://imadtbn.github.io/dz_portal/",
-            "availableLanguage": ["ar", "fr"]
+          "name": "خدمات تعبئة الهاتف النقال",
+          "url": "https://imadtbn.github.io/dz_portal/#toggle-recharge",
+          "provider": {
+            "@type": "Organization",
+            "name": "موبيليس"
+          },
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+213-666",
+            "contactType": "خدمة العملاء"
+          }
+        },
+        {
+          "@type": "Service",
+          "name": "خدمات بريد الجزائر",
+          "url": "https://imadtbn.github.io/dz_portal/#toggle-post",
+          "provider": {
+            "@type": "Organization",
+            "name": "بريد الجزائر"
+          },
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+213-1530",
+            "contactType": "خدمة العملاء"
+          }
+        },
+        {
+          "@type": "Service",
+          "name": "خدمات إتصالات الجزائر",
+          "url": "https://imadtbn.github.io/dz_portal/#toggle-telecom",
+          "provider": {
+            "@type": "Organization",
+            "name": "إتصالات الجزائر"
+          },
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+213-12",
+            "contactType": "خدمة العملاء"
+          }
+        },
+        {
+          "@type": "Service",
+          "name": "التربية والتعليم",
+          "url": "https://imadtbn.github.io/dz_portal/#toggle-education",
+          "provider": {
+            "@type": "GovernmentOrganization",
+            "name": "وزارة التربية الوطنية"
+          },
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+213-1075",
+            "contactType": "خدمة المواطنين"
+          }
+        },
+        {
+          "@type": "Service",
+          "name": "الخدمات الجامعية",
+          "url": "https://imadtbn.github.io/dz_portal/#toggle-10",
+          "provider": {
+            "@type": "GovernmentOrganization",
+            "name": "وزارة التعليم العالي والبحث العلمي"
+          },
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+213-23-93-91-32",
+            "contactType": "خدمة المواطنين"
+          }
+        },
+        {
+          "@type": "Service",
+          "name": "التكوين والتعليم المهنيين",
+          "url": "https://imadtbn.github.io/dz_portal/#toggle-vocational",
+          "provider": {
+            "@type": "GovernmentOrganization",
+            "name": "وزارة التكوين والتعليم المهنيين"
+          },
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+213-66-52-25-023",
+            "contactType": "خدمة المواطنين"
+          }
+        },
+        {
+          "@type": "Service",
+          "name": "خدمات الإدارة المحلية",
+          "url": "https://imadtbn.github.io/dz_portal/#toggle-admin",
+          "provider": {
+            "@type": "GovernmentOrganization",
+            "name": "وزارة الداخلية"
+          },
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+213-1100",
+            "contactType": "خدمة المواطنين"
+          }
+        },
+        {
+          "@type": "Service",
+          "name": "خدمات جبائية إلكترونية",
+          "url": "https://imadtbn.github.io/dz_portal/#toggle-tax",
+          "provider": {
+            "@type": "GovernmentOrganization",
+            "name": "وزارة المالية"
+          },
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+213-3040",
+            "contactType": "خدمة المواطنين"
+          }
+        },
+        {
+          "@type": "Service",
+          "name": "خدمات عقارية",
+          "url": "https://imadtbn.github.io/dz_portal/#toggle-realestate",
+          "provider": {
+            "@type": "GovernmentOrganization",
+            "name": "المديرية العامة للأملاك الوطنية"
+          },
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+213-21-59-51-51",
+            "contactType": "خدمة المواطنين"
+          }
+        },
+        {
+          "@type": "Service",
+          "name": "الضمان الاجتماعي",
+          "url": "https://imadtbn.github.io/dz_portal/#social-security",
+          "provider": {
+            "@type": "GovernmentOrganization",
+            "name": "وزارة العمل والتشغيل والضمان الاجتماعي"
+          },
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+213-3010",
+            "contactType": "خدمة المواطنين"
+          }
+        },
+        {
+          "@type": "Service",
+          "name": "خدمات مع العدالة",
+          "url": "https://imadtbn.github.io/dz_portal/#toggle-justice",
+          "provider": {
+            "@type": "GovernmentOrganization",
+            "name": "وزارة العدل"
+          },
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+213-1078",
+            "contactType": "خدمة المواطنين"
+          }
+        },
+        {
+          "@type": "Service",
+          "name": "النقل وحجز تذاكر السفر",
+          "url": "https://imadtbn.github.io/dz_portal/#toggle-12",
+          "provider": {
+            "@type": "GovernmentOrganization",
+            "name": "وزارة النقل"
+          },
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+213-1067",
+            "contactType": "خدمة المواطنين"
+          }
+        },
+        {
+          "@type": "Service",
+          "name": "الوكالة الوطنية للتشغيل - ANEM",
+          "url": "https://imadtbn.github.io/dz_portal/#toggle-11",
+          "provider": {
+            "@type": "GovernmentOrganization",
+            "name": "الوكالة الوطنية للتشغيل"
+          },
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+213-3005",
+            "contactType": "خدمة المواطنين"
+          }
+        },
+        {
+          "@type": "Service",
+          "name": "الخدمات الصحية",
+          "url": "https://imadtbn.github.io/dz_portal/#toggle-4",
+          "provider": {
+            "@type": "GovernmentOrganization",
+            "name": "وزارة الصحة"
+          },
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+213-3030",
+            "contactType": "خدمة المواطنين"
+          }
+        },
+        {
+          "@type": "Service",
+          "name": "خدمات وزارة التجارة الجزائرية",
+          "url": "https://imadtbn.github.io/dz_portal/#toggle-commerce",
+          "provider": {
+            "@type": "GovernmentOrganization",
+            "name": "وزارة التجارة"
+          },
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+213-1020",
+            "contactType": "خدمة المواطنين"
+          }
+        },
+        {
+          "@type": "Service",
+          "name": "الجمارك الجزائرية",
+          "url": "https://imadtbn.github.io/dz_portal/#toggle-11",
+          "provider": {
+            "@type": "GovernmentOrganization",
+            "name": "الجمارك الجزائرية"
+          },
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+213-1023",
+            "contactType": "خدمة المواطنين"
+          }
+        },
+        {
+          "@type": "Service",
+          "name": "الوكالة الوطنية للمقاول الذاتي",
+          "url": "https://imadtbn.github.io/dz_portal/#toggle-10",
+          "provider": {
+            "@type": "GovernmentOrganization",
+            "name": "الوكالة الوطنية للمقاول الذاتي"
+          },
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+213-1071",
+            "contactType": "خدمة المواطنين"
+          }
+        },
+        {
+          "@type": "Service",
+          "name": "فضاءات ووكالات",
+          "url": "https://imadtbn.github.io/dz_portal/#toggle-14",
+          "provider": {
+            "@type": "Organization",
+            "name": "مختلف الوكالات والشركات"
+          }
+        },
+        {
+          "@type": "Service",
+          "name": "وكالات التأمينات",
+          "url": "https://imadtbn.github.io/dz_portal/#insurance-header",
+          "provider": {
+            "@type": "Organization",
+            "name": "شركات التأمين المختلفة"
+          }
+        },
+        {
+          "@type": "Service",
+          "name": "الخدمات البنكية",
+          "url": "https://imadtbn.github.io/dz_portal/#toggle-banks",
+          "provider": {
+            "@type": "Organization",
+            "name": "البنوك الجزائرية"
+          }
+        },
+        {
+          "@type": "Service",
+          "name": "أرقام الطوارئ والخدمات",
+          "url": "https://imadtbn.github.io/dz_portal/#toggle-14",
+          "provider": {
+            "@type": "GovernmentOrganization",
+            "name": "جهات الطوارئ المختلفة"
+          }
+        },
+        {
+          "@type": "Service",
+          "name": "معلومات الاتصال",
+          "url": "https://imadtbn.github.io/dz_portal/#toggle-14",
+          "provider": {
+            "@type": "Organization",
+            "name": "البوابة الجزائرية للخدمات الرقمية"
+          },
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+213-697743721",
+            "email": "tabaniimadeddine@gmail.com",
+            "contactType": "خدمة العملاء"
           }
         }
       ]
     }
-    </script>
-
+  ]
+}
+</script>
+  
   <!-- SEO -->
   <meta name="description"
     content="البوابة الجزائرية للخدمات الإلكترونية - خدمات إدارية، بريد، ضرائب، تكوين، الضمان الاجتماعي، التعليم وغيرها في موقع واحد.">
