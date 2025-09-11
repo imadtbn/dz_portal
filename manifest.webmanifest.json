@@ -1,22 +1,148 @@
 {
-  "name": "البوابة الجزائرية للخدمات الإلكترونية",
+  "name": "البوابة الجزائرية للخدمات الرقمية",
   "short_name": "DZ Portal",
   "lang": "ar",
-  "start_url": "./index.html",
+  "dir": "rtl",
+  "start_url": "/dz_portal/index.html",
+  "scope": "/dz_portal/",
   "display": "standalone",
   "orientation": "portrait",
   "background_color": "#ffffff",
-  "theme_color": "#006233",
+  "theme_color": "#a52a2a",
+  "description": "البوابة الجزائرية للخدمات الرقمية تجمع كل الخدمات الحكومية الجزائرية: البريد، الاتصالات، التعليم، الجامعات، التكوين المهني، الحالة المدنية، الجباية، المالية، البنوك، الضمان الاجتماعي، الصحة، العدالة، التجارة، الجمارك، الطاقة، النقل، التأمين، وأرقام الطوارئ.",
+  "categories": [
+    "government",
+    "services",
+    "utilities",
+    "education",
+    "health",
+    "finance",
+    "communication",
+    "transport",
+    "security"
+  ],
   "icons": [
+    { "src": "/dz_portal/icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any maskable" },
+    { "src": "/dz_portal/icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ],
+  "screenshots": [
+    { "src": "/dz_portal/screenshots/home.png", "sizes": "1080x1920", "type": "image/png" },
+    { "src": "/dz_portal/screenshots/services.png", "sizes": "1080x1920", "type": "image/png" }
+  ],
+  "shortcuts": [
     {
-      "src": "icons/icon-192.png",
-      "sizes": "192x192",
-      "type": "image/png"
+      "name": "الخدمات البريدية",
+      "short_name": "البريد",
+      "url": "/dz_portal/index.html#postal-section",
+      "icons": [{ "src": "/dz_portal/icons/postal.png", "sizes": "96x96" }]
     },
     {
-      "src": "icons/icon-512.png",
-      "sizes": "512x512",
-      "type": "image/png"
+      "name": "اتصالات الجزائر",
+      "short_name": "اتصالات",
+      "url": "/dz_portal/index.html#telecom-section",
+      "icons": [{ "src": "/dz_portal/icons/telecom.png", "sizes": "96x96" }]
+    },
+    {
+      "name": "التعليم",
+      "short_name": "التعليم",
+      "url": "/dz_portal/index.html#education-section",
+      "icons": [{ "src": "/dz_portal/icons/education.png", "sizes": "96x96" }]
+    },
+    {
+      "name": "التكوين المهني",
+      "short_name": "التكوين",
+      "url": "/dz_portal/index.html#vocational-section",
+      "icons": [{ "src": "/dz_portal/icons/vocational.png", "sizes": "96x96" }]
+    },
+    {
+      "name": "الحالة المدنية",
+      "short_name": "الحالة",
+      "url": "/dz_portal/index.html#civil-section",
+      "icons": [{ "src": "/dz_portal/icons/civil.png", "sizes": "96x96" }]
+    },
+    {
+      "name": "الجباية",
+      "short_name": "الضرائب",
+      "url": "/dz_portal/index.html#tax-section",
+      "icons": [{ "src": "/dz_portal/icons/tax.png", "sizes": "96x96" }]
+    },
+    {
+      "name": "المالية",
+      "short_name": "مالية",
+      "url": "/dz_portal/index.html#finance-section",
+      "icons": [{ "src": "/dz_portal/icons/finance.png", "sizes": "96x96" }]
+    },
+    {
+      "name": "البنوك",
+      "short_name": "بنوك",
+      "url": "/dz_portal/index.html#banks-section",
+      "icons": [{ "src": "/dz_portal/icons/banks.png", "sizes": "96x96" }]
+    },
+    {
+      "name": "الضمان الاجتماعي",
+      "short_name": "الضمان",
+      "url": "/dz_portal/index.html#social-section",
+      "icons": [{ "src": "/dz_portal/icons/social.png", "sizes": "96x96" }]
+    },
+    {
+      "name": "الصحة",
+      "short_name": "صحة",
+      "url": "/dz_portal/index.html#health-section",
+      "icons": [{ "src": "/dz_portal/icons/health.png", "sizes": "96x96" }]
+    },
+    {
+      "name": "العدالة",
+      "short_name": "عدالة",
+      "url": "/dz_portal/index.html#justice-section",
+      "icons": [{ "src": "/dz_portal/icons/justice.png", "sizes": "96x96" }]
+    },
+    {
+      "name": "التجارة",
+      "short_name": "تجارة",
+      "url": "/dz_portal/index.html#commerce-section",
+      "icons": [{ "src": "/dz_portal/icons/commerce.png", "sizes": "96x96" }]
+    },
+    {
+      "name": "الجمارك",
+      "short_name": "جمارك",
+      "url": "/dz_portal/index.html#customs-section",
+      "icons": [{ "src": "/dz_portal/icons/customs.png", "sizes": "96x96" }]
+    },
+    {
+      "name": "الطاقة",
+      "short_name": "طاقة",
+      "url": "/dz_portal/index.html#energy-section",
+      "icons": [{ "src": "/dz_portal/icons/energy.png", "sizes": "96x96" }]
+    },
+    {
+      "name": "النقل",
+      "short_name": "نقل",
+      "url": "/dz_portal/index.html#transport-section",
+      "icons": [{ "src": "/dz_portal/icons/transport.png", "sizes": "96x96" }]
+    },
+    {
+      "name": "التأمين",
+      "short_name": "تأمين",
+      "url": "/dz_portal/index.html#insurance-section",
+      "icons": [{ "src": "/dz_portal/icons/insurance.png", "sizes": "96x96" }]
+    },
+    {
+      "name": "أرقام الطوارئ",
+      "short_name": "طوارئ",
+      "url": "/dz_portal/index.html#emergency-section",
+      "icons": [{ "src": "/dz_portal/icons/emergency.png", "sizes": "96x96" }]
     }
-  ]
+  ],
+  "related_applications": [
+    {
+      "platform": "play",
+      "url": "https://play.google.com/store/apps/details?id=dz.portal.app",
+      "id": "dz.portal.app"
+    },
+    {
+      "platform": "itunes",
+      "url": "https://apps.apple.com/app/id1234567890"
+    }
+  ],
+  "prefer_related_applications": false
 }
