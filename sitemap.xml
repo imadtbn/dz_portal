@@ -1,174 +1,210 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-  <!-- ============================================ -->
   <!-- الصفحة الرئيسية -->
-  <!-- اللون: عنوان h2 أحمر -->
   <url>
     <loc>https://imadtbn.github.io/dz_portal/</loc>
-    <lastmod>2025-08-06</lastmod>
-    <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
 
-  <!-- ============================================ -->
-  <!-- أرقام الطوارئ -->
-  <!-- اللون: h2 أحمر، أرقام الهاتف phone-block أسود -->
-  <url>
-    <loc>https://imadtbn.github.io/dz_portal/#emergency-numbers</loc>
-    <priority>0.95</priority>
-  </url>
+  <!-- قسم الدفع الإلكتروني للفواتير -->
+  <url><loc>https://www.ade.dz/e-paiement/</loc><priority>0.9</priority></url>
+  <url><loc>https://play.google.com/store/apps/details?id=com.ade.adese&amp;hl=ar</loc><priority>0.8</priority></url>
+  <url><loc>https://epayement.elit.dz/payementFacture.xhtml</loc><priority>0.9</priority></url>
+  <url><loc>https://baridinet.poste.dz/seaal</loc><priority>0.9</priority></url>
+  <url><loc>https://www.aadlgestimmo.dz/epayement/View/index.php</loc><priority>0.8</priority></url>
+  <url><loc>https://www.opgiconstantine.dz/</loc><priority>0.8</priority></url>
+  <url><loc>https://epay.education.dz/auth</loc><priority>0.9</priority></url>
+  <url><loc>tel:1592</loc><priority>0.7</priority></url>
+  <url><loc>tel:3303</loc><priority>0.7</priority></url>
+  <url><loc>tel:1594</loc><priority>0.7</priority></url>
 
-  <!-- ============================================ -->
-  <!-- الوكالة الوطنية للتشغيل (ANEM) -->
-  <!-- اللون: h2 أحمر، h3 أخضر -->
-  <url>
-    <loc>https://imadtbn.github.io/dz_portal/#anem-links</loc>
-    <priority>0.9</priority>
-  </url>
+  <!-- قسم تعبئة الهاتف -->
+  <url><loc>https://e-paiement.mobilis.dz/</loc><priority>0.9</priority></url>
+  <url><loc>https://play.google.com/store/search?q=mobispace&amp;c=apps&amp;hl=ar</loc><priority>0.8</priority></url>
+  <url><loc>https://moncompte.djezzy.dz/ar/guest/recharge</loc><priority>0.9</priority></url>
+  <url><loc>https://play.google.com/store/apps/details?id=com.djezzy.internet</loc><priority>0.8</priority></url>
+  <url><loc>http://estorm.ooredoo.dz/</loc><priority>0.9</priority></url>
+  <url><loc>https://play.google.com/store/apps/details?id=com.algeria.selfcare.app.android&amp;pli=1</loc><priority>0.8</priority></url>
+  <url><loc>tel:666</loc><priority>0.7</priority></url>
+  <url><loc>tel:777</loc><priority>0.7</priority></url>
+  <url><loc>tel:333</loc><priority>0.7</priority></url>
 
-  <!-- ============================================ -->
-  <!-- الخدمات الصحية -->
-  <!-- اللون: h2 أحمر، h3 أخضر، أرقام الهاتف phone-block أسود -->
-  <url>
-    <loc>https://imadtbn.github.io/dz_portal/#health-links</loc>
-    <priority>0.9</priority>
-  </url>
+  <!-- قسم بريد الجزائر -->
+  <url><loc>https://ccpnet.poste.dz/init</loc><priority>0.9</priority></url>
+  <url><loc>https://eccp.poste.dz/login</loc><priority>0.9</priority></url>
+  <url><loc>https://eccp.poste.dz/commande-edahabia</loc><priority>0.9</priority></url>
+  <url><loc>https://baridiweb.poste.dz/</loc><priority>0.9</priority></url>
+  <url><loc>https://play.google.com/store/apps/details?id=ru.bpc.mobilebank.bpc&amp;hl=ar</loc><priority>0.8</priority></url>
+  <url><loc>https://reclamation.poste.dz/</loc><priority>0.8</priority></url>
+  <url><loc>https://aptracking.poste.dz/</loc><priority>0.8</priority></url>
+  <url><loc>tel:1530</loc><priority>0.7</priority></url>
 
-  <!-- ============================================ -->
-  <!-- التربية والتعليم -->
-  <!-- اللون: h2 أحمر، h3 أخضر، phone-block أسود -->
-  <url>
-    <loc>https://imadtbn.github.io/dz_portal/#education-section</loc>
-    <priority>0.9</priority>
-  </url>
+  <!-- قسم اتصالات الجزائر -->
+  <url><loc>https://paiement.algerietelecom.dz/AR/index.php?p=facture_paiement</loc><priority>0.9</priority></url>
+  <url><loc>https://paiement.algerietelecom.dz/AR/index.php?p=dette_paiement</loc><priority>0.9</priority></url>
+  <url><loc>https://paiement.algerietelecom.dz/AR/index.php?p=internet_recharge&amp;pr=in</loc><priority>0.9</priority></url>
+  <url><loc>https://paiement.algerietelecom.dz/AR/index.php?p=internet_recharge&amp;pr=4g</loc><priority>0.9</priority></url>
+  <url><loc>https://paiement.algerietelecom.dz/AR/index.php?p=voucher_internet&amp;produit=in</loc><priority>0.8</priority></url>
+  <url><loc>https://paiement.algerietelecom.dz/AR/index.php?p=voucher_internet&amp;produit=4g</loc><priority>0.8</priority></url>
+  <url><loc>https://www.algerietelecom.dz/ar/page/migration-p232</loc><priority>0.8</priority></url>
+  <url><loc>https://www.algerietelecom.dz/ar/page/trouver-mon-agence-p256</loc><priority>0.8</priority></url>
+  <url><loc>https://www.algerietelecom.dz/ar/page/trouver-votre-numero-de-fixe-p268</loc><priority>0.8</priority></url>
+  <url><loc>https://www.algerietelecom.dz/ar/demande-na</loc><priority>0.8</priority></url>
+  <url><loc>https://client.at.dz/ar</loc><priority>0.9</priority></url>
+  <url><loc>https://www.algerietelecom.dz/ar/derangements</loc><priority>0.8</priority></url>
+  <url><loc>https://www.algerietelecom.dz/ar/particuliers/week-end-boost-prod227</loc><priority>0.7</priority></url>
+  <url><loc>https://www.moalim-dz.net/moalim_v2/login/index.php</loc><priority>0.8</priority></url>
+  <url><loc>https://inkidia.com.dz/</loc><priority>0.7</priority></url>
+  <url><loc>https://play.google.com/store/apps/details?id=dz.algerietelecom.rd.e_paiement&amp;hl=ar</loc><priority>0.8</priority></url>
+  <url><loc>https://play.google.com/store/apps/details?id=com.at.dz&amp;hl=ar</loc><priority>0.8</priority></url>
+  <url><loc>tel:12</loc><priority>0.7</priority></url>
 
-  <!-- ============================================ -->
-  <!-- الخدمات الجامعية -->
-  <url>
-    <loc>https://imadtbn.github.io/dz_portal/#university-section</loc>
-    <priority>0.9</priority>
-  </url>
+  <!-- قسم التربية والتعليم -->
+  <url><loc>https://ostad.education.dz/auth</loc><priority>0.9</priority></url>
+  <url><loc>https://taqiim.education.dz/</loc><priority>0.8</priority></url>
+  <url><loc>https://tawdif.education.dz/</loc><priority>0.8</priority></url>
+  <url><loc>https://concour.onec.dz/</loc><priority>0.8</priority></url>
+  <url><loc>https://awlyaa.education.dz/login</loc><priority>0.9</priority></url>
+  <url><loc>https://www.dzexams.com/</loc><priority>0.8</priority></url>
+  <url><loc>https://epay.education.dz/auth</loc><priority>0.9</priority></url>
+  <url><loc>https://bem.onec.dz/</loc><priority>0.9</priority></url>
+  <url><loc>https://bac.onec.dz/</loc><priority>0.9</priority></url>
+  <url><loc>https://www.onefd.edu.dz/att_niv_2025/</loc><priority>0.8</priority></url>
+  <url><loc>tel:1075</loc><priority>0.7</priority></url>
 
-  <!-- ============================================ -->
-  <!-- الدفع الإلكتروني -->
-  <url>
-    <loc>https://imadtbn.github.io/dz_portal/#payment-section</loc>
-    <priority>0.85</priority>
-  </url>
+  <!-- الجامعات -->
+  <url><loc>https://www.orientation-esi.dz/</loc><priority>0.9</priority></url>
+  <url><loc>https://progres.mesrs.dz/webfve/login.xhtml</loc><priority>0.9</priority></url>
+  <url><loc>https://progres.mesrs.dz/epaiement/epaiementI.xhtml</loc><priority>0.9</priority></url>
+  <url><loc>https://progres.mesrs.dz/epaiement/epaiementH.xhtml</loc><priority>0.9</priority></url>
+  <url><loc>https://progres.mesrs.dz/webonou/</loc><priority>0.8</priority></url>
+  <url><loc>https://play.google.com/store/apps/details?id=app.progres.webetu&amp;hl=ar</loc><priority>0.8</priority></url>
+  <url><loc>https://progres.mesrs.dz/webetu</loc><priority>0.8</priority></url>
+  <url><loc>https://play.google.com/store/apps/details?id=com.mesrs.mybus.mybusapp&amp;hl=ar</loc><priority>0.8</priority></url>
+  <url><loc>tel:+21323939132</loc><priority>0.7</priority></url>
 
-  <!-- ============================================ -->
-  <!-- شحن الهاتف -->
-  <url>
-    <loc>https://imadtbn.github.io/dz_portal/#recharge-section</loc>
-    <priority>0.85</priority>
-  </url>
+  <!-- التكوين المهني -->
+  <url><loc>https://www.takwin.dz/</loc><priority>0.9</priority></url>
+  <url><loc>https://takwin.dz/ProfessionalExams</loc><priority>0.8</priority></url>
+  <url><loc>tel:665225023</loc><priority>0.7</priority></url>
 
-  <!-- ============================================ -->
-  <!-- خدمات بريد الجزائر -->
-  <url>
-    <loc>https://imadtbn.github.io/dz_portal/#poste-dz</loc>
-    <priority>0.8</priority>
-  </url>
+  <!-- الإدارة المحلية -->
+  <url><loc>https://etatcivil.interieur.gov.dz/</loc><priority>0.9</priority></url>
+  <url><loc>https://etatcivil.interieur.gov.dz/ActeMariage/</loc><priority>0.9</priority></url>
+  <url><loc>https://demande12s.interieur.gov.dz/Ar/WFDemande.aspx</loc><priority>0.9</priority></url>
+  <url><loc>https://etatcivil.interieur.gov.dz/ActeDeces/</loc><priority>0.9</priority></url>
+  <url><loc>https://passeport.interieur.gov.dz/Ar/DemandeCNIBE/Demander%20la%20carte%20d'identit%C3%A9%20en%20ligne</loc><priority>0.9</priority></url>
+  <url><loc>https://passeport.interieur.gov.dz/Ar/Inscription/BaBou</loc><priority>0.9</priority></url>
+  <url><loc>https://prestations.interieur.gov.dz/guichet/</loc><priority>0.8</priority></url>
+  <url><loc>https://www.interieur.gov.dz/index.php/ar/component/annuaire/?view=contacter_nous_ar</loc><priority>0.8</priority></url>
+  <url><loc>tel:1100</loc><priority>0.7</priority></url>
 
-  <!-- ============================================ -->
-  <!-- إتصالات الجزائر -->
-  <url>
-    <loc>https://imadtbn.github.io/dz_portal/#telecom-section</loc>
-    <priority>0.8</priority>
-  </url>
+  <!-- الجباية -->
+  <url><loc>https://tabioucom.mf.gov.dz/acheter</loc><priority>0.9</priority></url>
+  <url><loc>https://tabioucom.mf.gov.dz/edit</loc><priority>0.9</priority></url>
+  <url><loc>https://qassimatouka.mf.gov.dz/acheter</loc><priority>0.9</priority></url>
+  <url><loc>https://qassimatouka.mf.gov.dz/edit</loc><priority>0.9</priority></url>
+  <url><loc>tel:3040</loc><priority>0.7</priority></url>
 
-  <!-- ============================================ -->
-  <!-- التكوين والتعليم المهنيين -->
-  <url>
-    <loc>https://imadtbn.github.io/dz_portal/#vocational-section</loc>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- ============================================ -->
-  <!-- النقل -->
-  <url>
-    <loc>https://imadtbn.github.io/dz_portal/#transport-section</loc>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- ============================================ -->
-  <!-- الضمان الاجتماعي -->
-  <url>
-    <loc>https://imadtbn.github.io/dz_portal/#social-security</loc>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- ============================================ -->
-  <!-- وزارة التجارة -->
-  <url>
-    <loc>https://imadtbn.github.io/dz_portal/#commerce-section</loc>
-    <priority>0.8</priority>
-    <!-- phone-block أسود: 1020 -->
-  </url>
-
-  <!-- ============================================ -->
-  <!-- الجمارك الجزائرية -->
-  <url>
-    <loc>https://imadtbn.github.io/dz_portal/#customs-list</loc>
-    <priority>0.8</priority>
-    <!-- phone-block أسود: 1023 -->
-  </url>
-
-  <!-- ============================================ -->
   <!-- العقار -->
-  <url>
-    <loc>https://imadtbn.github.io/dz_portal/#real-estate-section</loc>
-    <priority>0.75</priority>
-  </url>
+  <url><loc>https://fadaeldjazair.mf.gov.dz/EDCFPUBLICHOME/</loc><priority>0.9</priority></url>
+  <url><loc>https://fadaeldjazair.mf.gov.dz/mission-documentaire/index_public_35.html</loc><priority>0.8</priority></url>
+  <url><loc>https://fadaeldjazair.mf.gov.dz/recherche2</loc><priority>0.8</priority></url>
+  <url><loc>https://fadaeldjazair.mf.gov.dz/delivrance_automatique/recherche.php</loc><priority>0.8</priority></url>
+  <url><loc>https://fadaeldjazair.mf.gov.dz/recherche4</loc><priority>0.8</priority></url>
+  <url><loc>https://fadaeldjazair.mf.gov.dz/recherche5</loc><priority>0.8</priority></url>
+  <url><loc>https://fadaeldjazair.mf.gov.dz/lf/demander_lf</loc><priority>0.9</priority></url>
+  <url><loc>https://fadaeldjazair.mf.gov.dz/lf/suividemande</loc><priority>0.9</priority></url>
+  <url><loc>https://fadaeldjazair.mf.gov.dz/login2</loc><priority>0.8</priority></url>
+  <url><loc>https://fadaeldjazair.mf.gov.dz/login1</loc><priority>0.8</priority></url>
+  <url><loc>https://fadaeldjazair.mf.gov.dz/login</loc><priority>0.8</priority></url>
+  <url><loc>tel:+21321595151</loc><priority>0.7</priority></url>
 
-  <!-- ============================================ -->
-  <!-- الخدمات الجبائية الإلكترونية -->
-  <url>
-    <loc>https://imadtbn.github.io/dz_portal/#tax-services</loc>
-    <priority>0.7</priority>
-  </url>
+<!-- قسم الصحة -->
+  <url><loc>https://formation.sante.gov.dz/index.html</loc><priority>0.9</priority></url>
+  <url><loc>https://etabib.dz/</loc><priority>0.9</priority></url>
+  <url><loc>https://play.google.com/store/apps/details?id=dz.sebrou.docts_guide.app&amp;hl=ar</loc><priority>0.8</priority></url>
+  <url><loc>tel:3030</loc><priority>0.7</priority></url>
 
-  <!-- ============================================ -->
-  <!-- القضاء -->
-  <url>
-    <loc>https://imadtbn.github.io/dz_portal/#justice-section</loc>
-    <priority>0.7</priority>
-  </url>
+  <!-- قسم الضمان الاجتماعي -->
+  <url><loc>https://elhanaa.cnas.dz/</loc><priority>0.9</priority></url>
+  <url><loc>https://damancom.casnos.dz/affiliation</loc><priority>0.9</priority></url>
+  <url><loc>https://play.google.com/store/apps/details?id=dz.cnr.cnr</loc><priority>0.8</priority></url>
+  <url><loc>tel:3010</loc><priority>0.7</priority></url>
 
-  <!-- ============================================ -->
-  <!-- الخدمات الإدارة المحلية -->
-  <url>
-    <loc>https://imadtbn.github.io/dz_portal/#admin-section</loc>
-    <priority>0.7</priority>
-  </url>
+  <!-- قسم العدالة -->
+  <url><loc>https://www.mjustice.dz/ar/services</loc><priority>0.9</priority></url>
+  <url><loc>https://www.mjustice.dz/ar/services/etat-civil</loc><priority>0.8</priority></url>
+  <url><loc>https://www.mjustice.dz/ar/services/casier-judiciaire</loc><priority>0.8</priority></url>
+  <url><loc>https://www.mjustice.dz/ar/services/certificat-nationalite</loc><priority>0.8</priority></url>
+  <url><loc>https://www.mjustice.dz/ar/services/greffe-commercial</loc><priority>0.8</priority></url>
+  <url><loc>tel:1078</loc><priority>0.7</priority></url>
 
-  <!-- ============================================ -->
-  <!-- الوكالة الوطنية للمقاول الذاتي -->
-  <url>
-    <loc>https://imadtbn.github.io/dz_portal/#auto-entrepreneur</loc>
-    <priority>0.7</priority>
-  </url>
+  <!-- قسم التجارة -->
+  <url><loc>https://sidjilcom.cnrc.dz/</loc><priority>0.9</priority></url>
+  <url><loc>https://sidjilcom.cnrc.dz/search</loc><priority>0.9</priority></url>
+  <url><loc>https://sidjilcom.cnrc.dz/new-registry</loc><priority>0.9</priority></url>
+  <url><loc>https://sidjilcom.cnrc.dz/statistics</loc><priority>0.8</priority></url>
+  <url><loc>https://www.commerce.gov.dz/ar/services</loc><priority>0.8</priority></url>
+  <url><loc>tel:1020</loc><priority>0.7</priority></url>
 
-  <!-- ============================================ -->
-  <!-- فضاءات ووكالات -->
-  <url>
-    <loc>https://imadtbn.github.io/dz_portal/#agencies-section</loc>
-    <priority>0.7</priority>
-  </url>
+  <!-- قسم الجمارك -->
+  <url><loc>https://douane.gov.dz/rtc/</loc><priority>0.9</priority></url>
+  <url><loc>https://www.douane.gov.dz/spip.php?rubrique53</loc><priority>0.8</priority></url>
+  <url><loc>https://www.douane.gov.dz/?lang=ar</loc><priority>0.8</priority></url>
+  <url><loc>tel:1023</loc><priority>0.7</priority></url>
 
-  <!-- ============================================ -->
-  <!-- معلومات الاتصال -->
-  <url>
-    <loc>https://imadtbn.github.io/dz_portal/#contact-info</loc>
-    <priority>0.5</priority>
-  </url>
+  <!-- قسم البنوك -->
+  <url><loc>https://www.bea.dz/</loc><priority>0.9</priority></url>
+  <url><loc>https://www.bna.dz/</loc><priority>0.9</priority></url>
+  <url><loc>https://www.bdl.dz/</loc><priority>0.9</priority></url>
+  <url><loc>https://www.cpa-bank.dz/</loc><priority>0.9</priority></url>
+  <url><loc>https://www.badrbanque.dz/</loc><priority>0.9</priority></url>
+  <url><loc>https://www.alianzbank.dz/</loc><priority>0.8</priority></url>
+  <url><loc>https://www.gulfbank.dz/</loc><priority>0.8</priority></url>
+  <url><loc>https://www.trustbank.dz/</loc><priority>0.8</priority></url>
+  <url><loc>https://www.sgbd.dz/</loc><priority>0.8</priority></url>
+  <url><loc>https://www.natixis.dz/</loc><priority>0.8</priority></url>
 
-  <!-- ============================================ -->
-  <!-- التعليقات والإستفسارات -->
-  <url>
-    <loc>https://imadtbn.github.io/dz_portal/#comments-section</loc>
-    <priority>0.5</priority>
-  </url>
+  <!-- قسم المالية -->
+  <url><loc>https://www.mf.gov.dz/</loc><priority>0.9</priority></url>
+  <url><loc>https://www.mf.gov.dz/services</loc><priority>0.8</priority></url>
+  <url><loc>https://www.mf.gov.dz/tresor</loc><priority>0.8</priority></url>
+  <url><loc>https://www.mf.gov.dz/contact</loc><priority>0.7</priority></url>
+
+  <!-- قسم الطاقة -->
+  <url><loc>https://portail.sonelgaz.dz/</loc><priority>0.9</priority></url>
+  <url><loc>https://portail.sonelgaz.dz/epayment</loc><priority>0.9</priority></url>
+  <url><loc>https://www.naftal.dz/</loc><priority>0.8</priority></url>
+  <url><loc>https://www.naftal.dz/stations</loc><priority>0.8</priority></url>
+  <url><loc>tel:3301</loc><priority>0.7</priority></url>
+
+  <!-- قسم النقل -->
+  <url><loc>https://www.sntf.dz/</loc><priority>0.9</priority></url>
+  <url><loc>https://www.sntf.dz/booking</loc><priority>0.9</priority></url>
+  <url><loc>https://www.airalgerie.dz/</loc><priority>0.9</priority></url>
+  <url><loc>https://www.airalgerie.dz/reservation</loc><priority>0.9</priority></url>
+  <url><loc>https://www.ema.dz/</loc><priority>0.8</priority></url>
+  <url><loc>https://www.ama.dz/</loc><priority>0.8</priority></url>
+  <url><loc>tel:1520</loc><priority>0.7</priority></url>
+
+  <!-- قسم التأمين -->
+  <url><loc>https://www.caare.dz/</loc><priority>0.9</priority></url>
+  <url><loc>https://www.saa.dz/</loc><priority>0.9</priority></url>
+  <url><loc>https://www.caar.dz/</loc><priority>0.9</priority></url>
+  <url><loc>https://www.cnas.dz/assurance</loc><priority>0.8</priority></url>
+  <url><loc>tel:3210</loc><priority>0.7</priority></url>
+
+  <!-- قسم الطوارئ -->
+  <url><loc>tel:14</loc><priority>1.0</priority></url>
+  <url><loc>tel:17</loc><priority>1.0</priority></url>
+  <url><loc>tel:18</loc><priority>1.0</priority></url>
+  <url><loc>tel:19</loc><priority>1.0</priority></url>
+  <url><loc>tel:1055</loc><priority>1.0</priority></url>
+  <url><loc>tel:1548</loc><priority>1.0</priority></url>
+  <url><loc>tel:1021</loc><priority>1.0</priority></url>
+  <url><loc>tel:1044</loc><priority>1.0</priority></url>
 
 </urlset>
+
