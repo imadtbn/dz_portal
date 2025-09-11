@@ -1072,6 +1072,68 @@
     </div>
   </section>
 
+<!-- قسم الخدمات الجبائية الإليكترونية -->
+<section dir="rtl" style="text-align: right;">
+  <h2 id="toggle-tax" onclick="toggleSection('tax-section', this)"
+      style="cursor: pointer; background-color: #a52a2a; color: white; padding: 10px; border-radius: 8px;">
+    <span>
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTGizW91cfHyw8vNBHytKN8lKZNzfUWqZjpQ&s" 
+           alt="tax Logo" style="height:28px; margin-left:6px;">
+      خدمات جبائية إلكترونية <span class="count"></span>
+    </span>
+    <span class="toggle-icon" style="float: left;">▶</span>
+  </h2>
+  
+  <div id="tax-section"
+       style="display: none; padding: 10px 20px; direction: rtl; font-family: Arial, sans-serif; color: #006400;">
+
+    <!-- فرع الطابع الجبائي -->
+    <h3 onclick="toggleSection('stamp-tax', this)"
+        style="cursor: pointer; background-color: #f0faf6; color: #006400; padding: 8px; border-radius: 6px; text-align: right;">
+      <span>
+        <i class="fas fa-id-card" style="color: #006400; margin-left: 6px;"></i>
+        بطاقة التعريف، رخصة السياقة، جواز السفر، عقود النقل والسفر
+        <span class="count"></span>
+      </span>
+      <span class="toggle-icon" style="float: left;">▶</span>
+    </h3>
+    <ul id="stamp-tax" style="display: none; list-style: none; padding: 0; margin-right: 10px; line-height: 2;">
+      <li><i class="fas fa-stamp" style="color: #006400; margin-left: 6px;"></i>
+        <a href="https://tabioucom.mf.gov.dz/acheter" target="_blank">إقتناء حقوق الطابع الجبائي</a>
+      </li>
+      <li><i class="fas fa-redo" style="color: #006400; margin-left: 6px;"></i>
+        <a href="https://tabioucom.mf.gov.dz/edit" target="_blank">إعادة إقتناء حقوق الطابع الجبائي</a>
+      </li>
+    </ul>
+
+    <!-- فرع قسيمة السيارات -->
+    <h3 onclick="toggleSection('car-tax', this)"
+        style="cursor: pointer; background-color: #f0faf6; color: #006400; padding: 8px; border-radius: 6px; text-align: right; margin-top: 15px;">
+      <span>
+        <i class="fas fa-car-side" style="color: #006400; margin-left: 6px;"></i>
+        قسيمة السيارات <span class="count"></span>
+      </span>
+      <span class="toggle-icon" style="float: left;">▶</span>
+    </h3>
+    <ul id="car-tax" style="display: none; list-style: none; padding: 0; margin-right: 10px; line-height: 2;">
+      <li><i class="fas fa-receipt" style="color: #006400; margin-left: 6px;"></i>
+        <a href="https://qassimatouka.mf.gov.dz/acheter" target="_blank">إقتناء قسيمة السيارات</a>
+      </li>
+      <li><i class="fas fa-redo" style="color: #006400; margin-left: 6px;"></i>
+        <a href="https://qassimatouka.mf.gov.dz/edit" target="_blank">إعادة إصدار قسيمة السيارات</a>
+      </li>
+    </ul>
+  </div>
+
+  <!-- رقم الهاتف أسفل القسم -->
+  <div style="margin-top:10px; padding:8px; background-color:#f9f9f9; border-top:1px solid #ddd;">
+    <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
+    <strong>هاتف وزارة المالية:</strong>
+    <a href="tel:3040" dir="ltr">3040</a>
+  </div>
+</section>
+
+
   <!-- قسم العقار -->
   <section dir="rtl" style="text-align: right;">
     <h2 id="toggle-realestate" onclick="toggleSection('real-estate-section', this)"
@@ -1165,7 +1227,7 @@
 
   <!-- قسم الضمان الاجتماعي -->
   <section dir="rtl" style="text-align: right;">
-    <h2 id="social-security" onclick="toggleSection('real-estate-section', this)"
+    <h2 id="social-security" onclick="toggleSection('social-security-section', this)"
       style="cursor: pointer; background-color: #a52a2a; color: white; padding: 10px; border-radius: 8px;">
       <span><img src="https://www.mtess.gov.dz/ijra-at/img/logomtess.1bb30a8e.png" alt="social-security Logo"
           style="height:28px; margin-left:6px;">
@@ -1236,7 +1298,6 @@
             CNR</a>
         </li>
       </ul>
-
     </div>
 
     <!-- رقم الهاتف أسفل القسم -->
@@ -1247,107 +1308,49 @@
     </div>
   </section>
 
-  <!-- قسم الخدمات الجبائية الإليكترونية -->
-  <section dir="rtl" style="text-align: right;">
-    <h2 id="toggle-tax" onclick="toggleSection('tax-section', this)"
+<!-- قسم القضاء -->
+<section dir="rtl" style="text-align: right;">
+  <h2 id="toggle-justice" onclick="toggleSection('justice-links', this)"
       style="cursor: pointer; background-color: #a52a2a; color: white; padding: 10px; border-radius: 8px;">
-      <span><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTGizW91cfHyw8vNBHytKN8lKZNzfUWqZjpQ&s"
-          alt="tax Logo" style="height:28px; margin-left:6px;">
-        خدمات جبائية إلكترونية <span class="count"></span>
-      </span>
-      <span class="toggle-icon" style="float: left;">▶</span>
-    </h2>
+    <span>
+      <img src="https://www.mjustice.dz/wp-content/uploads/2019/12/logo-mj1.png" 
+           alt="justice Logo" style="height:28px; margin-left:6px;">
+      خدمات مع العدالة
+    </span>
+    <span class="toggle-icon" style="float: left;">▶</span>
+  </h2>
 
-    <div id="tax-section"
-      style="display: none; padding: 10px 20px; direction: rtl; font-family: Arial, sans-serif; color: #006400;">
+  <ul id="justice-links" style="display: none; text-align: right; list-style: none; padding: 0; line-height: 2;">
+    <li><i class="fas fa-file-alt" style="color: #006400;"></i>
+      <a href="https://e-casier.mjustice.dz/" target="_blank">استخراج صحيفة السوابق القضائية</a>
+    </li>
+    <li><i class="fas fa-passport" style="color: #006400;"></i>
+      <a href="https://portail.mjustice.dz/remote/login?lang=fr" target="_blank">استخراج الجنسية الجزائرية</a>
+    </li>
+    <li><i class="fas fa-archive" style="color: #006400;"></i>
+      <a href="https://www.mjustice.dz/ar/archive/" target="_blank">طلب مستخرج الوجود بالسجن إبان الثورة</a>
+    </li>
+    <li><i class="fas fa-file-contract" style="color: #006400;"></i>
+      <a href="https://www.mjustice.dz/ar/tr-ch/" target="_blank">طلب نسخة من عقود المحاكم</a>
+    </li>
+    <li><i class="fas fa-user-lock" style="color: #006400;"></i>
+      <a href="https://ziyarati.mjustice.dz/" target="_blank">رخص الاتصال بالمحبوسين</a>
+    </li>
+    <li><i class="fas fa-gavel" style="color: #006400;"></i>
+      <a href="https://e-nyaba.mjustice.dz/nouvelle_plainte.php" target="_blank">النيابة الإلكترونية - تسجيل شكوى</a>
+    </li>
+    <li><i class="fas fa-search" style="color: #006400;"></i>
+      <a href="https://e-nyaba.mjustice.dz/login.php" target="_blank">النيابة الإلكترونية - متابعة شكوى</a>
+    </li>
+  </ul>
 
-      <!-- فرع الطابع الجبائي -->
-      <h3 onclick="toggleSection('stamp-tax', this)"
-        style="cursor: pointer; background-color: #f0faf6; color: #006400; padding: 8px; border-radius: 6px; text-align: right;">
-        <span><i class="fas fa-id-card" style="color: #006400; margin-left: 6px;"></i>
-          بطاقة التعريف، رخصة السياقة، جواز السفر، عقود النقل والسفر
-          <span class="count"></span>
-        </span>
-        <span class="toggle-icon" style="float: left;">▶</span>
-      </h3>
-      <ul id="stamp-tax" style="display: none; list-style: none; padding: 0; margin-right: 10px; line-height: 2;">
-        <li><i class="fas fa-stamp" style="color: #006400; margin-left: 6px;"></i>
-          <a href="https://tabioucom.mf.gov.dz/acheter" target="_blank">إقتناء حقوق الطابع الجبائي</a>
-        </li>
-        <li><i class="fas fa-redo" style="color: #006400; margin-left: 6px;"></i>
-          <a href="https://tabioucom.mf.gov.dz/edit" target="_blank">إعادة إقتناء حقوق الطابع الجبائي</a>
-        </li>
-      </ul>
-
-      <!-- فرع قسيمة السيارات -->
-      <h3 onclick="toggleSection('car-tax', this)"
-        style="cursor: pointer; background-color: #f0faf6; color: #006400; padding: 8px; border-radius: 6px; text-align: right; margin-top: 15px;">
-        <span><i class="fas fa-car-side" style="color: #006400; margin-left: 6px;"></i>
-          قسيمة السيارات <span class="count"></span>
-        </span>
-        <span class="toggle-icon" style="float: left;">▶</span>
-      </h3>
-      <ul id="car-tax" style="display: none; list-style: none; padding: 0; margin-right: 10px; line-height: 2;">
-        <li><i class="fas fa-receipt" style="color: #006400; margin-left: 6px;"></i>
-          <a href="https://qassimatouka.mf.gov.dz/acheter" target="_blank">إقتناء قسيمة السيارات</a>
-        </li>
-        <li><i class="fas fa-redo" style="color: #006400; margin-left: 6px;"></i>
-          <a href="https://qassimatouka.mf.gov.dz/edit" target="_blank">إعادة إصدار قسيمة السيارات</a>
-        </li>
-      </ul>
-
-    </div>
-
-    <!-- رقم الهاتف أسفل القسم -->
-    <div style="margin-top:10px; padding:8px; background-color:#f9f9f9; border-top:1px solid #ddd;">
-      <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
-      <strong>هاتف وزارة المالية:</strong>
-      <a href="tel:3040">3040</a>
-    </div>
-  </section>
-
-  <!-- قسم القضاء -->
-  <section dir="rtl" style="text-align: right;">
-    <h2 id="toggle-8"
-      style="cursor: pointer; background-color: #a52a2a; color: white; padding: 10px; border-radius: 8px;">
-      <span><img src="https://www.mjustice.dz/wp-content/uploads/2019/12/logo-mj1.png" alt="justice Logo"
-          style="height:28px; margin-left:6px;">
-        خدمات مع العدالة <span class="count"></span>
-      </span>
-      <span class="toggle-icon" style="float: left;">▶</span>
-    </h2>
-
-    <ul id="justice-links" style="display: none; text-align: right; list-style: none; padding: 0; line-height: 2;">
-      <li><i class="fas fa-file-alt" style="color: #006400;"></i>
-        <a href="https://e-casier.mjustice.dz/" target="_blank">استخراج صحيفة السوابق القضائية</a>
-      </li>
-      <li><i class="fas fa-passport" style="color: #006400;"></i>
-        <a href="https://portail.mjustice.dz/remote/login?lang=fr" target="_blank">استخراج الجنسية الجزائرية</a>
-      </li>
-      <li><i class="fas fa-archive" style="color: #006400;"></i>
-        <a href="https://www.mjustice.dz/ar/archive/" target="_blank">طلب مستخرج الوجود بالسجن إبان الثورة</a>
-      </li>
-      <li><i class="fas fa-file-contract" style="color: #006400;"></i>
-        <a href="https://www.mjustice.dz/ar/tr-ch/" target="_blank">طلب نسخة من عقود المحاكم</a>
-      </li>
-      <li><i class="fas fa-user-lock" style="color: #006400;"></i>
-        <a href="https://ziyarati.mjustice.dz/" target="_blank">رخص الاتصال بالمحبوسين</a>
-      </li>
-      <li><i class="fas fa-gavel" style="color: #006400;"></i>
-        <a href="https://e-nyaba.mjustice.dz/nouvelle_plainte.php" target="_blank">النيابة الإلكترونية - تسجيل شكوى</a>
-      </li>
-      <li><i class="fas fa-search" style="color: #006400;"></i>
-        <a href="https://e-nyaba.mjustice.dz/login.php" target="_blank">النيابة الإلكترونية - متابعة شكوى</a>
-      </li>
-    </ul>
-
-    <!-- رقم الهاتف أسفل القسم -->
-    <div style="margin-top:10px; padding-right:5px;">
-      <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
-      <strong>هاتف وزارة العدل الجزائرية:</strong>
-      <a href="tel:1078">1078</a>
-    </div>
-  </section>
+  <!-- رقم الهاتف أسفل القسم -->
+  <div style="margin-top:10px; padding-right:5px;">
+    <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
+    <strong>هاتف وزارة العدل الجزائرية:</strong>
+    <a href="tel:1078">1078</a>
+  </div>
+</section>
 
   <!-- قسم النقل -->
   <section dir="rtl" style="text-align: right;">
@@ -1453,7 +1456,6 @@
     </div>
   </section>
 
-
   <!-- قسم الخدمات الصحية -->
   <section dir="rtl" style="text-align: right;">
     <h2 id="toggle-4" onclick="toggleSection('health-links', this)"
@@ -1531,7 +1533,6 @@
     </div>
   </section>
 
-
   <!-- قسم الجمارك الجزائرية -->
   <section dir="rtl" style="text-align: right;">
     <h2 id="toggle-11" onclick="toggleSection('customs-section', this)"
@@ -1563,9 +1564,7 @@
       <strong>هاتف الجمارك الجزائرية:</strong>
       <a href="tel:1023">1023</a>
     </div>
-
   </section>
-
 
   <!-- قسم الوكالة الوطنية للمقاول الذاتي -->
   <section dir="rtl" style="text-align: right;">
@@ -1654,7 +1653,7 @@
       <!-- تطبيق سيال -->
       <li>
         <i class="fas fa-mobile-alt" style="color: #006400;"></i>
-        <a href="https://wakalati.seaal.dz/" target="_blank">تحميل تطبيق WAKALATI لسيال</a>
+        <a href="https://play.google.com/store/apps/details?id=dz.seaalappli.wakalati&hl=AR" target="_blank">تحميل تطبيق WAKALATI لسيال</a>
       </li>
 
       <!-- نفطال -->
