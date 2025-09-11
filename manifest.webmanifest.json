@@ -25,10 +25,6 @@
     { "src": "/dz_portal/icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any maskable" },
     { "src": "/dz_portal/icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
   ],
-  "screenshots": [
-    { "src": "/dz_portal/screenshots/home.png", "sizes": "1080x1920", "type": "image/png" },
-    { "src": "/dz_portal/screenshots/services.png", "sizes": "1080x1920", "type": "image/png" }
-  ],
   "shortcuts": [
     {
       "name": "الخدمات البريدية",
@@ -40,37 +36,50 @@
       "name": "اتصالات الجزائر",
       "short_name": "اتصالات",
       "url": "/dz_portal/index.html#telecom-section",
-      "icons": [{ "src": "/dz_portal/icons/telecom.png", "sizes": "96x96" }]
+      "icons": [{ "src": "/dz_portal/icons/telecom.png", "sizes": "96x96" }],
+      "description": "رقم الهاتف: 12"
     },
     {
-      "name": "التعليم",
-      "short_name": "التعليم",
-      "url": "/dz_portal/index.html#education-section",
-      "icons": [{ "src": "/dz_portal/icons/education.png", "sizes": "96x96" }]
+      "name": "الضمان الاجتماعي",
+      "short_name": "الضمان",
+      "url": "/dz_portal/index.html#social-section",
+      "icons": [{ "src": "/dz_portal/icons/social.png", "sizes": "96x96" }],
+      "description": "رقم الهاتف: 3010"
     },
     {
-      "name": "التكوين المهني",
-      "short_name": "التكوين",
-      "url": "/dz_portal/index.html#vocational-section",
-      "icons": [{ "src": "/dz_portal/icons/vocational.png", "sizes": "96x96" }]
+      "name": "الصحة",
+      "short_name": "صحة",
+      "url": "/dz_portal/index.html#health-section",
+      "icons": [{ "src": "/dz_portal/icons/health.png", "sizes": "96x96" }],
+      "description": "رقم الهاتف: 3030"
     },
     {
-      "name": "الحالة المدنية",
-      "short_name": "الحالة",
-      "url": "/dz_portal/index.html#civil-section",
-      "icons": [{ "src": "/dz_portal/icons/civil.png", "sizes": "96x96" }]
+      "name": "العدالة",
+      "short_name": "عدالة",
+      "url": "/dz_portal/index.html#justice-section",
+      "icons": [{ "src": "/dz_portal/icons/justice.png", "sizes": "96x96" }],
+      "description": "رقم الهاتف: 1078"
     },
     {
-      "name": "الجباية",
-      "short_name": "الضرائب",
-      "url": "/dz_portal/index.html#tax-section",
-      "icons": [{ "src": "/dz_portal/icons/tax.png", "sizes": "96x96" }]
+      "name": "التجارة",
+      "short_name": "تجارة",
+      "url": "/dz_portal/index.html#commerce-section",
+      "icons": [{ "src": "/dz_portal/icons/commerce.png", "sizes": "96x96" }],
+      "description": "رقم الهاتف: 1020"
+    },
+    {
+      "name": "الجمارك",
+      "short_name": "جمارك",
+      "url": "/dz_portal/index.html#customs-section",
+      "icons": [{ "src": "/dz_portal/icons/customs.png", "sizes": "96x96" }],
+      "description": "رقم الهاتف: 1023"
     },
     {
       "name": "المالية",
       "short_name": "مالية",
       "url": "/dz_portal/index.html#finance-section",
-      "icons": [{ "src": "/dz_portal/icons/finance.png", "sizes": "96x96" }]
+      "icons": [{ "src": "/dz_portal/icons/finance.png", "sizes": "96x96" }],
+      "description": "رقم الهاتف: 3040"
     },
     {
       "name": "البنوك",
@@ -79,58 +88,32 @@
       "icons": [{ "src": "/dz_portal/icons/banks.png", "sizes": "96x96" }]
     },
     {
-      "name": "الضمان الاجتماعي",
-      "short_name": "الضمان",
-      "url": "/dz_portal/index.html#social-section",
-      "icons": [{ "src": "/dz_portal/icons/social.png", "sizes": "96x96" }]
-    },
-    {
-      "name": "الصحة",
-      "short_name": "صحة",
-      "url": "/dz_portal/index.html#health-section",
-      "icons": [{ "src": "/dz_portal/icons/health.png", "sizes": "96x96" }]
-    },
-    {
-      "name": "العدالة",
-      "short_name": "عدالة",
-      "url": "/dz_portal/index.html#justice-section",
-      "icons": [{ "src": "/dz_portal/icons/justice.png", "sizes": "96x96" }]
-    },
-    {
-      "name": "التجارة",
-      "short_name": "تجارة",
-      "url": "/dz_portal/index.html#commerce-section",
-      "icons": [{ "src": "/dz_portal/icons/commerce.png", "sizes": "96x96" }]
-    },
-    {
-      "name": "الجمارك",
-      "short_name": "جمارك",
-      "url": "/dz_portal/index.html#customs-section",
-      "icons": [{ "src": "/dz_portal/icons/customs.png", "sizes": "96x96" }]
-    },
-    {
       "name": "الطاقة",
       "short_name": "طاقة",
       "url": "/dz_portal/index.html#energy-section",
-      "icons": [{ "src": "/dz_portal/icons/energy.png", "sizes": "96x96" }]
+      "icons": [{ "src": "/dz_portal/icons/energy.png", "sizes": "96x96" }],
+      "description": "رقم الهاتف: 3301"
     },
     {
       "name": "النقل",
       "short_name": "نقل",
       "url": "/dz_portal/index.html#transport-section",
-      "icons": [{ "src": "/dz_portal/icons/transport.png", "sizes": "96x96" }]
+      "icons": [{ "src": "/dz_portal/icons/transport.png", "sizes": "96x96" }],
+      "description": "رقم الهاتف: 1520"
     },
     {
       "name": "التأمين",
       "short_name": "تأمين",
       "url": "/dz_portal/index.html#insurance-section",
-      "icons": [{ "src": "/dz_portal/icons/insurance.png", "sizes": "96x96" }]
+      "icons": [{ "src": "/dz_portal/icons/insurance.png", "sizes": "96x96" }],
+      "description": "رقم الهاتف: 3210"
     },
     {
       "name": "أرقام الطوارئ",
       "short_name": "طوارئ",
       "url": "/dz_portal/index.html#emergency-section",
-      "icons": [{ "src": "/dz_portal/icons/emergency.png", "sizes": "96x96" }]
+      "icons": [{ "src": "/dz_portal/icons/emergency.png", "sizes": "96x96" }],
+      "description": "الشرطة 17، الدرك 1055، الحماية المدنية 14، الإسعاف 3030"
     }
   ],
   "related_applications": [
