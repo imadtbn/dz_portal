@@ -621,6 +621,335 @@
     }
 </style>
 
+    <style>
+  /* أنماط قسم الترحيب الجديد */
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f7fdf9;
+    color: #333;
+    line-height: 1.6;
+    padding: 10px;
+  }
+
+  .welcome-section {
+    text-align: center;
+    background: linear-gradient(135deg, #f0f9f5 0%, #e6f4ed 100%);
+    padding: 20px 15px;
+    border-radius: 16px;
+    margin: 15px auto;
+    max-width: 1000px;
+    box-shadow: 0 5px 15px rgba(0, 98, 51, 0.1);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .welcome-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100" opacity="0.03"><path fill="%23006233" d="M50,0 L100,50 L50,100 L0,50 Z"/></svg>');
+    z-index: 0;
+  }
+
+  .welcome-content {
+    position: relative;
+    z-index: 1;
+  }
+
+  .welcome-logo {
+    max-width: 150px;
+    width: 100%;
+    height: auto;
+    margin: 0 auto 10px auto;
+    display: block;
+    filter: drop-shadow(0 3px 5px rgba(0, 0, 0, 0.1));
+  }
+
+  .welcome-title {
+    color: #006233;
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 12px;
+    line-height: 1.3;
+  }
+
+  .welcome-description {
+    font-size: 0.9em;
+    color: #333;
+    max-width: 800px;
+    margin: 0 auto 20px auto;
+    line-height: 1.6;
+  }
+
+  .welcome-stats {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    margin: 20px 0;
+  }
+
+  .stat-box {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 15px 12px;
+    border-radius: 10px;
+    min-width: 100px;
+    flex: 1;
+    max-width: 130px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+  }
+
+  .stat-box:hover {
+    transform: translateY(-3px);
+  }
+
+  .stat-icon {
+    color: #006233;
+    font-size: 1.5em;
+    margin-bottom: 8px;
+  }
+
+  .stat-title {
+    font-weight: bold;
+    color: #006233;
+    margin-bottom: 4px;
+    font-size: 0.85em;
+  }
+
+  .stat-value {
+    font-size: 1.4em;
+    font-weight: bold;
+    color: #a52a2a;
+  }
+
+  .share-button {
+    background-color: #d40000;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 0.9em;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 0 3px 6px rgba(212, 0, 0, 0.2);
+    margin-top: 10px;
+  }
+
+  .share-button:hover {
+    background-color: #a30000;
+    transform: scale(1.03);
+  }
+
+  /* شريط التنقل الديناميكي */
+  .nav-scroller {
+    position: relative;
+    z-index: 2;
+    height: 60px;
+    overflow: hidden;
+    margin: 20px 0;
+    direction: ltr;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 12px;
+    padding: 5px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .nav-scroller-inner {
+    display: flex;
+    flex-wrap: nowrap;
+    padding-bottom: 5px;
+    animation: scrollBanner 40s linear infinite;
+  }
+
+  .nav-item {
+    flex: 0 0 auto;
+    margin: 0 5px;
+  }
+
+  .nav-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    color: #006233;
+    text-decoration: none;
+    border-radius: 10px;
+    padding: 8px 10px;
+    width: 70px;
+    height: 50px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    font-size: 0.75em;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  /* ألوان مختلفة للأزرار */
+  .nav-link:nth-child(4n+1) {
+    background-color: #e6f7ff;
+  }
+
+  .nav-link:nth-child(4n+2) {
+    background-color: #fff2e6;
+  }
+
+  .nav-link:nth-child(4n+3) {
+    background-color: #e6fffa;
+  }
+
+  .nav-link:nth-child(4n+4) {
+    background-color: #f9f2ff;
+  }
+
+  .nav-link:hover {
+    background: #006233;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 98, 51, 0.2);
+  }
+
+  .nav-icon {
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+
+  /* أنيميشن للشريط المتحرك */
+  @keyframes scrollBanner {
+    0% {
+      transform: translateX(0);
+    }
+
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  /* توقف الأنيميشن عند التمرير فوق الشريط */
+  .nav-scroller:hover .nav-scroller-inner {
+    animation-play-state: paused;
+  }
+
+  /* التجاوب مع الشاشات الصغيرة */
+  @media (max-width: 768px) {
+    .welcome-title {
+      font-size: 1.3em;
+    }
+
+    .welcome-description {
+      font-size: 0.85em;
+      padding: 0 5px;
+    }
+
+    .stat-box {
+      min-width: 90px;
+      padding: 12px 8px;
+    }
+
+    .stat-value {
+      font-size: 1.2em;
+    }
+
+    .stat-title {
+      font-size: 0.8em;
+    }
+
+    .nav-link {
+      width: 65px;
+      height: 45px;
+      padding: 6px 8px;
+      font-size: 0.7em;
+    }
+
+    .nav-icon {
+      font-size: 14px;
+    }
+
+    .nav-scroller {
+      height: 55px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .welcome-section {
+      padding: 15px 10px;
+    }
+
+    .welcome-title {
+      font-size: 1.2em;
+    }
+
+    .welcome-stats {
+      gap: 8px;
+    }
+
+    .stat-box {
+      min-width: 80px;
+      padding: 10px 6px;
+      border-radius: 8px;
+    }
+
+    .stat-icon {
+      font-size: 1.3em;
+      margin-bottom: 5px;
+    }
+
+    .stat-value {
+      font-size: 1.1em;
+    }
+
+    .nav-scroller {
+      height: 50px;
+      margin: 15px 0;
+    }
+
+    .nav-link {
+      width: 80px;
+      height: 60px;
+      font-size: 0.85em;
+    }
+
+    .nav-icon {
+      font-size: 18px;
+    }
+
+
+    .share-button {
+      padding: 8px 16px;
+      font-size: 0.85em;
+    }
+  }
+
+  @media (max-width: 360px) {
+    .welcome-logo {
+      max-width: 120px;
+    }
+
+    .stat-box {
+      min-width: 70px;
+      padding: 8px 5px;
+    }
+
+    .stat-title {
+      font-size: 0.75em;
+    }
+
+    .nav-link {
+      width: 55px;
+      font-size: 0.6em;
+    }
+  }
+</style>
 </head>
 
 <body>
@@ -688,166 +1017,110 @@
     </style>
 
   </header>
-<!-- قسم الترحيب المحسن -->
-<section dir="rtl" style="text-align: center; background-color: #f0f9f5; padding: 30px 20px; border-radius: 12px; margin-top: 20px; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
 
-  <!-- شعار البوابة -->
-  <img src="https://raw.githubusercontent.com/imadtbn/dz_portal/refs/heads/main/icon.png" 
-       alt="أيقونة البوابة" loading="lazy" 
-       style="max-width: 160px; width: 100%; height: auto; margin: 0 auto 15px auto; display: block;">
+      <!-- قسم الترحيب المحسن -->
+  <section class="welcome-section">
+    <div class="welcome-content">
+      <!-- شعار البوابة -->
+      <img src="https://raw.githubusercontent.com/imadtbn/dz_portal/refs/heads/main/icon.png" alt="أيقونة البوابة"
+        loading="lazy" class="welcome-logo">
 
-  <!-- العنوان -->
-  <h1 style="color: #006233; font-size: 1.6em; font-weight: bold; margin-bottom: 10px; text-shadow: 0 2px 4px rgba(0,0,0,0.1);">
-    مرحبًا بكم في البوابة الجزائرية للخدمات الرقمية
-  </h1>
+      <!-- عنوان الترحيب -->
+      <h1 class="welcome-title">مرحبًا بكم في البوابة الجزائرية للخدمات الرقمية</h1>
 
-  <!-- الوصف -->
-  <p style="font-size: 0.9em; color: #333; max-width: 650px; margin: 0 auto 15px auto; line-height: 1.6;">
-    بوابة شاملة تجمع كل الخدمات الرقمية الحكومية الجزائرية: التعليم، البريد، الضرائب، الصحة، الضمان الاجتماعي، الإدارة المحلية، التكوين المهني، وأكثر. 
-  </p>
+      <!-- الوصف الرئيسي -->
+      <p class="welcome-description">
+        بوابة شاملة تجمع كل الخدمات الرقمية الحكومية الجزائرية: التعليم، البريد، الضرائب، الصحة، الضمان الاجتماعي،
+        الإدارة المحلية، التكوين المهني، وأكثر.
+        هدفنا تسهيل الوصول إلى خدماتكم عن بُعد بسهولة وأمان.
+      </p>
 
-  <!-- المميزات -->
-  <div class="features">
-    <div>
-      <i class="fas fa-folder-open"></i>
-      <div>الأقسام</div>
-      <div>25</div>
+      <!-- دعوة للمشاركة -->
+      <button onclick="sharePage()" class="share-button">
+        <i class="fas fa-share-alt" style="margin-left: 5px;"></i> شارك البوابة
+      </button>
+
+      <!-- المميزات الأساسية -->
+      <div class="welcome-stats">
+        <div class="stat-box">
+          <i class="fas fa-folder-open stat-icon"></i>
+          <div class="stat-title">عدد الأقسام</div>
+          <div class="stat-value">25</div>
+        </div>
+        <div class="stat-box">
+          <i class="fas fa-laptop stat-icon"></i>
+          <div class="stat-title">الخدمات الرقمية</div>
+          <div class="stat-value">250+</div>
+        </div>
+        <div class="stat-box">
+          <i class="fas fa-shield-alt stat-icon"></i>
+          <div class="stat-title">آمنة وموثوقة</div>
+          <div class="stat-value" style="font-size: 0.9em;">بيئة محمية</div>
+        </div>
+      </div>
+
+      <!-- شريط التنقل الديناميكي -->
+      <div class="nav-scroller">
+        <div class="nav-scroller-inner">
+          <!-- سيتم ملء هذا القسم ديناميكيًا بواسطة JavaScript -->
+        </div>
+      </div>
+
     </div>
-    <div>
-      <i class="fas fa-laptop"></i>
-      <div>الخدمات</div>
-      <div>250+</div>
-    </div>
-    <div>
-      <i class="fas fa-shield-alt"></i>
-      <div>موثوقة</div>
-      <div style="font-size: 0.8em;">بيئة آمنة</div>
-    </div>
-  </div>
+  </section>
 
-  <!-- زر المشاركة -->
-  <button onclick="sharePage()" class="share-btn">
-    <i class="fas fa-share-alt" style="margin-left: 5px;"></i> مشاركة
-  </button>
-
-  <!-- روابط ديناميكية -->
-  <div class="marquee">
-    <div id="quick-links" class="quick-links"></div>
-  </div>
-</section>
-
-<!-- CSS -->
-<style>
-  .features {
-    display: flex;
-    justify-content: center;
-    gap: 12px;
-    margin: 20px 0;
-  }
-  .features div {
-    background-color: #e6f4ed;
-    padding: 12px;
-    border-radius: 8px;
-    width: 100px;
-    font-size: 0.8em;
-    cursor: pointer;
-    transition: transform 0.6s ease, box-shadow 0.6s ease;
-  }
-  .features div:hover,
-  .features div:active {
-    transform: rotateY(360deg) scale(1.05);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-  }
-  .features i {
-    color: #006233;
-    font-size: 1.3em;
-    margin-bottom: 4px;
-    display: block;
-  }
-
-  .share-btn {
-    background-color: #d40000;
-    color: white;
-    padding: 8px 18px;
-    border: none;
-    border-radius: 6px;
-    font-size: 14px;
-    cursor: pointer;
-    transition: 0.3s;
-    margin-top: 10px;
-  }
-  .share-btn:hover { background-color: #a30000; }
-
-  .marquee {
-    margin-top: 25px;
-    overflow: hidden;
-    white-space: nowrap;
-    box-sizing: border-box;
-  }
-  .quick-links {
-    display: inline-flex;
-    gap: 10px;
-    animation: scroll 15s linear infinite;
-  }
-  .quick-links a {
-    background-color: #006233;
-    color: white;
-    padding: 6px 12px;
-    border-radius: 4px;
-    text-decoration: none;
-    font-size: 0.8em;
-    white-space: nowrap;
-  }
-
-  /* حركة الشريط */
-  @keyframes scroll {
-    0% { transform: translateX(100%); }
-    100% { transform: translateX(-100%); }
-  }
-
-  /* إيقاف عند hover أو لمس */
-  .marquee:hover .quick-links,
-  .marquee:active .quick-links,
-  .marquee.touching .quick-links {
-    animation-play-state: paused;
-  }
-</style>
-
-<!-- JavaScript -->
-<script>
-  const links = [
-    { text: "الدفع الإلكتروني للفواتير", href: "#payment-section" },
-    { text: "تعبئة الهاتف", href: "#recharge-section" },
-    { text: "خدمات بريد الجزائر", href: "#post-section" },
-    { text: "التربية والتعليم", href: "#education-section" },
-    { text: "الخدمات العقارية", href: "#real-estate-section" }
-  ];
-  const container = document.getElementById("quick-links");
-  links.forEach(link => {
-    const a = document.createElement("a");
-    a.href = link.href;
-    a.textContent = link.text;
-    container.appendChild(a);
-  });
-
-  function sharePage() {
-    if (navigator.share) {
-      navigator.share({
-        title: "البوابة الجزائرية للخدمات الرقمية",
-        url: window.location.href
+  <script>
+    function createNavigationBar() {
+      const navContainer = document.querySelector('.nav-scroller-inner');
+  
+      const sections = [
+        { id: 'toggle-payment', name: 'الدفع الإلكتروني', icon: 'fa-credit-card' },
+        { id: 'toggle-post', name: 'بريد الجزائر', icon: 'fa-envelope' },
+        { id: 'toggle-telecom', name: 'اتصالات الجزائر', icon: 'fa-wifi' },
+        { id: 'toggle-education', name: 'التربية والتعليم', icon: 'fa-graduation-cap' },
+        { id: 'toggle-10', name: 'الخدمات الجامعية', icon: 'fa-university' },
+        { id: 'toggle-vocational', name: 'التكوين المهني', icon: 'fa-tools' },
+        { id: 'toggle-admin', name: 'الإدارة المحلية', icon: 'fa-building' },
+        { id: 'toggle-tax', name: 'الخدمات الجبائية', icon: 'fa-file-invoice-dollar' },
+        { id: 'toggle-realestate', name: 'العقار', icon: 'fa-home' },
+        { id: 'social-security', name: 'الضمان الاجتماعي', icon: 'fa-shield-alt' },
+        { id: 'toggle-justice', name: 'العدالة', icon: 'fa-scale-balanced' },
+        { id: 'toggle-12', name: 'النقل', icon: 'fa-bus' },
+        { id: 'toggle-11', name: 'التشغيل', icon: 'fa-briefcase' },
+        { id: 'toggle-4', name: 'الصحة', icon: 'fa-heartbeat' },
+        { id: 'toggle-commerce', name: 'التجارة', icon: 'fa-store' }
+      ];
+  
+      // إنشاء الأزرار
+      sections.forEach(section => {
+        const navItem = document.createElement('div');
+        navItem.className = 'nav-item';
+        navItem.innerHTML = `
+          <a href="#${section.id}" class="nav-link">
+            <i class="fas ${section.icon} nav-icon"></i>
+            <span>${section.name}</span>
+          </a>`;
+        navContainer.appendChild(navItem);
       });
-    } else {
-      alert("خاصية المشاركة غير مدعومة على هذا المتصفح");
+  
+      // تفعيل التمرير السلس
+      navContainer.querySelectorAll('.nav-link').forEach(link => {
+        link.addEventListener('click', function (e) {
+          e.preventDefault();
+          const targetId = this.getAttribute('href').substring(1);
+          const targetElement = document.getElementById(targetId);
+          if (targetElement) {
+            window.scrollTo({
+              top: targetElement.offsetTop - 20,
+              behavior: 'smooth'
+            });
+          }
+        });
+      });
     }
-  }
-
-  // دعم اللمس لإيقاف الحركة
-  const marquee = document.querySelector(".marquee");
-  marquee.addEventListener("touchstart", () => marquee.classList.add("touching"));
-  marquee.addEventListener("touchend", () => marquee.classList.remove("touching"));
-</script>    
-
-
+  
+    document.addEventListener('DOMContentLoaded', createNavigationBar);
+  </script>
 
     
   <!-- قسم الدفع الإلكتروني للفواتير -->
