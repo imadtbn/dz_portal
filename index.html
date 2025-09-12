@@ -688,59 +688,145 @@
     </style>
 
   </header>
-
 <!-- قسم الترحيب المحسن -->
-<section dir="rtl" style="text-align: center; background-color: #f0f9f5; padding: 30px 20px; border-radius: 12px; margin-top: 20px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);">
+<section dir="rtl" style="text-align: center; background-color: #f0f9f5; padding: 30px 20px; border-radius: 12px; margin-top: 20px; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
+
   <!-- شعار البوابة -->
   <img src="https://raw.githubusercontent.com/imadtbn/dz_portal/refs/heads/main/icon.png" 
        alt="أيقونة البوابة" loading="lazy" 
        style="max-width: 220px; width: 100%; height: auto; margin: 0 auto 15px auto; display: block;">
 
-  <!-- عنوان الترحيب -->
+  <!-- العنوان -->
   <h1 style="color: #006233; font-size: 2em; font-weight: bold; margin-bottom: 10px; text-shadow: 0 2px 4px rgba(0,0,0,0.1);">
     مرحبًا بكم في البوابة الجزائرية للخدمات الرقمية
   </h1>
 
-  <!-- الوصف الرئيسي -->
+  <!-- الوصف -->
   <p style="font-size: 1em; color: #333; max-width: 700px; margin: 0 auto 15px auto; line-height: 1.6;">
     بوابة شاملة تجمع كل الخدمات الرقمية الحكومية الجزائرية: التعليم، البريد، الضرائب، الصحة، الضمان الاجتماعي، الإدارة المحلية، التكوين المهني، وأكثر. 
     هدفنا تسهيل الوصول إلى خدماتكم عن بُعد بسهولة وأمان.
   </p>
 
-  <!-- المميزات الأساسية -->
-  <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; margin: 20px 0;">
-    <div style="background-color: #e6f4ed; padding: 15px 20px; border-radius: 8px; min-width: 180px;">
-      <i class="fas fa-folder-open" style="color: #006233; font-size: 1.5em; margin-bottom: 5px;"></i>
-      <div style="font-weight: bold; color: #006233;">عدد الأقسام</div>
-      <div style="font-size: 1.2em;">25</div>
+  <!-- المميزات -->
+  <div class="features">
+    <div>
+      <i class="fas fa-folder-open"></i>
+      <div>عدد الأقسام</div>
+      <div>25</div>
     </div>
-    <div style="background-color: #e6f4ed; padding: 15px 20px; border-radius: 8px; min-width: 180px;">
-      <i class="fas fa-laptop" style="color: #006233; font-size: 1.5em; margin-bottom: 5px;"></i>
-      <div style="font-weight: bold; color: #006233;">عدد الخدمات الرقمية</div>
-      <div style="font-size: 1.2em;">250+</div>
+    <div>
+      <i class="fas fa-laptop"></i>
+      <div>عدد الخدمات الرقمية</div>
+      <div>250+</div>
     </div>
-    <div style="background-color: #e6f4ed; padding: 15px 20px; border-radius: 8px; min-width: 180px;">
-      <i class="fas fa-shield-alt" style="color: #006233; font-size: 1.5em; margin-bottom: 5px;"></i>
-      <div style="font-weight: bold; color: #006233;">آمنة وموثوقة</div>
-      <div style="font-size: 1em;">بيئة محمية للمعاملات</div>
+    <div>
+      <i class="fas fa-shield-alt"></i>
+      <div>آمنة وموثوقة</div>
+      <div style="font-size: 0.9em;">بيئة محمية للمعاملات</div>
     </div>
   </div>
 
-  <!-- دعوة للمشاركة -->
-  <button onclick="sharePage()" 
-          style="background-color: #d40000; color: white; padding: 12px 25px; border: none; border-radius: 8px; font-size: 16px; cursor: pointer; transition: background-color 0.3s;">
+  <!-- زر المشاركة -->
+  <button onclick="sharePage()" class="share-btn">
     <i class="fas fa-share-alt" style="margin-left: 8px;"></i> شارك البوابة مع أصدقائك
   </button>
 
-  <!-- روابط سريعة للأقسام الرئيسية -->
-  <div style="margin-top: 25px; display: flex; flex-wrap: wrap; justify-content: center; gap: 15px;">
-    <a href="#payment-section" style="background-color: #006233; color: white; padding: 10px 18px; border-radius: 5px; text-decoration: none;">الدفع الإلكتروني للفواتير</a>
-    <a href="#recharge-section" style="background-color: #006233; color: white; padding: 10px 18px; border-radius: 5px; text-decoration: none;">تعبئة الهاتف</a>
-    <a href="#post-section" style="background-color: #006233; color: white; padding: 10px 18px; border-radius: 5px; text-decoration: none;">خدمات بريد الجزائر</a>
-    <a href="#education-section" style="background-color: #006233; color: white; padding: 10px 18px; border-radius: 5px; text-decoration: none;">التربية والتعليم</a>
-    <a href="#real-estate-section" style="background-color: #006233; color: white; padding: 10px 18px; border-radius: 5px; text-decoration: none;">الخدمات العقارية</a>
-  </div>
+  <!-- روابط ديناميكية -->
+  <div id="quick-links" class="quick-links"></div>
 </section>
+
+<!-- CSS -->
+<style>
+  .features {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px 0;
+    flex-wrap: nowrap;
+  }
+  .features div {
+    flex: 1;
+    min-width: 0;
+    background-color: #e6f4ed;
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 0.9em;
+  }
+  .features i {
+    color: #006233;
+    font-size: 1.5em;
+    margin-bottom: 5px;
+    display: block;
+  }
+  .share-btn {
+    background-color: #d40000;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 10px;
+  }
+  .share-btn:hover { background-color: #a30000; }
+  .quick-links {
+    margin-top: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+  }
+  .quick-links a {
+    background-color: #006233;
+    color: white;
+    padding: 10px 18px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 0.9em;
+  }
+  @media(max-width: 600px) {
+    .features {
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      scrollbar-width: none;
+    }
+    .features::-webkit-scrollbar { display: none; }
+    .features div {
+      min-width: 150px;
+      flex: 0 0 auto;
+    }
+  }
+</style>
+
+<!-- JavaScript -->
+<script>
+  const links = [
+    { text: "الدفع الإلكتروني للفواتير", href: "#payment-section" },
+    { text: "تعبئة الهاتف", href: "#recharge-section" },
+    { text: "خدمات بريد الجزائر", href: "#post-section" },
+    { text: "التربية والتعليم", href: "#education-section" },
+    { text: "الخدمات العقارية", href: "#real-estate-section" }
+  ];
+  const container = document.getElementById("quick-links");
+  links.forEach(link => {
+    const a = document.createElement("a");
+    a.href = link.href;
+    a.textContent = link.text;
+    container.appendChild(a);
+  });
+
+  function sharePage() {
+    if (navigator.share) {
+      navigator.share({
+        title: "البوابة الجزائرية للخدمات الرقمية",
+        url: window.location.href
+      });
+    } else {
+      alert("خاصية المشاركة غير مدعومة على هذا المتصفح");
+    }
+  }
+</script>
 
 
   <!-- قسم الدفع الإلكتروني للفواتير -->
