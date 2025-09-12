@@ -694,45 +694,46 @@
   <!-- شعار البوابة -->
   <img src="https://raw.githubusercontent.com/imadtbn/dz_portal/refs/heads/main/icon.png" 
        alt="أيقونة البوابة" loading="lazy" 
-       style="max-width: 220px; width: 100%; height: auto; margin: 0 auto 15px auto; display: block;">
+       style="max-width: 160px; width: 100%; height: auto; margin: 0 auto 15px auto; display: block;">
 
   <!-- العنوان -->
-  <h1 style="color: #006233; font-size: 2em; font-weight: bold; margin-bottom: 10px; text-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+  <h1 style="color: #006233; font-size: 1.6em; font-weight: bold; margin-bottom: 10px; text-shadow: 0 2px 4px rgba(0,0,0,0.1);">
     مرحبًا بكم في البوابة الجزائرية للخدمات الرقمية
   </h1>
 
   <!-- الوصف -->
-  <p style="font-size: 1em; color: #333; max-width: 700px; margin: 0 auto 15px auto; line-height: 1.6;">
+  <p style="font-size: 0.9em; color: #333; max-width: 650px; margin: 0 auto 15px auto; line-height: 1.6;">
     بوابة شاملة تجمع كل الخدمات الرقمية الحكومية الجزائرية: التعليم، البريد، الضرائب، الصحة، الضمان الاجتماعي، الإدارة المحلية، التكوين المهني، وأكثر. 
-    هدفنا تسهيل الوصول إلى خدماتكم عن بُعد بسهولة وأمان.
   </p>
 
   <!-- المميزات -->
   <div class="features">
     <div>
       <i class="fas fa-folder-open"></i>
-      <div>عدد الأقسام</div>
+      <div>الأقسام</div>
       <div>25</div>
     </div>
     <div>
       <i class="fas fa-laptop"></i>
-      <div>عدد الخدمات الرقمية</div>
+      <div>الخدمات</div>
       <div>250+</div>
     </div>
     <div>
       <i class="fas fa-shield-alt"></i>
-      <div>آمنة وموثوقة</div>
-      <div style="font-size: 0.9em;">بيئة محمية للمعاملات</div>
+      <div>موثوقة</div>
+      <div style="font-size: 0.8em;">بيئة آمنة</div>
     </div>
   </div>
 
   <!-- زر المشاركة -->
   <button onclick="sharePage()" class="share-btn">
-    <i class="fas fa-share-alt" style="margin-left: 8px;"></i> شارك البوابة مع أصدقائك
+    <i class="fas fa-share-alt" style="margin-left: 5px;"></i> مشاركة
   </button>
 
   <!-- روابط ديناميكية -->
-  <div id="quick-links" class="quick-links"></div>
+  <div class="marquee">
+    <div id="quick-links" class="quick-links"></div>
+  </div>
 </section>
 
 <!-- CSS -->
@@ -740,62 +741,66 @@
   .features {
     display: flex;
     justify-content: center;
-    gap: 10px;
+    gap: 12px;
     margin: 20px 0;
-    flex-wrap: nowrap;
   }
   .features div {
-    flex: 1;
-    min-width: 0;
     background-color: #e6f4ed;
-    padding: 10px;
+    padding: 12px;
     border-radius: 8px;
-    font-size: 0.9em;
+    width: 100px;
+    font-size: 0.8em;
+    cursor: pointer;
+    transition: transform 0.6s ease, box-shadow 0.6s ease;
+  }
+  .features div:hover,
+  .features div:active {
+    transform: rotateY(360deg) scale(1.05);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
   }
   .features i {
     color: #006233;
-    font-size: 1.5em;
-    margin-bottom: 5px;
+    font-size: 1.3em;
+    margin-bottom: 4px;
     display: block;
   }
+
   .share-btn {
     background-color: #d40000;
     color: white;
-    padding: 12px 25px;
+    padding: 8px 18px;
     border: none;
-    border-radius: 8px;
-    font-size: 16px;
+    border-radius: 6px;
+    font-size: 14px;
     cursor: pointer;
     transition: 0.3s;
     margin-top: 10px;
   }
   .share-btn:hover { background-color: #a30000; }
-  .quick-links {
+
+  .marquee {
     margin-top: 25px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 12px;
+    overflow: hidden;
+    white-space: nowrap;
+    box-sizing: border-box;
+  }
+  .quick-links {
+    display: inline-flex;
+    gap: 10px;
+    animation: scroll 15s linear infinite;
   }
   .quick-links a {
     background-color: #006233;
     color: white;
-    padding: 10px 18px;
-    border-radius: 5px;
+    padding: 6px 12px;
+    border-radius: 4px;
     text-decoration: none;
-    font-size: 0.9em;
+    font-size: 0.8em;
+    white-space: nowrap;
   }
-  @media(max-width: 600px) {
-    .features {
-      flex-wrap: nowrap;
-      overflow-x: auto;
-      scrollbar-width: none;
-    }
-    .features::-webkit-scrollbar { display: none; }
-    .features div {
-      min-width: 150px;
-      flex: 0 0 auto;
-    }
+  @keyframes scroll {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
   }
 </style>
 
@@ -827,8 +832,6 @@
     }
   }
 </script>
-
-
   <!-- قسم الدفع الإلكتروني للفواتير -->
   <section dir="rtl" style="text-align: right;">
     <h2 id="toggle-payment" onclick="toggleSection('payment-section', this)"
