@@ -798,9 +798,18 @@
     font-size: 0.8em;
     white-space: nowrap;
   }
+
+  /* حركة الشريط */
   @keyframes scroll {
     0% { transform: translateX(100%); }
     100% { transform: translateX(-100%); }
+  }
+
+  /* إيقاف عند hover أو لمس */
+  .marquee:hover .quick-links,
+  .marquee:active .quick-links,
+  .marquee.touching .quick-links {
+    animation-play-state: paused;
   }
 </style>
 
@@ -831,7 +840,16 @@
       alert("خاصية المشاركة غير مدعومة على هذا المتصفح");
     }
   }
-</script>
+
+  // دعم اللمس لإيقاف الحركة
+  const marquee = document.querySelector(".marquee");
+  marquee.addEventListener("touchstart", () => marquee.classList.add("touching"));
+  marquee.addEventListener("touchend", () => marquee.classList.remove("touching"));
+</script>    
+
+
+
+    
   <!-- قسم الدفع الإلكتروني للفواتير -->
   <section dir="rtl" style="text-align: right;">
     <h2 id="toggle-payment" onclick="toggleSection('payment-section', this)"
