@@ -388,16 +388,19 @@
 </noscript>
 
 <!-- CSS داخلي -->
-<style>/* 🎨 إعدادات عامة للصفحة */
+<style>/
+    
+  /* 🎨 إعدادات عامة للصفحة */
 body {
   margin: 0;
   font-family: Arial, Tahoma, sans-serif;
   background-color: #f7fdf9;
   color: #333;
   line-height: 1.6;
+  padding-top: 80px; /* يترك مساحة للهيدر الثابت */
 }
 
-/* 🟢 الهيدر والفوتر بعرض الصفحة */
+/* 🟢 الهيدر والفوتر */
 header,
 footer {
   width: 100%;
@@ -406,6 +409,13 @@ footer {
   padding: 10px 15px;
   text-align: center;
   box-sizing: border-box;
+}
+
+header {
+  position: fixed; /* ثابت أعلى الصفحة */
+  top: 0;
+  left: 0;
+  z-index: 1000;
 }
 
 header .branding,
@@ -567,13 +577,15 @@ section h3 i {
 /* ☎️ صناديق أرقام الهاتف */
 .phone-box {
   margin-top: 10px;
-  padding: 8px;
+  padding: 10px 15px;
   background-color: #f9f9f9;
   border-top: 1px solid #ddd;
   font-size: 0.95em;
   display: flex;
   align-items: center;
   gap: 8px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
 }
 .phone-box i {
   color: #006400;
