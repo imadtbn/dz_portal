@@ -971,6 +971,31 @@
       <i class="fas fa-download" style="margin-left: 5px;"></i> تثبيت التطبيق
     </button>
 
+      <script>
+  let deferredPrompt;
+  const installBtn = document.getElementById('install-button');
+
+  // إخفاء الزر افتراضياً
+  installBtn.style.display = 'none';
+
+  window.addEventListener('beforeinstallprompt', (e) => {
+    // منع ظهور البوب-أب التلقائي
+    e.preventDefault();
+    deferredPrompt = e;
+
+    // إظهار الزر
+    installBtn.style.display = 'inline-block';
+
+    installBtn.addEventListener('click', async () => {
+      installBtn.style.display = 'none';
+      deferredPrompt.prompt();
+      const { outcome } = await deferredPrompt.userChoice;
+      console.log(`🟢 نتيجة التثبيت: ${outcome}`);
+      deferredPrompt = null;
+    });
+  });
+      </script>
+
     <!-- شريط الأخبار -->
     <div dir="rtl" style="position: sticky; top: 0; z-index: 999; background-color: #006233; color: white;
             padding: 8px 15px; font-weight: bold; font-size: 16px; text-shadow: 1px 1px 2px #000; 
