@@ -388,266 +388,274 @@
 </noscript>
 
 <!-- CSS داخلي -->
-<style>
-    /* 🎨 إعدادات عامة للصفحة */
-    body {
-        margin: 0;
-        font-family: Arial, Tahoma, sans-serif;
-        background-color: #f7fdf9;
-        color: #333;
-        line-height: 1.6
-    }
-header {
+<style>/* 🎨 إعدادات عامة للصفحة */
+body {
+  margin: 0;
+  font-family: Arial, Tahoma, sans-serif;
+  background-color: #f7fdf9;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* 🟢 الهيدر والفوتر بعرض الصفحة */
+header,
+footer {
   width: 100%;
   background-color: #006233;
   color: #fff;
-  padding: 10px;
+  padding: 10px 15px;
   text-align: center;
   box-sizing: border-box;
-    }
-    header,
-    footer {
-        background-color: #006233;
-        color: #fff;
-        padding: 10px;
-        text-align: center
-    }
+}
 
-    /* 👤 الهوية (الشعار + العنوان) */
-    .branding {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 10px;
-        flex-wrap: wrap
-    }
+header .branding,
+header #searchBox {
+  max-width: 100%;
+  margin: 0;
+  justify-content: space-between;
+}
 
-    .branding img {
-        width: 32px;
-        height: auto
-    }
+/* 👤 الهوية (الشعار + العنوان) */
+.branding {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
 
-    .branding i {
-        font-size: 24px
-    }
+.branding img {
+  width: 32px;
+  height: auto;
+}
 
-    .branding h1 {
-        margin: 0;
-        font-size: 1.4em;
-        font-weight: 700
-    }
+.branding i {
+  font-size: 24px;
+}
 
-    /* 📦 أقسام الموقع */
-    section {
-        background: #fff;
-        border: 1px solid #cde7da;
-        border-radius: 12px;
-        padding: 16px;
-        margin: 20px auto;
-        max-width: 900px;
-        box-shadow: 0 2px 6px rgba(0, 98, 51, .08);
-        transition: transform .3s ease
-    }
+.branding h1 {
+  margin: 0;
+  font-size: 1.4em;
+  font-weight: 700;
+}
 
-    section:hover {
-        transform: scale(1.005)
-    }
+/* 📦 أقسام الموقع */
+section {
+  background: #fff;
+  border: 1px solid #cde7da;
+  border-radius: 12px;
+  padding: 16px;
+  margin: 20px auto;
+  max-width: 900px;
+  box-shadow: 0 2px 6px rgba(0, 98, 51, .08);
+  transition: transform .3s ease;
+}
 
-    section h2,
-    section h3 {
-        background: #f0faf6 !important;
-        color: #a52a2a !important;
-        padding: 12px 16px;
-        font-size: 1.05em;
-        border-radius: 10px;
-        box-shadow: inset 0 -1px 0 rgba(0, 0, 0, .05);
-        cursor: pointer;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        transition: background-color .3s ease
-    }
+section:hover {
+  transform: scale(1.005);
+}
 
-    section h2:hover {
-        background: #cde7da
-    }
+section h2,
+section h3 {
+  background: #f0faf6 !important;
+  color: #a52a2a !important;
+  padding: 12px 16px;
+  font-size: 1.05em;
+  border-radius: 10px;
+  box-shadow: inset 0 -1px 0 rgba(0, 0, 0, .05);
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color .3s ease;
+}
 
-    section h2 .toggle-icon {
-        transition: transform .4s ease;
-        font-size: 1em
-    }
+section h2:hover {
+  background: #cde7da;
+}
 
-    section h2.open .toggle-icon {
-        transform: rotate(90deg)
-    }
+section h2 .toggle-icon {
+  transition: transform .4s ease;
+  font-size: 1em;
+}
 
-    /* 📋 القوائم الداخلية */
-    ul {
-        list-style: none;
-        padding: 0 10px;
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height .6s ease, opacity .6s ease;
-        opacity: 0
-    }
+section h2.open .toggle-icon {
+  transform: rotate(90deg);
+}
 
-    ul.show {
-        max-height: 1000px;
-        opacity: 1
-    }
+/* 📋 القوائم الداخلية */
+ul {
+  list-style: none;
+  padding: 0 10px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height .6s ease, opacity .6s ease;
+  opacity: 0;
+}
 
-    section ul li {
-        padding: 8px 4px;
-        border-bottom: 1px dashed #ccc;
-        transition: background .2s ease;
-        color: #880000;
-        word-wrap: break-word
-    }
+ul.show {
+  max-height: 1000px;
+  opacity: 1;
+}
 
-    section ul li:hover {
-        background: #fdf5f5
-    }
+section ul li {
+  padding: 8px 4px;
+  border-bottom: 1px dashed #ccc;
+  transition: background .2s ease;
+  color: #880000;
+  word-wrap: break-word;
+}
 
-    /* 🔗 الروابط */
-    a {
-        color: #a52a2a;
-        font-weight: 700;
-        text-decoration: none
-    }
+section ul li:hover {
+  background: #fdf5f5;
+}
 
-    a:hover {
-        color: #880000;
-        text-decoration: underline
-    }
+/* 🔗 الروابط */
+a {
+  color: #a52a2a;
+  font-weight: 700;
+  text-decoration: none;
+}
 
-    .toggle-icon,
-    .count,
-    section h2 i,
-    section h3 i {
-        color: #a52a2a !important
-    }
+a:hover {
+  color: #880000;
+  text-decoration: underline;
+}
 
-    /* 🔍 البحث */
-    #searchBox {
-        max-width: 500px;
-        margin: 20px auto;
-        display: flex;
-        justify-content: center
-    }
+.toggle-icon,
+.count,
+section h2 i,
+section h3 i {
+  color: #a52a2a !important;
+}
 
-    #searchInput {
-        width: 90%;
-        max-width: 600px;
-        padding: 10px;
-        border-radius: 10px;
-        border: 1px solid #ccc;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, .1);
-        font-size: 1em
-    }
+/* 🔍 البحث */
+#searchBox {
+  max-width: 500px;
+  margin: 20px auto;
+  display: flex;
+  justify-content: center;
+}
 
-    /* ⬆️ زر العودة للأعلى */
-    #scrollTopBtn {
-        position: fixed;
-        bottom: 80px;
-        left: 20px;
-        background: #006233;
-        color: #fff;
-        border: none;
-        padding: 12px 16px;
-        border-radius: 50%;
-        font-size: 20px;
-        cursor: pointer;
-        display: none;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, .3);
-        z-index: 9999
-    }
+#searchInput {
+  width: 90%;
+  max-width: 600px;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, .1);
+  font-size: 1em;
+}
 
-    /* 📱 تحسين العرض على الهواتف */
-    @media(max-width:768px) {
-        body {
-            font-size: .95em
-        }
+/* ⬆️ زر العودة للأعلى */
+#scrollTopBtn {
+  position: fixed;
+  bottom: 80px;
+  left: 20px;
+  background: #006233;
+  color: #fff;
+  border: none;
+  padding: 12px 16px;
+  border-radius: 50%;
+  font-size: 20px;
+  cursor: pointer;
+  display: none;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, .3);
+  z-index: 9999;
+}
 
-        .branding h1 {
-            font-size: 1em
-        }
+/* ☎️ صناديق أرقام الهاتف */
+.phone-box {
+  margin-top: 10px;
+  padding: 8px;
+  background-color: #f9f9f9;
+  border-top: 1px solid #ddd;
+  font-size: 0.95em;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.phone-box i {
+  color: #006400;
+  font-size: 1.1em;
+}
+.phone-box a {
+  color: #a52a2a;
+  font-weight: bold;
+  text-decoration: none;
+}
+.phone-box a:hover {
+  color: #880000;
+  text-decoration: underline;
+}
 
-        header h1 {
-            font-size: 1.1em
-        }
+/* 📱 تحسين العرض على الهواتف */
+@media(max-width:768px) {
+  body {
+    font-size: .95em;
+  }
+  .branding h1 {
+    font-size: 1em;
+  }
+  header h1 {
+    font-size: 1.1em;
+  }
+  section h2,
+  section h3 {
+    font-size: 1em;
+    padding: 8px;
+  }
+  ul li {
+    font-size: .95em;
+    padding: 4px 0;
+  }
+  #searchInput {
+    font-size: .95em;
+    padding: 8px;
+  }
+  #scrollTopBtn {
+    font-size: 24px;
+    padding: 14px;
+  }
+}
 
-        section h2,
-        section h3 {
-            font-size: 1em;
-            padding: 8px
-        }
+/* ✨ مؤثرات */
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
 
-        ul li {
-            font-size: .95em;
-            padding: 4px 0
-        }
+div[style*="border-radius"] i:hover {
+  animation: pulse .6s ease-in-out infinite;
+}
 
-        #searchInput {
-            font-size: .95em;
-            padding: 8px
-        }
+#install-button:hover {
+  background-color: #880000;
+}
 
-        #scrollTopBtn {
-            font-size: 24px;
-            padding: 14px
-        }
-    }
+button:hover {
+  background-color: #a30000;
+}
 
-    /* ✨ مؤثرات */
-    @keyframes pulse {
-        0% {
-            transform: scale(1)
-        }
+/* 📰 شريط الأخبار (يمين ➝ يسار) */
+@keyframes scrollNewsRTL {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
 
-        50% {
-            transform: scale(1.1)
-        }
+#newsTickerContainer:hover #newsTicker {
+  animation-play-state: paused;
+}
 
-        100% {
-            transform: scale(1)
-        }
-    }
+#newsTicker a {
+  color: #fff;
+  text-decoration: underline;
+}
 
-    div[style*="border-radius"] i:hover {
-        animation: pulse .6s ease-in-out infinite
-    }
-
-    #install-button:hover {
-        background-color: #880000
-    }
-
-    button:hover {
-        background-color: #a30000
-    }
-
-    /* 📰 شريط الأخبار (يمين ➝ يسار) */
-    @keyframes scrollNewsRTL {
-        0% {
-            transform: translateX(100%)
-        }
-
-        100% {
-            transform: translateX(-100%)
-        }
-    }
-
-    #newsTickerContainer:hover #newsTicker {
-        animation-play-state: paused
-    }
-
-    #newsTicker a {
-        color: #fff;
-        text-decoration: underline
-    }
-
-    #newsTicker a:hover {
-        color: #ffd700
-    }
+#newsTicker a:hover {
+  color: #ffd700;
+}
 </style>
 
     <style>
