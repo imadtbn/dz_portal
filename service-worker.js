@@ -1,27 +1,18 @@
 // اسم الكاش
-const CACHE_NAME = "dz-portal-cache-v1";
+const CACHE_NAME = "dz-portal-cache-v3";
 
-// الملفات التي يتم تخزينها عند التثبيت
-const urlsToCache = [
-  "/dz_portal/",
-  "/dz_portal/index.html",
-  "/dz_portal/manifest.webmanifest.json",
-  "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css",
-  "https://imadtbn.github.io/dz_portal/icons/icon-192.png",
-  "https://imadtbn.github.io/dz_portal/icons/icon-512.png"
-];
+// الملفات الأساسية (تتضمن صفحة offline)
+const OFFLINE_URL = "/dz_portal/offline.html";
 
-// تثبيت Service Worker وتخزين الملفات
 self.addEventListener("install", (event) => {
   event.waitUntil(
     caches.open(CACHE_NAME).then((cache) => {
-      return cache.addAll(urlsToCache);
+      return cache.addAll([OFFLINE_URL]);
     })
   );
   self.skipWaiting();
 });
 
-// تفعيل Service Worker وتنظيف الكاش القديم
 self.addEventListener("activate", (event) => {
   event.waitUntil(
     caches.keys().then((cacheNames) =>
@@ -35,11 +26,29 @@ self.addEventListener("activate", (event) => {
   self.clients.claim();
 });
 
-// جلب الملفات من الكاش أولاً ثم من الشبكة
 self.addEventListener("fetch", (event) => {
   event.respondWith(
-    caches.match(event.request).then((response) => {
-      return response || fetch(event.request);
-    })
+    fetch(event.request)
+      .then((networkResponse) => {
+        // تخزين الملفات التي يتم جلبها بنجاح
+        if (
+          networkResponse &&
+          networkResponse.status === 200 &&
+          networkResponse.type === "basic"
+        ) {
+          const responseClone = networkResponse.clone();
+          caches.open(CACHE_NAME).then((cache) => {
+            cache.put(event.request, responseClone);
+          });
+        }
+        return networkResponse;
+      })
+      .catch(() => {
+        // إذا الشبكة فشلت نرجع من الكاش
+        return caches.match(event.request).then((cachedResponse) => {
+          // إذا لم نجد أي كاش نرجع صفحة offline
+          return cachedResponse || caches.match(OFFLINE_URL);
+        });
+      })
   );
 });
