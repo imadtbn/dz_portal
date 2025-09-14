@@ -22,7 +22,6 @@
 <title>البوابة الجزائرية للخدمات الرقمية</title>
 
     
-  <title>غير متصل</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -385,44 +384,36 @@
 
 <!-- CSS داخلي -->
 <style>/
-    
-  /* 🎨 إعدادات عامة للصفحة */
-body {
+  /* 🎨 إعدادات عامة */
+* {
   margin: 0;
-  font-family: Arial, Tahoma, sans-serif;
-  background-color: #f7fdf9;
-  color: #333;
-  line-height: 1.6;
-  padding-top: 80px; /* يترك مساحة للهيدر الثابت */
-}
-
-/* 🟢 الهيدر والفوتر */
-header,
-footer {
-  width: 100%;
-  background-color: #006233;
-  color: #fff;
-  padding: 10px 15px;
-  text-align: center;
+  padding: 0;
   box-sizing: border-box;
 }
 
+body {
+  font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+  background-color: #f7fdf9;
+  color: #333;
+  line-height: 1.6;
+  direction: rtl;
+}
+
+/* 🟢 الهيدر */
 header {
-  position: fixed; /* ثابت أعلى الصفحة */
+  width: 100%;
+  position: fixed;
   top: 0;
   left: 0;
   z-index: 1000;
+  background: #006233;
+  color: #fff;
+  padding: 12px 20px;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 }
 
-header .branding,
-header #searchBox {
-  max-width: 100%;
-  margin: 0;
-  justify-content: space-between;
-}
-
-/* 👤 الهوية (الشعار + العنوان) */
-.branding {
+header .branding {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -430,50 +421,45 @@ header #searchBox {
   flex-wrap: wrap;
 }
 
-.branding img {
-  width: 32px;
+header .branding img {
+  width: 36px;
   height: auto;
 }
 
-.branding i {
-  font-size: 24px;
+header .branding h1 {
+  font-size: 1.5em;
+  font-weight: bold;
 }
 
-.branding h1 {
-  margin: 0;
-  font-size: 1.4em;
-  font-weight: 700;
-}
-
-/* 📦 أقسام الموقع */
+/* 📦 أقسام */
 section {
   background: #fff;
   border: 1px solid #cde7da;
   border-radius: 12px;
   padding: 16px;
-  margin: 20px auto;
+  margin: 100px auto 20px; /* مسافة مع الهيدر الثابت */
   max-width: 900px;
-  box-shadow: 0 2px 6px rgba(0, 98, 51, .08);
-  transition: transform .3s ease;
+  box-shadow: 0 2px 6px rgba(0, 98, 51, 0.08);
+  transition: transform 0.3s ease;
 }
 
 section:hover {
   transform: scale(1.005);
 }
 
+/* 📋 عناوين الأقسام */
 section h2,
 section h3 {
   background: #f0faf6 !important;
   color: #a52a2a !important;
   padding: 12px 16px;
-  font-size: 1.05em;
+  font-size: 1.1em;
   border-radius: 10px;
-  box-shadow: inset 0 -1px 0 rgba(0, 0, 0, .05);
   cursor: pointer;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  transition: background-color .3s ease;
+  transition: background-color 0.3s ease;
 }
 
 section h2:hover {
@@ -481,22 +467,21 @@ section h2:hover {
 }
 
 section h2 .toggle-icon {
-  transition: transform .4s ease;
-  font-size: 1em;
+  transition: transform 0.4s ease;
 }
 
 section h2.open .toggle-icon {
   transform: rotate(90deg);
 }
 
-/* 📋 القوائم الداخلية */
+/* 🔗 القوائم */
 ul {
   list-style: none;
   padding: 0 10px;
   max-height: 0;
   overflow: hidden;
-  transition: max-height .6s ease, opacity .6s ease;
   opacity: 0;
+  transition: max-height 0.6s ease, opacity 0.6s ease;
 }
 
 ul.show {
@@ -507,8 +492,7 @@ ul.show {
 section ul li {
   padding: 8px 4px;
   border-bottom: 1px dashed #ccc;
-  transition: background .2s ease;
-  color: #880000;
+  transition: background 0.2s ease;
   word-wrap: break-word;
 }
 
@@ -528,141 +512,32 @@ a:hover {
   text-decoration: underline;
 }
 
-.toggle-icon,
-.count,
-section h2 i,
-section h3 i {
-  color: #a52a2a !important;
-}
-
-/* 🔍 البحث */
-#searchBox {
-  max-width: 500px;
-  margin: 20px auto;
-  display: flex;
-  justify-content: center;
-}
-
-#searchInput {
-  width: 90%;
-  max-width: 600px;
-  padding: 10px;
-  border-radius: 10px;
-  border: 1px solid #ccc;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, .1);
-  font-size: 1em;
-}
-
-/* ⬆️ زر العودة للأعلى */
-#scrollTopBtn {
-  position: fixed;
-  bottom: 80px;
-  left: 20px;
-  background: #006233;
-  color: #fff;
-  border: none;
-  padding: 12px 16px;
-  border-radius: 50%;
-  font-size: 20px;
-  cursor: pointer;
-  display: none;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, .3);
-  z-index: 9999;
-}
-
-/* ☎️ صناديق أرقام الهاتف */
+/* ☎️ أرقام الهاتف */
 .phone-box {
-  margin-top: 10px;
+  margin-top: 12px;
   padding: 10px 15px;
-  background-color: #f9f9f9;
-  border-top: 1px solid #ddd;
-  font-size: 0.95em;
-  display: flex;
-  align-items: center;
-  gap: 8px;
+  background: #f9f9f9;
+  border: 1px solid #ddd;
   border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+  font-size: 1rem;
+  font-weight: 600;
+  box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.08);
 }
+
 .phone-box i {
   color: #006400;
-  font-size: 1.1em;
+  margin-left: 6px;
 }
+
 .phone-box a {
-  color: #a52a2a;
+  color: #006400;
   font-weight: bold;
+  font-size: 1.05em;
   text-decoration: none;
 }
+
 .phone-box a:hover {
-  color: #880000;
   text-decoration: underline;
-}
-
-/* 📱 تحسين العرض على الهواتف */
-@media(max-width:768px) {
-  body {
-    font-size: .95em;
-  }
-  .branding h1 {
-    font-size: 1em;
-  }
-  header h1 {
-    font-size: 1.1em;
-  }
-  section h2,
-  section h3 {
-    font-size: 1em;
-    padding: 8px;
-  }
-  ul li {
-    font-size: .95em;
-    padding: 4px 0;
-  }
-  #searchInput {
-    font-size: .95em;
-    padding: 8px;
-  }
-  #scrollTopBtn {
-    font-size: 24px;
-    padding: 14px;
-  }
-}
-
-/* ✨ مؤثرات */
-@keyframes pulse {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.1); }
-  100% { transform: scale(1); }
-}
-
-div[style*="border-radius"] i:hover {
-  animation: pulse .6s ease-in-out infinite;
-}
-
-#install-button:hover {
-  background-color: #880000;
-}
-
-button:hover {
-  background-color: #a30000;
-}
-
-/* 📰 شريط الأخبار (يمين ➝ يسار) */
-@keyframes scrollNewsRTL {
-  0% { transform: translateX(100%); }
-  100% { transform: translateX(-100%); }
-}
-
-#newsTickerContainer:hover #newsTicker {
-  animation-play-state: paused;
-}
-
-#newsTicker a {
-  color: #fff;
-  text-decoration: underline;
-}
-
-#newsTicker a:hover {
-  color: #ffd700;
 }
 </style>
 
