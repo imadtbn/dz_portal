@@ -22,6 +22,7 @@
 <title>البوابة الجزائرية للخدمات الرقمية</title>
 
     
+  <title>غير متصل</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -384,36 +385,44 @@
 
 <!-- CSS داخلي -->
 <style>/
-  /* 🎨 إعدادات عامة */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
+    
+  /* 🎨 إعدادات عامة للصفحة */
 body {
-  font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+  margin: 0;
+  font-family: Arial, Tahoma, sans-serif;
   background-color: #f7fdf9;
   color: #333;
   line-height: 1.6;
-  direction: rtl;
+  padding-top: 80px; /* يترك مساحة للهيدر الثابت */
 }
 
-/* 🟢 الهيدر */
-header {
+/* 🟢 الهيدر والفوتر */
+header,
+footer {
   width: 100%;
-  position: fixed;
+  background-color: #006233;
+  color: #fff;
+  padding: 10px 15px;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+header {
+  position: fixed; /* ثابت أعلى الصفحة */
   top: 0;
   left: 0;
   z-index: 1000;
-  background: #006233;
-  color: #fff;
-  padding: 12px 20px;
-  text-align: center;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 }
 
-header .branding {
+header .branding,
+header #searchBox {
+  max-width: 100%;
+  margin: 0;
+  justify-content: space-between;
+}
+
+/* 👤 الهوية (الشعار + العنوان) */
+.branding {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -421,45 +430,50 @@ header .branding {
   flex-wrap: wrap;
 }
 
-header .branding img {
-  width: 36px;
+.branding img {
+  width: 32px;
   height: auto;
 }
 
-header .branding h1 {
-  font-size: 1.5em;
-  font-weight: bold;
+.branding i {
+  font-size: 24px;
 }
 
-/* 📦 أقسام */
+.branding h1 {
+  margin: 0;
+  font-size: 1.4em;
+  font-weight: 700;
+}
+
+/* 📦 أقسام الموقع */
 section {
   background: #fff;
   border: 1px solid #cde7da;
   border-radius: 12px;
   padding: 16px;
-  margin: 100px auto 20px; /* مسافة مع الهيدر الثابت */
+  margin: 20px auto;
   max-width: 900px;
-  box-shadow: 0 2px 6px rgba(0, 98, 51, 0.08);
-  transition: transform 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0, 98, 51, .08);
+  transition: transform .3s ease;
 }
 
 section:hover {
   transform: scale(1.005);
 }
 
-/* 📋 عناوين الأقسام */
 section h2,
 section h3 {
   background: #f0faf6 !important;
   color: #a52a2a !important;
   padding: 12px 16px;
-  font-size: 1.1em;
+  font-size: 1.05em;
   border-radius: 10px;
+  box-shadow: inset 0 -1px 0 rgba(0, 0, 0, .05);
   cursor: pointer;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  transition: background-color 0.3s ease;
+  transition: background-color .3s ease;
 }
 
 section h2:hover {
@@ -467,21 +481,22 @@ section h2:hover {
 }
 
 section h2 .toggle-icon {
-  transition: transform 0.4s ease;
+  transition: transform .4s ease;
+  font-size: 1em;
 }
 
 section h2.open .toggle-icon {
   transform: rotate(90deg);
 }
 
-/* 🔗 القوائم */
+/* 📋 القوائم الداخلية */
 ul {
   list-style: none;
   padding: 0 10px;
   max-height: 0;
   overflow: hidden;
+  transition: max-height .6s ease, opacity .6s ease;
   opacity: 0;
-  transition: max-height 0.6s ease, opacity 0.6s ease;
 }
 
 ul.show {
@@ -492,7 +507,8 @@ ul.show {
 section ul li {
   padding: 8px 4px;
   border-bottom: 1px dashed #ccc;
-  transition: background 0.2s ease;
+  transition: background .2s ease;
+  color: #880000;
   word-wrap: break-word;
 }
 
@@ -512,194 +528,472 @@ a:hover {
   text-decoration: underline;
 }
 
-/* ☎️ أرقام الهاتف */
-.phone-box {
-  margin-top: 12px;
-  padding: 10px 15px;
-  background: #f9f9f9;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  font-size: 1rem;
-  font-weight: 600;
-  box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.08);
+.toggle-icon,
+.count,
+section h2 i,
+section h3 i {
+  color: #a52a2a !important;
 }
 
+/* 🔍 البحث */
+#searchBox {
+  max-width: 500px;
+  margin: 20px auto;
+  display: flex;
+  justify-content: center;
+}
+
+#searchInput {
+  width: 90%;
+  max-width: 600px;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, .1);
+  font-size: 1em;
+}
+
+/* ⬆️ زر العودة للأعلى */
+#scrollTopBtn {
+  position: fixed;
+  bottom: 80px;
+  left: 20px;
+  background: #006233;
+  color: #fff;
+  border: none;
+  padding: 12px 16px;
+  border-radius: 50%;
+  font-size: 20px;
+  cursor: pointer;
+  display: none;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, .3);
+  z-index: 9999;
+}
+
+/* ☎️ صناديق أرقام الهاتف */
+.phone-box {
+  margin-top: 10px;
+  padding: 10px 15px;
+  background-color: #f9f9f9;
+  border-top: 1px solid #ddd;
+  font-size: 0.95em;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+}
 .phone-box i {
   color: #006400;
-  margin-left: 6px;
+  font-size: 1.1em;
 }
-
 .phone-box a {
-  color: #006400;
+  color: #a52a2a;
   font-weight: bold;
-  font-size: 1.05em;
   text-decoration: none;
 }
-
 .phone-box a:hover {
+  color: #880000;
   text-decoration: underline;
+}
+
+/* 📱 تحسين العرض على الهواتف */
+@media(max-width:768px) {
+  body {
+    font-size: .95em;
+  }
+  .branding h1 {
+    font-size: 1em;
+  }
+  header h1 {
+    font-size: 1.1em;
+  }
+  section h2,
+  section h3 {
+    font-size: 1em;
+    padding: 8px;
+  }
+  ul li {
+    font-size: .95em;
+    padding: 4px 0;
+  }
+  #searchInput {
+    font-size: .95em;
+    padding: 8px;
+  }
+  #scrollTopBtn {
+    font-size: 24px;
+    padding: 14px;
+  }
+}
+
+/* ✨ مؤثرات */
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+div[style*="border-radius"] i:hover {
+  animation: pulse .6s ease-in-out infinite;
+}
+
+#install-button:hover {
+  background-color: #880000;
+}
+
+button:hover {
+  background-color: #a30000;
+}
+
+/* 📰 شريط الأخبار (يمين ➝ يسار) */
+@keyframes scrollNewsRTL {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+
+#newsTickerContainer:hover #newsTicker {
+  animation-play-state: paused;
+}
+
+#newsTicker a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+#newsTicker a:hover {
+  color: #ffd700;
 }
 </style>
 
     <style>
   /* أنماط قسم الترحيب الجديد */
-        /* ====== إعدادات عامة للقسم ====== */
-:root{
-  --welcome-bg: #f0f9f5;
-  --text-color: #1f2937;
-  --box-w: 140px;          /* عرض المربع (صغير) */
-  --box-h: 120px;          /* ارتفاع المربع (صغير) */
-  --box-gap: 12px;         /* تباعد المربعات */
-  --buttonbar-h: 56px;     /* ارتفاع شريط الأزرار (زائد قليلاً) */
-  --scroll-duration: 12s;  /* مدة دورة الشريط (أقصر = أسرع) */
-  --accent: #c53030;
-  --safe-bg: #e8f8f0;
-  --safe-border: #bfead6;
-  --radius: 10px;
-  --shadow: 0 6px 14px rgba(16,24,40,0.06);
-}
-
-/* ====== قسم الترحيب ====== */
-.welcome-section{
-  direction: rtl;
-  text-align: center;
-  background: var(--welcome-bg);
-  padding: 28px 18px;
-  border-radius: 14px;
-  box-shadow: var(--shadow);
-  color: var(--text-color);
-  overflow: hidden;
-}
-
-/* شعار وعنوان */
-.welcome-logo{
-  width: 84px;
-  height: auto;
-  display: inline-block;
-  margin-bottom: 10px;
-}
-.welcome-title{
-  font-size: 1.5rem;
-  margin: 6px 0 14px;
-  font-weight: 600;
-}
-
-/* ====== مجموعة المربعات (عدد القسم، عدد الخدمات، البيئة الآمنة) ====== */
-.welcome-stats{
-  display: flex;
-  gap: var(--box-gap);
-  justify-content: center;
-  align-items: stretch;
-  flex-wrap: nowrap; /* في سطر واحد */
-  margin-bottom: 16px;
-}
-
-/* كل مربع */
-.stat-card{
-  width: var(--box-w);
-  height: var(--box-h);
-  min-width: var(--box-w);
-  min-height: var(--box-h);
-  background: #fff;
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 10px;
-  text-align: center;
-  font-family: inherit;
-}
-
-/* رقم كبير داخل المربع */
-.stat-card .value{
-  font-size: 1.25rem;
-  font-weight: 700;
-  margin-bottom: 4px;
-}
-
-/* وصف المربع */
-.stat-card .label{
-  font-size: 0.82rem;
-  color: #5b6b73;
-}
-
-/* ستايل خاص لعنصر "البيئة الآمنة" */
-.stat-card.safe{
-  background: var(--safe-bg);
-  border: 1px solid var(--safe-border);
-}
-
-/* ====== شريط الأزرار المتحرك ====== */
-.button-bar-wrapper{
-  position: relative;
-  height: var(--buttonbar-h);
-  display: flex;
-  align-items: center;
-  overflow: hidden;
-  margin-top: 8px;
-}
-
-/* المحتوى المتحرك داخل الشريط */
-.button-bar{
-  display: inline-flex;
-  gap: 12px;
-  align-items: center;
-  white-space: nowrap;
-  will-change: transform;
-  animation: scrollBanner var(--scroll-duration) linear infinite;
-  padding-left: 8px;
-}
-
-/* زر الشريط */
-.button-bar .btn{
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-width: 110px;
-  height: calc(var(--buttonbar-h) - 12px);
-  padding: 0 12px;
-  border-radius: 8px;
-  background: var(--accent);
-  color: #fff;
-  font-weight: 600;
-  cursor: pointer;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-  user-select: none;
-}
-
-/* تكرار الشريط ليبدو مستمرًا بلا فراغ */
-.button-bar--dup{
-  margin-left: 24px; /* فراغ بين النسخ */
-}
-
-/* ====== تحريك الشريط ====== */
-@keyframes scrollBanner{
-  0%   { transform: translateX(0); }
-  100% { transform: translateX(-50%); } /* افتراض وجود نسخة مكررة تغطي العرض */
-}
-
-/* ====== استجابة للشاشات الصغيرة ====== */
-@media (max-width: 820px){
-  :root{
-    --box-w: 110px;
-    --box-h: 100px;
-    --buttonbar-h: 50px;
-    --scroll-duration: 9s; /* أسرع قليلاً على الهواتف */
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
   }
-  .welcome-title{ font-size: 1.15rem; }
-  .button-bar .btn{ min-width: 90px; height: calc(var(--buttonbar-h) - 10px); }
-  .welcome-stats{ gap: 10px; }
-  .stat-card{ padding: 8px; }
-}
 
-/* ====== ملاحظات سريعة ======
-- لظهور حركة مستمرة: انسخ محتوى .button-bar داخل .button-bar-wrapper مرتين
-  أو ضع عنصرين متطابقين أحدهما .button-bar والآخر .button-bar--dup.
-- لتسريع/تبطيء الشريط عدّل --scroll-duration (أقل = أسرع).
-- لتصغير أو تكبير المربعات عدّل --box-w و --box-h.
-*/
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f7fdf9;
+    color: #333;
+    line-height: 1.6;
+    padding: 10px;
+  }
+
+  .welcome-section {
+    text-align: center;
+    background: linear-gradient(135deg, #f0f9f5 0%, #e6f4ed 100%);
+    padding: 20px 15px;
+    border-radius: 16px;
+    margin: 15px auto;
+    max-width: 1000px;
+    box-shadow: 0 5px 15px rgba(0, 98, 51, 0.1);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .welcome-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100" opacity="0.03"><path fill="%23006233" d="M50,0 L100,50 L50,100 L0,50 Z"/></svg>');
+    z-index: 0;
+  }
+
+  .welcome-content {
+    position: relative;
+    z-index: 1;
+  }
+
+  .welcome-logo {
+    max-width: 150px;
+    width: 100%;
+    height: auto;
+    margin: 0 auto 10px auto;
+    display: block;
+    filter: drop-shadow(0 3px 5px rgba(0, 0, 0, 0.1));
+  }
+
+  .welcome-title {
+    color: #006233;
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 12px;
+    line-height: 1.3;
+  }
+
+  .welcome-description {
+    font-size: 0.9em;
+    color: #333;
+    max-width: 800px;
+    margin: 0 auto 20px auto;
+    line-height: 1.6;
+  }
+
+  .welcome-stats {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    margin: 20px 0;
+  }
+
+  .stat-box {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 15px 12px;
+    border-radius: 10px;
+    min-width: 100px;
+    flex: 1;
+    max-width: 130px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+  }
+
+  .stat-box:hover {
+    transform: translateY(-3px);
+  }
+
+  .stat-icon {
+    color: #006233;
+    font-size: 1.5em;
+    margin-bottom: 8px;
+  }
+
+  .stat-title {
+    font-weight: bold;
+    color: #006233;
+    margin-bottom: 4px;
+    font-size: 0.85em;
+  }
+
+  .stat-value {
+    font-size: 1.4em;
+    font-weight: bold;
+    color: #a52a2a;
+  }
+
+  .share-button {
+    background-color: #d40000;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 0.9em;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 0 3px 6px rgba(212, 0, 0, 0.2);
+    margin-top: 10px;
+  }
+
+  .share-button:hover {
+    background-color: #a30000;
+    transform: scale(1.03);
+  }
+
+  /* شريط التنقل الديناميكي */
+  .nav-scroller {
+    position: relative;
+    z-index: 2;
+    height: 75px;
+    overflow: hidden;
+    margin: 20px 0;
+    direction: ltr;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 12px;
+    padding: 5px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .nav-scroller-inner {
+    display: flex;
+    flex-wrap: nowrap;
+    padding-bottom: 5px;
+    animation: scrollBanner 15s linear infinite;
+  }
+
+  .nav-item {
+    flex: 0 0 auto;
+    margin: 0 5px;
+  }
+
+  .nav-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    color: #006233;
+    text-decoration: none;
+    border-radius: 10px;
+    padding: 8px 10px;
+    width: 75px;
+    height: 55px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    font-size: 0.75em;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  /* ألوان مختلفة للأزرار */
+  .nav-link:nth-child(4n+1) {
+    background-color: #e6f7ff;
+  }
+
+  .nav-link:nth-child(4n+2) {
+    background-color: #fff2e6;
+  }
+
+  .nav-link:nth-child(4n+3) {
+    background-color: #e6fffa;
+  }
+
+  .nav-link:nth-child(4n+4) {
+    background-color: #f9f2ff;
+  }
+
+  .nav-link:hover {
+    background: #006233;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 98, 51, 0.2);
+  }
+
+  .nav-icon {
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+
+  /* أنيميشن للشريط المتحرك */
+  @keyframes scrollBanner {
+    0% {
+      transform: translateX(0);
+    }
+
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  /* توقف الأنيميشن عند التمرير فوق الشريط */
+  .nav-scroller:hover .nav-scroller-inner {
+    animation-play-state: paused;
+  }
+
+  /* التجاوب مع الشاشات الصغيرة */
+  @media (max-width: 768px) {
+    .welcome-title {
+      font-size: 1.3em;
+    }
+
+    .welcome-description {
+      font-size: 0.85em;
+      padding: 0 5px;
+    }
+
+    .stat-box {
+      min-width: 90px;
+      padding: 12px 8px;
+    }
+
+    .stat-value {
+      font-size: 1.2em;
+    }
+
+    .stat-title {
+      font-size: 0.8em;
+    }
+
+    .nav-link {
+      width: 65px;
+      height: 45px;
+      padding: 6px 8px;
+      font-size: 0.7em;
+    }
+
+    .nav-icon {
+      font-size: 14px;
+    }
+
+    .nav-scroller {
+      height: 55px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .welcome-section {
+      padding: 15px 10px;
+    }
+
+    .welcome-title {
+      font-size: 1.2em;
+    }
+
+    .welcome-stats {
+      gap: 8px;
+    }
+
+    .stat-box {
+      min-width: 80px;
+      padding: 10px 6px;
+      border-radius: 8px;
+    }
+
+    .stat-icon {
+      font-size: 1.3em;
+      margin-bottom: 5px;
+    }
+
+    .stat-value {
+      font-size: 1.1em;
+    }
+
+    .nav-scroller {
+      height: 50px;
+      margin: 15px 0;
+    }
+
+    .nav-link {
+      width: 80px;
+      height: 60px;
+      font-size: 0.85em;
+    }
+
+    .nav-icon {
+      font-size: 18px;
+    }
+
+
+    .share-button {
+      padding: 8px 16px;
+      font-size: 0.85em;
+    }
+  }
+
+  @media (max-width: 360px) {
+    .welcome-logo {
+      max-width: 120px;
+    }
+
+    .stat-box {
+      min-width: 70px;
+      padding: 8px 5px;
+    }
+
+    .stat-title {
+      font-size: 0.75em;
+    }
+
+    .nav-link {
+      width: 55px;
+      font-size: 0.6em;
+    }
+  }
 </style>
 </head>
 
@@ -712,11 +1006,9 @@ a:hover {
       <img alt="علم الجزائر"
         src="https://raw.githubusercontent.com/imadtbn/dz_portal/refs/heads/main/icons/Flag_of_Algeria.jpg" />
     </div>
-   
-     <div id="searchBox">
-  <input id="searchInput" type="text" placeholder="ابحث هنا داخل الصفحة...">
-  <i class="fas fa-search"></i>
-</div>
+    <div dir="rtl" id="searchBox" style="text-align: right;">
+      <input id="searchInput" placeholder="ابحث هنا داخل الصفحة..." type="text" />
+    </div>
 
     <!-- زر تثبيت التطبيق مع أيقونة Font Awesome -->
     <button id="install-button" style="background-color: #d40000; color: white; padding: 10px 15px; border: none;
@@ -1236,7 +1528,7 @@ a:hover {
     <!-- رقم الهاتف أسفل القسم -->
     <div style="margin-top:10px; padding:8px; background-color:#f9f9f9; border-top:1px solid #ddd;">
       <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
-      <strong>وزارة التربية:</strong> <a href="tel:1075">1075</a>
+      <strong>هاتف وزارة التربية:</strong> <a href="tel:1075">1075</a>
     </div>
   </section>
 
@@ -1330,7 +1622,7 @@ a:hover {
     <!-- رقم الهاتف أسفل القسم -->
     <div style="margin-top:10px; padding:8px; background-color:#f9f9f9; border-top:1px solid #ddd;">
       <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
-      <strong>وزارة التكوين والتعليم المهنيين:</strong> <a href="tel:66 52 25 023">66 52 25 023</a>
+      <strong>هاتف وزارة التكوين والتعليم المهنيين:</strong> <a href="tel:66 52 25 023">66 52 25 023</a>
     </div>
   </section>
 
@@ -1457,7 +1749,7 @@ a:hover {
     <!-- رقم الهاتف أسفل القسم -->
     <div style="margin-top:10px; padding:8px; background-color:#f9f9f9; border-top:1px solid #ddd;">
       <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
-      <strong>وزارة المالية:</strong>
+      <strong>هاتف وزارة المالية:</strong>
       <a href="tel:3040" dir="ltr">3040</a>
     </div>
   </section>
@@ -1548,7 +1840,7 @@ a:hover {
     <!-- رقم الهاتف أسفل القسم -->
     <div style="margin-top:10px; padding:8px; background-color:#f9f9f9; border-top:1px solid #ddd;">
       <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
-      <strong>المديرية العامة للأملاك الوطنية:</strong>
+      <strong>هاتف المديرية العامة للأملاك الوطنية:</strong>
       <a href="tel:+213 21 59 51 51">+213 21 59 51 51</a>
     </div>
   </section>
@@ -1631,7 +1923,7 @@ a:hover {
     <!-- رقم الهاتف أسفل القسم -->
     <div style="margin-top:10px; padding:8px; background-color:#f9f9f9; border-top:1px solid #ddd;">
       <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
-      <strong>وزارة العمل والتشغيل والضمان الاجتماعي:</strong>
+      <strong>هاتف وزارة العمل والتشغيل والضمان الاجتماعي:</strong>
       <a href="tel:3010">3010</a>
     </div>
   </section>
@@ -1675,7 +1967,7 @@ a:hover {
     <!-- رقم الهاتف أسفل القسم -->
     <div style="margin-top:10px; padding-right:5px;">
       <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
-      <strong>وزارة العدل الجزائرية:</strong>
+      <strong>هاتف وزارة العدل الجزائرية:</strong>
       <a href="tel:1078">1078</a>
     </div>
   </section>
@@ -1705,14 +1997,14 @@ a:hover {
       <li>
         <img src="https://2h.ae/rUsr" alt="AppEtwassel Logo" style="height:20px; margin-left:6px;">
         <a href="https://play.google.com/store/apps/details?id=dz.setram.AppEtwassel" target="_blank">
-          تطبيق "تواصل" للترامواي
+          تحميل تطبيق "تواصل" للترامواي
         </a>
       </li>
 
       <li>
         <img src="https://2h.ae/MIDG" alt="SOGRAL Logo" style="height:20px; margin-left:6px;">
         <a href="https://play.google.com/store/apps/details?id=com.sogral.mobile&amp;hl=ar" target="_blank">
-        تطبيق "محطتي" للخطوط البرية سوقرال SOGRAL
+          تحميل تطبيق "محطتي" للخطوط البرية سوقرال SOGRAL
         </a>
       </li>
 
@@ -1733,7 +2025,7 @@ a:hover {
       <li>
         <img src="https://2h.ae/cFEm" alt="Etusa Mob Logo" style="height:20px; margin-left:6px;">
         <a href="https://play.google.com/store/apps/details?id=dz.etusa.etusa_mob&amp;hl=ar" target="_blank">
-          تطبيق "Etusa Mob"لمؤسسة النقل الحضري وشبه الحضري
+          تحميل تطبيق "Etusa Mob" لمؤسسة النقل الحضري وشبه الحضري
         </a>
       </li>
     </ul>
@@ -1741,7 +2033,7 @@ a:hover {
     <!-- رقم الهاتف أسفل القسم -->
     <div style="margin-top:10px; padding-right:5px;">
       <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
-      <strong>وزارة النقل:</strong>
+      <strong>هاتف وزارة النقل:</strong>
       <a href="tel:1067">1067</a>
     </div>
   </section>
@@ -1778,14 +2070,14 @@ a:hover {
           وكالة</a>
       </li>
       <li><i class="fas fa-clipboard-list" style="color: #006400;"></i>
-        <a href="https://www.anem.dz/app_mobile/Mon_offre.apk" target="_blank">تطبيق Mon Offre لعروض العمل</a>
+        <a href="https://www.anem.dz/app_mobile/Mon_offre.apk" target="_blank">تحميل تطبيق Mon Offre لعروض العمل</a>
       </li>
     </ul>
 
     <!-- رقم الهاتف أسفل القسم -->
     <div style="margin-top:10px; padding-right:5px;">
       <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
-      <strong>الوكالة الوطنية للتشغيل:</strong>
+      <strong>هاتف الوكالة الوطنية للتشغيل:</strong>
       <a href="tel:3005">3005</a>
     </div>
   </section>
@@ -1810,18 +2102,18 @@ a:hover {
       </li>
       <li><i class="fas fa-mobile-alt" style="color: green;"></i>
         <a href="https://play.google.com/store/apps/details?id=dz.sebrou.docts_guide.app&amp;hl=ar" target="_blank">
-          تطبيق "أطباء الجزائر"
+          تحميل تطبيق "أطباء الجزائر"
         </a>
       </li>
       <li><i class="fas fa-mobile-alt" style="color: green;"></i>
         <a href="https://play.google.com/store/apps/details?id=com.algerian.doctor&amp;hl=ar" target="_blank">
-          تطبيق "الطبيب الجزائري"
+          تحميل تطبيق "الطبيب الجزائري"
         </a>
       </li>
       <li><i class="fas fa-mobile-alt" style="color: green;"></i>
         <a href="https://play.google.com/store/apps/details?id=com.dz.bank.blood.nabilsoft.bankblooddz&amp;hl=ar"
           target="_blank">
-          تطبيق "بنك الدم الجزائري"
+          تحميل تطبيق "بنك الدم الجزائري"
         </a>
       </li>
     </ul>
@@ -1829,7 +2121,7 @@ a:hover {
     <!-- رقم الهاتف أسفل القسم -->
     <div style="margin-top:10px; padding-right:5px;">
       <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
-      <strong>وزارة الصحة:</strong>
+      <strong>هاتف وزارة الصحة:</strong>
       <a href="tel:3030">3030</a>
     </div>
   </section>
@@ -1863,7 +2155,7 @@ a:hover {
     <!-- رقم الهاتف أسفل القسم -->
     <div style="margin-top:10px; padding-right:5px;">
       <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
-      <strong>وزارة التجارة:</strong> <a href="tel:1020">1020</a>
+      <strong>هاتف وزارة التجارة:</strong> <a href="tel:1020">1020</a>
     </div>
   </section>
 
@@ -1895,7 +2187,7 @@ a:hover {
     <!-- رقم الهاتف أسفل القسم -->
     <div style="margin-top:10px; padding-right:5px;">
       <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
-      <strong>الجمارك الجزائرية:</strong>
+      <strong>هاتف الجمارك الجزائرية:</strong>
       <a href="tel:1023">1023</a>
     </div>
   </section>
@@ -1919,7 +2211,7 @@ a:hover {
     <!-- رقم الهاتف أسفل القسم -->
     <div style="margin-top:10px; padding-right:5px;">
       <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
-      <strong>الوكالة الوطنية للمقاول الذاتي:</strong>
+      <strong>هاتف الوكالة الوطنية للمقاول الذاتي:</strong>
       <a href="tel:1071">1071</a>
     </div>
   </section>
