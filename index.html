@@ -1515,6 +1515,98 @@ img.logo {
   
     document.addEventListener('DOMContentLoaded', createNavigationBar);
   </script>
+
+<!-- زر فتح النافذة -->
+<button onclick="openShareModal()" class="share-button">
+  <i class="fas fa-share-alt" style="margin-left:5px;"></i> شارك الصفحة
+</button>
+
+<!-- النافذة المنبثقة -->
+<div id="shareModal" class="share-modal">
+  <div class="share-modal-content">
+    <span class="close-btn" onclick="closeShareModal()">&times;</span>
+    <h2>ساعدنا في نشر الثقافة الرقمية في الجزائر</h2>
+    <div class="social-icons">
+      <a href="https://t.me/share/url?url=https://imadtbn.github.io/dz_portal/" target="_blank" class="telegram"><i class="fab fa-telegram-plane"></i></a>
+      <a href="https://api.whatsapp.com/send?text=https://imadtbn.github.io/dz_portal/" target="_blank" class="whatsapp"><i class="fab fa-whatsapp"></i></a>
+      <a href="https://www.youtube.com/" target="_blank" class="youtube"><i class="fab fa-youtube"></i></a>
+      <a href="https://www.instagram.com/" target="_blank" class="instagram"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.facebook.com/sharer/sharer.php?u=https://imadtbn.github.io/dz_portal/" target="_blank" class="facebook"><i class="fab fa-facebook-f"></i></a>
+    </div>
+  </div>
+</div>
+
+<!-- CSS -->
+<style>
+.share-modal {
+  display: none;
+  position: fixed;
+  z-index: 10000;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.5);
+}
+
+.share-modal-content {
+  background: #fff;
+  margin: 10% auto;
+  padding: 20px;
+  border-radius: 12px;
+  max-width: 350px;
+  text-align: center;
+  position: relative;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px; left: 10px;
+  font-size: 22px;
+  cursor: pointer;
+  color: #555;
+}
+
+.social-icons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.social-icons a {
+  width: 55px; height: 55px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center; align-items: center;
+  color: #fff; font-size: 22px;
+}
+
+.telegram { background: #0088cc; }
+.whatsapp { background: #25d366; }
+.youtube { background: #ff0000; }
+.instagram { background: #e1306c; }
+.facebook { background: #1877f2; }
+
+@media(max-width:480px){
+  .share-modal-content { width: 90%; margin-top: 30%; }
+  .social-icons a { width: 50px; height: 50px; font-size: 20px; }
+}
+</style>
+
+<!-- JavaScript -->
+<script>
+function openShareModal(){
+  document.getElementById("shareModal").style.display="block";
+}
+function closeShareModal(){
+  document.getElementById("shareModal").style.display="none";
+}
+
+// فتح النافذة تلقائياً عند كل زيارة
+document.addEventListener("DOMContentLoaded", function() {
+  document.getElementById("shareModal").style.display = "block";
+});
+</script>
   
   <!-- قسم الدفع الإلكتروني للفواتير -->
   <section dir="rtl" style="text-align: right;">
