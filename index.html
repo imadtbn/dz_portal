@@ -1046,9 +1046,17 @@
     position: relative;
     z-index: 1;
   }
+/* تنسيق موحد لشعارات الأقسام والفروع */
+img.logo {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;   /* يحافظ على النسبة الأصلية */
+  margin-left: 6px;
+  vertical-align: middle;
+}
 
   .welcome-logo {
-    max-width: 150px;
+    max-width: 120px;
     width: 100%;
     height: auto;
     margin: 0 auto 10px auto;
@@ -1342,7 +1350,7 @@
       <i class="fas fa-globe"></i>
       <h1>البوابة الجزائرية للخدمات الرقمية</h1>
       <img alt="علم الجزائر"
-        src="https://raw.githubusercontent.com/imadtbn/dz_portal/refs/heads/main/icons/Flag_of_Algeria.jpg" />
+        src="https://raw.githubusercontent.com/imadtbn/dz_portal/refs/heads/main/icons/Flag_of_Algeria.jpg" class="logo"> 
     </div>
 
     <div dir="rtl" id="searchBox" style="text-align: right;">
@@ -1398,6 +1406,8 @@
       #newsTickerContainer:hover #newsTicker {
         animation-play-state: paused;
       }
+
+      
     </style>
 
   </header>
@@ -1520,7 +1530,7 @@
 
       <!-- ADE -->
       <li>
-        <img src="https://github.com/imadtbn/dz_portal/blob/main/icons/ade.png?raw=true" alt="ADE Logo" style="height:28px; margin-left:6px;">
+        <img src="https://github.com/imadtbn/dz_portal/blob/main/icons/ade.png?raw=true" alt="ADE Logo"class="logo">
         <a href="https://www.ade.dz/e-paiement/" target="_blank">فاتورة الجزائرية للمياه (ADE)</a>
         <div style="margin-top:5px; padding-right:25px;">
           <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
@@ -1529,7 +1539,7 @@
       </li>
 
       <li>
-        <img src="https://github.com/imadtbn/dz_portal/blob/main/icons/google-play-logo.png?raw=true" alt="GOOGLE PlayLogo" style="height:28px; margin-left:6px;">
+        <img src="https://github.com/imadtbn/dz_portal/blob/main/icons/google-play-logo.png?raw=true" alt="GOOGLE PlayLogo"class="logo">
         <a href="https://play.google.com/store/apps/details?id=com.ade.adese&amp;hl=ar" target="_blank">
           تطبيق Miyahimob
         </a>
@@ -1537,7 +1547,7 @@
 
       <!-- سونلغاز -->
       <li>
-        <img src="https://github.com/imadtbn/dz_portal/blob/main/icons/sonelgaz.png?raw=true" alt="sonelgaz Logo" style="height:28px; margin-left:6px;">
+        <img src="https://github.com/imadtbn/dz_portal/blob/main/icons/sonelgaz.png?raw=true" alt="sonelgaz Logo" class="logo">
         <a href="https://epayement.elit.dz/payementFacture.xhtml" target="_blank">فاتورة الكهرباء والغاز (سونلغاز)</a>
         <div style="margin-top:5px; padding-right:25px;">
           <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
@@ -1547,7 +1557,7 @@
 
       <!-- سيال -->
       <li>
-        <img src="https://github.com/imadtbn/dz_portal/blob/main/icons/seaal.webp?raw=true" alt="seaal Logo" style="height:28px; margin-left:6px;">
+        <img src="https://github.com/imadtbn/dz_portal/blob/main/icons/seaal.webp?raw=true" alt="seaal Logo" class="logo">
         <a href="https://baridinet.poste.dz/seaal" target="_blank">فاتورة المياه (سيال)</a>
         <div style="margin-top:5px; padding-right:25px;">
           <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
@@ -1557,13 +1567,13 @@
 
       <!-- عدل -->
       <li>
-        <img src="https://github.com/imadtbn/dz_portal/blob/main/icons/AADL.png?raw=true" alt="AADL Logo" style="height:28px; margin-left:6px;">
+        <img src="https://github.com/imadtbn/dz_portal/blob/main/icons/AADL.png?raw=true" alt="AADL Logo" class="logo">
         <a href="https://www.aadlgestimmo.dz/epayement/View/index.php" target="_blank">فاتورة كراء عدل</a>
       </li>
 
       <!-- OPGI -->
       <li>
-        <img src="https://github.com/imadtbn/dz_portal/blob/main/icons/opgi.png?raw=true" alt="OPGI Logo" style="height:28px; margin-left:6px;">
+        <img src="https://github.com/imadtbn/dz_portal/blob/main/icons/opgi.png?raw=true" alt="OPGI Logo" class="logo">
         <a href="https://www.opgiconstantine.dz/" target="_blank">فاتورة كراء OPGI</a>
       </li>
 
@@ -1583,7 +1593,7 @@
     <h2 id="toggle-post" onclick="toggleSection('post-section', this)"
       style="cursor: pointer; background-color: #a52a2a; color: white; padding: 10px; border-radius: 8px;">
       <span>
-        <img src="https://github.com/imadtbn/dz_portal/blob/main/icons/poste.png?raw=true" alt="poste Logo" style="height:28px; margin-left:6px;">
+        <img src="https://github.com/imadtbn/dz_portal/blob/main/icons/poste.png?raw=true" alt="poste Logo" class="logo">
         خدمات بريد الجزائر <span class="count"></span>
       </span>
       <span class="toggle-icon" style="float: left;">▶</span>
@@ -1634,7 +1644,7 @@
     <h2 id="toggle-telecom" onclick="toggleSection('telecom-section', this)"
       style="cursor: pointer; background-color: #a52a2a; color: white; padding: 10px; border-radius: 8px;">
       <span> <img src="https://github.com/imadtbn/dz_portal/blob/main/icons/algerietelecom.png?raw=true" alt="telecom Logo"
-          style="height:28px; margin-left:6px;">
+          class="logo">
 
         خدمات إتصالات الجزائر <span class="count"></span></span>
       <span class="toggle-icon" style="float: left;">▶</span>
@@ -1751,7 +1761,7 @@
   <section dir="rtl" style="text-align: right;">
     <h2 id="toggle-education" onclick="toggleSection('education-section', this)"
       style="cursor: pointer; background-color: #a52a2a; color: white; padding: 10px; border-radius: 8px;">
-      <span> <img src="https://github.com/imadtbn/dz_portal/blob/main/icons/education.png?raw=true" alt="education Logo" style="height:28px; margin-left:6px;">
+      <span> <img src="https://github.com/imadtbn/dz_portal/blob/main/icons/education.png?raw=true" alt="education Logo" class="logo">
         التربية والتعليم <span class="count"></span></span>
       <span class="toggle-icon" style="float: left;">▶</span>
     </h2>
@@ -1850,7 +1860,7 @@
     <h2 id="toggle-10" onclick="toggleSection('university-services', this)"
       style="cursor: pointer; background-color: #a52a2a; color: white;">
       <span><img src="https://github.com/imadtbn/dz_portal/blob/main/icons/ESI.png?raw=true"
-          alt="university Logo" style="height:28px; margin-left:6px;"> الخدمات الجامعية
+          alt="university Logo" class="logo"> الخدمات الجامعية
         <span class="count"></span></span>
       <span class="toggle-icon" style="float: left;">▶</span>
     </h2>
@@ -1895,7 +1905,7 @@
   <section dir="rtl" style="text-align: right;">
     <h2 id="toggle-vocational" onclick="toggleSection('vocational-section', this)"
       style="cursor: pointer; background-color: #a52a2a; color: white; padding: 10px; border-radius: 8px;">
-      <span><img src="https://github.com/imadtbn/dz_portal/blob/main/icons/formation.png?raw=true" alt="vocational Logo" style="height:28px; margin-left:6px;">
+      <span><img src="https://github.com/imadtbn/dz_portal/blob/main/icons/formation.png?raw=true" alt="vocational Logo" class="logo">
         التكوين والتعليم المهنيين <span class="count"></span>
       </span>
       <span class="toggle-icon" style="float: left;">▶</span>
@@ -1943,7 +1953,7 @@
     <h2 id="toggle-admin" onclick="toggleSection('admin-section', this)"
       style="cursor: pointer; background-color: #006233; color: white; padding: 10px; border-radius: 8px;">
       <span><img src="https://github.com/imadtbn/dz_portal/blob/main/icons/inteurier.png?raw=true" alt="admin Logo"
-          style="height:28px; margin-left:6px;">
+          class="logo">
         خدمات الإدارة المحلية <span class="count"></span></span>
       <span class="toggle-icon" style="float: left;">▶</span>
     </h2>
@@ -2011,7 +2021,7 @@
       style="cursor: pointer; background-color: #a52a2a; color: white; padding: 10px; border-radius: 8px;">
       <span>
         <img src="https://github.com/imadtbn/dz_portal/blob/main/icons/inpux.jpg?raw=true"
-          alt="tax Logo" style="height:28px; margin-left:6px;">
+          alt="tax Logo" class="logo">
         خدمات جبائية إلكترونية <span class="count"></span>
       </span>
       <span class="toggle-icon" style="float: left;">▶</span>
@@ -2071,7 +2081,7 @@
     <h2 id="toggle-realestate" onclick="toggleSection('real-estate-section', this)"
       style="cursor: pointer; background-color: #a52a2a; color: white; padding: 10px; border-radius: 8px;">
       <span><img src="https://github.com/imadtbn/dz_portal/blob/main/icons/DGDN.png?raw=true" alt="realestate Logo"
-          style="height:28px; margin-left:6px;">
+          class="logo">
         خدمات عقارية - البوابة الجغرافية للبيانات الوطنية للعقار
         <span class="count"></span>
       </span>
@@ -2162,7 +2172,7 @@
     <h2 id="social-security" onclick="toggleSection('social-security-section', this)"
       style="cursor: pointer; background-color: #a52a2a; color: white; padding: 10px; border-radius: 8px;">
       <span><img src="https://github.com/imadtbn/dz_portal/blob/main/icons/travail.png?raw=true" alt="social-security Logo"
-          style="height:28px; margin-left:6px;">
+          class="logo">
         وزارة العمل و التشغيل و الضمان الاجتماعي <span class="count"></span>
       </span>
       <span class="toggle-icon" style="float: left;">▶</span>
@@ -2174,7 +2184,7 @@
       <h3 onclick="toggleSublist('cnas-list')"
         style="cursor: pointer; background-color: #f0faf6; color: #006233; padding: 8px; border-radius: 6px;">
         <span><img src="https://cnas.dz/wp-content/themes/cnas/assets/img/fixedSvgCnasLogoYKnew.png" alt="cnas Logo"
-            style="height:28px; margin-left:6px;">
+            class="logo">
           الصندوق الوطني للضمان الاجتماعي للعمال الأجراء <span class="count"></span>
         </span>
         <span class="toggle-icon" style="float: left;">▶</span>
@@ -2198,7 +2208,7 @@
         style="cursor: pointer; background-color: #f0faf6; color: #006233; padding: 8px; border-radius: 6px; margin-top: 10px;">
         <span><img
             src="https://github.com/imadtbn/dz_portal/blob/main/icons/CASNOS.png?raw=true"
-            alt="casnos Logo" style="height:28px; margin-left:6px;">
+            alt="casnos Logo" class="logo">
           الصندوق الوطني للضمان الاجتماعي لغير الأجراء <span class="count"></span>
         </span>
         <span class="toggle-icon" style="float: left;">▶</span>
@@ -2219,7 +2229,7 @@
       <h3 onclick="toggleSublist('cnr-list')"
         style="cursor: pointer; background-color: #f0faf6; color: #006233; padding: 8px; border-radius: 6px; margin-top: 10px;">
         <span><img src="https://github.com/imadtbn/dz_portal/blob/main/icons/CNAR.png?raw=true" alt="cnr Logo"
-            style="height:28px; margin-left:6px;">
+            class="logo">
           الصندوق الوطني للتقاعد <span class="count"></span>
         </span>
         <span class="toggle-icon" style="float: left;">▶</span>
@@ -2246,7 +2256,7 @@
       style="cursor: pointer; background-color: #a52a2a; color: white; padding: 10px; border-radius: 8px;">
       <span>
         <img src="https://github.com/imadtbn/dz_portal/blob/main/icons/justis.png?raw=true" alt="justice Logo"
-          style="height:28px; margin-left:6px;">
+          class="logo">
         خدمات مع العدالة
       </span>
       <span class="toggle-icon" style="float: left;">▶</span>
@@ -2289,7 +2299,7 @@
     <h2 id="toggle-12" onclick="toggleSection('transport-section', this)"
       style="cursor: pointer; background-color: #a52a2a; color: white; padding: 10px; border-radius: 8px;">
       <span><img src="https://raw.githubusercontent.com/imadtbn/dz_portal/5312a6651dc192b9cb2d6894f2352eb36dc3ee58/icons/tansport.svg" alt="justice Logo"
-          style="height:28px; margin-left:6px;">
+          class="logo">
 
         النقل وحجز تذاكر السفر <span class="count"></span>
       </span>
@@ -2297,47 +2307,47 @@
     </h2>
 
     <ul id="transport-section" style="display: none; list-style: none; padding: 0; line-height: 2;">
-      <img src="https://2h.ae/cKCD" alt="airalgerie Logo" style="height:20px; margin-left:6px;">
+      <img src="https://2h.ae/cKCD" alt="airalgerie Logo" class="logo">
       <a href="https://2h.ae/KGbY" target="_blank">
         حجز تذاكر السفر عبر الخطوط الجوية الجزائرية
       </a>
       </li>
 
       <li>
-        <img src="https://github.com/imadtbn/dz_portal/blob/main/icons/TASSILI.png?raw=true" alt="tassiliairlines Logo" style="height:20px; margin-left:6px;">
+        <img src="https://github.com/imadtbn/dz_portal/blob/main/icons/TASSILI.png?raw=true" alt="tassiliairlines Logo" class="logo">
         <a href="https://tassiliairlines.dz/" target="_blank">حجز تذاكر السفر عبر طيران الطاسيلي</a>
       </li>
 
       <li>
-        <img src="https://github.com/imadtbn/dz_portal/blob/main/icons/TAWASSEL.webp?raw=true" alt="AppEtwassel Logo" style="height:20px; margin-left:6px;">
+        <img src="https://github.com/imadtbn/dz_portal/blob/main/icons/TAWASSEL.webp?raw=true" alt="AppEtwassel Logo" class="logo">
         <a href="https://play.google.com/store/apps/details?id=dz.setram.AppEtwassel" target="_blank">
           تطبيق "تواصل" للترامواي
         </a>
       </li>
 
       <li>
-        <img src="https://github.com/imadtbn/dz_portal/blob/main/icons/google-play-logo.png?raw=true" alt="SOGRAL Logo" style="height:20px; margin-left:6px;">
+        <img src="https://github.com/imadtbn/dz_portal/blob/main/icons/google-play-logo.png?raw=true" alt="SOGRAL Logo" class="logo">
         <a href="https://play.google.com/store/apps/details?id=com.sogral.mobile&amp;hl=ar" target="_blank">
           تطبيق "محطتي" للخطوط البرية سوقرال SOGRAL
         </a>
       </li>
 
       <li>
-        <img src="https://github.com/imadtbn/dz_portal/blob/main/icons/FERRIES.png?raw=true" alt="algerieferries Logo" style="height:20px; margin-left:6px;">
+        <img src="https://github.com/imadtbn/dz_portal/blob/main/icons/FERRIES.png?raw=true" alt="algerieferries Logo" class="logo">
         <a href="https://afs.algerieferries.dz/booking/step1" target="_blank">
           حجز تذاكر السفر عبر المؤسسة الوطنية للنقل البحري للمسافرين
         </a>
       </li>
 
       <li>
-        <img src="https://2h.ae/YvTo" alt="sntf Logo" style="height:20px; margin-left:6px;">
+        <img src="https://2h.ae/YvTo" alt="sntf Logo" class="logo">
         <a href="https://www.sntf.dz/index.php/" target="_blank">
           مواقيت سير القطارات في الجزائر (SNTF)
         </a>
       </li>
 
       <li>
-        <img src="https://github.com/imadtbn/dz_portal/blob/main/icons/google-play-logo.png?raw=true" alt="Etusa Mob Logo" style="height:20px; margin-left:6px;">
+        <img src="https://github.com/imadtbn/dz_portal/blob/main/icons/google-play-logo.png?raw=true" alt="Etusa Mob Logo" class="logo">
         <a href="https://play.google.com/store/apps/details?id=dz.etusa.etusa_mob&amp;hl=ar" target="_blank">
           تطبيق "Etusa Mob" لمؤسسة النقل الحضري وشبه الحضري
         </a>
@@ -2357,7 +2367,7 @@
     <h2 id="toggle-11" onclick="toggleSection('anem-links', this)"
       style="cursor: pointer; background-color: #a52a2a; color: white; padding: 10px; border-radius: 8px;">
       <span><img src="https://github.com/imadtbn/dz_portal/blob/main/icons/anem.png?raw=true" alt="anem Logo"
-          style="height:28px; margin-left:6px;">
+          class="logo">
         الوكالة الوطنية للتشغيل - ANEM <span class="count"></span>
       </span>
       <span class="toggle-icon" style="float: left;">▶</span>
@@ -2401,7 +2411,7 @@
     <h2 id="toggle-4" onclick="toggleSection('health-links', this)"
       style="cursor: pointer; background-color: #a52a2a; color: white; padding: 10px; border-radius: 8px;">
       <span><img src="https://github.com/imadtbn/dz_portal/blob/main/icons/sante.jpg?raw=true"
-          alt="health Logo" style="height:28px; margin-left:6px;"> الخدمات الصحية <span class="count"></span></span>
+          alt="health Logo" class="logo"> الخدمات الصحية <span class="count"></span></span>
       <span class="toggle-icon" style="float: left;">▶</span>
     </h2>
     <ul id="health-links"
@@ -2444,7 +2454,7 @@
   <section dir="rtl" style="text-align: right;">
     <h2 id="toggle-commerce" onclick="toggleSection('commerce-section', this)"
       style="cursor: pointer; background-color: #a52a2a; color: white; padding: 10px; border-radius: 8px;">
-      <span><img src="https://github.com/imadtbn/dz_portal/blob/main/icons/commerc.png?raw=true" alt="commerce Logo" style="height:28px; margin-left:6px;">
+      <span><img src="https://github.com/imadtbn/dz_portal/blob/main/icons/commerc.png?raw=true" alt="commerce Logo" class="logo">
         خدمات وزارة التجارة الجزائرية <span class="count"></span></span>
       <span class="toggle-icon" style="float: left;">▶</span>
     </h2>
@@ -2478,7 +2488,7 @@
     <h2 id="toggle-11" onclick="toggleSection('customs-section', this)"
       style="cursor: pointer; background-color: #a52a2a; color: white; padding: 10px; border-radius: 8px;">
       <span><img src="https://github.com/imadtbn/dz_portal/blob/main/icons/douane.png?raw=true" alt="customs Logo"
-          style="height:28px; margin-left:6px;">
+          class="logo">
         الجمارك الجزائرية <span class="count"></span></span>
       <span class="toggle-icon" style="float: left;">▶</span>
     </h2>
@@ -2511,7 +2521,7 @@
     <h2 id="toggle-10" onclick="toggleSection('auto-entrepreneur', this)"
       style="cursor: pointer; background-color: #a52a2a; color: white;">
       <span><img src="https://github.com/imadtbn/dz_portal/blob/main/icons/econom.png?raw=true" alt="auto-entrepreneur Logo"
-          style="height:28px; margin-left:6px;"> الوكالة الوطنية للمقاول الذاتي <span class="count"></span></span>
+          class="logo"> الوكالة الوطنية للمقاول الذاتي <span class="count"></span></span>
       <span class="toggle-icon" style="float: left;">▶</span>
     </h2>
 
@@ -2545,7 +2555,7 @@
       <!-- اتصالات الجزائر -->
       <li>
         <img src="https://github.com/imadtbn/dz_portal/blob/main/icons/algerietelecom.png?raw=true" alt="telecom Logo"
-          style="height:28px; margin-left:6px;">
+          class="logo">
         <a href="https://client.at.dz/ar" target="_blank">فضاء الزبائن لإتصالات الجزائر</a>
         <div style="margin-top:5px; padding-right:20px;">
           <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
@@ -2556,7 +2566,7 @@
 
       <!-- الجزائرية للمياه -->
       <li>
-        <img src="https://github.com/imadtbn/dz_portal/blob/main/icons/ade.png?raw=true" alt="ADE Logo" style="height:28px; margin-left:6px;">
+        <img src="https://github.com/imadtbn/dz_portal/blob/main/icons/ade.png?raw=true" alt="ADE Logo" class="logo">
         <a href="https://www.ade.dz/login" target="_blank">فضاء الزبائن للجزائرية للمياه</a>
         <div style="margin-top:5px; padding-right:20px;">
           <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
@@ -2568,7 +2578,7 @@
       <!-- سونلغاز -->
       <li>
         <img src="https://github.com/imadtbn/dz_portal/blob/main/icons/sonelgaz.png?raw=true" alt="sonelgaz Logo"
-          style="height:28px; margin-left:6px;">
+          class="logo">
         <a href="https://www.sonelgaz.dz/ar/category/espace-clients-ar" target="_blank">
           فضاء الزبائن سونلغاز للكهرباء والغاز</a>
         <div style="margin-top:5px; padding-right:20px;">
@@ -2581,7 +2591,7 @@
       <!-- سيال -->
       <li>
         <img src="https://github.com/imadtbn/dz_portal/blob/main/icons/seaal.webp?raw=true" alt="seaal Logo"
-          style="height:28px; margin-left:6px;">
+          class="logo">
         <a href="https://wakalati.seaal.dz/" target="_blank">فضاء الزبائن سيال للماء والتطهير</a>
         <div style="margin-top:5px; padding-right:20px;">
           <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
@@ -2592,14 +2602,14 @@
 
       <!-- تطبيق سيال -->
       <li>
-        <img src="https://github.com/imadtbn/dz_portal/blob/main/icons/google-play-logo.png?raw=true" alt="seaalappli Logo" style="height:28px; margin-left:6px;">
+        <img src="https://github.com/imadtbn/dz_portal/blob/main/icons/google-play-logo.png?raw=true" alt="seaalappli Logo" class="logo">
         <a href="https://play.google.com/store/apps/details?id=dz.seaalappli.wakalati&hl=AR" target="_blank"> تطبيق
           WAKALATI لسيال</a>
       </li>
 
       <!-- نفطال -->
       <li>
-        <img src="https://github.com/imadtbn/dz_portal/blob/main/icons/naftal.webp?raw=true" alt="naftal.apps Logo" style="height:28px; margin-left:6px;">
+        <img src="https://github.com/imadtbn/dz_portal/blob/main/icons/naftal.webp?raw=true" alt="naftal.apps Logo" class="logo">
         <a href="https://play.google.com/store/apps/details?id=com.naftal.apps.naftalkhadamat&hl=AR"
           target="_blank"> تطبيق نفطال خدمات</a>
         <div style="margin-top:5px; padding-right:20px;">
@@ -2634,7 +2644,7 @@
         <li>
           <i class="fas fag" style="color:#006400; margin-left:6px;"></i>
           <img src="https://raw.githubusercontent.com/imadtbn/dz_portal/fbbc555e5ae753466188cb8714e3f520cc72e2a1/icons/saa.svg" alt="SAA Logo"
-            style="height:28px; margin-left:6px;">
+            class="logo">
           <a href="https://www.saa.dz/" target="_blank">الشركة الجزائرية للتأمينات (SAA)</a>
           <div style="margin-top:5px; padding-right:25px;">
             <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
@@ -2643,7 +2653,7 @@
         </li>
 
         <li>
-          <img src="https://github.com/imadtbn/dz_portal/blob/main/icons/caar.jpg?raw=true" alt="CAAR Logo" style="height:28px; margin-left:6px;">
+          <img src="https://github.com/imadtbn/dz_portal/blob/main/icons/caar.jpg?raw=true" alt="CAAR Logo" class="logo">
           <a href="https://caar.dz/" target="_blank">الشركة الجزائرية للتأمين و لإعادة التأمين (CAAR)</a>
           <div style="margin-top:5px; padding-right:25px;">
             <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
@@ -2652,7 +2662,7 @@
         </li>
 
         <li>
-          <img src="https://github.com/imadtbn/dz_portal/blob/main/icons/carama.png?raw=true" alt="CAARAMA Logo" style="height:28px; margin-left:6px;">
+          <img src="https://github.com/imadtbn/dz_portal/blob/main/icons/carama.png?raw=true" alt="CAARAMA Logo" class="logo">
           <a href="https://www.caarama.dz/" target="_blank">شركة التأمين على السيارات (CAARAMA)</a>
           <div style="margin-top:5px; padding-right:25px;">
             <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
@@ -2662,7 +2672,7 @@
         </li>
 
         <li>
-          <img src="https://github.com/imadtbn/dz_portal/blob/main/icons/gig.jpg?raw=true" alt="GIG Logo" style="height:28px; margin-left:6px;">
+          <img src="https://github.com/imadtbn/dz_portal/blob/main/icons/gig.jpg?raw=true" alt="GIG Logo" class="logo">
           <a href="https://gig.dz/ar/" target="_blank">مجموعة الخليج للتأمين </a>
           <div style="margin-top:5px; padding-right:25px;">
             <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
@@ -2682,7 +2692,7 @@
       <ul id="private-insurance" style="display: none; list-style: none; padding: 0 20px; line-height: 2;">
         <li>
           <img src="https://github.com/imadtbn/dz_portal/blob/main/icons/alliance.png?raw=true" alt="Alliance Logo"
-            style="height:28px; margin-left:6px;">
+            class="logo">
           <a href="https://www.allianceassurances.com.dz/#/" target="_blank">أليانس للتأمينات (Alliance Assurances)</a>
           <div style="margin-top:5px; padding-right:25px;">
             <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
@@ -2693,7 +2703,7 @@
         </li>
         <li>
           <img src="https://gam.dz/wp-content/uploads/logo-optimized.png" alt="Salama Logo"
-            style="height:28px; margin-left:6px;">
+            class="logo">
           <a href="https://gam.dz/" target="_blank">سلامة للتأمينات (Salama Assurances)</a>
           <div style="margin-top:5px; padding-right:25px;">
             <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
@@ -2701,7 +2711,7 @@
           </div>
         </li>
         <li>
-          <img src="https://github.com/imadtbn/dz_portal/blob/main/icons/TRUST.png?raw=true" alt="Trust Logo" style="height:28px; margin-left:6px;">
+          <img src="https://github.com/imadtbn/dz_portal/blob/main/icons/TRUST.png?raw=true" alt="Trust Logo" class="logo">
           <a href="https://trust-dz.com/" target="_blank">ترست الجزائر للتأمينات (Trust Algeria)</a>
           <div style="margin-top:5px; padding-right:25px;">
             <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
@@ -2714,7 +2724,7 @@
           </div>
         </li>
         <li>
-          <img src="https://github.com/imadtbn/dz_portal/blob/main/icons/amana.jpg?raw=true" alt="Amana Logo" style="height:28px; margin-left:6px;">
+          <img src="https://github.com/imadtbn/dz_portal/blob/main/icons/amana.jpg?raw=true" alt="Amana Logo" class="logo">
           <a href="http://www.amana.dz/" target="_blank">أمانة للتأمينات (Amana Assurances)</a>
           <div style="margin-top:5px; padding-right:25px;">
             <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
@@ -2724,7 +2734,7 @@
         <li>
           <i class="fas fa-building" style="color:#006400; margin-left:6px;"></i>
           <img src="https://www.macirvie.com/assets/images/logo.png" alt="Macir Vie Logo"
-            style="height:28px; margin-left:6px;">
+            class="logo">
           <a href="https://www.macirvie.com/" target="_blank">ماكير في للتأمين على الحياة (Macir Vie)</a>
           <div style="margin-top:5px; padding-right:25px;">
             <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
@@ -2744,7 +2754,7 @@
       </h3>
       <ul id="foreign-insurance" style="display: none; list-style: none; padding: 0 20px; line-height: 2;">
         <li>
-          <img src="https://2h.ae/qfYT" alt="AXA Logo" style="height:28px; margin-left:6px;">
+          <img src="https://2h.ae/qfYT" alt="AXA Logo" class="logo">
           <a href="https://www.axa.dz/" target="_blank">أكسا للتأمينات (AXA Assurances Algérie)</a>
           <div style="margin-top:5px; padding-right:25px;">
             <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
@@ -2754,7 +2764,7 @@
           </div>
         </li>
         <li>
-          <img src="https://2h.ae/cNVh" alt="Cardif Logo" style="height:28px; margin-left:6px;">
+          <img src="https://2h.ae/cNVh" alt="Cardif Logo" class="logo">
           <a href="https://www.macirvie.com/ar" target="_blank">كارديف للتأمينات (Cardif Algérie)</a>
           <div style="margin-top:5px; padding-right:25px;">
             <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
@@ -2787,7 +2797,7 @@
 
         <li>
           <img src="https://github.com/imadtbn/dz_portal/blob/main/icons/BNA.jpg?raw=true" alt="BNA Logo"
-            style="height:28px; margin-left:6px;">
+            class="logo">
           <a href="https://www.bna.dz/ar" target="_blank">البنك الوطني الجزائري (BNA)</a>
           <div style="margin-top:5px; padding-right:25px;">
             <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
@@ -2796,7 +2806,7 @@
         </li>
 
         <li>
-          <img src="https://github.com/imadtbn/dz_portal/blob/main/icons/BEA.png?raw=true" alt="BEA Logo" style="height:28px; margin-left:6px;">
+          <img src="https://github.com/imadtbn/dz_portal/blob/main/icons/BEA.png?raw=true" alt="BEA Logo" class="logo">
           <a href="https://bea.dz/" target="_blank">بنك الجزائر الخارجي (BEA)</a>
           <div style="margin-top:5px; padding-right:25px;">
             <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
@@ -2805,7 +2815,7 @@
         </li>
 
         <li>
-          <img src="https://github.com/imadtbn/dz_portal/blob/main/icons/BADR.jpg?raw=true" alt="BADR Logo" style="height:28px; margin-left:6px;">
+          <img src="https://2h.ae/eqez" alt="BADR Logo" class="logo">
           <a href="https://www.badrbank.dz/" target="_blank">بنك الفلاحة والتنمية الريفية
             (BADR)</a>
           <div style="margin-top:5px; padding-right:25px;">
@@ -2815,7 +2825,7 @@
         </li>
 
         <li>
-          <img src="https://2h.ae/smCp" alt="BDL Logo" style="height:28px; margin-left:6px;">
+          <img src="https://2h.ae/smCp" alt="BDL Logo" class="logo">
           <a href="https://www.bdl.dz/">بنك التنمية المحلية (BDL)</a>
           <div style="margin-top:5px; padding-right:25px;">
             <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
@@ -2824,7 +2834,7 @@
         </li>
 
         <li>
-          <img src="https://2h.ae/bkBB" alt="CPA Logo" style="height:28px; margin-left:6px;">
+          <img src="https://2h.ae/bkBB" alt="CPA Logo" class="logo">
           <a href="https://www.cpa-bank.dz/index.php/ar">القرض الشعبي الجزائري (CPA)</a>
           <div style="margin-top:5px; padding-right:25px;">
             <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
@@ -2833,7 +2843,7 @@
         </li>
 
         <li>
-          <img src="https://2h.ae/mnRS" alt="CNEP Logo" style="height:28px; margin-left:6px;">
+          <img src="https://2h.ae/mnRS" alt="CNEP Logo" class="logo">
           <a href="https://www.cnepbanque.dz/web/ar/accueil-arabe/"> الصندوق الوطني للتوفير و الاحتياط - بنك CNEP
             Banque</a>
           <div style="margin-top:5px; padding-right:25px;">
@@ -2843,7 +2853,7 @@
         </li>
 
         <li>
-          <img src="https://github.com/imadtbn/dz_portal/blob/main/icons/BNH.jpg?raw=true" alt="BNH Logo" style="height:28px; margin-left:6px;">
+          <img src="https://github.com/imadtbn/dz_portal/blob/main/icons/BNH.jpg?raw=true" alt="BNH Logo" class="logo">
           <a href="https://bnh.dz/">البنك الوطني للإسكان (BNH)</a>
           <div style="margin-top:5px; padding-right:25px;">
             <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
@@ -2863,7 +2873,7 @@
       <ul id="private-banks" style="display: none; list-style: none; padding: 0 20px; line-height: 2;">
 
         <li>
-          <img src="https://github.com/imadtbn/dz_portal/blob/main/icons/AGB.jpg?raw=true" alt="AGB Logo" style="height:28px; margin-left:6px;">
+          <img src="https://github.com/imadtbn/dz_portal/blob/main/icons/AGB.jpg?raw=true" alt="AGB Logo" class="logo">
           <a href="https://www.agb.dz/" target="_blank">بنك الخليج الجزائر (AGB)</a>
           <div style="margin-top:5px; padding-right:25px;">
             <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
@@ -2872,7 +2882,7 @@
         </li>
 
         <li>
-          <img src="https://2h.ae/xLja" alt="AlBaraka Logo" style="height:28px; margin-left:6px;">
+          <img src="https://2h.ae/xLja" alt="AlBaraka Logo" class="logo">
           <a href="https://2h.ae/idol">بنك البركة الجزائري</a>
           <div style="margin-top:5px; padding-right:25px;">
             <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
@@ -2881,7 +2891,7 @@
         </li>
 
         <li>
-          <img src="https://github.com/imadtbn/dz_portal/blob/main/icons/ABC.png?raw=true" alt="ABC Logo" style="height:28px; margin-left:6px;">
+          <img src="https://github.com/imadtbn/dz_portal/blob/main/icons/ABC.png?raw=true" alt="ABC Logo" class="logo">
           <a href="https://www.bank-abc.com/ar/CountrySites/Algeria">بنك ABC الجزائر (ABC)</a>
           <div style="margin-top:5px; padding-right:25px;">
             <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
@@ -2890,7 +2900,7 @@
         </li>
 
         <li>
-          <img src="https://2h.ae/cLQY" alt="Natixis Logo" style="height:28px; margin-left:6px;">
+          <img src="https://2h.ae/cLQY" alt="Natixis Logo" class="logo">
           <a href="https://ebanking.algerie.natixis.com/ebanking/index.ebk">Natixis Algérie</a>
           <div style="margin-top:5px; padding-right:25px;">
             <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
@@ -2899,7 +2909,7 @@
         </li>
 
         <li>
-          <img src="https://2h.ae/IUqW" alt="Société Générale Logo" style="height:28px; margin-left:6px;">
+          <img src="https://2h.ae/IUqW" alt="Société Générale Logo" class="logo">
           <a href="https://societegenerale.dz/fr/">Société Générale Algérie</a>
           <div style="margin-top:5px; padding-right:25px;">
             <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
@@ -2908,7 +2918,7 @@
         </li>
 
         <li>
-          <img src="https://2h.ae/IUqW" alt="Citibank Logo" style="height:28px; margin-left:6px;">
+          <img src="https://2h.ae/IUqW" alt="Citibank Logo" class="logo">
           <a href="https://www.citigroup.com/global/about-us/global-presence/algeria">Citibank N.A. Algérie</a>
           <div style="margin-top:5px; padding-right:25px;">
             <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
@@ -2917,7 +2927,7 @@
         </li>
 
         <li>
-          <img src="https://github.com/imadtbn/dz_portal/blob/main/icons/arabe-bank.jpg?raw=true" alt="Arab Bank PLC Logo" style="height:28px; margin-left:6px;">
+          <img src="https://github.com/imadtbn/dz_portal/blob/main/icons/arabe-bank.jpg?raw=true" alt="Arab Bank PLC Logo" class="logo">
           <a href="https://2h.ae/OqxW">البنك العربي</a>
           <div style="margin-top:5px; padding-right:25px;">
             <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
@@ -2928,7 +2938,7 @@
 
         <li>
           <img src="https://github.com/imadtbn/dz_portal/blob/main/icons/HSBC.png?raw=true" alt="HSBC Logo"
-            style="height:28px; margin-left:6px;">
+            class="logo">
           <a href="https://www.business.algeria.hsbc.com/">HSBC Algeria</a>
           <div style="margin-top:5px; padding-right:25px;">
             <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
@@ -2937,7 +2947,7 @@
         </li>
 
         <li>
-          <img src="https://github.com/imadtbn/dz_portal/blob/main/icons/fransabank.jpg?raw=true" alt="Fransabank Logo" style="height:28px; margin-left:6px;">
+          <img src="https://github.com/imadtbn/dz_portal/blob/main/icons/fransabank.jpg?raw=true" alt="Fransabank Logo" class="logo">
           <a href="https://2h.ae/wuTt">Fransabank El Djazair</a>
           <div style="margin-top:5px; padding-right:25px;">
             <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
@@ -2965,32 +2975,32 @@
       <!-- أرقام الطوارئ الأساسية -->
       <li>
         <img src="https://github.com/imadtbn/dz_portal/blob/main/icons/CGN.jpg?raw=true" alt="الدرك الوطني Logo"
-          style="height:20px; margin-left:6px;">
+          class="logo">
         <a href="https://www.mdn.dz/site_cgn/index.php" target="_blank"><strong>الدرك الوطني</strong></a>
         - <a href="tel:1055"><strong>1055</strong></a>
       </li>
 
       <li>
-        <img src="https://2h.ae/kUWB" alt="الشرطة Logo" style="height:20px; margin-left:6px;">
+        <img src="https://2h.ae/kUWB" alt="الشرطة Logo" class="logo">
         <a href="https://www.algeriepolice.dz/" target="_blank"><strong>الشرطة الجزائرية</strong></a>
         - <a href="tel:1548"><strong>1548</strong></a>
       </li>
 
       <li>
-        <img src="https://2h.ae/xxMU" alt="الشرطة حالات الاختطاف Logo" style="height:20px; margin-left:6px;">
+        <img src="https://2h.ae/xxMU" alt="الشرطة حالات الاختطاف Logo" class="logo">
         <a href="https://www.police.dz/" target="_blank"><strong>الشرطة - حالات الاختطاف</strong></a>
         - <a href="tel:104"><strong>104</strong></a>
       </li>
 
       <li>
-        <img src="https://2h.ae/shmC" alt="الحماية المدنية Logo" style="height:20px; margin-left:6px;">
+        <img src="https://2h.ae/shmC" alt="الحماية المدنية Logo" class="logo">
         <a href="https://dgpc.dz/" target="_blank"><strong>الحماية المدنية</strong></a>
         - <a href="tel:1021"><strong>1021</strong></a>
       </li>
 
       <li>
         <img src="https://github.com/imadtbn/dz_portal/blob/main/icons/CFN.png?raw=true" alt="حراس السواحل Logo"
-          style="height:20px; margin-left:6px;">
+          class="logo">
         <a href="https://www.mdn.dz/site_cfn/index.php" target="_blank"><strong>حراس السواحل</strong></a>
         - <a href="tel:1054"><strong>1054</strong></a>
       </li>
@@ -3000,48 +3010,48 @@
 
       <!-- خدمات إلكترونية -->
       <li>
-        <img src="https://github.com/imadtbn/dz_portal/blob/main/icons/ppgn.jpg?raw=true" alt="PPGN Logo" style="height:20px; margin-left:6px;">
+        <img src="https://github.com/imadtbn/dz_portal/blob/main/icons/ppgn.jpg?raw=true" alt="PPGN Logo" class="logo">
         <a href="https://ppgn.mdn.dz/" target="_blank"><strong>شكوى مسبقة ومعلومات عن بعد للدرك الوطني</strong></a>
       </li>
 
       <li>
-        <img src="https://github.com/imadtbn/dz_portal/blob/main/icons/tariki.jpg?raw=true" alt="Facebook Logo" style="height:20px; margin-left:6px;">
+        <img src="https://github.com/imadtbn/dz_portal/blob/main/icons/tariki.jpg?raw=true" alt="Facebook Logo" class="logo">
         <a href="https://www.facebook.com/tariki.GN/" target="_blank"><strong>مركز الإعلام و تنسيق المرور –
             طريقي</strong></a>
       </li>
 
       <li>
-        <img src="https://github.com/imadtbn/dz_portal/blob/main/icons/ALLO%20CHORTTA.webp?raw=true" alt="Android App Logo" style="height:20px; margin-left:6px;">
+        <img src="https://github.com/imadtbn/dz_portal/blob/main/icons/ALLO%20CHORTTA.webp?raw=true" alt="Android App Logo" class="logo">
         <a href="https://play.google.com/store/apps/details?id=allochorta.algeriepolice.dz&hl=ar"
           target="_blank"><strong> تطبيق ألو الشرطة</strong></a>
       </li>
 
       <li>
-        <img src="https://github.com/imadtbn/dz_portal/blob/main/icons/Logomediateur.png?raw=true" alt="Wassit Logo" style="height:20px; margin-left:6px;">
+        <img src="https://github.com/imadtbn/dz_portal/blob/main/icons/Logomediateur.png?raw=true" alt="Wassit Logo" class="logo">
         <a href="https://wassit.dz/ar/register#" target="_blank"><strong>تواصل مع وسيط الجمهورية</strong></a>
       </li>
 
       <!-- خدمات أخرى -->
       <li>
-        <img src="https://2h.ae/OGTi" alt="منظمة حماية المستهلك Logo" style="height:20px; margin-left:6px;">
+        <img src="https://2h.ae/OGTi" alt="منظمة حماية المستهلك Logo" class="logo">
         <a href="https://apoce.org/" target="_blank"><strong>منظمة حماية وإرشاد المستهلك</strong></a>
         - <a href="tel:3311">3311</a>
       </li>
 
       <li>
-        <img src="https://github.com/imadtbn/dz_portal/blob/main/icons/TOFFOLA.png?raw=true" alt="حماية الطفل Logo" style="height:20px; margin-left:6px;">
+        <img src="https://github.com/imadtbn/dz_portal/blob/main/icons/TOFFOLA.png?raw=true" alt="حماية الطفل Logo" class="logo">
         <a href="https://onppe.dz/index.php/ar/" target="_blank"><strong>حماية وترقية الطفولة</strong></a>
         - <a href="tel:1111">1111</a>
       </li>
 
       <li>
-        <img src="https://github.com/imadtbn/dz_portal/blob/main/icons/DGF.png?raw=true" alt="محافظة الغابات Logo" style="height:20px; margin-left:6px;">
+        <img src="https://github.com/imadtbn/dz_portal/blob/main/icons/DGF.png?raw=true" alt="محافظة الغابات Logo" class="logo">
         <a href="http://www.dgf.org.dz/ar" target="_blank"><strong>محافظة الغابات</strong></a>
         - <a href="tel:1070">1070</a>
       </li>
 
       <li>
-        <img src="https://github.com/imadtbn/dz_portal/blob/main/icons/Khadamaty.png?raw=true" alt="خدماتي Logo" style="height:20px; margin-left:6px;">
+        <img src="https://github.com/imadtbn/dz_portal/blob/main/icons/Khadamaty.png?raw=true" alt="خدماتي Logo" class="logo">
         <a href="https://www.khadamaty.dz/?lang=ar" target="_blank"><strong>خدماتي لتصليح الأجهزة
             الكهرومنزلية</strong></a>
         - <a href="tel:3075">3075</a>
@@ -3166,7 +3176,7 @@
       <span>© 2025 البوابة الجزائرية للخدمات الرقمية</span>
       <img alt="علم الجزائر"
         src="https://raw.githubusercontent.com/imadtbn/dz_portal/refs/heads/main/icons/Flag_of_Algeria.jpg"
-        style="height: 22px;" />
+        class="logo">
     </div>
 
     <!-- عبارة مزخرفة -->
