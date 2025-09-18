@@ -1512,6 +1512,15 @@ function openShareModal() {
 function closeShareModal() {
   document.getElementById("shareModal").style.display = "none";
 }
+
+  }
+
+// فتح النافذة تلقائياً بعد 10 ثواني
+document.addEventListener("DOMContentLoaded", function() {
+  setTimeout(function(){
+    document.getElementById("shareModal").style.display = "block";
+  }, 10000);
+});
 </script>
       
       <!-- المميزات الأساسية -->
