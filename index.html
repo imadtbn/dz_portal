@@ -1439,7 +1439,7 @@ img.logo {
   <i class="fas fa-share-alt" style="margin-left: 5px;"></i> شارك البوابة
 </button>
       
-     <!-- النافذة المنبثقة -->
+<!-- النافذة المنبثقة -->
 <div id="shareModal" class="share-modal">
   <div class="share-modal-content">
     <span class="close-btn" onclick="closeShareModal()">&times;</span>
@@ -1450,7 +1450,7 @@ img.logo {
       <a href="viber://forward?text=https://imadtbn.github.io/dz_portal/" target="_blank" class="viber"><i class="fab fa-viber"></i></a>
       <a href="https://www.instagram.com/" target="_blank" class="instagram"><i class="fab fa-instagram"></i></a>
       <a href="https://www.facebook.com/sharer/sharer.php?u=https://imadtbn.github.io/dz_portal/" target="_blank" class="facebook"><i class="fab fa-facebook-f"></i></a>
-      <a href="https://twitter.com/intent/tweet?url=https://imadtbn.github.io/dz_portal/&text=بوابة+الخدمات+الرقمية+في+الجزائر" target="_blank" class="twitter"><i class="fab fa-x-twitter"></i></a>
+      <a href="https://twitter.com/intent/tweet?url=https://imadtbn.github.io/dz_portal/&text=بوابة+الخدمات+الرقمية+في+الجزائر" target="_blank" class="twitter"><i class="fa-brands fa-x-twitter"></i></a>
       <a href="https://www.snapchat.com/scan?attachmentUrl=https://imadtbn.github.io/dz_portal/" target="_blank" class="snapchat"><i class="fab fa-snapchat-ghost"></i></a>
     </div>
   </div>
@@ -1462,61 +1462,63 @@ img.logo {
   display: none;
   position: fixed;
   z-index: 10000;
-  bottom: 20px;
-  right: 20px;
-  background: none; /* إزالة الخلفية السوداء */
-  animation: floatUp 0.8s ease-out;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  animation: fadeIn 0.5s ease-out;
 }
 
-@keyframes floatUp {
-  from { transform: translateY(50px); opacity: 0; }
-  to { transform: translateY(0); opacity: 1; }
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
 .share-modal-content {
-  background: #fff;
-  padding: 20px;
+  background: rgba(255,255,255,0.9); /* خلفية شفافة قليلا */
+  padding: 18px;
   border-radius: 14px;
-  max-width: 320px;
-  width: 90%;
+  max-width: 280px;   /* تصغير حجم النافذة */
+  width: 85%;
   text-align: center;
   position: relative;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-  animation: bounce 2s infinite;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.2);
 }
 
-@keyframes bounce {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-6px); }
+.share-modal-content h2 {
+  font-size: 1em;
+  margin: 0 35px;
+  color: #333;
 }
 
 .close-btn {
   position: absolute;
-  top: 10px; left: 10px;
-  font-size: 22px;
+  top: 8px; right: 10px;
+  font-size: 26px;
   cursor: pointer;
-  color: #555;
+  color: #d40000;
+  font-weight: bold;
+  transition: transform 0.2s;
 }
+.close-btn:hover { transform: scale(1.2); }
 
 .social-icons {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 15px;
-  margin-top: 20px;
+  gap: 12px;
+  margin-top: 15px;
 }
 
 .social-icons a {
-  width: 50px; height: 50px;
+  width: 44px; height: 44px;
   border-radius: 50%;
   display: flex;
   justify-content: center; align-items: center;
-  color: #fff; font-size: 22px;
-  transition: transform 0.3s;
+  color: #fff; font-size: 20px;
+  transition: transform 0.25s, box-shadow 0.25s;
 }
-
 .social-icons a:hover {
-  transform: scale(1.1);
+  transform: scale(1.15);
+  box-shadow: 0 3px 8px rgba(0,0,0,0.25);
 }
 
 .telegram { background: #0088cc; }
@@ -1526,11 +1528,6 @@ img.logo {
 .facebook { background: #1877f2; }
 .twitter { background: #000; }
 .snapchat { background: #fffc00; color: #000; }
-
-@media(max-width:480px){
-  .share-modal-content { width: 92%; }
-  .social-icons a { width: 45px; height: 45px; font-size: 20px; }
-}
 </style>
 
 <!-- JavaScript -->
