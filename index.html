@@ -23,93 +23,95 @@
 
 <!-- Structured Data -->
 <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "WebSite",
-      "@id": "https://imadtbn.github.io/dz_portal/#website",
-      "url": "https://imadtbn.github.io/dz_portal/",
-      "name": "البوابة الجزائرية للخدمات الرقمية",
-      "alternateName": "DZ e-Services Portal",
-      "inLanguage": "ar",
-      "description": "موقع موحد يضم روابط إلى جميع الخدمات الإلكترونية الرقمية الحكومية الجزائرية: التعليم، الجباية، العدالة، البريد، وغيرها.",
-      "image": "https://imadtbn.github.io/dz_portal/preview.png",
-      "potentialAction": {
-        "@type": "SearchAction",
-        "target": "https://imadtbn.github.io/dz_portal/?q={search_term_string}",
-        "query-input": "required name=search_term_string"
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://imadtbn.github.io/dz_portal/#website",
+        "url": "https://imadtbn.github.io/dz_portal/",
+        "name": "البوابة الجزائرية للخدمات الرقمية",
+        "alternateName": "DZ e-Services Portal",
+        "inLanguage": "ar",
+        "description": "موقع موحد يضم روابط إلى جميع الخدمات الإلكترونية الرقمية الحكومية الجزائرية: التعليم، الجباية، العدالة، البريد، وغيرها.",
+        "image": "https://imadtbn.github.io/dz_portal/preview.png",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://imadtbn.github.io/dz_portal/?q={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
+      },
+      {
+        "@type": "GovernmentOrganization",
+        "@id": "https://imadtbn.github.io/dz_portal/#organization",
+        "name": "الجمهورية الجزائرية الديمقراطية الشعبية",
+        "url": "https://www.el-mouradia.dz/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://imadtbn.github.io/dz_portal/logo.png"
+        },
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "contactType": "customer service",
+          "areaServed": "DZ",
+          "availableLanguage": ["ar", "fr"]
+        },
+        "address": { 
+          "@type": "PostalAddress", 
+          "addressCountry": "DZ" 
+        },
+        "sameAs": ["https://www.el-mouradia.dz/"]
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://imadtbn.github.io/dz_portal/#webpage",
+        "url": "https://imadtbn.github.io/dz_portal/",
+        "name": "الصفحة الرئيسية",
+        "isPartOf": { "@id": "https://imadtbn.github.io/dz_portal/#website" },
+        "about": { "@id": "https://imadtbn.github.io/dz_portal/#organization" },
+        "inLanguage": "ar",
+        "image": "https://imadtbn.github.io/dz_portal/preview.png"
+      },
+      {
+        "@type": "ItemList",
+        "@id": "https://imadtbn.github.io/dz_portal/#services-list",
+        "name": "قائمة الخدمات الرقمية الحكومية الجزائرية",
+        "description": "تضم هذه القائمة كافة الخدمات الرقمية الحكومية المتاحة في الجزائر",
+        "numberOfItems": 27,
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "item": { "@type": "Service", "name": "خدمات الدفع الإلكتروني للفواتير", "url": "https://imadtbn.github.io/dz_portal/#toggle-payment", "provider": { "@type": "Organization", "name": "الجزائرية للمياه (ADE)" }, "contactPoint": { "@type": "ContactPoint", "contactType": "customer service" } } },
+          { "@type": "ListItem", "position": 2, "item": { "@type": "Service", "name": "خدمات تعبئة الهاتف النقال", "url": "https://imadtbn.github.io/dz_portal/#toggle-recharge", "provider": { "@type": "Organization", "name": "موبيليس" }, "contactPoint": { "@type": "ContactPoint", "contactType": "customer service" } } },
+          { "@type": "ListItem", "position": 3, "item": { "@type": "Service", "name": "خدمات بريد الجزائر", "url": "https://imadtbn.github.io/dz_portal/#toggle-post", "provider": { "@type": "Organization", "name": "بريد الجزائر" }, "contactPoint": { "@type": "ContactPoint", "contactType": "customer service" } } },
+          { "@type": "ListItem", "position": 4, "item": { "@type": "Service", "name": "خدمات إتصالات الجزائر", "url": "https://imadtbn.github.io/dz_portal/#toggle-telecom", "provider": { "@type": "Organization", "name": "إتصالات الجزائر" }, "contactPoint": { "@type": "ContactPoint", "contactType": "customer service" } } },
+          { "@type": "ListItem", "position": 5, "item": { "@type": "Service", "name": "التربية والتعليم", "url": "https://imadtbn.github.io/dz_portal/#toggle-education", "provider": { "@type": "GovernmentOrganization", "name": "وزارة التربية الوطنية" }, "contactPoint": { "@type": "ContactPoint", "contactType": "customer service" } } },
+          { "@type": "ListItem", "position": 6, "item": { "@type": "Service", "name": "الخدمات الجامعية", "url": "https://imadtbn.github.io/dz_portal/#toggle-10", "provider": { "@type": "GovernmentOrganization", "name": "وزارة التعليم العالي والبحث العلمي" }, "contactPoint": { "@type": "ContactPoint", "contactType": "customer service" } } },
+          { "@type": "ListItem", "position": 7, "item": { "@type": "Service", "name": "التكوين والتعليم المهنيين", "url": "https://imadtbn.github.io/dz_portal/#toggle-vocational", "provider": { "@type": "GovernmentOrganization", "name": "وزارة التكوين والتعليم المهنيين" }, "contactPoint": { "@type": "ContactPoint", "contactType": "customer service" } } },
+          { "@type": "ListItem", "position": 8, "item": { "@type": "Service", "name": "خدمات الإدارة المحلية", "url": "https://imadtbn.github.io/dz_portal/#toggle-admin", "provider": { "@type": "GovernmentOrganization", "name": "وزارة الداخلية" }, "contactPoint": { "@type": "ContactPoint", "contactType": "customer service" } } },
+          { "@type": "ListItem", "position": 9, "item": { "@type": "Service", "name": "خدمات جبائية إلكترونية", "url": "https://imadtbn.github.io/dz_portal/#toggle-tax", "provider": { "@type": "GovernmentOrganization", "name": "وزارة المالية" }, "contactPoint": { "@type": "ContactPoint", "contactType": "customer service" } } },
+          { "@type": "ListItem", "position": 10, "item": { "@type": "Service", "name": "خدمات عقارية", "url": "https://imadtbn.github.io/dz_portal/#toggle-realestate", "provider": { "@type": "GovernmentOrganization", "name": "المديرية العامة للأملاك الوطنية" }, "contactPoint": { "@type": "ContactPoint", "contactType": "customer service" } } },
+          { "@type": "ListItem", "position": 11, "item": { "@type": "Service", "name": "خدمات وزارة الشؤون الخارجية", "url": "https://imadtbn.github.io/dz_portal/#toggle-admin", "provider": { "@type": "GovernmentOrganization", "name": "وزارة الشؤون الخارجية والجالية الوطنية بالخارج", "url": "https://www.mfa.gov.dz/", "logo": { "@type": "ImageObject", "url": "https://github.com/imadtbn/dz_portal/blob/main/icons/EXTERIEUR.webp?raw=true" } }, "contactPoint": { "@type": "ContactPoint", "contactType": "customer service" } } }
+          { "@type": "ListItem", "position": 12, "item": { "@type": "Service", "name": "الضمان الاجتماعي", "url": "https://imadtbn.github.io/dz_portal/#social-security", "provider": { "@type": "GovernmentOrganization", "name": "وزارة العمل والتشغيل والضمان الاجتماعي" }, "contactPoint": { "@type": "ContactPoint", "contactType": "customer service" } } },
+          { "@type": "ListItem", "position": 13, "item": { "@type": "Service", "name": "خدمات مع العدالة", "url": "https://imadtbn.github.io/dz_portal/#toggle-justice", "provider": { "@type": "GovernmentOrganization", "name": "وزارة العدل" }, "contactPoint": { "@type": "ContactPoint", "contactType": "customer service" } } },
+          { "@type": "ListItem", "position": 14, "item": { "@type": "Service", "name": "النقل وحجز تذاكر السفر", "url": "https://imadtbn.github.io/dz_portal/#toggle-12", "provider": { "@type": "GovernmentOrganization", "name": "وزارة النقل" }, "contactPoint": { "@type": "ContactPoint", "contactType": "customer service" } } },
+          { "@type": "ListItem", "position": 15, "item": { "@type": "Service", "name": "الوكالة الوطنية للتشغيل - ANEM", "url": "https://imadtbn.github.io/dz_portal/#toggle-11", "provider": { "@type": "GovernmentOrganization", "name": "الوكالة الوطنية للتشغيل" }, "contactPoint": { "@type": "ContactPoint", "contactType": "customer service" } } },
+          { "@type": "ListItem", "position": 16, "item": { "@type": "Service", "name": "الخدمات الصحية", "url": "https://imadtbn.github.io/dz_portal/#toggle-4", "provider": { "@type": "GovernmentOrganization", "name": "وزارة الصحة" }, "contactPoint": { "@type": "ContactPoint", "contactType": "customer service" } } },
+          { "@type": "ListItem", "position": 17, "item": { "@type": "Service", "name": "خدمات وزارة التجارة الجزائرية", "url": "https://imadtbn.github.io/dz_portal/#toggle-commerce", "provider": { "@type": "GovernmentOrganization", "name": "وزارة التجارة" }, "contactPoint": { "@type": "ContactPoint", "contactType": "customer service" } } },
+          { "@type": "ListItem", "position": 18, "item": { "@type": "Service", "name": "الجمارك الجزائرية", "url": "https://imadtbn.github.io/dz_portal/#toggle-11", "provider": { "@type": "GovernmentOrganization", "name": "الجمارك الجزائرية" }, "contactPoint": { "@type": "ContactPoint", "contactType": "customer service" } } },
+          { "@type": "ListItem", "position": 19, "item": { "@type": "Service", "name": "الوكالة الوطنية للمقاول الذاتي", "url": "https://imadtbn.github.io/dz_portal/#toggle-10", "provider": { "@type": "GovernmentOrganization", "name": "الوكالة الوطنية للمقاول الذاتي" }, "contactPoint": { "@type": "ContactPoint", "contactType": "customer service" } } },
+          { "@type": "ListItem", "position": 20, "item": { "@type": "Service", "name": "فضاءات ووكالات", "url": "https://imadtbn.github.io/dz_portal/#toggle-14", "provider": { "@type": "GovernmentOrganization", "name": "المديرية العامة للوكالات" }, "contactPoint": { "@type": "ContactPoint", "contactType": "customer service" } } },
+          { "@type": "ListItem", "position": 21, "item": { "@type": "Service", "name": "خدمات البنوك الجزائرية", "url": "https://imadtbn.github.io/dz_portal/#toggle-13", "provider": { "@type": "Organization", "name": "البنوك الجزائرية" }, "contactPoint": { "@type": "ContactPoint", "contactType": "customer service" } } },
+          { "@type": "ListItem", "position": 22, "item": { "@type": "Service", "name": "الخدمات الرقمية للشركات", "url": "https://imadtbn.github.io/dz_portal/#toggle-15", "provider": { "@type": "GovernmentOrganization", "name": "وزارة الصناعة" }, "contactPoint": { "@type": "ContactPoint", "contactType": "customer service" } } },
+          { "@type": "ListItem", "position": 23, "item": { "@type": "Service", "name": "خدمات السكن", "url": "https://imadtbn.github.io/dz_portal/#toggle-16", "provider": { "@type": "GovernmentOrganization", "name": "وزارة السكن والعمران" }, "contactPoint": { "@type": "ContactPoint", "contactType": "customer service" } } },
+          { "@type": "ListItem", "position": 24, "item": { "@type": "Service", "name": "خدمات المنح الطلابية", "url": "https://imadtbn.github.io/dz_portal/#toggle-17", "provider": { "@type": "GovernmentOrganization", "name": "وزارة التعليم العالي" }, "contactPoint": { "@type": "ContactPoint", "contactType": "customer service" } } },
+          { "@type": "ListItem", "position": 25, "item": { "@type": "Service", "name": "شهادات الميلاد والوثائق الرسمية", "url": "https://imadtbn.github.io/dz_portal/#toggle-18", "provider": { "@type": "GovernmentOrganization", "name": "وزارة الداخلية" }, "contactPoint": { "@type": "ContactPoint", "contactType": "customer service" } } },
+          { "@type": "ListItem", "position": 26, "item": { "@type": "Service", "name": "التصاريح والبطاقات البيومترية", "url": "https://imadtbn.github.io/dz_portal/#toggle-19", "provider": { "@type": "GovernmentOrganization", "name": "وزارة الداخلية" }, "contactPoint": { "@type": "ContactPoint", "contactType": "customer service" } } },
+          { "@type": "ListItem", "position": 27, "item": { "@type": "Service", "name": "خدمات التأمينات", "url": "https://imadtbn.github.io/dz_portal/#toggle-20", "provider": { "@type": "Organization", "name": "شركات التأمين" }, "contactPoint": { "@type": "ContactPoint", "contactType": "customer service" } } }
+        ]
       }
-    },
-    {
-      "@type": "GovernmentOrganization",
-      "@id": "https://imadtbn.github.io/dz_portal/#organization",
-      "name": "الجمهورية الجزائرية الديمقراطية الشعبية",
-      "url": "https://www.el-mouradia.dz/",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://imadtbn.github.io/dz_portal/logo.png"
-      },
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "contactType": "customer service",
-        "areaServed": "DZ",
-        "availableLanguage": ["ar", "fr"]
-      },
-      "address": { 
-        "@type": "PostalAddress", 
-        "addressCountry": "DZ" 
-      },
-      "sameAs": ["https://www.el-mouradia.dz/"]
-    },
-    {
-      "@type": "WebPage",
-      "@id": "https://imadtbn.github.io/dz_portal/#webpage",
-      "url": "https://imadtbn.github.io/dz_portal/",
-      "name": "الصفحة الرئيسية",
-      "isPartOf": { "@id": "https://imadtbn.github.io/dz_portal/#website" },
-      "about": { "@id": "https://imadtbn.github.io/dz_portal/#organization" },
-      "inLanguage": "ar",
-      "image": "https://imadtbn.github.io/dz_portal/preview.png"
-    },
-    {
-      "@type": "ItemList",
-      "@id": "https://imadtbn.github.io/dz_portal/#services-list",
-      "name": "قائمة الخدمات الرقمية الحكومية الجزائرية",
-      "description": "تضم هذه القائمة كافة الخدمات الرقمية الحكومية المتاحة في الجزائر",
-      "numberOfItems": 26,
-      "itemListElement": [
-        { "@type": "ListItem", "position": 1, "item": { "@type": "Service", "name": "خدمات الدفع الإلكتروني للفواتير", "url": "https://imadtbn.github.io/dz_portal/#toggle-payment", "provider": { "@type": "Organization", "name": "الجزائرية للمياه (ADE)" }, "contactPoint": { "@type": "ContactPoint", "contactType": "customer service" } } },
-        { "@type": "ListItem", "position": 2, "item": { "@type": "Service", "name": "خدمات تعبئة الهاتف النقال", "url": "https://imadtbn.github.io/dz_portal/#toggle-recharge", "provider": { "@type": "Organization", "name": "موبيليس" }, "contactPoint": { "@type": "ContactPoint", "contactType": "customer service" } } },
-        { "@type": "ListItem", "position": 3, "item": { "@type": "Service", "name": "خدمات بريد الجزائر", "url": "https://imadtbn.github.io/dz_portal/#toggle-post", "provider": { "@type": "Organization", "name": "بريد الجزائر" }, "contactPoint": { "@type": "ContactPoint", "contactType": "customer service" } } },
-        { "@type": "ListItem", "position": 4, "item": { "@type": "Service", "name": "خدمات إتصالات الجزائر", "url": "https://imadtbn.github.io/dz_portal/#toggle-telecom", "provider": { "@type": "Organization", "name": "إتصالات الجزائر" }, "contactPoint": { "@type": "ContactPoint", "contactType": "customer service" } } },
-        { "@type": "ListItem", "position": 5, "item": { "@type": "Service", "name": "التربية والتعليم", "url": "https://imadtbn.github.io/dz_portal/#toggle-education", "provider": { "@type": "GovernmentOrganization", "name": "وزارة التربية الوطنية" }, "contactPoint": { "@type": "ContactPoint", "contactType": "customer service" } } },
-        { "@type": "ListItem", "position": 6, "item": { "@type": "Service", "name": "الخدمات الجامعية", "url": "https://imadtbn.github.io/dz_portal/#toggle-10", "provider": { "@type": "GovernmentOrganization", "name": "وزارة التعليم العالي والبحث العلمي" }, "contactPoint": { "@type": "ContactPoint", "contactType": "customer service" } } },
-        { "@type": "ListItem", "position": 7, "item": { "@type": "Service", "name": "التكوين والتعليم المهنيين", "url": "https://imadtbn.github.io/dz_portal/#toggle-vocational", "provider": { "@type": "GovernmentOrganization", "name": "وزارة التكوين والتعليم المهنيين" }, "contactPoint": { "@type": "ContactPoint", "contactType": "customer service" } } },
-        { "@type": "ListItem", "position": 8, "item": { "@type": "Service", "name": "خدمات الإدارة المحلية", "url": "https://imadtbn.github.io/dz_portal/#toggle-admin", "provider": { "@type": "GovernmentOrganization", "name": "وزارة الداخلية" }, "contactPoint": { "@type": "ContactPoint", "contactType": "customer service" } } },
-        { "@type": "ListItem", "position": 9, "item": { "@type": "Service", "name": "خدمات جبائية إلكترونية", "url": "https://imadtbn.github.io/dz_portal/#toggle-tax", "provider": { "@type": "GovernmentOrganization", "name": "وزارة المالية" }, "contactPoint": { "@type": "ContactPoint", "contactType": "customer service" } } },
-        { "@type": "ListItem", "position": 10, "item": { "@type": "Service", "name": "خدمات عقارية", "url": "https://imadtbn.github.io/dz_portal/#toggle-realestate", "provider": { "@type": "GovernmentOrganization", "name": "المديرية العامة للأملاك الوطنية" }, "contactPoint": { "@type": "ContactPoint", "contactType": "customer service" } } },
-        { "@type": "ListItem", "position": 11, "item": { "@type": "Service", "name": "الضمان الاجتماعي", "url": "https://imadtbn.github.io/dz_portal/#social-security", "provider": { "@type": "GovernmentOrganization", "name": "وزارة العمل والتشغيل والضمان الاجتماعي" }, "contactPoint": { "@type": "ContactPoint", "contactType": "customer service" } } },
-        { "@type": "ListItem", "position": 12, "item": { "@type": "Service", "name": "خدمات مع العدالة", "url": "https://imadtbn.github.io/dz_portal/#toggle-justice", "provider": { "@type": "GovernmentOrganization", "name": "وزارة العدل" }, "contactPoint": { "@type": "ContactPoint", "contactType": "customer service" } } },
-        { "@type": "ListItem", "position": 13, "item": { "@type": "Service", "name": "النقل وحجز تذاكر السفر", "url": "https://imadtbn.github.io/dz_portal/#toggle-12", "provider": { "@type": "GovernmentOrganization", "name": "وزارة النقل" }, "contactPoint": { "@type": "ContactPoint", "contactType": "customer service" } } },
-        { "@type": "ListItem", "position": 14, "item": { "@type": "Service", "name": "الوكالة الوطنية للتشغيل - ANEM", "url": "https://imadtbn.github.io/dz_portal/#toggle-11", "provider": { "@type": "GovernmentOrganization", "name": "الوكالة الوطنية للتشغيل" }, "contactPoint": { "@type": "ContactPoint", "contactType": "customer service" } } },
-        { "@type": "ListItem", "position": 15, "item": { "@type": "Service", "name": "الخدمات الصحية", "url": "https://imadtbn.github.io/dz_portal/#toggle-4", "provider": { "@type": "GovernmentOrganization", "name": "وزارة الصحة" }, "contactPoint": { "@type": "ContactPoint", "contactType": "customer service" } } },
-        { "@type": "ListItem", "position": 16, "item": { "@type": "Service", "name": "خدمات وزارة التجارة الجزائرية", "url": "https://imadtbn.github.io/dz_portal/#toggle-commerce", "provider": { "@type": "GovernmentOrganization", "name": "وزارة التجارة" }, "contactPoint": { "@type": "ContactPoint", "contactType": "customer service" } } },
-        { "@type": "ListItem", "position": 17, "item": { "@type": "Service", "name": "الجمارك الجزائرية", "url": "https://imadtbn.github.io/dz_portal/#toggle-11", "provider": { "@type": "GovernmentOrganization", "name": "الجمارك الجزائرية" }, "contactPoint": { "@type": "ContactPoint", "contactType": "customer service" } } },
-        { "@type": "ListItem", "position": 18, "item": { "@type": "Service", "name": "الوكالة الوطنية للمقاول الذاتي", "url": "https://imadtbn.github.io/dz_portal/#toggle-10", "provider": { "@type": "GovernmentOrganization", "name": "الوكالة الوطنية للمقاول الذاتي" }, "contactPoint": { "@type": "ContactPoint", "contactType": "customer service" } } },
-        { "@type": "ListItem", "position": 19, "item": { "@type": "Service", "name": "فضاءات ووكالات", "url": "https://imadtbn.github.io/dz_portal/#toggle-14", "provider": { "@type": "GovernmentOrganization", "name": "المديرية العامة للوكالات" }, "contactPoint": { "@type": "ContactPoint", "contactType": "customer service" } } },
-        { "@type": "ListItem", "position": 20, "item": { "@type": "Service", "name": "خدمات البنوك الجزائرية", "url": "https://imadtbn.github.io/dz_portal/#toggle-13", "provider": { "@type": "Organization", "name": "البنوك الجزائرية" }, "contactPoint": { "@type": "ContactPoint", "contactType": "customer service" } } },
-        { "@type": "ListItem", "position": 21, "item": { "@type": "Service", "name": "الخدمات الرقمية للشركات", "url": "https://imadtbn.github.io/dz_portal/#toggle-15", "provider": { "@type": "GovernmentOrganization", "name": "وزارة الصناعة" }, "contactPoint": { "@type": "ContactPoint", "contactType": "customer service" } } },
-        { "@type": "ListItem", "position": 22, "item": { "@type": "Service", "name": "خدمات السكن", "url": "https://imadtbn.github.io/dz_portal/#toggle-16", "provider": { "@type": "GovernmentOrganization", "name": "وزارة السكن والعمران" }, "contactPoint": { "@type": "ContactPoint", "contactType": "customer service" } } },
-        { "@type": "ListItem", "position": 23, "item": { "@type": "Service", "name": "خدمات المنح الطلابية", "url": "https://imadtbn.github.io/dz_portal/#toggle-17", "provider": { "@type": "GovernmentOrganization", "name": "وزارة التعليم العالي" }, "contactPoint": { "@type": "ContactPoint", "contactType": "customer service" } } },
-        { "@type": "ListItem", "position": 24, "item": { "@type": "Service", "name": "شهادات الميلاد والوثائق الرسمية", "url": "https://imadtbn.github.io/dz_portal/#toggle-18", "provider": { "@type": "GovernmentOrganization", "name": "وزارة الداخلية" }, "contactPoint": { "@type": "ContactPoint", "contactType": "customer service" } } },
-        { "@type": "ListItem", "position": 25, "item": { "@type": "Service", "name": "التصاريح والبطاقات البيومترية", "url": "https://imadtbn.github.io/dz_portal/#toggle-19", "provider": { "@type": "GovernmentOrganization", "name": "وزارة الداخلية" }, "contactPoint": { "@type": "ContactPoint", "contactType": "customer service" } } },
-        { "@type": "ListItem", "position": 26, "item": { "@type": "Service", "name": "خدمات التأمينات", "url": "https://imadtbn.github.io/dz_portal/#toggle-20", "provider": { "@type": "Organization", "name": "شركات التأمين" }, "contactPoint": { "@type": "ContactPoint", "contactType": "customer service" } } }
-      ]
-    }
-  ]
-}
-</script>
+    ]
+  }
+  </script>
+  
 <!-- الوصف الرسمي لمحركات البحث -->
 <meta name="description"
   content="البوابة الجزائرية للخدمات الرقمية: بريد الجزائر، البطاقة الذهبية، اتصالات الجزائر، سونلغاز، دفع الفواتير، نتائج البكالوريا، التسجيل الجامعي، التكوين المهني، شهادة الميلاد والبطاقة البيومترية، الضرائب، السكن، الضمان الاجتماعي، منحة البطالة، البنوك، التأمينات، الجمارك، وأرقام الطوارئ.">
@@ -571,7 +573,7 @@ img.logo {
   .nav-scroller {
     position: relative;
     z-index: 2;
-    height: 60px;
+    height: 75px;
     overflow: hidden;
     margin: 20px 0;
     direction: ltr;
@@ -865,128 +867,22 @@ img.logo {
   <i class="fas fa-share-alt" style="margin-left: 5px;"></i> شارك البوابة
 </button>
       
-<!-- النافذة المنبثقة -->
-<div id="shareModal" class="share-modal">
-  <div class="share-modal-content">
-    <span class="close-btn" onclick="closeShareModal()">&times;</span>
-    <h2>مشاركة</h2>
-    <div class="social-icons">
-      <a href="https://api.whatsapp.com/send?text=https://imadtbn.github.io/dz_portal/" target="_blank" class="whatsapp"><i class="fab fa-whatsapp"></i></a>
-      <a href="viber://forward?text=https://imadtbn.github.io/dz_portal/" target="_blank" class="viber"><i class="fab fa-viber"></i></a>
-      <a href="https://www.instagram.com/" target="_blank" class="instagram"><i class="fab fa-instagram"></i></a>
-      <a href="https://www.facebook.com/sharer/sharer.php?u=https://imadtbn.github.io/dz_portal/" target="_blank" class="facebook"><i class="fab fa-facebook-f"></i></a>
-    </div>
-  </div>
-</div>
-
-<!-- CSS -->
-<style>
-.share-modal {
-  display: none;
-  position: fixed;
-  z-index: 10000;
-  top: 50%; left: 50%;
-  transform: translate(-50%, -50%);
-  animation: fadeIn 0.5s ease-out;
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; transform: translate(-50%, -40%); }
-  to { opacity: 1; transform: translate(-50%, -50%); }
-}
-
-.share-modal-content {
-  background: rgba(255,255,255,0.92); /* خلفية شفافة قليلا */
-  padding: 18px 16px;
-  border-radius: 16px;
-  max-width: 260px;   /* حجم أصغر */
-  width: 85%;
-  text-align: center;
-  position: relative;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.25);
-}
-
-.share-modal-content h2 {
-  font-size: 1em;
-  margin: 0 35px;
-  color: #333;
-  line-height: 1.4;
-}
-
-.close-btn {
-  position: absolute;
-  top: 8px; right: 12px;
-  font-size: 28px;
-  cursor: pointer;
-  color: #d40000;
-  font-weight: bold;
-  transition: transform 0.2s, color 0.2s;
-}
-.close-btn:hover { transform: scale(1.2); color: #a30000; }
-
-.social-icons {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 12px;
-  margin-top: 15px;
-}
-
-.social-icons a {
-  width: 42px; height: 42px;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center; align-items: center;
-  color: #fff; font-size: 20px;
-  transition: transform 0.25s, box-shadow 0.25s;
-}
-.social-icons a:hover {
-  transform: scale(1.15);
-  box-shadow: 0 3px 8px rgba(0,0,0,0.25);
-}
-
-.telegram { background: #0088cc; }
-.whatsapp { background: #25d366; }
-.viber { background: #7360f2; }
-.instagram { background: #e1306c; }
-.facebook { background: #1877f2; }
-.twitter { background: #000; }
-.snapchat { background: #fffc00; color: #000; }
-</style>
-
-<!-- JavaScript -->
-<script>
-function openShareModal(){
-  document.getElementById("shareModal").style.display="block";
-}
-function closeShareModal(){
-  document.getElementById("shareModal").style.display="none";
-}
-
-// فتح النافذة تلقائياً بعد 10 ثواني
-document.addEventListener("DOMContentLoaded", function() {
-  setTimeout(function(){
-    document.getElementById("shareModal").style.display = "block";
-  }, 10000);
-});
-</script>
-
       <!-- المميزات الأساسية -->
       <div class="welcome-stats">
         <div class="stat-box">
           <i class="fas fa-folder-open stat-icon"></i>
           <div class="stat-title">عدد الأقسام</div>
-          <div class="stat-value">25</div>
+          <div class="stat-value">27</div>
         </div>
         <div class="stat-box">
           <i class="fas fa-laptop stat-icon"></i>
           <div class="stat-title">الخدمات الرقمية</div>
-          <div class="stat-value">250+</div>
+          <div class="stat-value">260+</div>
         </div>
         <div class="stat-box">
           <i class="fas fa-shield-alt stat-icon"></i>
           <div class="stat-title">آمنة وموثوقة</div>
-          <div class="stat-value" style="font-size: 0.9em;">بيئة محمية</div>
+          <div class="stat-value" style="font-size: 1em;">بيئة محمية</div>
         </div>
       </div>
 
@@ -1012,6 +908,7 @@ document.addEventListener("DOMContentLoaded", function() {
         { id: 'toggle-10', name: 'الخدمات الجامعية', icon: 'fa-university' },
         { id: 'toggle-vocational', name: 'التكوين المهني', icon: 'fa-tools' },
         { id: 'toggle-admin', name: 'الإدارة المحلية', icon: 'fa-building' },
+        { id: 'toggle-admin', name: 'الشؤون الخارجية', icon: 'fa-flag' },
         { id: 'toggle-tax', name: 'الخدمات الجبائية', icon: 'fa-file-invoice-dollar' },
         { id: 'toggle-realestate', name: 'العقار', icon: 'fa-home' },
         { id: 'social-security', name: 'الضمان الاجتماعي', icon: 'fa-shield-alt' },
@@ -1053,8 +950,7 @@ document.addEventListener("DOMContentLoaded", function() {
     document.addEventListener('DOMContentLoaded', createNavigationBar);
   </script>
   
-  
-  <!-- قسم الدفع الإلكتروني للفواتير -->
+    <!-- قسم الدفع الإلكتروني للفواتير -->
   <section dir="rtl" style="text-align: right;">
     <h2 id="toggle-payment" onclick="toggleSection('payment-section', this)"
       style="cursor: pointer; background-color: #a52a2a; color: white; padding: 10px; border-radius: 8px;">
@@ -1168,6 +1064,14 @@ document.addEventListener("DOMContentLoaded", function() {
         <i class="fas fa-box" style="color: #006400; margin-left:6px;"></i>
         <a href="https://aptracking.poste.dz/" target="_blank">تتبع الطرود البريدية</a>
       </li>
+
+      <li>
+        <i class="fas fa-file-signature"></i>
+        <a href="https://tasdik.poste.dz/" target="_blank">
+          ترحيل الوثائق للتصديق عبر بريد الجزائر
+        </a>
+      </li>
+
     </ul>
 
     <!-- رقم الهاتف أسفل القسم -->
@@ -1705,41 +1609,57 @@ document.addEventListener("DOMContentLoaded", function() {
     </div>
   </section>
 
-    <!-- قسم خدمات وزارة الخارجية -->
-    <section dir="rtl" style="text-align: right;">
-      <h2 id="toggle-admin" onclick="toggleSection('admin-section', this)"
-        style="cursor: pointer; background-color: #006233; color: white; padding: 10px; border-radius: 8px;">
-        <span><img src="https://github.com/imadtbn/dz_portal/blob/main/icons/EXTERIEUR.webp?raw=true" alt="admin Logo"
-            class="logo">
-            وزارة الشؤون الخارجية <span class="count"></span></span>
-        <span class="toggle-icon" style="float: left;">▶</span>
-      </h2>
-  
-      <ul id="admin-section"
-        style="display: none; list-style: none; padding-right: 20px; line-height: 2; text-align: right;">
-  
-        <li>
-          <i class="fas fa-file-signature" style="color: green; margin-left:6px;"></i>
-          <a href="https://tasdik.poste.dz/" target="_blank">
-            ترحيل الوثائق المراد التصديق عليها عبر بريد الجزائر
-          </a>
-        </li>
+<!-- قسم خدمات وزارة الشؤون الخارجية -->
+<section dir="rtl">
+  <h2 id="toggle-admin" onclick="toggleSection('admin-section', this)">
+    <span>
+      <img src="https://github.com/imadtbn/dz_portal/blob/main/icons/EXTERIEUR.webp?raw=true" 
+           alt="وزارة الخارجية" class="logo">
+      وزارة الشؤون الخارجية <span class="count"></span>
+    </span>
+    <span class="toggle-icon">▶</span>
+  </h2>
 
-        <li>
-          <i class="fas fa-envelope" style="color: green; margin-left:6px;"></i>
-          <a href="https://www.mfa.gov.dz/ar/contact" target="_blank">
-            اكتب إلى كاتب الدولة مكلّف بالجالية الوطنية بالخارج
-          </a>
-        </li>
-      </ul>
-  
-      <!-- رقم الهاتف أسفل القسم -->
-      <div style="margin-top:10px; padding-right:5px;">
-        <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
-        <strong>وزارة الشؤون الخارجية:</strong>
-        <a href="tel:+213 21 50 45 45">+213 21 50 45 45</a>
-      </div>
-    </section>
+  <ul id="admin-section">
+    <li>
+      <i class="fas fa-file-signature"></i>
+      <a href="https://tasdik.poste.dz/" target="_blank">
+        ترحيل الوثائق للتصديق عبر بريد الجزائر
+      </a>
+    </li>
+    <li>
+      <i class="fas fa-envelope-open-text"></i>
+      <a href="https://www.mfa.gov.dz/ar/contact" target="_blank">
+        اكتب إلى كاتب الدولة مكلف بالجالية بالخارج
+      </a>
+    </li>
+    <li>
+      <i class="fas fa-flag"></i>
+      <a href="https://www.mfa.gov.dz/ar/embassys-locations-list" target="_blank">
+        الممثليات الدبلوماسية والقنصلية الجزائرية بالخارج
+      </a>
+    </li>
+    <li>
+      <i class="fas fa-landmark"></i>
+      <a href="https://www.mfa.gov.dz/ar/foreign-diplomatic-and-consular-representations-in-algeria" target="_blank">
+        الممثليات الدبلوماسية الأجنبية بالجزائر
+      </a>
+    </li>
+    <li>
+      <i class="fas fa-globe"></i>
+      <a href="https://www.mfa.gov.dz/ar/international-and-regional-organizations-in-algeria" target="_blank">
+        المنظمات الدولية والإقليمية في الجزائر
+      </a>
+    </li>
+  </ul>
+
+  <!-- رقم الهاتف أسفل القسم -->
+  <div style="margin-top:10px; padding:8px; background:#f9f9f9; border-top:1px solid #ddd;">
+    <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
+    <strong>وزارة الشؤون الخارجية</strong> 
+    <a href="tel:+21321504545">+213 21 50 45 45</a>
+  </div>
+</section>
 
   <!-- قسم الضمان الاجتماعي -->
   <section dir="rtl" style="text-align: right;">
@@ -2634,7 +2554,6 @@ document.addEventListener("DOMContentLoaded", function() {
     </ul>
   </section>
 
-
   <!-- قسم معلومات الاتصال -->
   <section dir="rtl" style="text-align: right;">
     <h2 id="toggle-14" onclick="toggleSection('contact-info', this)"
@@ -2879,7 +2798,6 @@ document.addEventListener("DOMContentLoaded", function() {
     }, 1200);
     // ===== نهاية العداد =====
 
-
     /* ===========================
        6. الإشعارات (API Google Script)
        =========================== */
@@ -2919,8 +2837,6 @@ document.addEventListener("DOMContentLoaded", function() {
         "✅ تم تسجيل بريدك بنجاح. ستصلك آخر التحديثات.";
     }
     // ===== نهاية الاشتراك =====
-
-
     /* ===========================
        8. إرسال التعليقات
        =========================== */
@@ -2964,7 +2880,6 @@ document.addEventListener("DOMContentLoaded", function() {
     // ===== نهاية دعم لمس شريط الأخبار =====
 
     //---- زر المشاركة -->
-
     function sharePage() {
       if (navigator.share) {
         navigator.share({
@@ -2977,13 +2892,9 @@ document.addEventListener("DOMContentLoaded", function() {
       }
     }
     //---- زر المشاركة نهاية -->
-
-
-
     if ("serviceWorker" in navigator) {
       navigator.serviceWorker.register("/dz_portal/service-worker.js");
     }
-
   </script>
 </body>
 </html>
