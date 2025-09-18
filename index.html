@@ -1435,116 +1435,84 @@ img.logo {
   <i class="fas fa-share-alt" style="margin-left: 5px;"></i> شارك البوابة
 </button>
       
-<!-- النافذة المنبثقة -->
+      <!-- النافذة المنبثقة -->
 <div id="shareModal" class="share-modal">
   <div class="share-modal-content">
-    <span class="close-btn" onclick="closeShareModal()">&times;</span>
+    <button class="close-btn" onclick="closeShareModal()">&times;</button>
     <h2>ساهم في نشر الثقافة الرقمية</h2>
     <div class="social-icons">
-      <a href="https://t.me/share/url?url=https://imadtbn.github.io/dz_portal/" target="_blank" class="telegram"><i class="fab fa-telegram-plane"></i></a>
-      <a href="https://api.whatsapp.com/send?text=https://imadtbn.github.io/dz_portal/" target="_blank" class="whatsapp"><i class="fab fa-whatsapp"></i></a>
-      <a href="viber://forward?text=https://imadtbn.github.io/dz_portal/" target="_blank" class="viber"><i class="fab fa-viber"></i></a>
-      <a href="https://www.instagram.com/" target="_blank" class="instagram"><i class="fab fa-instagram"></i></a>
-      <a href="https://www.facebook.com/sharer/sharer.php?u=https://imadtbn.github.io/dz_portal/" target="_blank" class="facebook"><i class="fab fa-facebook-f"></i></a>
-      <a href="https://twitter.com/intent/tweet?url=https://imadtbn.github.io/dz_portal/&text=بوابة+الخدمات+الرقمية+في+الجزائر" target="_blank" class="twitter"><i class="fab fa-x-twitter"></i></a>
-      <a href="https://www.snapchat.com/scan?attachmentUrl=https://imadtbn.github.io/dz_portal/" target="_blank" class="snapchat"><i class="fab fa-snapchat-ghost"></i></a>
+      <!-- فيسبوك -->
+      <a href="https://www.facebook.com/sharer/sharer.php?u=URL" target="_blank">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <!-- إكس -->
+      <a href="https://twitter.com/intent/tweet?url=URL&text=شارك" target="_blank">
+        <i class="fa-brands fa-x-twitter"></i>
+      </a>
+      <!-- واتساب -->
+      <a href="https://wa.me/?text=URL" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+      </a>
     </div>
   </div>
 </div>
 
-<!-- CSS -->
 <style>
 .share-modal {
   display: none;
   position: fixed;
   z-index: 10000;
-  bottom: 20px;
-  right: 20px;
-  background: none; /* إزالة الخلفية السوداء */
-  animation: floatUp 0.8s ease-out;
-}
-
-@keyframes floatUp {
-  from { transform: translateY(50px); opacity: 0; }
-  to { transform: translateY(0); opacity: 1; }
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0,0,0,0.4); /* شفافية */
 }
 
 .share-modal-content {
-  background: #fff;
+  background-color: #fff;
+  margin: 10% auto;
   padding: 20px;
-  border-radius: 14px;
-  max-width: 320px;
-  width: 90%;
+  border: 2px solid #a52a2a;
+  border-radius: 0;  /* مربع */
+  width: 300px;
   text-align: center;
-  position: relative;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-  animation: bounce 2s infinite;
-}
-
-@keyframes bounce {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-6px); }
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
 }
 
 .close-btn {
-  position: absolute;
-  top: 10px; left: 10px;
-  font-size: 22px;
+  font-size: 28px;   /* تكبير */
+  font-weight: bold;
+  border: none;
+  background: none;
+  color: #a52a2a;
   cursor: pointer;
-  color: #555;
+  position: absolute;
+  top: 10px; right: 15px;
 }
 
-.social-icons {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 15px;
-  margin-top: 20px;
+.close-btn:hover {
+  color: #d40000;
 }
 
 .social-icons a {
-  width: 50px; height: 50px;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center; align-items: center;
-  color: #fff; font-size: 22px;
-  transition: transform 0.3s;
+  display: inline-block;
+  margin: 10px;
+  font-size: 28px;   /* تحسين عرض الأيقونات */
+  color: #006233;
 }
 
 .social-icons a:hover {
-  transform: scale(1.1);
-}
-
-.telegram { background: #0088cc; }
-.whatsapp { background: #25d366; }
-.viber { background: #7360f2; }
-.instagram { background: #e1306c; }
-.facebook { background: #1877f2; }
-.twitter { background: #000; }
-.snapchat { background: #fffc00; color: #000; }
-
-@media(max-width:480px){
-  .share-modal-content { width: 92%; }
-  .social-icons a { width: 45px; height: 45px; font-size: 20px; }
+  color: #d40000;
 }
 </style>
 
-<!-- JavaScript -->
 <script>
-function openShareModal(){
-  document.getElementById("shareModal").style.display="block";
+function openShareModal() {
+  document.getElementById("shareModal").style.display = "block";
 }
-function closeShareModal(){
-  document.getElementById("shareModal").style.display="none";
+function closeShareModal() {
+  document.getElementById("shareModal").style.display = "none";
 }
-
-// فتح النافذة تلقائياً بعد 10 ثواني
-document.addEventListener("DOMContentLoaded", function() {
-  setTimeout(function(){
-    document.getElementById("shareModal").style.display = "block";
-  }, 10000);
-});
-</script>      
+</script>
       
       <!-- المميزات الأساسية -->
       <div class="welcome-stats">
