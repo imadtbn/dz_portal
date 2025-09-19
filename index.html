@@ -770,33 +770,35 @@ img.logo {
   }
 
 /* ألوان العلامات التجارية */
-#share-facebook   { background:#1877f2; color:#fff; }
-#share-twitter    { background:#1da1f2; color:#fff; }
-#share-instagram  { background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888); color:#fff; }
-#share-telegram   { background:#0088cc; color:#fff; }
-#share-whatsapp   { background:#25d366; color:#fff; }
-#share-viber      { background:#7360f2; color:#fff; }
+#share-facebook   { background:#1877f2; }
+#share-twitter    { background:#1da1f2; }
+#share-instagram  { background:linear-gradient(135deg,#f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); }
+#share-telegram   { background:#0088cc; }
+#share-whatsapp   { background:#25d366; }
+#share-viber      { background:#7360f2; }
 
-/* تحسين الشكل */
-.share-row { display:flex; flex-direction:column; gap:10px; }
-.social-share { display:flex; flex-wrap:wrap; gap:12px; justify-content:center; }
+/* الشكل العصري */
 .share-btn {
-  width:48px; height:48px;
+  width:56px; height:56px;
   border-radius:50%;
   display:flex; align-items:center; justify-content:center;
   text-decoration:none;
-  box-shadow:0 2px 4px rgba(0,0,0,.15);
-  flex-shrink:0;
+  box-shadow:0 4px 8px rgba(0,0,0,.15);
+  transition:transform .2s ease, box-shadow .2s ease;
 }
-.share-btn .icon { width:22px; height:22px; fill:#fff; }
+.share-btn .icon { width:26px; height:26px; fill:#fff; }
 
-/* تحسين الهواتف الصغيرة */
+/* تأثير التحويم */
+.share-btn:hover {
+  transform:scale(1.1);
+  box-shadow:0 6px 14px rgba(0,0,0,.2);
+}
+
+/* تحسين الهواتف */
 @media (max-width:480px){
-  .share-btn { width:42px; height:42px; }
-  .share-btn .icon { width:20px; height:20px; }
-  .social-share { gap:10px; }
-    }
-  
+  .share-btn { width:48px; height:48px; }
+  .share-btn .icon { width:22px; height:22px; }
+}
 </style>
 
 </head>
