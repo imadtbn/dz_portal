@@ -768,6 +768,35 @@ img.logo {
       font-size: 0.6em;
     }
   }
+
+/* ألوان العلامات التجارية */
+#share-facebook   { background:#1877f2; color:#fff; }
+#share-twitter    { background:#1da1f2; color:#fff; }
+#share-instagram  { background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888); color:#fff; }
+#share-telegram   { background:#0088cc; color:#fff; }
+#share-whatsapp   { background:#25d366; color:#fff; }
+#share-viber      { background:#7360f2; color:#fff; }
+
+/* تحسين الشكل */
+.share-row { display:flex; flex-direction:column; gap:10px; }
+.social-share { display:flex; flex-wrap:wrap; gap:12px; justify-content:center; }
+.share-btn {
+  width:48px; height:48px;
+  border-radius:50%;
+  display:flex; align-items:center; justify-content:center;
+  text-decoration:none;
+  box-shadow:0 2px 4px rgba(0,0,0,.15);
+  flex-shrink:0;
+}
+.share-btn .icon { width:22px; height:22px; fill:#fff; }
+
+/* تحسين الهواتف الصغيرة */
+@media (max-width:480px){
+  .share-btn { width:42px; height:42px; }
+  .share-btn .icon { width:20px; height:20px; }
+  .social-share { gap:10px; }
+    }
+  
 </style>
 
 </head>
@@ -866,7 +895,104 @@ img.logo {
 <button onclick="sharePage()" class="share-button">
   <i class="fas fa-share-alt" style="margin-left: 5px;"></i> شارك البوابة
 </button>
-      
+      <!-- ضع هذا القسم تحت زر "مشاركة البوابة" -->
+<div id="portal-share-row" class="share-row">
+  <button class="share-trigger" aria-expanded="false" aria-controls="social-share">مشاركة البوابة ▾</button>
+
+  <div id="social-share" class="social-share" hidden>
+    <!-- Facebook -->
+    <a class="share-btn" id="share-facebook" aria-label="مشاركة على فيسبوك" title="فيسبوك" target="_blank" rel="noopener">
+      <!-- SVG فيسبوك -->
+      <svg viewBox="0 0 24 24" class="icon" aria-hidden="true"><path d="M22 12a10 10 0 1 0-11.5 9.9v-7H8.9v-2.9h1.6V9.1c0-1.6.9-2.5 2.3-2.5.7 0 1.4.1 1.4.1v1.6h-.8c-.8 0-1  .5-1 1v1.2h1.7l-.3 2.9h-1.4v7A10 10 0 0 0 22 12z"/></svg>
+    </a>
+
+    <!-- Twitter -->
+    <a class="share-btn" id="share-twitter" aria-label="مشاركة على تويتر" title="تويتر" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" class="icon" aria-hidden="true"><path d="M22 5.9c-.6.3-1.2.5-1.9.6.7-.4 1.2-1 1.4-1.8-.7.4-1.5.7-2.3.9-.7-.7-1.7-1.1-2.8-1.1-2.1 0-3.8 1.7-3.8 3.8 0 .3 0 .6.1.9-3.1-.2-5.9-1.6-7.7-3.8-.3.6-.4 1.2-.4 1.9 0 1.3.7 2.4 1.8 3-.6 0-1.1-.2-1.6-.5 0 1.8 1.3 3.3 3 3.6-.3.1-.7.1-1 .1-.3 0-.6 0-.9-.1.6 1.9 2.4 3.3 4.5 3.3-1.7 1.3-3.8 2.1-6.1 2.1H5c2.2 1.4 4.8 2.2 7.6 2.2 9.1 0 14.1-7.5 14.1-14.1v-.6c1-.7 1.7-1.6 2.2-2.6-.9.4-1.8.7-2.8.8z"/></svg>
+    </a>
+
+    <!-- Instagram (web has no direct share; falls back to copy) -->
+    <button class="share-btn" id="share-instagram" aria-label="مشاركة على إنستغرام" title="إنستغرام">
+      <svg viewBox="0 0 24 24" class="icon" aria-hidden="true"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm5 6.2A4.8 4.8 0 1 0 16.8 13 4.8 4.8 0 0 0 12 8.2zm6.1-2.6a1.1 1.1 0 1 0 1.1 1.1 1.1 1.1 0 0 0-1.1-1.1z"/></svg>
+    </button>
+
+    <!-- Telegram -->
+    <a class="share-btn" id="share-telegram" aria-label="مشاركة على تيليغرام" title="تيليغرام" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" class="icon" aria-hidden="true"><path d="M21 3L3 10.2l4.2 1.6L17 6l-7.6 8.6L13 21z"/></svg>
+    </a>
+
+    <!-- WhatsApp -->
+    <a class="share-btn" id="share-whatsapp" aria-label="مشاركة على واتساب" title="واتساب" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" class="icon" aria-hidden="true"><path d="M20.5 3.5A11 11 0 1 0 12 23a10.7 10.7 0 0 0 5.7-1.6L22 22l-1.6-4.3A10.7 10.7 0 0 0 23 12 11 11 0 0 0 20.5 3.5zM15 14.2c-.3.8-1 1.4-1.8 1.6-.5.1-1 .1-1.5 0-.4 0-.9-.2-1.3-.4l-.8-.5c-.6-.4-1.2-1-1.5-1.7-.3-.8 0-1.5.6-2 .5-.3 1.1-.5 1.7-.5.4 0 .8 0 1.1.1.4.1.8.2 1.1.4.3.2.5.5.6.9.1.4.1.8 0 1.2z"/></svg>
+    </a>
+
+    <!-- Viber -->
+    <a class="share-btn" id="share-viber" aria-label="مشاركة على فايبر" title="فايبر" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" class="icon" aria-hidden="true"><path d="M17.5 6.5c-1-1-2.6-1.1-3.9-.3-1 .6-2.3 1.9-2.9 2.9-.3.6-.4 1.4-.1 2C10 12 8 13.8 7 15c-.4.6-.2 1.4.4 1.8.6.5 1.4.4 2-.1 1-1 2.8-3 4.1-3.6.9-.3 1.9-.1 2.7.5 1 0 1.8-.2 2.6-1 .9-.9 1-2.3.3-3.4-1.1-1.3-2.8-2-4.6-2z"/></svg>
+    </a>
+  </div>
+</div>
+
+<style>
+/* أسلوب مدمج يمكن تعديله حسب التصميم العام */
+.share-row { display:flex; flex-direction:column; gap:8px; font-family:Inter, system-ui, Arial; }
+.share-trigger { background:#0f172a; color:#fff; padding:8px 12px; border-radius:8px; border:0; cursor:pointer; width:max-content; }
+.social-share { display:flex; gap:10px; align-items:center; padding:6px 0; }
+.share-btn { display:inline-flex; width:44px; height:44px; border-radius:10px; align-items:center; justify-content:center; text-decoration:none; border:1px solid rgba(15,23,42,0.06); background:linear-gradient(180deg, #fff, #fbfbfd); box-shadow:0 2px 6px rgba(2,6,23,0.06); transition:transform .12s ease, box-shadow .12s ease; cursor:pointer; }
+.share-btn:focus { outline:2px solid #3b82f6; outline-offset:2px; }
+.share-btn:hover { transform:translateY(-4px); box-shadow:0 8px 20px rgba(2,6,23,0.08); }
+.icon { width:20px; height:20px; fill:currentColor; color:#0f172a; }
+@media (prefers-reduced-motion:reduce){ .share-btn { transition:none; } }
+</style>
+
+<script>
+(function(){
+  const url = encodeURIComponent(location.href);
+  const title = encodeURIComponent(document.title || 'الصفحة');
+
+  // روابط المشاركة
+  document.getElementById('share-facebook').href = `https://www.facebook.com/sharer/sharer.php?u=${url}`;
+  document.getElementById('share-twitter').href = `https://twitter.com/intent/tweet?text=${title}&url=${url}`;
+  document.getElementById('share-telegram').href = `https://t.me/share/url?url=${url}&text=${title}`;
+  document.getElementById('share-whatsapp').href = `https://wa.me/?text=${title}%20${url}`;
+  // Viber: حاول فتح التطبيق عبر رابط عميق، وإن لم ينجح سيبقى الرابط كوصلة عامة
+  document.getElementById('share-viber').href = `viber://forward?text=${title}%20${url}`;
+
+  // زر إنستغرام: لا يوجد endpoint ويب مباشر للمشاركة لذلك ننفذ نسخة للرابط ثم نفتح صفحة إنستغرام
+  document.getElementById('share-instagram').addEventListener('click', async function(){
+    try {
+      await navigator.clipboard.writeText(decodeURIComponent(title) + ' ' + location.href);
+      // افتح إنستغرام في نافذة جديدة لمساعدة المستخدم على لصق الرابط داخل التطبيق
+      window.open('https://www.instagram.com/', '_blank', 'noopener');
+      this.setAttribute('title','الرابط نُسخ إلى الحافظة');
+    } catch (e) {
+      // فشل النسخ: فقط افتح إنستغرام
+      window.open('https://www.instagram.com/', '_blank', 'noopener');
+    }
+  });
+
+  // زر العرض/إخفاء صف الأيقونات إن وُجد زر "مشاركة البوابة"
+  const trigger = document.querySelector('.share-trigger');
+  const panel = document.getElementById('social-share');
+  trigger.addEventListener('click', function(){
+    const expanded = this.getAttribute('aria-expanded') === 'true';
+    this.setAttribute('aria-expanded', String(!expanded));
+    if (panel.hasAttribute('hidden')) { panel.removeAttribute('hidden'); } else { panel.setAttribute('hidden',''); }
+  });
+
+  // استخدام Web Share API إن كانت متاحة كتحسين
+  const shareButtons = document.querySelectorAll('.share-btn');
+  shareButtons.forEach(btn=>{
+    btn.addEventListener('click', function(e){
+      // روابط عادية تفتح بنسخ الرابط. إذا Web Share API متاحة نستخدمها
+      if (navigator.share && this.tagName === 'A' && !this.id.includes('instagram')) {
+        e.preventDefault();
+        navigator.share({ title: document.title, url: location.href }).catch(()=>{/* تجاهل أخطاء المشاركة */});
+      }
+    });
+  });
+})();
+</script>
       <!-- المميزات الأساسية -->
       <div class="welcome-stats">
         <div class="stat-box">
