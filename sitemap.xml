@@ -122,6 +122,38 @@
   <url><loc>https://fadaeldjazair.mf.gov.dz/login</loc><priority>0.8</priority></url>
   <url><loc>tel:+21321595151</loc><priority>0.7</priority></url>
 
+  <!-- وزاره الشؤون الخارجيه -->
+  <url>
+<loc>https://imadtbn.github.io/dz_portal/#toggle-admin</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://tasdik.poste.dz/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.mfa.gov.dz/ar/contact</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.mfa.gov.dz/ar/embassys-locations-list</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.mfa.gov.dz/ar/foreign-diplomatic-and-consular-representations-in-algeria</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.mfa.gov.dz/ar/international-and-regional-organizations-in-algeria</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
 <!-- قسم الصحة -->
   <url><loc>https://formation.sante.gov.dz/index.html</loc><priority>0.9</priority></url>
   <url><loc>https://etabib.dz/</loc><priority>0.9</priority></url>
