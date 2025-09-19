@@ -121,7 +121,6 @@
   <url><loc>https://fadaeldjazair.mf.gov.dz/login1</loc><priority>0.8</priority></url>
   <url><loc>https://fadaeldjazair.mf.gov.dz/login</loc><priority>0.8</priority></url>
   <url><loc>tel:+21321595151</loc><priority>0.7</priority></url>
-
   <!-- وزاره الشؤون الخارجيه -->
   <url>
 <loc>https://imadtbn.github.io/dz_portal/#toggle-admin</loc>
