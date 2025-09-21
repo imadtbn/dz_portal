@@ -105,7 +105,7 @@
           { "@type": "ListItem", "position": 24, "item": { "@type": "Service", "name": "خدمات المنح الطلابية", "url": "https://imadtbn.github.io/dz_portal/#toggle-17", "provider": { "@type": "GovernmentOrganization", "name": "وزارة التعليم العالي" }, "contactPoint": { "@type": "ContactPoint", "contactType": "customer service" } } },
           { "@type": "ListItem", "position": 25, "item": { "@type": "Service", "name": "شهادات الميلاد والوثائق الرسمية", "url": "https://imadtbn.github.io/dz_portal/#toggle-18", "provider": { "@type": "GovernmentOrganization", "name": "وزارة الداخلية" }, "contactPoint": { "@type": "ContactPoint", "contactType": "customer service" } } },
           { "@type": "ListItem", "position": 26, "item": { "@type": "Service", "name": "التصاريح والبطاقات البيومترية", "url": "https://imadtbn.github.io/dz_portal/#toggle-19", "provider": { "@type": "GovernmentOrganization", "name": "وزارة الداخلية" }, "contactPoint": { "@type": "ContactPoint", "contactType": "customer service" } } },
-          { "@type": "ListItem", "position": 27, "item": { "@type": "Service", "name": "خدمات التأمينات", "url": "https://imadtbn.github.io/dz_portal/#toggle-20", "provider": { "@type": "Organization", "name": "شركات التأمين" }, "contactPoint": { "@type": "ContactPoint", "contactType": "customer service" } } }
+          { "@type": "ListItem", "position": 27, "item": { "@type": "Service", "name": "خدمات التأمينات", "url": "https://imadtbn.github.io/dz_portal/#toggle-20", "provider": { "@type": "Organization", "name": "شركات التأمين" }, "contactPoint": { "@type": "ContactPoint", "contactType": "customer service" } } },
         ]
       }
     ]
@@ -891,7 +891,8 @@ img.logo {
   <a class="share-btn" id="share-telegram" target="_blank" aria-label="Telegram">
     <svg class="icon" viewBox="0 0 24 24"><path fill="#0088CC" d="M9.999 15.002l-.4 5.6c.6 0 .8-.3 1.1-.7l2.6-2.5 5.4 3.9c1 .6 1.7.3 2-.9L24 4.8c.3-1.2-.4-1.7-1.4-1.3L1.3 10.6c-1.1.4-1.1 1-.2 1.2l5.6 1.8L19.8 6.2c.6-.3 1.1-.1.7.3"/></svg>
   </a>
-</div>
+
+  </div>
 
 <style>
 .social-share {
@@ -1699,56 +1700,58 @@ img.logo {
   </section>
 
 <!-- قسم خدمات وزارة الشؤون الخارجية -->
-<section dir="rtl">
-  <h2 id="toggle-admin" onclick="toggleSection('admin-section', this)">
-    <span>
-      <img src="https://github.com/imadtbn/dz_portal/blob/main/icons/EXTERIEUR.webp?raw=true" 
-           alt="وزارة الخارجية" class="logo">
-      وزارة الشؤون الخارجية <span class="count"></span>
-    </span>
-    <span class="toggle-icon">▶</span>
-  </h2>
+  <section dir="rtl" style="text-align: right;">
+    <h2 id="toggle-admin" onclick="toggleSection('admin-section', this)"
+      style="cursor: pointer; background-color: #006233; color: white; padding: 10px; border-radius: 8px;">
+      <span><img src="  https://github.com/imadtbn/dz_portal/blob/main/icons/EXTERIEUR.webp?raw=true" alt="admin Logo"
+          class="logo">
+        وزارة الشؤون الخارجية<span class="count"></span></span>
+      <span class="toggle-icon" style="float: left;">▶</span>
+    </h2>
 
-  <ul id="admin-section">
-    <li>
-      <i class="fas fa-file-signature">#006400; margin-left:6px;"></i>
-      <a href="https://tasdik.poste.dz/" target="_blank">
-        ترحيل الوثائق للتصديق عبر بريد الجزائر
-      </a>
-    </li>
-    <li>
-      <i class="fas fa-envelope-open-text">#006400; margin-left:6px;"></i>
-      <a href="https://www.mfa.gov.dz/ar/contact" target="_blank">
-        اكتب إلى كاتب الدولة مكلف بالجالية بالخارج
-      </a>
-    </li>
-    <li>
-      <i class="fas fa-flag">#006400; margin-left:6px;"></i>
-      <a href="https://www.mfa.gov.dz/ar/embassys-locations-list" target="_blank">
-        الممثليات الدبلوماسية والقنصلية الجزائرية بالخارج
-      </a>
-    </li>
-    <li>
-      <i class="fas fa-landmark">#006400; margin-left:6px;"></i>
-      <a href="https://www.mfa.gov.dz/ar/foreign-diplomatic-and-consular-representations-in-algeria" target="_blank">
-        الممثليات الدبلوماسية الأجنبية بالجزائر
-      </a>
-    </li>
-    <li>
-      <i class="fas fa-globe"></i>
-      <a href="https://www.mfa.gov.dz/ar/international-and-regional-organizations-in-algeria" target="_blank">
-        المنظمات الدولية والإقليمية في الجزائر
-      </a>
-    </li>
-  </ul>
+    <ul id="admin-section"
+      style="display: none; list-style: none; padding-right: 20px; line-height: 2; text-align: right;">
 
-  <!-- رقم الهاتف أسفل القسم -->
-  <div style="margin-top:10px; padding:8px; background:#f9f9f9; border-top:1px solid #ddd;">
-    <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
-    <strong>وزارة الشؤون الخارجية</strong> 
-    <a href="tel:+21321504545">+213 21 50 45 45</a>
-  </div>
-</section>
+      <li>
+        <i class="fas fa-file-signature" style="color: green; margin-left:6px;"></i>
+        <a href="https://tasdik.poste.dz/" target="_blank">ترحيل الوثائق للتصديق عبر بريد الجزائر
+</a>
+      </li>
+
+      <li>
+        <i class="fas fa-envelope-open-text" style="color: green; margin-left:6px;"></i>
+        <a href="https://www.mfa.gov.dz/ar/contact" target="_blank">اكتب إلى كاتب الدولة مكلف بالجالية بالخارج</a>
+      </li>
+
+      <li>
+        <i class="fas fa-flag" style="color: green; margin-left:6px;"></i>
+        <a href="https://www.mfa.gov.dz/ar/embassys-locations-list" target="_blank">
+          الممثليات الدبلوماسية والقنصلية الجزائرية بالخارج
+        </a>
+      </li>
+
+            <li>
+        <i class="fas fa-flag" style="color: green; margin-left:6px;"></i>
+        <a href="https://www.mfa.gov.dz/ar/embassys-locations-list" target="_blank">
+          الممثليات الدبلوماسية والقنصلية الجزائرية بالخارج
+        </a>
+      </li>
+
+            <li>
+        <i class="fas fa-globe" style="color: green; margin-left:6px;"></i>
+        <a href="https://www.mfa.gov.dz/ar/international-and-regional-organizations-in-algeria" target="_blank">
+          المنظمات الدولية والإقليمية في الجزائر
+        </a>
+      
+    </ul>
+
+    <!-- رقم الهاتف أسفل القسم -->
+    <div style="margin-top:10px; padding-right:5px;">
+      <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
+      <strong>وزارة الشؤون الخارجية:</strong>
+      <a href="tel:+21321504545">+21321504545</a>
+    </div>
+  </section>
 
   <!-- قسم الضمان الاجتماعي -->
   <section dir="rtl" style="text-align: right;">
