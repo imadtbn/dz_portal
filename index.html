@@ -891,7 +891,146 @@ img.logo {
   <a class="share-btn" id="share-telegram" target="_blank" aria-label="Telegram">
     <svg class="icon" viewBox="0 0 24 24"><path fill="#0088CC" d="M9.999 15.002l-.4 5.6c.6 0 .8-.3 1.1-.7l2.6-2.5 5.4 3.9c1 .6 1.7.3 2-.9L24 4.8c.3-1.2-.4-1.7-1.4-1.3L1.3 10.6c-1.1.4-1.1 1-.2 1.2l5.6 1.8L19.8 6.2c.6-.3 1.1-.1.7.3"/></svg>
   </a>
+<!-- ====== زر QR داخل شريط أزرار المشاركة ======
+     انسخ هذا المقطع إلى مكان أزرار المشاركة في صفحتك -->
+<style>
+/* حجم ومظهر أيقونات المشاركة الدائرية الصغيرة */
+.share-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;      /* غيّر حسب حجم أيقوناتك */
+  height: 44px;
+  border-radius: 50%;
+  overflow: hidden;
+  background: transparent;
+  cursor: pointer;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12);
+  margin: 0 6px;
+  text-decoration: none;
+}
 
+/* صورة داخل الزر */
+.share-btn img {
+  width: 70%; /* تبقي المساحة محيطة صغيرة حتى تبدو كأيقونة */
+  height: auto;
+  display: block;
+}
+
+/* نافذة المعاينة (lightbox) */
+#qrModal {
+  position: fixed;
+  inset: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0,0,0,0.6);
+  z-index: 10000;
+  padding: 24px;
+}
+
+/* محتوى النافذة */
+#qrModal .modal-card {
+  background: #fff;
+  border-radius: 8px;
+  max-width: 95vw;
+  max-height: 95vh;
+  padding: 12px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* صورة المعاينة بحجم طبيعي مع تناسب */
+#qrModal .modal-card img {
+  max-width: 80vw;
+  max-height: 70vh;
+  width: auto;
+  height: auto;
+}
+
+/* أزرار أعلى/أسفل النافذة */
+#qrModal .modal-actions {
+  margin-top: 10px;
+  display: flex;
+  gap: 8px;
+}
+#qrModal .btn {
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+}
+#qrModal .btn-close { background: #f0f0f0; }
+#qrModal .btn-download { background: #e8f4ff; }
+</style>
+
+<!-- أيقونة المشاركة (أضف داخل الشريط مع بقية الأزرار) -->
+<div id="social-share" class="social-share">
+  <!-- زر QR صغير دائري -->
+  <button class="share-btn" id="share-qr" aria-label="QR مشاركة رابط الصفحة" title="QR">
+    <img src="https://raw.githubusercontent.com/imadtbn/dz_portal/refs/heads/main/icons/Qrcodepage.png" alt="QR">
+  </button>
+</div>
+
+<!-- نافذة معاينة الصورة (lightbox) -->
+<div id="qrModal" role="dialog" aria-modal="true" aria-hidden="true">
+  <div class="modal-card" role="document">
+    <img id="qrLarge" src="https://raw.githubusercontent.com/imadtbn/dz_portal/refs/heads/main/icons/Qrcodepage.png" alt="QR - معاينة">
+    <div class="modal-actions">
+      <a id="downloadQr" class="btn btn-download" href="#" download="Qrcodepage.png">تنزيل</a>
+      <button class="btn btn-close" id="closeQr">إغلاق</button>
+    </div>
+  </div>
+</div>
+
+<script>
+/* سلوك فتح وإغلاق النافذة والتحميل */
+(function(){
+  const qrBtn = document.getElementById('share-qr');
+  const modal = document.getElementById('qrModal');
+  const closeBtn = document.getElementById('closeQr');
+  const downloadLink = document.getElementById('downloadQr');
+  const qrLarge = document.getElementById('qrLarge');
+  const imgUrl = 'https://raw.githubusercontent.com/imadtbn/dz_portal/refs/heads/main/icons/Qrcodepage.png';
+
+  // تحديث رابط التنزيل (في حال احتجت CORS يمكن تغيير إلى خدمة تخزين تدعم التحميل)
+  downloadLink.href = imgUrl;
+
+  function openModal() {
+    modal.style.display = 'flex';
+    modal.setAttribute('aria-hidden','false');
+    // تركيز لأغراض الوصول
+    closeBtn.focus();
+  }
+  function closeModal() {
+    modal.style.display = 'none';
+    modal.setAttribute('aria-hidden','true');
+    qrBtn.focus();
+  }
+
+  qrBtn.addEventListener('click', function(e){
+    e.preventDefault();
+    // تحميل الصورة عالية الدقة ثم فتح النافذة ليتسنى المسح من هاتف آخر
+    qrLarge.src = imgUrl;
+    openModal();
+  });
+
+  closeBtn.addEventListener('click', closeModal);
+
+  // إغلاق بالنقر خارج بطاقة المعاينة
+  modal.addEventListener('click', function(e){
+    if (e.target === modal) closeModal();
+  });
+
+  // إغلاق بواسطة زر Escape
+  document.addEventListener('keydown', function(e){
+    if (e.key === 'Escape' && modal.style.display === 'flex') closeModal();
+  });
+})();
+</script>
   </div>
 
 <style>
