@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html dir="rtl" lang="ar" 
-<head>
+<html dir="rtl" lang="ar" <head>
 <meta name="theme-color" content="#a52a2a">
 
 <!-- تسجيل Service Worker -->
@@ -111,7 +110,7 @@
     ]
   }
   </script>
-  
+
 <!-- الوصف الرسمي لمحركات البحث -->
 <meta name="description"
   content="البوابة الجزائرية للخدمات الرقمية: بريد الجزائر، البطاقة الذهبية، اتصالات الجزائر، سونلغاز، دفع الفواتير، نتائج البكالوريا، التسجيل الجامعي، التكوين المهني، شهادة الميلاد والبطاقة البيومترية، الضرائب، السكن، الضمان الاجتماعي، منحة البطالة، البنوك، التأمينات، الجمارك، وأرقام الطوارئ.">
@@ -178,143 +177,191 @@
 
 <!-- CSS داخلي -->
 <style>
-  /* 🎨 إعدادات عامة للصفحة */
+  /* إعدادات عامة للصفحة */
   body {
     margin: 0;
+    /* إزالة الهوامش الافتراضية للصفحة */
     font-family: Arial, Tahoma, sans-serif;
+    /* الخطوط الأساسية */
     background-color: #f7fdf9;
+    /* لون خلفية فاتح */
     color: #333;
-    line-height: 1.6
+    /* لون النص */
+    line-height: 1.6;
+    /* تباعد الأسطر */
   }
 
+  /* تنسيقات الهيدر والفوتر */
   header,
   footer {
     background-color: #006233;
+    /* خلفية خضراء */
     color: #fff;
+    /* النص أبيض */
     padding: 10px;
-    text-align: center
+    /* مسافة داخلية */
+    text-align: center;
+    /* محاذاة النص للوسط */
   }
 
-  /* 👤 الهوية (الشعار + العنوان) */
+  /* 👤 الهوية: شعار + عنوان */
   .branding {
     display: flex;
+    /* توزيع مرن */
     align-items: center;
+    /* محاذاة عمودية للوسط */
     justify-content: center;
+    /* محاذاة أفقية للوسط */
     gap: 10px;
-    flex-wrap: wrap
+    /* مسافة بين العناصر */
+    flex-wrap: wrap;
+    /* التفاف عند صغر الشاشة */
   }
 
   .branding img {
     width: 32px;
-    height: auto
+    /* حجم الشعار */
+    height: auto;
   }
 
   .branding i {
-    font-size: 24px
+    font-size: 24px;
+    /* أيقونة كبيرة */
   }
 
   .branding h1 {
     margin: 0;
     font-size: 1.4em;
-    font-weight: 700
+    /* حجم خط متوسط */
+    font-weight: 700;
+    /* خط عريض */
   }
 
   /* 📦 أقسام الموقع */
   section {
     background: #fff;
+    /* خلفية بيضاء */
     border: 1px solid #cde7da;
+    /* إطار خفيف */
     border-radius: 12px;
+    /* زوايا دائرية */
     padding: 16px;
+    /* مسافة داخلية */
     margin: 20px auto;
+    /* مسافة خارجية */
     max-width: 900px;
+    /* عرض أقصى */
     box-shadow: 0 2px 6px rgba(0, 98, 51, .08);
-    transition: transform .3s ease
+    /* ظل خفيف */
+    transition: transform .3s ease;
+    /* تأثير حركة ناعمة */
   }
 
   section:hover {
-    transform: scale(1.005)
+    transform: scale(1.005);
+    /* تكبير بسيط عند المرور */
   }
 
+  /* عناوين الأقسام */
   section h2,
   section h3 {
     background: #f0faf6 !important;
+    /* خلفية فاتحة */
     color: #a52a2a !important;
+    /* نص بني */
     padding: 12px 16px;
+    /* مسافة داخلية */
     font-size: 1.05em;
     border-radius: 10px;
     box-shadow: inset 0 -1px 0 rgba(0, 0, 0, .05);
+    /* خط داخلي */
     cursor: pointer;
+    /* مؤشر يد */
     display: flex;
+    /* توزيع داخلي مرن */
     justify-content: space-between;
+    /* نص يسار + أيقونة يمين */
     align-items: center;
-    transition: background-color .3s ease
+    transition: background-color .3s ease;
   }
 
   section h2:hover {
-    background: #cde7da
+    background: #cde7da;
+    /* لون عند المرور */
   }
 
   section h2 .toggle-icon {
     transition: transform .4s ease;
-    font-size: 1em
+    /* دوران الأيقونة */
+    font-size: 1em;
   }
 
   section h2.open .toggle-icon {
-    transform: rotate(90deg)
+    transform: rotate(90deg);
+    /* تدوير عند الفتح */
   }
 
   /* 📋 القوائم الداخلية */
   ul {
     list-style: none;
+    /* بدون نقاط */
     padding: 0 10px;
     max-height: 0;
+    /* إخفاء افتراضي */
     overflow: hidden;
     transition: max-height .6s ease, opacity .6s ease;
-    opacity: 0
+    opacity: 0;
+    /* شفاف */
   }
 
   ul.show {
     max-height: 1000px;
-    opacity: 1
+    /* عند التفعيل يظهر */
+    opacity: 1;
   }
 
+  /* عناصر القوائم */
   section ul li {
     padding: 8px 4px;
     border-bottom: 1px dashed #ccc;
+    /* خط منقط أسفل العنصر */
     transition: background .2s ease;
     color: #880000;
-    word-wrap: break-word
+    word-wrap: break-word;
+    /* كسر الكلمات الطويلة */
   }
 
   section ul li:hover {
-    background: #fdf5f5
+    background: #fdf5f5;
+    /* لون عند المرور */
   }
 
   /* 🔗 الروابط */
   a {
     color: #a52a2a;
     font-weight: 700;
-    text-decoration: none
+    text-decoration: none;
   }
 
   a:hover {
     color: #880000;
-    text-decoration: underline
+    text-decoration: underline;
   }
 
+  /* ألوان الأيقونات المرافقة للعناوين */
   .toggle-icon,
   .count,
   section h2 i,
   section h3 i {
-    color: #a52a2a !important
+    color: #a52a2a !important;
   }
 
-  /* 🔍 البحث */
+  /* 🔍 صندوق البحث */
   #searchBox {
     max-width: 500px;
     margin: 20px auto;
     display: flex;
-    justify-content: center
+    justify-content: center;
   }
 
   #searchInput {
@@ -322,14 +369,16 @@
     max-width: 600px;
     padding: 10px;
     border-radius: 10px;
+    /* زوايا دائرية */
     border: 1px solid #ccc;
     box-shadow: 0 2px 4px rgba(0, 0, 0, .1);
-    font-size: 1em
+    font-size: 1em;
   }
 
   /* ⬆️ زر العودة للأعلى */
   #scrollTopBtn {
     position: fixed;
+    /* ثابت في أسفل الشاشة */
     bottom: 80px;
     left: 20px;
     background: #006233;
@@ -337,186 +386,229 @@
     border: none;
     padding: 12px 16px;
     border-radius: 50%;
+    /* دائري */
     font-size: 20px;
     cursor: pointer;
     display: none;
+    /* مخفي افتراضيًا */
     box-shadow: 0 2px 5px rgba(0, 0, 0, .3);
-    z-index: 9999
+    z-index: 9999;
+    /* في المقدمة */
   }
 
-  /* 📱 تحسين العرض على الهواتف */
+  /* 📱 تحسين العرض على الشاشات الصغيرة */
   @media(max-width:768px) {
     body {
-      font-size: .95em
+      font-size: .95em;
     }
 
     .branding h1 {
-      font-size: 1em
+      font-size: 1em;
     }
 
     header h1 {
-      font-size: 1.1em
+      font-size: 1.1em;
     }
 
     section h2,
     section h3 {
       font-size: 1em;
-      padding: 8px
+      padding: 8px;
     }
 
     ul li {
       font-size: .95em;
-      padding: 4px 0
+      padding: 4px 0;
     }
 
     #searchInput {
       font-size: .95em;
-      padding: 8px
+      padding: 8px;
     }
 
     #scrollTopBtn {
       font-size: 24px;
-      padding: 14px
+      padding: 14px;
     }
   }
 
-  /* ✨ مؤثرات */
+  /* ✨ أنيميشن نابض للأيقونات */
   @keyframes pulse {
     0% {
-      transform: scale(1)
+      transform: scale(1);
     }
 
     50% {
-      transform: scale(1.1)
+      transform: scale(1.1);
     }
 
     100% {
-      transform: scale(1)
+      transform: scale(1);
     }
   }
 
   div[style*="border-radius"] i:hover {
-    animation: pulse .6s ease-in-out infinite
+    animation: pulse .6s ease-in-out infinite;
+    /* حركة مستمرة */
   }
 
+  /* تأثير عند تمرير زر التثبيت */
   #install-button:hover {
-    background-color: #880000
+    background-color: #880000;
   }
 
   button:hover {
-    background-color: #a30000
+    background-color: #a30000;
   }
 
-  /* 📰 شريط الأخبار (يمين ➝ يسار) */
+  /* 📰 شريط الأخبار المتحرك من اليمين لليسار */
   @keyframes scrollNewsRTL {
     0% {
-      transform: translateX(100%)
+      transform: translateX(100%);
     }
 
     100% {
-      transform: translateX(-100%)
+      transform: translateX(-100%);
     }
   }
 
   #newsTickerContainer:hover #newsTicker {
-    animation-play-state: paused
+    animation-play-state: paused;
+    /* إيقاف عند المرور */
   }
 
   #newsTicker a {
     color: #fff;
-    text-decoration: underline
+    text-decoration: underline;
   }
 
   #newsTicker a:hover {
-    color: #ffd700
+    color: #ffd700;
+    /* ذهبي عند المرور */
   }
 </style>
 
+<!-- إعادة ضبط القيم الافتراضية لكل العناصر -->
 <style>
-  /* أنماط قسم الترحيب الجديد */
   * {
     box-sizing: border-box;
+    /* يحسب العرض/الارتفاع شاملاً الحواف والحشوات */
     margin: 0;
+    /* إزالة الهوامش الافتراضية */
     padding: 0;
+    /* إزالة الحشوات الافتراضية */
   }
 
+  /* 🖼️ أنماط عامة للصفحة */
   body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* الخطوط */
     background-color: #f7fdf9;
+    /* لون خلفية فاتح */
     color: #333;
+    /* لون النصوص الأساسي */
     line-height: 1.6;
+    /* تباعد الأسطر */
     padding: 10px;
+    /* مسافة داخلية حول الصفحة */
   }
 
+  /* 🟩 صندوق الترحيب الرئيسي */
   .welcome-section {
     text-align: center;
+    /* محاذاة المحتوى للوسط */
     background: linear-gradient(135deg, #f0f9f5 0%, #e6f4ed 100%);
+    /* تدرج لوني للخلفية */
     padding: 20px 15px;
+    /* مسافة داخلية */
     border-radius: 16px;
+    /* زوايا دائرية */
     margin: 15px auto;
+    /* تباعد خارجي */
     max-width: 1000px;
+    /* عرض أقصى */
     box-shadow: 0 5px 15px rgba(0, 98, 51, 0.1);
+    /* ظل ناعم */
     position: relative;
+    /* لتمكين العناصر المطلقة داخله */
     overflow: hidden;
+    /* إخفاء أي عناصر تتجاوز الحدود */
   }
 
+  /* 🟩 مؤثر زخرفي في الخلفية */
   .welcome-section::before {
     content: "";
+    /* إنشاء عنصر افتراضي */
     position: absolute;
+    /* تحديد مكانه المطلق */
     top: 0;
     right: 0;
     width: 100%;
     height: 100%;
-    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100" opacity="0.03"><path fill="%23006233" d="M50,0 L100,50 L50,100 L0,50 Z"/></svg>');
+    background: url('...svg');
+    /* زخرفة بأيقونة هندسية شفافة */
     z-index: 0;
+    /* خلف النص */
   }
 
+  /* 🔼 لضمان ظهور النص فوق الخلفية */
   .welcome-content {
     position: relative;
     z-index: 1;
   }
-/* تنسيق موحد لشعارات الأقسام والفروع */
-img.logo {
-  width: 28px;
-  height: 28px;
-  object-fit: contain;   /* يحافظ على النسبة الأصلية */
-  margin-left: 6px;
-  vertical-align: middle;
-}
 
-  .welcome-logo {
-    max-width: 120px;
-    width: 100%;
-    height: auto;
-    margin: 0 auto 10px auto;
-    display: block;
-    filter: drop-shadow(0 3px 5px rgba(0, 0, 0, 0.1));
+  /* 🖼️ شعارات مصغرة موحدة الحجم */
+  img.logo {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+    /* الحفاظ على نسبة الصورة */
+    margin-left: 6px;
+    vertical-align: middle;
+    /* محاذاة مع النص */
   }
 
+  /* 🖼️ الشعار الرئيسي */
+  .welcome-logo {
+    max-width: 120px;
+    margin: 0 auto 10px;
+    display: block;
+    filter: drop-shadow(0 3px 5px rgba(0, 0, 0, 0.1));
+    /* ظل ناعم */
+  }
+
+  /* 📝 عنوان الترحيب */
   .welcome-title {
     color: #006233;
+    /* أخضر غامق */
     font-size: 1.5em;
     font-weight: bold;
     margin-bottom: 12px;
     line-height: 1.3;
   }
 
+  /* 📖 وصف قصير تحت العنوان */
   .welcome-description {
     font-size: 0.9em;
     color: #333;
     max-width: 800px;
-    margin: 0 auto 20px auto;
+    margin: 0 auto 20px;
     line-height: 1.6;
   }
 
+  /* 📊 قسم الإحصائيات */
   .welcome-stats {
     display: flex;
+    /* توزيع مرن */
     flex-wrap: wrap;
+    /* يلتف عند صغر الشاشة */
     justify-content: center;
     gap: 12px;
+    /* مسافة بين البطاقات */
     margin: 20px 0;
   }
 
+  /* 📊 بطاقة إحصائية */
   .stat-box {
     background-color: rgba(255, 255, 255, 0.9);
     padding: 15px 12px;
@@ -530,14 +622,17 @@ img.logo {
 
   .stat-box:hover {
     transform: translateY(-3px);
+    /* تحريك خفيف عند المرور */
   }
 
+  /* أيقونة داخل البطاقة */
   .stat-icon {
     color: #006233;
     font-size: 1.5em;
     margin-bottom: 8px;
   }
 
+  /* عنوان البطاقة */
   .stat-title {
     font-weight: bold;
     color: #006233;
@@ -545,12 +640,15 @@ img.logo {
     font-size: 0.85em;
   }
 
+  /* القيمة الرقمية */
   .stat-value {
     font-size: 1.4em;
     font-weight: bold;
     color: #a52a2a;
+    /* بني */
   }
 
+  /* 🔘 زر المشاركة */
   .share-button {
     background-color: #d40000;
     color: white;
@@ -569,7 +667,7 @@ img.logo {
     transform: scale(1.03);
   }
 
-  /* شريط التنقل الديناميكي */
+  /* 🟦 شريط التنقل الأفقي المتحرك */
   .nav-scroller {
     position: relative;
     z-index: 2;
@@ -577,6 +675,7 @@ img.logo {
     overflow: hidden;
     margin: 20px 0;
     direction: ltr;
+    /* الحركة من اليسار لليمين */
     background: rgba(255, 255, 255, 0.8);
     border-radius: 12px;
     padding: 5px;
@@ -588,6 +687,7 @@ img.logo {
     flex-wrap: nowrap;
     padding-bottom: 5px;
     animation: scrollBanner 40s linear infinite;
+    /* حركة تمرير تلقائي */
   }
 
   .nav-item {
@@ -605,30 +705,13 @@ img.logo {
     text-decoration: none;
     border-radius: 10px;
     padding: 8px 10px;
-    width: 70px;
-    height: 50px;
+    width: 68px;
+    height: 48px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
     transition: all 0.3s ease;
-    font-size: 0.75em;
+    font-size: 0.73em;
     font-weight: bold;
     text-align: center;
-  }
-
-  /* ألوان مختلفة للأزرار */
-  .nav-link:nth-child(4n+1) {
-    background-color: #e6f7ff;
-  }
-
-  .nav-link:nth-child(4n+2) {
-    background-color: #fff2e6;
-  }
-
-  .nav-link:nth-child(4n+3) {
-    background-color: #e6fffa;
-  }
-
-  .nav-link:nth-child(4n+4) {
-    background-color: #f9f2ff;
   }
 
   .nav-link:hover {
@@ -639,11 +722,10 @@ img.logo {
   }
 
   .nav-icon {
-    font-size: 16px;
-    margin-bottom: px;
+    font-size: 10px;
   }
 
-  /* أنيميشن للشريط المتحرك */
+  /* 🎞️ حركة التمرير */
   @keyframes scrollBanner {
     0% {
       transform: translateX(0);
@@ -654,12 +736,12 @@ img.logo {
     }
   }
 
-  /* توقف الأنيميشن عند التمرير فوق الشريط */
+  /* توقف الحركة عند تمرير الفأرة */
   .nav-scroller:hover .nav-scroller-inner {
     animation-play-state: paused;
   }
 
-  /* التجاوب مع الشاشات الصغيرة */
+  /* 📱 تحسين العرض للشاشات الصغيرة */
   @media (max-width: 768px) {
     .welcome-title {
       font-size: 1.3em;
@@ -686,7 +768,6 @@ img.logo {
     .nav-link {
       width: 65px;
       height: 45px;
-      padding: 6px 8px;
       font-size: 0.7em;
     }
 
@@ -715,12 +796,10 @@ img.logo {
     .stat-box {
       min-width: 80px;
       padding: 10px 6px;
-      border-radius: 8px;
     }
 
     .stat-icon {
       font-size: 1.3em;
-      margin-bottom: 5px;
     }
 
     .stat-value {
@@ -729,7 +808,6 @@ img.logo {
 
     .nav-scroller {
       height: 50px;
-      margin: 15px 0;
     }
 
     .nav-link {
@@ -741,7 +819,6 @@ img.logo {
     .nav-icon {
       font-size: 18px;
     }
-
 
     .share-button {
       padding: 8px 16px;
@@ -768,9 +845,6 @@ img.logo {
       font-size: 0.6em;
     }
   }
-
-
-
 </style>
 
 </head>
@@ -782,7 +856,8 @@ img.logo {
       <i class="fas fa-globe"></i>
       <h1>البوابة الجزائرية للخدمات الرقمية</h1>
       <img alt="علم الجزائر"
-        src="https://raw.githubusercontent.com/imadtbn/dz_portal/refs/heads/main/icons/Flag_of_Algeria.jpg" class="logo"> 
+        src="https://raw.githubusercontent.com/imadtbn/dz_portal/refs/heads/main/icons/Flag_of_Algeria.jpg"
+        class="logo">
     </div>
 
     <div dir="rtl" id="searchBox" style="text-align: right;">
@@ -810,19 +885,26 @@ img.logo {
           ⚡ سونلغاز تنضم إلى عائلة بريدي موب |
           📲 حمّل تطبيق بريدي موب وادفع فاتورتك من بيتك بكل أمان |
           👋 مرحبًا بكم في بوابة الخدمات الرقمية |
-          🛂 إطلاق خدمة تسديد حقوق الطابع الخاصة بالسفر عن بعد |
-          📢 استخراج شهادة السلبية العقارية عبر
-          <a href="https://fadaeldjazair.mf.gov.dz/EDCFPUBLICHOME/" target="_blank"
-            style="color: #ff0; text-decoration: underline;">هذه البوابة</a> |
-          💳  WimPay-BNA عبر
-          <a href="https://play.google.com/store/apps/details?id=com.beyn.bna.wimpay.customer" target="_blank"
-            style="color: #ff0; text-decoration: underline;">Google Play</a> |
-          📥 ثبت التطبيق لتسهيل الوصول للخدمات |
-📢 بريد الجزائر بالتنسيق مع وزارة الشؤون الخارجية يطلق خدمة "تصديق" 📄🌍 |  
-➡️ إيداع وثائقك الموجهة للاستعمال في الخارج عبر مكاتب البريد وتتبعها خطوة بخطوة حتى الاسترجاع بعد التصديق |  
-🔗 استفد الآن عبر: <a href="https://tasdik.poste.dz" target="_blank" style="color:#ff0; text-decoration:underline;">tasdik.poste.dz</a> |
 
-          
+      👋 مرحبًا بكم في بوابة الخدمات الرقمية |  
+      🆕 آخر التحديثات: إطلاق بوابة جزائرية للخدمات الرقمية |  
+      💻 إستفد من الخدمات الرقمية عن بعد في الجزائر بكل سهولة وسرعة |  
+      🔐 البوابة تعمل في بيئة آمنة – بياناتك محمية |  
+      🤝 شارك البوابة مع أصدقائك وساهم في نشر الثقافة الرقمية |  
+      ⚡ سونلغاز تنضم إلى عائلة بريدي موب |  
+      📲 حمّل تطبيق بريدي موب وادفع فاتورتك من بيتك بكل أمان |  
+      🛂 إطلاق خدمة تسديد حقوق الطابع الخاصة بالسفر عن بعد |  
+      📢 استخراج شهادة السلبية العقارية عبر
+      <a href="https://fadaeldjazair.mf.gov.dz/EDCFPUBLICHOME/" target="_blank"
+        style="color: #ff0; text-decoration: underline;">هذه البوابة</a> |  
+      💳 WimPay-BNA عبر
+      <a href="https://play.google.com/store/apps/details?id=com.beyn.bna.wimpay.customer" target="_blank"
+        style="color: #ff0; text-decoration: underline;">Google Play</a> |  
+      📥 ثبت التطبيق لتسهيل الوصول للخدمات |  
+      📢 بريد الجزائر بالتنسيق مع وزارة الشؤون الخارجية يطلق خدمة "تصديق" 📄🌍 |  
+      ➡️ إيداع وثائقك الموجهة للاستعمال في الخارج عبر مكاتب البريد وتتبعها خطوة بخطوة حتى الاسترجاع بعد التصديق |  
+      🔗 استفد الآن عبر: <a href="https://tasdik.poste.dz" target="_blank" style="color:#ff0; text-decoration:underline;">tasdik.poste.dz</a> |
+
         </div>
       </div>
     </div>
@@ -842,9 +924,8 @@ img.logo {
       #newsTickerContainer:hover #newsTicker {
         animation-play-state: paused;
       }
-
-      
     </style>
+    <!-- نهاية شريط الأخبار -->
 
   </header>
 
@@ -865,236 +946,288 @@ img.logo {
         هدفنا تسهيل الوصول إلى خدماتكم عن بُعد بسهولة وأمان.
       </p>
 
-<!-- زر المشاركة -->
-<button onclick="sharePage()" class="share-button">
-  <i class="fas fa-share-alt" style="margin-left: 5px;"></i> شارك البوابة
-</button>
+      <!-- زر المشاركة -->
+      <button onclick="sharePage()" class="share-button">
+        <i class="fas fa-share-alt" style="margin-left: 5px;"></i> شارك البوابة
+      </button>
 
-<!-- ====== أزرار المشاركة ====== -->
-<div id="social-share" class="social-share">
-  <a class="share-btn" id="share-facebook" target="_blank" aria-label="Facebook">
-    <svg class="icon" viewBox="0 0 24 24"><path fill="#1877F2" d="M24 12.07C24 5.4 18.63 0 12 0S0 5.4 0 12.07c0 6.01 4.39 11 10.13 11.93v-8.44H7.08V12h3.05V9.35c0-3.02 1.8-4.7 4.55-4.7 1.32 0 2.7.24 2.7.24v2.98h-1.52c-1.5 0-1.97.94-1.97 1.9V12h3.34l-.53 3.56h-2.81v8.44C19.61 23.07 24 18.08 24 12.07"/></svg>
-  </a>
+      <!-- ====== أزرار المشاركة ====== -->
+      <div id="social-share" class="social-share">
+        <a class="share-btn" id="share-facebook" target="_blank" aria-label="Facebook">
+          <svg class="icon" viewBox="0 0 24 24">
+            <path fill="#1877F2"
+              d="M24 12.07C24 5.4 18.63 0 12 0S0 5.4 0 12.07c0 6.01 4.39 11 10.13 11.93v-8.44H7.08V12h3.05V9.35c0-3.02 1.8-4.7 4.55-4.7 1.32 0 2.7.24 2.7.24v2.98h-1.52c-1.5 0-1.97.94-1.97 1.9V12h3.34l-.53 3.56h-2.81v8.44C19.61 23.07 24 18.08 24 12.07" />
+          </svg>
+        </a>
 
-  <a class="share-btn" id="share-twitter" target="_blank" aria-label="Twitter">
-    <svg class="icon" viewBox="0 0 24 24"><path fill="#1DA1F2" d="M24 4.56c-.89.4-1.85.66-2.86.78a4.92 4.92 0 0 0 2.15-2.71c-.95.56-2 .97-3.12 1.19A4.92 4.92 0 0 0 16.62 3c-2.72 0-4.92 2.26-4.92 5.04 0 .39.04.76.12 1.13A13.96 13.96 0 0 1 1.67 3.15a5.07 5.07 0 0 0-.67 2.54c0 1.74.87 3.28 2.2 4.19a4.88 4.88 0 0 1-2.24-.64v.06c0 2.44 1.68 4.48 3.9 4.95a4.94 4.94 0 0 1-2.22.09c.63 2 2.46 3.44 4.63 3.48A9.9 9.9 0 0 1 0 19.54a13.93 13.93 0 0 0 7.56 2.24c9.05 0 14-7.69 14-14.36 0-.22-.01-.43-.02-.65A9.9 9.9 0 0 0 24 4.56"/></svg>
-  </a>
+        <a class="share-btn" id="share-twitter" target="_blank" aria-label="Twitter">
+          <svg class="icon" viewBox="0 0 24 24">
+            <path fill="#1DA1F2"
+              d="M24 4.56c-.89.4-1.85.66-2.86.78a4.92 4.92 0 0 0 2.15-2.71c-.95.56-2 .97-3.12 1.19A4.92 4.92 0 0 0 16.62 3c-2.72 0-4.92 2.26-4.92 5.04 0 .39.04.76.12 1.13A13.96 13.96 0 0 1 1.67 3.15a5.07 5.07 0 0 0-.67 2.54c0 1.74.87 3.28 2.2 4.19a4.88 4.88 0 0 1-2.24-.64v.06c0 2.44 1.68 4.48 3.9 4.95a4.94 4.94 0 0 1-2.22.09c.63 2 2.46 3.44 4.63 3.48A9.9 9.9 0 0 1 0 19.54a13.93 13.93 0 0 0 7.56 2.24c9.05 0 14-7.69 14-14.36 0-.22-.01-.43-.02-.65A9.9 9.9 0 0 0 24 4.56" />
+          </svg>
+        </a>
 
-  <a class="share-btn" id="share-instagram" target="_blank" aria-label="Instagram">
-    <svg class="icon" viewBox="0 0 24 24"><path fill="#E4405F" d="M12 2.2c3.2 0 3.6.01 4.9.07 1.2.06 1.8.27 2.2.46.5.2.9.45 1.3.85.4.4.65.8.85 1.3.19.4.4 1 .46 2.2.06 1.3.07 1.7.07 4.9s-.01 3.6-.07 4.9c-.06 1.2-.27 1.8-.46 2.2-.2.5-.45.9-.85 1.3-.4.4-.8.65-1.3.85-.4.19-1 .4-2.2.46-1.3.06-1.7.07-4.9.07s-3.6-.01-4.9-.07c-1.2-.06-1.8-.27-2.2-.46a3.6 3.6 0 0 1-1.3-.85 3.6 3.6 0 0 1-.85-1.3c-.19-.4-.4-1-.46-2.2C2.2 15.6 2.2 15.2 2.2 12s.01-3.6.07-4.9c.06-1.2.27-1.8.46-2.2.2-.5.45-.9.85-1.3.4-.4.8-.65 1.3-.85.4-.19 1-.4 2.2-.46C8.4 2.2 8.8 2.2 12 2.2m0-2.2C8.7 0 8.3 0 7 0 5.7 0 4.8.2 4 .5a6 6 0 0 0-2.1 1.4A6 6 0 0 0 .5 4C.2 4.8 0 5.7 0 7c0 1.3 0 1.7 0 5s0 3.7.5 5a6 6 0 0 0 1.4 2.1A6 6 0 0 0 4 23.5c.8.3 1.7.5 3 .5s1.7 0 5 0 3.7 0 5-.5a6 6 0 0 0 2.1-1.4A6 6 0 0 0 23.5 20c.3-.8.5-1.7.5-3s0-1.7 0-5 0-3.7-.5-5a6 6 0 0 0-1.4-2.1A6 6 0 0 0 20 0.5c-.8-.3-1.7-.5-3-.5s-1.7 0-5 0z"/><path fill="#E4405F" d="M12 5.8A6.2 6.2 0 1 0 18.2 12 6.21 6.21 0 0 0 12 5.8zm0 10.2A4 4 0 1 1 16 12a4 4 0 0 1-4 4zm6.4-10.8a1.4 1.4 0 1 1-1.4 1.4 1.4 1.4 0 0 1 1.4-1.4z"/></svg>
-  </a>
+        <a class="share-btn" id="share-instagram" target="_blank" aria-label="Instagram">
+          <svg class="icon" viewBox="0 0 24 24">
+            <path fill="#E4405F"
+              d="M12 2.2c3.2 0 3.6.01 4.9.07 1.2.06 1.8.27 2.2.46.5.2.9.45 1.3.85.4.4.65.8.85 1.3.19.4.4 1 .46 2.2.06 1.3.07 1.7.07 4.9s-.01 3.6-.07 4.9c-.06 1.2-.27 1.8-.46 2.2-.2.5-.45.9-.85 1.3-.4.4-.8.65-1.3.85-.4.19-1 .4-2.2.46-1.3.06-1.7.07-4.9.07s-3.6-.01-4.9-.07c-1.2-.06-1.8-.27-2.2-.46a3.6 3.6 0 0 1-1.3-.85 3.6 3.6 0 0 1-.85-1.3c-.19-.4-.4-1-.46-2.2C2.2 15.6 2.2 15.2 2.2 12s.01-3.6.07-4.9c.06-1.2.27-1.8.46-2.2.2-.5.45-.9.85-1.3.4-.4.8-.65 1.3-.85.4-.19 1-.4 2.2-.46C8.4 2.2 8.8 2.2 12 2.2m0-2.2C8.7 0 8.3 0 7 0 5.7 0 4.8.2 4 .5a6 6 0 0 0-2.1 1.4A6 6 0 0 0 .5 4C.2 4.8 0 5.7 0 7c0 1.3 0 1.7 0 5s0 3.7.5 5a6 6 0 0 0 1.4 2.1A6 6 0 0 0 4 23.5c.8.3 1.7.5 3 .5s1.7 0 5 0 3.7 0 5-.5a6 6 0 0 0 2.1-1.4A6 6 0 0 0 23.5 20c.3-.8.5-1.7.5-3s0-1.7 0-5 0-3.7-.5-5a6 6 0 0 0-1.4-2.1A6 6 0 0 0 20 0.5c-.8-.3-1.7-.5-3-.5s-1.7 0-5 0z" />
+            <path fill="#E4405F"
+              d="M12 5.8A6.2 6.2 0 1 0 18.2 12 6.21 6.21 0 0 0 12 5.8zm0 10.2A4 4 0 1 1 16 12a4 4 0 0 1-4 4zm6.4-10.8a1.4 1.4 0 1 1-1.4 1.4 1.4 1.4 0 0 1 1.4-1.4z" />
+          </svg>
+        </a>
 
-  <a class="share-btn" id="share-whatsapp" target="_blank" aria-label="WhatsApp">
-    <svg class="icon" viewBox="0 0 24 24"><path fill="#25D366" d="M12 .3C5.5.3.3 5.5.3 12c0 2 .5 4 1.5 5.7L0 24l6.4-1.7A11.8 11.8 0 0 0 12 23.7C18.5 23.7 23.7 18.5 23.7 12S18.5.3 12 .3zM12 21c-1.9 0-3.7-.5-5.3-1.5l-.4-.2-3.8 1 1-3.7-.3-.4A9.1 9.1 0 0 1 3 12C3 7.1 7.1 3 12 3s9 4.1 9 9-4.1 9-9 9zm5.2-6.9c-.3-.2-1.8-.9-2.1-1s-.5-.2-.7.2c-.2.3-.8 1-1 1.2s-.4.2-.7.1c-.3-.2-1.2-.4-2.3-1.5-1-1-1.5-2-1.7-2.3s0-.5.2-.6.3-.4.5-.6c.2-.2.3-.3.4-.5.1-.2.1-.3 0-.5-.1-.2-.7-1.8-1-2.5-.3-.6-.5-.6-.7-.6h-.6c-.2 0-.5.1-.8.4s-1.1 1.1-1.1 2.6c0 1.5 1.1 3 1.2 3.2.1.2 2.1 3.4 5.1 4.8.7.3 1.3.5 1.8.6.8.2 1.5.1 2 .1.6-.1 1.8-.7 2.1-1.4.3-.6.3-1.1.2-1.2z"/></svg>
-  </a>
+        <a class="share-btn" id="share-whatsapp" target="_blank" aria-label="WhatsApp">
+          <svg class="icon" viewBox="0 0 24 24">
+            <path fill="#25D366"
+              d="M12 .3C5.5.3.3 5.5.3 12c0 2 .5 4 1.5 5.7L0 24l6.4-1.7A11.8 11.8 0 0 0 12 23.7C18.5 23.7 23.7 18.5 23.7 12S18.5.3 12 .3zM12 21c-1.9 0-3.7-.5-5.3-1.5l-.4-.2-3.8 1 1-3.7-.3-.4A9.1 9.1 0 0 1 3 12C3 7.1 7.1 3 12 3s9 4.1 9 9-4.1 9-9 9zm5.2-6.9c-.3-.2-1.8-.9-2.1-1s-.5-.2-.7.2c-.2.3-.8 1-1 1.2s-.4.2-.7.1c-.3-.2-1.2-.4-2.3-1.5-1-1-1.5-2-1.7-2.3s0-.5.2-.6.3-.4.5-.6c.2-.2.3-.3.4-.5.1-.2.1-.3 0-.5-.1-.2-.7-1.8-1-2.5-.3-.6-.5-.6-.7-.6h-.6c-.2 0-.5.1-.8.4s-1.1 1.1-1.1 2.6c0 1.5 1.1 3 1.2 3.2.1.2 2.1 3.4 5.1 4.8.7.3 1.3.5 1.8.6.8.2 1.5.1 2 .1.6-.1 1.8-.7 2.1-1.4.3-.6.3-1.1.2-1.2z" />
+          </svg>
+        </a>
 
-  <a class="share-btn" id="share-telegram" target="_blank" aria-label="Telegram">
-    <svg class="icon" viewBox="0 0 24 24"><path fill="#0088CC" d="M9.999 15.002l-.4 5.6c.6 0 .8-.3 1.1-.7l2.6-2.5 5.4 3.9c1 .6 1.7.3 2-.9L24 4.8c.3-1.2-.4-1.7-1.4-1.3L1.3 10.6c-1.1.4-1.1 1-.2 1.2l5.6 1.8L19.8 6.2c.6-.3 1.1-.1.7.3"/></svg>
-  </a>
-<!-- ====== زر QR داخل شريط أزرار المشاركة ======
+        <a class="share-btn" id="share-telegram" target="_blank" aria-label="Telegram">
+          <svg class="icon" viewBox="0 0 24 24">
+            <path fill="#0088CC"
+              d="M9.999 15.002l-.4 5.6c.6 0 .8-.3 1.1-.7l2.6-2.5 5.4 3.9c1 .6 1.7.3 2-.9L24 4.8c.3-1.2-.4-1.7-1.4-1.3L1.3 10.6c-1.1.4-1.1 1-.2 1.2l5.6 1.8L19.8 6.2c.6-.3 1.1-.1.7.3" />
+          </svg>
+        </a>
+        <!-- ====== زر QR داخل شريط أزرار المشاركة ======
      انسخ هذا المقطع إلى مكان أزرار المشاركة في صفحتك -->
-<style>
-/* حجم ومظهر أيقونات المشاركة الدائرية الصغيرة */
-.share-btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 44px;      /* غيّر حسب حجم أيقوناتك */
-  height: 44px;
-  border-radius: 50%;
-  overflow: hidden;
-  background: transparent;
-  cursor: pointer;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.12);
-  margin: 0 6px;
-  text-decoration: none;
-}
+        <style>
+          /* حجم ومظهر أيقونات المشاركة الدائرية الصغيرة */
+          .share-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 44px;
+            /* غيّر حسب حجم أيقوناتك */
+            height: 44px;
+            border-radius: 50%;
+            overflow: hidden;
+            background: transparent;
+            cursor: pointer;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+            margin: 0 6px;
+            text-decoration: none;
+          }
 
-/* صورة داخل الزر */
-.share-btn img {
-  width: 70%; /* تبقي المساحة محيطة صغيرة حتى تبدو كأيقونة */
-  height: auto;
-  display: block;
-}
+          /* صورة داخل الزر */
+          .share-btn img {
+            width: 70%;
+            /* تبقي المساحة محيطة صغيرة حتى تبدو كأيقونة */
+            height: auto;
+            display: block;
+          }
 
-/* نافذة المعاينة (lightbox) */
-#qrModal {
-  position: fixed;
-  inset: 0;
-  display: none;
-  align-items: center;
-  justify-content: center;
-  background: rgba(0,0,0,0.6);
-  z-index: 10000;
-  padding: 24px;
-}
+          /* نافذة المعاينة (lightbox) */
+          #qrModal {
+            position: fixed;
+            inset: 0;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            background: rgba(0, 0, 0, 0.6);
+            z-index: 10000;
+            padding: 24px;
+          }
 
-/* محتوى النافذة */
-#qrModal .modal-card {
-  background: #fff;
-  border-radius: 8px;
-  max-width: 95vw;
-  max-height: 95vh;
-  padding: 12px;
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
+          /* محتوى النافذة */
+          #qrModal .modal-card {
+            background: #fff;
+            border-radius: 8px;
+            max-width: 95vw;
+            max-height: 95vh;
+            padding: 12px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+          }
 
-/* صورة المعاينة بحجم طبيعي مع تناسب */
-#qrModal .modal-card img {
-  max-width: 80vw;
-  max-height: 70vh;
-  width: auto;
-  height: auto;
-}
+          /* صورة المعاينة بحجم طبيعي مع تناسب */
+          #qrModal .modal-card img {
+            max-width: 80vw;
+            max-height: 70vh;
+            width: auto;
+            height: auto;
+          }
 
-/* أزرار أعلى/أسفل النافذة */
-#qrModal .modal-actions {
-  margin-top: 10px;
-  display: flex;
-  gap: 8px;
-}
-#qrModal .btn {
-  padding: 8px 12px;
-  border-radius: 6px;
-  border: none;
-  cursor: pointer;
-  font-size: 14px;
-}
-#qrModal .btn-close { background: #f0f0f0; }
-#qrModal .btn-download { background: #e8f4ff; }
-</style>
+          /* أزرار أعلى/أسفل النافذة */
+          #qrModal .modal-actions {
+            margin-top: 10px;
+            display: flex;
+            gap: 8px;
+          }
 
-<!-- أيقونة المشاركة (أضف داخل الشريط مع بقية الأزرار) -->
-<div id="social-share" class="social-share">
-  <!-- زر QR صغير دائري -->
-  <button class="share-btn" id="share-qr" aria-label="QR مشاركة رابط الصفحة" title="QR">
-    <img src="https://raw.githubusercontent.com/imadtbn/dz_portal/refs/heads/main/icons/Qrcodepage.png" alt="QR">
-  </button>
-</div>
+          #qrModal .btn {
+            padding: 8px 12px;
+            border-radius: 6px;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+          }
 
-<!-- نافذة معاينة الصورة (lightbox) -->
-<div id="qrModal" role="dialog" aria-modal="true" aria-hidden="true">
-  <div class="modal-card" role="document">
-    <img id="qrLarge" src="https://raw.githubusercontent.com/imadtbn/dz_portal/refs/heads/main/icons/Qrcodepage.png" alt="QR - معاينة">
-    <div class="modal-actions">
-      <a id="downloadQr" class="btn btn-download" href="#" download="Qrcodepage.png">تنزيل</a>
-      <button class="btn btn-close" id="closeQr">إغلاق</button>
-    </div>
-  </div>
-</div>
+          #qrModal .btn-close {
+            background: #f0f0f0;
+          }
 
-<script>
-/* سلوك فتح وإغلاق النافذة والتحميل */
-(function(){
-  const qrBtn = document.getElementById('share-qr');
-  const modal = document.getElementById('qrModal');
-  const closeBtn = document.getElementById('closeQr');
-  const downloadLink = document.getElementById('downloadQr');
-  const qrLarge = document.getElementById('qrLarge');
-  const imgUrl = 'https://raw.githubusercontent.com/imadtbn/dz_portal/refs/heads/main/icons/Qrcodepage.png';
+          #qrModal .btn-download {
+            background: #e8f4ff;
+          }
+        </style>
 
-  // تحديث رابط التنزيل (في حال احتجت CORS يمكن تغيير إلى خدمة تخزين تدعم التحميل)
-  downloadLink.href = imgUrl;
+        <!-- أيقونة المشاركة (أضف داخل الشريط مع بقية الأزرار) -->
+        <div id="social-share" class="social-share">
+          <!-- زر QR صغير دائري -->
+          <button class="share-btn" id="share-qr" aria-label="QR مشاركة رابط الصفحة" title="QR">
+            <img src="https://raw.githubusercontent.com/imadtbn/dz_portal/refs/heads/main/icons/Qrcodepage.png"
+              alt="QR">
+          </button>
+        </div>
 
-  function openModal() {
-    modal.style.display = 'flex';
-    modal.setAttribute('aria-hidden','false');
-    // تركيز لأغراض الوصول
-    closeBtn.focus();
-  }
-  function closeModal() {
-    modal.style.display = 'none';
-    modal.setAttribute('aria-hidden','true');
-    qrBtn.focus();
-  }
+        <!-- نافذة معاينة الصورة (lightbox) -->
+        <div id="qrModal" role="dialog" aria-modal="true" aria-hidden="true">
+          <div class="modal-card" role="document">
+            <img id="qrLarge"
+              src="https://raw.githubusercontent.com/imadtbn/dz_portal/refs/heads/main/icons/Qrcodepage.png"
+              alt="QR - معاينة">
+            <div class="modal-actions">
+              <a id="downloadQr" class="btn btn-download" href="#" download="Qrcodepage.png">تنزيل</a>
+              <button class="btn btn-close" id="closeQr">إغلاق</button>
+            </div>
+          </div>
+        </div>
 
-  qrBtn.addEventListener('click', function(e){
-    e.preventDefault();
-    // تحميل الصورة عالية الدقة ثم فتح النافذة ليتسنى المسح من هاتف آخر
-    qrLarge.src = imgUrl;
-    openModal();
-  });
+        <script>
+          /* سلوك فتح وإغلاق النافذة والتحميل */
+          (function () {
+            const qrBtn = document.getElementById('share-qr');
+            const modal = document.getElementById('qrModal');
+            const closeBtn = document.getElementById('closeQr');
+            const downloadLink = document.getElementById('downloadQr');
+            const qrLarge = document.getElementById('qrLarge');
+            const imgUrl = 'https://raw.githubusercontent.com/imadtbn/dz_portal/refs/heads/main/icons/Qrcodepage.png';
 
-  closeBtn.addEventListener('click', closeModal);
+            // تحديث رابط التنزيل (في حال احتجت CORS يمكن تغيير إلى خدمة تخزين تدعم التحميل)
+            downloadLink.href = imgUrl;
 
-  // إغلاق بالنقر خارج بطاقة المعاينة
-  modal.addEventListener('click', function(e){
-    if (e.target === modal) closeModal();
-  });
+            function openModal() {
+              modal.style.display = 'flex';
+              modal.setAttribute('aria-hidden', 'false');
+              // تركيز لأغراض الوصول
+              closeBtn.focus();
+            }
+            function closeModal() {
+              modal.style.display = 'none';
+              modal.setAttribute('aria-hidden', 'true');
+              qrBtn.focus();
+            }
 
-  // إغلاق بواسطة زر Escape
-  document.addEventListener('keydown', function(e){
-    if (e.key === 'Escape' && modal.style.display === 'flex') closeModal();
-  });
-})();
-</script>
-  </div>
+            qrBtn.addEventListener('click', function (e) {
+              e.preventDefault();
+              // تحميل الصورة عالية الدقة ثم فتح النافذة ليتسنى المسح من هاتف آخر
+              qrLarge.src = imgUrl;
+              openModal();
+            });
 
-<style>
-.social-share {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  flex-wrap: wrap;
-}
-.share-btn {
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: transform 0.2s, box-shadow 0.2s;
-}
-.share-btn:hover {
-  transform: scale(1.1);
-  box-shadow: 0 3px 6px rgba(0,0,0,0.2);
-}
-.icon {
-  width: 28px;
-  height: 28px;
-}
-</style>
-<!-- ====== JavaScriptأزرار المشاركة  ====== -->
-<script>
-(function(){
-  const url = encodeURIComponent(location.href);
-  const title = encodeURIComponent(document.title || 'الصفحة');
+            closeBtn.addEventListener('click', closeModal);
 
-  // روابط المشاركة
-  document.getElementById('share-facebook').href = `https://www.facebook.com/sharer/sharer.php?u=${url}`;
-  document.getElementById('share-twitter').href = `https://twitter.com/intent/tweet?text=${title}&url=${url}`;
-  document.getElementById('share-telegram').href = `https://t.me/share/url?url=${url}&text=${title}`;
-  document.getElementById('share-whatsapp').href = `https://wa.me/?text=${title}%20${url}`;
-  document.getElementById('share-viber').href = `viber://forward?text=${title}%20${url}`;
+            // إغلاق بالنقر خارج بطاقة المعاينة
+            modal.addEventListener('click', function (e) {
+              if (e.target === modal) closeModal();
+            });
 
-  // زر إنستغرام: نسخ الرابط إلى الحافظة وفتح إنستغرام
-  document.getElementById('share-instagram').addEventListener('click', async function(e){
-    e.preventDefault();
-    try {
-      await navigator.clipboard.writeText(decodeURIComponent(title) + ' ' + location.href);
-      window.open('https://www.instagram.com/', '_blank', 'noopener');
-      this.setAttribute('title','الرابط نُسخ إلى الحافظة');
-    } catch {
-      window.open('https://www.instagram.com/', '_blank', 'noopener');
-    }
-  });
+            // إغلاق بواسطة زر Escape
+            document.addEventListener('keydown', function (e) {
+              if (e.key === 'Escape' && modal.style.display === 'flex') closeModal();
+            });
+          })();
+        </script>
+      </div>
 
-  // استخدام Web Share API إن كانت متاحة
-  const shareButtons = document.querySelectorAll('.share-btn');
-  shareButtons.forEach(btn=>{
-    btn.addEventListener('click', function(e){
-      if (navigator.share && this.tagName === 'A' && !this.id.includes('instagram')) {
-        e.preventDefault();
-        navigator.share({ title: document.title, url: location.href }).catch(()=>{});
-      }
-    });
-  });
-})();
-</script>
+      <style>
+        /* 🎨 الحاوية العامة لأزرار المشاركة */
+        .social-share {
+          display: flex;
+          /* ترتيب العناصر بشكل أفقي */
+          justify-content: center;
+          /* محاذاة الأزرار في المنتصف */
+          gap: 10px;
+          /* مسافة فاصلة بين الأزرار */
+          flex-wrap: wrap;
+          /* السماح بانتقال الأزرار لسطر جديد عند صغر الشاشة */
+        }
+
+        /* 🔘 زر المشاركة الفردي */
+        .share-btn {
+          width: 44px;
+          /* عرض الزر */
+          height: 44px;
+          /* ارتفاع الزر */
+          border-radius: 50%;
+          /* جعله دائري */
+          display: flex;
+          /* لتوسيط المحتوى داخله */
+          align-items: center;
+          /* محاذاة عمودية للأيقونة */
+          justify-content: center;
+          /* محاذاة أفقية للأيقونة */
+          transition: transform 0.2s, box-shadow 0.2s;
+          /* تأثير عند المرور */
+        }
+
+        /* ✨ مؤثرات عند المرور على الزر */
+        .share-btn:hover {
+          transform: scale(1.1);
+          /* تكبير بسيط */
+          box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+          /* إضافة ظل */
+        }
+
+        /* 📌 حجم الأيقونات داخل الأزرار */
+        .icon {
+          width: 28px;
+          /* عرض الأيقونة */
+          height: 28px;
+          /* ارتفاع الأيقونة */
+        }
+      </style>
+
+      <!-- ====== JavaScriptأزرار المشاركة  ====== -->
+      <script>
+        (function () {
+          const url = encodeURIComponent(location.href);
+          const title = encodeURIComponent(document.title || 'الصفحة');
+
+          // روابط المشاركة
+          document.getElementById('share-facebook').href = `https://www.facebook.com/sharer/sharer.php?u=${url}`;
+          document.getElementById('share-twitter').href = `https://twitter.com/intent/tweet?text=${title}&url=${url}`;
+          document.getElementById('share-telegram').href = `https://t.me/share/url?url=${url}&text=${title}`;
+          document.getElementById('share-whatsapp').href = `https://wa.me/?text=${title}%20${url}`;
+          document.getElementById('share-viber').href = `viber://forward?text=${title}%20${url}`;
+
+          // زر إنستغرام: نسخ الرابط إلى الحافظة وفتح إنستغرام
+          document.getElementById('share-instagram').addEventListener('click', async function (e) {
+            e.preventDefault();
+            try {
+              await navigator.clipboard.writeText(decodeURIComponent(title) + ' ' + location.href);
+              window.open('https://www.instagram.com/', '_blank', 'noopener');
+              this.setAttribute('title', 'الرابط نُسخ إلى الحافظة');
+            } catch {
+              window.open('https://www.instagram.com/', '_blank', 'noopener');
+            }
+          });
+
+          // استخدام Web Share API إن كانت متاحة
+          const shareButtons = document.querySelectorAll('.share-btn');
+          shareButtons.forEach(btn => {
+            btn.addEventListener('click', function (e) {
+              if (navigator.share && this.tagName === 'A' && !this.id.includes('instagram')) {
+                e.preventDefault();
+                navigator.share({ title: document.title, url: location.href }).catch(() => { });
+              }
+            });
+          });
+        })();
+      </script>
 
       <!-- المميزات الأساسية -->
       <div class="welcome-stats">
@@ -1124,11 +1257,11 @@ img.logo {
 
     </div>
   </section>
-
+  <!-- شريط الأيقونات التنقل الديناميكي -->
   <script>
     function createNavigationBar() {
       const navContainer = document.querySelector('.nav-scroller-inner');
-  
+
       const sections = [
         { id: 'toggle-payment', name: 'الدفع الإلكتروني', icon: 'fa-credit-card' },
         { id: 'toggle-post', name: 'بريد الجزائر', icon: 'fa-envelope' },
@@ -1147,7 +1280,7 @@ img.logo {
         { id: 'toggle-4', name: 'الصحة', icon: 'fa-heartbeat' },
         { id: 'toggle-commerce', name: 'التجارة', icon: 'fa-store' }
       ];
-  
+
       // إنشاء الأزرار
       sections.forEach(section => {
         const navItem = document.createElement('div');
@@ -1159,7 +1292,7 @@ img.logo {
           </a>`;
         navContainer.appendChild(navItem);
       });
-  
+
       // تفعيل التمرير السلس
       navContainer.querySelectorAll('.nav-link').forEach(link => {
         link.addEventListener('click', function (e) {
@@ -1175,11 +1308,11 @@ img.logo {
         });
       });
     }
-  
+
     document.addEventListener('DOMContentLoaded', createNavigationBar);
   </script>
-  
-    <!-- قسم الدفع الإلكتروني للفواتير -->
+
+  <!-- قسم الدفع الإلكتروني للفواتير -->
   <section dir="rtl" style="text-align: right;">
     <h2 id="toggle-payment" onclick="toggleSection('payment-section', this)"
       style="cursor: pointer; background-color: #a52a2a; color: white; padding: 10px; border-radius: 8px;">
@@ -1193,7 +1326,7 @@ img.logo {
 
       <!-- ADE -->
       <li>
-        <img src="https://github.com/imadtbn/dz_portal/blob/main/icons/ade.png?raw=true" alt="ADE Logo"class="logo">
+        <img src="https://github.com/imadtbn/dz_portal/blob/main/icons/ade.png?raw=true" alt="ADE Logo" class="logo">
         <a href="https://www.ade.dz/e-paiement/" target="_blank">فاتورة الجزائرية للمياه (ADE)</a>
         <div style="margin-top:5px; padding-right:25px;">
           <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
@@ -1202,7 +1335,8 @@ img.logo {
       </li>
 
       <li>
-        <img src="https://github.com/imadtbn/dz_portal/blob/main/icons/google-play-logo.png?raw=true" alt="GOOGLE PlayLogo"class="logo">
+        <img src="https://github.com/imadtbn/dz_portal/blob/main/icons/google-play-logo.png?raw=true"
+          alt="GOOGLE PlayLogo" class="logo">
         <a href="https://play.google.com/store/apps/details?id=com.ade.adese&amp;hl=ar" target="_blank">
           تطبيق Miyahimob
         </a>
@@ -1210,7 +1344,8 @@ img.logo {
 
       <!-- سونلغاز -->
       <li>
-        <img src="https://github.com/imadtbn/dz_portal/blob/main/icons/sonelgaz.png?raw=true" alt="sonelgaz Logo" class="logo">
+        <img src="https://github.com/imadtbn/dz_portal/blob/main/icons/sonelgaz.png?raw=true" alt="sonelgaz Logo"
+          class="logo">
         <a href="https://epayement.elit.dz/payementFacture.xhtml" target="_blank">فاتورة الكهرباء والغاز (سونلغاز)</a>
         <div style="margin-top:5px; padding-right:25px;">
           <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
@@ -1220,7 +1355,8 @@ img.logo {
 
       <!-- سيال -->
       <li>
-        <img src="https://github.com/imadtbn/dz_portal/blob/main/icons/seaal.webp?raw=true" alt="seaal Logo" class="logo">
+        <img src="https://github.com/imadtbn/dz_portal/blob/main/icons/seaal.webp?raw=true" alt="seaal Logo"
+          class="logo">
         <a href="https://baridinet.poste.dz/seaal" target="_blank">فاتورة المياه (سيال)</a>
         <div style="margin-top:5px; padding-right:25px;">
           <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
@@ -1256,7 +1392,8 @@ img.logo {
     <h2 id="toggle-post" onclick="toggleSection('post-section', this)"
       style="cursor: pointer; background-color: #a52a2a; color: white; padding: 10px; border-radius: 8px;">
       <span>
-        <img src="https://github.com/imadtbn/dz_portal/blob/main/icons/poste.png?raw=true" alt="poste Logo" class="logo">
+        <img src="https://github.com/imadtbn/dz_portal/blob/main/icons/poste.png?raw=true" alt="poste Logo"
+          class="logo">
         خدمات بريد الجزائر <span class="count"></span>
       </span>
       <span class="toggle-icon" style="float: left;">▶</span>
@@ -1295,7 +1432,7 @@ img.logo {
       </li>
 
       <li>
-        <i class="fas fa-file-signature">#006400; margin-left:6px;"></i>
+        <i class="fas fa-file-signature" style="color: #006400; margin-left:6px;"></i>
         <a href="https://tasdik.poste.dz/" target="_blank">
           ترحيل الوثائق للتصديق عبر بريد الجزائر
         </a>
@@ -1314,8 +1451,8 @@ img.logo {
   <section dir="rtl" style="text-align: right;">
     <h2 id="toggle-telecom" onclick="toggleSection('telecom-section', this)"
       style="cursor: pointer; background-color: #a52a2a; color: white; padding: 10px; border-radius: 8px;">
-      <span> <img src="https://github.com/imadtbn/dz_portal/blob/main/icons/algerietelecom.png?raw=true" alt="telecom Logo"
-          class="logo">
+      <span> <img src="https://github.com/imadtbn/dz_portal/blob/main/icons/algerietelecom.png?raw=true"
+          alt="telecom Logo" class="logo">
 
         خدمات إتصالات الجزائر <span class="count"></span></span>
       <span class="toggle-icon" style="float: left;">▶</span>
@@ -1432,7 +1569,8 @@ img.logo {
   <section dir="rtl" style="text-align: right;">
     <h2 id="toggle-education" onclick="toggleSection('education-section', this)"
       style="cursor: pointer; background-color: #a52a2a; color: white; padding: 10px; border-radius: 8px;">
-      <span> <img src="https://github.com/imadtbn/dz_portal/blob/main/icons/education.png?raw=true" alt="education Logo" class="logo">
+      <span> <img src="https://github.com/imadtbn/dz_portal/blob/main/icons/education.png?raw=true" alt="education Logo"
+          class="logo">
         التربية والتعليم <span class="count"></span></span>
       <span class="toggle-icon" style="float: left;">▶</span>
     </h2>
@@ -1530,8 +1668,8 @@ img.logo {
   <section dir="rtl" style="text-align: right;">
     <h2 id="toggle-10" onclick="toggleSection('university-services', this)"
       style="cursor: pointer; background-color: #a52a2a; color: white;">
-      <span><img src="https://github.com/imadtbn/dz_portal/blob/main/icons/ESI.png?raw=true"
-          alt="university Logo" class="logo"> الخدمات الجامعية
+      <span><img src="https://github.com/imadtbn/dz_portal/blob/main/icons/ESI.png?raw=true" alt="university Logo"
+          class="logo"> الخدمات الجامعية
         <span class="count"></span></span>
       <span class="toggle-icon" style="float: left;">▶</span>
     </h2>
@@ -1560,7 +1698,8 @@ img.logo {
         <a href="https://progres.mesrs.dz/webetu" target="_blank">التحويلات الجامعية</a>
       </li>
       <li><i class="fas fa-bus-alt" style="color: #006400;"></i>
-        <a href="https://play.google.com/store/apps/details?id=com.mesrs.mybus.mybusapp&hl=ar" target="_blank">تطبيق MYBUS</a>
+        <a href="https://play.google.com/store/apps/details?id=com.mesrs.mybus.mybusapp&hl=ar" target="_blank">تطبيق
+          MYBUS</a>
       </li>
     </ul>
 
@@ -1568,7 +1707,9 @@ img.logo {
     <div style="margin-top:10px; padding-right:5px;">
       <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
       <strong>وزارة التعليم العالي:</strong>
-      <a href="tel:+213 23 93 91 32">+213 23 93 91 32</a>
+      <a href="tel:+21323939132" style="direction:ltr; unicode-bidi:bidi-override;">
+        +213 23 93 91 32
+      </a>
     </div>
   </section>
 
@@ -1576,7 +1717,8 @@ img.logo {
   <section dir="rtl" style="text-align: right;">
     <h2 id="toggle-vocational" onclick="toggleSection('vocational-section', this)"
       style="cursor: pointer; background-color: #a52a2a; color: white; padding: 10px; border-radius: 8px;">
-      <span><img src="https://github.com/imadtbn/dz_portal/blob/main/icons/formation.png?raw=true" alt="vocational Logo" class="logo">
+      <span><img src="https://github.com/imadtbn/dz_portal/blob/main/icons/formation.png?raw=true" alt="vocational Logo"
+          class="logo">
         التكوين والتعليم المهنيين <span class="count"></span>
       </span>
       <span class="toggle-icon" style="float: left;">▶</span>
@@ -1615,7 +1757,10 @@ img.logo {
     <!-- رقم الهاتف أسفل القسم -->
     <div style="margin-top:10px; padding:8px; background-color:#f9f9f9; border-top:1px solid #ddd;">
       <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
-      <strong>وزارة التكوين والتعليم المهنيين:</strong> <a href="tel:66 52 25 023">66 52 25 023</a>
+      <strong>وزارة التكوين والتعليم المهنيين:</strong>
+      <a href="tel:+21323255266" style="direction:ltr; unicode-bidi:bidi-override;">
+        +213 23 25 52 66
+      </a>
     </div>
   </section>
 
@@ -1691,8 +1836,7 @@ img.logo {
     <h2 id="toggle-tax" onclick="toggleSection('tax-section', this)"
       style="cursor: pointer; background-color: #a52a2a; color: white; padding: 10px; border-radius: 8px;">
       <span>
-        <img src="https://github.com/imadtbn/dz_portal/blob/main/icons/inpux.jpg?raw=true"
-          alt="tax Logo" class="logo">
+        <img src="https://github.com/imadtbn/dz_portal/blob/main/icons/inpux.jpg?raw=true" alt="tax Logo" class="logo">
         خدمات جبائية إلكترونية <span class="count"></span>
       </span>
       <span class="toggle-icon" style="float: left;">▶</span>
@@ -1753,7 +1897,7 @@ img.logo {
       style="cursor: pointer; background-color: #a52a2a; color: white; padding: 10px; border-radius: 8px;">
       <span><img src="https://github.com/imadtbn/dz_portal/blob/main/icons/DGDN.png?raw=true" alt="realestate Logo"
           class="logo">
-        خدمات عقارية - البوابة الجغرافية للبيانات الوطنية للعقار
+        خدمات عقارية إلكترونية للأملاك الوطنية
         <span class="count"></span>
       </span>
       <span class="toggle-icon" style="float: left;">▶</span>
@@ -1834,11 +1978,13 @@ img.logo {
     <div style="margin-top:10px; padding:8px; background-color:#f9f9f9; border-top:1px solid #ddd;">
       <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
       <strong>المديرية العامة للأملاك الوطنية:</strong>
-      <a href="tel:+213 21 59 51 51">+213 21 59 51 51</a>
+      <a href="tel:+213 21 59 51 51" style="direction:ltr; unicode-bidi:bidi-override;">
+        +213 21 59 51 51
+      </a>
     </div>
   </section>
 
-<!-- قسم خدمات وزارة الشؤون الخارجية -->
+  <!-- قسم خدمات وزارة الشؤون الخارجية -->
   <section dir="rtl" style="text-align: right;">
     <h2 id="toggle-admin" onclick="toggleSection('admin-section', this)"
       style="cursor: pointer; background-color: #006233; color: white; padding: 10px; border-radius: 8px;">
@@ -1854,7 +2000,7 @@ img.logo {
       <li>
         <i class="fas fa-file-signature" style="color: green; margin-left:6px;"></i>
         <a href="https://tasdik.poste.dz/" target="_blank">ترحيل الوثائق للتصديق عبر بريد الجزائر
-</a>
+        </a>
       </li>
 
       <li>
@@ -1869,26 +2015,30 @@ img.logo {
         </a>
       </li>
 
-            <li>
+      <li>
         <i class="fas fa-flag" style="color: green; margin-left:6px;"></i>
-        <a href="https://emblibreville.mfa.gov.dz/ar/foreign-diplomatic-and-consular-representations-in-algeria" target="_blank">
-الممثليات الدبلوماسية و القنصلية الأجنبية بالجزائر
+        <a href="https://emblibreville.mfa.gov.dz/ar/foreign-diplomatic-and-consular-representations-in-algeria"
+          target="_blank">
+          الممثليات الدبلوماسية و القنصلية الأجنبية بالجزائر
         </a>
       </li>
 
-            <li>
+      <li>
         <i class="fas fa-globe" style="color: green; margin-left:6px;"></i>
         <a href="https://www.mfa.gov.dz/ar/international-and-regional-organizations-in-algeria" target="_blank">
           المنظمات الدولية والإقليمية في الجزائر
         </a>
-      
+
     </ul>
 
     <!-- رقم الهاتف أسفل القسم -->
     <div style="margin-top:10px; padding-right:5px;">
       <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
       <strong>وزارة الشؤون الخارجية:</strong>
-      <a href="tel:+21321504545">+21321504545</a>
+      <a href="tel:+21321504545" style="direction:ltr; unicode-bidi:bidi-override;">
+        +213 21 50 45 45
+      </a>
+
     </div>
   </section>
 
@@ -1896,8 +2046,8 @@ img.logo {
   <section dir="rtl" style="text-align: right;">
     <h2 id="social-security" onclick="toggleSection('social-security-section', this)"
       style="cursor: pointer; background-color: #a52a2a; color: white; padding: 10px; border-radius: 8px;">
-      <span><img src="https://github.com/imadtbn/dz_portal/blob/main/icons/travail.png?raw=true" alt="social-security Logo"
-          class="logo">
+      <span><img src="https://github.com/imadtbn/dz_portal/blob/main/icons/travail.png?raw=true"
+          alt="social-security Logo" class="logo">
         وزارة العمل و التشغيل و الضمان الاجتماعي <span class="count"></span>
       </span>
       <span class="toggle-icon" style="float: left;">▶</span>
@@ -1931,9 +2081,8 @@ img.logo {
       <!-- CASNOS -->
       <h3 onclick="toggleSublist('casnos-list')"
         style="cursor: pointer; background-color: #f0faf6; color: #006233; padding: 8px; border-radius: 6px; margin-top: 10px;">
-        <span><img
-            src="https://github.com/imadtbn/dz_portal/blob/main/icons/CASNOS.png?raw=true"
-            alt="casnos Logo" class="logo">
+        <span><img src="https://github.com/imadtbn/dz_portal/blob/main/icons/CASNOS.png?raw=true" alt="casnos Logo"
+            class="logo">
           الصندوق الوطني للضمان الاجتماعي لغير الأجراء <span class="count"></span>
         </span>
         <span class="toggle-icon" style="float: left;">▶</span>
@@ -2023,8 +2172,9 @@ img.logo {
   <section dir="rtl" style="text-align: right;">
     <h2 id="toggle-12" onclick="toggleSection('transport-section', this)"
       style="cursor: pointer; background-color: #a52a2a; color: white; padding: 10px; border-radius: 8px;">
-      <span><img src="https://raw.githubusercontent.com/imadtbn/dz_portal/5312a6651dc192b9cb2d6894f2352eb36dc3ee58/icons/tansport.svg" alt="justice Logo"
-          class="logo">
+      <span><img
+          src="https://raw.githubusercontent.com/imadtbn/dz_portal/5312a6651dc192b9cb2d6894f2352eb36dc3ee58/icons/tansport.svg"
+          alt="justice Logo" class="logo">
 
         النقل وحجز تذاكر السفر <span class="count"></span>
       </span>
@@ -2039,26 +2189,30 @@ img.logo {
       </li>
 
       <li>
-        <img src="https://github.com/imadtbn/dz_portal/blob/main/icons/TASSILI.png?raw=true" alt="tassiliairlines Logo" class="logo">
+        <img src="https://github.com/imadtbn/dz_portal/blob/main/icons/TASSILI.png?raw=true" alt="tassiliairlines Logo"
+          class="logo">
         <a href="https://tassiliairlines.dz/" target="_blank">حجز تذاكر السفر عبر طيران الطاسيلي</a>
       </li>
 
       <li>
-        <img src="https://github.com/imadtbn/dz_portal/blob/main/icons/TAWASSEL.webp?raw=true" alt="AppEtwassel Logo" class="logo">
+        <img src="https://github.com/imadtbn/dz_portal/blob/main/icons/TAWASSEL.webp?raw=true" alt="AppEtwassel Logo"
+          class="logo">
         <a href="https://play.google.com/store/apps/details?id=dz.setram.AppEtwassel" target="_blank">
           تطبيق "تواصل" للترامواي
         </a>
       </li>
 
       <li>
-        <img src="https://github.com/imadtbn/dz_portal/blob/main/icons/google-play-logo.png?raw=true" alt="SOGRAL Logo" class="logo">
+        <img src="https://github.com/imadtbn/dz_portal/blob/main/icons/google-play-logo.png?raw=true" alt="SOGRAL Logo"
+          class="logo">
         <a href="https://play.google.com/store/apps/details?id=com.sogral.mobile&amp;hl=ar" target="_blank">
           تطبيق "محطتي" للخطوط البرية سوقرال SOGRAL
         </a>
       </li>
 
       <li>
-        <img src="https://github.com/imadtbn/dz_portal/blob/main/icons/FERRIES.png?raw=true" alt="algerieferries Logo" class="logo">
+        <img src="https://github.com/imadtbn/dz_portal/blob/main/icons/FERRIES.png?raw=true" alt="algerieferries Logo"
+          class="logo">
         <a href="https://afs.algerieferries.dz/booking/step1" target="_blank">
           حجز تذاكر السفر عبر المؤسسة الوطنية للنقل البحري للمسافرين
         </a>
@@ -2072,7 +2226,8 @@ img.logo {
       </li>
 
       <li>
-        <img src="https://github.com/imadtbn/dz_portal/blob/main/icons/google-play-logo.png?raw=true" alt="Etusa Mob Logo" class="logo">
+        <img src="https://github.com/imadtbn/dz_portal/blob/main/icons/google-play-logo.png?raw=true"
+          alt="Etusa Mob Logo" class="logo">
         <a href="https://play.google.com/store/apps/details?id=dz.etusa.etusa_mob&amp;hl=ar" target="_blank">
           تطبيق "Etusa Mob" لمؤسسة النقل الحضري وشبه الحضري
         </a>
@@ -2135,8 +2290,8 @@ img.logo {
   <section dir="rtl" style="text-align: right;">
     <h2 id="toggle-4" onclick="toggleSection('health-links', this)"
       style="cursor: pointer; background-color: #a52a2a; color: white; padding: 10px; border-radius: 8px;">
-      <span><img src="https://github.com/imadtbn/dz_portal/blob/main/icons/sante.jpg?raw=true"
-          alt="health Logo" class="logo"> الخدمات الصحية <span class="count"></span></span>
+      <span><img src="https://github.com/imadtbn/dz_portal/blob/main/icons/sante.jpg?raw=true" alt="health Logo"
+          class="logo"> الخدمات الصحية <span class="count"></span></span>
       <span class="toggle-icon" style="float: left;">▶</span>
     </h2>
     <ul id="health-links"
@@ -2151,18 +2306,18 @@ img.logo {
       </li>
       <li><i class="fas fa-mobile-alt" style="color: green;"></i>
         <a href="https://play.google.com/store/apps/details?id=dz.sebrou.docts_guide.app&amp;hl=ar" target="_blank">
-           تطبيق "أطباء الجزائر"
+          تطبيق "أطباء الجزائر"
         </a>
       </li>
       <li><i class="fas fa-mobile-alt" style="color: green;"></i>
         <a href="https://play.google.com/store/apps/details?id=com.algerian.doctor&amp;hl=ar" target="_blank">
-           تطبيق "الطبيب الجزائري"
+          تطبيق "الطبيب الجزائري"
         </a>
       </li>
       <li><i class="fas fa-mobile-alt" style="color: green;"></i>
         <a href="https://play.google.com/store/apps/details?id=com.dz.bank.blood.nabilsoft.bankblooddz&amp;hl=ar"
           target="_blank">
-           تطبيق "بنك الدم الجزائري"
+          تطبيق "بنك الدم الجزائري"
         </a>
       </li>
     </ul>
@@ -2179,7 +2334,8 @@ img.logo {
   <section dir="rtl" style="text-align: right;">
     <h2 id="toggle-commerce" onclick="toggleSection('commerce-section', this)"
       style="cursor: pointer; background-color: #a52a2a; color: white; padding: 10px; border-radius: 8px;">
-      <span><img src="https://github.com/imadtbn/dz_portal/blob/main/icons/commerc.png?raw=true" alt="commerce Logo" class="logo">
+      <span><img src="https://github.com/imadtbn/dz_portal/blob/main/icons/commerc.png?raw=true" alt="commerce Logo"
+          class="logo">
         خدمات وزارة التجارة الجزائرية <span class="count"></span></span>
       <span class="toggle-icon" style="float: left;">▶</span>
     </h2>
@@ -2245,8 +2401,8 @@ img.logo {
   <section dir="rtl" style="text-align: right;">
     <h2 id="toggle-10" onclick="toggleSection('auto-entrepreneur', this)"
       style="cursor: pointer; background-color: #a52a2a; color: white;">
-      <span><img src="https://github.com/imadtbn/dz_portal/blob/main/icons/econom.png?raw=true" alt="auto-entrepreneur Logo"
-          class="logo"> الوكالة الوطنية للمقاول الذاتي <span class="count"></span></span>
+      <span><img src="https://github.com/imadtbn/dz_portal/blob/main/icons/econom.png?raw=true"
+          alt="auto-entrepreneur Logo" class="logo"> الوكالة الوطنية للمقاول الذاتي <span class="count"></span></span>
       <span class="toggle-icon" style="float: left;">▶</span>
     </h2>
 
@@ -2327,16 +2483,18 @@ img.logo {
 
       <!-- تطبيق سيال -->
       <li>
-        <img src="https://github.com/imadtbn/dz_portal/blob/main/icons/google-play-logo.png?raw=true" alt="seaalappli Logo" class="logo">
+        <img src="https://github.com/imadtbn/dz_portal/blob/main/icons/google-play-logo.png?raw=true"
+          alt="seaalappli Logo" class="logo">
         <a href="https://play.google.com/store/apps/details?id=dz.seaalappli.wakalati&hl=AR" target="_blank"> تطبيق
           WAKALATI لسيال</a>
       </li>
 
       <!-- نفطال -->
       <li>
-        <img src="https://github.com/imadtbn/dz_portal/blob/main/icons/naftal.webp?raw=true" alt="naftal.apps Logo" class="logo">
-        <a href="https://play.google.com/store/apps/details?id=com.naftal.apps.naftalkhadamat&hl=AR"
-          target="_blank"> تطبيق نفطال خدمات</a>
+        <img src="https://github.com/imadtbn/dz_portal/blob/main/icons/naftal.webp?raw=true" alt="naftal.apps Logo"
+          class="logo">
+        <a href="https://play.google.com/store/apps/details?id=com.naftal.apps.naftalkhadamat&hl=AR" target="_blank">
+          تطبيق نفطال خدمات</a>
         <div style="margin-top:5px; padding-right:20px;">
           <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
           <strong>مصلحة الزبائن - نفطال:</strong>
@@ -2367,32 +2525,42 @@ img.logo {
       </h3>
       <ul id="public-insurance" style="display: none; list-style: none; padding: 0 20px; line-height: 2;">
         <li>
-          <i class="fas fag" style="color:#006400; margin-left:6px;"></i>
-          <img src="https://raw.githubusercontent.com/imadtbn/dz_portal/fbbc555e5ae753466188cb8714e3f520cc72e2a1/icons/saa.svg" alt="SAA Logo"
-            class="logo">
+          <img
+            src="https://raw.githubusercontent.com/imadtbn/dz_portal/fbbc555e5ae753466188cb8714e3f520cc72e2a1/icons/saa.svg"
+            alt="SAA Logo" class="logo">
           <a href="https://www.saa.dz/" target="_blank">الشركة الجزائرية للتأمينات (SAA)</a>
           <div style="margin-top:5px; padding-right:25px;">
             <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
-            <a href="tel:021 22 50 00" style="color:#006400; text-decoration:none;">021 22 50 00</a>
+            <a href="tel:+213 21 22 50 00"
+              style="direction:ltr; unicode-bidi:bidi-override; color:#006400; text-decoration:none;">
+              +213 21 22 50 00
+            </a>
           </div>
         </li>
 
         <li>
-          <img src="https://github.com/imadtbn/dz_portal/blob/main/icons/caar.jpg?raw=true" alt="CAAR Logo" class="logo">
+          <img src="https://github.com/imadtbn/dz_portal/blob/main/icons/caar.jpg?raw=true" alt="CAAR Logo"
+            class="logo">
           <a href="https://caar.dz/" target="_blank">الشركة الجزائرية للتأمين و لإعادة التأمين (CAAR)</a>
           <div style="margin-top:5px; padding-right:25px;">
             <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
-            <a href="tel:+213221632072" style="color:#006400; text-decoration:none;">+213221632072</a>
+            <a href="tel:+213221632072"
+              style="direction:ltr; unicode-bidi:bidi-override; color:#006400; text-decoration:none;">
+              +213 22 16 32 07 2
+            </a>
           </div>
         </li>
 
         <li>
-          <img src="https://github.com/imadtbn/dz_portal/blob/main/icons/carama.png?raw=true" alt="CAARAMA Logo" class="logo">
+          <img src="https://github.com/imadtbn/dz_portal/blob/main/icons/carama.png?raw=true" alt="CAARAMA Logo"
+            class="logo">
           <a href="https://www.caarama.dz/" target="_blank">شركة التأمين على السيارات (CAARAMA)</a>
           <div style="margin-top:5px; padding-right:25px;">
             <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
-            <a href="tel:(213) 23 56 91 08/09/10" style="color:#006400; text-decoration:none;">(213) 23 56 91
-              08/09/10</a>
+            <a href="tel:+21323569108"
+              style="direction:ltr; unicode-bidi:bidi-override; color:#006400; text-decoration:none;">
+              (213) 23 56 91 08/09/10
+            </a>
           </div>
         </li>
 
@@ -2401,10 +2569,12 @@ img.logo {
           <a href="https://gig.dz/ar/" target="_blank">مجموعة الخليج للتأمين </a>
           <div style="margin-top:5px; padding-right:25px;">
             <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
-            <a href="tel:12 21 77 23 213 +" style="color:#006400; text-decoration:none;">12 21 77 23 213 +</a>
+            <a href="tel:+21323772112"
+              style="direction:ltr; unicode-bidi:bidi-override; color:#006400; text-decoration:none;">
+              +213 23 77 21 12
+            </a>
           </div>
         </li>
-
       </ul>
 
       <!-- التأمينات الخاصة -->
@@ -2421,49 +2591,61 @@ img.logo {
           <a href="https://www.allianceassurances.com.dz/#/" target="_blank">أليانس للتأمينات (Alliance Assurances)</a>
           <div style="margin-top:5px; padding-right:25px;">
             <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
-            <a href="tel:3315" style="color:#006400; text-decoration:none;">3315</a>
+            <a href="tel:3315"
+              style="direction:ltr; unicode-bidi:bidi-override; color:#006400; text-decoration:none;">3315</a>
             <br>📲 <a href="https://play.google.com/store/apps/details?id=com.blink.myalliance" target="_blank">تطبيق
               MyAlliance</a>
           </div>
         </li>
+
         <li>
-          <img src="https://gam.dz/wp-content/uploads/logo-optimized.png" alt="Salama Logo"
-            class="logo">
+          <img src="https://gam.dz/wp-content/uploads/logo-optimized.png" alt="Salama Logo" class="logo">
           <a href="https://gam.dz/" target="_blank">سلامة للتأمينات (Salama Assurances)</a>
           <div style="margin-top:5px; padding-right:25px;">
             <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
-            <a href="tel:+213 20 07 08 10" style="color:#006400; text-decoration:none;">+213 20 07 08 10</a>
+            <a href="tel:+21320070810"
+              style="direction:ltr; unicode-bidi:bidi-override; color:#006400; text-decoration:none;">
+              +213 20 07 08 10
+            </a>
           </div>
         </li>
+
         <li>
-          <img src="https://github.com/imadtbn/dz_portal/blob/main/icons/TRUST.png?raw=true" alt="Trust Logo" class="logo">
+          <img src="https://github.com/imadtbn/dz_portal/blob/main/icons/TRUST.png?raw=true" alt="Trust Logo"
+            class="logo">
           <a href="https://trust-dz.com/" target="_blank">ترست الجزائر للتأمينات (Trust Algeria)</a>
           <div style="margin-top:5px; padding-right:25px;">
             <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
-            <a href="tel:+213  23 48 92 25" style="color:#006400; text-decoration:none;">+213 23 48 92 25</a>
-
+            <a href="tel:+21323489225"
+              style="direction:ltr; unicode-bidi:bidi-override; color:#006400; text-decoration:none;">
+              +213 23 48 92 25
+            </a>
             <br>📲 <a href="https://play.google.com/store/apps/details?id=com.amanaDigital.MyamanaApp"
-              target="_blank">تطبيق
-              Android</a>
-
+              target="_blank">تطبيق Android</a>
           </div>
         </li>
+
         <li>
-          <img src="https://github.com/imadtbn/dz_portal/blob/main/icons/amana.jpg?raw=true" alt="Amana Logo" class="logo">
+          <img src="https://github.com/imadtbn/dz_portal/blob/main/icons/amana.jpg?raw=true" alt="Amana Logo"
+            class="logo">
           <a href="http://www.amana.dz/" target="_blank">أمانة للتأمينات (Amana Assurances)</a>
           <div style="margin-top:5px; padding-right:25px;">
             <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
-            <a href="tel:023 05 44 75" style="color:#006400; text-decoration:none;">023 05 44 75</a>
+            <a href="tel:+213 23 05 44 75"
+              style="direction:ltr; unicode-bidi:bidi-override; color:#006400; text-decoration:none;">
+              +213 23 05 44 75
+            </a>
           </div>
         </li>
+
         <li>
-          <i class="fas fa-building" style="color:#006400; margin-left:6px;"></i>
-          <img src="https://www.macirvie.com/assets/images/logo.png" alt="Macir Vie Logo"
-            class="logo">
+          <img src="https://www.macirvie.com/assets/images/logo.png" alt="Macir Vie Logo" class="logo">
           <a href="https://www.macirvie.com/" target="_blank">ماكير في للتأمين على الحياة (Macir Vie)</a>
           <div style="margin-top:5px; padding-right:25px;">
             <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
-            <a href="tel:xxxx" style="color:#006400; text-decoration:none;">xxxx</a>
+            <a href="tel:xxxx" style="direction:ltr; unicode-bidi:bidi-override; color:#006400; text-decoration:none;">
+              xxxx
+            </a>
             <br>📲 <a href="https://play.google.com/store/apps/details?id=com.macirvie.app" target="_blank">تطبيق
               Android</a>
           </div>
@@ -2483,21 +2665,27 @@ img.logo {
           <a href="https://www.axa.dz/" target="_blank">أكسا للتأمينات (AXA Assurances Algérie)</a>
           <div style="margin-top:5px; padding-right:25px;">
             <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
-            <a href="tel:021 98 23 00" style="color:#006400; text-decoration:none;">021 98 23 00</a>
+            <a href="tel:+213 21 98 23 00"
+              style="direction:ltr; unicode-bidi:bidi-override; color:#006400; text-decoration:none;">
+              +213 21 98 23 00
+            </a>
             <br>📲 <a href="https://play.google.com/store/apps/details?id=dz.axa.assurances" target="_blank">تطبيق
               Android</a>
           </div>
         </li>
+
         <li>
           <img src="https://2h.ae/cNVh" alt="Cardif Logo" class="logo">
           <a href="https://www.macirvie.com/ar" target="_blank">كارديف للتأمينات (Cardif Algérie)</a>
           <div style="margin-top:5px; padding-right:25px;">
             <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
-            <a href="tel:+213 770 11 20 72" style="color:#006400; text-decoration:none;">+213 770 11 20 72</a>
+            <a href="tel:+213770112072"
+              style="direction:ltr; unicode-bidi:bidi-override; color:#006400; text-decoration:none;">
+              +213 770 11 20 72
+            </a>
           </div>
         </li>
       </ul>
-
     </div>
   </section>
 
@@ -2521,8 +2709,7 @@ img.logo {
       <ul id="public-banks" style="display: none; list-style: none; padding: 0 20px; line-height: 2;">
 
         <li>
-          <img src="https://github.com/imadtbn/dz_portal/blob/main/icons/BNA.jpg?raw=true" alt="BNA Logo"
-            class="logo">
+          <img src="https://github.com/imadtbn/dz_portal/blob/main/icons/BNA.jpg?raw=true" alt="BNA Logo" class="logo">
           <a href="https://www.bna.dz/ar" target="_blank">البنك الوطني الجزائري (BNA)</a>
           <div style="margin-top:5px; padding-right:25px;">
             <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
@@ -2545,7 +2732,10 @@ img.logo {
             (BADR)</a>
           <div style="margin-top:5px; padding-right:25px;">
             <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
-            <a href="tel:+21321989323" style="color:#006400; text-decoration:none;">+21321989323</a>
+            <a href="tel:+213 21 98 93 23"
+              style="direction:ltr; unicode-bidi:bidi-override; color:#006400; text-decoration:none;">+213 21 98 93
+              23</a>
+            </a>
           </div>
         </li>
 
@@ -2563,7 +2753,9 @@ img.logo {
           <a href="https://www.cpa-bank.dz/index.php/ar">القرض الشعبي الجزائري (CPA)</a>
           <div style="margin-top:5px; padding-right:25px;">
             <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
-            <a href="tel:021 64 15 15" style="color:#006400; text-decoration:none;">021 64 15 15</a>
+            <a href="tel:+213 21 64 15 15"
+              style="direction:ltr; unicode-bidi:bidi-override; color:#006400; text-decoration:none;">+213 21 64 15
+              15</a>
           </div>
         </li>
 
@@ -2573,7 +2765,9 @@ img.logo {
             Banque</a>
           <div style="margin-top:5px; padding-right:25px;">
             <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
-            <a href="tel:18 61 36 023" style="color:#006400; text-decoration:none;">18 61 36 023</a>
+            <a href="tel:+213 23 36 61 18"
+              style="direction:ltr; unicode-bidi:bidi-override; color:#006400; text-decoration:none;">+213 23 36 61
+              18</a>
           </div>
         </li>
 
@@ -2582,7 +2776,9 @@ img.logo {
           <a href="https://bnh.dz/">البنك الوطني للإسكان (BNH)</a>
           <div style="margin-top:5px; padding-right:25px;">
             <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
-            <a href="tel:021-98-02-00" style="color:#006400; text-decoration:none;">021-98-02-00</a>
+            <a href="tel:+213 21 98 02 00"
+              style="direction:ltr; unicode-bidi:bidi-override; color:#006400; text-decoration:none;">+213 21 98 02
+              00</a>
           </div>
         </li>
 
@@ -2611,7 +2807,9 @@ img.logo {
           <a href="https://2h.ae/idol">بنك البركة الجزائري</a>
           <div style="margin-top:5px; padding-right:25px;">
             <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
-            <a href="tel:+213 661 900 832" style="color:#006400; text-decoration:none;">+213 661 900 832</a>
+            <a href="tel:+213 661 90 08 32"
+              style="direction:ltr; unicode-bidi:bidi-override; color:#006400; text-decoration:none;">+213 661 90 08
+              32</a>
           </div>
         </li>
 
@@ -2620,7 +2818,9 @@ img.logo {
           <a href="https://www.bank-abc.com/ar/CountrySites/Algeria">بنك ABC الجزائر (ABC)</a>
           <div style="margin-top:5px; padding-right:25px;">
             <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
-            <a href="tel:+213 021 9876 00​​ " style="color:#006400; text-decoration:none;">+213 021 9876 00​​</a>
+            <a href="tel:+213 21 98 76 00​​ "
+              style="direction:ltr; unicode-bidi:bidi-override; color:#006400; text-decoration:none;">+213 21 98 76
+              00​​</a>
           </div>
         </li>
 
@@ -2638,7 +2838,9 @@ img.logo {
           <a href="https://societegenerale.dz/fr/">Société Générale Algérie</a>
           <div style="margin-top:5px; padding-right:25px;">
             <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
-            <a href="tel:(+213) 21 45 11 55 " style="color:#006400; text-decoration:none;">(+213) 21 45 11 55 </a>
+            <a href="tel:+213 21 45 11 55"
+              style="direction:ltr; unicode-bidi:bidi-override; color:#006400; text-decoration:none;">+213 21 45 11
+              55</a>
           </div>
         </li>
 
@@ -2647,17 +2849,21 @@ img.logo {
           <a href="https://www.citigroup.com/global/about-us/global-presence/algeria">Citibank N.A. Algérie</a>
           <div style="margin-top:5px; padding-right:25px;">
             <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
-            <a href="tel: +213 21 98 19 00" style="color:#006400; text-decoration:none;"> +213 21 98 19 00</a>
+            <a href="tel: +213 21 98 19 00"
+              style="direction:ltr; unicode-bidi:bidi-override; color:#006400; text-decoration:none;"> +213 21 98 19
+              00</a>
           </div>
         </li>
 
         <li>
-          <img src="https://github.com/imadtbn/dz_portal/blob/main/icons/arabe-bank.jpg?raw=true" alt="Arab Bank PLC Logo" class="logo">
+          <img src="https://github.com/imadtbn/dz_portal/blob/main/icons/arabe-bank.jpg?raw=true"
+            alt="Arab Bank PLC Logo" class="logo">
           <a href="https://2h.ae/OqxW">البنك العربي</a>
           <div style="margin-top:5px; padding-right:25px;">
             <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
-            <a href="tel:50 86 60 21  213" style="color:#006400; text-decoration:none;">50 86 60 21 213
-            </a>
+            <a href="tel:+213 21 60 86 50"
+              style="direction:ltr; unicode-bidi:bidi-override; color:#006400; text-decoration:none;">+213 21 60 86
+              50</a>
           </div>
         </li>
 
@@ -2667,16 +2873,21 @@ img.logo {
           <a href="https://www.business.algeria.hsbc.com/">HSBC Algeria</a>
           <div style="margin-top:5px; padding-right:25px;">
             <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
-            <a href="tel:+213  23 98 28 00" style="color:#006400; text-decoration:none;">+213 23 98 28 00</a>
+            <a href="tel:+213 23 98 28 00"
+              style="direction:ltr; unicode-bidi:bidi-override; color:#006400; text-decoration:none;">+213 23 98 28
+              00</a>
           </div>
         </li>
 
         <li>
-          <img src="https://github.com/imadtbn/dz_portal/blob/main/icons/fransabank.jpg?raw=true" alt="Fransabank Logo" class="logo">
+          <img src="https://github.com/imadtbn/dz_portal/blob/main/icons/fransabank.jpg?raw=true" alt="Fransabank Logo"
+            class="logo">
           <a href="https://2h.ae/wuTt">Fransabank El Djazair</a>
           <div style="margin-top:5px; padding-right:25px;">
             <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
-            <a href="tel:200 999 021 (213+)" style="color:#006400; text-decoration:none;">200 999 021 (213+)</a>
+            <a href="tel:+213 21 99 09 20"
+              style="direction:ltr; unicode-bidi:bidi-override; color:#006400; text-decoration:none;">+213 21 99 09
+              20</a>
           </div>
         </li>
 
@@ -2740,19 +2951,22 @@ img.logo {
       </li>
 
       <li>
-        <img src="https://github.com/imadtbn/dz_portal/blob/main/icons/tariki.jpg?raw=true" alt="Facebook Logo" class="logo">
+        <img src="https://github.com/imadtbn/dz_portal/blob/main/icons/tariki.jpg?raw=true" alt="Facebook Logo"
+          class="logo">
         <a href="https://www.facebook.com/tariki.GN/" target="_blank"><strong>مركز الإعلام و تنسيق المرور –
             طريقي</strong></a>
       </li>
 
       <li>
-        <img src="https://github.com/imadtbn/dz_portal/blob/main/icons/ALLO%20CHORTTA.webp?raw=true" alt="Android App Logo" class="logo">
+        <img src="https://github.com/imadtbn/dz_portal/blob/main/icons/ALLO%20CHORTTA.webp?raw=true"
+          alt="Android App Logo" class="logo">
         <a href="https://play.google.com/store/apps/details?id=allochorta.algeriepolice.dz&hl=ar"
           target="_blank"><strong> تطبيق ألو الشرطة</strong></a>
       </li>
 
       <li>
-        <img src="https://github.com/imadtbn/dz_portal/blob/main/icons/Logomediateur.png?raw=true" alt="Wassit Logo" class="logo">
+        <img src="https://github.com/imadtbn/dz_portal/blob/main/icons/Logomediateur.png?raw=true" alt="Wassit Logo"
+          class="logo">
         <a href="https://wassit.dz/ar/register#" target="_blank"><strong>تواصل مع وسيط الجمهورية</strong></a>
       </li>
 
@@ -2764,19 +2978,22 @@ img.logo {
       </li>
 
       <li>
-        <img src="https://github.com/imadtbn/dz_portal/blob/main/icons/TOFFOLA.png?raw=true" alt="حماية الطفل Logo" class="logo">
+        <img src="https://github.com/imadtbn/dz_portal/blob/main/icons/TOFFOLA.png?raw=true" alt="حماية الطفل Logo"
+          class="logo">
         <a href="https://onppe.dz/index.php/ar/" target="_blank"><strong>حماية وترقية الطفولة</strong></a>
         - <a href="tel:1111">1111</a>
       </li>
 
       <li>
-        <img src="https://github.com/imadtbn/dz_portal/blob/main/icons/DGF.png?raw=true" alt="محافظة الغابات Logo" class="logo">
+        <img src="https://github.com/imadtbn/dz_portal/blob/main/icons/DGF.png?raw=true" alt="محافظة الغابات Logo"
+          class="logo">
         <a href="http://www.dgf.org.dz/ar" target="_blank"><strong>محافظة الغابات</strong></a>
         - <a href="tel:1070">1070</a>
       </li>
 
       <li>
-        <img src="https://github.com/imadtbn/dz_portal/blob/main/icons/Khadamaty.png?raw=true" alt="خدماتي Logo" class="logo">
+        <img src="https://github.com/imadtbn/dz_portal/blob/main/icons/Khadamaty.png?raw=true" alt="خدماتي Logo"
+          class="logo">
         <a href="https://www.khadamaty.dz/?lang=ar" target="_blank"><strong>خدماتي لتصليح الأجهزة
             الكهرومنزلية</strong></a>
         - <a href="tel:3075">3075</a>
@@ -3128,4 +3345,5 @@ img.logo {
     }
   </script>
 </body>
+
 </html>
