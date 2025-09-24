@@ -1074,72 +1074,54 @@
         </style>
 
         <!-- أيقونة المشاركة (أضف داخل الشريط مع بقية الأزرار) -->
-        <div id="social-share" class="social-share">
-          <!-- زر QR صغير دائري -->
-          <button class="share-btn" id="share-qr" aria-label="QR مشاركة رابط الصفحة" title="QR">
-            <img src="icons/Qrcodepage.png" alt="icon Logo" class="logo">"
-              alt="QR">
-          </button>
-        </div>
+       <!-- زر مشاركة الصفحة عبر QR -->
+<div class="share-qr">
+  <button id="show-qr" class="btn-share">
+    <i class="fas fa-qrcode"></i> مشاركة عبر QR
+  </button>
+</div>
 
-        <!-- نافذة معاينة الصورة (lightbox) -->
-        <div id="qrModal" role="dialog" aria-modal="true" aria-hidden="true">
-          <div id="qrModal">
-    <div class="modal-card">
-      <img src="icons/Qrcodepage.png" alt="QR">
-    </div>
-            <div class="modal-actions">
-              <a id="downloadQr" class="btn btn-download" href="#" download="Qrcodepage.png">تنزيل</a>
-              <button class="btn btn-close" id="closeQr">إغلاق</button>
-            </div>
-          </div>
-        </div>
+<!-- نافذة منبثقة لعرض صورة QR -->
+<div id="qrModal" class="modal" hidden>
+  <div class="modal-content">
+    <span id="close-qr" class="close">&times;</span>
+    <img src="icons/Qrcodepage.png" alt="QR لمشاركة الصفحة" class="qr-img">
+    <p>امسح الكود لمشاركة الصفحة</p>
+  </div>
+</div>
 
-        <script>
-          /* سلوك فتح وإغلاق النافذة والتحميل */
-          (function () {
-            const qrBtn = document.getElementById('share-qr');
-            const modal = document.getElementById('qrModal');
-            const closeBtn = document.getElementById('closeQr');
-            const downloadLink = document.getElementById('downloadQr');
-            const qrLarge = document.getElementById('qrLarge');
-            const imgUrl = 'https://raw.githubusercontent.com/imadtbn/dz_portal/refs/heads/main/icons/Qrcodepage.png';
+<style>
+.share-qr { margin: 1rem; }
+.btn-share {
+  background: #006233; color: #fff; border: none;
+  padding: .6rem 1rem; border-radius: .5rem; cursor: pointer;
+}
+.btn-share:hover { background: #004d26; }
+.modal {
+  position: fixed; inset: 0; background: rgba(0,0,0,.5);
+  display: flex; align-items: center; justify-content: center;
+}
+.modal-content {
+  background: #fff; padding: 1rem; border-radius: .75rem;
+  text-align: center; max-width: 300px;
+}
+.qr-img { width: 200px; height: auto; }
+.close { float: right; font-size: 1.5rem; cursor: pointer; }
+</style>
 
-            // تحديث رابط التنزيل (في حال احتجت CORS يمكن تغيير إلى خدمة تخزين تدعم التحميل)
-            downloadLink.href = imgUrl;
-
-            function openModal() {
-              modal.style.display = 'flex';
-              modal.setAttribute('aria-hidden', 'false');
-              // تركيز لأغراض الوصول
-              closeBtn.focus();
-            }
-            function closeModal() {
-              modal.style.display = 'none';
-              modal.setAttribute('aria-hidden', 'true');
-              qrBtn.focus();
-            }
-
-            qrBtn.addEventListener('click', function (e) {
-              e.preventDefault();
-              // تحميل الصورة عالية الدقة ثم فتح النافذة ليتسنى المسح من هاتف آخر
-              qrLarge.src = imgUrl;
-              openModal();
-            });
-
-            closeBtn.addEventListener('click', closeModal);
-
-            // إغلاق بالنقر خارج بطاقة المعاينة
-            modal.addEventListener('click', function (e) {
-              if (e.target === modal) closeModal();
-            });
-
-            // إغلاق بواسطة زر Escape
-            document.addEventListener('keydown', function (e) {
-              if (e.key === 'Escape' && modal.style.display === 'flex') closeModal();
-            });
-          })();
-        </script>
+<script>
+document.getElementById('show-qr').onclick = function() {
+  document.getElementById('qrModal').hidden = false;
+}
+document.getElementById('close-qr').onclick = function() {
+  document.getElementById('qrModal').hidden = true;
+}
+window.onclick = function(e) {
+  if (e.target.id === 'qrModal') {
+    document.getElementById('qrModal').hidden = true;
+  }
+}
+</script>
       </div>
 
       <style>
