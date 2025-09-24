@@ -952,37 +952,36 @@
 
       <!-- ====== أزرار المشاركة ====== -->
       <div id="social-share" class="social-share">
-        <a class="share-btn" id="share-facebook" target="_blank" aria-label="Facebook" 
-   href="https://www.facebook.com/sharer/sharer.php?u=YOUR_URL_HERE">
-  <img src="icons/facebook.webp" alt="Facebook" style="width:70%;height:auto;">
-</a>
+        <a class="share-btn" id="share-facebook" target="_blank" aria-label="Facebook"
+          href="https://www.facebook.com/sharer/sharer.php?u=YOUR_URL_HERE">
+          <img src="icons/facebook.webp" alt="Facebook" style="width:70%;height:auto;">
+        </a>
 
 
-<a class="share-btn" id="share-twitter" target="_blank" aria-label="Twitter"
-   href="https://twitter.com/intent/tweet?url=YOUR_URL_HERE&text=YOUR_TEXT_HERE">
-  <img src="icons/twitter.webp" alt="Twitter" style="width:70%;height:auto;">
-</a>
+        <a class="share-btn" id="share-twitter" target="_blank" aria-label="Twitter"
+          href="https://twitter.com/intent/tweet?url=YOUR_URL_HERE&text=YOUR_TEXT_HERE">
+          <img src="icons/twitter.webp" alt="Twitter" style="width:70%;height:auto;">
+        </a>
 
-<a class="share-btn" id="share-instagram" target="_blank" aria-label="Instagram"
-   href="https://www.instagram.com/YOUR_USERNAME/">
-  <img src="icons/instagram.webp" alt="Instagram" style="width:70%;height:auto;">
-</a>
+        <a class="share-btn" id="share-instagram" target="_blank" aria-label="Instagram"
+          href="https://www.instagram.com/YOUR_USERNAME/">
+          <img src="icons/instagram.png" alt="Instagram" style="width:70%;height:auto;">
+        </a>
 
-<a class="share-btn" id="share-whatsapp" target="_blank" aria-label="WhatsApp"
-   href="https://wa.me/?text=YOUR_TEXT_HERE%20YOUR_URL_HERE">
-  <img src="icons/whatsapp.webp" alt="WhatsApp" style="width:70%;height:auto;">
-</a>
+        <a class="share-btn" id="share-whatsapp" target="_blank" aria-label="WhatsApp"
+          href="https://wa.me/?text=YOUR_TEXT_HERE%20YOUR_URL_HERE">
+          <img src="icons/whatsapp.webp" alt="WhatsApp" style="width:70%;height:auto;">
+        </a>
 
-<a class="share-btn" id="share-telegram" target="_blank" aria-label="Telegram"
-   href="https://t.me/share/url?url=YOUR_URL_HERE&text=YOUR_TEXT_HERE">
-  <img src="icons/telegram.webp" alt="Telegram" style="width:70%;height:auto;">
-</a>
+        <a class="share-btn" id="share-telegram" target="_blank" aria-label="Telegram"
+          href="https://t.me/share/url?url=YOUR_URL_HERE&text=YOUR_TEXT_HERE">
+          <img src="icons/telegram.webp" alt="Telegram" style="width:70%;height:auto;">
+        </a>
 
-<a class="share-btn" id="share-messenger" target="_blank" aria-label="Messenger"
-   href="https://www.facebook.com/dialog/send?link=YOUR_URL_HERE&app_id=YOUR_APP_ID&redirect_uri=YOUR_URL_HERE">
-  <img src="icons/messenger.webp" alt="Messenger" style="width:70%;height:auto;">
-</a>
-
+        <a class="share-btn" id="share-messenger" target="_blank" aria-label="Messenger"
+          href="https://www.facebook.com/dialog/send?link=YOUR_URL_HERE&app_id=YOUR_APP_ID&redirect_uri=YOUR_URL_HERE">
+          <img src="icons/messenger.webp" alt="Messenger" style="width:70%;height:auto;">
+        </a>
 
         <!-- زر QR داخل شريط المشاركة -->
         <button class="share-btn" id="share-qr" aria-label="مشاركة عبر QR" title="QR">
@@ -1086,51 +1085,39 @@
       </div>
 
       <style>
-        /* 🎨 الحاوية العامة لأزرار المشاركة */
-        .social-share {
-          display: flex;
-          /* ترتيب العناصر بشكل أفقي */
-          justify-content: center;
-          /* محاذاة الأزرار في المنتصف */
-          gap: 10px;
-          /* مسافة فاصلة بين الأزرار */
-          flex-wrap: wrap;
-          /* السماح بانتقال الأزرار لسطر جديد عند صغر الشاشة */
-        }
-
-        /* 🔘 زر المشاركة الفردي */
         .share-btn {
-          width: 44px;
-          /* عرض الزر */
-          height: 44px;
-          /* ارتفاع الزر */
-          border-radius: 50%;
-          /* جعله دائري */
-          display: flex;
-          /* لتوسيط المحتوى داخله */
-          align-items: center;
-          /* محاذاة عمودية للأيقونة */
-          justify-content: center;
-          /* محاذاة أفقية للأيقونة */
-          transition: transform 0.2s, box-shadow 0.2s;
-          /* تأثير عند المرور */
-        }
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #fff;       /* خلفية بيضاء */
+  cursor: pointer;
+  overflow: hidden;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
 
-        /* ✨ مؤثرات عند المرور على الزر */
-        .share-btn:hover {
-          transform: scale(1.1);
-          /* تكبير بسيط */
-          box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
-          /* إضافة ظل */
-        }
+.share-btn img {
+  width: 70%;
+  height: auto;
+  display: block;
+}
 
-        /* 📌 حجم الأيقونات داخل الأزرار */
-        .icon {
-          width: 28px;
-          /* عرض الأيقونة */
-          height: 28px;
-          /* ارتفاع الأيقونة */
-        }
+/* تأثير عند التمرير */
+.share-btn:hover {
+  transform: scale(1.1);
+}
+
+/* ألوان الحدود لكل منصة */
+#share-facebook   { border: 2px solid #1877F2; } /* أزرق فيسبوك */
+#share-twitter    { border: 2px solid #1DA1F2; } /* أزرق تويتر */
+#share-instagram  { border: 2px solid #E4405F; } /* وردي/أحمر إنستغرام */
+#share-whatsapp   { border: 2px solid #25D366; } /* أخضر واتساب */
+#share-telegram   { border: 2px solid #0088CC; } /* أزرق تيليغرام */
+#share-messenger  { border: 2px solid #006AFF; } /* أزرق ماسنجر */
+#share-qr         { border: 2px solid #444;   } /* رمادي/أسود QR */
+
       </style>
 
       <!-- ====== JavaScriptأزرار المشاركة  ====== -->
@@ -1140,11 +1127,24 @@
           const title = encodeURIComponent(document.title || 'الصفحة');
 
           // روابط المشاركة
-          document.getElementById('share-facebook').href = `https://www.facebook.com/sharer/sharer.php?u=${url}`;
+          const url = encodeURIComponent(window.location.href);
+
+          // فيسبوك
+          document.getElementById('share-facebook').href =
+            `https://www.facebook.com/sharer/sharer.php?u=${url}`;
+
+          // ماسنجر (يتطلب App ID صالح)
+          const appId = "YOUR_APP_ID"; // غيّرها بـ App ID من فيسبوك
+          document.getElementById('share-messenger').href =
+            `https://www.facebook.com/dialog/send?link=${url}&app_id=${appId}&redirect_uri=${url}`;
+
+          // إنستغرام (لا يوجد رابط مشاركة مباشر)
+          // الأفضل تحويل الزائر لصفحتك على إنستغرام
+          document.getElementById('share-instagram').href =
+            `https://www.instagram.com/YOUR_USERNAME/`;
           document.getElementById('share-twitter').href = `https://twitter.com/intent/tweet?text=${title}&url=${url}`;
           document.getElementById('share-telegram').href = `https://t.me/share/url?url=${url}&text=${title}`;
           document.getElementById('share-whatsapp').href = `https://wa.me/?text=${title}%20${url}`;
-          document.getElementById('share-viber').href = `viber://forward?text=${title}%20${url}`;
 
           // زر إنستغرام: نسخ الرابط إلى الحافظة وفتح إنستغرام
           document.getElementById('share-instagram').addEventListener('click', async function (e) {
