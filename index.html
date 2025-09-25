@@ -959,28 +959,28 @@ header{
 
 
 /* ===== عرض الطقس المصغّر ===== */
-#weatherBox{
-  display:flex;
-  align-items:center;
-  gap:8px;
-  min-width:180px;
-  cursor:pointer;
-  color:var(--white);
-  font-weight:600;
-  user-select:none;
+#weatherBox {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #fff;
+  font-weight: 600;
+  flex: 1;                /* يتمدد ليأخذ المساحة المتوفرة */
+  min-width: 0;           /* مهم لإلغاء الحد الأدنى */
 }
-#weatherIcon{
-  width:34px;
-  height:34px;
-  display:block;
-  filter:drop-shadow(0 2px 6px rgba(0,0,0,.25));
+
+#weatherIcon {
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0;         /* يمنع تصغير الأيقونة */
 }
-#weatherInfo{
-  font-size:0.9rem;
-  white-space:nowrap;
-  overflow:hidden;
-  text-overflow:ellipsis;
-}
+
+#weatherInfo {
+  font-size: 0.92rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;    /* يسمح بلف النص */
+  word-break: break-word; /* يكسر السطر عند الحاجة */
 
 /* ===== شريط الأخبار (ticker) ===== */
 #newsTickerContainer{
