@@ -855,7 +855,7 @@
 
 <body>
 
-  <header style="; position: sticky; top: 0; z-index: 1000;">
+  <  <header style="; position: sticky; top: 0; z-index: 1000;">
     <div class="branding" dir="rtl" style="text-align: right;">
       <i class="fas fa-globe"></i>
       <h1>البوابة الجزائرية للخدمات الرقمية</h1>
@@ -863,9 +863,91 @@
 
     </div>
 
-    <div dir="rtl" id="searchBox" style="text-align: right;">
-      <input id="searchInput" placeholder="ابحث هنا داخل الصفحة..." type="text" />
-    </div>
+<div id="searchArea" style="display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;">
+  
+  <!-- الساعة والتاريخ -->
+  <div id="dateTimeBox" style="text-align:center;min-width:120px;color:#fff;">
+    <div id="clock" style="font-size:1.3em;font-weight:bold;"></div>
+    <div id="date" style="font-size:0.9em;"></div>
+  </div>
+
+  <!-- مربع البحث داخل الصفحة -->
+  <div id="searchBox" dir="rtl" style="flex:1;text-align:right;">
+    <input id="searchInput" placeholder="ابحث هنا داخل الصفحة..." type="text" 
+           style="width:100%;padding:8px;border-radius:8px;border:1px solid #ccc;">
+  </div>
+
+  <!-- مربع المدينة + الطقس -->
+<div id="weatherBox" style="display:flex;align-items:center;gap:8px;min-width:200px;justify-content:flex-start;">
+  <input id="cityInput" type="text" list="cities" placeholder="أدخل المدينة" 
+         style="padding:6px;border-radius:6px;border:1px solid #ccc;width:140px;">
+  <datalist id="cities">
+    <option value="الجزائر">
+    <option value="وهران">
+    <option value="قسنطينة">
+    <option value="سطيف">
+    <option value="عنابة">
+    <option value="باتنة">
+    <option value="بجاية">
+    <option value="تلمسان">
+    <option value="الجلفة">
+    <option value="البليدة">
+    <option value="ورقلة">
+    <option value="الأغواط">
+  </datalist>
+  
+  <img id="weatherIcon" alt="الطقس" style="width:32px;height:32px;">
+  <div>
+    <div id="weatherTemp" style="font-weight:bold;"></div>
+    <div id="weatherDesc" style="font-size:0.85em;color:#333;"></div>
+  </div>
+</div>
+</div>
+
+<script>
+  // تحديث الساعة والتاريخ
+  function updateClock() {
+    const now = new Date();
+    const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+    document.getElementById('clock').textContent = now.toLocaleTimeString('ar-DZ', { hour: '2-digit', minute: '2-digit' });
+    document.getElementById('date').textContent = now.toLocaleDateString('ar-DZ', options);
+  }
+  setInterval(updateClock, 1000);
+  updateClock();
+
+  // جلب الطقس من OpenWeatherMap
+  const apiKey = "c9600bb5dcccfb988100da9bf01b2f2f"; // ضع مفتاحك هنا
+
+  function fetchWeatherByCity(city) {
+    const url = `https://api.openweathermap.org/data/2.5/weather?q=${encodeURIComponent(city)}&units=metric&lang=ar&appid=${apiKey}`;
+    fetch(url)
+      .then(r => r.json())
+      .then(data => {
+        if (data.cod !== 200) throw new Error(data.message);
+        const icon = `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
+        document.getElementById('weatherIcon').src = icon;
+        document.getElementById('weatherTemp').textContent = `${Math.round(data.main.temp)}°C`;
+        document.getElementById('weatherDesc').textContent = data.weather[0].description;
+      })
+      .catch(() => {
+        document.getElementById('weatherTemp').textContent = "";
+        document.getElementById('weatherDesc').textContent = "تعذر تحميل الطقس";
+        document.getElementById('weatherIcon').src = "";
+      });
+  }
+
+  // إدخال المدينة والضغط على Enter
+  const cityInput = document.getElementById('cityInput');
+  cityInput.addEventListener('keypress', function(e) {
+    if (e.key === 'Enter') {
+      const city = cityInput.value.trim();
+      if (city) fetchWeatherByCity(city);
+    }
+  });
+
+  // افتراضي: مدينة الجزائر
+  fetchWeatherByCity("الجزائر");
+</script>
 
     <!-- زر تثبيت التطبيق مع أيقونة Font Awesome -->
     <button id="install-button" style="background-color: #d40000; color: white; padding: 10px 15px; border: none;
@@ -888,12 +970,8 @@
           ⚡ سونلغاز تنضم إلى عائلة بريدي موب |
           📲 حمّل تطبيق بريدي موب وادفع فاتورتك من بيتك بكل أمان |
           👋 مرحبًا بكم في بوابة الخدمات الرقمية |
-          👋 مرحبًا بكم في بوابة الخدمات الرقمية |
-          🆕 آخر التحديثات: إطلاق بوابة جزائرية للخدمات الرقمية |
           💻 إستفد من الخدمات الرقمية عن بعد في الجزائر بكل سهولة وسرعة |
           🔐 البوابة تعمل في بيئة آمنة – بياناتك محمية |
-          🤝 شارك البوابة مع أصدقائك وساهم في نشر الثقافة الرقمية |
-          ⚡ سونلغاز تنضم إلى عائلة بريدي موب |
           🛂 إطلاق خدمة تسديد حقوق الطابع الخاصة بالسفر عن بعد |
           📢 استخراج شهادة السلبية العقارية عبر
           <a href="https://fadaeldjazair.mf.gov.dz/EDCFPUBLICHOME/" target="_blank"
@@ -931,7 +1009,6 @@
     <!-- نهاية شريط الأخبار -->
 
   </header>
-
   <!-- قسم الترحيب المحسن -->
   <section class="welcome-section">
     <div class="welcome-content">
