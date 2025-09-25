@@ -954,33 +954,27 @@
       <div id="social-share" class="social-share">
         <a class="share-btn" id="share-facebook" target="_blank" aria-label="Facebook"
           href="https://www.facebook.com/sharer/sharer.php?u=https://imadtbn.github.io/dz_portal/">
-          <img src="icons/facebook.webp" alt="Facebook" style="width:70%;height:auto;">
+          <img src="icons/facebook.png" alt="Facebook" style="width:70%;height:auto;">
         </a>
-
 
         <a class="share-btn" id="share-twitter" target="_blank" aria-label="Twitter"
           href="https://twitter.com/intent/tweet?url=https://imadtbn.github.io/dz_portal/&text=شارك البوابة الرقمية مع أصدقائك">
-          <img src="icons/twitter.webp" alt="Twitter" style="width:70%;height:auto;">
-        </a>
-
-        <a class="share-btn" id="share-instagram" target="_blank" aria-label="Instagram"
-          href="https://www.instagram.com/">
-          <img src="icons/instagram.jpg" alt="Instagram" style="width:70%;height:auto;">
+          <img src="icons/twitter.png" alt="Twitter" style="width:70%;height:auto;">
         </a>
 
         <a class="share-btn" id="share-whatsapp" target="_blank" aria-label="WhatsApp"
           href="https://wa.me/?text=شارك البوابة الرقمية مع أصدقائك%20https://imadtbn.github.io/dz_portal/">
-          <img src="icons/whatsapp.webp" alt="WhatsApp" style="width:70%;height:auto;">
+          <img src="icons/whatsapp.png" alt="WhatsApp" style="width:70%;height:auto;">
         </a>
 
         <a class="share-btn" id="share-telegram" target="_blank" aria-label="Telegram"
           href="https://t.me/share/url?url=https://imadtbn.github.io/dz_portal/&text=شارك البوابة الرقمية مع أصدقائك">
-          <img src="icons/Telegram.webp" alt="Telegram" style="width:70%;height:auto;">
+          <img src="icons/telegram.png" alt="Telegram" style="width:70%;height:auto;">
         </a>
 
         <a class="share-btn" id="share-messenger" target="_blank" aria-label="Messenger"
           href="https://www.facebook.com/dialog/send?link=https://imadtbn.github.io/dz_portal/&app_id=YOUR_APP_ID&redirect_uri=https://imadtbn.github.io/dz_portal/">
-          <img src="icons/Messenger.webp" alt="Messenger" style="width:70%;height:auto;">
+          <img src="icons/Messenger.png" alt="Messenger" style="width:70%;height:auto;">
         </a>
 
         <!-- زر QR داخل شريط المشاركة -->
@@ -1053,71 +1047,124 @@
             qrPreview.addEventListener('touchstart', function () { }, { passive: true });
           })();
         </script>
+        <!-- شريط الأيقونات التنقل الديناميكي -->
+        <script>
+          function createNavigationBar() {
+            const navContainer = document.querySelector('.nav-scroller-inner');
 
-        <!-- اقتراح تنسيق CSS صغير (يتماشى مع أنماط share-btn الموجودة) -->
-        <style>
-          /* تأكد أن .share-btn موجودة في css العام. هذه قواعد مساعدة إن احتجت */
-          .share-btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 44px;
-            height: 44px;
-            border-radius: 50%;
-            overflow: hidden;
-            background: transparent;
-            border: none;
-            cursor: pointer;
+            const sections = [
+              { id: 'toggle-payment', name: 'الدفع الإلكتروني', icon: 'fa-credit-card' },
+              { id: 'toggle-post', name: 'بريد الجزائر', icon: 'fa-envelope' },
+              { id: 'toggle-telecom', name: 'اتصالات الجزائر', icon: 'fa-wifi' },
+              { id: 'toggle-education', name: 'التربية والتعليم', icon: 'fa-graduation-cap' },
+              { id: 'toggle-10', name: 'الخدمات الجامعية', icon: 'fa-university' },
+              { id: 'toggle-vocational', name: 'التكوين المهني', icon: 'fa-tools' },
+              { id: 'toggle-admin', name: 'الإدارة المحلية', icon: 'fa-building' },
+              { id: 'toggle-admin', name: 'الشؤون الخارجية', icon: 'fa-flag' },
+              { id: 'toggle-tax', name: 'الخدمات الجبائية', icon: 'fa-file-invoice-dollar' },
+              { id: 'toggle-realestate', name: 'العقار', icon: 'fa-home' },
+              { id: 'social-security', name: 'الضمان الاجتماعي', icon: 'fa-shield-alt' },
+              { id: 'toggle-justice', name: 'العدالة', icon: 'fa-scale-balanced' },
+              { id: 'toggle-12', name: 'النقل', icon: 'fa-bus' },
+              { id: 'toggle-11', name: 'التشغيل', icon: 'fa-briefcase' },
+              { id: 'toggle-4', name: 'الصحة', icon: 'fa-heartbeat' },
+              { id: 'toggle-commerce', name: 'التجارة', icon: 'fa-store' }
+            ];
+
+            // إنشاء الأزرار
+            sections.forEach(section => {
+              const navItem = document.createElement('div');
+              navItem.className = 'nav-item';
+              navItem.innerHTML = `
+          <a href="#${section.id}" class="nav-link">
+            <i class="fas ${section.icon} nav-icon"></i>
+            <span>${section.name}</span>
+          </a>`;
+              navContainer.appendChild(navItem);
+            });
+
+            // تفعيل التمرير السلس
+            navContainer.querySelectorAll('.nav-link').forEach(link => {
+              link.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+                if (targetElement) {
+                  window.scrollTo({
+                    top: targetElement.offsetTop - 20,
+                    behavior: 'smooth'
+                  });
+                }
+              });
+            });
           }
 
-          .share-btn img {
-            width: 70%;
-            height: auto;
-            display: block;
-          }
-
-          #qrModal img {
-            -webkit-user-drag: none;
-            user-drag: none;
-          }
-        </style>
-
+          document.addEventListener('DOMContentLoaded', createNavigationBar);
+        </script>
       </div>
 
       <style>
         .share-btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  background: #fff;       /* خلفية بيضاء */
-  cursor: pointer;
-  overflow: hidden;
-  transition: transform 0.2s, box-shadow 0.2s;
-}
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          width: 44px;
+          height: 44px;
+          border-radius: 50%;
+          background: #fff;
+          /* خلفية بيضاء */
+          cursor: pointer;
+          overflow: hidden;
+          transition: transform 0.2s, box-shadow 0.2s;
+        }
 
-.share-btn img {
-  width: 70%;
-  height: auto;
-  display: block;
-}
+        .share-btn img {
+          width: 70%;
+          height: auto;
+          display: block;
+        }
 
-/* تأثير عند التمرير */
-.share-btn:hover {
-  transform: scale(1.1);
-}
+        /* تأثير عند التمرير */
+        .share-btn:hover {
+          transform: scale(1.1);
+        }
 
-/* ألوان الحدود لكل منصة */
-#share-facebook   { border: 2px solid #1877F2; } /* أزرق فيسبوك */
-#share-twitter    { border: 2px solid #1DA1F2; } /* أزرق تويتر */
-#share-instagram  { border: 2px solid #E4405F; } /* وردي/أحمر إنستغرام */
-#share-whatsapp   { border: 2px solid #25D366; } /* أخضر واتساب */
-#share-telegram   { border: 2px solid #0088CC; } /* أزرق تيليغرام */
-#share-messenger  { border: 2px solid #006AFF; } /* أزرق ماسنجر */
-#share-qr         { border: 2px solid #444;   } /* رمادي/أسود QR */
+        /* ألوان الحدود لكل منصة */
+        #share-facebook {
+          border: 2px solid #1877F2;
+        }
 
+        /* أزرق فيسبوك */
+        #share-twitter {
+          border: 2px solid #1DA1F2;
+        }
+
+        /* أزرق تويتر */
+        #share-instagram {
+          border: 2px solid #E4405F;
+        }
+
+        /* وردي/أحمر إنستغرام */
+        #share-whatsapp {
+          border: 2px solid #25D366;
+        }
+
+        /* أخضر واتساب */
+        #share-telegram {
+          border: 2px solid #0088CC;
+        }
+
+        /* أزرق تيليغرام */
+        #share-messenger {
+          border: 2px solid #006AFF;
+        }
+
+        /* أزرق ماسنجر */
+        #share-qr {
+          border: 2px solid #444;
+        }
+
+        /* رمادي/أسود QR */
       </style>
 
       <!-- ====== JavaScriptأزرار المشاركة  ====== -->
@@ -1140,23 +1187,10 @@
 
           // إنستغرام (لا يوجد رابط مشاركة مباشر)
           // الأفضل تحويل الزائر لصفحتك على إنستغرام
-          document.getElementById('share-instagram').href =
-            `https://www.instagram.com/YOUR_USERNAME/`;
           document.getElementById('share-twitter').href = `https://twitter.com/intent/tweet?text=${title}&url=${url}`;
           document.getElementById('share-telegram').href = `https://t.me/share/url?url=${url}&text=${title}`;
           document.getElementById('share-whatsapp').href = `https://wa.me/?text=${title}%20${url}`;
 
-          // زر إنستغرام: نسخ الرابط إلى الحافظة وفتح إنستغرام
-          document.getElementById('share-instagram').addEventListener('click', async function (e) {
-            e.preventDefault();
-            try {
-              await navigator.clipboard.writeText(decodeURIComponent(title) + ' ' + location.href);
-              window.open('https://www.instagram.com/', '_blank', 'noopener');
-              this.setAttribute('title', 'الرابط نُسخ إلى الحافظة');
-            } catch {
-              window.open('https://www.instagram.com/', '_blank', 'noopener');
-            }
-          });
 
           // استخدام Web Share API إن كانت متاحة
           const shareButtons = document.querySelectorAll('.share-btn');
@@ -1199,60 +1233,6 @@
 
     </div>
   </section>
-  <!-- شريط الأيقونات التنقل الديناميكي -->
-  <script>
-    function createNavigationBar() {
-      const navContainer = document.querySelector('.nav-scroller-inner');
-
-      const sections = [
-        { id: 'toggle-payment', name: 'الدفع الإلكتروني', icon: 'fa-credit-card' },
-        { id: 'toggle-post', name: 'بريد الجزائر', icon: 'fa-envelope' },
-        { id: 'toggle-telecom', name: 'اتصالات الجزائر', icon: 'fa-wifi' },
-        { id: 'toggle-education', name: 'التربية والتعليم', icon: 'fa-graduation-cap' },
-        { id: 'toggle-10', name: 'الخدمات الجامعية', icon: 'fa-university' },
-        { id: 'toggle-vocational', name: 'التكوين المهني', icon: 'fa-tools' },
-        { id: 'toggle-admin', name: 'الإدارة المحلية', icon: 'fa-building' },
-        { id: 'toggle-admin', name: 'الشؤون الخارجية', icon: 'fa-flag' },
-        { id: 'toggle-tax', name: 'الخدمات الجبائية', icon: 'fa-file-invoice-dollar' },
-        { id: 'toggle-realestate', name: 'العقار', icon: 'fa-home' },
-        { id: 'social-security', name: 'الضمان الاجتماعي', icon: 'fa-shield-alt' },
-        { id: 'toggle-justice', name: 'العدالة', icon: 'fa-scale-balanced' },
-        { id: 'toggle-12', name: 'النقل', icon: 'fa-bus' },
-        { id: 'toggle-11', name: 'التشغيل', icon: 'fa-briefcase' },
-        { id: 'toggle-4', name: 'الصحة', icon: 'fa-heartbeat' },
-        { id: 'toggle-commerce', name: 'التجارة', icon: 'fa-store' }
-      ];
-
-      // إنشاء الأزرار
-      sections.forEach(section => {
-        const navItem = document.createElement('div');
-        navItem.className = 'nav-item';
-        navItem.innerHTML = `
-          <a href="#${section.id}" class="nav-link">
-            <i class="fas ${section.icon} nav-icon"></i>
-            <span>${section.name}</span>
-          </a>`;
-        navContainer.appendChild(navItem);
-      });
-
-      // تفعيل التمرير السلس
-      navContainer.querySelectorAll('.nav-link').forEach(link => {
-        link.addEventListener('click', function (e) {
-          e.preventDefault();
-          const targetId = this.getAttribute('href').substring(1);
-          const targetElement = document.getElementById(targetId);
-          if (targetElement) {
-            window.scrollTo({
-              top: targetElement.offsetTop - 20,
-              behavior: 'smooth'
-            });
-          }
-        });
-      });
-    }
-
-    document.addEventListener('DOMContentLoaded', createNavigationBar);
-  </script>
 
   <!-- قسم الدفع الإلكتروني للفواتير -->
   <section dir="rtl" style="text-align: right;">
