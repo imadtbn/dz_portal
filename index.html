@@ -904,6 +904,79 @@
 </div>
 </div>
 
+    <style> 
+  /* تحسين عرض منطقة البحث + الساعة + الطقس */
+#searchArea {
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+/* الهواتف أقل من 768px */
+@media (max-width: 768px) {
+  #searchArea {
+    flex-direction: column;
+    align-items: stretch;
+    text-align: center;
+  }
+
+  #dateTimeBox {
+    order: 1;
+    font-size: 1em;
+    margin-bottom: 6px;
+  }
+
+  #searchBox {
+    order: 2;
+    width: 100%;
+  }
+
+  #searchInput {
+    width: 95%;
+    font-size: 1em;
+    padding: 10px;
+  }
+
+  #weatherBox {
+    order: 3;
+    justify-content: center;
+    width: 100%;
+    gap: 10px;
+    margin-top: 6px;
+  }
+
+  #cityInput {
+    width: 60%;
+    font-size: 0.95em;
+    padding: 8px;
+  }
+
+  #weatherTemp {
+    font-size: 1em;
+  }
+
+  #weatherDesc {
+    font-size: 0.85em;
+  }
+
+  #weatherIcon {
+    width: 28px;
+    height: 28px;
+  }
+}
+
+/* الشاشات الصغيرة جداً أقل من 480px */
+@media (max-width: 480px) {
+  #cityInput {
+    width: 100%;
+    margin-bottom: 8px;
+  }
+  #weatherBox {
+    flex-direction: column;
+  }
+}
+
+</style>
+    
 <script>
   // تحديث الساعة والتاريخ
   function updateClock() {
