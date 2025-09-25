@@ -151,8 +151,6 @@
 <link rel="manifest" href="manifest.webmanifest.json">
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
 
-
-
 <!-- Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-K23WYKK60X"></script>
 <script>
@@ -771,12 +769,12 @@
 
     .nav-link {
       width: 65px;
-      height: 45px;
-      font-size: 0.7em;
+      height: 70px;
+      font-size: 0.8em;
     }
 
     .nav-icon {
-      font-size: 14px;
+      font-size: 13px;
     }
 
     .nav-scroller {
@@ -855,7 +853,7 @@
 
 <body>
 
-  <  <header style="; position: sticky; top: 0; z-index: 1000;">
+  <header style="; position: sticky; top: 0; z-index: 1000;">
     <div class="branding" dir="rtl" style="text-align: right;">
       <i class="fas fa-globe"></i>
       <h1>البوابة الجزائرية للخدمات الرقمية</h1>
@@ -863,164 +861,257 @@
 
     </div>
 
-<div id="searchArea" style="display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;">
+    <div id="searchArea" style="display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;">
+
+      <!-- الساعة + التاريخ -->
+      <div id="dateTimeBox" style="text-align:center;min-width:180px;color:#fff;font-weight:bold;">
+        <span id="clock" style="margin-left:6px;"></span>
+        <span id="date"></span>
+      </div>
+
+      <!-- مربع البحث داخل الصفحة -->
+      <div id="searchBox" dir="rtl" style="flex:1;text-align:right;">
+        <input id="searchInput" placeholder="ابحث هنا داخل الصفحة..." type="text"
+          style="width:100%;padding:8px;border-radius:8px;border:1px solid #ccc;">
+      </div>
+
+      <!-- الطقس -->
+      <div id="weatherBox"
+        style="display:flex;align-items:center;gap:6px;min-width:200px;justify-content:flex-start;cursor:pointer;">
+        <img id="weatherIcon" alt="الطقس" style="width:32px;height:32px;">
+        <span id="weatherInfo" style="font-size:0.9em;color:#fff;"></span>
+      </div>
+    </div>
+
+    <style>
+/* ======= متغيرات الألوان ======= */
+:root{
+  --primary-color:#006233;
+  --accent-color:#a52a2a;
+  --danger:#d40000;
+  --white:#ffffff;
+  --header-height: auto;
+}
+
+/* ======= هيدر عام ثابت (sticky) ======= */
+header{
+  position:sticky;
+  top:0;
+  z-index:1000;
+  background:var(--primary-color);
+  color:var(--white);
+  padding:10px 14px;
+  box-shadow:0 2px 6px rgba(0,0,0,.12);
+  display:block;
+}
+
+/* ==== حاوية داخلية مرنة للهيدر (تفرّق العناصر) ==== */
+#searchArea{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:18px;
+  flex-wrap:wrap;
+  max-width:1200px;
+  margin:0 auto;
+}
+
+/* ===== الهوية Branding ===== */
+.branding{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  direction:rtl;
+  text-align:right;
+  min-width:160px;
+  flex-shrink:0;
+}
+.branding h1{
+  margin:0;
+  font-size:1.05rem;
+  font-weight:700;
+  color:var(--white);
+  line-height:1;
+}
+.branding .logo{
+  width:34px;
+  height:34px;
+  object-fit:contain;
+  border-radius:4px;
+  box-shadow:0 1px 3px rgba(0,0,0,.15);
+}
+
+/* ===== صندوق الساعة والتاريخ ===== */
+#dateTimeBox{
+  display:flex;
+  gap:8px;
+  align-items:center;
+  color:var(--white);
+  min-width:160px;
+  justify-content:center;
+  font-weight:600;
+  font-size:0.95rem;
+  white-space:nowrap;
+}
+#dateTimeBox #clock{ font-size:1.15rem; }
+#dateTimeBox #date{ font-size:0.85rem; opacity:.95; }
+
+
+
+/* ===== عرض الطقس المصغّر ===== */
+#weatherBox{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  min-width:180px;
+  cursor:pointer;
+  color:var(--white);
+  font-weight:600;
+  user-select:none;
+}
+#weatherIcon{
+  width:34px;
+  height:34px;
+  display:block;
+  filter:drop-shadow(0 2px 6px rgba(0,0,0,.25));
+}
+#weatherInfo{
+  font-size:0.9rem;
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+}
+
+/* ===== شريط الأخبار (ticker) ===== */
+#newsTickerContainer{
+  width:100%;
+  background:linear-gradient(90deg, rgba(0,0,0,.05), rgba(255,255,255,.03));
+  padding:6px 12px;
+  margin-top:8px;
+  box-sizing:border-box;
+  overflow:hidden;
+  border-top:1px solid rgba(255,255,255,.04);
+  border-bottom:1px solid rgba(0,0,0,.05);
+  font-weight:700;
+  color:var(--white);
+}
+#newsTicker{
+  display:inline-block;
+  white-space:nowrap;
+  animation:scrollNewsRTL 90s linear infinite;
+  will-change:transform;
+}
+#newsTicker a{ color:#fff; text-decoration:underline; }
+#newsTicker a:hover{ color:#ffd700; }
+
+/* ===== حالة الوصول (focus / keyboard) ===== */
+a:focus, button:focus, input:focus, #weatherBox:focus{
+  outline:3px solid rgba(255,255,255,.14);
+  outline-offset:2px;
+  border-radius:6px;
+}
+
+/* ===== تجاوب/تحسين للهواتف ===== */
+@media (max-width: 768px){
+  #searchArea{
+    flex-direction:column;
+    align-items:stretch;
+    gap:10px;
+    padding:6px 4px;
+  }
+
+  /* الساعة والتاريخ في سطر واحد */
+  #dateTimeBox{
+    justify-content:center;
+    gap:6px;
+    font-size:1rem;
+  }
+  #dateTimeBox #clock{ font-size:1.05rem; }
+  #dateTimeBox #date{ font-size:0.9rem; }
+
+  /* البحث أفضل تكبير */
+  #searchBox{ order:2; width:100%; }
+  #searchBox input{ font-size:1rem; padding:10px 12px; }
+
+  /* الطقس يظهر صف واحد وموسّع */
+  #weatherBox{ order:3; justify-content:center; gap:10px; font-size:0.95rem; min-width:0; }
+  #weatherIcon{ width:30px; height:30px; }
+  #weatherInfo{ font-size:0.95rem; }
   
-  <!-- الساعة والتاريخ -->
-  <div id="dateTimeBox" style="text-align:center;min-width:120px;color:#fff;">
-    <div id="clock" style="font-size:1.3em;font-weight:bold;"></div>
-    <div id="date" style="font-size:0.9em;"></div>
-  </div>
-
-  <!-- مربع البحث داخل الصفحة -->
-  <div id="searchBox" dir="rtl" style="flex:1;text-align:right;">
-    <input id="searchInput" placeholder="ابحث هنا داخل الصفحة..." type="text" 
-           style="width:100%;padding:8px;border-radius:8px;border:1px solid #ccc;">
-  </div>
-
-  <!-- مربع المدينة + الطقس -->
-<div id="weatherBox" style="display:flex;align-items:center;gap:8px;min-width:200px;justify-content:flex-start;">
-  <input id="cityInput" type="text" list="cities" placeholder="أدخل المدينة" 
-         style="padding:6px;border-radius:6px;border:1px solid #ccc;width:140px;">
-  <datalist id="cities">
-    <option value="الجزائر">
-    <option value="وهران">
-    <option value="قسنطينة">
-    <option value="سطيف">
-    <option value="عنابة">
-    <option value="باتنة">
-    <option value="بجاية">
-    <option value="تلمسان">
-    <option value="الجلفة">
-    <option value="البليدة">
-    <option value="ورقلة">
-    <option value="الأغواط">
-  </datalist>
-  
-  <img id="weatherIcon" alt="الطقس" style="width:32px;height:32px;">
-  <div>
-    <div id="weatherTemp" style="font-weight:bold;"></div>
-    <div id="weatherDesc" style="font-size:0.85em;color:#333;"></div>
-  </div>
-</div>
-</div>
-
-    <style> 
-  /* تحسين عرض منطقة البحث + الساعة + الطقس */
-#searchArea {
-  flex-wrap: wrap;
-  gap: 12px;
+  /* شريط الأخبار أصغر */
+  #newsTickerContainer{ font-size:0.92rem; padding:6px 10px; }
 }
 
-/* الهواتف أقل من 768px */
-@media (max-width: 768px) {
-  #searchArea {
-    flex-direction: column;
-    align-items: stretch;
-    text-align: center;
-  }
-
-  #dateTimeBox {
-    order: 1;
-    font-size: 1em;
-    margin-bottom: 6px;
-  }
-
-  #searchBox {
-    order: 2;
-    width: 100%;
-  }
-
-  #searchInput {
-    width: 95%;
-    font-size: 1em;
-    padding: 10px;
-  }
-
-  #weatherBox {
-    order: 3;
-    justify-content: center;
-    width: 100%;
-    gap: 10px;
-    margin-top: 6px;
-  }
-
-  #cityInput {
-    width: 60%;
-    font-size: 0.95em;
-    padding: 8px;
-  }
-
-  #weatherTemp {
-    font-size: 1em;
-  }
-
-  #weatherDesc {
-    font-size: 0.85em;
-  }
-
-  #weatherIcon {
-    width: 28px;
-    height: 28px;
-  }
+/* ===== شاشات صغيرة جداً ===== */
+@media (max-width: 480px){
+  #dateTimeBox{ font-size:0.98rem; }
+  #searchBox input{ font-size:0.95rem; padding:9px; }
+  #weatherInfo{ font-size:0.9rem; max-width:140px; text-align:center; }
+  #newsTicker{ animation-duration:110s; }
 }
 
-/* الشاشات الصغيرة جداً أقل من 480px */
-@media (max-width: 480px) {
-  #cityInput {
-    width: 100%;
-    margin-bottom: 8px;
-  }
-  #weatherBox {
-    flex-direction: column;
-  }
+/* ===== تصغير العناصر عند الحاجة لمنع الفوضى ===== */
+@media (min-width:1201px){
+  #searchArea{ max-width:1400px; }
 }
+    </style>
 
-</style>
-    
-<script>
-  // تحديث الساعة والتاريخ
-  function updateClock() {
-    const now = new Date();
-    const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-    document.getElementById('clock').textContent = now.toLocaleTimeString('ar-DZ', { hour: '2-digit', minute: '2-digit' });
-    document.getElementById('date').textContent = now.toLocaleDateString('ar-DZ', options);
-  }
-  setInterval(updateClock, 1000);
-  updateClock();
+    <script>
+      // تحديث الساعة والتاريخ
+      function updateClock() {
+        const now = new Date();
+        const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+        document.getElementById('clock').textContent =
+          now.toLocaleTimeString('ar-DZ', { hour: '2-digit', minute: '2-digit' });
+        document.getElementById('date').textContent =
+          now.toLocaleDateString('ar-DZ', options);
+      }
+      setInterval(updateClock, 1000);
+      updateClock();
 
-  // جلب الطقس من OpenWeatherMap
-  const apiKey = "c9600bb5dcccfb988100da9bf01b2f2f"; // ضع مفتاحك هنا
+      // إعدادات OpenWeatherMap
+      const apiKey = "c9600bb5dcccfb988100da9bf01b2f2f"; // ضع مفتاحك هنا
+      let weatherInterval = null; // لتخزين المؤقت
 
-  function fetchWeatherByCity(city) {
-    const url = `https://api.openweathermap.org/data/2.5/weather?q=${encodeURIComponent(city)}&units=metric&lang=ar&appid=${apiKey}`;
-    fetch(url)
-      .then(r => r.json())
-      .then(data => {
-        if (data.cod !== 200) throw new Error(data.message);
-        const icon = `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
-        document.getElementById('weatherIcon').src = icon;
-        document.getElementById('weatherTemp').textContent = `${Math.round(data.main.temp)}°C`;
-        document.getElementById('weatherDesc').textContent = data.weather[0].description;
-      })
-      .catch(() => {
-        document.getElementById('weatherTemp').textContent = "";
-        document.getElementById('weatherDesc').textContent = "تعذر تحميل الطقس";
-        document.getElementById('weatherIcon').src = "";
+      function fetchWeather(lat, lon) {
+        const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&lang=ar&appid=${apiKey}`;
+        fetch(url)
+          .then(r => r.json())
+          .then(data => {
+            if (data.cod !== 200) throw new Error(data.message);
+            const icon = `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
+            const temp = `${Math.round(data.main.temp)}°C`;
+            const desc = data.weather[0].description;
+            const city = data.name;
+            document.getElementById('weatherIcon').src = icon;
+            document.getElementById('weatherInfo').textContent = `${temp} | ${desc} | بمدينة ${city}`;
+          })
+          .catch(() => {
+            document.getElementById('weatherInfo').textContent = "تعذر تحميل الطقس";
+            document.getElementById('weatherIcon').src = "";
+          });
+      }
+
+      // حدث عند النقر على أيقونة الطقس
+      document.getElementById('weatherBox').addEventListener('click', () => {
+        if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(pos => {
+            const { latitude, longitude } = pos.coords;
+            fetchWeather(latitude, longitude);
+
+            // إذا لم يكن هناك مؤقت سابق، أنشئ مؤقتاً يحدث كل 30 دقيقة
+            if (!weatherInterval) {
+              weatherInterval = setInterval(() => {
+                fetchWeather(latitude, longitude);
+              }, 30 * 60 * 1000); // 30 دقيقة
+            }
+          },
+            () => { document.getElementById('weatherInfo').textContent = "الرجاء تفعيل GPS"; });
+        } else {
+          document.getElementById('weatherInfo').textContent = "المتصفح لا يدعم GPS";
+        }
       });
-  }
-
-  // إدخال المدينة والضغط على Enter
-  const cityInput = document.getElementById('cityInput');
-  cityInput.addEventListener('keypress', function(e) {
-    if (e.key === 'Enter') {
-      const city = cityInput.value.trim();
-      if (city) fetchWeatherByCity(city);
-    }
-  });
-
-  // افتراضي: مدينة الجزائر
-  fetchWeatherByCity("الجزائر");
-</script>
+    </script>
 
     <!-- زر تثبيت التطبيق مع أيقونة Font Awesome -->
     <button id="install-button" style="background-color: #d40000; color: white; padding: 10px 15px; border: none;
@@ -1082,6 +1173,7 @@
     <!-- نهاية شريط الأخبار -->
 
   </header>
+
   <!-- قسم الترحيب المحسن -->
   <section class="welcome-section">
     <div class="welcome-content">
@@ -1551,7 +1643,8 @@
             الهاتف الثابت</a>
         </li>
         <li><i class="fas fa-globe" style="color: #006400; margin-left:6px;"></i>
-          <a href="https://paiement.algerietelecom.dz/AR/index.php?p=internet_recharge&pr=in" target="_blank">تعبئة حساب
+          <a href="https://paiement.algerietelecom.dz/AR/index.php?p=internet_recharge&pr=in" target="_blank">تعبئة
+            حساب
             الانترنت</a>
         </li>
         <li><i class="fas fa-broadcast-tower" style="color: #006400; margin-left:6px;"></i>
