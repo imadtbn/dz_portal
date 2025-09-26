@@ -189,7 +189,7 @@
     /* لون خلفية فاتح */
     color: #333;
     /* لون النص */
-    line-height: 1.6;
+    line-height: 1.5;
     /* تباعد الأسطر */
   }
 
@@ -865,16 +865,16 @@
       <i class="fas fa-globe"></i>
       <h1>البوابة الجزائرية للخدمات الرقمية</h1>
       <img alt="علم الجزائر" src="icons/Flag_of_Algeria.svg" class="logo">
-  
-      <!-- صندوق الطقس -->
-      <div id="weatherBox">
-        <img id="weatherIcon">
-        <span id="weatherInfo"></span>
-      </div>
     </div>
   
+    <!-- الطقس أسفل العنوان مباشرة -->
+    <div id="weatherBox">
+      <img id="weatherIcon">
+      <span id="weatherInfo"></span>
+    </div>
+  
+    <!-- البحث -->
     <div id="searchArea">
-      <!-- مربع البحث داخل الصفحة -->
       <div id="searchBox" dir="rtl">
         <input id="searchInput" placeholder="ابحث هنا داخل الصفحة..." type="text">
       </div>
@@ -892,8 +892,6 @@
           🆕 آخر التحديثات: إطلاق بوابة جزائرية للخدمات الرقمية |
           💻 إستفد من الخدمات الرقمية عن بعد في الجزائر بكل سهولة وسرعة |
           🔐 البوابة تعمل في بيئة آمنة – بياناتك محمية |
-          📢 بريد الجزائر بالتنسيق مع وزارة الشؤون الخارجية يطلق خدمة "تصديق" 📄🌍 |
-          🔗 استفد الآن عبر: <a href="https://tasdik.poste.dz" target="_blank">tasdik.poste.dz</a> |
         </div>
       </div>
     </div>
@@ -906,82 +904,85 @@
     --white:#fff;
   }
   
-  /* إزالة أي فراغ جانبي */
   html, body {
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
+    margin:0;
+    padding:0;
+    overflow-x:hidden;
   }
   
+  /* تثبيت الهيدر */
   header {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background: var(--primary-color);
-    color: var(--white);
-    box-shadow: 0 2px 6px rgba(0,0,0,.12);
-    transition: top 0.3s;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    background:var(--primary-color);
+    color:var(--white);
     z-index:1000;
-    box-sizing: border-box;
+    box-shadow:0 2px 6px rgba(0,0,0,.12);
+    transition:top 0.3s;
+    box-sizing:border-box;
   }
   
+  /* الهوية */
   .branding {
     display:flex;
     align-items:center;
-    gap:10px;
-    padding:8px 14px;
+    gap:8px;
+    padding:4px 10px;     /* تقليل المسافة */
   }
   .branding h1 {
     margin:0;
-    font-size:1.05rem;
+    font-size:1rem;       /* أصغر قليلاً */
     font-weight:700;
   }
-  .branding .logo { width:34px;height:34px; }
+  .branding .logo { width:30px;height:30px; }
   
+  /* الطقس */
   #weatherBox {
     display:flex;
     align-items:center;
     justify-content:center;
     gap:6px;
     color:#fff;
-    font-weight:600;
-    margin:auto;
+    font-size:0.85rem;
+    margin:2px 0;        /* تقليل الفراغ */
   }
-  #weatherIcon { width:28px;height:28px; }
+  #weatherIcon { width:24px;height:24px; }
   
+  /* البحث */
   #searchArea {
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    gap:12px;
-    padding:6px 14px;
+    padding:2px 10px;    /* أقل ارتفاع */
   }
   #searchBox { flex:1; }
   #searchBox input {
     width:100%;
-    padding:8px;
-    border-radius:8px;
+    padding:6px;         /* أقل ارتفاع */
+    border-radius:6px;
     border:1px solid #ccc;
+    font-size:0.9rem;
   }
   
+  /* زر تثبيت التطبيق */
   #install-button {
-    background-color: var(--danger);
-    color: white;
-    padding: 6px 12px;
-    border: none;
-    border-radius: 5px;
-    font-size: 14px;
-    cursor: pointer;
-    margin:8px 14px;
-  }
-  #install-button i { font-size:0.9em; }
-  
-  #newsBar {
-    background-color: var(--primary-color);
+    background-color:var(--danger);
     color:#fff;
-    padding:6px 10px;
+    padding:4px 10px;    /* أصغر */
+    margin:4px 10px;     /* تقليل المسافة */
+    border:none;
+    border-radius:4px;
+    font-size:13px;
+    cursor:pointer;
+  }
+  #install-button i { font-size:0.85em; }
+  
+  /* شريط الأخبار */
+  #newsBar {
+    background-color:var(--primary-color);
+    color:#fff;
+    padding:4px 8px;     /* أقل ارتفاع */
     font-weight:bold;
-    font-size:0.95rem;
+    font-size:0.85rem;   /* أصغر */
     overflow:hidden;
   }
   #newsTickerContainer { overflow:hidden; }
@@ -992,9 +993,6 @@
     animation:scrollNewsRTL 90s linear infinite;
   }
   #newsTicker a { color:#ff0; text-decoration:underline; }
-  #newsTickerContainer:hover #newsTicker {
-    animation-play-state: paused;
-  }
   
   @keyframes scrollNewsRTL {
     0%{ transform:translateX(-100%); }
@@ -1050,8 +1048,14 @@
   });
   </script>
   
-  
-  <!-- قسم الترحيب المحسن -->
+  <script>
+    window.addEventListener("load", ()=>{
+      const header = document.querySelector("header");
+      document.body.style.paddingTop = header.offsetHeight + "px";
+    });
+    </script>
+    
+  <!-- قسم الترحيب  -->
   <section class="welcome-section">
     <div class="welcome-content">
       <!-- شعار البوابة -->
