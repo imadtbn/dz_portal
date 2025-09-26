@@ -867,7 +867,7 @@
       <img alt="علم الجزائر" src="icons/Flag_of_Algeria.svg" class="logo">
     </div>
   
-    <!-- الطقس أسفل العنوان مباشرة -->
+    <!-- الطقس -->
     <div id="weatherBox">
       <img id="weatherIcon">
       <span id="weatherInfo"></span>
@@ -920,7 +920,6 @@
     color:var(--white);
     z-index:1000;
     box-shadow:0 2px 6px rgba(0,0,0,.12);
-    transition:top 0.3s;
     box-sizing:border-box;
   }
   
@@ -929,11 +928,11 @@
     display:flex;
     align-items:center;
     gap:8px;
-    padding:4px 10px;     /* تقليل المسافة */
+    padding:4px 10px;
   }
   .branding h1 {
     margin:0;
-    font-size:1rem;       /* أصغر قليلاً */
+    font-size:1rem;
     font-weight:700;
   }
   .branding .logo { width:30px;height:30px; }
@@ -946,18 +945,18 @@
     gap:6px;
     color:#fff;
     font-size:0.85rem;
-    margin:2px 0;        /* تقليل الفراغ */
+    margin:2px 0;
   }
   #weatherIcon { width:24px;height:24px; }
   
   /* البحث */
   #searchArea {
-    padding:2px 10px;    /* أقل ارتفاع */
+    padding:2px 10px;
   }
   #searchBox { flex:1; }
   #searchBox input {
     width:100%;
-    padding:6px;         /* أقل ارتفاع */
+    padding:6px;
     border-radius:6px;
     border:1px solid #ccc;
     font-size:0.9rem;
@@ -967,8 +966,8 @@
   #install-button {
     background-color:var(--danger);
     color:#fff;
-    padding:4px 10px;    /* أصغر */
-    margin:4px 10px;     /* تقليل المسافة */
+    padding:4px 10px;
+    margin:4px 10px;
     border:none;
     border-radius:4px;
     font-size:13px;
@@ -980,9 +979,9 @@
   #newsBar {
     background-color:var(--primary-color);
     color:#fff;
-    padding:4px 8px;     /* أقل ارتفاع */
+    padding:4px 8px;
     font-weight:bold;
-    font-size:0.85rem;   /* أصغر */
+    font-size:0.85rem;
     overflow:hidden;
   }
   #newsTickerContainer { overflow:hidden; }
@@ -1025,6 +1024,7 @@
     document.getElementById('weatherInfo').textContent=`${d.temp} | ${d.desc} | ${d.city}`;
   }
   
+  // تحميل آخر بيانات محفوظة
   const saved = localStorage.getItem("weatherData");
   if(saved) renderWeather(JSON.parse(saved));
   
@@ -1032,29 +1032,19 @@
     navigator.geolocation.getCurrentPosition(pos=>{
       const {latitude,longitude}=pos.coords;
       fetchWeather(latitude,longitude);
-      setInterval(()=>fetchWeather(latitude,longitude), 60*60*1000); // كل ساعة
+      setInterval(()=>fetchWeather(latitude,longitude), 60*60*1000);
     });
   }
   
-  // إخفاء/إظهار الهيدر عند التمرير (ديناميكي)
-  let lastScrollTop=0;
-  const header=document.querySelector("header");
-  window.addEventListener("scroll",()=>{
-    const st=window.pageYOffset||document.documentElement.scrollTop;
-    const headerHeight = header.offsetHeight;
-    if(st>lastScrollTop){ header.style.top=`-${headerHeight}px`; }
-    else{ header.style.top="0"; }
-    lastScrollTop=st<=0?0:st;
-  });
+  // ضبط padding-top للـ body تلقائياً حسب ارتفاع الهيدر
+  function adjustBodyPadding() {
+    const header = document.querySelector("header");
+    document.body.style.paddingTop = header.offsetHeight + "px";
+  }
+  window.addEventListener("load", adjustBodyPadding);
+  window.addEventListener("resize", adjustBodyPadding);
   </script>
-  
-  <script>
-    window.addEventListener("load", ()=>{
-      const header = document.querySelector("header");
-      document.body.style.paddingTop = header.offsetHeight + "px";
-    });
-    </script>
-    
+   
   <!-- قسم الترحيب  -->
   <section class="welcome-section">
     <div class="welcome-content">
