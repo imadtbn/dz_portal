@@ -863,12 +863,7 @@
 
     <div id="searchArea" style="display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;">
 
-      <!-- الساعة + التاريخ -->
-      <div id="dateTimeBox" style="text-align:center;min-width:180px;color:#fff;font-weight:bold;">
-        <span id="clock" style="margin-left:6px;"></span>
-        <span id="date"></span>
-      </div>
-
+     
       <!-- مربع البحث داخل الصفحة -->
       <div id="searchBox" dir="rtl" style="flex:1;text-align:right;">
         <input id="searchInput" placeholder="ابحث هنا داخل الصفحة..." type="text"
@@ -1020,13 +1015,7 @@ a:focus, button:focus, input:focus, #weatherBox:focus{
   }
 
   /* الساعة والتاريخ في سطر واحد */
-  #dateTimeBox{
-    justify-content:center;
-    gap:6px;
-    font-size:1rem;
-  }
-  #dateTimeBox #clock{ font-size:1.05rem; }
-  #dateTimeBox #date{ font-size:0.9rem; }
+
 
   /* البحث أفضل تكبير */
   #searchBox{ order:2; width:100%; }
@@ -1056,18 +1045,7 @@ a:focus, button:focus, input:focus, #weatherBox:focus{
     </style>
 
     <script>
-      // تحديث الساعة والتاريخ
-      function updateClock() {
-        const now = new Date();
-        const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-        document.getElementById('clock').textContent =
-          now.toLocaleTimeString('ar-DZ', { hour: '2-digit', minute: '2-digit' });
-        document.getElementById('date').textContent =
-          now.toLocaleDateString('ar-DZ', options);
-      }
-      setInterval(updateClock, 1000);
-      updateClock();
-
+  
       // إعدادات OpenWeatherMap
       const apiKey = "c9600bb5dcccfb988100da9bf01b2f2f"; // ضع مفتاحك هنا
       let weatherInterval = null; // لتخزين المؤقت
