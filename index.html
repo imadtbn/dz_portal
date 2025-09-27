@@ -871,6 +871,12 @@
     <div id="weatherBox">
       <img id="weatherIcon">
       <span id="weatherInfo"></span>
+
+        <!-- زر التحديث -->
+  <button id="refreshWeatherBtn" title="تحديث الطقس"
+    style="color:rgb(241, 22, 22);border:none;border-radius:12px;padding:4px 6px;cursor:pointer;font-size:0.9em;">
+    <i class="fas fa-sync-alt"></i>
+  </button>
     </div>
   
     <!-- البحث -->
@@ -1036,6 +1042,12 @@
     });
   }
   
+    // زر التحديث اليدوي
+  document.getElementById('refreshWeatherBtn').addEventListener('click', loadWeather);
+
+    // أول تشغيل عند تحميل الصفحة
+  loadWeather();
+  
   // ضبط padding-top للـ body تلقائياً حسب ارتفاع الهيدر
   function adjustBodyPadding() {
     const header = document.querySelector("header");
@@ -1043,6 +1055,7 @@
   }
   window.addEventListener("load", adjustBodyPadding);
   window.addEventListener("resize", adjustBodyPadding);
+
   </script>
    
   <!-- قسم الترحيب  -->
