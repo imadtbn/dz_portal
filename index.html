@@ -903,6 +903,7 @@ img.logo {
   </style>
   
   <script>
+document.addEventListener("DOMContentLoaded", () => {
   const apiKey = "c9600bb5dcccfb988100da9bf01b2f2f";
   let currentCoords = null;
 
@@ -912,47 +913,57 @@ img.logo {
       .then(r => r.json())
       .then(data => {
         const weatherData = {
-          icon:`https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`,
-          temp:`${Math.round(data.main.temp)}°C`,
-          desc:data.weather[0].description,
-          city:data.name,
-          time:Date.now()
+          icon: `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`,
+          temp: `${Math.round(data.main.temp)}°C`,
+          desc: data.weather[0].description,
+          city: data.name,
+          time: Date.now()
         };
         localStorage.setItem("weatherData", JSON.stringify(weatherData));
         renderWeather(weatherData);
       })
-      .catch(() => { document.getElementById('weatherInfo').textContent="تعذر تحميل الطقس"; })
+      .catch(() => {
+        document.getElementById("weatherInfo").textContent = "تعذر تحميل الطقس";
+      })
       .finally(() => {
-        document.querySelector("#refreshWeatherBtn i").classList.remove("spin");
+        const icon = document.querySelector("#refreshWeatherBtn i");
+        if (icon) icon.classList.remove("spin");
       });
   }
 
-  function renderWeather(d){
-    document.getElementById('weatherIcon').src=d.icon;
-    document.getElementById('weatherInfo').textContent=`${d.temp} | ${d.desc} | ${d.city}`;
+  function renderWeather(d) {
+    document.getElementById("weatherIcon").src = d.icon;
+    document.getElementById("weatherInfo").textContent =
+      `${d.temp} | ${d.desc} | ${d.city}`;
   }
 
   // تحميل آخر بيانات محفوظة
   const saved = localStorage.getItem("weatherData");
-  if(saved) renderWeather(JSON.parse(saved));
+  if (saved) renderWeather(JSON.parse(saved));
 
-  if(navigator.geolocation){
-    navigator.geolocation.getCurrentPosition(pos=>{
-      const {latitude,longitude}=pos.coords;
-      currentCoords = {lat:latitude,lon:longitude};
-      fetchWeather(latitude,longitude);
-      setInterval(()=>fetchWeather(latitude,longitude), 60*60*1000);
+  // أخذ الإحداثيات مرة واحدة
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(pos => {
+      const { latitude, longitude } = pos.coords;
+      currentCoords = { lat: latitude, lon: longitude };
+      fetchWeather(latitude, longitude);
+      // تحديث تلقائي كل ساعة
+      setInterval(() => fetchWeather(latitude, longitude), 60 * 60 * 1000);
     });
   }
 
   // زر التحديث اليدوي
-  document.getElementById('refreshWeatherBtn').addEventListener('click', () => {
-    if(currentCoords){
-      const icon = document.querySelector("#refreshWeatherBtn i");
-      icon.classList.add("spin");
-      fetchWeather(currentCoords.lat,currentCoords.lon);
-    }
-  });
+  const refreshBtn = document.getElementById("refreshWeatherBtn");
+  if (refreshBtn) {
+    refreshBtn.addEventListener("click", () => {
+      if (currentCoords) {
+        const icon = refreshBtn.querySelector("i");
+        if (icon) icon.classList.add("spin");
+        fetchWeather(currentCoords.lat, currentCoords.lon);
+      }
+    });
+  }
+});
 
   // ضبط padding-top للـ body تلقائياً حسب ارتفاع الهيدر
   function adjustBodyPadding() {
