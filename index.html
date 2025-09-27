@@ -867,17 +867,15 @@
       <img alt="علم الجزائر" src="icons/Flag_of_Algeria.svg" class="logo">
     </div>
   
-    <!-- الطقس -->
-    <div id="weatherBox">
-      <img id="weatherIcon">
-      <span id="weatherInfo"></span>
-
-        <!-- زر التحديث -->
+<!-- صندوق الطقس -->
+<div id="weatherBox" style="display:flex;align-items:center;gap:6px;">
+  <img id="weatherIcon" src="" alt="Icon" style="width:36px;height:36px;">
+  <span id="weatherInfo">جاري تحميل الطقس...</span>
   <button id="refreshWeatherBtn" title="تحديث الطقس"
-    style="color:rgb(241, 22, 22);border:none;border-radius:12px;padding:4px 6px;cursor:pointer;font-size:0.9em;">
+    style="background:#006233;color:white;border:none;border-radius:50%;width:32px;height:32px;cursor:pointer;display:flex;align-items:center;justify-content:center;">
     <i class="fas fa-sync-alt"></i>
   </button>
-    </div>
+</div>
   
     <!-- البحث -->
     <div id="searchArea">
@@ -1003,11 +1001,21 @@
     0%{ transform:translateX(-100%); }
     100%{ transform:translateX(100%); }
   }
+
+    /* دوران عند التحديث */
+  .spin {
+    animation: spin 1s linear infinite;
+  }
+  @keyframes spin {
+    from { transform: rotate(0deg); }
+    to   { transform: rotate(360deg); }
+  }
   </style>
   
   <script>
   const apiKey = "c9600bb5dcccfb988100da9bf01b2f2f";
-  
+  let currentCoords = null;
+
   function fetchWeather(lat, lon) {
     const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&lang=ar&appid=${apiKey}`;
     fetch(url)
@@ -1023,31 +1031,39 @@
         localStorage.setItem("weatherData", JSON.stringify(weatherData));
         renderWeather(weatherData);
       })
-      .catch(() => { document.getElementById('weatherInfo').textContent="تعذر تحميل الطقس"; });
+      .catch(() => { document.getElementById('weatherInfo').textContent="تعذر تحميل الطقس"; })
+      .finally(() => {
+        document.querySelector("#refreshWeatherBtn i").classList.remove("spin");
+      });
   }
+
   function renderWeather(d){
     document.getElementById('weatherIcon').src=d.icon;
     document.getElementById('weatherInfo').textContent=`${d.temp} | ${d.desc} | ${d.city}`;
   }
-  
+
   // تحميل آخر بيانات محفوظة
   const saved = localStorage.getItem("weatherData");
   if(saved) renderWeather(JSON.parse(saved));
-  
+
   if(navigator.geolocation){
     navigator.geolocation.getCurrentPosition(pos=>{
       const {latitude,longitude}=pos.coords;
+      currentCoords = {lat:latitude,lon:longitude};
       fetchWeather(latitude,longitude);
       setInterval(()=>fetchWeather(latitude,longitude), 60*60*1000);
     });
   }
-  
-    // زر التحديث اليدوي
-  document.getElementById('refreshWeatherBtn').addEventListener('click', loadWeather);
 
-    // أول تشغيل عند تحميل الصفحة
-  loadWeather();
-  
+  // زر التحديث اليدوي
+  document.getElementById('refreshWeatherBtn').addEventListener('click', () => {
+    if(currentCoords){
+      const icon = document.querySelector("#refreshWeatherBtn i");
+      icon.classList.add("spin");
+      fetchWeather(currentCoords.lat,currentCoords.lon);
+    }
+  });
+
   // ضبط padding-top للـ body تلقائياً حسب ارتفاع الهيدر
   function adjustBodyPadding() {
     const header = document.querySelector("header");
@@ -1055,8 +1071,8 @@
   }
   window.addEventListener("load", adjustBodyPadding);
   window.addEventListener("resize", adjustBodyPadding);
-
-  </script>
+</script>
+  
    
   <!-- قسم الترحيب  -->
   <section class="welcome-section">
