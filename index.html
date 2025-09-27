@@ -499,361 +499,251 @@
 
 <!-- إعادة ضبط القيم الافتراضية لكل العناصر -->
 <style>
-  * {
-    box-sizing: border-box;
-    /* يحسب العرض/الارتفاع شاملاً الحواف والحشوات */
-    margin: 0;
-    /* إزالة الهوامش الافتراضية */
-    padding: 0;
-    /* إزالة الحشوات الافتراضية */
-  }
+  /* 🎯 إعادة ضبط القيم الافتراضية */
+* {
+  box-sizing: border-box;   /* حساب العرض/الارتفاع يشمل الحواف والحشوات */
+  margin: 0;                /* إزالة الهوامش الافتراضية */
+  padding: 0;               /* إزالة الحشوات الافتراضية */
+}
 
-  /* 🖼️ أنماط عامة للصفحة */
-  body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    /* الخطوط */
-    background-color: #f7fdf9;
-    /* لون خلفية فاتح */
-    color: #333;
-    /* لون النصوص الأساسي */
-    line-height: 1.6;
-    /* تباعد الأسطر */
-    padding: 10px;
-    /* مسافة داخلية حول الصفحة */
-  }
+/* 🖼️ أنماط عامة للصفحة */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* الخط الأساسي */
+  background-color: #f7fdf9;  /* لون خلفية فاتح */
+  color: #333;                /* لون النصوص الأساسي */
+  line-height: 1.6;           /* تباعد الأسطر */
+  padding: 8px;              /* مسافة داخلية حول الصفحة */
+}
 
-  /* 🟩 صندوق الترحيب الرئيسي */
-  .welcome-section {
-    text-align: center;
-    /* محاذاة المحتوى للوسط */
-    background: linear-gradient(135deg, #f0f9f5 0%, #e6f4ed 100%);
-    /* تدرج لوني للخلفية */
-    padding: 20px 15px;
-    /* مسافة داخلية */
-    border-radius: 16px;
-    /* زوايا دائرية */
-    margin: 15px auto;
-    /* تباعد خارجي */
-    max-width: 1000px;
-    /* عرض أقصى */
-    box-shadow: 0 5px 15px rgba(0, 98, 51, 0.1);
-    /* ظل ناعم */
-    position: relative;
-    /* لتمكين العناصر المطلقة داخله */
-    overflow: hidden;
-    /* إخفاء أي عناصر تتجاوز الحدود */
-  }
+/* 🟩 صندوق الترحيب الرئيسي */
+.welcome-section {
+  text-align: center;                           /* محاذاة المحتوى للوسط */
+  background: linear-gradient(135deg, #f0f9f5 0%, #e6f4ed 100%); /* تدرج لوني للخلفية */
+  padding: 16px 13px;                           /* مسافة داخلية */
+  border-radius: 16px;                          /* زوايا دائرية */
+  margin: 7px auto;                            /* تباعد خارجي */
+  max-width: 1000px;                            /* عرض أقصى */
+  box-shadow: 0 5px 15px rgba(0, 98, 51, 0.1);  /* ظل ناعم */
+  position: relative;                           /* لتمكين العناصر المطلقة داخله */
+  overflow: hidden;                             /* إخفاء العناصر الخارجة عن الإطار */
+}
 
-  /* 🟩 مؤثر زخرفي في الخلفية */
-  .welcome-section::before {
-    content: "";
-    /* إنشاء عنصر افتراضي */
-    position: absolute;
-    /* تحديد مكانه المطلق */
-    top: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
-    background: url('...svg');
-    /* زخرفة بأيقونة هندسية شفافة */
-    z-index: 0;
-    /* خلف النص */
-  }
+/* 🟩 مؤثر زخرفي في الخلفية */
+.welcome-section::before {
+  content: "";             /* إنشاء عنصر افتراضي */
+  position: absolute;      /* تحديد مكانه المطلق */
+  top: 0;                  /* من الأعلى */
+  right: 0;                /* من اليمين */
+  width: 100%;             /* العرض يملأ الصندوق */
+  height: 100%;            /* الارتفاع يملأ الصندوق */
+  background: url('...svg'); /* صورة زخرفية */
+  z-index: 0;              /* خلف المحتوى */
+}
 
-  /* 🔼 لضمان ظهور النص فوق الخلفية */
-  .welcome-content {
-    position: relative;
-    z-index: 1;
-  }
+/* 🔼 لضمان ظهور النص فوق الخلفية */
+.welcome-content {
+  position: relative; /* يضمن أن النص فوق ::before */
+  z-index: 1;         /* في المقدمة */
+}
 
-  /* 🖼️ شعارات مصغرة موحدة الحجم */
-  img.logo {
-    width: 28px;
-    height: 28px;
-    object-fit: contain;
-    /* الحفاظ على نسبة الصورة */
-    margin-left: 6px;
-    vertical-align: middle;
-    /* محاذاة مع النص */
-  }
+/* 🖼️ شعارات مصغرة */
+img.logo {
+  width: 26px;            /* عرض الشعار */
+  height: 26px;           /* ارتفاع الشعار */
+  object-fit: contain;    /* المحافظة على النسبة */
+  margin-left: 5px;       /* مسافة يسار */
+  vertical-align: middle; /* محاذاة مع النص */
+}
 
-  /* 🖼️ الشعار الرئيسي */
-  .welcome-logo {
-    max-width: 120px;
-    margin: 0 auto 10px;
-    display: block;
-    filter: drop-shadow(0 3px 5px rgba(0, 0, 0, 0.1));
-    /* ظل ناعم */
-  }
+/* 🖼️ الشعار الرئيسي */
+.welcome-logo {
+  max-width: 120px;                                   /* الحد الأقصى للعرض */
+  margin: 0 auto 10px;                                /* توسيط + مسافة أسفل */
+  display: block;                                     /* كتلة منفصلة */
+  filter: drop-shadow(0 3px 5px rgba(0, 0, 0, 0.1));  /* ظل ناعم */
+}
 
-  /* 📝 عنوان الترحيب */
-  .welcome-title {
-    color: #006233;
-    /* أخضر غامق */
-    font-size: 1.5em;
-    font-weight: bold;
-    margin-bottom: 12px;
-    line-height: 1.3;
-  }
+/* 📝 عنوان الترحيب */
+.welcome-title {
+  color: #006233;        /* اللون أخضر غامق */
+  font-size: 1.5em;      /* حجم الخط */
+  font-weight: bold;     /* خط عريض */
+  margin-bottom: 10px;   /* مسافة أسفل */
+  line-height: 1.1;      /* تباعد الأسطر */
+}
 
-  /* 📖 وصف قصير تحت العنوان */
-  .welcome-description {
-    font-size: 0.9em;
-    color: #333;
-    max-width: 800px;
-    margin: 0 auto 20px;
-    line-height: 1.6;
-  }
+/* 📖 وصف قصير */
+.welcome-description {
+  font-size: 0.9em;      /* حجم أصغر */
+  color: #333;           /* لون النص */
+  max-width: 800px;      /* حد أقصى للعرض */
+  margin: 0 auto 18px;   /* توسيط + مسافة أسفل */
+  line-height: 1.4;      /* تباعد الأسطر */
+}
 
-  /* 📊 قسم الإحصائيات */
-  .welcome-stats {
-    display: flex;
-    /* توزيع مرن */
-    flex-wrap: wrap;
-    /* يلتف عند صغر الشاشة */
-    justify-content: center;
-    gap: 12px;
-    /* مسافة بين البطاقات */
-    margin: 20px 0;
-  }
+/* 📊 قسم الإحصائيات */
+.welcome-stats {
+  display: flex;          /* توزيع مرن */
+  flex-wrap: wrap;        /* يلتف عند صغر الشاشة */
+  justify-content: center;/* توسيط العناصر */
+  gap: 8px;              /* مسافة بين البطاقات */
+  margin: 6px 0;         /* مسافة عمودية */
+}
 
-  /* 📊 بطاقة إحصائية */
-  .stat-box {
-    background-color: rgba(255, 255, 255, 0.9);
-    padding: 15px 12px;
-    border-radius: 10px;
-    min-width: 100px;
-    flex: 1;
-    max-width: 130px;
-    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
-    transition: transform 0.3s ease;
-  }
+/* 📊 بطاقة إحصائية */
+.stat-box {
+  background-color: rgba(255, 255, 255, 0.9); /* خلفية شبه شفافة */
+  padding: 13px 10px;                         /* مسافة داخلية */
+  border-radius: 10px;                        /* زوايا دائرية */
+  min-width: 80px;                           /* عرض أدنى */
+  flex: 1;                                    /* تمدد حسب الفراغ */
+  max-width: 120px;                           /* عرض أقصى */
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);  /* ظل ناعم */
+  transition: transform 0.3s ease;            /* تأثير الحركة */
+}
+.stat-box:hover {
+  transform: translateY(-3px); /* ارتفاع بسيط عند المرور */
+}
 
-  .stat-box:hover {
-    transform: translateY(-3px);
-    /* تحريك خفيف عند المرور */
-  }
+/* أيقونة البطاقة */
+.stat-icon {
+  color: #006233;   /* لون أخضر */
+  font-size: 1.3em; /* حجم كبير */
+  margin-bottom: 6px; /* مسافة أسفل */
+}
 
-  /* أيقونة داخل البطاقة */
-  .stat-icon {
-    color: #006233;
-    font-size: 1.5em;
-    margin-bottom: 8px;
-  }
+/* عنوان البطاقة */
+.stat-title {
+  font-weight: bold; /* خط عريض */
+  color: #006233;    /* أخضر */
+  margin-bottom: 3px;/* مسافة أسفل */
+  font-size: 0.90em; /* حجم أصغر */
+}
 
-  /* عنوان البطاقة */
-  .stat-title {
-    font-weight: bold;
-    color: #006233;
-    margin-bottom: 4px;
-    font-size: 0.85em;
-  }
+/* القيمة الرقمية */
+.stat-value {
+  font-size: 1.4em;  /* حجم أكبر */
+  font-weight: bold; /* خط عريض */
+  color: #a52a2a;    /* لون بني */
+}
 
-  /* القيمة الرقمية */
-  .stat-value {
-    font-size: 1.4em;
-    font-weight: bold;
-    color: #a52a2a;
-    /* بني */
-  }
+/* 🔘 زر المشاركة */
+.share-button {
+  background-color: #d40000;        /* خلفية حمراء */
+  color: white;                     /* نص أبيض */
+  padding: 8px 11px;               /* مسافة داخلية */
+  border: none;                     /* بدون حدود */
+  border-radius: 8px;               /* زوايا دائرية */
+  font-size: 0.9em;                 /* حجم الخط */
+  cursor: pointer;                  /* مؤشر يد */
+  transition: background-color 0.3s, transform 0.2s; /* تأثير عند المرور */
+  box-shadow: 0 3px 6px rgba(212, 0, 0, 0.2);        /* ظل */
+  margin-top: 2px;                 /* مسافة أعلى */
+}
+.share-button:hover {
+  background-color: #a30000; /* لون أغمق عند المرور */
+  transform: scale(1.03);   /* تكبير بسيط */
+}
 
-  /* 🔘 زر المشاركة */
-  .share-button {
-    background-color: #d40000;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 8px;
-    font-size: 0.9em;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.2s;
-    box-shadow: 0 3px 6px rgba(212, 0, 0, 0.2);
-    margin-top: 10px;
-  }
+/* 🟦 شريط التنقل */
+.nav-scroller {
+  position: relative;                         /* تحديد مكانه */
+  z-index: 2;                                 /* فوق العناصر */
+  height: 58px;                               /* ارتفاع */
+  overflow: hidden;                           /* إخفاء الفائض */
+  margin: 20px 0;                             /* مسافة عمودية */
+  direction: ltr;                             /* اتجاه الحركة يسار → يمين */
+  background: rgba(255, 255, 255, 0.8);       /* خلفية شبه شفافة */
+  border-radius: 12px;                        /* زوايا دائرية */
+  padding: 5px;                               /* مسافة داخلية */
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);  /* ظل */
+}
 
-  .share-button:hover {
-    background-color: #a30000;
-    transform: scale(1.03);
-  }
+.nav-scroller-inner {
+  display: flex;                      /* توزيع مرن */
+  flex-wrap: nowrap;                  /* لا يلتف */
+  padding-bottom: 5px;                /* مسافة أسفل */
+  animation: scrollBanner 40s linear infinite; /* حركة تمرير مستمرة */
+}
 
-  /* 🟦 شريط التنقل الأفقي المتحرك */
-  .nav-scroller {
-    position: relative;
-    z-index: 2;
-    height: 75px;
-    overflow: hidden;
-    margin: 20px 0;
-    direction: ltr;
-    /* الحركة من اليسار لليمين */
-    background: rgba(255, 255, 255, 0.8);
-    border-radius: 12px;
-    padding: 5px;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
-  }
+.nav-item {
+  flex: 0 0 auto; /* عرض ثابت */
+  margin: 0 5px;  /* مسافة جانبية */
+}
 
-  .nav-scroller-inner {
-    display: flex;
-    flex-wrap: nowrap;
-    padding-bottom: 5px;
-    animation: scrollBanner 40s linear infinite;
-    /* حركة تمرير تلقائي */
-  }
+.nav-link {
+  display: flex;                    /* توزيع مرن */
+  flex-direction: column;           /* عمودي */
+  align-items: center;              /* محاذاة للوسط */
+  justify-content: center;          /* وسط عمودي */
+  background: white;                /* خلفية بيضاء */
+  color: #006233;                   /* لون أخضر */
+  text-decoration: none;            /* بدون خط تحت */
+  border-radius: 10px;              /* زوايا دائرية */
+  padding: 7px 9px;                /* مسافة داخلية */
+  width: 65px;                      /* العرض */
+  height: 45px;                     /* الارتفاع */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08); /* ظل */
+  transition: all 0.4s ease;        /* حركة ناعمة */
+  font-size: 0.73em;                /* حجم النص */
+  font-weight: bold;                /* خط عريض */
+  text-align: center;               /* توسيط النص */
+}
+.nav-link:hover {
+  background: #006233;              /* أخضر عند المرور */
+  color: white;                     /* نص أبيض */
+  transform: translateY(-2px);      /* ارتفاع بسيط */
+  box-shadow: 0 4px 8px rgba(0, 98, 51, 0.2); /* ظل أقوى */
+}
 
-  .nav-item {
-    flex: 0 0 auto;
-    margin: 0 5px;
-  }
+/* أيقونة الرابط */
+.nav-icon {
+  font-size: 9px; /* حجم صغير */
+}
 
-  .nav-link {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background: white;
-    color: #006233;
-    text-decoration: none;
-    border-radius: 10px;
-    padding: 8px 10px;
-    width: 68px;
-    height: 48px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
-    transition: all 0.3s ease;
-    font-size: 0.73em;
-    font-weight: bold;
-    text-align: center;
-  }
+/* 🎞️ حركة التمرير */
+@keyframes scrollBanner {
+  0% { transform: translateX(0); }      /* البداية */
+  100% { transform: translateX(-50%); } /* نهاية الحركة */
+}
 
-  .nav-link:hover {
-    background: #006233;
-    color: white;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0, 98, 51, 0.2);
-  }
+/* توقف الحركة عند تمرير الفأرة */
+.nav-scroller:hover .nav-scroller-inner {
+  animation-play-state: paused; /* إيقاف عند المرور */
+}
 
-  .nav-icon {
-    font-size: 10px;
-  }
+/* 📱 تحسين العرض للشاشات الصغيرة */
+@media (max-width: 768px) {
+  .welcome-title { font-size: 1.3em; }      /* تصغير العنوان */
+  .welcome-description { font-size: 0.85em; padding: 0 5px; }
+  .stat-box { min-width: 90px; padding: 12px 8px; }
+  .stat-value { font-size: 1.2em; }
+  .stat-title { font-size: 0.8em; }
+  .nav-link { width: 65px; height: 45px; font-size: 0.7em; }
+  .nav-icon { font-size: 14px; }
+  .nav-scroller { height: 45px; }
+}
 
-  /* 🎞️ حركة التمرير */
-  @keyframes scrollBanner {
-    0% {
-      transform: translateX(0);
-    }
+@media (max-width: 480px) {
+  .welcome-section { padding: 15px 10px; }
+  .welcome-title { font-size: 1.2em; }
+  .welcome-stats { gap: 8px; }
+  .stat-box { min-width: 80px; padding: 10px 6px; }
+  .stat-icon { font-size: 1.3em; }
+  .stat-value { font-size: 1.1em; }
+  .nav-scroller { height: 48px; }
+  .nav-link { width: 80px; height: 60px; font-size: 0.85em; }
+  .nav-icon { font-size: 18px; }
+  .share-button { padding: 8px 14px; font-size: 0.85em; }
+}
 
-    100% {
-      transform: translateX(-50%);
-    }
-  }
+@media (max-width: 360px) {
+  .welcome-logo { max-width: 120px; }
+  .stat-box { min-width: 70px; padding: 8px 5px; }
+  .stat-title { font-size: 0.75em; }
+  .nav-link { width: 55px; font-size: 0.6em; }
+}
 
-  /* توقف الحركة عند تمرير الفأرة */
-  .nav-scroller:hover .nav-scroller-inner {
-    animation-play-state: paused;
-  }
-
-  /* 📱 تحسين العرض للشاشات الصغيرة */
-  @media (max-width: 768px) {
-    .welcome-title {
-      font-size: 1.3em;
-    }
-
-    .welcome-description {
-      font-size: 0.85em;
-      padding: 0 5px;
-    }
-
-    .stat-box {
-      min-width: 90px;
-      padding: 12px 8px;
-    }
-
-    .stat-value {
-      font-size: 1.2em;
-    }
-
-    .stat-title {
-      font-size: 0.8em;
-    }
-
-    .nav-link {
-      width: 65px;
-      height: 70px;
-      font-size: 0.8em;
-    }
-
-    .nav-icon {
-      font-size: 13px;
-    }
-
-    .nav-scroller {
-      height: 55px;
-    }
-  }
-
-  @media (max-width: 480px) {
-    .welcome-section {
-      padding: 15px 10px;
-    }
-
-    .welcome-title {
-      font-size: 1.2em;
-    }
-
-    .welcome-stats {
-      gap: 8px;
-    }
-
-    .stat-box {
-      min-width: 80px;
-      padding: 10px 6px;
-    }
-
-    .stat-icon {
-      font-size: 1.3em;
-    }
-
-    .stat-value {
-      font-size: 1.1em;
-    }
-
-    .nav-scroller {
-      height: 50px;
-    }
-
-    .nav-link {
-      width: 80px;
-      height: 60px;
-      font-size: 0.85em;
-    }
-
-    .nav-icon {
-      font-size: 18px;
-    }
-
-    .share-button {
-      padding: 8px 16px;
-      font-size: 0.85em;
-    }
-  }
-
-  @media (max-width: 360px) {
-    .welcome-logo {
-      max-width: 120px;
-    }
-
-    .stat-box {
-      min-width: 70px;
-      padding: 8px 5px;
-    }
-
-    .stat-title {
-      font-size: 0.75em;
-    }
-
-    .nav-link {
-      width: 55px;
-      font-size: 0.6em;
-    }
-  }
 </style>
 
 </head>
@@ -1249,67 +1139,80 @@
       </div>
 
       <style>
-        .share-btn {
-          display: inline-flex;
-          align-items: center;
-          justify-content: center;
-          width: 44px;
-          height: 44px;
-          border-radius: 50%;
-          background: #fff;
-          /* خلفية بيضاء */
-          cursor: pointer;
-          overflow: hidden;
-          transition: transform 0.2s, box-shadow 0.2s;
-        }
+      /* 🔘 تنسيق الزر العام */
+.share-btn {
+  display: inline-flex;          /* يجعل العنصر مرن ويتيح محاذاة داخلية */
+  align-items: center;           /* محاذاة المحتوى عموديًا للوسط */
+  justify-content: center;       /* محاذاة المحتوى أفقيًا للوسط */
+  width: 44px;                   /* عرض ثابت للزر */
+  height: 44px;                  /* ارتفاع ثابت للزر */
+  border-radius: 50%;            /* جعل الزر دائري */
+  background: #fff;              /* خلفية بيضاء */
+  cursor: pointer;               /* عند المرور يتحول المؤشر لليد */
+  overflow: hidden;              /* إخفاء أي محتوى خارج حدود الزر */
+  transition: transform 0.2s, box-shadow 0.2s; /* انتقال سلس عند التغيير */
+}
 
-        .share-btn img {
-          width: 70%;
-          height: auto;
-          display: block;
-        }
+/* زيادة المسافة بين زر المشاركة وشريط أيقونات التواصل الاجتماعي */
+.share-button {
+    margin-bottom: 10px; /* يمكنك تعديل القيمة حسب الرغبة */
+}
 
-        /* تأثير عند التمرير */
-        .share-btn:hover {
-          transform: scale(1.1);
-        }
+/* أو بدلاً من ذلك إضافة هامش علوي لشريط الأيقونات */
 
-        /* ألوان الحدود لكل منصة */
-        #share-facebook {
-          border: 2px solid #1877F2;
-        }
+/* زيادة المسافة بين أيقونات التواصل الاجتماعي والحاويات المحيطة */
+.social-share {
+    margin-top: 15;   /* المسافة من الأعلى */
+    margin-bottom: 15; /* المسافة من الأسفل إذا لزم */
 
-        /* أزرق فيسبوك */
-        #share-twitter {
-          border: 2px solid #1DA1F2;
-        }
+/* 📷 أيقونة داخل الزر */
+.share-btn img {
+  width: 70%;   /* حجم الأيقونة كنسبة من حجم الزر */
+  height: auto; /* الحفاظ على نسبة الطول والعرض */
+  display: block;
+}
 
-        /* أزرق تويتر */
-        #share-instagram {
-          border: 2px solid #E4405F;
-        }
+/* ✨ تأثير عند تمرير الفأرة */
+.share-btn:hover {
+  transform: scale(1.1); /* تكبير الزر قليلاً عند المرور */
+}
 
-        /* وردي/أحمر إنستغرام */
-        #share-whatsapp {
-          border: 2px solid #25D366;
-        }
+/* 🎨 ألوان خاصة بحواف الأزرار لكل منصة */
 
-        /* أخضر واتساب */
-        #share-telegram {
-          border: 2px solid #0088CC;
-        }
+/* فيسبوك */
+#share-facebook {
+  border: 2px solid #1877F2; /* أزرق فيسبوك */
+}
 
-        /* أزرق تيليغرام */
-        #share-messenger {
-          border: 2px solid #006AFF;
-        }
+/* تويتر */
+#share-twitter {
+  border: 2px solid #1DA1F2; /* أزرق تويتر */
+}
 
-        /* أزرق ماسنجر */
-        #share-qr {
-          border: 2px solid #444;
-        }
+/* إنستغرام */
+#share-instagram {
+  border: 2px solid #E4405F; /* وردي/أحمر إنستغرام */
+}
 
-        /* رمادي/أسود QR */
+/* واتساب */
+#share-whatsapp {
+  border: 2px solid #25D366; /* أخضر واتساب */
+}
+
+/* تيليغرام */
+#share-telegram {
+  border: 2px solid #0088CC; /* أزرق تيليغرام */
+}
+
+/* ماسنجر */
+#share-messenger {
+  border: 2px solid #006AFF; /* أزرق ماسنجر */
+}
+
+/* رمز QR */
+#share-qr {
+  border: 2px solid #444; /* رمادي/أسود لرمز QR */
+}
       </style>
 
       <!-- ====== JavaScriptأزرار المشاركة  ====== -->
