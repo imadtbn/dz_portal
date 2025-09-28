@@ -820,14 +820,13 @@ document.addEventListener("DOMContentLoaded", () => {
   const saved = localStorage.getItem("weatherData");
   if (saved) renderWeather(JSON.parse(saved));
 
-  // تحديد الموقع وجلب الطقس
+  // أول تحميل مع GPS
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(pos => {
-      const { latitude, longitude } = pos.coords;
-      currentCoords = { lat: latitude, lon: longitude };
-      fetchWeather(latitude, longitude);
+      currentCoords = { lat: pos.coords.latitude, lon: pos.coords.longitude };
+      fetchWeather(currentCoords.lat, currentCoords.lon);
       // تحديث تلقائي كل ساعة
-      setInterval(() => fetchWeather(latitude, longitude), 60 * 60 * 1000);
+      setInterval(() => fetchWeather(currentCoords.lat, currentCoords.lon), 60 * 60 * 1000);
     });
   }
 
@@ -835,9 +834,18 @@ document.addEventListener("DOMContentLoaded", () => {
   const refreshBtn = document.getElementById("refreshWeatherBtn");
   if (refreshBtn) {
     refreshBtn.addEventListener("click", () => {
-      if (currentCoords) {
-        const icon = refreshBtn.querySelector("i");
-        if (icon) icon.classList.add("spin");
+      const icon = refreshBtn.querySelector("i");
+      if (icon) icon.classList.add("spin");
+
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(pos => {
+          currentCoords = { lat: pos.coords.latitude, lon: pos.coords.longitude };
+          fetchWeather(currentCoords.lat, currentCoords.lon);
+        }, () => {
+          // إذا رفض المستخدم مشاركة الموقع، استخدم آخر إحداثيات محفوظة
+          if (currentCoords) fetchWeather(currentCoords.lat, currentCoords.lon);
+        });
+      } else if (currentCoords) {
         fetchWeather(currentCoords.lat, currentCoords.lon);
       }
     });
