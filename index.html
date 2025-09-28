@@ -744,6 +744,48 @@ img.logo {
   .nav-link { width: 55px; font-size: 0.6em; }
 }
 
+/* تأثير خط أحمر كالبرق تحت الروابط */
+a.lightning {
+  position: relative;
+  z-index: 0;
+  text-decoration: none;
+}
+
+/* الخط (pseudo-element) */
+a.lightning::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -4px;            /* مسافة تحت النص - اضبط حسب الحاجة */
+  height: 3px;             /* سمك الخط */
+  background: linear-gradient(90deg,
+    transparent 0%,
+    #ff0022 35%,
+    #ff7a7a 55%,
+    transparent 100%);
+  transform-origin: left center;
+  transform: scaleX(0) skewX(-12deg);
+  filter: drop-shadow(0 0 6px rgba(255,0,34,0.65));
+  z-index: -1;
+  transition: transform .35s cubic-bezier(.2,.9,.2,1), opacity .2s;
+  opacity: 0.98;
+}
+
+/* حركة البرق عند المرور */
+@keyframes lightningFlash {
+  0%   { transform: scaleX(0) skewX(-18deg) translateX(-8%); }
+  45%  { transform: scaleX(1.15) skewX(2deg) translateX(0); }
+  70%  { transform: scaleX(0.95) skewX(-6deg) translateX(6%); }
+  100% { transform: scaleX(1) skewX(0) translateX(0); }
+}
+
+a.lightning:hover::after,
+a.lightning:focus::after {
+  transform: scaleX(1) skewX(0);
+  animation: lightningFlash .45s ease-out;
+}
+
 </style>
 
 </head>
@@ -998,8 +1040,7 @@ document.addEventListener("DOMContentLoaded", () => {
   window.addEventListener("load", adjustBodyPadding);
   window.addEventListener("resize", adjustBodyPadding);
 </script>
-  
-   
+     
   <!-- قسم الترحيب  -->
   <section class="welcome-section">
     <div class="welcome-content">
@@ -1147,7 +1188,7 @@ document.addEventListener("DOMContentLoaded", () => {
               const navItem = document.createElement('div');
               navItem.className = 'nav-item';
               navItem.innerHTML = `
-          <a href="#${section.id}" class="nav-link">
+          <a class="lightning" href="#${section.id}" class="nav-link">
             <i class="fas ${section.icon} nav-icon"></i>
             <span>${section.name}</span>
           </a>`;
@@ -1330,19 +1371,19 @@ document.addEventListener("DOMContentLoaded", () => {
     <ul id="payment-section"
       style="display: none; list-style: none; padding-right: 20px; line-height: 2; text-align: right;">
 
-      <!-- ADE -->
+      <!-- ADE --> 
       <li>
-        <img src="icons/ade.png" alt="ADE Logo" class="logo">
-        <a href="https://www.ade.dz/e-paiement/" target="_blank">فاتورة الجزائرية للمياه (ADE)</a>
+        <img src="icons/ade.png" alt="ADE Logo" class="logo"> 
+        <a class="lightning" href="https://www.ade.dz/e-paiement/" target="_blank">فاتورة الجزائرية للمياه (ADE)</a>
         <div style="margin-top:5px; padding-right:25px;">
           <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
-          <strong>الجزائرية للمياه:</strong> <a href="tel:1592">1592</a>
+          <strong>الجزائرية للمياه:</strong> <a class="lightning" href="tel:1592">1592</a>
         </div>
       </li>
 
       <li>
         <img src="icons/google-play-logo.png" alt="google-play-logoLogo" class="logo">
-        <a href="https://play.google.com/store/apps/details?id=com.ade.adese&amp;hl=ar" target="_blank">
+        <a class="lightning" href="https://play.google.com/store/apps/details?id=com.ade.adese&amp;hl=ar" target="_blank">
           تطبيق Miyahimob
         </a>
       </li>
@@ -1350,40 +1391,40 @@ document.addEventListener("DOMContentLoaded", () => {
       <!-- سونلغاز -->
       <li>
         <img src="icons/sonelgaz.png" alt="sonelgaz Logo" class="logo">
-        <a href="https://epayement.elit.dz/payementFacture.xhtml" target="_blank">فاتورة الكهرباء والغاز
+        <a class="lightning" href="https://epayement.elit.dz/payementFacture.xhtml" target="_blank">فاتورة الكهرباء والغاز
           (سونلغاز)</a>
         <div style="margin-top:5px; padding-right:25px;">
           <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
-          <strong>سونلغاز:</strong> <a href="tel:3303">3303</a>
+          <strong>سونلغاز:</strong> <a class="lightning" href="tel:3303">3303</a>
         </div>
       </li>
 
       <!-- سيال -->
       <li>
         <img src="icons/seaal.webp" alt="seaal Logo" class="logo">
-        <a href="https://baridinet.poste.dz/seaal" target="_blank">فاتورة المياه (سيال)</a>
+        <a class="lightning" href="https://baridinet.poste.dz/seaal" target="_blank">فاتورة المياه (سيال)</a>
         <div style="margin-top:5px; padding-right:25px;">
           <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
-          <strong>سيال:</strong> <a href="tel:1594">1594</a>
+          <strong>سيال:</strong> <a class="lightning" href="tel:1594">1594</a>
         </div>
       </li>
 
       <!-- عدل -->
       <li>
         <img src="icons/AADL.png" alt="AADLLogo" class="logo">
-        <a href="https://www.aadlgestimmo.dz/epayement/View/index.php" target="_blank">فاتورة كراء عدل</a>
+        <a class="lightning" href="https://www.aadlgestimmo.dz/epayement/View/index.php" target="_blank">فاتورة كراء عدل</a>
       </li>
 
       <!-- OPGI -->
       <li>
         <img src="icons/opgi.png" alt="opgi Logo" class="logo">
-        <a href="https://www.opgiconstantine.dz/" target="_blank">فاتورة كراء OPGI</a>
+        <a class="lightning" href="https://www.opgiconstantine.dz/" target="_blank">فاتورة كراء OPGI</a>
       </li>
 
       <!-- وزارة التربية -->
       <li>
         <i class="fas fa-file-invoice-dollar" style="color: green; margin-left:6px;"></i>
-        <a href="https://epay.education.dz/auth" target="_blank">
+        <a class="lightning" href="https://epay.education.dz/auth" target="_blank">
           منصة الدفع اﻹلكتروني في إمتحانات شهادة التعليم المتوسط والبكالوريا (BEM - BAC)
         </a>
       </li>
@@ -1405,13 +1446,13 @@ document.addEventListener("DOMContentLoaded", () => {
     <!-- موبيليس -->
     <li>
       <img src="icons/mobilis.png" alt="Mobilis Logo" class="logo">
-      <a href="https://e-paiement.mobilis.dz/" target="_blank"><strong>تعبئة الرصيد - موبيليس</strong></a>
+      <a class="lightning" href="https://e-paiement.mobilis.dz/" target="_blank"><strong>تعبئة الرصيد - موبيليس</strong></a>
       <div>
         <i class="fas fa-phone" style="color: #006400; margin-left:6px;"></i>
         <strong>مصلحة خدمة الزبائن - موبيليس:</strong>
-        <a href="tel:666">666</a>
+        <a class="lightning" href="tel:666">666</a>
       </div>
-      <a href="https://play.google.com/store/search?q=mobispace&c=apps&hl=ar" target="_blank">
+      <a class="lightning" href="https://play.google.com/store/search?q=mobispace&c=apps&hl=ar" target="_blank">
         <img src="icons/mobiispace.webp" alt="MyMobilis App Logo" class="logo">
         تحميل تطبيق MobiSpace
       </a>
@@ -1420,13 +1461,13 @@ document.addEventListener("DOMContentLoaded", () => {
     <!-- جازي -->
     <li>
       <img src="icons/djezzy.png" alt="Djezzy Logo" class="logo">
-      <a href="https://moncompte.djezzy.dz/ar/guest/recharge" target="_blank"><strong>تعبئة الرصيد - جازي</strong></a>
+      <a class="lightning" href="https://moncompte.djezzy.dz/ar/guest/recharge" target="_blank"><strong>تعبئة الرصيد - جازي</strong></a>
       <div>
         <i class="fas fa-phone" style="color: #006400; margin-left:6px;"></i>
         <strong>مصلحة خدمة الزبائن - جازي:</strong>
-        <a href="tel:777">777</a>
+        <a class="lightning" href="tel:777">777</a>
       </div>
-      <a href="https://play.google.com/store/apps/details?id=com.djezzy.internet" target="_blank">
+      <a class="lightning" href="https://play.google.com/store/apps/details?id=com.djezzy.internet" target="_blank">
         <img src="icons/djezzy1.webp" alt="Djezzy App Logo" class="logo">
         تحميل تطبيق Djezzy
       </a>
@@ -1435,20 +1476,21 @@ document.addEventListener("DOMContentLoaded", () => {
     <!-- أوريدو -->
     <li>
       <img src="icons/ooredoo.png" alt="Ooredoo Logo" class="logo">
-      <a href="http://estorm.ooredoo.dz/" target="_blank"><strong>تعبئة الرصيد - أوريدو</strong></a>
+      <a class="lightning" href="http://estorm.ooredoo.dz/" target="_blank"><strong>تعبئة الرصيد - أوريدو</strong></a>
       <div>
         <i class="fas fa-phone" style="color: #006400; margin-left:6px;"></i>
         <strong>مصلحة خدمة الزبائن - أوريدو:</strong>
-        <a href="tel:333">333</a>
+        <a class="lightning" href="tel:333">333</a>
       </div>
-      <a href="https://play.google.com/store/apps/details?id=com.algeria.selfcare.app.android&pli=1" target="_blank">
+      <a class="lightning" href="https://play.google.com/store/apps/details?id=com.algeria.selfcare.app.android&pli=1" target="_blank">
         <img src="icons/ooredoo1.webp" alt="Ooredoo App Logo" class="logo">
         تحميل تطبيق My Ooredoo Algeria
       </a>
     </li>
   </ul>
-</section>  
-  
+</section>
+
+
   <!-- قسم خدمات بريد الجزائر -->
   <section dir="rtl" style="text-align: right;">
     <h2 id="toggle-post" onclick="toggleSection('post-section', this)"
@@ -1464,37 +1506,37 @@ document.addEventListener("DOMContentLoaded", () => {
     <ul id="post-section" style="display: none; list-style: none; padding: 0 20px; line-height: 2; text-align: right;">
       <li>
         <i class="fas fa-user-plus" style="color: #006400; margin-left:6px;"></i>
-        <a href="https://ccpnet.poste.dz/init" target="_blank">فتح حساب بريدي</a>
+        <a class="lightning" href="https://ccpnet.poste.dz/init" target="_blank">فتح حساب بريدي</a>
       </li>
       <li>
         <i class="fas fa-wallet" style="color: #006400; margin-left:6px;"></i>
-        <a href="https://eccp.poste.dz/login" target="_blank">الاطلاع على رصيد الحساب الجاري (CCP)</a>
+        <a class="lightning" href="https://eccp.poste.dz/login" target="_blank">الاطلاع على رصيد الحساب الجاري (CCP)</a>
       </li>
       <li>
         <i class="fas fa-credit-card" style="color: #006400; margin-left:6px;"></i>
-        <a href="https://eccp.poste.dz/commande-edahabia" target="_blank">طلب البطاقة الذهبية وتتبعها</a>
+        <a class="lightning" href="https://eccp.poste.dz/commande-edahabia" target="_blank">طلب البطاقة الذهبية وتتبعها</a>
       </li>
       <li>
         <i class="fas fa-globe" style="color: #006400; margin-left:6px;"></i>
-        <a href="https://baridiweb.poste.dz/" target="_blank">خدمة بريدي واب (BaridiWeb)</a>
+        <a class="lightning" href="https://baridiweb.poste.dz/" target="_blank">خدمة بريدي واب (BaridiWeb)</a>
       </li>
       <li>
         <i class="fab fa-android" style="color: #006400; margin-left:6px;"></i>
-        <a href="https://play.google.com/store/apps/details?id=ru.bpc.mobilebank.bpc&hl=ar" target="_blank">تطبيق
+        <a class="lightning" href="https://play.google.com/store/apps/details?id=ru.bpc.mobilebank.bpc&hl=ar" target="_blank">تطبيق
           بريدي موب (BaridiMob)</a>
       </li>
       <li>
         <i class="fas fa-envelope-open-text" style="color: #006400; margin-left:6px;"></i>
-        <a href="https://reclamation.poste.dz/" target="_blank">تقديم شكاوي بريد الجزائر ومتابعتها</a>
+        <a class="lightning" href="https://reclamation.poste.dz/" target="_blank">تقديم شكاوي بريد الجزائر ومتابعتها</a>
       </li>
       <li>
         <i class="fas fa-box" style="color: #006400; margin-left:6px;"></i>
-        <a href="https://aptracking.poste.dz/" target="_blank">تتبع الطرود البريدية</a>
+        <a class="lightning" href="https://aptracking.poste.dz/" target="_blank">تتبع الطرود البريدية</a>
       </li>
 
       <li>
         <i class="fas fa-file-signature" style="color: #006400; margin-left:6px;"></i>
-        <a href="https://tasdik.poste.dz/" target="_blank">
+        <a class="lightning" href="https://tasdik.poste.dz/" target="_blank">
           ترحيل الوثائق للتصديق عبر بريد الجزائر
         </a>
       </li>
@@ -1504,7 +1546,7 @@ document.addEventListener("DOMContentLoaded", () => {
     <!-- رقم الهاتف أسفل القسم -->
     <div style="margin-top:10px; padding:8px; background-color:#f9f9f9; border-top:1px solid #ddd;">
       <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
-      <strong>مصلحة الزبائن - بريد الجزائر</strong> <a href="tel:1530">1530</a>
+      <strong>مصلحة الزبائن - بريد الجزائر</strong> <a class="lightning" href="tel:1530">1530</a>
     </div>
   </section>
 
@@ -1529,22 +1571,22 @@ document.addEventListener("DOMContentLoaded", () => {
       </h3>
       <ul id="telecom-payment" style="display: none; list-style: none; padding: 0 20px; line-height: 2;">
         <li><i class="fas fa-phone" style="color: #006400; margin-left:6px;"></i>
-          <a href="https://paiement.algerietelecom.dz/AR/index.php?p=facture_paiement" target="_blank">تسديد
+          <a class="lightning" href="https://paiement.algerietelecom.dz/AR/index.php?p=facture_paiement" target="_blank">تسديد
             فواتير
             الهاتف الثابت</a>
         </li>
         <li><i class="fas fa-file-invoice" style="color: #006400; margin-left:6px;"></i>
-          <a href="https://paiement.algerietelecom.dz/AR/index.php?p=dette_paiement" target="_blank">تسديد
+          <a class="lightning" href="https://paiement.algerietelecom.dz/AR/index.php?p=dette_paiement" target="_blank">تسديد
             مستحقات
             الهاتف الثابت</a>
         </li>
         <li><i class="fas fa-globe" style="color: #006400; margin-left:6px;"></i>
-          <a href="https://paiement.algerietelecom.dz/AR/index.php?p=internet_recharge&pr=in" target="_blank">تعبئة
+          <a class="lightning" href="https://paiement.algerietelecom.dz/AR/index.php?p=internet_recharge&pr=in" target="_blank">تعبئة
             حساب
             الانترنت</a>
         </li>
         <li><i class="fas fa-broadcast-tower" style="color: #006400; margin-left:6px;"></i>
-          <a href="https://paiement.algerietelecom.dz/AR/index.php?p=internet_recharge&pr=4g" target="_blank">تعبئة
+          <a class="lightning" href="https://paiement.algerietelecom.dz/AR/index.php?p=internet_recharge&pr=4g" target="_blank">تعبئة
             IDOOM 4G LTE</a>
         </li>
       </ul>
@@ -1558,11 +1600,11 @@ document.addEventListener("DOMContentLoaded", () => {
       </h3>
       <ul id="telecom-vouchers" style="display: none; list-style: none; padding: 0 20px; line-height: 2;">
         <li><i class="fas fa-wifi" style="color: #006400; margin-left:6px;"></i>
-          <a href="https://paiement.algerietelecom.dz/AR/index.php?p=voucher_internet&produit=in" target="_blank">تعبئة
+          <a class="lightning" href="https://paiement.algerietelecom.dz/AR/index.php?p=voucher_internet&produit=in" target="_blank">تعبئة
             الانترنت - بطاقات التعبئة</a>
         </li>
         <li><i class="fas fa-signal" style="color: #006400; margin-left:6px;"></i>
-          <a href="https://paiement.algerietelecom.dz/AR/index.php?p=voucher_internet&produit=4g" target="_blank">تعبئة
+          <a class="lightning" href="https://paiement.algerietelecom.dz/AR/index.php?p=voucher_internet&produit=4g" target="_blank">تعبئة
             IDOOM 4G LTE - بطاقات التعبئة</a>
         </li>
       </ul>
@@ -1576,49 +1618,49 @@ document.addEventListener("DOMContentLoaded", () => {
       </h3>
       <ul id="telecom-space" style="display: none; list-style: none; padding: 0 20px; line-height: 2;">
         <li><i class="fas fa-exchange-alt" style="color: #006400; margin-left:6px;"></i>
-          <a href="https://www.algerietelecom.dz/ar/page/migration-p232" target="_blank">طلب التحويل / متابعة
+          <a class="lightning" href="https://www.algerietelecom.dz/ar/page/migration-p232" target="_blank">طلب التحويل / متابعة
             إلى خدمة
             الألياف البصرية</a>
         </li>
         <li><i class="fas fa-map-marker-alt" style="color: #006400; margin-left:6px;"></i>
-          <a href="https://www.algerietelecom.dz/ar/page/trouver-mon-agence-p256" target="_blank">البحث عن
+          <a class="lightning" href="https://www.algerietelecom.dz/ar/page/trouver-mon-agence-p256" target="_blank">البحث عن
             وكالتي -
             إتصالات الجزائر</a>
         </li>
         <li><i class="fas fa-phone-square-alt" style="color: #006400; margin-left:6px;"></i>
-          <a href="https://www.algerietelecom.dz/ar/page/trouver-votre-numero-de-fixe-p268" target="_blank">إكتشف رقم
+          <a class="lightning" href="https://www.algerietelecom.dz/ar/page/trouver-votre-numero-de-fixe-p268" target="_blank">إكتشف رقم
             هاتفك الثابت FTTH</a>
         </li>
         <li><i class="fas fa-file-signature" style="color: #006400; margin-left:6px;"></i>
-          <a href="https://www.algerietelecom.dz/ar/demande-na" target="_blank">تقديم طلب إلكتروني</a>
+          <a class="lightning" href="https://www.algerietelecom.dz/ar/demande-na" target="_blank">تقديم طلب إلكتروني</a>
         </li>
         <li><i class="fas fa-user-lock" style="color: #006400; margin-left:6px;"></i>
-          <a href="https://client.at.dz/ar" target="_blank">فضاء الزبون - إنشاء / تسجيل الدخول</a>
+          <a class="lightning" href="https://client.at.dz/ar" target="_blank">فضاء الزبون - إنشاء / تسجيل الدخول</a>
         </li>
         <li><i class="fas fa-tools" style="color: #006400; margin-left:6px;"></i>
-          <a href="https://www.algerietelecom.dz/ar/derangements" target="_blank">الإبلاغ عن عطب</a>
+          <a class="lightning" href="https://www.algerietelecom.dz/ar/derangements" target="_blank">الإبلاغ عن عطب</a>
         </li>
         <li><i class="fas fa-bolt" style="color: #006400; margin-left:6px;"></i>
-          <a href="https://www.algerietelecom.dz/ar/particuliers/week-end-boost-prod227" target="_blank">WEEK-END
+          <a class="lightning" href="https://www.algerietelecom.dz/ar/particuliers/week-end-boost-prod227" target="_blank">WEEK-END
             Boost</a>
         </li>
         <li><i class="fas fa-store" style="color: #006400; margin-left:6px;"></i>
-          <a href="https://www.algerietelecom.dz/ar/particuliers/week-end-boost-prod227" target="_blank">تسويق
+          <a class="lightning" href="https://www.algerietelecom.dz/ar/particuliers/week-end-boost-prod227" target="_blank">تسويق
             IDOOM
             Markit</a>
         </li>
         <li><i class="fas fa-chalkboard-teacher" style="color: #006400; margin-left:6px;"></i>
-          <a href="https://www.moalim-dz.net/moalim_v2/login/index.php" target="_blank">منصة معلم</a>
+          <a class="lightning" href="https://www.moalim-dz.net/moalim_v2/login/index.php" target="_blank">منصة معلم</a>
         </li>
         <li><i class="fas fa-chalkboard-teacher" style="color: #006400; margin-left:6px;"></i>
-          <a href="https://inkidia.com.dz/" target="_blank">المعلم</a>
+          <a class="lightning" href="https://inkidia.com.dz/" target="_blank">المعلم</a>
         </li>
         <li><i class="fas fa-credit-card" style="color: #006400; margin-left:6px;"></i>
-          <a href="https://play.google.com/store/apps/details?id=dz.algerietelecom.rd.e_paiement&hl=ar"
+          <a class="lightning" href="https://play.google.com/store/apps/details?id=dz.algerietelecom.rd.e_paiement&hl=ar"
             target="_blank">تطبيق E-paiement لإتصالات الجزائر</a>
         </li>
         <li><i class="fas fa-mobile-alt" style="color: #006400; margin-left:6px;"></i>
-          <a href="https://play.google.com/store/apps/details?id=com.at.dz&hl=ar" target="_blank">تطبيق My
+          <a class="lightning" href="https://play.google.com/store/apps/details?id=com.at.dz&hl=ar" target="_blank">تطبيق My
             IDOOM
             لإتصالات الجزائر</a>
         </li>
@@ -1628,7 +1670,7 @@ document.addEventListener("DOMContentLoaded", () => {
     <!-- رقم الهاتف أسفل القسم -->
     <div style="margin-top:10px; padding:8px; background-color:#f9f9f9; border-top:1px solid #ddd;">
       <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
-      <strong>مصلحة الزبائن - إتصالات الجزائر</strong> <a href="tel:12">12</a>
+      <strong>مصلحة الزبائن - إتصالات الجزائر</strong> <a class="lightning" href="tel:12">12</a>
     </div>
   </section>
 
@@ -1652,16 +1694,16 @@ document.addEventListener("DOMContentLoaded", () => {
       </h3>
       <ul id="teacher-subsection" style="display: none; list-style: none; padding: 0 20px; line-height: 2;">
         <li><i class="fas fa-chalkboard-teacher" style="color: #006400; margin-left:6px;"></i>
-          <a href="https://ostad.education.dz/auth" target="_blank">المنصة الرقمية</a>
+          <a class="lightning" href="https://ostad.education.dz/auth" target="_blank">المنصة الرقمية</a>
         </li>
         <li><i class="fas fa-clipboard-check" style="color: #006400; margin-left:6px;"></i>
-          <a href="https://taqiim.education.dz/" target="_blank">تقييم المكتسبات</a>
+          <a class="lightning" href="https://taqiim.education.dz/" target="_blank">تقييم المكتسبات</a>
         </li>
         <li><i class="fas fa-chalkboard-teacher" style="color: #006400; margin-left:6px;"></i>
-          <a href="https://tawdif.education.dz/" target="_blank">توظيف الأساتذة المتعاقدين</a>
+          <a class="lightning" href="https://tawdif.education.dz/" target="_blank">توظيف الأساتذة المتعاقدين</a>
         </li>
         <li><i class="fas fa-briefcase" style="color: #006400; margin-left:6px;"></i>
-          <a href="https://concour.onec.dz/" target="_blank">المنصة الرقمية للتوظيف</a>
+          <a class="lightning" href="https://concour.onec.dz/" target="_blank">المنصة الرقمية للتوظيف</a>
         </li>
       </ul>
 
@@ -1674,19 +1716,19 @@ document.addEventListener("DOMContentLoaded", () => {
       </h3>
       <ul id="parents-subsection" style="display: none; list-style: none; padding: 0 20px; line-height: 2;">
         <li><i class="fas fa-user-shield" style="color: #006400; margin-left:6px;"></i>
-          <a href="https://awlyaa.education.dz/login" target="_blank">فضاء أولياء التلاميذ</a>
+          <a class="lightning" href="https://awlyaa.education.dz/login" target="_blank">فضاء أولياء التلاميذ</a>
         </li>
         <li><i class="fas fa-file-alt" style="color: #006400; margin-left:6px;"></i>
-          <a href="https://www.dzexams.com/" target="_blank">تحضير الفروض والاختبارات</a>
+          <a class="lightning" href="https://www.dzexams.com/" target="_blank">تحضير الفروض والاختبارات</a>
         </li>
         <li><i class="fas fa-credit-card" style="color: #006400; margin-left:6px;"></i>
-          <a href="https://epay.education.dz/auth" target="_blank">الدفع الإلكتروني للـ BEM و BAC</a>
+          <a class="lightning" href="https://epay.education.dz/auth" target="_blank">الدفع الإلكتروني للـ BEM و BAC</a>
         </li>
         <li><i class="fas fa-file-signature" style="color: #006400; margin-left:6px;"></i>
-          <a href="https://bem.onec.dz/" target="_blank">تسجيل شهادة التعليم المتوسط</a>
+          <a class="lightning" href="https://bem.onec.dz/" target="_blank">تسجيل شهادة التعليم المتوسط</a>
         </li>
         <li><i class="fas fa-file-signature" style="color: #006400; margin-left:6px;"></i>
-          <a href="https://bac.onec.dz/" target="_blank">تسجيل شهادة البكالوريا</a>
+          <a class="lightning" href="https://bac.onec.dz/" target="_blank">تسجيل شهادة البكالوريا</a>
         </li>
       </ul>
 
@@ -1699,10 +1741,10 @@ document.addEventListener("DOMContentLoaded", () => {
       </h3>
       <ul id="distance-subsection" style="display: none; list-style: none; padding: 0 20px; line-height: 2;">
         <li><i class="fas fa-laptop-house" style="color: #006400; margin-left:6px;"></i>
-          <a href="https://awlyaa.education.dz/login" target="_blank">التسجيل في التعليم عن بعد</a>
+          <a class="lightning" href="https://awlyaa.education.dz/login" target="_blank">التسجيل في التعليم عن بعد</a>
         </li>
         <li><i class="fas fa-award" style="color: #006400; margin-left:6px;"></i>
-          <a href="https://www.onefd.edu.dz/att_niv_2025/" target="_blank">شهادة إثبات المستوى 2024/2025</a>
+          <a class="lightning" href="https://www.onefd.edu.dz/att_niv_2025/" target="_blank">شهادة إثبات المستوى 2024/2025</a>
         </li>
       </ul>
 
@@ -1716,10 +1758,10 @@ document.addEventListener("DOMContentLoaded", () => {
       </h3>
       <ul id="exam-results" style="display: none; list-style: none; padding: 0 20px; line-height: 2;">
         <li><i class="fas fa-graduation-cap" style="color: #006400; margin-left:6px;"></i>
-          <a href="https://bem.onec.dz/" target="_blank">نتائج شهادة التعليم المتوسط</a>
+          <a class="lightning" href="https://bem.onec.dz/" target="_blank">نتائج شهادة التعليم المتوسط</a>
         </li>
         <li><i class="fas fa-certificate" style="color: #006400; margin-left:6px;"></i>
-          <a href="https://bac.onec.dz/" target="_blank">نتائج شهادة البكالوريا</a>
+          <a class="lightning" href="https://bac.onec.dz/" target="_blank">نتائج شهادة البكالوريا</a>
         </li>
       </ul>
     </div>
@@ -1727,7 +1769,7 @@ document.addEventListener("DOMContentLoaded", () => {
     <!-- رقم الهاتف أسفل القسم -->
     <div style="margin-top:10px; padding:8px; background-color:#f9f9f9; border-top:1px solid #ddd;">
       <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
-      <strong>وزارة التربية:</strong> <a href="tel:1075">1075</a>
+      <strong>وزارة التربية:</strong> <a class="lightning" href="tel:1075">1075</a>
     </div>
   </section>
 
@@ -1742,30 +1784,30 @@ document.addEventListener("DOMContentLoaded", () => {
 
     <ul id="university-services" style="display: none; list-style: none; padding: 0; line-height: 2;">
       <li><i class="fas fa-user-plus" style="color: #006400;"></i>
-        <a href="https://www.orientation-esi.dz/" target="_blank">التسجيل الأولي الجامعي</a>
+        <a class="lightning" href="https://www.orientation-esi.dz/" target="_blank">التسجيل الأولي الجامعي</a>
       </li>
       <li><i class="fas fa-sign-in-alt" style="color: #006400;"></i>
-        <a href="https://progres.mesrs.dz/webfve/login.xhtml" target="_blank">منصة Progres</a>
+        <a class="lightning" href="https://progres.mesrs.dz/webfve/login.xhtml" target="_blank">منصة Progres</a>
       </li>
       <li><i class="fas fa-credit-card" style="color: #006400;"></i>
-        <a href="https://progres.mesrs.dz/epaiement/epaiementI.xhtml" target="_blank">دفع حقوق إعادة
+        <a class="lightning" href="https://progres.mesrs.dz/epaiement/epaiementI.xhtml" target="_blank">دفع حقوق إعادة
           التّسجيل</a>
       </li>
       <li><i class="fas fa-home" style="color: #006400;"></i>
-        <a href="https://progres.mesrs.dz/epaiement/epaiementH.xhtml" target="_blank">دفع حقوق الإيواء</a>
+        <a class="lightning" href="https://progres.mesrs.dz/epaiement/epaiementH.xhtml" target="_blank">دفع حقوق الإيواء</a>
       </li>
       <li><i class="fas fa-building" style="color: #006400;"></i>
-        <a href="https://progres.mesrs.dz/webonou/" target="_blank">طلبات الإيواء</a>
+        <a class="lightning" href="https://progres.mesrs.dz/webonou/" target="_blank">طلبات الإيواء</a>
       </li>
       <li><i class="fab fa-android" style="color: #006400;"></i>
-        <a href="https://play.google.com/store/apps/details?id=app.progres.webetu&hl=ar" target="_blank"> تطبيق
+        <a class="lightning" href="https://play.google.com/store/apps/details?id=app.progres.webetu&hl=ar" target="_blank"> تطبيق
           Progres</a>
       </li>
       <li><i class="fas fa-random" style="color: #006400;"></i>
-        <a href="https://progres.mesrs.dz/webetu" target="_blank">التحويلات الجامعية</a>
+        <a class="lightning" href="https://progres.mesrs.dz/webetu" target="_blank">التحويلات الجامعية</a>
       </li>
       <li><i class="fas fa-bus-alt" style="color: #006400;"></i>
-        <a href="https://play.google.com/store/apps/details?id=com.mesrs.mybus.mybusapp&hl=ar" target="_blank">تطبيق
+        <a class="lightning" href="https://play.google.com/store/apps/details?id=com.mesrs.mybus.mybusapp&hl=ar" target="_blank">تطبيق
           MYBUS</a>
       </li>
     </ul>
@@ -1774,7 +1816,7 @@ document.addEventListener("DOMContentLoaded", () => {
     <div style="margin-top:10px; padding-right:5px;">
       <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
       <strong>وزارة التعليم العالي:</strong>
-      <a href="tel:+21323939132" style="direction:ltr; unicode-bidi:bidi-override;">
+      <a class="lightning" href="tel:+21323939132" style="direction:ltr; unicode-bidi:bidi-override;">
         +213 23 93 91 32
       </a>
     </div>
@@ -1800,7 +1842,7 @@ document.addEventListener("DOMContentLoaded", () => {
       </h3>
       <ul id="voc-sub1" style="display: none; list-style: none; padding: 0 20px; line-height: 2;">
         <li><i class="fas fa-user-plus" style="color: #006400; margin-left:6px;"></i>
-          <a href="https://www.takwin.dz/" target="_blank">التسجيل في التكوين والتعليم المهنيين</a>
+          <a class="lightning" href="https://www.takwin.dz/" target="_blank">التسجيل في التكوين والتعليم المهنيين</a>
         </li>
       </ul>
 
@@ -1813,7 +1855,7 @@ document.addEventListener("DOMContentLoaded", () => {
       </h3>
       <ul id="voc-sub2" style="display: none; list-style: none; padding: 0 20px; line-height: 2;">
         <li><i class="fas fa-calendar-alt" style="color: #006400; margin-left:6px;"></i>
-          <a href="https://takwin.dz/ProfessionalExams" target="_blank">
+          <a class="lightning" href="https://takwin.dz/ProfessionalExams" target="_blank">
             تسجيلات في الإمتحانات المهنية وفق الرزنامة الرسمية
           </a>
         </li>
@@ -1824,7 +1866,7 @@ document.addEventListener("DOMContentLoaded", () => {
     <div style="margin-top:10px; padding:8px; background-color:#f9f9f9; border-top:1px solid #ddd;">
       <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
       <strong>وزارة التكوين والتعليم المهنيين:</strong>
-      <a href="tel:+21323255266" style="direction:ltr; unicode-bidi:bidi-override;">
+      <a class="lightning" href="tel:+21323255266" style="direction:ltr; unicode-bidi:bidi-override;">
         +213 23 25 52 66
       </a>
     </div>
@@ -1844,46 +1886,46 @@ document.addEventListener("DOMContentLoaded", () => {
 
       <li>
         <i class="fas fa-baby" style="color: green; margin-left:6px;"></i>
-        <a href="https://etatcivil.interieur.gov.dz/" target="_blank">استخراج شهادة الميلاد</a>
+        <a class="lightning" href="https://etatcivil.interieur.gov.dz/" target="_blank">استخراج شهادة الميلاد</a>
       </li>
 
       <li>
         <i class="fas fa-ring" style="color: green; margin-left:6px;"></i>
-        <a href="https://etatcivil.interieur.gov.dz/ActeMariage/" target="_blank">استخراج عقد الزواج</a>
+        <a class="lightning" href="https://etatcivil.interieur.gov.dz/ActeMariage/" target="_blank">استخراج عقد الزواج</a>
       </li>
 
       <li>
         <i class="fas fa-baby" style="color: green; margin-left:6px;"></i>
-        <a href="https://demande12s.interieur.gov.dz/Ar/WFDemande.aspx" target="_blank">
+        <a class="lightning" href="https://demande12s.interieur.gov.dz/Ar/WFDemande.aspx" target="_blank">
           استخراج شهادة الميلاد S12
         </a>
       </li>
 
       <li>
         <i class="fas fa-file-alt" style="color: green; margin-left:6px;"></i>
-        <a href="https://etatcivil.interieur.gov.dz/ActeDeces/" target="_blank">استخراج شهادة الوفاة</a>
+        <a class="lightning" href="https://etatcivil.interieur.gov.dz/ActeDeces/" target="_blank">استخراج شهادة الوفاة</a>
       </li>
 
       <li>
         <i class="fas fa-id-card-alt" style="color: green; margin-left:6px;"></i>
-        <a href="https://passeport.interieur.gov.dz/Ar/DemandeCNIBE/Demander%20la%20carte%20d'identit%C3%A9%20en%20ligne"
+        <a class="lightning" href="https://passeport.interieur.gov.dz/Ar/DemandeCNIBE/Demander%20la%20carte%20d'identit%C3%A9%20en%20ligne"
           target="_blank">طلب بطاقة التعريف البيومترية</a>
       </li>
 
       <li>
         <i class="fas fa-passport" style="color: green; margin-left:6px;"></i>
-        <a href="https://passeport.interieur.gov.dz/Ar/Inscription/BaBou" target="_blank">طلب جواز السفر
+        <a class="lightning" href="https://passeport.interieur.gov.dz/Ar/Inscription/BaBou" target="_blank">طلب جواز السفر
           البيومتري</a>
       </li>
 
       <li>
         <i class="fas fa-desktop" style="color: green; margin-left:6px;"></i>
-        <a href="https://prestations.interieur.gov.dz/guichet/" target="_blank">الشباك عن بعد</a>
+        <a class="lightning" href="https://prestations.interieur.gov.dz/guichet/" target="_blank">الشباك عن بعد</a>
       </li>
 
       <li>
         <i class="fas fa-envelope-open-text" style="color: green; margin-left:6px;"></i>
-        <a href="https://www.interieur.gov.dz/index.php/ar/component/annuaire/?view=contacter_nous_ar" target="_blank">
+        <a class="lightning" href="https://www.interieur.gov.dz/index.php/ar/component/annuaire/?view=contacter_nous_ar" target="_blank">
           العرائض والشكاوى – الجماعات المحلية
         </a>
       </li>
@@ -1893,7 +1935,7 @@ document.addEventListener("DOMContentLoaded", () => {
     <div style="margin-top:10px; padding-right:5px;">
       <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
       <strong>وزارة الداخلية:</strong>
-      <a href="tel:1100">1100</a>
+      <a class="lightning" href="tel:1100">1100</a>
     </div>
   </section>
 
@@ -1923,10 +1965,10 @@ document.addEventListener("DOMContentLoaded", () => {
       </h3>
       <ul id="stamp-tax" style="display: none; list-style: none; padding: 0; margin-right: 10px; line-height: 2;">
         <li><i class="fas fa-stamp" style="color: #006400; margin-left: 6px;"></i>
-          <a href="https://tabioucom.mf.gov.dz/acheter" target="_blank">إقتناء حقوق الطابع الجبائي</a>
+          <a class="lightning" href="https://tabioucom.mf.gov.dz/acheter" target="_blank">إقتناء حقوق الطابع الجبائي</a>
         </li>
         <li><i class="fas fa-redo" style="color: #006400; margin-left: 6px;"></i>
-          <a href="https://tabioucom.mf.gov.dz/edit" target="_blank">إعادة إقتناء حقوق الطابع الجبائي</a>
+          <a class="lightning" href="https://tabioucom.mf.gov.dz/edit" target="_blank">إعادة إقتناء حقوق الطابع الجبائي</a>
         </li>
       </ul>
 
@@ -1941,10 +1983,10 @@ document.addEventListener("DOMContentLoaded", () => {
       </h3>
       <ul id="car-tax" style="display: none; list-style: none; padding: 0; margin-right: 10px; line-height: 2;">
         <li><i class="fas fa-receipt" style="color: #006400; margin-left: 6px;"></i>
-          <a href="https://qassimatouka.mf.gov.dz/acheter" target="_blank">إقتناء قسيمة السيارات</a>
+          <a class="lightning" href="https://qassimatouka.mf.gov.dz/acheter" target="_blank">إقتناء قسيمة السيارات</a>
         </li>
         <li><i class="fas fa-redo" style="color: #006400; margin-left: 6px;"></i>
-          <a href="https://qassimatouka.mf.gov.dz/edit" target="_blank">إعادة إصدار قسيمة السيارات</a>
+          <a class="lightning" href="https://qassimatouka.mf.gov.dz/edit" target="_blank">إعادة إصدار قسيمة السيارات</a>
         </li>
       </ul>
     </div>
@@ -1953,7 +1995,7 @@ document.addEventListener("DOMContentLoaded", () => {
     <div style="margin-top:10px; padding:8px; background-color:#f9f9f9; border-top:1px solid #ddd;">
       <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
       <strong>وزارة المالية:</strong>
-      <a href="tel:3040" dir="ltr">3040</a>
+      <a class="lightning" href="tel:3040" dir="ltr">3040</a>
     </div>
   </section>
 
@@ -1978,42 +2020,42 @@ document.addEventListener("DOMContentLoaded", () => {
       </h3>
       <ul id="public-sector" style="display: none; list-style: none; padding: 0; line-height: 2;">
         <li><i class="fas fa-file-signature" style="color: #006400;"></i>
-          <a href="https://fadaeldjazair.mf.gov.dz/EDCFPUBLICHOME/" target="_blank">
+          <a class="lightning" href="https://fadaeldjazair.mf.gov.dz/EDCFPUBLICHOME/" target="_blank">
             المنصة الرقمية لمستخرجات الوثائق العقارية، شهادة السلبية والعقود المشهرة
           </a>
         </li>
         <li><i class="fas fa-file-alt" style="color: #006400;"></i>
-          <a href="https://fadaeldjazair.mf.gov.dz/mission-documentaire/index_public_35.html" target="_blank">
+          <a class="lightning" href="https://fadaeldjazair.mf.gov.dz/mission-documentaire/index_public_35.html" target="_blank">
             معطايات مسحية
           </a>
         </li>
         <li><i class="fas fa-file-invoice" style="color: #006400;"></i>
-          <a href="https://fadaeldjazair.mf.gov.dz/recherche2" target="_blank">
+          <a class="lightning" href="https://fadaeldjazair.mf.gov.dz/recherche2" target="_blank">
             طلب مستخرج المصفوفة المسحية CC11
           </a>
         </li>
         <li><i class="fas fa-file-invoice-dollar" style="color: #006400;"></i>
-          <a href="https://fadaeldjazair.mf.gov.dz/delivrance_automatique/recherche.php" target="_blank">
+          <a class="lightning" href="https://fadaeldjazair.mf.gov.dz/delivrance_automatique/recherche.php" target="_blank">
             طلب مستخرج من حالة القسم CC12
           </a>
         </li>
         <li><i class="fas fa-info-circle" style="color: #006400;"></i>
-          <a href="https://fadaeldjazair.mf.gov.dz/recherche4" target="_blank">
+          <a class="lightning" href="https://fadaeldjazair.mf.gov.dz/recherche4" target="_blank">
             طلب معلومات ذات طابع مسحي CC14
           </a>
         </li>
         <li><i class="fas fa-file-signature" style="color: #006400;"></i>
-          <a href="https://fadaeldjazair.mf.gov.dz/recherche5" target="_blank">
+          <a class="lightning" href="https://fadaeldjazair.mf.gov.dz/recherche5" target="_blank">
             طلب مستخرج المصفوفة المسحية CC15
           </a>
         </li>
         <li><i class="fas fa-book" style="color: #006400;"></i>
-          <a href="https://fadaeldjazair.mf.gov.dz/lf/demander_lf" target="_blank">
+          <a class="lightning" href="https://fadaeldjazair.mf.gov.dz/lf/demander_lf" target="_blank">
             طلب الدفتر العقاري
           </a>
         </li>
         <li><i class="fas fa-tasks" style="color: #006400;"></i>
-          <a href="https://fadaeldjazair.mf.gov.dz/lf/suividemande" target="_blank">
+          <a class="lightning" href="https://fadaeldjazair.mf.gov.dz/lf/suividemande" target="_blank">
             متابعة طلب الدفتر العقاري
           </a>
         </li>
@@ -2027,13 +2069,13 @@ document.addEventListener("DOMContentLoaded", () => {
       </h3>
       <ul id="pro-sector" style="display: none; list-style: none; padding: 0; line-height: 2;">
         <li><i class="fas fa-user-cog" style="color: #006400;"></i>
-          <a href="https://fadaeldjazair.mf.gov.dz/login2" target="_blank">فضاء المحافظ العقاري</a>
+          <a class="lightning" href="https://fadaeldjazair.mf.gov.dz/login2" target="_blank">فضاء المحافظ العقاري</a>
         </li>
         <li><i class="fas fa-user-tie" style="color: #006400;"></i>
-          <a href="https://fadaeldjazair.mf.gov.dz/login1" target="_blank">فضاء خاص بالمفتشين العقاريين</a>
+          <a class="lightning" href="https://fadaeldjazair.mf.gov.dz/login1" target="_blank">فضاء خاص بالمفتشين العقاريين</a>
         </li>
         <li><i class="fas fa-user-edit" style="color: #006400;"></i>
-          <a href="https://fadaeldjazair.mf.gov.dz/login" target="_blank">فضاء خاص بالموثقين</a>
+          <a class="lightning" href="https://fadaeldjazair.mf.gov.dz/login" target="_blank">فضاء خاص بالموثقين</a>
         </li>
       </ul>
 
@@ -2043,7 +2085,7 @@ document.addEventListener("DOMContentLoaded", () => {
     <div style="margin-top:10px; padding:8px; background-color:#f9f9f9; border-top:1px solid #ddd;">
       <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
       <strong>المديرية العامة للأملاك الوطنية:</strong>
-      <a href="tel:+213 21 59 51 51" style="direction:ltr; unicode-bidi:bidi-override;">
+      <a class="lightning" href="tel:+213 21 59 51 51" style="direction:ltr; unicode-bidi:bidi-override;">
         +213 21 59 51 51
       </a>
     </div>
@@ -2063,26 +2105,26 @@ document.addEventListener("DOMContentLoaded", () => {
 
       <li>
         <i class="fas fa-file-signature" style="color: green; margin-left:6px;"></i>
-        <a href="https://tasdik.poste.dz/" target="_blank">ترحيل الوثائق للتصديق عبر بريد الجزائر
+        <a class="lightning" href="https://tasdik.poste.dz/" target="_blank">ترحيل الوثائق للتصديق عبر بريد الجزائر
         </a>
       </li>
 
       <li>
         <i class="fas fa-envelope-open-text" style="color: green; margin-left:6px;"></i>
-        <a href="https://www.mfa.gov.dz/ar/contact" target="_blank">اكتب إلى كاتب الدولة مكلف بالجالية
+        <a class="lightning" href="https://www.mfa.gov.dz/ar/contact" target="_blank">اكتب إلى كاتب الدولة مكلف بالجالية
           بالخارج</a>
       </li>
 
       <li>
         <i class="fas fa-flag" style="color: green; margin-left:6px;"></i>
-        <a href="https://www.mfa.gov.dz/ar/embassys-locations-list" target="_blank">
+        <a class="lightning" href="https://www.mfa.gov.dz/ar/embassys-locations-list" target="_blank">
           الممثليات الدبلوماسية والقنصلية الجزائرية بالخارج
         </a>
       </li>
 
       <li>
         <i class="fas fa-flag" style="color: green; margin-left:6px;"></i>
-        <a href="https://emblibreville.mfa.gov.dz/ar/foreign-diplomatic-and-consular-representations-in-algeria"
+        <a class="lightning" href="https://emblibreville.mfa.gov.dz/ar/foreign-diplomatic-and-consular-representations-in-algeria"
           target="_blank">
           الممثليات الدبلوماسية و القنصلية الأجنبية بالجزائر
         </a>
@@ -2090,7 +2132,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       <li>
         <i class="fas fa-globe" style="color: green; margin-left:6px;"></i>
-        <a href="https://www.mfa.gov.dz/ar/international-and-regional-organizations-in-algeria" target="_blank">
+        <a class="lightning" href="https://www.mfa.gov.dz/ar/international-and-regional-organizations-in-algeria" target="_blank">
           المنظمات الدولية والإقليمية في الجزائر
         </a>
 
@@ -2100,7 +2142,7 @@ document.addEventListener("DOMContentLoaded", () => {
     <div style="margin-top:10px; padding-right:5px;">
       <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
       <strong>وزارة الشؤون الخارجية:</strong>
-      <a href="tel:+21321504545" style="direction:ltr; unicode-bidi:bidi-override;">
+      <a class="lightning" href="tel:+21321504545" style="direction:ltr; unicode-bidi:bidi-override;">
         +213 21 50 45 45
       </a>
 
@@ -2129,15 +2171,15 @@ document.addEventListener("DOMContentLoaded", () => {
       </h3>
       <ul id="cnas-list" style="display: none; list-style: none; padding: 0 20px; line-height: 2;">
         <li><i class="fas fa-id-card" style="color: #006400; margin-left: 6px;"></i>
-          <a href="https://elhanaa.cnas.dz/" target="_blank">شهادة الإنتساب - CNAS</a>
+          <a class="lightning" href="https://elhanaa.cnas.dz/" target="_blank">شهادة الإنتساب - CNAS</a>
         </li>
         <li><i class="fas fa-user-slash" style="color: #006400; margin-left: 6px;"></i>
-          <a href="https://elhanaa.cnas.dz/attestation_no_affiliation.xhtml" target="_blank">شهادة عدم
+          <a class="lightning" href="https://elhanaa.cnas.dz/attestation_no_affiliation.xhtml" target="_blank">شهادة عدم
             الإنتساب -
             CNAS</a>
         </li>
         <li><i class="fas fa-mobile-screen-button" style="color: #006400; margin-left: 6px;"></i>
-          <a href="https://play.google.com/store/apps/details?id=dz.cnas.mobile_elhanaa&hl=ar" target="_blank">
+          <a class="lightning" href="https://play.google.com/store/apps/details?id=dz.cnas.mobile_elhanaa&hl=ar" target="_blank">
             تطبيق فضاء الهناء - CNAS</a>
         </li>
       </ul>
@@ -2152,13 +2194,13 @@ document.addEventListener("DOMContentLoaded", () => {
       </h3>
       <ul id="casnos-list" style="display: none; list-style: none; padding: 0 20px; line-height: 2;">
         <li><i class="fas fa-user-slash" style="color: #006400; margin-left: 6px;"></i>
-          <a href="https://damancom.casnos.dz/non-affiliation" target="_blank">شهادة عدم الإنتساب - CASNOS</a>
+          <a class="lightning" href="https://damancom.casnos.dz/non-affiliation" target="_blank">شهادة عدم الإنتساب - CASNOS</a>
         </li>
         <li><i class="fas fa-id-card" style="color: #006400; margin-left: 6px;"></i>
-          <a href="https://damancom.casnos.dz/auth/login/assure" target="_blank">شهادة الإنتساب - CASNOS</a>
+          <a class="lightning" href="https://damancom.casnos.dz/auth/login/assure" target="_blank">شهادة الإنتساب - CASNOS</a>
         </li>
         <li><i class="fas fa-file-signature" style="color: #006400; margin-left: 6px;"></i>
-          <a href="https://damancom.casnos.dz/affiliation" target="_blank">طلب الإنتساب - CASNOS</a>
+          <a class="lightning" href="https://damancom.casnos.dz/affiliation" target="_blank">طلب الإنتساب - CASNOS</a>
         </li>
       </ul>
 
@@ -2172,7 +2214,7 @@ document.addEventListener("DOMContentLoaded", () => {
       </h3>
       <ul id="cnr-list" style="display: none; list-style: none; padding: 0 20px; line-height: 2;">
         <li><i class="fas fa-mobile-screen-button" style="color: #006400; margin-left: 6px;"></i>
-          <a href="https://play.google.com/store/apps/details?id=dz.cnr.cnr" target="_blank">تطبيق المتقاعد -
+          <a class="lightning" href="https://play.google.com/store/apps/details?id=dz.cnr.cnr" target="_blank">تطبيق المتقاعد -
             CNR</a>
         </li>
       </ul>
@@ -2182,7 +2224,7 @@ document.addEventListener("DOMContentLoaded", () => {
     <div style="margin-top:10px; padding:8px; background-color:#f9f9f9; border-top:1px solid #ddd;">
       <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
       <strong>وزارة العمل والتشغيل والضمان الاجتماعي:</strong>
-      <a href="tel:3010">3010</a>
+      <a class="lightning" href="tel:3010">3010</a>
     </div>
   </section>
 
@@ -2199,26 +2241,26 @@ document.addEventListener("DOMContentLoaded", () => {
 
     <ul id="justice-links" style="display: none; text-align: right; list-style: none; padding: 0; line-height: 2;">
       <li><i class="fas fa-file-alt" style="color: #006400;"></i>
-        <a href="https://e-casier.mjustice.dz/" target="_blank">استخراج صحيفة السوابق القضائية</a>
+        <a class="lightning" href="https://e-casier.mjustice.dz/" target="_blank">استخراج صحيفة السوابق القضائية</a>
       </li>
       <li><i class="fas fa-passport" style="color: #006400;"></i>
-        <a href="https://portail.mjustice.dz/remote/login?lang=fr" target="_blank">استخراج الجنسية الجزائرية</a>
+        <a class="lightning" href="https://portail.mjustice.dz/remote/login?lang=fr" target="_blank">استخراج الجنسية الجزائرية</a>
       </li>
       <li><i class="fas fa-archive" style="color: #006400;"></i>
-        <a href="https://www.mjustice.dz/ar/archive/" target="_blank">طلب مستخرج الوجود بالسجن إبان الثورة</a>
+        <a class="lightning" href="https://www.mjustice.dz/ar/archive/" target="_blank">طلب مستخرج الوجود بالسجن إبان الثورة</a>
       </li>
       <li><i class="fas fa-file-contract" style="color: #006400;"></i>
-        <a href="https://www.mjustice.dz/ar/tr-ch/" target="_blank">طلب نسخة من عقود المحاكم</a>
+        <a class="lightning" href="https://www.mjustice.dz/ar/tr-ch/" target="_blank">طلب نسخة من عقود المحاكم</a>
       </li>
       <li><i class="fas fa-user-lock" style="color: #006400;"></i>
-        <a href="https://ziyarati.mjustice.dz/" target="_blank">رخص الاتصال بالمحبوسين</a>
+        <a class="lightning" href="https://ziyarati.mjustice.dz/" target="_blank">رخص الاتصال بالمحبوسين</a>
       </li>
       <li><i class="fas fa-gavel" style="color: #006400;"></i>
-        <a href="https://e-nyaba.mjustice.dz/nouvelle_plainte.php" target="_blank">النيابة الإلكترونية - تسجيل
+        <a class="lightning" href="https://e-nyaba.mjustice.dz/nouvelle_plainte.php" target="_blank">النيابة الإلكترونية - تسجيل
           شكوى</a>
       </li>
       <li><i class="fas fa-search" style="color: #006400;"></i>
-        <a href="https://e-nyaba.mjustice.dz/login.php" target="_blank">النيابة الإلكترونية - متابعة شكوى</a>
+        <a class="lightning" href="https://e-nyaba.mjustice.dz/login.php" target="_blank">النيابة الإلكترونية - متابعة شكوى</a>
       </li>
     </ul>
 
@@ -2226,7 +2268,7 @@ document.addEventListener("DOMContentLoaded", () => {
     <div style="margin-top:10px; padding-right:5px;">
       <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
       <strong>وزارة العدل الجزائرية:</strong>
-      <a href="tel:1078">1078</a>
+      <a class="lightning" href="tel:1078">1078</a>
     </div>
   </section>
 
@@ -2244,19 +2286,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
       <li>
         <i class="fas fa-check-circle" style="color: green; margin-left:6px;"></i>
-        <a href="https://www.markabatidz.energy.gov.dz/" target="_blank">"مركبتي" لفحص مطابقة المركبات حجز موعد
+        <a class="lightning" href="https://www.markabatidz.energy.gov.dz/" target="_blank">"مركبتي" لفحص مطابقة المركبات حجز موعد
         </a>
       </li>
 
       <li>
         <i class="fas fa-stamp" style="color: green; margin-left:6px;"></i>
-        <a href="https://tassareeh.energy.gov.dz/login.xhtml" target="_blank">تصاريح الإستراد
+        <a class="lightning" href="https://tassareeh.energy.gov.dz/login.xhtml" target="_blank">تصاريح الإستراد
         </a>
       </li>
 
       <li>
         <i class="fas fa-headset" style="color: green; margin-left:6px;"></i>
-        <a href="doleances.mem@energy.gov.dz" target="_blank">
+        <a class="lightning" href="doleances.mem@energy.gov.dz" target="_blank">
           خلية الإستماع </a>
       </li>
 
@@ -2267,7 +2309,7 @@ document.addEventListener("DOMContentLoaded", () => {
     <div style="margin-top:10px; padding-right:5px;">
       <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
       <strong>وزارة المحروقات والمناجم:</strong>
-      <a href="tel:+213 21 48 85 71" style="direction:ltr; unicode-bidi:bidi-override;">
+      <a class="lightning" href="tel:+213 21 48 85 71" style="direction:ltr; unicode-bidi:bidi-override;">
         +213 21 48 85 71
       </a>
 
@@ -2287,47 +2329,47 @@ document.addEventListener("DOMContentLoaded", () => {
 
     <ul id="transport-section" style="display: none; list-style: none; padding: 0; line-height: 2;">
       <img src="icons/air-algerie.png" alt="airalgerie Logo" class="logo">
-      <a href="https://airalgerie.dz/ar/%d8%a7%d9%84%d8%ad%d8%ac%d8%b2/" target="_blank">
+      <a class="lightning" href="https://airalgerie.dz/ar/%d8%a7%d9%84%d8%ad%d8%ac%d8%b2/" target="_blank">
         حجز تذاكر السفر عبر الخطوط الجوية الجزائرية
       </a>
       </li>
 
       <li>
         <img src="icons/TASSILI.png" alt="tassiliairlines Logo" class="logo">
-        <a href="https://tassiliairlines.dz/" target="_blank">حجز تذاكر السفر عبر طيران الطاسيلي</a>
+        <a class="lightning" href="https://tassiliairlines.dz/" target="_blank">حجز تذاكر السفر عبر طيران الطاسيلي</a>
       </li>
 
       <li>
         <img src="icons/TAWASSEL.webp" alt="AppEtwassel Logo" class="logo">
-        <a href="https://play.google.com/store/apps/details?id=dz.setram.AppEtwassel" target="_blank">
+        <a class="lightning" href="https://play.google.com/store/apps/details?id=dz.setram.AppEtwassel" target="_blank">
           تطبيق "تواصل" للترامواي
         </a>
       </li>
 
       <li>
         <img src="icons/mahatati.webp" alt="mahatatigo" class="logo">
-        <a href="https://play.google.com/store/apps/details?id=com.sogral.mobile&amp;hl=ar" target="_blank">
+        <a class="lightning" href="https://play.google.com/store/apps/details?id=com.sogral.mobile&amp;hl=ar" target="_blank">
           تطبيق "محطتي" للخطوط البرية سوقرال SOGRAL
         </a>
       </li>
 
       <li>
         <img src="icons/FERRIES.png" alt="algerieferries Logo" class="logo">
-        <a href="https://afs.algerieferries.dz/booking/step1" target="_blank">
+        <a class="lightning" href="https://afs.algerieferries.dz/booking/step1" target="_blank">
           حجز تذاكر السفر عبر المؤسسة الوطنية للنقل البحري للمسافرين
         </a>
       </li>
 
       <li>
         <img src="icons/sntf.png" alt="sntf Logo" class="logo">
-        <a href="https://www.sntf.dz/index.php/" target="_blank">
+        <a class="lightning" href="https://www.sntf.dz/index.php/" target="_blank">
           مواقيت سير القطارات في الجزائر (SNTF)
         </a>
       </li>
 
       <li>
         <img src="icons/Etusa Mob.webp" alt="Etusa Mob Logo" class="logo">
-        <a href="https://play.google.com/store/apps/details?id=dz.etusa.etusa_mob&amp;hl=ar" target="_blank">
+        <a class="lightning" href="https://play.google.com/store/apps/details?id=dz.etusa.etusa_mob&amp;hl=ar" target="_blank">
           تطبيق "Etusa Mob" لمؤسسة النقل الحضري وشبه الحضري
         </a>
       </li>
@@ -2337,7 +2379,7 @@ document.addEventListener("DOMContentLoaded", () => {
     <div style="margin-top:10px; padding-right:5px;">
       <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
       <strong>وزارة النقل:</strong>
-      <a href="tel:1067">1067</a>
+      <a class="lightning" href="tel:1067">1067</a>
     </div>
   </section>
 
@@ -2353,27 +2395,27 @@ document.addEventListener("DOMContentLoaded", () => {
 
     <ul id="anem-links" style="display: none; list-style: none; padding: 0; line-height: 2;">
       <li><i class="fas fa-money-check-alt" style="color: #006400;"></i>
-        <a href="https://minha.anem.dz/pre_inscription" target="_blank">التسجيل في منحة البطالة</a>
+        <a class="lightning" href="https://minha.anem.dz/pre_inscription" target="_blank">التسجيل في منحة البطالة</a>
       </li>
       <li><i class="fas fa-user-clock" style="color: #006400;"></i>
-        <a href="https://wassitonline.anem.dz/postulation/prolongationDemande" target="_blank">تمديد طلب
+        <a class="lightning" href="https://wassitonline.anem.dz/postulation/prolongationDemande" target="_blank">تمديد طلب
           العمل</a>
       </li>
       <li><i class="fas fa-search" style="color: #006400;"></i>
-        <a href="https://auth.anem.dz/Account/Login" target="_blank">فرصتي – التقدم لعروض العمل</a>
+        <a class="lightning" href="https://auth.anem.dz/Account/Login" target="_blank">فرصتي – التقدم لعروض العمل</a>
       </li>
       <li><i class="fas fa-bullhorn" style="color: #006400;"></i>
-        <a href="https://www.anem.dz/opportunites/ar.html" target="_blank">فرص عمل وإعلانات</a>
+        <a class="lightning" href="https://www.anem.dz/opportunites/ar.html" target="_blank">فرص عمل وإعلانات</a>
       </li>
       <li><i class="fas fa-mobile-alt" style="color: #006400;"></i>
-        <a href="https://www.anem.dz/app_mobile/Name.apk" target="_blank">تطبيق ANEM-Dz</a>
+        <a class="lightning" href="https://www.anem.dz/app_mobile/Name.apk" target="_blank">تطبيق ANEM-Dz</a>
       </li>
       <li><i class="fas fa-map-marked" style="color: #006400;"></i>
-        <a href="https://www.anem.dz/app_mobile/Mon_agence.apk" target="_blank"> تطبيق Mon Agence للبحث عن
+        <a class="lightning" href="https://www.anem.dz/app_mobile/Mon_agence.apk" target="_blank"> تطبيق Mon Agence للبحث عن
           وكالة</a>
       </li>
       <li><i class="fas fa-clipboard-list" style="color: #006400;"></i>
-        <a href="https://www.anem.dz/app_mobile/Mon_offre.apk" target="_blank"> تطبيق Mon Offre لعروض العمل</a>
+        <a class="lightning" href="https://www.anem.dz/app_mobile/Mon_offre.apk" target="_blank"> تطبيق Mon Offre لعروض العمل</a>
       </li>
     </ul>
 
@@ -2381,7 +2423,7 @@ document.addEventListener("DOMContentLoaded", () => {
     <div style="margin-top:10px; padding-right:5px;">
       <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
       <strong>الوكالة الوطنية للتشغيل:</strong>
-      <a href="tel:3005">3005</a>
+      <a class="lightning" href="tel:3005">3005</a>
     </div>
   </section>
 
@@ -2395,25 +2437,25 @@ document.addEventListener("DOMContentLoaded", () => {
     <ul id="health-links"
       style="display: none; list-style: none; padding-right: 20px; line-height: 2; text-align: right;">
       <li><i class="fas fa-book-medical" style="color: green;"></i>
-        <a href="https://formation.sante.gov.dz/index.html" target="_blank">
+        <a class="lightning" href="https://formation.sante.gov.dz/index.html" target="_blank">
           منصة التكوين - التسجيل في الشبه طبي
         </a>
       </li>
       <li><i class="fas fa-clinic-medical" style="color: green;"></i>
-        <a href="https://etabib.dz/" target="_blank">العيادة الرقمية</a>
+        <a class="lightning" href="https://etabib.dz/" target="_blank">العيادة الرقمية</a>
       </li>
       <li><i class="fas fa-mobile-alt" style="color: green;"></i>
-        <a href="https://play.google.com/store/apps/details?id=dz.sebrou.docts_guide.app&amp;hl=ar" target="_blank">
+        <a class="lightning" href="https://play.google.com/store/apps/details?id=dz.sebrou.docts_guide.app&amp;hl=ar" target="_blank">
           تطبيق "أطباء الجزائر"
         </a>
       </li>
       <li><i class="fas fa-mobile-alt" style="color: green;"></i>
-        <a href="https://play.google.com/store/apps/details?id=com.algerian.doctor&amp;hl=ar" target="_blank">
+        <a class="lightning" href="https://play.google.com/store/apps/details?id=com.algerian.doctor&amp;hl=ar" target="_blank">
           تطبيق "الطبيب الجزائري"
         </a>
       </li>
       <li><i class="fas fa-mobile-alt" style="color: green;"></i>
-        <a href="https://play.google.com/store/apps/details?id=com.dz.bank.blood.nabilsoft.bankblooddz&amp;hl=ar"
+        <a class="lightning" href="https://play.google.com/store/apps/details?id=com.dz.bank.blood.nabilsoft.bankblooddz&amp;hl=ar"
           target="_blank">
           تطبيق "بنك الدم الجزائري"
         </a>
@@ -2424,7 +2466,7 @@ document.addEventListener("DOMContentLoaded", () => {
     <div style="margin-top:10px; padding-right:5px;">
       <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
       <strong>وزارة الصحة:</strong>
-      <a href="tel:3030">3030</a>
+      <a class="lightning" href="tel:3030">3030</a>
     </div>
   </section>
 
@@ -2440,18 +2482,18 @@ document.addEventListener("DOMContentLoaded", () => {
     <ul id="commerce-section" style="display: none; list-style: none; padding: 0; line-height: 2;">
       <li>
         <i class="fas fa-chart-line" style="color: #006400;"></i>
-        <a href="https://fspe.commerce.gov.dz/" target="_blank">المنصة الرقمية لتسيير الصندوق الخاص لترقية
+        <a class="lightning" href="https://fspe.commerce.gov.dz/" target="_blank">المنصة الرقمية لتسيير الصندوق الخاص لترقية
           الصادرات</a>
       </li>
       <li>
         <i class="fas fa-money-check-alt" style="color: #006400;"></i>
-        <a href="https://mfdgi.gov.dz/portailpublic_ar/" target="_blank">فضاء التصريح والدفع الإلكترونيين -
+        <a class="lightning" href="https://mfdgi.gov.dz/portailpublic_ar/" target="_blank">فضاء التصريح والدفع الإلكترونيين -
           جباية
           تيك</a>
       </li>
       <li>
         <i class="fas fa-headset" style="color: #006400;"></i>
-        <a href="https://www.commerce.gov.dz/ar/ecrire-a-la-cellule-d-ecoute/" target="_blank">خلية الإصغاء
+        <a class="lightning" href="https://www.commerce.gov.dz/ar/ecrire-a-la-cellule-d-ecoute/" target="_blank">خلية الإصغاء
           لوزارة
           التجارة</a>
       </li>
@@ -2460,7 +2502,7 @@ document.addEventListener("DOMContentLoaded", () => {
     <!-- رقم الهاتف أسفل القسم -->
     <div style="margin-top:10px; padding-right:5px;">
       <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
-      <strong>وزارة التجارة:</strong> <a href="tel:1020">1020</a>
+      <strong>وزارة التجارة:</strong> <a class="lightning" href="tel:1020">1020</a>
     </div>
   </section>
 
@@ -2476,16 +2518,16 @@ document.addEventListener("DOMContentLoaded", () => {
     <ul id="customs-section" style="display: none; list-style: none; padding: 0; line-height: 2;">
       <li>
         <i class="fas fa-file-contract" style="color: #006400;"></i>
-        <a href="https://douane.gov.dz/rtc/" target="_blank">المعلومة التعريفية الملزمة - RTC</a>
+        <a class="lightning" href="https://douane.gov.dz/rtc/" target="_blank">المعلومة التعريفية الملزمة - RTC</a>
       </li>
       <li>
         <i class="fas fa-headphones-alt" style="color: #006400;"></i>
-        <a href="https://www.douane.gov.dz/spip.php?rubrique53" target="_blank">خلية الإستماع للجمارك
+        <a class="lightning" href="https://www.douane.gov.dz/spip.php?rubrique53" target="_blank">خلية الإستماع للجمارك
           الجزائرية</a>
       </li>
       <li>
         <i class="fas fa-info-circle" style="color: #006400;"></i>
-        <a href="https://www.douane.gov.dz/?lang=ar" target="_blank">الموقع الرسمي للجمارك الجزائرية</a>
+        <a class="lightning" href="https://www.douane.gov.dz/?lang=ar" target="_blank">الموقع الرسمي للجمارك الجزائرية</a>
       </li>
     </ul>
 
@@ -2493,7 +2535,7 @@ document.addEventListener("DOMContentLoaded", () => {
     <div style="margin-top:10px; padding-right:5px;">
       <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
       <strong>الجمارك الجزائرية:</strong>
-      <a href="tel:1023">1023</a>
+      <a class="lightning" href="tel:1023">1023</a>
     </div>
   </section>
 
@@ -2509,7 +2551,7 @@ document.addEventListener("DOMContentLoaded", () => {
     <ul id="auto-entrepreneur" style="display: none; list-style: none; padding: 0; line-height: 2;">
       <li>
         <i class="fas fa-id-badge" style="color: #006400;"></i>
-        <a href="https://anae.dz/user/ae/register" target="_blank">طلب بطاقة المقاول الذاتي</a>
+        <a class="lightning" href="https://anae.dz/user/ae/register" target="_blank">طلب بطاقة المقاول الذاتي</a>
       </li>
     </ul>
 
@@ -2517,7 +2559,7 @@ document.addEventListener("DOMContentLoaded", () => {
     <div style="margin-top:10px; padding-right:5px;">
       <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
       <strong>الوكالة الوطنية للمقاول الذاتي:</strong>
-      <a href="tel:1071">1071</a>
+      <a class="lightning" href="tel:1071">1071</a>
     </div>
   </section>
 
@@ -2536,52 +2578,52 @@ document.addEventListener("DOMContentLoaded", () => {
       <!-- اتصالات الجزائر -->
       <li>
         <img src="icons/algerietelecom.png" alt="algerietelecom Logo" class="logo">
-        <a href="https://client.at.dz/ar" target="_blank">فضاء الزبائن لإتصالات الجزائر</a>
+        <a class="lightning" href="https://client.at.dz/ar" target="_blank">فضاء الزبائن لإتصالات الجزائر</a>
         <div style="margin-top:5px; padding-right:20px;">
           <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
           <strong>مصلحة زبائن اتصالات الجزائر:</strong>
-          <a href="tel:12">12</a>
+          <a class="lightning" href="tel:12">12</a>
         </div>
       </li>
 
       <!-- الجزائرية للمياه -->
       <li>
         <img src="icons/ade.png" alt="ADE Logo" class="logo">
-        <a href="https://www.ade.dz/login" target="_blank">فضاء الزبائن للجزائرية للمياه</a>
+        <a class="lightning" href="https://www.ade.dz/login" target="_blank">فضاء الزبائن للجزائرية للمياه</a>
         <div style="margin-top:5px; padding-right:20px;">
           <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
           <strong>الجزائرية للمياه:</strong>
-          <a href="tel:1594">1594</a>
+          <a class="lightning" href="tel:1594">1594</a>
         </div>
       </li>
 
       <!-- سونلغاز -->
       <li>
         <img src="icons/sonelgaz.png" alt="sonelgaz Logo" class="logo">
-        <a href="https://www.sonelgaz.dz/ar/category/espace-clients-ar" target="_blank">
+        <a class="lightning" href="https://www.sonelgaz.dz/ar/category/espace-clients-ar" target="_blank">
           فضاء الزبائن سونلغاز للكهرباء والغاز</a>
         <div style="margin-top:5px; padding-right:20px;">
           <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
           <strong>هاتف سونلغاز:</strong>
-          <a href="tel:3303">3303</a>
+          <a class="lightning" href="tel:3303">3303</a>
         </div>
       </li>
 
       <!-- سيال -->
       <li>
         <img src="icons/seaal.webp" alt="seaal Logo" class="logo">
-        <a href="https://wakalati.seaal.dz/" target="_blank">فضاء الزبائن سيال للماء والتطهير</a>
+        <a class="lightning" href="https://wakalati.seaal.dz/" target="_blank">فضاء الزبائن سيال للماء والتطهير</a>
         <div style="margin-top:5px; padding-right:20px;">
           <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
           <strong>مصلحة الزبائن - سيال:</strong>
-          <a href="tel:1594">1594</a>
+          <a class="lightning" href="tel:1594">1594</a>
         </div>
       </li>
 
       <!-- تطبيق سيال -->
       <li>
         <img src="icons/google-play-logo.png" alt="google-play-logo Logo" class="logo">
-        <a href="https://play.google.com/store/apps/details?id=dz.seaalappli.wakalati&hl=AR" target="_blank">
+        <a class="lightning" href="https://play.google.com/store/apps/details?id=dz.seaalappli.wakalati&hl=AR" target="_blank">
           تطبيق
           WAKALATI لسيال</a>
       </li>
@@ -2589,12 +2631,12 @@ document.addEventListener("DOMContentLoaded", () => {
       <!-- نفطال -->
       <li>
         <img src="icons/naftal.webp" alt="naftal Logo" class="logo">
-        <a href="https://play.google.com/store/apps/details?id=com.naftal.apps.naftalkhadamat&hl=AR" target="_blank">
+        <a class="lightning" href="https://play.google.com/store/apps/details?id=com.naftal.apps.naftalkhadamat&hl=AR" target="_blank">
           تطبيق نفطال خدمات</a>
         <div style="margin-top:5px; padding-right:20px;">
           <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
           <strong>مصلحة الزبائن - نفطال:</strong>
-          <a href="tel:3305">3305</a>
+          <a class="lightning" href="tel:3305">3305</a>
         </div>
       </li>
 
@@ -2622,10 +2664,10 @@ document.addEventListener("DOMContentLoaded", () => {
       <ul id="public-insurance" style="display: none; list-style: none; padding: 0 20px; line-height: 2;">
         <li>
           <img src="icons/saa.svg" alt="saa Logo" class="logo">
-          <a href="https://www.saa.dz/" target="_blank">الشركة الجزائرية للتأمينات (SAA)</a>
+          <a class="lightning" href="https://www.saa.dz/" target="_blank">الشركة الجزائرية للتأمينات (SAA)</a>
           <div style="margin-top:5px; padding-right:25px;">
             <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
-            <a href="tel:+213 21 22 50 00"
+            <a class="lightning" href="tel:+213 21 22 50 00"
               style="direction:ltr; unicode-bidi:bidi-override; color:#006400; text-decoration:none;">
               +213 21 22 50 00
             </a>
@@ -2634,10 +2676,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
         <li>
           <img src="icons/caar.jpg" alt="caar Logo" class="logo">
-          <a href="https://caar.dz/" target="_blank">الشركة الجزائرية للتأمين و لإعادة التأمين (CAAR)</a>
+          <a class="lightning" href="https://caar.dz/" target="_blank">الشركة الجزائرية للتأمين و لإعادة التأمين (CAAR)</a>
           <div style="margin-top:5px; padding-right:25px;">
             <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
-            <a href="tel:+213221632072"
+            <a class="lightning" href="tel:+213221632072"
               style="direction:ltr; unicode-bidi:bidi-override; color:#006400; text-decoration:none;">
               +213 22 16 32 07 2
             </a>
@@ -2646,10 +2688,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
         <li>
           <img src="icons/caarama.png" alt="caarama Logo" class="logo">
-          <a href="https://www.caarama.dz/" target="_blank">شركة التأمين على السيارات (CAARAMA)</a>
+          <a class="lightning" href="https://www.caarama.dz/" target="_blank">شركة التأمين على السيارات (CAARAMA)</a>
           <div style="margin-top:5px; padding-right:25px;">
             <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
-            <a href="tel:+21323569108"
+            <a class="lightning" href="tel:+21323569108"
               style="direction:ltr; unicode-bidi:bidi-override; color:#006400; text-decoration:none;">
               (213) 23 56 91 08/09/10
             </a>
@@ -2658,10 +2700,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
         <li>
           <img src="icons/gig.jpg" alt="gig Logo" class="logo">
-          <a href="https://gig.dz/ar/" target="_blank">مجموعة الخليج للتأمين </a>
+          <a class="lightning" href="https://gig.dz/ar/" target="_blank">مجموعة الخليج للتأمين </a>
           <div style="margin-top:5px; padding-right:25px;">
             <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
-            <a href="tel:+21323772112"
+            <a class="lightning" href="tel:+21323772112"
               style="direction:ltr; unicode-bidi:bidi-override; color:#006400; text-decoration:none;">
               +213 23 77 21 12
             </a>
@@ -2680,23 +2722,23 @@ document.addEventListener("DOMContentLoaded", () => {
 
         <li>
           <img src="icons/alliance.png" alt="alliance Logo" class="logo">
-          <a href="https://www.allianceassurances.com.dz/#/" target="_blank">أليانس للتأمينات (Alliance
+          <a class="lightning" href="https://www.allianceassurances.com.dz/#/" target="_blank">أليانس للتأمينات (Alliance
             Assurances)</a>
           <div style="margin-top:5px; padding-right:25px;">
             <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
-            <a href="tel:3315"
+            <a class="lightning" href="tel:3315"
               style="direction:ltr; unicode-bidi:bidi-override; color:#006400; text-decoration:none;">3315</a>
-            <br>📲 <a href="https://play.google.com/store/apps/details?id=com.blink.myalliance" target="_blank">تطبيق
+            <br>📲 <a class="lightning" href="https://play.google.com/store/apps/details?id=com.blink.myalliance" target="_blank">تطبيق
               MyAlliance</a>
           </div>
         </li>
 
         <li>
           <img src="icons/gam.png" alt="gam Logo" class="logo">
-          <a href="https://gam.dz/" target="_blank">سلامة للتأمينات (Salama Assurances)</a>
+          <a class="lightning" href="https://gam.dz/" target="_blank">سلامة للتأمينات (Salama Assurances)</a>
           <div style="margin-top:5px; padding-right:25px;">
             <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
-            <a href="tel:+21320070810"
+            <a class="lightning" href="tel:+21320070810"
               style="direction:ltr; unicode-bidi:bidi-override; color:#006400; text-decoration:none;">
               +213 20 07 08 10
             </a>
@@ -2705,24 +2747,24 @@ document.addEventListener("DOMContentLoaded", () => {
 
         <li>
           <img src="icons/TRUST.png" alt="Trust Logo" class="logo">
-          <a href="https://trust-dz.com/" target="_blank">ترست الجزائر للتأمينات (Trust Algeria)</a>
+          <a class="lightning" href="https://trust-dz.com/" target="_blank">ترست الجزائر للتأمينات (Trust Algeria)</a>
           <div style="margin-top:5px; padding-right:25px;">
             <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
-            <a href="tel:+21323489225"
+            <a class="lightning" href="tel:+21323489225"
               style="direction:ltr; unicode-bidi:bidi-override; color:#006400; text-decoration:none;">
               +213 23 48 92 25
             </a>
-            <br>📲 <a href="https://play.google.com/store/apps/details?id=com.amanaDigital.MyamanaApp"
+            <br>📲 <a class="lightning" href="https://play.google.com/store/apps/details?id=com.amanaDigital.MyamanaApp"
               target="_blank">تطبيق Android</a>
           </div>
         </li>
 
         <li>
           <img src="icons/amana.jpg" alt="amana" class="logo">
-          <a href="http://www.amana.dz/" target="_blank">أمانة للتأمينات (Amana Assurances)</a>
+          <a class="lightning" href="http://www.amana.dz/" target="_blank">أمانة للتأمينات (Amana Assurances)</a>
           <div style="margin-top:5px; padding-right:25px;">
             <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
-            <a href="tel:+213 23 05 44 75"
+            <a class="lightning" href="tel:+213 23 05 44 75"
               style="direction:ltr; unicode-bidi:bidi-override; color:#006400; text-decoration:none;">
               +213 23 05 44 75
             </a>
@@ -2731,13 +2773,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
         <li>
           <img src="icons/macirvie.png" alt="Macir Vie Logo" class="logo">
-          <a href="https://www.macirvie.com/" target="_blank">ماكير في للتأمين على الحياة (Macir Vie)</a>
+          <a class="lightning" href="https://www.macirvie.com/" target="_blank">ماكير في للتأمين على الحياة (Macir Vie)</a>
           <div style="margin-top:5px; padding-right:25px;">
             <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
-            <a href="tel:xxxx" style="direction:ltr; unicode-bidi:bidi-override; color:#006400; text-decoration:none;">
+            <a class="lightning" href="tel:xxxx" style="direction:ltr; unicode-bidi:bidi-override; color:#006400; text-decoration:none;">
               xxxx
             </a>
-            <br>📲 <a href="https://play.google.com/store/apps/details?id=com.macirvie.app" target="_blank">تطبيق
+            <br>📲 <a class="lightning" href="https://play.google.com/store/apps/details?id=com.macirvie.app" target="_blank">تطبيق
               Android</a>
           </div>
         </li>
@@ -2753,24 +2795,24 @@ document.addEventListener("DOMContentLoaded", () => {
       <ul id="foreign-insurance" style="display: none; list-style: none; padding: 0 20px; line-height: 2;">
         <li>
           <img src="icons/axa.png" alt="AXA Logo" class="logo">
-          <a href="https://www.axa.dz/" target="_blank">أكسا للتأمينات (AXA Assurances Algérie)</a>
+          <a class="lightning" href="https://www.axa.dz/" target="_blank">أكسا للتأمينات (AXA Assurances Algérie)</a>
           <div style="margin-top:5px; padding-right:25px;">
             <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
-            <a href="tel:+213 21 98 23 00"
+            <a class="lightning" href="tel:+213 21 98 23 00"
               style="direction:ltr; unicode-bidi:bidi-override; color:#006400; text-decoration:none;">
               +213 21 98 23 00
             </a>
-            <br>📲 <a href="https://play.google.com/store/apps/details?id=dz.axa.assurances" target="_blank">تطبيق
+            <br>📲 <a class="lightning" href="https://play.google.com/store/apps/details?id=dz.axa.assurances" target="_blank">تطبيق
               Android</a>
           </div>
         </li>
 
         <li>
           <img src="icons/cardif.png" alt="Cardif Logo" class="logo">
-          <a href="https://www.macirvie.com/ar" target="_blank">كارديف للتأمينات (Cardif Algérie)</a>
+          <a class="lightning" href="https://www.macirvie.com/ar" target="_blank">كارديف للتأمينات (Cardif Algérie)</a>
           <div style="margin-top:5px; padding-right:25px;">
             <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
-            <a href="tel:+213770112072"
+            <a class="lightning" href="tel:+213770112072"
               style="direction:ltr; unicode-bidi:bidi-override; color:#006400; text-decoration:none;">
               +213 770 11 20 72
             </a>
@@ -2801,29 +2843,29 @@ document.addEventListener("DOMContentLoaded", () => {
 
         <li>
           <img src="icons/BNA.jpg" alt="BNA Logo" class="logo">
-          <a href="https://www.bna.dz/ar" target="_blank">البنك الوطني الجزائري (BNA)</a>
+          <a class="lightning" href="https://www.bna.dz/ar" target="_blank">البنك الوطني الجزائري (BNA)</a>
           <div style="margin-top:5px; padding-right:25px;">
             <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
-            <a href="tel:3306" style="color:#006400; text-decoration:none;">3306</a>
+            <a class="lightning" href="tel:3306" style="color:#006400; text-decoration:none;">3306</a>
           </div>
         </li>
 
         <li>
           <img src="icons/bea.png" alt="BEA Logo" class="logo">
-          <a href="https://bea.dz/" target="_blank">بنك الجزائر الخارجي (BEA)</a>
+          <a class="lightning" href="https://bea.dz/" target="_blank">بنك الجزائر الخارجي (BEA)</a>
           <div style="margin-top:5px; padding-right:25px;">
             <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
-            <a href="tel:xxxx" style="color:#006400; text-decoration:none;">xxxx</a>
+            <a class="lightning" href="tel:xxxx" style="color:#006400; text-decoration:none;">xxxx</a>
           </div>
         </li>
 
         <li>
           <img src="icons/BADR.jpg" alt="BADR Logo" class="logo">
-          <a href="https://www.badrbank.dz/" target="_blank">بنك الفلاحة والتنمية الريفية
+          <a class="lightning" href="https://www.badrbank.dz/" target="_blank">بنك الفلاحة والتنمية الريفية
             (BADR)</a>
           <div style="margin-top:5px; padding-right:25px;">
             <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
-            <a href="tel:+213 21 98 93 23"
+            <a class="lightning" href="tel:+213 21 98 93 23"
               style="direction:ltr; unicode-bidi:bidi-override; color:#006400; text-decoration:none;">+213
               21 98 93
               23</a>
@@ -2833,19 +2875,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
         <li>
           <img src="icons/bdl.png" alt="BDL Logo" class="logo">
-          <a href="https://www.bdl.dz/">بنك التنمية المحلية (BDL)</a>
+          <a class="lightning" href="https://www.bdl.dz/">بنك التنمية المحلية (BDL)</a>
           <div style="margin-top:5px; padding-right:25px;">
             <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
-            <a href="tel:3312 " style="color:#006400; text-decoration:none;">3312 </a>
+            <a class="lightning" href="tel:3312 " style="color:#006400; text-decoration:none;">3312 </a>
           </div>
         </li>
 
         <li>
           <img src="icons/cpa.jpg" alt="CPA Logo" class="logo">
-          <a href="https://www.cpa-bank.dz/index.php/ar">القرض الشعبي الجزائري (CPA)</a>
+          <a class="lightning" href="https://www.cpa-bank.dz/index.php/ar">القرض الشعبي الجزائري (CPA)</a>
           <div style="margin-top:5px; padding-right:25px;">
             <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
-            <a href="tel:+213 21 64 15 15"
+            <a class="lightning" href="tel:+213 21 64 15 15"
               style="direction:ltr; unicode-bidi:bidi-override; color:#006400; text-decoration:none;">+213
               21 64 15
               15</a>
@@ -2854,12 +2896,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
         <li>
           <img src="icons/cnep.png" alt="CNEP Logo" class="logo">
-          <a href="https://www.cnepbanque.dz/web/ar/accueil-arabe/"> الصندوق الوطني للتوفير و الاحتياط - بنك
+          <a class="lightning" href="https://www.cnepbanque.dz/web/ar/accueil-arabe/"> الصندوق الوطني للتوفير و الاحتياط - بنك
             CNEP
             Banque</a>
           <div style="margin-top:5px; padding-right:25px;">
             <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
-            <a href="tel:+213 23 36 61 18"
+            <a class="lightning" href="tel:+213 23 36 61 18"
               style="direction:ltr; unicode-bidi:bidi-override; color:#006400; text-decoration:none;">+213
               23 36 61
               18</a>
@@ -2868,10 +2910,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
         <li>
           <img src="icons/BNH.jpg" alt="BNH Logo" class="logo">
-          <a href="https://bnh.dz/">البنك الوطني للإسكان (BNH)</a>
+          <a class="lightning" href="https://bnh.dz/">البنك الوطني للإسكان (BNH)</a>
           <div style="margin-top:5px; padding-right:25px;">
             <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
-            <a href="tel:+213 21 98 02 00"
+            <a class="lightning" href="tel:+213 21 98 02 00"
               style="direction:ltr; unicode-bidi:bidi-override; color:#006400; text-decoration:none;">+213
               21 98 02
               00</a>
@@ -2891,19 +2933,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
         <li>
           <img src="icons/AGB.jpg" alt="AGB Logo" class="logo">
-          <a href="https://www.agb.dz/" target="_blank">بنك الخليج الجزائر (AGB)</a>
+          <a class="lightning" href="https://www.agb.dz/" target="_blank">بنك الخليج الجزائر (AGB)</a>
           <div style="margin-top:5px; padding-right:25px;">
             <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
-            <a href="tel:3340" style="color:#006400; text-decoration:none;">3340</a>
+            <a class="lightning" href="tel:3340" style="color:#006400; text-decoration:none;">3340</a>
           </div>
         </li>
 
         <li>
           <img src="icons/albaraka.jpg" alt="AlBaraka Logo" class="logo">
-          <a href="https://2h.ae/idol">بنك البركة الجزائري</a>
+          <a class="lightning" href="https://2h.ae/idol">بنك البركة الجزائري</a>
           <div style="margin-top:5px; padding-right:25px;">
             <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
-            <a href="tel:+213 661 90 08 32"
+            <a class="lightning" href="tel:+213 661 90 08 32"
               style="direction:ltr; unicode-bidi:bidi-override; color:#006400; text-decoration:none;">+213
               661 90 08
               32</a>
@@ -2912,10 +2954,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
         <li>
           <img src="icons/ABC.png" alt="ABC Logo" class="logo">
-          <a href="https://www.bank-abc.com/ar/CountrySites/Algeria">بنك ABC الجزائر (ABC)</a>
+          <a class="lightning" href="https://www.bank-abc.com/ar/CountrySites/Algeria">بنك ABC الجزائر (ABC)</a>
           <div style="margin-top:5px; padding-right:25px;">
             <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
-            <a href="tel:+213 21 98 76 00​​ "
+            <a class="lightning" href="tel:+213 21 98 76 00​​ "
               style="direction:ltr; unicode-bidi:bidi-override; color:#006400; text-decoration:none;">+213
               21 98 76
               00​​</a>
@@ -2924,19 +2966,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
         <li>
           <img src="icons/natixis.png" Natixis Logo" class="logo">
-          <a href="https://ebanking.algerie.natixis.com/ebanking/index.ebk">Natixis Algérie</a>
+          <a class="lightning" href="https://ebanking.algerie.natixis.com/ebanking/index.ebk">Natixis Algérie</a>
           <div style="margin-top:5px; padding-right:25px;">
             <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
-            <a href="tel:xxxx" style="color:#006400; text-decoration:none;">xxxx</a>
+            <a class="lightning" href="tel:xxxx" style="color:#006400; text-decoration:none;">xxxx</a>
           </div>
         </li>
 
         <li>
           <img src="icons/societe_general_algerie.webp" alt="Société Générale Logo" class="logo">
-          <a href="https://societegenerale.dz/fr/">Société Générale Algérie</a>
+          <a class="lightning" href="https://societegenerale.dz/fr/">Société Générale Algérie</a>
           <div style="margin-top:5px; padding-right:25px;">
             <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
-            <a href="tel:+213 21 45 11 55"
+            <a class="lightning" href="tel:+213 21 45 11 55"
               style="direction:ltr; unicode-bidi:bidi-override; color:#006400; text-decoration:none;">+213
               21 45 11
               55</a>
@@ -2945,11 +2987,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
         <li>
           <img src="icons/citibank.webp" alt="Citibank Logo" class="logo">
-          <a href="https://www.citigroup.com/global/about-us/global-presence/algeria">Citibank N.A.
+          <a class="lightning" href="https://www.citigroup.com/global/about-us/global-presence/algeria">Citibank N.A.
             Algérie</a>
           <div style="margin-top:5px; padding-right:25px;">
             <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
-            <a href="tel: +213 21 98 19 00"
+            <a class="lightning" href="tel: +213 21 98 19 00"
               style="direction:ltr; unicode-bidi:bidi-override; color:#006400; text-decoration:none;">
               +213 21 98 19
               00</a>
@@ -2958,10 +3000,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
         <li>
           <img src="icons/arabe-bank.png" alt="Arab Bank PLC Logo" class="logo">
-          <a href="https://2h.ae/OqxW">البنك العربي</a>
+          <a class="lightning" href="https://2h.ae/OqxW">البنك العربي</a>
           <div style="margin-top:5px; padding-right:25px;">
             <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
-            <a href="tel:+213 21 60 86 50"
+            <a class="lightning" href="tel:+213 21 60 86 50"
               style="direction:ltr; unicode-bidi:bidi-override; color:#006400; text-decoration:none;">+213
               21 60 86
               50</a>
@@ -2970,10 +3012,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
         <li>
           <img src="icons/HSBC.png" alt="HSBC Logo" class="logo">
-          <a href="https://www.business.algeria.hsbc.com/">HSBC Algeria</a>
+          <a class="lightning" href="https://www.business.algeria.hsbc.com/">HSBC Algeria</a>
           <div style="margin-top:5px; padding-right:25px;">
             <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
-            <a href="tel:+213 23 98 28 00"
+            <a class="lightning" href="tel:+213 23 98 28 00"
               style="direction:ltr; unicode-bidi:bidi-override; color:#006400; text-decoration:none;">+213
               23 98 28
               00</a>
@@ -2982,10 +3024,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
         <li>
           <img src="icons/fransabank.jpg" alt="Fransabank Logo" class="logo">
-          <a href="https://2h.ae/wuTt">Fransabank El Djazair</a>
+          <a class="lightning" href="https://2h.ae/wuTt">Fransabank El Djazair</a>
           <div style="margin-top:5px; padding-right:25px;">
             <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
-            <a href="tel:+213 21 99 09 20"
+            <a class="lightning" href="tel:+213 21 99 09 20"
               style="direction:ltr; unicode-bidi:bidi-override; color:#006400; text-decoration:none;">+213
               21 99 09
               20</a>
@@ -3012,32 +3054,32 @@ document.addEventListener("DOMContentLoaded", () => {
       <!-- أرقام الطوارئ الأساسية -->
       <li>
         <img src="icons/CGN.jpg" alt="الدرك الوطني Logo" class="logo">
-        <a href="https://www.mdn.dz/site_cgn/index.php" target="_blank"><strong>الدرك الوطني</strong></a>
-        - <a href="tel:1055"><strong>1055</strong></a>
+        <a class="lightning" href="https://www.mdn.dz/site_cgn/index.php" target="_blank"><strong>الدرك الوطني</strong></a>
+        - <a class="lightning" href="tel:1055"><strong>1055</strong></a>
       </li>
 
       <li>
         <img src="icons/ALLO CHORTTA.webp" alt="الشرطة Logo" class="logo">
-        <a href="https://www.algeriepolice.dz/" target="_blank"><strong>الشرطة الجزائرية</strong></a>
-        - <a href="tel:1548"><strong>1548</strong></a>
+        <a class="lightning" href="https://www.algeriepolice.dz/" target="_blank"><strong>الشرطة الجزائرية</strong></a>
+        - <a class="lightning" href="tel:1548"><strong>1548</strong></a>
       </li>
 
       <li>
         <img src="icons/gosp.jpg" alt="الشرطة حالات الاختطاف Logo" class="logo">
-        <a href="https://www.police.dz/" target="_blank"><strong>الشرطة - حالات الاختطاف</strong></a>
-        - <a href="tel:104"><strong>104</strong></a>
+        <a class="lightning" href="https://www.police.dz/" target="_blank"><strong>الشرطة - حالات الاختطاف</strong></a>
+        - <a class="lightning" href="tel:104"><strong>104</strong></a>
       </li>
 
       <li>
         <img src="icons/dgpc.svg" alt="الحماية المدنية Logo" class="logo">
-        <a href="https://dgpc.dz/" target="_blank"><strong>الحماية المدنية</strong></a>
-        - <a href="tel:1021"><strong>1021</strong></a>
+        <a class="lightning" href="https://dgpc.dz/" target="_blank"><strong>الحماية المدنية</strong></a>
+        - <a class="lightning" href="tel:1021"><strong>1021</strong></a>
       </li>
 
       <li>
         <img src="icons/CFN.png" alt="حراس السواحل Logo" class="logo">
-        <a href="https://www.mdn.dz/site_cfn/index.php" target="_blank"><strong>حراس السواحل</strong></a>
-        - <a href="tel:1054"><strong>1054</strong></a>
+        <a class="lightning" href="https://www.mdn.dz/site_cfn/index.php" target="_blank"><strong>حراس السواحل</strong></a>
+        - <a class="lightning" href="tel:1054"><strong>1054</strong></a>
       </li>
 
       <!-- فاصل -->
@@ -3046,51 +3088,51 @@ document.addEventListener("DOMContentLoaded", () => {
       <!-- خدمات إلكترونية -->
       <li>
         <img src="icons/ppgn.jpg" alt="PPGN Logo" class="logo">
-        <a href="https://ppgn.mdn.dz/" target="_blank"><strong>شكوى مسبقة ومعلومات عن بعد للدرك
+        <a class="lightning" href="https://ppgn.mdn.dz/" target="_blank"><strong>شكوى مسبقة ومعلومات عن بعد للدرك
             الوطني</strong></a>
       </li>
 
       <li>
         <img src="icons/tariki.jpg" alt="tariki Logo" class="logo">
-        <a href="https://www.facebook.com/tariki.GN/" target="_blank"><strong>مركز الإعلام و تنسيق المرور –
+        <a class="lightning" href="https://www.facebook.com/tariki.GN/" target="_blank"><strong>مركز الإعلام و تنسيق المرور –
             طريقي</strong></a>
       </li>
 
       <li>
         <img src="icons/ALLO CHORTTA.webp" class="logo">
-        <a href="https://play.google.com/store/apps/details?id=allochorta.algeriepolice.dz&hl=ar"
+        <a class="lightning" href="https://play.google.com/store/apps/details?id=allochorta.algeriepolice.dz&hl=ar"
           target="_blank"><strong> تطبيق ألو الشرطة</strong></a>
       </li>
 
       <li>
         <img src="icons/Logomediateur.png" alt="LogomediateurLogo" class="logo">
-        <a href="https://wassit.dz/ar/register#" target="_blank"><strong>تواصل مع وسيط الجمهورية</strong></a>
+        <a class="lightning" href="https://wassit.dz/ar/register#" target="_blank"><strong>تواصل مع وسيط الجمهورية</strong></a>
       </li>
 
       <!-- خدمات أخرى -->
       <li>
         <img src="icons/apoce.png" alt="apoce Logo" class="logo">
-        <a href="https://apoce.org/" target="_blank"><strong>منظمة حماية وإرشاد المستهلك</strong></a>
-        - <a href="tel:3311">3311</a>
+        <a class="lightning" href="https://apoce.org/" target="_blank"><strong>منظمة حماية وإرشاد المستهلك</strong></a>
+        - <a class="lightning" href="tel:3311">3311</a>
       </li>
 
       <li>
         <img src="icons/TOFFOLA.png" alt="TOFFOLA Logo" class="logo">
-        <a href="https://onppe.dz/index.php/ar/" target="_blank"><strong>حماية وترقية الطفولة</strong></a>
-        - <a href="tel:1111">1111</a>
+        <a class="lightning" href="https://onppe.dz/index.php/ar/" target="_blank"><strong>حماية وترقية الطفولة</strong></a>
+        - <a class="lightning" href="tel:1111">1111</a>
       </li>
 
       <li>
         <img src="icons/DGF.png" alt="dgf Logo" class="logo">
-        <a href="http://www.dgf.org.dz/ar" target="_blank"><strong>محافظة الغابات</strong></a>
-        - <a href="tel:1070">1070</a>
+        <a class="lightning" href="http://www.dgf.org.dz/ar" target="_blank"><strong>محافظة الغابات</strong></a>
+        - <a class="lightning" href="tel:1070">1070</a>
       </li>
 
       <li>
         <img src="icons/Khadamaty.png" alt="khadamaty Logo" class="logo">
-        <a href="https://www.khadamaty.dz/?lang=ar" target="_blank"><strong>خدماتي لتصليح الأجهزة
+        <a class="lightning" href="https://www.khadamaty.dz/?lang=ar" target="_blank"><strong>خدماتي لتصليح الأجهزة
             الكهرومنزلية</strong></a>
-        - <a href="tel:3075">3075</a>
+        - <a class="lightning" href="tel:3075">3075</a>
       </li>
 
     </ul>
@@ -3107,14 +3149,14 @@ document.addEventListener("DOMContentLoaded", () => {
     <ul id="contact-info"
       style="display: none; list-style: none; padding: 15px 20px; background-color: #f0faf6; border-radius: 6px; line-height: 2;">
       <li><i class="fas fa-envelope" style="color: #006400;"></i> البريد الإلكتروني:
-        <a href="mailto:tabaniimadeddine@gmail.com">tabaniimadeddine@gmail.com</a>
+        <a class="lightning" href="mailto:tabaniimadeddine@gmail.com">tabaniimadeddine@gmail.com</a>
       </li>
       <li><i class="fas fa-phone-alt" style="color: #006400;"></i> الهاتف:
-        <a href="tel:+213697743721">+213697743721</a>
+        <a class="lightning" href="tel:+213697743721">+213697743721</a>
       </li>
       <li><i class="fas fa-map-marker-alt" style="color: #006400;"></i> العنوان: الجزائر العاصمة</li>
       <li><i class="fab fa-facebook-square" style="color: #006400;"></i>
-        <a href="https://www.f.com/" target="_blank">صفحتنا على فايسبوك</a>
+        <a class="lightning" href="https://www.f.com/" target="_blank">صفحتنا على فايسبوك</a>
       </li>
     </ul>
   </section>
