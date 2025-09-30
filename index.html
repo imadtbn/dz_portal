@@ -477,10 +477,13 @@
 
   /*  زر التثبيت */
   #install-button {
-  font-size: 14px;
-  padding: 10px 12px;
-}
-#install-button i { font-size: 0.9em; }
+    font-size: 14px;
+    padding: 10px 12px;
+  }
+
+  #install-button i {
+    font-size: 0.9em;
+  }
 
   /* تأثير عند تمرير زر التثبيت */
   #install-button:hover {
@@ -521,280 +524,489 @@
 <!-- إعادة ضبط القيم الافتراضية لكل العناصر -->
 <style>
   /* 🎯 إعادة ضبط القيم الافتراضية */
-* {
-  box-sizing: border-box;   /* حساب العرض/الارتفاع يشمل الحواف والحشوات */
-  margin: 0;                /* إزالة الهوامش الافتراضية */
-  padding: 0;               /* إزالة الحشوات الافتراضية */
-}
+  * {
+    box-sizing: border-box;
+    /* حساب العرض/الارتفاع يشمل الحواف والحشوات */
+    margin: 0;
+    /* إزالة الهوامش الافتراضية */
+    padding: 0;
+    /* إزالة الحشوات الافتراضية */
+  }
 
-/* 🖼️ أنماط عامة للصفحة */
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* الخط الأساسي */
-  background-color: #f7fdf9;  /* لون خلفية فاتح */
-  color: #333;                /* لون النصوص الأساسي */
-  line-height: 1.6;           /* تباعد الأسطر */
-  padding: 8px;              /* مسافة داخلية حول الصفحة */
-}
+  /* 🖼️ أنماط عامة للصفحة */
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* الخط الأساسي */
+    background-color: #f7fdf9;
+    /* لون خلفية فاتح */
+    color: #333;
+    /* لون النصوص الأساسي */
+    line-height: 1.6;
+    /* تباعد الأسطر */
+    padding: 8px;
+    /* مسافة داخلية حول الصفحة */
+  }
 
-/* 🟩 صندوق الترحيب الرئيسي */
-.welcome-section {
-  text-align: center;                           /* محاذاة المحتوى للوسط */
-  background: linear-gradient(135deg, #f0f9f5 0%, #e6f4ed 100%); /* تدرج لوني للخلفية */
-  padding: 16px 13px;                           /* مسافة داخلية */
-  border-radius: 16px;                          /* زوايا دائرية */
-  margin: 7px auto;                            /* تباعد خارجي */
-  max-width: 1000px;                            /* عرض أقصى */
-  box-shadow: 0 5px 15px rgba(0, 98, 51, 0.1);  /* ظل ناعم */
-  position: relative;                           /* لتمكين العناصر المطلقة داخله */
-  overflow: hidden;                             /* إخفاء العناصر الخارجة عن الإطار */
-}
+  /* 🟩 صندوق الترحيب الرئيسي */
+  .welcome-section {
+    text-align: center;
+    /* محاذاة المحتوى للوسط */
+    background: linear-gradient(135deg, #f0f9f5 0%, #e6f4ed 100%);
+    /* تدرج لوني للخلفية */
+    padding: 16px 13px;
+    /* مسافة داخلية */
+    border-radius: 16px;
+    /* زوايا دائرية */
+    margin: 7px auto;
+    /* تباعد خارجي */
+    max-width: 1000px;
+    /* عرض أقصى */
+    box-shadow: 0 5px 15px rgba(0, 98, 51, 0.1);
+    /* ظل ناعم */
+    position: relative;
+    /* لتمكين العناصر المطلقة داخله */
+    overflow: hidden;
+    /* إخفاء العناصر الخارجة عن الإطار */
+  }
 
-/* 🔼 لضمان ظهور النص فوق الخلفية */
-.welcome-content {
-  position: relative; /* يضمن أن النص فوق ::before */
-  z-index: 1;         /* في المقدمة */
-}
+  /* 🔼 لضمان ظهور النص فوق الخلفية */
+  .welcome-content {
+    position: relative;
+    /* يضمن أن النص فوق ::before */
+    z-index: 1;
+    /* في المقدمة */
+  }
 
-/* 🖼️ شعارات مصغرة */
-img.logo {
-  width: 26px;            /* عرض الشعار */
-  height: 26px;           /* ارتفاع الشعار */
-  object-fit: contain;    /* المحافظة على النسبة */
-  margin-left: 5px;       /* مسافة يسار */
-  vertical-align: middle; /* محاذاة مع النص */
-}
+  /* 🖼️ شعارات مصغرة */
+  img.logo {
+    width: 26px;
+    /* عرض الشعار */
+    height: 26px;
+    /* ارتفاع الشعار */
+    object-fit: contain;
+    /* المحافظة على النسبة */
+    margin-left: 5px;
+    /* مسافة يسار */
+    vertical-align: middle;
+    /* محاذاة مع النص */
+  }
 
-/* 🖼️ الشعار الرئيسي */
-.welcome-logo {
-  max-width: 120px;                                   /* الحد الأقصى للعرض */
-  margin: 0 auto 10px;                                /* توسيط + مسافة أسفل */
-  display: block;                                     /* كتلة منفصلة */
-  filter: drop-shadow(0 3px 5px rgba(0, 0, 0, 0.1));  /* ظل ناعم */
-}
+  /* 🖼️ الشعار الرئيسي */
+  .welcome-logo {
+    max-width: 120px;
+    /* الحد الأقصى للعرض */
+    margin: 0 auto 10px;
+    /* توسيط + مسافة أسفل */
+    display: block;
+    /* كتلة منفصلة */
+    filter: drop-shadow(0 3px 5px rgba(0, 0, 0, 0.1));
+    /* ظل ناعم */
+  }
 
-/* 📝 عنوان الترحيب */
-.welcome-title {
-  color: #006233;        /* اللون أخضر غامق */
-  font-size: 1.5em;      /* حجم الخط */
-  font-weight: bold;     /* خط عريض */
-  margin-bottom: 10px;   /* مسافة أسفل */
-  line-height: 1.1;      /* تباعد الأسطر */
-}
+  /* 📝 عنوان الترحيب */
+  .welcome-title {
+    color: #006233;
+    /* اللون أخضر غامق */
+    font-size: 1.5em;
+    /* حجم الخط */
+    font-weight: bold;
+    /* خط عريض */
+    margin-bottom: 10px;
+    /* مسافة أسفل */
+    line-height: 1.1;
+    /* تباعد الأسطر */
+  }
 
-/* 📖 وصف قصير */
-.welcome-description {
-  font-size: 0.9em;      /* حجم أصغر */
-  color: #333;           /* لون النص */
-  max-width: 800px;      /* حد أقصى للعرض */
-  margin: 0 auto 18px;   /* توسيط + مسافة أسفل */
-  line-height: 1.4;      /* تباعد الأسطر */
-}
+  /* 📖 وصف قصير */
+  .welcome-description {
+    font-size: 0.9em;
+    /* حجم أصغر */
+    color: #333;
+    /* لون النص */
+    max-width: 800px;
+    /* حد أقصى للعرض */
+    margin: 0 auto 18px;
+    /* توسيط + مسافة أسفل */
+    line-height: 1.4;
+    /* تباعد الأسطر */
+  }
 
-/* 📊 قسم الإحصائيات */
-.welcome-stats {
-  display: flex;          /* توزيع مرن */
-  flex-wrap: wrap;        /* يلتف عند صغر الشاشة */
-  justify-content: center;/* توسيط العناصر */
-  gap: 8px;              /* مسافة بين البطاقات */
-  margin: 6px 0;         /* مسافة عمودية */
-}
+  /* 📊 قسم الإحصائيات */
+  .welcome-stats {
+    display: flex;
+    /* توزيع مرن */
+    flex-wrap: wrap;
+    /* يلتف عند صغر الشاشة */
+    justify-content: center;
+    /* توسيط العناصر */
+    gap: 8px;
+    /* مسافة بين البطاقات */
+    margin: 6px 0;
+    /* مسافة عمودية */
+  }
 
-/* 📊 بطاقة إحصائية */
-.stat-box {
-  background-color: rgba(255, 255, 255, 0.9); /* خلفية شبه شفافة */
-  padding: 13px 10px;                         /* مسافة داخلية */
-  border-radius: 10px;                        /* زوايا دائرية */
-  min-width: 80px;                           /* عرض أدنى */
-  flex: 1;                                    /* تمدد حسب الفراغ */
-  max-width: 120px;                           /* عرض أقصى */
-  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);  /* ظل ناعم */
-  transition: transform 0.3s ease;            /* تأثير الحركة */
-}
-.stat-box:hover {
-  transform: translateY(-3px); /* ارتفاع بسيط عند المرور */
-}
+  /* 📊 بطاقة إحصائية */
+  .stat-box {
+    background-color: rgba(255, 255, 255, 0.9);
+    /* خلفية شبه شفافة */
+    padding: 13px 10px;
+    /* مسافة داخلية */
+    border-radius: 10px;
+    /* زوايا دائرية */
+    min-width: 80px;
+    /* عرض أدنى */
+    flex: 1;
+    /* تمدد حسب الفراغ */
+    max-width: 120px;
+    /* عرض أقصى */
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
+    /* ظل ناعم */
+    transition: transform 0.3s ease;
+    /* تأثير الحركة */
+  }
 
-/* أيقونة البطاقة */
-.stat-icon {
-  color: #006233;   /* لون أخضر */
-  font-size: 1.3em; /* حجم كبير */
-  margin-bottom: 6px; /* مسافة أسفل */
-}
+  .stat-box:hover {
+    transform: translateY(-3px);
+    /* ارتفاع بسيط عند المرور */
+  }
 
-/* عنوان البطاقة */
-.stat-title {
-  font-weight: bold; /* خط عريض */
-  color: #006233;    /* أخضر */
-  margin-bottom: 3px;/* مسافة أسفل */
-  font-size: 0.90em; /* حجم أصغر */
-}
+  /* أيقونة البطاقة */
+  .stat-icon {
+    color: #006233;
+    /* لون أخضر */
+    font-size: 1.3em;
+    /* حجم كبير */
+    margin-bottom: 6px;
+    /* مسافة أسفل */
+  }
 
-/* القيمة الرقمية */
-.stat-value {
-  font-size: 1.4em;  /* حجم أكبر */
-  font-weight: bold; /* خط عريض */
-  color: #a52a2a;    /* لون بني */
-}
+  /* عنوان البطاقة */
+  .stat-title {
+    font-weight: bold;
+    /* خط عريض */
+    color: #006233;
+    /* أخضر */
+    margin-bottom: 3px;
+    /* مسافة أسفل */
+    font-size: 0.90em;
+    /* حجم أصغر */
+  }
 
-/* 🔘 زر المشاركة */
-.share-button {
-  background-color: #d40000;        /* خلفية حمراء */
-  color: white;                     /* نص أبيض */
-  padding: 8px 11px;               /* مسافة داخلية */
-  border: none;                     /* بدون حدود */
-  border-radius: 8px;               /* زوايا دائرية */
-  font-size: 0.9em;                 /* حجم الخط */
-  cursor: pointer;                  /* مؤشر يد */
-  transition: background-color 0.3s, transform 0.2s; /* تأثير عند المرور */
-  box-shadow: 0 3px 6px rgba(212, 0, 0, 0.2);        /* ظل */
-  margin-top: 2px;                 /* مسافة أعلى */
-}
-.share-button:hover {
-  background-color: #a30000; /* لون أغمق عند المرور */
-  transform: scale(1.03);   /* تكبير بسيط */
-}
+  /* القيمة الرقمية */
+  .stat-value {
+    font-size: 1.4em;
+    /* حجم أكبر */
+    font-weight: bold;
+    /* خط عريض */
+    color: #a52a2a;
+    /* لون بني */
+  }
 
-/* 🟦 شريط التنقل */
-.nav-scroller {
-  position: relative;                         /* تحديد مكانه */
-  z-index: 2;                                 /* فوق العناصر */
-  height: 58px;                               /* ارتفاع */
-  overflow: hidden;                           /* إخفاء الفائض */
-  margin: 20px 0;                             /* مسافة عمودية */
-  direction: ltr;                             /* اتجاه الحركة يسار → يمين */
-  background: rgba(255, 255, 255, 0.8);       /* خلفية شبه شفافة */
-  border-radius: 12px;                        /* زوايا دائرية */
-  padding: 5px;                               /* مسافة داخلية */
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);  /* ظل */
-}
+  /* 🔘 زر المشاركة */
+  .share-button {
+    background-color: #d40000;
+    /* خلفية حمراء */
+    color: white;
+    /* نص أبيض */
+    padding: 8px 11px;
+    /* مسافة داخلية */
+    border: none;
+    /* بدون حدود */
+    border-radius: 8px;
+    /* زوايا دائرية */
+    font-size: 0.9em;
+    /* حجم الخط */
+    cursor: pointer;
+    /* مؤشر يد */
+    transition: background-color 0.3s, transform 0.2s;
+    /* تأثير عند المرور */
+    box-shadow: 0 3px 6px rgba(212, 0, 0, 0.2);
+    /* ظل */
+    margin-top: 2px;
+    /* مسافة أعلى */
+  }
 
-.nav-scroller-inner {
-  display: flex;                      /* توزيع مرن */
-  flex-wrap: nowrap;                  /* لا يلتف */
-  padding-bottom: 5px;                /* مسافة أسفل */
-  animation: scrollBanner 40s linear infinite; /* حركة تمرير مستمرة */
-}
+  .share-button:hover {
+    background-color: #a30000;
+    /* لون أغمق عند المرور */
+    transform: scale(1.03);
+    /* تكبير بسيط */
+  }
 
-.nav-item {
-  flex: 0 0 auto; /* عرض ثابت */
-  margin: 0 5px;  /* مسافة جانبية */
-}
+  /* 🟦 شريط التنقل */
+  .nav-scroller {
+    position: relative;
+    /* تحديد مكانه */
+    z-index: 2;
+    /* فوق العناصر */
+    height: 58px;
+    /* ارتفاع */
+    overflow: hidden;
+    /* إخفاء الفائض */
+    margin: 20px 0;
+    /* مسافة عمودية */
+    direction: ltr;
+    /* اتجاه الحركة يسار → يمين */
+    background: rgba(255, 255, 255, 0.8);
+    /* خلفية شبه شفافة */
+    border-radius: 12px;
+    /* زوايا دائرية */
+    padding: 5px;
+    /* مسافة داخلية */
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    /* ظل */
+  }
 
-.nav-link {
-  display: flex;                    /* توزيع مرن */
-  flex-direction: column;           /* عمودي */
-  align-items: center;              /* محاذاة للوسط */
-  justify-content: center;          /* وسط عمودي */
-  background: white;                /* خلفية بيضاء */
-  color: #006233;                   /* لون أخضر */
-  text-decoration: none;            /* بدون خط تحت */
-  border-radius: 10px;              /* زوايا دائرية */
-  padding: 7px 9px;                /* مسافة داخلية */
-  width: 65px;                      /* العرض */
-  height: 45px;                     /* الارتفاع */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08); /* ظل */
-  transition: all 0.4s ease;        /* حركة ناعمة */
-  font-size: 0.73em;                /* حجم النص */
-  font-weight: bold;                /* خط عريض */
-  text-align: center;               /* توسيط النص */
-}
-.nav-link:hover {
-  background: #006233;              /* أخضر عند المرور */
-  color: white;                     /* نص أبيض */
-  transform: translateY(-2px);      /* ارتفاع بسيط */
-  box-shadow: 0 4px 8px rgba(0, 98, 51, 0.2); /* ظل أقوى */
-}
+  .nav-scroller-inner {
+    display: flex;
+    /* توزيع مرن */
+    flex-wrap: nowrap;
+    /* لا يلتف */
+    padding-bottom: 5px;
+    /* مسافة أسفل */
+    animation: scrollBanner 40s linear infinite;
+    /* حركة تمرير مستمرة */
+  }
 
-/* أيقونة الرابط */
-.nav-icon {
-  font-size: 9px; /* حجم صغير */
-}
+  .nav-item {
+    flex: 0 0 auto;
+    /* عرض ثابت */
+    margin: 0 5px;
+    /* مسافة جانبية */
+  }
 
-/* 🎞️ حركة التمرير */
-@keyframes scrollBanner {
-  0% { transform: translateX(0); }      /* البداية */
-  100% { transform: translateX(-50%); } /* نهاية الحركة */
-}
+  .nav-link {
+    display: flex;
+    /* توزيع مرن */
+    flex-direction: column;
+    /* عمودي */
+    align-items: center;
+    /* محاذاة للوسط */
+    justify-content: center;
+    /* وسط عمودي */
+    background: white;
+    /* خلفية بيضاء */
+    color: #006233;
+    /* لون أخضر */
+    text-decoration: none;
+    /* بدون خط تحت */
+    border-radius: 10px;
+    /* زوايا دائرية */
+    padding: 7px 9px;
+    /* مسافة داخلية */
+    width: 65px;
+    /* العرض */
+    height: 45px;
+    /* الارتفاع */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+    /* ظل */
+    transition: all 0.4s ease;
+    /* حركة ناعمة */
+    font-size: 0.73em;
+    /* حجم النص */
+    font-weight: bold;
+    /* خط عريض */
+    text-align: center;
+    /* توسيط النص */
+  }
 
-/* توقف الحركة عند تمرير الفأرة */
-.nav-scroller:hover .nav-scroller-inner {
-  animation-play-state: paused; /* إيقاف عند المرور */
-}
+  .nav-link:hover {
+    background: #006233;
+    /* أخضر عند المرور */
+    color: white;
+    /* نص أبيض */
+    transform: translateY(-2px);
+    /* ارتفاع بسيط */
+    box-shadow: 0 4px 8px rgba(0, 98, 51, 0.2);
+    /* ظل أقوى */
+  }
 
-/* 📱 تحسين العرض للشاشات الصغيرة */
-@media (max-width: 768px) {
-  .welcome-title { font-size: 1.3em; }      /* تصغير العنوان */
-  .welcome-description { font-size: 0.85em; padding: 0 5px; }
-  .stat-box { min-width: 90px; padding: 12px 8px; }
-  .stat-value { font-size: 1.2em; }
-  .stat-title { font-size: 0.8em; }
-  .nav-link { width: 65px; height: 45px; font-size: 0.7em; }
-  .nav-icon { font-size: 14px; }
-  .nav-scroller { height: 45px; }
-}
+  /* أيقونة الرابط */
+  .nav-icon {
+    font-size: 9px;
+    /* حجم صغير */
+  }
 
-@media (max-width: 480px) {
-  .welcome-section { padding: 15px 10px; }
-  .welcome-title { font-size: 1.2em; }
-  .welcome-stats { gap: 8px; }
-  .stat-box { min-width: 80px; padding: 10px 6px; }
-  .stat-icon { font-size: 1.3em; }
-  .stat-value { font-size: 1.1em; }
-  .nav-scroller { height: 48px; }
-  .nav-link { width: 80px; height: 60px; font-size: 0.85em; }
-  .nav-icon { font-size: 18px; }
-  .share-button { padding: 8px 14px; font-size: 0.85em; }
-}
+  /* 🎞️ حركة التمرير */
+  @keyframes scrollBanner {
+    0% {
+      transform: translateX(0);
+    }
 
-@media (max-width: 360px) {
-  .welcome-logo { max-width: 120px; }
-  .stat-box { min-width: 70px; padding: 8px 5px; }
-  .stat-title { font-size: 0.75em; }
-  .nav-link { width: 55px; font-size: 0.6em; }
-}
+    /* البداية */
+    100% {
+      transform: translateX(-50%);
+    }
 
-/* تأثير خط أحمر كالبرق تحت الروابط */
-a.lightning {
-  position: relative;
-  z-index: 0;
-  text-decoration: none;
-}
+    /* نهاية الحركة */
+  }
 
-/* الخط (pseudo-element) */
-a.lightning::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: -4px;            /* مسافة تحت النص - اضبط حسب الحاجة */
-  height: 3px;             /* سمك الخط */
-  background: linear-gradient(90deg,
-    transparent 0%,
-    #ff0022 35%,
-    #ff7a7a 55%,
-    transparent 100%);
-  transform-origin: left center;
-  transform: scaleX(0) skewX(-12deg);
-  filter: drop-shadow(0 0 6px rgba(255,0,34,0.65));
-  z-index: -1;
-  transition: transform .35s cubic-bezier(.2,.9,.2,1), opacity .2s;
-  opacity: 0.98;
-}
+  /* توقف الحركة عند تمرير الفأرة */
+  .nav-scroller:hover .nav-scroller-inner {
+    animation-play-state: paused;
+    /* إيقاف عند المرور */
+  }
 
-/* حركة البرق عند المرور */
-@keyframes lightningFlash {
-  0%   { transform: scaleX(0) skewX(-18deg) translateX(-8%); }
-  45%  { transform: scaleX(1.15) skewX(2deg) translateX(0); }
-  70%  { transform: scaleX(0.95) skewX(-6deg) translateX(6%); }
-  100% { transform: scaleX(1) skewX(0) translateX(0); }
-}
+  /* 📱 تحسين العرض للشاشات الصغيرة */
+  @media (max-width: 768px) {
+    .welcome-title {
+      font-size: 1.3em;
+    }
 
-a.lightning:hover::after,
-a.lightning:focus::after {
-  transform: scaleX(1) skewX(0);
-  animation: lightningFlash .45s ease-out;
-}
+    /* تصغير العنوان */
+    .welcome-description {
+      font-size: 0.85em;
+      padding: 0 5px;
+    }
 
+    .stat-box {
+      min-width: 90px;
+      padding: 12px 8px;
+    }
+
+    .stat-value {
+      font-size: 1.2em;
+    }
+
+    .stat-title {
+      font-size: 0.8em;
+    }
+
+    .nav-link {
+      width: 65px;
+      height: 45px;
+      font-size: 0.7em;
+    }
+
+    .nav-icon {
+      font-size: 14px;
+    }
+
+    .nav-scroller {
+      height: 45px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .welcome-section {
+      padding: 15px 10px;
+    }
+
+    .welcome-title {
+      font-size: 1.2em;
+    }
+
+    .welcome-stats {
+      gap: 8px;
+    }
+
+    .stat-box {
+      min-width: 80px;
+      padding: 10px 6px;
+    }
+
+    .stat-icon {
+      font-size: 1.3em;
+    }
+
+    .stat-value {
+      font-size: 1.1em;
+    }
+
+    .nav-scroller {
+      height: 48px;
+    }
+
+    .nav-link {
+      width: 80px;
+      height: 60px;
+      font-size: 0.85em;
+    }
+
+    .nav-icon {
+      font-size: 18px;
+    }
+
+    .share-button {
+      padding: 8px 14px;
+      font-size: 0.85em;
+    }
+  }
+
+  @media (max-width: 360px) {
+    .welcome-logo {
+      max-width: 120px;
+    }
+
+    .stat-box {
+      min-width: 70px;
+      padding: 8px 5px;
+    }
+
+    .stat-title {
+      font-size: 0.75em;
+    }
+
+    .nav-link {
+      width: 55px;
+      font-size: 0.6em;
+    }
+  }
+
+  /* تأثير خط أحمر كالبرق تحت الروابط */
+  a.lightning {
+    position: relative;
+    z-index: 0;
+    text-decoration: none;
+  }
+
+  /* الخط (pseudo-element) */
+  a.lightning::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -4px;
+    /* مسافة تحت النص - اضبط حسب الحاجة */
+    height: 3px;
+    /* سمك الخط */
+    background: linear-gradient(90deg,
+        transparent 0%,
+        #ff0022 35%,
+        #ff7a7a 55%,
+        transparent 100%);
+    transform-origin: left center;
+    transform: scaleX(0) skewX(-12deg);
+    filter: drop-shadow(0 0 6px rgba(255, 0, 34, 0.65));
+    z-index: -1;
+    transition: transform .35s cubic-bezier(.2, .9, .2, 1), opacity .2s;
+    opacity: 0.98;
+  }
+
+  /* حركة البرق عند المرور */
+  @keyframes lightningFlash {
+    0% {
+      transform: scaleX(0) skewX(-18deg) translateX(-8%);
+    }
+
+    45% {
+      transform: scaleX(1.15) skewX(2deg) translateX(0);
+    }
+
+    70% {
+      transform: scaleX(0.95) skewX(-6deg) translateX(6%);
+    }
+
+    100% {
+      transform: scaleX(1) skewX(0) translateX(0);
+    }
+  }
+
+  a.lightning:hover::after,
+  a.lightning:focus::after {
+    transform: scaleX(1) skewX(0);
+    animation: lightningFlash .45s ease-out;
+  }
 </style>
 
 </head>
@@ -808,101 +1020,107 @@ a.lightning:focus::after {
       <img alt="علم الجزائر" src="icons/Flag_of_Algeria.svg" class="logo">
     </div>
 
-<!-- 📦 قسم الطقس في الوسط -->
-<div style="display:flex;justify-content:center;align-items:center;margin:5px 0;">
-  <div id="weatherBox" style="display:flex;align-items:center;gap:10px;
+    <!-- 📦 قسم الطقس في الوسط -->
+    <div style="display:flex;justify-content:center;align-items:center;margin:5px 0;">
+      <div id="weatherBox" style="display:flex;align-items:center;gap:10px;
        background:#006400;border:1px solid #ddd;border-radius:10px;
        padding:2px 10px;max-width:350px;box-shadow:0 2px 6px rgba(0,0,0,.1);">
-    <img id="weatherIcon" src="" alt="أيقونة الطقس" style="width: 28px;height:28px;">
-    <span id="weatherInfo" style="flex:1;white-space:nowrap;">--</span>
-    <button id="refreshWeatherBtn" style="border:none;background:#006420;color:rgb(224, 95, 95); 
+        <img id="weatherIcon" src="" alt="أيقونة الطقس" style="width: 28px;height:28px;">
+        <span id="weatherInfo" style="flex:1;white-space:nowrap;">--</span>
+        <button id="refreshWeatherBtn" style="border:none;background:#006420;color:rgb(224, 95, 95); 
             border-radius:6px;padding:9px 12px;cursor:pointer;">
-      <i class="fas fa-sync"></i>
-    </button>
-  </div>
-</div>
+          <i class="fas fa-sync"></i>
+        </button>
+      </div>
+    </div>
 
-<style>
-  .spin {
-    animation: spin 1s linear infinite;
-  }
-  @keyframes spin {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
-  }
-</style>
-
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-  const apiKey = "c9600bb5dcccfb988100da9bf01b2f2f";
-  let currentCoords = null;
-
-  function fetchWeather(lat, lon) {
-    const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&lang=ar&appid=${apiKey}`;
-    fetch(url)
-      .then(r => r.json())
-      .then(data => {
-        const weatherData = {
-          icon: `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`,
-          temp: `${Math.round(data.main.temp)}°`,
-          desc: data.weather[0].description,
-          city: data.name,
-          time: Date.now()
-        };
-        localStorage.setItem("weatherData", JSON.stringify(weatherData));
-        renderWeather(weatherData);
-      })
-      .catch(() => {
-        document.getElementById("weatherInfo").textContent = "تعذر تحميل الطقس";
-      })
-      .finally(() => {
-        const icon = document.querySelector("#refreshWeatherBtn i");
-        if (icon) icon.classList.remove("spin");
-      });
-  }
-
-  function renderWeather(d) {
-    document.getElementById("weatherIcon").src = d.icon;
-    document.getElementById("weatherInfo").textContent =
-      `${d.desc} / ${d.temp} / ${d.city}`;
-  }
-
-  // تحميل بيانات محفوظة
-  const saved = localStorage.getItem("weatherData");
-  if (saved) renderWeather(JSON.parse(saved));
-
-  // أول تحميل مع GPS
-  if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(pos => {
-      currentCoords = { lat: pos.coords.latitude, lon: pos.coords.longitude };
-      fetchWeather(currentCoords.lat, currentCoords.lon);
-      // تحديث تلقائي كل ساعة
-      setInterval(() => fetchWeather(currentCoords.lat, currentCoords.lon), 60 * 60 * 1000);
-    });
-  }
-
-  // زر التحديث اليدوي
-  const refreshBtn = document.getElementById("refreshWeatherBtn");
-  if (refreshBtn) {
-    refreshBtn.addEventListener("click", () => {
-      const icon = refreshBtn.querySelector("i");
-      if (icon) icon.classList.add("spin");
-
-      if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(pos => {
-          currentCoords = { lat: pos.coords.latitude, lon: pos.coords.longitude };
-          fetchWeather(currentCoords.lat, currentCoords.lon);
-        }, () => {
-          // إذا رفض المستخدم مشاركة الموقع، استخدم آخر إحداثيات محفوظة
-          if (currentCoords) fetchWeather(currentCoords.lat, currentCoords.lon);
-        });
-      } else if (currentCoords) {
-        fetchWeather(currentCoords.lat, currentCoords.lon);
+    <style>
+      .spin {
+        animation: spin 1s linear infinite;
       }
-    });
-  }
-});
-</script>
+
+      @keyframes spin {
+        from {
+          transform: rotate(0deg);
+        }
+
+        to {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const apiKey = "c9600bb5dcccfb988100da9bf01b2f2f";
+        let currentCoords = null;
+
+        function fetchWeather(lat, lon) {
+          const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&lang=ar&appid=${apiKey}`;
+          fetch(url)
+            .then(r => r.json())
+            .then(data => {
+              const weatherData = {
+                icon: `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`,
+                temp: `${Math.round(data.main.temp)}°`,
+                desc: data.weather[0].description,
+                city: data.name,
+                time: Date.now()
+              };
+              localStorage.setItem("weatherData", JSON.stringify(weatherData));
+              renderWeather(weatherData);
+            })
+            .catch(() => {
+              document.getElementById("weatherInfo").textContent = "تعذر تحميل الطقس";
+            })
+            .finally(() => {
+              const icon = document.querySelector("#refreshWeatherBtn i");
+              if (icon) icon.classList.remove("spin");
+            });
+        }
+
+        function renderWeather(d) {
+          document.getElementById("weatherIcon").src = d.icon;
+          document.getElementById("weatherInfo").textContent =
+            `${d.desc} / ${d.temp} / ${d.city}`;
+        }
+
+        // تحميل بيانات محفوظة
+        const saved = localStorage.getItem("weatherData");
+        if (saved) renderWeather(JSON.parse(saved));
+
+        // أول تحميل مع GPS
+        if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(pos => {
+            currentCoords = { lat: pos.coords.latitude, lon: pos.coords.longitude };
+            fetchWeather(currentCoords.lat, currentCoords.lon);
+            // تحديث تلقائي كل ساعة
+            setInterval(() => fetchWeather(currentCoords.lat, currentCoords.lon), 60 * 60 * 1000);
+          });
+        }
+
+        // زر التحديث اليدوي
+        const refreshBtn = document.getElementById("refreshWeatherBtn");
+        if (refreshBtn) {
+          refreshBtn.addEventListener("click", () => {
+            const icon = refreshBtn.querySelector("i");
+            if (icon) icon.classList.add("spin");
+
+            if (navigator.geolocation) {
+              navigator.geolocation.getCurrentPosition(pos => {
+                currentCoords = { lat: pos.coords.latitude, lon: pos.coords.longitude };
+                fetchWeather(currentCoords.lat, currentCoords.lon);
+              }, () => {
+                // إذا رفض المستخدم مشاركة الموقع، استخدم آخر إحداثيات محفوظة
+                if (currentCoords) fetchWeather(currentCoords.lat, currentCoords.lon);
+              });
+            } else if (currentCoords) {
+              fetchWeather(currentCoords.lat, currentCoords.lon);
+            }
+          });
+        }
+      });
+    </script>
 
 
     <!-- البحث -->
@@ -911,12 +1129,12 @@ document.addEventListener("DOMContentLoaded", () => {
         <input id="searchInput" placeholder="ابحث هنا داخل الصفحة..." type="text">
       </div>
     </div>
-  
+
     <!-- زر تثبيت التطبيق -->
     <button id="install-button">
       <i class="fas fa-download"></i> تثبيت التطبيق
     </button>
-  
+
     <!-- شريط الأخبار -->
     <div dir="rtl" id="newsBar">
       <div id="newsTickerContainer">
@@ -928,128 +1146,164 @@ document.addEventListener("DOMContentLoaded", () => {
       </div>
     </div>
   </header>
-  
+
   <style>
-  :root {
-    --primary-color:#006233;
-    --danger:#d40000;
-    --white:#fff;
-  }
-  
-  html, body {
-    margin:0;
-    padding:0;
-    overflow-x:hidden;
-  }
-  
-  /* تثبيت الهيدر */
-  header {
-    position:fixed;
-    top:0;
-    left:0;
-    width:100%;
-    background:var(--primary-color);
-    color:var(--white);
-    z-index:1000;
-    box-shadow:0 2px 6px rgba(0,0,0,.12);
-    box-sizing:border-box;
-  }
-  
-  /* الهوية */
-  .branding {
-    display:flex;
-    align-items:center;
-    gap:8px;
-    padding:4px 10px;
-  }
-  .branding h1 {
-    margin:0;
-    font-size:1rem;
-    font-weight:700;
-  }
-  .branding .logo { width:30px;height:30px; }
-  
-  /* الطقس */
-  #weatherBox {
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    gap:6px;
-    color:#fff;
-    font-size:0.85rem;
-    margin:2px 0;
-  }
-  #weatherIcon { width:24px;height:24px; }
-  
-  /* البحث */
-  #searchArea {
-    padding:2px 10px;
-  }
-  #searchBox { flex:1; }
-  #searchBox input {
-    width:100%;
-    padding:6px;
-    border-radius:6px;
-    border:1px solid #ccc;
-    font-size:0.9rem;
-  }
-  
-  /* زر تثبيت التطبيق */
-  #install-button {
-    background-color:var(--danger);
-    color:#fff;
-    padding:4px 10px;
-    margin:4px 10px;
-    border:none;
-    border-radius:4px;
-    font-size:13px;
-    cursor:pointer;
-  }
-  #install-button i { font-size:0.85em; }
-  
-  /* شريط الأخبار */
-  #newsBar {
-    background-color:var(--primary-color);
-    color:#fff;
-    padding:4px 8px;
-    font-weight:bold;
-    font-size:0.85rem;
-    overflow:hidden;
-  }
-  #newsTickerContainer { overflow:hidden; }
-  #newsTicker {
-    display:inline-block;
-    white-space:nowrap;
-    min-width:100%;
-    animation:scrollNewsRTL 90s linear infinite;
-  }
-  #newsTicker a { color:#ff0; text-decoration:underline; }
-  
-  @keyframes scrollNewsRTL {
-    0%{ transform:translateX(-100%); }
-    100%{ transform:translateX(100%); }
-  }
+    :root {
+      --primary-color: #006233;
+      --danger: #d40000;
+      --white: #fff;
+    }
+
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+    }
+
+    /* تثبيت الهيدر */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: var(--primary-color);
+      color: var(--white);
+      z-index: 1000;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, .12);
+      box-sizing: border-box;
+    }
+
+    /* الهوية */
+    .branding {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 4px 10px;
+    }
+
+    .branding h1 {
+      margin: 0;
+      font-size: 1rem;
+      font-weight: 700;
+    }
+
+    .branding .logo {
+      width: 30px;
+      height: 30px;
+    }
+
+    /* الطقس */
+    #weatherBox {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      color: #fff;
+      font-size: 0.85rem;
+      margin: 2px 0;
+    }
+
+    #weatherIcon {
+      width: 24px;
+      height: 24px;
+    }
+
+    /* البحث */
+    #searchArea {
+      padding: 2px 10px;
+    }
+
+    #searchBox {
+      flex: 1;
+    }
+
+    #searchBox input {
+      width: 100%;
+      padding: 6px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-size: 0.9rem;
+    }
+
+    /* زر تثبيت التطبيق */
+    #install-button {
+      background-color: var(--danger);
+      color: #fff;
+      padding: 4px 10px;
+      margin: 4px 10px;
+      border: none;
+      border-radius: 4px;
+      font-size: 13px;
+      cursor: pointer;
+    }
+
+    #install-button i {
+      font-size: 0.85em;
+    }
+
+    /* شريط الأخبار */
+    #newsBar {
+      background-color: var(--primary-color);
+      color: #fff;
+      padding: 4px 8px;
+      font-weight: bold;
+      font-size: 0.85rem;
+      overflow: hidden;
+    }
+
+    #newsTickerContainer {
+      overflow: hidden;
+    }
+
+    #newsTicker {
+      display: inline-block;
+      white-space: nowrap;
+      min-width: 100%;
+      animation: scrollNewsRTL 90s linear infinite;
+    }
+
+    #newsTicker a {
+      color: #ff0;
+      text-decoration: underline;
+    }
+
+    @keyframes scrollNewsRTL {
+      0% {
+        transform: translateX(-100%);
+      }
+
+      100% {
+        transform: translateX(100%);
+      }
+    }
 
     /* دوران عند التحديث */
-  .spin {
-    animation: spin 1s linear infinite;
-  }
-  @keyframes spin {
-    from { transform: rotate(0deg); }
-    to   { transform: rotate(360deg); }
-  }
+    .spin {
+      animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+      from {
+        transform: rotate(0deg);
+      }
+
+      to {
+        transform: rotate(360deg);
+      }
+    }
   </style>
- 
-<script>
+
+  <script>
     // ضبط padding-top للـ body تلقائياً حسب ارتفاع الهيدر
-  function adjustBodyPadding() {
-    const header = document.querySelector("header");
-    document.body.style.paddingTop = header.offsetHeight + "px";
-  }
-  window.addEventListener("load", adjustBodyPadding);
-  window.addEventListener("resize", adjustBodyPadding);
-</script>
-     
+    function adjustBodyPadding() {
+      const header = document.querySelector("header");
+      document.body.style.paddingTop = header.offsetHeight + "px";
+    }
+    window.addEventListener("load", adjustBodyPadding);
+    window.addEventListener("resize", adjustBodyPadding);
+  </script>
+
   <!-- قسم الترحيب  -->
   <section class="welcome-section">
     <div class="welcome-content">
@@ -1075,7 +1329,7 @@ document.addEventListener("DOMContentLoaded", () => {
       <div id="social-share" class="social-share">
         <a class="share-btn" id="share-facebook" target="_blank" aria-label="Facebook"
           href="https://www.facebook.com/sharer/sharer.php?u=https://imadtbn.github.io/dz_portal/">
-          <img src="icons/facebook.png"  alt="Facebook" style="width:75%;height:auto;">
+          <img src="icons/facebook.png" alt="Facebook" style="width:75%;height:auto;">
         </a>
 
         <a class="share-btn" id="share-twitter" target="_blank" aria-label="Twitter"
@@ -1225,80 +1479,103 @@ document.addEventListener("DOMContentLoaded", () => {
       </div>
 
       <style>
-      /* 🔘 تنسيق الزر العام */
-.share-btn {
-  display: inline-flex;          /* يجعل العنصر مرن ويتيح محاذاة داخلية */
-  align-items: center;           /* محاذاة المحتوى عموديًا للوسط */
-  justify-content: center;       /* محاذاة المحتوى أفقيًا للوسط */
-  width: 44px;                   /* عرض ثابت للزر */
-  height: 44px;                  /* ارتفاع ثابت للزر */
-  border-radius: 50%;            /* جعل الزر دائري */
-  background: #fff;              /* خلفية بيضاء */
-  cursor: pointer;               /* عند المرور يتحول المؤشر لليد */
-  overflow: hidden;              /* إخفاء أي محتوى خارج حدود الزر */
-  transition: transform 0.2s, box-shadow 0.2s; /* انتقال سلس عند التغيير */
-}
+        /* 🔘 تنسيق الزر العام */
+        .share-btn {
+          display: inline-flex;
+          /* يجعل العنصر مرن ويتيح محاذاة داخلية */
+          align-items: center;
+          /* محاذاة المحتوى عموديًا للوسط */
+          justify-content: center;
+          /* محاذاة المحتوى أفقيًا للوسط */
+          width: 44px;
+          /* عرض ثابت للزر */
+          height: 44px;
+          /* ارتفاع ثابت للزر */
+          border-radius: 50%;
+          /* جعل الزر دائري */
+          background: #fff;
+          /* خلفية بيضاء */
+          cursor: pointer;
+          /* عند المرور يتحول المؤشر لليد */
+          overflow: hidden;
+          /* إخفاء أي محتوى خارج حدود الزر */
+          transition: transform 0.2s, box-shadow 0.2s;
+          /* انتقال سلس عند التغيير */
+        }
 
-/* زيادة المسافة بين زر المشاركة وشريط أيقونات التواصل الاجتماعي */
-.share-button {
-    margin-bottom: 10px; /* يمكنك تعديل القيمة حسب الرغبة */
-}
+        /* زيادة المسافة بين زر المشاركة وشريط أيقونات التواصل الاجتماعي */
+        .share-button {
+          margin-bottom: 10px;
+          /* يمكنك تعديل القيمة حسب الرغبة */
+        }
 
-/* أو بدلاً من ذلك إضافة هامش علوي لشريط الأيقونات */
+        /* أو بدلاً من ذلك إضافة هامش علوي لشريط الأيقونات */
 
-/* زيادة المسافة بين أيقونات التواصل الاجتماعي والحاويات المحيطة */
-.social-share {
-    margin-top: 15;   /* المسافة من الأعلى */
-    margin-bottom: 15; /* المسافة من الأسفل إذا لزم */
+        /* زيادة المسافة بين أيقونات التواصل الاجتماعي والحاويات المحيطة */
+        .social-share {
+          margin-top: 15;
+          /* المسافة من الأعلى */
+          margin-bottom: 15;
+          /* المسافة من الأسفل إذا لزم */
 
-/* 📷 أيقونة داخل الزر */
-.share-btn img {
-  width: 70%;   /* حجم الأيقونة كنسبة من حجم الزر */
-  height: auto; /* الحفاظ على نسبة الطول والعرض */
-  display: block;
-}
+          /* 📷 أيقونة داخل الزر */
+          .share-btn img {
+            width: 70%;
+            /* حجم الأيقونة كنسبة من حجم الزر */
+            height: auto;
+            /* الحفاظ على نسبة الطول والعرض */
+            display: block;
+          }
 
-/* ✨ تأثير عند تمرير الفأرة */
-.share-btn:hover {
-  transform: scale(1.1); /* تكبير الزر قليلاً عند المرور */
-}
+          /* ✨ تأثير عند تمرير الفأرة */
+          .share-btn:hover {
+            transform: scale(1.1);
+            /* تكبير الزر قليلاً عند المرور */
+          }
 
-/* 🎨 ألوان خاصة بحواف الأزرار لكل منصة */
+          /* 🎨 ألوان خاصة بحواف الأزرار لكل منصة */
 
-/* فيسبوك */
-#share-facebook {
-  border: 2px solid #1877F2; /* أزرق فيسبوك */
-}
+          /* فيسبوك */
+          #share-facebook {
+            border: 2px solid #1877F2;
+            /* أزرق فيسبوك */
+          }
 
-/* تويتر */
-#share-twitter {
-  border: 2px solid #1DA1F2; /* أزرق تويتر */
-}
+          /* تويتر */
+          #share-twitter {
+            border: 2px solid #1DA1F2;
+            /* أزرق تويتر */
+          }
 
-/* إنستغرام */
-#share-instagram {
-  border: 2px solid #E4405F; /* وردي/أحمر إنستغرام */
-}
+          /* إنستغرام */
+          #share-instagram {
+            border: 2px solid #E4405F;
+            /* وردي/أحمر إنستغرام */
+          }
 
-/* واتساب */
-#share-whatsapp {
-  border: 2px solid #25D366; /* أخضر واتساب */
-}
+          /* واتساب */
+          #share-whatsapp {
+            border: 2px solid #25D366;
+            /* أخضر واتساب */
+          }
 
-/* تيليغرام */
-#share-telegram {
-  border: 2px solid #0088CC; /* أزرق تيليغرام */
-}
+          /* تيليغرام */
+          #share-telegram {
+            border: 2px solid #0088CC;
+            /* أزرق تيليغرام */
+          }
 
-/* ماسنجر */
-#share-messenger {
-  border: 2px solid #006AFF; /* أزرق ماسنجر */
-}
+          /* ماسنجر */
+          #share-messenger {
+            border: 2px solid #006AFF;
+            /* أزرق ماسنجر */
+          }
 
-/* رمز QR */
-#share-qr {
-  border: 2px solid #444; /* رمادي/أسود لرمز QR */
-}
+          /* رمز QR */
+          #share-qr {
+            border: 2px solid #444;
+            /* رمادي/أسود لرمز QR */
+          }
       </style>
 
       <!-- ====== JavaScriptأزرار المشاركة  ====== -->
@@ -1344,12 +1621,12 @@ document.addEventListener("DOMContentLoaded", () => {
         <div class="stat-box">
           <i class="fas fa-folder-open stat-icon"></i>
           <div class="stat-title">عدد الأقسام</div>
-          <div class="stat-value">28</div>
+          <div class="stat-value">29</div>
         </div>
         <div class="stat-box">
           <i class="fas fa-laptop stat-icon"></i>
           <div class="stat-title">الخدمات الرقمية</div>
-          <div class="stat-value">270+</div>
+          <div class="stat-value">280+</div>
         </div>
         <div class="stat-box">
           <i class="fas fa-shield-alt stat-icon"></i>
@@ -1380,55 +1657,209 @@ document.addEventListener("DOMContentLoaded", () => {
     <ul id="payment-section"
       style="display: none; list-style: none; padding-right: 20px; line-height: 2; text-align: right;">
 
-      <!-- ADE --> 
-      <li>
-        <img src="icons/ade.png" alt="ADE Logo" class="logo"> 
-        <a class="lightning" href="https://www.ade.dz/e-paiement/" target="_blank">فاتورة الجزائرية للمياه (ADE)</a>
-        <div style="margin-top:5px; padding-right:25px;">
-          <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
-          <strong>الجزائرية للمياه:</strong> <a class="lightning" href="tel:1593">1593</a>
-        </div>
-      </li>
+<!-- ADE -->
+<li style="margin-bottom:10px;">
 
-      <li>
-        <img src="icons/google-play-logo.png" alt="google-play-logoLogo" class="logo">
-        <a class="lightning" href="https://play.google.com/store/apps/details?id=com.ade.adese&amp;hl=ar" target="_blank">
-          تطبيق Miyahimob
-        </a>
-      </li>
+  <!-- السطر الأول: فاتورة -->
+  <div style="margin-bottom:6px; padding-right:25px;">
+    <img src="icons/ade.png" alt="ADE Logo" class="logo">
+    <strong>
+      <a class="lightning" href="https://www.ade.dz/e-paiement/" target="_blank">
+        فاتورة الجزائرية للمياه (ADE)
+      </a>
+    </strong>
+  </div>
 
-      <!-- سونلغاز -->
-      <li>
-        <img src="icons/sonelgaz.png" alt="sonelgaz Logo" class="logo">
-        <a class="lightning" href="https://epayement.elit.dz/payementFacture.xhtml" target="_blank">فاتورة الكهرباء والغاز
-          (سونلغاز)</a>
-        <div style="margin-top:5px; padding-right:25px;">
-          <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
-          <strong>سونلغاز:</strong> <a class="lightning" href="tel:3303">3303</a>
-        </div>
-      </li>
+  <!-- السطر الثاني: الموقع الرسمي -->
+  <div style="margin-bottom:6px; padding-right:25px;">
+    <i class="fas fa-globe" style="color:#006400; margin-left:6px;"></i>
+    <strong>
+      <a class="lightning" href="https://www.ade.dz/ar" target="_blank">
+        الموقع الرسمي للجزائرية للمياه
+      </a>
+    </strong>
+  </div>
 
-      <!-- سيال -->
-      <li>
-        <img src="icons/seaal.webp" alt="seaal Logo" class="logo">
-        <a class="lightning" href="https://baridinet.poste.dz/seaal" target="_blank">فاتورة المياه (سيال)</a>
-        <div style="margin-top:5px; padding-right:25px;">
-          <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
-          <strong>سيال:</strong> <a class="lightning" href="tel:1594">1594</a>
-        </div>
-      </li>
+  <!-- السطر الثالث: رقم الهاتف -->
+  <div style="margin-bottom:6px; padding-right:25px;">
+    <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
+    <strong>مصلحة خدمة الزبائن:</strong>
+    <a class="lightning" href="tel:1593">1593</a>
+  </div>
 
-      <!-- عدل -->
-      <li>
-        <img src="icons/AADL.png" alt="AADLLogo" class="logo">
-        <a class="lightning" href="https://www.aadlgestimmo.dz/epayement/View/index.php" target="_blank">فاتورة كراء عدل</a>
-      </li>
+  <!-- السطر الرابع: التطبيقات -->
+  <div style="padding-right:25px;">
+    <img src="icons/google-play-logo.png" alt="google-play-logo" class="logo">
+    <a class="lightning" href="https://play.google.com/store/apps/details?id=com.ade.adese&amp;hl=ar" target="_blank">
+      تطبيق Miyahimob
+    </a>
+  </div>
 
-      <!-- OPGI -->
-      <li>
-        <img src="icons/opgi.png" alt="opgi Logo" class="logo">
-        <a class="lightning" href="https://www.opgiconstantine.dz/" target="_blank">فاتورة كراء OPGI</a>
-      </li>
+</li>
+
+<!-- سونلغاز -->
+<li style="margin-bottom:10px;">
+
+  <!-- السطر الأول: فاتورة -->
+  <div style="margin-bottom:6px; padding-right:25px;">
+    <img src="icons/sonelgaz.png" alt="Sonelgaz Logo" class="logo">
+    <strong>
+      <a class="lightning" href="https://epayement.elit.dz/payementFacture.xhtml" target="_blank">
+        فاتورة الكهرباء والغاز (سونلغاز)
+      </a>
+    </strong>
+  </div>
+
+  <!-- السطر الثاني: الموقع الرسمي -->
+  <div style="margin-bottom:6px; padding-right:25px;">
+    <i class="fas fa-globe" style="color:#006400; margin-left:6px;"></i>
+    <strong>
+      <a class="lightning" href="https://www.sonelgaz.dz/" target="_blank">
+        الموقع الرسمي لسونلغاز
+      </a>
+    </strong>
+  </div>
+
+  <!-- السطر الثالث: رقم الهاتف -->
+  <div style="margin-bottom:6px; padding-right:25px;">
+    <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
+    <strong>مصلحة خدمة الزبائن:</strong>
+    <a class="lightning" href="tel:3303">3303</a>
+  </div>
+
+  <!-- السطر الرابع: التطبيقات -->
+  <div style="padding-right:25px;">
+    <img src="icons/google-play-logo.png" alt="Google Play" class="logo">
+    <a class="lightning" href="https://play.google.com/store/apps/details?id=dz.elit.sonelgazmobile" target="_blank">
+      تطبيق Sonelgaz Mobile
+    </a>
+  </div>
+
+</li>
+
+
+<!-- سيال -->
+<li style="margin-bottom:10px;">
+
+  <!-- السطر الأول: فاتورة -->
+  <div style="margin-bottom:6px; padding-right:25px;">
+    <img src="icons/seaal.webp" alt="SEAAL Logo" class="logo">
+    <strong>
+      <a class="lightning" href="https://baridinet.poste.dz/seaal" target="_blank">
+        فاتورة المياه (سيال)
+      </a>
+    </strong>
+  </div>
+
+  <!-- السطر الثاني: الموقع الرسمي -->
+  <div style="margin-bottom:6px; padding-right:25px;">
+    <i class="fas fa-globe" style="color:#006400; margin-left:6px;"></i>
+    <strong>
+      <a class="lightning" href="https://www.seaal.dz/" target="_blank">
+        الموقع الرسمي لسيال
+      </a>
+    </strong>
+  </div>
+
+  <!-- السطر الثالث: رقم الهاتف -->
+  <div style="margin-bottom:6px; padding-right:25px;">
+    <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
+    <strong>مصلحة خدمة الزبائن:</strong>
+    <a class="lightning" href="tel:1594">1594</a>
+  </div>
+
+  <!-- السطر الرابع: التطبيقات -->
+  <div style="padding-right:25px;">
+    <img src="icons/google-play-logo.png" alt="Google Play" class="logo">
+    <a class="lightning" href="https://play.google.com/store/apps/details?id=com.seaal.mobile" target="_blank">
+      تطبيق SEAAL Mobile
+    </a>
+  </div>
+
+</li>
+
+
+<!-- عدل -->
+<li style="margin-bottom:10px;">
+
+  <!-- السطر الأول: فاتورة -->
+  <div style="margin-bottom:6px; padding-right:25px;">
+    <img src="icons/AADL.png" alt="AADL Logo" class="logo">
+    <strong>
+      <a class="lightning" href="https://www.aadlgestimmo.dz/epayement/View/index.php" target="_blank">
+        فاتورة كراء عدل
+      </a>
+    </strong>
+  </div>
+
+  <!-- السطر الثاني: الموقع الرسمي -->
+  <div style="margin-bottom:6px; padding-right:25px;">
+    <i class="fas fa-globe" style="color:#006400; margin-left:6px;"></i>
+    <strong>
+      <a class="lightning" href="https://www.aadl.com.dz/" target="_blank">
+        الموقع الرسمي لوكالة عدل
+      </a>
+    </strong>
+  </div>
+
+  <!-- السطر الثالث: رقم الهاتف -->
+  <div style="margin-bottom:6px; padding-right:25px;">
+    <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
+    <strong>مصلحة خدمة الزبائن:</strong>
+    <a class="lightning" href="tel:3030">3030</a>
+  </div>
+
+  <!-- السطر الرابع: التطبيقات -->
+  <div style="padding-right:25px;">
+    <img src="icons/google-play-logo.png" alt="Google Play" class="logo">
+    <a class="lightning" href="https://play.google.com/store/apps/details?id=dz.aadl.mobile" target="_blank">
+      تطبيق AADL Mobile
+    </a>
+  </div>
+
+</li>
+
+
+<!-- OPGI -->
+<li style="margin-bottom:10px;">
+
+  <!-- السطر الأول: فاتورة -->
+  <div style="margin-bottom:6px; padding-right:25px;">
+    <img src="icons/opgi.png" alt="OPGI Logo" class="logo">
+    <strong>
+      <a class="lightning" href="https://www.opgiconstantine.dz/" target="_blank">
+        فاتورة كراء OPGI
+      </a>
+    </strong>
+  </div>
+
+  <!-- السطر الثاني: الموقع الرسمي -->
+  <div style="margin-bottom:6px; padding-right:25px;">
+    <i class="fas fa-globe" style="color:#006400; margin-left:6px;"></i>
+    <strong>
+      <a class="lightning" href="https://www.opgi-alger.dz/" target="_blank">
+        الموقع الرسمي لـ OPGI
+      </a>
+    </strong>
+  </div>
+
+  <!-- السطر الثالث: رقم الهاتف -->
+  <div style="margin-bottom:6px; padding-right:25px;">
+    <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
+    <strong>مصلحة خدمة الزبائن:</strong>
+    <a class="lightning" href="tel:+21300000000" style="direction:ltr; unicode-bidi:bidi-override;">+2130000000</a>
+  </div>
+
+  <!-- السطر الرابع: التطبيقات -->
+  <div style="padding-right:25px;">
+    <img src="icons/google-play-logo.png" alt="Google Play" class="logo">
+    <a class="lightning" href="#" target="_blank">
+      تطبيق OPGI (إن وُجد)
+    </a>
+  </div>
+
+</li>
+
 
       <!-- وزارة التربية -->
       <li>
@@ -1442,63 +1873,138 @@ document.addEventListener("DOMContentLoaded", () => {
   </section>
 
   <!-- قسم تعبئة الهاتف -->
-<section dir="rtl">
-  <h2 id="toggle-recharge" onclick="toggleSection('recharge-section', this)">
-    <span>
-      <i class="fas fa-money-check-alt"></i>
-      خدمات تعبئة الهاتف النقال <span class="count"></span>
-    </span>
-    <span class="toggle-icon">▶</span>
-  </h2>
+  <section dir="rtl">
+    <h2 id="toggle-recharge" onclick="toggleSection('recharge-section', this)">
+      <span>
+        <i class="fas fa-money-check-alt"></i>
+        خدمات تعبئة الهاتف النقال <span class="count"></span>
+      </span>
+      <span class="toggle-icon">▶</span>
+    </h2>
 
-  <ul id="recharge-section">
-    <!-- موبيليس -->
-    <li>
-      <img src="icons/mobilis.png" alt="Mobilis Logo" class="logo">
-      <a class="lightning" href="https://e-paiement.mobilis.dz/" target="_blank"><strong>تعبئة الرصيد - موبيليس</strong></a>
-      <div>
-        <i class="fas fa-phone" style="color: #006400; margin-left:6px;"></i>
-        <strong>مصلحة خدمة الزبائن - موبيليس:</strong>
-        <a class="lightning" href="tel:666">666</a>
-      </div>
-      <a class="lightning" href="https://play.google.com/store/search?q=mobispace&c=apps&hl=ar" target="_blank">
-        <img src="icons/mobilispace.webp" alt="MyMobilis App Logo" class="logo">
-        تحميل تطبيق MobiSpace
+    <ul id="recharge-section">
+<!-- موبيليس -->
+<li style="margin-bottom:10px;">
+
+  <!-- السطر الأول: تعبئة الرصيد -->
+  <div style="margin-bottom:6px; padding-right:25px;">
+    <img src="icons/mobilis.png" alt="Mobilis Logo" class="logo">
+    <strong>
+      <a class="lightning" href="https://e-paiement.mobilis.dz/" target="_blank">
+        تعبئة الرصيد - موبيليس
       </a>
-    </li>
+    </strong>
+  </div>
 
-    <!-- جازي -->
-    <li>
-      <img src="icons/djezzy.png" alt="Djezzy Logo" class="logo">
-      <a class="lightning" href="https://moncompte.djezzy.dz/ar/guest/recharge" target="_blank"><strong>تعبئة الرصيد - جازي</strong></a>
-      <div>
-        <i class="fas fa-phone" style="color: #006400; margin-left:6px;"></i>
-        <strong>مصلحة خدمة الزبائن - جازي:</strong>
-        <a class="lightning" href="tel:777">777</a>
-      </div>
-      <a class="lightning" href="https://play.google.com/store/apps/details?id=com.djezzy.internet" target="_blank">
-        <img src="icons/djezzy1.webp" alt="Djezzy App Logo" class="logo">
-        تحميل تطبيق Djezzy
+  <!-- السطر الثاني: الموقع الرسمي -->
+  <div style="margin-bottom:6px; padding-right:25px;">
+    <i class="fas fa-globe" style="color:#006400; margin-left:6px;"></i>
+    <strong>
+      <a class="lightning" href="https://www.mobilis.dz/" target="_blank">
+        الموقع الرسمي لموبيليس
       </a>
-    </li>
+    </strong>
+  </div>
 
-    <!-- أوريدو -->
-    <li>
-      <img src="icons/ooredoo.png" alt="Ooredoo Logo" class="logo">
-      <a class="lightning" href="http://estorm.ooredoo.dz/" target="_blank"><strong>تعبئة الرصيد - أوريدو</strong></a>
-      <div>
-        <i class="fas fa-phone" style="color: #006400; margin-left:6px;"></i>
-        <strong>مصلحة خدمة الزبائن - أوريدو:</strong>
-        <a class="lightning" href="tel:333">333</a>
-      </div>
-      <a class="lightning" href="https://play.google.com/store/apps/details?id=com.algeria.selfcare.app.android&pli=1" target="_blank">
-        <img src="icons/ooredoo1.webp" alt="Ooredoo App Logo" class="logo">
-        تحميل تطبيق My Ooredoo Algeria
+  <!-- السطر الثالث: رقم الهاتف -->
+  <div style="margin-bottom:6px; padding-right:25px;">
+    <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
+    <strong>مصلحة خدمة الزبائن:</strong>
+    <a class="lightning" href="tel:666">666</a>
+  </div>
+
+  <!-- السطر الرابع: التطبيقات -->
+  <div style="padding-right:25px;">
+    <img src="icons/mobilispace.webp" alt="MobiSpace App Logo" class="logo">
+    <a class="lightning" href="https://play.google.com/store/search?q=mobispace&c=apps&hl=ar" target="_blank">
+      تحميل تطبيق MobiSpace
+    </a>
+  </div>
+
+</li>
+
+<!-- جازي -->
+<li style="margin-bottom:10px;">
+
+  <!-- السطر الأول: تعبئة الرصيد -->
+  <div style="margin-bottom:6px; padding-right:25px;">
+    <img src="icons/djezzy.png" alt="Djezzy Logo" class="logo">
+    <strong>
+      <a class="lightning" href="https://moncompte.djezzy.dz/ar/guest/recharge" target="_blank">
+        تعبئة الرصيد - جازي
       </a>
-    </li>
-  </ul>
-</section>
+    </strong>
+  </div>
 
+  <!-- السطر الثاني: الموقع الرسمي -->
+  <div style="margin-bottom:6px; padding-right:25px;">
+    <i class="fas fa-globe" style="color:#006400; margin-left:6px;"></i>
+    <strong>
+      <a class="lightning" href="https://www.djezzy.dz/" target="_blank">
+        الموقع الرسمي لجازي
+      </a>
+    </strong>
+  </div>
+
+  <!-- السطر الثالث: رقم الهاتف -->
+  <div style="margin-bottom:6px; padding-right:25px;">
+    <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
+    <strong>مصلحة خدمة الزبائن:</strong>
+    <a class="lightning" href="tel:777">777</a>
+  </div>
+
+  <!-- السطر الرابع: التطبيقات -->
+  <div style="padding-right:25px;">
+    <img src="icons/djezzy1.webp" alt="Djezzy App Logo" class="logo">
+    <a class="lightning" href="https://play.google.com/store/apps/details?id=com.djezzy.internet" target="_blank">
+      تحميل تطبيق Djezzy
+    </a>
+  </div>
+
+</li>
+
+<!-- أوريدو -->
+<li style="margin-bottom:10px;">
+
+  <!-- السطر الأول: تعبئة الرصيد -->
+  <div style="margin-bottom:6px; padding-right:25px;">
+    <img src="icons/ooredoo.png" alt="Ooredoo Logo" class="logo">
+    <strong>
+      <a class="lightning" href="http://estorm.ooredoo.dz/" target="_blank">
+        تعبئة الرصيد - أوريدو
+      </a>
+    </strong>
+  </div>
+
+  <!-- السطر الثاني: الموقع الرسمي -->
+  <div style="margin-bottom:6px; padding-right:25px;">
+    <i class="fas fa-globe" style="color:#006400; margin-left:6px;"></i>
+    <strong>
+      <a class="lightning" href="https://www.ooredoo.dz/" target="_blank">
+        الموقع الرسمي لأوريدو
+      </a>
+    </strong>
+  </div>
+
+  <!-- السطر الثالث: رقم الهاتف -->
+  <div style="margin-bottom:6px; padding-right:25px;">
+    <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
+    <strong>مصلحة خدمة الزبائن:</strong>
+    <a class="lightning" href="tel:333">333</a>
+  </div>
+
+  <!-- السطر الرابع: التطبيقات -->
+  <div style="padding-right:25px;">
+    <img src="icons/ooredoo1.webp" alt="Ooredoo App Logo" class="logo">
+    <a class="lightning" href="https://play.google.com/store/apps/details?id=com.algeria.selfcare.app.android&pli=1" target="_blank">
+      تحميل تطبيق My Ooredoo Algeria
+    </a>
+  </div>
+
+</li>
+
+    </ul>
+  </section>
 
   <!-- قسم خدمات بريد الجزائر -->
   <section dir="rtl" style="text-align: right;">
@@ -1523,7 +2029,8 @@ document.addEventListener("DOMContentLoaded", () => {
       </li>
       <li>
         <i class="fas fa-credit-card" style="color: #006400; margin-left:6px;"></i>
-        <a class="lightning" href="https://eccp.poste.dz/commande-edahabia" target="_blank">طلب البطاقة الذهبية وتتبعها</a>
+        <a class="lightning" href="https://eccp.poste.dz/commande-edahabia" target="_blank">طلب البطاقة الذهبية
+          وتتبعها</a>
       </li>
       <li>
         <i class="fas fa-globe" style="color: #006400; margin-left:6px;"></i>
@@ -1531,7 +2038,8 @@ document.addEventListener("DOMContentLoaded", () => {
       </li>
       <li>
         <i class="fab fa-android" style="color: #006400; margin-left:6px;"></i>
-        <a class="lightning" href="https://play.google.com/store/apps/details?id=ru.bpc.mobilebank.bpc&hl=ar" target="_blank">تطبيق
+        <a class="lightning" href="https://play.google.com/store/apps/details?id=ru.bpc.mobilebank.bpc&hl=ar"
+          target="_blank">تطبيق
           بريدي موب (BaridiMob)</a>
       </li>
       <li>
@@ -1554,9 +2062,23 @@ document.addEventListener("DOMContentLoaded", () => {
 
     <!-- رقم الهاتف أسفل القسم -->
     <div style="margin-top:10px; padding:8px; background-color:#f9f9f9; border-top:1px solid #ddd;">
-      <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
-      <strong>مصلحة الزبائن - بريد الجزائر</strong> <a class="lightning" href="tel:1530">1530</a>
+      <!-- سطر الوكالة  -->
+      <div style="margin-bottom:6px;">
+        <i class="fas fa-globe" style="color:#006400; margin-left:6px;"></i>
+        <strong>
+          <a class="lightning" href="https://www.poste.dz/" target="_blank">
+            بريد الجزائر </a>
+        </strong>
+      </div>
+
+      <!-- سطر الهاتف   -->
+      <div>
+        <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
+        <strong>هاتف مصلحة الزبائن:</strong>
+        <a class="lightning" href="tel:1530" style="direction:ltr; unicode-bidi:bidi-override;">1530</a>
+      </div>
     </div>
+
   </section>
 
   <!-- قسم خدمات إتصالات الجزائر -->
@@ -1580,22 +2102,26 @@ document.addEventListener("DOMContentLoaded", () => {
       </h3>
       <ul id="telecom-payment" style="display: none; list-style: none; padding: 0 20px; line-height: 2;">
         <li><i class="fas fa-phone" style="color: #006400; margin-left:6px;"></i>
-          <a class="lightning" href="https://paiement.algerietelecom.dz/AR/index.php?p=facture_paiement" target="_blank">تسديد
+          <a class="lightning" href="https://paiement.algerietelecom.dz/AR/index.php?p=facture_paiement"
+            target="_blank">تسديد
             فواتير
             الهاتف الثابت</a>
         </li>
         <li><i class="fas fa-file-invoice" style="color: #006400; margin-left:6px;"></i>
-          <a class="lightning" href="https://paiement.algerietelecom.dz/AR/index.php?p=dette_paiement" target="_blank">تسديد
+          <a class="lightning" href="https://paiement.algerietelecom.dz/AR/index.php?p=dette_paiement"
+            target="_blank">تسديد
             مستحقات
             الهاتف الثابت</a>
         </li>
         <li><i class="fas fa-globe" style="color: #006400; margin-left:6px;"></i>
-          <a class="lightning" href="https://paiement.algerietelecom.dz/AR/index.php?p=internet_recharge&pr=in" target="_blank">تعبئة
+          <a class="lightning" href="https://paiement.algerietelecom.dz/AR/index.php?p=internet_recharge&pr=in"
+            target="_blank">تعبئة
             حساب
             الانترنت</a>
         </li>
         <li><i class="fas fa-broadcast-tower" style="color: #006400; margin-left:6px;"></i>
-          <a class="lightning" href="https://paiement.algerietelecom.dz/AR/index.php?p=internet_recharge&pr=4g" target="_blank">تعبئة
+          <a class="lightning" href="https://paiement.algerietelecom.dz/AR/index.php?p=internet_recharge&pr=4g"
+            target="_blank">تعبئة
             IDOOM 4G LTE</a>
         </li>
       </ul>
@@ -1609,11 +2135,13 @@ document.addEventListener("DOMContentLoaded", () => {
       </h3>
       <ul id="telecom-vouchers" style="display: none; list-style: none; padding: 0 20px; line-height: 2;">
         <li><i class="fas fa-wifi" style="color: #006400; margin-left:6px;"></i>
-          <a class="lightning" href="https://paiement.algerietelecom.dz/AR/index.php?p=voucher_internet&produit=in" target="_blank">تعبئة
+          <a class="lightning" href="https://paiement.algerietelecom.dz/AR/index.php?p=voucher_internet&produit=in"
+            target="_blank">تعبئة
             الانترنت - بطاقات التعبئة</a>
         </li>
         <li><i class="fas fa-signal" style="color: #006400; margin-left:6px;"></i>
-          <a class="lightning" href="https://paiement.algerietelecom.dz/AR/index.php?p=voucher_internet&produit=4g" target="_blank">تعبئة
+          <a class="lightning" href="https://paiement.algerietelecom.dz/AR/index.php?p=voucher_internet&produit=4g"
+            target="_blank">تعبئة
             IDOOM 4G LTE - بطاقات التعبئة</a>
         </li>
       </ul>
@@ -1627,17 +2155,20 @@ document.addEventListener("DOMContentLoaded", () => {
       </h3>
       <ul id="telecom-space" style="display: none; list-style: none; padding: 0 20px; line-height: 2;">
         <li><i class="fas fa-exchange-alt" style="color: #006400; margin-left:6px;"></i>
-          <a class="lightning" href="https://www.algerietelecom.dz/ar/page/migration-p232" target="_blank">طلب التحويل / متابعة
+          <a class="lightning" href="https://www.algerietelecom.dz/ar/page/migration-p232" target="_blank">طلب التحويل /
+            متابعة
             إلى خدمة
             الألياف البصرية</a>
         </li>
         <li><i class="fas fa-map-marker-alt" style="color: #006400; margin-left:6px;"></i>
-          <a class="lightning" href="https://www.algerietelecom.dz/ar/page/trouver-mon-agence-p256" target="_blank">البحث عن
+          <a class="lightning" href="https://www.algerietelecom.dz/ar/page/trouver-mon-agence-p256"
+            target="_blank">البحث عن
             وكالتي -
             إتصالات الجزائر</a>
         </li>
         <li><i class="fas fa-phone-square-alt" style="color: #006400; margin-left:6px;"></i>
-          <a class="lightning" href="https://www.algerietelecom.dz/ar/page/trouver-votre-numero-de-fixe-p268" target="_blank">إكتشف رقم
+          <a class="lightning" href="https://www.algerietelecom.dz/ar/page/trouver-votre-numero-de-fixe-p268"
+            target="_blank">إكتشف رقم
             هاتفك الثابت FTTH</a>
         </li>
         <li><i class="fas fa-file-signature" style="color: #006400; margin-left:6px;"></i>
@@ -1650,11 +2181,13 @@ document.addEventListener("DOMContentLoaded", () => {
           <a class="lightning" href="https://www.algerietelecom.dz/ar/derangements" target="_blank">الإبلاغ عن عطب</a>
         </li>
         <li><i class="fas fa-bolt" style="color: #006400; margin-left:6px;"></i>
-          <a class="lightning" href="https://www.algerietelecom.dz/ar/particuliers/week-end-boost-prod227" target="_blank">WEEK-END
+          <a class="lightning" href="https://www.algerietelecom.dz/ar/particuliers/week-end-boost-prod227"
+            target="_blank">WEEK-END
             Boost</a>
         </li>
         <li><i class="fas fa-store" style="color: #006400; margin-left:6px;"></i>
-          <a class="lightning" href="https://www.algerietelecom.dz/ar/particuliers/week-end-boost-prod227" target="_blank">تسويق
+          <a class="lightning" href="https://www.algerietelecom.dz/ar/particuliers/week-end-boost-prod227"
+            target="_blank">تسويق
             IDOOM
             Markit</a>
         </li>
@@ -1665,11 +2198,13 @@ document.addEventListener("DOMContentLoaded", () => {
           <a class="lightning" href="https://inkidia.com.dz/" target="_blank">المعلم</a>
         </li>
         <li><i class="fas fa-credit-card" style="color: #006400; margin-left:6px;"></i>
-          <a class="lightning" href="https://play.google.com/store/apps/details?id=dz.algerietelecom.rd.e_paiement&hl=ar"
+          <a class="lightning"
+            href="https://play.google.com/store/apps/details?id=dz.algerietelecom.rd.e_paiement&hl=ar"
             target="_blank">تطبيق E-paiement لإتصالات الجزائر</a>
         </li>
         <li><i class="fas fa-mobile-alt" style="color: #006400; margin-left:6px;"></i>
-          <a class="lightning" href="https://play.google.com/store/apps/details?id=com.at.dz&hl=ar" target="_blank">تطبيق My
+          <a class="lightning" href="https://play.google.com/store/apps/details?id=com.at.dz&hl=ar"
+            target="_blank">تطبيق My
             IDOOM
             لإتصالات الجزائر</a>
         </li>
@@ -1678,9 +2213,23 @@ document.addEventListener("DOMContentLoaded", () => {
 
     <!-- رقم الهاتف أسفل القسم -->
     <div style="margin-top:10px; padding:8px; background-color:#f9f9f9; border-top:1px solid #ddd;">
-      <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
-      <strong>مصلحة الزبائن - إتصالات الجزائر</strong> <a class="lightning" href="tel:12">12</a>
+      <!-- سطر الوكالة  -->
+      <div style="margin-bottom:6px;">
+        <i class="fas fa-globe" style="color:#006400; margin-left:6px;"></i>
+        <strong>
+          <a class="lightning" href="https://www.algerietelecom.dz/ar" target="_blank">
+            إتصالات الجزائر </a>
+        </strong>
+      </div>
+
+      <!-- سطر الهاتف   -->
+      <div>
+        <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
+        <strong>هاتف مصلحة الزبائن:</strong>
+        <a class="lightning" href="tel:12" style="direction:ltr; unicode-bidi:bidi-override;">12</a>
+      </div>
     </div>
+
   </section>
 
   <!-- قسم التربية والتعليم -->
@@ -1753,7 +2302,8 @@ document.addEventListener("DOMContentLoaded", () => {
           <a class="lightning" href="https://awlyaa.education.dz/login" target="_blank">التسجيل في التعليم عن بعد</a>
         </li>
         <li><i class="fas fa-award" style="color: #006400; margin-left:6px;"></i>
-          <a class="lightning" href="https://www.onefd.edu.dz/att_niv_2025/" target="_blank">شهادة إثبات المستوى 2024/2025</a>
+          <a class="lightning" href="https://www.onefd.edu.dz/att_niv_2025/" target="_blank">شهادة إثبات المستوى
+            2024/2025</a>
         </li>
       </ul>
 
@@ -1777,9 +2327,24 @@ document.addEventListener("DOMContentLoaded", () => {
 
     <!-- رقم الهاتف أسفل القسم -->
     <div style="margin-top:10px; padding:8px; background-color:#f9f9f9; border-top:1px solid #ddd;">
-      <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
-      <strong>وزارة التربية:</strong> <a class="lightning" href="tel:1075">1075</a>
+      <!-- سطر الوكالة  -->
+      <div style="margin-bottom:6px;">
+        <i class="fas fa-globe" style="color:#006400; margin-left:6px;"></i>
+        <strong>
+          <a class="lightning" href="https://www.education.gov.dz/" target="_blank">
+            وزارة التربية الوطنية </a>
+        </strong>
+      </div>
+
+      <!-- سطر الهاتف   -->
+      <div>
+        <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
+        <strong>هاتف رقم:</strong>
+        <a class="lightning" href="tel:+213 23 52 72 27" style="direction:ltr; unicode-bidi:bidi-override;">+213 23 52
+          72 27</a>
+      </div>
     </div>
+
   </section>
 
   <!-- قسم الخدمات الجامعية -->
@@ -1803,32 +2368,48 @@ document.addEventListener("DOMContentLoaded", () => {
           التّسجيل</a>
       </li>
       <li><i class="fas fa-home" style="color: #006400;"></i>
-        <a class="lightning" href="https://progres.mesrs.dz/epaiement/epaiementH.xhtml" target="_blank">دفع حقوق الإيواء</a>
+        <a class="lightning" href="https://progres.mesrs.dz/epaiement/epaiementH.xhtml" target="_blank">دفع حقوق
+          الإيواء</a>
       </li>
       <li><i class="fas fa-building" style="color: #006400;"></i>
         <a class="lightning" href="https://progres.mesrs.dz/webonou/" target="_blank">طلبات الإيواء</a>
       </li>
       <li><i class="fab fa-android" style="color: #006400;"></i>
-        <a class="lightning" href="https://play.google.com/store/apps/details?id=app.progres.webetu&hl=ar" target="_blank"> تطبيق
+        <a class="lightning" href="https://play.google.com/store/apps/details?id=app.progres.webetu&hl=ar"
+          target="_blank"> تطبيق
           Progres</a>
       </li>
       <li><i class="fas fa-random" style="color: #006400;"></i>
         <a class="lightning" href="https://progres.mesrs.dz/webetu" target="_blank">التحويلات الجامعية</a>
       </li>
       <li><i class="fas fa-bus-alt" style="color: #006400;"></i>
-        <a class="lightning" href="https://play.google.com/store/apps/details?id=com.mesrs.mybus.mybusapp&hl=ar" target="_blank">تطبيق
+        <a class="lightning" href="https://play.google.com/store/apps/details?id=com.mesrs.mybus.mybusapp&hl=ar"
+          target="_blank">تطبيق
           MYBUS</a>
       </li>
     </ul>
 
     <!-- رقم الهاتف أسفل القسم -->
-    <div style="margin-top:10px; padding-right:5px;">
-      <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
-      <strong>وزارة التعليم العالي:</strong>
-      <a class="lightning" href="tel:+21323939132" style="direction:ltr; unicode-bidi:bidi-override;">
-        +213 23 93 91 32
-      </a>
+    <div style="margin-top:10px; padding:8px; background-color:#f9f9f9; border-top:1px solid #ddd;">
+      <!-- سطر الوكالة  -->
+      <div style="margin-bottom:6px;">
+        <i class="fas fa-globe" style="color:#006400; margin-left:6px;"></i>
+        <strong>
+          <a class="lightning" href="https://www.orientation-esi.dz/index.php" target="_blank">
+            وزارة التعليم العالي و البحث العلمي
+          </a>
+        </strong>
+      </div>
+
+      <!-- سطر الهاتف   -->
+      <div>
+        <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
+        <strong>هاتف رقم:</strong>
+        <a class="lightning" href="tel:+21323939132" style="direction:ltr; unicode-bidi:bidi-override;"> +213 23 93 91
+          32 </a>
+      </div>
     </div>
+
   </section>
 
   <!-- قسم التكوين والتعليم المهنيين -->
@@ -1873,12 +2454,24 @@ document.addEventListener("DOMContentLoaded", () => {
 
     <!-- رقم الهاتف أسفل القسم -->
     <div style="margin-top:10px; padding:8px; background-color:#f9f9f9; border-top:1px solid #ddd;">
-      <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
-      <strong>وزارة التكوين والتعليم المهنيين:</strong>
-      <a class="lightning" href="tel:+21323255266" style="direction:ltr; unicode-bidi:bidi-override;">
-        +213 23 25 52 66
-      </a>
+      <!-- سطر الوكالة  -->
+      <div style="margin-bottom:6px;">
+        <i class="fas fa-globe" style="color:#006400; margin-left:6px;"></i>
+        <strong>
+          <a class="lightning" href="https://mfp.gov.dz/" target="_blank">
+            وزارة التكوين والتعليم المهنيين </a>
+        </strong>
+      </div>
+
+      <!-- سطر الهاتف   -->
+      <div>
+        <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
+        <strong>هاتف رقم:</strong>
+        <a class="lightning" href="tel:+21323255266" style="direction:ltr; unicode-bidi:bidi-override;">+213 23 25 52
+          66</a>
+      </div>
     </div>
+
   </section>
 
   <!-- قسم خدمات الإدارة المحلية -->
@@ -1900,7 +2493,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
       <li>
         <i class="fas fa-ring" style="color: green; margin-left:6px;"></i>
-        <a class="lightning" href="https://etatcivil.interieur.gov.dz/ActeMariage/" target="_blank">استخراج عقد الزواج</a>
+        <a class="lightning" href="https://etatcivil.interieur.gov.dz/ActeMariage/" target="_blank">استخراج عقد
+          الزواج</a>
       </li>
 
       <li>
@@ -1912,18 +2506,21 @@ document.addEventListener("DOMContentLoaded", () => {
 
       <li>
         <i class="fas fa-file-alt" style="color: green; margin-left:6px;"></i>
-        <a class="lightning" href="https://etatcivil.interieur.gov.dz/ActeDeces/" target="_blank">استخراج شهادة الوفاة</a>
+        <a class="lightning" href="https://etatcivil.interieur.gov.dz/ActeDeces/" target="_blank">استخراج شهادة
+          الوفاة</a>
       </li>
 
       <li>
         <i class="fas fa-id-card-alt" style="color: green; margin-left:6px;"></i>
-        <a class="lightning" href="https://passeport.interieur.gov.dz/Ar/DemandeCNIBE/Demander%20la%20carte%20d'identit%C3%A9%20en%20ligne"
+        <a class="lightning"
+          href="https://passeport.interieur.gov.dz/Ar/DemandeCNIBE/Demander%20la%20carte%20d'identit%C3%A9%20en%20ligne"
           target="_blank">طلب بطاقة التعريف البيومترية</a>
       </li>
 
       <li>
         <i class="fas fa-passport" style="color: green; margin-left:6px;"></i>
-        <a class="lightning" href="https://passeport.interieur.gov.dz/Ar/Inscription/BaBou" target="_blank">طلب جواز السفر
+        <a class="lightning" href="https://passeport.interieur.gov.dz/Ar/Inscription/BaBou" target="_blank">طلب جواز
+          السفر
           البيومتري</a>
       </li>
 
@@ -1934,18 +2531,32 @@ document.addEventListener("DOMContentLoaded", () => {
 
       <li>
         <i class="fas fa-envelope-open-text" style="color: green; margin-left:6px;"></i>
-        <a class="lightning" href="https://www.interieur.gov.dz/index.php/ar/component/annuaire/?view=contacter_nous_ar" target="_blank">
+        <a class="lightning" href="https://www.interieur.gov.dz/index.php/ar/component/annuaire/?view=contacter_nous_ar"
+          target="_blank">
           العرائض والشكاوى – الجماعات المحلية
         </a>
       </li>
     </ul>
 
     <!-- رقم الهاتف أسفل القسم -->
-    <div style="margin-top:10px; padding-right:5px;">
-      <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
-      <strong>وزارة الداخلية:</strong>
-      <a class="lightning" href="tel:1100">1100</a>
+    <div style="margin-top:10px; padding:8px; background-color:#f9f9f9; border-top:1px solid #ddd;">
+      <!-- سطر الوكالة  -->
+      <div style="margin-bottom:6px;">
+        <i class="fas fa-globe" style="color:#006400; margin-left:6px;"></i>
+        <strong>
+          <a class="lightning" href="https://www.interieur.gov.dz/index.php/ar/" target="_blank">
+            وزارة الداخلية والجماعات المحلية والتهيئة العمرانية </a>
+        </strong>
+      </div>
+
+      <!-- سطر الهاتف   -->
+      <div>
+        <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
+        <strong>هاتف رقم:</strong>
+        <a class="lightning" href="tel:1100" style="direction:ltr; unicode-bidi:bidi-override;">1100</a>
+      </div>
     </div>
+
   </section>
 
   <!-- قسم الخدمات الجبائية الإليكترونية -->
@@ -1977,7 +2588,8 @@ document.addEventListener("DOMContentLoaded", () => {
           <a class="lightning" href="https://tabioucom.mf.gov.dz/acheter" target="_blank">إقتناء حقوق الطابع الجبائي</a>
         </li>
         <li><i class="fas fa-redo" style="color: #006400; margin-left: 6px;"></i>
-          <a class="lightning" href="https://tabioucom.mf.gov.dz/edit" target="_blank">إعادة إقتناء حقوق الطابع الجبائي</a>
+          <a class="lightning" href="https://tabioucom.mf.gov.dz/edit" target="_blank">إعادة إقتناء حقوق الطابع
+            الجبائي</a>
         </li>
       </ul>
 
@@ -2002,10 +2614,23 @@ document.addEventListener("DOMContentLoaded", () => {
 
     <!-- رقم الهاتف أسفل القسم -->
     <div style="margin-top:10px; padding:8px; background-color:#f9f9f9; border-top:1px solid #ddd;">
-      <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
-      <strong>وزارة المالية:</strong>
-      <a class="lightning" href="tel:3040" dir="ltr">3040</a>
+      <!-- سطر الوكالة  -->
+      <div style="margin-bottom:6px;">
+        <i class="fas fa-globe" style="color:#006400; margin-left:6px;"></i>
+        <strong>
+          <a class="lightning" href="https://www.mf.gov.dz/index.php/ar/" target="_blank">
+            وزارة المالية </a>
+        </strong>
+      </div>
+
+      <!-- سطر الهاتف   -->
+      <div>
+        <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
+        <strong>هاتف رقم:</strong>
+        <a class="lightning" href="tel:+21321595252" style="direction:ltr; unicode-bidi:bidi-override;">+21321595252</a>
+      </div>
     </div>
+
   </section>
 
   <!-- قسم العقار -->
@@ -2034,7 +2659,8 @@ document.addEventListener("DOMContentLoaded", () => {
           </a>
         </li>
         <li><i class="fas fa-file-alt" style="color: #006400;"></i>
-          <a class="lightning" href="https://fadaeldjazair.mf.gov.dz/mission-documentaire/index_public_35.html" target="_blank">
+          <a class="lightning" href="https://fadaeldjazair.mf.gov.dz/mission-documentaire/index_public_35.html"
+            target="_blank">
             معطايات مسحية
           </a>
         </li>
@@ -2044,7 +2670,8 @@ document.addEventListener("DOMContentLoaded", () => {
           </a>
         </li>
         <li><i class="fas fa-file-invoice-dollar" style="color: #006400;"></i>
-          <a class="lightning" href="https://fadaeldjazair.mf.gov.dz/delivrance_automatique/recherche.php" target="_blank">
+          <a class="lightning" href="https://fadaeldjazair.mf.gov.dz/delivrance_automatique/recherche.php"
+            target="_blank">
             طلب مستخرج من حالة القسم CC12
           </a>
         </li>
@@ -2081,7 +2708,8 @@ document.addEventListener("DOMContentLoaded", () => {
           <a class="lightning" href="https://fadaeldjazair.mf.gov.dz/login2" target="_blank">فضاء المحافظ العقاري</a>
         </li>
         <li><i class="fas fa-user-tie" style="color: #006400;"></i>
-          <a class="lightning" href="https://fadaeldjazair.mf.gov.dz/login1" target="_blank">فضاء خاص بالمفتشين العقاريين</a>
+          <a class="lightning" href="https://fadaeldjazair.mf.gov.dz/login1" target="_blank">فضاء خاص بالمفتشين
+            العقاريين</a>
         </li>
         <li><i class="fas fa-user-edit" style="color: #006400;"></i>
           <a class="lightning" href="https://fadaeldjazair.mf.gov.dz/login" target="_blank">فضاء خاص بالموثقين</a>
@@ -2092,12 +2720,24 @@ document.addEventListener("DOMContentLoaded", () => {
 
     <!-- رقم الهاتف أسفل القسم -->
     <div style="margin-top:10px; padding:8px; background-color:#f9f9f9; border-top:1px solid #ddd;">
-      <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
-      <strong>المديرية العامة للأملاك الوطنية:</strong>
-      <a class="lightning" href="tel:+213 21 59 51 51" style="direction:ltr; unicode-bidi:bidi-override;">
-        +213 21 59 51 51
-      </a>
+      <!-- سطر الوكالة  -->
+      <div style="margin-bottom:6px;">
+        <i class="fas fa-globe" style="color:#006400; margin-left:6px;"></i>
+        <strong>
+          <a class="lightning" href="https://www.mf.gov.dz/index.php/ar/" target="_blank">
+            المديرية العامة للأملاك الوطنية </a>
+        </strong>
+      </div>
+
+      <!-- سطر الهاتف   -->
+      <div>
+        <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
+        <strong>هاتف رقم:</strong>
+        <a class="lightning" href="tel:+213 21 59 51 51" style="direction:ltr; unicode-bidi:bidi-override;">+213 21 59
+          51 51</a>
+      </div>
     </div>
+
   </section>
 
   <!-- قسم خدمات وزارة الشؤون الخارجية -->
@@ -2133,7 +2773,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
       <li>
         <i class="fas fa-flag" style="color: green; margin-left:6px;"></i>
-        <a class="lightning" href="https://emblibreville.mfa.gov.dz/ar/foreign-diplomatic-and-consular-representations-in-algeria"
+        <a class="lightning"
+          href="https://emblibreville.mfa.gov.dz/ar/foreign-diplomatic-and-consular-representations-in-algeria"
           target="_blank">
           الممثليات الدبلوماسية و القنصلية الأجنبية بالجزائر
         </a>
@@ -2141,20 +2782,30 @@ document.addEventListener("DOMContentLoaded", () => {
 
       <li>
         <i class="fas fa-globe" style="color: green; margin-left:6px;"></i>
-        <a class="lightning" href="https://www.mfa.gov.dz/ar/international-and-regional-organizations-in-algeria" target="_blank">
+        <a class="lightning" href="https://www.mfa.gov.dz/ar/international-and-regional-organizations-in-algeria"
+          target="_blank">
           المنظمات الدولية والإقليمية في الجزائر
         </a>
-
     </ul>
 
     <!-- رقم الهاتف أسفل القسم -->
-    <div style="margin-top:10px; padding-right:5px;">
-      <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
-      <strong>وزارة الشؤون الخارجية:</strong>
-      <a class="lightning" href="tel:+21321504545" style="direction:ltr; unicode-bidi:bidi-override;">
-        +213 21 50 45 45
-      </a>
+    <div style="margin-top:10px; padding:8px; background-color:#f9f9f9; border-top:1px solid #ddd;">
+      <!-- سطر الوكالة  -->
+      <div style="margin-bottom:6px;">
+        <i class="fas fa-globe" style="color:#006400; margin-left:6px;"></i>
+        <strong>
+          <a class="lightning" href="https://www.mfa.gov.dz/ar" target="_blank">
+            وزارة الشؤون الخارجية </a>
+        </strong>
+      </div>
 
+      <!-- سطر الهاتف   -->
+      <div>
+        <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
+        <strong>هاتف رقم:</strong>
+        <a class="lightning" href="tel:+21321504545" style="direction:ltr; unicode-bidi:bidi-override;">+213 21 50 45 45
+        </a>
+      </div>
     </div>
   </section>
 
@@ -2163,7 +2814,7 @@ document.addEventListener("DOMContentLoaded", () => {
     <h2 id="social-security" onclick="toggleSection('social-security-section', this)"
       style="cursor: pointer; background-color: #a52a2a; color: white; padding: 10px; border-radius: 8px;">
       <span><img src="icons/travail.png" alt="travailLogo" class="logo">
-        وزارة العمل و التشغيل و الضمان الاجتماعي <span class="count"></span>
+        خدمات الضمان الاجتماعي <span class="count"></span>
       </span>
       <span class="toggle-icon" style="float: left;">▶</span>
     </h2>
@@ -2188,7 +2839,8 @@ document.addEventListener("DOMContentLoaded", () => {
             CNAS</a>
         </li>
         <li><i class="fas fa-mobile-screen-button" style="color: #006400; margin-left: 6px;"></i>
-          <a class="lightning" href="https://play.google.com/store/apps/details?id=dz.cnas.mobile_elhanaa&hl=ar" target="_blank">
+          <a class="lightning" href="https://play.google.com/store/apps/details?id=dz.cnas.mobile_elhanaa&hl=ar"
+            target="_blank">
             تطبيق فضاء الهناء - CNAS</a>
         </li>
       </ul>
@@ -2203,10 +2855,12 @@ document.addEventListener("DOMContentLoaded", () => {
       </h3>
       <ul id="casnos-list" style="display: none; list-style: none; padding: 0 20px; line-height: 2;">
         <li><i class="fas fa-user-slash" style="color: #006400; margin-left: 6px;"></i>
-          <a class="lightning" href="https://damancom.casnos.dz/non-affiliation" target="_blank">شهادة عدم الإنتساب - CASNOS</a>
+          <a class="lightning" href="https://damancom.casnos.dz/non-affiliation" target="_blank">شهادة عدم الإنتساب -
+            CASNOS</a>
         </li>
         <li><i class="fas fa-id-card" style="color: #006400; margin-left: 6px;"></i>
-          <a class="lightning" href="https://damancom.casnos.dz/auth/login/assure" target="_blank">شهادة الإنتساب - CASNOS</a>
+          <a class="lightning" href="https://damancom.casnos.dz/auth/login/assure" target="_blank">شهادة الإنتساب -
+            CASNOS</a>
         </li>
         <li><i class="fas fa-file-signature" style="color: #006400; margin-left: 6px;"></i>
           <a class="lightning" href="https://damancom.casnos.dz/affiliation" target="_blank">طلب الإنتساب - CASNOS</a>
@@ -2223,7 +2877,8 @@ document.addEventListener("DOMContentLoaded", () => {
       </h3>
       <ul id="cnr-list" style="display: none; list-style: none; padding: 0 20px; line-height: 2;">
         <li><i class="fas fa-mobile-screen-button" style="color: #006400; margin-left: 6px;"></i>
-          <a class="lightning" href="https://play.google.com/store/apps/details?id=dz.cnr.cnr" target="_blank">تطبيق المتقاعد -
+          <a class="lightning" href="https://play.google.com/store/apps/details?id=dz.cnr.cnr" target="_blank">تطبيق
+            المتقاعد -
             CNR</a>
         </li>
       </ul>
@@ -2231,10 +2886,25 @@ document.addEventListener("DOMContentLoaded", () => {
 
     <!-- رقم الهاتف أسفل القسم -->
     <div style="margin-top:10px; padding:8px; background-color:#f9f9f9; border-top:1px solid #ddd;">
-      <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
-      <strong>وزارة العمل والتشغيل والضمان الاجتماعي:</strong>
-      <a class="lightning" href="tel:3010">3010</a>
+      <!-- سطر الوكالة  -->
+      <div style="margin-bottom:6px;">
+        <i class="fas fa-globe" style="color:#006400; margin-left:6px;"></i>
+        <strong>
+          <a class="lightning" href="https://www.mtess.gov.dz/ar/" target="_blank">
+            وزارة العمل و التشغيل و الضمان الاجتماعي
+
+          </a>
+        </strong>
+      </div>
+
+      <!-- سطر الهاتف   -->
+      <div>
+        <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
+        <strong>هاتف رقم:</strong>
+        <a class="lightning" href="tel:3010" style="direction:ltr; unicode-bidi:bidi-override;">3010</a>
+      </div>
     </div>
+
   </section>
 
   <!-- قسم القضاء -->
@@ -2253,10 +2923,12 @@ document.addEventListener("DOMContentLoaded", () => {
         <a class="lightning" href="https://e-casier.mjustice.dz/" target="_blank">استخراج صحيفة السوابق القضائية</a>
       </li>
       <li><i class="fas fa-passport" style="color: #006400;"></i>
-        <a class="lightning" href="https://portail.mjustice.dz/remote/login?lang=fr" target="_blank">استخراج الجنسية الجزائرية</a>
+        <a class="lightning" href="https://portail.mjustice.dz/remote/login?lang=fr" target="_blank">استخراج الجنسية
+          الجزائرية</a>
       </li>
       <li><i class="fas fa-archive" style="color: #006400;"></i>
-        <a class="lightning" href="https://www.mjustice.dz/ar/archive/" target="_blank">طلب مستخرج الوجود بالسجن إبان الثورة</a>
+        <a class="lightning" href="https://www.mjustice.dz/ar/archive/" target="_blank">طلب مستخرج الوجود بالسجن إبان
+          الثورة</a>
       </li>
       <li><i class="fas fa-file-contract" style="color: #006400;"></i>
         <a class="lightning" href="https://www.mjustice.dz/ar/tr-ch/" target="_blank">طلب نسخة من عقود المحاكم</a>
@@ -2265,20 +2937,35 @@ document.addEventListener("DOMContentLoaded", () => {
         <a class="lightning" href="https://ziyarati.mjustice.dz/" target="_blank">رخص الاتصال بالمحبوسين</a>
       </li>
       <li><i class="fas fa-gavel" style="color: #006400;"></i>
-        <a class="lightning" href="https://e-nyaba.mjustice.dz/nouvelle_plainte.php" target="_blank">النيابة الإلكترونية - تسجيل
+        <a class="lightning" href="https://e-nyaba.mjustice.dz/nouvelle_plainte.php" target="_blank">النيابة الإلكترونية
+          - تسجيل
           شكوى</a>
       </li>
       <li><i class="fas fa-search" style="color: #006400;"></i>
-        <a class="lightning" href="https://e-nyaba.mjustice.dz/login.php" target="_blank">النيابة الإلكترونية - متابعة شكوى</a>
+        <a class="lightning" href="https://e-nyaba.mjustice.dz/login.php" target="_blank">النيابة الإلكترونية - متابعة
+          شكوى</a>
       </li>
     </ul>
 
     <!-- رقم الهاتف أسفل القسم -->
-    <div style="margin-top:10px; padding-right:5px;">
-      <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
-      <strong>وزارة العدل الجزائرية:</strong>
-      <a class="lightning" href="tel:1078">1078</a>
+    <div style="margin-top:10px; padding:8px; background-color:#f9f9f9; border-top:1px solid #ddd;">
+      <!-- سطر الوكالة  -->
+      <div style="margin-bottom:6px;">
+        <i class="fas fa-globe" style="color:#006400; margin-left:6px;"></i>
+        <strong>
+          <a class="lightning" href="https://www.mjustice.dz/ar/" target="_blank">
+            وزارة العدل </a>
+        </strong>
+      </div>
+
+      <!-- سطر الهاتف   -->
+      <div>
+        <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
+        <strong>هاتف رقم:</strong>
+        <a class="lightning" href="tel:1078" style="direction:ltr; unicode-bidi:bidi-override;">1078</a>
+      </div>
     </div>
+
   </section>
 
   <!-- قسم خدمات وزارة المحروقات والمناجم -->
@@ -2295,7 +2982,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
       <li>
         <i class="fas fa-check-circle" style="color: green; margin-left:6px;"></i>
-        <a class="lightning" href="https://www.markabatidz.energy.gov.dz/" target="_blank">"مركبتي" لفحص مطابقة المركبات حجز موعد
+        <a class="lightning" href="https://www.markabatidz.energy.gov.dz/" target="_blank">"مركبتي" لفحص مطابقة المركبات
+          حجز موعد
         </a>
       </li>
 
@@ -2310,18 +2998,25 @@ document.addEventListener("DOMContentLoaded", () => {
         <a class="lightning" href="doleances.mem@energy.gov.dz" target="_blank">
           خلية الإستماع </a>
       </li>
-
-
     </ul>
 
     <!-- رقم الهاتف أسفل القسم -->
-    <div style="margin-top:10px; padding-right:5px;">
-      <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
-      <strong>وزارة المحروقات والمناجم:</strong>
-      <a class="lightning" href="tel:+213 21 48 85 71" style="direction:ltr; unicode-bidi:bidi-override;">
-        +213 21 48 85 71
-      </a>
+    <div style="margin-top:10px; padding:8px; background-color:#f9f9f9; border-top:1px solid #ddd;">
+      <!-- سطر الوكالة  -->
+      <div style="margin-bottom:6px;">
+        <i class="fas fa-globe" style="color:#006400; margin-left:6px;"></i>
+        <strong>
+          <a class="lightning" href="https://www.energy.gov.dz/" target="_blank">
+            وزارة المحروقات والمناجم </a>
+        </strong>
+      </div>
 
+      <!-- سطر الهاتف   -->
+      <div>
+        <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
+        <strong>هاتف رقم:</strong>
+        <a class="lightning" href="tel:+21321488571" style="direction:ltr; unicode-bidi:bidi-override;">+21321488571</a>
+      </div>
     </div>
   </section>
 
@@ -2357,7 +3052,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
       <li>
         <img src="icons/mahatati.webp" alt="mahatatigo" class="logo">
-        <a class="lightning" href="https://play.google.com/store/apps/details?id=com.sogral.mobile&amp;hl=ar" target="_blank">
+        <a class="lightning" href="https://play.google.com/store/apps/details?id=com.sogral.mobile&amp;hl=ar"
+          target="_blank">
           تطبيق "محطتي" للخطوط البرية سوقرال SOGRAL
         </a>
       </li>
@@ -2378,18 +3074,38 @@ document.addEventListener("DOMContentLoaded", () => {
 
       <li>
         <img src="icons/Etusa Mob.webp" alt="Etusa Mob Logo" class="logo">
-        <a class="lightning" href="https://play.google.com/store/apps/details?id=dz.etusa.etusa_mob&amp;hl=ar" target="_blank">
+        <a class="lightning" href="https://play.google.com/store/apps/details?id=dz.etusa.etusa_mob&amp;hl=ar"
+          target="_blank">
           تطبيق "Etusa Mob" لمؤسسة النقل الحضري وشبه الحضري
         </a>
+      </li>
+
+      <li><i class="fas fa-file-signature" style="color: #006400; margin-left: 6px;"></i>
+        <a class="lightning" href="https://www.mt.gov.dz/?page_id=5323&lang=ar" target="_blank">التبليغ لدى وزارة
+          النقل</a>
       </li>
     </ul>
 
     <!-- رقم الهاتف أسفل القسم -->
-    <div style="margin-top:10px; padding-right:5px;">
-      <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
-      <strong>وزارة النقل:</strong>
-      <a class="lightning" href="tel:1067">1067</a>
+    <div style="margin-top:10px; padding:8px; background-color:#f9f9f9; border-top:1px solid #ddd;">
+      <!-- سطر الوكالة  -->
+      <div style="margin-bottom:6px;">
+        <i class="fas fa-globe" style="color:#006400; margin-left:6px;"></i>
+        <strong>
+          <a class="lightning" href="https://www.mt.gov.dz/?page_id=5284&lang=ar" target="_blank">
+            وزارة النقل </a>
+        </strong>
+      </div>
+
+      <!-- سطر الهاتف   -->
+      <div>
+        <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
+        <strong>هاتف رقم:</strong>
+        <a class="lightning" href="tel:+21323059385" style="direction:ltr; unicode-bidi:bidi-override;">+21323059385</a>
+      </div>
     </div>
+
+
   </section>
 
   <!-- قسم الوكالة الوطنية للتشغيل -->
@@ -2407,7 +3123,8 @@ document.addEventListener("DOMContentLoaded", () => {
         <a class="lightning" href="https://minha.anem.dz/pre_inscription" target="_blank">التسجيل في منحة البطالة</a>
       </li>
       <li><i class="fas fa-user-clock" style="color: #006400;"></i>
-        <a class="lightning" href="https://wassitonline.anem.dz/postulation/prolongationDemande" target="_blank">تمديد طلب
+        <a class="lightning" href="https://wassitonline.anem.dz/postulation/prolongationDemande" target="_blank">تمديد
+          طلب
           العمل</a>
       </li>
       <li><i class="fas fa-search" style="color: #006400;"></i>
@@ -2420,20 +3137,35 @@ document.addEventListener("DOMContentLoaded", () => {
         <a class="lightning" href="https://www.anem.dz/app_mobile/Name.apk" target="_blank">تطبيق ANEM-Dz</a>
       </li>
       <li><i class="fas fa-map-marked" style="color: #006400;"></i>
-        <a class="lightning" href="https://www.anem.dz/app_mobile/Mon_agence.apk" target="_blank"> تطبيق Mon Agence للبحث عن
+        <a class="lightning" href="https://www.anem.dz/app_mobile/Mon_agence.apk" target="_blank"> تطبيق Mon Agence
+          للبحث عن
           وكالة</a>
       </li>
       <li><i class="fas fa-clipboard-list" style="color: #006400;"></i>
-        <a class="lightning" href="https://www.anem.dz/app_mobile/Mon_offre.apk" target="_blank"> تطبيق Mon Offre لعروض العمل</a>
+        <a class="lightning" href="https://www.anem.dz/app_mobile/Mon_offre.apk" target="_blank"> تطبيق Mon Offre لعروض
+          العمل</a>
       </li>
     </ul>
 
     <!-- رقم الهاتف أسفل القسم -->
-    <div style="margin-top:10px; padding-right:5px;">
-      <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
-      <strong>الوكالة الوطنية للتشغيل:</strong>
-      <a class="lightning" href="tel:3005">3005</a>
+    <div style="margin-top:10px; padding:8px; background-color:#f9f9f9; border-top:1px solid #ddd;">
+      <!-- سطر الوكالة  -->
+      <div style="margin-bottom:6px;">
+        <i class="fas fa-globe" style="color:#006400; margin-left:6px;"></i>
+        <strong>
+          <a class="lightning" href="https://www.anem.dz/" target="_blank">
+            الوكالة الوطنية للتشغيل </a>
+        </strong>
+      </div>
+
+      <!-- سطر الهاتف   -->
+      <div>
+        <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
+        <strong>هاتف رقم:</strong>
+        <a class="lightning" href="tel:3005">3005</a>
+      </div>
     </div>
+
   </section>
 
   <!-- قسم الخدمات الصحية -->
@@ -2454,17 +3186,20 @@ document.addEventListener("DOMContentLoaded", () => {
         <a class="lightning" href="https://etabib.dz/" target="_blank">العيادة الرقمية</a>
       </li>
       <li><i class="fas fa-mobile-alt" style="color: green;"></i>
-        <a class="lightning" href="https://play.google.com/store/apps/details?id=dz.sebrou.docts_guide.app&amp;hl=ar" target="_blank">
+        <a class="lightning" href="https://play.google.com/store/apps/details?id=dz.sebrou.docts_guide.app&amp;hl=ar"
+          target="_blank">
           تطبيق "أطباء الجزائر"
         </a>
       </li>
       <li><i class="fas fa-mobile-alt" style="color: green;"></i>
-        <a class="lightning" href="https://play.google.com/store/apps/details?id=com.algerian.doctor&amp;hl=ar" target="_blank">
+        <a class="lightning" href="https://play.google.com/store/apps/details?id=com.algerian.doctor&amp;hl=ar"
+          target="_blank">
           تطبيق "الطبيب الجزائري"
         </a>
       </li>
       <li><i class="fas fa-mobile-alt" style="color: green;"></i>
-        <a class="lightning" href="https://play.google.com/store/apps/details?id=com.dz.bank.blood.nabilsoft.bankblooddz&amp;hl=ar"
+        <a class="lightning"
+          href="https://play.google.com/store/apps/details?id=com.dz.bank.blood.nabilsoft.bankblooddz&amp;hl=ar"
           target="_blank">
           تطبيق "بنك الدم الجزائري"
         </a>
@@ -2472,11 +3207,24 @@ document.addEventListener("DOMContentLoaded", () => {
     </ul>
 
     <!-- رقم الهاتف أسفل القسم -->
-    <div style="margin-top:10px; padding-right:5px;">
-      <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
-      <strong>وزارة الصحة:</strong>
-      <a class="lightning" href="tel:3030">3030</a>
+    <div style="margin-top:10px; padding:8px; background-color:#f9f9f9; border-top:1px solid #ddd;">
+      <!-- سطر الوكالة  -->
+      <div style="margin-bottom:6px;">
+        <i class="fas fa-globe" style="color:#006400; margin-left:6px;"></i>
+        <strong>
+          <a class="lightning" href="https://sante.gov.dz/ar/" target="_blank">
+            وزارة الصحة </a>
+        </strong>
+      </div>
+
+      <!-- سطر الهاتف   -->
+      <div>
+        <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
+        <strong>هاتف رقم:</strong>
+        <a class="lightning" href="tel:+21323059385" style="direction:ltr; unicode-bidi:bidi-override;">+21323059385</a>
+      </div>
     </div>
+
   </section>
 
   <!-- قسم وزارة التجارة -->
@@ -2491,28 +3239,43 @@ document.addEventListener("DOMContentLoaded", () => {
     <ul id="commerce-section" style="display: none; list-style: none; padding: 0; line-height: 2;">
       <li>
         <i class="fas fa-chart-line" style="color: #006400;"></i>
-        <a class="lightning" href="https://fspe.commerce.gov.dz/" target="_blank">المنصة الرقمية لتسيير الصندوق الخاص لترقية
+        <a class="lightning" href="https://fspe.commerce.gov.dz/" target="_blank">المنصة الرقمية لتسيير الصندوق الخاص
+          لترقية
           الصادرات</a>
       </li>
       <li>
         <i class="fas fa-money-check-alt" style="color: #006400;"></i>
-        <a class="lightning" href="https://mfdgi.gov.dz/portailpublic_ar/" target="_blank">فضاء التصريح والدفع الإلكترونيين -
+        <a class="lightning" href="https://mfdgi.gov.dz/portailpublic_ar/" target="_blank">فضاء التصريح والدفع
+          الإلكترونيين -
           جباية
           تيك</a>
       </li>
       <li>
         <i class="fas fa-headset" style="color: #006400;"></i>
-        <a class="lightning" href="https://www.commerce.gov.dz/ar/ecrire-a-la-cellule-d-ecoute/" target="_blank">خلية الإصغاء
-          لوزارة
-          التجارة</a>
+        <a class="lightning" href="https://www.commerce.gov.dz/ar/ecrire-a-la-cellule-d-ecoute/" target="_blank">
+          خلية الإصغاء لوزارة التجارة </a>
       </li>
     </ul>
 
-    <!-- رقم الهاتف أسفل القسم -->
-    <div style="margin-top:10px; padding-right:5px;">
-      <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
-      <strong>وزارة التجارة:</strong> <a class="lightning" href="tel:1020">1020</a>
+    <!-- بيانات الوزارة -->
+    <div style="margin-top:10px; padding:8px; background-color:#f9f9f9; border-top:1px solid #ddd;">
+      <!-- سطر الوكالة  -->
+      <div style="margin-bottom:6px;">
+        <i class="fas fa-globe" style="color:#006400; margin-left:6px;"></i>
+        <strong>
+          <a class="lightning" href="https://www.commerce.gov.dz/ar" target="_blank">
+            وزارة التجارة الداخلية وضبط السوق الوطنية </a>
+        </strong>
+      </div>
+
+      <!-- سطر الهاتف   -->
+      <div>
+        <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
+        <strong>هاتف رقم:</strong>
+        <a class="lightning" href="tel:1020">1020</a>
+      </div>
     </div>
+
   </section>
 
   <!-- قسم الجمارك الجزائرية -->
@@ -2536,16 +3299,30 @@ document.addEventListener("DOMContentLoaded", () => {
       </li>
       <li>
         <i class="fas fa-info-circle" style="color: #006400;"></i>
-        <a class="lightning" href="https://www.douane.gov.dz/?lang=ar" target="_blank">الموقع الرسمي للجمارك الجزائرية</a>
+        <a class="lightning" href="https://www.douane.gov.dz/?lang=ar" target="_blank">الموقع الرسمي للجمارك
+          الجزائرية</a>
       </li>
     </ul>
 
     <!-- رقم الهاتف أسفل القسم -->
-    <div style="margin-top:10px; padding-right:5px;">
-      <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
-      <strong>الجمارك الجزائرية:</strong>
-      <a class="lightning" href="tel:1023">1023</a>
+    <div style="margin-top:10px; padding:8px; background-color:#f9f9f9; border-top:1px solid #ddd;">
+      <!-- سطر الوكالة مع أيقونة الموقع -->
+      <div style="margin-bottom:6px;">
+        <i class="fas fa-globe" style="color:#006400; margin-left:6px;"></i>
+        <strong>
+          <a class="lightning" href="https://www.douane.gov.dz/?lang=ar" target="_blank">
+            الجمارك الجزائرية </a>
+        </strong>
+      </div>
+
+      <!-- سطر الهاتف مع أيقونة الهاتف -->
+      <div>
+        <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
+        <strong>هاتف رقم:</strong>
+        <a class="lightning" href="tel:1023">1023</a>
+      </div>
     </div>
+
   </section>
 
   <!-- قسم الوكالة الوطنية للمقاول الذاتي -->
@@ -2564,12 +3341,88 @@ document.addEventListener("DOMContentLoaded", () => {
       </li>
     </ul>
 
-    <!-- رقم الهاتف أسفل القسم -->
-    <div style="margin-top:10px; padding-right:5px;">
-      <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
-      <strong>الوكالة الوطنية للمقاول الذاتي:</strong>
-      <a class="lightning" href="tel:1071">1071</a>
+    <!-- بيانات الوكالة الوطنية للمقاول الذاتي -->
+    <div style="margin-top:10px; padding:8px; background-color:#f9f9f9; border-top:1px solid #ddd;">
+      <!-- سطر الوكالة مع أيقونة الموقع -->
+      <div style="margin-bottom:6px;">
+        <i class="fas fa-globe" style="color:#006400; margin-left:6px;"></i>
+        <strong>
+          <a class="lightning" href="https://anae.dz/" target="_blank">
+            الوكالة الوطنية للمقاول الذاتي
+          </a>
+        </strong>
+      </div>
+
+      <!-- سطر الهاتف مع أيقونة الهاتف -->
+      <div>
+        <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
+        <strong>هاتف رقم:</strong>
+        <a class="lightning" href="tel:1071">1071</a>
+      </div>
     </div>
+
+  </section>
+
+  <!-- قسم الوكالة الوطنية لترقية الإستثمار -->
+  <section dir="rtl" style="text-align: right;">
+    <h2 id="toggle-10" onclick="toggleSection('auto-entrepreneur', this)"
+      style="cursor: pointer; background-color: #a52a2a; color: white;">
+      <span><img src="icons/aapi.png" alt="econom Logo" class="logo"> الوكالة الوطنية لترقية الإستثمار <span
+          class="count"></span></span>
+      <span class="toggle-icon" style="float: left;">▶</span>
+    </h2>
+
+    <ul id="auto-entrepreneur" style="display: none; list-style: none; padding: 0; line-height: 2;">
+      <li>
+        <i class="fas fa-user-plus" style="color: #006400;"></i>
+        <a class="lightning" href="https://services.aapi.dz/login?Lang=AR" target="_blank">
+          التسجيل في الوكالة الجزائرية لترقية الاستثمار
+        </a>
+      </li>
+      <li>
+        <i class="fas fa-briefcase" style="color: #006400;"></i>
+        <a class="lightning"
+          href="https://invest.gov.dz/check/realms/INVEST-REALM/login-actions/registration?execution=9bd07bb8-0d4d-4a3c-b130-2833b94e4fba&client_id=invest-backend&tab_id=D7utuX1rUls"
+          target="_blank">
+          التسجيل في بوابة المستثمر
+        </a>
+      </li>
+      <li>
+        <i class="fas fa-lightbulb" style="color: #006400;"></i>
+        <a class="lightning" href="https://services.aapi.dz/index?service=porteur" target="_blank">حامل مشروع</a>
+      </li>
+      <li>
+        <i class="fas fa-exclamation-triangle" style="color: #006400;"></i>
+        <a class="lightning" href="https://services.aapi.dz/index?service=infraction" target="_blank">تبليغ عن
+          مخالفة</a>
+      </li>
+      <li>
+        <i class="fas fa-comments" style="color: #006400;"></i>
+        <a class="lightning" href="https://services.aapi.dz/index?service=requete" target="_blank">طرح إنشغال</a>
+      </li>
+    </ul>
+
+    <!-- بيانات الوكالة -->
+    <div style="margin-top:10px; padding:8px; background-color:#f9f9f9; border-top:1px solid #ddd;">
+      <div style="margin-bottom:6px;">
+        <i class="fas fa-globe" style="color:#006400; margin-left:6px;"></i>
+        <strong>
+          <a class="lightning" href="https://www.aapi.dz" target="_blank">
+            الوكالة الوطنية لترقية الإستثمار
+          </a>
+        </strong>
+      </div>
+
+      <!-- سطر الهاتف مع أيقونة الهاتف -->
+      <div>
+        <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
+        <strong>هاتف رقم:</strong>
+        <a class="lightning" href="tel:+21323833030" style="direction:ltr; unicode-bidi:bidi-override;">
+          +213 23 83 30 30
+        </a>
+      </div>
+    </div>
+
   </section>
 
   <!-- قسم فضاءات ووكالات -->
@@ -2632,7 +3485,8 @@ document.addEventListener("DOMContentLoaded", () => {
       <!-- تطبيق سيال -->
       <li>
         <img src="icons/google-play-logo.png" alt="google-play-logo Logo" class="logo">
-        <a class="lightning" href="https://play.google.com/store/apps/details?id=dz.seaalappli.wakalati&hl=AR" target="_blank">
+        <a class="lightning" href="https://play.google.com/store/apps/details?id=dz.seaalappli.wakalati&hl=AR"
+          target="_blank">
           تطبيق
           WAKALATI لسيال</a>
       </li>
@@ -2640,7 +3494,8 @@ document.addEventListener("DOMContentLoaded", () => {
       <!-- نفطال -->
       <li>
         <img src="icons/naftal.webp" alt="naftal Logo" class="logo">
-        <a class="lightning" href="https://play.google.com/store/apps/details?id=com.naftal.apps.naftalkhadamat&hl=AR" target="_blank">
+        <a class="lightning" href="https://play.google.com/store/apps/details?id=com.naftal.apps.naftalkhadamat&hl=AR"
+          target="_blank">
           تطبيق نفطال خدمات</a>
         <div style="margin-top:5px; padding-right:20px;">
           <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
@@ -2685,7 +3540,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
         <li>
           <img src="icons/caar.jpg" alt="caar Logo" class="logo">
-          <a class="lightning" href="https://caar.dz/" target="_blank">الشركة الجزائرية للتأمين و لإعادة التأمين (CAAR)</a>
+          <a class="lightning" href="https://caar.dz/" target="_blank">الشركة الجزائرية للتأمين و لإعادة التأمين
+            (CAAR)</a>
           <div style="margin-top:5px; padding-right:25px;">
             <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
             <a class="lightning" href="tel:+213221632072"
@@ -2731,13 +3587,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
         <li>
           <img src="icons/alliance.png" alt="alliance Logo" class="logo">
-          <a class="lightning" href="https://www.allianceassurances.com.dz/#/" target="_blank">أليانس للتأمينات (Alliance
+          <a class="lightning" href="https://www.allianceassurances.com.dz/#/" target="_blank">أليانس للتأمينات
+            (Alliance
             Assurances)</a>
           <div style="margin-top:5px; padding-right:25px;">
             <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
             <a class="lightning" href="tel:3315"
               style="direction:ltr; unicode-bidi:bidi-override; color:#006400; text-decoration:none;">3315</a>
-            <br>📲 <a class="lightning" href="https://play.google.com/store/apps/details?id=com.blink.myalliance" target="_blank">تطبيق
+            <br>📲 <a class="lightning" href="https://play.google.com/store/apps/details?id=com.blink.myalliance"
+              target="_blank">تطبيق
               MyAlliance</a>
           </div>
         </li>
@@ -2782,13 +3640,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
         <li>
           <img src="icons/macirvie.png" alt="Macir Vie Logo" class="logo">
-          <a class="lightning" href="https://www.macirvie.com/" target="_blank">ماكير في للتأمين على الحياة (Macir Vie)</a>
+          <a class="lightning" href="https://www.macirvie.com/" target="_blank">ماكير في للتأمين على الحياة (Macir
+            Vie)</a>
           <div style="margin-top:5px; padding-right:25px;">
             <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
-            <a class="lightning" href="tel:xxxx" style="direction:ltr; unicode-bidi:bidi-override; color:#006400; text-decoration:none;">
+            <a class="lightning" href="tel:xxxx"
+              style="direction:ltr; unicode-bidi:bidi-override; color:#006400; text-decoration:none;">
               xxxx
             </a>
-            <br>📲 <a class="lightning" href="https://play.google.com/store/apps/details?id=com.macirvie.app" target="_blank">تطبيق
+            <br>📲 <a class="lightning" href="https://play.google.com/store/apps/details?id=com.macirvie.app"
+              target="_blank">تطبيق
               Android</a>
           </div>
         </li>
@@ -2811,7 +3672,8 @@ document.addEventListener("DOMContentLoaded", () => {
               style="direction:ltr; unicode-bidi:bidi-override; color:#006400; text-decoration:none;">
               +213 21 98 23 00
             </a>
-            <br>📲 <a class="lightning" href="https://play.google.com/store/apps/details?id=dz.axa.assurances" target="_blank">تطبيق
+            <br>📲 <a class="lightning" href="https://play.google.com/store/apps/details?id=dz.axa.assurances"
+              target="_blank">تطبيق
               Android</a>
           </div>
         </li>
@@ -2905,7 +3767,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
         <li>
           <img src="icons/cnep.png" alt="CNEP Logo" class="logo">
-          <a class="lightning" href="https://www.cnepbanque.dz/web/ar/accueil-arabe/"> الصندوق الوطني للتوفير و الاحتياط - بنك
+          <a class="lightning" href="https://www.cnepbanque.dz/web/ar/accueil-arabe/"> الصندوق الوطني للتوفير و الاحتياط
+            - بنك
             CNEP
             Banque</a>
           <div style="margin-top:5px; padding-right:25px;">
@@ -3063,7 +3926,8 @@ document.addEventListener("DOMContentLoaded", () => {
       <!-- أرقام الطوارئ الأساسية -->
       <li>
         <img src="icons/CGN.jpg" alt="الدرك الوطني Logo" class="logo">
-        <a class="lightning" href="https://www.mdn.dz/site_cgn/index.php" target="_blank"><strong>الدرك الوطني</strong></a>
+        <a class="lightning" href="https://www.mdn.dz/site_cgn/index.php" target="_blank"><strong>الدرك
+            الوطني</strong></a>
         - <a class="lightning" href="tel:1055"><strong>1055</strong></a>
       </li>
 
@@ -3087,7 +3951,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
       <li>
         <img src="icons/CFN.png" alt="حراس السواحل Logo" class="logo">
-        <a class="lightning" href="https://www.mdn.dz/site_cfn/index.php" target="_blank"><strong>حراس السواحل</strong></a>
+        <a class="lightning" href="https://www.mdn.dz/site_cfn/index.php" target="_blank"><strong>حراس
+            السواحل</strong></a>
         - <a class="lightning" href="tel:1054"><strong>1054</strong></a>
       </li>
 
@@ -3103,7 +3968,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
       <li>
         <img src="icons/tariki.jpg" alt="tariki Logo" class="logo">
-        <a class="lightning" href="https://www.facebook.com/tariki.GN/" target="_blank"><strong>مركز الإعلام و تنسيق المرور –
+        <a class="lightning" href="https://www.facebook.com/tariki.GN/" target="_blank"><strong>مركز الإعلام و تنسيق
+            المرور –
             طريقي</strong></a>
       </li>
 
@@ -3115,7 +3981,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
       <li>
         <img src="icons/Logomediateur.png" alt="LogomediateurLogo" class="logo">
-        <a class="lightning" href="https://wassit.dz/ar/register#" target="_blank"><strong>تواصل مع وسيط الجمهورية</strong></a>
+        <a class="lightning" href="https://wassit.dz/ar/register#" target="_blank"><strong>تواصل مع وسيط
+            الجمهورية</strong></a>
       </li>
 
       <!-- خدمات أخرى -->
@@ -3127,7 +3994,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
       <li>
         <img src="icons/TOFFOLA.png" alt="TOFFOLA Logo" class="logo">
-        <a class="lightning" href="https://onppe.dz/index.php/ar/" target="_blank"><strong>حماية وترقية الطفولة</strong></a>
+        <a class="lightning" href="https://onppe.dz/index.php/ar/" target="_blank"><strong>حماية وترقية
+            الطفولة</strong></a>
         - <a class="lightning" href="tel:1111">1111</a>
       </li>
 
