@@ -1305,68 +1305,72 @@
         <i class="fas fa-share-alt" style="margin-left: 5px;"></i> شارك البوابة
       </button>
 
-      <!-- شريط الأيقونات التنقل الديناميكي -->
-      <script>
-        function createNavigationBar() {
-          const navContainer = document.querySelector('.nav-scroller-inner');
-          const sections = [
-            { id: 'toggle-payment', name: 'الدفع الإلكتروني', icon: 'fa-credit-card' },
-            { id: 'toggle-recharge', name: 'تعبئة النقال', icon: 'fa-money-check-alt' },
-            { id: 'toggle-post', name: 'بريد الجزائر', icon: 'fa-envelope' },
-            { id: 'toggle-telecom', name: 'اتصالات الجزائر', icon: 'fa-wifi' },
-            { id: 'toggle-education', name: 'التربية والتعليم', icon: 'fa-graduation-cap' },
-            { id: 'toggle-university', name: 'الخدمات الجامعية', icon: 'fa-university' },
-            { id: 'toggle-vocational', name: 'التكوين المهني', icon: 'fa-tools' },
-            { id: 'toggle-admin', name: 'الإدارة المحلية', icon: 'fa-building' },
-            { id: 'toggle-tax', name: 'الخدمات الجبائية', icon: 'fa-file-invoice-dollar' },
-            { id: 'toggle-realestate', name: 'الأملاك الوطنية والعقار', icon: 'fa-home' },
-            { id: 'toggle-foreign', name: 'وزارة الشؤون الخارجية', icon: 'fa-flag' },
-            { id: 'social-security', name: 'الضمان الاجتماعي', icon: 'fa-shield-alt' },
-            { id: 'toggle-justice', name: 'العدالة', icon: 'fa-scale-balanced' },
-            { id: 'toggle-energy', name: 'المحروقات والمناجم', icon: 'fa-gas-pump' },
-            { id: 'toggle-transport', name: 'النقل', icon: 'fa-bus' },
-            { id: 'toggle-employment', name: 'التشغيل', icon: 'fa-briefcase' },
-            { id: 'toggle-health', name: 'الصحة', icon: 'fa-heartbeat' },
-            { id: 'toggle-commerce', name: 'التجارة', icon: 'fa-store' },
-            { id: 'toggle-customs', name: 'الجمارك الجزائرية', icon: 'fa-landmark' },
-            { id: 'toggle-autoentrepreneur', name: 'الوكالة الوطنية للمقاول الذاتي', icon: 'fa-user-tie' },
-            { id: 'toggle-investment', name: 'الوكالة الوطنية لترقية الإستثمار', icon: 'fa-chart-line' },
-            { id: 'toggle-banks', name: 'الخدمات البنكية', icon: 'fa-building-columns' },
-            { id: 'toggle-insurance', name: 'وكالات التأمينات', icon: 'fa-shield-alt' },
-            { id: 'toggle-emergency', name: 'أرقام الطوارئ والخدمات', icon: 'fa-phone-volume' }
-          ];
+<!-- شريط الأيقونات التنقل الديناميكي -->
+<script>
+  function createNavigationBar() {
+    const navContainer = document.querySelector('.nav-scroller-inner');
+    const sections = [
+      { id: 'toggle-payment', name: 'الدفع الإلكتروني', icon: 'fa-credit-card' },
+      { id: 'toggle-recharge', name: 'تعبئة النقال', icon: 'fa-money-check-alt' },
+      { id: 'toggle-post', name: 'بريد الجزائر', icon: 'fa-envelope' },
+      { id: 'toggle-telecom', name: 'اتصالات الجزائر', icon: 'fa-wifi' },
+      { id: 'toggle-education', name: 'التربية والتعليم', icon: 'fa-graduation-cap' },
+      { id: 'toggle-university', name: 'الخدمات الجامعية', icon: 'fa-university' },
+      { id: 'toggle-vocational', name: 'التكوين المهني', icon: 'fa-tools' },
+      { id: 'toggle-admin', name: 'الإدارة المحلية', icon: 'fa-building' },
+      { id: 'toggle-tax', name: 'الخدمات الجبائية', icon: 'fa-file-invoice-dollar' },
+      { id: 'toggle-realestate', name: 'الأملاك الوطنية والعقار', icon: 'fa-home' },
+      { id: 'toggle-foreign', name: 'وزارة الشؤون الخارجية', icon: 'fa-flag' },
+      { id: 'social-security', name: 'الضمان الاجتماعي', icon: 'fa-shield-alt' },
+      { id: 'toggle-justice', name: 'العدالة', icon: 'fa-scale-balanced' },
+      { id: 'toggle-energy', name: 'المحروقات والمناجم', icon: 'fa-gas-pump' },
+      { id: 'toggle-transport', name: 'النقل', icon: 'fa-bus' },
+      { id: 'toggle-employment', name: 'التشغيل', icon: 'fa-briefcase' },
+      { id: 'toggle-health', name: 'الصحة', icon: 'fa-heartbeat' },
+      { id: 'toggle-commerce', name: 'التجارة', icon: 'fa-store' },
+      { id: 'toggle-customs', name: 'الجمارك الجزائرية', icon: 'fa-landmark' },
+      { id: 'toggle-autoentrepreneur', name: 'الوكالة الوطنية للمقاول الذاتي', icon: 'fa-user-tie' },
+      { id: 'toggle-investment', name: 'الوكالة الوطنية لترقية الإستثمار', icon: 'fa-chart-line' },
+      { id: 'toggle-banks', name: 'الخدمات البنكية', icon: 'fa-building-columns' },
+      { id: 'toggle-insurance', name: 'وكالات التأمينات', icon: 'fa-shield-alt' },
+      { id: 'toggle-emergency', name: 'أرقام الطوارئ والخدمات', icon: 'fa-phone-volume' }
+    ];
 
-          // إنشاء الأزرار
-          sections.forEach(section => {
-            const navItem = document.createElement('div');
-            navItem.className = 'nav-item';
-            navItem.innerHTML = `
-          <a class="lightning" href="#${section.id}" class="nav-link">
-            <i class="fas ${section.icon} nav-icon"></i>
-            <span>${section.name}</span>
-          </a>`;
-            navContainer.appendChild(navItem);
-          });
+    // إنشاء الأزرار
+    sections.forEach(section => {
+      const navItem = document.createElement('div');
+      navItem.className = 'nav-item';
+      navItem.innerHTML = `
+        <a class="lightning nav-link" href="#${section.id}">
+          <i class="fas ${section.icon} nav-icon"></i>
+          <span>${section.name}</span>
+        </a>`;
+      navContainer.appendChild(navItem);
+    });
 
-          // تفعيل التمرير السلس
-          navContainer.querySelectorAll('.nav-link').forEach(link => {
-            link.addEventListener('click', function (e) {
-              e.preventDefault();
-              const targetId = this.getAttribute('href').substring(1);
-              const targetElement = document.getElementById(targetId);
-              if (targetElement) {
-                window.scrollTo({
-                  top: targetElement.offsetTop - 20,
-                  behavior: 'smooth'
-                });
-              }
-            });
+    // تفعيل التمرير السلس مع حساب ارتفاع الهيدر
+    navContainer.querySelectorAll('.nav-link').forEach(link => {
+      link.addEventListener('click', function (e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href').substring(1);
+        const targetElement = document.getElementById(targetId);
+        if (targetElement) {
+          const header = document.querySelector('header') || document.querySelector('.site-header');
+          const headerOffset = header ? header.offsetHeight : 0;
+          const elementPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
+          const offsetPosition = elementPosition - headerOffset;
+
+          window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth'
           });
         }
+      });
+    });
+  }
 
-        document.addEventListener('DOMContentLoaded', createNavigationBar);
-      </script>
-
+  document.addEventListener('DOMContentLoaded', createNavigationBar);
+</script>
     </div>
 
     <!-- المميزات الأساسية -->
