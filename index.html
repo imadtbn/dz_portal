@@ -12,15 +12,6 @@
 <!-- ألوان للمتصفحات -->
 <meta name="theme-color" content="#006400" />
 
-  <!-- Clarity tracking code for https://imadtbn.github.io/dz_portal/ -->
-<script>
-    (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i+"?ref=bwt";
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "tjk39ubxx1");
-</script>
-  
 <!-- تسجيل Service Worker -->
 <script>
   if ('serviceWorker' in navigator) {
@@ -35,7 +26,15 @@
   }
 </script>
 
-<!-- Structured Data -->
+<!-- Clarity tracking code for https://imadtbn.github.io/dz_portal/ -->
+<script>
+  (function (c, l, a, r, i, t, y) {
+    c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
+    t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i + "?ref=bwt";
+    y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
+  })(window, document, "clarity", "script", "tjk39ubxx1");
+</script>
+
 <!-- Structured Data -->
 <script type="application/ld+json">
 {
@@ -45,29 +44,33 @@
   "description": "قائمة بالخدمات الحكومية والمؤسساتية الجزائرية المتوفرة عبر البوابة",
   "itemListElement": [
     { "@type": "SiteNavigationElement", "position": 1, "name": "الدفع الإلكتروني", "url": "#toggle-payment" },
-    { "@type": "SiteNavigationElement", "position": 2, "name": "بريد الجزائر", "url": "#toggle-post" },
-    { "@type": "SiteNavigationElement", "position": 3, "name": "اتصالات الجزائر", "url": "#toggle-telecom" },
-    { "@type": "SiteNavigationElement", "position": 4, "name": "التربية والتعليم", "url": "#toggle-education" },
-    { "@type": "SiteNavigationElement", "position": 5, "name": "الخدمات الجامعية", "url": "#toggle-university" },
-    { "@type": "SiteNavigationElement", "position": 6, "name": "التكوين المهني", "url": "#toggle-vocational" },
-    { "@type": "SiteNavigationElement", "position": 7, "name": "الإدارة المحلية", "url": "#toggle-admin" },
-    { "@type": "SiteNavigationElement", "position": 8, "name": "وزارة الشؤون الخارجية", "url": "#toggle-foreign" },
-    { "@type": "SiteNavigationElement", "position": 9, "name": "المحروقات والمناجم", "url": "#toggle-energy" },
-    { "@type": "SiteNavigationElement", "position": 10, "name": "الخدمات الجبائية", "url": "#toggle-tax" },
-    { "@type": "SiteNavigationElement", "position": 11, "name": "الأملاك الوطنية والعقار", "url": "#toggle-realestate" },
+    { "@type": "SiteNavigationElement", "position": 2, "name": "الدفع الإلكتروني", "url": "#toggle-recharge" },
+    { "@type": "SiteNavigationElement", "position": 3, "name": "بريد الجزائر", "url": "#toggle-post" },
+    { "@type": "SiteNavigationElement", "position": 4, "name": "اتصالات الجزائر", "url": "#toggle-telecom" },
+    { "@type": "SiteNavigationElement", "position": 5, "name": "التربية والتعليم", "url": "#toggle-education" },
+    { "@type": "SiteNavigationElement", "position": 6, "name": "الخدمات الجامعية", "url": "#toggle-university" },
+    { "@type": "SiteNavigationElement", "position": 7, "name": "التكوين المهني", "url": "#toggle-vocational" },
+    { "@type": "SiteNavigationElement", "position": 8, "name": "الإدارة المحلية", "url": "#toggle-admin" },
+    { "@type": "SiteNavigationElement", "position": 9, "name": "الخدمات الجبائية", "url": "#toggle-tax" },
+    { "@type": "SiteNavigationElement", "position": 10, "name": "الأملاك الوطنية والعقار", "url": "#toggle-realestate" },
+    { "@type": "SiteNavigationElement", "position": 11, "name": "وزارة الشؤون الخارجية", "url": "#toggle-foreign" },
     { "@type": "SiteNavigationElement", "position": 12, "name": "الضمان الاجتماعي", "url": "#social-security" },
     { "@type": "SiteNavigationElement", "position": 13, "name": "العدالة", "url": "#toggle-justice" },
-    { "@type": "SiteNavigationElement", "position": 14, "name": "النقل", "url": "#toggle-transport" },
-    { "@type": "SiteNavigationElement", "position": 15, "name": "التشغيل", "url": "#toggle-employment" },
-    { "@type": "SiteNavigationElement", "position": 16, "name": "الصحة", "url": "#toggle-health" },
-    { "@type": "SiteNavigationElement", "position": 17, "name": "التجارة", "url": "#toggle-commerce" },
-    { "@type": "SiteNavigationElement", "position": 18, "name": "الجمارك الجزائرية", "url": "#toggle-customs" },
-    { "@type": "SiteNavigationElement", "position": 19, "name": "الوكالة الوطنية للمقاول الذاتي", "url": "#toggle-autoentrepreneur" },
-    { "@type": "SiteNavigationElement", "position": 20, "name": "الوكالة الوطنية لترقية الإستثمار", "url": "#toggle-investment" },
-    { "@type": "SiteNavigationElement", "position": 21, "name": "أرقام الطوارئ والخدمات", "url": "#toggle-emergency" },
+    { "@type": "SiteNavigationElement", "position": 14, "name": "المحروقات والمناجم", "url": "#toggle-energy" },
+    { "@type": "SiteNavigationElement", "position": 15, "name": "النقل", "url": "#toggle-transport" },
+    { "@type": "SiteNavigationElement", "position": 16, "name": "التشغيل", "url": "#toggle-employment" },
+    { "@type": "SiteNavigationElement", "position": 17, "name": "الصحة", "url": "#toggle-health" },
+    { "@type": "SiteNavigationElement", "position": 18, "name": "التجارة", "url": "#toggle-commerce" },
+    { "@type": "SiteNavigationElement", "position": 19, "name": "الجمارك الجزائرية", "url": "#toggle-customs" },
+    { "@type": "SiteNavigationElement", "position": 20, "name": "الوكالة الوطنية للمقاول الذاتي", "url": "#toggle-autoentrepreneur" },
+    { "@type": "SiteNavigationElement", "position": 21, "name": "الوكالة الوطنية لترقية الإستثمار", "url": "#toggle-investment" },
     { "@type": "SiteNavigationElement", "position": 22, "name": "وكالات التأمينات", "url": "#toggle-insurance" }
-  ]
+    { "@type": "SiteNavigationElement", "position": 23, "name": "خدمات بنكية, "url": "#toggle-banks" }
+    { "@type": "SiteNavigationElement", "position": 24, "name": "أرقام الطوارئ والخدمات", "url": "#toggle-emergency" },
+    { "@type": "SiteNavigationElement", "position": 25, "name": "معلومات الإتصال", "url": "#toggle-contact" },
+    { "@type": "SiteNavigationElement", "position": 26, "name": "التعليقات والإستفسارات", "url": "#toggle-comments" } ],
 }
+
 </script>
 
 <!-- الوصف الرسمي لمحركات البحث -->
@@ -141,7 +144,7 @@
     /* لون خلفية فاتح */
     color: #333;
     /* لون النص */
-    line-height: 1.5;
+    line-height: 1.3;
     /* تباعد الأسطر */
   }
 
@@ -166,7 +169,7 @@
     /* محاذاة عمودية للوسط */
     justify-content: center;
     /* محاذاة أفقية للوسط */
-    gap: 10px;
+    gap: 5px;
     /* مسافة بين العناصر */
     flex-wrap: wrap;
     /* التفاف عند صغر الشاشة */
@@ -179,7 +182,7 @@
   }
 
   .branding i {
-    font-size: 24px;
+    font-size: 20px;
     /* أيقونة كبيرة */
   }
 
@@ -361,7 +364,7 @@
     }
 
     header h1 {
-      font-size: 1.1em;
+      font-size: 1.0em;
     }
 
     section h2,
@@ -404,25 +407,6 @@
   div[style*="border-radius"] i:hover {
     animation: pulse .6s ease-in-out infinite;
     /* حركة مستمرة */
-  }
-
-  /*  زر التثبيت */
-  #install-button {
-    font-size: 14px;
-    padding: 10px 12px;
-  }
-
-  #install-button i {
-    font-size: 0.9em;
-  }
-
-  /* تأثير عند تمرير زر التثبيت */
-  #install-button:hover {
-    background-color: #880000;
-  }
-
-  button:hover {
-    background-color: #a30000;
   }
 
   /* 📰 شريط الأخبار من اليسار إلى اليمين */
@@ -637,7 +621,7 @@
     /* مسافة داخلية */
     border: none;
     /* بدون حدود */
-    border-radius: 8px;
+    border-radius: 6px;
     /* زوايا دائرية */
     font-size: 0.9em;
     /* حجم الخط */
@@ -654,8 +638,9 @@
   .share-button:hover {
     background-color: #a30000;
     /* لون أغمق عند المرور */
-    transform: scale(1.03);
+    transform: scale(1.04);
     /* تكبير بسيط */
+
   }
 
   /* 🟦 شريط التنقل */
@@ -973,16 +958,18 @@
     box-sizing: border-box;
   }
 
+  }
+
   /* الهوية */
   .branding h1 {
     margin: 0;
-    font-size: 1rem;
+    font-size: 0.9rem;
     font-weight: 700;
   }
 
   .branding .logo {
-    width: 30px;
-    height: 30px;
+    width: 28px;
+    height: 28px;
   }
 
   /* الطقس */
@@ -990,9 +977,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 6px;
+    gap: 5px;
     color: #fff;
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     margin: 2px 0;
   }
 
@@ -1003,7 +990,7 @@
 
   /* البحث */
   #searchArea {
-    padding: 2px 10px;
+    padding: 2px 9px;
   }
 
   #searchBox {
@@ -1012,7 +999,7 @@
 
   #searchBox input {
     width: 100%;
-    padding: 6px;
+    padding: 8px;
     border-radius: 6px;
     border: 1px solid #ccc;
     font-size: 0.9rem;
@@ -1025,20 +1012,20 @@
     padding: 8px 14px;
     margin: 8px 14px;
     border: none;
-    border-radius: 4px;
+    border-radius: 6px;
     font-size: 14px;
     cursor: pointer;
   }
 
   #install-button i {
-    font-size: 0.95em;
+    font-size: 0.85em;
   }
 
   /* شريط الأخبار */
   #newsBar {
     background-color: var(--primary-color);
     color: #fff;
-    padding: 4px 8px;
+    padding: 4px 7px;
     font-weight: bold;
     font-size: 0.85rem;
     overflow: hidden;
@@ -3724,7 +3711,7 @@
 
   <!-- قسم التعليقات والإستفسارات -->
   <section dir="rtl" style="text-align: right;">
-    <h2 onclick="toggleSection('comments-content', this)"
+    <h2 id="toggle-comments" onclick="toggleSection('comments-content', this)"
       style="cursor: pointer; background-color: #a52a2a; color: white; padding: 10px; border-radius: 8px;">
       <span><i class="fas fa-comments" style="color: #006400;"></i> التعليقات والاستفسارات</span>
       <span class="toggle-icon" style="float: left;">▶</span>
@@ -3853,10 +3840,7 @@
     });
     // ===== نهاية زر تثبيت التطبيق =====
 
-
-    /* ===========================
-       2. توسيع/طي الأقسام + العداد
-       =========================== */
+    /* ===========================  2. توسيع/طي الأقسام + العداد   =========================== */
     document.addEventListener("DOMContentLoaded", function () {
       const headers = document.querySelectorAll("section h2, section h3");
       headers.forEach((header, index) => {
@@ -3889,9 +3873,7 @@
     // ===== نهاية توسيع/طي الأقسام =====
 
 
-    /* ===========================
-       3. زر الصعود لأعلى الصفحة
-       =========================== */
+    /* =========================== 3. زر الصعود لأعلى الصفحة =========================== */
     window.onscroll = function () {
       const btn = document.getElementById("scrollTopBtn");
       btn.style.display =
@@ -3904,11 +3886,7 @@
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
     // ===== نهاية زر الصعود =====
-
-
-    /* ===========================
-       4. البحث داخل الأقسام
-       =========================== */
+    /* ================== 4. البحث داخل الأقسام =========================== */
     document.getElementById("searchInput").addEventListener("input", function () {
       const query = this.value.toLowerCase().trim();
       const sections = document.querySelectorAll("section");
@@ -3919,10 +3897,7 @@
     });
     // ===== نهاية البحث =====
 
-
-    /* ===========================
-       5. عدّاد الزيارات الوهمي
-       =========================== */
+    /* ================= 5. عدّاد الزيارات الوهمي  =========================== */
     let daily = Math.floor(Math.random() * 10000 + 1000);  // زيارات اليوم
     let total = 3000000 + Math.floor(Math.random() * 50000); // إجمالي الزيارات
 
@@ -3941,9 +3916,7 @@
     }, 1200);
     // ===== نهاية العداد =====
 
-    /* ===========================
-       6. الإشعارات (API Google Script)
-       =========================== */
+    /* ===================== 6. الإشعارات (API Google Script)  =========================== */
     let lastMsg = "";
     const apiUrl = "https://script.google.com/macros/s/AKfycbwap_0FcirukQreMhIVn1PS0kSEzoxPFrNKn1u94yR7z1l-ndxADsFNlx50CPePvs6j/exec";
 
@@ -3959,30 +3932,24 @@
         console.error("خطأ في جلب التحديثات", e);
       }
     }
-
     function showNotification(msg) {
       const box = document.getElementById("notificationBox");
       box.textContent = "🔔 " + msg;
       box.style.display = "block";
       setTimeout(() => { box.style.display = "none"; }, 6000);
     }
-
     setInterval(checkUpdates, 60000);
     checkUpdates();
     // ===== نهاية الإشعارات =====
 
 
-    /* ===========================
-       7. الاشتراك في التحديثات
-       =========================== */
+    /* ====================== 7. الاشتراك في التحديثات =========================== */
     function showSubscribeMsg() {
       document.getElementById("subscribeMsg").textContent =
         "✅ تم تسجيل بريدك بنجاح. ستصلك آخر التحديثات.";
     }
     // ===== نهاية الاشتراك =====
-    /* ===========================
-       8. إرسال التعليقات
-       =========================== */
+    /* ==============8. إرسال التعليقات ====================== */
     function toggleSection(id, header) {
       const section = document.getElementById(id);
       const icon = header.querySelector('.toggle-icon');
@@ -4010,9 +3977,7 @@
     }
     // ===== نهاية التعليقات =====
 
-    /* ===========================
-       9. دعم لمس شريط الأخبار للجوال
-       =========================== */
+    /* ================== 9. دعم لمس شريط الأخبار للجوال =========================== */
     const ticker = document.getElementById('newsTicker');
     ticker.addEventListener('touchstart', () => {
       ticker.style.animationPlayState = 'paused';
@@ -4040,5 +4005,4 @@
     }
   </script>
 </body>
-
 </html>
