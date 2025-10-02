@@ -39,38 +39,86 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "ItemList",
-  "name": "البوابة الجزائرية للخدمات الإلكترونية",
-  "description": "قائمة بالخدمات الحكومية والمؤسساتية الجزائرية المتوفرة عبر البوابة",
-  "itemListElement": [
-    { "@type": "SiteNavigationElement", "position": 1, "name": "الدفع الإلكتروني", "url": "#toggle-payment" },
-    { "@type": "SiteNavigationElement", "position": 2, "name": "الدفع الإلكتروني", "url": "#toggle-recharge" },
-    { "@type": "SiteNavigationElement", "position": 3, "name": "بريد الجزائر", "url": "#toggle-post" },
-    { "@type": "SiteNavigationElement", "position": 4, "name": "اتصالات الجزائر", "url": "#toggle-telecom" },
-    { "@type": "SiteNavigationElement", "position": 5, "name": "التربية والتعليم", "url": "#toggle-education" },
-    { "@type": "SiteNavigationElement", "position": 6, "name": "الخدمات الجامعية", "url": "#toggle-university" },
-    { "@type": "SiteNavigationElement", "position": 7, "name": "التكوين المهني", "url": "#toggle-vocational" },
-    { "@type": "SiteNavigationElement", "position": 8, "name": "الإدارة المحلية", "url": "#toggle-admin" },
-    { "@type": "SiteNavigationElement", "position": 9, "name": "الخدمات الجبائية", "url": "#toggle-tax" },
-    { "@type": "SiteNavigationElement", "position": 10, "name": "الأملاك الوطنية والعقار", "url": "#toggle-realestate" },
-    { "@type": "SiteNavigationElement", "position": 11, "name": "وزارة الشؤون الخارجية", "url": "#toggle-foreign" },
-    { "@type": "SiteNavigationElement", "position": 12, "name": "الضمان الاجتماعي", "url": "#social-security" },
-    { "@type": "SiteNavigationElement", "position": 13, "name": "العدالة", "url": "#toggle-justice" },
-    { "@type": "SiteNavigationElement", "position": 14, "name": "المحروقات والمناجم", "url": "#toggle-energy" },
-    { "@type": "SiteNavigationElement", "position": 15, "name": "النقل", "url": "#toggle-transport" },
-    { "@type": "SiteNavigationElement", "position": 16, "name": "التشغيل", "url": "#toggle-employment" },
-    { "@type": "SiteNavigationElement", "position": 17, "name": "الصحة", "url": "#toggle-health" },
-    { "@type": "SiteNavigationElement", "position": 18, "name": "التجارة", "url": "#toggle-commerce" },
-    { "@type": "SiteNavigationElement", "position": 19, "name": "الجمارك الجزائرية", "url": "#toggle-customs" },
-    { "@type": "SiteNavigationElement", "position": 20, "name": "الوكالة الوطنية للمقاول الذاتي", "url": "#toggle-autoentrepreneur" },
-    { "@type": "SiteNavigationElement", "position": 21, "name": "الوكالة الوطنية لترقية الإستثمار", "url": "#toggle-investment" },
-    { "@type": "SiteNavigationElement", "position": 22, "name": "وكالات التأمينات", "url": "#toggle-insurance" },
-    { "@type": "SiteNavigationElement", "position": 23, "name": "خدمات بنكية", url": "#toggle-banks" },
-    { "@type": "SiteNavigationElement", "position": 24, "name": "أرقام الطوارئ والخدمات", "url": "#toggle-emergency" },
-    { "@type": "SiteNavigationElement", "position": 25, "name": "معلومات الإتصال", "url": "#toggle-contact" },
-    { "@type": "SiteNavigationElement", "position": 26, "name": "التعليقات والإستفسارات", "url": "#toggle-comments" }, ]
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://imadtbn.github.io/dz_portal/#website",
+      "url": "https://imadtbn.github.io/dz_portal/",
+      "name": "البوابة الجزائرية للخدمات الرقمية",
+      "alternateName": "DZ e-Services Portal",
+      "inLanguage": "ar",
+      "description": "موقع موحد يضم روابط إلى جميع الخدمات الإلكترونية الرقمية الحكومية الجزائرية: التعليم، الجباية، العدالة، البريد، وغيرها.",
+      "image": "https://imadtbn.github.io/dz_portal/preview.png",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://imadtbn.github.io/dz_portal/?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    },
+    {
+      "@type": "GovernmentOrganization",
+      "@id": "https://imadtbn.github.io/dz_portal/#organization",
+      "name": "الجمهورية الجزائرية الديمقراطية الشعبية",
+      "url": "https://www.el-mouradia.dz/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://github.com/imadtbn/dz_portal/blob/main/icon.jpg?raw=true"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer service",
+        "areaServed": "DZ",
+        "availableLanguage": ["ar", "fr"]
+      },
+      "address": { "@type": "PostalAddress", "addressCountry": "DZ" },
+      "sameAs": ["https://www.el-mouradia.dz/"]
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://imadtbn.github.io/dz_portal/#webpage",
+      "url": "https://imadtbn.github.io/dz_portal/",
+      "name": "الصفحة الرئيسية",
+      "isPartOf": { "@id": "https://imadtbn.github.io/dz_portal/#website" },
+      "about": { "@id": "https://imadtbn.github.io/dz_portal/#organization" },
+      "inLanguage": "ar",
+      "image": "https://imadtbn.github.io/dz_portal/preview.png"
+    },
+    {
+      "@type": "ItemList",
+      "@id": "https://imadtbn.github.io/dz_portal/#navigation",
+      "name": "قائمة التنقل في البوابة الجزائرية للخدمات الإلكترونية",
+      "description": "قائمة أقسام وخدمات البوابة الجزائرية للخدمات الإلكترونية",
+      "itemListElement": [
+        { "@type": "SiteNavigationElement", "position": 1, "name": "الدفع الإلكتروني", "url": "#toggle-payment" },
+        { "@type": "SiteNavigationElement", "position": 2, "name": "تعبئة الهاتف النقال", "url": "#toggle-recharge" },
+        { "@type": "SiteNavigationElement", "position": 3, "name": "بريد الجزائر", "url": "#toggle-post" },
+        { "@type": "SiteNavigationElement", "position": 4, "name": "اتصالات الجزائر", "url": "#toggle-telecom" },
+        { "@type": "SiteNavigationElement", "position": 5, "name": "التربية والتعليم", "url": "#toggle-education" },
+        { "@type": "SiteNavigationElement", "position": 6, "name": "الخدمات الجامعية", "url": "#toggle-university" },
+        { "@type": "SiteNavigationElement", "position": 7, "name": "التكوين المهني", "url": "#toggle-vocational" },
+        { "@type": "SiteNavigationElement", "position": 8, "name": "الإدارة المحلية", "url": "#toggle-admin" },
+        { "@type": "SiteNavigationElement", "position": 9, "name": "الخدمات الجبائية", "url": "#toggle-tax" },
+        { "@type": "SiteNavigationElement", "position": 10, "name": "الأملاك الوطنية والعقار", "url": "#toggle-realestate" },
+        { "@type": "SiteNavigationElement", "position": 11, "name": "وزارة الشؤون الخارجية", "url": "#toggle-foreign" },
+        { "@type": "SiteNavigationElement", "position": 12, "name": "الضمان الاجتماعي", "url": "#social-security" },
+        { "@type": "SiteNavigationElement", "position": 13, "name": "العدالة", "url": "#toggle-justice" },
+        { "@type": "SiteNavigationElement", "position": 14, "name": "المحروقات والمناجم", "url": "#toggle-energy" },
+        { "@type": "SiteNavigationElement", "position": 15, "name": "النقل", "url": "#toggle-transport" },
+        { "@type": "SiteNavigationElement", "position": 16, "name": "التشغيل", "url": "#toggle-employment" },
+        { "@type": "SiteNavigationElement", "position": 17, "name": "الصحة", "url": "#toggle-health" },
+        { "@type": "SiteNavigationElement", "position": 18, "name": "التجارة", "url": "#toggle-commerce" },
+        { "@type": "SiteNavigationElement", "position": 19, "name": "الجمارك الجزائرية", "url": "#toggle-customs" },
+        { "@type": "SiteNavigationElement", "position": 20, "name": "الوكالة الوطنية للمقاول الذاتي", "url": "#toggle-autoentrepreneur" },
+        { "@type": "SiteNavigationElement", "position": 21, "name": "الوكالة الوطنية لترقية الإستثمار", "url": "#toggle-investment" },
+        { "@type": "SiteNavigationElement", "position": 22, "name": "وكالات التأمينات", "url": "#toggle-insurance" },
+        { "@type": "SiteNavigationElement", "position": 23, "name": "خدمات بنكية", "url": "#toggle-banks" },
+        { "@type": "SiteNavigationElement", "position": 24, "name": "أرقام الطوارئ والخدمات", "url": "#toggle-emergency" },
+        { "@type": "SiteNavigationElement", "position": 25, "name": "معلومات الإتصال", "url": "#toggle-contact" },
+        { "@type": "SiteNavigationElement", "position": 26, "name": "التعليقات والإستفسارات", "url": "#toggle-comments" }
+      ]
+    }
+  ]
 }
-
 </script>
 
 <!-- الوصف الرسمي لمحركات البحث -->
