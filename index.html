@@ -1166,6 +1166,7 @@
     box-sizing: border-box;
     /* يشمل الحشوات ضمن الأبعاد */
   }
+
   /* الهوية داخل الهيدر */
   .branding h1 {
     margin: 0;
@@ -1509,7 +1510,7 @@
           const navContainer = document.querySelector('.nav-scroller-inner');
           const sections = [
             { id: 'toggle-payment', name: 'الدفع الإلكتروني', icon: 'fa-credit-card' },
-            { id: 'toggle-recharge', name: 'تعبئة النقال', icon: 'fa-money-check-alt' },
+            { id: 'toggle-recharge', name: 'تعبئة الهاتف', icon: 'fa-money-check-alt' },
             { id: 'toggle-post', name: 'بريد الجزائر', icon: 'fa-envelope' },
             { id: 'toggle-telecom', name: 'اتصالات الجزائر', icon: 'fa-wifi' },
             { id: 'toggle-education', name: 'التربية والتعليم', icon: 'fa-graduation-cap' },
@@ -1518,21 +1519,21 @@
             { id: 'toggle-admin', name: 'الإدارة المحلية', icon: 'fa-building' },
             { id: 'toggle-tax', name: 'الخدمات الجبائية', icon: 'fa-file-invoice-dollar' },
             { id: 'toggle-tenders', name: 'الصفقات العمومية', icon: 'fa-file-contract' },
-            { id: 'toggle-realestate', name: 'الأملاك والعقار', icon: 'fa-home' },
+            { id: 'toggle-realestate', name: 'أملاك عقارية', icon: 'fa-home' },
             { id: 'toggle-foreign', name: 'و-الشؤون الخارجية', icon: 'fa-flag' },
             { id: 'social-security', name: 'الضمان الاجتماعي', icon: 'fa-shield-alt' },
             { id: 'toggle-justice', name: 'العدالة', icon: 'fa-scale-balanced' },
-            { id: 'toggle-energy', name: 'المحروقات والمناجم', icon: 'fa-gas-pump' },
+            { id: 'toggle-energy', name: 'الطاقة والمناجم', icon: 'fa-gas-pump' },
             { id: 'toggle-transport', name: 'النقل', icon: 'fa-bus' },
             { id: 'toggle-employment', name: 'التشغيل', icon: 'fa-briefcase' },
             { id: 'toggle-health', name: 'الصحة', icon: 'fa-heartbeat' },
             { id: 'toggle-commerce', name: 'التجارة', icon: 'fa-store' },
             { id: 'toggle-customs', name: 'الجمارك الجزائرية', icon: 'fa-landmark' },
-            { id: 'toggle-autoentrepreneur', name: 'الوكالة الوطنية للمقاول الذاتي', icon: 'fa-user-tie' },
-            { id: 'toggle-investment', name: 'الوكالة الوطنية لترقية الإستثمار', icon: 'fa-chart-line' },
+            { id: 'toggle-autoentrepreneur', name: 'المقاول الذاتي', icon: 'fa-user-tie' },
+            { id: 'toggle-investment', name: 'ترقية الإستثمار', icon: 'fa-chart-line' },
             { id: 'toggle-banks', name: 'الخدمات البنكية', icon: 'fa-building-columns' },
             { id: 'toggle-insurance', name: 'وكالات التأمينات', icon: 'fa-shield-alt' },
-            { id: 'toggle-emergency', name: 'أرقام الطوارئ والخدمات', icon: 'fa-phone-volume' }
+            { id: 'toggle-emergency', name: 'أرقام الطوارئ', icon: 'fa-phone-volume' }
           ];
 
           // إنشاء الأزرار
@@ -2685,8 +2686,7 @@
     <h2 id="toggle-realestate" onclick="toggleSection('real-estate-section', this)"
       style="cursor: pointer; background-color: #a52a2a; color: white; padding: 10px; border-radius: 8px;">
       <span><img src="icons/DGDN.png" alt="DGDN Logo" class="logo">
-        خدمات عقارية إلكترونية للأملاك الوطنية
-        <span class="count"></span>
+خدمات الأملاك العقارية   <span class="count"></span>
       </span>
       <span class="toggle-icon" style="float: left;">▶</span>
     </h2>
