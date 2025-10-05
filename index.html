@@ -1423,144 +1423,92 @@ header {
     </ul>
   </section>
 
-  <!-- قسم تعبئة الهاتف -->
-  <section dir="rtl">
-    <h2 id="toggle-recharge" onclick="toggleSection('recharge-section', this)">
-      <span>
-        <i class="fas fa-money-check-alt"></i>
-        خدمات تعبئة الهاتف النقال <span class="count"></span>
-      </span>
-      <span class="toggle-icon">▶</span>
-    </h2>
+  <!-- 📱 قسم تعبئة الهاتف النقال -->
+<section dir="rtl">
+  <h2 id="toggle-recharge" onclick="toggleSection('recharge-section', this)">
+    <span><i class="fas fa-money-check-alt"></i> خدمات تعبئة الهاتف النقال <span class="count"></span></span>
+    <span class="toggle-icon">▶</span>
+  </h2>
 
-    <ul id="recharge-section">
-      <!-- موبيليس -->
-      <li style="margin-bottom:10px;">
+  <ul id="recharge-section">
 
-        <!-- السطر الأول: تعبئة الرصيد -->
-        <div style="margin-bottom:6px; padding-right:25px;">
-          <img src="icons/mobilis.png" alt="Mobilis Logo" class="logo">
-          <strong>
-            <a class="lightning" href="https://e-paiement.mobilis.dz/" target="_blank">
-              تعبئة الرصيد - موبيليس
-            </a>
-          </strong>
-        </div>
-
-        <!-- السطر الثاني: الموقع الرسمي -->
-        <div style="margin-bottom:6px; padding-right:25px;">
-          <i class="fas fa-globe" style="color:#006400; margin-left:6px;"></i>
-          <strong>
-            <a class="lightning" href="https://www.mobilis.dz/" target="_blank">
-              الموقع الرسمي لموبيليس
-            </a>
-          </strong>
-        </div>
-
-        <!-- السطر الثالث: رقم الهاتف -->
-        <div style="margin-bottom:6px; padding-right:25px;">
-          <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
-          <strong>مصلحة خدمة الزبائن:</strong>
+    <!-- 🔹 موبيليس -->
+    <li>
+      <h3 onclick="toggleSection('mobilis-section', this)">
+        <i class="fas fa-signal"></i> موبيليس <span class="toggle-icon">▶</span>
+      </h3>
+      <ul id="mobilis-section">
+        <li>
+          <img src="icons/mobilis.png" class="logo" alt="Mobilis">
+          <a class="lightning" href="https://e-paiement.mobilis.dz/" target="_blank">تعبئة الرصيد - موبيليس</a>
+        </li>
+        <li>
+          <i class="fas fa-globe" style="color:#006400"></i>
+          <a class="lightning" href="https://www.mobilis.dz/" target="_blank">الموقع الرسمي لموبيليس</a>
+        </li>
+        <li>
+          <i class="fas fa-phone" style="color:#006400"></i> مصلحة الزبائن:
           <a class="lightning" href="tel:666">666</a>
-        </div>
+        </li>
+        <li>
+          <img src="icons/mobilispace.webp" class="logo" alt="MobiSpace">
+          <a class="lightning" href="https://play.google.com/store/search?q=mobispace&c=apps&hl=ar" target="_blank">تحميل تطبيق MobiSpace</a>
+        </li>
+      </ul>
+    </li>
 
-        <!-- السطر الرابع: التطبيقات -->
-        <div style="padding-right:25px;">
-          <img src="icons/mobilispace.webp" alt="MobiSpace App Logo" class="logo">
-          <a class="lightning" href="https://play.google.com/store/search?q=mobispace&c=apps&hl=ar" target="_blank">
-            تحميل تطبيق MobiSpace
-          </a>
-        </div>
-      </li>
-      <!-- فاصل -->
-      <li style="border-top: 1px solid #ccc; margin: 8px 0;"></li>
-
-      <!-- جازي -->
-      <li style="margin-bottom:10px;">
-
-        <!-- السطر الأول: تعبئة الرصيد -->
-        <div style="margin-bottom:6px; padding-right:25px;">
-          <img src="icons/djezzy.png" alt="Djezzy Logo" class="logo">
-          <strong>
-            <a class="lightning" href="https://moncompte.djezzy.dz/ar/guest/recharge" target="_blank">
-              تعبئة الرصيد - جازي
-            </a>
-          </strong>
-        </div>
-
-        <!-- السطر الثاني: الموقع الرسمي -->
-        <div style="margin-bottom:6px; padding-right:25px;">
-          <i class="fas fa-globe" style="color:#006400; margin-left:6px;"></i>
-          <strong>
-            <a class="lightning" href="https://www.djezzy.dz/" target="_blank">
-              الموقع الرسمي لجازي
-            </a>
-          </strong>
-        </div>
-
-        <!-- السطر الثالث: رقم الهاتف -->
-        <div style="margin-bottom:6px; padding-right:25px;">
-          <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
-          <strong>مصلحة خدمة الزبائن:</strong>
+    <!-- 🔹 جازي -->
+    <li>
+      <h3 onclick="toggleSection('djezzy-section', this)">
+        <i class="fas fa-signal"></i> جازي <span class="toggle-icon">▶</span>
+      </h3>
+      <ul id="djezzy-section">
+        <li>
+          <img src="icons/djezzy.png" class="logo" alt="Djezzy">
+          <a class="lightning" href="https://moncompte.djezzy.dz/ar/guest/recharge" target="_blank">تعبئة الرصيد - جازي</a>
+        </li>
+        <li>
+          <i class="fas fa-globe" style="color:#006400"></i>
+          <a class="lightning" href="https://www.djezzy.dz/" target="_blank">الموقع الرسمي لجازي</a>
+        </li>
+        <li>
+          <i class="fas fa-phone" style="color:#006400"></i> مصلحة الزبائن:
           <a class="lightning" href="tel:777">777</a>
-        </div>
+        </li>
+        <li>
+          <img src="icons/djezzy1.webp" class="logo" alt="Djezzy App">
+          <a class="lightning" href="https://play.google.com/store/apps/details?id=com.djezzy.internet" target="_blank">تحميل تطبيق Djezzy</a>
+        </li>
+      </ul>
+    </li>
 
-        <!-- السطر الرابع: التطبيقات -->
-        <div style="padding-right:25px;">
-          <img src="icons/djezzy1.webp" alt="Djezzy App Logo" class="logo">
-          <a class="lightning" href="https://play.google.com/store/apps/details?id=com.djezzy.internet" target="_blank">
-            تحميل تطبيق Djezzy
-          </a>
-        </div>
-
-      </li>
-
-      <!-- فاصل -->
-      <li style="border-top: 1px solid #ccc; margin: 8px 0;"></li>
-
-      <!-- أوريدو -->
-      <li style="margin-bottom:10px;">
-
-        <!-- السطر الأول: تعبئة الرصيد -->
-        <div style="margin-bottom:6px; padding-right:25px;">
-          <img src="icons/ooredoo.png" alt="Ooredoo Logo" class="logo">
-          <strong>
-            <a class="lightning" href="http://estorm.ooredoo.dz/" target="_blank">
-              تعبئة الرصيد - أوريدو
-            </a>
-          </strong>
-        </div>
-
-        <!-- السطر الثاني: الموقع الرسمي -->
-        <div style="margin-bottom:6px; padding-right:25px;">
-          <i class="fas fa-globe" style="color:#006400; margin-left:6px;"></i>
-          <strong>
-            <a class="lightning" href="https://www.ooredoo.dz/" target="_blank">
-              الموقع الرسمي لأوريدو
-            </a>
-          </strong>
-        </div>
-
-        <!-- السطر الثالث: رقم الهاتف -->
-        <div style="margin-bottom:6px; padding-right:25px;">
-          <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
-          <strong>مصلحة خدمة الزبائن:</strong>
+    <!-- 🔹 أوريدو -->
+    <li>
+      <h3 onclick="toggleSection('ooredoo-section', this)">
+        <i class="fas fa-signal"></i> أوريدو <span class="toggle-icon">▶</span>
+      </h3>
+      <ul id="ooredoo-section">
+        <li>
+          <img src="icons/ooredoo.png" class="logo" alt="Ooredoo">
+          <a class="lightning" href="http://estorm.ooredoo.dz/" target="_blank">تعبئة الرصيد - أوريدو</a>
+        </li>
+        <li>
+          <i class="fas fa-globe" style="color:#006400"></i>
+          <a class="lightning" href="https://www.ooredoo.dz/" target="_blank">الموقع الرسمي لأوريدو</a>
+        </li>
+        <li>
+          <i class="fas fa-phone" style="color:#006400"></i> مصلحة الزبائن:
           <a class="lightning" href="tel:333">333</a>
-        </div>
+        </li>
+        <li>
+          <img src="icons/ooredoo1.webp" class="logo" alt="My Ooredoo">
+          <a class="lightning" href="https://play.google.com/store/apps/details?id=com.algeria.selfcare.app.android&pli=1" target="_blank">تحميل تطبيق My Ooredoo Algeria</a>
+        </li>
+      </ul>
+    </li>
 
-        <!-- السطر الرابع: التطبيقات -->
-        <div style="padding-right:25px;">
-          <img src="icons/ooredoo1.webp" alt="Ooredoo App Logo" class="logo">
-          <a class="lightning"
-            href="https://play.google.com/store/apps/details?id=com.algeria.selfcare.app.android&pli=1" target="_blank">
-            تحميل تطبيق My Ooredoo Algeria
-          </a>
-        </div>
-
-      </li>
-
-    </ul>
-  </section>
+  </ul>
+</section>
 
   <!-- قسم خدمات بريد الجزائر -->
   <section dir="rtl" style="text-align: right;">
