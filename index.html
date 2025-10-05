@@ -1168,261 +1168,134 @@ header {
     </div>
   </section>
 
-  <!-- قسم الدفع الإلكتروني للفواتير -->
-  <section dir="rtl" style="text-align: right;">
-    <h2 id="toggle-payment" onclick="toggleSection('payment-section', this)">
-      <span><i class="fas fa-file-invoice-dollar"></i> خدمات الدفع الإلكتروني للفواتير <span
-          class="count"></span></span>
-      <span class="toggle-icon">▶</span>
-    </h2>
+ <!-- قسم الدفع الإلكتروني للفواتير (مقسّم إلى 6 فروع) -->
+<section dir="rtl">
+  <h2 id="toggle-payment" onclick="toggleSection('payment-section', this)">
+    <span><i class="fas fa-file-invoice-dollar"></i> خدمات الدفع الإلكتروني للفواتير <span class="count"></span></span>
+    <span class="toggle-icon">▶</span>
+  </h2>
 
+  <ul id="payment-section">
+    <!-- فرع الجزائرية للمياه (ADE) -->
+    <li style="margin-bottom:10px;">
+      <div style="margin-bottom:6px; padding-right:25px;">
+        <img src="icons/ade.png" alt="ADE Logo" class="logo">
+        <strong><a class="lightning" href="https://www.ade.dz/e-paiement/" target="_blank">فاتورة الجزائرية للمياه (ADE)</a></strong>
+      </div>
+      <div style="margin-bottom:6px; padding-right:25px;">
+        <i class="fas fa-globe" style="color:#006400; margin-left:6px;"></i>
+        <strong><a class="lightning" href="https://www.ade.dz/ar" target="_blank">الموقع الرسمي للجزائرية للمياه</a></strong>
+      </div>
+      <div style="margin-bottom:6px; padding-right:25px;">
+        <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
+        <strong>مصلحة خدمة الزبائن:</strong> <a class="lightning" href="tel:1593">1593</a>
+      </div>
+      <div style="padding-right:25px;">
+        <img src="icons/google-play-logo.png" alt="Google Play" class="logo">
+        <a class="lightning" href="https://play.google.com/store/apps/details?id=com.ade.adese&hl=ar" target="_blank">تطبيق Miyahimob</a>
+      </div>
+    </li>
 
-    <ul id="payment-section"
-      style="display: none; list-style: none; padding-right: 20px; line-height: 2; text-align: right;">
+    <li style="border-top: 1px solid #ccc; margin: 8px 0;"></li>
 
-      <!-- ADE -->
-      <li style="margin-bottom:10px;">
+    <!-- فرع سونلغاز -->
+    <li style="margin-bottom:10px;">
+      <div style="margin-bottom:6px; padding-right:25px;">
+        <img src="icons/sonelgaz.png" alt="Sonelgaz Logo" class="logo">
+        <strong><a class="lightning" href="https://epayement.elit.dz/payementFacture.xhtml" target="_blank">فاتورة الكهرباء والغاز (سونلغاز)</a></strong>
+      </div>
+      <div style="margin-bottom:6px; padding-right:25px;">
+        <i class="fas fa-globe" style="color:#006400; margin-left:6px;"></i>
+        <strong><a class="lightning" href="https://www.sonelgaz.dz/" target="_blank">الموقع الرسمي لسونلغاز</a></strong>
+      </div>
+      <div style="margin-bottom:6px; padding-right:25px;">
+        <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
+        <strong>مصلحة خدمة الزبائن:</strong> <a class="lightning" href="tel:3030">3030</a>
+      </div>
+      <div style="padding-right:25px;">
+        <img src="icons/google-play-logo.png" alt="Google Play" class="logo">
+        <a class="lightning" href="https://play.google.com/store/apps/details?id=dz.elit.sonelgazmobile" target="_blank">تطبيق Sonelgaz Mobile</a>
+      </div>
+    </li>
 
-        <!-- السطر الأول: فاتورة -->
-        <div style="margin-bottom:6px; padding-right:25px;">
-          <img src="icons/ade.png" alt="ADE Logo" class="logo">
-          <strong>
-            <a class="lightning" href="https://www.ade.dz/e-paiement/" target="_blank">
-              فاتورة الجزائرية للمياه (ADE)
-            </a>
-          </strong>
-        </div>
+    <li style="border-top: 1px solid #ccc; margin: 8px 0;"></li>
 
-        <!-- السطر الثاني: الموقع الرسمي -->
-        <div style="margin-bottom:6px; padding-right:25px;">
-          <i class="fas fa-globe" style="color:#006400; margin-left:6px;"></i>
-          <strong>
-            <a class="lightning" href="https://www.ade.dz/ar" target="_blank">
-              الموقع الرسمي للجزائرية للمياه
-            </a>
-          </strong>
-        </div>
+    <!-- فرع سيال -->
+    <li style="margin-bottom:10px;">
+      <div style="margin-bottom:6px; padding-right:25px;">
+        <img src="icons/seaal.webp" alt="SEAAL Logo" class="logo">
+        <strong><a class="lightning" href="https://baridinet.poste.dz/seaal" target="_blank">فاتورة المياه (سيال)</a></strong>
+      </div>
+      <div style="margin-bottom:6px; padding-right:25px;">
+        <i class="fas fa-globe" style="color:#006400; margin-left:6px;"></i>
+        <strong><a class="lightning" href="https://www.seaal.dz/" target="_blank">الموقع الرسمي لسيال</a></strong>
+      </div>
+      <div style="margin-bottom:6px; padding-right:25px;">
+        <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
+        <strong>مصلحة خدمة الزبائن:</strong> <a class="lightning" href="tel:1594">1594</a>
+      </div>
+      <div style="padding-right:25px;">
+        <img src="icons/google-play-logo.png" alt="Google Play" class="logo">
+        <a class="lightning" href="https://play.google.com/store/apps/details?id=com.seaal.mobile" target="_blank">تطبيق SEAAL Mobile</a>
+      </div>
+    </li>
 
-        <!-- السطر الثالث: خدمة الزبائن -->
-        <div style="margin-bottom:6px; padding-right:25px;">
-          <i class="fas fa-headset" style="color:#006400; margin-left:6px;"></i>
-          <a class="lightning" href="https://www.ade.dz/login" target="_blank">
-            <strong>مصلحة خدمة الزبائن:</strong> 1593
-          </a>
-          <span style="margin-right:10px;">
-            (<a class="lightning" href="tel:1593">اتصل الآن</a>)
-          </span>
-        </div>
+    <li style="border-top: 1px solid #ccc; margin: 8px 0;"></li>
 
-        <!-- السطر الرابع: التطبيقات -->
-        <div style="padding-right:25px;">
-          <img src="icons/google-play-logo.png" alt="google-play-logo" class="logo">
-          <a class="lightning" href="https://play.google.com/store/apps/details?id=com.ade.adese&amp;hl=ar"
-            target="_blank">
-            تطبيق Miyahimob
-          </a>
-        </div>
+    <!-- فرع وكالة عدل -->
+    <li style="margin-bottom:10px;">
+      <div style="margin-bottom:6px; padding-right:25px;">
+        <img src="icons/AADL.png" alt="AADL Logo" class="logo">
+        <strong><a class="lightning" href="https://www.aadlgestimmo.dz/epayement/View/index.php" target="_blank">فاتورة كراء عدل</a></strong>
+      </div>
+      <div style="margin-bottom:6px; padding-right:25px;">
+        <i class="fas fa-globe" style="color:#006400; margin-left:6px;"></i>
+        <strong><a class="lightning" href="https://www.aadl.com.dz/" target="_blank">الموقع الرسمي لوكالة عدل</a></strong>
+      </div>
+      <div style="margin-bottom:6px; padding-right:25px;">
+        <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
+        <strong>مصلحة خدمة الزبائن:</strong> <a class="lightning" href="tel:3030">3030</a>
+      </div>
+      <div style="padding-right:25px;">
+        <img src="icons/google-play-logo.png" alt="Google Play" class="logo">
+        <a class="lightning" href="https://play.google.com/store/apps/details?id=dz.aadl.mobile" target="_blank">تطبيق AADL Mobile</a>
+      </div>
+    </li>
 
-      </li>
+    <li style="border-top: 1px solid #ccc; margin: 8px 0;"></li>
 
-      <!-- فاصل -->
-      <li style="border-top: 1px solid #ccc; margin: 8px 0;"></li>
+    <!-- فرع وكالة OPGI -->
+    <li style="margin-bottom:10px;">
+      <div style="margin-bottom:6px; padding-right:25px;">
+        <img src="icons/opgi.png" alt="OPGI Logo" class="logo">
+        <strong><a class="lightning" href="https://www.opgiconstantine.dz/" target="_blank">فاتورة كراء OPGI</a></strong>
+      </div>
+      <div style="margin-bottom:6px; padding-right:25px;">
+        <i class="fas fa-globe" style="color:#006400; margin-left:6px;"></i>
+        <strong><a class="lightning" href="https://www.opgi-alger.dz/" target="_blank">الموقع الرسمي لـ OPGI</a></strong>
+      </div>
+      <div style="margin-bottom:6px; padding-right:25px;">
+        <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
+        <strong>مصلحة خدمة الزبائن:</strong> <a class="lightning" href="tel:+21300000000">+2130000000</a>
+      </div>
+      <div style="padding-right:25px;">
+        <img src="icons/google-play-logo.png" alt="Google Play" class="logo">
+        <a class="lightning" href="#" target="_blank">تطبيق OPGI (إن وُجد)</a>
+      </div>
+    </li>
 
-      <!-- سونلغاز -->
-      <li style="margin-bottom:10px;">
+    <li style="border-top: 1px solid #ccc; margin: 8px 0;"></li>
 
-        <!-- السطر الأول: فاتورة -->
-        <div style="margin-bottom:6px; padding-right:25px;">
-          <img src="icons/sonelgaz.png" alt="Sonelgaz Logo" class="logo">
-          <strong>
-            <a class="lightning" href="https://epayement.elit.dz/payementFacture.xhtml" target="_blank">
-              فاتورة الكهرباء والغاز (سونلغاز)
-            </a>
-          </strong>
-        </div>
+    <!-- فرع دفع حقوق امتحانات BEM - BAC -->
+    <li style="margin-bottom:10px;">
+      <i class="fas fa-file-invoice-dollar" style="color: green; margin-left:6px;"></i>
+      <a class="lightning" href="https://epay.education.dz/auth" target="_blank">
+        دفع حقوق امتحانات شهادة التعليم المتوسط والبكالوريا (BEM - BAC)
+      </a>
+    </li>
 
-        <!-- السطر الثاني: الموقع الرسمي -->
-        <div style="margin-bottom:6px; padding-right:25px;">
-          <i class="fas fa-globe" style="color:#006400; margin-left:6px;"></i>
-          <strong>
-            <a class="lightning" href="https://www.sonelgaz.dz/" target="_blank">
-              الموقع الرسمي لسونلغاز
-            </a>
-          </strong>
-        </div>
-
-        <!-- السطر الثالث: خدمة الزبائن -->
-        <div style="margin-bottom:6px; padding-right:25px;">
-          <i class="fas fa-headset" style="color:#006400; margin-left:6px;"></i>
-          <a class="lightning" href="https://www.sonelgaz.dz/ar/category/espace-clients-ar" target="_blank">
-            <strong>مصلحة خدمة الزبائن:</strong> 3030
-          </a>
-          <span style="margin-right:10px;">
-            (<a class="lightning" href="tel:3030">اتصل الآن</a>)
-          </span>
-        </div>
-
-
-        <!-- السطر الرابع: التطبيقات -->
-        <div style="padding-right:25px;">
-          <img src="icons/google-play-logo.png" alt="Google Play" class="logo">
-          <a class="lightning" href="https://play.google.com/store/apps/details?id=dz.elit.sonelgazmobile"
-            target="_blank">
-            تطبيق Sonelgaz Mobile
-          </a>
-        </div>
-
-      </li>
-
-      <!-- فاصل -->
-      <li style="border-top: 1px solid #ccc; margin: 8px 0;"></li>
-
-      <!-- سيال -->
-      <li style="margin-bottom:10px;">
-
-        <!-- السطر الأول: فاتورة -->
-        <div style="margin-bottom:6px; padding-right:25px;">
-          <img src="icons/seaal.webp" alt="SEAAL Logo" class="logo">
-          <strong>
-            <a class="lightning" href="https://baridinet.poste.dz/seaal" target="_blank">
-              فاتورة المياه (سيال)
-            </a>
-          </strong>
-        </div>
-
-        <!-- السطر الثاني: الموقع الرسمي -->
-        <div style="margin-bottom:6px; padding-right:25px;">
-          <i class="fas fa-globe" style="color:#006400; margin-left:6px;"></i>
-          <strong>
-            <a class="lightning" href="https://www.seaal.dz/" target="_blank">
-              الموقع الرسمي لسيال
-            </a>
-          </strong>
-        </div>
-
-        <!-- السطر الثالث: خدمة الزبائن -->
-        <div style="margin-bottom:6px; padding-right:25px;">
-          <i class="fas fa-headset" style="color:#006400; margin-left:6px;"></i>
-          <a class="lightning" href="https://wakalati.seaal.dz/" target="_blank">
-            <strong>مصلحة خدمة الزبائن:</strong> 1594
-          </a>
-          <span style="margin-right:10px;">
-            (<a class="lightning" href="tel:1594">اتصل الآن</a>)
-          </span>
-        </div>
-
-
-        <!-- السطر الرابع: التطبيقات -->
-        <div style="padding-right:25px;">
-          <img src="icons/google-play-logo.png" alt="Google Play" class="logo">
-          <a class="lightning" href="https://play.google.com/store/apps/details?id=com.seaal.mobile" target="_blank">
-            تطبيق SEAAL Mobile
-          </a>
-        </div>
-
-      </li>
-
-      <!-- فاصل -->
-      <li style="border-top: 1px solid #ccc; margin: 8px 0;"></li>
-
-      <!-- عدل -->
-      <li style="margin-bottom:10px;">
-
-        <!-- السطر الأول: فاتورة -->
-        <div style="margin-bottom:6px; padding-right:25px;">
-          <img src="icons/AADL.png" alt="AADL Logo" class="logo">
-          <strong>
-            <a class="lightning" href="https://www.aadlgestimmo.dz/epayement/View/index.php" target="_blank">
-              فاتورة كراء عدل
-            </a>
-          </strong>
-        </div>
-
-        <!-- السطر الثاني: الموقع الرسمي -->
-        <div style="margin-bottom:6px; padding-right:25px;">
-          <i class="fas fa-globe" style="color:#006400; margin-left:6px;"></i>
-          <strong>
-            <a class="lightning" href="https://www.aadl.com.dz/" target="_blank">
-              الموقع الرسمي لوكالة عدل
-            </a>
-          </strong>
-        </div>
-
-        <!-- السطر الثالث: رقم الهاتف -->
-        <div style="margin-bottom:6px; padding-right:25px;">
-          <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
-          <strong>مصلحة خدمة الزبائن:</strong>
-          <a class="lightning" href="tel:3030">3030</a>
-        </div>
-
-        <!-- السطر الرابع: التطبيقات -->
-        <div style="padding-right:25px;">
-          <img src="icons/google-play-logo.png" alt="Google Play" class="logo">
-          <a class="lightning" href="https://play.google.com/store/apps/details?id=dz.aadl.mobile" target="_blank">
-            تطبيق AADL Mobile
-          </a>
-        </div>
-
-      </li>
-
-      <!-- فاصل -->
-      <li style="border-top: 1px solid #ccc; margin: 8px 0;"></li>
-
-      <!-- OPGI -->
-      <li style="margin-bottom:10px;">
-
-        <!-- السطر الأول: فاتورة -->
-        <div style="margin-bottom:6px; padding-right:25px;">
-          <img src="icons/opgi.png" alt="OPGI Logo" class="logo">
-          <strong>
-            <a class="lightning" href="https://www.opgiconstantine.dz/" target="_blank">
-              فاتورة كراء OPGI
-            </a>
-          </strong>
-        </div>
-
-        <!-- السطر الثاني: الموقع الرسمي -->
-        <div style="margin-bottom:6px; padding-right:25px;">
-          <i class="fas fa-globe" style="color:#006400; margin-left:6px;"></i>
-          <strong>
-            <a class="lightning" href="https://www.opgi-alger.dz/" target="_blank">
-              الموقع الرسمي لـ OPGI
-            </a>
-          </strong>
-        </div>
-
-        <!-- السطر الثالث: رقم الهاتف -->
-        <div style="margin-bottom:6px; padding-right:25px;">
-          <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
-          <strong>مصلحة خدمة الزبائن:</strong>
-          <a class="lightning" href="tel:+21300000000"
-            style="direction:ltr; unicode-bidi:bidi-override;">+2130000000</a>
-        </div>
-
-        <!-- السطر الرابع: التطبيقات -->
-        <div style="padding-right:25px;">
-          <img src="icons/google-play-logo.png" alt="Google Play" class="logo">
-          <a class="lightning" href="#" target="_blank">
-            تطبيق OPGI (إن وُجد)
-          </a>
-        </div>
-
-      </li>
-
-      <!-- فاصل -->
-      <li style="border-top: 1px solid #ccc; margin: 8px 0;"></li>
-
-      <!-- وزارة التربية -->
-      <li>
-        <i class="fas fa-file-invoice-dollar" style="color: green; margin-left:6px;"></i>
-        <a class="lightning" href="https://epay.education.dz/auth" target="_blank">
-          منصة الدفع اﻹلكتروني في إمتحانات شهادة التعليم المتوسط والبكالوريا (BEM - BAC)
-        </a>
-      </li>
-
-    </ul>
-  </section>
-
+  </ul>
+</section>
 <!-- 📱 قسم تعبئة الهاتف النقال -->
 <section dir="rtl" style="text-align: right;">
   <h2 id="toggle-recharge" onclick="toggleSection('recharge-section', this)">
