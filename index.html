@@ -7,10 +7,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <!-- أيقونة الموقع -->
-<link rel="icon" href="icons/icon.png" type="image/png" />
+<link rel="icon" href="icons/icon.png" type="image/png" loading="lazy" class="welcome-logo/>
 
 <!-- ألوان للمتصفحات -->
-<meta name="theme-color" content="#006400" />
+<meta name=" theme-color" content="#006400" />
 
 <!-- تسجيل Service Worker -->
 <script>
@@ -62,7 +62,7 @@
   "url": "https://imadtbn.github.io/dz_portal/",
   "logo": {
     "@type": "ImageObject",
-    "url": "https://github.com/imadtbn/dz_portal/blob/main/icon.png?raw=true"
+    "url": "https://github.com/imadtbn/dz_portal/blob/main/icons/icon.png?raw=true"
   },
   "contactPoint": {
     "@type": "ContactPoint",
@@ -1738,146 +1738,6 @@
     </div>
   </section>
 
-<!-- قسم الخدمات البنكية -->
-<section dir="rtl" style="text-align: right;">
-  <h2 id="banks-section-header" onclick="toggleSection('banks-section-content', this)"
-    style="cursor:pointer; background-color:#a52a2a; color:white; padding:10px; border-radius:8px;">
-    <span><i class="fas fa-building-columns"></i> الخدمات البنكية <span class="count"></span></span>
-    <span class="toggle-icon" style="float:left;">▶</span>
-  </h2>
-
-  <div id="banks-section-content" style="display:none; padding:10px 20px;">
-
-    <!-- البنوك العمومية -->
-    <h3 onclick="toggleSublist('public-banks-list')"
-      style="cursor:pointer; background-color:#f0faf6; color:#006233; padding:8px; border-radius:6px; margin-top:10px;">
-      <span><i class="fas fa-landmark"></i> البنوك العمومية <span class="count">(10 خدمات)</span></span>
-      <span class="toggle-icon" style="float:left;">▶</span>
-    </h3>
-
-    <ul id="public-banks-list"
-      style="display:none; list-style:none; padding:0 20px; line-height:2; margin-top:8px;">
-
-      <!-- BEA -->
-      <h3 onclick="toggleSublist('bea-list')"
-        style="cursor:pointer; background-color:#f9fdfb; color:#006233; padding:8px; border-radius:6px; margin-top:6px;">
-        <span><img src="icons/bea.png" alt="BEA Logo" class="logo"> بنك الجزائر الخارجي <span class="count">(3 خدمات)</span></span>
-        <span class="toggle-icon" style="float:left;">▶</span>
-      </h3>
-      <ul id="bea-list" style="display:none; list-style:none; padding:0 20px; line-height:2;">
-        <li><i class="fas fa-globe" style="color:#006400; margin-left:6px;"></i>
-          <a class="lightning" href="https://www.bea.dz/" target="_blank">الموقع الرسمي</a>
-        </li>
-        <li><img src="icons/googleplay.png" alt="Google Play" style="width:18px; margin-left:6px; vertical-align:middle;">
-          <a class="lightning" href="https://play.google.com/store/apps/details?id=dz.bea.mobilebanking" target="_blank">
-            تحميل تطبيق BEA Mobile</a>
-        </li>
-        <li><i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
-          <a class="lightning" href="tel:+21321436000" style="direction:ltr; display:inline-block;">+213 21 43 60 00</a>
-        </li>
-      </ul>
-
-      <!-- BNA -->
-      <h3 onclick="toggleSublist('bna-list')"
-        style="cursor:pointer; background-color:#f9fdfb; color:#006233; padding:8px; border-radius:6px; margin-top:10px;">
-        <span><img src="icons/BNA.jpg" alt="BNA Logo" class="logo"> البنك الوطني الجزائري <span class="count">(3 خدمات)</span></span>
-        <span class="toggle-icon" style="float:left;">▶</span>
-      </h3>
-      <ul id="bna-list" style="display:none; list-style:none; padding:0 20px; line-height:2;">
-        <li><i class="fas fa-globe" style="color:#006400; margin-left:6px;"></i>
-          <a class="lightning" href="https://www.bna.dz/" target="_blank">الموقع الرسمي</a>
-        </li>
-        <li><img src="icons/googleplay.png" alt="Google Play" style="width:18px; margin-left:6px; vertical-align:middle;">
-          <a class="lightning" href="https://play.google.com/store/apps/details?id=dz.bna.mobile" target="_blank">
-            تحميل تطبيق BNA Mobile</a>
-        </li>
-        <li><i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
-          <a class="lightning" href="tel:3020" style="direction:ltr; display:inline-block;">3020</a>
-        </li>
-      </ul>
-
-      <!-- BADR -->
-      <h3 onclick="toggleSublist('badr-list')"
-        style="cursor:pointer; background-color:#f9fdfb; color:#006233; padding:8px; border-radius:6px; margin-top:10px;">
-        <span><img src="icons/BADR.jpg" alt="BADR Logo" class="logo"> بنك الفلاحة والتنمية الريفية <span class="count">(2 خدمات)</span></span>
-        <span class="toggle-icon" style="float:left;">▶</span>
-      </h3>
-      <ul id="badr-list" style="display:none; list-style:none; padding:0 20px; line-height:2;">
-        <li><i class="fas fa-globe" style="color:#006400; margin-left:6px;"></i>
-          <a class="lightning" href="https://www.badrbanque.dz/" target="_blank">الموقع الرسمي</a>
-        </li>
-        <li><i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
-          <a class="lightning" href="tel:+21321744209" style="direction:ltr; display:inline-block;">+213 21 74 42 09</a>
-        </li>
-      </ul>
-
-      <!-- CPA -->
-      <h3 onclick="toggleSublist('cpa-list')"
-        style="cursor:pointer; background-color:#f9fdfb; color:#006233; padding:8px; border-radius:6px; margin-top:10px;">
-        <span><img src="icons/cpa.jpg" alt="CPA Logo" class="logo"> القرض الشعبي الجزائري <span class="count">(2 خدمات)</span></span>
-        <span class="toggle-icon" style="float:left;">▶</span>
-      </h3>
-      <ul id="cpa-list" style="display:none; list-style:none; padding:0 20px; line-height:2;">
-        <li><i class="fas fa-globe" style="color:#006400; margin-left:6px;"></i>
-          <a class="lightning" href="https://www.cpa-bank.dz/" target="_blank">الموقع الرسمي</a>
-        </li>
-        <li><i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
-          <a class="lightning" href="tel:+21321735306" style="direction:ltr; display:inline-block;">+213 21 73 53 06</a>
-        </li>
-      </ul>
-    </ul>
-
-    <!-- البنوك الأجنبية -->
-    <h3 onclick="toggleSublist('foreign-banks-list')"
-      style="cursor:pointer; background-color:#f0faf6; color:#006233; padding:8px; border-radius:6px; margin-top:15px;">
-      <span><i class="fas fa-globe-europe"></i> البنوك الأجنبية <span class="count">(6 خدمات)</span></span>
-      <span class="toggle-icon" style="float:left;">▶</span>
-    </h3>
-
-    <ul id="foreign-banks-list"
-      style="display:none; list-style:none; padding:0 20px; line-height:2; margin-top:8px;">
-
-      <!-- AGB -->
-      <h3 onclick="toggleSublist('agb-list')"
-        style="cursor:pointer; background-color:#f9fdfb; color:#006233; padding:8px; border-radius:6px; margin-top:6px;">
-        <span><img src="icons/AGB.jpg" alt="AGB Logo" class="logo"> بنك الخليج الجزائر <span class="count">(3 خدمات)</span></span>
-        <span class="toggle-icon" style="float:left;">▶</span>
-      </h3>
-      <ul id="agb-list" style="display:none; list-style:none; padding:0 20px; line-height:2;">
-        <li><i class="fas fa-globe" style="color:#006400; margin-left:6px;"></i>
-          <a class="lightning" href="https://www.ag-bank.com/" target="_blank">الموقع الرسمي</a>
-        </li>
-        <li><img src="icons/google-play-logo.png" alt="Google Play" style="width:18px; margin-left:6px; vertical-align:middle;">
-          <a class="lightning" href="https://play.google.com/store/apps/details?id=com.agb.mobile" target="_blank">
-            تحميل تطبيق AGB Mobile</a>
-        </li>
-        <li><i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
-          <a class="lightning" href="tel:+21323792000" style="direction:ltr; display:inline-block;">+213 23 79 20 00</a>
-        </li>
-      </ul>
-
-      <!-- Société Générale -->
-      <h3 onclick="toggleSublist('sg-list')"
-        style="cursor:pointer; background-color:#f9fdfb; color:#006233; padding:8px; border-radius:6px; margin-top:10px;">
-        <span><img src="icons/societe_general_algerie.webp" alt="SG Logo" class="logo"> بنك Société Générale Algérie <span class="count">(3 خدمات)</span></span>
-        <span class="toggle-icon" style="float:left;">▶</span>
-      </h3>
-      <ul id="sg-list" style="display:none; list-style:none; padding:0 20px; line-height:2;">
-        <li><i class="fas fa-globe" style="color:#006400; margin-left:6px;"></i>
-          <a class="lightning" href="https://www.societegenerale.dz/" target="_blank">الموقع الرسمي</a>
-        </li>
-        <li><img src="icons/google-play-logo.png" alt="Google Play" style="width:18px; margin-left:6px; vertical-align:middle;">
-          <a class="lightning" href="https://play.google.com/store/apps/details?id=com.sga.mobile" target="_blank">
-            تحميل تطبيق SGA Mobile</a>
-        </li>
-        <li><i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
-          <a class="lightning" href="tel:+21323366400" style="direction:ltr; display:inline-block;">+213 23 36 64 00</a>
-        </li>
-      </ul>
-    </ul>
-  </div>
-</section>
-
   <!-- قسم تعبئة الهاتف النقال -->
   <section dir="rtl" style="text-align: right;">
     <h2 id="toggle-recharge-section" onclick="toggleSection('recharge-section-content', this)"
@@ -1906,7 +1766,8 @@
         <li><i class="fas fa-phone" style="color: #006400; margin-left:6px;"></i>
           مصلحة خدمة الزبائن: <a class="lightning" href="tel:666">666</a>
         </li>
-        <li><img src="icons/mobilispace.webp" alt="mobilispace" style="width:18px; margin-left:6px; vertical-align:middle;">
+        <li><img src="icons/mobilispace.webp" alt="mobilispace"
+            style="width:18px; margin-left:6px; vertical-align:middle;">
           <a class="lightning" href="https://play.google.com/store/search?q=mobispace&c=apps&hl=ar"
             target="_blank">تطبيق MobiSpace</a>
         </li>
@@ -4084,28 +3945,29 @@
 
   <script>
     /* ==========     1. زر تثبيت التطبيق PWA   ======================= */
-    const installButton = document.getElementById('install-button');
     let deferredPrompt;
+    const installBtn = document.getElementById('install-button');
+    installBtn.style.display = 'none';
 
     window.addEventListener('beforeinstallprompt', (e) => {
-      e.preventDefault(); // منع النافذة التلقائية
+      e.preventDefault();
       deferredPrompt = e;
-      installButton.style.display = 'inline-block'; // إظهار الزر عند توفر التثبيت
+      installBtn.style.display = 'inline-block';
+    });
 
-      installButton.addEventListener('click', () => {
-        installButton.style.display = 'none'; // إخفاء الزر بعد النقر
+    installBtn.addEventListener('click', async () => {
+      installBtn.style.display = 'none';
+      if (deferredPrompt) {
         deferredPrompt.prompt();
-        deferredPrompt.userChoice.then((choiceResult) => {
-          if (choiceResult.outcome !== 'accepted') {
-            installButton.style.display = 'inline-block'; // إعادة إظهار الزر إذا لم يوافق المستخدم
-          }
-          deferredPrompt = null;
-        });
-      });
+        const { outcome } = await deferredPrompt.userChoice;
+        deferredPrompt = null;
+      }
     });
 
     window.addEventListener('appinstalled', () => {
-      installButton.style.display = 'none';
+      console.log('✅ تم تثبيت التطبيق بنجاح');
+    });
+    installButton.style.display = 'none';
     });
     // ===== نهاية زر تثبيت التطبيق =====
 
