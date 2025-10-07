@@ -3945,33 +3945,32 @@
 
   <script>
     /* ==========     1. زر تثبيت التطبيق PWA   ======================= */
+    const installButton = document.getElementById('install-button');
     let deferredPrompt;
-    const installBtn = document.getElementById('install-button');
-    installBtn.style.display = 'none';
 
     window.addEventListener('beforeinstallprompt', (e) => {
-      e.preventDefault();
+      e.preventDefault(); // منع النافذة التلقائية
       deferredPrompt = e;
-      installBtn.style.display = 'inline-block';
-    });
+      installButton.style.display = 'inline-block'; // إظهار الزر عند توفر التثبيت
 
-    installBtn.addEventListener('click', async () => {
-      installBtn.style.display = 'none';
-      if (deferredPrompt) {
+      installButton.addEventListener('click', () => {
+        installButton.style.display = 'none'; // إخفاء الزر بعد النقر
         deferredPrompt.prompt();
-        const { outcome } = await deferredPrompt.userChoice;
-        deferredPrompt = null;
-      }
+        deferredPrompt.userChoice.then((choiceResult) => {
+          if (choiceResult.outcome !== 'accepted') {
+            installButton.style.display = 'inline-block'; // إعادة إظهار الزر إذا لم يوافق المستخدم
+          }
+          deferredPrompt = null;
+        });
+      });
     });
 
     window.addEventListener('appinstalled', () => {
-      console.log('✅ تم تثبيت التطبيق بنجاح');
-    });
-    installButton.style.display = 'none';
+      installButton.style.display = 'none';
     });
     // ===== نهاية زر تثبيت التطبيق =====
 
-    /* =================  2. توسيع/طي الأقسام + العداد   ================= */
+    /* ===========================  2. توسيع/طي الأقسام + العداد   =========================== */
     document.addEventListener("DOMContentLoaded", function () {
       const headers = document.querySelectorAll("section h2, section h3");
       headers.forEach((header, index) => {
