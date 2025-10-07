@@ -3945,29 +3945,86 @@
 
   <script>
     /* ==========     1. زر تثبيت التطبيق PWA   ======================= */
-    const installButton = document.getElementById('install-button');
-    let deferredPrompt;
 
-    window.addEventListener('beforeinstallprompt', (e) => {
-      e.preventDefault(); // منع النافذة التلقائية
-      deferredPrompt = e;
-      installButton.style.display = 'inline-block'; // إظهار الزر عند توفر التثبيت
+/* تحسين زر تثبيت PWA */
+const installButton = document.getElementById('install-button');
+let deferredPrompt = null;
+let installListenerAdded = false;
 
-      installButton.addEventListener('click', () => {
-        installButton.style.display = 'none'; // إخفاء الزر بعد النقر
-        deferredPrompt.prompt();
-        deferredPrompt.userChoice.then((choiceResult) => {
-          if (choiceResult.outcome !== 'accepted') {
-            installButton.style.display = 'inline-block'; // إعادة إظهار الزر إذا لم يوافق المستخدم
-          }
-          deferredPrompt = null;
-        });
-      });
-    });
+// helper: عرض حالة التثبيت
+function setInstalledState() {
+  installButton.textContent = 'مُثبت';
+  installButton.disabled = true;
+  installButton.classList.add('installed');
+  installButton.style.opacity = '0.8';
+  installButton.style.cursor = 'default';
+}
 
-    window.addEventListener('appinstalled', () => {
-      installButton.style.display = 'none';
-    });
+// helper: عرض زر التثبيت نشط
+function setInstallAvailable() {
+  installButton.textContent = 'تثبيت التطبيق';
+  installButton.disabled = false;
+  installButton.classList.remove('installed');
+  installButton.style.opacity = '1';
+  installButton.style.cursor = 'pointer';
+  installButton.style.display = 'inline-block';
+}
+
+// تأكد من حالة التثبيت عند تحميل الصفحة
+window.addEventListener('load', async () => {
+  // بعض متصفحات سطح المكتب تدعم getInstalledRelatedApps (غير واسع الدعم)
+  if (navigator.getInstalledRelatedApps) {
+    try {
+      const apps = await navigator.getInstalledRelatedApps();
+      if (apps && apps.length) {
+        setInstalledState();
+        return;
+      }
+    } catch (e) { /* تجاهل إذا لم تكن مدعومة */ }
+  }
+  // افتراضيًا أخفي الزر حتى نرى beforeinstallprompt
+  installButton.style.display = 'none';
+  setInstallAvailable();
+});
+
+// قبل عرض مربع التثبيت: خزن الحدث وأظهر الزر
+window.addEventListener('beforeinstallprompt', (e) => {
+  e.preventDefault();
+  deferredPrompt = e;
+  setInstallAvailable();
+
+  // أضف معالج النقر مرة واحدة فقط
+  if (!installListenerAdded) {
+    installButton.addEventListener('click', async () => {
+      if (!deferredPrompt) return;
+      // إظهار الحوار دون إخفاء الزر فوريًا
+      try {
+        await deferredPrompt.prompt();
+        const choice = await deferredPrompt.userChoice;
+        // إذا قبل المستخدم: عرض حالة مثبت
+        if (choice.outcome === 'accepted') {
+          setInstalledState();
+        } else {
+          // رفض المستخدم: احتفظ بالزر متاحاً
+          setInstallAvailable();
+        }
+      } catch (err) {
+        // في حالة خطأ، أعد إظهار الزر
+        setInstallAvailable();
+        console.error('install prompt error', err);
+      } finally {
+        deferredPrompt = null;
+      }
+    }, { once: false });
+    installListenerAdded = true;
+  }
+});
+
+// عند اكتمال التثبيت (يحدث على الحاسوب أو الهاتف)
+window.addEventListener('appinstalled', () => {
+  setInstalledState();
+});
+
     // ===== نهاية زر تثبيت التطبيق =====
 
     /* ===========================  2. توسيع/طي الأقسام + العداد   =========================== */
