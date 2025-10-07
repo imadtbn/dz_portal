@@ -1617,7 +1617,7 @@
       <!-- ADE -->
       <h3 onclick="toggleSublist('ade-list')"
         style="cursor: pointer; background-color: #f0faf6; color: #006233; padding: 8px; border-radius: 6px;">
-        <span><img src="icons/ade.png" alt="ADE Logo" loading="lazy"  loading="lazy" class="logo">
+        <span><img src="icons/ade.png" alt="ADE Logo"  loading="lazy" class="logo">
           الجزائرية للمياه <span class="count"></span>
         </span>
         <span class="toggle-icon" style="float: left;">▶</span>
@@ -1641,7 +1641,7 @@
       <!-- سونلغاز -->
       <h3 onclick="toggleSublist('sonelgaz-list')"
         style="cursor: pointer; background-color: #f0faf6; color: #006233; padding: 8px; border-radius: 6px; margin-top:10px;">
-        <span><img src="icons/sonelgaz.png" alt="Sonelgaz Logo" loading="lazy"  loading="lazy" class="logo">
+        <span><img src="icons/sonelgaz.png" alt="Sonelgaz Logo"  loading="lazy" class="logo">
           سونلغاز <span class="count"></span>
         </span>
         <span class="toggle-icon" style="float: left;">▶</span>
@@ -1666,7 +1666,7 @@
       <!-- سيال -->
       <h3 onclick="toggleSublist('seaal-list')"
         style="cursor: pointer; background-color: #f0faf6; color: #006233; padding: 8px; border-radius: 6px; margin-top:10px;">
-        <span><img src="icons/seaal.webp" alt="SEAAL Logo"  loading="lazy"  loading="lazy" class="logo">
+        <span><img src="icons/seaal.webp" alt="SEAAL Logo"  loading="lazy" class="logo">
           سيال <span class="count"></span>
         </span>
         <span class="toggle-icon" style="float: left;">▶</span>
@@ -1690,7 +1690,7 @@
       <!-- وكالة عدل -->
       <h3 onclick="toggleSublist('aadl-list')"
         style="cursor: pointer; background-color: #f0faf6; color: #006233; padding: 8px; border-radius: 6px; margin-top:10px;">
-        <span><img src="icons/AADL.png" alt="AADL Logo" loading="lazy"  loading="lazy" class="logo">
+        <span><img src="icons/AADL.png" alt="AADL Logo"  loading="lazy" class="logo">
           وكالة عدل <span class="count"></span>
         </span>
         <span class="toggle-icon" style="float: left;">▶</span>
@@ -3945,29 +3945,29 @@
 
   <script>
     /* ==========     1. زر تثبيت التطبيق PWA   ======================= */
-  let deferredPrompt;
-  const installBtn = document.getElementById('install-button');
-  installBtn.style.display = 'none';
+    const installButton = document.getElementById('install-button');
+    let deferredPrompt;
 
-  window.addEventListener('beforeinstallprompt', (e) => {
-    e.preventDefault();
-    deferredPrompt = e;
-    installBtn.style.display = 'inline-block';
-  });
+    window.addEventListener('beforeinstallprompt', (e) => {
+      e.preventDefault(); // منع النافذة التلقائية
+      deferredPrompt = e;
+      installButton.style.display = 'inline-block'; // إظهار الزر عند توفر التثبيت
 
-  installBtn.addEventListener('click', async () => {
-    installBtn.style.display = 'none';
-    if (deferredPrompt) {
-      deferredPrompt.prompt();
-      const { outcome } = await deferredPrompt.userChoice;
-      deferredPrompt = null;
-    }
-  });
+      installButton.addEventListener('click', () => {
+        installButton.style.display = 'none'; // إخفاء الزر بعد النقر
+        deferredPrompt.prompt();
+        deferredPrompt.userChoice.then((choiceResult) => {
+          if (choiceResult.outcome !== 'accepted') {
+            installButton.style.display = 'inline-block'; // إعادة إظهار الزر إذا لم يوافق المستخدم
+          }
+          deferredPrompt = null;
+        });
+      });
+    });
 
-  window.addEventListener('appinstalled', () => {
-    console.log('✅ تم تثبيت التطبيق بنجاح');
-  });
-  
+    window.addEventListener('appinstalled', () => {
+      installButton.style.display = 'none';
+    });
     // ===== نهاية زر تثبيت التطبيق =====
 
     /* ===========================  2. توسيع/طي الأقسام + العداد   =========================== */
@@ -4153,7 +4153,6 @@
       navigator.serviceWorker.register("/dz_portal/service-worker.js");
     }
   </script>
-  
-</body>
+  </body>
 
 </html>
