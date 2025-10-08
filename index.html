@@ -1149,31 +1149,35 @@
   }
 
   /* تثبيت الهيدر أعلى الصفحة */
-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background: var(--primary-color);
-  color: var(--white);
-  z-index: 1000;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, .12);
-  box-sizing: border-box;
-  min-height: 30px;         /* الارتفاع الأدنى للهيدر */
-  padding: 4px 6px;         /* تقليل المسافة الداخلية */
-}
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: var(--primary-color);
+    color: var(--white);
+    z-index: 1000;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, .12);
+    box-sizing: border-box;
+    min-height: 30px;
+    /* الارتفاع الأدنى للهيدر */
+    padding: 4px 6px;
+    /* تقليل المسافة الداخلية */
+  }
 
   /* الهوية داخل الهيدر */
-.branding {
-  gap: 3px;
-}
-.branding h1 {
-  font-size: 0.8rem;
-}
-.branding .logo {
-  width: 22px;
-  height: 22px;
-}
+  .branding {
+    gap: 3px;
+  }
+
+  .branding h1 {
+    font-size: 0.8rem;
+  }
+
+  .branding .logo {
+    width: 22px;
+    height: 22px;
+  }
 
 
   /* صندوق الطقس في الهيدر */
@@ -1201,10 +1205,11 @@ header {
   }
 
   /* منطقة البحث داخل الهيدر */
-#searchArea {
-  padding: 0 9px 2px 9px; /* تقليل المسافة السفلية */
-  margin-bottom: 0;
-}
+  #searchArea {
+    padding: 0 9px 2px 9px;
+    /* تقليل المسافة السفلية */
+    margin-bottom: 0;
+  }
 
 
   #searchBox {
@@ -1272,8 +1277,9 @@ header {
     /* حجم متوسط للنص */
     overflow: hidden;
     /* إخفاء النص الزائد */
-  margin-top: 2px; /* كانت المسافة الافتراضية أكبر */
-}
+    margin-top: 2px;
+    /* كانت المسافة الافتراضية أكبر */
+  }
 
   #newsTickerContainer {
     overflow: hidden;
@@ -2943,6 +2949,12 @@ header {
         <a class="lightning" href="https://play.google.com/store/apps/details?id=dz.etusa.etusa_mob&amp;hl=ar"
           target="_blank">
           تطبيق "Etusa Mob" لمؤسسة النقل الحضري وشبه الحضري
+        </a>
+      </li>
+
+      <li>
+        <img src="icons/volz.png" alt="Etusa Mob Logo" loading="lazy" class="logo">
+        <a class="lightning" href="https://volz.app/ar" target="_blank"> احجز تذاكر طيرانك من الجزائر عبر Volz
         </a>
       </li>
 
