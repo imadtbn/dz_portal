@@ -117,12 +117,13 @@
         { "@type": "SiteNavigationElement", "position": 19, "name": "التجارة", "url": "#toggle-commerce" },
         { "@type": "SiteNavigationElement", "position": 20, "name": "الجمارك الجزائرية", "url": "#toggle-customs" },
         { "@type": "SiteNavigationElement", "position": 21, "name": "الوكالة الوطنية للمقاول الذاتي", "url": "#toggle-autoentrepreneur" },
-        { "@type": "SiteNavigationElement", "position": 22, "name": "الوكالة الوطنية لترقية الإستثمار", "url": "#toggle-investment" },
-        { "@type": "SiteNavigationElement", "position": 23, "name": "وكالات التأمينات", "url": "#toggle-insurance" },
-        { "@type": "SiteNavigationElement", "position": 24, "name": "خدمات بنكية", "url": "#toggle-banks" },
-        { "@type": "SiteNavigationElement", "position": 25, "name": "أرقام الطوارئ والخدمات", "url": "#toggle-emergency" },
-        { "@type": "SiteNavigationElement", "position": 26, "name": "معلومات الإتصال", "url": "#toggle-contact" },
-        { "@type": "SiteNavigationElement", "position": 27, "name": "التعليقات والإستفسارات", "url": "#toggle-comments" }
+        { "@type": "SiteNavigationElement", "position": 22, "name": "الديوان الوطني للحج والعمرة", "url": "#toggle-onpo" },
+        { "@type": "SiteNavigationElement", "position": 23, "name": "الوكالة الوطنية لترقية الإستثمار", "url": "#toggle-investment" },
+        { "@type": "SiteNavigationElement", "position": 24, "name": "وكالات التأمينات", "url": "#toggle-insurance" },
+        { "@type": "SiteNavigationElement", "position": 25, "name": "خدمات بنكية", "url": "#toggle-banks" },
+        { "@type": "SiteNavigationElement", "position": 26, "name": "أرقام الطوارئ والخدمات", "url": "#toggle-emergency" },
+        { "@type": "SiteNavigationElement", "position": 27, "name": "معلومات الإتصال", "url": "#toggle-contact" },
+        { "@type": "SiteNavigationElement", "position": 28, "name": "التعليقات والإستفسارات", "url": "#toggle-comments" }
       ]
     }
   ]
@@ -211,7 +212,7 @@
     /* تطبيق خلفية خضراء على الهيدر والفوتر */
     color: #fff;
     /* جعل النص باللون الأبيض */
-    padding: 10px;
+    padding: 4px 6px;
     /* إضافة مسافة داخلية حول النص */
     text-align: center;
     /* محاذاة المحتوى إلى المنتصف */
@@ -811,7 +812,7 @@
     /* منع العناصر من الانتقال إلى سطر جديد */
     padding-bottom: 5px;
     /* ترك مسافة صغيرة أسفل العناصر */
-    animation: scrollBanner 40s linear infinite;
+    animation: scrollBanner 20s linear infinite;
     /* تشغيل حركة تمرير مستمرة للشريط */
   }
 
@@ -1148,41 +1149,32 @@
   }
 
   /* تثبيت الهيدر أعلى الصفحة */
-  header {
-    position: fixed;
-    /* جعله دائم الظهور */
-    top: 0;
-    left: 0;
-    width: 100%;
-    /* يمتد على عرض الصفحة */
-    background: var(--primary-color);
-    /* خلفية خضراء */
-    color: var(--white);
-    /* نص أبيض */
-    z-index: 1000;
-    /* فوق كل العناصر الأخرى */
-    box-shadow: 0 2px 6px rgba(0, 0, 0, .12);
-    /* ظل خفيف أسفله */
-    box-sizing: border-box;
-    /* يشمل الحشوات ضمن الأبعاد */
-  }
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: var(--primary-color);
+  color: var(--white);
+  z-index: 1000;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, .12);
+  box-sizing: border-box;
+  min-height: 30px;         /* الارتفاع الأدنى للهيدر */
+  padding: 4px 6px;         /* تقليل المسافة الداخلية */
+}
 
   /* الهوية داخل الهيدر */
-  .branding h1 {
-    margin: 0;
-    /* إزالة الهوامش */
-    font-size: 0.9rem;
-    /* حجم خط صغير */
-    font-weight: 700;
-    /* خط عريض */
-  }
+.branding {
+  gap: 3px;
+}
+.branding h1 {
+  font-size: 0.8rem;
+}
+.branding .logo {
+  width: 22px;
+  height: 22px;
+}
 
-  .branding .logo {
-    width: 28px;
-    /* عرض شعار الهوية */
-    height: 28px;
-    /* ارتفاع الشعار */
-  }
 
   /* صندوق الطقس في الهيدر */
   #weatherBox {
@@ -1209,10 +1201,11 @@
   }
 
   /* منطقة البحث داخل الهيدر */
-  #searchArea {
-    padding: 2px 9px;
-    /* مسافة داخلية بسيطة */
-  }
+#searchArea {
+  padding: 0 9px 2px 9px; /* تقليل المسافة السفلية */
+  margin-bottom: 0;
+}
+
 
   #searchBox {
     flex: 1;
@@ -1279,7 +1272,8 @@
     /* حجم متوسط للنص */
     overflow: hidden;
     /* إخفاء النص الزائد */
-  }
+  margin-top: 2px; /* كانت المسافة الافتراضية أكبر */
+}
 
   #newsTickerContainer {
     overflow: hidden;
@@ -1530,6 +1524,7 @@
             { id: 'toggle-commerce', name: 'التجارة', icon: 'fa-store' },
             { id: 'toggle-customs', name: 'الجمارك الجزائرية', icon: 'fa-landmark' },
             { id: 'toggle-autoentrepreneur', name: 'المقاول الذاتي', icon: 'fa-user-tie' },
+            { id: 'toggle-onpo', name: 'الحج والعمرة', icon: 'fa-kaaba' },
             { id: 'toggle-investment', name: 'ترقية الإستثمار', icon: 'fa-chart-line' },
             { id: 'toggle-banks', name: 'الخدمات البنكية', icon: 'fa-building-columns' },
             { id: 'toggle-insurance', name: 'وكالات التأمينات', icon: 'fa-shield-alt' },
@@ -2100,7 +2095,8 @@
           <a class="lightning" href="https://www.dzexams.com/" target="_blank">تحضير الفروض والاختبارات</a>
         </li>
         <li><i class="fas fa-credit-card" style="color: #006400; margin-left:6px;"></i>
-          <a class="lightning" href="https://epay.education.dz/auth" target="_blank">الدفع الإلكتروني للـ BEM و BAC</a>
+          <a class="lightning" href="https://epay.education.dz/auth" target="_blank">الدفع الإلكتروني لمستحقات إمتحانات
+            BEM و BAC</a>
         </li>
         <li><i class="fas fa-file-signature" style="color: #006400; margin-left:6px;"></i>
           <a class="lightning" href="https://bem.onec.dz/" target="_blank">تسجيل شهادة التعليم المتوسط</a>
@@ -2210,7 +2206,7 @@
       <li>
         <i class="fas fa-user-tie" style="color: #006400;"></i>
         <a class="lightning" href="https://portal.dgrsdt.dz/" target="_blank">
-          منصة التسجيل للخبراء والمترشحين للمناصب العليا
+          التسجيل في منصة الخبراء والمترشحين للمناصب العليا
         </a>
       </li>
 
@@ -3234,56 +3230,57 @@
 
   </section>
 
-<!-- 🕋 قسم الديوان الوطني للحج والعمرة -->
-<section dir="rtl" style="text-align: right;">
-  <h2 id="toggle-onpo" onclick="toggleSection('onpo', this)"
+  <!-- 🕋 قسم الديوان الوطني للحج والعمرة -->
+  <section dir="rtl" style="text-align: right;">
+    <h2 id="toggle-onpo" onclick="toggleSection('onpo', this)"
       style="cursor: pointer; background-color: #a52a2a; color: white; padding: 10px; border-radius: 8px;">
-    <span>
-      <img src="icons/onpo.png" alt="ONPO Logo" loading="lazy" class="logo">
-      الديوان الوطني للحج والعمرة
-      <span class="count"></span>
-    </span>
-    <span class="toggle-icon" style="float: left;">▶</span>
-  </h2>
+      <span>
+        <img src="icons/onpo.png" alt="ONPO Logo" loading="lazy" class="logo">
+        الديوان الوطني للحج والعمرة
+        <span class="count"></span>
+      </span>
+      <span class="toggle-icon" style="float: left;">▶</span>
+    </h2>
 
-  <ul id="onpo" style="display: none; list-style: none; padding: 0; line-height: 2;">
-    <li>
-      <i class="fas fa-kaaba" style="color: #006400;"></i>
-      <a class="lightning" href="https://pelerinage.interieur.gov.dz/Ar/Accueil/Accueil" target="_blank">
-        التسجيل في قرعة الحج 1447هـ / 2026
-      </a>
-    </li>
-    <li>
-      <i class="fas fa-mosque" style="color: #006400;"></i>
-      <a class="lightning" href="https://bawabetelhadj.dz/" target="_blank">
-        البوابة الجزائرية للحج
-      </a>
-    </li>
-    <li>
-      <i class="fas fa-person-praying" style="color: #006400;"></i> <!-- بديل: fa-person-praying -->
-      <a class="lightning" href="https://bawabetelomra.dz/" target="_blank">
-        البوابة الجزائرية للعمرة
-      </a>
-    </li>
-  </ul>
-
-  <!-- بيانات الاتصال -->
-  <div style="margin-top:10px; padding:8px; background-color:#f9f9f9; border-top:1px solid #ddd;">
-    <div style="margin-bottom:6px;">
-      <i class="fas fa-globe" style="color:#006400; margin-left:6px;"></i>
-      <strong>
-        <a class="lightning" href="https://onpo.dz/" target="_blank">
-          الموقع الرسمي للديوان الوطني للحج والعمرة
+    <ul id="onpo" style="display: none; list-style: none; padding: 0; line-height: 2;">
+      <li>
+        <i class="fas fa-kaaba" style="color: #006400;"></i>
+        <a class="lightning" href="https://pelerinage.interieur.gov.dz/Ar/Accueil/Accueil" target="_blank">
+          التسجيل في قرعة الحج 1447هـ / 2026
         </a>
-      </strong>
+      </li>
+      <li>
+        <i class="fas fa-mosque" style="color: #006400;"></i>
+        <a class="lightning" href="https://bawabetelhadj.dz/" target="_blank">
+          البوابة الجزائرية للحج
+        </a>
+      </li>
+      <li>
+        <i class="fas fa-person-praying" style="color: #006400;"></i> <!-- بديل: fa-person-praying -->
+        <a class="lightning" href="https://bawabetelomra.dz/" target="_blank">
+          البوابة الجزائرية للعمرة
+        </a>
+      </li>
+    </ul>
+
+    <!-- بيانات الاتصال -->
+    <div style="margin-top:10px; padding:8px; background-color:#f9f9f9; border-top:1px solid #ddd;">
+      <div style="margin-bottom:6px;">
+        <i class="fas fa-globe" style="color:#006400; margin-left:6px;"></i>
+        <strong>
+          <a class="lightning" href="https://onpo.dz/" target="_blank">
+            الموقع الرسمي للديوان الوطني للحج والعمرة
+          </a>
+        </strong>
+      </div>
+      <div>
+        <i class="fas fa-phone-volume" style="color:#006400; margin-left:6px;"></i>
+        <strong>هاتف:</strong>
+        <a class="lightning" href="tel:+21323777862" style="direction:ltr; unicode-bidi:bidi-override;">+213 23 77 78
+          62</a>
+      </div>
     </div>
-    <div>
-      <i class="fas fa-phone-volume" style="color:#006400; margin-left:6px;"></i>
-      <strong>هاتف:</strong>
-      <a class="lightning" href="tel:+21323777862" style="direction:ltr; unicode-bidi:bidi-override;">+213 23 77 78 62</a>
-    </div>
-  </div>
-</section>
+  </section>
 
   <!-- قسم الوكالة الوطنية لترقية الإستثمار -->
   <section dir="rtl" style="text-align: right;">
@@ -3347,224 +3344,235 @@
 
   </section>
 
-<!-- 🛡️ قسم خدمات التأمينات -->
-<section dir="rtl" style="text-align: right;">
-  <h2 id="toggle-insurance-section" onclick="toggleSection('insurance-section-content', this)"
-    style="cursor: pointer; background-color: #a52a2a; color: white; padding: 10px; border-radius: 8px;">
-    <span><i class="fas fa-shield-alt"></i> خدمات التأمينات <span class="count"></span></span>
-    <span class="toggle-icon" style="float: left;">▶</span>
-  </h2>
-
-  <div id="insurance-section-content" style="display: none; padding: 10px 20px;">
-
-    <!-- الشركة الجزائرية للتأمينات SAA -->
-    <h3 onclick="toggleSublist('saa-list')"
-      style="cursor: pointer; background-color: #f0faf6; color: #006233; padding: 8px; border-radius: 6px;">
-      <span><img src="icons/saa.svg" alt="SAA Logo" loading="lazy" class="logo">
-        الشركة الجزائرية للتأمينات (SAA)
-      </span>
+  <!-- 🛡️ قسم خدمات التأمينات -->
+  <section dir="rtl" style="text-align: right;">
+    <h2 id="toggle-insurance-section" onclick="toggleSection('insurance-section-content', this)"
+      style="cursor: pointer; background-color: #a52a2a; color: white; padding: 10px; border-radius: 8px;">
+      <span><i class="fas fa-shield-alt"></i> خدمات التأمينات <span class="count"></span></span>
       <span class="toggle-icon" style="float: left;">▶</span>
-    </h3>
-    <ul id="saa-list" style="display: none; list-style: none; padding: 0 20px; line-height: 2;">
-      <li><i class="fas fa-globe" style="color:#006400; margin-left:6px;"></i>
-        <a class="lightning" href="https://www.saa.dz/" target="_blank">الموقع الرسمي</a>
-      </li>
-      <li><i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
-        <a class="lightning" href="tel:+21321225000" style="direction:ltr; unicode-bidi:bidi-override;">+213 21 22 50 00</a>
-      </li>
-    </ul>
+    </h2>
 
-    <!-- الشركة الجزائرية للتأمين وإعادة التأمين CAAR -->
-    <h3 onclick="toggleSublist('caar-list')"
-      style="cursor: pointer; background-color: #f0faf6; color: #006233; padding: 8px; border-radius: 6px; margin-top:10px;">
-      <span><img src="icons/caar.jpg" alt="CAAR Logo" loading="lazy" class="logo">
-        الشركة الجزائرية للتأمين وإعادة التأمين (CAAR)
-      </span>
-      <span class="toggle-icon" style="float: left;">▶</span>
-    </h3>
-    <ul id="caar-list" style="display: none; list-style: none; padding: 0 20px; line-height: 2;">
-      <li><i class="fas fa-globe" style="color:#006400; margin-left:6px;"></i>
-        <a class="lightning" href="https://caar.dz/" target="_blank">الموقع الرسمي</a>
-      </li>
-      <li><i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
-        <a class="lightning" href="tel:+21322163207" style="direction:ltr; unicode-bidi:bidi-override;">+213 22 16 32 07</a>
-      </li>
-    </ul>
+    <div id="insurance-section-content" style="display: none; padding: 10px 20px;">
 
-        <!-- شركة التأمين على السيارات (CAARAMA) -->
-<h3 onclick="toggleSublist('caarama-list')"
-  style="cursor:pointer; background-color:#f0faf6; color:#006233; padding:8px; border-radius:6px; margin-top:10px;">
-  <span><img src="icons/caarama.png" alt="CAARAMA Logo" loading="lazy" class="logo">
-    شركة التأمين على السيارات (CAARAMA)
-  </span>
-  <span class="toggle-icon" style="float:left;">▶</span>
-</h3>
-<ul id="caarama-list" style="display:none; list-style:none; padding:0 20px; line-height:2;">
-  <li><i class="fas fa-globe" style="color:#006400; margin-left:6px;"></i>
-    <a class="lightning" href="https://www.caarama.dz/" target="_blank">الموقع الرسمي</a>
-  </li>
-  <li><i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
-    <a class="lightning" href="tel:+21323569108" style="direction:ltr; unicode-bidi:bidi-override;">(213) 23 56 91 08 / 09 / 10</a>
-  </li>
-</ul>
+      <!-- الشركة الجزائرية للتأمينات SAA -->
+      <h3 onclick="toggleSublist('saa-list')"
+        style="cursor: pointer; background-color: #f0faf6; color: #006233; padding: 8px; border-radius: 6px;">
+        <span><img src="icons/saa.svg" alt="SAA Logo" loading="lazy" class="logo">
+          الشركة الجزائرية للتأمينات (SAA)
+        </span>
+        <span class="toggle-icon" style="float: left;">▶</span>
+      </h3>
+      <ul id="saa-list" style="display: none; list-style: none; padding: 0 20px; line-height: 2;">
+        <li><i class="fas fa-globe" style="color:#006400; margin-left:6px;"></i>
+          <a class="lightning" href="https://www.saa.dz/" target="_blank">الموقع الرسمي</a>
+        </li>
+        <li><i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
+          <a class="lightning" href="tel:+21321225000" style="direction:ltr; unicode-bidi:bidi-override;">+213 21 22 50
+            00</a>
+        </li>
+      </ul>
 
-    <!-- ترست الجزائر للتأمينات (Trust Algeria) -->
-<h3 onclick="toggleSublist('trust-list')"
-  style="cursor:pointer; background-color:#f0faf6; color:#006233; padding:8px; border-radius:6px; margin-top:10px;">
-  <span><img src="icons/TRUST.png" alt="Trust Logo" loading="lazy" class="logo">
-    ترست الجزائر للتأمينات (Trust Algeria)
-  </span>
-  <span class="toggle-icon" style="float:left;">▶</span>
-</h3>
-<ul id="trust-list" style="display:none; list-style:none; padding:0 20px; line-height:2;">
-  <li><i class="fas fa-globe" style="color:#006400; margin-left:6px;"></i>
-    <a class="lightning" href="https://trust-dz.com/" target="_blank">الموقع الرسمي</a>
-  </li>
-  <li><i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
-    <a class="lightning" href="tel:+21323489225" style="direction:ltr; unicode-bidi:bidi-override;">+213 23 48 92 25</a>
-  </li>
-  <li><img src="icons/google-play-logo.png" alt="google-play-logo logo"
-      style="width:18px; margin-left:6px; vertical-align:middle;">
-    <a class="lightning" href="https://play.google.com/store/apps/details?id=com.amanaDigital.MyamanaApp"
-      target="_blank">تطبيق Android</a>
-  </li>
-</ul>
+      <!-- الشركة الجزائرية للتأمين وإعادة التأمين CAAR -->
+      <h3 onclick="toggleSublist('caar-list')"
+        style="cursor: pointer; background-color: #f0faf6; color: #006233; padding: 8px; border-radius: 6px; margin-top:10px;">
+        <span><img src="icons/caar.jpg" alt="CAAR Logo" loading="lazy" class="logo">
+          الشركة الجزائرية للتأمين وإعادة التأمين (CAAR)
+        </span>
+        <span class="toggle-icon" style="float: left;">▶</span>
+      </h3>
+      <ul id="caar-list" style="display: none; list-style: none; padding: 0 20px; line-height: 2;">
+        <li><i class="fas fa-globe" style="color:#006400; margin-left:6px;"></i>
+          <a class="lightning" href="https://caar.dz/" target="_blank">الموقع الرسمي</a>
+        </li>
+        <li><i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
+          <a class="lightning" href="tel:+21322163207" style="direction:ltr; unicode-bidi:bidi-override;">+213 22 16 32
+            07</a>
+        </li>
+      </ul>
 
-    <!-- أليانس للتأمينات Alliance -->
-    <h3 onclick="toggleSublist('alliance-list')"
-      style="cursor: pointer; background-color: #f0faf6; color: #006233; padding: 8px; border-radius: 6px; margin-top:10px;">
-      <span><img src="icons/alliance.png" alt="Alliance Logo" loading="lazy" class="logo">
-        أليانس للتأمينات (Alliance Assurances)
-      </span>
-      <span class="toggle-icon" style="float: left;">▶</span>
-    </h3>
-    <ul id="alliance-list" style="display: none; list-style: none; padding: 0 20px; line-height: 2;">
-      <li><i class="fas fa-globe" style="color:#006400; margin-left:6px;"></i>
-        <a class="lightning" href="https://www.allianceassurances.com.dz/#/" target="_blank">الموقع الرسمي</a>
-      </li>
-      <li><i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
-        <a class="lightning" href="tel:3315">3315</a>
-      </li>
-      <li><img src="icons/google-play-logo.png" alt="MyAlliance" style="width:18px; margin-left:6px; vertical-align:middle;">
-        <a class="lightning" href="https://play.google.com/store/apps/details?id=com.blink.myalliance"
-          target="_blank">تطبيق MyAlliance</a>
-      </li>
-    </ul>
+      <!-- شركة التأمين على السيارات (CAARAMA) -->
+      <h3 onclick="toggleSublist('caarama-list')"
+        style="cursor:pointer; background-color:#f0faf6; color:#006233; padding:8px; border-radius:6px; margin-top:10px;">
+        <span><img src="icons/caarama.png" alt="CAARAMA Logo" loading="lazy" class="logo">
+          شركة التأمين على السيارات (CAARAMA)
+        </span>
+        <span class="toggle-icon" style="float:left;">▶</span>
+      </h3>
+      <ul id="caarama-list" style="display:none; list-style:none; padding:0 20px; line-height:2;">
+        <li><i class="fas fa-globe" style="color:#006400; margin-left:6px;"></i>
+          <a class="lightning" href="https://www.caarama.dz/" target="_blank">الموقع الرسمي</a>
+        </li>
+        <li><i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
+          <a class="lightning" href="tel:+21323569108" style="direction:ltr; unicode-bidi:bidi-override;">(213) 23 56 91
+            08 / 09 / 10</a>
+        </li>
+      </ul>
 
-    <!-- كارديف للتأمينات (Cardif Algérie) -->
-<h3 onclick="toggleSublist('cardif-list')"
-  style="cursor:pointer; background-color:#f0faf6; color:#006233; padding:8px; border-radius:6px; margin-top:10px;">
-  <span><img src="icons/cardif.png" alt="Cardif Logo" loading="lazy" class="logo">
-    كارديف للتأمينات (Cardif Algérie)
-  </span>
-  <span class="toggle-icon" style="float:left;">▶</span>
-</h3>
-<ul id="cardif-list" style="display:none; list-style:none; padding:0 20px; line-height:2;">
-  <li><i class="fas fa-globe" style="color:#006400; margin-left:6px;"></i>
-    <a class="lightning" href="https://www.macirvie.com/ar" target="_blank">الموقع الرسمي</a>
-  </li>
-  <li><i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
-    <a class="lightning" href="tel:+213770112072" style="direction:ltr; unicode-bidi:bidi-override;">+213 770 11 20 72</a>
-  </li>
-</ul>
+      <!-- ترست الجزائر للتأمينات (Trust Algeria) -->
+      <h3 onclick="toggleSublist('trust-list')"
+        style="cursor:pointer; background-color:#f0faf6; color:#006233; padding:8px; border-radius:6px; margin-top:10px;">
+        <span><img src="icons/TRUST.png" alt="Trust Logo" loading="lazy" class="logo">
+          ترست الجزائر للتأمينات (Trust Algeria)
+        </span>
+        <span class="toggle-icon" style="float:left;">▶</span>
+      </h3>
+      <ul id="trust-list" style="display:none; list-style:none; padding:0 20px; line-height:2;">
+        <li><i class="fas fa-globe" style="color:#006400; margin-left:6px;"></i>
+          <a class="lightning" href="https://trust-dz.com/" target="_blank">الموقع الرسمي</a>
+        </li>
+        <li><i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
+          <a class="lightning" href="tel:+21323489225" style="direction:ltr; unicode-bidi:bidi-override;">+213 23 48 92
+            25</a>
+        </li>
+        <li><img src="icons/google-play-logo.png" alt="google-play-logo logo"
+            style="width:18px; margin-left:6px; vertical-align:middle;">
+          <a class="lightning" href="https://play.google.com/store/apps/details?id=com.amanaDigital.MyamanaApp"
+            target="_blank">تطبيق Android</a>
+        </li>
+      </ul>
 
-<!-- أكسا للتأمينات (AXA Assurances Algérie) -->
-<h3 onclick="toggleSublist('axa-list')"
-  style="cursor:pointer; background-color:#f0faf6; color:#006233; padding:8px; border-radius:6px; margin-top:10px;">
-  <span><img src="icons/axa.png" alt="AXA Logo" loading="lazy" class="logo">
-    أكسا للتأمينات (AXA Assurances Algérie)
-  </span>
-  <span class="toggle-icon" style="float:left;">▶</span>
-</h3>
-<ul id="axa-list" style="display:none; list-style:none; padding:0 20px; line-height:2;">
-  <li><i class="fas fa-globe" style="color:#006400; margin-left:6px;"></i>
-    <a class="lightning" href="https://www.axa.dz/" target="_blank">الموقع الرسمي</a>
-  </li>
-  <li><i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
-    <a class="lightning" href="tel:+21321982300" style="direction:ltr; unicode-bidi:bidi-override;">+213 21 98 23 00</a>
-  </li>
-  <li><img src="icons/google-play-logo.png" alt="AXA App"
-      style="width:18px; margin-left:6px; vertical-align:middle;">
-    <a class="lightning" href="https://play.google.com/store/apps/details?id=dz.axa.assurances"
-      target="_blank">تطبيق Android</a>
-  </li>
-</ul>
+      <!-- أليانس للتأمينات Alliance -->
+      <h3 onclick="toggleSublist('alliance-list')"
+        style="cursor: pointer; background-color: #f0faf6; color: #006233; padding: 8px; border-radius: 6px; margin-top:10px;">
+        <span><img src="icons/alliance.png" alt="Alliance Logo" loading="lazy" class="logo">
+          أليانس للتأمينات (Alliance Assurances)
+        </span>
+        <span class="toggle-icon" style="float: left;">▶</span>
+      </h3>
+      <ul id="alliance-list" style="display: none; list-style: none; padding: 0 20px; line-height: 2;">
+        <li><i class="fas fa-globe" style="color:#006400; margin-left:6px;"></i>
+          <a class="lightning" href="https://www.allianceassurances.com.dz/#/" target="_blank">الموقع الرسمي</a>
+        </li>
+        <li><i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
+          <a class="lightning" href="tel:3315">3315</a>
+        </li>
+        <li><img src="icons/google-play-logo.png" alt="MyAlliance"
+            style="width:18px; margin-left:6px; vertical-align:middle;">
+          <a class="lightning" href="https://play.google.com/store/apps/details?id=com.blink.myalliance"
+            target="_blank">تطبيق MyAlliance</a>
+        </li>
+      </ul>
 
-<!-- مجموعة الخليج للتأمين GIG -->
-<h3 onclick="toggleSublist('gig-list')"
-  style="cursor: pointer; background-color:#f0faf6; color:#006233; padding:8px; border-radius:6px; margin-top:10px;">
-  <span><img src="icons/gig.jpg" alt="GIG Logo" loading="lazy" class="logo">
-    مجموعة الخليج للتأمين (GIG)
-  </span>
-  <span class="toggle-icon" style="float:left;">▶</span>
-</h3>
-<ul id="gig-list" style="display:none; list-style:none; padding:0 20px; line-height:2;">
-  <li><i class="fas fa-globe" style="color:#006400; margin-left:6px;"></i>
-    <a class="lightning" href="https://gig.dz/ar/" target="_blank">الموقع الرسمي</a>
-  </li>
-  <li><i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
-    <a class="lightning" href="tel:+21323772112" style="direction:ltr; unicode-bidi:bidi-override;">+213 23 77 21 12</a>
-  </li>
-</ul>
+      <!-- كارديف للتأمينات (Cardif Algérie) -->
+      <h3 onclick="toggleSublist('cardif-list')"
+        style="cursor:pointer; background-color:#f0faf6; color:#006233; padding:8px; border-radius:6px; margin-top:10px;">
+        <span><img src="icons/cardif.png" alt="Cardif Logo" loading="lazy" class="logo">
+          كارديف للتأمينات (Cardif Algérie)
+        </span>
+        <span class="toggle-icon" style="float:left;">▶</span>
+      </h3>
+      <ul id="cardif-list" style="display:none; list-style:none; padding:0 20px; line-height:2;">
+        <li><i class="fas fa-globe" style="color:#006400; margin-left:6px;"></i>
+          <a class="lightning" href="https://www.macirvie.com/ar" target="_blank">الموقع الرسمي</a>
+        </li>
+        <li><i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
+          <a class="lightning" href="tel:+213770112072" style="direction:ltr; unicode-bidi:bidi-override;">+213 770 11
+            20 72</a>
+        </li>
+      </ul>
 
-<!-- سلامة للتأمينات (Salama Assurances) -->
-<h3 onclick="toggleSublist('salama-list')"
-  style="cursor:pointer; background-color:#f0faf6; color:#006233; padding:8px; border-radius:6px; margin-top:10px;">
-  <span><img src="icons/gam.png" alt="Salama Logo" loading="lazy" class="logo">
-    سلامة للتأمينات (Salama Assurances)
-  </span>
-  <span class="toggle-icon" style="float:left;">▶</span>
-</h3>
-<ul id="salama-list" style="display:none; list-style:none; padding:0 20px; line-height:2;">
-  <li><i class="fas fa-globe" style="color:#006400; margin-left:6px;"></i>
-    <a class="lightning" href="https://gam.dz/" target="_blank">الموقع الرسمي</a>
-  </li>
-  <li><i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
-    <a class="lightning" href="tel:+21320070810" style="direction:ltr; unicode-bidi:bidi-override;">+213 20 07 08 10</a>
-  </li>
-</ul>
+      <!-- أكسا للتأمينات (AXA Assurances Algérie) -->
+      <h3 onclick="toggleSublist('axa-list')"
+        style="cursor:pointer; background-color:#f0faf6; color:#006233; padding:8px; border-radius:6px; margin-top:10px;">
+        <span><img src="icons/axa.png" alt="AXA Logo" loading="lazy" class="logo">
+          أكسا للتأمينات (AXA Assurances Algérie)
+        </span>
+        <span class="toggle-icon" style="float:left;">▶</span>
+      </h3>
+      <ul id="axa-list" style="display:none; list-style:none; padding:0 20px; line-height:2;">
+        <li><i class="fas fa-globe" style="color:#006400; margin-left:6px;"></i>
+          <a class="lightning" href="https://www.axa.dz/" target="_blank">الموقع الرسمي</a>
+        </li>
+        <li><i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
+          <a class="lightning" href="tel:+21321982300" style="direction:ltr; unicode-bidi:bidi-override;">+213 21 98 23
+            00</a>
+        </li>
+        <li><img src="icons/google-play-logo.png" alt="AXA App"
+            style="width:18px; margin-left:6px; vertical-align:middle;">
+          <a class="lightning" href="https://play.google.com/store/apps/details?id=dz.axa.assurances"
+            target="_blank">تطبيق Android</a>
+        </li>
+      </ul>
 
-<!-- أمانة للتأمينات (Amana Assurances) -->
-<h3 onclick="toggleSublist('amana-list')"
-  style="cursor:pointer; background-color:#f0faf6; color:#006233; padding:8px; border-radius:6px; margin-top:10px;">
-  <span><img src="icons/amana.jpg" alt="Amana Logo" loading="lazy" class="logo">
-    أمانة للتأمينات (Amana Assurances)
-  </span>
-  <span class="toggle-icon" style="float:left;">▶</span>
-</h3>
-<ul id="amana-list" style="display:none; list-style:none; padding:0 20px; line-height:2;">
-  <li><i class="fas fa-globe" style="color:#006400; margin-left:6px;"></i>
-    <a class="lightning" href="http://www.amana.dz/" target="_blank">الموقع الرسمي</a>
-  </li>
-  <li><i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
-    <a class="lightning" href="tel:+21323054475" style="direction:ltr; unicode-bidi:bidi-override;">+213 23 05 44 75</a>
-  </li>
-</ul>
+      <!-- مجموعة الخليج للتأمين GIG -->
+      <h3 onclick="toggleSublist('gig-list')"
+        style="cursor: pointer; background-color:#f0faf6; color:#006233; padding:8px; border-radius:6px; margin-top:10px;">
+        <span><img src="icons/gig.jpg" alt="GIG Logo" loading="lazy" class="logo">
+          مجموعة الخليج للتأمين (GIG)
+        </span>
+        <span class="toggle-icon" style="float:left;">▶</span>
+      </h3>
+      <ul id="gig-list" style="display:none; list-style:none; padding:0 20px; line-height:2;">
+        <li><i class="fas fa-globe" style="color:#006400; margin-left:6px;"></i>
+          <a class="lightning" href="https://gig.dz/ar/" target="_blank">الموقع الرسمي</a>
+        </li>
+        <li><i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
+          <a class="lightning" href="tel:+21323772112" style="direction:ltr; unicode-bidi:bidi-override;">+213 23 77 21
+            12</a>
+        </li>
+      </ul>
 
-<!-- ماكير في للتأمين على الحياة (Macir Vie) -->
-<h3 onclick="toggleSublist('macirvie-list')"
-  style="cursor:pointer; background-color:#f0faf6; color:#006233; padding:8px; border-radius:6px; margin-top:10px;">
-  <span><img src="icons/macirvie.png" alt="Macir Vie Logo" loading="lazy" class="logo">
-    ماكير في للتأمين على الحياة (Macir Vie)
-  </span>
-  <span class="toggle-icon" style="float:left;">▶</span>
-</h3>
-<ul id="macirvie-list" style="display:none; list-style:none; padding:0 20px; line-height:2;">
-  <li><i class="fas fa-globe" style="color:#006400; margin-left:6px;"></i>
-    <a class="lightning" href="https://www.macirvie.com/" target="_blank">الموقع الرسمي</a>
-  </li>
-  <li><i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
-    <a class="lightning" href="tel:xxxx" style="direction:ltr; unicode-bidi:bidi-override;">xxxx</a>
-  </li>
-      <li><img src="icons/google-play-logo.png" alt="macirvie" style="width:18px; margin-left:6px; vertical-align:middle;">
-        <a class="lightning" href="https://play.google.com/store/apps/details?id=com.macirvie.app"
-          target="_blank">تطبيق macirvie</a>
-      </li>
-</ul>
+      <!-- سلامة للتأمينات (Salama Assurances) -->
+      <h3 onclick="toggleSublist('salama-list')"
+        style="cursor:pointer; background-color:#f0faf6; color:#006233; padding:8px; border-radius:6px; margin-top:10px;">
+        <span><img src="icons/gam.png" alt="Salama Logo" loading="lazy" class="logo">
+          سلامة للتأمينات (Salama Assurances)
+        </span>
+        <span class="toggle-icon" style="float:left;">▶</span>
+      </h3>
+      <ul id="salama-list" style="display:none; list-style:none; padding:0 20px; line-height:2;">
+        <li><i class="fas fa-globe" style="color:#006400; margin-left:6px;"></i>
+          <a class="lightning" href="https://gam.dz/" target="_blank">الموقع الرسمي</a>
+        </li>
+        <li><i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
+          <a class="lightning" href="tel:+21320070810" style="direction:ltr; unicode-bidi:bidi-override;">+213 20 07 08
+            10</a>
+        </li>
+      </ul>
 
-  </div>
-</section>
-  
+      <!-- أمانة للتأمينات (Amana Assurances) -->
+      <h3 onclick="toggleSublist('amana-list')"
+        style="cursor:pointer; background-color:#f0faf6; color:#006233; padding:8px; border-radius:6px; margin-top:10px;">
+        <span><img src="icons/amana.jpg" alt="Amana Logo" loading="lazy" class="logo">
+          أمانة للتأمينات (Amana Assurances)
+        </span>
+        <span class="toggle-icon" style="float:left;">▶</span>
+      </h3>
+      <ul id="amana-list" style="display:none; list-style:none; padding:0 20px; line-height:2;">
+        <li><i class="fas fa-globe" style="color:#006400; margin-left:6px;"></i>
+          <a class="lightning" href="http://www.amana.dz/" target="_blank">الموقع الرسمي</a>
+        </li>
+        <li><i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
+          <a class="lightning" href="tel:+21323054475" style="direction:ltr; unicode-bidi:bidi-override;">+213 23 05 44
+            75</a>
+        </li>
+      </ul>
+
+      <!-- ماكير في للتأمين على الحياة (Macir Vie) -->
+      <h3 onclick="toggleSublist('macirvie-list')"
+        style="cursor:pointer; background-color:#f0faf6; color:#006233; padding:8px; border-radius:6px; margin-top:10px;">
+        <span><img src="icons/macirvie.png" alt="Macir Vie Logo" loading="lazy" class="logo">
+          ماكير في للتأمين على الحياة (Macir Vie)
+        </span>
+        <span class="toggle-icon" style="float:left;">▶</span>
+      </h3>
+      <ul id="macirvie-list" style="display:none; list-style:none; padding:0 20px; line-height:2;">
+        <li><i class="fas fa-globe" style="color:#006400; margin-left:6px;"></i>
+          <a class="lightning" href="https://www.macirvie.com/" target="_blank">الموقع الرسمي</a>
+        </li>
+        <li><i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
+          <a class="lightning" href="tel:xxxx" style="direction:ltr; unicode-bidi:bidi-override;">xxxx</a>
+        </li>
+        <li><img src="icons/google-play-logo.png" alt="macirvie"
+            style="width:18px; margin-left:6px; vertical-align:middle;">
+          <a class="lightning" href="https://play.google.com/store/apps/details?id=com.macirvie.app"
+            target="_blank">تطبيق macirvie</a>
+        </li>
+      </ul>
+
+    </div>
+  </section>
+
   <!-- قسم الخدمات البنكية -->
   <section dir="rtl" style="text-align: right;">
     <h2 id="banks-section-header" onclick="toggleSection('banks-section-content', this)"
@@ -4401,4 +4409,5 @@
     }
   </script>
 </body>
+
 </html>
