@@ -1,7 +1,7 @@
 {
   "name": "البوابة الجزائرية للخدمات الرقمية",
   "short_name": "DZ Portal",
-  "start_url": ".",
+"start_url": "https://imadtbn.github.io/dz_portal/"
   "display": "standalone",
   "background_color": "#006400",
   "theme_color": "#006400",
