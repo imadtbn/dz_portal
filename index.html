@@ -10,7 +10,7 @@
 <link rel="icon" href="icons/icon.png" type="image/png" loading="lazy" class="welcome-logo/>
 
 <!-- ألوان للمتصفحات -->
-<meta name=" theme-color" content="#006400" />
+<meta name=" theme-color" content="#ffffffff" />
 
 <!-- تسجيل Service Worker -->
 <script>
@@ -1021,7 +1021,7 @@
 
     /* تقليص الشعار */
     .stat-box {
-      min-width: 60px;
+      min-width: 70px;
       padding: 8px 5px;
     }
 
@@ -1364,6 +1364,62 @@
       <img alt="علم الجزائر" src="icons/Flag_of_Algeria.svg" loading="lazy" class="logo">
     </div>
 
+        <!--  قسم تبديل الوضع الليلي -->
+        
+        <button id="darkModeToggle" style="border:none;background:#333;color:#fff;
+          border-radius:6px;padding:9px 12px;cursor:pointer;">
+          <i class="fas fa-moon"></i>
+        </button>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const toggle = document.getElementById("darkModeToggle");
+    const body = document.body;
+
+    // تحميل الوضع من التخزين
+    if (localStorage.getItem("darkMode") === "true") {
+      body.classList.add("dark-mode");
+    }
+
+    toggle.addEventListener("click", () => {
+      body.classList.toggle("dark-mode");
+      const enabled = body.classList.contains("dark-mode");
+      localStorage.setItem("darkMode", enabled);
+      toggle.innerHTML = enabled
+        ? '<i class="fas fa-sun"></i>'
+        : '<i class="fas fa-moon"></i>';
+    });
+  });
+</script>
+
+<style>
+  body.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+  }
+
+  body.dark-mode section {
+    background-color: #1e1e1e;
+    border-color: #333;
+    box-shadow: 0 2px 6px rgba(255,255,255,0.05);
+  }
+
+  body.dark-mode header,
+  body.dark-mode footer {
+    background-color: #333 !important;
+    color: #fff !important;
+  }
+
+  body.dark-mode a {
+    color: #80cbc4;
+  }
+
+  body.dark-mode a:hover {
+    color: #4db6ac;
+  }
+</style>
+
+
     <!-- 📦 قسم الطقس في الوسط -->
     <div style="display:flex;justify-content:center;align-items:center;margin:5px 0;">
       <div id="weatherBox" style="display:flex;align-items:center;gap:10px;
@@ -1449,6 +1505,33 @@
         }
       });
     </script>
+
+    <!--  قسم الترجمة -->
+<button id="googleLangToggle" style="border:none;background:#006233;color:#fff;
+  border-radius:6px;padding:9px 12px;cursor:pointer;">
+  AR
+</button>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const btn = document.getElementById("googleLangToggle");
+    const langs = ["ar", "fr", "en"];
+    let current = 0;
+
+    btn.addEventListener("click", () => {
+      current = (current + 1) % langs.length;
+      const lang = langs[current];
+      btn.textContent = lang.toUpperCase();
+
+      const currentUrl = window.location.href;
+      const googleUrl =
+        `https://translate.google.com/translate?hl=${lang}&sl=auto&tl=${lang}&u=${encodeURIComponent(currentUrl)}`;
+      window.open(googleUrl, "_blank");
+    });
+  });
+</script>
+
+
 
     <!-- البحث -->
     <div id="searchArea">
@@ -4523,6 +4606,165 @@ document.addEventListener("DOMContentLoaded", function () {
       navigator.serviceWorker.register("/dz_portal/service-worker.js");
     }
   </script>
+
+  <script>
+  function updateTranslations(lang) {
+    const t = {
+      ar: {
+        title: "البوابة الجزائرية للخدمات الرقمية",
+        welcome: "أهلا بكم في البوابة الجزائرية للخدمات الرقمية",
+        desc: "بوابة شاملة تجمع كل الخدمات الرقمية الحكومية الجزائرية: التعليم، البريد، الضرائب، الضمان الاجتماعي، الإدارة المحلية، التكوين المهني، وأكثر. هدفنا تسهيل الوصول إلى خدماتكم عن بُعد بسهولة وأمان.",
+        install: "تثبيت التطبيق",
+        share: "شارك البوابة",
+        weather: "الطقس",
+        search: "ابحث هنا داخل الصفحة...",
+        news: "🆕 آخر التحديثات",
+        sections: {
+          payment: "خدمات الدفع الإلكتروني للفواتير",
+          recharge: "خدمات تعبئة الهاتف النقال",
+          post: "بريد الجزائر",
+          telecom: "اتصالات الجزائر",
+          education: "التربية والتعليم",
+          university: "الخدمات الجامعية",
+          vocational: "التكوين المهني",
+          admin: "الإدارة المحلية",
+          tax: "الخدمات الجبائية",
+          justice: "العدالة",
+          energy: "المحروقات والمناجم",
+          transport: "النقل",
+          employment: "التشغيل",
+          health: "الصحة",
+          commerce: "التجارة",
+          customs: "الجمارك الجزائرية",
+          banks: "الخدمات البنكية",
+          insurance: "وكالات التأمينات",
+          emergency: "أرقام الطوارئ",
+          contact: "معلومات الاتصال",
+          comments: "التعليقات والاستفسارات"
+        }
+      },
+      en: {
+        title: "Algerian Digital Services Portal",
+        welcome: "Welcome to the Algerian Digital Services Portal",
+        desc: "A unified gateway for all Algerian government digital services: education, mail, taxes, social security, local administration, vocational training, and more. Our goal is to make online access easy and secure.",
+        install: "Install App",
+        share: "Share Portal",
+        weather: "Weather",
+        search: "Search within the page...",
+        news: "🆕 Latest Updates",
+        sections: {
+          payment: "E-Payment Services",
+          recharge: "Mobile Recharge",
+          post: "Algeria Post",
+          telecom: "Algerie Telecom",
+          education: "Education",
+          university: "University Services",
+          vocational: "Vocational Training",
+          admin: "Local Administration",
+          tax: "Tax Services",
+          justice: "Justice",
+          energy: "Energy & Mines",
+          transport: "Transport",
+          employment: "Employment",
+          health: "Health",
+          commerce: "Commerce",
+          customs: "Algerian Customs",
+          banks: "Banking Services",
+          insurance: "Insurance Agencies",
+          emergency: "Emergency Numbers",
+          contact: "Contact Information",
+          comments: "Comments & Inquiries"
+        }
+      },
+      fr: {
+        title: "Portail Algérien des Services Numériques",
+        welcome: "Bienvenue sur le Portail Algérien des Services Numériques",
+        desc: "Un portail unifié regroupant tous les services numériques du gouvernement algérien : éducation, poste, impôts, sécurité sociale, administration locale, formation professionnelle et plus encore. Notre objectif est de faciliter l'accès en ligne de manière simple et sécurisée.",
+        install: "Installer l'application",
+        share: "Partager le portail",
+        weather: "Météo",
+        search: "Rechercher dans la page...",
+        news: "🆕 Dernières mises à jour",
+        sections: {
+          payment: "Paiement électronique des factures",
+          recharge: "Recharge mobile",
+          post: "Poste Algérie",
+          telecom: "Algérie Télécom",
+          education: "Éducation",
+          university: "Services universitaires",
+          vocational: "Formation professionnelle",
+          admin: "Administration locale",
+          tax: "Services fiscaux",
+          justice: "Justice",
+          energy: "Énergie et Mines",
+          transport: "Transport",
+          employment: "Emploi",
+          health: "Santé",
+          commerce: "Commerce",
+          customs: "Douanes algériennes",
+          banks: "Services bancaires",
+          insurance: "Agences d'assurance",
+          emergency: "Numéros d'urgence",
+          contact: "Informations de contact",
+          comments: "Commentaires et demandes"
+        }
+      }
+    };
+
+    const tr = t[lang] || t.ar;
+
+    // العنوان العام
+    document.title = tr.title;
+    document.querySelector(".welcome-title").textContent = tr.welcome;
+    document.querySelector(".welcome-description").textContent = tr.desc;
+    document.getElementById("install-button").innerHTML = `<i class="fas fa-download"></i> ${tr.install}`;
+    document.querySelector(".share-button").innerHTML = `<i class="fas fa-share-alt" style="margin-left:5px;"></i> ${tr.share}`;
+
+    // صندوق البحث
+    const searchInput = document.getElementById("searchInput");
+    if (searchInput) searchInput.placeholder = tr.search;
+
+    // شريط الأخبار
+    const newsTicker = document.getElementById("newsTicker");
+    if (newsTicker) newsTicker.textContent = `${tr.news}: ${tr.title}`;
+
+    // ترجمة العناوين في الأقسام
+    const ids = {
+      payment: "toggle-payment",
+      recharge: "toggle-recharge",
+      post: "toggle-post",
+      telecom: "toggle-telecom",
+      education: "toggle-education",
+      university: "toggle-university",
+      vocational: "toggle-vocational",
+      admin: "toggle-admin",
+      tax: "toggle-tax",
+      justice: "toggle-justice",
+      energy: "toggle-energy",
+      transport: "toggle-transport",
+      employment: "toggle-employment",
+      health: "toggle-health",
+      commerce: "toggle-commerce",
+      customs: "toggle-customs",
+      banks: "toggle-banks",
+      insurance: "toggle-insurance",
+      emergency: "toggle-emergency",
+      contact: "toggle-contact",
+      comments: "toggle-comments"
+    };
+
+    for (const key in ids) {
+      const el = document.querySelector(`#${ids[key]}`);
+      if (el) el.querySelector("span").childNodes[1].textContent = " " + tr.sections[key];
+    }
+  }
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const savedLang = localStorage.getItem("siteLang") || "ar";
+    updateTranslations(savedLang);
+  });
+</script>
+
 </body>
 
 </html>
