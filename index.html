@@ -1270,7 +1270,7 @@
     /* خلفية خضراء */
     color: #fff;
     /* نص أبيض */
-    padding: 4px 7px;
+    padding: 3px 4px;
     /* مسافة داخلية صغيرة */
     font-weight: bold;
     /* خط عريض */
@@ -1351,48 +1351,8 @@
 
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   /* إضافة ظل خفيف أسفل الزر لإبرازه */
-</style>
 
-</head>
-
-<body>
-
-  <header>
-    <div class="branding" dir="rtl">
-      <i class="fas fa-globe"></i>
-      <h1>البوابة الجزائرية للخدمات الرقمية</h1>
-      <img alt="علم الجزائر" src="icons/Flag_of_Algeria.svg" loading="lazy" class="logo">
-    </div>
-
-        <!--  قسم تبديل الوضع الليلي -->
-        
-        <button id="darkModeToggle" style="border:none;background:#333;color:#fff;
-          border-radius:6px;padding:9px 12px;cursor:pointer;">
-          <i class="fas fa-moon"></i>
-        </button>
-
-<script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const toggle = document.getElementById("darkModeToggle");
-    const body = document.body;
-
-    // تحميل الوضع من التخزين
-    if (localStorage.getItem("darkMode") === "true") {
-      body.classList.add("dark-mode");
-    }
-
-    toggle.addEventListener("click", () => {
-      body.classList.toggle("dark-mode");
-      const enabled = body.classList.contains("dark-mode");
-      localStorage.setItem("darkMode", enabled);
-      toggle.innerHTML = enabled
-        ? '<i class="fas fa-sun"></i>'
-        : '<i class="fas fa-moon"></i>';
-    });
-  });
-</script>
-
-<style>
+    /* التبديل للوضع الليلي */
   body.dark-mode {
     background-color: #121212;
     color: #e0e0e0;
@@ -1419,9 +1379,23 @@
   }
 </style>
 
+</head>
+
+<body>
+
+  <header>
+    <div class="branding" dir="rtl">
+      <i class="fas fa-globe"></i>
+      <h1>البوابة الجزائرية للخدمات الرقمية</h1>
+      <img alt="علم الجزائر" src="icons/Flag_of_Algeria.svg" loading="lazy" class="logo">
+    </div>
 
     <!-- 📦 قسم الطقس في الوسط -->
     <div style="display:flex;justify-content:center;align-items:center;margin:5px 0;">
+       <button id="googleLangToggle" style="border:none;background:#006233;color:#fff;
+    border-radius:6px;padding:9px 12px;cursor:pointer;">
+    AR
+  </button>
       <div id="weatherBox" style="display:flex;align-items:center;gap:10px;
        background:#006400;border:1px solid #ddd;border-radius:10px;
        padding:2px 10px;max-width:350px;box-shadow:0 2px 6px rgba(0,0,0,.1);">
@@ -1432,108 +1406,14 @@
           <i class="fas fa-sync"></i>
         </button>
       </div>
+       <!-- زر الوضع الليلي على اليمين -->
+  <button id="darkModeToggle" style="border:none;background:#333;color:#fff;
+    border-radius:6px;padding:9px 12px;cursor:pointer;">
+    <i class="fas fa-moon"></i>
+  </button>
     </div>
 
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        const apiKey = "c9600bb5dcccfb988100da9bf01b2f2f";
-        let currentCoords = null;
-
-        function fetchWeather(lat, lon) {
-          const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&lang=ar&appid=${apiKey}`;
-          fetch(url)
-            .then(r => r.json())
-            .then(data => {
-              const weatherData = {
-                icon: `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`,
-                temp: `${Math.round(data.main.temp)}°`,
-                desc: data.weather[0].description,
-                city: data.name,
-                time: Date.now()
-              };
-              localStorage.setItem("weatherData", JSON.stringify(weatherData));
-              renderWeather(weatherData);
-            })
-            .catch(() => {
-              document.getElementById("weatherInfo").textContent = "تعذر تحميل الطقس";
-            })
-            .finally(() => {
-              const icon = document.querySelector("#refreshWeatherBtn i");
-              if (icon) icon.classList.remove("spin");
-            });
-        }
-
-        function renderWeather(d) {
-          document.getElementById("weatherIcon").src = d.icon;
-          document.getElementById("weatherInfo").textContent =
-            `${d.desc} / ${d.temp} / ${d.city}`;
-        }
-
-        // تحميل بيانات محفوظة
-        const saved = localStorage.getItem("weatherData");
-        if (saved) renderWeather(JSON.parse(saved));
-
-        // أول تحميل مع GPS
-        if (navigator.geolocation) {
-          navigator.geolocation.getCurrentPosition(pos => {
-            currentCoords = { lat: pos.coords.latitude, lon: pos.coords.longitude };
-            fetchWeather(currentCoords.lat, currentCoords.lon);
-            // تحديث تلقائي كل ساعة
-            setInterval(() => fetchWeather(currentCoords.lat, currentCoords.lon), 60 * 60 * 1000);
-          });
-        }
-
-        // زر التحديث اليدوي
-        const refreshBtn = document.getElementById("refreshWeatherBtn");
-        if (refreshBtn) {
-          refreshBtn.addEventListener("click", () => {
-            const icon = refreshBtn.querySelector("i");
-            if (icon) icon.classList.add("spin");
-
-            if (navigator.geolocation) {
-              navigator.geolocation.getCurrentPosition(pos => {
-                currentCoords = { lat: pos.coords.latitude, lon: pos.coords.longitude };
-                fetchWeather(currentCoords.lat, currentCoords.lon);
-              }, () => {
-                // إذا رفض المستخدم مشاركة الموقع، استخدم آخر إحداثيات محفوظة
-                if (currentCoords) fetchWeather(currentCoords.lat, currentCoords.lon);
-              });
-            } else if (currentCoords) {
-              fetchWeather(currentCoords.lat, currentCoords.lon);
-            }
-          });
-        }
-      });
-    </script>
-
-    <!--  قسم الترجمة -->
-<button id="googleLangToggle" style="border:none;background:#006233;color:#fff;
-  border-radius:6px;padding:9px 12px;cursor:pointer;">
-  AR
-</button>
-
-<script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const btn = document.getElementById("googleLangToggle");
-    const langs = ["ar", "fr", "en"];
-    let current = 0;
-
-    btn.addEventListener("click", () => {
-      current = (current + 1) % langs.length;
-      const lang = langs[current];
-      btn.textContent = lang.toUpperCase();
-
-      const currentUrl = window.location.href;
-      const googleUrl =
-        `https://translate.google.com/translate?hl=${lang}&sl=auto&tl=${lang}&u=${encodeURIComponent(currentUrl)}`;
-      window.open(googleUrl, "_blank");
-    });
-  });
-</script>
-
-
-
-    <!-- البحث -->
+<!-- البحث -->
     <div id="searchArea">
       <div id="searchBox" dir="rtl">
         <input id="searchInput" placeholder="ابحث هنا داخل الصفحة..." type="text">
@@ -4605,6 +4485,43 @@ document.addEventListener("DOMContentLoaded", function () {
     if ("serviceWorker" in navigator) {
       navigator.serviceWorker.register("/dz_portal/service-worker.js");
     }
-  </script>
+
+  document.addEventListener("DOMContentLoaded", () => {
+    /* ========  زر الوضع الليلي  ======== */
+    const darkBtn = document.getElementById("darkModeToggle");
+    const body = document.body;
+
+    if (localStorage.getItem("darkMode") === "true") {
+      body.classList.add("dark-mode");
+      darkBtn.innerHTML = '<i class="fas fa-sun"></i>';
+    }
+
+    darkBtn.addEventListener("click", () => {
+      body.classList.toggle("dark-mode");
+      const enabled = body.classList.contains("dark-mode");
+      localStorage.setItem("darkMode", enabled);
+      darkBtn.innerHTML = enabled
+        ? '<i class="fas fa-sun"></i>'
+        : '<i class="fas fa-moon"></i>';
+    });
+
+    /* ========  زر التبديل بين اللغات عبر Google Translate  ======== */
+    const langBtn = document.getElementById("googleLangToggle");
+    const langs = ["ar", "fr", "en"];
+    let current = 0;
+
+    langBtn.addEventListener("click", () => {
+      current = (current + 1) % langs.length;
+      const lang = langs[current];
+      langBtn.textContent = lang.toUpperCase();
+
+      const url = window.location.href;
+      const googleUrl =
+        `https://translate.google.com/translate?hl=${lang}&sl=auto&tl=${lang}&u=${encodeURIComponent(url)}`;
+      window.open(googleUrl, "_blank");
+    });
+  });
+
+</script>
 </body>
 </html>
