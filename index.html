@@ -166,15 +166,6 @@
 
 <link rel="manifest" href="manifest.webmanifest.json">
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-<link rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-      integrity="sha512-KNUXQKKe2s5OJmYQ8H+7hxqF5bYtRDNvE0B8D9qX2VR8nZhl6KqhvQYFlriLKjWgN6zRr1O4m+u9D9R2f6v4VQ=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer" />
-<link rel="stylesheet" href="styles.css">   
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
-
 
 <!-- Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-K23WYKK60X"></script>
@@ -4259,14 +4250,6 @@
     window.addEventListener('appinstalled', () => {
       setInstalledState();
     });
-
-    const icon = installButton.querySelector('i');
-const label = document.createElement('span');
-label.id = 'install-label';
-installButton.append(label);
-
-function setInstalledState() { label.textContent = 'مُثبت'; ... }
-function setInstallAvailable() { label.textContent = 'تثبيت التطبيق'; ... }
 
     // ===== نهاية زر تثبيت التطبيق =====
 
