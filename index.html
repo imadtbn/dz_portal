@@ -17,16 +17,12 @@
 <!-- تسجيل Service Worker -->
 <script>
   if ('serviceWorker' in navigator) {
-    window.addEventListener('load', function () {
-      navigator.serviceWorker.register('service-worker.js')
-        .then(function (registration) {
-          console.log('✅ تم تسجيل Service Worker:', registration.scope);
-        }, function (err) {
-          console.log('❌ فشل تسجيل Service Worker:', err);
-        });
-    });
+    navigator.serviceWorker.register('service-worker.js')
+      .then(() => console.log('Service Worker registered'))
+      .catch(err => console.error('SW registration failed:', err));
   }
 </script>
+
 
 <!-- Clarity tracking code for https://imadtbn.github.io/dz_portal/ -->
 <script>
