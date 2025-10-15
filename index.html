@@ -16,18 +16,24 @@
   <meta name="theme-color" content="#006233">
 
   <!-- تسجيل Service Worker -->
-  <script>
-    if ('serviceWorker' in navigator) {
-      window.addEventListener('load', function () {
-        navigator.serviceWorker.register('service-worker.js')
-          .then(function (registration) {
-            console.log('✅ تم تسجيل Service Worker:', registration.scope);
-          }, function (err) {
-            console.log('❌ فشل تسجيل Service Worker:', err);
-          });
-      });
-    }
-  </script>
+<script>
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('./service-worker.js')
+    .then(reg => console.log('✅ Service Worker registered:', reg.scope))
+    .catch(err => console.error('❌ Service Worker failed:', err));
+}
+</script>
+
+  <!-- Microsoft Tiles -->  
+  <meta name="msapplication-TileColor" content="#006233">
+  <meta name="msapplication-TileImage" content="icons/icon.png">
+  <meta name="msapplication-config" content="browserconfig.xml">
+  <!-- Apple Touch Icon -->
+  <link rel="apple-touch-icon" href="icons/icon.png">
+  <meta name="apple-mobile-web-app-title" content="البوابة الجزائرية للخدمات الرقمية">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
 
   <!-- Clarity tracking code for https://imadtbn.github.io/dz_portal/ -->
   <script>
