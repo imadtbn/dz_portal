@@ -1,14 +1,12 @@
 // اسم الكاش
 const CACHE_NAME = "dz-portal-cache-v3";
 
-// الملفات الأساسية (تتضمن صفحة offline)
-const OFFLINE_URL = "/dz_portal/offline.html";
+// المسار الصحيح لصفحة Offline داخل مجلد المشروع
+const OFFLINE_URL = "./offline.html";
 
 self.addEventListener("install", (event) => {
   event.waitUntil(
-    caches.open(CACHE_NAME).then((cache) => {
-      return cache.addAll([OFFLINE_URL]);
-    })
+    caches.open(CACHE_NAME).then((cache) => cache.addAll([OFFLINE_URL]))
   );
   self.skipWaiting();
 });
@@ -29,26 +27,16 @@ self.addEventListener("activate", (event) => {
 self.addEventListener("fetch", (event) => {
   event.respondWith(
     fetch(event.request)
-      .then((networkResponse) => {
-        // تخزين الملفات التي يتم جلبها بنجاح
-        if (
-          networkResponse &&
-          networkResponse.status === 200 &&
-          networkResponse.type === "basic"
-        ) {
-          const responseClone = networkResponse.clone();
-          caches.open(CACHE_NAME).then((cache) => {
-            cache.put(event.request, responseClone);
-          });
+      .then((response) => {
+        // تخزين الملفات التي تم جلبها بنجاح في الكاش
+        if (response && response.status === 200 && response.type === "basic") {
+          const clone = response.clone();
+          caches.open(CACHE_NAME).then((cache) => cache.put(event.request, clone));
         }
-        return networkResponse;
+        return response;
       })
-      .catch(() => {
-        // إذا الشبكة فشلت نرجع من الكاش
-        return caches.match(event.request).then((cachedResponse) => {
-          // إذا لم نجد أي كاش نرجع صفحة offline
-          return cachedResponse || caches.match(OFFLINE_URL);
-        });
-      })
+      .catch(() =>
+        caches.match(event.request).then((cached) => cached || caches.match(OFFLINE_URL))
+      )
   );
 });
