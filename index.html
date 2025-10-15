@@ -12,7 +12,7 @@
 <link rel="icon" href="icons/icon.png" type="image/png" loading="lazy" class="welcome-logo">
 
 <!-- ألوان للمتصفحات -->
-<meta name="theme-color" content="#ffffffff">
+<meta name="theme-color"content="#ffffffff">
 
 <!-- تسجيل Service Worker -->
 <script>
@@ -1446,104 +1446,131 @@
     </div>
   </header>
 
-<!-- قسم الترحيب -->
-<section class="welcome-section">
-  <div class="welcome-content">
-    <img src="icons/icon.png" alt="أيقونة البوابة" loading="lazy" class="welcome-logo">
-    <h1 class="welcome-title">أهلاً بكم في البوابة الجزائرية للخدمات الرقمية</h1>
-    <p class="welcome-description">
-      بوابة شاملة تجمع كل الخدمات الرقمية الحكومية الجزائرية: التعليم، البريد، الضرائب، الضمان الاجتماعي، الإدارة المحلية، التكوين المهني، وأكثر.
-      هدفنا تسهيل الوصول إلى خدماتكم عن بُعد بسهولة وأمان.
-    </p>
+  <!-- قسم الترحيب  -->
+  <section class="welcome-section">
+    <div class="welcome-content">
+      <!-- شعار البوابة -->
+      <img src="icons/icon.png" alt="أيقونة البوابة" loading="lazy" class="welcome-logo">
 
-    <button id="install-button"><i class="fas fa-download"></i> تثبيت التطبيق</button>
-    <button onclick="sharePage()" class="share-button"><i class="fas fa-share-alt" style="margin-left:5px;"></i> شارك البوابة</button>
-  </div>
+      <!-- عنوان الترحيب -->
+      <h1 class="welcome-title">أهلا بكم في البوابة الجزائرية للخدمات الرقمية</h1>
 
-  <div class="welcome-stats">
-    <div class="stat-box">
-      <i class="fas fa-folder-open stat-icon"></i>
-      <div class="stat-title">عدد الأقسام</div>
-      <div class="stat-value">29</div>
+      <!-- الوصف الرئيسي -->
+      <p class="welcome-description">
+        بوابة شاملة تجمع كل الخدمات الرقمية الحكومية الجزائرية: التعليم، البريد، الضرائب، الضمان
+        الاجتماعي، الإدارة المحلية، التكوين المهني، وأكثر.
+        هدفنا تسهيل الوصول إلى خدماتكم عن بُعد بسهولة وأمان.
+      </p>
+
+      <!-- زر تثبيت التطبيق -->
+      <button id="install-button">
+        <i class="fas fa-download"></i> تثبيت التطبيق
+      </button>
+
+      <!-- زر المشاركة -->
+      <button onclick="sharePage()" class="share-button">
+        <i class="fas fa-share-alt" style="margin-left: 5px;"></i> شارك البوابة
+      </button>
+
+      <!-- شريط الأيقونات التنقل الديناميكي -->
+      <script>
+        function createNavigationBar() {
+          const navContainer = document.querySelector('.nav-scroller-inner');
+          const sections = [
+            { id: 'toggle-payment', name: 'الدفع الإلكتروني', icon: 'fa-credit-card' },
+            { id: 'toggle-recharge', name: 'تعبئة الهاتف', icon: 'fa-money-check-alt' },
+            { id: 'toggle-post', name: 'بريد الجزائر', icon: 'fa-envelope' },
+            { id: 'toggle-telecom', name: 'اتصالات الجزائر', icon: 'fa-wifi' },
+            { id: 'toggle-education', name: 'التربية والتعليم', icon: 'fa-graduation-cap' },
+            { id: 'toggle-university', name: 'الخدمات الجامعية', icon: 'fa-university' },
+            { id: 'toggle-vocational', name: 'التكوين المهني', icon: 'fa-tools' },
+            { id: 'toggle-admin', name: 'الإدارة المحلية', icon: 'fa-building' },
+            { id: 'toggle-aadl3', name: 'وكالة عدل', icon: 'fa-home' },
+            { id: 'toggle-tax', name: 'الخدمات الجبائية', icon: 'fa-file-invoice-dollar' },
+            { id: 'toggle-tenders', name: 'الصفقات العمومية', icon: 'fa-file-contract' },
+            { id: 'toggle-realestate', name: 'أملاك عقارية', icon: 'fa-home' },
+            { id: 'toggle-foreign', name: 'و-الشؤون الخارجية', icon: 'fa-flag' },
+            { id: 'social-security', name: 'الضمان الاجتماعي', icon: 'fa-shield-alt' },
+            { id: 'toggle-justice', name: 'العدالة', icon: 'fa-scale-balanced' },
+            { id: 'toggle-energy', name: 'الطاقة والمناجم', icon: 'fa-gas-pump' },
+            { id: 'toggle-transport', name: 'النقل', icon: 'fa-bus' },
+            { id: 'toggle-employment', name: 'التشغيل', icon: 'fa-briefcase' },
+            { id: 'toggle-health', name: 'الصحة', icon: 'fa-heartbeat' },
+            { id: 'toggle-commerce', name: 'التجارة', icon: 'fa-store' },
+            { id: 'toggle-customs', name: 'الجمارك الجزائرية', icon: 'fa-landmark' },
+            { id: 'toggle-autoentrepreneur', name: 'المقاول الذاتي', icon: 'fa-user-tie' },
+            { id: 'toggle-onpo', name: 'الحج والعمرة', icon: 'fa-kaaba' },
+            { id: 'toggle-investment', name: 'ترقية الإستثمار', icon: 'fa-chart-line' },
+            { id: 'toggle-banks', name: 'الخدمات البنكية', icon: 'fa-building-columns' },
+            { id: 'toggle-insurance', name: 'وكالات التأمينات', icon: 'fa-shield-alt' },
+            { id: 'toggle-emergency', name: 'أرقام الطوارئ', icon: 'fa-phone-volume' }
+          ];
+
+          // إنشاء الأزرار
+          sections.forEach(section => {
+            const navItem = document.createElement('div');
+            navItem.className = 'nav-item';
+            navItem.innerHTML = `
+        <a class="lightning nav-link" href="#${section.id}">
+          <i class="fas ${section.icon} nav-icon"></i>
+          <span>${section.name}</span>
+        </a>`;
+            navContainer.appendChild(navItem);
+          });
+
+          // تفعيل التمرير السلس مع حساب ارتفاع الهيدر
+          navContainer.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', function (e) {
+              e.preventDefault();
+              const targetId = this.getAttribute('href').substring(1);
+              const targetElement = document.getElementById(targetId);
+              if (targetElement) {
+                const header = document.querySelector('header') || document.querySelector('.site-header');
+                const headerOffset = header ? header.offsetHeight : 0;
+                const elementPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
+                const offsetPosition = elementPosition - headerOffset;
+
+                window.scrollTo({
+                  top: offsetPosition,
+                  behavior: 'smooth'
+                });
+              }
+            });
+          });
+        }
+
+        document.addEventListener('DOMContentLoaded', createNavigationBar);
+      </script>
     </div>
-    <div class="stat-box">
-      <i class="fas fa-laptop stat-icon"></i>
-      <div class="stat-title">الخدمات الرقمية</div>
-      <div class="stat-value">280+</div>
+
+    <!-- المميزات الأساسية -->
+    <div class="welcome-stats">
+      <div class="stat-box">
+        <i class="fas fa-folder-open stat-icon"></i>
+        <div class="stat-title">عدد الأقسام</div>
+        <div class="stat-value">29</div>
+      </div>
+      <div class="stat-box">
+        <i class="fas fa-laptop stat-icon"></i>
+        <div class="stat-title">الخدمات الرقمية</div>
+        <div class="stat-value">280+</div>
+      </div>
+      <div class="stat-box">
+        <i class="fas fa-shield-alt stat-icon"></i>
+        <div class="stat-title">آمنة وموثوقة</div>
+        <div class="stat-value" style="font-size: 1em;">بيئة محمية</div>
+      </div>
     </div>
-    <div class="stat-box">
-      <i class="fas fa-shield-alt stat-icon"></i>
-      <div class="stat-title">آمنة وموثوقة</div>
-      <div class="stat-value" style="font-size:1em;">بيئة محمية</div>
+
+    <!-- شريط التنقل الديناميكي -->
+    <div class="nav-scroller">
+      <div class="nav-scroller-inner">
+        <!-- سيتم ملء هذا القسم ديناميكيًا بواسطة JavaScript -->
+      </div>
     </div>
-  </div>
 
-  <div class="nav-scroller">
-    <div class="nav-scroller-inner"></div>
-  </div>
-</section>
-
-<script>
-function createNavigationBar() {
-  const navContainer = document.querySelector('.nav-scroller-inner');
-  const sections = [
-    { id: 'toggle-payment', name: 'الدفع الإلكتروني', icon: 'fa-credit-card' },
-    { id: 'toggle-recharge', name: 'تعبئة الهاتف', icon: 'fa-money-check-alt' },
-    { id: 'toggle-post', name: 'بريد الجزائر', icon: 'fa-envelope' },
-    { id: 'toggle-telecom', name: 'اتصالات الجزائر', icon: 'fa-wifi' },
-    { id: 'toggle-education', name: 'التربية والتعليم', icon: 'fa-graduation-cap' },
-    { id: 'toggle-university', name: 'الخدمات الجامعية', icon: 'fa-university' },
-    { id: 'toggle-vocational', name: 'التكوين المهني', icon: 'fa-tools' },
-    { id: 'toggle-admin', name: 'الإدارة المحلية', icon: 'fa-building' },
-    { id: 'toggle-aadl3', name: 'وكالة عدل', icon: 'fa-home' },
-    { id: 'toggle-tax', name: 'الخدمات الجبائية', icon: 'fa-file-invoice-dollar' },
-    { id: 'toggle-tenders', name: 'الصفقات العمومية', icon: 'fa-file-contract' },
-    { id: 'toggle-realestate', name: 'أملاك عقارية', icon: 'fa-home' },
-    { id: 'toggle-foreign', name: 'وزارة الشؤون الخارجية', icon: 'fa-flag' },
-    { id: 'social-security', name: 'الضمان الاجتماعي', icon: 'fa-shield-alt' },
-    { id: 'toggle-justice', name: 'العدالة', icon: 'fa-scale-balanced' },
-    { id: 'toggle-energy', name: 'الطاقة والمناجم', icon: 'fa-gas-pump' },
-    { id: 'toggle-transport', name: 'النقل', icon: 'fa-bus' },
-    { id: 'toggle-employment', name: 'التشغيل', icon: 'fa-briefcase' },
-    { id: 'toggle-health', name: 'الصحة', icon: 'fa-heartbeat' },
-    { id: 'toggle-commerce', name: 'التجارة', icon: 'fa-store' },
-    { id: 'toggle-customs', name: 'الجمارك الجزائرية', icon: 'fa-landmark' },
-    { id: 'toggle-autoentrepreneur', name: 'المقاول الذاتي', icon: 'fa-user-tie' },
-    { id: 'toggle-onpo', name: 'الحج والعمرة', icon: 'fa-kaaba' },
-    { id: 'toggle-investment', name: 'ترقية الإستثمار', icon: 'fa-chart-line' },
-    { id: 'toggle-banks', name: 'الخدمات البنكية', icon: 'fa-building-columns' },
-    { id: 'toggle-insurance', name: 'وكالات التأمينات', icon: 'fa-shield-alt' },
-    { id: 'toggle-emergency', name: 'أرقام الطوارئ', icon: 'fa-phone-volume' }
-  ];
-
-  sections.forEach(section => {
-    const navItem = document.createElement('div');
-    navItem.className = 'nav-item';
-    navItem.innerHTML = `
-      <a class="lightning nav-link" href="#${section.id}">
-        <i class="fas ${section.icon} nav-icon"></i>
-        <span>${section.name}</span>
-      </a>`;
-    navContainer.appendChild(navItem);
-  });
-
-  navContainer.querySelectorAll('.nav-link').forEach(link => {
-    link.addEventListener('click', e => {
-      e.preventDefault();
-      const targetId = link.getAttribute('href').substring(1);
-      const targetElement = document.getElementById(targetId);
-      if (targetElement) {
-        const header = document.querySelector('header');
-        const headerOffset = header ? header.offsetHeight : 0;
-        const elementPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
-        window.scrollTo({ top: elementPosition - headerOffset, behavior: 'smooth' });
-      }
-    });
-  });
-}
-document.addEventListener('DOMContentLoaded', createNavigationBar);
-</script>
-
+    </div>
+  </section>
 
   <!-- قسم الدفع الإلكتروني للفواتير -->
   <section dir="rtl" style="text-align: right;">
