@@ -4146,82 +4146,81 @@
   <button id="scrollTopBtn" onclick="scrollToTop()" title="العودة للأعلى">↑
   </button>
 
-  <script>
-    /*  زر تثبيت PWA */
-    <button id="install-button" style="display:none;">
-      <i class="fas fa-download"></i> تثبيت التطبيق
-    </button>
+  <!-- زر تثبيت التطبيق -->
+<button id="install-button" style="display:none;">
+  <i class="fas fa-download"></i> تثبيت التطبيق
+</button>
 
+<script>
+const installButton = document.getElementById('install-button');
+let deferredPrompt = null;
 
-    const installButton = document.getElementById('install-button');
-    let deferredPrompt = null;
+// عرض الحالة بعد التثبيت
+function setInstalledState() {
+  installButton.textContent = 'مُثبَّت';
+  installButton.disabled = true;
+  installButton.classList.add('installed');
+  installButton.style.opacity = '0.8';
+  installButton.style.cursor = 'default';
+}
 
-    // عرض الحالة بعد التثبيت
-    function setInstalledState() {
-      installButton.textContent = 'مُثبَّت';
-      installButton.disabled = true;
-      installButton.classList.add('installed');
-      installButton.style.opacity = '0.8';
-      installButton.style.cursor = 'default';
-    }
+// تفعيل الزر عندما يصبح التثبيت متاحاً
+function setInstallAvailable() {
+  installButton.textContent = 'تثبيت التطبيق';
+  installButton.disabled = false;
+  installButton.classList.remove('installed');
+  installButton.style.opacity = '1';
+  installButton.style.cursor = 'pointer';
+  installButton.style.display = 'inline-block';
+}
 
-    // تفعيل الزر عندما يصبح التثبيت متاحاً
-    function setInstallAvailable() {
-      installButton.textContent = 'تثبيت التطبيق';
-      installButton.disabled = false;
-      installButton.classList.remove('installed');
-      installButton.style.opacity = '1';
-      installButton.style.cursor = 'pointer';
-      installButton.style.display = 'inline-block';
-    }
-
-    // فحص حالة التثبيت بعد تحميل الصفحة
-    window.addEventListener('load', async () => {
-      if (navigator.getInstalledRelatedApps) {
-        try {
-          const apps = await navigator.getInstalledRelatedApps();
-          if (apps && apps.length > 0) {
-            setInstalledState();
-            return;
-          }
-        } catch (_) { /* تجاهل في حالة عدم الدعم */ }
+// فحص حالة التثبيت بعد تحميل الصفحة
+window.addEventListener('load', async () => {
+  if (navigator.getInstalledRelatedApps) {
+    try {
+      const apps = await navigator.getInstalledRelatedApps();
+      if (apps && apps.length > 0) {
+        setInstalledState();
+        return;
       }
-      installButton.style.display = 'none';
-    });
+    } catch (_) { /* تجاهل في حالة عدم الدعم */ }
+  }
+  installButton.style.display = 'none';
+});
 
-    // عند توفر حدث beforeinstallprompt
-    window.addEventListener('beforeinstallprompt', (e) => {
-      e.preventDefault();
-      deferredPrompt = e;
+// عند توفر حدث beforeinstallprompt
+window.addEventListener('beforeinstallprompt', (e) => {
+  e.preventDefault();
+  deferredPrompt = e;
+  setInstallAvailable();
+
+  installButton.addEventListener('click', async () => {
+    if (!deferredPrompt) return;
+    try {
+      await deferredPrompt.prompt();
+      const result = await deferredPrompt.userChoice;
+      if (result.outcome === 'accepted') {
+        setInstalledState();
+      } else {
+        setInstallAvailable();
+      }
+    } catch (err) {
+      console.error('install prompt error', err);
       setInstallAvailable();
+    } finally {
+      deferredPrompt = null;
+    }
+  });
+});
 
-      installButton.addEventListener('click', async () => {
-        if (!deferredPrompt) return;
-        try {
-          await deferredPrompt.prompt();
-          const result = await deferredPrompt.userChoice;
-          if (result.outcome === 'accepted') {
-            setInstalledState();
-          } else {
-            setInstallAvailable();
-          }
-        } catch (err) {
-          console.error('install prompt error', err);
-          setInstallAvailable();
-        } finally {
-          deferredPrompt = null;
-        }
-      });
-    });
+// عند اكتمال التثبيت
+window.addEventListener('appinstalled', () => {
+  setInstalledState();
+});
+</script>
 
-    // عند اكتمال التثبيت
-    window.addEventListener('appinstalled', () => {
-      setInstalledState();
-    });
-
-    // ===== نهاية زر تثبيت التطبيق =====
-
-    /* توسيع/طي الأقسام + عدّاد — يدعم إغلاق الأخوة فقط ويفتح الحاوية الأصل عند الحاجة */
+  <script>
+      /* توسيع/طي الأقسام + عدّاد — يدعم إغلاق الأخوة فقط ويفتح الحاوية الأصل عند الحاجة */
     document.addEventListener("DOMContentLoaded", function () {
       const headers = document.querySelectorAll("section h2, section h3");
 
