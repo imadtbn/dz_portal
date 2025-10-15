@@ -1,15 +1,23 @@
 {
   "name": "البوابة الجزائرية للخدمات الرقمية",
   "short_name": "DZ Portal",
-  "start_url": "https://imadtbn.github.io/dz_portal/",
+  "start_url": "/dz_portal/",
+  "scope": "/dz_portal/",
   "display": "standalone",
-  "background_color": "#006400"",
-  "theme_color": "#006400",
   "orientation": "portrait",
-  "description": "بوابة شاملة تجمع كل الخدمات الرقمية الحكومية الجزائرية: بريد الجزائر، التعليم، الضرائب، الصحة، السكن، البنوك، والمزيد.",
+  "background_color": "#ffffff",
+  "theme_color": "#006400",
+  "description": "البوابة الجزائرية للخدمات الرقمية - الوصول إلى الخدمات الحكومية الإلكترونية بسهولة.",
   "icons": [
-    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png" },
-    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png" }
-    
+    {
+      "src": "icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
   ]
 }
