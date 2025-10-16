@@ -170,6 +170,7 @@ if ('serviceWorker' in navigator) {
   <meta name="msvalidate.01" content="9BCA38377A234DCCEB9991EAD1A2F6C2">
 
   <!-- أيقونات وملفات -->
+
   <link rel="manifest" href="manifest.webmanifest.json">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
 
@@ -4427,6 +4428,7 @@ if ('serviceWorker' in navigator) {
           };
           tryRegister(0);
         })();
+        
         /* -------------------- 7) زر الرجوع للأعلى -------------------- */
         (function initScrollTop() {
 
@@ -4454,8 +4456,7 @@ if ('serviceWorker' in navigator) {
       }); // end DOMContentLoaded
     })(); // end IIFE
 
-    /* ===== الإشعارات عبر Google Script ===== */
-
+    /* ===== الإشعارات عبر 8 Google Script ===== */
     document.addEventListener("DOMContentLoaded", function () {
       const box = document.getElementById("notificationBox");
       const apiUrl = "https://script.google.com/macros/s/AKfycbwap_0FcirukQreMhIVn1PS0kSEzoxPFrNKn1u94yR7z1l-ndxADsFNlx50CPePvs6j/exec";
@@ -4514,7 +4515,7 @@ if ('serviceWorker' in navigator) {
       setInterval(checkUpdates, FETCH_INTERVAL);
     });
 
-    /* ===== العداد الوهمي ===== */
+    /* ===== العداد 9 الوهمي ===== */
     document.addEventListener("DOMContentLoaded", function () {
       // عناصر العداد
       const dailyEl = document.getElementById('daily-visits');
@@ -4542,7 +4543,7 @@ if ('serviceWorker' in navigator) {
       }, 1200);
     });
 
-    /* ===== رسالة الاشتراك ===== */
+    /* ===== رسالة 10 الاشتراك ===== */
     function showSubscribeMsg() {
       const msgEl = document.getElementById('subscribeMsg');
       if (msgEl) {
@@ -4552,7 +4553,7 @@ if ('serviceWorker' in navigator) {
     }
 
 
-    /* ===== صندوق الطقس ===== */
+    /* ===== صندوق 11 الطقس ===== */
     document.addEventListener("DOMContentLoaded", () => {
       /* ===== صندوق الطقس ===== */
       const apiKey = "c9600bb5dcccfb988100da9bf01b2f2f"; // مفتاح OpenWeatherMap
@@ -4652,7 +4653,7 @@ if ('serviceWorker' in navigator) {
       initWeather();
     });
 
-    /* ==============8. إرسال التعليقات ====================== */
+    /* ==============12 إرسال التعليقات ====================== */
     function toggleSection(id, header) {
       const section = document.getElementById(id);
       const icon = header.querySelector('.toggle-icon');
@@ -4678,7 +4679,33 @@ if ('serviceWorker' in navigator) {
         form.reset();
       }
     }
-    // ===== نهاية التعليقات =====
+  
+    // ===== تثبيت الهيدر في الأعلى 13 =====
+    // ضبط padding-top للـ body تلقائياً حسب ارتفاع الهيدر
+    function adjustBodyPadding() {
+      const header = document.querySelector("header");
+      document.body.style.paddingTop = header.offsetHeight + "px";
+    }
+    window.addEventListener("load", adjustBodyPadding);
+    window.addEventListener("resize", adjustBodyPadding);
+ 
+        //---- 14 زر المشاركة -->
+    function sharePage() {
+      if (navigator.share) {
+        navigator.share({
+          title: 'البوابة الجزائرية للخدمات الرقمية',
+          text: 'شارك البوابة الجزائرية للخدمات الرقمية مع أصدقائك وساهم في تعميم الثقافة الرقمية',
+          url: window.location.href
+        });
+      } else {
+        alert("المشاركة غير مدعومة في هذا المتصفح. انسخ الرابط: " + window.location.href);
+      }
+    }
+    //---- زر المشاركة نهاية -->
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker.register("/dz_portal/service-worker.js");
+    }
+
   </script>
 
 </body>
