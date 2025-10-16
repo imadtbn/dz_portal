@@ -16,15 +16,15 @@
   <meta name="theme-color" content="#006233">
 
   <!-- تسجيل Service Worker -->
-<script>
-if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('./service-worker.js')
-    .then(reg => console.log('✅ Service Worker registered:', reg.scope))
-    .catch(err => console.error('❌ Service Worker failed:', err));
-}
-</script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('./service-worker.js')
+        .then(reg => console.log('✅ Service Worker registered:', reg.scope))
+        .catch(err => console.error('❌ Service Worker failed:', err));
+    }
+  </script>
 
-  <!-- Microsoft Tiles -->  
+  <!-- Microsoft Tiles -->
   <meta name="msapplication-TileColor" content="#006233">
   <meta name="msapplication-TileImage" content="icons/icon.png">
   <meta name="msapplication-config" content="browserconfig.xml">
@@ -4428,7 +4428,7 @@ if ('serviceWorker' in navigator) {
           };
           tryRegister(0);
         })();
-        
+
         /* -------------------- 7) زر الرجوع للأعلى -------------------- */
         (function initScrollTop() {
 
@@ -4554,103 +4554,75 @@ if ('serviceWorker' in navigator) {
 
 
     /* ===== صندوق 11 الطقس ===== */
+
     document.addEventListener("DOMContentLoaded", () => {
-      /* ===== صندوق الطقس ===== */
-      const apiKey = "c9600bb5dcccfb988100da9bf01b2f2f"; // مفتاح OpenWeatherMap
-      const weatherIcon = document.getElementById("weatherIcon");
-      const weatherInfo = document.getElementById("weatherInfo");
-      const refreshBtn = document.getElementById("refreshWeatherBtn");
-
+      const apiKey = "c9600bb5dcccfb988100da9bf01b2f2f";
       let currentCoords = null;
-      let lastUpdate = 0;
 
-      // عرض بيانات الطقس
-      function renderWeather(d) {
-        if (!weatherIcon || !weatherInfo) return;
-        weatherIcon.src = d.icon;
-        weatherIcon.alt = d.desc;
-        weatherInfo.textContent = `${d.desc} / ${d.temp} / ${d.city}`;
-      }
-
-      // جلب الطقس من API
       function fetchWeather(lat, lon) {
-        if (!lat || !lon) {
-          weatherInfo.textContent = "تعذر تحديد الموقع";
-          return;
-        }
-
         const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&lang=ar&appid=${apiKey}`;
         fetch(url)
-          .then(r => {
-            if (!r.ok) throw new Error("خطأ في الاتصال");
-            return r.json();
-          })
+          .then(r => r.json())
           .then(data => {
-            const w = {
+            const weatherData = {
               icon: `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`,
-              temp: `${Math.round(data.main.temp)}°C`,
+              temp: `${Math.round(data.main.temp)}°`,
               desc: data.weather[0].description,
               city: data.name,
               time: Date.now()
             };
-            localStorage.setItem("weatherData", JSON.stringify(w));
-            renderWeather(w);
+            localStorage.setItem("weatherData", JSON.stringify(weatherData));
+            renderWeather(weatherData);
           })
           .catch(() => {
-            weatherInfo.textContent = "⚠️ تعذر تحميل بيانات الطقس";
+            document.getElementById("weatherInfo").textContent = "تعذر تحميل الطقس";
           })
           .finally(() => {
-            if (refreshBtn) {
-              const icon = refreshBtn.querySelector("i");
-              if (icon) icon.classList.remove("spin");
-            }
+            const icon = document.querySelector("#refreshWeatherBtn i");
+            if (icon) icon.classList.remove("spin");
           });
+      }
+
+      function renderWeather(d) {
+        document.getElementById("weatherIcon").src = d.icon;
+        document.getElementById("weatherInfo").textContent =
+          `${d.desc} / ${d.temp} / ${d.city}`;
       }
 
       // تحميل بيانات محفوظة
       const saved = localStorage.getItem("weatherData");
-      if (saved) {
-        const data = JSON.parse(saved);
-        renderWeather(data);
-        lastUpdate = data.time;
-      }
+      if (saved) renderWeather(JSON.parse(saved));
 
-      // طلب الإذن وتحديث الطقس
-      function initWeather() {
-        if (navigator.geolocation) {
-          navigator.geolocation.getCurrentPosition(
-            pos => {
-              currentCoords = { lat: pos.coords.latitude, lon: pos.coords.longitude };
-              fetchWeather(currentCoords.lat, currentCoords.lon);
-              // تحديث كل ساعة
-              setInterval(() => {
-                fetchWeather(currentCoords.lat, currentCoords.lon);
-              }, 60 * 60 * 1000);
-            },
-            () => {
-              weatherInfo.textContent = "⚠️ رفض إذن تحديد الموقع";
-            }
-          );
-        } else {
-          weatherInfo.textContent = "المتصفح لا يدعم GPS";
-        }
+      // أول تحميل مع GPS
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(pos => {
+          currentCoords = { lat: pos.coords.latitude, lon: pos.coords.longitude };
+          fetchWeather(currentCoords.lat, currentCoords.lon);
+          // تحديث تلقائي كل ساعة
+          setInterval(() => fetchWeather(currentCoords.lat, currentCoords.lon), 60 * 60 * 1000);
+        });
       }
 
       // زر التحديث اليدوي
+      const refreshBtn = document.getElementById("refreshWeatherBtn");
       if (refreshBtn) {
         refreshBtn.addEventListener("click", () => {
           const icon = refreshBtn.querySelector("i");
           if (icon) icon.classList.add("spin");
-          if (currentCoords) {
+
+          if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(pos => {
+              currentCoords = { lat: pos.coords.latitude, lon: pos.coords.longitude };
+              fetchWeather(currentCoords.lat, currentCoords.lon);
+            }, () => {
+              // إذا رفض المستخدم مشاركة الموقع، استخدم آخر إحداثيات محفوظة
+              if (currentCoords) fetchWeather(currentCoords.lat, currentCoords.lon);
+            });
+          } else if (currentCoords) {
             fetchWeather(currentCoords.lat, currentCoords.lon);
-          } else {
-            initWeather();
           }
         });
       }
-
-      // تشغيل أولي
-      initWeather();
     });
 
     /* ==============12 إرسال التعليقات ====================== */
@@ -4679,7 +4651,7 @@ if ('serviceWorker' in navigator) {
         form.reset();
       }
     }
-  
+
     // ===== تثبيت الهيدر في الأعلى 13 =====
     // ضبط padding-top للـ body تلقائياً حسب ارتفاع الهيدر
     function adjustBodyPadding() {
@@ -4688,8 +4660,8 @@ if ('serviceWorker' in navigator) {
     }
     window.addEventListener("load", adjustBodyPadding);
     window.addEventListener("resize", adjustBodyPadding);
- 
-        //---- 14 زر المشاركة -->
+
+    //---- 14 زر المشاركة -->
     function sharePage() {
       if (navigator.share) {
         navigator.share({
