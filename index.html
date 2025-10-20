@@ -8,9 +8,11 @@
 
   <!-- ضبط العرض للهواتف -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
 
   <!-- أيقونة الموقع -->
-  <link rel="icon" href="icons/icon.png" type="image/png" loading="lazy" class="welcome-logo">
+  <link rel="icon" href="icons/icon.png" alt="icon" type="image/png" loading="lazy" class="welcome-logo">
 
   <!-- ألوان للمتصفحات -->
   <meta name="theme-color" content="#006233">
@@ -34,15 +36,42 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
+  <!-- تحسين الاتصال المسبق بالخوادم الخارجية -->
+  <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
+  <link rel="preconnect" href="https://www.clarity.ms" crossorigin>
 
-  <!-- Clarity tracking code for https://imadtbn.github.io/dz_portal/ -->
-  <script>
+  <!-- Google Analytics -->
+  <script defer src="https://www.googletagmanager.com/gtag/js?id=G-K23WYKK60X"></script>
+  <script defer>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-K23WYKK60X');
+  </script>
+
+  <!-- Google Tag Manager -->
+  <script defer>
+    (function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+      var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+      j.defer = true; j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+      f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-NW3BWPF6');
+  </script>
+
+  <!-- Microsoft Clarity -->
+  <script defer>
     (function (c, l, a, r, i, t, y) {
       c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
-      t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i + "?ref=bwt";
-      y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
+      t = l.createElement(r);
+      t.defer = 1;
+      t.src = "https://www.clarity.ms/tag/" + i + "?ref=bwt";
+      y = l.getElementsByTagName(r)[0];
+      y.parentNode.insertBefore(t, y);
     })(window, document, "clarity", "script", "tjk39ubxx1");
   </script>
+
 
   <!-- Structured Data -->
   <script type="application/ld+json">
@@ -174,32 +203,19 @@
 
   <link rel="manifest" href="manifest.webmanifest.json">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 
-  <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-K23WYKK60X"></script>
+  <!-- 📦 تسجيل Service Worker ذكي للتخزين المؤقت -->
   <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-    gtag('config', 'G-K23WYKK60X');
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('./service-worker.js')
+          .then(reg => console.log('✅ Service Worker registered:', reg.scope))
+          .catch(err => console.error('❌ Service Worker registration failed:', err));
+      });
+    }
   </script>
 
-  <!-- Google Tag Manager -->
-  <script>
-    (function (w, d, s, l, i) {
-      w[l] = w[l] || []; w[l].push({
-        'gtm.start':
-          new Date().getTime(), event: 'gtm.js'
-      }); var f = d.getElementsByTagName(s)[0],
-        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
-          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
-    })(window, document, 'script', 'dataLayer', 'GTM-NW3BWPF6');
-  </script>
-
-  <noscript>
-    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NW3BWPF6" height="0" width="0"
-      style="display:none;visibility:hidden"></iframe>
-  </noscript>
 
   <style>
     /* إعدادات عامة للصفحة */
@@ -1387,6 +1403,16 @@
     body.dark-mode a:hover {
       color: #4db6ac;
     }
+
+    @font-face {
+      font-family: 'CustomFont';
+      src: url('fonts/CustomFont.woff2') format('woff2');
+      font-display: swap;
+    }
+
+    * {
+      font-display: swap;
+    }
   </style>
 
 </head>
@@ -1397,7 +1423,7 @@
     <div class="branding" dir="rtl">
       <i class="fas fa-globe"></i>
       <h1>البوابة الجزائرية للخدمات الرقمية</h1>
-      <img alt="علم الجزائر" src="icons/Flag_of_Algeria.svg" alt="flag Logo"loading="lazy" class="logo">
+      <img alt="علم الجزائر" src="icons/Flag_of_Algeria.svg" alt="flag Logo" loading="lazy" class="logo">
     </div>
 
     <!-- 📦 قسم الطقس في الوسط -->
@@ -1413,7 +1439,7 @@
       <div id="weatherBox" style="display:flex;align-items:center;gap:10px;background:#006400;
     border:1px solid #ddd;border-radius:10px;padding:4px 12px;
     max-width:350px;box-shadow:0 2px 6px rgba(0,0,0,.1);">
-        <img id="weatherIcon" src="" alt="أيقونة الطقس" style="width:28px;height:28px;">
+        <img id="weatherIcon" src="" alt="أيقونة الطقس" loading="lazy" style="width:28px;height:28px;">
         <span id="weatherInfo" style="flex:1;white-space:nowrap;">--</span>
         <button id="refreshWeatherBtn" style="border:none;background:#006420;color:#fff;
       border-radius:6px;padding:8px 10px;cursor:pointer;">
@@ -1724,7 +1750,7 @@
     <h2 id="toggle-recharge-section" onclick="toggleSection('recharge-section-content', this)"
       style="cursor: pointer; background-color: #a52a2a; color: white; padding: 10px; border-radius: 8px;">
       <span> <img src="icons/flexy.png" alt="flexy Logo" loading="lazy" class="logo">
-      </i> خدمات تعبئة الهاتف النقال <span class="count"></span></span>
+        </i> خدمات تعبئة الهاتف النقال <span class="count"></span></span>
       <span class="toggle-icon" style="float: left;">▶</span>
     </h2>
 
@@ -1739,7 +1765,8 @@
         <span class="toggle-icon" style="float: left;">▶</span>
       </h3>
       <ul id="mobilis-list" style="display: none; list-style: none; padding: 0 20px; line-height: 2;">
-        <li><img src="icons/mobilis.png" alt="mobilis" style="width:18px; margin-left:6px; vertical-align:middle;">
+        <li><img src="icons/mobilis.png" alt="mobilis" loading="lazy"
+            style="width:18px; margin-left:6px; vertical-align:middle;">
           <a class="lightning" href="https://e-paiement.mobilis.dz/" target="_blank">تعبئة الرصيد - موبيليس</a>
         </li>
         <li><i class="fas fa-globe" style="color: #006400; margin-left:6px;"></i>
@@ -1764,7 +1791,8 @@
         <span class="toggle-icon" style="float: left;">▶</span>
       </h3>
       <ul id="djezzy-list" style="display: none; list-style: none; padding: 0 20px; line-height: 2;">
-        <li><img src="icons/djezzy.png" alt="djezzy" style="width:18px; margin-left:6px; vertical-align:middle;">
+        <li><img src="icons/djezzy.png" alt="djezzy" loading="lazy"
+            style="width:18px; margin-left:6px; vertical-align:middle;">
           <a class="lightning" href="https://moncompte.djezzy.dz/ar/guest/recharge" target="_blank">تعبئة الرصيد -
             جازي</a>
         </li>
@@ -1789,7 +1817,8 @@
         <span class="toggle-icon" style="float: left;">▶</span>
       </h3>
       <ul id="ooredoo-list" style="display: none; list-style: none; padding: 0 20px; line-height: 2;">
-        <li><img src="icons/ooredoo.png" alt="ooredoo" style="width:18px; margin-left:6px; vertical-align:middle;">
+        <li><img src="icons/ooredoo.png" alt="ooredoo" loading="lazy"
+            style="width:18px; margin-left:6px; vertical-align:middle;">
           <a class="lightning" href="http://estorm.ooredoo.dz/" target="_blank">تعبئة الرصيد - أوريدو</a>
         </li>
         <li><i class="fas fa-globe" style="color: #006400; margin-left:6px;"></i>
@@ -2761,7 +2790,7 @@
       <!-- CASNOS -->
       <h3 onclick="toggleSublist('casnos-list')"
         style="cursor: pointer; background-color: #f0faf6; color: #006233; padding: 8px; border-radius: 6px; margin-top: 10px;">
-        <span><img src="icons/CASNOS.png" casnos Logo" loading="lazy" class="logo">
+        <span><img src="icons/CASNOS.png" alt="casnos Logo" loading="lazy" class="logo">
           الصندوق الوطني للضمان الاجتماعي لغير الأجراء <span class="count"></span>
         </span>
         <span class="toggle-icon" style="float: left;">▶</span>
@@ -3537,7 +3566,7 @@
           <a class="lightning" href="tel:+21323489225" style="direction:ltr; unicode-bidi:bidi-override;">+213 23 48 92
             25</a>
         </li>
-        <li><img src="icons/google-play-logo.png" alt="google-play-logo logo"
+        <li><img src="icons/google-play-logo.png" alt="google-play-logo logo" loading="lazy"
             style="width:18px; margin-left:6px; vertical-align:middle;">
           <a class="lightning" href="https://play.google.com/store/apps/details?id=com.amanaDigital.MyamanaApp"
             target="_blank">تطبيق Android</a>
@@ -3559,7 +3588,7 @@
         <li><i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
           <a class="lightning" href="tel:3315">3315</a>
         </li>
-        <li><img src="icons/google-play-logo.png" alt="MyAlliance"
+        <li><img src="icons/google-play-logo.png" alt="MyAlliance" loading="lazy"
             style="width:18px; margin-left:6px; vertical-align:middle;">
           <a class="lightning" href="https://play.google.com/store/apps/details?id=com.blink.myalliance"
             target="_blank">تطبيق MyAlliance</a>
@@ -3600,7 +3629,7 @@
           <a class="lightning" href="tel:+21321982300" style="direction:ltr; unicode-bidi:bidi-override;">+213 21 98 23
             00</a>
         </li>
-        <li><img src="icons/google-play-logo.png" alt="AXA App"
+        <li><img src="icons/google-play-logo.png" alt="AXA App" loading="lazy"
             style="width:18px; margin-left:6px; vertical-align:middle;">
           <a class="lightning" href="https://play.google.com/store/apps/details?id=dz.axa.assurances"
             target="_blank">تطبيق Android</a>
@@ -3676,7 +3705,7 @@
         <li><i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
           <a class="lightning" href="tel:xxxx" style="direction:ltr; unicode-bidi:bidi-override;">xxxx</a>
         </li>
-        <li><img src="icons/google-play-logo.png" alt="macirvie"
+        <li><img src="icons/google-play-logo.png" alt="macirvie" loading="lazy"
             style="width:18px; margin-left:6px; vertical-align:middle;">
           <a class="lightning" href="https://play.google.com/store/apps/details?id=com.macirvie.app"
             target="_blank">تطبيق macirvie</a>
@@ -3716,7 +3745,7 @@
           <li><i class="fas fa-globe" style="color:#006400; margin-left:6px;"></i>
             <a class="lightning" href="https://www.bea.dz/" target="_blank">الموقع الرسمي</a>
           </li>
-          <li><img src="icons/google-play-logo.png" alt="Google Play"
+          <li><img src="icons/google-play-logo.png" alt="Google Play" loading="lazy"
               style="width:18px; margin-left:6px; vertical-align:middle;">
             <a class="lightning" href="https://play.google.com/store/apps/details?id=dz.bea.mobilebanking"
               target="_blank">
@@ -3739,7 +3768,7 @@
           <li><i class="fas fa-globe" style="color:#006400; margin-left:6px;"></i>
             <a class="lightning" href="https://www.bna.dz/" target="_blank">الموقع الرسمي</a>
           </li>
-          <li><img src="icons/google-play-logo.png" alt="Google Play"
+          <li><img src="icons/google-play-logo.png" alt="Google Play" loading="lazy"
               style="width:18px; margin-left:6px; vertical-align:middle;">
             <a class="lightning" href="https://play.google.com/store/apps/details?id=dz.bna.mobile" target="_blank">
               تحميل تطبيق BNA Mobile</a>
@@ -3842,7 +3871,7 @@
           <li><i class="fas fa-globe" style="color:#006400; margin-left:6px;"></i>
             <a class="lightning" href="https://www.ag-bank.com/" target="_blank">الموقع الرسمي</a>
           </li>
-          <li><img src="icons/google-play-logo.png" alt="Google Play"
+          <li><img src="icons/google-play-logo.png" alt="Google Play" loading="lazy"
               style="width:18px; margin-left:6px; vertical-align:middle;">
             <a class="lightning" href="https://play.google.com/store/apps/details?id=com.agb.mobile" target="_blank">
               تحميل تطبيق AGB Mobile</a>
@@ -3856,7 +3885,7 @@
         <!-- abc algeria -->
         <h3 onclick="toggleSublist('abc-List')"
           style="cursor:pointer; background-color:#f9fdfb; color:#006233; padding:8px; border-radius:6px; margin-top:10px;">
-          <span><img src="icons/ABC.png" alt="abc logo  loading=" lazy" class="logo"> بنك ABC الجزائر
+          <span><img src="icons/ABC.png" alt="abc logo" class="logo" loading="lazy"> بنك ABC الجزائر
             <span></span></span>
           <span class="toggle-icon" style="float:left;">▶</span>
         </h3>
@@ -3900,7 +3929,7 @@
           <li><i class="fas fa-globe" style="color:#006400; margin-left:6px;"></i>
             <a class="lightning" href="https://www.societegenerale.dz/" target="_blank">الموقع الرسمي</a>
           </li>
-          <li><img src="icons/google-play-logo.png" alt="Google Play"
+          <li><img src="icons/google-play-logo.png" alt="Google Play" loading="lazy"
               style="width:18px; margin-left:6px; vertical-align:middle;">
             <a class="lightning" href="https://play.google.com/store/apps/details?id=com.sga.mobile" target="_blank">
               تحميل تطبيق SGA Mobile</a>
@@ -3921,7 +3950,7 @@
           <li><i class="fas fa-globe" style="color:#006400; margin-left:6px;"></i>
             <a class="lightning" href="https://www.albaraka-bank.dz/?lang=ar" target="_blank">الموقع الرسمي</a>
           </li>
-          <li><img src="icons/google-play-logo.png" alt="google-play-logo Logo"
+          <li><img src="icons/google-play-logo.png" alt="google-play-logo Logo" loading="lazy"
               style="width:18px; margin-left:6px; vertical-align:middle;">
             <a class="lightning" href="https://play.google.com/store/apps/details?id=com.aebs.p2bbaraka&hl=ar&pli=1"
               target="_blank">
@@ -4748,6 +4777,12 @@
     if ("serviceWorker" in navigator) {
       navigator.serviceWorker.register("/dz_portal/service-worker.js");
     }
+
+    //----  loading', 'lazy تحميل الصور  -->
+
+    document.querySelectorAll('img:not([loading])').forEach(img => {
+      img.setAttribute('loading', 'lazy');
+    });
 
   </script>
 
