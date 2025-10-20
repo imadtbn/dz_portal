@@ -1,40 +1,42 @@
-// ✅ DZ Portal Service Worker (نسخة موسعة)
-const CACHE_NAME = "dzportal-cache-v3";
-
-// 🗂️ تخزين الموارد الأساسية + جميع الأيقونات
-const CORE_ASSETS = [
+// ✅ DZ Portal Service Worker
+const CACHE_NAME = "dzportal-cache-v2";
+const STATIC_ASSETS = [
   "./",
   "./index.html",
   "./manifest.webmanifest.json",
   "./icons/icon.png",
-  "./icons/Flag_of_Algeria.svg"
+  "./icons/Flag_of_Algeria.svg",
+  "./icons/mobilispace.webp",
+  "./icons/AADL.png",
+  "./icons/djezzy1.webp",
+  "./icons/travail.png",
+  "./icons/energy.png",
+  "./icons/transport.svg",
+  "./icons/inteurier.png",
+  "./icons/EXTERIEUR.webp",
+  "./icons/commerc.png",
+  "./icons/DGDN.png",
+  "./icons/poste.png",
+  "./icons/algerietelecom.png",
+  "./icons/education.png",
+  "./icons/justis.png",
+  "./icons/flexy.png",
+  "./icons/ESI.png",
+  "./icons/ooredoo1.webp",
+  "./icons/formation.png",
+  "./icons/anem.png",
+  "./icons/sante.jpg"
 ];
 
-// عند التثبيت: فحص مجلد الأيقونات وتخزين كل ملف فيه تلقائيا
+// ✅ التثبيت: تخزين الموارد الثابتة
 self.addEventListener("install", event => {
   event.waitUntil(
-    (async () => {
-      const cache = await caches.open(CACHE_NAME);
-      // إضافة الموارد الأساسية
-      await cache.addAll(CORE_ASSETS);
-
-      // جلب قائمة الأيقونات ديناميكياً (كل ما في مجلد icons/)
-      try {
-        const icons = await fetch("./icons/");
-        const text = await icons.text();
-        const matches = [...text.matchAll(/href="([^"]+\.(png|jpg|jpeg|svg|webp))"/g)].map(m => "./icons/" + m[1]);
-        if (matches.length) {
-          await cache.addAll(matches);
-        }
-      } catch (err) {
-        console.warn("⚠️ لم يتم جلب جميع الأيقونات:", err);
-      }
-    })()
+    caches.open(CACHE_NAME).then(cache => cache.addAll(STATIC_ASSETS))
   );
   self.skipWaiting();
 });
 
-// عند التفعيل: حذف الكاش القديم
+// ✅ التفعيل: حذف الكاش القديم
 self.addEventListener("activate", event => {
   event.waitUntil(
     caches.keys().then(keys =>
@@ -44,11 +46,12 @@ self.addEventListener("activate", event => {
   self.clients.claim();
 });
 
-// عند الجلب: استخدام الكاش أولاً للموارد المحلية
+// ✅ الجلب: جلب من الكاش أولاً ثم من الشبكة
 self.addEventListener("fetch", event => {
   const req = event.request;
   const url = new URL(req.url);
 
+  // تخزين فقط ملفات نفس النطاق
   if (url.origin === location.origin) {
     event.respondWith(cacheFirst(req));
   } else {
@@ -56,32 +59,32 @@ self.addEventListener("fetch", event => {
   }
 });
 
-// 📦 الكاش أولاً (للموارد المحلية)
+// ⚙️ إستراتيجية: الكاش أولاً (للموارد المحلية)
 async function cacheFirst(req) {
-  const cached = await caches.match(req);
-  return cached || fetch(req);
+  const cachedResponse = await caches.match(req);
+  return cachedResponse || fetch(req);
 }
 
-// 🌐 الشبكة أولاً (للموارد الخارجية)
+// ⚙️ إستراتيجية: الشبكة أولاً (للموارد الخارجية)
 async function networkFirst(req) {
   const cache = await caches.open(CACHE_NAME);
   try {
     const fresh = await fetch(req);
     cache.put(req, fresh.clone());
     return fresh;
-  } catch {
+  } catch (e) {
     const cached = await cache.match(req);
     return cached || Response.error();
   }
 }
 
-// ✅ دعم تثبيت التطبيق (PWA)
+// ✅ دعم تثبيت التطبيق
 self.addEventListener("beforeinstallprompt", e => {
   e.preventDefault();
   self.deferredPrompt = e;
 });
 
-// 🔄 التحديث الفوري عند توفر نسخة جديدة
+// ✅ تنبيه المستخدم بالتحديث الجديد
 self.addEventListener("message", event => {
   if (event.data === "checkForUpdate") {
     self.skipWaiting();
