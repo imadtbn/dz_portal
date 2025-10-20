@@ -10,13 +10,19 @@ const URLS_TO_CACHE = [
 ];
 
 // عند التثبيت: تخزين الملفات مؤقتًا
-self.addEventListener("install", (event) => {
+self.addEventListener('install', event => {
   event.waitUntil(
-    caches.open(CACHE_NAME).then((cache) => {
-      return cache.addAll(URLS_TO_CACHE);
+    caches.open('dz-portal-v1').then(cache => {
+      return cache.addAll([
+        '/dz_portal/',
+        '/dz_portal/index.html',
+        '/dz_portal/icons/icon.png',
+        '/dz_portal/manifest.webmanifest.json'
+      ]);
     })
   );
 });
+
 
 // عند الجلب: الرد من الكاش أو من الشبكة
 self.addEventListener("fetch", (event) => {
