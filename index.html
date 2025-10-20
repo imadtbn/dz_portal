@@ -1441,14 +1441,16 @@
     max-width:350px;box-shadow:0 2px 6px rgba(0,0,0,.1);">
         <img id="weatherIcon" src="" alt="أيقونة الطقس" loading="lazy" style="width:28px;height:28px;">
         <span id="weatherInfo" style="flex:1;white-space:nowrap;">--</span>
-        <button id="refreshWeatherBtn" style="border:none;background:#006420;color:#fff;
+        <button id="refreshWeatherBtn" aria-label="تحديث بيانات الطقس"
+        style="border:none;background:#006420;color:#fff;
       border-radius:6px;padding:8px 10px;cursor:pointer;">
           <i class="fas fa-sync"></i>
         </button>
       </div>
 
       <!-- زر الوضع الليلي -->
-      <button id="darkModeToggle" style="border:none;background:#333;color:#fff;border-radius:6px;
+      <button id="darkModeToggle" aria-label="تبديل الوضع الليلي"
+      style="border:none;background:#333;color:#fff;border-radius:6px;
     padding:9px 12px;cursor:pointer;">
         <i class="fas fa-moon"></i>
       </button>
