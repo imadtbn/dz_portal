@@ -1,12 +1,13 @@
-// ✅ DZ Portal Service Worker
-const CACHE_NAME = "dzportal-cache-v2";
+// ✅ DZ Portal Service Worker (نسخة محسّنة ومستقرة)
+const CACHE_NAME = "dzportal-cache-v5";
 const STATIC_ASSETS = [
   "./",
   "./index.html",
   "./manifest.webmanifest.json",
+  // جميع الأيقونات الحالية
   "./icons/icon.png",
   "./icons/Flag_of_Algeria.svg",
-   "./icons/AADL.png",
+  "./icons/AADL.png",
   "./icons/ABC.png",
   "./icons/AGB.jpg",
   "./icons/ALLO CHORTTA.webp",
@@ -26,7 +27,6 @@ const STATIC_ASSETS = [
   "./icons/EXTERIEUR.webp",
   "./icons/Etusa Mob.webp",
   "./icons/FERRIES.png",
-  "./icons/Flag_of_Algeria.svg",
   "./icons/HSBC.png",
   "./icons/Instagram.png",
   "./icons/Khadamaty.png",
@@ -74,7 +74,6 @@ const STATIC_ASSETS = [
   "./icons/gosp.jpg",
   "./icons/icon-192.png",
   "./icons/icon-512.png",
-  "./icons/icon.png",
   "./icons/ina-elections.png",
   "./icons/inpux.jpg",
   "./icons/inteurier.png",
@@ -101,14 +100,13 @@ const STATIC_ASSETS = [
   "./icons/tariki.jpg",
   "./icons/telegram.png",
   "./icons/transport.svg",
-  "./icons/travail.png",
+  "./icons/travail.png"
+    "./icons/travail.png",
 ];
 
 // ✅ التثبيت: تخزين الموارد الثابتة
 self.addEventListener("install", event => {
-  event.waitUntil(
-    caches.open(CACHE_NAME).then(cache => cache.addAll(STATIC_ASSETS))
-  );
+  event.waitUntil(caches.open(CACHE_NAME).then(cache => cache.addAll(STATIC_ASSETS)));
   self.skipWaiting();
 });
 
@@ -122,12 +120,14 @@ self.addEventListener("activate", event => {
   self.clients.claim();
 });
 
-// ✅ الجلب: جلب من الكاش أولاً ثم من الشبكة
+// ✅ الجلب: كاش أولاً للموارد المحلية، شبكة أولاً للباقي
 self.addEventListener("fetch", event => {
   const req = event.request;
   const url = new URL(req.url);
 
-  // تخزين فقط ملفات نفس النطاق
+  // تجاهل الطلبات غير GET أو امتدادات Chrome
+  if (req.method !== "GET" || url.protocol.startsWith("chrome-extension")) return;
+
   if (url.origin === location.origin) {
     event.respondWith(cacheFirst(req));
   } else {
@@ -135,34 +135,34 @@ self.addEventListener("fetch", event => {
   }
 });
 
-// ⚙️ إستراتيجية: الكاش أولاً (للموارد المحلية)
+// ⚙️ الكاش أولاً
 async function cacheFirst(req) {
-  const cachedResponse = await caches.match(req);
-  return cachedResponse || fetch(req);
+  const cached = await caches.match(req);
+  return cached || fetch(req);
 }
 
-// ⚙️ إستراتيجية: الشبكة أولاً (للموارد الخارجية)
+// ⚙️ الشبكة أولاً
 async function networkFirst(req) {
+  if (req.method !== "GET") return fetch(req);
+
   const cache = await caches.open(CACHE_NAME);
   try {
     const fresh = await fetch(req);
-    cache.put(req, fresh.clone());
+    if (req.url.startsWith("http")) cache.put(req, fresh.clone());
     return fresh;
-  } catch (e) {
+  } catch {
     const cached = await cache.match(req);
     return cached || Response.error();
   }
 }
 
-// ✅ دعم تثبيت التطبيق
+// ✅ دعم تثبيت التطبيق (PWA)
 self.addEventListener("beforeinstallprompt", e => {
   e.preventDefault();
   self.deferredPrompt = e;
 });
 
-// ✅ تنبيه المستخدم بالتحديث الجديد
+// 🔄 تحديث فوري عند توفر نسخة جديدة
 self.addEventListener("message", event => {
-  if (event.data === "checkForUpdate") {
-    self.skipWaiting();
-  }
+  if (event.data === "checkForUpdate") self.skipWaiting();
 });
