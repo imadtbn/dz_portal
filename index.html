@@ -129,11 +129,12 @@
         { "@type": "SiteNavigationElement", "position": 22, "name": "الوكالة الوطنية للمقاول الذاتي", "url": "#toggle-autoentrepreneur" },
         { "@type": "SiteNavigationElement", "position": 23, "name": "الديوان الوطني للحج والعمرة", "url": "#toggle-onpo" },
         { "@type": "SiteNavigationElement", "position": 24, "name": "الوكالة الوطنية لترقية الإستثمار", "url": "#toggle-investment" },
-        { "@type": "SiteNavigationElement", "position": 25, "name": "وكالات التأمينات", "url": "#toggle-insurance" },
-        { "@type": "SiteNavigationElement", "position": 26, "name": "خدمات بنكية", "url": "#toggle-banks" },
-        { "@type": "SiteNavigationElement", "position": 27, "name": "أرقام الطوارئ والخدمات", "url": "#toggle-emergency" },
-        { "@type": "SiteNavigationElement", "position": 28, "name": "معلومات الإتصال", "url": "#toggle-contact" },
-        { "@type": "SiteNavigationElement", "position": 29, "name": "التعليقات والإستفسارات", "url": "#toggle-comments" }
+        { "@type": "SiteNavigationElement", "position": 25, "name": "السلطة الوطنية المستقلة للانتخابات", "url": "#toggle-electionsdz" },
+        { "@type": "SiteNavigationElement", "position": 26, "name": "وكالات التأمينات", "url": "#toggle-insurance" },
+        { "@type": "SiteNavigationElement", "position": 27, "name": "خدمات بنكية", "url": "#toggle-banks" },
+        { "@type": "SiteNavigationElement", "position": 28, "name": "أرقام الطوارئ والخدمات", "url": "#toggle-emergency" },
+        { "@type": "SiteNavigationElement", "position": 29, "name": "معلومات الإتصال", "url": "#toggle-contact" },
+        { "@type": "SiteNavigationElement", "position": 30, "name": "التعليقات والإستفسارات", "url": "#toggle-comments" }
       ]
     }
   ]
@@ -896,7 +897,7 @@
 
       /* بداية الحركة من موضعها الطبيعي */
       100% {
-        transform: translateX(-50%);
+        transform: translateX(-100%);
       }
 
       /* نهاية الحركة بعد تحريك النصف الأيسر */
@@ -1503,6 +1504,7 @@
             { id: 'toggle-autoentrepreneur', name: 'المقاول الذاتي', icon: 'fa-user-tie' },
             { id: 'toggle-onpo', name: 'الحج والعمرة', icon: 'fa-kaaba' },
             { id: 'toggle-investment', name: 'ترقية الإستثمار', icon: 'fa-chart-line' },
+            { id: 'toggle-investment', name: 'الإنتخابات الجزائرية', icon: 'fas fa-vote-yea' },
             { id: 'toggle-banks', name: 'الخدمات البنكية', icon: 'fa-building-columns' },
             { id: 'toggle-insurance', name: 'وكالات التأمينات', icon: 'fa-shield-alt' },
             { id: 'toggle-emergency', name: 'أرقام الطوارئ', icon: 'fa-phone-volume' }
@@ -1519,6 +1521,13 @@
         </a>`;
             navContainer.appendChild(navItem);
           });
+
+          document.addEventListener('DOMContentLoaded', () => {
+            createNavigationBar();
+            const inner = document.querySelector('.nav-scroller-inner');
+            inner.innerHTML += inner.innerHTML; // تكرار العناصر لضمان دورة كاملة
+          });
+
 
           // تفعيل التمرير السلس مع حساب ارتفاع الهيدر
           navContainer.querySelectorAll('.nav-link').forEach(link => {
@@ -1550,7 +1559,7 @@
       <div class="stat-box">
         <i class="fas fa-folder-open stat-icon"></i>
         <div class="stat-title">عدد الأقسام</div>
-        <div class="stat-value">29</div>
+        <div class="stat-value">30</div>
       </div>
       <div class="stat-box">
         <i class="fas fa-laptop stat-icon"></i>
@@ -3380,6 +3389,73 @@
 
   </section>
 
+  <!-- قسم السلطة الوطنية المستقلة للانتخابات -->
+  <section dir="rtl" style="text-align: right;">
+    <h2 id="toggle-electionsdz" onclick="toggleSection('electionsdz-section', this)"
+      style="cursor: pointer; background-color: #a52a2a; color: white; padding: 10px; border-radius: 8px;">
+      <span><img src="icons/ina-elections.png" alt="electionsdz" loading="lazy" class="logo"> السلطة الوطنية المستقلة
+        للانتخابات
+        <span class="count"></span></span>
+      <span class="toggle-icon" style="float: left;">▶</span>
+    </h2>
+
+    <ul id="electionsdz-section" style="display: none; list-style: none; padding: 0; line-height: 2;">
+      <li>
+        <i class="fas fa-user-plus" style="color: #006400;"></i>
+        <a class="lightning" href="https://services.ina-elections.dz/services/register" target="_blank">
+          التسجيل في القوائم الانتخابية
+        </a>
+      </li>
+      <li>
+        <i class="fas fa-id-card" style="color: #006400;"></i>
+        <a class="lightning" href="https://services.ina-elections.dz/services/duplicata" target="_blank">
+          طلب نسخة من بطاقة الناخب
+        </a>
+      </li>
+      <li>
+        <i class="fas fa-hand-holding-heart" style="color: #006400;"></i>
+        <a class="lightning" href="https://services.ina-elections.dz/services/hofad-amana" target="_blank">
+          سجل نفسك في حفاظ الأمانة
+        </a>
+      </li>
+      <li>
+        <i class="fas fa-search-location" style="color: #006400;"></i>
+        <a class="lightning" href="https://services.ina-elections.dz/services/orientation" target="_blank">
+          هل أنت مسجل؟
+        </a>
+      </li>
+      <li>
+        <i class="fas fa-map-marker-alt" style="color: #006400;"></i>
+        <a class="lightning" href="https://services.ina-elections.dz/services/residence" target="_blank">
+          طلب تغيير مكان الإقامة
+        </a>
+      </li>
+      <li>
+        <i class="fas fa-edit" style="color: #006400;"></i>
+        <a class="lightning" href="https://services.ina-elections.dz/services/update-infos" target="_blank">
+          تحيين وتصحيح المعلومات
+        </a>
+      </li>
+    </ul>
+
+    <div style="margin-top:10px; padding:8px; background-color:#f9f9f9; border-top:1px solid #ddd;">
+      <div style="margin-bottom:6px;">
+        <i class="fas fa-globe" style="color:#006400; margin-left:6px;"></i>
+        <strong>
+          <a class="lightning" href="https://ina-elections.dz/" target="_blank">
+            الموقع الرسمي للسلطة الوطنية المستقلة للانتخابات
+          </a>
+        </strong>
+      </div>
+
+      <div>
+        <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
+        <strong>هاتف:</strong>
+        <a class="lightning" href="tel:+21321376874" style="direction:ltr; unicode-bidi:bidi-override;">+21321376874</a>
+      </div>
+    </div>
+  </section>
+
   <!-- 🛡️ قسم خدمات التأمينات -->
   <section dir="rtl" style="text-align: right;">
     <h2 id="toggle-insurance-section" onclick="toggleSection('insurance-section-content', this)"
@@ -4551,74 +4627,74 @@
         setTimeout(() => { msgEl.textContent = ''; }, 8000);
       }
     }
-    
+
     /* ===== صندوق 11 الطقس ===== */
-const weatherBox = document.getElementById("weatherBox");
-const weatherInfo = document.getElementById("weatherInfo");
-const weatherIcon = document.getElementById("weatherIcon");
-const refreshWeatherBtn = document.getElementById("refreshWeatherBtn");
+    const weatherBox = document.getElementById("weatherBox");
+    const weatherInfo = document.getElementById("weatherInfo");
+    const weatherIcon = document.getElementById("weatherIcon");
+    const refreshWeatherBtn = document.getElementById("refreshWeatherBtn");
 
-// حفظ آخر موقع مستخدم في localStorage
-function saveLastLocation(lat, lon) {
-  localStorage.setItem("lastLat", lat);
-  localStorage.setItem("lastLon", lon);
-  localStorage.setItem("lastUpdate", Date.now());
-}
+    // حفظ آخر موقع مستخدم في localStorage
+    function saveLastLocation(lat, lon) {
+      localStorage.setItem("lastLat", lat);
+      localStorage.setItem("lastLon", lon);
+      localStorage.setItem("lastUpdate", Date.now());
+    }
 
-// تحميل آخر موقع محفوظ
-function getLastLocation() {
-  return {
-    lat: localStorage.getItem("lastLat"),
-    lon: localStorage.getItem("lastLon")
-  };
-}
+    // تحميل آخر موقع محفوظ
+    function getLastLocation() {
+      return {
+        lat: localStorage.getItem("lastLat"),
+        lon: localStorage.getItem("lastLon")
+      };
+    }
 
-// جلب بيانات الطقس من OpenWeatherMap
-async function fetchWeather(lat, lon) {
-  try {
-    const apiKey = "c9600bb5dcccfb988100da9bf01b2f2f"; // ضع مفتاحك من https://openweathermap.org/
-    const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&lang=ar&appid=${apiKey}`;
-    const res = await fetch(url);
-    if (!res.ok) throw new Error("فشل في جلب الطقس");
-    const data = await res.json();
-    const icon = `https://openweathermap.org/img/wn/${data.weather[0].icon}.png`;
-    weatherIcon.src = icon;
-    weatherInfo.textContent = `${data.name}: ${Math.round(data.main.temp)}°C ${data.weather[0].description}`;
-    saveLastLocation(lat, lon);
-  } catch (e) {
-    console.error("خطأ في جلب بيانات الطقس:", e);
-    weatherInfo.textContent = "تعذر جلب الطقس";
-  }
-}
+    // جلب بيانات الطقس من OpenWeatherMap
+    async function fetchWeather(lat, lon) {
+      try {
+        const apiKey = "c9600bb5dcccfb988100da9bf01b2f2f"; // ضع مفتاحك من https://openweathermap.org/
+        const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&lang=ar&appid=${apiKey}`;
+        const res = await fetch(url);
+        if (!res.ok) throw new Error("فشل في جلب الطقس");
+        const data = await res.json();
+        const icon = `https://openweathermap.org/img/wn/${data.weather[0].icon}.png`;
+        weatherIcon.src = icon;
+        weatherInfo.textContent = `${data.name}: ${Math.round(data.main.temp)}°C ${data.weather[0].description}`;
+        saveLastLocation(lat, lon);
+      } catch (e) {
+        console.error("خطأ في جلب بيانات الطقس:", e);
+        weatherInfo.textContent = "تعذر جلب الطقس";
+      }
+    }
 
-// محاولة تحديد الموقع
-function getWeatherWithGPS() {
-  if ("geolocation" in navigator) {
-    navigator.geolocation.getCurrentPosition(
-      pos => fetchWeather(pos.coords.latitude, pos.coords.longitude),
-      err => {
-        console.warn("رفض المستخدم إذن GPS أو حدث خطأ:", err);
+    // محاولة تحديد الموقع
+    function getWeatherWithGPS() {
+      if ("geolocation" in navigator) {
+        navigator.geolocation.getCurrentPosition(
+          pos => fetchWeather(pos.coords.latitude, pos.coords.longitude),
+          err => {
+            console.warn("رفض المستخدم إذن GPS أو حدث خطأ:", err);
+            const last = getLastLocation();
+            if (last.lat && last.lon) fetchWeather(last.lat, last.lon);
+            else weatherInfo.textContent = "الرجاء تفعيل GPS لجلب الطقس.";
+          }
+        );
+      } else {
         const last = getLastLocation();
         if (last.lat && last.lon) fetchWeather(last.lat, last.lon);
-        else weatherInfo.textContent = "الرجاء تفعيل GPS لجلب الطقس.";
       }
-    );
-  } else {
-    const last = getLastLocation();
-    if (last.lat && last.lon) fetchWeather(last.lat, last.lon);
-  }
-}
+    }
 
-// تحديث كل ساعة
-setInterval(getWeatherWithGPS, 3600000); // 1 ساعة
+    // تحديث كل ساعة
+    setInterval(getWeatherWithGPS, 3600000); // 1 ساعة
 
-// تحديث يدوي
-refreshWeatherBtn.addEventListener("click", getWeatherWithGPS);
+    // تحديث يدوي
+    refreshWeatherBtn.addEventListener("click", getWeatherWithGPS);
 
-// تشغيل عند تحميل الصفحة
-document.addEventListener("DOMContentLoaded", getWeatherWithGPS);
+    // تشغيل عند تحميل الصفحة
+    document.addEventListener("DOMContentLoaded", getWeatherWithGPS);
 
-      /* ==============12 إرسال التعليقات ====================== */
+    /* ==============12 إرسال التعليقات ====================== */
     function toggleSection(id, header) {
       const section = document.getElementById(id);
       const icon = header.querySelector('.toggle-icon');
@@ -4666,7 +4742,7 @@ document.addEventListener("DOMContentLoaded", getWeatherWithGPS);
         alert("المشاركة غير مدعومة في هذا المتصفح. انسخ الرابط: " + window.location.href);
       }
     }
-   
+
     //---- زر المشاركة نهاية -->
     if ("serviceWorker" in navigator) {
       navigator.serviceWorker.register("/dz_portal/service-worker.js");
