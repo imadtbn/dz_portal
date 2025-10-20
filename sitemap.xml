@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  
+<urlset 
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+                      http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
   <!-- الصفحة الرئيسية -->
   <url>
     <loc>https://imadtbn.github.io/dz_portal/</loc>
@@ -9,101 +13,57 @@
     <priority>1.0</priority>
   </url>
 
-  <!-- الأقسام الرئيسية -->
-  <url>
-    <loc>https://imadtbn.github.io/dz_portal/payment.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://imadtbn.github.io/dz_portal/recharge.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://imadtbn.github.io/dz_portal/post.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://imadtbn.github.io/dz_portal/telecom.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://imadtbn.github.io/dz_portal/education.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://imadtbn.github.io/dz_portal/university.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://imadtbn.github.io/dz_portal/vocational.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://imadtbn.github.io/dz_portal/admin.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://imadtbn.github.io/dz_portal/tax.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://imadtbn.github.io/dz_portal/justice.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://imadtbn.github.io/dz_portal/health.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://imadtbn.github.io/dz_portal/commerce.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://imadtbn.github.io/dz_portal/employment.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://imadtbn.github.io/dz_portal/realestate.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://imadtbn.github.io/dz_portal/transport.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://imadtbn.github.io/dz_portal/energy.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://imadtbn.github.io/dz_portal/social-security.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://imadtbn.github.io/dz_portal/customs.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://imadtbn.github.io/dz_portal/investment.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+  <!-- الخدمات الإلكترونية والمالية -->
+  <url><loc>https://imadtbn.github.io/dz_portal/#toggle-payment</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://imadtbn.github.io/dz_portal/#toggle-recharge</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://imadtbn.github.io/dz_portal/#toggle-post</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://imadtbn.github.io/dz_portal/#toggle-telecom</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://imadtbn.github.io/dz_portal/#toggle-banks</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://imadtbn.github.io/dz_portal/#toggle-insurance</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+
+  <!-- التعليم والتكوين -->
+  <url><loc>https://imadtbn.github.io/dz_portal/#toggle-education</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://imadtbn.github.io/dz_portal/#toggle-university</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://imadtbn.github.io/dz_portal/#toggle-vocational</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+
+  <!-- السكن والعقار -->
+  <url><loc>https://imadtbn.github.io/dz_portal/#toggle-aadl3</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://imadtbn.github.io/dz_portal/#toggle-realestate</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://imadtbn.github.io/dz_portal/#toggle-investment</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+
+  <!-- الإدارة والجهات الحكومية -->
+  <url><loc>https://imadtbn.github.io/dz_portal/#toggle-admin</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://imadtbn.github.io/dz_portal/#toggle-tax</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://imadtbn.github.io/dz_portal/#toggle-tenders</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://imadtbn.github.io/dz_portal/#toggle-justice</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://imadtbn.github.io/dz_portal/#toggle-electionsdz</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+
+  <!-- الشؤون الخارجية والطاقة -->
+  <url><loc>https://imadtbn.github.io/dz_portal/#toggle-foreign</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://imadtbn.github.io/dz_portal/#toggle-energy</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+
+  <!-- الخدمات الاجتماعية والعمالية -->
+  <url><loc>https://imadtbn.github.io/dz_portal/#social-security</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://imadtbn.github.io/dz_portal/#toggle-employment</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://imadtbn.github.io/dz_portal/#toggle-health</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+
+  <!-- النقل والمواصلات -->
+  <url><loc>https://imadtbn.github.io/dz_portal/#toggle-transport</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+
+  <!-- التجارة والخدمات -->
+  <url><loc>https://imadtbn.github.io/dz_portal/#toggle-commerce</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://imadtbn.github.io/dz_portal/#toggle-customs</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://imadtbn.github.io/dz_portal/#toggle-autoentrepreneur</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://imadtbn.github.io/dz_portal/#toggle-onpo</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
+
+  <!-- الأمن والطوارئ -->
+  <url><loc>https://imadtbn.github.io/dz_portal/#toggle-emergency</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+
+  <!-- أقسام التواصل والمحتوى -->
+  <url><loc>https://imadtbn.github.io/dz_portal/#toggle-contact</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://imadtbn.github.io/dz_portal/#toggle-comments</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+
+</urlset>    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://imadtbn.github.io/dz_portal/autoentrepreneur.html</loc>
