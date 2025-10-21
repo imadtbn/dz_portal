@@ -10,7 +10,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-
     <!-- أيقونة الموقع -->
     <link rel="icon" href="icons/icon.png" alt="icon" type="image/png" loading="lazy" class="welcome-logo">
 
@@ -184,12 +183,6 @@
     <meta property="og:url" content="https://imadtbn.github.io/dz_portal/" />
     <meta property="og:type" content="website" />
 
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="البوابة الجزائرية للخدمات الرقمية" />
-    <meta name="twitter:description" content="الخدمات الرقمية الجزائرية في مكان واحد." />
-    <meta name="twitter:image" content="https://imadtbn.github.io/dz_portal/icons/icon.png" />
-
     <!-- معلومات إضافية -->
     <meta name="author" content="DZ Portal">
     <meta name="robots" content="index, follow">
@@ -217,7 +210,6 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto&display=swap">
     </noscript>
 
-
     <!-- 📦 تسجيل Service Worker ذكي للتخزين المؤقت -->
     <script>
         if ('serviceWorker' in navigator) {
@@ -228,7 +220,6 @@
             });
         }
     </script>
-
 
     <style>
         /* إعدادات عامة للصفحة */
@@ -1047,7 +1038,7 @@
             }
 
             .share-button {
-                padding: 8px 14px;
+                padding: 8px 18px;
                 font-size: 0.85em;
             }
         }
@@ -1276,7 +1267,7 @@
             /* أحمر */
             color: #fff;
             /* نص أبيض */
-            padding: 8px 14px;
+            padding: 8px 18px;
             /* مسافة داخلية */
             margin: 8px 14px;
             /* مسافة خارجية */
@@ -1364,14 +1355,6 @@
             /* ترك مسافة أسفل الزر لتباعد بصري جيد */
         }
 
-        /* زيادة المسافة بين شريط الأيقونات والعناصر المجاورة */
-        .social-share {
-            margin-top: 50px;
-            /* ترك فراغ علوي كبير للفصل عن العناصر السابقة */
-            margin-bottom: 15px;
-            /* ترك فراغ سفلي (تم تصحيح نقص px) */
-        }
-
         /* 📷 أيقونة داخل زر المشاركة */
         .share-btn img {
             width: 70%;
@@ -1388,7 +1371,10 @@
             /* تكبير الزر بنسبة 10% عند المرور */
         }
 
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        .share-button {
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
         /* إضافة ظل خفيف أسفل الزر لإبرازه */
 
         /* التبديل للوضع الليلي */
@@ -1508,12 +1494,12 @@
 
             <!-- زر تثبيت التطبيق -->
             <button id="install-button">
-                <i class="fas fa-download"></i> تثبيت التطبيق
+                <i class="fas fa-download"></i> تثبيت التطبيـق
             </button>
 
             <!-- زر المشاركة -->
             <button onclick="sharePage()" class="share-button">
-                <i class="fas fa-share-alt" style="margin-left: 5px;"></i> شارك البوابة
+                <i class="fas fa-share-alt" style="margin-left: 5px;"></i> شـارك البوابـة
             </button>
 
             <!-- شريط الأيقونات التنقل الديناميكي -->
@@ -1742,7 +1728,8 @@
             <h3 onclick="toggleSublist('opgi-list')"
                 style="cursor: pointer; background-color: #f0faf6; color: #006233; padding: 8px; border-radius: 6px; margin-top:10px;">
                 <span><img src="icons/opgi.png" alt="OPGI Logo" width="64" height="64" loading="lazy" class="logo">
-                    ديوان الترقية والتسيير العقاري <span class="count"></span>
+
+                    الترقية والتسيير العقاري <span class="count"></span>
                 </span>
                 <span class="toggle-icon" style="float: left;">▶</span>
             </h3>
@@ -2208,7 +2195,7 @@
                 <i class="fas fa-globe" style="color:#006400; margin-left:6px;"></i>
                 <strong>
                     <a class="lightning" href="https://www.education.gov.dz/" target="_blank">
-                الموقع الرسمي لوزارة التربية الوطنية </a>
+                        الموقع الرسمي لوزارة التربية الوطنية </a>
                 </strong>
             </div>
 
@@ -2459,7 +2446,7 @@
         <h2 id="toggle-aadl3" onclick="toggleSection('aadl3-section', this)"
             style="cursor: pointer; background-color: #006233; color: white; padding: 10px; border-radius: 8px;">
             <span><img src="icons/AADL.png" alt="interieur Logo" width="64" height="64" loading="lazy" class="logo">
-                خدمات وكالة عدل لتحسين السكن وتطويره AADL<span class="count"></span></span>
+                خدمات وكالة عدل لتحسين السكن وتطويره<span class="count"></span></span>
             <span class="toggle-icon" style="float: left;">▶</span>
         </h2>
 
@@ -3376,6 +3363,8 @@
 
     </section>
 
+    
+
     <!-- قسم الوكالة الوطنية للمقاول الذاتي -->
     <section dir="rtl" style="text-align: right;">
         <h2 id="toggle-autoentrepreneur" onclick="toggleSection('auto-entrepreneur', this)"
@@ -3519,7 +3508,7 @@
                 <i class="fas fa-globe" style="color:#006400; margin-left:6px;"></i>
                 <strong>
                     <a class="lightning" href="https://www.aapi.dz" target="_blank">
-                        الوكالة الوطنية لترقية الإستثمار
+                        الموقع الرسمي للوكالة الوطنية لترقية الإستثمار
                     </a>
                 </strong>
             </div>
@@ -4407,28 +4396,7 @@
             <div id="commentList" style="margin-top:30px;"></div>
         </div>
     </section>
-
-    <!-- قسم الاشتراك في التحديثات -->
-    <section dir="rtl"
-        style="text-align: center; margin: 20px auto; padding: 15px; background-color: #f0faf6; border-radius: 10px; max-width: 500px;">
-        <h2 style="color: #006233;">📩 اشترك لتصلك آخر التحديثات</h2>
-
-        <!-- نموذج Google Form -->
-        <form
-            action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSeRLTtPk1EI19nDKoV_dGMoR33Yy-5yA2sEi8Ylm5Z-S6X6yQ/formResponse"
-            method="POST" target="hidden_iframe" onsubmit="showSubscribeMsg()">
-            <input type="email" name="entry.1093766077" placeholder="أدخل بريدك الإلكتروني" required
-                style="padding: 10px; width: 70%; border: 1px solid #ccc; border-radius: 6px;">
-            <button type="submit"
-                style="background-color: #006233; color: white; padding: 10px 15px; border: none; border-radius: 6px; cursor: pointer;">
-                اشتراك
-            </button>
-        </form>
-
-        <iframe name="hidden_iframe" style="display:none;"></iframe>
-        <p id="subscribeMsg" style="color: #006233; margin-top: 10px; font-size: 0.9em;"></p>
-    </section>
-
+  
     <!-- عنصر الإشعارات -->
     <div id="notificationBox"
         style="position: fixed; bottom: 20px; left: 20px; background: #006233; color: white; padding: 12px 16px; border-radius: 8px; display: none; box-shadow: 0 2px 6px rgba(0,0,0,0.3); z-index:9999;">
@@ -4454,21 +4422,42 @@
         </div>
     </div>
 
-    <!-- الفوتر -->
-    <footer>
-        <div dir="rtl" class="footer-branding"
-            style="display: flex; justify-content: center; align-items: center; gap: 12px; flex-wrap: wrap; text-align: center; margin-bottom: 8px;">
-            <span>© 2025 البوابة الجزائرية للخدمات الرقمية</span>
-            <img alt="علم الجزائر" src="icons/Flag_of_Algeria.svg" alt="flagLogo" width="64" height="64" loading="lazy"
-                class="logo">
-        </div>
+<!-- 🔻 الفوتر  -->
+<footer style="
+    background: linear-gradient(135deg, #006233, #004d26);
+    color: #fff;
+    text-align: center;
+    padding: 20px 10px;
+    border-top: 3px solid #004d26;
+    box-shadow: 0 -3px 10px rgba(0,0,0,0.15);
+    margin-top: 40px;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+">
+    <div dir="rtl" style="
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        flex-wrap: wrap;
+        margin-bottom: 10px;
+        text-align: center;
+    ">
+        <span style="font-size: 0.95em;">© 2025 البوابة الجزائرية للخدمات الرقمية</span>
+        <img src="icons/Flag_of_Algeria.svg" alt="علم الجزائر" width="28" height="28" loading="lazy"
+             style="order: 2; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.25));">
+    </div>
 
-        <!-- عبارة مزخرفة -->
-        <div
-            style="color: white; font-weight: bold; font-size: 20px; text-shadow: 1px 1px 2px #000; text-align: center; margin-top: 5px;">
-            ❀ لا تنسونا من صالح دعائكم ❀
-        </div>
-    </footer>
+    <hr style="width: 60%; margin: 10px auto; border: none; border-top: 1px solid rgba(255,255,255,0.3);">
+
+    <div style="
+        font-weight: bold;
+        font-size: 1.05em;
+        text-shadow: 1px 1px 2px #000;
+        letter-spacing: 1px;
+    ">
+        ❀ لا تنسونا من صالح دعائكم ❀
+    </div>
+</footer>
 
     <!-- زر الرجوع للأعلى -->
     <button id="scrollTopBtn" onclick="scrollToTop()" title="العودة للأعلى">↑
