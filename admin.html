@@ -1076,5 +1076,133 @@ section {
     </footer>
 
     <script src="script.js"></script>
+
+<script>
+
+// تفعيل شريط التنقل للموبايل
+const navToggle = document.querySelector('.nav-toggle');
+const navMenu = document.querySelector('.nav-menu');
+
+navToggle.addEventListener('click', () => {
+    navMenu.classList.toggle('active');
+});
+
+// إغلاق القائمة عند النقر على رابط
+document.querySelectorAll('.nav-link').forEach(link => {
+    link.addEventListener('click', () => {
+        navMenu.classList.remove('active');
+    });
+});
+
+// تصفية المنشورات
+const filterBtns = document.querySelectorAll('.filter-btn');
+const publicationCards = document.querySelectorAll('.publication-card');
+
+filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+        // إزالة النشط من جميع الأزرار
+        filterBtns.forEach(b => b.classList.remove('active'));
+        // إضافة النشط للزر المختار
+        btn.classList.add('active');
+        
+        const filter = btn.getAttribute('data-filter');
+        
+        publicationCards.forEach(card => {
+            if (filter === 'all' || card.classList.contains(filter)) {
+                card.style.display = 'block';
+            } else {
+                card.style.display = 'none';
+            }
+        });
+    });
+});
+
+// فرز المنشورات حسب التاريخ
+function sortPublicationsByDate() {
+    const grid = document.querySelector('.publications-grid');
+    const cards = Array.from(publicationCards);
+    
+    cards.sort((a, b) => {
+        const dateA = new Date(a.getAttribute('data-date'));
+        const dateB = new Date(b.getAttribute('data-date'));
+        return dateB - dateA; // الأحدث أولاً
+    });
+    
+    // إعادة ترتيب البطاقات في الشبكة
+    cards.forEach(card => grid.appendChild(card));
+}
+
+// تفعيل الفرز عند تحميل الصفحة
+document.addEventListener('DOMContentLoaded', sortPublicationsByDate);
+
+// نموذج طلب المساعدة
+const helpForm = document.querySelector('.help-form');
+if (helpForm) {
+    helpForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        // هنا يمكنك إضافة كود إرسال البيانات للخادم
+        alert('تم استلام طلبك بنجاح! سنتواصل معك قريباً.');
+        this.reset();
+    });
+}
+
+// نموذج الاتصال
+const contactForm = document.querySelector('.contact-form form');
+if (contactForm) {
+    contactForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        alert('شكراً على رسالتك! سنرد عليك في أقرب وقت.');
+        this.reset();
+    });
+}
+
+// إضافة تأثير التمرير السلس
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+            target.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+    });
+});
+
+// إضافة تأثير الظهور عند التمرير
+const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+};
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.style.opacity = '1';
+            entry.target.style.transform = 'translateY(0)';
+        }
+    });
+}, observerOptions);
+
+// تطبيق تأثير الظهور على العناصر
+document.querySelectorAll('.activity-card, .publication-card').forEach(el => {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(20px)';
+    el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+    observer.observe(el);
+});
+
+// تحديث السنة في الفوتر تلقائياً
+document.addEventListener('DOMContentLoaded', function() {
+    const yearSpan = document.querySelector('.footer-bottom p');
+    if (yearSpan) {
+        const currentYear = new Date().getFullYear();
+        yearSpan.innerHTML = yearSpan.innerHTML.replace('2024', currentYear);
+    }
+});
+</script>
+
 </body>
 </html>
