@@ -8,6 +8,16 @@
   "background_color": "#ffffff",
   "theme_color": "#006400",
   "description": "البوابة الجزائرية للخدمات الرقمية - الوصول إلى الخدمات الحكومية الإلكترونية بسهولة.",
+{
+  "icons": [
+    {
+      "src": "https://imadtbn.github.io/dz_portal/icons/icon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
+
   "icons": [
     {
       "src": "icons/icon-192.png",
