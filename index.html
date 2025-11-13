@@ -139,18 +139,34 @@
       "itemListElement": [
         { "@type": "SiteNavigationElement", "position": 1, "name": "الدفع الإلكتروني", "url": "#toggle-payment" },
         { "@type": "SiteNavigationElement", "position": 2, "name": "تعبئة الهاتف النقال", "url": "#toggle-recharge" },
+
+        { "@type": "SiteNavigationElement", "position": 2, "name": "موبيليس, "url": "#toggle-recharge" },
+        { "@type": "SiteNavigationElement", "position": 2, "name": "جازي, "url": "#toggle-recharge" },
+        { "@type": "SiteNavigationElement", "position": 2, "name": "أوريدو", "url": "#toggle-recharge" },
+
         { "@type": "SiteNavigationElement", "position": 3, "name": "بريد الجزائر", "url": "#toggle-post" },
         { "@type": "SiteNavigationElement", "position": 4, "name": "اتصالات الجزائر", "url": "#toggle-telecom" },
         { "@type": "SiteNavigationElement", "position": 5, "name": "التربية والتعليم", "url": "#toggle-education" },
+        { "@type": "SiteNavigationElement", "position": 5, "name": "منصة الأستاذ", "url": "#toggle-education" },
+        { "@type": "SiteNavigationElement", "position": 5, "name": "فضاء الأولياء", "url": "#toggle-education" },
+        { "@type": "SiteNavigationElement", "position": 5, "name": "التمارين والفروض", "url": "#toggle-education" },
+        
         { "@type": "SiteNavigationElement", "position": 6, "name": "الخدمات الجامعية", "url": "#toggle-university" },
         { "@type": "SiteNavigationElement", "position": 7, "name": "التكوين المهني", "url": "#toggle-vocational" },
         { "@type": "SiteNavigationElement", "position": 8, "name": "الإدارة المحلية", "url": "#toggle-admin" },
+        { "@type": "SiteNavigationElement", "position": 8, "name": "قفة رمضان", "url": "#toggle-admin" },
+        { "@type": "SiteNavigationElement", "position": 8, "name": "منحة رمضان", "url": "#toggle-admin" },
         { "@type": "SiteNavigationElement", "position": 9, "name": "الوكالة الوطنية لتحسين السكن و تطويره aadl", "url": "#toggle-aadl3" },
         { "@type": "SiteNavigationElement", "position": 10, "name": "الخدمات الجبائية", "url": "#toggle-tax" },
         { "@type": "SiteNavigationElement", "position": 11, "name": "الصفقات العمومية", "url": "#toggle-tenders" },
         { "@type": "SiteNavigationElement", "position": 12, "name": "الأملاك الوطنية والعقار", "url": "#toggle-realestate" },
         { "@type": "SiteNavigationElement", "position": 13, "name": "وزارة الشؤون الخارجية", "url": "#toggle-foreign" },
         { "@type": "SiteNavigationElement", "position": 14, "name": "الضمان الاجتماعي", "url": "#social-security" },
+
+        { "@type": "SiteNavigationElement", "position": 14, "name": "CNAS", "url": "#social-security" },
+        { "@type": "SiteNavigationElement", "position": 14, "name": "casnos", "url": "#social-security" },
+        { "@type": "SiteNavigationElement", "position": 14, "name": "CNR", "url": "#social-security" },
+
         { "@type": "SiteNavigationElement", "position": 15, "name": "العدالة", "url": "#toggle-justice" },
         { "@type": "SiteNavigationElement", "position": 16, "name": "المحروقات والمناجم", "url": "#toggle-energy" },
         { "@type": "SiteNavigationElement", "position": 17, "name": "النقل", "url": "#toggle-transport" },
@@ -3343,8 +3359,6 @@
 
   </section>
 
-
-
   <!-- قسم الوكالة الوطنية للمقاول الذاتي -->
   <section dir="rtl" style="text-align: right;">
     <h2 id="toggle-autoentrepreneur" onclick="toggleSection('auto-entrepreneur', this)"
@@ -4368,41 +4382,17 @@
     </div>
   </div>
 
-  <!-- ⭐ قسم تقييم الصفحة -->
+  <!-- ⭐ قسم تقييم الصفحة الحقيقي -->
   <section id="rating-section" dir="rtl" style="text-align:center; margin:20px auto; max-width:600px;">
     <h3 style="color:#006233;">قيّم هذه الصفحة</h3>
-    <div id="star-rating" style="font-size:2rem; color:#ccc; cursor:pointer;">
-      <i class="fas fa-star" data-value="1"></i>
-      <i class="fas fa-star" data-value="2"></i>
-      <i class="fas fa-star" data-value="3"></i>
-      <i class="fas fa-star" data-value="4"></i>
-      <i class="fas fa-star" data-value="5"></i>
-    </div>
-    <p id="rating-text" style="margin-top:10px; color:#a52a2a; font-weight:bold;">لم يتم التقييم بعد</p>
+    <p style="font-size:1rem; color:#333;">
+      نرحّب برأيك لتحسين خدماتنا الرقمية.
+    </p>
+    <a href="https://forms.gle/yfMJqhsD3XDn9NaJ7" target="_blank" style="display:inline-block; background:#a52a2a; color:#fff; padding:10px 20px;
+            border-radius:8px; text-decoration:none; font-weight:bold;">
+      <i class="fas fa-star"></i> إضغط هنا لتقديم تقييمك الحقيقي
+    </a>
   </section>
-
-  <script>
-    const stars = document.querySelectorAll('#star-rating i');
-    const ratingText = document.getElementById('rating-text');
-
-    stars.forEach(star => {
-      star.addEventListener('click', () => {
-        const value = star.getAttribute('data-value');
-        stars.forEach(s => s.style.color = '#ccc');
-        for (let i = 0; i < value; i++) stars[i].style.color = '#FFD700';
-        ratingText.textContent = `شكراً! تم تقييم الصفحة بـ ${value} من 5 نجوم`;
-        localStorage.setItem('pageRating', value);
-      });
-    });
-
-    window.addEventListener('DOMContentLoaded', () => {
-      const saved = localStorage.getItem('pageRating');
-      if (saved) {
-        for (let i = 0; i < saved; i++) stars[i].style.color = '#FFD700';
-        ratingText.textContent = `تقييمك السابق: ${saved} من 5 نجوم`;
-      }
-    });
-  </script>
 
   <!-- 🔻 الفوتر  -->
   <footer style="
