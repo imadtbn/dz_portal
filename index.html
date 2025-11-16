@@ -1459,65 +1459,12 @@
         </span>
       </button>
 
-        <div id="notifyPanel" style="display:none;position:fixed;bottom:20px;left:20px;background:#fff;
+      <div id="notifyPanel" style="display:none;position:fixed;bottom:20px;left:20px;background:#fff;
     padding:15px;border-radius:10px;box-shadow:0 4px 12px rgba(0,0,0,.2);
     z-index:9999;max-width:280px;border:2px solid #d40000;">
-    <h4 style="margin:0 0 10px;color:#006233;">إشعار جديد</h4>
-    <p id="notifyText" style="margin:0;color:#333;"></p>
-  </div>
-
-        <script>
-    async function checkForNewServices() {
-      const notifyBtn = document.getElementById("notifyBtn");
-      const notifyBadge = document.getElementById("notifyBadge");
-      const notifyPanel = document.getElementById("notifyPanel");
-      const notifyText = document.getElementById("notifyText");
-
-      function showNotification(msg) {
-        notifyText.textContent = msg;
-        notifyBadge.style.display = "inline-block";
-      }
-
-      notifyBtn.addEventListener("click", () => {
-        notifyPanel.style.display =
-          notifyPanel.style.display === "none" ? "block" : "none";
-        notifyBadge.style.display = "none";
-      });
-
-      // جلب قائمة الخدمات الحالية
-      const response = await fetch("services.json");
-      const currentServices = await response.json();
-
-      // القائمة المحفوظة سابقًا
-      const saved = localStorage.getItem("servicesList");
-      const savedServices = saved ? JSON.parse(saved) : [];
-
-      // استخراج ID للخدمات
-      const savedIDs = savedServices.map(s => s.id);
-      const newServices = currentServices.filter(s => !savedIDs.includes(s.id));
-
-      if (newServices.length > 0) {
-        // يوجد خدمة جديدة
-        const latest = newServices[newServices.length - 1];
-        showNotification("تم إضافة خدمة جديدة: " + latest.title);
-      }
-
-      // حفظ النسخة الجديدة
-      localStorage.setItem("servicesList", JSON.stringify(currentServices));
-    }
-
-    // تشغيل النظام
-    checkForNewServices();
-  </script>
-
-
-
-
-      <!-- زر تبديل اللغة -->
-      <button id="googleLangToggle" style="border:none;background:#006233;color:#fff;border-radius:6px;
-    padding:9px 12px;cursor:pointer;min-width:40px;">
-        AR
-      </button>
+        <h4 style="margin:0 0 10px;color:#006233;">إشعار جديد</h4>
+        <p id="notifyText" style="margin:0;color:#333;"></p>
+      </div>
 
       <!-- صندوق عرض الطقس -->
       <div id="weatherBox" style="display:flex;align-items:center;gap:10px;background:#006400;
@@ -5008,6 +4955,50 @@
 
   </script>
 
+  <!-- سكريبت خاص بالإشعارات -->
+  <script>
+    async function checkForNewServices() {
+      const notifyBtn = document.getElementById("notifyBtn");
+      const notifyBadge = document.getElementById("notifyBadge");
+      const notifyPanel = document.getElementById("notifyPanel");
+      const notifyText = document.getElementById("notifyText");
+
+      function showNotification(msg) {
+        notifyText.textContent = msg;
+        notifyBadge.style.display = "inline-block";
+      }
+
+      notifyBtn.addEventListener("click", () => {
+        notifyPanel.style.display =
+          notifyPanel.style.display === "none" ? "block" : "none";
+        notifyBadge.style.display = "none";
+      });
+
+      // جلب قائمة الخدمات الحالية
+      const response = await fetch("services.json");
+      const currentServices = await response.json();
+
+      // القائمة المحفوظة سابقًا
+      const saved = localStorage.getItem("servicesList");
+      const savedServices = saved ? JSON.parse(saved) : [];
+
+      // استخراج ID للخدمات
+      const savedIDs = savedServices.map(s => s.id);
+      const newServices = currentServices.filter(s => !savedIDs.includes(s.id));
+
+      if (newServices.length > 0) {
+        // يوجد خدمة جديدة
+        const latest = newServices[newServices.length - 1];
+        showNotification("تم إضافة خدمة جديدة: " + latest.title);
+      }
+
+      // حفظ النسخة الجديدة
+      localStorage.setItem("servicesList", JSON.stringify(currentServices));
+    }
+
+    // تشغيل النظام
+    checkForNewServices();
+  </script>
 
 </body>
 
