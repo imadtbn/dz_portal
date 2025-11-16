@@ -1449,6 +1449,16 @@
     <!-- 📦 قسم الطقس في الوسط -->
     <div style="display:flex;justify-content:center;align-items:center;gap:10px;margin:5px 0;">
 
+      <!-- زر الإشعارات -->
+      <button id="notifyBtn" aria-label="إشعارات" style="border:none;background:#d40000;color:#fff;border-radius:6px;
+    padding:9px 12px;cursor:pointer;position:relative;">
+        <i class="fas fa-bell"></i>
+        <span id="notifyBadge" style="position:absolute;top:-4px;right:-4px;background:#ff0;
+        color:#000;padding:2px 6px;border-radius:50%;font-size:0.7em;display:none;">
+          1
+        </span>
+      </button>
+
       <!-- زر تبديل اللغة -->
       <button id="googleLangToggle" style="border:none;background:#006233;color:#fff;border-radius:6px;
     padding:9px 12px;cursor:pointer;min-width:40px;">
@@ -4943,6 +4953,57 @@
     });
 
   </script>
+
+  <script>
+    async function checkForNewServices() {
+      const notifyBtn = document.getElementById("notifyBtn");
+      const notifyBadge = document.getElementById("notifyBadge");
+      const notifyPanel = document.getElementById("notifyPanel");
+      const notifyText = document.getElementById("notifyText");
+
+      function showNotification(msg) {
+        notifyText.textContent = msg;
+        notifyBadge.style.display = "inline-block";
+      }
+
+      notifyBtn.addEventListener("click", () => {
+        notifyPanel.style.display =
+          notifyPanel.style.display === "none" ? "block" : "none";
+        notifyBadge.style.display = "none";
+      });
+
+      // جلب قائمة الخدمات الحالية
+      const response = await fetch("services.json");
+      const currentServices = await response.json();
+
+      // القائمة المحفوظة سابقًا
+      const saved = localStorage.getItem("servicesList");
+      const savedServices = saved ? JSON.parse(saved) : [];
+
+      // استخراج ID للخدمات
+      const savedIDs = savedServices.map(s => s.id);
+      const newServices = currentServices.filter(s => !savedIDs.includes(s.id));
+
+      if (newServices.length > 0) {
+        // يوجد خدمة جديدة
+        const latest = newServices[newServices.length - 1];
+        showNotification("تم إضافة خدمة جديدة: " + latest.title);
+      }
+
+      // حفظ النسخة الجديدة
+      localStorage.setItem("servicesList", JSON.stringify(currentServices));
+    }
+
+    // تشغيل النظام
+    checkForNewServices();
+  </script>
+
+  <div id="notifyPanel" style="display:none;position:fixed;bottom:20px;left:20px;background:#fff;
+    padding:15px;border-radius:10px;box-shadow:0 4px 12px rgba(0,0,0,.2);
+    z-index:9999;max-width:280px;border:2px solid #d40000;">
+    <h4 style="margin:0 0 10px;color:#006233;">إشعار جديد</h4>
+    <p id="notifyText" style="margin:0;color:#333;"></p>
+  </div>
 
 </body>
 
