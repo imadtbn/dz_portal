@@ -94,6 +94,8 @@ const STATIC_ASSETS = [
   "./icons/sante.jpg",
   "./icons/seaal.webp",
   "./icons/sntf.png",
+  "./icons/enpi.png",
+  "./icons/icons/flightradar24.jpg",
   "./icons/societe_general_algerie.webp",
   "./icons/sonelgaz.png",
   "./icons/tansport.svg",
