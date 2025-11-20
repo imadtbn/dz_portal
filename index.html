@@ -613,7 +613,7 @@
       /* منع انقسام النص إلى أسطر متعددة */
       min-width: 100%;
       /* التأكد من امتداد النص على عرض الحاوية */
-      animation: scrollNewsLTR 50s linear infinite;
+      animation: scrollNewsLTR 70s linear infinite;
       /* تشغيل حركة التمرير بشكل مستمر وسلس */
     }
 
@@ -1760,7 +1760,7 @@
           <a class="lightning" href="https://consulter-factures.elit.dz/" target="_blank">تصفح فارتورتك عبر
             الأنترنات</a>
         </li>
-        <li><i class="fas fa-calculator" style="color: #006400; margin-left:6px;"></i>
+        <li><i class="fas fa-cloud-upload-alt" style="color: #006400; margin-left:6px;"></i>
           <a class="lightning" href="https://www.sonelgaz-distribution.dz/?option=form-auto-releve"
             target="_blank">الرفع الآلي - محاكاة فاتورتك عبر النات</a>
         </li>
@@ -2235,17 +2235,7 @@
         <li><i class="fas fa-file-alt" style="color: #006400; margin-left:6px;"></i>
           <a class="lightning" href="https://www.dzexams.com/" target="_blank">تحضير الفروض والاختبارات</a>
         </li>
-        <li><i class="fas fa-credit-card" style="color: #006400; margin-left:6px;"></i>
-          <a class="lightning" href="https://epay.education.dz/auth" target="_blank">الدفع الإلكتروني لمستحقات
-            إمتحانات
-            BEM و BAC</a>
-        </li>
-        <li><i class="fas fa-file-signature" style="color: #006400; margin-left:6px;"></i>
-          <a class="lightning" href="https://bem.onec.dz/" target="_blank">تسجيل شهادة التعليم المتوسط</a>
-        </li>
-        <li><i class="fas fa-file-signature" style="color: #006400; margin-left:6px;"></i>
-          <a class="lightning" href="https://bac.onec.dz/" target="_blank">تسجيل شهادة البكالوريا</a>
-        </li>
+
       </ul>
 
       <!-- التعليم والتكوين عن بعد -->
@@ -2266,6 +2256,29 @@
             2024/2025</a>
         </li>
       </ul>
+
+      <!-- فضاء التسجيل في الإمتحانات -->
+      <h3 onclick="toggleSublist('examen-subsection')"
+        style="cursor: pointer; background-color: #f0faf6; color: #006233; padding: 8px; border-radius: 6px;">
+        <span><i class="fas fa-cloud-upload-alt style=" color: #006400; margin-left:6px;"></i> فضاء التسجيل في الإمتحانات
+          BEM-BAC
+          <span class="count"></span></span>
+        <span class="toggle-icon" style="float: left;">▶</span>
+      </h3>
+      <ul id="examen-subsection" style="display: none; list-style: none; padding: 0 20px; line-height: 2;">
+        <li><i class="fas fa-file-signature" style="color: #006400; margin-left:6px;"></i>
+          <a class="lightning" href="https://bem.onec.dz/" target="_blank">تسجيل شهادة التعليم المتوسط BEM</a>
+        </li>
+        <li><i class="fas fa-file-signature" style="color: #006400; margin-left:6px;"></i>
+          <a class="lightning" href="https://bac.onec.dz/" target="_blank">تسجيل شهادة البكالوريا BAC</a>
+        </li>
+        <li><i class="fas fa-credit-card" style="color: #006400; margin-left:6px;"></i>
+          <a class="lightning" href="https://epay.education.dz/auth" target="_blank">الدفع الإلكتروني لمستحقات
+            إمتحانات
+            BEM و BAC</a>
+        </li>
+      </ul>
+
 
       <!-- نتائج الامتحانات الوطنية -->
       <h3 onclick="toggleSublist('exam-results')"
