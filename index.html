@@ -1437,6 +1437,14 @@
     * {
       font-display: swap;
     }
+
+    header {
+      transition: transform 0.25s ease;
+    }
+
+    header.hide-header {
+      transform: translateY(-100%);
+    }
   </style>
 
 </head>
@@ -2260,7 +2268,8 @@
       <!-- فضاء التسجيل في الإمتحانات -->
       <h3 onclick="toggleSublist('examen-subsection')"
         style="cursor: pointer; background-color: #f0faf6; color: #006233; padding: 8px; border-radius: 6px;">
-        <span><i class="fas fa-cloud-upload-alt style=" color: #006400; margin-left:6px;"></i> فضاء التسجيل في الإمتحانات
+        <span><i class="fas fa-cloud-upload-alt style=" color: #006400; margin-left:6px;"></i> فضاء التسجيل في
+          الإمتحانات
           BEM-BAC
           <span class="count"></span></span>
         <span class="toggle-icon" style="float: left;">▶</span>
@@ -3760,6 +3769,77 @@
     </div>
   </section>
 
+  <!-- قسم المديرية العامة للأمن الوطني -->
+  <section dir="rtl" style="text-align: right;">
+    <h2 id="toggle-policedz" onclick="toggleSection('policedz-section', this)"
+      style="cursor: pointer; background-color: #a52a2a; color: white; padding: 10px; border-radius: 8px;">
+      <span><img src="icons/dgsn.png" alt="policedz logo" width="64" height="64" loading="lazy" class="logo">
+        المديرية العامة للأمن الوطني
+        <span class="count"></span></span>
+      <span class="toggle-icon" style="float: left;">▶</span>
+    </h2>
+
+    <ul id="policedz-section" style="display: none; list-style: none; padding: 0; line-height: 2;">
+      <li>
+        <i class="fas fa-id-card" style="color: #006400;"></i>
+        <a class="lightning" href="https://www.dgsn.dz/e-declaration/" target="_blank">
+          منصة التصريح بضياع الوثائق
+        </a>
+      </li>
+      <li>
+        <i class="fas fa-file-signature" style="color: #006400;"></i>
+        <a class="lightning"
+          href="https://www.dgsn.dz/?-%D8%A5%D8%AF%D9%84%D8%A7%D8%A1-%D8%A8%D8%B4%D9%87%D8%A7%D8%AF%D8%A9,583-"
+          target="_blank">
+          إدلاء بشهادة
+        </a>
+      </li>
+      <li>
+        <i class="fas fa-search" style="color: #006400;"></i>
+        <a class="lightning"
+          href="https://www.dgsn.dz/?-%D8%A8%D8%AD%D8%AB-%D9%81%D9%8A-%D9%81%D8%A7%D8%A6%D8%AF%D8%A9-" target="_blank">
+          بحث في فائدة العائلات
+        </a>
+      </li>
+      <li>
+        <i class="fas fa-file-alt" style="color: #006400;"></i>
+        <a class="lightning" href="https://www.algeriepolice.dz/qsc" target="_blank">
+          إستمارة الخدمة الشرطية
+        </a>
+      </li>
+      <li>
+        <i class="fas fa-phone-alt" style="color: #006400;"></i>
+        <a class="lightning" href="https://www.dgsn.dz/?-%D8%AF%D9%84%D9%8A%D9%84-" target="_blank">
+          الدليــــل الهــــــاتفي
+        </a>
+      </li>
+
+      <li>
+        <img src="icons/ALLO CHORTTA.webp" width="64" height="64" loading="lazy" class="logo">
+        <a class="lightning" href="https://play.google.com/store/apps/details?id=allochorta.algeriepolice.dz&hl=ar"
+          target="_blank"><strong> تطبيق ألو الشرطة</strong></a>
+      </li>
+
+    </ul>
+
+    <div style="margin-top:10px; padding:8px; background-color:#f9f9f9; border-top:1px solid #ddd;">
+      <div style="margin-bottom:6px;">
+        <i class="fas fa-globe" style="color:#006400; margin-left:6px;"></i>
+        <strong>
+          <a class="lightning" href="https://www.dgsn.dz/" target="_blank">
+            الموقع الرسمي للمديرية العامة للأمن الوطني
+          </a>
+        </strong>
+      </div>
+
+      <div>
+        <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
+        <strong>هاتف:</strong>
+        <a class="lightning" href="tel:1584" style="direction:ltr; unicode-bidi:bidi-override;">1584</a>
+      </div>
+    </div>
+  </section>
+
   <!-- 🛡️ قسم خدمات التأمينات -->
   <section dir="rtl" style="text-align: right;">
     <h2 id="toggle-insurance-section" onclick="toggleSection('insurance-section-content', this)"
@@ -5115,6 +5195,25 @@
       img.setAttribute('loading', 'lazy');
     });
 
+  </script>
+
+  <script>
+    let lastScroll = 0;
+
+    window.addEventListener("scroll", () => {
+      const header = document.querySelector("header");
+      const current = window.scrollY;
+
+      if (current > lastScroll) {
+        // المستخدم ينزل للأسفل → إخفاء الهيدر
+        header.classList.add("hide-header");
+      } else {
+        // المستخدم يصعد للأعلى → إظهار الهيدر
+        header.classList.remove("hide-header");
+      }
+
+      lastScroll = current;
+    });
   </script>
 
 </body>
