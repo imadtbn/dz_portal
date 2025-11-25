@@ -183,11 +183,13 @@
         { "@type": "SiteNavigationElement", "position": 24, "name": "الديوان الوطني للحج والعمرة", "url": "#toggle-onpo" },
         { "@type": "SiteNavigationElement", "position": 25, "name": "الوكالة الوطنية لترقية الإستثمار", "url": "#toggle-investment" },
         { "@type": "SiteNavigationElement", "position": 26, "name": "السلطة الوطنية المستقلة للانتخابات", "url": "#toggle-electionsdz" },
-        { "@type": "SiteNavigationElement", "position": 27, "name": "وكالات التأمينات", "url": "#toggle-insurance" },
-        { "@type": "SiteNavigationElement", "position": 28, "name": "خدمات بنكية", "url": "#toggle-banks" },
-        { "@type": "SiteNavigationElement", "position": 29, "name": "أرقام الطوارئ والخدمات", "url": "#toggle-emergency" },
-        { "@type": "SiteNavigationElement", "position": 30, "name": "معلومات الإتصال", "url": "#toggle-contact" },
-        { "@type": "SiteNavigationElement", "position": 30, "name": "التعليقات والإستفسارات", "url": "#toggle-comments" }
+        { "@type": "SiteNavigationElement", "position": 27, "name": "المديرية العامة للأمن الوطني", "url": "#toggle-dgsn" },
+        { "@type": "SiteNavigationElement", "position": 28, "name": "سلطة ضبط البريد والاتصالات الالكترونية", "url": "#toggle-arpce" },
+        { "@type": "SiteNavigationElement", "position": 29, "name": "وكالات التأمينات", "url": "#toggle-insurance" },
+        { "@type": "SiteNavigationElement", "position": 30, "name": "خدمات بنكية", "url": "#toggle-banks" },
+        { "@type": "SiteNavigationElement", "position": 31, "name": "أرقام الطوارئ والخدمات", "url": "#toggle-emergency" },
+        { "@type": "SiteNavigationElement", "position": 32, "name": "معلومات الإتصال", "url": "#toggle-contact" },
+        { "@type": "SiteNavigationElement", "position": 33, "name": "التعليقات والإستفسارات", "url": "#toggle-comments" }
       ]
     }
   ]
@@ -1630,6 +1632,8 @@
             { id: 'toggle-onpo', name: 'الحج والعمرة', icon: 'fa-kaaba' },
             { id: 'toggle-investment', name: 'ترقية الإستثمار', icon: 'fa-chart-line' },
             { id: 'toggle-investment', name: 'الإنتخابات الجزائرية', icon: 'fas fa-vote-yea' },
+            { id: 'toggle-dgsn', name: 'الشرطة الجزائرية', icon: 'fas fa-user-police' },
+            { id: 'toggle-investment', name: 'سلطة ضبط البريد والإتصالات', icon: 'fas fa-tower-broadcast' },
             { id: 'toggle-banks', name: 'الخدمات البنكية', icon: 'fa-building-columns' },
             { id: 'toggle-insurance', name: 'وكالات التأمينات', icon: 'fa-shield-alt' },
             { id: 'toggle-emergency', name: 'أرقام الطوارئ', icon: 'fa-phone-volume' }
@@ -3836,6 +3840,59 @@
         <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
         <strong>هاتف:</strong>
         <a class="lightning" href="tel:1584" style="direction:ltr; unicode-bidi:bidi-override;">1584</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- قسم  سلطة ضبط البريد والاتصالات الالكترونية -->
+  <section dir="rtl" style="text-align: right;">
+    <h2 id="toggle-arpce" onclick="toggleSection('arpce-section', this)"
+      style="cursor: pointer; background-color: #a52a2a; color: white; padding: 10px; border-radius: 8px;">
+      <span><img src="icons/arpce.png" alt="arpce logo" width="64" height="64" loading="lazy" class="logo">
+        سلطة ضبط البريد والاتصالات الالكترونية
+        <span class="count"></span></span>
+      <span class="toggle-icon" style="float: left;">▶</span>
+    </h2>
+
+    <ul id="arpce-section" style="display: none; list-style: none; padding: 0; line-height: 2;">
+      <li>
+        <i class="fas fa-clipboard-list" style="color: #006400;"></i>
+        <a class="lightning" href="https://www.arpce.dz/ar/service/request" target="_blank">
+          استمارة طلب خدمة عبر الموقع </a>
+      </li>
+      <li>
+        <i class="fas fa-exclamation-circle" style="color: #006400;"></i>
+        <a class="lightning" href="https://www.arpce.dz/ar/claim" target="_blank">
+          إيداع شكوى
+        </a>
+      </li>
+      <li>
+        <i class="fas fa-credit-card" style="color: #006400;"></i>
+        <a class="lightning" href="https://epay.arpce.dz/" target="_blank">
+          دفع فاتورة سلطة الضبط عبر الإنترنت
+        </a>
+      </li>
+      <li>
+        <img src="icons/arpce1.webp" width="64" height="64" loading="lazy" class="logo">
+        <a class="lightning" href="https://play.google.com/store/apps/details?id=dz.arpce.jawdati"
+          target="_blank"><strong> تحميل تطبيق جودتي</strong></a>
+      </li>
+    </ul>
+
+    <div style="margin-top:10px; padding:8px; background-color:#f9f9f9; border-top:1px solid #ddd;">
+      <div style="margin-bottom:6px;">
+        <i class="fas fa-globe" style="color:#006400; margin-left:6px;"></i>
+        <strong>
+          <a class="lightning" href="https://www.arpce.dz/ar" target="_blank">
+            سلطة ضبط البريد والاتصالات الالكترونية (ARPCE)
+          </a>
+        </strong>
+      </div>
+
+      <div>
+        <i class="fas fa-phone" style="color:#006400; margin-left:6px;"></i>
+        <strong>هاتف:</strong>
+        <a class="lightning" href="tel:3333" style="direction:ltr; unicode-bidi:bidi-override;">3333</a>
       </div>
     </div>
   </section>
