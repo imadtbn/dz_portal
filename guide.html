@@ -302,11 +302,24 @@ function toggleSection(id, header) {
     icon.style.transform = 'rotate(90deg)';
   }
 }
+
+
+// ===== تثبيت الهيدر في الأعلى 13 =====
+// ضبط padding-top للـ body تلقائياً حسب ارتفاع الهيدر
+function adjustBodyPadding() {
+    const header = document.querySelector("header");
+    document.body.style.paddingTop = header.offsetHeight + "px";
+}
+window.addEventListener("load", adjustBodyPadding);
+window.addEventListener("resize", adjustBodyPadding);
+
+        
 </script>
 
 
 
 
 </body>
+
 
 </html>
