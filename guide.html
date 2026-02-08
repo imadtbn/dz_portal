@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <title>مراجعة دليل تطبيق البوابة الجزائرية للخدمات الرقمية</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO -->
+    <meta name="description"
+        content="مراجعة شاملة لتطبيق البوابة الجزائرية للخدمات الرقمية مع نبذة عن التطبيق والميزات والخدمات المقدمة.">
+    <meta name="keywords"
+        content="الخدمات الرقمية, تطبيق حكومي, خدمات المواطنين, بوابة إلكترونية, خدمات إدارية, الدفع الإلكتروني, الجزائر, خدمات عمومية, منصات رسمية">
+
+    <!-- نفس CSS -->
+    <link rel="stylesheet" href="css/stylesheet.css">
+
+    <!-- Font Awesome -->
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style"
+        onload="this.rel='stylesheet'">
+
+
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "البوابة الجزائرية للخدمات الرقمية",
+  "url": "https://your-site/",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://your-site/?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+
+</head>
+
+<body>
+
+    <!-- ===== نفس الهيدر ===== -->
+    <header>
+        <div class="branding" dir="rtl">
+            <i class="fas fa-globe"></i>
+            <h1>البوابة الجزائرية للخدمات الرقمية</h1>
+            <img src="icons/Flag_of_Algeria.svg" alt="علم الجزائر" width="64" height="64" loading="lazy" class="logo">
+        </div>
+
+        <!-- 📦 قسم الطقس في الوسط -->
+        <div style="display:flex;justify-content:center;align-items:center;gap:10px;margin:5px 0;">
+
+
+            <!-- صندوق عرض الطقس -->
+            <div id="weatherBox" style="display:flex;align-items:center;gap:10px;background:#006400;
+    border:1px solid #ddd;border-radius:10px;padding:4px 12px;
+    max-width:350px;box-shadow:0 2px 6px rgba(0,0,0,.1);">
+                <img id="weatherIcon" src="" alt="أيقونة الطقس" loading="lazy" style="width:28px;height:28px;">
+                <span id="weatherInfo" style="flex:1;white-space:nowrap;">--</span>
+                <button id="refreshWeatherBtn" aria-label="تحديث بيانات الطقس" style="border:none;background:#006420;color:#fff;
+      border-radius:6px;padding:8px 10px;cursor:pointer;">
+                    <i class="fas fa-sync"></i>
+                </button>
+            </div>
+
+            <!-- زر الوضع الليلي -->
+            <button id="darkModeToggle" aria-label="تبديل الوضع الليلي" style="border:none;background:#333;color:#fff;border-radius:6px;
+    padding:9px 12px;cursor:pointer;">
+                <i class="fas fa-moon"></i>
+            </button>
+
+        </div>
+
+        <!-- البحث -->
+        <div id="searchArea">
+            <div id="searchBox" dir="rtl">
+                <input id="searchInput" placeholder="ابحث هنا داخل الصفحة..." type="text">
+            </div>
+        </div>
+
+    </header>
+
+    <!-- ================= مراجعة التطبيق ================= -->
+    <section dir="rtl"
+        style="text-align: right; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.8; max-width: 900px; margin: auto; padding: 20px;">
+
+        <h2
+            style="cursor: pointer; background-color: #a52a2a; color: white; padding: 15px; border-radius: 8px; text-align: center; font-size: 1.5em; margin-bottom: 20px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
+            <i class="fas fa-star"></i> مراجعة تطبيق البوابة الجزائرية للخدمات الرقمية
+        </h2>
+
+        <div style="margin-top: 20px;">
+
+            <!-- نبذة عن التطبيق -->
+            <h3 onclick="toggleSection('about', this)"
+                style="cursor: pointer; background: linear-gradient(to right, #006233, #004d26); color: white; padding: 12px 15px; border-radius: 8px; margin-top: 15px; box-shadow: 0 3px 6px rgba(0,0,0,0.1); display: flex; justify-content: space-between; align-items: center;">
+                <span><i class="fas fa-info-circle"></i> نبذة عن التطبيق</span>
+                <span class="toggle-icon" style="transition: transform 0.3s;">▶</span>
+            </h3>
+            <div id="about" class="accordion-content">
+                <div style="padding: 15px 20px;">
+                    <p>تطبيق البوابة الجزائرية للخدمات الرقمية هو حل عملي يهدف إلى تجميع أهم الخدمات الحكومية والعمومية
+                        الجزائرية في تطبيق واحد، لتسهيل وصول المواطنين إلى خدماتهم اليومية بسرعة، دون عناء البحث أو
+                        التنقل بين مواقع متعددة. التطبيق موجّه لكل من يريد إنجاز معاملاته الرقمية بوضوح، أمان، وسهولة.
+                    </p>
+                </div>
+            </div>
+
+            <!-- ما الذي يقدّمه التطبيق؟ -->
+            <h3 onclick="toggleSection('offers', this)"
+                style="cursor: pointer; background: linear-gradient(to right, #006233, #004d26); color: white; padding: 12px 15px; border-radius: 8px; margin-top: 15px; box-shadow: 0 3px 6px rgba(0,0,0,0.1); display: flex; justify-content: space-between; align-items: center;">
+                <span><i class="fas fa-cogs"></i> ما الذي يقدّمه التطبيق؟</span>
+                <span class="toggle-icon" style="transition: transform 0.3s;">▶</span>
+            </h3>
+            <div id="offers" class="accordion-content">
+                <div style="padding: 15px 20px;">
+                    <p>يوفّر التطبيق وصولًا مباشرًا إلى مجموعة واسعة من الخدمات الرقمية الرسمية، مع واجهة بسيطة تساعد
+                        المستخدم على العثور على الخدمة المطلوبة في ثوانٍ.</p>
+                </div>
+            </div>
+
+            <!-- الميزات الرئيسية -->
+            <h3 onclick="toggleSection('features', this)"
+                style="cursor: pointer; background: linear-gradient(to right, #006233, #004d26); color: white; padding: 12px 15px; border-radius: 8px; margin-top: 15px; box-shadow: 0 3px 6px rgba(0,0,0,0.1); display: flex; justify-content: space-between; align-items: center;">
+                <span><i class="fas fa-check-circle"></i> الميزات الرئيسية</span>
+                <span class="toggle-icon" style="transition: transform 0.3s;">▶</span>
+            </h3>
+            <div id="features" class="accordion-content">
+                <div style="padding: 15px 20px;">
+                    <ul style="list-style-type: disc; padding-right: 20px;">
+                        <li>الوصول إلى الخدمات الحكومية من مكان واحد</li>
+                        <li>روابط مباشرة وآمنة للمواقع والمنصات الرسمية</li>
+                        <li>تنظيم الخدمات حسب القطاعات (تعليم، صحة، سكن، إدارة…)</li>
+                        <li>واجهة سهلة الاستخدام ومتوافقة مع جميع الأجهزة</li>
+                        <li>بحث سريع داخل التطبيق</li>
+                        <li>دعم الوضع الليلي لراحة العين</li>
+                    </ul>
+                </div>
+            </div>
+
+
+            
+            <!-- كيف يعمل التطبيق؟ -->
+            <h3 onclick="toggleSection('how-it-works', this)"
+                style="cursor: pointer; background: linear-gradient(to right, #006233, #004d26); color: white; padding: 12px 15px; border-radius: 8px; margin-top: 15px; box-shadow: 0 3px 6px rgba(0,0,0,0.1); display: flex; justify-content: space-between; align-items: center;">
+                <span><i class="fas fa-play-circle"></i> كيف يعمل التطبيق؟</span>
+                <span class="toggle-icon" style="transition: transform 0.3s;">▶</span>
+            </h3>
+            <div id="how-it-works" class="accordion-content">
+                <div style="padding: 15px 20px;">
+                    <ol style="padding-right: 20px;">
+                        <li>فتح التطبيق</li>
+                        <li>اختيار القطاع المطلوب</li>
+                        <li>الدخول مباشرة إلى الخدمة الرسمية دون تعقيد</li>
+                    </ol>
+                </div>
+            </div>
+
+            <!-- الجديد في هذا الإصدار -->
+            <h3 onclick="toggleSection('new', this)"
+                style="cursor: pointer; background: linear-gradient(to right, #006233, #004d26); color: white; padding: 12px 15px; border-radius: 8px; margin-top: 15px; box-shadow: 0 3px 6px rgba(0,0,0,0.1); display: flex; justify-content: space-between; align-items: center;">
+                <span><i class="fas fa-bolt"></i> الجديد في هذا الإصدار</span>
+                <span class="toggle-icon" style="transition: transform 0.3s;">▶</span>
+            </h3>
+            <div id="new" class="accordion-content">
+                <div style="padding: 15px 20px;">
+                    <ul style="list-style-type: disc; padding-right: 20px;">
+                        <li>تحسين سرعة التصفح والأداء</li>
+                        <li>تنظيم أفضل للأقسام والخدمات</li>
+                        <li>تحسين تجربة المستخدم على الهواتف والأجهزة اللوحية</li>
+                        <li>إصلاحات تقنية لزيادة الاستقرار</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- متطلبات النظام -->
+            <h3 onclick="toggleSection('requirements', this)"
+                style="cursor: pointer; background: linear-gradient(to right, #006233, #004d26); color: white; padding: 12px 15px; border-radius: 8px; margin-top: 15px; box-shadow: 0 3px 6px rgba(0,0,0,0.1); display: flex; justify-content: space-between; align-items: center;">
+                <span><i class="fas fa-desktop"></i> متطلبات النظام</span>
+                <span class="toggle-icon" style="transition: transform 0.3s;">▶</span>
+            </h3>
+            <div id="requirements" class="accordion-content">
+                <div style="padding: 15px 20px;">
+                    <ul style="list-style-type: disc; padding-right: 20px;">
+                        <li>يعمل على أجهزة Android الحديثة</li>
+                        <li>متوافق مع متصفحات Chrome و Edge و Firefox</li>
+                        <li>يتطلب اتصالًا بالإنترنت</li>
+                        <li>التطبيق مجاني بالكامل ولا يحتوي على اشتراكات مدفوعة</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- ملاحظات مهمة -->
+            <h3 onclick="toggleSection('notes', this)"
+                style="cursor: pointer; background: linear-gradient(to right, #006233, #004d26); color: white; padding: 12px 15px; border-radius: 8px; margin-top: 15px; box-shadow: 0 3px 6px rgba(0,0,0,0.1); display: flex; justify-content: space-between; align-items: center;">
+                <span><i class="fas fa-exclamation-triangle"></i> ملاحظات مهمة</span>
+                <span class="toggle-icon" style="transition: transform 0.3s;">▶</span>
+            </h3>
+            <div id="notes" class="accordion-content">
+                <div style="padding: 15px 20px;">
+                    <ul style="list-style-type: disc; padding-right: 20px;">
+                        <li>التطبيق لا يمثّل جهة حكومية رسمية</li>
+                        <li>جميع الروابط تؤدي إلى مواقع رسمية معتمدة</li>
+                        <li>لا يتم تخزين أو معالجة أي بيانات شخصية</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- لماذا ننصح باستخدامه؟ -->
+            <h3 onclick="toggleSection('recommendation', this)"
+                style="cursor: pointer; background: linear-gradient(to right, #006233, #004d26); color: white; padding: 12px 15px; border-radius: 8px; margin-top: 15px; box-shadow: 0 3px 6px rgba(0,0,0,0.1); display: flex; justify-content: space-between; align-items: center;">
+                <span><i class="fas fa-thumbs-up"></i> لماذا ننصح باستخدامه؟</span>
+                <span class="toggle-icon" style="transition: transform 0.3s;">▶</span>
+            </h3>
+            <div id="recommendation" class="accordion-content">
+                <div style="padding: 15px 20px;">
+                    <p>لأنه يختصر الوقت، يجمع الخدمات في مكان واحد، ويجعل الوصول إلى المنصات الحكومية أبسط من أي وقت
+                        مضى. <strong>باختصار: إدارة ذكية للخدمات بدل البحث العشوائي.</strong></p>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ===== زر العودة ===== -->
+    <section style="text-align:center">
+        <a href="index.html" class="lightning">
+            ⬅️ العودة إلى الصفحة الرئيسية
+        </a>
+    </section>
+
+    <!-- الفوتر من index.html -->
+    <footer style="
+        background: linear-gradient(135deg, #006233, #004d26);
+        color: #fff;
+        text-align: center;
+        padding: 20px 10px;
+        border-top: 3px solid #004d26;
+        box-shadow: 0 -3px 10px rgba(0,0,0,0.15);
+        margin-top: 40px;
+        font-family: 'Segoe UI', Tahoma, sans-serif;
+    ">
+        <div dir="rtl" style="
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-bottom: 10px;
+            text-align: center;
+        ">
+            <span style="font-size: 0.95em;">© 2025 البوابة الجزائرية للخدمات الرقمية</span>
+            <img src="icons/Flag_of_Algeria.svg" alt="علم الجزائر" width="28" height="28" loading="lazy"
+                style="order: 2; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.25));">
+        </div>
+
+        <hr style="width: 60%; margin: 10px auto; border: none; border-top: 1px solid rgba(255,255,255,0.3);">
+
+        <div style="
+            font-weight: bold;
+            font-size: 1.05em;
+            text-shadow: 1px 1px 2px #000;
+            letter-spacing: 1px;
+        ">
+            ❀ لا تنسونا من صالح دعائكم ❀
+        </div>
+    </footer>
+
+
+    <script>
+function toggleSection(id, header) {
+  const allContents = document.querySelectorAll('.accordion-content');
+  const allIcons = document.querySelectorAll('.toggle-icon');
+
+  const section = document.getElementById(id);
+  const icon = header.querySelector('.toggle-icon');
+
+  // إغلاق جميع الأقسام الأخرى
+  allContents.forEach(content => {
+    if (content !== section) {
+      content.classList.remove('active');
+      content.style.display = 'none';
+    }
+  });
+
+  allIcons.forEach(i => {
+    if (i !== icon) {
+      i.style.transform = 'rotate(0deg)';
+    }
+  });
+
+  // فتح / غلق القسم الحالي
+  if (section.classList.contains('active')) {
+    section.classList.remove('active');
+    section.style.display = 'none';
+    icon.style.transform = 'rotate(0deg)';
+  } else {
+    section.classList.add('active');
+    section.style.display = 'block';
+    icon.style.transform = 'rotate(90deg)';
+  }
+}
+</script>
+
+
+
+
+</body>
+
+</html>
