@@ -84,10 +84,26 @@
     <section dir="rtl"
         style="text-align: right; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.8; max-width: 900px; margin: auto; padding: 20px;">
 
-        <h2
-            style="cursor: pointer; background-color: #a52a2a; color: white; padding: 15px; border-radius: 8px; text-align: center; font-size: 1.5em; margin-bottom: 20px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
-            <i class="fas fa-star"></i> مراجعة تطبيق البوابة الجزائرية للخدمات الرقمية
-        </h2>
+<h2
+    style="
+        cursor: pointer;
+        background: linear-gradient(to right, #a52a2a, #8b1a1a);
+        color: #fff;
+        padding: 15px 20px;
+        border-radius: 10px;
+        text-align: center;
+        font-size: 1.6em;
+        margin-bottom: 25px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    ">
+    <i class="fas fa-star"></i>
+    عن تطبيق البوابة الجزائرية للخدمات الرقمية
+</h2>
+
 
         <div style="margin-top: 20px;">
 
@@ -119,6 +135,7 @@
                 </div>
             </div>
 
+
             <!-- الميزات الرئيسية -->
             <h3 onclick="toggleSection('features', this)"
                 style="cursor: pointer; background: linear-gradient(to right, #006233, #004d26); color: white; padding: 12px 15px; border-radius: 8px; margin-top: 15px; box-shadow: 0 3px 6px rgba(0,0,0,0.1); display: flex; justify-content: space-between; align-items: center;">
@@ -127,19 +144,18 @@
             </h3>
             <div id="features" class="accordion-content">
                 <div style="padding: 15px 20px;">
-                    <ul style="list-style-type: disc; padding-right: 20px;">
+                    <ol style="padding-right: 20px;">
                         <li>الوصول إلى الخدمات الحكومية من مكان واحد</li>
                         <li>روابط مباشرة وآمنة للمواقع والمنصات الرسمية</li>
                         <li>تنظيم الخدمات حسب القطاعات (تعليم، صحة، سكن، إدارة…)</li>
                         <li>واجهة سهلة الاستخدام ومتوافقة مع جميع الأجهزة</li>
                         <li>بحث سريع داخل التطبيق</li>
                         <li>دعم الوضع الليلي لراحة العين</li>
-                    </ul>
+                    </ol>
                 </div>
             </div>
 
 
-            
             <!-- كيف يعمل التطبيق؟ -->
             <h3 onclick="toggleSection('how-it-works', this)"
                 style="cursor: pointer; background: linear-gradient(to right, #006233, #004d26); color: white; padding: 12px 15px; border-radius: 8px; margin-top: 15px; box-shadow: 0 3px 6px rgba(0,0,0,0.1); display: flex; justify-content: space-between; align-items: center;">
@@ -164,12 +180,12 @@
             </h3>
             <div id="new" class="accordion-content">
                 <div style="padding: 15px 20px;">
-                    <ul style="list-style-type: disc; padding-right: 20px;">
+                    <ol style="padding-right: 20px;">
                         <li>تحسين سرعة التصفح والأداء</li>
                         <li>تنظيم أفضل للأقسام والخدمات</li>
                         <li>تحسين تجربة المستخدم على الهواتف والأجهزة اللوحية</li>
                         <li>إصلاحات تقنية لزيادة الاستقرار</li>
-                    </ul>
+                    </ol>
                 </div>
             </div>
 
@@ -181,12 +197,13 @@
             </h3>
             <div id="requirements" class="accordion-content">
                 <div style="padding: 15px 20px;">
-                    <ul style="list-style-type: disc; padding-right: 20px;">
+                    <ol style="padding-right: 20px;">
                         <li>يعمل على أجهزة Android الحديثة</li>
                         <li>متوافق مع متصفحات Chrome و Edge و Firefox</li>
                         <li>يتطلب اتصالًا بالإنترنت</li>
                         <li>التطبيق مجاني بالكامل ولا يحتوي على اشتراكات مدفوعة</li>
-                    </ul>
+                    </ol>
+
                 </div>
             </div>
 
@@ -198,11 +215,11 @@
             </h3>
             <div id="notes" class="accordion-content">
                 <div style="padding: 15px 20px;">
-                    <ul style="list-style-type: disc; padding-right: 20px;">
+                    <ol style="padding-right: 20px;">
                         <li>التطبيق لا يمثّل جهة حكومية رسمية</li>
                         <li>جميع الروابط تؤدي إلى مواقع رسمية معتمدة</li>
                         <li>لا يتم تخزين أو معالجة أي بيانات شخصية</li>
-                    </ul>
+                    </ol>
                 </div>
             </div>
 
@@ -221,18 +238,47 @@
 
         </div>
 
-    </section>
+    </section>.
 
 
-    <!-- ===== زر العودة ===== -->
-    <section style="text-align:center">
-        <a href="index.html" class="lightning">
-            ⬅️ العودة إلى الصفحة الرئيسية
-        </a>
-    </section>
+    <!-- قسم المراجعة -->
+    <section dir="rtl">
+        <!-- العنوان الرئيسي مع إضافة تقييم نجوم -->
 
-    <!-- الفوتر من index.html -->
-    <footer style="
+
+        <h2 class="review-title">
+    <i class="fas fa-star"></i>
+    مراجعة تطبيق البوابة الجزائرية للخدمات الرقمية
+    <div class="review-rating">
+        ⭐⭐⭐⭐☆
+        <span>(4/5)</span>
+    </div>
+</h2>
+
+        <!-- إضافة صورة التطبيق -->
+        <div style="text-align: center; margin: 20px 0;">
+            <img src="icons/app-screenshot.jpg" alt="لقطة شاشة لتطبيق البوابة الجزائرية"
+                style="max-width: 450px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
+        </div>
+
+        <!-- روابط التحميل -->
+        <div style="text-align: center; margin: 20px 0;">
+            <a href="https://play.google.com/store/apps/details?id=com.example.app"
+                style="background: #006233; color: white; padding: 12px 20px; border-radius: 8px; text-decoration: none; display: inline-block; margin: 0 10px;">
+                <i class="fas fa-download"></i> تحميل من softonic
+            </a>
+        </div>
+
+
+        <!-- ===== زر العودة ===== -->
+        <section style="text-align:center">
+            <a href="index.html" class="lightning">
+                ⬅️ العودة إلى الصفحة الرئيسية
+            </a>
+        </section>
+
+        <!-- الفوتر من index.html -->
+        <footer style="
         background: linear-gradient(135deg, #006233, #004d26);
         color: #fff;
         text-align: center;
@@ -242,7 +288,7 @@
         margin-top: 40px;
         font-family: 'Segoe UI', Tahoma, sans-serif;
     ">
-        <div dir="rtl" style="
+            <div dir="rtl" style="
             display: flex;
             justify-content: center;
             align-items: center;
@@ -251,77 +297,105 @@
             margin-bottom: 10px;
             text-align: center;
         ">
-            <span style="font-size: 0.95em;">© 2025 البوابة الجزائرية للخدمات الرقمية</span>
-            <img src="icons/Flag_of_Algeria.svg" alt="علم الجزائر" width="28" height="28" loading="lazy"
-                style="order: 2; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.25));">
-        </div>
+                <span style="font-size: 0.95em;">© 2025 البوابة الجزائرية للخدمات الرقمية</span>
+                <img src="icons/Flag_of_Algeria.svg" alt="علم الجزائر" width="28" height="28" loading="lazy"
+                    style="order: 2; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.25));">
+            </div>
 
-        <hr style="width: 60%; margin: 10px auto; border: none; border-top: 1px solid rgba(255,255,255,0.3);">
+            <hr style="width: 60%; margin: 10px auto; border: none; border-top: 1px solid rgba(255,255,255,0.3);">
 
-        <div style="
+            <div style="
             font-weight: bold;
             font-size: 1.05em;
             text-shadow: 1px 1px 2px #000;
             letter-spacing: 1px;
         ">
-            ❀ لا تنسونا من صالح دعائكم ❀
-        </div>
-    </footer>
+                ❀ لا تنسونا من صالح دعائكم ❀
+            </div>
+        </footer>
 
 
-    <script>
-function toggleSection(id, header) {
-  const allContents = document.querySelectorAll('.accordion-content');
-  const allIcons = document.querySelectorAll('.toggle-icon');
+        <script>
+            function toggleSection(id, header) {
+                const allContents = document.querySelectorAll('.accordion-content');
+                const allIcons = document.querySelectorAll('.toggle-icon');
 
-  const section = document.getElementById(id);
-  const icon = header.querySelector('.toggle-icon');
+                const section = document.getElementById(id);
+                const icon = header.querySelector('.toggle-icon');
 
-  // إغلاق جميع الأقسام الأخرى
-  allContents.forEach(content => {
-    if (content !== section) {
-      content.classList.remove('active');
-      content.style.display = 'none';
-    }
-  });
+                // إغلاق جميع الأقسام الأخرى
+                allContents.forEach(content => {
+                    if (content !== section) {
+                        content.classList.remove('active');
+                        content.style.display = 'none';
+                    }
+                });
 
-  allIcons.forEach(i => {
-    if (i !== icon) {
-      i.style.transform = 'rotate(0deg)';
-    }
-  });
+                allIcons.forEach(i => {
+                    if (i !== icon) {
+                        i.style.transform = 'rotate(0deg)';
+                    }
+                });
 
-  // فتح / غلق القسم الحالي
-  if (section.classList.contains('active')) {
-    section.classList.remove('active');
-    section.style.display = 'none';
-    icon.style.transform = 'rotate(0deg)';
-  } else {
-    section.classList.add('active');
-    section.style.display = 'block';
-    icon.style.transform = 'rotate(90deg)';
-  }
-}
+                // فتح / غلق القسم الحالي
+                if (section.classList.contains('active')) {
+                    section.classList.remove('active');
+                    section.style.display = 'none';
+                    icon.style.transform = 'rotate(0deg)';
+                } else {
+                    section.classList.add('active');
+                    section.style.display = 'block';
+                    icon.style.transform = 'rotate(90deg)';
+                }
+            }
 
-
-// ===== تثبيت الهيدر في الأعلى 13 =====
-// ضبط padding-top للـ body تلقائياً حسب ارتفاع الهيدر
-function adjustBodyPadding() {
-    const header = document.querySelector("header");
-    document.body.style.paddingTop = header.offsetHeight + "px";
-}
-window.addEventListener("load", adjustBodyPadding);
-window.addEventListener("resize", adjustBodyPadding);
-
-        
-</script>
+            // ===== تثبيت الهيدر في الأعلى 13 =====
+            // ضبط padding-top للـ body تلقائياً حسب ارتفاع الهيدر
+            function adjustBodyPadding() {
+                const header = document.querySelector("header");
+                document.body.style.paddingTop = header.offsetHeight + "px";
+            }
+            window.addEventListener("load", adjustBodyPadding);
+            window.addEventListener("resize", adjustBodyPadding);
 
 
+            // ===== تثبيت الهيدر في الأعلى 13 =====
+            // ضبط padding-top للـ body تلقائياً حسب ارتفاع الهيدر
+            function adjustBodyPadding() {
+                const header = document.querySelector("header");
+                document.body.style.paddingTop = header.offsetHeight + "px";
+            }
+            window.addEventListener("load", adjustBodyPadding);
+            window.addEventListener("resize", adjustBodyPadding);
 
+
+            //----  loading', 'lazy تحميل الصور  -->
+
+            document.querySelectorAll('img:not([loading])').forEach(img => {
+                img.setAttribute('loading', 'lazy');
+            });
+
+            // المستخدم ينزل للأسفل → إخفاء الهيدر
+
+            let lastScroll = 0;
+
+            window.addEventListener("scroll", () => {
+                const header = document.querySelector("header");
+                const current = window.scrollY;
+
+                if (current > lastScroll) {
+                    // المستخدم ينزل للأسفل → إخفاء الهيدر
+                    header.classList.add("hide-header");
+                } else {
+                    // المستخدم يصعد للأعلى → إظهار الهيدر
+                    header.classList.remove("hide-header");
+                }
+
+                lastScroll = current;
+            });
+
+        </script>
 
 </body>
 
-  <script src="js/javascript.js"></script>
-
 </html>
-
