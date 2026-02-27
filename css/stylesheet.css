@@ -3,7 +3,7 @@
     body {
       margin: 0;
       /* إزالة الهوامش الافتراضية للمتصفح */
-      font-family: Arial, Tahoma, sans-serif;
+      font-family: Arial;
       /* تحديد نوع الخط الأساسي للنصوص */
       background-color: #f7fdf9;
       /* ضبط لون خلفية الصفحة بلون فاتح مائل للأخضر */
