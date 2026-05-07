@@ -1,0 +1,963 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>شروط الاستخدام | البوابة الجزائرية للخدمات الرقمية</title>
+    <meta name="description" content="شروط وأحكام استخدام البوابة الجزائرية للخدمات الرقمية">
+
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --primary: #006233;
+            --primary-dark: #004d26;
+            --primary-light: #e8f5e9;
+            --accent: #d40000;
+            --gold: #ffd700;
+            --white: #ffffff;
+            --gray-50: #fafafa;
+            --gray-100: #f5f5f5;
+            --gray-200: #eeeeee;
+            --gray-300: #e0e0e0;
+            --gray-600: #757575;
+            --gray-700: #616161;
+            --gray-800: #424242;
+            --gray-900: #212121;
+            --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
+            --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.15);
+            --radius: 12px;
+            --radius-lg: 20px;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Tajawal', sans-serif;
+            background: var(--gray-50);
+            color: var(--gray-800);
+            line-height: 1.8;
+        }
+
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: var(--white);
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .header-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .back-btn {
+            width: 45px;
+            height: 45px;
+            background: rgba(255, 255, 255, 0.2);
+            border: none;
+            border-radius: 50%;
+            color: var(--white);
+            cursor: pointer;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+        }
+
+        .back-btn:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateX(-5px);
+        }
+
+        .logo-section h1 {
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        .logo-section span {
+            display: block;
+            font-size: 0.8rem;
+            opacity: 0.9;
+            font-weight: 400;
+        }
+
+        /* Breadcrumb */
+        .breadcrumb {
+            background: var(--white);
+            padding: 1rem 2rem;
+            border-bottom: 1px solid var(--gray-200);
+        }
+
+        .breadcrumb-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.9rem;
+        }
+
+        .breadcrumb a {
+            color: var(--gray-600);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .breadcrumb a:hover {
+            color: var(--primary);
+        }
+
+        .breadcrumb .current {
+            color: var(--primary);
+            font-weight: 500;
+        }
+
+        .breadcrumb i {
+            color: var(--gray-600);
+            font-size: 0.8rem;
+        }
+
+        /* Hero */
+        .page-hero {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: var(--white);
+            padding: 4rem 2rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .page-hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 400px;
+            height: 400px;
+            background: rgba(255, 215, 0, 0.1);
+            border-radius: 50%;
+        }
+
+        .hero-content-simple {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero-icon {
+            width: 100px;
+            height: 100px;
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            margin: 0 auto 1.5rem;
+            backdrop-filter: blur(10px);
+            border: 3px solid rgba(255, 215, 0, 0.3);
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-15px);
+            }
+        }
+
+        .page-hero h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            font-weight: 800;
+        }
+
+        .page-hero p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        /* Main Container */
+        .main-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+
+        /* Last Updated Banner */
+        .update-banner {
+            background: linear-gradient(135deg, var(--gold) 0%, #ffc107 100%);
+            color: var(--gray-900);
+            padding: 1rem 1.5rem;
+            border-radius: var(--radius);
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            font-weight: 500;
+        }
+
+        .update-banner i {
+            font-size: 1.5rem;
+        }
+
+        /* Terms Content */
+        .terms-content {
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            padding: 3rem;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .terms-intro {
+            color: var(--gray-700);
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            padding-bottom: 2rem;
+            border-bottom: 2px solid var(--gray-200);
+        }
+
+        .terms-section {
+            margin-bottom: 2.5rem;
+        }
+
+        .terms-section:last-child {
+            margin-bottom: 0;
+        }
+
+        .section-number {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: var(--primary);
+            color: var(--white);
+            border-radius: 50%;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .terms-section h3 {
+            color: var(--primary);
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .terms-section p {
+            color: var(--gray-700);
+            margin-bottom: 1rem;
+        }
+
+        .terms-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .terms-list li {
+            position: relative;
+            padding-right: 2rem;
+            margin-bottom: 0.75rem;
+            color: var(--gray-700);
+        }
+
+        .terms-list li::before {
+            content: '\f00c';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            position: absolute;
+            right: 0;
+            color: var(--primary);
+        }
+
+        .terms-list ul {
+            margin-top: 0.5rem;
+            margin-right: 1.5rem;
+        }
+
+        .terms-list ul li::before {
+            content: '\f111';
+            font-size: 0.5rem;
+            top: 0.5rem;
+        }
+
+        /* Highlight Box */
+        .highlight-box {
+            background: var(--primary-light);
+            border-right: 4px solid var(--primary);
+            padding: 1.5rem;
+            border-radius: var(--radius);
+            margin: 1.5rem 0;
+        }
+
+        .highlight-box i {
+            color: var(--primary);
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .highlight-box h4 {
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .highlight-box p {
+            margin: 0;
+            color: var(--gray-700);
+        }
+
+        /* Warning Box */
+        .warning-box {
+            background: #fff3cd;
+            border-right: 4px solid var(--warning);
+            padding: 1.5rem;
+            border-radius: var(--radius);
+            margin: 1.5rem 0;
+        }
+
+        .warning-box i {
+            color: var(--warning);
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .warning-box h4 {
+            color: #856404;
+            margin-bottom: 0.5rem;
+        }
+
+        .warning-box p {
+            margin: 0;
+            color: #856404;
+        }
+
+        /* Acceptance Section */
+        .acceptance-section {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: var(--white);
+            padding: 2rem;
+            border-radius: var(--radius-lg);
+            text-align: center;
+            margin-top: 3rem;
+        }
+
+        .acceptance-section i {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .acceptance-section h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .acceptance-section p {
+            opacity: 0.9;
+            margin-bottom: 1.5rem;
+        }
+
+        .acceptance-date {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 0.5rem 1.5rem;
+            border-radius: 50px;
+            font-size: 0.9rem;
+        }
+
+        /* Footer - 3 Columns */
+        .footer {
+            background: var(--gray-900);
+            color: var(--white);
+            padding: 4rem 2rem 2rem;
+            margin-top: 4rem;
+        }
+
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1.2fr 1fr 1fr;
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-column h4 {
+            color: var(--gold);
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .footer-brand {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .footer-brand img {
+            width: 60px;
+            height: 60px;
+            border-radius: var(--radius);
+        }
+
+        .footer-brand h3 {
+            font-size: 1.3rem;
+        }
+
+        .footer-brand span {
+            display: block;
+            font-size: 0.8rem;
+            opacity: 0.8;
+        }
+
+        .footer-desc {
+            color: var(--gray-300);
+            line-height: 1.8;
+            font-size: 0.95rem;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.75rem;
+        }
+
+        .footer-links a {
+            color: var(--gray-300);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: var(--transition);
+        }
+
+        .footer-links a:hover {
+            color: var(--gold);
+            transform: translateX(-5px);
+        }
+
+        .footer-contact p {
+            color: var(--gray-300);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .footer-contact i {
+            color: var(--gold);
+            width: 20px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .social-links a {
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .social-links a:hover {
+            background: var(--gold);
+            color: var(--gray-900);
+            transform: translateY(-3px);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 2rem;
+            text-align: center;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .footer-bottom p {
+            color: var(--gray-300);
+            font-size: 0.9rem;
+        }
+
+        .footer-bottom .heart {
+            color: var(--accent);
+            animation: heartbeat 1.5s ease-in-out infinite;
+        }
+
+        @keyframes heartbeat {
+
+            0%,
+            100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.2);
+            }
+        }
+
+        /* Print Button */
+        .print-btn {
+            position: fixed;
+            bottom: 2rem;
+            left: 2rem;
+            width: 60px;
+            height: 60px;
+            background: var(--primary);
+            color: var(--white);
+            border: none;
+            border-radius: 50%;
+            font-size: 1.5rem;
+            cursor: pointer;
+            box-shadow: var(--shadow-lg);
+            transition: var(--transition);
+            z-index: 100;
+        }
+
+        .print-btn:hover {
+            background: var(--primary-dark);
+            transform: scale(1.1);
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .footer-content {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .terms-content {
+                padding: 2rem 1.5rem;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .page-hero h2 {
+                font-size: 1.75rem;
+            }
+
+            .print-btn {
+                width: 50px;
+                height: 50px;
+                font-size: 1.25rem;
+            }
+        }
+
+        /* Print Styles */
+        @media print {
+
+            .header,
+            .breadcrumb,
+            .footer,
+            .print-btn {
+                display: none;
+            }
+
+            .page-hero {
+                background: var(--primary) !important;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+
+            .terms-content {
+                box-shadow: none;
+            }
+        }
+    </style>
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "شروط الاستخدام | البوابة الجزائرية للخدمات الرقمية",
+        "description": "شروط وأحكام استخدام البوابة الجزائرية للخدمات الرقمية",
+        "url": "https://www.algerian-digital-portal.com/terms.html",
+        "breadcrumb": {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+                {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "name": "الرئيسية",
+                    "item": "https://www.algerian-digital-portal.com/index.html"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "name": "شروط الاستخدام"
+                }
+            ]
+        }
+    }
+    </script>
+
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <div class="logo-section">
+                <a href="../index.html" class="back-btn" title="العودة للصفحة الرئيسية">
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+                <div>
+                    <h1>البوابة الجزائرية</h1>
+                    <span>للخدمات الرقمية</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <nav class="breadcrumb">
+        <div class="breadcrumb-content">
+            <a href="../index.html"><i class="fas fa-home"></i> الرئيسية</a>
+            <i class="fas fa-chevron-left"></i>
+            <span class="current">شروط الاستخدام</span>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="page-hero">
+        <div class="hero-content-simple">
+            <div class="hero-icon">
+                <i class="fas fa-file-contract"></i>
+            </div>
+            <h2>شروط الاستخدام</h2>
+            <p>الأحكام والشروط المنظمة لاستخدام البوابة الجزائرية للخدمات الرقمية</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="main-container">
+        <!-- Update Banner -->
+        <div class="update-banner">
+            <i class="fas fa-info-circle"></i>
+            <span>آخر تحديث: 11 مارس 2026</span>
+        </div>
+
+        <!-- Terms Content -->
+        <article class="terms-content">
+            <div class="terms-intro">
+                <p>مرحباً بك في <strong>البوابة الجزائرية للخدمات الرقمية</strong>. باستخدامك لهذه البوابة، فإنك توافق
+                    على الالتزام بالشروط والأحكام التالية. يرجى قراءة هذه الشروط بعناية قبل استخدام الموقع.</p>
+            </div>
+
+            <!-- Section 1 -->
+            <section class="terms-section">
+                <span class="section-number">1</span>
+                <h3><i class="fas fa-check-circle"></i> قبول الشروط</h3>
+                <p>بمجرد دخولك واستخدامك لبوابة الخدمات الرقمية، فإنك تقر بأنك قد قرأت وفهمت ووافقت على الالتزام بهذه
+                    الشروط والأحكام. إذا كنت لا توافق على أي جزء من هذه الشروط، يرجى عدم استخدام البوابة.</p>
+
+                <div class="highlight-box">
+                    <i class="fas fa-lightbulb"></i>
+                    <h4>ملاحظة هامة</h4>
+                    <p>نحتفظ بالحق في تعديل هذه الشروط في أي وقت. سيتم إشعار المستخدمين بأي تغييرات جوهرية عبر إشعار
+                        بارز في الصفحة الرئيسية.</p>
+                </div>
+            </section>
+
+            <!-- Section 2 -->
+            <section class="terms-section">
+                <span class="section-number">2</span>
+                <h3><i class="fas fa-bullseye"></i> الغرض من البوابة</h3>
+                <p>تقدم البوابة الجزائرية للخدمات الرقمية:</p>
+                <ul class="terms-list">
+                    <li>تجميع روابط الخدمات الحكومية والعمومية الرقمية الرسمية في مكان واحد</li>
+                    <li>تسهيل الوصول السريع والآمن إلى هذه الخدمات</li>
+                    <li>تصنيف الخدمات حسب القطاعات لتسهيل التنقل</li>
+                    <li>توفير معلومات محدثة عن الخدمات الرقمية المتاحة</li>
+                </ul>
+
+                <div class="warning-box">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    <h4>تحديد المسؤولية</h4>
+                    <p>البوابة هي منصة توجيهية فقط. نحن لا نقدم الخدمات بأنفسنا، بل نوجهك إلى المواقع الرسمية المختصة.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Section 3 -->
+            <section class="terms-section">
+                <span class="section-number">3</span>
+                <h3><i class="fas fa-user-check"></i> شروط الاستخدام المسموح</h3>
+                <p>يُسمح باستخدام البوابة للأغراض التالية:</p>
+                <ul class="terms-list">
+                    <li>الوصول إلى المعلومات والروابط المتاحة للعموم</li>
+                    <li>البحث عن الخدمات الحكومية الرقمية</li>
+                    <li>مشاركة روابط البوابة مع الآخرين</li>
+                    <li>التواصل مع فريق الدعم لأغراض مشروعة</li>
+                </ul>
+            </section>
+
+            <!-- Section 4 -->
+            <section class="terms-section">
+                <span class="section-number">4</span>
+                <h3><i class="fas fa-ban"></i> الاستخدامات الممنوعة</h3>
+                <p>يُحظر صراحةً:</p>
+                <ul class="terms-list">
+                    <li>محاولة اختراق أو تعطيل أنظمة البوابة</li>
+                    <li>استخدام البوابة لأغراض غير قانونية أو احتيالية</li>
+                    <li>إعادة نشر المحتوى دون الإشارة إلى المصدر</li>
+                    <li>جمع بيانات المستخدمين بأي شكل من الأشكال</li>
+                    <li>إرسال رسائل مزعجة أو غير مرغوب فيها عبر نماذج الاتصال</li>
+                    <li>محاولة الوصول إلى أقسام غير مصرح بها من البوابة</li>
+                </ul>
+            </section>
+
+            <!-- Section 5 -->
+            <section class="terms-section">
+                <span class="section-number">5</span>
+                <h3><i class="fas fa-shield-alt"></i> الملكية الفكرية</h3>
+                <p>جميع المحتويات المتاحة على البوابة، بما في ذلك:</p>
+                <ul class="terms-list">
+                    <li>التصميم والشعارات والأيقونات</li>
+                    <li>نظام التصنيف والتنظيم</li>
+                    <li>النصوص والوصف المكتوب</li>
+                </ul>
+                <p>هي ملك للبوابة الجزائرية للخدمات الرقمية ومحمية بموجب قوانين الملكية الفكرية. يُسمح بإعادة الاستخدام
+                    الشخصي غير التجاري مع الإشارة إلى المصدر.</p>
+            </section>
+
+            <!-- Section 6 -->
+            <section class="terms-section">
+                <span class="section-number">6</span>
+                <h3><i class="fas fa-external-link-alt"></i> الروابط الخارجية</h3>
+                <p>تحتوي البوابة على روابط لمواقع خارجية تابعة للجهات الحكومية والعمومية:</p>
+                <ul class="terms-list">
+                    <li>نحن غير مسؤولين عن محتوى أو ممارسات الخصوصية في المواقع الخارجية</li>
+                    <li>الانتقال إلى موقع خارجي يعني خضوعك لشروط ذلك الموقع</li>
+                    <li>نحن نبذل جهدنا للتحقق من صحة الروابط لكن لا نضمن توفرها الدائم</li>
+                </ul>
+            </section>
+
+            <!-- Section 7 -->
+            <section class="terms-section">
+                <span class="section-number">7</span>
+                <h3><i class="fas fa-user-shield"></i> الخصوصية والبيانات</h3>
+                <p>نلتزم بما يلي:</p>
+                <ul class="terms-list">
+                    <li>عدم جمع أي بيانات شخصية عبر البوابة</li>
+                    <li>عدم استخدام ملفات تعريف الارتباط (Cookies) التتبعية</li>
+                    <li>عدم مشاركة أي معلومات مع أطراف ثالثة</li>
+                </ul>
+                <p>للاطلاع على التفاصيل الكاملة، يرجى مراجعة <a href="privacy.html" style="color: var(--primary);">سياسة
+                        الخصوصية</a>.</p>
+            </section>
+
+
+
+            <!-- Section 8 -->
+            <section class="terms-section">
+                <span class="section-number">8</span>
+                <h3><i class="fas fa-tools"></i> الصيانة والتوفر</h3>
+                <p>نحن نسعى جاهدين لضمان:</p>
+                <ul class="terms-list">
+                    <li>توفر البوابة على مدار الساعة</li>
+                    <li>تحديث المحتوى باستمرار</li>
+                    <li>إصلاح الأعطال التقنية في أسرع وقت ممكن</li>
+                </ul>
+                <p>مع ذلك، لا نضمن توفر البوابة بنسبة 100% وقد تكون هناك فترات توقف للصيانة.</p>
+            </section>
+
+            <!-- Section 9 -->
+            <section class="terms-section">
+                <span class="section-number">9</span>
+                <h3><i class="fas fa-gavel"></i> تحديد المسؤولية</h3>
+                <p>باستخدامك للبوابة، فإنك تقر بأن:</p>
+                <ul class="terms-list">
+                    <li>البوابة تُقدم "كما هي" دون أي ضمانات صريحة أو ضمنية</li>
+                    <li>نحن غير مسؤولين عن أي أضرار مباشرة أو غير مباشرة ناتجة عن الاستخدام</li>
+                    <li>المسؤولية النهائية تقع على عاتق المستخدم في التحقق من صحة المعلومات</li>
+                </ul>
+            </section>
+
+            <!-- Section 10 -->
+            <section class="terms-section">
+                <span class="section-number">10</span>
+                <h3><i class="fas fa-balance-scale"></i> القانون الواجب التطبيق</h3>
+                <p>تخضع هذه الشروط والأحكام لقوانين <strong>الجمهورية الجزائرية الديمقراطية الشعبية</strong>. أي نزاع
+                    ينشأ عن استخدام البوابة يُحال إلى المحاكم الجزائرية المختصة.</p>
+            </section>
+
+            <!-- Section 11 -->
+            <section class="terms-section">
+                <span class="section-number">11</span>
+                <h3><i class="fas fa-comments"></i> التواصل والشكاوى</h3>
+                <p>لأي استفسار أو شكوى متعلقة بهذه الشروط، يمكنك التواصل معنا عبر:</p>
+                <ul class="terms-list">
+                    <li>نموذج الاتصال المتاح في صفحة "اتصل بنا"</li>
+                    <li>البريد الإلكتروني: tabaniimadeddine@gmail.com</li>
+                </ul>
+                <p>نحن نسعى للرد على جميع الاستفسارات في غضون 48 ساعة عمل.</p>
+            </section>
+
+            <!-- Acceptance -->
+            <div class="acceptance-section">
+                <i class="fas fa-handshake"></i>
+                <h3>باستخدامك للبوابة، فإنك توافق على هذه الشروط</h3>
+                <p>إذا كنت لا توافق على أي من هذه الشروط، يرجى عدم استخدام البوابة.</p>
+                <span class="acceptance-date">تاريخ آخر تحديث: 11 مارس 2026</span>
+            </div>
+        </article>
+    </main>
+
+    <!-- Print Button -->
+    <button class="print-btn" onclick="window.print()" title="طباعة الصفحة">
+        <i class="fas fa-print"></i>
+    </button>
+
+    <!-- Footer - 3 Columns -->
+    <footer class="footer">
+        <div class="footer-content">
+            <!-- Column 1: Brand -->
+            <div class="footer-column">
+                <div class="footer-brand">
+                    <img src="https://flagcdn.com/w80/dz.png" alt="علم الجزائر">
+                    <div>
+                        <h3>البوابة الجزائرية</h3>
+                        <span>للخدمات الرقمية</span>
+                    </div>
+                </div>
+                <p class="footer-desc">
+                    منصة وطنية موحدة تتيح للمواطن الجزائري الوصول السريع والآمن إلى جميع الخدمات الحكومية والعمومية
+                    الرقمية من مكان واحد، دون تعقيد أو تنقل إداري.
+                </p>
+                <!-- Social Links -->
+                <!--
+                                <div class="social-links">
+                    <a href="#" title="فيسبوك"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" title="تويتر"><i class="fab fa-twitter"></i></a>
+                    <a href="#" title="إنستغرام"><i class="fab fa-instagram"></i></a>
+                    <a href="#" title="يوتيوب"><i class="fab fa-youtube"></i></a>
+                </div>  -->
+            </div>
+
+            <!-- Column 2: Quick Links -->
+            <div class="footer-column">
+                <h4><i class="fas fa-link"></i> روابط سريعة</h4>
+                <ul class="footer-links">
+                    <li>
+                        <a href="../index.html">
+                            <i class="fas fa-home"></i>
+                            الصفحة الرئيسية
+                        </a>
+                    </li>
+                    <li>
+                        <a href="about.html">
+                            <i class="fas fa-users"></i>
+                            من نحن
+                        </a>
+                    </li>
+                    <li>
+                        <a href="contact.html">
+                            <i class="fas fa-envelope"></i>
+                            اتصل بنا
+                        </a>
+                    </li>
+                    <li>
+                        <a href="privacy.html">
+                            <i class="fas fa-shield-alt"></i>
+                            سياسة الخصوصية
+                        </a>
+                    </li>
+                    <li>
+                        <a href="terms.html">
+                            <i class="fas fa-file-contract"></i>
+                            شروط الاستخدام
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Column 3: Contact Info -->
+            <div class="footer-column">
+                <h4><i class="fas fa-address-card"></i> معلومات الاتصال</h4>
+                <div class="footer-contact">
+                    <p>
+                        <i class="fas fa-envelope"></i>
+                        tabaniimadeddine@gmail.com
+                    </p>
+                    <p>
+                        <i class="fas fa-phone"></i>
+                        +213 697 74 37 21
+                    </p>
+                    <p>
+                        <i class="fas fa-map-marker-alt"></i>
+                        الجزائر العاصمة، الجزائر
+                    </p>
+                    <p>
+                        <i class="fas fa-clock"></i>
+                        متاح 24/7 - طوال أيام الأسبوع
+                    </p>
+                </div>
+                <div style="margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid rgba(255,255,255,0.1);">
+                    <p style="color: var(--gray-300); font-size: 0.9rem;">
+                        <i class="fas fa-code" style="color: var(--gold); margin-left: 0.5rem;"></i>
+                        صنع بـ <span class="heart">❤</span> في الجزائر
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2025 البوابة الجزائرية للخدمات الرقمية - جميع الحقوق محفوظة</p>
+            <p style="margin-top: 0.5rem; font-size: 0.85rem;">❀ لا تنسونا من صالح دعائكم ❀</p>
+        </div>
+    </footer>
+</body>
+
+</html>
