@@ -807,3 +807,186 @@
                 font-size: 1.75rem;
             }
         }
+
+        
+
+
+
+/* =========================
+   Hero Visual Icon
+========================= */
+
+.hero-visual {
+    position: relative;
+    width: 220px;
+    height: 220px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(circle at top,
+            rgba(255,255,255,0.18),
+            rgba(255,255,255,0.05));
+
+    backdrop-filter: blur(12px);
+
+    border: 1px solid rgba(255,255,255,0.15);
+
+    box-shadow:
+        0 10px 40px rgba(0,0,0,0.25),
+        inset 0 0 30px rgba(255,255,255,0.08);
+
+    overflow: hidden;
+
+    animation: heroFloat 4s ease-in-out infinite;
+}
+
+/* Glow Effect */
+.hero-visual::before {
+    content: "";
+
+    position: absolute;
+    inset: -20px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(circle,
+            rgba(255,255,255,0.25) 0%,
+            transparent 70%);
+
+    opacity: .7;
+
+    animation: pulseGlow 4s linear infinite;
+}
+
+/* الصورة */
+.hero-icon {
+    position: relative;
+    z-index: 2;
+
+    width: 50%;
+    height: 50%;
+
+    object-fit: contain;
+
+    filter:
+        drop-shadow(0 10px 20px rgba(0,0,0,.25));
+
+    transition:
+        transform .35s ease,
+        filter .35s ease;
+}
+
+/* Hover */
+.hero-visual:hover .hero-icon {
+    transform: scale(1.08) rotate(-3deg);
+
+    filter:
+        drop-shadow(0 15px 25px rgba(0,0,0,.35));
+}
+
+/* حركة عائمة */
+@keyframes heroFloat {
+    0%,100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* تأثير توهج */
+@keyframes pulseGlow {
+    0% {
+        transform: scale(1);
+        opacity: .6;
+    }
+
+    50% {
+        transform: scale(1.08);
+        opacity: .9;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: .6;
+    }
+}
+
+/* =========================
+   Responsive
+========================= */
+
+@media (max-width: 992px) {
+
+    .hero-visual {
+        width: 180px;
+        height: 180px;
+        margin: 2rem auto 0;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .hero-visual {
+        width: 140px;
+        height: 140px;
+    }
+
+    .hero-icon {
+        width: 58%;
+        height: 58%;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .hero-visual {
+        width: 110px;
+        height: 110px;
+    }
+}
+
+.hero-icon {
+    clip-path: circle(50%);
+}
+
+.hero-icon {
+    position: relative;
+    z-index: 2;
+
+    width: 62%;
+    height: 62%;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    padding: 10px;
+
+    background: rgba(255,255,255,0.08);
+
+    border: 2px solid rgba(255,255,255,0.15);
+
+    box-shadow:
+        0 8px 20px rgba(0,0,0,.25),
+        inset 0 0 10px rgba(255,255,255,.08);
+
+    filter:
+        drop-shadow(0 10px 20px rgba(0,0,0,.25));
+
+    transition:
+        transform .35s ease,
+        filter .35s ease,
+        box-shadow .35s ease;
+}
+
+.hero-icon img {
+    border-radius: 50%;
+}
