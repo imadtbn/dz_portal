@@ -40,7 +40,7 @@
             font-family: 'Tajawal', sans-serif;
             background: var(--gray-50);
             color: var(--gray-800);
-            line-height: 1;
+            line-height: 1.7;
         }
 
         /* Header */
@@ -989,4 +989,520 @@
 
 .hero-icon img {
     border-radius: 50%;
+}
+
+        /* تحسينات بصرية */
+        .service-item:hover {
+            background-color: var(--primary);
+            color: #fff;
+            transform: translateX(-5px);
+        }
+
+        .service-item:hover .service-arrow {
+            color: #fff;
+        }
+
+        .exam-banner {
+            background: linear-gradient(90deg, #ff7e5f, #feb47b);
+        }
+
+        .exam-banner:hover {
+            background: linear-gradient(90deg, #feb47b, #ff7e5f);
+        }
+
+        .exam-banner-btn {
+            background-color: #fff;
+            color: var(--primary);
+        }
+
+        /* تحسينات SEO */
+        .section-title {
+            font-size: 1.8rem;
+        }
+
+        .service-info h4 {
+            font-size: 1.2rem;
+        }
+
+        .service-info p {
+            font-size: 0.95rem;
+        }
+
+        /* تحسينات الأداء */
+        .hero-icon {
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+        }
+
+        .service-item {
+            transition: all 0.3s ease;
+        }
+
+        .exam-banner {
+            transition: background 0.3s ease;
+        }
+
+        .exam-banner-btn {
+            transition: all 0.3s ease;
+        }
+
+        /* تحسينات الوصولية */
+        .service-item:focus {
+            outline: 2px solid var(--primary);
+            outline-offset: 2px;
+        }
+
+        .exam-banner-btn:focus {
+            outline: 2px solid var(--primary);
+            outline-offset: 2px;
+        }
+
+        /* تحسينات محركات البحث (SEO) */
+        .section-title {
+            font-size: 1.8rem;
+        }
+
+        .service-info h4 {
+            font-size: 1.2rem;
+        }
+
+        .service-info p {
+            font-size: 0.95rem;
+        }
+
+        /* تحسينات الأمان */
+        a[target="_blank"] {
+            position: relative;
+        }
+
+        a[target="_blank"]::after {
+            content: " (فتح في نافذة جديدة)";
+            font-size: 0.8rem;
+            color: var(--gray-300);
+            position: absolute;
+            top: 100%;
+            left: 0;
+            white-space: nowrap;
+        }
+
+        /* تحسينات تجربة المستخدم (UX) */
+        .service-item:hover {
+            background-color: var(--primary);
+            color: #fff;
+            transform: translateX(-5px);
+        }
+
+        .service-item:hover .service-arrow {
+            color: #fff;
+        }
+
+        .exam-banner {
+            background: linear-gradient(90deg, #ff7e5f, #feb47b);
+        }
+
+        .exam-banner:hover {
+            background: linear-gradient(90deg, #feb47b, #ff7e5f);
+        }
+
+        .exam-banner-btn {
+            background-color: #fff;
+            color: var(--primary);
+        }
+
+        /* تحسينات الأداء */
+        .hero-icon {
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+        }
+
+        .service-item {
+            transition: all 0.3s ease;
+        }
+
+        .exam-banner {
+            transition: background 0.3s ease;
+        }
+
+        .exam-banner-btn {
+            transition: all 0.3s ease;
+        }
+
+
+        /* تحسينات الوصولية */
+        .service-item:focus {
+            outline: 2px solid var(--primary);
+            outline-offset: 2px;
+        }
+
+        .exam-banner-btn:focus {
+            outline: 2px solid var(--primary);
+            outline-offset: 2px;
+        }
+
+        /* ==================================================
+   MOBILE & SMALL DEVICES OPTIMIZATION
+================================================== */
+
+@media (max-width: 768px) {
+
+    /* تحسين عام */
+    body {
+        line-height: 1.7;
+        overflow-x: hidden;
+    }
+
+    html {
+        scroll-padding-top: 90px;
+    }
+
+    /* =========================
+       Header
+    ========================= */
+
+    .header {
+        padding: 1rem;
+    }
+
+    .header-content {
+        flex-wrap: nowrap;
+        gap: .75rem;
+    }
+
+    .logo-section h1 {
+        font-size: 1rem;
+    }
+
+    .logo-section span {
+        font-size: .7rem;
+    }
+
+    .back-btn,
+    .search-trigger {
+        width: 40px;
+        height: 40px;
+        flex-shrink: 0;
+    }
+
+    /* =========================
+       Breadcrumb
+    ========================= */
+
+    .breadcrumb {
+        padding: .8rem 1rem;
+    }
+
+    .breadcrumb-content {
+        font-size: .85rem;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    /* =========================
+       Hero Section
+    ========================= */
+
+    .sector-hero {
+        padding: 2rem 1rem;
+    }
+
+    .hero-content {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        text-align: center;
+    }
+
+    .hero-text h2 {
+        font-size: 1.5rem;
+        line-height: 1.5;
+
+        flex-direction: column;
+        gap: .5rem;
+    }
+
+    .hero-text p {
+        font-size: .95rem;
+        line-height: 1.9;
+        max-width: 100%;
+    }
+
+    /* Hero Stats */
+    .hero-stats {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: .75rem;
+    }
+
+    .hero-stat {
+        flex: 1 1 110px;
+
+        padding: .9rem;
+
+        min-width: 100px;
+    }
+
+    .hero-stat-number {
+        font-size: 1.3rem;
+    }
+
+    .hero-stat-label {
+        font-size: .75rem;
+    }
+
+    /* =========================
+       Hero Visual
+    ========================= */
+
+    .hero-visual {
+        width: 130px;
+        height: 130px;
+
+        margin: 0 auto;
+    }
+
+    .hero-icon {
+        width: 68%;
+        height: 68%;
+
+        padding: 6px;
+    }
+
+    /* =========================
+       Quick Links
+    ========================= */
+
+    .quick-links {
+        padding: .8rem .5rem;
+
+        top: 70px;
+    }
+
+    .quick-links-content {
+        gap: .6rem;
+    }
+
+    .quick-link {
+        padding: .65rem 1rem;
+
+        font-size: .8rem;
+
+        flex-shrink: 0;
+    }
+
+    /* =========================
+       Main Layout
+    ========================= */
+
+    .main-content {
+        padding: 1rem;
+
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar {
+        display: none;
+    }
+
+    /* =========================
+       Cards
+    ========================= */
+
+    .section-card {
+        border-radius: 18px;
+    }
+
+    .section-header-card {
+        padding: 1rem;
+
+        flex-direction: column;
+        align-items: flex-start;
+        gap: .75rem;
+    }
+
+    .section-title {
+        font-size: 1rem;
+        line-height: 1.5;
+    }
+
+    .section-title i {
+        width: 36px;
+        height: 36px;
+
+        font-size: .9rem;
+    }
+
+    .service-count {
+        font-size: .7rem;
+    }
+
+    /* =========================
+       Services
+    ========================= */
+
+    .services-grid {
+        grid-template-columns: 1fr;
+
+        padding: 1rem;
+    }
+
+    .service-item {
+        padding: 1rem;
+
+        gap: .8rem;
+
+        align-items: center;
+    }
+
+    .service-icon {
+        width: 45px;
+        height: 45px;
+
+        font-size: 1rem;
+
+        flex-shrink: 0;
+    }
+
+    .service-info h4 {
+        font-size: .95rem;
+        line-height: 1.5;
+    }
+
+    .service-info p {
+        font-size: .78rem;
+        line-height: 1.6;
+    }
+
+    .service-arrow {
+        opacity: 1;
+    }
+
+    /* =========================
+       Banner
+    ========================= */
+
+    .exam-banner {
+        flex-direction: column;
+
+        text-align: center;
+
+        padding: 1.25rem;
+
+        gap: 1rem;
+    }
+
+    .exam-banner-btn {
+        margin-right: 0;
+
+        width: 100%;
+
+        text-align: center;
+    }
+
+    /* =========================
+       Footer
+    ========================= */
+
+    .footer {
+        padding: 2rem 1rem 1rem;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+
+        gap: 2rem;
+    }
+
+    .footer-brand {
+        align-items: flex-start;
+    }
+
+    .footer-brand img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .footer-desc,
+    .footer-contact p,
+    .footer-links a {
+        font-size: .9rem;
+        line-height: 1.8;
+    }
+
+    .social-links {
+        justify-content: center;
+    }
+
+    /* =========================
+       External Link Tooltip
+    ========================= */
+
+    a[target="_blank"]::after {
+        display: none;
+    }
+
+}
+
+/* ==================================================
+   VERY SMALL DEVICES
+================================================== */
+
+@media (max-width: 480px) {
+
+    .hero-text h2 {
+        font-size: 1.25rem;
+    }
+
+    .hero-text p {
+        font-size: .88rem;
+    }
+
+    .hero-stat {
+        min-width: 90px;
+    }
+
+    .hero-stat-number {
+        font-size: 1.1rem;
+    }
+
+    .service-item {
+        padding: .85rem;
+    }
+
+    .service-info h4 {
+        font-size: .88rem;
+    }
+
+    .service-info p {
+        font-size: .72rem;
+    }
+
+    .quick-link {
+        font-size: .75rem;
+        padding: .55rem .9rem;
+    }
+
+    .hero-visual {
+        width: 110px;
+        height: 110px;
+    }
+
+}
+
+/* ==================================================
+   TOUCH OPTIMIZATION
+================================================== */
+
+@media (hover: none) {
+
+    .service-item:hover,
+    .quick-link:hover,
+    .exam-banner-btn:hover,
+    .hero-visual:hover .hero-icon {
+        transform: none;
+    }
+
+    .service-arrow {
+        opacity: 1;
+    }
 }
