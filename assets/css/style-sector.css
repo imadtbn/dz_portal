@@ -1071,20 +1071,7 @@
             font-size: 0.95rem;
         }
 
-        /* تحسينات الأمان */
-        a[target="_blank"] {
-            position: relative;
-        }
 
-        a[target="_blank"]::after {
-            content: " (فتح في نافذة جديدة)";
-            font-size: 0.8rem;
-            color: var(--gray-300);
-            position: absolute;
-            top: 100%;
-            left: 0;
-            white-space: nowrap;
-        }
 
         /* تحسينات تجربة المستخدم (UX) */
         .service-item:hover {
