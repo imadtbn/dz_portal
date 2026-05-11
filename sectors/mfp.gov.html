@@ -15,43 +15,122 @@
     <link rel="icon" href="../assets/images/icon.png" type="image/png">
     <link rel="icon" href="https://imadtbn.github.io/dz_portal/icons/icon.png" type="image/png">
 
+    <link rel="preload" as="image" href="../assets/images/formation.png" fetchpriority="high">
+
     <!-- تحسين الأمان -->
     <meta http-equiv="X-Content-Type-Options" content="nosniff">
     <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
 
-    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link rel="preload" as="style"
+        href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&display=swap"
+        onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style"
+        onload="this.onload=null;this.rel='stylesheet'">
 
     <link rel="stylesheet" href="../assets/css/style-sector.css">
 
-            <!-- Structured Data -->
+    <!-- Structured Data -->
     <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+
+    {
+      "@type": "WebSite",
+      "@id": "https://imadtbn.github.io/dz_portal/#website",
+      "url": "https://imadtbn.github.io/dz_portal/",
+      "name": "البوابة الجزائرية للخدمات الرقمية",
+      "alternateName": "DZ Portal",
+      "inLanguage": "ar"
+    },
+
+    {
+      "@type": "Organization",
+      "@id": "https://imadtbn.github.io/dz_portal/#organization",
+      "name": "البوابة الجزائرية للخدمات الرقمية",
+      "url": "https://imadtbn.github.io/dz_portal/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://imadtbn.github.io/dz_portal/icons/icon.png"
+      },
+       "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer support",
+        "areaServed": "DZ",
+        "availableLanguage": ["ar", "fr"],
+        "email": "tabaniimadeddine@gmail.com",
+        "telephone": "+213697743721"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "الجزائر",
+        "postalCode": "16000",
+        "addressCountry": "DZ"
+      },
+      "sameAs": [
+        "https://imadtbn.github.io/dz_portal/"
+      ]
+    },
+
+    {
+      "@type": "WebPage",
+      "@id": "https://imadtbn.github.io/dz_portal/sectors/mfp.html#webpage",
+      "url": "https://imadtbn.github.io/dz_portal/sectors/mfp.html",
+      "name": "التكوين والتعليم المهنيين",
+      "description": "جميع خدمات التكوين والتعليم المهنيين في الجزائر - التسجيل في البرامج، إمتحانات، وبرامج التدريب، وغيرها من الخدمات الرقمية المتطورة التي توفر الوقت والجهد وتضمن الأمان والسرعة في إنجاز المعاملات.",
+      "keywords": [
+        "التكوين والتعليم المهنيين",
+        "خدمات رقمية",
+        "الجزائر",
+        "التسجيل في البرامج",
+        "إمتحانات",
+        "برامج التدريب"
+
+      ],
+      "inLanguage": "ar",
+      "isPartOf": {
+        "@id": "https://imadtbn.github.io/dz_portal/#website"
+      },
+      "about": {
+        "@id": "https://imadtbn.github.io/dz_portal/#organization"
+      },
+      "publisher": {
+        "@id": "https://imadtbn.github.io/dz_portal/#organization"
+      },
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://imadtbn.github.io/dz_portal/assets/images/mfp.png"
+      },
+      "breadcrumb": {
+        "@id": "https://imadtbn.github.io/dz_portal/sectors/mfp.html#breadcrumb"
+      }
+    },
+
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://imadtbn.github.io/dz_portal/sectors/mfp.html#breadcrumb",
+      "itemListElement": [
         {
-            "@context": "https://schema.org",
-            "@type": "GovernmentService",
-            "name": "خدمات التكوين والتعليم المهنيين في الجزائر",
-            "description": "جميع خدمات التكوين والتعليم المهنيين في الجزائر - التسجيل في البرامج، إمتحانات، وبرامج التدريب، وغيرها من الخدمات الرقمية المتطورة التي توفر الوقت والجهد وتضمن الأمان والسرعة في إنجاز المعاملات.",
-            "keywords": "التكوين والتعليم المهنيين, التسجيل في البرامج, إمتحانات, برامج التدريب, خدمات رقمية, الجزائر",
-            "provider": {
-                "@type": "GovernmentOrganization",
-                "name": "وزارة التكوين والتعليم المهنيين الجزائرية",
-                "url": "https://mfp.gov.dz/"
-            },
-            "serviceType": [
-                {
-                    "@type": "Service",
-                    "name": "التسجيل في برامج التكوين والتعليم المهنيين",
-                    "url": "https://www.takwin.dz/"
-                },
-                {
-                    "@type": "Service",
-                    "name": "الإمتحانات المهنية في التكوين والتعليم المهنيين",
-                    "url": "https://takwin.dz/ProfessionalExams"
-                }
-            ]
-        }   
-        </script>
+          "@type": "ListItem",
+          "position": 1,
+          "name": "الرئيسية",
+          "item": "https://imadtbn.github.io/dz_portal/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "التكوين والتعليم المهنيين",
+          "item": "https://imadtbn.github.io/dz_portal/sectors/mfp.html"
+        }
+      ]
+    }
+
+  ]
+}
+</script>
 </head>
 
 <body>
@@ -254,7 +333,8 @@
             <!-- Column 1: Brand -->
             <div class="footer-column">
                 <div class="footer-brand">
-                    <img src="https://flagcdn.com/w80/dz.png" alt="علم الجزائر">
+                    <img src="https://flagcdn.com/w80/dz.png" alt="علم الجزائر" width="80" height="60" loading="lazy"
+                        decoding="async">
                     <div>
                         <h3>البوابة الجزائرية</h3>
                         <span>للخدمات الرقمية</span>
@@ -345,7 +425,7 @@
         </div>
     </footer>
 
-    <script src="../assets/js/sector.js"></script>
+    <script src="../assets/js/sector.js" defer></script>
 
 </body>
 
