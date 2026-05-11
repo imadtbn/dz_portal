@@ -14,6 +14,8 @@
     <meta property="og:url" content="https://imadtbn.github.io/dz_portal/" />
     <meta property="og:type" content="website" />
 
+    <link rel="preload" as="image" href="assets/images/icon-512.png" fetchpriority="high">
+
     <!-- Structured Data -->
     <script type="application/ld+json">
 {
@@ -283,7 +285,6 @@
 }
 </script>
 
-
     <!-- أيقونة الموقع -->
     <link rel="icon" href="assets/images/icon.png" type="image/png">
     <link rel="icon" href="https://imadtbn.github.io/dz_portal/icons/icon.png" type="image/png">
@@ -294,9 +295,14 @@
 
 
     <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link rel="preload" as="style"
+        href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&display=swap"
+        onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style"
+        onload="this.onload=null;this.rel='stylesheet'">
     <link rel="stylesheet" href="assets/css/style-main.css">
 
     <link rel="manifest" href="manifest.webmanifest.json">
@@ -498,7 +504,7 @@
                     <img src="assets/images/education.png" alt="التربية والتعليم" loading="lazy">
                 </div>
                 <h3 class="sector-title">التربية والتعليم</h3>
-                <p class="sector-desc">التسجيل في الامتحانات، نتائج البكالوريا والتعليم المتوسط، فضاء الأستاذ والولي，
+                <p class="sector-desc">التسجيل في الامتحانات، نتائج، فضاء الأستاذ والأولياء
                     التعليم عن بعد</p>
             </a>
 
@@ -518,9 +524,9 @@
                 <div class="sector-icon">
                     <img src="assets/images/dzexam.png" alt="dzexam1" loading="lazy">
                 </div>
-                <h3 class="sector-title">dzexam1 بنك الفروص والإختبارات</h3>
-                <p class="sector-desc">جميع فروض واختبارات شهادة التعليم المتوسط، البكالوريا، والابتدائي مع التصحيح
-                    النموذجي لجميع المواد والمستويات التعليمية</p>
+                <h3 class="sector-title">dzexam1 للفروص والإختبارات</h3>
+                <p class="sector-desc"> فروض واختبارات شهادة التعليم المتوسط، البكالوريا، والابتدائي مع التصحيح
+                </p>
             </a>
 
             <!-- dzexams -->
@@ -529,9 +535,9 @@
                 <div class="sector-icon">
                     <img src="assets/images/dzexams.png" alt="dzexams" loading="lazy">
                 </div>
-                <h3 class="sector-title">dzexams بنك الفروص والإختبارات</h3>
-                <p class="sector-desc">جميع فروض واختبارات شهادة التعليم المتوسط، البكالوريا، والابتدائي مع التصحيح
-                    النموذجي لجميع المواد والمستويات التعليمية</p>
+                <h3 class="sector-title">dzexams للفروص والإختبارات</h3>
+                <p class="sector-desc"> فروض واختبارات شهادة التعليم المتوسط، البكالوريا، والابتدائي مع التصحيح
+                </p>
             </a>
 
             <!-- التكوين والتعليم المهنيين -->
@@ -551,8 +557,7 @@
                     <img src="assets/images/poste.png" alt="بريد الجزائر" loading="lazy">
                 </div>
                 <h3 class="sector-title">بريد الجزائر</h3>
-                <p class="sector-desc">التسجيل في الامتحانات، نتائج البكالوريا والتعليم المتوسط، فضاء الأستاذ والولي，
-                    التعليم عن بعد</p>
+                <p class="sector-desc">خدمات البريد في الجزائر، بطاقة ذهبية، تطبيقات</p>
             </a>
 
             <!-- إتصالات الجزائر -->
@@ -572,7 +577,8 @@
                     <img src="assets/images/service telephon.png" alt="خدمات الهاتف النقال" loading="lazy">
                 </div>
                 <h3 class="sector-title">خدمات الهاتف النقال</h3>
-                <p class="sector-desc">مصلحة خدمة الزبائن， شحن الرصيد， تفعيل الخدمات وتطبيقات، والعديد من المزايا.</p>
+                <p class="sector-desc">موبيليس، جازي، أوريدو، تطبيقات وأرقام، مصلحة الزبائن
+                </p>
             </a>
 
             <!-- ARPCE -->
@@ -581,7 +587,7 @@
                 <div class="sector-icon">
                     <img src="assets/images/arpce.png" alt="ARPCE" loading="lazy">
                 </div>
-                <h3 class="sector-title">سلطة ضبط البريد والاتصالات الالكترونية (ARPCE)</h3>
+                <h3 class="sector-title">ضبط البريد والاتصالات الالكترونية (ARPCE)</h3>
                 <p class="sector-desc">طلب خدمة， دفع فاتورة， معرفة عدد أرقام الهاتف بإسمك， وتطبيقات</p>
             </a>
 
@@ -592,7 +598,7 @@
                     <img src="assets/images/inteurier.png" alt="الداخلية والجماعات المحلية" loading="lazy">
                 </div>
                 <h3 class="sector-title">الداخلية والجماعات المحلية</h3>
-                <p class="sector-desc">البطاقة التعريف البيوميترية， رخصة السياقة， جواز السفر， شهادة الميلاد， الشباك عن
+                <p class="sector-desc">البطاقة التعريف البيوميترية, رخصة السياقة جواز السفر， شهادة الميلاد， الشباك عن
                     بعد</p>
             </a>
 
@@ -602,8 +608,8 @@
                 <div class="sector-icon">
                     <img src="assets/images/madr.png" alt="وزارة الفلاحة" loading="lazy">
                 </div>
-                <h3 class="sector-title">وزارة الفلاحة والتنمية الريفية والصيد البحري</h3>
-                <p class="sector-desc"> حجز أضاحي العيد، شكاوي عن بعد، ........</p>
+                <h3 class="sector-title">الفلاحة والتنمية الريفية والصيد البحري</h3>
+                <p class="sector-desc"> حجز أضاحي العيد، شكاوي عن بعد، </p>
             </a>
 
             <!-- نفطال -->
@@ -612,8 +618,8 @@
                 <div class="sector-icon">
                     <img src="assets/images/naftal.webp" alt="نفطال" loading="lazy">
                 </div>
-                <h3 class="sector-title">مؤسسة نفطال للمواد البترولية</h3>
-                <p class="sector-desc"> محطتي، خدمات عن بعد، تطبيقات </p>
+                <h3 class="sector-title"> نفطال للمواد البترولية</h3>
+                <p class="sector-desc"> محطتي، إقتناء العجلات، خدمات عن بعد، تطبيقات </p>
             </a>
 
             <!-- السكن -->
@@ -623,7 +629,7 @@
                     <img src="assets/images/sakan.png" alt="السكن والعمران" loading="lazy">
                 </div>
                 <h3 class="sector-title">السكن والعمران</h3>
-                <p class="sector-desc">وكالة عدل， ENPI الترقية العقارية， الديوان الوطني للترقية العقارية OPGI دفع كراء
+                <p class="sector-desc">وكالة عدل， ENPI الترقية العقارية， الديوان الترقية العقارية OPGI دفع كراء
                     السكن الاجتماعي</p>
             </a>
 
@@ -654,7 +660,7 @@
                     <img src="assets/images/energy.png" alt="سونلغاز" loading="lazy">
                 </div>
                 <h3 class="sector-title">الطاقة، سونلغاز للكهرباء والغاز</h3>
-                <p class="sector-desc">فاتورة الكهرباء والغاز， فاتورة الماء， الجزائرية للمياه， سيال， سونلغاز</p>
+                <p class="sector-desc">فاتورة الكهرباء والغاز， فاتورة الماء, الجزائرية للمياه， سيال， سونلغاز</p>
             </a>
 
             <!-- سونلغاز -->
@@ -694,7 +700,7 @@
                     <img src="assets/images/justis.png" alt="العدالة" loading="lazy">
                 </div>
                 <h3 class="sector-title">العدالة</h3>
-                <p class="sector-desc">صحيفة السوابق， الجنسية الجزائرية， النيابة الإلكترونية， رخص الاتصال بالمحبوسين</p>
+                <p class="sector-desc">النيابة الإليكترونية، السوابق العدلية، الجنسية، الإتصال بالمحبوسين</p>
             </a>
 
             <!-- الشؤون الخارجية -->
@@ -724,7 +730,7 @@
                     <img src="assets/images/commerc.png" alt="التجارة" loading="lazy">
                 </div>
                 <h3 class="sector-title">التجارة والجمارك الجزائرية</h3>
-                <p class="sector-desc">خدمات وزارة التجارة وترقية الصادرات， الجمارك الجزائرية， إتصال وإصغاء</p>
+                <p class="sector-desc">خدمات التجارة وترقية الصادرات， الجمارك الجزائرية， إتصال وإصغاء</p>
             </a>
 
             <!-- المقاول الذاتي -->
@@ -764,7 +770,7 @@
                     <img src="assets/images/ina-elections.png" alt="السلطة الوطنية المستقلة للانتخابات" loading="lazy">
                 </div>
                 <h3 class="sector-title">السلطة الوطنية المستقلة للانتخابات</h3>
-                <p class="sector-desc">بطاقة الناخب، تسجيل الناخبين، ترشيح المرشحين، نتائج الانتخابات، أين أنتخب</p>
+                <p class="sector-desc">بطاقة الناخب، تسجيل الناخبين، نتائج الانتخابات، أين أنتخب</p>
             </a>
 
             <!-- مركبتي" لفحص مطابقة المركبات -->
@@ -784,9 +790,7 @@
                     <img src="assets/images/dgsn.png" alt="الشؤون الخارجية" loading="lazy">
                 </div>
                 <h3 class="sector-title">الشرطة الجزائرية</h3>
-                <p class="sector-desc">الشرطة الجزائرية, الأمن الوطني, الخدمات الرقمية, التطبيق, https://www.dgsn.dz,
-                    خدمات عن بعد, تطبيقات الشرطة, الدعم الأمني, المعلومات الأمنية, تجربة المستخدم, جودة الخدمات, المجتمع
-                    الجزائرية">
+                <p class="sector-desc">شكاوي وتصاريح عن بعد, الخدمات الرقمية, تطبيقات، دليل هاتفي ">
                 </p>
             </a>
 
@@ -827,7 +831,7 @@
                     <img src="assets/images/bank.png" alt="finance" loading="lazy">
                 </div>
                 <h3 class="sector-title">بنوك عمومية وخاصة</h3>
-                <p class="sector-desc">خدمات البنوك العمومية والخاصة， حسابات البنكية， القروض， والاستثمارات</p>
+                <p class="sector-desc">خدمات البنوك العمومية والخاصة， حسابات البنكية， القروض</p>
             </a>
 
             <!-- خدمات أرقام الطوارئ -->
@@ -837,7 +841,7 @@
                     <img src="assets/images/emergency.png" alt="emergency" loading="lazy">
                 </div>
                 <h3 class="sector-title">أرقام الطوارئ</h3>
-                <p class="sector-desc">أرقام الطوارئ المهمة في الجزائر، الإسعاف، الشرطة， الدرك الوطني， خدمات عند بعد，
+                <p class="sector-desc">أرقام الطوارئ في الجزائر، الإسعاف، الشرطة， الدرك الوطني， خدمات عند بعد，
                     تطبيقات الطوارئ</p>
                 جمعيات</p>
             </a>
@@ -915,7 +919,8 @@
             <!-- Column 1: Brand -->
             <div class="footer-column">
                 <div class="footer-brand">
-                    <img src="https://flagcdn.com/w80/dz.png" alt="علم الجزائر">
+                    <img src="https://flagcdn.com/w80/dz.png" alt="علم الجزائر" width="80" height="60" loading="lazy"
+                        decoding="async">
                     <div>
                         <h3>البوابة الجزائرية</h3>
                         <span>للخدمات الرقمية</span>
