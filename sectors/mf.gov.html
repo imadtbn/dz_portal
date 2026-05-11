@@ -16,40 +16,129 @@
     <link rel="icon" href="../assets/images/icon.png" type="image/png">
     <link rel="icon" href="https://imadtbn.github.io/dz_portal/icons/icon.png" type="image/png">
 
+    <link rel="preload" as="image" href="../assets/images/finance.png" fetchpriority="high">
+
     <!-- تحسين الأمان -->
     <meta http-equiv="X-Content-Type-Options" content="nosniff">
     <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
 
-    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link rel="preload" as="style"
+        href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&display=swap"
+        onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style"
+        onload="this.onload=null;this.rel='stylesheet'">
 
     <link rel="stylesheet" href="../assets/css/style-sector.css">
 
     <!-- Structured Data -->
     <script type="application/ld+json">
-        {
-            "@context": "https://schema.org",
-            "@type": "WebPage",
-            "name": "المالية - الجباية | البوابة الجزائرية للخدمات الرقمية",
-            "description": "اكتشف خدمات المالية والجباية الرقمية في الجزائر. تسجيل في مختلف الصيغ المالية، دفع الرسوم والضرائب، قسيمة السيارات، قسيمية  بطاقة التعريف، رخصة السياقة، جواز السفر، عقود النقل والسفر ، الطابع الجبائي، الصفقات العمومية، الأملاك العقار وأكثر من ذلك بكثير، كل ذلك من راحة منزلك.",
-            "keywords": "المالية، الجباية، خدمات رقمية، الجزائر، دفع الضرائب، قسيمة السيارات، الطابع الجبائي، الصفقات العمومية، الأملاك العقارية، خدمات إلكترونية， الخدمات المالية الرقمية",
-            "author": {
-                "@type": "Organization",
-                "name": "البوابة الجزائرية للخدمات الرقمية",
-                "url": "https://imadtbn.github.io/dz_portal/"
-            },
-            "publisher": {
-                "@type": "Organization",
-                "name": "البوابة الجزائرية للخدمات الرقمية",
-                "logo": {
-                    "@type": "ImageObject",
-                    "url": "https://imadtbn.github.io/dz_portal/icons/icon.png"
-                }
-            }
-        }
-    </script>
+{
+  "@context": "https://schema.org",
+  "@graph": [
 
+    {
+      "@type": "WebSite",
+      "@id": "https://imadtbn.github.io/dz_portal/#website",
+      "url": "https://imadtbn.github.io/dz_portal/",
+      "name": "البوابة الجزائرية للخدمات الرقمية",
+      "alternateName": "DZ Portal",
+      "inLanguage": "ar"
+    },
+
+    {
+      "@type": "Organization",
+      "@id": "https://imadtbn.github.io/dz_portal/#organization",
+      "name": "البوابة الجزائرية للخدمات الرقمية",
+      "url": "https://imadtbn.github.io/dz_portal/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://imadtbn.github.io/dz_portal/icons/icon.png"
+      },
+       "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer support",
+        "areaServed": "DZ",
+        "availableLanguage": ["ar", "fr"],
+        "email": "tabaniimadeddine@gmail.com",
+        "telephone": "+213697743721"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "الجزائر",
+        "postalCode": "16000",
+        "addressCountry": "DZ"
+      },
+      "sameAs": [
+        "https://imadtbn.github.io/dz_portal/"
+      ]
+    },
+
+    {
+      "@type": "WebPage",
+      "@id": "https://imadtbn.github.io/dz_portal/sectors/mf.html#webpage",
+      "url": "https://imadtbn.github.io/dz_portal/sectors/mf.html",
+      "name": "وزارة المالية، ضرائب والجباية",
+      "description": "تقدم وزارة المالية، ضرائب والجباية مجموعة من الخدمات الرقمية التي تتيح للمواطنين الجزائريين الوصول إلى خدمات الوكالة بكل سهولة ويسر، دون الحاجة للتنقل إلى مكاتب الوكالة.",
+      "keywords": [
+        "وزارة المالية، ضرائب والجباية",
+        "خدمات رقمية",
+        "الجزائر",
+        "دفع الضرائب",
+        "قسيمة السيارات",
+        "الطابع الجبائي",
+        "الصفقات العمومية",
+        "الأملاك العقارية",
+        "خدمات إلكترونية",
+        "الخدمات المالية الرقمية",
+        "المالية الرقمية في الجزائر",
+        "الجباية الرقمية في الجزائر",
+        "خدمات وزارة المالية الرقمية",
+        "المالية والجباية الرقمية في الجزائر",
+      ],
+      "inLanguage": "ar",
+      "isPartOf": {
+        "@id": "https://imadtbn.github.io/dz_portal/#website"
+      },
+      "about": {
+        "@id": "https://imadtbn.github.io/dz_portal/#organization"
+      },
+      "publisher": {
+        "@id": "https://imadtbn.github.io/dz_portal/#organization"
+      },
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://imadtbn.github.io/dz_portal/assets/images/madr.png"
+      },
+      "breadcrumb": {
+        "@id": "https://imadtbn.github.io/dz_portal/sectors/mf.html#breadcrumb"
+      }
+    },
+
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://imadtbn.github.io/dz_portal/sectors/mf.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "الرئيسية",
+          "item": "https://imadtbn.github.io/dz_portal/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "وزارة المالية، ضرائب والجباية",
+          "item": "https://imadtbn.github.io/dz_portal/sectors/mf.html"
+        }
+      ]
+    }
+
+  ]
+}
+</script>
 
 </head>
 
@@ -721,7 +810,8 @@
             <!-- Column 1: Brand -->
             <div class="footer-column">
                 <div class="footer-brand">
-                    <img src="https://flagcdn.com/w80/dz.png" alt="علم الجزائر">
+                    <img src="https://flagcdn.com/w80/dz.png" alt="علم الجزائر" width="80" height="60" loading="lazy"
+                        decoding="async">
                     <div>
                         <h3>البوابة الجزائرية</h3>
                         <span>للخدمات الرقمية</span>
@@ -812,7 +902,7 @@
         </div>
     </footer>
 
-    <script src="../assets/js/sector.js"></script>
+    <script src="../assets/js/sector.js" defer></script>
 
 </body>
 
