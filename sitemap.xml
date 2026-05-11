@@ -1,101 +1,444 @@
+cat > /home/claude/sitemap.xml << 'XMLEOF'
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset 
+<urlset
   xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-                      http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+  xmlns:xhtml="http://www.w3.org/1999/xhtml"
+  xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
 
-  <!-- الصفحة الرئيسية -->
+  <!-- ======================================================== -->
+  <!--   Sitemap - البوابة الجزائرية للخدمات الرقمية           -->
+  <!--   Base URL : https://imadtbn.github.io/dz_portal/        -->
+  <!--   Generated : 2025-05-11                                  -->
+  <!-- ======================================================== -->
+
+  <!-- ══════════════ الصفحة الرئيسية ══════════════ -->
   <url>
     <loc>https://imadtbn.github.io/dz_portal/</loc>
-    <lastmod>2025-10-20</lastmod>
-    <changefreq>daily</changefreq>
+    <lastmod>2025-05-11</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://imadtbn.github.io/dz_portal/"/>
+    <image:image>
+      <image:loc>https://imadtbn.github.io/dz_portal/icons/icon.png</image:loc>
+      <image:title>البوابة الجزائرية للخدمات الرقمية</image:title>
+    </image:image>
   </url>
 
-  <!-- الخدمات الإلكترونية والمالية -->
-  <url><loc>https://imadtbn.github.io/dz_portal/#toggle-payment</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://imadtbn.github.io/dz_portal/#toggle-recharge</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://imadtbn.github.io/dz_portal/#toggle-post</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://imadtbn.github.io/dz_portal/#toggle-telecom</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://imadtbn.github.io/dz_portal/#toggle-banks</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://imadtbn.github.io/dz_portal/#toggle-insurance</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-
-  <!-- التعليم والتكوين -->
-  <url><loc>https://imadtbn.github.io/dz_portal/#toggle-education</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://imadtbn.github.io/dz_portal/#toggle-university</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://imadtbn.github.io/dz_portal/#toggle-vocational</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-
-  <!-- السكن والعقار -->
-  <url><loc>https://imadtbn.github.io/dz_portal/#toggle-aadl3</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://imadtbn.github.io/dz_portal/#toggle-realestate</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://imadtbn.github.io/dz_portal/#toggle-investment</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-
-  <!-- الإدارة والجهات الحكومية -->
-  <url><loc>https://imadtbn.github.io/dz_portal/#toggle-admin</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://imadtbn.github.io/dz_portal/#toggle-tax</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://imadtbn.github.io/dz_portal/#toggle-tenders</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://imadtbn.github.io/dz_portal/#toggle-justice</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://imadtbn.github.io/dz_portal/#toggle-electionsdz</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-
-  <!-- الشؤون الخارجية والطاقة -->
-  <url><loc>https://imadtbn.github.io/dz_portal/#toggle-foreign</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://imadtbn.github.io/dz_portal/#toggle-energy</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-
-  <!-- الخدمات الاجتماعية والعمالية -->
-  <url><loc>https://imadtbn.github.io/dz_portal/#social-security</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://imadtbn.github.io/dz_portal/#toggle-employment</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://imadtbn.github.io/dz_portal/#toggle-health</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-
-  <!-- النقل والمواصلات -->
-  <url><loc>https://imadtbn.github.io/dz_portal/#toggle-transport</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-
-  <!-- التجارة والخدمات -->
-  <url><loc>https://imadtbn.github.io/dz_portal/#toggle-commerce</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://imadtbn.github.io/dz_portal/#toggle-customs</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://imadtbn.github.io/dz_portal/#toggle-autoentrepreneur</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://imadtbn.github.io/dz_portal/#toggle-onpo</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
-
-  <!-- الأمن والطوارئ -->
-  <url><loc>https://imadtbn.github.io/dz_portal/#toggle-emergency</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-
-  <!-- أقسام التواصل والمحتوى -->
-  <url><loc>https://imadtbn.github.io/dz_portal/#toggle-contact</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
-  <url><loc>https://imadtbn.github.io/dz_portal/#toggle-comments</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
-
-</urlset>    <priority>0.8</priority>
-  </url>
+  <!-- ══════════════ الصفحات العامة ══════════════ -->
   <url>
-    <loc>https://imadtbn.github.io/dz_portal/autoentrepreneur.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://imadtbn.github.io/dz_portal/banks.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://imadtbn.github.io/dz_portal/insurance.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://imadtbn.github.io/dz_portal/onpo.html</loc>
-    <changefreq>weekly</changefreq>
+    <loc>https://imadtbn.github.io/dz_portal/pages/about.html</loc>
+    <lastmod>2025-05-11</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
 
-  <!-- صفحات الاتصال والملاحظات -->
   <url>
-    <loc>https://imadtbn.github.io/dz_portal/contact.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://imadtbn.github.io/dz_portal/comments.html</loc>
+    <loc>https://imadtbn.github.io/dz_portal/pages/contact.html</loc>
+    <lastmod>2025-05-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
 
+  <url>
+    <loc>https://imadtbn.github.io/dz_portal/pages/privacy.html</loc>
+    <lastmod>2025-05-11</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
+  </url>
+
+  <url>
+    <loc>https://imadtbn.github.io/dz_portal/pages/terms.html</loc>
+    <lastmod>2025-05-11</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
+  </url>
+
+  <!-- ══════════════ قطاع التعليم والتكوين ══════════════ -->
+  <url>
+    <loc>https://imadtbn.github.io/dz_portal/sectors/education.html</loc>
+    <lastmod>2025-05-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://imadtbn.github.io/dz_portal/assets/images/education.png</image:loc>
+      <image:title>التربية والتعليم</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://imadtbn.github.io/dz_portal/sectors/progres.mesrs.html</loc>
+    <lastmod>2025-05-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://imadtbn.github.io/dz_portal/assets/images/ESI.png</image:loc>
+      <image:title>التعليم العالي والخدمات الجامعية</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://imadtbn.github.io/dz_portal/sectors/dzexam1.html</loc>
+    <lastmod>2025-05-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://imadtbn.github.io/dz_portal/assets/images/dzexam.png</image:loc>
+      <image:title>dzexam1 - بنك الفروض والاختبارات</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://imadtbn.github.io/dz_portal/sectors/dzexams.html</loc>
+    <lastmod>2025-05-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://imadtbn.github.io/dz_portal/assets/images/dzexams.png</image:loc>
+      <image:title>dzexams - بنك الفروض والاختبارات</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://imadtbn.github.io/dz_portal/sectors/mfp.gov.html</loc>
+    <lastmod>2025-05-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://imadtbn.github.io/dz_portal/assets/images/formation.png</image:loc>
+      <image:title>التكوين والتعليم المهنيين</image:title>
+    </image:image>
+  </url>
+
+  <!-- ══════════════ قطاع الاتصالات والبريد ══════════════ -->
+  <url>
+    <loc>https://imadtbn.github.io/dz_portal/sectors/poste.html</loc>
+    <lastmod>2025-05-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://imadtbn.github.io/dz_portal/assets/images/poste.png</image:loc>
+      <image:title>بريد الجزائر</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://imadtbn.github.io/dz_portal/sectors/algerietelecom.html</loc>
+    <lastmod>2025-05-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://imadtbn.github.io/dz_portal/assets/images/algerietelecom.png</image:loc>
+      <image:title>اتصالات الجزائر</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://imadtbn.github.io/dz_portal/sectors/telephon.html</loc>
+    <lastmod>2025-05-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://imadtbn.github.io/dz_portal/assets/images/service telephon.png</image:loc>
+      <image:title>خدمات الهاتف النقال</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://imadtbn.github.io/dz_portal/sectors/arpce.html</loc>
+    <lastmod>2025-05-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://imadtbn.github.io/dz_portal/assets/images/arpce.png</image:loc>
+      <image:title>سلطة ضبط البريد والاتصالات الإلكترونية ARPCE</image:title>
+    </image:image>
+  </url>
+
+  <!-- ══════════════ قطاع الداخلية والعدالة والشرطة ══════════════ -->
+  <url>
+    <loc>https://imadtbn.github.io/dz_portal/sectors/interieur.html</loc>
+    <lastmod>2025-05-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://imadtbn.github.io/dz_portal/assets/images/inteurier.png</image:loc>
+      <image:title>الداخلية والجماعات المحلية</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://imadtbn.github.io/dz_portal/sectors/mjustice.html</loc>
+    <lastmod>2025-05-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://imadtbn.github.io/dz_portal/assets/images/justis.png</image:loc>
+      <image:title>العدالة</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://imadtbn.github.io/dz_portal/sectors/dgsn.html</loc>
+    <lastmod>2025-05-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://imadtbn.github.io/dz_portal/assets/images/dgsn.png</image:loc>
+      <image:title>الشرطة الجزائرية</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://imadtbn.github.io/dz_portal/sectors/ina-elections.html</loc>
+    <lastmod>2025-05-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://imadtbn.github.io/dz_portal/assets/images/ina-elections.png</image:loc>
+      <image:title>السلطة الوطنية المستقلة للانتخابات</image:title>
+    </image:image>
+  </url>
+
+  <!-- ══════════════ قطاع السكن والعمران ══════════════ -->
+  <url>
+    <loc>https://imadtbn.github.io/dz_portal/sectors/mhuv.gov.html</loc>
+    <lastmod>2025-05-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://imadtbn.github.io/dz_portal/assets/images/sakan.png</image:loc>
+      <image:title>السكن والعمران</image:title>
+    </image:image>
+  </url>
+
+  <!-- ══════════════ قطاع التأمين والضمان الاجتماعي ══════════════ -->
+  <url>
+    <loc>https://imadtbn.github.io/dz_portal/sectors/mtess.html</loc>
+    <lastmod>2025-05-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://imadtbn.github.io/dz_portal/assets/images/travail.png</image:loc>
+      <image:title>التأمينات والضمان الاجتماعي</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://imadtbn.github.io/dz_portal/sectors/assurance.html</loc>
+    <lastmod>2025-05-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://imadtbn.github.io/dz_portal/assets/images/asserance.jpg</image:loc>
+      <image:title>التأمين على الممتلكات</image:title>
+    </image:image>
+  </url>
+
+  <!-- ══════════════ قطاع المالية والاقتصاد ══════════════ -->
+  <url>
+    <loc>https://imadtbn.github.io/dz_portal/sectors/mf.gov.html</loc>
+    <lastmod>2025-05-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://imadtbn.github.io/dz_portal/assets/images/finance.png</image:loc>
+      <image:title>المالية والجباية</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://imadtbn.github.io/dz_portal/sectors/bank.html</loc>
+    <lastmod>2025-05-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://imadtbn.github.io/dz_portal/assets/images/bank.png</image:loc>
+      <image:title>البنوك العمومية والخاصة</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://imadtbn.github.io/dz_portal/sectors/commerce.html</loc>
+    <lastmod>2025-05-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://imadtbn.github.io/dz_portal/assets/images/commerc.png</image:loc>
+      <image:title>التجارة والجمارك الجزائرية</image:title>
+    </image:image>
+  </url>
+
+  <!-- ══════════════ قطاع الطاقة والمياه ══════════════ -->
+  <url>
+    <loc>https://imadtbn.github.io/dz_portal/sectors/facteur.html</loc>
+    <lastmod>2025-05-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://imadtbn.github.io/dz_portal/assets/images/energy.png</image:loc>
+      <image:title>الطاقة وتخليص فواتير الكهرباء والغاز والمياه</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://imadtbn.github.io/dz_portal/sectors/sonalgaz.html</loc>
+    <lastmod>2025-05-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://imadtbn.github.io/dz_portal/assets/images/sonelgaz.png</image:loc>
+      <image:title>سونلغاز للكهرباء والغاز</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://imadtbn.github.io/dz_portal/sectors/ade.html</loc>
+    <lastmod>2025-05-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://imadtbn.github.io/dz_portal/assets/images/ade.png</image:loc>
+      <image:title>الجزائرية للمياه</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://imadtbn.github.io/dz_portal/sectors/seaal.html</loc>
+    <lastmod>2025-05-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://imadtbn.github.io/dz_portal/assets/images/seaal.webp</image:loc>
+      <image:title>سيال للمياه والتطهير</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://imadtbn.github.io/dz_portal/sectors/naftal.html</loc>
+    <lastmod>2025-05-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://imadtbn.github.io/dz_portal/assets/images/naftal.webp</image:loc>
+      <image:title>نفطال للمواد البترولية</image:title>
+    </image:image>
+  </url>
+
+  <!-- ══════════════ قطاع الصحة ══════════════ -->
+  <url>
+    <loc>https://imadtbn.github.io/dz_portal/sectors/sante.html</loc>
+    <lastmod>2025-05-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://imadtbn.github.io/dz_portal/assets/images/sante.jpg</image:loc>
+      <image:title>الصحة</image:title>
+    </image:image>
+  </url>
+
+  <!-- ══════════════ قطاع النقل والمواصلات ══════════════ -->
+  <url>
+    <loc>https://imadtbn.github.io/dz_portal/sectors/transport.html</loc>
+    <lastmod>2025-05-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://imadtbn.github.io/dz_portal/assets/images/transport.svg</image:loc>
+      <image:title>النقل والمواصلات</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://imadtbn.github.io/dz_portal/sectors/markabatidz.html</loc>
+    <lastmod>2025-05-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <image:image>
+      <image:loc>https://imadtbn.github.io/dz_portal/assets/images/markabaty.jpg</image:loc>
+      <image:title>مركبتي - فحص مطابقة المركبات</image:title>
+    </image:image>
+  </url>
+
+  <!-- ══════════════ قطاع الشؤون الخارجية والدينية ══════════════ -->
+  <url>
+    <loc>https://imadtbn.github.io/dz_portal/sectors/mfa.html</loc>
+    <lastmod>2025-05-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://imadtbn.github.io/dz_portal/assets/images/EXTERIEUR.webp</image:loc>
+      <image:title>الشؤون الخارجية والجالية الجزائرية</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://imadtbn.github.io/dz_portal/sectors/onpo.html</loc>
+    <lastmod>2025-05-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <image:image>
+      <image:loc>https://imadtbn.github.io/dz_portal/assets/images/onpo.png</image:loc>
+      <image:title>الديوان الوطني للحج والعمرة</image:title>
+    </image:image>
+  </url>
+
+  <!-- ══════════════ قطاع الفلاحة والاستثمار والتشغيل ══════════════ -->
+  <url>
+    <loc>https://imadtbn.github.io/dz_portal/sectors/madr.html</loc>
+    <lastmod>2025-05-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://imadtbn.github.io/dz_portal/assets/images/madr.png</image:loc>
+      <image:title>وزارة الفلاحة والتنمية الريفية والصيد البحري</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://imadtbn.github.io/dz_portal/sectors/aapi.html</loc>
+    <lastmod>2025-05-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://imadtbn.github.io/dz_portal/assets/images/aapi.png</image:loc>
+      <image:title>الوكالة الوطنية لترقية الاستثمار</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://imadtbn.github.io/dz_portal/sectors/anae.html</loc>
+    <lastmod>2025-05-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <image:image>
+      <image:loc>https://imadtbn.github.io/dz_portal/assets/images/anae.jpg</image:loc>
+      <image:title>المقاول الذاتي</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://imadtbn.github.io/dz_portal/sectors/anem.html</loc>
+    <lastmod>2025-05-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://imadtbn.github.io/dz_portal/assets/images/anem.png</image:loc>
+      <image:title>الوكالة الوطنية للتشغيل</image:title>
+    </image:image>
+  </url>
+
+  <!-- ══════════════ الطوارئ ══════════════ -->
+  <url>
+    <loc>https://imadtbn.github.io/dz_portal/sectors/emergency.html</loc>
+    <lastmod>2025-05-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://imadtbn.github.io/dz_portal/assets/images/emergency.png</image:loc>
+      <image:title>أرقام الطوارئ في الجزائر</image:title>
+    </image:image>
+  </url>
+
 </urlset>
+XMLEOF
+echo "Done"
