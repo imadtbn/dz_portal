@@ -15,14 +15,21 @@
     <link rel="icon" href="../assets/images/icon.png" type="image/png">
     <link rel="icon" href="https://imadtbn.github.io/dz_portal/icons/icon.png" type="image/png">
 
+    <link rel="preload" as="image" href="../assets/images/algerietelecom.png" fetchpriority="high">
+
     <!-- تحسين الأمان -->
     <meta http-equiv="X-Content-Type-Options" content="nosniff">
     <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
 
 
-    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link rel="preload" as="style"
+        href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&display=swap"
+        onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style"
+        onload="this.onload=null;this.rel='stylesheet'">
 
     <link rel="stylesheet" href="../assets/css/style-sector.css">
 
@@ -50,6 +57,20 @@
       "logo": {
         "@type": "ImageObject",
         "url": "https://imadtbn.github.io/dz_portal/icons/icon.png"
+      },
+              "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer support",
+        "areaServed": "DZ",
+        "availableLanguage": ["ar", "fr"],
+        "email": "tabaniimadeddine@gmail.com",
+        "telephone": "+213697743721"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "الجزائر",
+        "postalCode": "16000",
+        "addressCountry": "DZ"
       },
       "sameAs": [
         "https://imadtbn.github.io/dz_portal/"
@@ -117,372 +138,326 @@
 </head>
 
 <body>
-    < !-- Header -->
-        <header class="header">
-            <div class="header-content">
-                <div class="logo-section"><button class="back-btn" onclick="history.back()"
-                        title="العودة للصفحة الرئيسية"><i class="fas fa-arrow-right"></i></button>
-                    <div>
-                        <h1>البوابة الجزائرية</h1><span>للخدمات الرقمية</span>
+
+    <!-- Header -->
+
+    <header class="header">
+        <div class="header-content">
+            <div class="logo-section"><button class="back-btn" onclick="history.back()"
+                    title="العودة للصفحة الرئيسية"><i class="fas fa-arrow-right"></i></button>
+                <div>
+                    <h1>البوابة الجزائرية</h1><span>للخدمات الرقمية</span>
+                </div>
+            </div>
+            <div class="header-actions"><button class="search-trigger" title="بحث"><i
+                        class="fas fa-search"></i></button></div>
+        </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <nav class="breadcrumb">
+        <div class="breadcrumb-content"><a href="../index.html"><i class="fas fa-home"></i>الرئيسية</a><i
+                class="fas fa-chevron-left"></i><span class="current">إتصالات الجزائر</span></div>
+    </nav>
+    <!-- Hero -->
+    <section class="sector-hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h2><i class="fas fa-wifi"></i>إتصالات الجزائر - إكتشف خدمات الإلكترونية </h2>
+                <p>تقدم إتصالات الجزائر مجموعة من الخدمات الرقمية عن بعد، تتيح للمواطنين إنجاز معاملاتهم
+                    المالية إلكترونياً، تضمن الإستجابة الفورية والأمان والسرعة في إنجاز المعاملات. </p>
+                <div class="hero-stats">
+                    <div class="hero-stat">
+                        <div class="hero-stat-number">16</div>
+                        <div class="hero-stat-label">خدمة رقمية</div>
+                    </div>
+                    <div class="hero-stat">
+                        <div class="hero-stat-number">10/10</div>
+                        <div class="hero-stat-label">إستجابة فورية</div>
+                    </div>
+                    <div class="hero-stat">
+                        <div class="hero-stat-number">24/7</div>
+                        <div class="hero-stat-label">خدمة متوفرة</div>
                     </div>
                 </div>
-                <div class="header-actions"><button class="search-trigger" title="بحث"><i
-                            class="fas fa-search"></i></button></div>
             </div>
-        </header>
-        < !-- Breadcrumb -->
-            <nav class="breadcrumb">
-                <div class="breadcrumb-content"><a href="../index.html"><i class="fas fa-home"></i>الرئيسية</a><i
-                        class="fas fa-chevron-left"></i><span class="current">إتصالات الجزائر</span></div>
-            </nav>
-            < !-- Hero -->
-                <section class="sector-hero">
-                    <div class="hero-content">
-                        <div class="hero-text">
-                            <h2><i class="fas fa-wifi"></i>إتصالات الجزائر - إكتشف خدمات الإلكترونية </h2>
-                            <p>تقدم إتصالات الجزائر مجموعة من الخدمات الرقمية عن بعد، تتيح للمواطنين إنجاز معاملاتهم
-                                المالية إلكترونياً، تضمن الإستجابة الفورية والأمان والسرعة في إنجاز المعاملات. </p>
-                            <div class="hero-stats">
-                                <div class="hero-stat">
-                                    <div class="hero-stat-number">16</div>
-                                    <div class="hero-stat-label">خدمة رقمية</div>
-                                </div>
-                                <div class="hero-stat">
-                                    <div class="hero-stat-number">10/10</div>
-                                    <div class="hero-stat-label">إستجابة فورية</div>
-                                </div>
-                                <div class="hero-stat">
-                                    <div class="hero-stat-number">24/7</div>
-                                    <div class="hero-stat-label">خدمة متوفرة</div>
-                                </div>
-                            </div>
+            <div class="hero-visual"><img src="../assets/images/algerietelecom.png" alt="إتصالات الجزائر"
+                    class="hero-icon" loading="lazy"></div>
+        </div>
+    </section>
+    <!-- Quick Links -->
+    <div class="quick-links">
+        <div class="quick-links-content"><a href="#cards" class="quick-link active"><i
+                    class="fas fa-credit-card"></i><span>بطاقات التعبئة</span></a><a href="#epay" class="quick-link"><i
+                    class="fas fa-wallet"></i><span>دفع إليكتروني</span></a><a href="#personel" class="quick-link"><i
+                    class="fas fa-user-lock"></i><span>فضاء
+                    الزبائن</span></a><a href="#app-offre" class="quick-link"><i class="fas fa-store"></i><span>عروض
+                    وتطبيقات</span></a></div>
+    </div>
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-card">
+                <h3 class="sidebar-title">التنقل السريع</h3>
+                <ul class="sidebar-menu"><a href="#cards" class="quick-link active"><i
+                            class="fas fa-credit-card"></i><span>بطاقات التعبئة</span></a><a href="#epay"
+                        class="quick-link"><i class="fas fa-wallet"></i><span>دفع
+                            إليكتروني</span></a><a href="#personel" class="quick-link"><i
+                            class="fas fa-user-lock"></i><span>فضاء الزبائن</span></a><a href="#app-offre"
+                        class="quick-link"><i class="fas fa-store"></i><span>عروض وتطبيقات</span></a></ul>
+            </div>
+            <div class="sidebar-card">
+                <h3 class="sidebar-title">روابط مهمة</h3>
+                <ul class="sidebar-menu">
+                    <li><a href="https://www.algerietelecom.dz/ar" target="_blank"><i class="fas fa-globe"></i>الموقع
+                            الرسمي لإتصالات الجزائر </a>
+                    </li>
+                    <li><a href="tel:12" target="_blank"><i class="fas fa-phone"></i>الاتصال
+                            بفضاء خدمة الزبائن </a></li>
+                </ul>
+            </div>
+        </aside>
+        <!-- Content -->
+        <main class="content-area">
+            <!-- Exam Banner -->
+            <div class="exam-banner">
+                <div class="exam-banner-icon"><i class="fas fa-exchange-alt"></i></div>
+                <div class="exam-banner-content">
+                    <h3>طلب التحويل إلى خدمة الألياف البصرية</h3>
+                    <p>الطلبات متوفرة - لا تفوت الفرصة</p>
+                </div><a href="https://www.algerietelecom.dz/ar/page/migration-p232" target="_blank"
+                    class="exam-banner-btn">حولها الآن <i class="fas fa-arrow-left"></i></a>
+            </div>
+            <!-- cards Section -->
+            <section class="section-card" id="cards">
+                <div class="section-header-card">
+                    <h3 class="section-title"><i class="fas fa-chalkboard-teacher"></i>بطاقات التعبئة
+                    </h3><span class="service-count">04 خدمات</span>
+                </div>
+                <div class="services-grid"><a
+                        href="https://paiement.algerietelecom.dz/AR/index.php?p=voucher_internet&produit=in"
+                        target="_blank" class="service-item">
+                        <div class="service-icon"><i class="fas fa-wifi"></i></div>
+                        <div class="service-info">
+                            <h4>تعبئة الانترنت</h4>
+                            <p>تعبئة الانترنت</p>
+                        </div><i class="fas fa-chevron-left service-arrow"></i>
+                    </a><a href="https://paiement.algerietelecom.dz/AR/index.php?p=voucher_internet&produit=4g"
+                        target="_blank" class="service-item">
+                        <div class="service-icon"><i class="fas fa-signal"></i>
                         </div>
-                        <div class="hero-visual"><img src="../assets/images/algerietelecom.png" alt="إتصالات الجزائر"
-                                class="hero-icon" loading="lazy"></div>
-                    </div>
-                </section>
-                < !-- Quick Links -->
-                    <div class="quick-links">
-                        <div class="quick-links-content"><a href="#cards" class="quick-link active"><i
-                                    class="fas fa-credit-card"></i><span>بطاقات التعبئة</span></a><a href="#epay"
-                                class="quick-link"><i class="fas fa-wallet"></i><span>دفع إليكتروني</span></a><a
-                                href="#personel" class="quick-link"><i class="fas fa-user-lock"></i><span>فضاء
-                                    الزبائن</span></a><a href="#app-offre" class="quick-link"><i
-                                    class="fas fa-store"></i><span>عروض وتطبيقات</span></a></div>
-                    </div>
-                    < !-- Main Content -->
-                        <div class="main-content">
-                            < !-- Sidebar -->
-                                <aside class="sidebar">
-                                    <div class="sidebar-card">
-                                        <h3 class="sidebar-title">التنقل السريع</h3>
-                                        <ul class="sidebar-menu"><a href="#cards" class="quick-link active"><i
-                                                    class="fas fa-credit-card"></i><span>بطاقات التعبئة</span></a><a
-                                                href="#epay" class="quick-link"><i class="fas fa-wallet"></i><span>دفع
-                                                    إليكتروني</span></a><a href="#personel" class="quick-link"><i
-                                                    class="fas fa-user-lock"></i><span>فضاء الزبائن</span></a><a
-                                                href="#app-offre" class="quick-link"><i
-                                                    class="fas fa-store"></i><span>عروض وتطبيقات</span></a></ul>
-                                    </div>
-                                    <div class="sidebar-card">
-                                        <h3 class="sidebar-title">روابط مهمة</h3>
-                                        <ul class="sidebar-menu">
-                                            <li><a href="https://www.algerietelecom.dz/ar" target="_blank"><i
-                                                        class="fas fa-globe"></i>الموقع الرسمي لإتصالات الجزائر </a>
-                                            </li>
-                                            <li><a href="tel:12" target="_blank"><i class="fas fa-phone"></i>الاتصال
-                                                    بفضاء خدمة الزبائن </a></li>
-                                        </ul>
-                                    </div>
-                                </aside>
-                                < !-- Content -->
-                                    <main class="content-area">
-                                        < !-- Exam Banner -->
-                                            <div class="exam-banner">
-                                                <div class="exam-banner-icon"><i class="fas fa-exchange-alt"></i></div>
-                                                <div class="exam-banner-content">
-                                                    <h3>طلب التحويل إلى خدمة الألياف البصرية</h3>
-                                                    <p>الطلبات متوفرة - لا تفوت الفرصة</p>
-                                                </div><a href="https://www.algerietelecom.dz/ar/page/migration-p232"
-                                                    target="_blank" class="exam-banner-btn">حولها الآن <i
-                                                        class="fas fa-arrow-left"></i></a>
-                                            </div>
-                                            < !-- cards Section -->
-                                                <section class="section-card" id="cards">
-                                                    <div class="section-header-card">
-                                                        <h3 class="section-title"><i
-                                                                class="fas fa-chalkboard-teacher"></i>بطاقات التعبئة
-                                                        </h3><span class="service-count">04 خدمات</span>
-                                                    </div>
-                                                    <div class="services-grid"><a
-                                                            href="https://paiement.algerietelecom.dz/AR/index.php?p=voucher_internet&produit=in"
-                                                            target="_blank" class="service-item">
-                                                            <div class="service-icon"><i class="fas fa-wifi"></i></div>
-                                                            <div class="service-info">
-                                                                <h4>تعبئة الانترنت</h4>
-                                                                <p>تعبئة الانترنت</p>
-                                                            </div><i class="fas fa-chevron-left service-arrow"></i>
-                                                        </a><a
-                                                            href="https://paiement.algerietelecom.dz/AR/index.php?p=voucher_internet&produit=4g"
-                                                            target="_blank" class="service-item">
-                                                            <div class="service-icon"><i class="fas fa-signal"></i>
-                                                            </div>
-                                                            <div class="service-info">
-                                                                <h4>تعبئة IDOOM 4G LTE </h4>
-                                                                <p>تعبئة IDOOM 4G LTE</p>
-                                                            </div><i class="fas fa-chevron-left service-arrow"></i>
-                                                        </a></div>
-                                                </section>
-                                                < !-- epay Section -->
-                                                    <section class="section-card" id="epay">
-                                                        <div class="section-header-card">
-                                                            <h3 class="section-title"><i
-                                                                    class="fas fa-building"></i>الدفع الإلكتروني </h3>
-                                                            <span class="service-count">4 خدمات</span>
-                                                        </div>
-                                                        <div class="services-grid"><a
-                                                                href="https://paiement.algerietelecom.dz/AR/index.php?p=facture_paiement"
-                                                                target="" class="service-item">
-                                                                <div class="service-icon"><i
-                                                                        class="fas fa-file-invoice"></i></div>
-                                                                <div class="service-info">
-                                                                    <h4>فاتورة الهاتف الثابت</h4>
-                                                                    <p>دفع فاتورة الهاتف الثابت</p>
-                                                                </div><i class="fas fa-chevron-left service-arrow"></i>
-                                                            </a><a
-                                                                href="https://paiement.algerietelecom.dz/AR/index.php?p=dette_paiement"
-                                                                target="" class="service-item">
-                                                                <div class="service-icon"><i
-                                                                        class="fas fa-file-invoice-dollar"></i></div>
-                                                                <div class="service-info">
-                                                                    <h4>مستحقات الهاتف الثابت</h4>
-                                                                    <p>دفع مستحقات الهاتف الثابت</p>
-                                                                </div><i class="fas fa-chevron-left service-arrow"></i>
-                                                            </a><a
-                                                                href="https://paiement.algerietelecom.dz/AR/index.php?p=internet_recharge&pr=in"
-                                                                target="" class="service-item">
-                                                                <div class="service-icon"><i class="fas fa-globe"></i>
-                                                                </div>
-                                                                <div class="service-info">
-                                                                    <h4>تعبئة الانترنت</h4>
-                                                                    <p>تعبئة الانترنت</p>
-                                                                </div><i class="fas fa-chevron-left service-arrow"></i>
-                                                            </a><a
-                                                                href="https://paiement.algerietelecom.dz/AR/index.php?p=internet_recharge&pr=4g"
-                                                                target="" class="service-item">
-                                                                <div class="service-icon"><i
-                                                                        class="fas fa-broadcast-tower"></i></div>
-                                                                <div class="service-info">
-                                                                    <h4>تعبئة IDOOM 4G LTE</h4>
-                                                                    <p>تعبئة حساب IDOOM 4G LTE</p>
-                                                                </div><i class="fas fa-chevron-left service-arrow"></i>
-                                                            </a></div>
-                                                    </section>
-                                                    < !-- personal Section -->
-                                                        <section class="section-card" id="personel">
-                                                            <div class="section-header-card">
-                                                                <h3 class="section-title"><i
-                                                                        class="fas fa-building"></i>فضاء الزبائن </h3>
-                                                                <span class="service-count">06 خدمات</span>
-                                                            </div>
-                                                            <div class="services-grid"><a href="https://client.at.dz/ar"
-                                                                    target="_blank" class="service-item">
-                                                                    <div class="service-icon"><i
-                                                                            class="fas fa-user-lock"></i></div>
-                                                                    <div class="service-info">
-                                                                        <h4>فضاء الزبون</h4>
-                                                                        <p>فضاء الزبون - إنشاء حساب / تسجيل الدخول</p>
-                                                                    </div><i
-                                                                        class="fas fa-chevron-left service-arrow"></i>
-                                                                </a><a
-                                                                    href="https://www.algerietelecom.dz/ar/demande-na"
-                                                                    target="_blank" class="service-item">
-                                                                    <div class="service-icon"><i
-                                                                            class="fas fa-file-signature"></i></div>
-                                                                    <div class="service-info">
-                                                                        <h4>طلب إلكتروني</h4>
-                                                                        <p>تقديم طلب إلكتروني</p>
-                                                                    </div><i
-                                                                        class="fas fa-chevron-left service-arrow"></i>
-                                                                </a><a
-                                                                    href="https://www.algerietelecom.dz/ar/derangements"
-                                                                    target="" class="service-item">
-                                                                    <div class="service-icon"><i
-                                                                            class="fas fa-tools"></i></div>
-                                                                    <div class="service-info">
-                                                                        <h4>الإبلاغ عن عطب</h4>
-                                                                        <p>الإبلاغ عن عطب</p>
-                                                                    </div><i
-                                                                        class="fas fa-chevron-left service-arrow"></i>
-                                                                </a><a
-                                                                    href="https://www.algerietelecom.dz/ar/page/migration-p232"
-                                                                    target="" class="service-item">
-                                                                    <div class="service-icon"><i
-                                                                            class="fas fa-exchange-alt"></i></div>
-                                                                    <div class="service-info">
-                                                                        <h4>طلب التحويل إلى خدمة الألياف البصرية</h4>
-                                                                        <p>طلب التحويل / متابعة إلى خدمة الألياف البصرية
-                                                                        </p>
-                                                                    </div><i
-                                                                        class="fas fa-chevron-left service-arrow"></i>
-                                                                </a><a
-                                                                    href="https://www.algerietelecom.dz/ar/page/trouver-mon-agence-p256"
-                                                                    target="_blank" class="service-item">
-                                                                    <div class="service-icon"><i
-                                                                            class="fas fa-map-marker-alt"></i></div>
-                                                                    <div class="service-info">
-                                                                        <h4>إبحث عن وكالة </h4>
-                                                                        <p>البحث عن وكالتي - إتصالات الجزائر</p>
-                                                                    </div><i
-                                                                        class="fas fa-chevron-left service-arrow"></i>
-                                                                </a><a
-                                                                    href="https://www.algerietelecom.dz/ar/page/trouver-votre-numero-de-fixe-p268"
-                                                                    target="_blank" class="service-item">
-                                                                    <div class="service-icon"><i
-                                                                            class="fas fa-phone-square-alt"></i></div>
-                                                                    <div class="service-info">
-                                                                        <h4>إكتشف رقم هاتفك الثابت FTTH </h4>
-                                                                        <p>إكتشف رقم هاتفك الثابت FTTH</p>
-                                                                    </div><i
-                                                                        class="fas fa-chevron-left service-arrow"></i>
-                                                                </a></div>
-                                                        </section>
-                                                        < !-- app-offre Section -->
-                                                            <section class="section-card" id="app-offre">
-                                                                <div class="section-header-card">
-                                                                    <h3 class="section-title"><i
-                                                                            class="fas fa-store"></i>عروض وتطبيقات </h3>
-                                                                    <span class="service-count">06 خدمات</span>
-                                                                </div>
-                                                                <div class="services-grid"><a
-                                                                        href="https://www.algerietelecom.dz/ar/particuliers/week-end-boost-prod227"
-                                                                        target="" class="service-item">
-                                                                        <div class="service-icon"><i
-                                                                                class="fas fa-bolt"></i></div>
-                                                                        <div class="service-info">
-                                                                            <h4>WEEK-END Boost</h4>
-                                                                            <p>WEEK-END Boost</p>
-                                                                        </div><i
-                                                                            class="fas fa-chevron-left service-arrow"></i>
-                                                                    </a><a
-                                                                        href="https://www.algerietelecom.dz/ar/particuliers/week-end-boost-prod227"
-                                                                        target="" class="service-item">
-                                                                        <div class="service-icon"><i
-                                                                                class="fas fa-store"></i></div>
-                                                                        <div class="service-info">
-                                                                            <h4>IDOOM Markit </h4>
-                                                                            <p>تسويق IDOOM Markit </p>
-                                                                        </div><i
-                                                                            class="fas fa-chevron-left service-arrow"></i>
-                                                                    </a><a
-                                                                        href="https://play.google.com/store/apps/details?id=dz.algerietelecom.rd.e_paiement&hl=ar"
-                                                                        target="" class="service-item">
-                                                                        <div class="service-icon"><i
-                                                                                class="fas fa-mobile-alt"></i></div>
-                                                                        <div class="service-info">
-                                                                            <h4>تطبيق E-paiement</h4>
-                                                                            <p>تطبيق E-paiement لإتصالات الجزائر </p>
-                                                                        </div><i
-                                                                            class="fas fa-chevron-left service-arrow"></i>
-                                                                    </a><a
-                                                                        href="https://play.google.com/store/apps/details?id=com.at.dz&hl=ar"
-                                                                        target="" class="service-item">
-                                                                        <div class="service-icon"><i
-                                                                                class="fas fa-mobile-alt"></i></div>
-                                                                        <div class="service-info">
-                                                                            <h4>تطبيق My IDOOM</h4>
-                                                                            <p>تطبيق My IDOOM لإتصالات الجزائر </p>
-                                                                        </div><i
-                                                                            class="fas fa-chevron-left service-arrow"></i>
-                                                                    </a><a
-                                                                        href="https://www.moalim-dz.net/moalim_v2/login/index.php"
-                                                                        target="" class="service-item">
-                                                                        <div class="service-icon"><i
-                                                                                class="fas fa-chalkboard-teacher"></i>
-                                                                        </div>
-                                                                        <div class="service-info">
-                                                                            <h4>منصة معلم</h4>
-                                                                            <p>منصة معلم لإتصالات الجزائر </p>
-                                                                        </div><i
-                                                                            class="fas fa-chevron-left service-arrow"></i>
-                                                                    </a><a href="https://inkidia.com.dz/" target=""
-                                                                        class="service-item">
-                                                                        <div class="service-icon"><i
-                                                                                class="fas fa-chalkboard-teacher"></i>
-                                                                        </div>
-                                                                        <div class="service-info">
-                                                                            <h4>المعلم</h4>
-                                                                            <p>المعلم </p>
-                                                                        </div><i
-                                                                            class="fas fa-chevron-left service-arrow"></i>
-                                                                    </a></div>
-                                                            </section>
-                                    </main>
+                        <div class="service-info">
+                            <h4>تعبئة IDOOM 4G LTE </h4>
+                            <p>تعبئة IDOOM 4G LTE</p>
+                        </div><i class="fas fa-chevron-left service-arrow"></i>
+                    </a></div>
+            </section>
+
+            <!-- epay Section -->
+            <section class="section-card" id="epay">
+                <div class="section-header-card">
+                    <h3 class="section-title"><i class="fas fa-building"></i>الدفع الإلكتروني </h3>
+                    <span class="service-count">4 خدمات</span>
+                </div>
+                <div class="services-grid"><a href="https://paiement.algerietelecom.dz/AR/index.php?p=facture_paiement"
+                        target="" class="service-item">
+                        <div class="service-icon"><i class="fas fa-file-invoice"></i></div>
+                        <div class="service-info">
+                            <h4>فاتورة الهاتف الثابت</h4>
+                            <p>دفع فاتورة الهاتف الثابت</p>
+                        </div><i class="fas fa-chevron-left service-arrow"></i>
+                    </a><a href="https://paiement.algerietelecom.dz/AR/index.php?p=dette_paiement" target=""
+                        class="service-item">
+                        <div class="service-icon"><i class="fas fa-file-invoice-dollar"></i></div>
+                        <div class="service-info">
+                            <h4>مستحقات الهاتف الثابت</h4>
+                            <p>دفع مستحقات الهاتف الثابت</p>
+                        </div><i class="fas fa-chevron-left service-arrow"></i>
+                    </a><a href="https://paiement.algerietelecom.dz/AR/index.php?p=internet_recharge&pr=in" target=""
+                        class="service-item">
+                        <div class="service-icon"><i class="fas fa-globe"></i>
                         </div>
-                        < !-- Footer - 3 Columns -->
-                            <footer class="footer">
-                                <div class="footer-content">
-                                    < !-- Column 1: Brand -->
-                                        <div class="footer-column">
-                                            <div class="footer-brand"><img src="https://flagcdn.com/w80/dz.png"
-                                                    alt="علم الجزائر">
-                                                <div>
-                                                    <h3>البوابة الجزائرية</h3><span>للخدمات الرقمية</span>
-                                                </div>
-                                            </div>
-                                            <p class="footer-desc">منصة وطنية موحدة تتيح للمواطن الجزائري الوصول السريع
-                                                والآمن إلى جميع الخدمات الحكومية والعمومية الرقمية من مكان واحد، دون
-                                                تعقيد أو تنقل إداري. </p>
-                                            <div class="social-links"><a href="#" title="فيسبوك"><i
-                                                        class="fab fa-facebook-f"></i></a><a href="#" title="تويتر"><i
-                                                        class="fab fa-twitter"></i></a><a href="#" title="إنستغرام"><i
-                                                        class="fab fa-instagram"></i></a><a href="#" title="يوتيوب"><i
-                                                        class="fab fa-youtube"></i></a></div>
-                                        </div>
-                                        < !-- Column 2: Quick Links -->
-                                            <div class="footer-column">
-                                                <h4><i class="fas fa-link"></i>روابط سريعة</h4>
-                                                <ul class="footer-links">
-                                                    <li><a href="../index.html"><i class="fas fa-home"></i>الصفحة
-                                                            الرئيسية </a></li>
-                                                    <li><a href="../pages/about.html"><i class="fas fa-users"></i>من نحن
-                                                        </a></li>
-                                                    <li><a href="../pages/contact.html"><i
-                                                                class="fas fa-envelope"></i>اتصل بنا </a></li>
-                                                    <li><a href="../pages/privacy.html"><i
-                                                                class="fas fa-shield-alt"></i>سياسة الخصوصية </a></li>
-                                                    <li><a href="../pages/terms.html"><i
-                                                                class="fas fa-file-contract"></i>شروط الاستخدام </a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                            < !-- Column 3: Contact Info -->
-                                                <div class="footer-column">
-                                                    <h4><i class="fas fa-address-card"></i>معلومات الاتصال</h4>
-                                                    <div class="footer-contact">
-                                                        <p><i class="fas fa-envelope"></i>tabaniimadeddine@gmail.com
-                                                        </p>
-                                                        <p><i class="fas fa-phone"></i>+213 697 74 37 21 </p>
-                                                        <p><i class="fas fa-map-marker-alt"></i>الجزائر العاصمة، الجزائر
-                                                        </p>
-                                                        <p><i class="fas fa-clock"></i>متاح 24/7 - طوال أيام الأسبوع
-                                                        </p>
-                                                    </div>
-                                                    <div
-                                                        style="margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid rgba(255,255,255,0.1);">
-                                                        <p style="color: var(--gray-300); font-size: 0.9rem;"><i
-                                                                class="fas fa-code"
-                                                                style="color: var(--gold); margin-left: 0.5rem;"></i>صنع
-                                                            بـ <span class="heart">❤</span>في الجزائر </p>
-                                                    </div>
-                                                </div>
-                                </div>
-                                <div class="footer-bottom">
-                                    <p>© 2025 البوابة الجزائرية للخدمات الرقمية - جميع الحقوق محفوظة</p>
-                                    <p style="margin-top: 0.5rem; font-size: 0.85rem;">❀ لا تنسونا من صالح دعائكم ❀</p>
-                                </div>
-                            </footer>
-                            <script src="../assets/js/sector.js"></script>
+                        <div class="service-info">
+                            <h4>تعبئة الانترنت</h4>
+                            <p>تعبئة الانترنت</p>
+                        </div><i class="fas fa-chevron-left service-arrow"></i>
+                    </a><a href="https://paiement.algerietelecom.dz/AR/index.php?p=internet_recharge&pr=4g" target=""
+                        class="service-item">
+                        <div class="service-icon"><i class="fas fa-broadcast-tower"></i></div>
+                        <div class="service-info">
+                            <h4>تعبئة IDOOM 4G LTE</h4>
+                            <p>تعبئة حساب IDOOM 4G LTE</p>
+                        </div><i class="fas fa-chevron-left service-arrow"></i>
+                    </a></div>
+            </section>
+
+            <!-- personal Section -->
+            <section class="section-card" id="personel">
+                <div class="section-header-card">
+                    <h3 class="section-title"><i class="fas fa-building"></i>فضاء الزبائن </h3>
+                    <span class="service-count">06 خدمات</span>
+                </div>
+                <div class="services-grid"><a href="https://client.at.dz/ar" target="_blank" class="service-item">
+                        <div class="service-icon"><i class="fas fa-user-lock"></i></div>
+                        <div class="service-info">
+                            <h4>فضاء الزبون</h4>
+                            <p>فضاء الزبون - إنشاء حساب / تسجيل الدخول</p>
+                        </div><i class="fas fa-chevron-left service-arrow"></i>
+                    </a><a href="https://www.algerietelecom.dz/ar/demande-na" target="_blank" class="service-item">
+                        <div class="service-icon"><i class="fas fa-file-signature"></i></div>
+                        <div class="service-info">
+                            <h4>طلب إلكتروني</h4>
+                            <p>تقديم طلب إلكتروني</p>
+                        </div><i class="fas fa-chevron-left service-arrow"></i>
+                    </a><a href="https://www.algerietelecom.dz/ar/derangements" target="" class="service-item">
+                        <div class="service-icon"><i class="fas fa-tools"></i></div>
+                        <div class="service-info">
+                            <h4>الإبلاغ عن عطب</h4>
+                            <p>الإبلاغ عن عطب</p>
+                        </div><i class="fas fa-chevron-left service-arrow"></i>
+                    </a><a href="https://www.algerietelecom.dz/ar/page/migration-p232" target="" class="service-item">
+                        <div class="service-icon"><i class="fas fa-exchange-alt"></i></div>
+                        <div class="service-info">
+                            <h4>طلب التحويل إلى خدمة الألياف البصرية</h4>
+                            <p>طلب التحويل / متابعة إلى خدمة الألياف البصرية
+                            </p>
+                        </div><i class="fas fa-chevron-left service-arrow"></i>
+                    </a><a href="https://www.algerietelecom.dz/ar/page/trouver-mon-agence-p256" target="_blank"
+                        class="service-item">
+                        <div class="service-icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <div class="service-info">
+                            <h4>إبحث عن وكالة </h4>
+                            <p>البحث عن وكالتي - إتصالات الجزائر</p>
+                        </div><i class="fas fa-chevron-left service-arrow"></i>
+                    </a><a href="https://www.algerietelecom.dz/ar/page/trouver-votre-numero-de-fixe-p268"
+                        target="_blank" class="service-item">
+                        <div class="service-icon"><i class="fas fa-phone-square-alt"></i></div>
+                        <div class="service-info">
+                            <h4>إكتشف رقم هاتفك الثابت FTTH </h4>
+                            <p>إكتشف رقم هاتفك الثابت FTTH</p>
+                        </div><i class="fas fa-chevron-left service-arrow"></i>
+                    </a></div>
+            </section>
+
+            <!-- app-offre Section -->
+            <section class="section-card" id="app-offre">
+                <div class="section-header-card">
+                    <h3 class="section-title"><i class="fas fa-store"></i>عروض وتطبيقات </h3>
+                    <span class="service-count">06 خدمات</span>
+                </div>
+                <div class="services-grid"><a
+                        href="https://www.algerietelecom.dz/ar/particuliers/week-end-boost-prod227" target=""
+                        class="service-item">
+                        <div class="service-icon"><i class="fas fa-bolt"></i></div>
+                        <div class="service-info">
+                            <h4>WEEK-END Boost</h4>
+                            <p>WEEK-END Boost</p>
+                        </div><i class="fas fa-chevron-left service-arrow"></i>
+                    </a><a href="https://www.algerietelecom.dz/ar/particuliers/week-end-boost-prod227" target=""
+                        class="service-item">
+                        <div class="service-icon"><i class="fas fa-store"></i></div>
+                        <div class="service-info">
+                            <h4>IDOOM Markit </h4>
+                            <p>تسويق IDOOM Markit </p>
+                        </div><i class="fas fa-chevron-left service-arrow"></i>
+                    </a><a href="https://play.google.com/store/apps/details?id=dz.algerietelecom.rd.e_paiement&hl=ar"
+                        target="" class="service-item">
+                        <div class="service-icon"><i class="fas fa-mobile-alt"></i></div>
+                        <div class="service-info">
+                            <h4>تطبيق E-paiement</h4>
+                            <p>تطبيق E-paiement لإتصالات الجزائر </p>
+                        </div><i class="fas fa-chevron-left service-arrow"></i>
+                    </a><a href="https://play.google.com/store/apps/details?id=com.at.dz&hl=ar" target=""
+                        class="service-item">
+                        <div class="service-icon"><i class="fas fa-mobile-alt"></i></div>
+                        <div class="service-info">
+                            <h4>تطبيق My IDOOM</h4>
+                            <p>تطبيق My IDOOM لإتصالات الجزائر </p>
+                        </div><i class="fas fa-chevron-left service-arrow"></i>
+                    </a><a href="https://www.moalim-dz.net/moalim_v2/login/index.php" target="" class="service-item">
+                        <div class="service-icon"><i class="fas fa-chalkboard-teacher"></i>
+                        </div>
+                        <div class="service-info">
+                            <h4>منصة معلم</h4>
+                            <p>منصة معلم لإتصالات الجزائر </p>
+                        </div><i class="fas fa-chevron-left service-arrow"></i>
+                    </a><a href="https://inkidia.com.dz/" target="" class="service-item">
+                        <div class="service-icon"><i class="fas fa-chalkboard-teacher"></i>
+                        </div>
+                        <div class="service-info">
+                            <h4>المعلم</h4>
+                            <p>المعلم </p>
+                        </div><i class="fas fa-chevron-left service-arrow"></i>
+                    </a></div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Footer - 3 Columns -->
+    <footer class="footer">
+        <div class="footer-content">
+
+            <!-- Column 1: Brand -->
+            <div class="footer-column">
+                <div class="footer-brand"><img src="https://flagcdn.com/w80/dz.png" alt="علم الجزائر">
+                    <div>
+                        <h3>البوابة الجزائرية</h3><span>للخدمات الرقمية</span>
+                    </div>
+                </div>
+                <p class="footer-desc">منصة وطنية موحدة تتيح للمواطن الجزائري الوصول السريع
+                    والآمن إلى جميع الخدمات الحكومية والعمومية الرقمية من مكان واحد، دون
+                    تعقيد أو تنقل إداري. </p>
+                <div class="social-links"><a href="#" title="فيسبوك"><i class="fab fa-facebook-f"></i></a><a href="#"
+                        title="تويتر"><i class="fab fa-twitter"></i></a><a href="#" title="إنستغرام"><i
+                            class="fab fa-instagram"></i></a><a href="#" title="يوتيوب"><i
+                            class="fab fa-youtube"></i></a></div>
+            </div>
+
+            <!-- Column 2: Quick Links -->
+            <div class="footer-column">
+                <h4><i class="fas fa-link"></i>روابط سريعة</h4>
+                <ul class="footer-links">
+                    <li><a href="../index.html"><i class="fas fa-home"></i>الصفحة
+                            الرئيسية </a></li>
+                    <li><a href="../pages/about.html"><i class="fas fa-users"></i>من نحن
+                        </a></li>
+                    <li><a href="../pages/contact.html"><i class="fas fa-envelope"></i>اتصل بنا </a></li>
+                    <li><a href="../pages/privacy.html"><i class="fas fa-shield-alt"></i>سياسة الخصوصية </a>
+                    </li>
+                    <li><a href="../pages/terms.html"><i class="fas fa-file-contract"></i>شروط الاستخدام
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Column 3: Contact Info -->
+            <div class="footer-column">
+                <h4><i class="fas fa-address-card"></i>معلومات الاتصال</h4>
+                <div class="footer-contact">
+                    <p><i class="fas fa-envelope"></i>tabaniimadeddine@gmail.com
+                    </p>
+                    <p><i class="fas fa-phone"></i>+213 697 74 37 21 </p>
+                    <p><i class="fas fa-map-marker-alt"></i>الجزائر العاصمة، الجزائر
+                    </p>
+                    <p><i class="fas fa-clock"></i>متاح 24/7 - طوال أيام الأسبوع
+                    </p>
+                </div>
+                <div style="margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid rgba(255,255,255,0.1);">
+                    <p style="color: var(--gray-300); font-size: 0.9rem;"><i class="fas fa-code"
+                            style="color: var(--gold); margin-left: 0.5rem;"></i>صنع
+                        بـ <span class="heart">❤</span>في الجزائر </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2025 البوابة الجزائرية للخدمات الرقمية - جميع الحقوق محفوظة</p>
+            <p style="margin-top: 0.5rem; font-size: 0.85rem;">❀ لا تنسونا من صالح دعائكم ❀</p>
+        </div>
+    </footer>
+
+    <script src="../assets/js/sector.js" defer></script>
 </body>
 
 </html>
