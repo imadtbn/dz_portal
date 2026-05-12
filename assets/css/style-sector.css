@@ -1527,3 +1527,54 @@ body {
     content-visibility:auto;
     contain-intrinsic-size:1px 1000px;
 }
+
+.contact-link{
+    display: inline-block;
+    text-decoration: none;
+    color: inherit;
+    transition: 0.3s ease;
+    font-weight: 500;
+}
+
+.contact-link:hover{
+    color: #f2f3f5;
+    transform: translateY(-2px);
+}
+
+/* رقم الهاتف من اليسار إلى اليمين */
+.phone-link{
+    direction: ltr;
+    unicode-bidi: embed;
+    font-family: monospace;
+    letter-spacing: 1px;
+}
+
+/* تنسيق البريد */
+.email-link{
+    word-break: break-word;
+}
+
+.footer-link{
+    color: inherit;
+    text-decoration: none;
+    transition: 0.3s ease;
+    display: inline-block;
+}
+
+.footer-link:hover{
+    color: #feffff;
+    transform: translateX(-3px);
+}
+
+/* الهاتف من اليسار إلى اليمين */
+.phone-link{
+    direction: ltr;
+    unicode-bidi: embed;
+    font-family: monospace;
+    letter-spacing: 1px;
+}
+
+/* البريد */
+.email-link{
+    word-break: break-word;
+}
