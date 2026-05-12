@@ -1578,3 +1578,36 @@ body {
 .email-link{
     word-break: break-word;
 }
+
+/* تحسين ظهور Sidebar في الهواتف */
+@media (max-width: 992px) {
+
+    .main-content {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .sidebar {
+        display: block !important;
+        width: 100%;
+        position: relative;
+        top: auto;
+        order: -1;
+    }
+
+    .sidebar-card {
+        width: 100%;
+    }
+
+    .sidebar-menu {
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+
+    .sidebar-menu a,
+    .sidebar-menu li a {
+        width: 100%;
+    }
+}
