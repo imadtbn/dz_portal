@@ -26,7 +26,7 @@
       "@id": "https://imadtbn.github.io/dz_portal/#website",
       "url": "https://imadtbn.github.io/dz_portal/",
       "name": "البوابة الجزائرية للخدمات الرقمية",
-      "alternateName": "DZ e-Services Portal",
+      "alternateName": "DZ E-Services Portal",
       "inLanguage": "ar",
       "description": "منصة موحدة تتيح للمواطن الجزائري الوصول السريع والآمن إلى جميع الخدمات الحكومية والعمومية الرقمية من مكان واحد، دون تعقيد أو تنقل إداري.",
       "image": "https://imadtbn.github.io/dz_portal/preview.png",
@@ -381,7 +381,9 @@
     <div class="loader" id="loader">
         <div class="loader-content">
             <div class="loader-spinner"></div>
-            <p style="color: white; font-size: 1.1rem;">بسم الله، سيتم تحميل البوابة...</p>
+            <p style="color: white; font-size: 1.3rem;">بسم الله، سيتم تحميل البوابة...</p>
+            <p style="color: rgb(244, 221, 10); font-size: 1.1rem;">اللهم وفق أبنائنا وبناتنا في الإمتحانات وفيما تحبه وترضاه </p>
+
         </div>
     </div>
 
@@ -445,7 +447,7 @@
                 <input type="text" class="search-box" placeholder="ابحث عن خدمة، وزارة، أو معاملة إدارية..."
                     id="globalSearch">
                 <button class="search-btn">
-                    <i class="fas fa-search"></i>
+                    <i class="fas fa-search" alt="بحث"></i>
                 </button>
             </div>
         </div>
@@ -630,8 +632,8 @@
                     <img src="assets/images/sakan.png" alt="السكن والعمران" loading="lazy">
                 </div>
                 <h3 class="sector-title">السكن والعمران</h3>
-                <p class="sector-desc">وكالة عدل， ENPI الترقية العقارية， الديوان الترقية العقارية OPGI دفع كراء
-                    السكن الاجتماعي</p>
+                <p class="sector-desc">السكن الاجتماعي، السكن الريفي، السكن العمومي الإيجاري، السكن الترقوي المدعم，
+                    السكن العمومي الإيجاري</p>
             </a>
 
             <!-- التأمينات -->
@@ -658,10 +660,10 @@
             <a href="sectors/facteur.html" class="sector-card">
                 <span class="sector-count">17 خدمات</span>
                 <div class="sector-icon">
-                    <img src="assets/images/energy.png" alt="سونلغاز" loading="lazy">
+                    <img src="assets/images/facteur.png" alt="فواتير الطاقة والماء" loading="lazy">
                 </div>
-                <h3 class="sector-title">الطاقة، سونلغاز للكهرباء والغاز</h3>
-                <p class="sector-desc">فاتورة الكهرباء والغاز， فاتورة الماء, الجزائرية للمياه， سيال， سونلغاز</p>
+                <h3 class="sector-title">تسديد فواتير الطاقة والماء</h3>
+                <p class="sector-desc">دفع فواتير الكهرباء والماء عبر البوابة الجزائرية للخدمات الرقمية</p>
             </a>
 
             <!-- سونلغاز -->
@@ -982,35 +984,35 @@
             <div class="footer-column">
                 <h4><i class="fas fa-address-card"></i> معلومات الاتصال</h4>
 
-<div class="footer-contact">
+                <div class="footer-contact">
 
-    <p>
-        <i class="fas fa-envelope"></i>
+                    <p>
+                        <i class="fas fa-envelope"></i>
 
-        <a href="mailto:tabaniimadeddine@gmail.com" class="footer-link email-link">
-            tabaniimadeddine@gmail.com
-        </a>
-    </p>
+                        <a href="mailto:tabaniimadeddine@gmail.com" class="footer-link email-link">
+                            tabaniimadeddine@gmail.com
+                        </a>
+                    </p>
 
-    <p>
-        <i class="fas fa-phone"></i>
+                    <p>
+                        <i class="fas fa-phone"></i>
 
-        <a href="tel:+213697743721" class="footer-link phone-link">
-            +213 697 74 37 21
-        </a>
-    </p>
+                        <a href="tel:+213697743721" class="footer-link phone-link">
+                            +213 697 74 37 21
+                        </a>
+                    </p>
 
-    <p>
-        <i class="fas fa-map-marker-alt"></i>
-        الجزائر العاصمة، الجزائر
-    </p>
+                    <p>
+                        <i class="fas fa-map-marker-alt"></i>
+                        الجزائر العاصمة، الجزائر
+                    </p>
 
-    <p>
-        <i class="fas fa-clock"></i>
-        متاح 24/7 - طوال أيام الأسبوع
-    </p>
+                    <p>
+                        <i class="fas fa-clock"></i>
+                        متاح 24/7 - طوال أيام الأسبوع
+                    </p>
 
-</div>
+                </div>
 
                 <div style="margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid rgba(255,255,255,0.1);">
                     <p style="color: var(--gray-300); font-size: 0.9rem;">
@@ -1037,7 +1039,7 @@
         window.addEventListener('load', () => {
             setTimeout(() => {
                 document.getElementById('loader').classList.add('hidden');
-            }, 700); // إخفاء اللودر بعد --- ثانية من تحميل الصفحة   
+            }, 1000); // إخفاء اللودر بعد --- ثانية من تحميل الصفحة   
         });
 
         // Theme toggle
