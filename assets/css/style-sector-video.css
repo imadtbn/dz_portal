@@ -1,0 +1,148 @@
+/* =========================
+   Professional Video Section
+========================= */
+
+.video-section {
+    overflow: hidden;
+}
+
+.video-card {
+    position: relative;
+    border-radius: 24px;
+    overflow: hidden;
+    background: linear-gradient(135deg, #ffffff, #faf7ff);
+    border: 1px solid rgba(123, 31, 162, 0.08);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+    transition: 0.4s ease;
+}
+
+.video-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 45px rgba(123, 31, 162, 0.15);
+}
+
+.video-wrapper {
+    position: relative;
+    overflow: hidden;
+    background: #000;
+}
+
+.tutorial-video {
+    width: 100%;
+    display: block;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border: none;
+}
+
+.video-overlay {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background:
+        linear-gradient(to top,
+            rgba(0, 0, 0, 0.25),
+            transparent 40%);
+}
+
+.video-content {
+    padding: 2rem;
+}
+
+.video-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    background: rgba(190, 36, 95, 0.1);
+    color: #be245f;
+    padding: 0.65rem 1rem;
+    border-radius: 30px;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+}
+
+.video-content h4 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #222;
+    line-height: 1.7;
+}
+
+.video-content p {
+    color: #666;
+    line-height: 2;
+    margin-bottom: 1.8rem;
+    font-size: 1rem;
+}
+
+.video-actions {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.video-btn {
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    padding: 0.95rem 1.5rem;
+    border-radius: 14px;
+    font-weight: 700;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.7rem;
+    transition: 0.3s ease;
+    font-family: inherit;
+}
+
+.secondary-btn {
+    background: #7b1fa2;
+    color: white;
+}
+
+.secondary-btn:hover {
+    background: #6a1b9a;
+    transform: translateY(-2px);
+}
+
+.share-btn {
+    background: #f3f4f6;
+    color: #333;
+}
+
+.share-btn:hover {
+    background: #e5e7eb;
+    transform: translateY(-2px);
+}
+
+/* تحسين عرض الهاتف */
+
+@media (max-width: 768px) {
+
+    .video-content {
+        padding: 1.25rem;
+    }
+
+    .video-content h4 {
+        font-size: 1.15rem;
+    }
+
+    .video-content p {
+        font-size: 0.95rem;
+        line-height: 1.9;
+    }
+
+    .video-actions {
+        flex-direction: column;
+    }
+
+    .video-btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .tutorial-video {
+        aspect-ratio: 16 / 10;
+    }
+}
