@@ -1635,3 +1635,19 @@ button,
 video {
     color-scheme: light;
 }
+
+
+@media (prefers-color-scheme: dark) {
+
+    html,
+    body,
+    .section-card,
+    .sidebar-card,
+    .service-item,
+    .video-card,
+    .header,
+    .footer {
+        background-color: inherit !important;
+        color: inherit !important;
+    }
+}
