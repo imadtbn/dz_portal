@@ -1611,3 +1611,27 @@ body {
         width: 100%;
     }
 }
+
+
+
+/* إجبار الموقع على الوضع الفاتح */
+
+:root {
+    color-scheme: light;
+}
+
+html,
+body {
+    background-color: #ffffff !important;
+    color: #222222 !important;
+}
+
+/* منع تعديل عناصر النماذج والفيديو تلقائياً */
+
+input,
+textarea,
+select,
+button,
+video {
+    color-scheme: light;
+}
