@@ -8,16 +8,23 @@
     <meta name="description"
         content="جميع الخدمات الرقمية لوزارة التربية الوطنية - التسجيل في الامتحانات، النتائج، فضاء الأستاذ والولي">
     <meta name="keywords" content="التربية والتعليم، الخدمات الرقمية، الامتحانات، النتائج، فضاء الأستاذ، فضاء الولي">
-        <meta name="author" content="البوابة الجزائرية للخدمات الرقمية">
+    <meta name="author" content="البوابة الجزائرية للخدمات الرقمية">
 
-        <!-- Google Search Console & Bing Verification -->
+    <!-- Google Search Console & Bing Verification -->
     <meta name="google-site-verification" content="tGjdnUHs9yv4HTGpgnemjCK7YsJ3bI4twWC1WDi5Nqw">
     <meta name="google-site-verification" content="f5Xi4oFx0v5dN6iPZd9qCw-7vnc3vIbAeYF9jr4vwVM">
     <meta name="msvalidate.01" content="9BCA38377A234DCCEB9991EAD1A2F6C2">
 
     <!-- Google AdSense -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8310657804532081"
-     crossorigin="anonymous"></script>
+        crossorigin="anonymous"></script>
+
+    <script async custom-element="amp-auto-ads" src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js">
+    </script>
+
+
+    <script async custom-element="amp-auto-ads" src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js">
+    </script>
 
     <!-- أيقونة الموقع -->
     <link rel="icon" href="../assets/images/icon.png" type="image/png">
@@ -142,6 +149,9 @@
 </head>
 
 <body>
+    <amp-auto-ads type="adsense" data-ad-client="ca-pub-8310657804532081">
+    </amp-auto-ads>
+
     <!-- Header -->
     <header class="header">
         <div class="header-content">
@@ -223,17 +233,22 @@
 
             <a href="#distance" class="quick-link">
                 <i class="fas fa-laptop"></i>
-                <span>التعليم والتكوين عن بعد</span>
+                <span>التكوين عن بعد</span>
             </a>
 
             <a href="#distance" class="quick-link">
                 <i class="fas fa-laptop"></i>
-                <span>فضاء التسجيل في الإمتحانات</span>
+                <span>التسجيل في الإمتحانات</span>
             </a>
 
             <a href="#exams" class="quick-link active">
-                <i class="fas fa-file-signature"></i>
-                <span>نتائج الإمتحانات الوطنية</span>
+                <i class="fas fa-file-alt"></i>
+                <span>نتائج الإمتحانات</span>
+            </a>
+
+            <a href="#videos" class="quick-link active">
+                <i class="fas fa-video"></i>
+                <span>فيديوهات الإستعمال</span>
             </a>
 
             <a href="#resources" class="quick-link">
@@ -252,48 +267,40 @@
             <div class="sidebar-card">
                 <h3 class="sidebar-title">التنقل السريع</h3>
                 <ul class="sidebar-menu">
+                    <a href="#teacher" class="quick-link">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                        <span>فضاء الأستاذ</span>
+                    </a>
 
-                    <li>
-                        <a href="#teacher" class="quick-link">
-                            <i class="fas fa-chalkboard-teacher"></i>
-                            فضاء الأستاذ
-                        </a>
-                    </li>
+                    <a href="#parent" class="quick-link">
+                        <i class="fas fa-users"></i>
+                        <span>فضاء الأولياء</span>
+                    </a>
 
-                    <li>
-                        <a href="#parent" class="quick-link">
-                            <i class="fas fa-user-shield"></i>
-                            فضاء الأولياء
-                        </a>
-                    </li>
+                    <a href="#distance" class="quick-link">
+                        <i class="fas fa-laptop"></i>
+                        <span>التكوين عن بعد</span>
+                    </a>
 
-                    <li>
-                        <a href="#distance" class="quick-link">
-                            <i class="fas fa-wifi"></i>
-                            التعليم عن بعد
-                        </a>
-                    </li>
+                    <a href="#distance" class="quick-link">
+                        <i class="fas fa-laptop"></i>
+                        <span>التسجيل في الإمتحانات</span>
+                    </a>
 
-                    <li>
-                        <a href="#exams" class="active">
-                            <i class="fas fa-file-alt"></i>
-                            التسجيل في الامتحانات
-                        </a>
-                    </li>
+                    <a href="#exams" class="quick-link active">
+                        <i class="fas fa-file-alt"></i>
+                        <span>نتائج الإمتحانات</span>
+                    </a>
 
-                    <li>
-                        <a href="#results" class="quick-link">
-                            <i class="fas fa-chart-bar"></i>
-                            النتائج الإمتحانات والشهادات
-                        </a>
-                    </li>
+                    <a href="#videos" class="quick-link active">
+                        <i class="fas fa-video"></i>
+                        <span>فيديوهات الإستعمال</span>
+                    </a>
 
-                    <li>
-                        <a href="#resources" class="quick-link">
-                            <i class="fas fa-download"></i>
-                            بنك الفروض والإختبارات
-                        </a>
-                    </li>
+                    <a href="#resources" class="quick-link">
+                        <i class="fas fa-book"></i>
+                        <span>الفروض والاختبارات</span>
+                    </a>
 
                 </ul>
             </div>
@@ -360,6 +367,19 @@
                         <i class="fas fa-chevron-left service-arrow"></i>
                     </a>
 
+                    <a href="../pages/process/ostad-process.html" class="service-item"
+                        style="border: 2px solid #f3e5f5;">
+                        <div class="service-icon" style="background: #f3e5f5; color: #7b1fa2;">
+                            <i class="fas fa-video"></i>
+                        </div>
+                        <div class="service-info">
+                            <h4>طريقة التسجيل</h4>
+                            <p>طريقة التسجيل في فضاء الأستاذ</p>
+                        </div>
+                        <span
+                            style="margin-right: auto; background: #be245f; color: white; padding: 0.5rem 1rem; border-radius: 20px; font-weight: 700;">شاهد</span>
+                    </a>
+
                     <a href="https://taqiim.education.dz/" target="_blank" class="service-item">
                         <div class="service-icon">
                             <i class="fas fa-clipboard-check"></i>
@@ -403,6 +423,7 @@
                         </div>
                         <i class="fas fa-chevron-left service-arrow"></i>
                     </a>
+
                 </div>
             </section>
 
@@ -427,6 +448,19 @@
                         <i class="fas fa-chevron-left service-arrow"></i>
                     </a>
 
+                    <a href="../pages/process/awlyaa-process.html" class="service-item"
+                        style="border: 2px solid #f3e5f5;">
+                        <div class="service-icon" style="background: #f3e5f5; color: #7b1fa2;">
+                            <i class="fas fa-video"></i>
+                        </div>
+                        <div class="service-info">
+                            <h4>طريقة التسجيل</h4>
+                            <p>طريقة التسجيل في فضاء الأولياء</p>
+                        </div>
+                        <span
+                            style="margin-right: auto; background: #be245f; color: white; padding: 0.5rem 1rem; border-radius: 20px; font-weight: 700;">شاهد</span>
+                    </a>
+
                     <a href="#resources" class="service-item">
                         <div class="service-icon">
                             <i class="fas fa-file-alt"></i>
@@ -437,6 +471,8 @@
                         </div>
                         <i class="fas fa-chevron-left service-arrow"></i>
                     </a>
+
+
                 </div>
             </section>
 
@@ -461,6 +497,19 @@
                         <i class="fas fa-chevron-left service-arrow"></i>
                     </a>
 
+                    <a href="../pages/process/awlyaa-process.html" class="service-item"
+                        style="border: 2px solid #f3e5f5;">
+                        <div class="service-icon" style="background: #f3e5f5; color: #7b1fa2;">
+                            <i class="fas fa-video"></i>
+                        </div>
+                        <div class="service-info">
+                            <h4>طريقة التسجيل</h4>
+                            <p>طريقة التسجيل في التعليم عن بعد</p>
+                        </div>
+                        <span
+                            style="margin-right: auto; background: #be245f; color: white; padding: 0.5rem 1rem; border-radius: 20px; font-weight: 700;">شاهد</span>
+                    </a>
+
                     <a href="https://www.onefd.edu.dz/att_niv_2025/" target="_blank" class="service-item">
                         <div class="service-icon">
                             <i class="fas fa-award"></i>
@@ -471,6 +520,21 @@
                         </div>
                         <i class="fas fa-chevron-left service-arrow"></i>
                     </a>
+
+                    <a href="../pages/process/onefd-process.html" class="service-item"
+                        style="border: 2px solid #f3e5f5;">
+                        <div class="service-icon" style="background: #f3e5f5; color: #7b1fa2;">
+                            <i class="fas fa-video"></i>
+                        </div>
+                        <div class="service-info">
+                            <h4>طريقة التسجيل</h4>
+                            <p>طريقة استخراج شهادات إثبات المستوى</p>
+                        </div>
+                        <span
+                            style="margin-right: auto; background: #be245f; color: white; padding: 0.5rem 1rem; border-radius: 20px; font-weight: 700;">شاهد</span>
+                    </a>
+
+
                 </div>
             </section>
 
@@ -495,6 +559,19 @@
                         <i class="fas fa-chevron-left service-arrow"></i>
                     </a>
 
+                    <a href="../pages/process/ostad-process.html" class="service-item"
+                        style="border: 2px solid #f3e5f5;">
+                        <div class="service-icon" style="background: #f3e5f5; color: #7b1fa2;">
+                            <i class="fas fa-video"></i>
+                        </div>
+                        <div class="service-info">
+                            <h4>طريقة التسجيل</h4>
+                            <p>طريقة التسجيل في إمتحانات البكالوريا</p>
+                        </div>
+                        <span
+                            style="margin-right: auto; background: #be245f; color: white; padding: 0.5rem 1rem; border-radius: 20px; font-weight: 700;">شاهد</span>
+                    </a>
+
                     <a href="https://bem.onec.dz/" target="_blank" class="service-item">
                         <div class="service-icon">
                             <i class="fas fa-school"></i>
@@ -506,6 +583,19 @@
                         <i class="fas fa-chevron-left service-arrow"></i>
                     </a>
 
+                    <a href="../pages/process/ostad-process.html" class="service-item"
+                        style="border: 2px solid #f3e5f5;">
+                        <div class="service-icon" style="background: #f3e5f5; color: #7b1fa2;">
+                            <i class="fas fa-video"></i>
+                        </div>
+                        <div class="service-info">
+                            <h4>طريقة التسجيل</h4>
+                            <p>طريقة التسجيل في الإمتحان BEM</p>
+                        </div>
+                        <span
+                            style="margin-right: auto; background: #be245f; color: white; padding: 0.5rem 1rem; border-radius: 20px; font-weight: 700;">شاهد</span>
+                    </a>
+
                     <a href="https://epay.education.dz/auth" target="_blank" class="service-item">
                         <div class="service-icon">
                             <i class="fas fa-credit-card"></i>
@@ -515,6 +605,19 @@
                             <p>تسديد مستحقات التسجيل في امتحانات BEM و BAC إلكترونياً</p>
                         </div>
                         <i class="fas fa-chevron-left service-arrow"></i>
+                    </a>
+
+                    <a href="../pages/process/ostad-process.html" class="service-item"
+                        style="border: 2px solid #f3e5f5;">
+                        <div class="service-icon" style="background: #f3e5f5; color: #7b1fa2;">
+                            <i class="fas fa-video"></i>
+                        </div>
+                        <div class="service-info">
+                            <h4>طريقة الدفع</h4>
+                            <p>طريقة دفع مستحقات التسجيل في امتحانات</p>
+                        </div>
+                        <span
+                            style="margin-right: auto; background: #be245f; color: white; padding: 0.5rem 1rem; border-radius: 20px; font-weight: 700;">شاهد</span>
                     </a>
                 </div>
             </section>
@@ -541,6 +644,19 @@
                         <i class="fas fa-chevron-left service-arrow"></i>
                     </a>
 
+                    <a href="../pages/process/bac.onec-process.html" class="service-item"
+                        style="border: 2px solid #f3e5f5;">
+                        <div class="service-icon" style="background: #f3e5f5; color: #7b1fa2;">
+                            <i class="fas fa-video"></i>
+                        </div>
+                        <div class="service-info">
+                            <h4>طريقة الإطلاع على النتائج</h4>
+                            <p>طريقة الإطلاع على نتائج امتحانات BEM</p>
+                        </div>
+                        <span
+                            style="margin-right: auto; background: #be245f; color: white; padding: 0.5rem 1rem; border-radius: 20px; font-weight: 700;">شاهد</span>
+                    </a>
+
                     <a href="https://bac.onec.dz/" target="_blank" class="service-item">
                         <div class="service-icon">
                             <i class="fas fa-trophy"></i>
@@ -550,6 +666,19 @@
                             <p>الاطلاع على نتائج امتحان البكالوريا باستخدام رقم التسجيل</p>
                         </div>
                         <i class="fas fa-chevron-left service-arrow"></i>
+                    </a>
+
+                    <a href="../pages/process/bac.onec-process.html" class="service-item"
+                        style="border: 2px solid #f3e5f5;">
+                        <div class="service-icon" style="background: #f3e5f5; color: #7b1fa2;">
+                            <i class="fas fa-video"></i>
+                        </div>
+                        <div class="service-info">
+                            <h4>طريقة الإطلاع على النتائج</h4>
+                            <p>طريقة الإطلاع على نتائج امتحانات البكالوريا</p>
+                        </div>
+                        <span
+                            style="margin-right: auto; background: #be245f; color: white; padding: 0.5rem 1rem; border-radius: 20px; font-weight: 700;">شاهد</span>
                     </a>
 
                     <a href="https://www.onefd.edu.dz/att_niv_**/" target="_blank" class="service-item">
@@ -669,35 +798,35 @@
             <!-- Column 3: Contact Info -->
             <div class="footer-column">
                 <h4><i class="fas fa-address-card"></i> معلومات الاتصال</h4>
-<div class="footer-contact">
+                <div class="footer-contact">
 
-    <p>
-        <i class="fas fa-envelope"></i>
+                    <p>
+                        <i class="fas fa-envelope"></i>
 
-        <a href="mailto:tabaniimadeddine@gmail.com" class="footer-link email-link">
-            tabaniimadeddine@gmail.com
-        </a>
-    </p>
+                        <a href="mailto:tabaniimadeddine@gmail.com" class="footer-link email-link">
+                            tabaniimadeddine@gmail.com
+                        </a>
+                    </p>
 
-    <p>
-        <i class="fas fa-phone"></i>
+                    <p>
+                        <i class="fas fa-phone"></i>
 
-        <a href="tel:+213697743721" class="footer-link phone-link">
-            +213 697 74 37 21
-        </a>
-    </p>
+                        <a href="tel:+213697743721" class="footer-link phone-link">
+                            +213 697 74 37 21
+                        </a>
+                    </p>
 
-    <p>
-        <i class="fas fa-map-marker-alt"></i>
-        الجزائر العاصمة، الجزائر
-    </p>
+                    <p>
+                        <i class="fas fa-map-marker-alt"></i>
+                        الجزائر العاصمة، الجزائر
+                    </p>
 
-    <p>
-        <i class="fas fa-clock"></i>
-        متاح 24/7 - طوال أيام الأسبوع
-    </p>
+                    <p>
+                        <i class="fas fa-clock"></i>
+                        متاح 24/7 - طوال أيام الأسبوع
+                    </p>
 
-</div>
+                </div>
                 <div style="margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid rgba(255,255,255,0.1);">
                     <p style="color: var(--gray-300); font-size: 0.9rem;">
                         <i class="fas fa-code" style="color: var(--gold); margin-left: 0.5rem;"></i>
