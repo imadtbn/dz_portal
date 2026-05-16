@@ -146,3 +146,203 @@
         aspect-ratio: 16 / 10;
     }
 }
+
+
+/* =========================
+   Professional Video Section
+========================= */
+
+.video-section {
+    overflow: hidden;
+}
+
+.video-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 28px;
+    background: linear-gradient(135deg, #ffffff, #faf7ff);
+    border: 1px solid rgba(123, 31, 162, 0.08);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+    transition: 0.4s ease;
+}
+
+.video-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 50px rgba(123, 31, 162, 0.16);
+}
+
+.video-wrapper {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    background: #000;
+}
+
+.tutorial-frame {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border: none;
+    display: block;
+}
+
+.video-glow {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background:
+        linear-gradient(to top,
+            rgba(0, 0, 0, 0.25),
+            transparent 45%);
+}
+
+.video-content {
+    padding: 2rem;
+}
+
+.video-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.7rem 1.1rem;
+    border-radius: 50px;
+    background: rgba(190, 36, 95, 0.1);
+    color: #be245f;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+}
+
+.video-content h4 {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+    color: #222;
+    line-height: 1.7;
+}
+
+.video-content p {
+    color: #666;
+    line-height: 2;
+    margin-bottom: 1.8rem;
+}
+
+.video-features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.video-feature {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: #f8f9fb;
+    padding: 0.8rem 1rem;
+    border-radius: 14px;
+    font-size: 0.95rem;
+    color: #444;
+    font-weight: 600;
+}
+
+.video-feature i {
+    color: #7b1fa2;
+}
+
+.video-actions {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.video-btn {
+    border: none;
+    text-decoration: none;
+    cursor: pointer;
+    padding: 1rem 1.5rem;
+    border-radius: 16px;
+    font-weight: 700;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.7rem;
+    transition: 0.3s ease;
+    font-family: inherit;
+}
+
+.youtube-btn {
+    background: #ff0000;
+    color: white;
+}
+
+.youtube-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(255, 0, 0, 0.2);
+}
+
+.share-btn {
+    background: #f1f3f5;
+    color: #333;
+}
+
+.share-btn:hover {
+    background: #e5e7eb;
+    transform: translateY(-3px);
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+
+    .video-content {
+        padding: 1.25rem;
+    }
+
+    .video-content h4 {
+        font-size: 1.15rem;
+    }
+
+    .video-content p {
+        font-size: 0.95rem;
+    }
+
+    .video-actions {
+        flex-direction: column;
+    }
+
+    .video-btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .video-features {
+        flex-direction: column;
+    }
+
+    .tutorial-frame {
+        aspect-ratio: 16 / 10;
+    }
+}
+
+
+.video-wrapper {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 24px;
+    background: #000;
+}
+
+.tutorial-frame {
+    width: 100%;
+    height: 100%;
+    min-height: 500px;
+    aspect-ratio: 16 / 9;
+    border: 0;
+    display: block;
+}
+
+@media (max-width: 768px) {
+
+    .tutorial-frame {
+        min-height: 240px;
+    }
+}
