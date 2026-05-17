@@ -31,7 +31,7 @@
     </script>
 
     <script async custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"></script>
-    
+
     <!-- أيقونة الموقع -->
     <link rel="icon" href="../assets/images/icon.png" type="image/png">
     <link rel="icon" href="https://imadtbn.github.io/dz_portal/icons/icon.png" type="image/png">
@@ -53,12 +53,11 @@
 
     <link rel="stylesheet" href="../assets/css/style-sector.css">
 
-    <!-- Structured Data -->
-    <script type="application/ld+json">
+<!-- Structured Data -->
+<script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@graph": [
-
     {
       "@type": "WebSite",
       "@id": "https://imadtbn.github.io/dz_portal/#website",
@@ -67,17 +66,22 @@
       "alternateName": "DZ Portal",
       "inLanguage": "ar"
     },
-
     {
       "@type": "Organization",
       "@id": "https://imadtbn.github.io/dz_portal/#organization",
       "name": "البوابة الجزائرية للخدمات الرقمية",
       "url": "https://imadtbn.github.io/dz_portal/",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://imadtbn.github.io/dz_portal/search?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+        "image": "https://imadtbn.github.io/dz_portal/icons/icon.png"
+      },
       "logo": {
         "@type": "ImageObject",
         "url": "https://imadtbn.github.io/dz_portal/icons/icon.png"
       },
-             "contactPoint": {
+      "contactPoint": {
         "@type": "ContactPoint",
         "contactType": "customer support",
         "areaServed": "DZ",
@@ -95,13 +99,12 @@
         "https://imadtbn.github.io/dz_portal/"
       ]
     },
-
     {
       "@type": "WebPage",
       "@id": "https://imadtbn.github.io/dz_portal/sectors/seeal.html#webpage",
       "url": "https://imadtbn.github.io/dz_portal/sectors/seeal.html",
       "name": "سيال للمياه والتطهير Seeal | البوابة الجزائرية للخدمات الرقمية",
-      "description": "اكتشف خدمات سيال للمياه والتطهير Seeal الرقمية عبر البوابة الجزائرية للخدمات الرقمية. من دفع الفواتير إلى محاكاة الفاتورة، دفع وتطبيقات في إنتظاركم، تواصل مع Seeal بسهولة ويسر. خدمات رقمية متكاملة لتلبية جميع احتياجاتك المتعلقة بالمياه في الجزائر.",
+      "description": "اكتشف خدمات سيال للمياه والتطهير Seeal الرقمية عبر البوابة الجزائرية للخدمات الرقمية.",
       "keywords": [
         "سيال للمياه والتطهير Seeal",
         "خدمات المياه الرقمية",
@@ -115,7 +118,7 @@
         "خدمات المياه في الجزائر",
         "البوابة الجزائرية للخدمات الرقمية",
         "Seeal e-Services",
-        "Seeal digital services", 
+        "Seeal digital services",
         "Seeal online services",
         "Seeal bill payment",
         "Seeal bill simulation",
@@ -145,13 +148,12 @@
       },
       "primaryImageOfPage": {
         "@type": "ImageObject",
-        "url": "https://imadtbn.github.io/dz_portal/assets/images/seeal.webp",
+        "url": "https://imadtbn.github.io/dz_portal/assets/images/seeal.webp"
       },
       "breadcrumb": {
         "@id": "https://imadtbn.github.io/dz_portal/sectors/seeal.html#breadcrumb"
       }
     },
-
     {
       "@type": "BreadcrumbList",
       "@id": "https://imadtbn.github.io/dz_portal/sectors/seeal.html#breadcrumb",
@@ -170,7 +172,6 @@
         }
       ]
     }
-
   ]
 }
 </script>
@@ -185,7 +186,7 @@
         data-auto-format="rspv" data-full-width="">
         <div overflow=""></div>
     </amp-ad>
-    
+
     <!-- Header -->
     <header class="header">
         <div class="header-content">
