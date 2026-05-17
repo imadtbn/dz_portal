@@ -1352,3 +1352,9 @@ div[style*="border-radius"] i:hover {
     unicode-bidi: embed;
     display: inline-block;
 }
+
+
+.adsbygoogle {
+    min-height: 280px;
+    display: block;
+}

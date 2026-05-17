@@ -761,3 +761,8 @@
 .email-link{
     word-break: break-word;
 }
+
+.adsbygoogle {
+    min-height: 280px;
+    display: block;
+}

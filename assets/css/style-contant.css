@@ -829,3 +829,22 @@
 .email-link{
     word-break: break-word;
 }
+
+
+.google-map{
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    margin-top: 20px;
+}
+
+.google-map iframe{
+    display: block;
+    width: 100%;
+    min-height: 400px;
+}
+
+.adsbygoogle {
+    min-height: 280px;
+    display: block;
+}

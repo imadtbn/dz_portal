@@ -501,6 +501,7 @@ body {
     border-radius: 50%;
     animation: spin 1s linear infinite;
     margin: 0 auto 1rem;
+    will-change: transform;
 }
 
 
@@ -758,6 +759,8 @@ body {
     transition: transform 0.3s ease;
 }
 
+
+
 /* Hover */
 .sector-card:hover .sector-icon {
     transform: translateY(-5px);
@@ -978,4 +981,9 @@ body {
 /* البريد */
 .email-link {
     word-break: break-word;
+}
+
+.adsbygoogle {
+    min-height: 280px;
+    display: block;
 }

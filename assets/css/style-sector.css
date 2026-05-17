@@ -1651,3 +1651,8 @@ video {
         color: inherit !important;
     }
 }
+
+.adsbygoogle {
+    min-height: 280px;
+    display: block;
+}

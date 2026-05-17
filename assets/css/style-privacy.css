@@ -256,3 +256,7 @@
       font-size: 0.95rem;
     }
 
+.adsbygoogle {
+    min-height: 280px;
+    display: block;
+}
