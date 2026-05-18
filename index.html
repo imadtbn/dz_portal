@@ -16,7 +16,6 @@
 
     <link rel="preload" as="image" href="assets/images/icon-512.png">
 
-    <!-- Structured Data -->
     <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -26,17 +25,25 @@
       "@id": "https://imadtbn.github.io/dz_portal/#website",
       "url": "https://imadtbn.github.io/dz_portal/",
       "name": "البوابة الجزائرية للخدمات الرقمية",
-      "alternateName": "DZ E-Services Portal",
-      "inLanguage": "ar",
+      "alternateName": ["DZ E-Services Portal", "البوابة الجزائرية"],
+      "inLanguage": ["ar", "fr"],
       "description": "منصة موحدة تتيح للمواطن الجزائري الوصول السريع والآمن إلى جميع الخدمات الحكومية والعمومية الرقمية من مكان واحد، دون تعقيد أو تنقل إداري.",
-      "image": "https://imadtbn.github.io/dz_portal/preview.png",
-"logo": {
-  "@type": "ImageObject",
-  "url": "https://imadtbn.github.io/dz_portal/icons/icon.png"
-}
-
+      "publisher": { "@id": "https://imadtbn.github.io/dz_portal/#organization" },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://imadtbn.github.io/dz_portal/?q={search_term_string}"
+        },
+        "query-input": "required name=search_term_string"
+      },
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://imadtbn.github.io/dz_portal/preview.png",
+        "width": 1200,
+        "height": 630
+      }
     },
-
     {
       "@type": "Organization",
       "@id": "https://imadtbn.github.io/dz_portal/#organization",
@@ -44,19 +51,29 @@
       "url": "https://imadtbn.github.io/dz_portal/",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://imadtbn.github.io/dz_portal/icons/icon.png"
+        "@id": "https://imadtbn.github.io/dz_portal/#logo",
+        "url": "https://imadtbn.github.io/dz_portal/icons/icon.png",
+        "width": 512,
+        "height": 512,
+        "caption": "شعار البوابة الجزائرية للخدمات الرقمية"
+      },
+      "image": { "@id": "https://imadtbn.github.io/dz_portal/#logo" },
+      "founder": {
+        "@type": "Person",
+        "name": "Imad Tabani",
+        "email": "mailto:tabaniimadeddine@gmail.com"
       },
       "contactPoint": {
         "@type": "ContactPoint",
         "contactType": "customer support",
         "areaServed": "DZ",
-        "availableLanguage": ["ar", "fr"],
+        "availableLanguage": ["Arabic", "French"],
         "email": "tabaniimadeddine@gmail.com",
         "telephone": "+213697743721"
       },
       "address": {
         "@type": "PostalAddress",
-        "addressLocality": "الجزائر",
+        "addressLocality": "الجزائر العاصمة",
         "postalCode": "16000",
         "addressCountry": "DZ"
       },
@@ -64,400 +81,578 @@
         "https://imadtbn.github.io/dz_portal/"
       ]
     },
-
     {
       "@type": "WebPage",
       "@id": "https://imadtbn.github.io/dz_portal/#webpage",
       "url": "https://imadtbn.github.io/dz_portal/",
-      "name": "الصفحة الرئيسية",
-      "isPartOf": {
-        "@id": "https://imadtbn.github.io/dz_portal/#website"
-      },
-      "about": {
-        "@id": "https://imadtbn.github.io/dz_portal/#organization"
-      },
+      "name": "الصفحة الرئيسية - البوابة الجزائرية للخدمات الرقمية",
+      "isPartOf": { "@id": "https://imadtbn.github.io/dz_portal/#website" },
+      "about": { "@id": "https://imadtbn.github.io/dz_portal/#organization" },
       "inLanguage": "ar",
-      "image": "https://imadtbn.github.io/dz_portal/preview.png",
       "description": "منصة موحدة تتيح للمواطن الجزائري الوصول السريع والآمن إلى جميع الخدمات الحكومية والعمومية الرقمية من مكان واحد، دون تعقيد أو تنقل إداري.",
-"keywords": [
-  "الجزائر",
-  "بوابة الخدمات الرقمية",
-  "الخدمات الحكومية",
-  "الخدمات الإلكترونية",
-  "التربية والتعليم",
-  "التعليم العالي",
-  "الخدمات الجامعية",
-    "التكوين المهني",
-    "بريد الجزائر",
-    "اتصالات الجزائر",
-    "السكن والعمران",
-    "الفواتير",
-    "العدالة",
-    "الصحة",
-    "النقل والسفر",
-    "السلطة الوطنية المستقلة للانتخابات",
-    "مركبتي لفحص مطابقة المركبات",
-    "المقاول الذاتي",
-    "الوكالة الوطنية لترقية الإستثمار",
-    "وزارة الفلاحة والتنمية الريفية والصيد البحري",
-    "dzexams",
-    "dzexam1",
-    "eddirasa",
-    "etudpdf",
-    "educationdz",
-    "medjedel",
-    "ecolerradja",
-    "dztests",
-    "t-onec",
-    "السلطة العليا للشفافية والوقاية من الفساد ومكافحته",
-    "الديوان المركزي لقمع الفساد",
-    "المؤسسة الوطنية للمواد البترولية نفطال"
-    "hatplc",
-    "ocrc",
-    "naftal"
-    "الشرطة الجزائرية",
-    "الخدمات الرقمية في الجزائر",
-    "الخدمات الإلكترونية في الجزائر",
-    "الدرك الوطني الجزائري",
-    "الجزائر الرقمية",
-    "الحماية المدنية الجزائرية",
-    "الجزائرية للمياه",
-    "سيال للمياه والتطهير",
-    "الجزائرية للغاز",
-    "سونلغاز للكهرباء والغاز",
-    "الجزائرية للكهرباء",
-    "الجزائرية للماء والكهرباء",
-    "الجزائرية للماء والكهرباء والغاز",
-    "الصحة في الجزائر",
-    "النقل في الجزائر",
-    "السفر في الجزائر",
-    "الانتخابات في الجزائر",
-    "الفساد في الجزائر",
-    "الشفافية في الجزائر",
-    "الوقاية من الفساد في الجزائر",
-    "مكافحة الفساد في الجزائر",
-    "التشغيل الذاتي في الجزائر",
-    "الاستثمار في الجزائر",
-    "المقاول الذاتي في الجزائر",
-    "الزراعة في الجزائر",
-    "التنمية الريفية في الجزائر",
-    "الصيد البحري في الجزائر",
-    "بنك الفروض والاختبارات في الجزائر",
-    "منصات الفروض والاختبارات في الجزائر",
-    "التعليم عن بعد في الجزائر",
-    "التحويلات الجامعية في الجزائر",
-    "الإيواء الجامعي في الجزائر",
-    "التسجيل في الامتحانات في الجزائر",
-    "نتائج الامتحانات في الجزائر",
-    "فضاء الأستاذ والأولياء في الجزائر",
-    "الضمان الاجتماعي في الجزائر",
-    "cnas",
-    "casnos",
-    "cnr",
-    "الجمارك الجزائرية",
-    "قسيمة السيارة في الجزائر",
-    "الطابع الجبائي",
-    "البوابة الجغرافية",
-    "مسح الأراضي"
-]
-      "genre": "Public Services, Digital Services",
-      "mainEntityOfPage": {
-        "@id": "https://imadtbn.github.io/dz_portal/#website"
-      },
       "primaryImageOfPage": {
         "@type": "ImageObject",
         "url": "https://imadtbn.github.io/dz_portal/preview.png"
       },
       "breadcrumb": {
         "@type": "BreadcrumbList",
-        "itemListElement": [
-          {
-            "@type": "ListItem",
-            "position": 1,
-            "name": "الصفحة الرئيسية",
-            "item": "https://imadtbn.github.io/dz_portal/"
-          }
-        ]
+        "@id": "https://imadtbn.github.io/dz_portal/#breadcrumb"
+      },
+      "mainEntity": {
+        "@type": "ItemList",
+        "@id": "https://imadtbn.github.io/dz_portal/#main-services"
       }
     },
-
     {
-      "@type": "ItemList",
-      "@id": "https://imadtbn.github.io/dz_portal/#navigation",
-      "name": "قائمة التنقل في البوابة الجزائرية للخدمات الإلكترونية",
-      "description": "قائمة أقسام وخدمات البوابة الجزائرية للخدمات الإلكترونية",
+      "@type": "BreadcrumbList",
+      "@id": "https://imadtbn.github.io/dz_portal/#breadcrumb",
       "itemListElement": [
         {
           "@type": "ListItem",
           "position": 1,
-          "name": "التربية والتعليم",
-          "url": "https://imadtbn.github.io/dz_portal/sectors/education.html"
+          "name": "الصفحة الرئيسية",
+          "item": "https://imadtbn.github.io/dz_portal/"
+        }
+      ]
+    },
+    {
+      "@type": "ItemList",
+      "@id": "https://imadtbn.github.io/dz_portal/#main-services",
+      "name": "الخدمات الرقمية الجزائرية",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "item": {
+            "@type": "Service",
+            "name": "التربية والتعليم",
+            "description": "التسجيل في الامتحانات، نتائج، فضاء الأستاذ والأولياء، التعليم عن بعد",
+            "provider": { "@id": "https://imadtbn.github.io/dz_portal/#organization" },
+            "areaServed": "DZ",
+            "category": "الخدمات الحكومية",
+            "url": "https://imadtbn.github.io/dz_portal/sectors/education.html"
+          }
         },
         {
           "@type": "ListItem",
           "position": 2,
-          "name": "بنك الفروض والاختبارات",
-          "url": "https://imadtbn.github.io/dz_portal/sectors/exam-compos.html"
+          "item": {
+            "@type": "Service",
+            "name": "بنك الفروض والاختبارات",
+            "description": "جميع منصات الفروض والاختبارات للتعليم في الجزائر",
+            "provider": { "@id": "https://imadtbn.github.io/dz_portal/#organization" },
+            "areaServed": "DZ",
+            "category": "الخدمات التعليمية",
+            "url": "https://imadtbn.github.io/dz_portal/sectors/exam-compos.html"
+          }
         },
         {
           "@type": "ListItem",
           "position": 3,
-          "name": "التعليم العالي والخدمات الجامعية",
-          "url": "https://imadtbn.github.io/dz_portal/sectors/progres.mesrs.html"
+          "item": {
+            "@type": "Service",
+            "name": "الخدمات الجامعية",
+            "description": "التسجيل الجامعي، منصة Progres، الإيواء الجامعي، التحويلات الجامعية",
+            "provider": { "@id": "https://imadtbn.github.io/dz_portal/#organization" },
+            "areaServed": "DZ",
+            "category": "التعليم العالي",
+            "url": "https://imadtbn.github.io/dz_portal/sectors/progres.mesrs.html"
+          }
         },
         {
           "@type": "ListItem",
           "position": 4,
-          "name": "التكوين والتعليم المهنيين",
-          "url": "https://imadtbn.github.io/dz_portal/sectors/mfp.gov.html"
+          "item": {
+            "@type": "Service",
+            "name": "التكوين والتعليم المهني",
+            "description": "التسجيل في التكوين والتعليم المهنيين، الامتحانات",
+            "provider": { "@id": "https://imadtbn.github.io/dz_portal/#organization" },
+            "areaServed": "DZ",
+            "category": "التكوين المهني",
+            "url": "https://imadtbn.github.io/dz_portal/sectors/mfp.gov.html"
+          }
         },
         {
           "@type": "ListItem",
           "position": 5,
-          "name": "بريد الجزائر",
-          "url": "https://imadtbn.github.io/dz_portal/sectors/poste.html"
+          "item": {
+            "@type": "Service",
+            "name": "بريد الجزائر",
+            "description": "خدمات البريد في الجزائر، البطاقة الذهبية، التطبيقات الرقمية",
+            "provider": { "@id": "https://imadtbn.github.io/dz_portal/#organization" },
+            "areaServed": "DZ",
+            "category": "البريد والمواصلات",
+            "url": "https://imadtbn.github.io/dz_portal/sectors/poste.html"
+          }
         },
         {
           "@type": "ListItem",
           "position": 6,
-          "name": "اتصالات الجزائر",
-          "url": "https://imadtbn.github.io/dz_portal/sectors/algerietelecom.html"
+          "item": {
+            "@type": "Service",
+            "name": "اتصالات الجزائر",
+            "description": "خدمات الانترنت، فضاء الزبون، بطاقات التعبئة، الدفع الإلكتروني",
+            "provider": { "@id": "https://imadtbn.github.io/dz_portal/#organization" },
+            "areaServed": "DZ",
+            "category": "الاتصالات",
+            "url": "https://imadtbn.github.io/dz_portal/sectors/algerietelecom.html"
+          }
         },
         {
           "@type": "ListItem",
           "position": 7,
-          "name": "خدمات الهاتف النقال",
-          "url": "https://imadtbn.github.io/dz_portal/sectors/telephon.html"
+          "item": {
+            "@type": "Service",
+            "name": "خدمات الهاتف النقال",
+            "description": "موبيليس، جازي، أوريدو، تطبيقات وأرقام، مصلحة الزبائن",
+            "provider": { "@id": "https://imadtbn.github.io/dz_portal/#organization" },
+            "areaServed": "DZ",
+            "category": "الهاتف النقال",
+            "url": "https://imadtbn.github.io/dz_portal/sectors/telephon.html"
+          }
         },
         {
           "@type": "ListItem",
           "position": 8,
-          "name": "سلطة ضبط البريد والاتصالات الإلكترونية (ARPCE)",
-          "url": "https://imadtbn.github.io/dz_portal/sectors/arpce.html"
+          "item": {
+            "@type": "Service",
+            "name": "سلطة ضبط البريد والاتصالات الإلكترونية (ARPCE)",
+            "description": "طلب خدمة، دفع الفاتورة، معرفة عدد أرقام الهاتف باسمك، التطبيقات",
+            "provider": { "@id": "https://imadtbn.github.io/dz_portal/#organization" },
+            "areaServed": "DZ",
+            "category": "الرقابة والتنظيم",
+            "url": "https://imadtbn.github.io/dz_portal/sectors/arpce.html"
+          }
         },
         {
           "@type": "ListItem",
           "position": 9,
-          "name": "الداخلية والجماعات المحلية",
-          "url": "https://imadtbn.github.io/dz_portal/sectors/interieur.html"
+          "item": {
+            "@type": "Service",
+            "name": "وزارة الداخلية والجماعات المحلية",
+            "description": "البطاقة التعريف البيومترية، رخصة السياقة، جواز السفر، شهادة الميلاد، الشباك عن بعد",
+            "provider": { "@id": "https://imadtbn.github.io/dz_portal/#organization" },
+            "areaServed": "DZ",
+            "category": "الأمن والأحوال المدنية",
+            "url": "https://imadtbn.github.io/dz_portal/sectors/interieur.html"
+          }
         },
         {
           "@type": "ListItem",
           "position": 10,
-          "name": "السكن والعمران",
-          "url": "https://imadtbn.github.io/dz_portal/sectors/mhuv.gov.html"
+          "item": {
+            "@type": "Service",
+            "name": "السكن والعمران",
+            "description": "السكن الاجتماعي، السكن الريفي، السكن العمومي الإيجاري، السكن الترقوي المدعم",
+            "provider": { "@id": "https://imadtbn.github.io/dz_portal/#organization" },
+            "areaServed": "DZ",
+            "category": "السكن",
+            "url": "https://imadtbn.github.io/dz_portal/sectors/mhuv.gov.html"
+          }
         },
         {
           "@type": "ListItem",
           "position": 11,
-          "name": "التأمينات والضمان الاجتماعي",
-          "url": "https://imadtbn.github.io/dz_portal/sectors/mtess.html"
+          "item": {
+            "@type": "Service",
+            "name": "التأمين والضمان الاجتماعي",
+            "description": "الضمان الاجتماعي CNAS/CASNOS، التقاعد CNR، مؤسسات التأمين الخاصة",
+            "provider": { "@id": "https://imadtbn.github.io/dz_portal/#organization" },
+            "areaServed": "DZ",
+            "category": "الضمان الاجتماعي",
+            "url": "https://imadtbn.github.io/dz_portal/sectors/mtess.html"
+          }
         },
         {
           "@type": "ListItem",
           "position": 12,
-          "name": "المالية والجباية",
-          "url": "https://imadtbn.github.io/dz_portal/sectors/mf.gov.html"
+          "item": {
+            "@type": "Service",
+            "name": "المالية والجباية",
+            "description": "الطابع الجبائي، قسيمة السيارات، الصفقات العمومية، الأملاك العقارية",
+            "provider": { "@id": "https://imadtbn.github.io/dz_portal/#organization" },
+            "areaServed": "DZ",
+            "category": "المالية",
+            "url": "https://imadtbn.github.io/dz_portal/sectors/mf.gov.html"
+          }
         },
         {
           "@type": "ListItem",
           "position": 13,
-          "name": "الطاقة والماء والكهرباء والغاز",
-          "url": "https://imadtbn.github.io/dz_portal/sectors/facteur.html"
+          "item": {
+            "@type": "Service",
+            "name": "تسديد الفواتير",
+            "description": "دفع فواتير الكهرباء والماء والغاز عبر البوابة الجزائرية للخدمات الرقمية",
+            "provider": { "@id": "https://imadtbn.github.io/dz_portal/#organization" },
+            "areaServed": "DZ",
+            "category": "الفواتير",
+            "url": "https://imadtbn.github.io/dz_portal/sectors/facteur.html"
+          }
         },
         {
           "@type": "ListItem",
           "position": 14,
-          "name": "العدالة",
-          "url": "https://imadtbn.github.io/dz_portal/sectors/mjustice.html"
+          "item": {
+            "@type": "Service",
+            "name": "سونلغاز",
+            "description": "فاتورة الكهرباء والغاز، الربط بالكهرباء، الربط بالغاز",
+            "provider": { "@id": "https://imadtbn.github.io/dz_portal/#organization" },
+            "areaServed": "DZ",
+            "category": "الطاقة",
+            "url": "https://imadtbn.github.io/dz_portal/sectors/sonalgaz.html"
+          }
         },
         {
           "@type": "ListItem",
           "position": 15,
-          "name": "الشؤون الخارجية والجالية الجزائرية",
-          "url": "https://imadtbn.github.io/dz_portal/sectors/mfa.html"
+          "item": {
+            "@type": "Service",
+            "name": "الجزائرية للمياه",
+            "description": "فاتورة الماء، خدمات الجزائرية للمياه",
+            "provider": { "@id": "https://imadtbn.github.io/dz_portal/#organization" },
+            "areaServed": "DZ",
+            "category": "المياه",
+            "url": "https://imadtbn.github.io/dz_portal/sectors/ade.html"
+          }
         },
         {
           "@type": "ListItem",
           "position": 16,
-          "name": "الديوان الوطني للحج والعمرة",
-          "url": "https://imadtbn.github.io/dz_portal/sectors/onpo.html"
+          "item": {
+            "@type": "Service",
+            "name": "سيال للمياه والتطهير",
+            "description": "فاتورة الماء لسيال للمياه والتطهير",
+            "provider": { "@id": "https://imadtbn.github.io/dz_portal/#organization" },
+            "areaServed": "DZ",
+            "category": "المياه والتطهير",
+            "url": "https://imadtbn.github.io/dz_portal/sectors/seaal.html"
+          }
         },
         {
           "@type": "ListItem",
           "position": 17,
-          "name": "التجارة والجمارك الجزائرية",
-          "url": "https://imadtbn.github.io/dz_portal/sectors/commerce.html"
+          "item": {
+            "@type": "Service",
+            "name": "العدالة",
+            "description": "النيابة الإلكترونية، السوابق العدلية، الجنسية، الاتصال بالمحبوسين",
+            "provider": { "@id": "https://imadtbn.github.io/dz_portal/#organization" },
+            "areaServed": "DZ",
+            "category": "العدالة",
+            "url": "https://imadtbn.github.io/dz_portal/sectors/mjustice.html"
+          }
         },
         {
           "@type": "ListItem",
           "position": 18,
-          "name": "تخليص فواتير المياه، الكهرباء والغاز",
-          "url": "https://imadtbn.github.io/dz_portal/sectors/facteur.html"
+          "item": {
+            "@type": "Service",
+            "name": "الشؤون الخارجية والجالية الجزائرية",
+            "description": "خدمات الشؤون الخارجية والجالية الجزائرية",
+            "provider": { "@id": "https://imadtbn.github.io/dz_portal/#organization" },
+            "areaServed": "DZ",
+            "category": "الشؤون الخارجية",
+            "url": "https://imadtbn.github.io/dz_portal/sectors/mfa.html"
+          }
         },
         {
           "@type": "ListItem",
           "position": 19,
-          "name": "سونلغاز للكهرباء والغاز",
-          "url": "https://imadtbn.github.io/dz_portal/sectors/sonalgaz.html"
+          "item": {
+            "@type": "Service",
+            "name": "الديوان الوطني للحج والعمرة",
+            "description": "خدمات الحج والعمرة في الجزائر",
+            "provider": { "@id": "https://imadtbn.github.io/dz_portal/#organization" },
+            "areaServed": "DZ",
+            "category": "الحج والعمرة",
+            "url": "https://imadtbn.github.io/dz_portal/sectors/onpo.html"
+          }
         },
         {
           "@type": "ListItem",
           "position": 20,
-          "name": "الجزائرية للمياه",
-          "url": "https://imadtbn.github.io/dz_portal/sectors/ade.html"
+          "item": {
+            "@type": "Service",
+            "name": "التجارة والجمارك الجزائرية",
+            "description": "خدمات التجارة وترقية الصادرات، الجمارك الجزائرية، اتصال وإصغاء",
+            "provider": { "@id": "https://imadtbn.github.io/dz_portal/#organization" },
+            "areaServed": "DZ",
+            "category": "التجارة والجمارك",
+            "url": "https://imadtbn.github.io/dz_portal/sectors/commerce.html"
+          }
         },
         {
           "@type": "ListItem",
           "position": 21,
-          "name": "سيال للمياه والتطهير",
-          "url": "https://imadtbn.github.io/dz_portal/sectors/seaal.html"
+          "item": {
+            "@type": "Service",
+            "name": "الشرطة الجزائرية",
+            "description": "شكاوي وتصاريح عن بعد، الخدمات الرقمية، تطبيقات، دليل هاتفي",
+            "provider": { "@id": "https://imadtbn.github.io/dz_portal/#organization" },
+            "areaServed": "DZ",
+            "category": "الأمن",
+            "url": "https://imadtbn.github.io/dz_portal/sectors/dgsn.html"
+          }
         },
         {
           "@type": "ListItem",
           "position": 22,
-          "name": "الشرطة الجزائرية",
-          "url": "https://imadtbn.github.io/dz_portal/sectors/dgsn.html"
+          "item": {
+            "@type": "Service",
+            "name": "الصحة",
+            "description": "العيادة الرقمية، التكوين الشبه طبي، تطبيقات الأطباء، بنك الدم",
+            "provider": { "@id": "https://imadtbn.github.io/dz_portal/#organization" },
+            "areaServed": "DZ",
+            "category": "الصحة",
+            "url": "https://imadtbn.github.io/dz_portal/sectors/sante.html"
+          }
         },
         {
           "@type": "ListItem",
           "position": 23,
-          "name": "الصحة",
-          "url": "https://imadtbn.github.io/dz_portal/sectors/sante.html"
+          "item": {
+            "@type": "Service",
+            "name": "النقل والمواصلات",
+            "description": "حجز تذاكر الطيران، القطارات، البواخر، الترامواي، تطبيق محطتي",
+            "provider": { "@id": "https://imadtbn.github.io/dz_portal/#organization" },
+            "areaServed": "DZ",
+            "category": "النقل",
+            "url": "https://imadtbn.github.io/dz_portal/sectors/transport.html"
+          }
         },
         {
           "@type": "ListItem",
           "position": 24,
-          "name": "النقل والسفر",
-          "url": "https://imadtbn.github.io/dz_portal/sectors/transport.html"
+          "item": {
+            "@type": "Service",
+            "name": "السلطة الوطنية المستقلة للانتخابات",
+            "description": "بطاقة الناخب، تسجيل الناخبين، نتائج الانتخابات، أين أنتخب",
+            "provider": { "@id": "https://imadtbn.github.io/dz_portal/#organization" },
+            "areaServed": "DZ",
+            "category": "الانتخابات",
+            "url": "https://imadtbn.github.io/dz_portal/sectors/ina-elections.html"
+          }
         },
         {
           "@type": "ListItem",
           "position": 25,
-          "name": "السلطة الوطنية المستقلة للانتخابات",
-          "url": "https://imadtbn.github.io/dz_portal/sectors/ina-elections.html"
+          "item": {
+            "@type": "Service",
+            "name": "مركبتي لفحص مطابقة المركبات",
+            "description": "حجز مواعيد فحص مطابقة المركبات في الجزائر",
+            "provider": { "@id": "https://imadtbn.github.io/dz_portal/#organization" },
+            "areaServed": "DZ",
+            "category": "النقل",
+            "url": "https://imadtbn.github.io/dz_portal/sectors/markabatidz.html"
+          }
         },
         {
           "@type": "ListItem",
           "position": 26,
-          "name": "مركبتي لفحص مطابقة المركبات",
-          "url": "https://imadtbn.github.io/dz_portal/sectors/markabatidz.html"
+          "item": {
+            "@type": "Service",
+            "name": "المقاول الذاتي",
+            "description": "خدمات المقاول الذاتي في الجزائر",
+            "provider": { "@id": "https://imadtbn.github.io/dz_portal/#organization" },
+            "areaServed": "DZ",
+            "category": "التشغيل",
+            "url": "https://imadtbn.github.io/dz_portal/sectors/anae.html"
+          }
         },
         {
           "@type": "ListItem",
           "position": 27,
-          "name": "المقاول الذاتي",
-          "url": "https://imadtbn.github.io/dz_portal/sectors/anae.html"
+          "item": {
+            "@type": "Service",
+            "name": "الوكالة الوطنية لترقية الاستثمار",
+            "description": "خدمات ترقية الاستثمار في الجزائر",
+            "provider": { "@id": "https://imadtbn.github.io/dz_portal/#organization" },
+            "areaServed": "DZ",
+            "category": "الاستثمار",
+            "url": "https://imadtbn.github.io/dz_portal/sectors/aapi.html"
+          }
         },
         {
           "@type": "ListItem",
           "position": 28,
-          "name": "الوكالة الوطنية لترقية الإستثمار",
-          "url": "https://imadtbn.github.io/dz_portal/sectors/aapi.html"
+          "item": {
+            "@type": "Service",
+            "name": "وزارة الفلاحة والتنمية الريفية والصيد البحري",
+            "description": "حجز أضاحي العيد، شكاوي عن بعد",
+            "provider": { "@id": "https://imadtbn.github.io/dz_portal/#organization" },
+            "areaServed": "DZ",
+            "category": "الفلاحة",
+            "url": "https://imadtbn.github.io/dz_portal/sectors/mard.html"
+          }
         },
         {
           "@type": "ListItem",
           "position": 29,
-          "name": "وزارة الفلاحة والتنمية الريفية والصيد البحري",
-          "url": "https://imadtbn.github.io/dz_portal/sectors/mard.html"
+          "item": {
+            "@type": "Service",
+            "name": "نفطال للمواد البترولية",
+            "description": "محطتي، اقتناء العجلات، خدمات عن بعد، تطبيقات",
+            "provider": { "@id": "https://imadtbn.github.io/dz_portal/#organization" },
+            "areaServed": "DZ",
+            "category": "الطاقة",
+            "url": "https://imadtbn.github.io/dz_portal/sectors/naftal.html"
+          }
         },
         {
           "@type": "ListItem",
           "position": 30,
-          "name": "dzexams",
-          "url": "https://imadtbn.github.io/dz_portal/sectors/dzexams.html"
+          "item": {
+            "@type": "Service",
+            "name": "السلطة العليا للشفافية والوقاية من الفساد ومكافحته",
+            "description": "الوقاية من الفساد ومكافحته، التصريح بالممتلكات",
+            "provider": { "@id": "https://imadtbn.github.io/dz_portal/#organization" },
+            "areaServed": "DZ",
+            "category": "الشفافية",
+            "url": "https://imadtbn.github.io/dz_portal/sectors/hatplc.html"
+          }
         },
         {
           "@type": "ListItem",
           "position": 31,
-          "name": "dzexam1",
-          "url": "https://imadtbn.github.io/dz_portal/sectors/dzexam1.html"
+          "item": {
+            "@type": "Service",
+            "name": "الديوان المركزي لقمع الفساد",
+            "description": "خدمات الديوان المركزي لقمع الفساد",
+            "provider": { "@id": "https://imadtbn.github.io/dz_portal/#organization" },
+            "areaServed": "DZ",
+            "category": "الشفافية",
+            "url": "https://imadtbn.github.io/dz_portal/sectors/ocrc.html"
+          }
         },
         {
           "@type": "ListItem",
           "position": 32,
-          "name": "eddirasa",
-          "url": "https://imadtbn.github.io/dz_portal/sectors/eddirasa.html"
+          "item": {
+            "@type": "Service",
+            "name": "الوكالة الوطنية للتشغيل",
+            "description": "الوكالة الوطنية للتشغيل، منحة البطالة، عروض العمل",
+            "provider": { "@id": "https://imadtbn.github.io/dz_portal/#organization" },
+            "areaServed": "DZ",
+            "category": "التشغيل",
+            "url": "https://imadtbn.github.io/dz_portal/sectors/anem.html"
+          }
         },
-       { 
-        "@type": "ListItem",
+        {
+          "@type": "ListItem",
           "position": 33,
-          "name": "etudpdf",
-          "url": "https://imadtbn.github.io/dz_portal/sectors/etudpdf.html"
+          "item": {
+            "@type": "Service",
+            "name": "dzexams",
+            "description": "فروض واختبارات شهادة التعليم المتوسط، البكالوريا، والابتدائي مع التصحيح",
+            "provider": { "@id": "https://imadtbn.github.io/dz_portal/#organization" },
+            "areaServed": "DZ",
+            "category": "التعليم",
+            "url": "https://imadtbn.github.io/dz_portal/sectors/dzexams.html"
+          }
         },
-               { 
-        "@type": "ListItem",
+        {
+          "@type": "ListItem",
           "position": 34,
-          "name": "educationdz",
-          "url": "https://imadtbn.github.io/dz_portal/sectors/educationdz.html"
+          "item": {
+            "@type": "Service",
+            "name": "dzexam1",
+            "description": "فروض واختبارات شهادة التعليم المتوسط، البكالوريا، والابتدائي مع التصحيح",
+            "provider": { "@id": "https://imadtbn.github.io/dz_portal/#organization" },
+            "areaServed": "DZ",
+            "category": "التعليم",
+            "url": "https://imadtbn.github.io/dz_portal/sectors/dzexam1.html"
+          }
         },
-        { 
-        "@type": "ListItem",
+        {
+          "@type": "ListItem",
           "position": 35,
-          "name": "medjedel",
-          "url": "https://imadtbn.github.io/dz_portal/sectors/medjedel.html"
+          "item": {
+            "@type": "Service",
+            "name": "Eddirasa",
+            "description": "فروض واختبارات شهادة التعليم المتوسط، البكالوريا، والابتدائي مع التصحيح",
+            "provider": { "@id": "https://imadtbn.github.io/dz_portal/#organization" },
+            "areaServed": "DZ",
+            "category": "التعليم",
+            "url": "https://imadtbn.github.io/dz_portal/sectors/eddirasa.html"
+          }
         },
-        { 
-        "@type": "ListItem",
+        {
+          "@type": "ListItem",
           "position": 36,
-          "name": "ecolerradja",
-          "url": "https://imadtbn.github.io/dz_portal/sectors/ecolerradja.html"
+          "item": {
+            "@type": "Service",
+            "name": "Etud-Pdf",
+            "description": "فروض واختبارات شهادة التعليم المتوسط، البكالوريا، والابتدائي مع التصحيح",
+            "provider": { "@id": "https://imadtbn.github.io/dz_portal/#organization" },
+            "areaServed": "DZ",
+            "category": "التعليم",
+            "url": "https://imadtbn.github.io/dz_portal/sectors/etudpdf.html"
+          }
         },
-        { 
-        "@type": "ListItem",
+        {
+          "@type": "ListItem",
           "position": 37,
-          "name": "dztests",
-          "url": "https://imadtbn.github.io/dz_portal/sectors/dztests.html"
+          "item": {
+            "@type": "Service",
+            "name": "Mdjedel",
+            "description": "فروض واختبارات شهادة التعليم المتوسط، البكالوريا، والابتدائي مع التصحيح",
+            "provider": { "@id": "https://imadtbn.github.io/dz_portal/#organization" },
+            "areaServed": "DZ",
+            "category": "التعليم",
+            "url": "https://imadtbn.github.io/dz_portal/sectors/medjedel.html"
+          }
         },
-        { 
-        "@type": "ListItem",
+        {
+          "@type": "ListItem",
           "position": 38,
-          "name": "t-onec",
-          "url": "https://imadtbn.github.io/dz_portal/sectors/t-onec.html"
-        }, 
-        { 
-        "@type": "ListItem",
+          "item": {
+            "@type": "Service",
+            "name": "التأمين على الممتلكات",
+            "description": "شركة التأمين على الممتلكات، تعويضات عن الخسائر، تطبيقات",
+            "provider": { "@id": "https://imadtbn.github.io/dz_portal/#organization" },
+            "areaServed": "DZ",
+            "category": "التأمين",
+            "url": "https://imadtbn.github.io/dz_portal/sectors/assurance.html"
+          }
+        },
+        {
+          "@type": "ListItem",
           "position": 39,
-          "name": "السلطة العليا للشفافية والوقاية من الفساد ومكافحته",
-          "url": "https://imadtbn.github.io/dz_portal/sectors/hatplc.html"
-        }, 
-        { 
-        "@type": "ListItem",
+          "item": {
+            "@type": "Service",
+            "name": "بنوك عمومية وخاصة",
+            "description": "خدمات البنوك العمومية والخاصة، الحسابات البنكية، القروض",
+            "provider": { "@id": "https://imadtbn.github.io/dz_portal/#organization" },
+            "areaServed": "DZ",
+            "category": "الخدمات البنكية",
+            "url": "https://imadtbn.github.io/dz_portal/sectors/bank.html"
+          }
+        },
+        {
+          "@type": "ListItem",
           "position": 40,
-          "name": "الديوان المركزي لقمع الفساد",
-          "url": "https://imadtbn.github.io/dz_portal/sectors/ocrc.html"
-        }, 
-        {
-          "@type": "ListItem",
-          "position": 41,
-          "name": "المؤسسة الوطنية للمواد البترولية نفطال",
-          "url": "https://imadtbn.github.io/dz_portal/sectors/naftal.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 42,
-          "name": "من نحن",
-          "url": "https://imadtbn.github.io/dz_portal/pages/about.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 43,
-          "name": "سياسة الخصوصية",
-          "url": "https://imadtbn.github.io/dz_portal/pages/privacy.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 44,
-          "name": "سياسة الخصوصية",
-          "url": "https://imadtbn.github.io/dz_portal/pages/privacy.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 44,
-          "name": "إتصل بنا",
-          "url": "https://imadtbn.github.io/dz_portal/pages/contact.html"
-        },      
-    ]
+          "item": {
+            "@type": "Service",
+            "name": "أرقام الطوارئ",
+            "description": "أرقام الطوارئ في الجزائر، الإسعاف، الشرطة، الدرك الوطني، خدمات عن بعد، جمعيات، تطبيقات الطوارئ",
+            "provider": { "@id": "https://imadtbn.github.io/dz_portal/#organization" },
+            "areaServed": "DZ",
+            "category": "الطوارئ",
+            "url": "https://imadtbn.github.io/dz_portal/sectors/emergency.html"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "ItemList",
+      "@id": "https://imadtbn.github.io/dz_portal/#navigation",
+      "name": "قائمة التنقل في البوابة الجزائرية للخدمات الإلكترونية",
+      "itemListElement": [
+        { "@type": "SiteNavigationElement", "position": 1, "name": "الصفحة الرئيسية", "url": "https://imadtbn.github.io/dz_portal/index.html" },
+        { "@type": "SiteNavigationElement", "position": 2, "name": "من نحن", "url": "https://imadtbn.github.io/dz_portal/pages/about.html" },
+        { "@type": "SiteNavigationElement", "position": 3, "name": "اتصل بنا", "url": "https://imadtbn.github.io/dz_portal/pages/contact.html" },
+        { "@type": "SiteNavigationElement", "position": 4, "name": "سياسة الخصوصية", "url": "https://imadtbn.github.io/dz_portal/pages/privacy.html" },
+        { "@type": "SiteNavigationElement", "position": 5, "name": "شروط الاستخدام", "url": "https://imadtbn.github.io/dz_portal/pages/terms.html" }
+      ]
     }
   ]
 }
