@@ -144,8 +144,8 @@
         {
           "@type": "ListItem",
           "position": 2,
-         ="شروط الاستخدام",
-          "item":="https://imadtbn.github.io/dz_portal/pages/terms.html"
+          "name": "شروط الاستخدام",
+          "item": "https://imadtbn.github.io/dz_portal/pages/terms.html"
         }
       ]
     }
@@ -180,12 +180,22 @@
         </div>
     </header>
 
-    <!-- Breadcrumb -->
-    <nav class="breadcrumb">
+        <!-- Breadcrumb -->
+    <nav class="breadcrumb" aria-label="مسار التنقل">
         <div class="breadcrumb-content">
-            <a href="../index.html"><i class="fas fa-home"></i> الرئيسية</a>
-            <i class="fas fa-chevron-left"></i>
-            <span class="current">شروط الاستخدام</span>
+
+            <a href="../index.html" class="breadcrumb-link">
+                <i class="fas fa-home" aria-hidden="true"></i>
+                <span>الرئيسية</span>
+            </a>
+
+            <i class="fas fa-chevron-left separator" aria-hidden="true"></i>
+
+            <span class="current" aria-current="page">
+                <i class="fas fa-file-contract" aria-hidden="true"></i>
+                <span>شروط الاستخدام</span>
+            </span>
+
         </div>
     </nav>
 
