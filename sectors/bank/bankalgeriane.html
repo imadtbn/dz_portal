@@ -84,16 +84,29 @@
         </div>
     </header>
 
-    <!-- Breadcrumb -->
-    <nav class="breadcrumb">
+
+        <!-- Breadcrumb -->
+    <nav class="breadcrumb" aria-label="مسار التنقل">
         <div class="breadcrumb-content">
-            <a href="../../index.html"><i class="fas fa-home"></i> الرئيسية</a>
-            <i class="fas fa-chevron-left"></i>
 
-            <a href="../bank.html"><i class="fas fa-bank"></i> البنوك</a>
-            <i class="fas fa-chevron-left"></i>
+            <a href="../index.html" class="breadcrumb-link">
+                <i class="fas fa-home" aria-hidden="true"></i>
+                <span>الرئيسية</span>
+            </a>
 
-            <span class="current">البنوك العمومية الجزائرية</span>
+            <i class="fas fa-chevron-left separator" aria-hidden="true"></i>
+
+            <a href="../bank.html" class="breadcrumb-link">
+                <i class="fas fa-bank" aria-hidden="true"></i>
+                <span>البنوك</span>
+            </a>
+
+            <i class="fas fa-chevron-left separator" aria-hidden="true"></i>
+
+            <span class="current" aria-current="page">
+                <i class="fas fa-bank" aria-hidden="true"></i>
+                <span>البنوك العمومية الجزائرية</span>
+            </span>
 
         </div>
     </nav>
