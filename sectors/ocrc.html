@@ -179,12 +179,20 @@
     </header>
 
     <!-- Breadcrumb -->
-    <nav class="breadcrumb">
+    <nav class="breadcrumb" aria-label="مسار التنقل">
         <div class="breadcrumb-content">
-            <a href="../index.html"><i class="fas fa-home"></i> الرئيسية</a>
-            <i class="fas fa-chevron-left"></i>
 
-            <span class="current"><i class="fas fa-shield-alt"></i> الديوان المركزي لقمع الفساد</span>
+            <a href="../index.html" class="breadcrumb-link">
+                <i class="fas fa-home" aria-hidden="true"></i>
+                <span>الرئيسية</span>
+            </a>
+
+            <i class="fas fa-chevron-left separator" aria-hidden="true"></i>
+
+            <span class="current" aria-current="page">
+                <i class="fas fa-shield-alt" aria-hidden="true"></i>
+                <span>الديوان المركزي لقمع الفساد</span>
+            </span>
 
         </div>
     </nav>
@@ -303,7 +311,8 @@
 
                 <div class="services-grid">
 
-                    <a href="https://www.ocrc.gov.dz/ar/%D8%AA%D9%82%D8%AF%D9%8A%D9%85-%D8%B4%D9%83%D9%88%D9%89" target="" class="service-item">
+                    <a href="https://www.ocrc.gov.dz/ar/%D8%AA%D9%82%D8%AF%D9%8A%D9%85-%D8%B4%D9%83%D9%88%D9%89"
+                        target="" class="service-item">
                         <div class="service-icon">
                             <i class="fas fa-file-alt"></i>
                         </div>
