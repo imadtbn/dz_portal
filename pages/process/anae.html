@@ -188,16 +188,27 @@
     </header>
 
     <!-- Breadcrumb -->
-    <nav class="breadcrumb">
+    <nav class="breadcrumb" aria-label="مسار التنقل">
         <div class="breadcrumb-content">
-            <a href="../../index.html"><i class="fas fa-home"></i> الرئيسية</a>
-            <i class="fas fa-chevron-left"></i>
 
-            <a href="../../sectors/anae.html"><i class="fas fa-id-badge "></i>
-                الوكالة الوطنية للمقاول الذاتي </a>
-            <i class="fas fa-chevron-left"></i>
+            <a href="../../index.html" class="breadcrumb-link">
+                <i class="fas fa-home" aria-hidden="true"></i>
+                <span>الرئيسية</span>
+            </a>
 
-            <span class="current">طريقة الإستخراج لبطاقة المقاول الذاتي</span>
+            <i class="fas fa-chevron-left separator" aria-hidden="true"></i>
+
+            <a href="../../sectors/anae.html" class="breadcrumb-link">
+                <i class="fas fa-id-badge" aria-hidden="true"></i>
+                <span>المقاول الذاتي</span>
+            </a>
+
+            <i class="fas fa-chevron-left separator" aria-hidden="true"></i>
+
+            <span class="current" aria-current="page">
+                <i class="fas fa-video" aria-hidden="true"></i>
+                <span>طريقة الإستخراج</span>
+            </span>
 
         </div>
     </nav>
@@ -227,8 +238,7 @@
                 </div>
             </div>
             <div class="hero-visual">
-                <img src="../../assets/images/anae.jpg" alt="الوكالة الوطنية للمقاول الذاتي" class="hero-icon"
-                    loading="lazy">
+                <img src="../../assets/images/anae.jpg" alt="المقاول الذاتي" class="hero-icon" loading="lazy">
             </div>
         </div>
     </section>
@@ -297,62 +307,92 @@
                 <div class="section-header-card">
                     <h3 class="section-title">
                         <i class="fas fa-video"></i>
-                        طريقة الإستخراج لبطاقة المقاول الذاتي
+                        طريقة طلب بطاقة المقاول الذاتي
                     </h3>
 
-                    <span class="service-count">فيديو توضيحي</span>
+                    <span class="service-count">
+                        فيديو توضيحي
+                    </span>
                 </div>
 
                 <div class="video-card">
 
-                    <!-- Video Player -->
+                    <!-- Video Container -->
                     <div class="video-wrapper">
 
-                        <video class="tutorial-video" controls preload="metadata" playsinline
-                            poster="../../assets/images/anae.jpg">
-
-                            <source src="../../assets/videos/markabaty-process.mp4" type="video/mp4">
-
-                            متصفحك لا يدعم تشغيل الفيديو.
-                        </video>
-
-                        <div class="video-overlay"></div>
+                        <!-- YouTube Video -->
+                        <iframe class="tutorial-frame" src="https://www.youtube.com/embed/WvoxK3nbYXQ"
+                            title="طريقة طلب بطاقة المقاول الذاتي"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen loading="lazy">
+                        </iframe>
 
                     </div>
 
-                    <!-- Video Info -->
-                    <div class="video-content">
+                    <!-- Facebook Video Example -->
+                    <!--
+            <iframe class="tutorial-frame"
+                src="https://www.facebook.com/plugins/video.php?href=FACEBOOK_VIDEO_URL&show_text=false"
+                allowfullscreen
+                allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+                loading="lazy">
+            </iframe>
+            -->
 
-                        <div class="video-badge">
-                            <i class="fas fa-circle-play"></i>
-                            شرح عملي خطوة بخطوة
+                    <div class="video-glow"></div>
+
+                </div>
+
+                <!-- Content -->
+                <div class="video-content">
+
+                    <div class="video-badge">
+                        <i class="fas fa-circle-play"></i>
+                        شرح عملي خطوة بخطوة
+                    </div>
+
+                    <h4>
+                        طريقة طلب بطاقة المقاول الذاتي.
+                    </h4>
+
+                    <p>
+                        شاهد الشرح الكامل لطريقة طلب بطاقة المقاول الذاتي.
+                    </p>
+
+                    <!-- Features -->
+                    <div class="video-features">
+
+                        <div class="video-feature">
+                            <i class="fas fa-check-circle"></i>
+                            شرح مبسط
                         </div>
 
-                        <h4>
-                            طريقة الإستخراج لبطاقة المقاول الذاتي
-                        </h4>
-
-                        <p>
-                            شاهد الشرح الكامل لكيفية إنشاء حساب والطلب لبطاقة المقاول الذاتي بكل سهولة.
-                        </p>
-
-                        <!-- Actions -->
-                        <div class="video-actions">
-
-                            <a href="../../assets/videos/registration-process-markabatidz.mp4" download
-                                class="video-btn secondary-btn">
-
-                                <i class="fas fa-download"></i>
-                                تحميل الفيديو
-                            </a>
-
-                            <button class="video-btn share-btn" onclick="shareVideo()">
-
-                                <i class="fas fa-share-alt"></i>
-                                مشاركة
-                            </button>
-
+                        <div class="video-feature">
+                            <i class="fas fa-mobile-alt"></i>
+                            متوافق مع الهاتف
                         </div>
+
+                        <div class="video-feature">
+                            <i class="fas fa-bolt"></i>
+                            استجابة فورية
+                        </div>
+                    </div>
+
+                    <!-- Actions -->
+                    <div class="video-actions">
+
+                        <a href="https://www.youtube.com/watch/WvoxK3nbYXQ" target="_blank"
+                            class="video-btn youtube-btn">
+
+                            <i class="fab fa-youtube"></i>
+                            مشاهدة على يوتيوب
+                        </a>
+
+                        <button class="video-btn share-btn" onclick="shareVideo()">
+
+                            <i class="fas fa-share-alt"></i>
+                            مشاركة
+                        </button>
 
                     </div>
 
@@ -399,32 +439,31 @@
                         </a>
                     </li>
                     <li>
-                        <a href="../pages/about.html">
+                        <a href="../about.html">
                             <i class="fas fa-users"></i>
                             من نحن
                         </a>
                     </li>
                     <li>
-                        <a href="../pages/contact.html">
+                        <a href="../contact.html">
                             <i class="fas fa-envelope"></i>
                             اتصل بنا
                         </a>
                     </li>
                     <li>
-                        <a href="../pages/privacy.html">
+                        <a href="../privacy.html">
                             <i class="fas fa-shield-alt"></i>
                             سياسة الخصوصية
                         </a>
                     </li>
                     <li>
-                        <a href="../pages/terms.html">
+                        <a href="../terms.html">
                             <i class="fas fa-file-contract"></i>
                             شروط الاستخدام
                         </a>
                     </li>
                 </ul>
             </div>
-
             <!-- Column 3: Contact Info -->
             <div class="footer-column">
                 <h4><i class="fas fa-address-card"></i> معلومات الاتصال</h4>
