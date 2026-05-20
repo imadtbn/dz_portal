@@ -1713,3 +1713,19 @@ video {
         gap: 6px;
     }
 }
+
+
+
+:root {
+  /* الوضع النهاري (افتراضي) */
+  --bg-body: #fafafa;
+  --text-primary: #212529;
+  --primary: #006233;
+  
+  /* الوضع الليلي */
+  @media (prefers-color-scheme: dark) {
+    --bg-body: #0a0a0a;
+    --text-primary: #e0e0e0;
+    --primary: #4caf50;
+  }
+}
