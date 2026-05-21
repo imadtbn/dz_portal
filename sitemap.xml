@@ -393,7 +393,7 @@
     <priority>0.7</priority>
     <image:image>
       <image:loc>https://imadtbn.github.io/dz_portal/assets/images/hatplc.jpg</image:loc>
-      <image:title>hatplc</image:title>
+      <image:title>السلطة العليا للشفافية والوقاية من الفساد ومكافحته</image:title>
     </image:image>
   </url>
   <url>
@@ -403,10 +403,39 @@
     <priority>0.7</priority>
     <image:image>
       <image:loc>https://imadtbn.github.io/dz_portal/assets/images/ocrc.jpg</image:loc>
-      <image:title>ocrc</image:title>
+      <image:title>الديوان المركزي لقمع الفساد</image:title>
     </image:image>
   </url>
-
+  <url>
+    <loc>https://imadtbn.github.io/dz_portal/sectors/aadl.html</loc>
+    <lastmod>2025-05-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://imadtbn.github.io/dz_portal/assets/images/AADL.png</image:loc>
+      <image:title>الديوان المركزي لقمع الفساد</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://imadtbn.github.io/dz_portal/sectors/enpi.html</loc>
+    <lastmod>2025-05-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://imadtbn.github.io/dz_portal/assets/images/enpi.jpg</image:loc>
+      <image:title>المؤسسة الوطنية للترقية العقارية</image:title>
+    </image:image>
+  </url>
+    <url>
+    <loc>https://imadtbn.github.io/dz_portal/sectors/opgi.html</loc>
+    <lastmod>2025-05-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://imadtbn.github.io/dz_portal/assets/images/opgi.png</image:loc>
+      <image:title>ديوان الترقية والتسيير العقاري</image:title>
+    </image:image>
+  </url>
   <url>
     <loc>https://imadtbn.github.io/dz_portal/sectors/anae.html</loc>
     <lastmod>2025-05-12</lastmod>
