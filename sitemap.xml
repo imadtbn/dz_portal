@@ -29,7 +29,7 @@
   </url>
   <url>
     <loc>https://imadtbn.github.io/dz_portal/pages/contact.html</loc>
-    <lastmod>2025-05-12</lastmod>
+    <lastmod>2026-05-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -231,6 +231,26 @@
       <image:title>البنوك العمومية والخاصة</image:title>
     </image:image>
   </url>
+    <url>
+    <loc>https://imadtbn.github.io/dz_portal/sectors/bank/bankalgeriane.html</loc>
+    <lastmod>2025-05-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://imadtbn.github.io/dz_portal/assets/images/bank.png</image:loc>
+      <image:title>البنوك العمومية والخاصة</image:title>
+    </image:image>
+  </url>
+      <url>
+    <loc>https://imadtbn.github.io/dz_portal/sectors/bank/banketranger.html</loc>
+    <lastmod>2025-05-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://imadtbn.github.io/dz_portal/assets/images/bank.png</image:loc>
+      <image:title>البنوك العمومية والخاصة</image:title>
+    </image:image>
+  </url>
   <url>
     <loc>https://imadtbn.github.io/dz_portal/sectors/commerce.html</loc>
     <lastmod>2025-05-12</lastmod>
@@ -362,10 +382,31 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://imadtbn.github.io/dz_portal/assets/images/aapi.png</image:loc>
-      <image:title>الوكالة الوطنية لترقية الاستثمار</image:title>
+      <image:loc>https://imadtbn.github.io/dz_portal/assets/images/hatplc.jpg/image:loc>
+      <image:title>السلطة العليا للشفافية والوقاية من الفساد ومكافحته</image:title>
     </image:image>
   </url>
+  <url>
+    <loc>https://imadtbn.github.io/dz_portal/sectors/hatplc.html</loc>
+    <lastmod>2025-05-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://imadtbn.github.io/dz_portal/assets/images/hatplc.jpg</image:loc>
+      <image:title>hatplc</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://imadtbn.github.io/dz_portal/sectors/ocrc.html</loc>
+    <lastmod>2025-05-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://imadtbn.github.io/dz_portal/assets/images/ocrc.jpg</image:loc>
+      <image:title>ocrc</image:title>
+    </image:image>
+  </url>
+
   <url>
     <loc>https://imadtbn.github.io/dz_portal/sectors/anae.html</loc>
     <lastmod>2025-05-12</lastmod>
@@ -395,6 +436,26 @@
     <image:image>
       <image:loc>https://imadtbn.github.io/dz_portal/assets/images/emergency.png</image:loc>
       <image:title>أرقام الطوارئ في الجزائر</image:title>
+    </image:image>
+  </url>
+    <url>
+    <loc>https://imadtbn.github.io/dz_portal/sectors/assurance.html</loc>
+    <lastmod>2025-05-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://imadtbn.github.io/dz_portal/assets/images/asserance.jpg</image:loc>
+      <image:title>وكالات التأمين على الممتلكات</image:title>
+    </image:image>
+  </url>
+      <url>
+    <loc>https://imadtbn.github.io/dz_portal/sectors/assurance/saa.html</loc>
+    <lastmod>2025-05-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://imadtbn.github.io/dz_portal/assets/images/saa.jpg</image:loc>
+      <image:title>saa</image:title>
     </image:image>
   </url>
 </urlset>
