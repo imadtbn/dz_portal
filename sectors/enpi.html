@@ -79,7 +79,6 @@
 {
   "@context": "https://schema.org",
   "@graph": [
-
     {
       "@type": "WebSite",
       "@id": "https://imadtbn.github.io/dz_portal/#website",
@@ -88,7 +87,6 @@
       "alternateName": "DZ Portal",
       "inLanguage": "ar"
     },
-
     {
       "@type": "Organization",
       "@id": "https://imadtbn.github.io/dz_portal/#organization",
@@ -98,37 +96,36 @@
         "@type": "ImageObject",
         "url": "https://imadtbn.github.io/dz_portal/icons/icon.png"
       },
-       "contactPoint": {
-        "@type": "ContactPoint",
-        "contactType": "customer support",
-        "areaServed": "DZ",
-        "availableLanguage": ["ar", "fr"],
-        "email": "tabaniimadeddine@gmail.com",
-        "telephone": "+213697743721"
-      },
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "contactType": "customer support",
+          "areaServed": "DZ",
+          "availableLanguage": ["ar", "fr"],
+          "email": "tabaniimadeddine@gmail.com",
+          "telephone": "+213697743721"
+        }
+      ],
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "الجزائر",
         "postalCode": "16000",
         "addressCountry": "DZ"
       },
-      "sameAs": [
-        "https://imadtbn.github.io/dz_portal/"
-      ]
+      "sameAs": ["https://imadtbn.github.io/dz_portal/"]
     },
-
     {
       "@type": "WebPage",
       "@id": "https://imadtbn.github.io/dz_portal/sectors/enpi.html#webpage",
       "url": "https://imadtbn.github.io/dz_portal/sectors/enpi.html",
       "name": "المؤسسة الوطنية للترقية العقارية",
-      "description": "تقدم وزارة السكن والعمران مجموعة من الخدمات الرقمية التي تتيح للمواطنين الجزائريين الوصول إلى خدمات الوكالة بكل سهولة ويسر، دون الحاجة للتنقل إلى مكاتب الوكالة.",
+      "description": "تقدم المؤسسة الوطنية للترقية العقارية مجموعة من الخدمات الرقمية التي تتيح للمواطنين الجزائريين الوصول إلى خدمات الوكالة بكل سهولة ويسر، دون الحاجة للتنقل إلى مكاتب الوكالة.",
       "keywords": [
         "وزارة السكن والعمران",
         "خدمات رقمية",
         "السكن",
         "العمران",
-        "الجزائر",  
+        "الجزائر",
         "تسجيل سكن",
         "دفع الكراء",
         "عروض سكنية",
@@ -137,51 +134,100 @@
         "وكالة عدل",
         "OPGI",
         "ENPI"
-        ],
+      ],
       "inLanguage": "ar",
-      "isPartOf": {
-        "@id": "https://imadtbn.github.io/dz_portal/#website"
-      },
-      "about": {
-        "@id": "https://imadtbn.github.io/dz_portal/#organization"
-      },
-      "publisher": {
-        "@id": "https://imadtbn.github.io/dz_portal/#organization"
-      },
+      "isPartOf": {"@id": "https://imadtbn.github.io/dz_portal/#website"},
+      "about": {"@id": "https://imadtbn.github.io/dz_portal/#organization"},
+      "publisher": {"@id": "https://imadtbn.github.io/dz_portal/#organization"},
       "primaryImageOfPage": {
         "@type": "ImageObject",
         "url": "https://imadtbn.github.io/dz_portal/assets/images/enpi.jpg"
       },
-      "breadcrumb": {
-        "@id": "https://imadtbn.github.io/dz_portal/sectors/enpi.html#breadcrumb"
-      }
+      "breadcrumb": {"@id": "https://imadtbn.github.io/dz_portal/sectors/enpi.html#breadcrumb"},
+      "hasPart": [
+        {
+          "@type": "Service",
+          "name": "اقتناء محل تجاري",
+          "description": "التسجيل لاقتناء محل تجاري",
+          "url": "http://www.enpi-net.dz/LocauxEnpi/",
+          "provider": {"@id": "https://imadtbn.github.io/dz_portal/#organization"},
+          "potentialAction": {
+            "@type": "Action",
+            "target": "http://www.enpi-net.dz/LocauxEnpi/",
+            "actionPlatform": "http://schema.org/DesktopWebPlatform"
+          }
+        },
+        {
+          "@type": "Service",
+          "name": "فضاء الزبائن",
+          "description": "فضاء الزبائن",
+          "url": "https://www.enpi-net.dz/lpp_consultation/",
+          "provider": {"@id": "https://imadtbn.github.io/dz_portal/#organization"},
+          "potentialAction": {
+            "@type": "Action",
+            "target": "https://www.enpi-net.dz/lpp_consultation/",
+            "actionPlatform": "http://schema.org/DesktopWebPlatform"
+          }
+        },
+        {
+          "@type": "Service",
+          "name": "سكن ترقوي عمومي LPP",
+          "description": "التسجيل لاقتناء سكن ترقوي عمومي LPP",
+          "url": "https://www.enpi-net.dz/ENPI/Inscription.php",
+          "provider": {"@id": "https://imadtbn.github.io/dz_portal/#organization"},
+          "potentialAction": {
+            "@type": "Action",
+            "target": "https://www.enpi-net.dz/ENPI/Inscription.php",
+            "actionPlatform": "http://schema.org/DesktopWebPlatform"
+          }
+        },
+        {
+          "@type": "Service",
+          "name": "سكن ترقوي حر LPL",
+          "description": "التسجيل لاقتناء سكن ترقوي حر LPL",
+          "url": "https://www.enpi-net.dz/LPL/Inscription.php",
+          "provider": {"@id": "https://imadtbn.github.io/dz_portal/#organization"},
+          "potentialAction": {
+            "@type": "Action",
+            "target": "https://www.enpi-net.dz/LPL/Inscription.php",
+            "actionPlatform": "http://schema.org/DesktopWebPlatform"
+          }
+        },
+        {
+          "@type": "Service",
+          "name": "تطبيق إنشغال",
+          "description": "الدخول لتطبيق إنشغال",
+          "url": "https://www.enpi-net.dz/Inchighal/",
+          "provider": {"@id": "https://imadtbn.github.io/dz_portal/#organization"},
+          "potentialAction": {
+            "@type": "DownloadAction",
+            "target": "https://www.enpi-net.dz/Inchighal/",
+            "actionPlatform": "http://schema.org/DesktopWebPlatform"
+          }
+        },
+        {
+          "@type": "Service",
+          "name": "تطبيق بريدي موب",
+          "description": "تحميل تطبيق بريدي موب الجزائر",
+          "url": "https://play.google.com/store/apps/details?id=ru.bpc.mobilebank.bpc",
+          "provider": {"@id": "https://imadtbn.github.io/dz_portal/#organization"},
+          "potentialAction": {
+            "@type": "DownloadAction",
+            "target": "https://play.google.com/store/apps/details?id=ru.bpc.mobilebank.bpc",
+            "actionPlatform": "http://schema.org/AndroidPlatform"
+          }
+        }
+      ]
     },
-
     {
       "@type": "BreadcrumbList",
       "@id": "https://imadtbn.github.io/dz_portal/sectors/enpi.html#breadcrumb",
       "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "الرئيسية",
-          "item": "https://imadtbn.github.io/dz_portal/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "وزارة السكن والعمران",
-          "item": "https://imadtbn.github.io/dz_portal/sectors/mhuv.gov.html"
-        },
-        {
-            "@type": "ListItem",
-            "position": 3,
-            "name": "ديوان الترقية والتسيير العقاري",
-            "item": "https://imadtbn.github.io/dz_portal/sectors/enpi.html"
-          }
+        {"@type": "ListItem", "position": 1, "name": "الرئيسية", "item": "https://imadtbn.github.io/dz_portal/"},
+        {"@type": "ListItem", "position": 2, "name": "وزارة السكن والعمران", "item": "https://imadtbn.github.io/dz_portal/sectors/mhuv.gov.html"},
+        {"@type": "ListItem", "position": 3, "name": "ديوان الترقية والتسيير العقاري", "item": "https://imadtbn.github.io/dz_portal/sectors/enpi.html"}
       ]
     }
-
   ]
 }
 </script>
