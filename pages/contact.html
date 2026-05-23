@@ -83,8 +83,20 @@
       "@id": "https://imadtbn.github.io/dz_portal/#website",
       "url": "https://imadtbn.github.io/dz_portal/",
       "name": "البوابة الجزائرية للخدمات الرقمية",
-      "alternateName": "DZ Portal",
-      "inLanguage": "ar"
+      "alternateName": [
+        "DZ Portal",
+        "البوابة الجزائرية"
+      ],
+      "description": "منصة جزائرية رقمية تجمع الخدمات الحكومية والعمومية الإلكترونية في مكان واحد لتسهيل الوصول إليها.",
+      "inLanguage": "ar",
+      "publisher": {
+        "@id": "https://imadtbn.github.io/dz_portal/#organization"
+      },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://imadtbn.github.io/dz_portal/?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
     },
 
     {
@@ -94,20 +106,45 @@
       "url": "https://imadtbn.github.io/dz_portal/",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://imadtbn.github.io/dz_portal/icons/icon.png"
+        "url": "https://imadtbn.github.io/dz_portal/icons/icon.png",
+        "width": 512,
+        "height": 512
       },
-             "contactPoint": {
-        "@type": "ContactPoint",
-        "contactType": "customer support",
-        "areaServed": "DZ",
-        "availableLanguage": ["ar", "fr"],
-        "email": "tabaniimadeddine@gmail.com",
-        "telephone": "+213697743721"
+      "image": "https://imadtbn.github.io/dz_portal/icons/icon.png",
+      "description": "منصة رقمية جزائرية تهدف إلى تسهيل الوصول إلى الخدمات الحكومية والعمومية الإلكترونية.",
+      "email": "mailto:tabaniimadeddine@gmail.com",
+      "telephone": "+213697743721",
+      "areaServed": {
+        "@type": "Country",
+        "name": "الجزائر"
       },
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "contactType": "customer support",
+          "telephone": "+213697743721",
+          "email": "tabaniimadeddine@gmail.com",
+          "areaServed": "DZ",
+          "availableLanguage": [
+            "Arabic",
+            "French"
+          ]
+        },
+        {
+          "@type": "ContactPoint",
+          "contactType": "technical support",
+          "telephone": "+213697743721",
+          "email": "tabaniimadeddine@gmail.com",
+          "areaServed": "DZ",
+          "availableLanguage": [
+            "Arabic",
+            "French"
+          ]
+        }
+      ],
       "address": {
         "@type": "PostalAddress",
-        "addressLocality": "الجزائر",
-        "postalCode": "16000",
+        "addressLocality": "الجزائر العاصمة",
         "addressCountry": "DZ"
       },
       "sameAs": [
@@ -116,43 +153,177 @@
     },
 
     {
-      "@type": "WebPage",
+      "@type": "ContactPage",
       "@id": "https://imadtbn.github.io/dz_portal/pages/contact.html#webpage",
       "url": "https://imadtbn.github.io/dz_portal/pages/contact.html",
       "name": "اتصل بنا | البوابة الجزائرية للخدمات الرقمية",
-      "description": "تواصل مع فريق البوابة الجزائرية للخدمات الرقمية - نحن هنا لمساعدتك",
-      "keywords": [
-        "البوابة الجزائرية للخدمات الرقمية",
-        "اتصل بنا",
-        "خدمات رقمية",
-        "الجزائر",
-        "الدعم الفني",
-        "اقتراحات",
-        "بلاغات",
-        "تواصل معنا"
-      ],
+      "headline": "اتصل بنا",
+      "description": "صفحة التواصل الرسمية الخاصة بالبوابة الجزائرية للخدمات الرقمية لتقديم الاستفسارات والاقتراحات والإبلاغ عن المشاكل التقنية والروابط المعطلة.",
       "inLanguage": "ar",
+      "datePublished": "2025-01-01",
+      "dateModified": "2026-05-23",
       "isPartOf": {
         "@id": "https://imadtbn.github.io/dz_portal/#website"
       },
       "about": {
-        "@id": "https://imadtbn.github.io/dz_portal/pages/about.html/#organization"
+        "@id": "https://imadtbn.github.io/dz_portal/#organization"
       },
       "publisher": {
         "@id": "https://imadtbn.github.io/dz_portal/#organization"
       },
       "primaryImageOfPage": {
         "@type": "ImageObject",
-        "url": "https://imadtbn.github.io/dz_portal/assets/images/icon.png"
+        "url": "https://imadtbn.github.io/dz_portal/icons/icon.png"
       },
+      "keywords": [
+        "اتصل بنا",
+        "التواصل",
+        "الدعم الفني",
+        "الخدمات الرقمية",
+        "الجزائر",
+        "البوابة الجزائرية",
+        "اقتراحات",
+        "الإبلاغ عن مشكلة",
+        "روابط معطلة",
+        "خدمات حكومية رقمية",
+        "الدعم التقني",
+        "الاستفسارات",
+        "تواصل معنا",
+        "مراسلة الإدارة",
+        "خدمة المواطنين"
+      ],
       "breadcrumb": {
-        "@id": "https://imadtbn.github.io/dz_portal//pages/contact.html#breadcrumb"
+        "@id": "https://imadtbn.github.io/dz_portal/pages/contact.html#breadcrumb"
+      },
+      "mainEntity": {
+        "@type": "ItemList",
+        "name": "خدمات التواصل والدعم",
+        "itemListElement": [
+          {
+            "@type": "Service",
+            "position": 1,
+            "name": "الدعم الفني",
+            "description": "الدعم الفني الخاص بالموقع والخدمات الرقمية.",
+            "provider": {
+              "@id": "https://imadtbn.github.io/dz_portal/#organization"
+            },
+            "availableChannel": {
+              "@type": "ServiceChannel",
+              "serviceUrl": "https://imadtbn.github.io/dz_portal/pages/contact.html",
+              "servicePhone": {
+                "@type": "ContactPoint",
+                "telephone": "+213697743721"
+              }
+            }
+          },
+          {
+            "@type": "Service",
+            "position": 2,
+            "name": "الإبلاغ عن الروابط المعطلة",
+            "description": "خدمة مخصصة للإبلاغ عن الروابط والخدمات التي لا تعمل.",
+            "provider": {
+              "@id": "https://imadtbn.github.io/dz_portal/#organization"
+            }
+          },
+          {
+            "@type": "Service",
+            "position": 3,
+            "name": "اقتراح إضافة خدمات جديدة",
+            "description": "استقبال اقتراحات المستخدمين لإضافة خدمات حكومية جديدة.",
+            "provider": {
+              "@id": "https://imadtbn.github.io/dz_portal/#organization"
+            }
+          },
+          {
+            "@type": "Service",
+            "position": 4,
+            "name": "التواصل عبر البريد الإلكتروني",
+            "description": "إرسال الرسائل والاستفسارات عبر البريد الإلكتروني الرسمي.",
+            "url": "mailto:tabaniimadeddine@gmail.com",
+            "provider": {
+              "@id": "https://imadtbn.github.io/dz_portal/#organization"
+            },
+            "potentialAction": {
+              "@type": "CommunicateAction",
+              "target": "mailto:tabaniimadeddine@gmail.com"
+            }
+          },
+          {
+            "@type": "Service",
+            "position": 5,
+            "name": "التواصل الهاتفي",
+            "description": "خدمة التواصل المباشر عبر الهاتف.",
+            "url": "tel:+213697743721",
+            "provider": {
+              "@id": "https://imadtbn.github.io/dz_portal/#organization"
+            },
+            "potentialAction": {
+              "@type": "CommunicateAction",
+              "target": "tel:+213697743721"
+            }
+          }
+        ]
       }
     },
 
     {
+      "@type": "FAQPage",
+      "@id": "https://imadtbn.github.io/dz_portal/pages/contact.html#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "هل البوابة رسمية من الحكومة الجزائرية؟",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "البوابة هي مبادرة مدنية تطوعية تهدف إلى تسهيل الوصول إلى الخدمات الحكومية الرقمية ولا تمثل جهة حكومية رسمية."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "هل استخدام البوابة مجاني؟",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "نعم، جميع خدمات البوابة متاحة مجاناً بالكامل دون أي رسوم."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "هل أحتاج لإنشاء حساب لاستخدام البوابة؟",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "لا، يمكن استخدام البوابة مباشرة دون الحاجة إلى إنشاء حساب."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "كيف يمكنني الإبلاغ عن رابط معطل؟",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "يمكن الإبلاغ عن الروابط المعطلة عبر نموذج الاتصال أو البريد الإلكتروني."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "هل يمكن اقتراح خدمة جديدة للإضافة؟",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "نعم، يمكن إرسال اقتراحات لإضافة خدمات حكومية جديدة عبر نموذج الاتصال."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "هل بياناتي الشخصية آمنة؟",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "البوابة لا تجمع بيانات شخصية، وتطبق المواقع الحكومية الخارجية سياسات الخصوصية الخاصة بها."
+          }
+        }
+      ]
+    },
+
+    {
       "@type": "BreadcrumbList",
-      "@id": "https://imadtbn.github.io/dz_portal//pages/contact.html#breadcrumb",
+      "@id": "https://imadtbn.github.io/dz_portal/pages/contact.html#breadcrumb",
       "itemListElement": [
         {
           "@type": "ListItem",
@@ -168,7 +339,6 @@
         }
       ]
     }
-
   ]
 }
 </script>
