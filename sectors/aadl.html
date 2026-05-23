@@ -79,7 +79,6 @@
 {
   "@context": "https://schema.org",
   "@graph": [
-
     {
       "@type": "WebSite",
       "@id": "https://imadtbn.github.io/dz_portal/#website",
@@ -88,7 +87,6 @@
       "alternateName": "DZ Portal",
       "inLanguage": "ar"
     },
-
     {
       "@type": "Organization",
       "@id": "https://imadtbn.github.io/dz_portal/#organization",
@@ -98,14 +96,16 @@
         "@type": "ImageObject",
         "url": "https://imadtbn.github.io/dz_portal/icons/icon.png"
       },
-       "contactPoint": {
-        "@type": "ContactPoint",
-        "contactType": "customer support",
-        "areaServed": "DZ",
-        "availableLanguage": ["ar", "fr"],
-        "email": "tabaniimadeddine@gmail.com",
-        "telephone": "+213697743721"
-      },
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "contactType": "customer support",
+          "areaServed": "DZ",
+          "availableLanguage": ["ar", "fr"],
+          "email": "tabaniimadeddine@gmail.com",
+          "telephone": "+213697743721"
+        }
+      ],
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "الجزائر",
@@ -116,28 +116,27 @@
         "https://imadtbn.github.io/dz_portal/"
       ]
     },
-
     {
       "@type": "WebPage",
       "@id": "https://imadtbn.github.io/dz_portal/sectors/aadl.html#webpage",
       "url": "https://imadtbn.github.io/dz_portal/sectors/aadl.html",
-      "name": "وزارة السكن والعمران",
-      "description": "تقدم وزارة السكن والعمران مجموعة من الخدمات الرقمية التي تتيح للمواطنين الجزائريين الوصول إلى خدمات الوكالة بكل سهولة ويسر، دون الحاجة للتنقل إلى مكاتب الوكالة.",
+      "name": "وكالة عدل للسكن وتطويره",
+      "description": "تقدم وكالة عدل للسكن وتطويره مجموعة من الخدمات الرقمية التي تتيح للمواطنين الجزائريين الوصول إلى خدمات الوكالة بكل سهولة ويسر، دون الحاجة للتنقل إلى مكاتب الوكالة.",
       "keywords": [
+        "وكالة عدل",
+        "AADL",
         "وزارة السكن والعمران",
-        "خدمات رقمية",
         "السكن",
         "العمران",
-        "وكالة عدل للسكن وتطويره",
-        "الجزائر",  
-        "تسجيل سكن",
         "دفع الكراء",
         "عروض سكنية",
         "طلبات دعم",
-        "وكالة عدل",
+        "خدمات رقمية",
+        "خدمات إلكترونية",
+        "ENPI",
         "OPGI",
-        "ENPI"
-        ],
+        "الجزائر"
+      ],
       "inLanguage": "ar",
       "isPartOf": {
         "@id": "https://imadtbn.github.io/dz_portal/#website"
@@ -154,9 +153,80 @@
       },
       "breadcrumb": {
         "@id": "https://imadtbn.github.io/dz_portal/sectors/aadl.html#breadcrumb"
-      }
+      },
+      "hasPart": [
+        {
+          "@type": "Service",
+          "name": "الدخول لمنصة وكالة عدل 3",
+          "description": "تسجيل الدخول لمنصة وكالة عدل 3",
+          "url": "https://aadl.dz/relogin",
+          "provider": {
+            "@id": "https://imadtbn.github.io/dz_portal/#organization"
+          },
+          "potentialAction": {
+            "@type": "Action",
+            "target": "https://aadl.dz/relogin",
+            "actionPlatform": "http://schema.org/DesktopWebPlatform"
+          }
+        },
+        {
+          "@type": "Service",
+          "name": "خدمة الزبائن",
+          "description": "مصلحة خدمة الزبائن",
+          "url": "tel:3040",
+          "provider": {
+            "@id": "https://imadtbn.github.io/dz_portal/#organization"
+          },
+          "potentialAction": {
+            "@type": "Action",
+            "target": "tel:3040",
+            "actionPlatform": "http://schema.org/Phone"
+          }
+        },
+        {
+          "@type": "Service",
+          "name": "فاتورة الكراء",
+          "description": "تسديد الفاتورة الشهرية للسكن",
+          "url": "https://www.aadlgestimmo.dz/epayement/View/index.php",
+          "provider": {
+            "@id": "https://imadtbn.github.io/dz_portal/#organization"
+          },
+          "potentialAction": {
+            "@type": "Action",
+            "target": "https://www.aadlgestimmo.dz/epayement/View/index.php",
+            "actionPlatform": "http://schema.org/DesktopWebPlatform"
+          }
+        },
+        {
+          "@type": "Service",
+          "name": "تطبيق AADL",
+          "description": "تطبيق AADL Mobile",
+          "url": "https://play.google.com/store/apps/details?id=dz.aadl.mobile",
+          "provider": {
+            "@id": "https://imadtbn.github.io/dz_portal/#organization"
+          },
+          "potentialAction": {
+            "@type": "DownloadAction",
+            "target": "https://play.google.com/store/apps/details?id=dz.aadl.mobile",
+            "actionPlatform": "http://schema.org/AndroidPlatform"
+          }
+        },
+        {
+          "@type": "Service",
+          "name": "تطبيق بريدي موب",
+          "description": "تحميل تطبيق بريدي موب الجزائر",
+          "url": "https://play.google.com/store/apps/details?id=ru.bpc.mobilebank.bpc",
+          "provider": {
+            "@id": "https://imadtbn.github.io/dz_portal/#organization"
+          },
+          "potentialAction": {
+            "@type": "DownloadAction",
+            "target": "https://play.google.com/store/apps/details?id=ru.bpc.mobilebank.bpc",
+            "actionPlatform": "http://schema.org/AndroidPlatform"
+          }
+        }
+      ]
     },
-
     {
       "@type": "BreadcrumbList",
       "@id": "https://imadtbn.github.io/dz_portal/sectors/aadl.html#breadcrumb",
@@ -174,14 +244,13 @@
           "item": "https://imadtbn.github.io/dz_portal/sectors/mhuv.gov.html"
         },
         {
-            "@type": "ListItem",
-            "position": 3,
-            "name": "وكالة عدل للسكن وتطويره",
-            "item": "https://imadtbn.github.io/dz_portal/sectors/aadl.html"
-          }
+          "@type": "ListItem",
+          "position": 3,
+          "name": "وكالة عدل للسكن وتطويره",
+          "item": "https://imadtbn.github.io/dz_portal/sectors/aadl.html"
+        }
       ]
     }
-
   ]
 }
 </script>
