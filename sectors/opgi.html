@@ -79,7 +79,6 @@
 {
   "@context": "https://schema.org",
   "@graph": [
-
     {
       "@type": "WebSite",
       "@id": "https://imadtbn.github.io/dz_portal/#website",
@@ -88,7 +87,6 @@
       "alternateName": "DZ Portal",
       "inLanguage": "ar"
     },
-
     {
       "@type": "Organization",
       "@id": "https://imadtbn.github.io/dz_portal/#organization",
@@ -98,14 +96,16 @@
         "@type": "ImageObject",
         "url": "https://imadtbn.github.io/dz_portal/icons/icon.png"
       },
-       "contactPoint": {
-        "@type": "ContactPoint",
-        "contactType": "customer support",
-        "areaServed": "DZ",
-        "availableLanguage": ["ar", "fr"],
-        "email": "tabaniimadeddine@gmail.com",
-        "telephone": "+213697743721"
-      },
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "contactType": "customer support",
+          "areaServed": "DZ",
+          "availableLanguage": ["ar", "fr"],
+          "email": "tabaniimadeddine@gmail.com",
+          "telephone": "+213697743721"
+        }
+      ],
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "الجزائر",
@@ -116,28 +116,30 @@
         "https://imadtbn.github.io/dz_portal/"
       ]
     },
-
     {
       "@type": "WebPage",
       "@id": "https://imadtbn.github.io/dz_portal/sectors/opgi.html#webpage",
       "url": "https://imadtbn.github.io/dz_portal/sectors/opgi.html",
-      "name": "وزارة السكن والعمران",
-      "description": "تقدم وزارة السكن والعمران مجموعة من الخدمات الرقمية التي تتيح للمواطنين الجزائريين الوصول إلى خدمات الوكالة بكل سهولة ويسر، دون الحاجة للتنقل إلى مكاتب الوكالة.",
+      "name": "ديوان الترقية والتسيير العقاري",
+      "description": "يوفر ديوان الترقية والتسيير العقاري OPGI مجموعة من الخدمات الرقمية الخاصة بالسكن والعقار في الجزائر، بما في ذلك دفع فواتير الكراء، خدمات الزبائن، والتطبيقات الرقمية الخاصة بالسكن العمومي.",
       "keywords": [
-        "وزارة السكن والعمران",
-        "خدمات رقمية",
-        "السكن",
-        "العمران",
-        "الجزائر",  
-        "تسجيل سكن",
-        "دفع الكراء",
-        "عروض سكنية",
         "ديوان الترقية والتسيير العقاري",
-        "طلبات دعم",
-        "وكالة عدل",
         "OPGI",
-        "ENPI"
-        ],
+        "السكن",
+        "العقار",
+        "السكن العمومي",
+        "فاتورة كراء",
+        "دفع الكراء",
+        "خدمات رقمية",
+        "وزارة السكن والعمران",
+        "الجزائر",
+        "سكن اجتماعي",
+        "تطبيق OPGI",
+        "بريدي موب",
+        "خدمات إلكترونية",
+        "كراء السكنات",
+        "إدارة السكن"
+      ],
       "inLanguage": "ar",
       "isPartOf": {
         "@id": "https://imadtbn.github.io/dz_portal/#website"
@@ -153,10 +155,71 @@
         "url": "https://imadtbn.github.io/dz_portal/assets/images/opgi.png"
       },
       "breadcrumb": {
-        "@id": "https://imadtbn.github.io/dz_portal/sectors/mhuv.gov.html#breadcrumb"
+        "@id": "https://imadtbn.github.io/dz_portal/sectors/opgi.html#breadcrumb"
+      },
+      "hasPart": [
+        {
+          "@type": "Service",
+          "name": "خدمة الزبائن OPGI",
+          "description": "الاتصال بخدمة الزبائن الخاصة بديوان الترقية والتسيير العقاري",
+          "url": "tel:00000",
+          "provider": {
+            "@id": "https://imadtbn.github.io/dz_portal/#organization"
+          },
+          "potentialAction": {
+            "@type": "CommunicateAction",
+            "target": "tel:00000",
+            "actionPlatform": "http://schema.org/Phone"
+          }
+        },
+        {
+          "@type": "Service",
+          "name": "فاتورة كراء OPGI",
+          "description": "دفع فاتورة كراء سكنات OPGI عبر الإنترنت",
+          "url": "https://www.opgiconstantine.dz/",
+          "provider": {
+            "@id": "https://imadtbn.github.io/dz_portal/#organization"
+          },
+          "potentialAction": {
+            "@type": "PayAction",
+            "target": "https://www.opgiconstantine.dz/",
+            "actionPlatform": "http://schema.org/DesktopWebPlatform"
+          }
+        },
+        {
+          "@type": "MobileApplication",
+          "name": "تطبيق OPGI Mobile",
+          "operatingSystem": "Android",
+          "applicationCategory": "BusinessApplication",
+          "downloadUrl": "https://play.google.com/store/apps/details?id=dz.opgi.mobile",
+          "url": "https://play.google.com/store/apps/details?id=dz.opgi.mobile",
+          "description": "تطبيق OPGI Mobile الخاص بخدمات ديوان الترقية والتسيير العقاري"
+        },
+        {
+          "@type": "MobileApplication",
+          "name": "تطبيق بريدي موب",
+          "operatingSystem": "Android",
+          "applicationCategory": "FinanceApplication",
+          "downloadUrl": "https://play.google.com/store/apps/details?id=ru.bpc.mobilebank.bpc",
+          "url": "https://play.google.com/store/apps/details?id=ru.bpc.mobilebank.bpc",
+          "description": "تطبيق بريدي موب للدفع الإلكتروني والخدمات المالية في الجزائر"
+        }
+      ],
+      "mainEntity": {
+        "@type": "GovernmentOrganization",
+        "name": "ديوان الترقية والتسيير العقاري",
+        "alternateName": "OPGI",
+        "url": "https://www.opgi-alger.dz/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://imadtbn.github.io/dz_portal/assets/images/opgi.png"
+        },
+        "areaServed": {
+          "@type": "Country",
+          "name": "الجزائر"
+        }
       }
     },
-
     {
       "@type": "BreadcrumbList",
       "@id": "https://imadtbn.github.io/dz_portal/sectors/opgi.html#breadcrumb",
@@ -174,14 +237,13 @@
           "item": "https://imadtbn.github.io/dz_portal/sectors/mhuv.gov.html"
         },
         {
-            "@type": "ListItem",
-            "position": 3,
-            "name": "ديوان الترقية والتسيير العقاري",
-            "item": "https://imadtbn.github.io/dz_portal/sectors/opgi.html"
-          }
+          "@type": "ListItem",
+          "position": 3,
+          "name": "ديوان الترقية والتسيير العقاري",
+          "item": "https://imadtbn.github.io/dz_portal/sectors/opgi.html"
+        }
       ]
     }
-
   ]
 }
 </script>
