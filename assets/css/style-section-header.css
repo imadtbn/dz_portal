@@ -1,0 +1,193 @@
+/* ===== Section Header تحسين ===== */
+.section-header {
+    position: relative;
+    text-align: center;
+    margin-bottom: 3rem;
+    padding: 2rem 1.5rem;
+    border-radius: 28px;
+    overflow: hidden;
+
+    background: linear-gradient(135deg,
+            rgba(0, 98, 51, 0.08),
+            rgba(255, 255, 255, 0.95));
+
+    border: 1px solid rgba(0, 98, 51, 0.12);
+
+    backdrop-filter: blur(10px);
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.05),
+        inset 0 1px 0 rgba(255, 255, 255, 0.6);
+}
+
+/* خلفية زخرفية */
+.section-header::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(circle at top right,
+            rgba(0, 98, 51, 0.12),
+            transparent 35%),
+        radial-gradient(circle at bottom left,
+            rgba(212, 175, 55, 0.08),
+            transparent 30%);
+    pointer-events: none;
+}
+
+.section-header h2 {
+    position: relative;
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 800;
+    color: #006233;
+    margin-bottom: 0.8rem;
+    letter-spacing: -0.5px;
+}
+
+.section-header h2::after {
+    content: "";
+    display: block;
+    width: 90px;
+    height: 5px;
+    margin: 14px auto 0;
+    border-radius: 999px;
+
+    background: linear-gradient(to left,
+            #006233,
+            #00a651);
+}
+
+.section-header p {
+    position: relative;
+    font-size: 1.08rem;
+    color: #555;
+    max-width: 650px;
+    margin: 0 auto;
+    line-height: 1.9;
+}
+
+/* ===== PWA Badge تحسين ===== */
+.pwa-badge {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+
+    width: fit-content;
+    margin: 2rem auto 0;
+    padding: 1rem 1.4rem;
+
+    border-radius: 24px;
+
+    background:
+        linear-gradient(135deg,
+            rgba(0, 98, 51, 0.08),
+            rgba(255, 255, 255, 0.96));
+
+    border: 1px solid rgba(0, 98, 51, 0.14);
+
+    box-shadow:
+        0 8px 24px rgba(0, 98, 51, 0.08),
+        inset 0 1px 0 rgba(255, 255, 255, 0.6);
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+.pwa-badge:hover {
+    transform: translateY(-4px);
+    box-shadow:
+        0 14px 30px rgba(0, 98, 51, 0.15);
+}
+
+/* أيقونة التطبيق */
+.pwa-badge .app-icon {
+    width: 72px;
+    height: 72px;
+    min-width: 72px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 20px;
+
+    background: linear-gradient(135deg,
+            #ffffff,
+            #f4fff7);
+
+    box-shadow:
+        0 4px 12px rgba(0, 0, 0, 0.08);
+
+    overflow: hidden;
+}
+
+.pwa-badge .app-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* النص */
+.badge-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: right;
+}
+
+.badge-title {
+    font-size: 1.05rem;
+    font-weight: 800;
+    color: #006233;
+    margin-bottom: 0.2rem;
+}
+
+.badge-subtitle {
+    font-size: 0.92rem;
+    color: #666;
+    line-height: 1.5;
+}
+
+/* نقطة الحالة */
+.badge-subtitle::before {
+    content: "";
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    margin-left: 6px;
+    border-radius: 50%;
+    background: #00c853;
+    box-shadow: 0 0 10px rgba(0, 200, 83, 0.6);
+}
+
+/* موبايل */
+@media (max-width: 768px) {
+
+    .section-header {
+        padding: 1.8rem 1rem;
+    }
+
+    .pwa-badge {
+        width: 100%;
+        justify-content: flex-start;
+        padding: 1rem;
+        border-radius: 20px;
+    }
+
+    .pwa-badge .app-icon {
+        width: 62px;
+        height: 62px;
+        min-width: 62px;
+    }
+
+    .badge-title {
+        font-size: 1rem;
+    }
+
+    .badge-subtitle {
+        font-size: 0.85rem;
+    }
+}
