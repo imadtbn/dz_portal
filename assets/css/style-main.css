@@ -985,15 +985,24 @@ body {
 .ad-container {
     width: 100%;
     overflow: hidden;
-    margin: 20px auto;
-    text-align: center;
+ margin: 1rem 0;    text-align: center;
     clear: both;
     margin: 10px auto;
     padding: 0;
     overflow: hidden;
+    min-height: 280px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    contain: layout style paint;
 }
 
 .adsbygoogle {
     display: block;
     min-height: 90px;
+}
+
+.ad-container ins.adsbygoogle {
+    width: 100%;
+    display: block;
 }
