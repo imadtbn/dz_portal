@@ -1354,7 +1354,20 @@ div[style*="border-radius"] i:hover {
 }
 
 
+/*إعلانات ads*/
+
+.ad-container {
+    width: 100%;
+    overflow: hidden;
+    margin: 20px auto;
+    text-align: center;
+    clear: both;
+    margin: 10px auto;
+    padding: 0;
+    overflow: hidden;
+}
+
 .adsbygoogle {
-    min-height: 280px;
     display: block;
+    min-height: 90px;
 }
