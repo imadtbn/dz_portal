@@ -1740,3 +1740,54 @@
                 --primary: #4caf50;
             }
         }
+
+
+
+        /* البطاقة */
+.trusted-service{
+    position: relative;
+    overflow: hidden;
+}
+
+/* شارة التوثيق */
+.trusted-badge{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 24px;
+    height: 24px;
+    background: rgb(51, 51, 209);
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    box-shadow: 0 2px 8px rgba(24,119,242,0.35);
+}
+
+/* شارة جديد */
+.service-badge{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background: #f2182e;
+    color: #fff;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 30px;
+    box-shadow: 0 3px 10px rgba(34,197,94,0.3);
+    z-index: 2;
+}
+
+/* تحسين hover */
+.trusted-service:hover .trusted-badge{
+    transform: scale(1.08);
+    transition: 0.25s ease;
+}
+
+.trusted-service:hover .service-badge{
+    transform: translateY(-1px);
+    transition: 0.25s ease;
+}
