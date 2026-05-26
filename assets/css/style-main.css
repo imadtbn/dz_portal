@@ -1092,6 +1092,13 @@ body {
     font-size:.9rem;
     opacity:.9;
     margin-top:4px;
+
+    
+    border-radius: 50px;
+    color: var(--gold);
+    margin-bottom: 2rem;
+    border: 1.5px solid rgba(255, 215, 0, 0.3); 
+    animation: pulse 2s infinite;
 }
 
 .download-pulse{
