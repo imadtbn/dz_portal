@@ -862,7 +862,7 @@
     <div class="loader-content">
       <div class="loader-spinner"></div>
       <p style="color: white; font-size: 1.3rem;">بسم الله، سيتم تحميل البوابة...</p>
-      <p style="color: rgb(234, 211, 7); font-size: 1.1rem;">الله أكبر، الله أكبر ولله الحمد</p>
+      <p style="color: rgb(234, 211, 7); font-size: 1.3rem;">الله أكبر، الله أكبر ولله الحمد</p>
 
     </div>
   </div>
@@ -942,19 +942,31 @@
         </div>
       </div>
 
+      <!--محرك البحث -->
       <div class="search-container">
-        <input type="text" class="search-box" placeholder="ابحث عن خدمة، وزارة، أو معاملة إدارية..." id="globalSearch">
-        <button class="search-btn">
-          <i class="fas fa-search" alt="بحث"></i>
-        </button>
-      </div>
-    </div>
 
-    <!-- Scroll Indicator -->
-    <div
-      style="position: 4px; bottom: 2rem; left: 50%; transform: translateX(-50%); color: white; animation: bounce 2s infinite;">
-      <i class="fas fa-chevron-down" style="font-size: 2rem;"></i>
-    </div>
+        <div class="search-box-wrapper">
+
+          <input type="text" class="search-box" placeholder="ابحث عن خدمة، وزارة، أو معاملة إدارية..." id="globalSearch"
+            autocomplete="off">
+
+          <button class="search-btn">
+            <i class="fas fa-search"></i>
+          </button>
+
+        </div>
+
+        <!-- نتائج البحث -->
+        <div class="search-results" id="searchResults"></div>
+
+      </div>
+
+      <!-- Scroll Indicator -->
+      <div
+        style="position: 4px; bottom: 2rem; left: 50%; transform: translateX(-50%); color: white; animation: bounce 2s infinite;">
+        <i class="fas fa-chevron-down" style="font-size: 2rem;"></i>
+      </div>
+
   </section>
 
   <!-- Quick Access -->
@@ -1956,6 +1968,8 @@
     (adsbygoogle = window.adsbygoogle || []).push({});
   </script>
 
+  <!-- قاعدة بيانات محرك البحث -->
+  <script defer src="assets/js/searchData.js"></script>
 
 </body>
 
