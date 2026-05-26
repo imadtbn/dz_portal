@@ -1006,3 +1006,166 @@ body {
     width: 100%;
     display: block;
 }
+
+
+/* ===== زر تحميل التطبيق ===== */
+
+.download-app-wrapper{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin:2rem auto;
+    width:100%;
+}
+
+.download-app-btn{
+    position:relative;
+    overflow:hidden;
+
+    display:flex;
+    align-items:center;
+    gap:1rem;
+
+    background:linear-gradient(135deg,#006233,#009944);
+    color:#fff;
+
+    padding:1rem 1.5rem;
+    border-radius:22px;
+
+    text-decoration:none;
+
+    box-shadow:
+    0 10px 30px rgba(0,98,51,.35),
+    0 0 0 1px rgba(255,255,255,.08) inset;
+
+    transition:
+    transform .3s ease,
+    box-shadow .3s ease;
+
+    animation:floatBtn 3s ease-in-out infinite;
+
+    max-width:340px;
+    width:100%;
+}
+
+.download-app-btn:hover{
+    transform:translateY(-6px) scale(1.02);
+
+    box-shadow:
+    0 18px 40px rgba(0,98,51,.45),
+    0 0 30px rgba(0,153,68,.35);
+}
+
+.download-icon{
+    width:62px;
+    height:62px;
+
+    min-width:62px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    border-radius:18px;
+
+    background:rgba(255,255,255,.12);
+    backdrop-filter:blur(10px);
+
+    font-size:1.6rem;
+
+    animation:pulseIcon 2s infinite;
+}
+
+.download-content{
+    display:flex;
+    flex-direction:column;
+    text-align:right;
+}
+
+.download-title{
+    font-size:1.15rem;
+    font-weight:800;
+    line-height:1.2;
+}
+
+.download-subtitle{
+    font-size:.9rem;
+    opacity:.9;
+    margin-top:4px;
+}
+
+.download-pulse{
+    position:absolute;
+    inset:0;
+
+    background:
+    radial-gradient(circle at center,
+    rgba(255,255,255,.22) 0%,
+    transparent 70%);
+
+    animation:pulseGlow 2.5s infinite;
+}
+
+/* تأثيرات */
+
+@keyframes pulseGlow{
+    0%{
+        transform:scale(.9);
+        opacity:.5;
+    }
+
+    70%{
+        transform:scale(1.4);
+        opacity:0;
+    }
+
+    100%{
+        opacity:0;
+    }
+}
+
+@keyframes pulseIcon{
+    0%,100%{
+        transform:scale(1);
+    }
+
+    50%{
+        transform:scale(1.08);
+    }
+}
+
+@keyframes floatBtn{
+    0%,100%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-5px);
+    }
+}
+
+/* موبايل */
+
+@media(max-width:768px){
+
+    .download-app-btn{
+        max-width:92%;
+        padding:1rem;
+        border-radius:18px;
+    }
+
+    .download-title{
+        font-size:1rem;
+    }
+
+    .download-subtitle{
+        font-size:.82rem;
+    }
+
+    .download-icon{
+        width:55px;
+        height:55px;
+        min-width:55px;
+        font-size:1.4rem;
+    }
+}
