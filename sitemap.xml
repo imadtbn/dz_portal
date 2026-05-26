@@ -76,6 +76,16 @@
       <image:title>dzexam1 - بنك الفروض والاختبارات</image:title>
     </image:image>
   </url>
+    <url>
+    <loc>https://imadtbn.github.io/dz_portal/sectors/dzexam.pro.html</loc>
+    <lastmod>2025-05-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://imadtbn.github.io/dz_portal/assets/images/dzexams.pro.webp</image:loc>
+      <image:title>dzexam.pro - بنك الفروض والاختبارات</image:title>
+    </image:image>
+  </url>
   <url>
     <loc>https://imadtbn.github.io/dz_portal/sectors/dzexams.html</loc>
     <lastmod>2025-05-12</lastmod>
