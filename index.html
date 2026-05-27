@@ -2,914 +2,1474 @@
 <html lang="ar" dir="rtl">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>البوابة الجزائرية للخدمات الرقمية | DZ e-Services Portal</title>
+    <title>البوابة الجزائرية للخدمات الرقمية | DZ e-Services Portal</title>
 
-  <meta name="description" content="منصة موحدة للوصول إلى الخدمات الحكومية الجزائرية الرقمية">
+    <meta name="description" content="منصة موحدة للوصول إلى الخدمات الحكومية الجزائرية الرقمية">
 
-  <meta name="keywords"
-    content="الجزائر, بوابة الخدمات الرقمية, الخدمات الحكومية, الخدمات الإلكترونية, الجزائر الرقمية, الخدمات العامة, الخدمات الإدارية, الخدمات عبر الإنترنت">
+    <meta name="keywords" content="الجزائر, بوابة الخدمات الرقمية, الخدمات الحكومية, الخدمات الإلكترونية, الجزائر الرقمية, الخدمات العامة, الخدمات الإدارية, الخدمات عبر الإنترنت">
 
-  <meta name="author" content="dz portal">
+    <meta name="author" content="dz portal">
 
-  <meta property="og:image" content="https://imadtbn.github.io/dz_portal/icons/icon.png" />
-  <meta property="og:url" content="https://imadtbn.github.io/dz_portal/" />
-  <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://imadtbn.github.io/dz_portal/icons/icon.png" />
+    <meta property="og:url" content="https://imadtbn.github.io/dz_portal/" />
+    <meta property="og:type" content="website" />
 
-  <link rel="preload" as="image" href="assets/images/icon.png">
+    <link rel="preload" as="image" href="assets/images/icon.png">
 
-  <!-- Structured Data -->
-  <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "WebSite",
-      "@id": "https://imadtbn.github.io/dz_portal/#website",
-      "url": "https://imadtbn.github.io/dz_portal/",
-      "name": "البوابة الجزائرية للخدمات الرقمية",
-      "alternateName": ["DZ E-Services Portal", "البوابة الجزائرية"],
-      "inLanguage": ["ar", "fr"],
-      "description": "منصة موحدة تتيح للمواطن الجزائري الوصول السريع والآمن إلى جميع الخدمات الحكومية والعمومية الرقمية من مكان واحد، دون تعقيد أو تنقل إداري.",
-      "publisher": { "@id": "https://imadtbn.github.io/dz_portal/#organization" },
-      "potentialAction": {
-        "@type": "SearchAction",
-        "target": {
-          "@type": "EntryPoint",
-          "urlTemplate": "https://imadtbn.github.io/dz_portal/?q={search_term_string}"
-        },
-        "query-input": "required name=search_term_string"
-      },
-      "image": {
-        "@type": "ImageObject",
-        "url": "https://imadtbn.github.io/dz_portal/preview.png",
-        "width": 1200,
-        "height": 630
-      }
-    },
-    {
-      "@type": "Organization",
-      "@id": "https://imadtbn.github.io/dz_portal/#organization",
-      "name": "البوابة الجزائرية للخدمات الرقمية",
-      "url": "https://imadtbn.github.io/dz_portal/",
-      "logo": {
-        "@type": "ImageObject",
-        "@id": "https://imadtbn.github.io/dz_portal/#logo",
-        "url": "https://imadtbn.github.io/dz_portal/icons/icon.png",
-        "width": 512,
-        "height": 512,
-        "caption": "شعار البوابة الجزائرية للخدمات الرقمية"
-      },
-      "image": { "@id": "https://imadtbn.github.io/dz_portal/#logo" },
-      "founder": {
-        "@type": "Person",
-        "name": "Imad Tabani",
-        "email": "mailto:tabaniimadeddine@gmail.com"
-      },
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "contactType": "customer support",
-        "areaServed": "DZ",
-        "availableLanguage": ["Arabic", "French"],
-        "email": "tabaniimadeddine@gmail.com",
-        "telephone": "+213697743721"
-      },
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "الجزائر العاصمة",
-        "postalCode": "16000",
-        "addressCountry": "DZ"
-      },
-      "sameAs": [
-        "https://imadtbn.github.io/dz_portal/"
-      ]
-    },
-    {
-      "@type": "WebPage",
-      "@id": "https://imadtbn.github.io/dz_portal/#webpage",
-      "url": "https://imadtbn.github.io/dz_portal/",
-      "name": "الصفحة الرئيسية - البوابة الجزائرية للخدمات الرقمية",
-      "isPartOf": { "@id": "https://imadtbn.github.io/dz_portal/#website" },
-      "about": { "@id": "https://imadtbn.github.io/dz_portal/#organization" },
-      "inLanguage": "ar",
-      "description": "منصة موحدة تتيح للمواطن الجزائري الوصول السريع والآمن إلى جميع الخدمات الحكومية والعمومية الرقمية من مكان واحد، دون تعقيد أو تنقل إداري.",
-      "primaryImageOfPage": {
-        "@type": "ImageObject",
-        "url": "https://imadtbn.github.io/dz_portal/preview.png"
-      },
-      "breadcrumb": {
-        "@type": "BreadcrumbList",
-        "@id": "https://imadtbn.github.io/dz_portal/#breadcrumb"
-      },
-      "mainEntity": {
-        "@type": "ItemList",
-        "@id": "https://imadtbn.github.io/dz_portal/#main-services"
-      }
-    },
-    {
-      "@type": "BreadcrumbList",
-      "@id": "https://imadtbn.github.io/dz_portal/#breadcrumb",
-      "itemListElement": [
+    <!-- Structured Data -->
+    <script type="application/ld+json">
         {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "الصفحة الرئيسية",
-          "item": "https://imadtbn.github.io/dz_portal/"
+            "@context": "https://schema.org",
+            "@graph": [{
+                "@type": "WebSite",
+                "@id": "https://imadtbn.github.io/dz_portal/#website",
+                "url": "https://imadtbn.github.io/dz_portal/",
+                "name": "البوابة الجزائرية للخدمات الرقمية",
+                "alternateName": ["DZ E-Services Portal", "البوابة الجزائرية"],
+                "inLanguage": ["ar", "fr"],
+                "description": "منصة موحدة تتيح للمواطن الجزائري الوصول السريع والآمن إلى جميع الخدمات الحكومية والعمومية الرقمية من مكان واحد، دون تعقيد أو تنقل إداري.",
+                "keywords": [
+                    "education",
+                    "bac",
+                    "bem",
+                    "فضاء",
+                    "نتائج",
+                    "أولياء",
+                    "تعليم",
+                    "تسجيل",
+                    "امتحان",
+                    "بكالوريا",
+                    "متوسط",
+                    "ابتدائي",
+                    "أستاذ",
+                    "تلميذ",
+                    "مدرسة",
+                    "تربية",
+                    "تعليم عن بعد",
+                    "فضاء الأستاذ",
+                    "فضاء الأولياء",
+                    "تسجيلات",
+                    "شهادة",
+                    "تعليم متوسط",
+                    "exam",
+                    "compos",
+                    "فرض",
+                    "اختبار",
+                    "بنك",
+                    "تصحيح",
+                    "تعليم",
+                    "فروض",
+                    "اختبارات",
+                    "تعليم متوسط",
+                    "بكالوريا",
+                    "ابتدائي",
+                    "dzexams",
+                    "exam",
+                    "فرض",
+                    "اختبار",
+                    "بكالوريا",
+                    "متوسط",
+                    "تصحيح",
+                    "تعليم",
+                    "شهادة",
+                    "dzexam1",
+                    "exam",
+                    "فرض",
+                    "اختبار",
+                    "بكالوريا",
+                    "متوسط",
+                    "تعليم",
+                    "شهادة",
+                    "eddirasa",
+                    "exam",
+                    "فرض",
+                    "اختبار",
+                    "دراسة",
+                    "تعليم",
+                    "بكالوريا",
+                    "متوسط",
+                    "etudpdf",
+                    "exam",
+                    "فرض",
+                    "اختبار",
+                    "pdf",
+                    "تعليم",
+                    "بكالوريا",
+                    "متوسط",
+                    "mdjedel",
+                    "medjedel",
+                    "exam",
+                    "فرض",
+                    "اختبار",
+                    "تعليم",
+                    "بكالوريا",
+                    "متوسط",
+                    "dzexam.pro",
+                    "exam",
+                    "فرض",
+                    "اختبار",
+                    "بكالوريا",
+                    "متوسط",
+                    "تعليم",
+                    "progres",
+                    "جامعة",
+                    "طالب",
+                    "إيواء",
+                    "منحة",
+                    "تسجيل جامعي",
+                    "mesrs",
+                    "تحويل",
+                    "سكن جامعي",
+                    "تعليم عالي",
+                    "جامعي",
+                    "ليسانس",
+                    "ماستر",
+                    "دكتوراه",
+                    "formation",
+                    "تكوين",
+                    "مهني",
+                    "تعليم مهني",
+                    "mfp",
+                    "تسجيل",
+                    "امتحان",
+                    "تكوين مهني",
+                    "مهنة",
+                    "حرفة",
+                    "poste",
+                    "ccp",
+                    "baridimob",
+                    "ذهبية",
+                    "بريد",
+                    "حساب بريدي",
+                    "تحويل",
+                    "طرود",
+                    "فضاء زبون",
+                    "بريد الجزائر",
+                    "الجزائر بريد",
+                    "حساب",
+                    "بطاقة ذهبية",
+                    "idoom",
+                    "wifi",
+                    "internet",
+                    "اتصالات",
+                    "أنترنت",
+                    "فضاء زبون",
+                    "تعبئة",
+                    "فاتورة",
+                    "algerie telecom",
+                    "اتصالات الجزائر",
+                    "أنترنت",
+                    "شبكة",
+                    "دفع إلكتروني",
+                    "mobilis",
+                    "djezzy",
+                    "oredoo",
+                    "موبيليس",
+                    "جازي",
+                    "أوريدو",
+                    "هاتف",
+                    "شحن",
+                    "رصيد",
+                    "فليكسي",
+                    "تطبيق",
+                    "نقال",
+                    "جوال",
+                    "شبكة",
+                    "اتصال",
+                    "arpce",
+                    "ضبط",
+                    "اتصالات",
+                    "فاتورة",
+                    "رقم هاتف",
+                    "جيل لجيل",
+                    "777",
+                    "سلطة",
+                    "بريد",
+                    "إلكترونية",
+                    "interieur",
+                    "بطاقة تعريف",
+                    "بيومترية",
+                    "رخصة سياقة",
+                    "جواز سفر",
+                    "شهادة ميلاد",
+                    "شباك عن بعد",
+                    "منحة",
+                    "حالة مدنية",
+                    "داخلية",
+                    "جماعات",
+                    "محلية",
+                    "تعريف",
+                    "هوية",
+                    "sakan",
+                    "سكن",
+                    "aadl",
+                    "enpi",
+                    "opgi",
+                    "lpp",
+                    "lpa",
+                    "اجتماعي",
+                    "ريفي",
+                    "عمومي",
+                    "ترقوي",
+                    "عمران",
+                    "سكن",
+                    "مسكن",
+                    "بيت",
+                    "سكني",
+                    "aadl",
+                    "عدل",
+                    "سكن",
+                    "تحسين",
+                    "تطوير",
+                    "وكالة",
+                    "عقار",
+                    "opgi",
+                    "ترقية",
+                    "تسيير",
+                    "عقاري",
+                    "سكن",
+                    "ديوان",
+                    "عقار",
+                    "enpi",
+                    "ترقية",
+                    "عقاري",
+                    "سكن",
+                    "مؤسسة",
+                    "وطنية",
+                    "عقار",
+                    "facteur",
+                    "فاتورة",
+                    "دفع",
+                    "كهرباء",
+                    "ماء",
+                    "غاز",
+                    "تسديد",
+                    "فاتورة",
+                    "دفع إلكتروني",
+                    "فواتير",
+                    "sonelgaz",
+                    "سونلغاز",
+                    "كهرباء",
+                    "غاز",
+                    "فاتورة",
+                    "ربط",
+                    "عطل",
+                    "طاقة",
+                    "كهرباء",
+                    "غاز",
+                    "فاتورة",
+                    "صونلغاز",
+                    "ade",
+                    "جزائرية للمياه",
+                    "فاتورة ماء",
+                    "ماء",
+                    "محاكاة",
+                    "مياه",
+                    "فاتورة",
+                    "ماء",
+                    "seaal",
+                    "سيال",
+                    "مياه",
+                    "تطهير",
+                    "فاتورة",
+                    "محاكاة",
+                    "ماء",
+                    "صرف",
+                    "صحي",
+                    "mard",
+                    "فلاحة",
+                    "أضحية",
+                    "عيد",
+                    "شكوى",
+                    "صيد",
+                    "تنمية ريفية",
+                    "فلاح",
+                    "زراعة",
+                    "ريف",
+                    "naftal",
+                    "نفطال",
+                    "محطة",
+                    "وقود",
+                    "بترول",
+                    "عجلات",
+                    "محطتي",
+                    "بنزين",
+                    "غازول",
+                    "محطة وقود",
+                    "cnas",
+                    "casnos",
+                    "cnr",
+                    "تقاعد",
+                    "ضمان اجتماعي",
+                    "تأمين",
+                    "عمل",
+                    "تشغيل",
+                    "منحة",
+                    "شيخوخة",
+                    "عجز",
+                    "بطالة",
+                    "finance",
+                    "مالية",
+                    "جباية",
+                    "طابع",
+                    "ضريبة",
+                    "صفقات",
+                    "عمومية",
+                    "أملاك",
+                    "مال",
+                    "جباية",
+                    "ضرائب",
+                    "رسوم",
+                    "qassimatouka",
+                    "قسيمة",
+                    "سيارة",
+                    "قسيمتك",
+                    "مركبة",
+                    "شراء",
+                    "سيارات",
+                    "قسيمة سيارة",
+                    "tabioucom",
+                    "طابع",
+                    "جبائي",
+                    "جواز",
+                    "بطاقة",
+                    "رخصة",
+                    "سياقة",
+                    "طابع جبائي",
+                    "رسوم",
+                    "حقوق",
+                    "nifenligne",
+                    "ترقيم",
+                    "جبائي",
+                    "ضمان",
+                    "صفقات",
+                    "محاكاة",
+                    "ترقيم",
+                    "جباية",
+                    "fadaeldjazair",
+                    "أملاك",
+                    "عقاري",
+                    "دفتر",
+                    "مسح",
+                    "وكالة",
+                    "مصفوفات",
+                    "عقار",
+                    "أرض",
+                    "عقود",
+                    "justice",
+                    "عدالة",
+                    "نيابة",
+                    "سوابق",
+                    "عدلية",
+                    "جنسية",
+                    "محبوس",
+                    "محكمة",
+                    "قضاء",
+                    "قانون",
+                    "جزائي",
+                    "hatplc",
+                    "شفافية",
+                    "فساد",
+                    "وقاية",
+                    "تصريح",
+                    "ممتلكات",
+                    "مكافحة",
+                    "رشوة",
+                    "تبذير",
+                    "ocrc",
+                    "فساد",
+                    "قمع",
+                    "ديوان",
+                    "شكوى",
+                    "رشوة",
+                    "تبليغ",
+                    "فساد إداري",
+                    "mfa",
+                    "خارجية",
+                    "جالية",
+                    "سفارة",
+                    "قنصلية",
+                    "جواز",
+                    "سفر",
+                    "تأشيرة",
+                    "تصريح",
+                    "سفارة",
+                    "قنصلية",
+                    "onpo",
+                    "حج",
+                    "عمرة",
+                    "ديوان",
+                    "تسجيل",
+                    "مكة",
+                    "مدينة",
+                    "مناسك",
+                    "حاج",
+                    "معتمر",
+                    "commerce",
+                    "تجارة",
+                    "جمارك",
+                    "صادرات",
+                    "استيراد",
+                    "تصدير",
+                    "تاجر",
+                    "استيراد",
+                    "تصدير",
+                    "رسوم جمركية",
+                    "dgsn",
+                    "شرطة",
+                    "شكوى",
+                    "تصريح",
+                    "أمن",
+                    "تطبيق",
+                    "أمن",
+                    "نظام",
+                    "شرطة",
+                    "درك",
+                    "أمن وطني",
+                    "sante",
+                    "صحة",
+                    "طبيب",
+                    "عيادة",
+                    "تكوين",
+                    "شبه طبي",
+                    "دم",
+                    "صيدلية",
+                    "مستشفى",
+                    "علاج",
+                    "دواء",
+                    "صحة",
+                    "نقل",
+                    "طيران",
+                    "قطار",
+                    "باخرة",
+                    "ترامواي",
+                    "محطتي",
+                    "حجز",
+                    "تذكرة",
+                    "سفر",
+                    "مواصلات",
+                    "تنقل",
+                    "طيران",
+                    "سكك حديدية",
+                    "elections",
+                    "انتخابات",
+                    "ناخب",
+                    "بطاقة",
+                    "تسجيل",
+                    "صوت",
+                    "انتخب",
+                    "انتخاب",
+                    "تصويت",
+                    "برلمان",
+                    "رئاسيات",
+                    "markabaty",
+                    "مركبتي",
+                    "فحص",
+                    "مركبة",
+                    "مطابقة",
+                    "موعد",
+                    "سيارة",
+                    "فحص تقني",
+                    "سيارات",
+                    "مركبات",
+                    "anae",
+                    "مقاول",
+                    "ذاتي",
+                    "عمل",
+                    "حر",
+                    "تسجيل",
+                    "مقاولة",
+                    "نشاط",
+                    "مهني",
+                    "حرفي",
+                    "aapi",
+                    "استثمار",
+                    "ترقية",
+                    "وكالة",
+                    "مؤسسة",
+                    "مستثمر",
+                    "مشاريع",
+                    "استثمارات",
+                    "anem",
+                    "تشغيل",
+                    "بطالة",
+                    "منحة",
+                    "عمل",
+                    "وكالة",
+                    "عرض",
+                    "وظيفة",
+                    "شغل",
+                    "باحث عن عمل",
+                    "assurance",
+                    "تأمين",
+                    "ممتلكات",
+                    "تعويض",
+                    "خسارة",
+                    "شركة",
+                    "تأمين",
+                    "حادث",
+                    "ضرر",
+                    "تعويضات",
+                    "bank",
+                    "بنك",
+                    "قرض",
+                    "حساب",
+                    "بنكي",
+                    "عمومي",
+                    "خاص",
+                    "مال",
+                    "بنك",
+                    "بنك الجزائر",
+                    "قرض",
+                    "تمويل",
+                    "حساب جاري",
+                    "emergency",
+                    "طوارئ",
+                    "إسعاف",
+                    "شرطة",
+                    "درك",
+                    "نجدة",
+                    "رقم",
+                    "طوارئ",
+                    "سعافات",
+                    "حماية مدنية",
+                    "نجدة",
+                    "هاتف",
+                    "me",
+                    "بيئة",
+                    "جودة",
+                    "حياة",
+                    "نفايات",
+                    "صناعية",
+                    "نظيف",
+                    "بيئة",
+                    "تلوث",
+                    "نظافة",
+                    "جودة"
+                ],
+
+                "publisher": {
+                    "@id": "https://imadtbn.github.io/dz_portal/#organization"
+                },
+                "potentialAction": {
+                    "@type": "SearchAction",
+                    "target": {
+                        "@type": "EntryPoint",
+                        "urlTemplate": "https://imadtbn.github.io/dz_portal/?q={search_term_string}"
+                    },
+                    "query-input": "required name=search_term_string"
+                },
+                "image": {
+                    "@type": "ImageObject",
+                    "url": "https://imadtbn.github.io/dz_portal/preview.png",
+                    "width": 1200,
+                    "height": 630
+                }
+            }, {
+                "@type": "Organization",
+                "@id": "https://imadtbn.github.io/dz_portal/#organization",
+                "name": "البوابة الجزائرية للخدمات الرقمية",
+                "url": "https://imadtbn.github.io/dz_portal/",
+                "logo": {
+                    "@type": "ImageObject",
+                    "@id": "https://imadtbn.github.io/dz_portal/#logo",
+                    "url": "https://imadtbn.github.io/dz_portal/icons/icon.png",
+                    "width": 512,
+                    "height": 512,
+                    "caption": "شعار البوابة الجزائرية للخدمات الرقمية"
+                },
+                "image": {
+                    "@id": "https://imadtbn.github.io/dz_portal/#logo"
+                },
+                "founder": {
+                    "@type": "Person",
+                    "name": "Imad Tabani",
+                    "email": "mailto:tabaniimadeddine@gmail.com"
+                },
+                "contactPoint": {
+                    "@type": "ContactPoint",
+                    "contactType": "customer support",
+                    "areaServed": "DZ",
+                    "availableLanguage": ["Arabic", "French"],
+                    "email": "tabaniimadeddine@gmail.com",
+                    "telephone": "+213697743721"
+                },
+                "address": {
+                    "@type": "PostalAddress",
+                    "addressLocality": "الجزائر العاصمة",
+                    "postalCode": "16000",
+                    "addressCountry": "DZ"
+                },
+                "sameAs": [
+                    "https://imadtbn.github.io/dz_portal/"
+                ]
+            }, {
+                "@type": "WebPage",
+                "@id": "https://imadtbn.github.io/dz_portal/#webpage",
+                "url": "https://imadtbn.github.io/dz_portal/",
+                "name": "الصفحة الرئيسية - البوابة الجزائرية للخدمات الرقمية",
+                "isPartOf": {
+                    "@id": "https://imadtbn.github.io/dz_portal/#website"
+                },
+                "about": {
+                    "@id": "https://imadtbn.github.io/dz_portal/#organization"
+                },
+                "inLanguage": "ar",
+                "description": "منصة موحدة تتيح للمواطن الجزائري الوصول السريع والآمن إلى جميع الخدمات الحكومية والعمومية الرقمية من مكان واحد، دون تعقيد أو تنقل إداري.",
+                "primaryImageOfPage": {
+                    "@type": "ImageObject",
+                    "url": "https://imadtbn.github.io/dz_portal/preview.png"
+                },
+                "breadcrumb": {
+                    "@type": "BreadcrumbList",
+                    "@id": "https://imadtbn.github.io/dz_portal/#breadcrumb"
+                },
+                "mainEntity": {
+                    "@type": "ItemList",
+                    "@id": "https://imadtbn.github.io/dz_portal/#main-services"
+                }
+            }, {
+                "@type": "BreadcrumbList",
+                "@id": "https://imadtbn.github.io/dz_portal/#breadcrumb",
+                "itemListElement": [{
+                    "@type": "ListItem",
+                    "position": 1,
+                    "name": "الصفحة الرئيسية",
+                    "item": "https://imadtbn.github.io/dz_portal/"
+                }]
+            }, {
+                "@type": "ItemList",
+                "@id": "https://imadtbn.github.io/dz_portal/#main-services",
+                "name": "الخدمات الرقمية الجزائرية",
+                "itemListElement": [{
+                    "@type": "ListItem",
+                    "position": 1,
+                    "item": {
+                        "@type": "Service",
+                        "name": "التربية والتعليم",
+                        "description": "التسجيل في الامتحانات، نتائج، فضاء الأستاذ والأولياء، التعليم عن بعد",
+                        "provider": {
+                            "@id": "https://imadtbn.github.io/dz_portal/#organization"
+                        },
+                        "areaServed": "DZ",
+                        "category": "الخدمات الحكومية",
+                        "url": "https://imadtbn.github.io/dz_portal/sectors/education.html"
+                    }
+                }, {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "item": {
+                        "@type": "Service",
+                        "name": "بنك الفروض والاختبارات",
+                        "description": "جميع منصات الفروض والاختبارات للتعليم في الجزائر",
+                        "provider": {
+                            "@id": "https://imadtbn.github.io/dz_portal/#organization"
+                        },
+                        "areaServed": "DZ",
+                        "category": "الخدمات التعليمية",
+                        "url": "https://imadtbn.github.io/dz_portal/sectors/exam-compos.html"
+                    }
+                }, {
+                    "@type": "ListItem",
+                    "position": 3,
+                    "item": {
+                        "@type": "Service",
+                        "name": "الخدمات الجامعية",
+                        "description": "التسجيل الجامعي، منصة Progres، الإيواء الجامعي، التحويلات الجامعية",
+                        "provider": {
+                            "@id": "https://imadtbn.github.io/dz_portal/#organization"
+                        },
+                        "areaServed": "DZ",
+                        "category": "التعليم العالي",
+                        "url": "https://imadtbn.github.io/dz_portal/sectors/progres.mesrs.html"
+                    }
+                }, {
+                    "@type": "ListItem",
+                    "position": 4,
+                    "item": {
+                        "@type": "Service",
+                        "name": "التكوين والتعليم المهني",
+                        "description": "التسجيل في التكوين والتعليم المهنيين، الامتحانات",
+                        "provider": {
+                            "@id": "https://imadtbn.github.io/dz_portal/#organization"
+                        },
+                        "areaServed": "DZ",
+                        "category": "التكوين المهني",
+                        "url": "https://imadtbn.github.io/dz_portal/sectors/mfp.gov.html"
+                    }
+                }, {
+                    "@type": "ListItem",
+                    "position": 5,
+                    "item": {
+                        "@type": "Service",
+                        "name": "بريد الجزائر",
+                        "description": "خدمات البريد في الجزائر، البطاقة الذهبية، التطبيقات الرقمية",
+                        "provider": {
+                            "@id": "https://imadtbn.github.io/dz_portal/#organization"
+                        },
+                        "areaServed": "DZ",
+                        "category": "البريد والمواصلات",
+                        "url": "https://imadtbn.github.io/dz_portal/sectors/poste.html"
+                    }
+                }, {
+                    "@type": "ListItem",
+                    "position": 6,
+                    "item": {
+                        "@type": "Service",
+                        "name": "اتصالات الجزائر",
+                        "description": "خدمات الانترنت، فضاء الزبون، بطاقات التعبئة، الدفع الإلكتروني",
+                        "provider": {
+                            "@id": "https://imadtbn.github.io/dz_portal/#organization"
+                        },
+                        "areaServed": "DZ",
+                        "category": "الاتصالات",
+                        "url": "https://imadtbn.github.io/dz_portal/sectors/algerietelecom.html"
+                    }
+                }, {
+                    "@type": "ListItem",
+                    "position": 7,
+                    "item": {
+                        "@type": "Service",
+                        "name": "خدمات الهاتف النقال",
+                        "description": "موبيليس، جازي، أوريدو، تطبيقات وأرقام، مصلحة الزبائن",
+                        "provider": {
+                            "@id": "https://imadtbn.github.io/dz_portal/#organization"
+                        },
+                        "areaServed": "DZ",
+                        "category": "الهاتف النقال",
+                        "url": "https://imadtbn.github.io/dz_portal/sectors/telephon.html"
+                    }
+                }, {
+                    "@type": "ListItem",
+                    "position": 8,
+                    "item": {
+                        "@type": "Service",
+                        "name": "سلطة ضبط البريد والاتصالات الإلكترونية (ARPCE)",
+                        "description": "طلب خدمة، دفع الفاتورة، معرفة عدد أرقام الهاتف باسمك، التطبيقات",
+                        "provider": {
+                            "@id": "https://imadtbn.github.io/dz_portal/#organization"
+                        },
+                        "areaServed": "DZ",
+                        "category": "الرقابة والتنظيم",
+                        "url": "https://imadtbn.github.io/dz_portal/sectors/arpce.html"
+                    }
+                }, {
+                    "@type": "ListItem",
+                    "position": 9,
+                    "item": {
+                        "@type": "Service",
+                        "name": "وزارة الداخلية والجماعات المحلية",
+                        "description": "البطاقة التعريف البيومترية، رخصة السياقة، جواز السفر، شهادة الميلاد، الشباك عن بعد",
+                        "provider": {
+                            "@id": "https://imadtbn.github.io/dz_portal/#organization"
+                        },
+                        "areaServed": "DZ",
+                        "category": "الأمن والأحوال المدنية",
+                        "url": "https://imadtbn.github.io/dz_portal/sectors/interieur.html"
+                    }
+                }, {
+                    "@type": "ListItem",
+                    "position": 10,
+                    "item": {
+                        "@type": "Service",
+                        "name": "السكن والعمران",
+                        "description": "السكن الاجتماعي، السكن الريفي، السكن العمومي الإيجاري، السكن الترقوي المدعم",
+                        "provider": {
+                            "@id": "https://imadtbn.github.io/dz_portal/#organization"
+                        },
+                        "areaServed": "DZ",
+                        "category": "السكن",
+                        "url": "https://imadtbn.github.io/dz_portal/sectors/mhuv.gov.html"
+                    }
+                }, {
+                    "@type": "ListItem",
+                    "position": 11,
+                    "item": {
+                        "@type": "Service",
+                        "name": "التأمين والضمان الاجتماعي",
+                        "description": "الضمان الاجتماعي CNAS/CASNOS، التقاعد CNR، مؤسسات التأمين الخاصة",
+                        "provider": {
+                            "@id": "https://imadtbn.github.io/dz_portal/#organization"
+                        },
+                        "areaServed": "DZ",
+                        "category": "الضمان الاجتماعي",
+                        "url": "https://imadtbn.github.io/dz_portal/sectors/mtess.html"
+                    }
+                }, {
+                    "@type": "ListItem",
+                    "position": 12,
+                    "item": {
+                        "@type": "Service",
+                        "name": "المالية والجباية",
+                        "description": "الطابع الجبائي، قسيمة السيارات، الصفقات العمومية، الأملاك العقارية",
+                        "provider": {
+                            "@id": "https://imadtbn.github.io/dz_portal/#organization"
+                        },
+                        "areaServed": "DZ",
+                        "category": "المالية",
+                        "url": "https://imadtbn.github.io/dz_portal/sectors/mf.gov.html"
+                    }
+                }, {
+                    "@type": "ListItem",
+                    "position": 13,
+                    "item": {
+                        "@type": "Service",
+                        "name": "تسديد الفواتير",
+                        "description": "دفع فواتير الكهرباء والماء والغاز عبر البوابة الجزائرية للخدمات الرقمية",
+                        "provider": {
+                            "@id": "https://imadtbn.github.io/dz_portal/#organization"
+                        },
+                        "areaServed": "DZ",
+                        "category": "الفواتير",
+                        "url": "https://imadtbn.github.io/dz_portal/sectors/facteur.html"
+                    }
+                }, {
+                    "@type": "ListItem",
+                    "position": 14,
+                    "item": {
+                        "@type": "Service",
+                        "name": "سونلغاز",
+                        "description": "فاتورة الكهرباء والغاز، الربط بالكهرباء، الربط بالغاز",
+                        "provider": {
+                            "@id": "https://imadtbn.github.io/dz_portal/#organization"
+                        },
+                        "areaServed": "DZ",
+                        "category": "الطاقة",
+                        "url": "https://imadtbn.github.io/dz_portal/sectors/sonalgaz.html"
+                    }
+                }, {
+                    "@type": "ListItem",
+                    "position": 15,
+                    "item": {
+                        "@type": "Service",
+                        "name": "الجزائرية للمياه",
+                        "description": "فاتورة الماء، خدمات الجزائرية للمياه",
+                        "provider": {
+                            "@id": "https://imadtbn.github.io/dz_portal/#organization"
+                        },
+                        "areaServed": "DZ",
+                        "category": "المياه",
+                        "url": "https://imadtbn.github.io/dz_portal/sectors/ade.html"
+                    }
+                }, {
+                    "@type": "ListItem",
+                    "position": 16,
+                    "item": {
+                        "@type": "Service",
+                        "name": "سيال للمياه والتطهير",
+                        "description": "فاتورة الماء لسيال للمياه والتطهير",
+                        "provider": {
+                            "@id": "https://imadtbn.github.io/dz_portal/#organization"
+                        },
+                        "areaServed": "DZ",
+                        "category": "المياه والتطهير",
+                        "url": "https://imadtbn.github.io/dz_portal/sectors/seaal.html"
+                    }
+                }, {
+                    "@type": "ListItem",
+                    "position": 17,
+                    "item": {
+                        "@type": "Service",
+                        "name": "العدالة",
+                        "description": "النيابة الإلكترونية، السوابق العدلية، الجنسية، الاتصال بالمحبوسين",
+                        "provider": {
+                            "@id": "https://imadtbn.github.io/dz_portal/#organization"
+                        },
+                        "areaServed": "DZ",
+                        "category": "العدالة",
+                        "url": "https://imadtbn.github.io/dz_portal/sectors/mjustice.html"
+                    }
+                }, {
+                    "@type": "ListItem",
+                    "position": 18,
+                    "item": {
+                        "@type": "Service",
+                        "name": "الشؤون الخارجية والجالية الجزائرية",
+                        "description": "خدمات الشؤون الخارجية والجالية الجزائرية",
+                        "provider": {
+                            "@id": "https://imadtbn.github.io/dz_portal/#organization"
+                        },
+                        "areaServed": "DZ",
+                        "category": "الشؤون الخارجية",
+                        "url": "https://imadtbn.github.io/dz_portal/sectors/mfa.html"
+                    }
+                }, {
+                    "@type": "ListItem",
+                    "position": 19,
+                    "item": {
+                        "@type": "Service",
+                        "name": "الديوان الوطني للحج والعمرة",
+                        "description": "خدمات الحج والعمرة في الجزائر",
+                        "provider": {
+                            "@id": "https://imadtbn.github.io/dz_portal/#organization"
+                        },
+                        "areaServed": "DZ",
+                        "category": "الحج والعمرة",
+                        "url": "https://imadtbn.github.io/dz_portal/sectors/onpo.html"
+                    }
+                }, {
+                    "@type": "ListItem",
+                    "position": 20,
+                    "item": {
+                        "@type": "Service",
+                        "name": "التجارة والجمارك الجزائرية",
+                        "description": "خدمات التجارة وترقية الصادرات، الجمارك الجزائرية، اتصال وإصغاء",
+                        "provider": {
+                            "@id": "https://imadtbn.github.io/dz_portal/#organization"
+                        },
+                        "areaServed": "DZ",
+                        "category": "التجارة والجمارك",
+                        "url": "https://imadtbn.github.io/dz_portal/sectors/commerce.html"
+                    }
+                }, {
+                    "@type": "ListItem",
+                    "position": 21,
+                    "item": {
+                        "@type": "Service",
+                        "name": "الشرطة الجزائرية",
+                        "description": "شكاوي وتصاريح عن بعد، الخدمات الرقمية، تطبيقات، دليل هاتفي",
+                        "provider": {
+                            "@id": "https://imadtbn.github.io/dz_portal/#organization"
+                        },
+                        "areaServed": "DZ",
+                        "category": "الأمن",
+                        "url": "https://imadtbn.github.io/dz_portal/sectors/dgsn.html"
+                    }
+                }, {
+                    "@type": "ListItem",
+                    "position": 22,
+                    "item": {
+                        "@type": "Service",
+                        "name": "الصحة",
+                        "description": "العيادة الرقمية، التكوين الشبه طبي، تطبيقات الأطباء، بنك الدم",
+                        "provider": {
+                            "@id": "https://imadtbn.github.io/dz_portal/#organization"
+                        },
+                        "areaServed": "DZ",
+                        "category": "الصحة",
+                        "url": "https://imadtbn.github.io/dz_portal/sectors/sante.html"
+                    }
+                }, {
+                    "@type": "ListItem",
+                    "position": 23,
+                    "item": {
+                        "@type": "Service",
+                        "name": "النقل والمواصلات",
+                        "description": "حجز تذاكر الطيران، القطارات، البواخر، الترامواي، تطبيق محطتي",
+                        "provider": {
+                            "@id": "https://imadtbn.github.io/dz_portal/#organization"
+                        },
+                        "areaServed": "DZ",
+                        "category": "النقل",
+                        "url": "https://imadtbn.github.io/dz_portal/sectors/transport.html"
+                    }
+                }, {
+                    "@type": "ListItem",
+                    "position": 24,
+                    "item": {
+                        "@type": "Service",
+                        "name": "السلطة الوطنية المستقلة للانتخابات",
+                        "description": "بطاقة الناخب، تسجيل الناخبين، نتائج الانتخابات، أين أنتخب",
+                        "provider": {
+                            "@id": "https://imadtbn.github.io/dz_portal/#organization"
+                        },
+                        "areaServed": "DZ",
+                        "category": "الانتخابات",
+                        "url": "https://imadtbn.github.io/dz_portal/sectors/ina-elections.html"
+                    }
+                }, {
+                    "@type": "ListItem",
+                    "position": 25,
+                    "item": {
+                        "@type": "Service",
+                        "name": "مركبتي لفحص مطابقة المركبات",
+                        "description": "حجز مواعيد فحص مطابقة المركبات في الجزائر",
+                        "provider": {
+                            "@id": "https://imadtbn.github.io/dz_portal/#organization"
+                        },
+                        "areaServed": "DZ",
+                        "category": "النقل",
+                        "url": "https://imadtbn.github.io/dz_portal/sectors/markabatidz.html"
+                    }
+                }, {
+                    "@type": "ListItem",
+                    "position": 26,
+                    "item": {
+                        "@type": "Service",
+                        "name": "المقاول الذاتي",
+                        "description": "خدمات المقاول الذاتي في الجزائر",
+                        "provider": {
+                            "@id": "https://imadtbn.github.io/dz_portal/#organization"
+                        },
+                        "areaServed": "DZ",
+                        "category": "التشغيل",
+                        "url": "https://imadtbn.github.io/dz_portal/sectors/anae.html"
+                    }
+                }, {
+                    "@type": "ListItem",
+                    "position": 27,
+                    "item": {
+                        "@type": "Service",
+                        "name": "الوكالة الوطنية لترقية الاستثمار",
+                        "description": "خدمات ترقية الاستثمار في الجزائر",
+                        "provider": {
+                            "@id": "https://imadtbn.github.io/dz_portal/#organization"
+                        },
+                        "areaServed": "DZ",
+                        "category": "الاستثمار",
+                        "url": "https://imadtbn.github.io/dz_portal/sectors/aapi.html"
+                    }
+                }, {
+                    "@type": "ListItem",
+                    "position": 28,
+                    "item": {
+                        "@type": "Service",
+                        "name": "وزارة الفلاحة والتنمية الريفية والصيد البحري",
+                        "description": "حجز أضاحي العيد، شكاوي عن بعد",
+                        "provider": {
+                            "@id": "https://imadtbn.github.io/dz_portal/#organization"
+                        },
+                        "areaServed": "DZ",
+                        "category": "الفلاحة",
+                        "url": "https://imadtbn.github.io/dz_portal/sectors/mard.html"
+                    }
+                }, {
+                    "@type": "ListItem",
+                    "position": 29,
+                    "item": {
+                        "@type": "Service",
+                        "name": "نفطال للمواد البترولية",
+                        "description": "محطتي، اقتناء العجلات، خدمات عن بعد، تطبيقات",
+                        "provider": {
+                            "@id": "https://imadtbn.github.io/dz_portal/#organization"
+                        },
+                        "areaServed": "DZ",
+                        "category": "الطاقة",
+                        "url": "https://imadtbn.github.io/dz_portal/sectors/naftal.html"
+                    }
+                }, {
+                    "@type": "ListItem",
+                    "position": 30,
+                    "item": {
+                        "@type": "Service",
+                        "name": "السلطة العليا للشفافية والوقاية من الفساد ومكافحته",
+                        "description": "الوقاية من الفساد ومكافحته، التصريح بالممتلكات",
+                        "provider": {
+                            "@id": "https://imadtbn.github.io/dz_portal/#organization"
+                        },
+                        "areaServed": "DZ",
+                        "category": "الشفافية",
+                        "url": "https://imadtbn.github.io/dz_portal/sectors/hatplc.html"
+                    }
+                }, {
+                    "@type": "ListItem",
+                    "position": 31,
+                    "item": {
+                        "@type": "Service",
+                        "name": "الديوان المركزي لقمع الفساد",
+                        "description": "خدمات الديوان المركزي لقمع الفساد",
+                        "provider": {
+                            "@id": "https://imadtbn.github.io/dz_portal/#organization"
+                        },
+                        "areaServed": "DZ",
+                        "category": "الشفافية",
+                        "url": "https://imadtbn.github.io/dz_portal/sectors/ocrc.html"
+                    }
+                }, {
+                    "@type": "ListItem",
+                    "position": 32,
+                    "item": {
+                        "@type": "Service",
+                        "name": "الوكالة الوطنية للتشغيل",
+                        "description": "الوكالة الوطنية للتشغيل، منحة البطالة، عروض العمل",
+                        "provider": {
+                            "@id": "https://imadtbn.github.io/dz_portal/#organization"
+                        },
+                        "areaServed": "DZ",
+                        "category": "التشغيل",
+                        "url": "https://imadtbn.github.io/dz_portal/sectors/anem.html"
+                    }
+                }, {
+                    "@type": "ListItem",
+                    "position": 33,
+                    "item": {
+                        "@type": "Service",
+                        "name": "dzexams",
+                        "description": "فروض واختبارات شهادة التعليم المتوسط، البكالوريا، والابتدائي مع التصحيح",
+                        "provider": {
+                            "@id": "https://imadtbn.github.io/dz_portal/#organization"
+                        },
+                        "areaServed": "DZ",
+                        "category": "التعليم",
+                        "url": "https://imadtbn.github.io/dz_portal/sectors/dzexams.html"
+                    }
+                }, {
+                    "@type": "ListItem",
+                    "position": 34,
+                    "item": {
+                        "@type": "Service",
+                        "name": "dzexam1",
+                        "description": "فروض واختبارات شهادة التعليم المتوسط، البكالوريا، والابتدائي مع التصحيح",
+                        "provider": {
+                            "@id": "https://imadtbn.github.io/dz_portal/#organization"
+                        },
+                        "areaServed": "DZ",
+                        "category": "التعليم",
+                        "url": "https://imadtbn.github.io/dz_portal/sectors/dzexam1.html"
+                    }
+                }, {
+                    "@type": "ListItem",
+                    "position": 35,
+                    "item": {
+                        "@type": "Service",
+                        "name": "Eddirasa",
+                        "description": "فروض واختبارات شهادة التعليم المتوسط، البكالوريا، والابتدائي مع التصحيح",
+                        "provider": {
+                            "@id": "https://imadtbn.github.io/dz_portal/#organization"
+                        },
+                        "areaServed": "DZ",
+                        "category": "التعليم",
+                        "url": "https://imadtbn.github.io/dz_portal/sectors/eddirasa.html"
+                    }
+                }, {
+                    "@type": "ListItem",
+                    "position": 36,
+                    "item": {
+                        "@type": "Service",
+                        "name": "Etud-Pdf",
+                        "description": "فروض واختبارات شهادة التعليم المتوسط، البكالوريا، والابتدائي مع التصحيح",
+                        "provider": {
+                            "@id": "https://imadtbn.github.io/dz_portal/#organization"
+                        },
+                        "areaServed": "DZ",
+                        "category": "التعليم",
+                        "url": "https://imadtbn.github.io/dz_portal/sectors/etudpdf.html"
+                    }
+                }, {
+                    "@type": "ListItem",
+                    "position": 37,
+                    "item": {
+                        "@type": "Service",
+                        "name": "Mdjedel",
+                        "description": "فروض واختبارات شهادة التعليم المتوسط، البكالوريا، والابتدائي مع التصحيح",
+                        "provider": {
+                            "@id": "https://imadtbn.github.io/dz_portal/#organization"
+                        },
+                        "areaServed": "DZ",
+                        "category": "التعليم",
+                        "url": "https://imadtbn.github.io/dz_portal/sectors/medjedel.html"
+                    }
+                }, {
+                    "@type": "ListItem",
+                    "position": 38,
+                    "item": {
+                        "@type": "Service",
+                        "name": "dzexam.pro",
+                        "description": "فروض واختبارات شهادة التعليم المتوسط، البكالوريا، والابتدائي مع التصحيح",
+                        "provider": {
+                            "@id": "https://imadtbn.github.io/dz_portal/#organization"
+                        },
+                        "areaServed": "DZ",
+                        "category": "التعليم",
+                        "url": "https://imadtbn.github.io/dz_portal/sectors/dzexam.pro.html"
+                    }
+                }, {
+                    "@type": "ListItem",
+                    "position": 39,
+                    "item": {
+                        "@type": "Service",
+                        "name": "التأمين على الممتلكات",
+                        "description": "شركة التأمين على الممتلكات، تعويضات عن الخسائر، تطبيقات",
+                        "provider": {
+                            "@id": "https://imadtbn.github.io/dz_portal/#organization"
+                        },
+                        "areaServed": "DZ",
+                        "category": "التأمين",
+                        "url": "https://imadtbn.github.io/dz_portal/sectors/assurance.html"
+                    }
+                }, {
+                    "@type": "ListItem",
+                    "position": 40,
+                    "item": {
+                        "@type": "Service",
+                        "name": "المديرية العامة للأملاك العقارية",
+                        "description": "أملاك عقارية، مصفوفات، عقود الملكية",
+                        "provider": {
+                            "@id": "https://imadtbn.github.io/dz_portal/#organization"
+                        },
+                        "areaServed": "DZ",
+                        "category": "عقار",
+                        "url": "https://imadtbn.github.io/dz_portal/sectors/fadaeldjazair.html"
+                    }
+                }, {
+                    "@type": "ListItem",
+                    "position": 41,
+                    "item": {
+                        "@type": "Service",
+                        "name": "بنوك عمومية وخاصة",
+                        "description": "خدمات البنوك العمومية والخاصة، الحسابات البنكية، القروض",
+                        "provider": {
+                            "@id": "https://imadtbn.github.io/dz_portal/#organization"
+                        },
+                        "areaServed": "DZ",
+                        "category": "الخدمات البنكية",
+                        "url": "https://imadtbn.github.io/dz_portal/sectors/bank.html"
+                    }
+                }, {
+                    "@type": "ListItem",
+                    "position": 42,
+                    "item": {
+                        "@type": "Service",
+                        "name": "أرقام الطوارئ",
+                        "description": "أرقام الطوارئ في الجزائر، الإسعاف، الشرطة، الدرك الوطني، خدمات عن بعد، جمعيات، تطبيقات الطوارئ",
+                        "provider": {
+                            "@id": "https://imadtbn.github.io/dz_portal/#organization"
+                        },
+                        "areaServed": "DZ",
+                        "category": "الطوارئ",
+                        "url": "https://imadtbn.github.io/dz_portal/sectors/emergency.html"
+                    }
+                }]
+            }, {
+                "@type": "ListItem",
+                "position": 43,
+                "item": {
+                    "@type": "Service",
+                    "name": "قسيمتك",
+                    "description": "إصدار وشراء قسيمة السيارات عن بعد",
+                    "provider": {
+                        "@id": "https://imadtbn.github.io/dz_portal/#organization"
+                    },
+                    "areaServed": "DZ",
+                    "category": "خدمات مالية",
+                    "url": "https://imadtbn.github.io/dz_portal/sectors/qassimatouka.html"
+                }
+            }]
+        }, {
+            "@type": "ListItem",
+            "position": 44,
+            "item": {
+                "@type": "Service",
+                "name": "طابعكم",
+                "description": "إصدار وشراء الطابع الجبائي عن بعد",
+                "provider": {
+                    "@id": "https://imadtbn.github.io/dz_portal/#organization"
+                },
+                "areaServed": "DZ",
+                "category": "خدمات مالية",
+                "url": "https://imadtbn.github.io/dz_portal/sectors/tabioucom.html"
+            }
+        }]
+
+
+        {
+            "@type": "ItemList",
+            "@id": "https://imadtbn.github.io/dz_portal/#navigation",
+            "name": "التنقل الرئيسي",
+            "itemListOrder": "https://schema.org/ItemListOrderAscending",
+            "numberOfItems": 5,
+            "itemListElement": [{
+                "@type": "SiteNavigationElement",
+                "position": 1,
+                "name": "الصفحة الرئيسية",
+                "url": "https://imadtbn.github.io/dz_portal/"
+            }, {
+                "@type": "SiteNavigationElement",
+                "position": 2,
+                "name": "من نحن",
+                "url": "https://imadtbn.github.io/dz_portal/pages/about.html"
+            }, {
+                "@type": "SiteNavigationElement",
+                "position": 3,
+                "name": "اتصل بنا",
+                "url": "https://imadtbn.github.io/dz_portal/pages/contact.html"
+            }, {
+                "@type": "SiteNavigationElement",
+                "position": 4,
+                "name": "سياسة الخصوصية",
+                "url": "https://imadtbn.github.io/dz_portal/pages/privacy.html"
+            }, {
+                "@type": "SiteNavigationElement",
+                "position": 5,
+                "name": "شروط الاستخدام",
+                "url": "https://imadtbn.github.io/dz_portal/pages/terms.html"
+            }]
         }
-      ]
-    },
-    {
-      "@type": "ItemList",
-      "@id": "https://imadtbn.github.io/dz_portal/#main-services",
-      "name": "الخدمات الرقمية الجزائرية",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "item": {
-            "@type": "Service",
-            "name": "التربية والتعليم",
-            "description": "التسجيل في الامتحانات، نتائج، فضاء الأستاذ والأولياء، التعليم عن بعد",
-            "provider": { "@id": "https://imadtbn.github.io/dz_portal/#organization" },
-            "areaServed": "DZ",
-            "category": "الخدمات الحكومية",
-            "url": "https://imadtbn.github.io/dz_portal/sectors/education.html"
-          }
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "item": {
-            "@type": "Service",
-            "name": "بنك الفروض والاختبارات",
-            "description": "جميع منصات الفروض والاختبارات للتعليم في الجزائر",
-            "provider": { "@id": "https://imadtbn.github.io/dz_portal/#organization" },
-            "areaServed": "DZ",
-            "category": "الخدمات التعليمية",
-            "url": "https://imadtbn.github.io/dz_portal/sectors/exam-compos.html"
-          }
-        },
-        {
-          "@type": "ListItem",
-          "position": 3,
-          "item": {
-            "@type": "Service",
-            "name": "الخدمات الجامعية",
-            "description": "التسجيل الجامعي، منصة Progres، الإيواء الجامعي، التحويلات الجامعية",
-            "provider": { "@id": "https://imadtbn.github.io/dz_portal/#organization" },
-            "areaServed": "DZ",
-            "category": "التعليم العالي",
-            "url": "https://imadtbn.github.io/dz_portal/sectors/progres.mesrs.html"
-          }
-        },
-        {
-          "@type": "ListItem",
-          "position": 4,
-          "item": {
-            "@type": "Service",
-            "name": "التكوين والتعليم المهني",
-            "description": "التسجيل في التكوين والتعليم المهنيين، الامتحانات",
-            "provider": { "@id": "https://imadtbn.github.io/dz_portal/#organization" },
-            "areaServed": "DZ",
-            "category": "التكوين المهني",
-            "url": "https://imadtbn.github.io/dz_portal/sectors/mfp.gov.html"
-          }
-        },
-        {
-          "@type": "ListItem",
-          "position": 5,
-          "item": {
-            "@type": "Service",
-            "name": "بريد الجزائر",
-            "description": "خدمات البريد في الجزائر، البطاقة الذهبية، التطبيقات الرقمية",
-            "provider": { "@id": "https://imadtbn.github.io/dz_portal/#organization" },
-            "areaServed": "DZ",
-            "category": "البريد والمواصلات",
-            "url": "https://imadtbn.github.io/dz_portal/sectors/poste.html"
-          }
-        },
-        {
-          "@type": "ListItem",
-          "position": 6,
-          "item": {
-            "@type": "Service",
-            "name": "اتصالات الجزائر",
-            "description": "خدمات الانترنت، فضاء الزبون، بطاقات التعبئة، الدفع الإلكتروني",
-            "provider": { "@id": "https://imadtbn.github.io/dz_portal/#organization" },
-            "areaServed": "DZ",
-            "category": "الاتصالات",
-            "url": "https://imadtbn.github.io/dz_portal/sectors/algerietelecom.html"
-          }
-        },
-        {
-          "@type": "ListItem",
-          "position": 7,
-          "item": {
-            "@type": "Service",
-            "name": "خدمات الهاتف النقال",
-            "description": "موبيليس، جازي، أوريدو، تطبيقات وأرقام، مصلحة الزبائن",
-            "provider": { "@id": "https://imadtbn.github.io/dz_portal/#organization" },
-            "areaServed": "DZ",
-            "category": "الهاتف النقال",
-            "url": "https://imadtbn.github.io/dz_portal/sectors/telephon.html"
-          }
-        },
-        {
-          "@type": "ListItem",
-          "position": 8,
-          "item": {
-            "@type": "Service",
-            "name": "سلطة ضبط البريد والاتصالات الإلكترونية (ARPCE)",
-            "description": "طلب خدمة، دفع الفاتورة، معرفة عدد أرقام الهاتف باسمك، التطبيقات",
-            "provider": { "@id": "https://imadtbn.github.io/dz_portal/#organization" },
-            "areaServed": "DZ",
-            "category": "الرقابة والتنظيم",
-            "url": "https://imadtbn.github.io/dz_portal/sectors/arpce.html"
-          }
-        },
-        {
-          "@type": "ListItem",
-          "position": 9,
-          "item": {
-            "@type": "Service",
-            "name": "وزارة الداخلية والجماعات المحلية",
-            "description": "البطاقة التعريف البيومترية، رخصة السياقة، جواز السفر، شهادة الميلاد، الشباك عن بعد",
-            "provider": { "@id": "https://imadtbn.github.io/dz_portal/#organization" },
-            "areaServed": "DZ",
-            "category": "الأمن والأحوال المدنية",
-            "url": "https://imadtbn.github.io/dz_portal/sectors/interieur.html"
-          }
-        },
-        {
-          "@type": "ListItem",
-          "position": 10,
-          "item": {
-            "@type": "Service",
-            "name": "السكن والعمران",
-            "description": "السكن الاجتماعي، السكن الريفي، السكن العمومي الإيجاري، السكن الترقوي المدعم",
-            "provider": { "@id": "https://imadtbn.github.io/dz_portal/#organization" },
-            "areaServed": "DZ",
-            "category": "السكن",
-            "url": "https://imadtbn.github.io/dz_portal/sectors/mhuv.gov.html"
-          }
-        },
-        {
-          "@type": "ListItem",
-          "position": 11,
-          "item": {
-            "@type": "Service",
-            "name": "التأمين والضمان الاجتماعي",
-            "description": "الضمان الاجتماعي CNAS/CASNOS، التقاعد CNR، مؤسسات التأمين الخاصة",
-            "provider": { "@id": "https://imadtbn.github.io/dz_portal/#organization" },
-            "areaServed": "DZ",
-            "category": "الضمان الاجتماعي",
-            "url": "https://imadtbn.github.io/dz_portal/sectors/mtess.html"
-          }
-        },
-        {
-          "@type": "ListItem",
-          "position": 12,
-          "item": {
-            "@type": "Service",
-            "name": "المالية والجباية",
-            "description": "الطابع الجبائي، قسيمة السيارات، الصفقات العمومية، الأملاك العقارية",
-            "provider": { "@id": "https://imadtbn.github.io/dz_portal/#organization" },
-            "areaServed": "DZ",
-            "category": "المالية",
-            "url": "https://imadtbn.github.io/dz_portal/sectors/mf.gov.html"
-          }
-        },
-        {
-          "@type": "ListItem",
-          "position": 13,
-          "item": {
-            "@type": "Service",
-            "name": "تسديد الفواتير",
-            "description": "دفع فواتير الكهرباء والماء والغاز عبر البوابة الجزائرية للخدمات الرقمية",
-            "provider": { "@id": "https://imadtbn.github.io/dz_portal/#organization" },
-            "areaServed": "DZ",
-            "category": "الفواتير",
-            "url": "https://imadtbn.github.io/dz_portal/sectors/facteur.html"
-          }
-        },
-        {
-          "@type": "ListItem",
-          "position": 14,
-          "item": {
-            "@type": "Service",
-            "name": "سونلغاز",
-            "description": "فاتورة الكهرباء والغاز، الربط بالكهرباء، الربط بالغاز",
-            "provider": { "@id": "https://imadtbn.github.io/dz_portal/#organization" },
-            "areaServed": "DZ",
-            "category": "الطاقة",
-            "url": "https://imadtbn.github.io/dz_portal/sectors/sonalgaz.html"
-          }
-        },
-        {
-          "@type": "ListItem",
-          "position": 15,
-          "item": {
-            "@type": "Service",
-            "name": "الجزائرية للمياه",
-            "description": "فاتورة الماء، خدمات الجزائرية للمياه",
-            "provider": { "@id": "https://imadtbn.github.io/dz_portal/#organization" },
-            "areaServed": "DZ",
-            "category": "المياه",
-            "url": "https://imadtbn.github.io/dz_portal/sectors/ade.html"
-          }
-        },
-        {
-          "@type": "ListItem",
-          "position": 16,
-          "item": {
-            "@type": "Service",
-            "name": "سيال للمياه والتطهير",
-            "description": "فاتورة الماء لسيال للمياه والتطهير",
-            "provider": { "@id": "https://imadtbn.github.io/dz_portal/#organization" },
-            "areaServed": "DZ",
-            "category": "المياه والتطهير",
-            "url": "https://imadtbn.github.io/dz_portal/sectors/seaal.html"
-          }
-        },
-        {
-          "@type": "ListItem",
-          "position": 17,
-          "item": {
-            "@type": "Service",
-            "name": "العدالة",
-            "description": "النيابة الإلكترونية، السوابق العدلية، الجنسية، الاتصال بالمحبوسين",
-            "provider": { "@id": "https://imadtbn.github.io/dz_portal/#organization" },
-            "areaServed": "DZ",
-            "category": "العدالة",
-            "url": "https://imadtbn.github.io/dz_portal/sectors/mjustice.html"
-          }
-        },
-        {
-          "@type": "ListItem",
-          "position": 18,
-          "item": {
-            "@type": "Service",
-            "name": "الشؤون الخارجية والجالية الجزائرية",
-            "description": "خدمات الشؤون الخارجية والجالية الجزائرية",
-            "provider": { "@id": "https://imadtbn.github.io/dz_portal/#organization" },
-            "areaServed": "DZ",
-            "category": "الشؤون الخارجية",
-            "url": "https://imadtbn.github.io/dz_portal/sectors/mfa.html"
-          }
-        },
-        {
-          "@type": "ListItem",
-          "position": 19,
-          "item": {
-            "@type": "Service",
-            "name": "الديوان الوطني للحج والعمرة",
-            "description": "خدمات الحج والعمرة في الجزائر",
-            "provider": { "@id": "https://imadtbn.github.io/dz_portal/#organization" },
-            "areaServed": "DZ",
-            "category": "الحج والعمرة",
-            "url": "https://imadtbn.github.io/dz_portal/sectors/onpo.html"
-          }
-        },
-        {
-          "@type": "ListItem",
-          "position": 20,
-          "item": {
-            "@type": "Service",
-            "name": "التجارة والجمارك الجزائرية",
-            "description": "خدمات التجارة وترقية الصادرات، الجمارك الجزائرية، اتصال وإصغاء",
-            "provider": { "@id": "https://imadtbn.github.io/dz_portal/#organization" },
-            "areaServed": "DZ",
-            "category": "التجارة والجمارك",
-            "url": "https://imadtbn.github.io/dz_portal/sectors/commerce.html"
-          }
-        },
-        {
-          "@type": "ListItem",
-          "position": 21,
-          "item": {
-            "@type": "Service",
-            "name": "الشرطة الجزائرية",
-            "description": "شكاوي وتصاريح عن بعد، الخدمات الرقمية، تطبيقات، دليل هاتفي",
-            "provider": { "@id": "https://imadtbn.github.io/dz_portal/#organization" },
-            "areaServed": "DZ",
-            "category": "الأمن",
-            "url": "https://imadtbn.github.io/dz_portal/sectors/dgsn.html"
-          }
-        },
-        {
-          "@type": "ListItem",
-          "position": 22,
-          "item": {
-            "@type": "Service",
-            "name": "الصحة",
-            "description": "العيادة الرقمية، التكوين الشبه طبي، تطبيقات الأطباء، بنك الدم",
-            "provider": { "@id": "https://imadtbn.github.io/dz_portal/#organization" },
-            "areaServed": "DZ",
-            "category": "الصحة",
-            "url": "https://imadtbn.github.io/dz_portal/sectors/sante.html"
-          }
-        },
-        {
-          "@type": "ListItem",
-          "position": 23,
-          "item": {
-            "@type": "Service",
-            "name": "النقل والمواصلات",
-            "description": "حجز تذاكر الطيران، القطارات، البواخر، الترامواي، تطبيق محطتي",
-            "provider": { "@id": "https://imadtbn.github.io/dz_portal/#organization" },
-            "areaServed": "DZ",
-            "category": "النقل",
-            "url": "https://imadtbn.github.io/dz_portal/sectors/transport.html"
-          }
-        },
-        {
-          "@type": "ListItem",
-          "position": 24,
-          "item": {
-            "@type": "Service",
-            "name": "السلطة الوطنية المستقلة للانتخابات",
-            "description": "بطاقة الناخب، تسجيل الناخبين، نتائج الانتخابات، أين أنتخب",
-            "provider": { "@id": "https://imadtbn.github.io/dz_portal/#organization" },
-            "areaServed": "DZ",
-            "category": "الانتخابات",
-            "url": "https://imadtbn.github.io/dz_portal/sectors/ina-elections.html"
-          }
-        },
-        {
-          "@type": "ListItem",
-          "position": 25,
-          "item": {
-            "@type": "Service",
-            "name": "مركبتي لفحص مطابقة المركبات",
-            "description": "حجز مواعيد فحص مطابقة المركبات في الجزائر",
-            "provider": { "@id": "https://imadtbn.github.io/dz_portal/#organization" },
-            "areaServed": "DZ",
-            "category": "النقل",
-            "url": "https://imadtbn.github.io/dz_portal/sectors/markabatidz.html"
-          }
-        },
-        {
-          "@type": "ListItem",
-          "position": 26,
-          "item": {
-            "@type": "Service",
-            "name": "المقاول الذاتي",
-            "description": "خدمات المقاول الذاتي في الجزائر",
-            "provider": { "@id": "https://imadtbn.github.io/dz_portal/#organization" },
-            "areaServed": "DZ",
-            "category": "التشغيل",
-            "url": "https://imadtbn.github.io/dz_portal/sectors/anae.html"
-          }
-        },
-        {
-          "@type": "ListItem",
-          "position": 27,
-          "item": {
-            "@type": "Service",
-            "name": "الوكالة الوطنية لترقية الاستثمار",
-            "description": "خدمات ترقية الاستثمار في الجزائر",
-            "provider": { "@id": "https://imadtbn.github.io/dz_portal/#organization" },
-            "areaServed": "DZ",
-            "category": "الاستثمار",
-            "url": "https://imadtbn.github.io/dz_portal/sectors/aapi.html"
-          }
-        },
-        {
-          "@type": "ListItem",
-          "position": 28,
-          "item": {
-            "@type": "Service",
-            "name": "وزارة الفلاحة والتنمية الريفية والصيد البحري",
-            "description": "حجز أضاحي العيد، شكاوي عن بعد",
-            "provider": { "@id": "https://imadtbn.github.io/dz_portal/#organization" },
-            "areaServed": "DZ",
-            "category": "الفلاحة",
-            "url": "https://imadtbn.github.io/dz_portal/sectors/mard.html"
-          }
-        },
-        {
-          "@type": "ListItem",
-          "position": 29,
-          "item": {
-            "@type": "Service",
-            "name": "نفطال للمواد البترولية",
-            "description": "محطتي، اقتناء العجلات، خدمات عن بعد، تطبيقات",
-            "provider": { "@id": "https://imadtbn.github.io/dz_portal/#organization" },
-            "areaServed": "DZ",
-            "category": "الطاقة",
-            "url": "https://imadtbn.github.io/dz_portal/sectors/naftal.html"
-          }
-        },
-        {
-          "@type": "ListItem",
-          "position": 30,
-          "item": {
-            "@type": "Service",
-            "name": "السلطة العليا للشفافية والوقاية من الفساد ومكافحته",
-            "description": "الوقاية من الفساد ومكافحته، التصريح بالممتلكات",
-            "provider": { "@id": "https://imadtbn.github.io/dz_portal/#organization" },
-            "areaServed": "DZ",
-            "category": "الشفافية",
-            "url": "https://imadtbn.github.io/dz_portal/sectors/hatplc.html"
-          }
-        },
-        {
-          "@type": "ListItem",
-          "position": 31,
-          "item": {
-            "@type": "Service",
-            "name": "الديوان المركزي لقمع الفساد",
-            "description": "خدمات الديوان المركزي لقمع الفساد",
-            "provider": { "@id": "https://imadtbn.github.io/dz_portal/#organization" },
-            "areaServed": "DZ",
-            "category": "الشفافية",
-            "url": "https://imadtbn.github.io/dz_portal/sectors/ocrc.html"
-          }
-        },
-        {
-          "@type": "ListItem",
-          "position": 32,
-          "item": {
-            "@type": "Service",
-            "name": "الوكالة الوطنية للتشغيل",
-            "description": "الوكالة الوطنية للتشغيل، منحة البطالة، عروض العمل",
-            "provider": { "@id": "https://imadtbn.github.io/dz_portal/#organization" },
-            "areaServed": "DZ",
-            "category": "التشغيل",
-            "url": "https://imadtbn.github.io/dz_portal/sectors/anem.html"
-          }
-        },
-        {
-          "@type": "ListItem",
-          "position": 33,
-          "item": {
-            "@type": "Service",
-            "name": "dzexams",
-            "description": "فروض واختبارات شهادة التعليم المتوسط، البكالوريا، والابتدائي مع التصحيح",
-            "provider": { "@id": "https://imadtbn.github.io/dz_portal/#organization" },
-            "areaServed": "DZ",
-            "category": "التعليم",
-            "url": "https://imadtbn.github.io/dz_portal/sectors/dzexams.html"
-          }
-        },
-        {
-          "@type": "ListItem",
-          "position": 34,
-          "item": {
-            "@type": "Service",
-            "name": "dzexam1",
-            "description": "فروض واختبارات شهادة التعليم المتوسط، البكالوريا، والابتدائي مع التصحيح",
-            "provider": { "@id": "https://imadtbn.github.io/dz_portal/#organization" },
-            "areaServed": "DZ",
-            "category": "التعليم",
-            "url": "https://imadtbn.github.io/dz_portal/sectors/dzexam1.html"
-          }
-        },
-        {
-          "@type": "ListItem",
-          "position": 35,
-          "item": {
-            "@type": "Service",
-            "name": "Eddirasa",
-            "description": "فروض واختبارات شهادة التعليم المتوسط، البكالوريا، والابتدائي مع التصحيح",
-            "provider": { "@id": "https://imadtbn.github.io/dz_portal/#organization" },
-            "areaServed": "DZ",
-            "category": "التعليم",
-            "url": "https://imadtbn.github.io/dz_portal/sectors/eddirasa.html"
-          }
-        },
-        {
-          "@type": "ListItem",
-          "position": 36,
-          "item": {
-            "@type": "Service",
-            "name": "Etud-Pdf",
-            "description": "فروض واختبارات شهادة التعليم المتوسط، البكالوريا، والابتدائي مع التصحيح",
-            "provider": { "@id": "https://imadtbn.github.io/dz_portal/#organization" },
-            "areaServed": "DZ",
-            "category": "التعليم",
-            "url": "https://imadtbn.github.io/dz_portal/sectors/etudpdf.html"
-          }
-        },
-        {
-          "@type": "ListItem",
-          "position": 37,
-          "item": {
-            "@type": "Service",
-            "name": "Mdjedel",
-            "description": "فروض واختبارات شهادة التعليم المتوسط، البكالوريا، والابتدائي مع التصحيح",
-            "provider": { "@id": "https://imadtbn.github.io/dz_portal/#organization" },
-            "areaServed": "DZ",
-            "category": "التعليم",
-            "url": "https://imadtbn.github.io/dz_portal/sectors/medjedel.html"
-          }
-        },
-        {
-          "@type": "ListItem",
-          "position": 38,
-          "item": {
-            "@type": "Service",
-            "name": "dzexam.pro",
-            "description": "فروض واختبارات شهادة التعليم المتوسط، البكالوريا، والابتدائي مع التصحيح",
-            "provider": { "@id": "https://imadtbn.github.io/dz_portal/#organization" },
-            "areaServed": "DZ",
-            "category": "التعليم",
-            "url": "https://imadtbn.github.io/dz_portal/sectors/dzexam.pro.html"
-          }
-        },
-        {
-          "@type": "ListItem",
-          "position": 39,
-          "item": {
-            "@type": "Service",
-            "name": "التأمين على الممتلكات",
-            "description": "شركة التأمين على الممتلكات، تعويضات عن الخسائر، تطبيقات",
-            "provider": { "@id": "https://imadtbn.github.io/dz_portal/#organization" },
-            "areaServed": "DZ",
-            "category": "التأمين",
-            "url": "https://imadtbn.github.io/dz_portal/sectors/assurance.html"
-          }
-        },
-        {
-          "@type": "ListItem",
-          "position": 40,
-          "item": {
-            "@type": "Service",
-            "name": "المديرية العامة للأملاك العقارية",
-            "description": "أملاك عقارية، مصفوفات، عقود الملكية",
-            "provider": { "@id": "https://imadtbn.github.io/dz_portal/#organization" },
-            "areaServed": "DZ",
-            "category": "عقار",
-            "url": "https://imadtbn.github.io/dz_portal/sectors/fadaeldjazair.html"
-          }
-        },
-        {
-          "@type": "ListItem",
-          "position": 41,
-          "item": {
-            "@type": "Service",
-            "name": "بنوك عمومية وخاصة",
-            "description": "خدمات البنوك العمومية والخاصة، الحسابات البنكية، القروض",
-            "provider": { "@id": "https://imadtbn.github.io/dz_portal/#organization" },
-            "areaServed": "DZ",
-            "category": "الخدمات البنكية",
-            "url": "https://imadtbn.github.io/dz_portal/sectors/bank.html"
-          }
-        },
-        {
-          "@type": "ListItem",
-          "position": 42,
-          "item": {
-            "@type": "Service",
-            "name": "أرقام الطوارئ",
-            "description": "أرقام الطوارئ في الجزائر، الإسعاف، الشرطة، الدرك الوطني، خدمات عن بعد، جمعيات، تطبيقات الطوارئ",
-            "provider": { "@id": "https://imadtbn.github.io/dz_portal/#organization" },
-            "areaServed": "DZ",
-            "category": "الطوارئ",
-            "url": "https://imadtbn.github.io/dz_portal/sectors/emergency.html"
-          }
+    </script>
+
+    <!-- أيقونة الموقع -->
+    <!-- favicon -->
+    <link rel="icon" href="assets/images/icon.png" alt="icon" type="image/png" sizes="32x32" loading="lazy">
+
+    <!-- apple -->
+    <link rel="apple-touch-icon" href="https://imadtbn.github.io/dz_portal/icons/icon.png">
+
+
+    <!-- تحسين الأمان -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/fontawesome.min.css">
+
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+
+    <link rel="stylesheet" href="assets/css/style-main.css">
+    <link rel="stylesheet" href="assets/css/style-section-header.css">
+
+
+    <link rel="manifest" href="manifest.webmanifest.json">
+
+    <!-- تسجيل Service Worker -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('./service-worker.js')
+                .then(reg => console.log('✅ Service Worker registered:', reg.scope))
+                .catch(err => console.error('❌ Service Worker failed:', err));
         }
-      ]
-    },
-    {
-      "@type": "ListItem",
-      "position": 43,
-      "item": {
-        "@type": "Service",
-        "name": "قسيمتك",
-        "description": "إصدار وشراء قسيمة السيارات عن بعد",
-        "provider": { "@id": "https://imadtbn.github.io/dz_portal/#organization" },
-        "areaServed": "DZ",
-        "category": "خدمات مالية",
-        "url": "https://imadtbn.github.io/dz_portal/sectors/qassimatouka.html"
-      }
-    }
-  ]
-},
-{
-  "@type": "ListItem",
-  "position": 44,
-  "item": {
-    "@type": "Service",
-    "name": "طابعكم",
-    "description": "إصدار وشراء الطابع الجبائي عن بعد",
-    "provider": { "@id": "https://imadtbn.github.io/dz_portal/#organization" },
-    "areaServed": "DZ",
-    "category": "خدمات مالية",
-    "url": "https://imadtbn.github.io/dz_portal/sectors/tabioucom.html"
-  }
-}
-]
+    </script>
 
+    <!-- Google Search Console & Bing Verification -->
+    <meta name="google-site-verification" content="tGjdnUHs9yv4HTGpgnemjCK7YsJ3bI4twWC1WDi5Nqw">
+    <meta name="google-site-verification" content="f5Xi4oFx0v5dN6iPZd9qCw-7vnc3vIbAeYF9jr4vwVM">
+    <meta name="msvalidate.01" content="9BCA38377A234DCCEB9991EAD1A2F6C2">
 
-{
-  "@type": "ItemList",
-  "@id": "https://imadtbn.github.io/dz_portal/#navigation",
-  "name": "التنقل الرئيسي",
-  "itemListOrder": "https://schema.org/ItemListOrderAscending",
-  "numberOfItems": 5,
-  "itemListElement": [
-    {
-      "@type": "SiteNavigationElement",
-      "position": 1,
-      "name": "الصفحة الرئيسية",
-      "url": "https://imadtbn.github.io/dz_portal/"
-    },
-    {
-      "@type": "SiteNavigationElement",
-      "position": 2,
-      "name": "من نحن",
-      "url": "https://imadtbn.github.io/dz_portal/pages/about.html"
-    },
-    {
-      "@type": "SiteNavigationElement",
-      "position": 3,
-      "name": "اتصل بنا",
-      "url": "https://imadtbn.github.io/dz_portal/pages/contact.html"
-    },
-    {
-      "@type": "SiteNavigationElement",
-      "position": 4,
-      "name": "سياسة الخصوصية",
-      "url": "https://imadtbn.github.io/dz_portal/pages/privacy.html"
-    },
-    {
-      "@type": "SiteNavigationElement",
-      "position": 5,
-      "name": "شروط الاستخدام",
-      "url": "https://imadtbn.github.io/dz_portal/pages/terms.html"
-    }
-  ]
-}
-</script>
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8310657804532081" crossorigin="anonymous"></script>
 
-  <!-- أيقونة الموقع -->
-  <!-- favicon -->
-  <link rel="icon" href="assets/images/icon.png" alt="icon" type="image/png" sizes="32x32" loading="lazy">
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
 
-  <!-- apple -->
-  <link rel="apple-touch-icon" href="https://imadtbn.github.io/dz_portal/icons/icon.png">
+    <!-- Microsoft Tiles -->
+    <meta name="msapplication-TileColor" content="#006233">
+    <meta name="msapplication-TileImage" content="icons/icon.png">
+    <meta name="msapplication-config" content="browserconfig.xml">
 
+    <!-- Apple Touch Icon -->
+    <link rel="apple-touch-icon" href="icons/icon.png">
+    <meta name="apple-mobile-web-app-title" content="البوابة الجزائرية للخدمات الرقمية">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
-  <!-- تحسين الأمان -->
-  <meta http-equiv="X-Content-Type-Options" content="nosniff">
-  <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+    <!-- تحسين الاتصال المسبق بالخوادم الخارجية -->
+    <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
+    <link rel="preconnect" href="https://www.clarity.ms" crossorigin>
 
+    <!-- Google Analytics -->
 
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script defer>
+        window.dataLayer = window.dataLayer || [];
 
-  <link rel="preload" as="style"
-    href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&display=swap"
-    onload="this.onload=null;this.rel='stylesheet'">
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'G-K23WYKK60X');
+    </script>
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/fontawesome.min.css">
+    <!-- Google Tag Manager -->
+    <script defer>
+        (function(w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                'gtm.start': new Date().getTime(),
+                event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s),
+                dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.defer = true;
+            j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-NW3BWPF6');
+    </script>
 
-  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style"
-    onload="this.onload=null;this.rel='stylesheet'">
-
-  <link rel="stylesheet" href="assets/css/style-main.css">
-  <link rel="stylesheet" href="assets/css/style-section-header.css">
-
-
-  <link rel="manifest" href="manifest.webmanifest.json">
-
-  <!-- تسجيل Service Worker -->
-  <script>
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('./service-worker.js')
-        .then(reg => console.log('✅ Service Worker registered:', reg.scope))
-        .catch(err => console.error('❌ Service Worker failed:', err));
-    }
-  </script>
-
-  <!-- Google Search Console & Bing Verification -->
-  <meta name="google-site-verification" content="tGjdnUHs9yv4HTGpgnemjCK7YsJ3bI4twWC1WDi5Nqw">
-  <meta name="google-site-verification" content="f5Xi4oFx0v5dN6iPZd9qCw-7vnc3vIbAeYF9jr4vwVM">
-  <meta name="msvalidate.01" content="9BCA38377A234DCCEB9991EAD1A2F6C2">
-
-  <!-- Google AdSense -->
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8310657804532081"
-    crossorigin="anonymous"></script>
-
-  <script>
-    (adsbygoogle = window.adsbygoogle || []).push({});
-  </script>
-
-  <!-- Microsoft Tiles -->
-  <meta name="msapplication-TileColor" content="#006233">
-  <meta name="msapplication-TileImage" content="icons/icon.png">
-  <meta name="msapplication-config" content="browserconfig.xml">
-
-  <!-- Apple Touch Icon -->
-  <link rel="apple-touch-icon" href="icons/icon.png">
-  <meta name="apple-mobile-web-app-title" content="البوابة الجزائرية للخدمات الرقمية">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-
-  <!-- تحسين الاتصال المسبق بالخوادم الخارجية -->
-  <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
-  <link rel="preconnect" href="https://www.clarity.ms" crossorigin>
-
-  <!-- Google Analytics -->
-
-  <script defer>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-    gtag('config', 'G-K23WYKK60X');
-  </script>
-
-  <!-- Google Tag Manager -->
-  <script defer>
-    (function (w, d, s, l, i) {
-      w[l] = w[l] || []; w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
-      var f = d.getElementsByTagName(s)[0],
-        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
-      j.defer = true; j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
-      f.parentNode.insertBefore(j, f);
-    })(window, document, 'script', 'dataLayer', 'GTM-NW3BWPF6');
-  </script>
-
-  <!-- Microsoft Clarity -->
-  <script defer>
-    (function (c, l, a, r, i, t, y) {
-      c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
-      t = l.createElement(r);
-      t.defer = 1;
-      t.src = "https://www.clarity.ms/tag/" + i + "?ref=bwt";
-      y = l.getElementsByTagName(r)[0];
-      y.parentNode.insertBefore(t, y);
-    })(window, document, "clarity", "script", "tjk39ubxx1");
-  </script>
+    <!-- Microsoft Clarity -->
+    <script defer>
+        (function(c, l, a, r, i, t, y) {
+            c[a] = c[a] || function() {
+                (c[a].q = c[a].q || []).push(arguments)
+            };
+            t = l.createElement(r);
+            t.defer = 1;
+            t.src = "https://www.clarity.ms/tag/" + i + "?ref=bwt";
+            y = l.getElementsByTagName(r)[0];
+            y.parentNode.insertBefore(t, y);
+        })(window, document, "clarity", "script", "tjk39ubxx1");
+    </script>
 
 
 </head>
 
 <body>
 
-  <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NW3BWPF6" height="0" width="0"
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NW3BWPF6" height="0" width="0"
       style="display:none;visibility:hidden"></iframe></noscript>
-  <!-- End Google Tag Manager (noscript) -->
+    <!-- End Google Tag Manager (noscript) -->
 
-  <!-- Loader -->
+    <!-- Loader -->
 
-  <div class="loader" id="loader">
-    <div class="loader-content">
-      <div class="loader-spinner"></div>
-      <p style="color: white; font-size: 1.3rem;">بسم الله، سيتم تحميل البوابة...</p>
-      <p style="color: rgb(234, 211, 7); font-size: 1.3rem;">الله أكبر، الله أكبر ولله الحمد</p>
+    <div class="loader" id="loader">
+        <div class="loader-content">
+            <div class="loader-spinner"></div>
+            <p style="color: white; font-size: 1.3rem;">بسم الله، سيتم تحميل البوابة...</p>
+            <p style="color: rgb(234, 211, 7); font-size: 1.3rem;">عيدكم مبارك</p>
 
+        </div>
     </div>
-  </div>
 
-  <!-- Theme Toggle -->
-  <button class="theme-toggle" onclick="toggleTheme()" title="تبديل الوضع الليلي">
+    <!-- Theme Toggle -->
+    <button class="theme-toggle" onclick="toggleTheme()" title="تبديل الوضع الليلي">
     <i class="fas fa-moon"></i>
   </button>
 
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="hero-content">
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
 
-      <div class="hero-badge">
-        <i class="fas fa-shield-alt"></i>
-        <span>بوابة بروابط رسمية آمنة وموثوقة</span>
-      </div>
+            <div class="hero-badge">
+                <i class="fas fa-shield-alt"></i>
+                <span>بوابة بروابط رسمية آمنة وموثوقة</span>
+            </div>
 
-      <h1>
-        البوابة الجزائرية للخدمات <span>الرقمية</span>
-      </h1>
+            <h1>
+                البوابة الجزائرية للخدمات <span>الرقمية</span>
+            </h1>
 
-      <p class="hero-subtitle">
-        منصة موحدة تتيح للمواطن الجزائري الوصول السريع والآمن إلى جميع الخدمات الحكومية والعمومية الرقمية من
-        مكان واحد
-      </p>
+            <p class="hero-subtitle">
+                منصة موحدة تتيح للمواطن الجزائري الوصول السريع والآمن إلى جميع الخدمات الحكومية والعمومية الرقمية من مكان واحد
+            </p>
 
-      <!-- زر تحميل التطبيق -->
-      <div class="download-app-wrapper">
-        <a href="https://drive.google.com/file/d/1HQDKbb2AKFmDCPdGGErDFE6lGpGSqzF9/view?usp=sharing" target="_blank"
-          class="download-app-btn">
-          <div class="download-icon">
-            <i class="fas fa-download"></i>
-          </div>
+            <!-- زر تحميل التطبيق -->
+            <div class="download-app-wrapper">
+                <a href="https://drive.google.com/file/d/1HQDKbb2AKFmDCPdGGErDFE6lGpGSqzF9/view?usp=sharing" target="_blank" class="download-app-btn">
+                    <div class="download-icon">
+                        <i class="fas fa-download"></i>
+                    </div>
 
-          <div class="download-content">
-            <span class="download-title">تحميل التطبيق</span>
-            <span class="download-subtitle">نسخة أندرويد • حمل الآن</span>
-          </div>
+                    <div class="download-content">
+                        <span class="download-title">تحميل التطبيق</span>
+                        <span class="download-subtitle">نسخة أندرويد • حمل الآن</span>
+                    </div>
 
-          <div class="download-pulse"></div>
-        </a>
-      </div>
+                    <div class="download-pulse"></div>
+                </a>
+            </div>
 
 
-      <!--
+            <!--
             <div class="hero-badge pwa-badge">
         <div class="sector-icon app-icon">
           <img src="assets/images/icon-512.png" alt="تطبيق البوابة الجزائرية للخدمات الرقمية" loading="lazy" width="120"
@@ -927,1049 +1487,1009 @@
       </div>      
     -->
 
-      <div class="stats-bar">
-        <div class="stat-item">
-          <span class="stat-number">30+</span>
-          <span class="stat-label">قطاع حكومي</span>
-        </div>
-        <div class="stat-item">
-          <span class="stat-number">280+</span>
-          <span class="stat-label">خدمة رقمية</span>
-        </div>
-        <div class="stat-item">
-          <span class="stat-number">24/7</span>
-          <span class="stat-label">خدمة متواصلة</span>
-        </div>
-      </div>
+            <div class="stats-bar">
+                <div class="stat-item">
+                    <span class="stat-number">30+</span>
+                    <span class="stat-label">قطاع حكومي</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">280+</span>
+                    <span class="stat-label">خدمة رقمية</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">24/7</span>
+                    <span class="stat-label">خدمة متواصلة</span>
+                </div>
+            </div>
 
-      <!--محرك البحث -->
-      <div class="search-container">
+            <!--محرك البحث -->
+            <div class="search-container">
 
-        <div class="search-box-wrapper">
+                <div class="search-box-wrapper">
 
-          <input type="text" class="search-box" placeholder="ابحث عن خدمة، وزارة، أو معاملة إدارية..." id="globalSearch"
-            autocomplete="off">
+                    <input type="text" class="search-box" placeholder="ابحث عن خدمة، وزارة، أو معاملة إدارية..." id="globalSearch" autocomplete="off">
 
-          <button class="search-btn">
+                    <button class="search-btn">
             <i class="fas fa-search"></i>
           </button>
 
-        </div>
+                </div>
 
-        <!-- نتائج البحث -->
-        <div class="search-results" id="searchResults"></div>
+                <!-- نتائج البحث -->
+                <div class="search-results" id="searchResults"></div>
 
-      </div>
+            </div>
 
-      <!-- Scroll Indicator -->
-      <div
-        style="position: 4px; bottom: 2rem; left: 50%; transform: translateX(-50%); color: white; animation: bounce 2s infinite;">
-        <i class="fas fa-chevron-down" style="font-size: 2rem;"></i>
-      </div>
+            <!-- Scroll Indicator -->
+            <div style="position: 4px; bottom: 2rem; left: 50%; transform: translateX(-50%); color: white; animation: bounce 2s infinite;">
+                <i class="fas fa-chevron-down" style="font-size: 2rem;"></i>
+            </div>
 
-  </section>
+    </section>
 
-  <!-- Quick Access -->
-  <div class="quick-access" dir="rtl">
-    <a href="sectors/education.html" class="quick-link">
-      <i class="fas fa-graduation-cap"></i>
-      <span>التعليم</span>
-    </a>
-    <a href="sectors/sante.html" class="quick-link">
-      <i class="fas fa-heartbeat"></i>
-      <span>الصحة</span>
-    </a>
-    <a href="sectors/facteur.html" class="quick-link">
-      <i class="fas fa-file-invoice-dollar"></i>
-      <span>الفواتير</span>
-    </a>
-    <a href="sectors/interieur.html" class="quick-link">
-      <i class="fas fa-id-card"></i>
-      <span>البطاقة البيوميترية</span>
-    </a>
+    <!-- Quick Access -->
+    <div class="quick-access" dir="rtl">
+        <a href="sectors/education.html" class="quick-link">
+            <i class="fas fa-graduation-cap"></i>
+            <span>التعليم</span>
+        </a>
+        <a href="sectors/sante.html" class="quick-link">
+            <i class="fas fa-heartbeat"></i>
+            <span>الصحة</span>
+        </a>
+        <a href="sectors/facteur.html" class="quick-link">
+            <i class="fas fa-file-invoice-dollar"></i>
+            <span>الفواتير</span>
+        </a>
+        <a href="sectors/interieur.html" class="quick-link">
+            <i class="fas fa-id-card"></i>
+            <span>البطاقة البيوميترية</span>
+        </a>
 
-    <a href="sectors/mtess.html" class="quick-link">
-      <i class="fas fa-hand-holding-usd"></i>
-      <span>الضمان الإجتماعي</span>
-    </a>
-    <a href="sectors/mhuv.gov.html" class="quick-link">
-      <i class="fas fa-home"></i>
-      <span>السكن</span>
-    </a>
-    <a href="sectors/transport.html" class="quick-link">
-      <i class="fas fa-plane"></i>
-      <span>السفر</span>
-    </a>
-  </div>
+        <a href="sectors/mtess.html" class="quick-link">
+            <i class="fas fa-hand-holding-usd"></i>
+            <span>الضمان الإجتماعي</span>
+        </a>
+        <a href="sectors/mhuv.gov.html" class="quick-link">
+            <i class="fas fa-home"></i>
+            <span>السكن</span>
+        </a>
+        <a href="sectors/transport.html" class="quick-link">
+            <i class="fas fa-plane"></i>
+            <span>السفر</span>
+        </a>
+    </div>
 
-  <!-- إعلان صوري -->
-  <div class="ad-container">
-    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8310657804532081" data-ad-slot="3972494044"
-      data-ad-format="auto" data-full-width-responsive="true"></ins>
-  </div>
-  <script>
-    (adsbygoogle = window.adsbygoogle || []).push({});
-  </script>
+    <!-- إعلان صوري -->
+    <div class="ad-container">
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8310657804532081" data-ad-slot="3972494044" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    </div>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
 
 
-  <!-- Sectors Grid -->
-  <section class="sectors-section" id="sectors">
+    <!-- Sectors Grid -->
+    <section class="sectors-section" id="sectors">
 
-    <div class="section-header">
-      <h2>القطاعات الحكومية</h2>
-      <p>اختر القطاع للوصول إلى الخدمات الرقمية المتاحة</p>
+        <div class="section-header">
+            <h2>القطاعات الحكومية</h2>
+            <p>اختر القطاع للوصول إلى الخدمات الرقمية المتاحة</p>
 
-      <div class="hero-badge pwa-badge">
+            <div class="hero-badge pwa-badge">
 
-        <div class="sector-icon app-icon">
-          <img src="assets/images/icon-512.png" alt="تطبيق البوابة الجزائرية للخدمات الرقمية" loading="lazy" width="120"
-            height="120">
-        </div>
+                <div class="sector-icon app-icon">
+                    <img src="assets/images/icon-512.png" alt="تطبيق البوابة الجزائرية للخدمات الرقمية" loading="lazy" width="120" height="120">
+                </div>
 
-        <div class="badge-content">
-          <span class="badge-title">
+                <div class="badge-content">
+                    <span class="badge-title">
             تثبيت التطبيق
           </span>
 
-          <span class="badge-subtitle">
+                    <span class="badge-subtitle">
             وصول سريع • أداء أفضل • بدون متصفح
           </span>
+                </div>
+
+            </div>
+
         </div>
 
-      </div>
+        <!-- إعلان ضمن الخلاصة-->
+        <div class="ad-container">
+            <ins class="adsbygoogle" style="display:block" data-ad-format="auto" data-ad-layout-key="-fb+5w+4e-db+86" data-ad-client="ca-pub-8310657804532081" data-ad-slot="1315961685"></ins>
+        </div>
+        <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
 
+        <div class="sectors-grid">
+            <!-- التربية والتعليم -->
+            <a href="sectors/education.html" class="sector-card">
+                <span class="sector-count">12 خدمة</span>
+                <div class="sector-icon">
+                    <img src="assets/images/education.png" alt="التربية والتعليم" loading="lazy" width="120" height="120">
+                </div>
+                <h3 class="sector-title">التربية والتعليم</h3>
+                <p class="sector-desc">التسجيل في الامتحانات، نتائج، فضاء الأستاذ والأولياء التعليم عن بعد</p>
+            </a>
+
+            <!-- exam + compos -->
+            <a href="sectors/exam-compos.html" class="sector-card">
+                <span class="sector-count">8 خدمات</span>
+                <div class="sector-icon">
+                    <img src="assets/images/exam-compos.PNG" alt="بنك الفروض والاختبارات" loading="lazy" width="120" height="120">
+                </div>
+                <h3 class="sector-title">بنك <br> الفروض والاختبارات</h3>
+                <p class="sector-desc">جميع منصات الفروض والاختبارات هنا</p>
+            </a>
+
+            <!-- التعليم العالي -->
+            <a href="sectors/progres.mesrs.html" class="sector-card">
+                <span class="sector-count">8 خدمات</span>
+                <div class="sector-icon">
+                    <img src="assets/images/ESI.png" alt="الخدمات الجامعية" loading="lazy" width="120" height="120">
+                </div>
+                <h3 class="sector-title">الخدمات الجامعية</h3>
+                <p class="sector-desc">التسجيل الجامعي، منصة Progres الإيواء الجامعي， التحويلات</p>
+            </a>
+
+            <!-- التكوين والتعليم المهنيين -->
+            <a href="sectors/mfp.gov.html" class="sector-card">
+                <span class="sector-count">2 خدمات</span>
+                <div class="sector-icon">
+                    <img src="assets/images/formation.png" alt="التكوين والتعليم المهنيين" loading="lazy" width="120" height="120">
+                </div>
+                <h3 class="sector-title">التكوين والتعليم المهني</h3>
+                <p class="sector-desc">التسجيل في التكوين والتعليم المهنيين، إمتحانات</p>
+            </a>
+
+        </div>
+
+        <!-- الإعلانات الصورية -->
+
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8310657804532081" data-ad-slot="9966295018" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        </div>
+        <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+
+        <div class="sectors-grid">
+
+            <!-- بريد الجزائر -->
+            <a href="sectors/poste.html" class="sector-card">
+                <span class="sector-count">14 خدمة</span>
+                <div class="sector-icon">
+                    <img src="assets/images/poste.png" alt="بريد الجزائر" loading="lazy" width="120" height="120">
+                </div>
+                <h3 class="sector-title">بريد الجزائر</h3>
+                <p class="sector-desc">خدمات البريد في الجزائر، بطاقة ذهبية، تطبيقات</p>
+            </a>
+
+            <!-- إتصالات الجزائر -->
+            <a href="sectors/algerietelecom.html" class="sector-card">
+                <span class="sector-count">18 خدمة</span>
+                <div class="sector-icon">
+                    <img src="assets/images/algerietelecom.png" alt="إتصالات الجزائر" loading="lazy" width="120" height="120">
+                </div>
+                <h3 class="sector-title">إتصالات الجزائر</h3>
+                <p class="sector-desc">إتصالات الجزائر، أنترنات، فضاء الزبون، بطاقات التعبئة، دفع إليكتروني</p>
+            </a>
+
+            <!-- السكن -->
+            <a href="sectors/mhuv.gov.html" class="sector-card">
+                <span class="sector-count">6 خدمات</span>
+                <div class="sector-icon">
+                    <img src="assets/images/sakan.png" alt="السكن والعمران" loading="lazy" width="120" height="120">
+                </div>
+                <h3 class="sector-title">السكن والعمران</h3>
+                <p class="sector-desc"> الاجتماعي، الريفي، العمومي الإيجاري، الترقوي المدعم， aadl, enpi, opgi, lpp, lpa, العمومي الإيجاري</p>
+            </a>
+
+            <!-- الطاقة -->
+            <a href="sectors/facteur.html" class="sector-card">
+                <span class="sector-count">17 خدمات</span>
+                <div class="sector-icon">
+                    <img src="assets/images/facteur.png" alt="فواتير الطاقة والماء" loading="lazy" width="120" height="120">
+                </div>
+                <h3 class="sector-title">تسديد الفواتير</h3>
+                <p class="sector-desc">دفع فواتير الكهرباء والماء عبر البوابة الجزائرية للخدمات الرقمية</p>
+            </a>
+
+        </div>
+
+        <!-- الإعلانات الصورية 2 -->
+
+        <div class="ad-container">
+            <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8310657804532081" data-ad-slot="7803975574" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        </div>
+        <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+
+        <div class="sectors-grid">
+
+            <!-- الهاتف النقال -->
+            <a href="sectors/telephon.html" class="sector-card">
+                <span class="sector-count">6 خدمات</span>
+                <div class="sector-icon">
+                    <img src="assets/images/service-telephon.png" alt="خدمات الهاتف النقال" loading="lazy" width="120" height="120">
+                </div>
+                <h3 class="sector-title">خدمات الهاتف النقال</h3>
+                <p class="sector-desc">موبيليس، جازي، أوريدو، تطبيقات وأرقام، مصلحة الزبائن
+                </p>
+            </a>
+
+            <!-- ARPCE -->
+            <a href="sectors/arpce.html" class="sector-card">
+                <span class="sector-count">06 خدمة</span>
+                <div class="sector-icon">
+                    <img src="assets/images/arpce.png" alt="ARPCE" loading="lazy" width="120" height="120">
+                </div>
+                <h3 class="sector-title">سلطة ضبط البريد <br>والاتصالات الالكترونية</h3>
+                <p class="sector-desc">طلب خدمة， ARPCE, دفع فاتورة， معرفة أرقام الهاتف, منصة جيل لجيل 777, وتطبيقات</p>
+            </a>
+
+            <!-- الداخلية -->
+            <a href="sectors/interieur.html" class="sector-card">
+                <span class="sector-count">18 خدمات</span>
+                <div class="sector-icon">
+                    <img src="assets/images/inteurier.png" alt="الداخلية والجماعات المحلية" loading="lazy" width="120" height="120">
+                </div>
+                <h3 class="sector-title">وزارة الداخلية <br>والجماعات المحلية</h3>
+                <p class="sector-desc">البطاقة التعريف البيوميترية, رخصة السياقة جواز السفر， شهادة الميلاد， الشباك عن بعد
+                </p>
+            </a>
+
+            <!-- الفلاحة -->
+            <a href="sectors/madr.html" class="sector-card">
+                <span class="sector-count">06 خدمات</span>
+                <div class="sector-icon">
+                    <img src="assets/images/madr.png" alt="وزارة الفلاحة" loading="lazy" width="120" height="120">
+                </div>
+                <h3 class="sector-title">وزارة الفلاحة <br>والتنمية والصيد </h3>
+                <p class="sector-desc"> حجز أضاحي العيد، شكاوي عن بعد</p>
+            </a>
+
+
+        </div>
+
+        <!-- إعلان متعددة-->
+
+        <div class="ad-container">
+            <ins class="adsbygoogle" style="display:block" data-ad-format="auto" data-ad-client="ca-pub-8310657804532081" data-ad-slot="4862117468"></ins>
+        </div>
+        <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+
+        <div class="sectors-grid">
+
+            <!-- نفطال -->
+            <a href="sectors/naftal.html" class="sector-card">
+                <span class="sector-count">06 خدمات</span>
+                <div class="sector-icon">
+                    <img src="assets/images/naftal.webp" alt="نفطال" loading="lazy" width="120" height="120">
+                </div>
+                <h3 class="sector-title"> نفطال <br> للمواد البترولية</h3>
+                <p class="sector-desc"> محطتي، إقتناء العجلات، خدمات عن بعد، تطبيقات </p>
+            </a>
+
+            <!-- التأمينات -->
+            <a href="sectors/mtess.html" class="sector-card">
+                <span class="sector-count">10 خدمات</span>
+                <div class="sector-icon">
+                    <img src="assets/images/travail.png" alt="التأمينات والضمان الإجتماعي" loading="lazy" width="120" height="120">
+                </div>
+                <h3 class="sector-title">التأمين <br>والضمان الإجتماعي</h3>
+                <p class="sector-desc">الضمان الاجتماعي CNAS/CASNOS، التقاعد CNR، موسسات التأمين الخاصة</p>
+            </a>
+
+            <!-- المالية -->
+            <a href="sectors/mf.gov.html" class="sector-card">
+                <span class="sector-count">15 خدمة</span>
+                <div class="sector-icon">
+                    <img src="assets/images/finance.png" alt="المالية والجباية" loading="lazy" width="120" height="120">
+                </div>
+                <h3 class="sector-title">المالية والجباية</h3>
+                <p class="sector-desc">الطابع الجبائي، قسيمة السيارات， الصفقات العمومية， الأملاك العقارية</p>
+            </a>
+
+            <!-- قسيمك -->
+            <a href="sectors/qassimatouka.html" class="sector-card">
+                <span class="sector-count">05 خدمة</span>
+                <div class="sector-icon">
+                    <img src="assets/images/dga.png" alt="المديرية العامة للضرائب" loading="lazy" width="150" height="150">
+                </div>
+                <h3 class="sector-title">قسيمتك</h3>
+                <p class="sector-desc">إقتناع قسيمة السيارات ، إعادة الإصدار</p>
+            </a>
+
+        </div>
+
+        <!-- الإعلان الصوري 5 -->
+        <div class="ad-container">
+            <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8310657804532081" data-ad-slot="6461453831" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        </div>
+        <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+
+        <div class="sectors-grid">
+
+            <!-- طابعكم -->
+            <a href="sectors/tabioucom.html" class="sector-card">
+                <span class="sector-count">05 خدمة</span>
+                <div class="sector-icon">
+                    <img src="assets/images/dga.png" alt="المديرية العامة للضرائب" loading="lazy" width="150" height="150">
+                </div>
+                <h3 class="sector-title">طابعكم</h3>
+                <p class="sector-desc">شراء الطابع الجبائي لجواز سفر، بطاقة التعريف الوطنية، رخصة السياقة، حقوق السفر</p>
+            </a>
+
+            <!-- الاملاك العقارية -->
+            <a href="sectors/fadaeldjazair.html" class="sector-card">
+                <span class="sector-count">10 خدمة</span>
+                <div class="sector-icon">
+                    <img src="assets/images/dgdn.png" alt="المديرية العامة للأملاك العقارية" loading="lazy" width="150" height="150">
+                </div>
+                <h3 class="sector-title">الاملاك العقارية</h3>
+                <p class="sector-desc">أملاك عقارية، مصفوفات، دفتر عقاري، الوكالة العقارية، مسح عقاري، وثائق وعقود</p>
+            </a>
+
+            <!-- الترقيم الجبائي -->
+            <a href="sectors/nifenligne.html" class="sector-card">
+                <span class="sector-count">12 خدمة</span>
+                <div class="sector-icon">
+                    <img src="assets/images/dga.png" alt="المديرية العامة للضرائب" loading="lazy" width="150" height="150">
+                </div>
+                <h3 class="sector-title">الترقيم الجبائي</h3>
+                <p class="sector-desc">صندوق ضمان الصفقات، محاكاة صفقة عمومية</p>
+            </a>
+
+            <!-- العدل -->
+            <a href="sectors/mjustice.html" class="sector-card">
+                <span class="sector-count">8 خدمات</span>
+                <div class="sector-icon">
+                    <img src="assets/images/justis.png" alt="العدالة" loading="lazy" width="120" height="120">
+                </div>
+                <h3 class="sector-title">العدالة</h3>
+                <p class="sector-desc">النيابة الإليكترونية، السوابق العدلية، الجنسية، الإتصال بالمحبوسين</p>
+            </a>
+
+        </div>
+
+        <!-- إعلان داخل المقالة-->
+
+        <div class="ad-container">
+            <ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="auto" data-ad-client="ca-pub-8310657804532081" data-ad-slot="9770159361"></ins>
+        </div>
+        <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+
+        <div class="sectors-grid">
+
+            <!-- hatplc -->
+            <a href="sectors/hatplc.html" class="sector-card">
+                <span class="sector-count">8 خدمات</span>
+                <div class="sector-icon">
+                    <img src="assets/images/hatplc.jpg" alt="hatplc" loading="lazy" width="120" height="120">
+                </div>
+                <h3 class="sector-title">الشفافية والوقاية من الفساد ومكافحته</h3>
+                <p class="sector-desc">الوقاية من الفساد ومكافحته، التصريح بالممتلكات</p>
+            </a>
+
+            <!-- ocrc -->
+            <a href="sectors/ocrc.html" class="sector-card">
+                <span class="sector-count">8 خدمات</span>
+                <div class="sector-icon">
+                    <img src="assets/images/ocrc.png" alt="ocrc" loading="lazy" width="120" height="120">
+                </div>
+                <h3 class="sector-title">الديوان المركزي لقمع الفساد</h3>
+                <p class="sector-desc">الديوان المركزي لقمع الفساد</p>
+            </a>
+
+            <!-- الشؤون الخارجية -->
+            <a href="sectors/mfa.html" class="sector-card">
+                <span class="sector-count">6 خدمات</span>
+                <div class="sector-icon">
+                    <img src="assets/images/EXTERIEUR.webp" alt="الشؤون الخارجية" loading="lazy" width="120" height="120">
+                </div>
+                <h3 class="sector-title">الشؤون الخارجية <br> والجالية الجزائرية</h3>
+                <p class="sector-desc">الشؤون الخارجية والجالية الجزائرية</p>
+            </a>
+
+            <!-- الحج والعمرة -->
+            <a href="sectors/onpo.html" class="sector-card">
+                <span class="sector-count">3 خدمات</span>
+                <div class="sector-icon">
+                    <img src="assets/images/onpo.png" alt="الديوان الوطني للحج والعمرة" loading="lazy" width="120" height="120">
+                </div>
+                <h3 class="sector-title">الديوان الوطني<br> للحج والعمرة</h3>
+                <p class="sector-desc">الديوان الوطني للحج والعمرة</p>
+            </a>
+
+        </div>
+
+        <!-- الإعلان الصوري 5 -->
+
+        <div class="ad-container">
+            <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8310657804532081" data-ad-slot="6505685868" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        </div>
+        <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+
+        <div class="sectors-grid">
+
+            <!-- وزارة التجارة -->
+            <a href="sectors/commerce.html" class="sector-card">
+                <span class="sector-count">6 خدمات</span>
+                <div class="sector-icon">
+                    <img src="assets/images/commerc.png" alt="التجارة" loading="lazy" width="120" height="120">
+                </div>
+                <h3 class="sector-title">التجارة والجمارك الجزائرية</h3>
+                <p class="sector-desc">خدمات التجارة وترقية الصادرات， الجمارك الجزائرية， إتصال وإصغاء</p>
+            </a>
+
+            <!-- المقاول الذاتي -->
+            <a href="sectors/anae.html" class="sector-card">
+                <span class="sector-count">2 خدمات</span>
+                <div class="sector-icon">
+                    <img src="assets/images/anae.jpg" alt="المقاول الذاتي" loading="lazy" width="120" height="120">
+                </div>
+                <h3 class="sector-title">المقاول الذاتي</h3>
+                <p class="sector-desc">خدمات المقاول الذاتي</p>
+            </a>
+
+            <!-- ترقية الإستثمار -->
+            <a href="sectors/aapi.html" class="sector-card">
+                <span class="sector-count">5 خدمات</span>
+                <div class="sector-icon">
+                    <img src="assets/images/aapi.png" alt="ترقية الإستثمار" loading="lazy" width="120" height="120">
+                </div>
+                <h3 class="sector-title">الوكالة الوطنية <br>لترقية الإستثمار</h3>
+                <p class="sector-desc">الوكالة الوطنية لترقية الإستثمار</p>
+            </a>
+
+            <!-- الوكالة الوطنية للتشغيل -->
+            <a href="sectors/anem.html" class="sector-card">
+                <span class="sector-count">5 خدمات</span>
+                <div class="sector-icon">
+                    <img src="assets/images/anem.png" alt="الوكالة الوطنية للتشغيل" loading="lazy" width="120" height="120">
+                </div>
+                <h3 class="sector-title">الوكالة الوطنية للتشغيل</h3>
+                <p class="sector-desc">الوكالة الوطنية للتشغيل، منحة البطالة، عروض العمل</p>
+            </a>
+
+        </div>
+
+        <!-- الإعلان الصوري 2 -->
+
+        <div class="ad-container">
+            <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8310657804532081" data-ad-slot="1307988056" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        </div>
+        <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+
+        <div class="sectors-grid">
+
+            <!-- سونلغاز -->
+            <a href="sectors/sonalgaz.html" class="sector-card">
+                <span class="sector-count">17 خدمات</span>
+                <div class="sector-icon">
+                    <img src="assets/images/sonelgaz.png" alt="سونلغاز" loading="lazy" width="120" height="120">
+                </div>
+                <h3 class="sector-title">سونلغاز</h3>
+                <p class="sector-desc">فاتورة الكهرباء والغاز， سونلغاز الربط بالكهرباء ، سونلغاز الربط بالغاز</p>
+            </a>
+
+
+            <!-- الجزائرية للمياه -->
+            <a href="sectors/ade.html" class="sector-card">
+                <span class="sector-count">17 خدمات</span>
+                <div class="sector-icon">
+                    <img src="assets/images/ade.png" alt="الجزائرية للمياه" loading="lazy" width="120" height="120">
+                </div>
+                <h3 class="sector-title">الجزائرية للمياه</h3>
+                <p class="sector-desc">فاتورة الماء， الجزائرية للمياه</p>
+            </a>
+
+            <!-- سيال -->
+            <a href="sectors/seaal.html" class="sector-card">
+                <span class="sector-count">17 خدمات</span>
+                <div class="sector-icon">
+                    <img src="assets/images/seaal.webp" alt="سيال" loading="lazy" width="120" height="120">
+                </div>
+                <h3 class="sector-title">سيال</h3>
+                <p class="sector-desc">فاتورة الماء لسيال للمياه والتطهير</p>
+            </a>
+
+            <!-- aadl -->
+            <a href="sectors/aadl.html" class="sector-card">
+                <span class="sector-count">05 خدمات</span>
+                <div class="sector-icon">
+                    <img src="assets/images/AADL.png" alt="وكالة عدل" loading="lazy" width="120" height="120">
+                </div>
+                <h3 class="sector-title">وكالة عدل</h3>
+                <p class="sector-desc">وكالة عدل لتحسين السكن وتطويره</p>
+            </a>
+
+        </div>
+
+        <!-- الإعلان الصوري 3 -->
+
+        <div class="ad-container">
+            <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8310657804532081" data-ad-slot="5542746534" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        </div>
+        <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+
+        <div class="sectors-grid">
+
+            <!-- opgi -->
+            <a href="sectors/opgi.html" class="sector-card">
+                <span class="sector-count">05 خدمات</span>
+                <div class="sector-icon">
+                    <img src="assets/images/opgi.png" alt="وكالة عدل" loading="lazy" width="120" height="120">
+                </div>
+                <h3 class="sector-title">الترقية والتسيير العقاري</h3>
+                <p class="sector-desc">ديوان الترقية والتسيير العقاري OPGI</p>
+            </a>
+
+
+            <!-- enpi -->
+            <a href="sectors/enpi.html" class="sector-card">
+                <span class="sector-count">05 خدمات</span>
+                <div class="sector-icon">
+                    <img src="assets/images/enpi.jpg" alt="وكالة عدل" loading="lazy" width="120" height="120">
+                </div>
+                <h3 class="sector-title">المؤسسة الوطنية للترقية العقارية</h3>
+                <p class="sector-desc"> خدمات المؤسسة الوطنية للترقية العقارية (ENPI)
+                </p>
+            </a>
+
+            <!-- dzexam1 -->
+            <a href="sectors/dzexam1.html" class="sector-card">
+                <span class="sector-count">16 خدمات</span>
+                <div class="sector-icon">
+                    <img src="assets/images/dzexam.png" alt="dzexam1" loading="lazy" width="120" height="120">
+                </div>
+                <h3 class="sector-title">dzexam1</h3>
+                <p class="sector-desc"> فروض واختبارات شهادة التعليم المتوسط، البكالوريا، والابتدائي مع التصحيح
+                </p>
+            </a>
+
+            <!-- dzexams -->
+            <a href="sectors/dzexams.html" class="sector-card">
+                <span class="sector-count">22 خدمات</span>
+                <div class="sector-icon">
+                    <img src="assets/images/dzexams.png" alt="dzexams" loading="lazy" width="120" height="120">
+                </div>
+                <h3 class="sector-title">dzexams</h3>
+                <p class="sector-desc"> فروض واختبارات شهادة التعليم المتوسط، البكالوريا، والابتدائي مع التصحيح
+                </p>
+            </a>
+
+        </div>
+
+        <!-- الإعلان الصوري 5 -->
+        <div class="ad-container">
+            <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8310657804532081" data-ad-slot="6461453831" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        </div>
+        <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+
+        <div class="sectors-grid">
+
+            <!-- dzexam.pro -->
+            <a href="sectors/dzexams.pro.html" class="sector-card">
+                <span class="sector-count">22 خدمات</span>
+                <div class="sector-icon">
+                    <img src="assets/images/dzexams.pro.webp" alt="dzexams" loading="lazy" width="120" height="120">
+                </div>
+                <h3 class="sector-title">dzexam.pro</h3>
+                <p class="sector-desc"> فروض واختبارات شهادة التعليم المتوسط، البكالوريا، والابتدائي مع التصحيح
+                </p>
+            </a>
+
+            <!-- eddirasa -->
+            <a href="sectors/eddirasa.html" class="sector-card">
+                <span class="sector-count">22 خدمات</span>
+                <div class="sector-icon">
+                    <img src="assets/images/eddirasa.png" alt="dzexams" loading="lazy" width="120" height="120">
+                </div>
+                <h3 class="sector-title">Eddirasa</h3>
+                <p class="sector-desc"> فروض واختبارات شهادة التعليم المتوسط، البكالوريا، والابتدائي مع التصحيح
+                </p>
+            </a>
+
+            <!-- etudpdf -->
+            <a href="sectors/etudpdf.html" class="sector-card">
+                <span class="sector-count">22 خدمات</span>
+                <div class="sector-icon">
+                    <img src="assets/images/etudpdf.png" alt="dzexams" loading="lazy" width="120" height="120">
+                </div>
+                <h3 class="sector-title">Etud-Pdf</h3>
+                <p class="sector-desc"> فروض واختبارات شهادة التعليم المتوسط، البكالوريا، والابتدائي مع التصحيح
+                </p>
+            </a>
+
+
+            <!-- medjedel -->
+            <a href="sectors/medjedel.html" class="sector-card">
+                <span class="sector-count">22 خدمات</span>
+                <div class="sector-icon">
+                    <img src="assets/images/medjedel.png" alt="dzexams" loading="lazy" width="120" height="120">
+                </div>
+                <h3 class="sector-title">Mdjedel</h3>
+                <p class="sector-desc"> فروض واختبارات شهادة التعليم المتوسط، البكالوريا، والابتدائي مع التصحيح
+                </p>
+            </a>
+
+
+
+        </div>
+
+        <!-- الإعلان الصوري 6 -->
+        <div class="ad-container">
+            <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8310657804532081" data-ad-slot="8935196632" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        </div>
+        <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+
+        <div class="sectors-grid">
+
+            <!-- الإنتخابات -->
+            <a href="sectors/ina-elections.html" class="sector-card">
+                <span class="sector-count">6 خدمات</span>
+                <div class="sector-icon">
+                    <img src="assets/images/ina-elections.png" alt="السلطة الوطنية المستقلة للانتخابات" loading="lazy" width="120" height="120">
+                </div>
+                <h3 class="sector-title">السلطة الوطنية<br> المستقلة للانتخابات</h3>
+                <p class="sector-desc">بطاقة الناخب، تسجيل الناخبين، نتائج الانتخابات، أين أنتخب</p>
+            </a>
+
+            <!-- مركبتي" لفحص مطابقة المركبات -->
+            <a href="sectors/markabatidz.html" class="sector-card">
+                <span class="sector-count">6 خدمات</span>
+                <div class="sector-icon">
+                    <img src="assets/images/markabaty.jpg" alt="مركبتي" loading="lazy" width="120" height="120">
+                </div>
+                <h3 class="sector-title">"مركبتي" <br> لفحص مطابقة المركبات</h3>
+                <p class="sector-desc">مركبتي" لفحص مطابقة المركبات</p>
+            </a>
+
+            <!-- الشرطة -->
+            <a href="sectors/dgsn.html" class="sector-card">
+                <span class="sector-count">6 خدمات</span>
+                <div class="sector-icon">
+                    <img src="assets/images/dgsn.png" alt="الشؤون الخارجية" loading="lazy" width="120" height="120">
+                </div>
+                <h3 class="sector-title">الشرطة الجزائرية</h3>
+                <p class="sector-desc">شكاوي وتصاريح عن بعد, الخدمات الرقمية, تطبيقات، دليل هاتفي </p>
+            </a>
+
+            <!-- الصحة -->
+            <a href="sectors/sante.html" class="sector-card">
+                <span class="sector-count">6 خدمات</span>
+                <div class="sector-icon">
+                    <img src="assets/images/sante.jpg" alt="الصحة" loading="lazy" width="120" height="120">
+                </div>
+                <h3 class="sector-title">الصحة</h3>
+                <p class="sector-desc">العيادة الرقمية، التكوين الشبه طبي، تطبيقات الأطباء، بنك الدم</p>
+            </a>
+
+        </div>
+
+        <!-- الإعلان الصوري 5 -->
+
+        <div class="ad-container">
+            <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8310657804532081" data-ad-slot="6505685868" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        </div>
+        <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+
+
+        <div class="sectors-grid">
+
+            <!-- البيئة والحياة -->
+            <a href="sectors/me.gov.html" class="sector-card">
+                <span class="sector-count">10 خدمات</span>
+                <div class="sector-icon">
+                    <img src="assets/images/me.gov.jpg" alt="transport" loading="lazy" width="120" height="120">
+                </div>
+                <h3 class="sector-title">وزارة البيئة وجودة الحياة</h3>
+                <p class="sector-desc">جمع النففيات الصناعية ، تطبيقات، نظيف</p>
+            </a>
+
+
+            <!-- النقل -->
+            <a href="sectors/transport.html" class="sector-card">
+                <span class="sector-count">10 خدمات</span>
+                <div class="sector-icon">
+                    <img src="assets/images/transport.svg" alt="transport" loading="lazy" width="120" height="120">
+                </div>
+                <h3 class="sector-title">النقل والمواصلات</h3>
+                <p class="sector-desc">حجز تذاكر الطيران， القطارات， البواخر， الترامواي， تطبيق محطتي</p>
+            </a>
+
+            <!-- خدمات التامين -->
+            <a href="sectors/assurance.html" class="sector-card">
+                <span class="sector-count">10 خدمات</span>
+                <div class="sector-icon">
+                    <img src="assets/images/asserance.jpg" alt="التأمين" loading="lazy" width="120" height="120">
+                </div>
+                <h3 class="sector-title">التأمين على الممتلكات</h3>
+                <p class="sector-desc">شركة التأمين على الممتلكات， تعويضات عن الخسائر， تطبيقات</p>
+            </a>
+
+            <!-- خدمات البنوك والمالية -->
+            <a href="sectors/bank.html" class="sector-card">
+                <span class="sector-count">10 خدمات</span>
+                <div class="sector-icon">
+                    <img src="assets/images/bank.png" alt="finance" loading="lazy" width="120" height="120">
+                </div>
+                <h3 class="sector-title">بنوك عمومية وخاصة</h3>
+                <p class="sector-desc">خدمات البنوك العمومية والخاصة， حسابات البنكية， القروض</p>
+            </a>
+
+
+        </div>
+
+        <!-- الإعلان الصوري 7 -->
+
+        <div class="ad-container">
+            <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8310657804532081" data-ad-slot="4101672353" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        </div>
+        <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+
+        <div class="sectors-grid">
+
+            <!-- خدمات أرقام الطوارئ -->
+            <a href="sectors/emergency.html" class="sector-card">
+                <span class="sector-count">10 خدمات</span>
+                <div class="sector-icon">
+                    <img src="assets/images/emergency.png" alt="emergency" loading="lazy" width="120" height="120">
+                </div>
+                <h3 class="sector-title">أرقام الطوارئ</h3>
+                <p class="sector-desc">أرقام الطوارئ في الجزائر، الإسعاف， الشرطة， الدرك الوطني， خدمات عند بعد，جمعيات تطبيقات الطوارئ</p>
+            </a>
+
+            <!-- تطبيقات -->
+            <a href="#index.html" class="sector-card">
+                <span class="sector-count">10 خدمات</span>
+                <div class="sector-icon">
+                    <img src="assets/images/gplay.png" alt="emergency" loading="lazy" width="20" height="10">
+                </div>
+                <h3 class="sector-title">تطبيقات</h3>
+                <p class="sector-desc">--- قيد التصميم ---- </p>
+            </a>
+        </div>
+
+        </div>
+
+        <!-- الإعلانات المتعددة -->
+
+        <div class="ad-container">
+            <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8310657804532081" data-ad-slot="6368743049" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        </div>
+        <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+
+    </section>
+
+
+    <!-- عداد الزيارات -->
+    <div style="text-align: center; font-family: Arial,
+  				 sans-serif; margin-top: 40px; direction: rtl;">
+        <div style="color: #d40000; font-size: 40px; font-weight: bold;">
+            <span id="daily-visits">0</span>+
+        </div>
+        <div style="color: #006233; font-size: 18px; margin-bottom: 30px;">
+            عدد الزيارات<br><small style="color: #777;">اليوم</small>
+        </div>
+
+        <div style="color: #d40000; font-size: 36px; font-weight: bold;">
+            <span id="total-visits">0</span>+
+        </div>
+        <div style="color: #006233; font-size: 18px;">
+            عدد الزيارات منذ جوان 2025<br>
+
+        </div>
     </div>
 
-    <!-- إعلان ضمن الخلاصة-->
-    <div class="ad-container">
-      <ins class="adsbygoogle" style="display:block" data-ad-format="auto" data-ad-layout-key="-fb+5w+4e-db+86"
-        data-ad-client="ca-pub-8310657804532081" data-ad-slot="1315961685"></ins>
-    </div>
-    <script>
-      (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
-
-    <div class="sectors-grid">
-      <!-- التربية والتعليم -->
-      <a href="sectors/education.html" class="sector-card">
-        <span class="sector-count">12 خدمة</span>
-        <div class="sector-icon">
-          <img src="assets/images/education.png" alt="التربية والتعليم" loading="lazy" width="120" height="120">
+    <!-- Features -->
+    <section class="features">
+        <div class="features-grid">
+            <div class="feature">
+                <div class="feature-icon">
+                    <i class="fas fa-bolt"></i>
+                </div>
+                <h3>سريع وفعال</h3>
+                <p>وصول فوري إلى الخدمات دون انتظار أو تنقل</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">
+                    <i class="fas fa-lock"></i>
+                </div>
+                <h3>آمن وموثوق</h3>
+                <p>روابط رسمية من مصادر حكومية معتمدة</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">
+                    <i class="fas fa-mobile-alt"></i>
+                </div>
+                <h3>متجاوب مع الجوال</h3>
+                <p>تصميم يتكيف مع جميع أحجام الشاشات</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">
+                    <i class="fas fa-user-check"></i>
+                </div>
+                <h3>بدون تسجيل</h3>
+                <p>استخدم البوابة مباشرة دون إدخال بيانات شخصية</p>
+            </div>
         </div>
-        <h3 class="sector-title">التربية والتعليم</h3>
-        <p class="sector-desc">التسجيل في الامتحانات، نتائج، فضاء الأستاذ والأولياء
-          التعليم عن بعد</p>
-      </a>
+    </section>
 
-      <!-- exam + compos -->
-      <a href="sectors/exam-compos.html" class="sector-card">
-        <span class="sector-count">8 خدمات</span>
-        <div class="sector-icon">
-          <img src="assets/images/exam-compos.PNG" alt="بنك الفروض والاختبارات" loading="lazy" width="120" height="120">
-        </div>
-        <h3 class="sector-title">بنك <br> الفروض والاختبارات</h3>
-        <p class="sector-desc">جميع منصات الفروض والاختبارات هنا</p>
-      </a>
-
-      <!-- التعليم العالي -->
-      <a href="sectors/progres.mesrs.html" class="sector-card">
-        <span class="sector-count">8 خدمات</span>
-        <div class="sector-icon">
-          <img src="assets/images/ESI.png" alt="الخدمات الجامعية" loading="lazy" width="120" height="120">
-        </div>
-        <h3 class="sector-title">الخدمات الجامعية</h3>
-        <p class="sector-desc">التسجيل الجامعي، منصة Progres الإيواء الجامعي， التحويلات</p>
-      </a>
-
-      <!-- التكوين والتعليم المهنيين -->
-      <a href="sectors/mfp.gov.html" class="sector-card">
-        <span class="sector-count">2 خدمات</span>
-        <div class="sector-icon">
-          <img src="assets/images/formation.png" alt="التكوين والتعليم المهنيين" loading="lazy" width="120"
-            height="120">
-        </div>
-        <h3 class="sector-title">التكوين والتعليم المهني</h3>
-        <p class="sector-desc">التسجيل في التكوين والتعليم المهنيين، إمتحانات</p>
-      </a>
-
-    </div>
-
-    <!-- الإعلانات الصورية -->
-
-    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8310657804532081" data-ad-slot="9966295018"
-      data-ad-format="auto" data-full-width-responsive="true"></ins>
-    </div>
-    <script>
-      (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
-
-    <div class="sectors-grid">
-
-      <!-- بريد الجزائر -->
-      <a href="sectors/poste.html" class="sector-card">
-        <span class="sector-count">14 خدمة</span>
-        <div class="sector-icon">
-          <img src="assets/images/poste.png" alt="بريد الجزائر" loading="lazy" width="120" height="120">
-        </div>
-        <h3 class="sector-title">بريد الجزائر</h3>
-        <p class="sector-desc">خدمات البريد في الجزائر، بطاقة ذهبية، تطبيقات</p>
-      </a>
-
-      <!-- إتصالات الجزائر -->
-      <a href="sectors/algerietelecom.html" class="sector-card">
-        <span class="sector-count">18 خدمة</span>
-        <div class="sector-icon">
-          <img src="assets/images/algerietelecom.png" alt="إتصالات الجزائر" loading="lazy" width="120" height="120">
-        </div>
-        <h3 class="sector-title">إتصالات الجزائر</h3>
-        <p class="sector-desc">إتصالات الجزائر، أنترنات، فضاء الزبون، بطاقات التعبئة، دفع إليكتروني</p>
-      </a>
-
-      <!-- السكن -->
-      <a href="sectors/mhuv.gov.html" class="sector-card">
-        <span class="sector-count">6 خدمات</span>
-        <div class="sector-icon">
-          <img src="assets/images/sakan.png" alt="السكن والعمران" loading="lazy" width="120" height="120">
-        </div>
-        <h3 class="sector-title">السكن والعمران</h3>
-        <p class="sector-desc"> الاجتماعي، الريفي، العمومي الإيجاري، الترقوي المدعم，
-          aadl, enpi, opgi, lpp, lpa, العمومي الإيجاري</p>
-      </a>
-
-      <!-- الطاقة -->
-      <a href="sectors/facteur.html" class="sector-card">
-        <span class="sector-count">17 خدمات</span>
-        <div class="sector-icon">
-          <img src="assets/images/facteur.png" alt="فواتير الطاقة والماء" loading="lazy" width="120" height="120">
-        </div>
-        <h3 class="sector-title">تسديد الفواتير</h3>
-        <p class="sector-desc">دفع فواتير الكهرباء والماء عبر البوابة الجزائرية للخدمات الرقمية</p>
-      </a>
-
-    </div>
-
-    <!-- الإعلانات الصورية 2 -->
-
-    <div class="ad-container">
-      <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8310657804532081" data-ad-slot="7803975574"
-        data-ad-format="auto" data-full-width-responsive="true"></ins>
-    </div>
-    <script>
-      (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
-
-    <div class="sectors-grid">
-
-      <!-- الهاتف النقال -->
-      <a href="sectors/telephon.html" class="sector-card">
-        <span class="sector-count">6 خدمات</span>
-        <div class="sector-icon">
-          <img src="assets/images/service-telephon.png" alt="خدمات الهاتف النقال" loading="lazy" width="120"
-            height="120">
-        </div>
-        <h3 class="sector-title">خدمات الهاتف النقال</h3>
-        <p class="sector-desc">موبيليس، جازي، أوريدو، تطبيقات وأرقام، مصلحة الزبائن
+    <!-- ⭐ قسم تقييم الصفحة الحقيقي -->
+    <section id="rating-section" dir="rtl" style="text-align:center; margin:20px auto; max-width:600px;">
+        <h3 style="color:#006233;">قيّم هذه الصفحة</h3>
+        <p style="font-size:1rem; color:#333;">
+            نرحّب برأيك لتحسين خدماتنا الرقمية.
         </p>
-      </a>
+        <a href="https://forms.gle/yfMJqhsD3XDn9NaJ7" target="_blank" style="display:inline-block; background:#d40000; color:#fff; padding:10px 20px;
+            border-radius:8px; text-decoration:none; font-weight:bold;">
+            <i class="fas fa-star"></i> إضغط هنا لتقديم تقييمك الحقيقي
+        </a>
+    </section>
 
-      <!-- ARPCE -->
-      <a href="sectors/arpce.html" class="sector-card">
-        <span class="sector-count">06 خدمة</span>
-        <div class="sector-icon">
-          <img src="assets/images/arpce.png" alt="ARPCE" loading="lazy" width="120" height="120">
-        </div>
-        <h3 class="sector-title">سلطة ضبط البريد <br>والاتصالات الالكترونية</h3>
-        <p class="sector-desc">طلب خدمة， ARPCE, دفع فاتورة， معرفة أرقام الهاتف, منصة جيل لجيل 777, وتطبيقات</p>
-      </a>
-
-      <!-- الداخلية -->
-      <a href="sectors/interieur.html" class="sector-card">
-        <span class="sector-count">18 خدمات</span>
-        <div class="sector-icon">
-          <img src="assets/images/inteurier.png" alt="الداخلية والجماعات المحلية" loading="lazy" width="120"
-            height="120">
-        </div>
-        <h3 class="sector-title">وزارة الداخلية <br>والجماعات المحلية</h3>
-        <p class="sector-desc">البطاقة التعريف البيوميترية, رخصة السياقة جواز السفر， شهادة الميلاد， الشباك عن
-          بعد</p>
-      </a>
-
-      <!-- الفلاحة -->
-      <a href="sectors/madr.html" class="sector-card">
-        <span class="sector-count">06 خدمات</span>
-        <div class="sector-icon">
-          <img src="assets/images/madr.png" alt="وزارة الفلاحة" loading="lazy" width="120" height="120">
-        </div>
-        <h3 class="sector-title">وزارة الفلاحة <br>والتنمية والصيد </h3>
-        <p class="sector-desc"> حجز أضاحي العيد، شكاوي عن بعد</p>
-      </a>
-
-
-    </div>
-
-    <!-- إعلان متعددة-->
-
-    <div class="ad-container">
-      <ins class="adsbygoogle" style="display:block" data-ad-format="auto" data-ad-client="ca-pub-8310657804532081"
-        data-ad-slot="4862117468"></ins>
-    </div>
-    <script>
-      (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
-
-    <div class="sectors-grid">
-
-      <!-- نفطال -->
-      <a href="sectors/naftal.html" class="sector-card">
-        <span class="sector-count">06 خدمات</span>
-        <div class="sector-icon">
-          <img src="assets/images/naftal.webp" alt="نفطال" loading="lazy" width="120" height="120">
-        </div>
-        <h3 class="sector-title"> نفطال <br> للمواد البترولية</h3>
-        <p class="sector-desc"> محطتي، إقتناء العجلات، خدمات عن بعد، تطبيقات </p>
-      </a>
-
-      <!-- التأمينات -->
-      <a href="sectors/mtess.html" class="sector-card">
-        <span class="sector-count">10 خدمات</span>
-        <div class="sector-icon">
-          <img src="assets/images/travail.png" alt="التأمينات والضمان الإجتماعي" loading="lazy" width="120"
-            height="120">
-        </div>
-        <h3 class="sector-title">التأمين <br>والضمان الإجتماعي</h3>
-        <p class="sector-desc">الضمان الاجتماعي CNAS/CASNOS، التقاعد CNR، موسسات التأمين الخاصة</p>
-      </a>
-
-      <!-- المالية -->
-      <a href="sectors/mf.gov.html" class="sector-card">
-        <span class="sector-count">15 خدمة</span>
-        <div class="sector-icon">
-          <img src="assets/images/finance.png" alt="المالية والجباية" loading="lazy" width="120" height="120">
-        </div>
-        <h3 class="sector-title">المالية والجباية</h3>
-        <p class="sector-desc">الطابع الجبائي، قسيمة السيارات， الصفقات العمومية， الأملاك العقارية</p>
-      </a>
-
-      <!-- قسيمك -->
-      <a href="sectors/qassimatouka.html" class="sector-card">
-        <span class="sector-count">05 خدمة</span>
-        <div class="sector-icon">
-          <img src="assets/images/dga.png" alt="المديرية العامة للضرائب" loading="lazy" width="150" height="150">
-        </div>
-        <h3 class="sector-title">قسيمتك</h3>
-        <p class="sector-desc">إقتناع قسيمة السيارات ، إعادة الإصدار</p>
-      </a>
-
-    </div>
-
-    <!-- الإعلان الصوري 5 -->
-    <div class="ad-container">
-      <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8310657804532081" data-ad-slot="6461453831"
-        data-ad-format="auto" data-full-width-responsive="true"></ins>
-    </div>
-    <script>
-      (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
-
-    <div class="sectors-grid">
-
-      <!-- طابعكم -->
-      <a href="sectors/tabioucom.html" class="sector-card">
-        <span class="sector-count">05 خدمة</span>
-        <div class="sector-icon">
-          <img src="assets/images/dga.png" alt="المديرية العامة للضرائب" loading="lazy" width="150" height="150">
-        </div>
-        <h3 class="sector-title">طابعكم</h3>
-        <p class="sector-desc">شراء الطابع الجبائي لجواز سفر، بطاقة التعريف الوطنية، رخصة السياقة، حقوق السفر</p>
-      </a>
-
-      <!-- الاملاك العقارية -->
-      <a href="sectors/fadaeldjazair.html" class="sector-card">
-        <span class="sector-count">10 خدمة</span>
-        <div class="sector-icon">
-          <img src="assets/images/dgdn.png" alt="المديرية العامة للأملاك العقارية" loading="lazy" width="150"
-            height="150">
-        </div>
-        <h3 class="sector-title">الاملاك العقارية</h3>
-        <p class="sector-desc">أملاك عقارية، مصفوفات، دفتر عقاري، الوكالة العقارية، مسح عقاري، وثائق وعقود</p>
-      </a>
-
-      <!-- الترقيم الجبائي -->
-      <a href="sectors/nifenligne.html" class="sector-card">
-        <span class="sector-count">12 خدمة</span>
-        <div class="sector-icon">
-          <img src="assets/images/dga.png" alt="المديرية العامة للضرائب" loading="lazy" width="150" height="150">
-        </div>
-        <h3 class="sector-title">الترقيم الجبائي</h3>
-        <p class="sector-desc">صندوق ضمان الصفقات، محاكاة صفقة عمومية</p>
-      </a>
-
-      <!-- العدل -->
-      <a href="sectors/mjustice.html" class="sector-card">
-        <span class="sector-count">8 خدمات</span>
-        <div class="sector-icon">
-          <img src="assets/images/justis.png" alt="العدالة" loading="lazy" width="120" height="120">
-        </div>
-        <h3 class="sector-title">العدالة</h3>
-        <p class="sector-desc">النيابة الإليكترونية، السوابق العدلية، الجنسية، الإتصال بالمحبوسين</p>
-      </a>
-
-    </div>
-
-    <!-- إعلان داخل المقالة-->
-
-    <div class="ad-container">
-      <ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article"
-        data-ad-format="auto" data-ad-client="ca-pub-8310657804532081" data-ad-slot="9770159361"></ins>
-    </div>
-    <script>
-      (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
-
-    <div class="sectors-grid">
-
-      <!-- hatplc -->
-      <a href="sectors/hatplc.html" class="sector-card">
-        <span class="sector-count">8 خدمات</span>
-        <div class="sector-icon">
-          <img src="assets/images/hatplc.jpg" alt="hatplc" loading="lazy" width="120" height="120">
-        </div>
-        <h3 class="sector-title">الشفافية والوقاية من الفساد ومكافحته</h3>
-        <p class="sector-desc">الوقاية من الفساد ومكافحته، التصريح بالممتلكات</p>
-      </a>
-
-      <!-- ocrc -->
-      <a href="sectors/ocrc.html" class="sector-card">
-        <span class="sector-count">8 خدمات</span>
-        <div class="sector-icon">
-          <img src="assets/images/ocrc.png" alt="ocrc" loading="lazy" width="120" height="120">
-        </div>
-        <h3 class="sector-title">الديوان المركزي لقمع الفساد</h3>
-        <p class="sector-desc">الديوان المركزي لقمع الفساد</p>
-      </a>
-
-      <!-- الشؤون الخارجية -->
-      <a href="sectors/mfa.html" class="sector-card">
-        <span class="sector-count">6 خدمات</span>
-        <div class="sector-icon">
-          <img src="assets/images/EXTERIEUR.webp" alt="الشؤون الخارجية" loading="lazy" width="120" height="120">
-        </div>
-        <h3 class="sector-title">الشؤون الخارجية <br> والجالية الجزائرية</h3>
-        <p class="sector-desc">الشؤون الخارجية والجالية الجزائرية</p>
-      </a>
-
-      <!-- الحج والعمرة -->
-      <a href="sectors/onpo.html" class="sector-card">
-        <span class="sector-count">3 خدمات</span>
-        <div class="sector-icon">
-          <img src="assets/images/onpo.png" alt="الديوان الوطني للحج والعمرة" loading="lazy" width="120" height="120">
-        </div>
-        <h3 class="sector-title">الديوان الوطني<br> للحج والعمرة</h3>
-        <p class="sector-desc">الديوان الوطني للحج والعمرة</p>
-      </a>
-
-    </div>
-
-    <!-- الإعلان الصوري 5 -->
-
-    <div class="ad-container">
-      <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8310657804532081" data-ad-slot="6505685868"
-        data-ad-format="auto" data-full-width-responsive="true"></ins>
-    </div>
-    <script>
-      (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
-
-    <div class="sectors-grid">
-
-      <!-- وزارة التجارة -->
-      <a href="sectors/commerce.html" class="sector-card">
-        <span class="sector-count">6 خدمات</span>
-        <div class="sector-icon">
-          <img src="assets/images/commerc.png" alt="التجارة" loading="lazy" width="120" height="120">
-        </div>
-        <h3 class="sector-title">التجارة والجمارك الجزائرية</h3>
-        <p class="sector-desc">خدمات التجارة وترقية الصادرات， الجمارك الجزائرية， إتصال وإصغاء</p>
-      </a>
-
-      <!-- المقاول الذاتي -->
-      <a href="sectors/anae.html" class="sector-card">
-        <span class="sector-count">2 خدمات</span>
-        <div class="sector-icon">
-          <img src="assets/images/anae.jpg" alt="المقاول الذاتي" loading="lazy" width="120" height="120">
-        </div>
-        <h3 class="sector-title">المقاول الذاتي</h3>
-        <p class="sector-desc">خدمات المقاول الذاتي</p>
-      </a>
-
-      <!-- ترقية الإستثمار -->
-      <a href="sectors/aapi.html" class="sector-card">
-        <span class="sector-count">5 خدمات</span>
-        <div class="sector-icon">
-          <img src="assets/images/aapi.png" alt="ترقية الإستثمار" loading="lazy" width="120" height="120">
-        </div>
-        <h3 class="sector-title">الوكالة الوطنية <br>لترقية الإستثمار</h3>
-        <p class="sector-desc">الوكالة الوطنية لترقية الإستثمار</p>
-      </a>
-
-      <!-- الوكالة الوطنية للتشغيل -->
-      <a href="sectors/anem.html" class="sector-card">
-        <span class="sector-count">5 خدمات</span>
-        <div class="sector-icon">
-          <img src="assets/images/anem.png" alt="الوكالة الوطنية للتشغيل" loading="lazy" width="120" height="120">
-        </div>
-        <h3 class="sector-title">الوكالة الوطنية للتشغيل</h3>
-        <p class="sector-desc">الوكالة الوطنية للتشغيل، منحة البطالة، عروض العمل</p>
-      </a>
-
-    </div>
-
-    <!-- الإعلان الصوري 2 -->
-
-    <div class="ad-container">
-      <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8310657804532081" data-ad-slot="1307988056"
-        data-ad-format="auto" data-full-width-responsive="true"></ins>
-    </div>
-    <script>
-      (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
-
-    <div class="sectors-grid">
-
-      <!-- سونلغاز -->
-      <a href="sectors/sonalgaz.html" class="sector-card">
-        <span class="sector-count">17 خدمات</span>
-        <div class="sector-icon">
-          <img src="assets/images/sonelgaz.png" alt="سونلغاز" loading="lazy" width="120" height="120">
-        </div>
-        <h3 class="sector-title">سونلغاز</h3>
-        <p class="sector-desc">فاتورة الكهرباء والغاز， سونلغاز الربط بالكهرباء ، سونلغاز الربط بالغاز</p>
-      </a>
-
-
-      <!-- الجزائرية للمياه -->
-      <a href="sectors/ade.html" class="sector-card">
-        <span class="sector-count">17 خدمات</span>
-        <div class="sector-icon">
-          <img src="assets/images/ade.png" alt="الجزائرية للمياه" loading="lazy" width="120" height="120">
-        </div>
-        <h3 class="sector-title">الجزائرية للمياه</h3>
-        <p class="sector-desc">فاتورة الماء， الجزائرية للمياه</p>
-      </a>
-
-      <!-- سيال -->
-      <a href="sectors/seaal.html" class="sector-card">
-        <span class="sector-count">17 خدمات</span>
-        <div class="sector-icon">
-          <img src="assets/images/seaal.webp" alt="سيال" loading="lazy" width="120" height="120">
-        </div>
-        <h3 class="sector-title">سيال</h3>
-        <p class="sector-desc">فاتورة الماء لسيال للمياه والتطهير</p>
-      </a>
-
-      <!-- aadl -->
-      <a href="sectors/aadl.html" class="sector-card">
-        <span class="sector-count">05 خدمات</span>
-        <div class="sector-icon">
-          <img src="assets/images/AADL.png" alt="وكالة عدل" loading="lazy" width="120" height="120">
-        </div>
-        <h3 class="sector-title">وكالة عدل</h3>
-        <p class="sector-desc">وكالة عدل لتحسين السكن وتطويره</p>
-      </a>
-
-    </div>
-
-    <!-- الإعلان الصوري 3 -->
-
-    <div class="ad-container">
-      <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8310657804532081" data-ad-slot="5542746534"
-        data-ad-format="auto" data-full-width-responsive="true"></ins>
-    </div>
-    <script>
-      (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
-
-    <div class="sectors-grid">
-
-      <!-- opgi -->
-      <a href="sectors/opgi.html" class="sector-card">
-        <span class="sector-count">05 خدمات</span>
-        <div class="sector-icon">
-          <img src="assets/images/opgi.png" alt="وكالة عدل" loading="lazy" width="120" height="120">
-        </div>
-        <h3 class="sector-title">الترقية والتسيير العقاري</h3>
-        <p class="sector-desc">ديوان الترقية والتسيير العقاري OPGI</p>
-      </a>
-
-
-      <!-- enpi -->
-      <a href="sectors/enpi.html" class="sector-card">
-        <span class="sector-count">05 خدمات</span>
-        <div class="sector-icon">
-          <img src="assets/images/enpi.jpg" alt="وكالة عدل" loading="lazy" width="120" height="120">
-        </div>
-        <h3 class="sector-title">المؤسسة الوطنية للترقية العقارية</h3>
-        <p class="sector-desc"> خدمات المؤسسة الوطنية للترقية العقارية (ENPI)
-        </p>
-      </a>
-
-      <!-- dzexam1 -->
-      <a href="sectors/dzexam1.html" class="sector-card">
-        <span class="sector-count">16 خدمات</span>
-        <div class="sector-icon">
-          <img src="assets/images/dzexam.png" alt="dzexam1" loading="lazy" width="120" height="120">
-        </div>
-        <h3 class="sector-title">dzexam1</h3>
-        <p class="sector-desc"> فروض واختبارات شهادة التعليم المتوسط، البكالوريا، والابتدائي مع التصحيح
-        </p>
-      </a>
-
-      <!-- dzexams -->
-      <a href="sectors/dzexams.html" class="sector-card">
-        <span class="sector-count">22 خدمات</span>
-        <div class="sector-icon">
-          <img src="assets/images/dzexams.png" alt="dzexams" loading="lazy" width="120" height="120">
-        </div>
-        <h3 class="sector-title">dzexams</h3>
-        <p class="sector-desc"> فروض واختبارات شهادة التعليم المتوسط، البكالوريا، والابتدائي مع التصحيح
-        </p>
-      </a>
-
-    </div>
-
-    <!-- الإعلان الصوري 5 -->
-    <div class="ad-container">
-      <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8310657804532081" data-ad-slot="6461453831"
-        data-ad-format="auto" data-full-width-responsive="true"></ins>
-    </div>
-    <script>
-      (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
-
-    <div class="sectors-grid">
-
-      <!-- dzexam.pro -->
-      <a href="sectors/dzexams.pro.html" class="sector-card">
-        <span class="sector-count">22 خدمات</span>
-        <div class="sector-icon">
-          <img src="assets/images/dzexams.pro.webp" alt="dzexams" loading="lazy" width="120" height="120">
-        </div>
-        <h3 class="sector-title">dzexam.pro</h3>
-        <p class="sector-desc"> فروض واختبارات شهادة التعليم المتوسط، البكالوريا، والابتدائي مع التصحيح
-        </p>
-      </a>
-
-      <!-- eddirasa -->
-      <a href="sectors/eddirasa.html" class="sector-card">
-        <span class="sector-count">22 خدمات</span>
-        <div class="sector-icon">
-          <img src="assets/images/eddirasa.png" alt="dzexams" loading="lazy" width="120" height="120">
-        </div>
-        <h3 class="sector-title">Eddirasa</h3>
-        <p class="sector-desc"> فروض واختبارات شهادة التعليم المتوسط، البكالوريا، والابتدائي مع التصحيح
-        </p>
-      </a>
-
-      <!-- etudpdf -->
-      <a href="sectors/etudpdf.html" class="sector-card">
-        <span class="sector-count">22 خدمات</span>
-        <div class="sector-icon">
-          <img src="assets/images/etudpdf.png" alt="dzexams" loading="lazy" width="120" height="120">
-        </div>
-        <h3 class="sector-title">Etud-Pdf</h3>
-        <p class="sector-desc"> فروض واختبارات شهادة التعليم المتوسط، البكالوريا، والابتدائي مع التصحيح
-        </p>
-      </a>
-
-
-      <!-- medjedel -->
-      <a href="sectors/medjedel.html" class="sector-card">
-        <span class="sector-count">22 خدمات</span>
-        <div class="sector-icon">
-          <img src="assets/images/medjedel.png" alt="dzexams" loading="lazy" width="120" height="120">
-        </div>
-        <h3 class="sector-title">Mdjedel</h3>
-        <p class="sector-desc"> فروض واختبارات شهادة التعليم المتوسط، البكالوريا، والابتدائي مع التصحيح
-        </p>
-      </a>
-
-
-
-    </div>
-
-    <!-- الإعلان الصوري 6 -->
-    <div class="ad-container">
-      <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8310657804532081" data-ad-slot="8935196632"
-        data-ad-format="auto" data-full-width-responsive="true"></ins>
-    </div>
-    <script>
-      (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
-
-    <div class="sectors-grid">
-
-      <!-- الإنتخابات -->
-      <a href="sectors/ina-elections.html" class="sector-card">
-        <span class="sector-count">6 خدمات</span>
-        <div class="sector-icon">
-          <img src="assets/images/ina-elections.png" alt="السلطة الوطنية المستقلة للانتخابات" loading="lazy" width="120"
-            height="120">
-        </div>
-        <h3 class="sector-title">السلطة الوطنية<br> المستقلة للانتخابات</h3>
-        <p class="sector-desc">بطاقة الناخب، تسجيل الناخبين، نتائج الانتخابات، أين أنتخب</p>
-      </a>
-
-      <!-- مركبتي" لفحص مطابقة المركبات -->
-      <a href="sectors/markabatidz.html" class="sector-card">
-        <span class="sector-count">6 خدمات</span>
-        <div class="sector-icon">
-          <img src="assets/images/markabaty.jpg" alt="مركبتي" loading="lazy" width="120" height="120">
-        </div>
-        <h3 class="sector-title">"مركبتي" <br> لفحص مطابقة المركبات</h3>
-        <p class="sector-desc">مركبتي" لفحص مطابقة المركبات</p>
-      </a>
-
-      <!-- الشرطة -->
-      <a href="sectors/dgsn.html" class="sector-card">
-        <span class="sector-count">6 خدمات</span>
-        <div class="sector-icon">
-          <img src="assets/images/dgsn.png" alt="الشؤون الخارجية" loading="lazy" width="120" height="120">
-        </div>
-        <h3 class="sector-title">الشرطة الجزائرية</h3>
-        <p class="sector-desc">شكاوي وتصاريح عن بعد, الخدمات الرقمية, تطبيقات، دليل هاتفي </p>
-      </a>
-
-      <!-- الصحة -->
-      <a href="sectors/sante.html" class="sector-card">
-        <span class="sector-count">6 خدمات</span>
-        <div class="sector-icon">
-          <img src="assets/images/sante.jpg" alt="الصحة" loading="lazy" width="120" height="120">
-        </div>
-        <h3 class="sector-title">الصحة</h3>
-        <p class="sector-desc">العيادة الرقمية، التكوين الشبه طبي، تطبيقات الأطباء، بنك الدم</p>
-      </a>
-
-    </div>
-
-    <!-- الإعلان الصوري 5 -->
-
-    <div class="ad-container">
-      <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8310657804532081" data-ad-slot="6505685868"
-        data-ad-format="auto" data-full-width-responsive="true"></ins>
-    </div>
-    <script>
-      (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
-
-
-    <div class="sectors-grid">
-
-      <!-- البيئة والحياة -->
-      <a href="sectors/me.gov.html" class="sector-card">
-        <span class="sector-count">10 خدمات</span>
-        <div class="sector-icon">
-          <img src="assets/images/me.gov.jpg" alt="transport" loading="lazy" width="120" height="120">
-        </div>
-        <h3 class="sector-title">وزارة البيئة وجودة الحياة</h3>
-        <p class="sector-desc">جمع النففيات الصناعية ، تطبيقات، نظيف</p>
-      </a>
-
-
-      <!-- النقل -->
-      <a href="sectors/transport.html" class="sector-card">
-        <span class="sector-count">10 خدمات</span>
-        <div class="sector-icon">
-          <img src="assets/images/transport.svg" alt="transport" loading="lazy" width="120" height="120">
-        </div>
-        <h3 class="sector-title">النقل والمواصلات</h3>
-        <p class="sector-desc">حجز تذاكر الطيران， القطارات， البواخر， الترامواي， تطبيق محطتي</p>
-      </a>
-
-      <!-- خدمات التامين -->
-      <a href="sectors/assurance.html" class="sector-card">
-        <span class="sector-count">10 خدمات</span>
-        <div class="sector-icon">
-          <img src="assets/images/asserance.jpg" alt="التأمين" loading="lazy" width="120" height="120">
-        </div>
-        <h3 class="sector-title">التأمين على الممتلكات</h3>
-        <p class="sector-desc">شركة التأمين على الممتلكات， تعويضات عن الخسائر， تطبيقات</p>
-      </a>
-
-      <!-- خدمات البنوك والمالية -->
-      <a href="sectors/bank.html" class="sector-card">
-        <span class="sector-count">10 خدمات</span>
-        <div class="sector-icon">
-          <img src="assets/images/bank.png" alt="finance" loading="lazy" width="120" height="120">
-        </div>
-        <h3 class="sector-title">بنوك عمومية وخاصة</h3>
-        <p class="sector-desc">خدمات البنوك العمومية والخاصة， حسابات البنكية， القروض</p>
-      </a>
-
-
-    </div>
-
-    <!-- الإعلان الصوري 7 -->
-
-    <div class="ad-container">
-      <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8310657804532081" data-ad-slot="4101672353"
-        data-ad-format="auto" data-full-width-responsive="true"></ins>
-    </div>
-    <script>
-      (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
-
-    <div class="sectors-grid">
-
-      <!-- خدمات أرقام الطوارئ -->
-      <a href="sectors/emergency.html" class="sector-card">
-        <span class="sector-count">10 خدمات</span>
-        <div class="sector-icon">
-          <img src="assets/images/emergency.png" alt="emergency" loading="lazy" width="120" height="120">
-        </div>
-        <h3 class="sector-title">أرقام الطوارئ</h3>
-        <p class="sector-desc">أرقام الطوارئ في الجزائر، الإسعاف， الشرطة， الدرك الوطني， خدمات عند بعد，جمعيات
-          تطبيقات الطوارئ</p>
-      </a>
-
-      <!-- تطبيقات -->
-      <a href="#index.html" class="sector-card">
-        <span class="sector-count">10 خدمات</span>
-        <div class="sector-icon">
-          <img src="assets/images/gplay.png" alt="emergency" loading="lazy" width="20" height="10">
-        </div>
-        <h3 class="sector-title">تطبيقات</h3>
-        <p class="sector-desc">--- قيد التصميم ---- </p>
-      </a>
-    </div>
-
-    </div>
 
     <!-- الإعلانات المتعددة -->
-
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8310657804532081" crossorigin="anonymous"></script>
     <div class="ad-container">
-      <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8310657804532081" data-ad-slot="6368743049"
-        data-ad-format="auto" data-full-width-responsive="true"></ins>
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8310657804532081" data-ad-slot="9506042271" data-ad-format="auto" data-full-width-responsive="true"></ins>
     </div>
     <script>
-      (adsbygoogle = window.adsbygoogle || []).push({});
+        (adsbygoogle = window.adsbygoogle || []).push({});
     </script>
 
-  </section>
+    <!-- Footer - 3 Columns -->
+    <footer class="footer">
+        <div class="footer-content">
+            <!-- Column 1: Brand -->
+            <div class="footer-column">
+                <div class="footer-brand">
+                    <img src="https://flagcdn.com/w80/dz.png" alt="علم الجزائر" width="80" height="60" loading="lazy" width="120" height="120" decoding="async">
+                    <div>
+                        <h3>البوابة الجزائرية</h3>
+                        <span>للخدمات الرقمية</span>
+                    </div>
+                </div>
+                <p class="footer-desc">
+                    منصة وطنية موحدة تتيح للمواطن الجزائري الوصول السريع والآمن إلى جميع الخدمات الحكومية والعمومية الرقمية من مكان واحد، دون تعقيد أو تنقل إداري.
+                </p>
+                <!-- Social Links -->
+
+                <div class="social-links">
+                    <a href="#" title="فيسبوك"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" title="تويتر"><i class="fab fa-twitter"></i></a>
+                    <a href="#" title="إنستغرام"><i class="fab fa-instagram"></i></a>
+                    <a href="#" title="يوتيوب"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+
+            <!-- Column 2: Quick Links -->
+            <div class="footer-column">
+                <h4><i class="fas fa-link"></i> روابط سريعة</h4>
+                <ul class="footer-links">
+                    <li>
+                        <a href="#index.html">
+                            <i class="fas fa-home"></i> الصفحة الرئيسية
+                        </a>
+                    </li>
+                    <li>
+                        <a href="pages/about.html">
+                            <i class="fas fa-users"></i> من نحن
+                        </a>
+                    </li>
+                    <li>
+                        <a href="pages/contact.html">
+                            <i class="fas fa-envelope"></i> اتصل بنا
+                        </a>
+                    </li>
+                    <li>
+                        <a href="pages/privacy.html">
+                            <i class="fas fa-shield-alt"></i> سياسة الخصوصية
+                        </a>
+                    </li>
+                    <li>
+                        <a href="pages/terms.html">
+                            <i class="fas fa-file-contract"></i> شروط الاستخدام
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- إعلان صوري -->
+            <div class="ad-container">
+                <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8310657804532081" data-ad-slot="3972494044" data-ad-format="auto" data-full-width-responsive="true"></ins>
+            </div>
+            <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
 
 
-  <!-- عداد الزيارات -->
-  <div style="text-align: center; font-family: Arial,
-  				 sans-serif; margin-top: 40px; direction: rtl;">
-    <div style="color: #d40000; font-size: 40px; font-weight: bold;">
-      <span id="daily-visits">0</span>+
-    </div>
-    <div style="color: #006233; font-size: 18px; margin-bottom: 30px;">
-      عدد الزيارات<br><small style="color: #777;">اليوم</small>
-    </div>
+            <!-- Column 3: Contact Info -->
+            <div class="footer-column">
+                <h4><i class="fas fa-address-card"></i> معلومات الاتصال</h4>
 
-    <div style="color: #d40000; font-size: 36px; font-weight: bold;">
-      <span id="total-visits">0</span>+
-    </div>
-    <div style="color: #006233; font-size: 18px;">
-      عدد الزيارات منذ جوان 2025<br>
+                <div class="footer-contact">
 
-    </div>
-  </div>
+                    <p>
+                        <i class="fas fa-envelope"></i>
 
-  <!-- Features -->
-  <section class="features">
-    <div class="features-grid">
-      <div class="feature">
-        <div class="feature-icon">
-          <i class="fas fa-bolt"></i>
-        </div>
-        <h3>سريع وفعال</h3>
-        <p>وصول فوري إلى الخدمات دون انتظار أو تنقل</p>
-      </div>
-      <div class="feature">
-        <div class="feature-icon">
-          <i class="fas fa-lock"></i>
-        </div>
-        <h3>آمن وموثوق</h3>
-        <p>روابط رسمية من مصادر حكومية معتمدة</p>
-      </div>
-      <div class="feature">
-        <div class="feature-icon">
-          <i class="fas fa-mobile-alt"></i>
-        </div>
-        <h3>متجاوب مع الجوال</h3>
-        <p>تصميم يتكيف مع جميع أحجام الشاشات</p>
-      </div>
-      <div class="feature">
-        <div class="feature-icon">
-          <i class="fas fa-user-check"></i>
-        </div>
-        <h3>بدون تسجيل</h3>
-        <p>استخدم البوابة مباشرة دون إدخال بيانات شخصية</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ⭐ قسم تقييم الصفحة الحقيقي -->
-  <section id="rating-section" dir="rtl" style="text-align:center; margin:20px auto; max-width:600px;">
-    <h3 style="color:#006233;">قيّم هذه الصفحة</h3>
-    <p style="font-size:1rem; color:#333;">
-      نرحّب برأيك لتحسين خدماتنا الرقمية.
-    </p>
-    <a href="https://forms.gle/yfMJqhsD3XDn9NaJ7" target="_blank" style="display:inline-block; background:#d40000; color:#fff; padding:10px 20px;
-            border-radius:8px; text-decoration:none; font-weight:bold;">
-      <i class="fas fa-star"></i> إضغط هنا لتقديم تقييمك الحقيقي
-    </a>
-  </section>
-
-
-  <!-- الإعلانات المتعددة -->
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8310657804532081"
-    crossorigin="anonymous"></script>
-  <div class="ad-container">
-    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8310657804532081" data-ad-slot="9506042271"
-      data-ad-format="auto" data-full-width-responsive="true"></ins>
-  </div>
-  <script>
-    (adsbygoogle = window.adsbygoogle || []).push({});
-  </script>
-
-  <!-- Footer - 3 Columns -->
-  <footer class="footer">
-    <div class="footer-content">
-      <!-- Column 1: Brand -->
-      <div class="footer-column">
-        <div class="footer-brand">
-          <img src="https://flagcdn.com/w80/dz.png" alt="علم الجزائر" width="80" height="60" loading="lazy" width="120"
-            height="120" decoding="async">
-          <div>
-            <h3>البوابة الجزائرية</h3>
-            <span>للخدمات الرقمية</span>
-          </div>
-        </div>
-        <p class="footer-desc">
-          منصة وطنية موحدة تتيح للمواطن الجزائري الوصول السريع والآمن إلى جميع الخدمات الحكومية والعمومية
-          الرقمية من مكان واحد، دون تعقيد أو تنقل إداري.
-        </p>
-        <!-- Social Links -->
-
-        <div class="social-links">
-          <a href="#" title="فيسبوك"><i class="fab fa-facebook-f"></i></a>
-          <a href="#" title="تويتر"><i class="fab fa-twitter"></i></a>
-          <a href="#" title="إنستغرام"><i class="fab fa-instagram"></i></a>
-          <a href="#" title="يوتيوب"><i class="fab fa-youtube"></i></a>
-        </div>
-      </div>
-
-      <!-- Column 2: Quick Links -->
-      <div class="footer-column">
-        <h4><i class="fas fa-link"></i> روابط سريعة</h4>
-        <ul class="footer-links">
-          <li>
-            <a href="#index.html">
-              <i class="fas fa-home"></i>
-              الصفحة الرئيسية
-            </a>
-          </li>
-          <li>
-            <a href="pages/about.html">
-              <i class="fas fa-users"></i>
-              من نحن
-            </a>
-          </li>
-          <li>
-            <a href="pages/contact.html">
-              <i class="fas fa-envelope"></i>
-              اتصل بنا
-            </a>
-          </li>
-          <li>
-            <a href="pages/privacy.html">
-              <i class="fas fa-shield-alt"></i>
-              سياسة الخصوصية
-            </a>
-          </li>
-          <li>
-            <a href="pages/terms.html">
-              <i class="fas fa-file-contract"></i>
-              شروط الاستخدام
-            </a>
-          </li>
-        </ul>
-      </div>
-
-      <!-- إعلان صوري -->
-      <div class="ad-container">
-        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8310657804532081"
-          data-ad-slot="3972494044" data-ad-format="auto" data-full-width-responsive="true"></ins>
-      </div>
-      <script>
-        (adsbygoogle = window.adsbygoogle || []).push({});
-      </script>
-
-
-      <!-- Column 3: Contact Info -->
-      <div class="footer-column">
-        <h4><i class="fas fa-address-card"></i> معلومات الاتصال</h4>
-
-        <div class="footer-contact">
-
-          <p>
-            <i class="fas fa-envelope"></i>
-
-            <a href="mailto:tabaniimadeddine@gmail.com" class="footer-link email-link">
+                        <a href="mailto:tabaniimadeddine@gmail.com" class="footer-link email-link">
               tabaniimadeddine@gmail.com
             </a>
-          </p>
+                    </p>
 
-          <p>
-            <i class="fas fa-phone"></i>
+                    <p>
+                        <i class="fas fa-phone"></i>
 
-            <a href="tel:+213697743721" class="footer-link phone-link">
+                        <a href="tel:+213697743721" class="footer-link phone-link">
               +213 697 74 37 21
             </a>
-          </p>
+                    </p>
 
-          <p>
-            <i class="fas fa-map-marker-alt"></i>
-            الجزائر العاصمة، الجزائر
-          </p>
+                    <p>
+                        <i class="fas fa-map-marker-alt"></i> الجزائر العاصمة، الجزائر
+                    </p>
 
-          <p>
-            <i class="fas fa-clock"></i>
-            متاح 24/7 - طوال أيام الأسبوع
-          </p>
+                    <p>
+                        <i class="fas fa-clock"></i> متاح 24/7 - طوال أيام الأسبوع
+                    </p>
 
+                </div>
+
+                <div style="margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid rgba(255,255,255,0.1);">
+                    <p style="color: var(--gray-300); font-size: 0.9rem;">
+                        <i class="fas fa-code" style="color: var(--gold); margin-left: 0.5rem;"></i> صنع بـ <span class="heart">❤</span> في الجزائر
+                    </p>
+                </div>
+            </div>
         </div>
 
-        <div style="margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid rgba(255,255,255,0.1);">
-          <p style="color: var(--gray-300); font-size: 0.9rem;">
-            <i class="fas fa-code" style="color: var(--gold); margin-left: 0.5rem;"></i>
-            صنع بـ <span class="heart">❤</span> في الجزائر
-          </p>
+        <div class="footer-bottom">
+            <p>© 2025 البوابة الجزائرية للخدمات الرقمية - جميع الحقوق محفوظة</p>
+            <p style="margin-top: 0.5rem; font-size: 0.85rem;">❀ لا تنسونا من صالح دعائكم ❀</p>
         </div>
-      </div>
-    </div>
+    </footer>
 
-    <div class="footer-bottom">
-      <p>© 2025 البوابة الجزائرية للخدمات الرقمية - جميع الحقوق محفوظة</p>
-      <p style="margin-top: 0.5rem; font-size: 0.85rem;">❀ لا تنسونا من صالح دعائكم ❀</p>
-    </div>
-  </footer>
-
-  <!-- Floating Action Button -->
-  <button class="fab" onclick="scrollToTop()" title="العودة للأعلى">
+    <!-- Floating Action Button -->
+    <button class="fab" onclick="scrollToTop()" title="العودة للأعلى">
     <i class="fas fa-arrow-up"></i>
   </button>
 
-  <script defer src="assets/js/main.js"></script>
+    <script defer src="assets/js/main.js"></script>
 
-  <script>
-    (adsbygoogle = window.adsbygoogle || []).push({});
-  </script>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
 
-  <!-- قاعدة بيانات محرك البحث -->
-  <script defer src="assets/js/searchData.js"></script>
+    <!-- قاعدة بيانات محرك البحث -->
+    <script defer src="assets/js/searchData.js"></script>
 
 </body>
 
