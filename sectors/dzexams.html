@@ -53,141 +53,450 @@
 
     <!-- Structured Data -->
     <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-
     {
-      "@type": "WebSite",
-      "@id": "https://imadtbn.github.io/dz_portal/#website",
-      "url": "https://imadtbn.github.io/dz_portal/",
-      "name": "البوابة الجزائرية للخدمات الرقمية",
-      "alternateName": "DZ Portal",
-      "inLanguage": "ar"
-    },
-
-    {
-      "@type": "Organization",
-      "@id": "https://imadtbn.github.io/dz_portal/#organization",
-      "name": "البوابة الجزائرية للخدمات الرقمية",
-      "url": "https://imadtbn.github.io/dz_portal/",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://imadtbn.github.io/dz_portal/icons/icon.png"
-      },
-        "contactPoint": {
-        "@type": "ContactPoint",
-        "contactType": "customer support",
-        "areaServed": "DZ",
-        "availableLanguage": ["ar", "fr"],
-        "email": "tabaniimadeddine@gmail.com",
-        "telephone": "+213697743721"
-      },
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "الجزائر",
-        "postalCode": "16000",
-        "addressCountry": "DZ"
-      },
-      "sameAs": [
-        "https://imadtbn.github.io/dz_portal/"
-      ]
-    },
-
-    {
-      "@type": "WebPage",
-      "@id": "https://imadtbn.github.io/dz_portal/sectors/dzexams.html#webpage",
-      "url": "https://imadtbn.github.io/dz_portal/sectors/dzexams.html",
-      "name": "dzexams - بنك الامتحانات موقع التعليم الجزائري",
-      "description": "جميع الخدمات الرقمية لوزارة التربية الوطنية - التسجيل في الامتحانات، النتائج، فضاء الأستاذ والولي",
-      "keywords": [
-        "التربية والتعليم",
-        "الخدمات الرقمية",
-        "الامتحانات",
-        "النتائج",
-        "فضاء الأستاذ",
-        "فضاء الولي",
-        "تقييم المكتسبات",
-        "التسجيل في شهادة البكالوريا",
-        "توظيف الأساتذة المتعاقدين",
-        "المنصة الرقمية للتوظيف",
-        "الدفع الإلكتروني للامتحانات",
-        "التحضير للامتحانات",
-        "التحضيري",
-        "eddirasa",
-                "dzexam.pro",
-        "فروض",
-        "موقع الدراسة الجزائري",
-        "etudpdf",
-        "dzexam1",
-        "dzexams",
-        "بنك الفروض والاختبارات",
-          "نماذج البكالوريا 2026",
-  "شهادة التعليم المتوسط",
-  "امتحانات التعليم الابتدائي",
-  "التصحيح النموذجي للمواد",
-  "موقع الدراسة الجزائري",
-  "وثائق بيداغوجية للأساتذة",
-  "مكتبة تعليمية للأطفال",
-  "أخبار قطاع التربية الوطنية",
-        "نماذج البكالوريا",
-        "التسجيل في شهادة البكالوريا",
-        "نتائج شهادة البكالوريا",
-        "نماذج شهادة التعليم المتوسط",
-        "نتائج شهادة التعليم المتوسط",
-        "منصة معلم",
-        "التعليم عن بعد",
-        "إثبات المستوى",
-        "التسجيل في شهادة التعليم الأساسي",
-        "إختبارات"
-      ],
-      "inLanguage": "ar",
-      "isPartOf": {
-        "@id": "https://imadtbn.github.io/dz_portal/#website"
-      },
-      "about": {
-        "@id": "https://imadtbn.github.io/dz_portal/#organization"
-      },
-      "publisher": {
-        "@id": "https://imadtbn.github.io/dz_portal/#organization"
-      },
-      "primaryImageOfPage": {
-        "@type": "ImageObject",
-        "url": "https://imadtbn.github.io/dz_portal/assets/images/dzexams.png"
-      },
-      "breadcrumb": {
-        "@id": "https://imadtbn.github.io/dz_portal/sectors/dzexams.html#breadcrumb"
-      }
-    },
-
-    {
-      "@type": "BreadcrumbList",
-      "@id": "https://imadtbn.github.io/dz_portal/sectors/dzexams.html#breadcrumb",
-      "itemListElement": [
+      "@context": "https://schema.org",
+      "@graph": [
         {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "الرئيسية",
-          "item": "https://imadtbn.github.io/dz_portal/"
+          "@type": "WebSite",
+          "@id": "https://imadtbn.github.io/dz_portal/#website",
+          "url": "https://imadtbn.github.io/dz_portal/",
+          "name": "البوابة الجزائرية للخدمات الرقمية",
+          "alternateName": "DZ Portal",
+          "description": "منصة وطنية موحدة للخدمات الحكومية والعمومية الرقمية في الجزائر.",
+          "inLanguage": "ar-DZ",
+          "publisher": { "@id": "https://imadtbn.github.io/dz_portal/#organization" }
         },
         {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "التربية والتعليم",
-          "item": "https://imadtbn.github.io/dz_portal/sectors/education.html"
+          "@type": "Organization",
+          "@id": "https://imadtbn.github.io/dz_portal/#organization",
+          "name": "البوابة الجزائرية للخدمات الرقمية",
+          "url": "https://imadtbn.github.io/dz_portal/",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://imadtbn.github.io/dz_portal/icons/icon.png"
+          },
+          "email": "tabaniimadeddine@gmail.com",
+          "telephone": "+213697743721",
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "contactType": "customer support",
+            "areaServed": "DZ",
+            "availableLanguage": ["ar", "fr"]
+          },
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "الجزائر",
+            "addressCountry": "DZ"
+          },
+          "sameAs": [
+            "https://imadtbn.github.io/dz_portal/"
+          ]
         },
         {
-          "@type": "ListItem",
-          "position": 3,
-          "name": "dzexams",
-          "item": "https://imadtbn.github.io/dz_portal/sectors/dzexams.html"
+          "@type": "WebPage",
+          "@id": "https://imadtbn.github.io/dz_portal/sectors/dzexams.html#webpage",
+          "url": "https://imadtbn.github.io/dz_portal/sectors/dzexams.html",
+          "name": "dzexams - بنك الامتحانات موقع التعليم الجزائري",
+          "description": "جميع الخدمات الرقمية لوزارة التربية الوطنية - التسجيل في الامتحانات، النتائج، فضاء الأستاذ والولي",
+          "keywords": "dzexams, بنك الفروض والاختبارات, فروض واختبارات الجزائر, نماذج البكالوريا 2026, شهادة التعليم المتوسط, امتحانات الابتدائي, التصحيح النموذجي, موقع الدراسة الجزائري",
+          "inLanguage": "ar-DZ",
+          "isPartOf": { "@id": "https://imadtbn.github.io/dz_portal/#website" },
+          "publisher": { "@id": "https://imadtbn.github.io/dz_portal/#organization" },
+          "primaryImageOfPage": {
+            "@type": "ImageObject",
+            "url": "https://imadtbn.github.io/dz_portal/assets/images/dzexams.png"
+          },
+          "breadcrumb": { "@id": "https://imadtbn.github.io/dz_portal/sectors/dzexams.html#breadcrumb" },
+          "datePublished": "2025-01-01",
+          "dateModified": "2025-01-15",
+          "mainEntity": { "@id": "#services-list" }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://imadtbn.github.io/dz_portal/sectors/dzexams.html#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "الرئيسية",
+              "item": "https://imadtbn.github.io/dz_portal/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "التربية والتعليم",
+              "item": "https://imadtbn.github.io/dz_portal/sectors/education.html"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "dzexams",
+              "item": "https://imadtbn.github.io/dz_portal/sectors/dzexams.html"
+            }
+          ]
+        },
+        {
+          "@type": "ItemList",
+          "@id": "#services-list",
+          "name": "خدمات dzexams التعليمية",
+          "description": "قائمة بجميع الفروض والاختبارات لجميع المستويات التعليمية في الجزائر",
+          "numberOfItems": 22,
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "item": {
+                "@type": "Service",
+                "name": "القسم التحضيري",
+                "description": "نماذج الإختبارات والتمارين للقسم التحضيري",
+                "url": "https://www.dzexams.com/ar/0ap",
+                "provider": { "@id": "https://imadtbn.github.io/dz_portal/#organization" },
+                "category": "Primary Education",
+                "potentialAction": { "@type": "UseAction", "target": "https://www.dzexams.com/ar/0ap" }
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "item": {
+                "@type": "Service",
+                "name": "السنة الأولى إبتدائي",
+                "description": "نماذج اختبارية للسنة الأولى إبتدائي",
+                "url": "https://www.dzexams.com/ar/1ap",
+                "provider": { "@id": "https://imadtbn.github.io/dz_portal/#organization" },
+                "category": "Primary Education",
+                "potentialAction": { "@type": "UseAction", "target": "https://www.dzexams.com/ar/1ap" }
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "item": {
+                "@type": "Service",
+                "name": "السنة الثانية إبتدائي",
+                "description": "نماذج اختبارية للسنة الثانية إبتدائي",
+                "url": "https://www.dzexams.com/ar/2ap",
+                "provider": { "@id": "https://imadtbn.github.io/dz_portal/#organization" },
+                "category": "Primary Education",
+                "potentialAction": { "@type": "UseAction", "target": "https://www.dzexams.com/ar/2ap" }
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 4,
+              "item": {
+                "@type": "Service",
+                "name": "السنة الثالثة إبتدائي",
+                "description": "نماذج اختبارية للسنة الثالثة إبتدائي",
+                "url": "https://www.dzexams.com/ar/3ap",
+                "provider": { "@id": "https://imadtbn.github.io/dz_portal/#organization" },
+                "category": "Primary Education",
+                "potentialAction": { "@type": "UseAction", "target": "https://www.dzexams.com/ar/3ap" }
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 5,
+              "item": {
+                "@type": "Service",
+                "name": "السنة الرابعة إبتدائي",
+                "description": "نماذج اختبارية للسنة الرابعة إبتدائي",
+                "url": "https://www.dzexams.com/ar/4ap",
+                "provider": { "@id": "https://imadtbn.github.io/dz_portal/#organization" },
+                "category": "Primary Education",
+                "potentialAction": { "@type": "UseAction", "target": "https://www.dzexams.com/ar/4ap" }
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 6,
+              "item": {
+                "@type": "Service",
+                "name": "السنة الخامسة إبتدائي",
+                "description": "نماذج اختبارية للسنة الخامسة إبتدائي",
+                "url": "https://www.dzexams.com/ar/5ap",
+                "provider": { "@id": "https://imadtbn.github.io/dz_portal/#organization" },
+                "category": "Primary Education",
+                "potentialAction": { "@type": "UseAction", "target": "https://www.dzexams.com/ar/5ap" }
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 7,
+              "item": {
+                "@type": "Service",
+                "name": "شهادة التعليم الابتدائي",
+                "description": "مواضيع وحلول شهادة التعليم الابتدائي",
+                "url": "https://www.dzexams.com/ar/bep",
+                "provider": { "@id": "https://imadtbn.github.io/dz_portal/#organization" },
+                "category": "Primary Education",
+                "potentialAction": { "@type": "UseAction", "target": "https://www.dzexams.com/ar/bep" }
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 8,
+              "item": {
+                "@type": "Service",
+                "name": "السنة الأولى متوسط",
+                "description": "نماذج الفروض والإختبارات للسنة الأولى متوسط",
+                "url": "https://www.dzexams.com/ar/1im",
+                "provider": { "@id": "https://imadtbn.github.io/dz_portal/#organization" },
+                "category": "Middle School Education",
+                "potentialAction": { "@type": "UseAction", "target": "https://www.dzexams.com/ar/1im" }
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 9,
+              "item": {
+                "@type": "Service",
+                "name": "السنة الثانية متوسط",
+                "description": "نماذج الفروض والإختبارات للسنة الثانية متوسط",
+                "url": "https://www.dzexams.com/ar/2im",
+                "provider": { "@id": "https://imadtbn.github.io/dz_portal/#organization" },
+                "category": "Middle School Education",
+                "potentialAction": { "@type": "UseAction", "target": "https://www.dzexams.com/ar/2im" }
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 10,
+              "item": {
+                "@type": "Service",
+                "name": "السنة الثالثة متوسط",
+                "description": "نماذج الفروض والإختبارات للسنة الثالثة متوسط",
+                "url": "https://www.dzexams.com/ar/3im",
+                "provider": { "@id": "https://imadtbn.github.io/dz_portal/#organization" },
+                "category": "Middle School Education",
+                "potentialAction": { "@type": "UseAction", "target": "https://www.dzexams.com/ar/3im" }
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 11,
+              "item": {
+                "@type": "Service",
+                "name": "السنة الرابعة متوسط",
+                "description": "نماذج الفروض والإختبارات للسنة الرابعة متوسط",
+                "url": "https://www.dzexams.com/ar/4im",
+                "provider": { "@id": "https://imadtbn.github.io/dz_portal/#organization" },
+                "category": "Middle School Education",
+                "potentialAction": { "@type": "UseAction", "target": "https://www.dzexams.com/ar/4im" }
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 12,
+              "item": {
+                "@type": "Service",
+                "name": "شهادة التعليم المتوسط (BEM)",
+                "description": "مواضيع وحلول شهادة التعليم المتوسط",
+                "url": "https://www.dzexams.com/ar/bem",
+                "provider": { "@id": "https://imadtbn.github.io/dz_portal/#organization" },
+                "category": "Middle School Education",
+                "potentialAction": { "@type": "UseAction", "target": "https://www.dzexams.com/ar/bem" }
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 13,
+              "item": {
+                "@type": "Service",
+                "name": "السنة الأولى ثانوي",
+                "description": "نماذج الفروض والإختبارات للسنة الأولى ثانوي",
+                "url": "https://www.dzexams.com/ar/1as",
+                "provider": { "@id": "https://imadtbn.github.io/dz_portal/#organization" },
+                "category": "High School Education",
+                "potentialAction": { "@type": "UseAction", "target": "https://www.dzexams.com/ar/1as" }
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 14,
+              "item": {
+                "@type": "Service",
+                "name": "السنة الثانية ثانوي",
+                "description": "نماذج الفروض والإختبارات للسنة الثانية ثانوي",
+                "url": "https://www.dzexams.com/ar/2as",
+                "provider": { "@id": "https://imadtbn.github.io/dz_portal/#organization" },
+                "category": "High School Education",
+                "potentialAction": { "@type": "UseAction", "target": "https://www.dzexams.com/ar/2as" }
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 15,
+              "item": {
+                "@type": "Service",
+                "name": "السنة الثالثة ثانوي",
+                "description": "نماذج الفروض والإختبارات للسنة الثالثة ثانوي",
+                "url": "https://www.dzexams.com/ar/3as",
+                "provider": { "@id": "https://imadtbn.github.io/dz_portal/#organization" },
+                "category": "High School Education",
+                "potentialAction": { "@type": "UseAction", "target": "https://www.dzexams.com/ar/3as" }
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 16,
+              "item": {
+                "@type": "Service",
+                "name": "شهادة البكالوريا",
+                "description": "مواضيع وحلول إختبارات شهادة البكالوريا",
+                "url": "https://www.dzexams.com/ar/bac",
+                "provider": { "@id": "https://imadtbn.github.io/dz_portal/#organization" },
+                "category": "High School Education",
+                "potentialAction": { "@type": "UseAction", "target": "https://www.dzexams.com/ar/bac" }
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 17,
+              "item": {
+                "@type": "Service",
+                "name": "مكتبة تعليمية",
+                "description": "مكتبة تعليمية غنية بالقصص، الكتب، الألغاز، والمسائل اللغوية والرياضية للأطفال",
+                "url": "https://www.dzexams.com/ar/library",
+                "provider": { "@id": "https://imadtbn.github.io/dz_portal/#organization" },
+                "category": "Educational Resource",
+                "potentialAction": { "@type": "UseAction", "target": "https://www.dzexams.com/ar/library" }
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 18,
+              "item": {
+                "@type": "Service",
+                "name": "القرآن الكريم",
+                "description": "القرآن الكريم",
+                "url": "https://www.dzexams.com/ar/quran",
+                "provider": { "@id": "https://imadtbn.github.io/dz_portal/#organization" },
+                "category": "Religious",
+                "potentialAction": { "@type": "UseAction", "target": "https://www.dzexams.com/ar/quran" }
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 19,
+              "item": {
+                "@type": "Service",
+                "name": "وثائق بيداغوجية",
+                "description": "وثائق بيداغوجية للأساتذة",
+                "url": "https://www.dzexams.com/ar/teacher",
+                "provider": { "@id": "https://imadtbn.github.io/dz_portal/#organization" },
+                "category": "Teacher Resources",
+                "potentialAction": { "@type": "UseAction", "target": "https://www.dzexams.com/ar/teacher" }
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 20,
+              "item": {
+                "@type": "Service",
+                "name": "قنوات تعليمية",
+                "description": "قنوات تعليمية متنوعة",
+                "url": "https://www.dzexams.com/ar/youtube",
+                "provider": { "@id": "https://imadtbn.github.io/dz_portal/#organization" },
+                "category": "Video Learning",
+                "potentialAction": { "@type": "UseAction", "target": "https://www.dzexams.com/ar/youtube" }
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 21,
+              "item": {
+                "@type": "Service",
+                "name": "نصائح و توجيهات",
+                "description": "نصائح و توجيهات تعليمية",
+                "url": "https://www.dzexams.com/ar/advices",
+                "provider": { "@id": "https://imadtbn.github.io/dz_portal/#organization" },
+                "category": "Advice",
+                "potentialAction": { "@type": "UseAction", "target": "https://www.dzexams.com/ar/advices" }
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 22,
+              "item": {
+                "@type": "Service",
+                "name": "أخبار قطاع التربية",
+                "description": "الأخبار الرسمية لقطاع التربية والتعليم في الجزائر",
+                "url": "https://www.dzexams.com/ar/news",
+                "provider": { "@id": "https://imadtbn.github.io/dz_portal/#organization" },
+                "category": "News",
+                "potentialAction": { "@type": "UseAction", "target": "https://www.dzexams.com/ar/news" }
+              }
+            }
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://imadtbn.github.io/dz_portal/sectors/dzexam1.html#website",
+          "name": "dzexam1",
+          "url": "https://imadtbn.github.io/dz_portal/sectors/dzexam1.html",
+          "description": "منصة تعليمية جزائرية",
+          "inLanguage": "ar"
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://imadtbn.github.io/dz_portal/sectors/dzexams.pro.html#website",
+          "name": "DzExam.Pro",
+          "url": "https://imadtbn.github.io/dz_portal/sectors/dzexams.pro.html",
+          "description": "منصة متخصصة في الامتحانات",
+          "inLanguage": "ar"
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://imadtbn.github.io/dz_portal/sectors/eddirasa.html#website",
+          "name": "Eddirasa",
+          "url": "https://imadtbn.github.io/dz_portal/sectors/eddirasa.html",
+          "description": "موقع الدراسة الجزائري",
+          "inLanguage": "ar"
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://imadtbn.github.io/dz_portal/sectors/etudpdf.html#website",
+          "name": "etudpdf",
+          "url": "https://imadtbn.github.io/dz_portal/sectors/etudpdf.html",
+          "description": "كتب وملفات تعليمية PDF",
+          "inLanguage": "ar"
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://imadtbn.github.io/dz_portal/sectors/educationdz.html#website",
+          "name": "Educationdz",
+          "url": "https://imadtbn.github.io/dz_portal/sectors/educationdz.html",
+          "description": "بوابة التعليم في الجزائر",
+          "inLanguage": "ar"
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://imadtbn.github.io/dz_portal/sectors/ecolerradja.html#website",
+          "name": "ecolerradja",
+          "url": "https://imadtbn.github.io/dz_portal/sectors/ecolerradja.html",
+          "description": "مدرسة الرجاء التعليمية",
+          "inLanguage": "ar"
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://imadtbn.github.io/dz_portal/sectors/dztests.html#website",
+          "name": "dztests",
+          "url": "https://imadtbn.github.io/dz_portal/sectors/dztests.html",
+          "description": "اختبارات جزائرية متنوعة",
+          "inLanguage": "ar"
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://imadtbn.github.io/dz_portal/sectors/t-onec.html#website",
+          "name": "t-onec",
+          "url": "https://imadtbn.github.io/dz_portal/sectors/t-onec.html",
+          "description": "منصة Onec التعليمية",
+          "inLanguage": "ar"
         }
       ]
     }
-
-  ]
-}
-</script>
+    </script>
 
     <link rel="canonical" href="https://imadtbn.github.io/dz_portal/sectors/dzexams.html">
     <meta name="robots" content="index, follow">
