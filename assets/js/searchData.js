@@ -685,7 +685,20 @@ const searchData = [
             "مستشفى",
             "علاج",
             "دواء",
-            "صحة"
+            "صحة",
+            "الصحة العمومية",
+                        "التكوين في الشبه طبي",
+                        "تطبيقات الصحة",
+                        "العيادة الرقمية",
+                        "بنك الدم الجزائري",
+                        "أطباء الجزائر",
+                        "الطبيب الجزائري",
+                        "Plateforme",
+                        "Plateforme Numérique Nationale",
+                        "Plateforme Numérique Nationale de gestion des
+                        Équivalences des Diplômes ",
+                        "Équivalences des Diplômes",
+                        "شهاد المعادلة"
         ]
     },
     {
