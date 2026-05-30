@@ -66,6 +66,7 @@ body {
     0% {
         transform: translate(0, 0);
     }
+
     100% {
         transform: translate(-60px, -60px);
     }
@@ -95,10 +96,12 @@ body {
 }
 
 @keyframes pulse {
+
     0%,
     100% {
         box-shadow: 0 0 0 0 rgba(255, 215, 0, 0.4);
     }
+
     50% {
         box-shadow: 0 0 0 10px rgba(255, 215, 0, 0);
     }
@@ -466,9 +469,11 @@ body {
     .stats-bar {
         gap: 1.5rem;
     }
+
     .sectors-grid {
         grid-template-columns: 1fr;
     }
+
     .quick-access {
         margin: 1rem;
     }
@@ -664,10 +669,12 @@ body {
 }
 
 @keyframes heartbeat {
+
     0%,
     100% {
         transform: scale(1);
     }
+
     50% {
         transform: scale(1.2);
     }
@@ -692,6 +699,7 @@ body {
         opacity: 0;
         transform: translateY(-20px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -705,15 +713,19 @@ body {
     .contact-cards {
         grid-template-columns: 1fr;
     }
+
     .contact-section {
         grid-template-columns: 1fr;
     }
+
     .contact-info-side {
         order: 2;
     }
+
     .faq-grid {
         grid-template-columns: 1fr;
     }
+
     .footer-content {
         grid-template-columns: 1fr 1fr;
     }
@@ -723,10 +735,12 @@ body {
     .form-row {
         grid-template-columns: 1fr;
     }
+
     .footer-content {
         grid-template-columns: 1fr;
         gap: 2rem;
     }
+
     .page-hero h2 {
         font-size: 1.75rem;
     }
@@ -776,6 +790,7 @@ body {
         width: 55px;
         height: 55px;
     }
+
     .sector-icon img {
         width: 65%;
         height: 65%;
@@ -864,10 +879,12 @@ body {
 ========================= */
 
 @keyframes floatBadge {
+
     0%,
     100% {
         transform: translateY(0);
     }
+
     50% {
         transform: translateY(-6px);
     }
@@ -883,13 +900,16 @@ body {
         gap: 10px;
         padding: 10px 14px;
     }
+
     .app-icon {
         width: 52px;
         height: 52px;
     }
+
     .badge-title {
         font-size: .92rem;
     }
+
     .badge-subtitle {
         font-size: .75rem;
     }
@@ -1050,7 +1070,6 @@ body {
     border-radius: 50px;
     color: var(--gold);
     margin-bottom: 2rem;
-    border: 1.5px solid rgba(255, 215, 0, 0.3);
     animation: pulse 2s infinite;
 }
 
@@ -1069,30 +1088,36 @@ body {
         transform: scale(.9);
         opacity: .5;
     }
+
     70% {
         transform: scale(1.4);
         opacity: 0;
     }
+
     100% {
         opacity: 0;
     }
 }
 
 @keyframes pulseIcon {
+
     0%,
     100% {
         transform: scale(1);
     }
+
     50% {
         transform: scale(1.08);
     }
 }
 
 @keyframes floatBtn {
+
     0%,
     100% {
         transform: translateY(0);
     }
+
     50% {
         transform: translateY(-5px);
     }
@@ -1107,12 +1132,15 @@ body {
         padding: 1rem;
         border-radius: 18px;
     }
+
     .download-title {
         font-size: 1rem;
     }
+
     .download-subtitle {
         font-size: .82rem;
     }
+
     .download-icon {
         width: 55px;
         height: 55px;
@@ -1346,7 +1374,7 @@ body {
     left: -120%;
     width: 80%;
     height: 100%;
-    background: linear-gradient( 120deg, transparent, rgba(255, 255, 255, .4), transparent);
+    background: linear-gradient(120deg, transparent, rgba(255, 255, 255, .4), transparent);
     transition: .7s;
 }
 
@@ -1362,19 +1390,81 @@ body {
         padding: 1.5rem 1rem;
         border-radius: 20px;
     }
+
     .seo-tags-header h2 {
         font-size: 1.5rem;
     }
+
     .seo-tags-header p {
         font-size: .95rem;
     }
+
     .tags-cloud {
         gap: .7rem;
     }
+
     .seo-tag {
         width: 100%;
         justify-content: center;
         font-size: .92rem;
         padding: .9rem 1rem;
+    }
+}
+
+/* شارة جديد */
+.service-badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
+    padding: 6px 14px;
+
+    background: linear-gradient(135deg,
+            #006233 0%,
+            #008f4f 100%);
+
+    color: #fff;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: .3px;
+
+    border-radius: 50px;
+
+    box-shadow:
+        0 4px 12px rgba(0, 98, 51, .25),
+        0 2px 4px rgba(0, 0, 0, .08);
+
+    z-index: 10;
+
+    transition: all .3s ease;
+}
+
+.service-badge i {
+    font-size: 11px;
+}
+
+.sector-card:hover .service-badge {
+    transform: translateY(-2px) scale(1.05);
+}
+
+.service-badge {
+    animation: badgePulse 2.5s infinite;
+}
+
+@keyframes badgePulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(0, 98, 51, .4);
+    }
+
+    70% {
+        box-shadow: 0 0 0 10px rgba(0, 98, 51, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(0, 98, 51, 0);
     }
 }
