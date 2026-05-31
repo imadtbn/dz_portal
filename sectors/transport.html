@@ -58,11 +58,10 @@
     <link rel="stylesheet" href="../assets/css/style-sector.css">
 
     <!-- Structured Data -->
-    <script type="application/ld+json">
+<script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@graph": [
-
     {
       "@type": "WebSite",
       "@id": "https://imadtbn.github.io/dz_portal/#website",
@@ -71,11 +70,8 @@
       "alternateName": "DZ Portal",
       "description": "بوابة جزائرية تجمع الخدمات الرقمية الحكومية والعمومية في مكان واحد لتسهيل الوصول إليها.",
       "inLanguage": "ar-DZ",
-      "publisher": {
-        "@id": "https://imadtbn.github.io/dz_portal/#organization"
-      }
+      "publisher": { "@id": "https://imadtbn.github.io/dz_portal/#organization" }
     },
-
     {
       "@type": "Organization",
       "@id": "https://imadtbn.github.io/dz_portal/#organization",
@@ -88,18 +84,20 @@
       },
       "email": "mailto:tabaniimadeddine@gmail.com",
       "telephone": "+213697743721",
-      "sameAs": [
-        "https://imadtbn.github.io/dz_portal/"
-      ]
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer support",
+        "areaServed": "DZ",
+        "availableLanguage": ["ar", "fr"]
+      },
+      "sameAs": [ "https://imadtbn.github.io/dz_portal/" ]
     },
-
     {
       "@type": "ImageObject",
       "@id": "https://imadtbn.github.io/dz_portal/assets/images/transport.svg",
       "url": "https://imadtbn.github.io/dz_portal/assets/images/transport.svg",
       "name": "النقل والمواصلات في الجزائر"
     },
-
     {
       "@type": "CollectionPage",
       "@id": "https://imadtbn.github.io/dz_portal/sectors/transport.html#webpage",
@@ -108,43 +106,16 @@
       "headline": "النقل والمواصلات في الجزائر",
       "description": "دليل رقمي شامل لخدمات النقل والمواصلات في الجزائر، يشمل حجز التذاكر، مواقيت القطارات، النقل البحري، النقل الجوي، وتطبيقات التنقل الذكية.",
       "inLanguage": "ar-DZ",
-      "isPartOf": {
-        "@id": "https://imadtbn.github.io/dz_portal/#website"
-      },
-      "about": {
-        "@id": "https://imadtbn.github.io/dz_portal/#organization"
-      },
-      "publisher": {
-        "@id": "https://imadtbn.github.io/dz_portal/#organization"
-      },
-      "primaryImageOfPage": {
-        "@id": "https://imadtbn.github.io/dz_portal/assets/images/transport.svg"
-      },
-      "breadcrumb": {
-        "@id": "https://imadtbn.github.io/dz_portal/sectors/transport.html#breadcrumb"
-      },
+      "isPartOf": { "@id": "https://imadtbn.github.io/dz_portal/#website" },
+      "about": { "@id": "https://imadtbn.github.io/dz_portal/#organization" },
+      "publisher": { "@id": "https://imadtbn.github.io/dz_portal/#organization" },
+      "primaryImageOfPage": { "@id": "https://imadtbn.github.io/dz_portal/assets/images/transport.svg" },
+      "breadcrumb": { "@id": "https://imadtbn.github.io/dz_portal/sectors/transport.html#breadcrumb" },
       "datePublished": "2025-01-01",
-      "dateModified": "2026-05-30",
-      "keywords": [
-        "النقل والمواصلات",
-        "النقل الرقمي",
-        "حجز التذاكر",
-        "الخطوط الجوية الجزائرية",
-        "طيران الطاسيلي",
-        "النقل البحري",
-        "السكك الحديدية",
-        "SNTF",
-        "ترامواي الجزائر",
-        "الحافلات",
-        "تطبيقات النقل",
-        "Flightradar24",
-        "Etusa Mob",
-        "محطتي",
-        "Volz",
-        "الخدمات الرقمية في الجزائر"
-      ]
+      "dateModified": "2025-01-20",
+      "keywords": ["النقل والمواصلات", "النقل الرقمي", "حجز التذاكر", "الخطوط الجوية الجزائرية", "طيران الطاسيلي", "النقل البحري", "السكك الحديدية", "SNTF", "ترامواي الجزائر", "الحافلات", "تطبيقات النقل", "Flightradar24", "Etusa Mob", "محطتي", "Volz", "الخدمات الرقمية في الجزائر"],
+      "mainEntity": { "@id": "#transport-services-list" }
     },
-
     {
       "@type": "BreadcrumbList",
       "@id": "https://imadtbn.github.io/dz_portal/sectors/transport.html#breadcrumb",
@@ -162,8 +133,146 @@
           "item": "https://imadtbn.github.io/dz_portal/sectors/transport.html"
         }
       ]
+    },
+    {
+      "@type": "ItemList",
+      "@id": "#transport-services-list",
+      "name": "خدمات النقل والمواصلات الرقمية في الجزائر",
+      "description": "قائمة شاملة بخدمات النقل الجوي والبحري والبري والتطبيقات المرتبطة بها",
+      "numberOfItems": 10,
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "item": {
+            "@type": "Service",
+            "name": "حجز تذاكر الخطوط الجوية الجزائرية",
+            "description": "حجز تذاكر الطيران عبر الخطوط الجوية الجزائرية",
+            "url": "https://airalgerie.dz/ar/%d8%a7%d9%84%d8%ad%d8%ac%d8%b2/",
+            "provider": { "@id": "https://imadtbn.github.io/dz_portal/#organization" },
+            "category": "النقل الجوي",
+            "potentialAction": { "@type": "UseAction", "target": "https://airalgerie.dz/ar/%d8%a7%d9%84%d8%ad%d8%ac%d8%b2/" }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "item": {
+            "@type": "Service",
+            "name": "حجز تذاكر طيران الطاسيلي",
+            "description": "حجز تذاكر طيران الطاسيلي",
+            "url": "https://tassiliairlines.dz/",
+            "provider": { "@id": "https://imadtbn.github.io/dz_portal/#organization" },
+            "category": "النقل الجوي",
+            "potentialAction": { "@type": "UseAction", "target": "https://tassiliairlines.dz/" }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "item": {
+            "@type": "Service",
+            "name": "حجز تذاكر النقل البحري",
+            "description": "حجز تذاكر النقل البحري عبر Algérie Ferries",
+            "url": "https://afs.algerieferries.dz/booking/step1",
+            "provider": { "@id": "https://imadtbn.github.io/dz_portal/#organization" },
+            "category": "النقل البحري",
+            "potentialAction": { "@type": "UseAction", "target": "https://afs.algerieferries.dz/booking/step1" }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "item": {
+            "@type": "Service",
+            "name": "مواقيت سير القطارات SNTF",
+            "description": "الشركة الوطنية للنقل بالسكك الحديدية - مواقيت القطارات",
+            "url": "https://www.sntf.dz/index.php/",
+            "provider": { "@id": "https://imadtbn.github.io/dz_portal/#organization" },
+            "category": "النقل البري",
+            "potentialAction": { "@type": "UseAction", "target": "https://www.sntf.dz/index.php/" }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "item": {
+            "@type": "SoftwareApplication",
+            "name": "Flightradar24",
+            "description": "تطبيق لتتبع حركة الملاحة الجوية في الوقت الحقيقي",
+            "applicationCategory": "Navigation",
+            "operatingSystem": "Android, iOS",
+            "url": "https://www.flightradar24.com/36.17,3.25/7",
+            "provider": { "@id": "https://imadtbn.github.io/dz_portal/#organization" }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 6,
+          "item": {
+            "@type": "SoftwareApplication",
+            "name": "تواصل للترامواي",
+            "description": "تطبيق 'تواصل' للترامواي",
+            "applicationCategory": "Travel",
+            "operatingSystem": "Android",
+            "url": "https://play.google.com/store/apps/details?id=dz.setram.AppEtwassel",
+            "provider": { "@id": "https://imadtbn.github.io/dz_portal/#organization" }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 7,
+          "item": {
+            "@type": "SoftwareApplication",
+            "name": "محطتي - SOGRAL",
+            "description": "تطبيق 'محطتي' للخطوط البرية سوقرال",
+            "applicationCategory": "Travel",
+            "operatingSystem": "Android",
+            "url": "https://play.google.com/store/apps/details?id=com.sogral.mobile&amp;hl=ar",
+            "provider": { "@id": "https://imadtbn.github.io/dz_portal/#organization" }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 8,
+          "item": {
+            "@type": "SoftwareApplication",
+            "name": "Etusa Mob",
+            "description": "تطبيق 'Etusa Mob' لمؤسسة النقل الحضري وشبه الحضري",
+            "applicationCategory": "Travel",
+            "operatingSystem": "Android",
+            "url": "https://play.google.com/store/apps/details?id=com.sogral.mobile&amp;hl=ar",
+            "provider": { "@id": "https://imadtbn.github.io/dz_portal/#organization" }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 9,
+          "item": {
+            "@type": "SoftwareApplication",
+            "name": "Volz",
+            "description": "احجز تذاكر طيرانك من الجزائر عبر Volz",
+            "applicationCategory": "Travel",
+            "operatingSystem": "Web, Android, iOS",
+            "url": "https://volz.app/ar",
+            "provider": { "@id": "https://imadtbn.github.io/dz_portal/#organization" }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 10,
+          "item": {
+            "@type": "Service",
+            "name": "التبليغ لدى وزارة النقل",
+            "description": "خدمة التبليغ عن مشاكل النقل لدى وزارة النقل",
+            "url": "https://play.google.com/store/apps/details?id=dz.sebrou.docts_guide.app&hl=ar",
+            "provider": { "@id": "https://imadtbn.github.io/dz_portal/#organization" },
+            "category": "خدمات المواطن",
+            "potentialAction": { "@type": "UseAction", "target": "https://play.google.com/store/apps/details?id=dz.sebrou.docts_guide.app&hl=ar" }
+          }
+        }
+      ]
     }
-
   ]
 }
 </script>
