@@ -923,12 +923,6 @@
           <span class="stat-label">خدمة متواصلة</span>
         </div>
 
-        <!--عداد الخدمات-->
-        <button id="newServicesBtn" class="filter-btn">
-          الخدمات الجديدة
-          <span class="new-count" id="newServicesCount"></span>
-        </button>
-
       </div>
 
       <!--محرك البحث -->
@@ -990,16 +984,6 @@
     </a>
   </div>
 
-  <!--أزرار الفلترة-->
-  <div class="filter-actions">
-    <button class="filter-btn active" data-filter="all">
-      جميع الخدمات
-    </button>
-    <button class="filter-btn" data-filter="new">
-      الخدمات الجديدة
-    </button>
-  </div>
-
   <!-- إعلان صوري -->
   <div class="ad-container">
     <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8310657804532081" data-ad-slot="3972494044"
@@ -1011,6 +995,7 @@
 
   <!-- Sectors Grid -->
   <section class="sectors-section" id="sectors">
+
     <div class="section-header">
       <h2>القطاعات الحكومية</h2>
       <p>اختر القطاع للوصول إلى الخدمات الرقمية المتاحة</p>
@@ -1043,6 +1028,21 @@
     <script>
       (adsbygoogle = window.adsbygoogle || []).push({});
     </script>
+
+    <!--أزرار الفلترة-->
+    <div class="filter-actions">
+      <button class="filter-btn active" data-filter="all">
+        جميع الخدمات
+      </button>
+
+      <!--عداد الخدمات-->
+      <button id="newServicesBtn" class="filter-btn">
+        الخدمات الجديدة
+        <span class="new-count" id="newServicesCount"></span>
+      </button>
+    </div>
+
+
 
     <div class="sectors-grid">
       <!-- التربية والتعليم -->
@@ -1799,8 +1799,8 @@
         <div class="sector-icon">
           <img src="assets/images/facteur_loyer.png" alt="فاتورة إستئجار السكن" loading="lazy" width="120" height="120">
         </div>
-        <h3 class="sector-title">فاتورة الإستئجار للسكن</h3>
-        <p class="sector-desc">دفع تكاليف الإيجار aadl, enpi, opgi</p>
+        <h3 class="sector-title">تسديد تكاليف إيجار السكن</h3>
+        <p class="sector-desc">دفع تكاليف الإيجار للسكن aadl, enpi, opgi</p>
       </a>
 
       <!-- خدمات البنوك والمالية -->
@@ -1842,7 +1842,6 @@
         <p class="sector-desc">--- قيد التصميم ---- </p>
       </a>
     </div>
-
 
     <!-- الإعلانات المتعددة -->
     <div class="ad-container">
@@ -1931,7 +1930,7 @@
       </a>
       <a href="sectors/facture_loyer.html" class="seo-tag">
         <i class="fas fa-home"></i>
-        #فاتورة الكراء
+        #تكاليف كراء السكن
       </a>
 
     </div>
