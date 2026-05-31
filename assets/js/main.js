@@ -165,3 +165,64 @@ window.addEventListener('beforeinstallprompt', (e) => {
     deferredPrompt = null;
   });
 });
+
+
+// زر الفلترة والعداد
+
+const filterBtns = document.querySelectorAll('.filter-btn');
+const cards = document.querySelectorAll('.sector-card');
+
+filterBtns.forEach(btn => {
+
+    btn.addEventListener('click', () => {
+
+        filterBtns.forEach(b =>
+            b.classList.remove('active')
+        );
+
+        btn.classList.add('active');
+
+        const filter = btn.dataset.filter;
+
+        cards.forEach(card => {
+
+            const isNew =
+                card.querySelector('.service-badge');
+
+            if(filter === 'all'){
+                card.style.display = '';
+            }
+            else{
+                card.style.display =
+                    isNew ? '' : 'none';
+            }
+
+        });
+
+    });
+
+});
+
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    const btn = document.getElementById("newServicesBtn");
+
+    const count = document.querySelectorAll(
+        ".sector-card[data-new='true']"
+    ).length;
+
+    if (count > 0) {
+
+        btn.innerHTML = `
+            <i class="fas fa-sparkles"></i>
+            الخدمات الجديدة (${count})
+        `;
+
+    } else {
+
+        btn.style.display = "none";
+
+    }
+
+});
