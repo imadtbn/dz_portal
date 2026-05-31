@@ -265,6 +265,8 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    content-visibility: auto;
+    contain-intrinsic-size: 300px;
 }
 
 .sector-card::before {
@@ -1467,4 +1469,111 @@ body {
     100% {
         box-shadow: 0 0 0 0 rgba(0, 98, 51, 0);
     }
+}
+
+/*--- أزرار الفلترة والعداد---*/
+.filter-actions {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.filter-btn {
+    border: none;
+    padding: 12px 20px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-family: inherit;
+    font-weight: 700;
+}
+
+.filter-btn.active {
+    background: #006233;
+    color: #fff;
+}
+
+.new-count{
+    position:relative;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+
+    min-width:30px;
+    height:30px;
+    padding:0 10px;
+
+    background:linear-gradient(
+        135deg,
+        #006233,
+        #00994d
+    );
+
+    color:#fff;
+    font-size:.85rem;
+    font-weight:800;
+
+    border-radius:50px;
+    border:1px solid rgba(255,255,255,.4);
+
+    box-shadow:
+        0 4px 15px rgba(0,98,51,.25);
+
+    overflow:hidden;
+}
+
+.new-count::before{
+    content:'';
+    position:absolute;
+    top:0;
+    left:-100%;
+    width:60%;
+    height:100%;
+
+    background:linear-gradient(
+        90deg,
+        transparent,
+        rgba(255,255,255,.5),
+        transparent
+    );
+
+    animation:shine 3s infinite;
+}
+
+@keyframes shine{
+    100%{
+        left:180%;
+    }
+}
+
+#newServicesBtn{
+    display:flex;
+    align-items:center;
+    gap:10px;
+
+    padding:12px 22px;
+
+    background:#fff;
+    color:#006233;
+
+    border:2px solid #006233;
+    border-radius:50px;
+
+    font-weight:700;
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+#newServicesBtn:hover{
+    background:#006233;
+    color:#fff;
+    transform:translateY(-2px);
+}
+
+.filter-btn:hover .new-count{
+    transform:scale(1.08);
+    box-shadow:
+        0 6px 18px rgba(0,98,51,.35),
+        0 0 0 4px rgba(0,98,51,.12);
 }
