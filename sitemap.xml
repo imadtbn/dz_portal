@@ -24,32 +24,32 @@
   <url>
     <loc>https://imadtbn.github.io/dz_portal/pages/about.html</loc>
     <lastmod>2026-05-12</lastmod>
-    <changefreq>monthly</changefreq>
+    <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://imadtbn.github.io/dz_portal/pages/contact.html</loc>
     <lastmod>2026-05-12</lastmod>
-    <changefreq>monthly</changefreq>
+    <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://imadtbn.github.io/dz_portal/pages/privacy.html</loc>
     <lastmod>2026-05-12</lastmod>
-    <changefreq>yearly</changefreq>
+    <changefreq>weekly</changefreq>
     <priority>0.4</priority>
   </url>
   <url>
     <loc>https://imadtbn.github.io/dz_portal/pages/terms.html</loc>
     <lastmod>2026-05-12</lastmod>
-    <changefreq>yearly</changefreq>
+    <changefreq>weekly</changefreq>
     <priority>0.4</priority>
   </url>
   <!-- ══════════════ قطاع التعليم والتكوين ══════════════ -->
   <url>
     <loc>https://imadtbn.github.io/dz_portal/sectors/education.html</loc>
     <lastmod>2026-05-12</lastmod>
-    <changefreq>monthly</changefreq>
+    <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <image:image>
       <image:loc>https://imadtbn.github.io/dz_portal/assets/images/education.png</image:loc>
@@ -59,7 +59,7 @@
   <url>
     <loc>https://imadtbn.github.io/dz_portal/sectors/progres.mesrs.html</loc>
     <lastmod>2026-05-12</lastmod>
-    <changefreq>monthly</changefreq>
+    <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <image:image>
       <image:loc>https://imadtbn.github.io/dz_portal/assets/images/ESI.png</image:loc>
@@ -69,8 +69,8 @@
   <url>
     <loc>https://imadtbn.github.io/dz_portal/sectors/dzexam1.html</loc>
     <lastmod>2026-05-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
     <image:image>
       <image:loc>https://imadtbn.github.io/dz_portal/assets/images/dzexam.png</image:loc>
       <image:title>dzexam1 - بنك الفروض والاختبارات</image:title>
@@ -79,8 +79,8 @@
     <url>
     <loc>https://imadtbn.github.io/dz_portal/sectors/dzexam.pro.html</loc>
     <lastmod>2026-05-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
     <image:image>
       <image:loc>https://imadtbn.github.io/dz_portal/assets/images/dzexams.pro.webp</image:loc>
       <image:title>dzexam.pro - بنك الفروض والاختبارات</image:title>
@@ -89,8 +89,8 @@
   <url>
     <loc>https://imadtbn.github.io/dz_portal/sectors/dzexams.html</loc>
     <lastmod>2026-05-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
     <image:image>
       <image:loc>https://imadtbn.github.io/dz_portal/assets/images/dzexams.png</image:loc>
       <image:title>dzexams - بنك الفروض والاختبارات</image:title>
@@ -99,8 +99,8 @@
   <url>
     <loc>https://imadtbn.github.io/dz_portal/sectors/mfp.gov.html</loc>
     <lastmod>2026-05-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.1</priority>
     <image:image>
       <image:loc>https://imadtbn.github.io/dz_portal/assets/images/formation.png</image:loc>
       <image:title>التكوين والتعليم المهنيين</image:title>
@@ -110,8 +110,8 @@
   <url>
     <loc>https://imadtbn.github.io/dz_portal/sectors/poste.html</loc>
     <lastmod>2026-05-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
     <image:image>
       <image:loc>https://imadtbn.github.io/dz_portal/assets/images/poste.png</image:loc>
       <image:title>بريد الجزائر</image:title>
@@ -120,8 +120,8 @@
   <url>
     <loc>https://imadtbn.github.io/dz_portal/sectors/algerietelecom.html</loc>
     <lastmod>2026-05-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
     <image:image>
       <image:loc>https://imadtbn.github.io/dz_portal/assets/images/algerietelecom.png</image:loc>
       <image:title>اتصالات الجزائر</image:title>
@@ -130,8 +130,8 @@
   <url>
     <loc>https://imadtbn.github.io/dz_portal/sectors/telephon.html</loc>
     <lastmod>2026-05-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.1</priority>
     <image:image>
       <image:loc>https://imadtbn.github.io/dz_portal/assets/images/service-telephon.png</image:loc>
       <image:title>خدمات الهاتف النقال</image:title>
@@ -140,8 +140,8 @@
   <url>
     <loc>https://imadtbn.github.io/dz_portal/sectors/arpce.html</loc>
     <lastmod>2026-05-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.1</priority>
     <image:image>
       <image:loc>https://imadtbn.github.io/dz_portal/assets/images/arpce.png</image:loc>
       <image:title>سلطة ضبط البريد والاتصالات الإلكترونية ARPCE</image:title>
@@ -151,7 +151,7 @@
   <url>
     <loc>https://imadtbn.github.io/dz_portal/sectors/interieur.html</loc>
     <lastmod>2026-05-12</lastmod>
-    <changefreq>monthly</changefreq>
+    <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <image:image>
       <image:loc>https://imadtbn.github.io/dz_portal/assets/images/inteurier.png</image:loc>
@@ -161,8 +161,8 @@
   <url>
     <loc>https://imadtbn.github.io/dz_portal/sectors/mjustice.html</loc>
     <lastmod>2026-05-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
     <image:image>
       <image:loc>https://imadtbn.github.io/dz_portal/assets/images/justis.png</image:loc>
       <image:title>العدالة</image:title>
@@ -171,8 +171,8 @@
   <url>
     <loc>https://imadtbn.github.io/dz_portal/sectors/dgsn.html</loc>
     <lastmod>2026-05-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.1</priority>
     <image:image>
       <image:loc>https://imadtbn.github.io/dz_portal/assets/images/dgsn.png</image:loc>
       <image:title>الشرطة الجزائرية</image:title>
@@ -181,8 +181,8 @@
   <url>
     <loc>https://imadtbn.github.io/dz_portal/sectors/ina-elections.html</loc>
     <lastmod>2026-05-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.1</priority>
     <image:image>
       <image:loc>https://imadtbn.github.io/dz_portal/assets/images/ina-elections.png</image:loc>
       <image:title>السلطة الوطنية المستقلة للانتخابات</image:title>
@@ -192,8 +192,8 @@
   <url>
     <loc>https://imadtbn.github.io/dz_portal/sectors/mhuv.gov.html</loc>
     <lastmod>2026-05-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
     <image:image>
       <image:loc>https://imadtbn.github.io/dz_portal/assets/images/sakan.png</image:loc>
       <image:title>السكن والعمران</image:title>
@@ -203,8 +203,8 @@
   <url>
     <loc>https://imadtbn.github.io/dz_portal/sectors/mtess.html</loc>
     <lastmod>2026-05-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
     <image:image>
       <image:loc>https://imadtbn.github.io/dz_portal/assets/images/travail.png</image:loc>
       <image:title>التأمينات والضمان الاجتماعي</image:title>
@@ -213,8 +213,8 @@
   <url>
     <loc>https://imadtbn.github.io/dz_portal/sectors/assurance.html</loc>
     <lastmod>2026-05-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.1</priority>
     <image:image>
       <image:loc>https://imadtbn.github.io/dz_portal/assets/images/asserance.jpg</image:loc>
       <image:title>التأمين على الممتلكات</image:title>
@@ -224,8 +224,8 @@
   <url>
     <loc>https://imadtbn.github.io/dz_portal/sectors/mf.gov.html</loc>
     <lastmod>2026-05-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
     <image:image>
       <image:loc>https://imadtbn.github.io/dz_portal/assets/images/finance.png</image:loc>
       <image:title>المالية والجباية</image:title>
@@ -234,8 +234,8 @@
   <url>
     <loc>https://imadtbn.github.io/dz_portal/sectors/qassimatouka.html</loc>
     <lastmod>2026-05-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
     <image:image>
       <image:loc>https://imadtbn.github.io/dz_portal/assets/images/dga.png</image:loc>
       <image:title>المديرية العامة للضرائب</image:title>
@@ -244,8 +244,8 @@
   <url>
     <loc>https://imadtbn.github.io/dz_portal/sectors/tabioucom.html</loc>
     <lastmod>2026-05-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
     <image:image>
       <image:loc>https://imadtbn.github.io/dz_portal/assets/images/dga.png</image:loc>
       <image:title>المديرية العامة للضرائب</image:title>
@@ -254,8 +254,8 @@
   <url>
     <loc>https://imadtbn.github.io/dz_portal/sectors/fadaeldjazair.html</loc>
     <lastmod>2026-05-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
     <image:image>
       <image:loc>https://imadtbn.github.io/dz_portal/assets/images/dga.png</image:loc>
       <image:title>المديرية العامة للضرائب</image:title>
@@ -264,8 +264,8 @@
   <url>
     <loc>https://imadtbn.github.io/dz_portal/sectors/fadaeldjazair.html</loc>
     <lastmod>2026-05-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
     <image:image>
       <image:loc>https://imadtbn.github.io/dz_portal/sectors/nifenligne.html</image:loc>
       <image:title>المديرية العامة للضرائب</image:title>
@@ -274,8 +274,8 @@
   <url>
     <loc>https://imadtbn.github.io/dz_portal/sectors/bank.html</loc>
     <lastmod>2026-05-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.1</priority>
     <image:image>
       <image:loc>https://imadtbn.github.io/dz_portal/assets/images/bank.png</image:loc>
       <image:title>البنوك العمومية والخاصة</image:title>
@@ -284,8 +284,8 @@
   <url>
     <loc>https://imadtbn.github.io/dz_portal/sectors/bank/bankalgeriane.html</loc>
     <lastmod>2026-05-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.1</priority>
     <image:image>
       <image:loc>https://imadtbn.github.io/dz_portal/assets/images/bank.png</image:loc>
       <image:title>البنوك العمومية والخاصة</image:title>
@@ -294,8 +294,8 @@
   <url>
     <loc>https://imadtbn.github.io/dz_portal/sectors/bank/banketranger.html</loc>
     <lastmod>2026-05-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.1</priority>
     <image:image>
       <image:loc>https://imadtbn.github.io/dz_portal/assets/images/bank.png</image:loc>
       <image:title>البنوك العمومية والخاصة</image:title>
@@ -304,8 +304,8 @@
   <url>
     <loc>https://imadtbn.github.io/dz_portal/sectors/commerce.html</loc>
     <lastmod>2026-05-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.1</priority>
     <image:image>
       <image:loc>https://imadtbn.github.io/dz_portal/assets/images/commerc.png</image:loc>
       <image:title>التجارة والجمارك الجزائرية</image:title>
@@ -315,8 +315,8 @@
   <url>
     <loc>https://imadtbn.github.io/dz_portal/sectors/facteur.html</loc>
     <lastmod>2026-05-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
     <image:image>
       <image:loc>https://imadtbn.github.io/dz_portal/assets/images/energy.png</image:loc>
       <image:title>الطاقة وتخليص فواتير الكهرباء والغاز والمياه</image:title>
@@ -325,8 +325,8 @@
   <url>
     <loc>https://imadtbn.github.io/dz_portal/sectors/sonalgaz.html</loc>
     <lastmod>2026-05-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
     <image:image>
       <image:loc>https://imadtbn.github.io/dz_portal/assets/images/sonelgaz.png</image:loc>
       <image:title>سونلغاز للكهرباء والغاز</image:title>
@@ -335,8 +335,8 @@
   <url>
     <loc>https://imadtbn.github.io/dz_portal/sectors/ade.html</loc>
     <lastmod>2026-05-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.1</priority>
     <image:image>
       <image:loc>https://imadtbn.github.io/dz_portal/assets/images/ade.png</image:loc>
       <image:title>الجزائرية للمياه</image:title>
@@ -345,8 +345,8 @@
   <url>
     <loc>https://imadtbn.github.io/dz_portal/sectors/seaal.html</loc>
     <lastmod>2026-05-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.1</priority>
     <image:image>
       <image:loc>https://imadtbn.github.io/dz_portal/assets/images/seaal.webp</image:loc>
       <image:title>سيال للمياه والتطهير</image:title>
@@ -355,8 +355,8 @@
   <url>
     <loc>https://imadtbn.github.io/dz_portal/sectors/naftal.html</loc>
     <lastmod>2026-05-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.1</priority>
     <image:image>
       <image:loc>https://imadtbn.github.io/dz_portal/assets/images/naftal.webp</image:loc>
       <image:title>نفطال للمواد البترولية</image:title>
@@ -366,8 +366,8 @@
   <url>
     <loc>https://imadtbn.github.io/dz_portal/sectors/sante.html</loc>
     <lastmod>2026-05-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
     <image:image>
       <image:loc>https://imadtbn.github.io/dz_portal/assets/images/sante.jpg</image:loc>
       <image:title>الصحة</image:title>
@@ -377,8 +377,8 @@
   <url>
     <loc>https://imadtbn.github.io/dz_portal/sectors/transport.html</loc>
     <lastmod>2026-05-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
     <image:image>
       <image:loc>https://imadtbn.github.io/dz_portal/assets/images/transport.svg</image:loc>
       <image:title>النقل والمواصلات</image:title>
@@ -387,7 +387,7 @@
   <url>
     <loc>https://imadtbn.github.io/dz_portal/sectors/markabatidz.html</loc>
     <lastmod>2026-05-12</lastmod>
-    <changefreq>monthly</changefreq>
+    <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image>
       <image:loc>https://imadtbn.github.io/dz_portal/assets/images/markabaty.jpg</image:loc>
@@ -398,8 +398,8 @@
   <url>
     <loc>https://imadtbn.github.io/dz_portal/sectors/mfa.html</loc>
     <lastmod>2026-05-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.1</priority>
     <image:image>
       <image:loc>https://imadtbn.github.io/dz_portal/assets/images/EXTERIEUR.webp</image:loc>
       <image:title>الشؤون الخارجية والجالية الجزائرية</image:title>
@@ -408,7 +408,7 @@
   <url>
     <loc>https://imadtbn.github.io/dz_portal/sectors/onpo.html</loc>
     <lastmod>2026-05-12</lastmod>
-    <changefreq>monthly</changefreq>
+    <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image>
       <image:loc>https://imadtbn.github.io/dz_portal/assets/images/onpo.png</image:loc>
@@ -419,32 +419,28 @@
   <url>
     <loc>https://imadtbn.github.io/dz_portal/sectors/madr.html</loc>
     <lastmod>2026-05-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.1</priority>
     <image:image>
       <image:loc>https://imadtbn.github.io/dz_portal/assets/images/madr.png</image:loc>
       <image:title>وزارة الفلاحة والتنمية الريفية والصيد البحري</image:title>
     </image:image>
   </url>
-
   <url>
     <loc>https://imadtbn.github.io/dz_portal/sectors/aapi.html</loc>
     <lastmod>2026-05-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.1</priority>
     <image:image>
       <image:loc>https://imadtbn.github.io/dz_portal/assets/images/hatplc.jpg</image:loc>
         <image:title>السلطة العليا للشفافية والوقاية من الفساد ومكافحته</image:title>
       </image:image>
     </url>
-
-
-
     <url>
       <loc>https://imadtbn.github.io/dz_portal/sectors/hatplc.html</loc>
       <lastmod>2026-05-12</lastmod>
-      <changefreq>monthly</changefreq>
-      <priority>0.7</priority>
+      <changefreq>weekly</changefreq>
+      <priority>0.1</priority>
       <image:image>
         <image:loc>https://imadtbn.github.io/dz_portal/assets/images/hatplc.jpg</image:loc>
         <image:title>السلطة العليا للشفافية والوقاية من الفساد ومكافحته</image:title>
@@ -454,8 +450,8 @@
     <url>
       <loc>https://imadtbn.github.io/dz_portal/sectors/ocrc.html</loc>
       <lastmod>2026-05-12</lastmod>
-      <changefreq>monthly</changefreq>
-      <priority>0.7</priority>
+      <changefreq>weekly</changefreq>
+      <priority>0.1</priority>
       <image:image>
         <image:loc>https://imadtbn.github.io/dz_portal/assets/images/ocrc.jpg</image:loc>
         <image:title>الديوان المركزي لقمع الفساد</image:title>
@@ -464,8 +460,8 @@
     <url>
       <loc>https://imadtbn.github.io/dz_portal/sectors/aadl.html</loc>
       <lastmod>2026-05-12</lastmod>
-      <changefreq>monthly</changefreq>
-      <priority>0.7</priority>
+      <changefreq>weekly</changefreq>
+      <priority>0.1</priority>
       <image:image>
         <image:loc>https://imadtbn.github.io/dz_portal/assets/images/AADL.png</image:loc>
         <image:title>وكالة عدل لتحسين السكن وتطويره</image:title>
@@ -474,8 +470,8 @@
     <url>
       <loc>https://imadtbn.github.io/dz_portal/sectors/enpi.html</loc>
       <lastmod>2026-05-12</lastmod>
-      <changefreq>monthly</changefreq>
-      <priority>0.7</priority>
+      <changefreq>weekly</changefreq>
+      <priority>0.1</priority>
       <image:image>
         <image:loc>https://imadtbn.github.io/dz_portal/assets/images/enpi.jpg</image:loc>
         <image:title>المؤسسة الوطنية للترقية العقارية</image:title>
@@ -484,8 +480,8 @@
     <url>
       <loc>https://imadtbn.github.io/dz_portal/sectors/opgi.html</loc>
       <lastmod>2026-05-12</lastmod>
-      <changefreq>monthly</changefreq>
-      <priority>0.7</priority>
+      <changefreq>weekly</changefreq>
+      <priority>0.1</priority>
       <image:image>
         <image:loc>https://imadtbn.github.io/dz_portal/assets/images/opgi.png</image:loc>
         <image:title>ديوان الترقية والتسيير العقاري</image:title>
@@ -494,7 +490,7 @@
     <url>
       <loc>https://imadtbn.github.io/dz_portal/sectors/anae.html</loc>
       <lastmod>2026-05-12</lastmod>
-      <changefreq>monthly</changefreq>
+      <changefreq>weekly</changefreq>
       <priority>0.6</priority>
       <image:image>
         <image:loc>https://imadtbn.github.io/dz_portal/assets/images/anae.jpg</image:loc>
@@ -504,8 +500,8 @@
     <url>
       <loc>https://imadtbn.github.io/dz_portal/sectors/anem.html</loc>
       <lastmod>2026-05-12</lastmod>
-      <changefreq>monthly</changefreq>
-      <priority>0.7</priority>
+      <changefreq>weekly</changefreq>
+      <priority>0.1</priority>
       <image:image>
         <image:loc>https://imadtbn.github.io/dz_portal/assets/images/anem.png</image:loc>
         <image:title>الوكالة الوطنية للتشغيل</image:title>
@@ -514,19 +510,31 @@
         <url>
       <loc>https://imadtbn.github.io/dz_portal/sectors/msnfcf.gov.html</loc>
       <lastmod>2026-05-30</lastmod>
-      <changefreq>monthly</changefreq>
-      <priority>0.7</priority>
+      <changefreq>weekly</changefreq>
+      <priority>0.1</priority>
       <image:image>
         <image:loc>https://imadtbn.github.io/dz_portal/assets/images/msnfcf.png</image:loc>
         <image:title>التضامن والأسرة وقضايا المرأة</image:title>
       </image:image>
     </url>
+
+    <url>
+      <loc>https://imadtbn.github.io/dz_portal/sectors/facture_loyer.html</loc>
+      <lastmod>2026-05-30</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.2</priority>
+      <image:image>
+        <image:loc>https://imadtbn.github.io/dz_portal/assets/images/facture_loyer.png</image:loc>
+        <image:title>تسديد فاتورة إستئجار السكن</image:title>
+      </image:image>
+    </url>
+
     <!-- ══════════════ الطوارئ ══════════════ -->
     <url>
       <loc>https://imadtbn.github.io/dz_portal/sectors/emergency.html</loc>
       <lastmod>2026-05-12</lastmod>
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
+      <changefreq>weekly</changefreq>
+      <priority>0.2</priority>
       <image:image>
         <image:loc>https://imadtbn.github.io/dz_portal/assets/images/emergency.png</image:loc>
         <image:title>أرقام الطوارئ في الجزائر</image:title>
@@ -535,8 +543,8 @@
     <url>
       <loc>https://imadtbn.github.io/dz_portal/sectors/assurance.html</loc>
       <lastmod>2026-05-12</lastmod>
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
+      <changefreq>weekly</changefreq>
+      <priority>0.2</priority>
       <image:image>
         <image:loc>https://imadtbn.github.io/dz_portal/assets/images/asserance.jpg</image:loc>
         <image:title>وكالات التأمين على الممتلكات</image:title>
@@ -545,8 +553,8 @@
     <url>
       <loc>https://imadtbn.github.io/dz_portal/sectors/assurance/saa.html</loc>
       <lastmod>2026-05-12</lastmod>
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
+      <changefreq>weekly</changefreq>
+      <priority>0.2</priority>
       <image:image>
         <image:loc>https://imadtbn.github.io/dz_portal/assets/images/saa.jpg</image:loc>
         <image:title>saa</image:title>

@@ -1,4 +1,8 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://imadtbn.github.io/dz_portal/
+Disallow: /private/
+Disallow: /tmp/
+Disallow: /cgi-bin/
+
+Sitemap: https://imadtbn.github.io/dz_portal/sitemap.xml
