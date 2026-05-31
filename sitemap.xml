@@ -426,16 +426,20 @@
       <image:title>وزارة الفلاحة والتنمية الريفية والصيد البحري</image:title>
     </image:image>
   </url>
+
   <url>
     <loc>https://imadtbn.github.io/dz_portal/sectors/aapi.html</loc>
     <lastmod>2026-05-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://imadtbn.github.io/dz_portal/assets/images/hatplc.jpg/image:loc>
+      <image:loc>https://imadtbn.github.io/dz_portal/assets/images/hatplc.jpg</image:loc>
         <image:title>السلطة العليا للشفافية والوقاية من الفساد ومكافحته</image:title>
       </image:image>
     </url>
+
+
+
     <url>
       <loc>https://imadtbn.github.io/dz_portal/sectors/hatplc.html</loc>
       <lastmod>2026-05-12</lastmod>
@@ -446,6 +450,7 @@
         <image:title>السلطة العليا للشفافية والوقاية من الفساد ومكافحته</image:title>
       </image:image>
     </url>
+
     <url>
       <loc>https://imadtbn.github.io/dz_portal/sectors/ocrc.html</loc>
       <lastmod>2026-05-12</lastmod>
