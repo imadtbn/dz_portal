@@ -1,60 +1,94 @@
-# robots.txt for dz_portal (Advanced SEO)
+# ═══════════════════════════════════════════════════════════════════════════
+# robots.txt - البوابة الجزائرية للخدمات الرقمية
+# ✅ النسخة المتقدمة لتحسين الزحف والفهرسة مع توجيهات خاصة لمحركات البحث
+# 🌐 الموقع: https://imadtbn.github.io/dz_portal/
+# 🗺️ آخر تحديث: 2026-06-01
+# ═══════════════════════════════════════════════════════════════════════════
 
-# =========================
-# قواعد عامة لجميع العناكب
-# =========================
+# ============================================================================
+# 📌 القواعد العامة لجميع محركات البوتات (السماح بكل شيء مع استثناءات بسيطة)
+# ============================================================================
 User-agent: *
-Disallow: /admin/
-Disallow: /login/
-Disallow: /private/
-Disallow: /tmp/
-Crawl-delay: 5
+Allow: /
+Disallow: /service-worker.js
+Disallow: /manifest.webmanifest
+Disallow: /browserconfig.xml
+Disallow: /assets/fonts/
+Disallow: /*?q=
+Disallow: /*?s=
+Disallow: /*utm_
+Disallow: /*ref=
+
+# ============================================================================
+# ⚡ توجيهات خاصة بـ Googlebot (لتحسين سرعة الزحف والفهرسة)
+# ============================================================================
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0.5
+# تفضيل الزحف إلى الصفحات الرئيسية أولاً (بمساعدة Sitemap)
+Sitemap: https://imadtbn.github.io/dz_portal/sitemap.xml
+
+# ============================================================================
+# 🖼️ توجيهات خاصة بـ Googlebot-Image (لفهرسة الصور بشكل أسرع)
+# ============================================================================
+User-agent: Googlebot-Image
+Allow: /assets/images/
+Allow: /icons/
+Disallow: /assets/fonts/
+Crawl-delay: 1.0
+
+# ============================================================================
+# 🔍 توجيهات خاصة بـ Bingbot (تحسين الزحف والتحديث السريع)
+# ============================================================================
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1.0
+Sitemap: https://imadtbn.github.io/dz_portal/sitemap.xml
+
+# ============================================================================
+# 📢 توجيهات خاصة بـ AdsBot-Google و Mediapartners (لإعلانات AdSense)
+# ============================================================================
+User-agent: AdsBot-Google
+Allow: /
+User-agent: Mediapartners-Google
 Allow: /
 
-# =========================
-# تعليمات خاصة بـ Googlebot
-# =========================
-User-agent: Googlebot
-Crawl-delay: 3
+# ============================================================================
+# 🌐 توجيهات لبوتات وسائل التواصل الاجتماعي (للحصول على معاينات غنية)
+# ============================================================================
+User-agent: Twitterbot
+Allow: /
+User-agent: Facebookbot
+Allow: /
+User-agent: LinkedInBot
+Allow: /
 
-# إعطاء أولوية عالية للصفحات الأساسية
-Allow: /                 # Priority: 1.0
-Allow: /sectors/education.html        # Priority: 0.9
-Allow: /sectors/progres.mesrs.html    # Priority: 0.9
-Allow: /sectors/interieur.html        # Priority: 0.9
-Allow: /sectors/mhuv.gov.html         # Priority: 0.9
-Allow: /sectors/sante.html            # Priority: 0.9
-Allow: /sectors/finance.html          # Priority: 0.9
-Allow: /sectors/emergency.html        # Priority: 1.0
+# ============================================================================
+# ⏩ توجيهات خاصة بـ Yandex (محرك البحث الروسي)
+# ============================================================================
+User-agent: Yandex
+Allow: /
+Crawl-delay: 1.5
 
-# تقليل الزحف على الصفحات ذات الأولوية المنخفضة
-Disallow: /sectors/dzexam1.html
-Disallow: /sectors/dzexam.pro.html
-Disallow: /sectors/dzexams.html
-Disallow: /sectors/mfp.gov.html
-Disallow: /sectors/telephon.html
-Disallow: /sectors/arpce.html
+# ============================================================================
+# 🛠️ توجيهات لزاحف الأرشفة (Wayback Machine)
+# ============================================================================
+User-agent: ia_archiver
+Allow: /
 
-# =========================
-# تعليمات خاصة بـ Bingbot
-# =========================
-User-agent: Bingbot
-Crawl-delay: 10
+# ============================================================================
+# 📂 مسارات إضافية مقترحة لمنع الزحف (غير موجودة حالياً، ولكن للاحتياط)
+# ============================================================================
+Disallow: /_drafts/
+Disallow: /tmp/
+Disallow: /backup/
+Disallow: /logs/
 
-# السماح بالزحف لكن مع أولوية أقل للصفحات الثانوية
-Allow: /sectors/poste.html
-Allow: /sectors/algerietelecom.html
-Allow: /sectors/markabatidz.html       # Priority: 0.6
-Allow: /sectors/onpo.html              # Priority: 0.6
-Allow: /sectors/anae.html              # Priority: 0.6
-
-# منع الزحف على الصفحات قليلة الأهمية
-Disallow: /sectors/mfa.html
-Disallow: /sectors/aapi.html
-Disallow: /sectors/hatplc.html
-Disallow: /sectors/ocrc.html
-
-# =========================
-# ملف Sitemap
-# =========================
+# ============================================================================
+# 🗺️ تحديد موقع خريطة الموقع بشكل صريح (لجميع البوتات)
+# ============================================================================
 Sitemap: https://imadtbn.github.io/dz_portal/sitemap.xml
+
+# ═══════════════════════════════════════════════════════════════════════════
+# نهاية الملف - تمتع بزحف سريع وفهرسة شاملة! 🚀
+# ═══════════════════════════════════════════════════════════════════════════
