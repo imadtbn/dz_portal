@@ -1,8 +1,60 @@
-User-agent: *
-Allow: /
+# robots.txt for dz_portal (Advanced SEO)
 
+# =========================
+# قواعد عامة لجميع العناكب
+# =========================
+User-agent: *
+Disallow: /admin/
+Disallow: /login/
 Disallow: /private/
 Disallow: /tmp/
-Disallow: /cgi-bin/
+Crawl-delay: 5
+Allow: /
 
+# =========================
+# تعليمات خاصة بـ Googlebot
+# =========================
+User-agent: Googlebot
+Crawl-delay: 3
+
+# إعطاء أولوية عالية للصفحات الأساسية
+Allow: /                 # Priority: 1.0
+Allow: /sectors/education.html        # Priority: 0.9
+Allow: /sectors/progres.mesrs.html    # Priority: 0.9
+Allow: /sectors/interieur.html        # Priority: 0.9
+Allow: /sectors/mhuv.gov.html         # Priority: 0.9
+Allow: /sectors/sante.html            # Priority: 0.9
+Allow: /sectors/finance.html          # Priority: 0.9
+Allow: /sectors/emergency.html        # Priority: 1.0
+
+# تقليل الزحف على الصفحات ذات الأولوية المنخفضة
+Disallow: /sectors/dzexam1.html
+Disallow: /sectors/dzexam.pro.html
+Disallow: /sectors/dzexams.html
+Disallow: /sectors/mfp.gov.html
+Disallow: /sectors/telephon.html
+Disallow: /sectors/arpce.html
+
+# =========================
+# تعليمات خاصة بـ Bingbot
+# =========================
+User-agent: Bingbot
+Crawl-delay: 10
+
+# السماح بالزحف لكن مع أولوية أقل للصفحات الثانوية
+Allow: /sectors/poste.html
+Allow: /sectors/algerietelecom.html
+Allow: /sectors/markabatidz.html       # Priority: 0.6
+Allow: /sectors/onpo.html              # Priority: 0.6
+Allow: /sectors/anae.html              # Priority: 0.6
+
+# منع الزحف على الصفحات قليلة الأهمية
+Disallow: /sectors/mfa.html
+Disallow: /sectors/aapi.html
+Disallow: /sectors/hatplc.html
+Disallow: /sectors/ocrc.html
+
+# =========================
+# ملف Sitemap
+# =========================
 Sitemap: https://imadtbn.github.io/dz_portal/sitemap.xml
