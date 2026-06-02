@@ -11,12 +11,9 @@
 User-agent: *
 
 # حماية المسارات الإدارية والتقنية والحساسة
-Disallow: /admin/
-Disallow: /login/
-Disallow: /private/
+
 Disallow: /tmp/
 Disallow: /cgi-bin/
-Disallow: /*.pdf$
 Disallow: /*?*
 
 # السماح بالمحتوى العام والموارد الثابتة
@@ -36,12 +33,9 @@ Crawl-delay: 5
 User-agent: Googlebot
 
 # [B.1] حماية المسارات الحساسة
-Disallow: /admin/
-Disallow: /login/
 Disallow: /private/
 Disallow: /tmp/
 Disallow: /cgi-bin/
-Disallow: /*.pdf$
 Disallow: /*?*
 
 # [B.2] الصفحات ذات الأولوية القصوى (1.0 - 0.9)
@@ -91,10 +85,34 @@ Allow: /sectors/opgi.html
 Allow: /sectors/anem.html
 Allow: /sectors/msnfcf.gov.html
 Allow: /sectors/commerce.html
+Allow: /sectors/campuce.jobs.html
+Allow: /sectors/mjeunesse.gov.html
+Allow: /sectors/bank.html
+Allow: /sectors/assurance.html
+Allow: /pages/contact.html
+Allow: /pages/privacy.html
+Allow: /pages/terms.html
+Allow: /sectors/markabatidz.html
+Allow: /sectors/facteur.html
+Allow: /pages/about.html
+Allow: /sectors/eddirasa.html
+Allow: /sectors/etudpdf.html
+Allow: /sectors/mf.gov.html
+Allow: /sectors/exam-compos.html
+Allow: /pages/process/naftal.html
+Allow: /sectors/dztests.html
+Allow: /sectors/me.gov.html
+Allow: /sectors/nifenligne.html
+Allow: /pages/process/arpce.html
+Allow: /sectors/t-onec.html
+Allow: /sectors/ecolerradja.html
+Allow: /sectors/mjustice.html
+
+
 
 
 # [B.3] الصفحات ذات الأولوية العالية (0.6 - 0.5)
-# من نحن | اتصل بنا | مركبتي | الحج والعمرة | المقاول الذاتي
+# من نحن | اتصل بنا 
 Allow: /pages/about.html
 Allow: /pages/contact.html
 
@@ -106,10 +124,7 @@ Allow: /pages/terms.html
 
 # [B.5] الصفحات ذات الأولوية المنخفضة (0.1)
 # التكوين المهني | الهاتف | ARPCE | الشرطة | الانتخابات | المياه | الطاقة | الخارجية | الفلاحة | الاستثمار | الشفافية | قمع الفساد | السكن الترقوي | التشغيل | التضامن | البنوك | التجارة
-Allow: /sectors/bank.html
-Allow: /sectors/bank/
-Allow: /sectors/assurance.html
-Allow: /sectors/assurance/
+
 
 # [B.6] السماح بالموارد الثابتة (CSS/JS/الصور)
 Allow: /assets/
@@ -124,12 +139,9 @@ Allow: /icons/
 User-agent: Bingbot
 
 # حماية المسارات الحساسة
-Disallow: /admin/
-Disallow: /login/
 Disallow: /private/
 Disallow: /tmp/
 Disallow: /cgi-bin/
-Disallow: /*.pdf$
 Disallow: /*?*
 
 # السماح بالمحتوى العام
