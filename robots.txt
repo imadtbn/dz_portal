@@ -1,58 +1,165 @@
-robots.txtDisallow: /assets/fonts/
-Crawl-delay: 1.0
+# ============================================================
+# robots.txt - البوابة الجزائرية للخدمات الرقمية
+# https://imadtbn.github.io/dz_portal/
+# Generated: 2026-06-02
+# Based on: sitemap.xml priorities + index.html structure
+# ============================================================
 
-# ============================================================================
-# 🔍 توجيهات خاصة بـ Bingbot (تحسين الزحف والتحديث السريع)
-# ============================================================================
-User-agent: Bingbot
-Allow: /
-Crawl-delay: 1.0
-Sitemap: https://imadtbn.github.io/dz_portal/sitemap.xml
+# --------------------------
+# [A] قواعد عامة - جميع العناكب
+# --------------------------
+User-agent: *
 
-# ============================================================================
-# 📢 توجيهات خاصة بـ AdsBot-Google و Mediapartners (لإعلانات AdSense)
-# ============================================================================
-User-agent: AdsBot-Google
-Allow: /
-User-agent: Mediapartners-Google
-Allow: /
-
-# ============================================================================
-# 🌐 توجيهات لبوتات وسائل التواصل الاجتماعي (للحصول على معاينات غنية)
-# ============================================================================
-User-agent: Twitterbot
-Allow: /
-User-agent: Facebookbot
-Allow: /
-User-agent: LinkedInBot
-Allow: /
-
-# ============================================================================
-# ⏩ توجيهات خاصة بـ Yandex (محرك البحث الروسي)
-# ============================================================================
-User-agent: Yandex
-Allow: /
-Crawl-delay: 1.5
-
-# ============================================================================
-# 🛠️ توجيهات لزاحف الأرشفة (Wayback Machine)
-# ============================================================================
-User-agent: ia_archiver
-Allow: /
-
-# ============================================================================
-# 📂 مسارات إضافية مقترحة لمنع الزحف (غير موجودة حالياً، ولكن للاحتياط)
-# ============================================================================
-Disallow: /_drafts/
+# حماية المسارات الإدارية والتقنية والحساسة
+Disallow: /admin/
+Disallow: /login/
+Disallow: /private/
 Disallow: /tmp/
-Disallow: /backup/
-Disallow: /logs/
+Disallow: /cgi-bin/
+Disallow: /*.pdf$
+Disallow: /*?*
 
-# ============================================================================
-# 🗺️ تحديد موقع خريطة الموقع بشكل صريح (لجميع البوتات)
-# ============================================================================
+# السماح بالمحتوى العام والموارد الثابتة
+Allow: /
+Allow: /pages/
+Allow: /sectors/
+Allow: /assets/
+Allow: /icons/
+Allow: /manifest.webmanifest
+
+# معدل الزحف العام (يُحترم من Bingbot وغيره)
+Crawl-delay: 5
+
+# --------------------------
+# [B] Googlebot - تعليمات مخصصة
+# --------------------------
+User-agent: Googlebot
+
+# [B.1] حماية المسارات الحساسة
+Disallow: /admin/
+Disallow: /login/
+Disallow: /private/
+Disallow: /tmp/
+Disallow: /cgi-bin/
+Disallow: /*.pdf$
+Disallow: /*?*
+
+# [B.2] الصفحات ذات الأولوية القصوى (1.0 - 0.9)
+# الرئيسية | التربية والتعليم | التعليم العالي | الداخلية
+Allow: /$
+Allow: /index.html
+Allow: /sectors/education.html
+Allow: /sectors/progres.mesrs.html
+Allow: /sectors/interieur.html
+Allow: /sectors/markabatidz.html
+Allow: /sectors/onpo.html
+Allow: /sectors/anae.html
+Allow: /sectors/sante.html
+Allow: /sectors/facteur.html
+Allow: /sectors/sonalgaz.html
+Allow: /sectors/mf.gov.html
+Allow: /sectors/mtess.html
+Allow: /sectors/poste.html
+Allow: /sectors/algerietelecom.html
+Allow: /sectors/mhuv.gov.html
+Allow: /sectors/mjustice.html
+Allow: /sectors/transport.html
+Allow: /sectors/dzexams.html
+Allow: /sectors/dzexam1.html
+Allow: /sectors/dzexam.pro.html
+Allow: /sectors/qassimatouka.html
+Allow: /sectors/tabioucom.html
+Allow: /sectors/fadaeldjazair.html
+Allow: /sectors/facture_loyer.html
+Allow: /sectors/emergency.html
+Allow: /sectors/mfp.gov.html
+Allow: /sectors/telephon.html
+Allow: /sectors/arpce.html
+Allow: /sectors/dgsn.html
+Allow: /sectors/ina-elections.html
+Allow: /sectors/ade.html
+Allow: /sectors/seaal.html
+Allow: /sectors/naftal.html
+Allow: /sectors/mfa.html
+Allow: /sectors/madr.html
+Allow: /sectors/aapi.html
+Allow: /sectors/hatplc.html
+Allow: /sectors/ocrc.html
+Allow: /sectors/aadl.html
+Allow: /sectors/enpi.html
+Allow: /sectors/opgi.html
+Allow: /sectors/anem.html
+Allow: /sectors/msnfcf.gov.html
+Allow: /sectors/commerce.html
+
+
+# [B.3] الصفحات ذات الأولوية العالية (0.6 - 0.5)
+# من نحن | اتصل بنا | مركبتي | الحج والعمرة | المقاول الذاتي
+Allow: /pages/about.html
+Allow: /pages/contact.html
+
+
+# [B.4] الصفحات ذات الأولوية المتوسطة (0.4 - 0.2)
+# الخصوصية | الشروط | التأمين
+Allow: /pages/privacy.html
+Allow: /pages/terms.html
+
+# [B.5] الصفحات ذات الأولوية المنخفضة (0.1)
+# التكوين المهني | الهاتف | ARPCE | الشرطة | الانتخابات | المياه | الطاقة | الخارجية | الفلاحة | الاستثمار | الشفافية | قمع الفساد | السكن الترقوي | التشغيل | التضامن | البنوك | التجارة
+Allow: /sectors/bank.html
+Allow: /sectors/bank/
+Allow: /sectors/assurance.html
+Allow: /sectors/assurance/
+
+# [B.6] السماح بالموارد الثابتة (CSS/JS/الصور)
+Allow: /assets/
+Allow: /icons/
+
+# ملاحظة: Googlebot يتجاهل Crawl-delay في robots.txt
+# يُفضل ضبط معدل الزحف عبر Google Search Console
+
+# --------------------------
+# [C] Bingbot - تعليمات مخصصة
+# --------------------------
+User-agent: Bingbot
+
+# حماية المسارات الحساسة
+Disallow: /admin/
+Disallow: /login/
+Disallow: /private/
+Disallow: /tmp/
+Disallow: /cgi-bin/
+Disallow: /*.pdf$
+Disallow: /*?*
+
+# السماح بالمحتوى العام
+Allow: /
+Allow: /pages/
+Allow: /sectors/
+Allow: /assets/
+Allow: /icons/
+
+# Bingbot يحترم Crawl-delay بشكل فعّال
+Crawl-delay: 10
+
+# --------------------------
+# [D] عناكب إضافية
+# --------------------------
+User-agent: Slurp
+Crawl-delay: 10
+
+User-agent: DuckDuckBot
+Crawl-delay: 5
+
+User-agent: Yandex
+Crawl-delay: 10
+
+# --------------------------
+# [E] إعدادات الموقع والفهرسة
+# --------------------------
+Host: https://imadtbn.github.io
+
+# --------------------------
+# [F] خرائط الموقع (Sitemaps)
+# --------------------------
 Sitemap: https://imadtbn.github.io/dz_portal/sitemap.xml
-
-# ═══════════════════════════════════════════════════════════════════════════
-# نهاية الملف - تمتع بزحف سريع وفهرسة شاملة! 🚀
-# ═══════════════════════════════════════════════════════════════════════════
