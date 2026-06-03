@@ -89,9 +89,6 @@ Allow: /sectors/campuce.jobs.html
 Allow: /sectors/mjeunesse.gov.html
 Allow: /sectors/bank.html
 Allow: /sectors/assurance.html
-Allow: /pages/contact.html
-Allow: /pages/privacy.html
-Allow: /pages/terms.html
 Allow: /sectors/markabatidz.html
 Allow: /sectors/facteur.html
 Allow: /pages/about.html
@@ -99,28 +96,27 @@ Allow: /sectors/eddirasa.html
 Allow: /sectors/etudpdf.html
 Allow: /sectors/mf.gov.html
 Allow: /sectors/exam-compos.html
-Allow: /pages/process/naftal.html
 Allow: /sectors/dztests.html
 Allow: /sectors/me.gov.html
 Allow: /sectors/nifenligne.html
-Allow: /pages/process/arpce.html
 Allow: /sectors/t-onec.html
 Allow: /sectors/ecolerradja.html
-Allow: /sectors/mjustice.html
-
+Allow: /sectors/seor.html
 
 
 
 # [B.3] الصفحات ذات الأولوية العالية (0.6 - 0.5)
 # من نحن | اتصل بنا 
-Allow: /pages/about.html
-Allow: /pages/contact.html
+Allow: /pages/process/arpce.html
+Allow: /pages/process/naftal.html
 
 
 # [B.4] الصفحات ذات الأولوية المتوسطة (0.4 - 0.2)
 # الخصوصية | الشروط | التأمين
-Allow: /pages/privacy.html
 Allow: /pages/terms.html
+Allow: /pages/about.html
+Allow: /pages/contact.html
+Allow: /pages/privacy.html
 
 # [B.5] الصفحات ذات الأولوية المنخفضة (0.1)
 # التكوين المهني | الهاتف | ARPCE | الشرطة | الانتخابات | المياه | الطاقة | الخارجية | الفلاحة | الاستثمار | الشفافية | قمع الفساد | السكن الترقوي | التشغيل | التضامن | البنوك | التجارة
