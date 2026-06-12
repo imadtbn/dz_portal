@@ -14,7 +14,6 @@ User-agent: *
 
 Disallow: /tmp/
 Disallow: /cgi-bin/
-Disallow: /*?*
 
 # السماح بالمحتوى العام والموارد الثابتة
 Allow: /
