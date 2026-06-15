@@ -827,11 +827,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const okBtn = document.querySelector(".security-btn");
 
     // عرض النافذة مرة واحدة يومياً
-    const lastSeen = localStorage.getItem("poste-security-alert");
-
-    if(lastSeen === new Date().toDateString()){
-        modal.style.display = "none";
-    }
+    
 
     function closeModal(){
         modal.style.display = "none";
