@@ -57,23 +57,18 @@ document.getElementById('theme-toggle').addEventListener('click', () => {
 
 //النافذة التحذيرية
 
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", () => {
 
     const modal = document.getElementById("securityAlert");
-    const closeBtn = document.querySelector(".security-close");
-    const okBtn = document.querySelector(".security-btn");
 
-    // عرض النافذة مرة واحدة يومياً
-    
-    function closeModal(){
+    if(!modal) return;
+
+    const closeBtn = modal.querySelector(".alert-close");
+
+    function closeModal() {
         modal.style.display = "none";
-        localStorage.setItem(
-            "poste-security-alert",
-            new Date().toDateString()
-        );
     }
 
     closeBtn.addEventListener("click", closeModal);
-    okBtn.addEventListener("click", closeModal);
 
 });
