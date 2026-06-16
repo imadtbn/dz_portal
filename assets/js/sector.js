@@ -56,26 +56,22 @@ document.getElementById('theme-toggle').addEventListener('click', () => {
 });
 
 //النافذة التحذيرية
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", function () {
 
     const modal = document.getElementById("securityAlert");
+    const closeBtn = document.querySelector(".security-close");
+    const okBtn = document.querySelector(".security-btn");
 
-    if (!modal) return;
 
-    const closeBtn = modal.querySelector(".alert-close");
-    const actionBtn = modal.querySelector(".alert-btn");
-
-    function closeModal() {
+    function closeModal(){
         modal.style.display = "none";
+        localStorage.setItem(
+            "poste-security-alert",
+            new Date().toDateString()
+        );
     }
 
-    if (closeBtn) {
-        closeBtn.addEventListener("click", closeModal);
-    }
-
-    if (actionBtn && actionBtn.tagName === "BUTTON") {
-        actionBtn.addEventListener("click", closeModal);
-    }
+    closeBtn.addEventListener("click", closeModal);
+    okBtn.addEventListener("click", closeModal);
 
 });
-
