@@ -1793,7 +1793,9 @@
 }
 
 /* Security Modal */
-.security-modal{
+/* ===== Alert Modal ===== */
+
+.alert-modal{
     position:fixed;
     inset:0;
     background:rgba(0,0,0,.65);
@@ -1802,99 +1804,115 @@
     align-items:center;
     padding:20px;
     z-index:99999;
-    animation:fadeIn .3s ease;
+    animation:alertFade .3s ease;
 }
 
-.security-modal-content{
+.alert-content{
     width:100%;
-    max-width:500px;
+    max-width:520px;
     background:#fff;
-    border-radius:16px;
-    padding:25px;
+    border-radius:18px;
+    padding:28px;
     text-align:center;
     position:relative;
-    box-shadow:0 10px 40px rgba(0,0,0,.25);
-    border-top:6px solid #f7c600;
+    box-shadow:0 15px 40px rgba(0,0,0,.25);
+    border-top:6px solid var(--alert-color);
 }
 
-.security-icon{
-    width:70px;
-    height:70px;
+.alert-icon{
+    width:80px;
+    height:80px;
     margin:0 auto 15px;
     border-radius:50%;
-    background:#fff8d6;
+    background:var(--alert-bg);
     display:flex;
     align-items:center;
     justify-content:center;
-    font-size:32px;
-    color:#0056a6;
+    font-size:34px;
+    color:var(--alert-color);
 }
 
-.security-modal-content h2{
-    color:#0056a6;
+.alert-content h2{
+    color:var(--alert-color);
     margin-bottom:15px;
-    font-size:1.5rem;
 }
 
-.security-modal-content p{
-    color:#333;
+.alert-content p{
     line-height:1.9;
-    margin-bottom:12px;
+    color:#444;
 }
 
-.security-btn{
-    background:#0056a6;
+.alert-btn{
+    display:inline-block;
+    margin:15px 0;
+    padding:14px 26px;
+    border-radius:10px;
+    text-decoration:none;
+    background:var(--alert-color);
     color:#fff;
-    border:none;
-    padding:12px 30px;
-    border-radius:8px;
-    cursor:pointer;
-    font-size:1rem;
+    font-weight:700;
     transition:.3s;
 }
 
-.security-btn:hover{
-    background:#003f7d;
+.alert-btn:hover{
+    transform:translateY(-2px);
 }
 
-.security-close{
+.alert-footer{
+    color:var(--alert-color);
+    font-weight:600;
+    margin-top:10px;
+}
+
+.alert-close{
     position:absolute;
-    top:10px;
-    left:10px;
+    top:12px;
+    left:12px;
     background:none;
     border:none;
-    font-size:28px;
+    font-size:30px;
     cursor:pointer;
     color:#666;
 }
 
-@keyframes fadeIn{
-    from{
-        opacity:0;
-    }
-    to{
-        opacity:1;
-    }
+@keyframes alertFade{
+    from{opacity:0;}
+    to{opacity:1;}
 }
 
-/* Mobile */
+/* ===== Mobilis Theme ===== */
+
+.mobilis-theme{
+    --alert-color:#00a651;
+    --alert-bg:#e9f9f0;
+}
+
+/* ===== Algeria Post Theme ===== */
+
+.poste-theme{
+    --alert-color:#0056a6;
+    --alert-bg:#eef5ff;
+}
+
+/* Responsive */
+
 @media (max-width:768px){
 
-    .security-modal-content{
-        max-width:100%;
-        padding:20px;
-        border-radius:12px;
+    .alert-content{
+        padding:22px 18px;
+        border-radius:14px;
     }
 
-    .security-modal-content h2{
+    .alert-btn{
+        width:100%;
+        display:block;
+    }
+
+    .alert-content h2{
         font-size:1.3rem;
     }
 
-    .security-modal-content p{
+    .alert-content p{
         font-size:.95rem;
-    }
-
-    .security-btn{
-        width:100%;
     }
 }
