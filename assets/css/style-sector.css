@@ -1894,6 +1894,13 @@
     --alert-bg:#eef5ff;
 }
 
+/* ===== mdn marin Theme ===== */
+
+.marin-theme {
+    --alert-color: #3207f3;
+    --alert-bg: #055024;
+}
+
 /* Responsive */
 
 @media (max-width:768px){
