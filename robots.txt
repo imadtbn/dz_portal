@@ -102,6 +102,7 @@ Allow: /sectors/t-onec.html
 Allow: /sectors/ecolerradja.html
 Allow: /sectors/seor.html
 Allow: /sectors/douane.html
+Allow: /sectors/mdn.html
 
 
 
