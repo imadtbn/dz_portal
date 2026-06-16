@@ -819,29 +819,7 @@
 </div>
     
     <script src="../assets/js/sector.js" defer></script>
-<script>
-document.addEventListener("DOMContentLoaded", function () {
 
-    const modal = document.getElementById("securityAlert");
-    const closeBtn = document.querySelector(".security-close");
-    const okBtn = document.querySelector(".security-btn");
-
-    // عرض النافذة مرة واحدة يومياً
-    
-
-    function closeModal(){
-        modal.style.display = "none";
-        localStorage.setItem(
-            "poste-security-alert",
-            new Date().toDateString()
-        );
-    }
-
-    closeBtn.addEventListener("click", closeModal);
-    okBtn.addEventListener("click", closeModal);
-
-});
-</script>
 </body>
 
 </html>
