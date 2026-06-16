@@ -597,4 +597,14 @@
       <image:title>للمياه seor</image:title>
     </image:image>
   </url>
+  <url>
+    <loc>https://imadtbn.github.io/dz_portal/sectors/mdn.html</loc>
+    <lastmod>2026-06-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+    <image:image>
+      <image:loc>https://imadtbn.github.io/dz_portal/assets/images/mdn.jpeg</image:loc>
+      <image:title>وزارة الدفاع الوطني</image:title>
+    </image:image>
+  </url>
 </urlset>
