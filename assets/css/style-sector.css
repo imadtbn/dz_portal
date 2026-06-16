@@ -1923,3 +1923,84 @@
         font-size:.95rem;
     }
 }
+
+
+
+
+.health-theme{
+    --health-primary:#d62828;
+    --health-secondary:#198754;
+    --health-bg:#fff5f5;
+}
+
+.alert-card{
+    background:#fff;
+    border-radius:18px;
+    padding:25px;
+    text-align:center;
+    box-shadow:0 8px 25px rgba(0,0,0,.08);
+    border-top:6px solid var(--health-primary);
+    max-width:700px;
+    margin:20px auto;
+}
+
+.alert-card .alert-icon{
+    width:80px;
+    height:80px;
+    margin:0 auto 15px;
+    border-radius:50%;
+    background:var(--health-bg);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:36px;
+    color:var(--health-primary);
+}
+
+.alert-card h2{
+    color:var(--health-secondary);
+    margin-bottom:10px;
+    font-size:1.5rem;
+}
+
+.alert-card h3{
+    color:var(--health-primary);
+    margin-bottom:15px;
+    font-size:1.25rem;
+    line-height:1.6;
+}
+
+.alert-card p{
+    color:#444;
+    line-height:2;
+    margin-bottom:15px;
+}
+
+.health-message{
+    display:inline-block;
+    background:var(--health-primary);
+    color:#fff;
+    padding:12px 20px;
+    border-radius:10px;
+    font-weight:700;
+}
+
+@media (max-width:768px){
+
+    .alert-card{
+        padding:20px 15px;
+        margin:15px;
+    }
+
+    .alert-card h2{
+        font-size:1.3rem;
+    }
+
+    .alert-card h3{
+        font-size:1.1rem;
+    }
+
+    .alert-card p{
+        font-size:.95rem;
+    }
+}
