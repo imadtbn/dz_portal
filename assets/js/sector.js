@@ -54,3 +54,26 @@ document.getElementById('theme-toggle').addEventListener('click', () => {
     document.documentElement.setAttribute('data-theme', next);
     localStorage.setItem('theme', next);
 });
+
+//النافذة التحذيرية
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const modal = document.getElementById("securityAlert");
+    const closeBtn = document.querySelector(".security-close");
+    const okBtn = document.querySelector(".security-btn");
+
+    // عرض النافذة مرة واحدة يومياً
+    
+    function closeModal(){
+        modal.style.display = "none";
+        localStorage.setItem(
+            "poste-security-alert",
+            new Date().toDateString()
+        );
+    }
+
+    closeBtn.addEventListener("click", closeModal);
+    okBtn.addEventListener("click", closeModal);
+
+});
