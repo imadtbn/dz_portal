@@ -70,6 +70,11 @@ payload = {
 "https://imadtbn.github.io/dz_portal/sectors/t-onec.html",
 "https://imadtbn.github.io/dz_portal/sectors/ecolerradja.html",
 "https://imadtbn.github.io/dz_portal/sectors/seor.html",
+"https://imadtbn.github.io/dz_portal/sectors/mdn.html",
+"https://imadtbn.github.io/dz_portal/sectors/mobilis.html",
+"https://imadtbn.github.io/dz_portal/sectors/djezzy.html",
+"https://imadtbn.github.io/dz_portal/sectors/ooredoo.html",
+
 
 "https://imadtbn.github.io/dz_portal/pages/terms.html",
 "https://imadtbn.github.io/dz_portal/pages/about.html",
