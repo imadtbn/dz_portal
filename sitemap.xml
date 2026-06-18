@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset
-  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-  xmlns:xhtml="http://www.w3.org/1999/xhtml"
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml"
   xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <!-- ======================================================== -->
   <!--   Sitemap - البوابة الجزائرية للخدمات الرقمية           -->
@@ -14,7 +12,7 @@
     <lastmod>2026-06-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://imadtbn.github.io/dz_portal/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://imadtbn.github.io/dz_portal/" />
     <image:image>
       <image:loc>https://imadtbn.github.io/dz_portal/icons/icon.png</image:loc>
       <image:title>البوابة الجزائرية للخدمات الرقمية</image:title>
@@ -311,7 +309,7 @@
       <image:title>وزارة التجارة</image:title>
     </image:image>
   </url>
-    <url>
+  <url>
     <loc>https://imadtbn.github.io/dz_portal/sectors/douane.html</loc>
     <lastmod>2026-06-18</lastmod>
     <changefreq>weekly</changefreq>
@@ -587,7 +585,7 @@
       <image:title>منصة توظيف مخصصة للطلبة الجزائريين</image:title>
     </image:image>
   </url>
-    <url>
+  <url>
     <loc>https://imadtbn.github.io/dz_portal/sectors/seor.html</loc>
     <lastmod>2026-06-03</lastmod>
     <changefreq>weekly</changefreq>
@@ -607,4 +605,35 @@
       <image:title>وزارة الدفاع الوطني</image:title>
     </image:image>
   </url>
+  <url>
+    <loc>https://imadtbn.github.io/dz_portal/sectors/mobilis.html</loc>
+    <lastmod>2026-06-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+    <image:image>
+      <image:loc>https://imadtbn.github.io/dz_portal/assets/images/mobilis.jpg</image:loc>
+      <image:title>موبيليس</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://imadtbn.github.io/dz_portal/sectors/djezzy.html</loc>
+    <lastmod>2026-06-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+    <image:image>
+      <image:loc>https://imadtbn.github.io/dz_portal/assets/images/djezzy.png</image:loc>
+      <image:title>جازي</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://imadtbn.github.io/dz_portal/sectors/ooredoo.html</loc>
+    <lastmod>2026-06-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+    <image:image>
+      <image:loc>https://imadtbn.github.io/dz_portal/assets/images/ooredoo.jpg</image:loc>
+      <image:title>جازي</image:title>
+    </image:image>
+  </url>
+
 </urlset>
