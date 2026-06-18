@@ -103,6 +103,9 @@ Allow: /sectors/ecolerradja.html
 Allow: /sectors/seor.html
 Allow: /sectors/douane.html
 Allow: /sectors/mdn.html
+Allow: /sectors/mobilis.html
+Allow: /sectors/ooredoo.html
+Allow: /sectors/djezzy.html
 
 
 
