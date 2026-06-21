@@ -106,6 +106,7 @@ Allow: /sectors/mdn.html
 Allow: /sectors/mobilis.html
 Allow: /sectors/ooredoo.html
 Allow: /sectors/djezzy.html
+Allow: /sectors/sntf.html
 
 
 
