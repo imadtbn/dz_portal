@@ -62,7 +62,7 @@ function closeModal() {
 // Search functionality
 document.querySelector('.search-trigger').addEventListener('click', () => {
 
-    const query = prompt('ابحث عن خط أو خدمة:');
+    const query = prompt('ابحث عن خط ، إتجاه أو خدمة:');
 
     if (!query) return;
 
