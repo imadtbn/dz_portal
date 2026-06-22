@@ -835,7 +835,6 @@
                     </div>
 
 
-
                     <!-- بطاقة التحديثات والدعم -->
                     <div class="train-card support-card">
                         <div class="train-thumbnail">
@@ -994,7 +993,7 @@
         </div>
     </footer>
 
-    <script src="../assets/js/sector.js" defer></script>
+
 
     <div id="scheduleModal" class="schedule-modal">
 
@@ -1012,30 +1011,7 @@
 
     </div>
 
-    <script>
-        const modal = document.getElementById('scheduleModal');
-        const modalImg = document.getElementById('scheduleImage');
-        const modalTitle = document.getElementById('scheduleTitle');
-        document.querySelectorAll('.view-schedule-btn').forEach(btn => {
-            btn.addEventListener('click', () => {
-                modalImg.src = btn.dataset.image;
-                modalTitle.textContent = btn.dataset.title;
-                modal.classList.add('active');
-                document.body.style.overflow = 'hidden';
-            });
-        });
-        document.querySelector('.close-modal').addEventListener('click', closeModal);
-        modal.addEventListener('click', e => {
-            if (e.target === modal) {
-                closeModal();
-            }
-        });
-
-        function closeModal() {
-            modal.classList.remove('active');
-            document.body.style.overflow = '';
-        }
-    </script>
+    <script src="../assets/js/sector-sntf.js" defer></script>
 
 </body>
 
