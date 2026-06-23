@@ -196,3 +196,85 @@
 .support-card p {
     line-height: 1.8;
 }
+
+/* support-banner */
+
+.support-banner{
+    display:flex;
+    align-items:center;
+    gap:1.5rem;
+    padding:1.25rem;
+    border-radius:16px;
+    background:linear-gradient(
+        135deg,
+        #eff6ff 0%,
+        #f8fafc 100%
+    );
+    border:1px solid rgba(37,99,235,.15);
+}
+
+.support-icon{
+    flex-shrink:0;
+    width:70px;
+    height:70px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:#2563eb;
+    color:#fff;
+    font-size:1.7rem;
+}
+
+.support-info{
+    flex:1;
+}
+
+.support-info h4{
+    margin:0 0 .4rem;
+    color:#1e3a8a;
+    font-size:1.1rem;
+}
+
+.support-info p{
+    margin:0;
+    color:#475569;
+    line-height:1.8;
+}
+
+.support-btn{
+    flex-shrink:0;
+    display:flex;
+    align-items:center;
+    gap:.5rem;
+    padding:.9rem 1.2rem;
+    background:#2563eb;
+    color:#fff;
+    text-decoration:none;
+    border-radius:12px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.support-btn:hover{
+    transform:translateY(-2px);
+}
+
+
+@media (max-width:768px){
+
+    .support-banner{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .support-info{
+        width:100%;
+    }
+
+    .support-btn{
+        width:100%;
+        justify-content:center;
+    }
+
+}
