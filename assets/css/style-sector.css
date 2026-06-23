@@ -1793,6 +1793,10 @@ video {
     --alert-bg: #e9f9f0;
 }
 
+.sntf-theme {
+    --alert-color: #1206f1;
+    --alert-bg: #8ed1ab;
+}
 
 /* ===== Algeria Post Theme ===== */
 
