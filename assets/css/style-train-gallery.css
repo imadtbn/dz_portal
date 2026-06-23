@@ -278,3 +278,9 @@
     }
 
 }
+
+/* Performance Optimization */
+.train-card{
+    content-visibility:auto;
+    contain-intrinsic-size:350px;
+}
