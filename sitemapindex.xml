@@ -1,70 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- ======================================================== -->
-<!--  Sitemap Index - البوابة الجزائرية للخدمات الرقمية      -->
-<!--  Base URL : https://imadtbn.github.io/dz_portal/         -->
-<!--  Generated : 2026-06-26                                  -->
-<!--  يتوافق مع معايير Sitemap Protocol ويُنصح به من جوجل    -->
-<!-- ======================================================== -->
 <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-  <!-- ========== 1. الصفحة الرئيسية والصفحات العامة ========== -->
   <sitemap>
     <loc>https://imadtbn.github.io/dz_portal/sitemap_main.xml</loc>
-    <lastmod>2026-06-21</lastmod>
+    <lastmod>2026-06-26</lastmod>
   </sitemap>
 
-  <!-- ========== 2. قطاع التعليم والتكوين ========== -->
   <sitemap>
     <loc>https://imadtbn.github.io/dz_portal/sitemap_education.xml</loc>
-    <lastmod>2026-06-21</lastmod>
+    <lastmod>2026-06-26</lastmod>
   </sitemap>
 
-  <!-- ========== 3. قطاع الاتصالات والبريد ========== -->
   <sitemap>
     <loc>https://imadtbn.github.io/dz_portal/sitemap_telecom.xml</loc>
-    <lastmod>2026-06-21</lastmod>
+    <lastmod>2026-06-26</lastmod>
   </sitemap>
 
-  <!-- ========== 4. قطاع الداخلية والعدالة والشرطة ========== -->
   <sitemap>
     <loc>https://imadtbn.github.io/dz_portal/sitemap_interior.xml</loc>
-    <lastmod>2026-06-21</lastmod>
+    <lastmod>2026-06-26</lastmod>
   </sitemap>
 
-  <!-- ========== 5. قطاع السكن والتأمين والضمان الاجتماعي ========== -->
   <sitemap>
     <loc>https://imadtbn.github.io/dz_portal/sitemap_housing_insurance.xml</loc>
-    <lastmod>2026-06-21</lastmod>
+    <lastmod>2026-06-26</lastmod>
   </sitemap>
 
-  <!-- ========== 6. قطاع المالية والاقتصاد ========== -->
   <sitemap>
     <loc>https://imadtbn.github.io/dz_portal/sitemap_finance.xml</loc>
-    <lastmod>2026-06-21</lastmod>
+    <lastmod>2026-06-26</lastmod>
   </sitemap>
 
-  <!-- ========== 7. قطاع الطاقة والمياه ========== -->
   <sitemap>
     <loc>https://imadtbn.github.io/dz_portal/sitemap_energy.xml</loc>
-    <lastmod>2026-06-21</lastmod>
+    <lastmod>2026-06-26</lastmod>
   </sitemap>
 
-  <!-- ========== 8. قطاع الصحة والنقل والشؤون الخارجية والدينية ========== -->
   <sitemap>
     <loc>https://imadtbn.github.io/dz_portal/sitemap_health_transport_foreign.xml</loc>
-    <lastmod>2026-06-21</lastmod>
+    <lastmod>2026-06-26</lastmod>
   </sitemap>
 
-  <!-- ========== 9. قطاع الفلاحة والاستثمار والتشغيل ========== -->
   <sitemap>
     <loc>https://imadtbn.github.io/dz_portal/sitemap_agriculture_employment.xml</loc>
-    <lastmod>2026-06-21</lastmod>
+    <lastmod>2026-06-26</lastmod>
   </sitemap>
 
-  <!-- ========== 10. الطوارئ والخدمات المتنوعة ========== -->
   <sitemap>
     <loc>https://imadtbn.github.io/dz_portal/sitemap_emergency_others.xml</loc>
-    <lastmod>2026-06-21</lastmod>
+    <lastmod>2026-06-26</lastmod>
   </sitemap>
 
 </sitemapindex>
