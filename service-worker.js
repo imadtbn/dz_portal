@@ -3,7 +3,7 @@ const CACHE_NAME = "dzportal-cache-v5";
 const STATIC_ASSETS = [
   "./",
   "./index.html",
-  "./manifest.webmanifest",
+  "./manifest.webmanifest.json",
   "./assets/css/style-main.css",
   "./assets/css/style-section-header.css",
   "./assets/js/script-main.js",
