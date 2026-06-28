@@ -102,8 +102,8 @@ const STATIC_ASSETS = [
   "./icons/tariki.jpg",
   "./icons/telegram.png",
   "./icons/transport.svg",
+  "./icons/travail.png",
   "./icons/travail.png"
-    "./icons/travail.png",
 ];
 
 // ✅ التثبيت: تخزين الموارد الثابتة
