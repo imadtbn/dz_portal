@@ -25,7 +25,7 @@ window.addEventListener('load', () => {
         loader.style.display = 'none';
       }, 500);
 
-    }, 700); // مدة عرض اللودر (700ms)
+    }, 600); // مدة عرض اللودر (600ms)
 
   }
 });
@@ -44,16 +44,7 @@ function scrollToTop() {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
-// Search functionality
-document.getElementById('globalSearch').addEventListener('input', function (e) {
-  const query = e.target.value.toLowerCase();
-  const cards = document.querySelectorAll('.sector-card');
 
-  cards.forEach(card => {
-    const text = card.textContent.toLowerCase();
-    card.style.display = text.includes(query) ? 'block' : 'none';
-  });
-});
 
 // Smooth scroll for anchor links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
