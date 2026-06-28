@@ -44,7 +44,16 @@ function scrollToTop() {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
+// Search functionality
+document.getElementById('globalSearch').addEventListener('input', function (e) {
+  const query = e.target.value.toLowerCase();
+  const cards = document.querySelectorAll('.sector-card');
 
+  cards.forEach(card => {
+    const text = card.textContent.toLowerCase();
+    card.style.display = text.includes(query) ? 'block' : 'none';
+  });
+});
 
 // Smooth scroll for anchor links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -134,27 +143,48 @@ function trackPageVisit() {
   }
 }
 
-// زر التثبيت
-
+// كود إدارة وتفعيل زر التثبيت المطور
 let deferredPrompt;
+const pwaBadge = document.querySelector('.pwa-badge');
 
+// 1. التقاط حدث التثبيت والاحتفاظ به
 window.addEventListener('beforeinstallprompt', (e) => {
+  // منع المتصفح من إظهار النافذة التلقائية فوراً
   e.preventDefault();
-
+  
+  // حفظ الحدث لاستخدامه لاحقاً عند النقر
   deferredPrompt = e;
+  
+  // إظهار زر التثبيت للمستخدم
+  if (pwaBadge) {
+    pwaBadge.style.display = 'inline-flex';
+  }
+});
 
-  document.querySelector('.pwa-badge').style.display = 'inline-flex';
+// 2. معالجة النقر على الزر مرة واحدة وبشكل منفصل
+if (pwaBadge) {
+  pwaBadge.addEventListener('click', async () => {
+    if (!deferredPrompt) return;
 
-  document.querySelector('.pwa-badge').addEventListener('click', async () => {
-
+    // إظهار نافذة التثبيت الخاصة بالمتصفح
     deferredPrompt.prompt();
 
+    // معرفة خيار المستخدم (موافق أم إلغاء)
     const { outcome } = await deferredPrompt.userChoice;
+    console.log(`خيار المستخدم لتثبيت التطبيق: ${outcome}`);
 
-    console.log(outcome);
-
+    // إخفاء الزر وتفريغ المتغير لأن المتصفح لا يسمح باستخدام الحدث مرتين
+    pwaBadge.style.display = 'none';
     deferredPrompt = null;
   });
+}
+
+// 3. إخفاء الزر تلقائياً إذا تم تثبيت التطبيق بالفعل بنجاح
+window.addEventListener('appinstalled', (evt) => {
+  console.log('تم تثبيت البوابة الجزائرية للخدمات الرقمية بنجاح بنظام PWA!');
+  if (pwaBadge) {
+    pwaBadge.style.display = 'none';
+  }
 });
 
 
