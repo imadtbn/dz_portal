@@ -72,6 +72,7 @@ const STATIC_ASSETS = [
   "./icons/gig.jpg",
   "./icons/google-play-logo.png",
   "./icons/gosp.jpg",
+  "./icons/icon-192.png",
   "./icons/icon-512.png",
   "./icons/ina-elections.png",
   "./icons/inpux.jpg",
