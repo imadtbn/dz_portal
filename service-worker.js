@@ -4,7 +4,6 @@ const STATIC_ASSETS = [
   "./",
   "./index.html",
   "./manifest.webmanifest.json",
-  // جميع الأيقونات الحالية
   "./icons/icon.png",
   "./icons/Flag_of_Algeria.svg",
   "./icons/AADL.png",
@@ -107,7 +106,9 @@ const STATIC_ASSETS = [
 
 // ✅ التثبيت: تخزين الموارد الثابتة
 self.addEventListener("install", event => {
-  event.waitUntil(caches.open(CACHE_NAME).then(cache => cache.addAll(STATIC_ASSETS)));
+  event.waitUntil(
+    caches.open(CACHE_NAME).then(cache => cache.addAll(STATIC_ASSETS))
+  );
   self.skipWaiting();
 });
 
@@ -126,7 +127,6 @@ self.addEventListener("fetch", event => {
   const req = event.request;
   const url = new URL(req.url);
 
-  // تجاهل الطلبات غير GET أو امتدادات Chrome
   if (req.method !== "GET" || url.protocol.startsWith("chrome-extension")) return;
 
   if (url.origin === location.origin) {
@@ -136,16 +136,12 @@ self.addEventListener("fetch", event => {
   }
 });
 
-// ⚙️ الكاش أولاً
 async function cacheFirst(req) {
   const cached = await caches.match(req);
   return cached || fetch(req);
 }
 
-// ⚙️ الشبكة أولاً
 async function networkFirst(req) {
-  if (req.method !== "GET") return fetch(req);
-
   const cache = await caches.open(CACHE_NAME);
   try {
     const fresh = await fetch(req);
@@ -156,12 +152,6 @@ async function networkFirst(req) {
     return cached || Response.error();
   }
 }
-
-// ✅ دعم تثبيت التطبيق (PWA)
-self.addEventListener("beforeinstallprompt", e => {
-  e.preventDefault();
-  self.deferredPrompt = e;
-});
 
 // 🔄 تحديث فوري عند توفر نسخة جديدة
 self.addEventListener("message", event => {

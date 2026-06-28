@@ -1095,14 +1095,14 @@
     <link rel="stylesheet" href="assets/css/style-main.css">
     <link rel="stylesheet" href="assets/css/style-section-header.css">
 
-    <link rel="manifest" href="manifest.webmanifest.json">
-
-    <!-- تسجيل Service Worker -->
+    <link rel="manifest" href="./manifest.webmanifest.json">
     <script>
         if ('serviceWorker' in navigator) {
-            navigator.serviceWorker.register('./service-worker.js')
-                .then(reg => console.log('✅ Service Worker registered:', reg.scope))
-                .catch(err => console.error('❌ Service Worker failed:', err));
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('./service-worker.js')
+                    .then(reg => console.log('Service Worker Registered!', reg))
+                    .catch(err => console.err('Registration failed: ', err));
+            });
         }
     </script>
 
