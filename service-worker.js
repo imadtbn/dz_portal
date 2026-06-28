@@ -4,12 +4,6 @@ const STATIC_ASSETS = [
   "./",
   "./index.html",
   "./manifest.webmanifest.json",
-  "./assets/css/style-main.css",
-  "./assets/css/style-section-header.css",
-  "./assets/js/script-main.js",
-  "./assets/js/script-section-header.js",
-  "./assets/js/script-search.js",
-  "./assets/js/script-analytics.js",
   // جميع الأيقونات الحالية
   "./icons/icon.png",
   "./icons/Flag_of_Algeria.svg",
@@ -108,7 +102,6 @@ const STATIC_ASSETS = [
   "./icons/tariki.jpg",
   "./icons/telegram.png",
   "./icons/transport.svg",
-  "./icons/travail.png",
   "./icons/travail.png"
 ];
 
