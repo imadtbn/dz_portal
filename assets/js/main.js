@@ -143,47 +143,57 @@ function trackPageVisit() {
   }
 }
 
-// كود إدارة وتفعيل زر التثبيت المطور
+// ====== تثبيت التطبيق (PWA) ======
 let deferredPrompt;
-const pwaBadge = document.querySelector('.pwa-badge');
+const installBtn = document.getElementById('installAppBtn');
 
-// 1. التقاط حدث التثبيت والاحتفاظ به
+// استقبال حدث beforeinstallprompt
 window.addEventListener('beforeinstallprompt', (e) => {
-  // منع المتصفح من إظهار النافذة التلقائية فوراً
   e.preventDefault();
-  
-  // حفظ الحدث لاستخدامه لاحقاً عند النقر
   deferredPrompt = e;
-  
-  // إظهار زر التثبيت للمستخدم
-  if (pwaBadge) {
-    pwaBadge.style.display = 'inline-flex';
+  // إظهار الزر إذا كان مخفياً (اختياري)
+  if (installBtn) {
+    installBtn.style.display = 'flex';
   }
 });
 
-// 2. معالجة النقر على الزر مرة واحدة وبشكل منفصل
-if (pwaBadge) {
-  pwaBadge.addEventListener('click', async () => {
-    if (!deferredPrompt) return;
-
-    // إظهار نافذة التثبيت الخاصة بالمتصفح
-    deferredPrompt.prompt();
-
-    // معرفة خيار المستخدم (موافق أم إلغاء)
-    const { outcome } = await deferredPrompt.userChoice;
-    console.log(`خيار المستخدم لتثبيت التطبيق: ${outcome}`);
-
-    // إخفاء الزر وتفريغ المتغير لأن المتصفح لا يسمح باستخدام الحدث مرتين
-    pwaBadge.style.display = 'none';
-    deferredPrompt = null;
+// حدث النقر على زر التثبيت
+if (installBtn) {
+  installBtn.addEventListener('click', async () => {
+    if (deferredPrompt) {
+      // عرض نافذة التثبيت
+      deferredPrompt.prompt();
+      const result = await deferredPrompt.userChoice;
+      console.log(`نتيجة التثبيت: ${result.outcome}`);
+      if (result.outcome === 'accepted') {
+        console.log('تم تثبيت التطبيق بنجاح');
+        // إخفاء الزر بعد التثبيت
+        installBtn.style.display = 'none';
+      } else {
+        console.log('تم رفض التثبيت');
+      }
+      deferredPrompt = null;
+    } else {
+      // إذا لم يكن الحدث متاحاً (متصفح غير مدعوم أو تم التثبيت مسبقاً)
+      alert('متصفحك لا يدعم تثبيت التطبيقات أو تم التثبيت مسبقاً.');
+    }
   });
 }
 
-// 3. إخفاء الزر تلقائياً إذا تم تثبيت التطبيق بالفعل بنجاح
-window.addEventListener('appinstalled', (evt) => {
-  console.log('تم تثبيت البوابة الجزائرية للخدمات الرقمية بنجاح بنظام PWA!');
-  if (pwaBadge) {
-    pwaBadge.style.display = 'none';
+// في حالة نجاح التثبيت (حدث appinstalled)
+window.addEventListener('appinstalled', () => {
+  console.log('تم تثبيت التطبيق عبر المتصفح');
+  if (installBtn) installBtn.style.display = 'none';
+});
+
+// إذا كان المتصفح لا يدعم PWA، نخفي الزر
+window.addEventListener('load', () => {
+  if (!('serviceWorker' in navigator) || !window.matchMedia('(display-mode: standalone)').matches) {
+    // لا تفعل شيئاً، الزر يظهر لكن النقر سيظهر رسالة
+  }
+  // التحقق إذا كان التطبيق مفتوحاً بالفعل كـ PWA
+  if (window.matchMedia('(display-mode: standalone)').matches) {
+    if (installBtn) installBtn.style.display = 'none';
   }
 });
 
@@ -195,55 +205,55 @@ const cards = document.querySelectorAll('.sector-card');
 
 filterBtns.forEach(btn => {
 
-    btn.addEventListener('click', () => {
+  btn.addEventListener('click', () => {
 
-        filterBtns.forEach(b =>
-            b.classList.remove('active')
-        );
+    filterBtns.forEach(b =>
+      b.classList.remove('active')
+    );
 
-        btn.classList.add('active');
+    btn.classList.add('active');
 
-        const filter = btn.dataset.filter;
+    const filter = btn.dataset.filter;
 
-        cards.forEach(card => {
+    cards.forEach(card => {
 
-            const isNew =
-                card.querySelector('.service-badge');
+      const isNew =
+        card.querySelector('.service-badge');
 
-            if(filter === 'all'){
-                card.style.display = '';
-            }
-            else{
-                card.style.display =
-                    isNew ? '' : 'none';
-            }
-
-        });
+      if (filter === 'all') {
+        card.style.display = '';
+      }
+      else {
+        card.style.display =
+          isNew ? '' : 'none';
+      }
 
     });
+
+  });
 
 });
 
 
 document.addEventListener("DOMContentLoaded", () => {
 
-    const btn = document.getElementById("newServicesBtn");
+  const btn = document.getElementById("newServicesBtn");
 
-    const count = document.querySelectorAll(
-        ".sector-card[data-new='true']"
-    ).length;
+  const count = document.querySelectorAll(
+    ".sector-card[data-new='true']"
+  ).length;
 
-    if (count > 0) {
+  if (count > 0) {
 
-        btn.innerHTML = `
+    btn.innerHTML = `
             <i class="fas fa-sparkles"></i>
             الخدمات الجديدة (${count})
         `;
 
-    } else {
+  } else {
 
-        btn.style.display = "none";
+    btn.style.display = "none";
 
-    }
+  }
 
 });
