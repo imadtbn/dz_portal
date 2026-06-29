@@ -1,6 +1,6 @@
 // Hide loader
 // Smart Loader - يظهر مرة واحدة فقط داخل نفس الجلسة
-window.addEventListener('load', () => {
+//window.addEventListener('load', () => {
 
     const loader = document.getElementById('loader');
 
@@ -32,7 +32,7 @@ window.addEventListener('load', () => {
 
 
 // Theme toggle
-function toggleTheme() {
+//function toggleTheme() {
     document.body.classList.toggle('dark-mode');
     const icon = document.querySelector('.theme-toggle i');
     icon.classList.toggle('fa-moon');
