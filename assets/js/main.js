@@ -149,34 +149,33 @@ function trackPageVisit() {
 
 let deferredPrompt;
 
+const installBtn = document.getElementById("installAppBtn");
+
 window.addEventListener("beforeinstallprompt", (e) => {
     e.preventDefault();
     deferredPrompt = e;
+
+    installBtn.style.display = "flex";
 });
 
-document.getElementById("installAppBtn").addEventListener("click", async() => {
+installBtn.addEventListener("click", async() => {
 
-    if (!deferredPrompt) {
-        alert("متصفحك لا يدعم التثبيت المباشر.");
-        return;
-    }
+    if (!deferredPrompt) return;
 
     deferredPrompt.prompt();
 
-    await deferredPrompt.userChoice;
+    const { outcome } = await deferredPrompt.userChoice;
+
+    if (outcome === "accepted") {
+        installBtn.style.display = "none";
+    }
 
     deferredPrompt = null;
 
 });
 
-window.addEventListener("beforeinstallprompt", e => {
-    e.preventDefault();
-
-    e.prompt();
-
-    e.userChoice.then(choice => {
-        console.log(choice.outcome);
-    });
+window.addEventListener("appinstalled", () => {
+    installBtn.style.display = "none";
 });
 
 
