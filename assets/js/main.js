@@ -143,59 +143,131 @@ function trackPageVisit() {
   }
 }
 
-// ====== تثبيت التطبيق (PWA) ======
-let deferredPrompt;
-const installBtn = document.getElementById('installAppBtn');
+// ============================================================
+// حل شامل لتثبيت PWA (يعمل على جميع المتصفحات والأجهزة)
+// ============================================================
 
-// استقبال حدث beforeinstallprompt
-window.addEventListener('beforeinstallprompt', (e) => {
-  e.preventDefault();
-  deferredPrompt = e;
-  // إظهار الزر إذا كان مخفياً (اختياري)
-  if (installBtn) {
-    installBtn.style.display = 'flex';
-  }
-});
+(function() {
+    'use strict';
 
-// حدث النقر على زر التثبيت
-if (installBtn) {
-  installBtn.addEventListener('click', async () => {
-    if (deferredPrompt) {
-      // عرض نافذة التثبيت
-      deferredPrompt.prompt();
-      const result = await deferredPrompt.userChoice;
-      console.log(`نتيجة التثبيت: ${result.outcome}`);
-      if (result.outcome === 'accepted') {
-        console.log('تم تثبيت التطبيق بنجاح');
-        // إخفاء الزر بعد التثبيت
+    // 1. العناصر
+    const installBtn = document.getElementById('installAppBtn');
+    if (!installBtn) return; // تأكد من وجود الزر
+
+    let deferredPrompt = null;
+    const isStandalone = window.matchMedia('(display-mode: standalone)').matches;
+
+    // 2. إذا كان التطبيق مفتوحاً في وضع PWA، نخفي الزر
+    if (isStandalone) {
         installBtn.style.display = 'none';
-      } else {
-        console.log('تم رفض التثبيت');
-      }
-      deferredPrompt = null;
-    } else {
-      // إذا لم يكن الحدث متاحاً (متصفح غير مدعوم أو تم التثبيت مسبقاً)
-      alert('متصفحك لا يدعم تثبيت التطبيقات أو تم التثبيت مسبقاً.');
+        return;
     }
-  });
-}
 
-// في حالة نجاح التثبيت (حدث appinstalled)
-window.addEventListener('appinstalled', () => {
-  console.log('تم تثبيت التطبيق عبر المتصفح');
-  if (installBtn) installBtn.style.display = 'none';
-});
+    // 3. استقبال حدث beforeinstallprompt (Chrome, Edge, إلخ)
+    window.addEventListener('beforeinstallprompt', (e) => {
+        e.preventDefault();
+        deferredPrompt = e;
+        // إظهار الزر وتفعيله
+        installBtn.style.display = 'flex';
+        installBtn.style.pointerEvents = 'auto';
+        installBtn.style.opacity = '1';
+        // تحديث النص
+        const title = installBtn.querySelector('.badge-title');
+        if (title) title.textContent = 'تثبيت التطبيق';
+        const subtitle = installBtn.querySelector('.badge-subtitle');
+        if (subtitle) subtitle.textContent = 'انقر لتثبيت التطبيق رسمياً';
+    });
 
-// إذا كان المتصفح لا يدعم PWA، نخفي الزر
-window.addEventListener('load', () => {
-  if (!('serviceWorker' in navigator) || !window.matchMedia('(display-mode: standalone)').matches) {
-    // لا تفعل شيئاً، الزر يظهر لكن النقر سيظهر رسالة
-  }
-  // التحقق إذا كان التطبيق مفتوحاً بالفعل كـ PWA
-  if (window.matchMedia('(display-mode: standalone)').matches) {
-    if (installBtn) installBtn.style.display = 'none';
-  }
-});
+    // 4. دالة عرض التعليمات اليدوية (للمتصفحات غير المدعومة)
+    function showManualInstructions() {
+        const ua = navigator.userAgent;
+        const isIOS = /iPad|iPhone|iPod/.test(ua) && !window.MSStream;
+        const isSafari = /^((?!chrome|android).)*safari/i.test(ua);
+        const isAndroid = /android/i.test(ua);
+
+        let message = '';
+        if (isIOS) {
+            message = '📱 لإضافة التطبيق إلى شاشتك الرئيسية على iPhone/iPad:\n\n' +
+                      '1. اضغط على زر المشاركة (□ مع سهم لأعلى) في أسفل الشاشة.\n' +
+                      '2. اختر "إضافة إلى الشاشة الرئيسية".\n' +
+                      '3. اضغط على "إضافة" في الأعلى.';
+        } else if (isSafari && !isIOS) {
+            message = '🍏 لإضافة التطبيق إلى الشاشة الرئيسية في Safari على Mac:\n\n' +
+                      '1. اضغط على زر المشاركة في شريط الأدوات.\n' +
+                      '2. اختر "إضافة إلى الشاشة الرئيسية".';
+        } else if (isAndroid) {
+            message = '🤖 لإضافة التطبيق إلى الشاشة الرئيسية على Android:\n\n' +
+                      '1. اضغط على القائمة (ثلاث نقاط) في أعلى المتصفح.\n' +
+                      '2. اختر "إضافة إلى الشاشة الرئيسية" أو "تثبيت".\n' +
+                      '3. اتبع التعليمات.';
+        } else {
+            message = '🌐 متصفحك لا يدعم التثبيت التلقائي.\n\n' +
+                      'يمكنك إضافة هذه الصفحة إلى المفضلة، أو استخدام خيار "إضافة إلى الشاشة الرئيسية" من قائمة المتصفح.';
+        }
+
+        // عرض التعليمات في نافذة منبثقة (يمكن استبدالها بمودال مخصص)
+        alert(message);
+    }
+
+    // 5. حدث النقر على زر التثبيت
+    installBtn.addEventListener('click', async (e) => {
+        e.preventDefault();
+
+        if (deferredPrompt) {
+            // المتصفح يدعم التثبيت التلقائي
+            try {
+                deferredPrompt.prompt();
+                const result = await deferredPrompt.userChoice;
+                if (result.outcome === 'accepted') {
+                    console.log('✅ تم تثبيت التطبيق بنجاح');
+                    installBtn.style.display = 'none';
+                } else {
+                    console.log('❌ رفض المستخدم التثبيت');
+                    showManualInstructions(); // عرض تعليمات يدوية كبديل
+                }
+                deferredPrompt = null;
+            } catch (err) {
+                console.error('خطأ في التثبيت:', err);
+                showManualInstructions();
+            }
+        } else {
+            // المتصفح لا يدعم beforeinstallprompt أو لم يتم استقباله
+            showManualInstructions();
+        }
+    });
+
+    // 6. في حالة نجاح التثبيت عبر المتصفح (حدث appinstalled)
+    window.addEventListener('appinstalled', () => {
+        console.log('✅ تم تثبيت التطبيق (حدث appinstalled)');
+        installBtn.style.display = 'none';
+    });
+
+    // 7. إذا لم يظهر beforeinstallprompt بعد 5 ثوان، نغير سلوك الزر إلى "تعليمات"
+    setTimeout(() => {
+        if (!deferredPrompt && installBtn.style.display !== 'none') {
+            const title = installBtn.querySelector('.badge-title');
+            if (title) title.textContent = 'تثبيت التطبيق';
+            const subtitle = installBtn.querySelector('.badge-subtitle');
+            if (subtitle) subtitle.textContent = 'اضغط للتعليمات';
+            // نضمن أن الزر قابل للنقر
+            installBtn.style.pointerEvents = 'auto';
+        }
+    }, 5000);
+
+    // 8. (اختياري) تحسين إمكانية الوصول: إضافة دور زر وعلامة تبويب
+    installBtn.setAttribute('role', 'button');
+    installBtn.setAttribute('tabindex', '0');
+    installBtn.style.cursor = 'pointer';
+
+    // 9. دعم الضغط على Enter أو Space (لوحة المفاتيح)
+    installBtn.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            installBtn.click();
+        }
+    });
+
+})();
 
 
 // زر الفلترة والعداد
