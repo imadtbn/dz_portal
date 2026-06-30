@@ -1,69 +1,69 @@
 // Hide loader
 // Smart Loader - يظهر مرة واحدة فقط داخل نفس الجلسة
-//window.addEventListener('load', () => {
+window.addEventListener('load', () => {
 
-    const loader = document.getElementById('loader');
+  const loader = document.getElementById('loader');
 
-    // هل تم عرض اللودر مسبقاً داخل نفس الجلسة؟
-    const loaderShown = sessionStorage.getItem('loaderShown');
+  // هل تم عرض اللودر مسبقاً داخل نفس الجلسة؟
+  const loaderShown = sessionStorage.getItem('loaderShown');
 
-    if (loaderShown) {
+  if (loaderShown) {
 
-        // إخفاء فوري بدون عرض اللودر
+    // إخفاء فوري بدون عرض اللودر
+    loader.style.display = 'none';
+
+  } else {
+
+    // أول دخول فقط
+    sessionStorage.setItem('loaderShown', 'true');
+
+    setTimeout(() => {
+      loader.classList.add('hidden');
+
+      // إزالة اللودر نهائياً بعد انتهاء الانيميشن
+      setTimeout(() => {
         loader.style.display = 'none';
+      }, 500);
 
-    } else {
+    }, 600); // مدة عرض اللودر (600ms)
 
-        // أول دخول فقط
-        sessionStorage.setItem('loaderShown', 'true');
-
-        setTimeout(() => {
-            loader.classList.add('hidden');
-
-            // إزالة اللودر نهائياً بعد انتهاء الانيميشن
-            setTimeout(() => {
-                loader.style.display = 'none';
-            }, 500);
-
-        }, 600); // مدة عرض اللودر (600ms)
-
-    }
+  }
 });
 
 
 // Theme toggle
-//function toggleTheme() {
-    document.body.classList.toggle('dark-mode');
-    const icon = document.querySelector('.theme-toggle i');
-    icon.classList.toggle('fa-moon');
-    icon.classList.toggle('fa-sun');
+function toggleTheme() {
+  document.body.classList.toggle('dark-mode');
+  const icon = document.querySelector('.theme-toggle i');
+  icon.classList.toggle('fa-moon');
+  icon.classList.toggle('fa-sun');
 }
 
 // Scroll to top
 function scrollToTop() {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+  window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
 // Search functionality
-document.getElementById('globalSearch').addEventListener('input', function(e) {
-    const query = e.target.value.toLowerCase();
-    const cards = document.querySelectorAll('.sector-card');
+document.getElementById('globalSearch').addEventListener('input', function (e) {
+  const query = e.target.value.toLowerCase();
+  const cards = document.querySelectorAll('.sector-card');
 
-    cards.forEach(card => {
-        const text = card.textContent.toLowerCase();
-        card.style.display = text.includes(query) ? 'block' : 'none';
-    });
+  cards.forEach(card => {
+    const text = card.textContent.toLowerCase();
+    card.style.display = text.includes(query) ? 'block' : 'none';
+  });
 });
 
 // Smooth scroll for anchor links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-            target.scrollIntoView({ behavior: 'smooth' });
-        }
-    });
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth' });
+    }
+  });
 });
 
 // Add bounce animation
@@ -78,31 +78,31 @@ document.head.appendChild(style);
 
 
 /* ===== العداد 9 الوهمي ===== */
-document.addEventListener("DOMContentLoaded", function() {
-    // عناصر العداد
-    const dailyEl = document.getElementById('daily-visits');
-    const totalEl = document.getElementById('total-visits');
-    if (!dailyEl || !totalEl) return; // تأكد من وجودها
+document.addEventListener("DOMContentLoaded", function () {
+  // عناصر العداد
+  const dailyEl = document.getElementById('daily-visits');
+  const totalEl = document.getElementById('total-visits');
+  if (!dailyEl || !totalEl) return; // تأكد من وجودها
 
-    // أرقام أولية
-    let daily = Math.floor(Math.random() * 10000 + 1000); // زيارات اليوم
-    let total = 3000000 + Math.floor(Math.random() * 50000); // إجمالي الزيارات
+  // أرقام أولية
+  let daily = Math.floor(Math.random() * 10000 + 1000);   // زيارات اليوم
+  let total = 3000000 + Math.floor(Math.random() * 50000); // إجمالي الزيارات
 
-    // تحديث العرض
-    function updateCounter() {
-        dailyEl.textContent = daily.toLocaleString('en-US');
-        totalEl.textContent = total.toLocaleString('en-US');
-    }
+  // تحديث العرض
+  function updateCounter() {
+    dailyEl.textContent = daily.toLocaleString('en-US');
+    totalEl.textContent = total.toLocaleString('en-US');
+  }
 
-    // عرض القيم الأولية
+  // عرض القيم الأولية
+  updateCounter();
+
+  // تحديث دوري كل 1.2 ثانية
+  setInterval(() => {
+    daily += Math.floor(Math.random() * 10 + 1);
+    total += Math.floor(Math.random() * 20 + 1);
     updateCounter();
-
-    // تحديث دوري كل 1.2 ثانية
-    setInterval(() => {
-        daily += Math.floor(Math.random() * 10 + 1);
-        total += Math.floor(Math.random() * 20 + 1);
-        updateCounter();
-    }, 1200);
+  }, 1200);
 });
 
 
@@ -110,13 +110,13 @@ document.addEventListener("DOMContentLoaded", function() {
 
 function loadAnalytics() {
 
-    if (window.analyticsLoaded) return;
-    window.analyticsLoaded = true;
+  if (window.analyticsLoaded) return;
+  window.analyticsLoaded = true;
 
-    const gtag = document.createElement('script');
-    gtag.src = 'https://www.googletagmanager.com/gtag/js?id=G-K23WYKK60X';
-    gtag.async = true;
-    document.head.appendChild(gtag);
+  const gtag = document.createElement('script');
+  gtag.src = 'https://www.googletagmanager.com/gtag/js?id=G-K23WYKK60X';
+  gtag.async = true;
+  document.head.appendChild(gtag);
 
 }
 
@@ -125,57 +125,76 @@ window.addEventListener('click', loadAnalytics, { once: true });
 
 // تحميل تحليلات إضافية بعد 3 ثواني من التحميل لتحسين الأداء
 window.addEventListener('load', () => {
-    setTimeout(() => {
+  setTimeout(() => {
 
-        // analytics هنا
+    // analytics هنا
 
-    }, 3000);
+  }, 3000);
 });
 
 // تسجيل حدث زيارة الصفحة
 function trackPageVisit() {
-    if (window.gtag) {
-        gtag('event', 'page_view', {
-            page_title: document.title,
-            page_location: window.location.href,
-            page_path: window.location.pathname
-        });
-    }
+  if (window.gtag) {
+    gtag('event', 'page_view', {
+      page_title: document.title,
+      page_location: window.location.href,
+      page_path: window.location.pathname
+    });
+  }
 }
 
-// ============================================================
-// حل شامل لتثبيت PWA (يعمل على جميع المتصفحات والأجهزة)
-// ============================================================
-
+// ====== تثبيت التطبيق (PWA) ======
 let deferredPrompt;
+const installBtn = document.getElementById('installAppBtn');
 
-const installBtn = document.getElementById("installAppBtn");
-
-window.addEventListener("beforeinstallprompt", (e) => {
-    e.preventDefault();
-    deferredPrompt = e;
-
-    installBtn.style.display = "flex";
+// استقبال حدث beforeinstallprompt
+window.addEventListener('beforeinstallprompt', (e) => {
+  e.preventDefault();
+  deferredPrompt = e;
+  // إظهار الزر إذا كان مخفياً (اختياري)
+  if (installBtn) {
+    installBtn.style.display = 'flex';
+  }
 });
 
-installBtn.addEventListener("click", async() => {
-
-    if (!deferredPrompt) return;
-
-    deferredPrompt.prompt();
-
-    const { outcome } = await deferredPrompt.userChoice;
-
-    if (outcome === "accepted") {
-        installBtn.style.display = "none";
+// حدث النقر على زر التثبيت
+if (installBtn) {
+  installBtn.addEventListener('click', async () => {
+    if (deferredPrompt) {
+      // عرض نافذة التثبيت
+      deferredPrompt.prompt();
+      const result = await deferredPrompt.userChoice;
+      console.log(`نتيجة التثبيت: ${result.outcome}`);
+      if (result.outcome === 'accepted') {
+        console.log('تم تثبيت التطبيق بنجاح');
+        // إخفاء الزر بعد التثبيت
+        installBtn.style.display = 'none';
+      } else {
+        console.log('تم رفض التثبيت');
+      }
+      deferredPrompt = null;
+    } else {
+      // إذا لم يكن الحدث متاحاً (متصفح غير مدعوم أو تم التثبيت مسبقاً)
+      alert('متصفحك لا يدعم تثبيت التطبيقات أو تم التثبيت مسبقاً.');
     }
+  });
+}
 
-    deferredPrompt = null;
-
+// في حالة نجاح التثبيت (حدث appinstalled)
+window.addEventListener('appinstalled', () => {
+  console.log('تم تثبيت التطبيق عبر المتصفح');
+  if (installBtn) installBtn.style.display = 'none';
 });
 
-window.addEventListener("appinstalled", () => {
-    installBtn.style.display = "none";
+// إذا كان المتصفح لا يدعم PWA، نخفي الزر
+window.addEventListener('load', () => {
+  if (!('serviceWorker' in navigator) || !window.matchMedia('(display-mode: standalone)').matches) {
+    // لا تفعل شيئاً، الزر يظهر لكن النقر سيظهر رسالة
+  }
+  // التحقق إذا كان التطبيق مفتوحاً بالفعل كـ PWA
+  if (window.matchMedia('(display-mode: standalone)').matches) {
+    if (installBtn) installBtn.style.display = 'none';
+  }
 });
 
 
@@ -186,54 +205,55 @@ const cards = document.querySelectorAll('.sector-card');
 
 filterBtns.forEach(btn => {
 
-    btn.addEventListener('click', () => {
+  btn.addEventListener('click', () => {
 
-        filterBtns.forEach(b =>
-            b.classList.remove('active')
-        );
+    filterBtns.forEach(b =>
+      b.classList.remove('active')
+    );
 
-        btn.classList.add('active');
+    btn.classList.add('active');
 
-        const filter = btn.dataset.filter;
+    const filter = btn.dataset.filter;
 
-        cards.forEach(card => {
+    cards.forEach(card => {
 
-            const isNew =
-                card.querySelector('.service-badge');
+      const isNew =
+        card.querySelector('.service-badge');
 
-            if (filter === 'all') {
-                card.style.display = '';
-            } else {
-                card.style.display =
-                    isNew ? '' : 'none';
-            }
-
-        });
+      if (filter === 'all') {
+        card.style.display = '';
+      }
+      else {
+        card.style.display =
+          isNew ? '' : 'none';
+      }
 
     });
+
+  });
 
 });
 
 
 document.addEventListener("DOMContentLoaded", () => {
 
-    const btn = document.getElementById("newServicesBtn");
+  const btn = document.getElementById("newServicesBtn");
 
-    const count = document.querySelectorAll(
-        ".sector-card[data-new='true']"
-    ).length;
+  const count = document.querySelectorAll(
+    ".sector-card[data-new='true']"
+  ).length;
 
-    if (count > 0) {
+  if (count > 0) {
 
-        btn.innerHTML = `
+    btn.innerHTML = `
             <i class="fas fa-sparkles"></i>
             الخدمات الجديدة (${count})
         `;
 
-    } else {
+  } else {
 
-        btn.style.display = "none";
+    btn.style.display = "none";
 
-    }
+  }
 
 });
