@@ -1097,13 +1097,12 @@
 
     <link rel="manifest" href="manifest.json">
 
-    <script>
-        if ('serviceWorker' in navigator) {
-            window.addEventListener('load', () => {
-                navigator.serviceWorker.register('./service-worker.js')
-                    .then(reg => console.log('Service Worker Registered!', reg))
-                    .catch(err => console.error('Registration failed: ', err));
-            });
+    <link rel="manifest" href="manifest.json">
+
+     <script>
+        if ("serviceWorker" in navigator) {
+            navigator.serviceWorker.register("/dz_portal/sw.js")
+                .then(() => console.log("Service Worker Registered"));
         }
     </script>
 
