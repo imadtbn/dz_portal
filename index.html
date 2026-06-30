@@ -22,12 +22,12 @@
     <meta name="author" content="البوابة الجزائرية للخدمات الرقمية">
     <meta name="language" content="Arabic">
 
-        <link rel="manifest" href="/dz_portal/manifest.json">
+    <link rel="manifest" href="manifest.json">
     <meta name="theme-color" content="#006400">
 
     <script>
         if ("serviceWorker" in navigator) {
-            navigator.serviceWorker.register("/dz_portal/sw.js")
+            navigator.serviceWorker.register("sw.js")
                 .then(() => console.log("Service Worker Registered"));
         }
     </script>
