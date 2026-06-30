@@ -48,6 +48,9 @@ self.addEventListener("fetch", (event) => {
 
   if (request.method !== "GET") return;
 
+  // تجاهل الطلبات التي ليست http/https (مثل chrome-extension://, moz-extension://, data: ...)
+  if (!request.url.startsWith("http")) return;
+
   if (request.mode === "navigate") {
     event.respondWith(
       fetch(request).catch(() => caches.match(OFFLINE_URL))
@@ -64,11 +67,14 @@ self.addEventListener("fetch", (event) => {
           if (
             networkResponse &&
             networkResponse.status === 200 &&
-            networkResponse.type === "basic"
+            networkResponse.type === "basic" &&
+            request.url.startsWith(self.location.origin)
           ) {
             const responseClone = networkResponse.clone();
             caches.open(CACHE_NAME).then((cache) => {
-              cache.put(request, responseClone);
+              cache.put(request, responseClone).catch((err) => {
+                console.warn("تعذر تخزين الطلب في الكاش:", request.url, err);
+              });
             });
           }
           return networkResponse;
