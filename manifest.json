@@ -1,19 +1,17 @@
 {
   "name": "البوابة الجزائرية للخدمات الرقمية",
   "short_name": "DZ Portal",
-  "id": "/dz_portal/",
-  "start_url": "https://imadtbn.github.io/dz_portal/",
-  "scope": "/dz_portal/",
+  "start_url": "https://imadtbn.github.io/dz_portal/index.html",
   "display": "standalone",
-  "orientation": "portrait",
   "background_color": "#ffffff",
-  "lang": "ar",
   "theme_color": "#006400",
+  "orientation": "portrait",
+  "lang": "ar",
+  "description": "البوابة الجزائرية للخدمات الرقمية - الوصول إلى الخدمات الحكومية الإلكترونية بسهولة.",
   "display_override": [
     "window-controls-overlay",
     "standalone"
   ],
-  "description": "البوابة الجزائرية للخدمات الرقمية - الوصول إلى الخدمات الحكومية الإلكترونية بسهولة.",
   "icons": [
     {
       "src": "/dz_portal/icon-192.png",
