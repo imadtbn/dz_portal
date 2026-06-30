@@ -22,6 +22,16 @@
     <meta name="author" content="البوابة الجزائرية للخدمات الرقمية">
     <meta name="language" content="Arabic">
 
+        <link rel="manifest" href="/dz_portal/manifest.json">
+    <meta name="theme-color" content="#006400">
+
+    <script>
+        if ("serviceWorker" in navigator) {
+            navigator.serviceWorker.register("/dz_portal/sw.js")
+                .then(() => console.log("Service Worker Registered"));
+        }
+    </script>
+
     <!-- Structured Data -->
     <script type="application/ld+json">
         {
@@ -1094,17 +1104,6 @@
 
     <link rel="stylesheet" href="assets/css/style-main.css">
     <link rel="stylesheet" href="assets/css/style-section-header.css">
-
-    <link rel="manifest" href="manifest.json">
-
-    <link rel="manifest" href="manifest.json">
-
-     <script>
-        if ("serviceWorker" in navigator) {
-            navigator.serviceWorker.register("/dz_portal/sw.js")
-                .then(() => console.log("Service Worker Registered"));
-        }
-    </script>
 
     <!-- Google Search Console & Bing Verification -->
     <meta name="google-site-verification" content="tGjdnUHs9yv4HTGpgnemjCK7YsJ3bI4twWC1WDi5Nqw">
