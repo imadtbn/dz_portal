@@ -1,5 +1,5 @@
 // ✅ DZ Portal Service Worker (نسخة محسّنة ومستقرة)
-const CACHE_NAME = "dzportal-cache-v5";
+const CACHE_NAME = "dz_portal";
 const STATIC_ASSETS = [
     "./",
     "./index.html",
