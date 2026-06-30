@@ -1,0 +1,43 @@
+{
+  "name": "البوابة الجزائرية للخدمات الرقمية",
+  "short_name": "DZ Portal",
+  "id": "/dz_portal/",
+  "start_url": "/dz_portal/index.html",
+  "scope": "/dz_portal/",
+  "display": "standalone",
+  "display_override": ["window-controls-overlay", "standalone", "browser"],
+  "background_color": "#ffffff",
+  "theme_color": "#006400",
+  "orientation": "portrait-primary",
+  "lang": "ar",
+  "dir": "rtl",
+  "description": "البوابة الجزائرية للخدمات الرقمية - الوصول إلى الخدمات الحكومية والقطاعات الإلكترونية بسهولة وسرعة.",
+  "categories": ["government", "utilities", "productivity"],
+  "icons": [
+    {
+      "src": "/dz_portal/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/dz_portal/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/dz_portal/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/dz_portal/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "screenshots": []
+}
