@@ -1095,31 +1095,15 @@
     <link rel="stylesheet" href="assets/css/style-main.css">
     <link rel="stylesheet" href="assets/css/style-section-header.css">
 
-    <link rel="manifest" href="./manifest.webmanifest.json">
+    <link rel="manifest" href="manifest.json">
+
     <script>
         if ('serviceWorker' in navigator) {
-
-            window.addEventListener('load', async() => {
-
-                try {
-
-                    const registration = await navigator.serviceWorker.register('./service-worker.js', {
-
-                        scope: './',
-                        updateViaCache: 'none'
-
-                    });
-
-                    console.log('✅ Service Worker Registered', registration);
-
-                } catch (error) {
-
-                    console.error('❌ Service Worker Registration Failed', error);
-
-                }
-
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('./service-worker.js')
+                    .then(reg => console.log('Service Worker Registered!', reg))
+                    .catch(err => console.error('Registration failed: ', err));
             });
-
         }
     </script>
 
