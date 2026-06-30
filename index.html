@@ -22,16 +22,6 @@
     <meta name="author" content="البوابة الجزائرية للخدمات الرقمية">
     <meta name="language" content="Arabic">
 
-    <link rel="manifest" href="manifest.json">
-    <meta name="theme-color" content="#006400">
-
-    <script>
-        if ("serviceWorker" in navigator) {
-            navigator.serviceWorker.register("sw.js")
-                .then(() => console.log("Service Worker Registered"));
-        }
-    </script>
-
     <!-- Structured Data -->
     <script type="application/ld+json">
         {
@@ -1105,6 +1095,17 @@
     <link rel="stylesheet" href="assets/css/style-main.css">
     <link rel="stylesheet" href="assets/css/style-section-header.css">
 
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#006400">
+
+    <script>
+        if ("serviceWorker" in navigator) {
+            navigator.serviceWorker.register("sw.js")
+                .then(() => console.log("Service Worker Registered"));
+        }
+    </script>
+
+
     <!-- Google Search Console & Bing Verification -->
     <meta name="google-site-verification" content="tGjdnUHs9yv4HTGpgnemjCK7YsJ3bI4twWC1WDi5Nqw">
     <meta name="google-site-verification" content="f5Xi4oFx0v5dN6iPZd9qCw-7vnc3vIbAeYF9jr4vwVM">
@@ -1299,8 +1300,6 @@
         </a>
     </div>
 
-
-
     <!-- Sectors Grid -->
     <section class="sectors-section" id="sectors">
 
@@ -1320,8 +1319,6 @@
             </div>
         </div>
 
-
-
         <!--أزرار الفلترة-->
         <div class="filter-actions">
             <button class="filter-btn active" data-filter="all">
@@ -1335,9 +1332,7 @@
             </button>
         </div>
 
-
         <div class="sectors-grid">
-
             <!-- DZ portal -->
             <a href="https://drive.google.com/file/d/1HQDKbb2AKFmDCPdGGErDFE6lGpGSqzF9/view?usp=sharing" target="_blank"
                 class="sector-card" data-new="true">
@@ -1407,6 +1402,18 @@
                     لجميع ولايات الجزائر </p>
             </a>
 
+        </div>
+
+        <!-- الإعلانات المتعددة -->
+        <div class="ad-container">
+            <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8310657804532081"
+                data-ad-slot="9506042271" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        </div>
+        <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+
+        <div class="sectors-grid">
             <!-- الدفاع الوطني -->
             <a href="sectors/mdn.html" class="sector-card" data-new="true">
                 <span class="sector-count">06 خدمات</span>
@@ -1650,7 +1657,6 @@
                 <h3 class="sector-title">وزارة الفلاحة <br>والتنمية والصيد </h3>
                 <p class="sector-desc">طلب حصادة / دراسة، حملة الحصاد والدرس، التصريح بالإنتاج، شكاوي عن بعد</p>
             </a>
-
         </div>
 
         <!-- الإعلانات الصورية -->
@@ -1931,6 +1937,7 @@
             <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8310657804532081"
                 data-ad-slot="6505685868" data-ad-format="auto" data-full-width-responsive="true"></ins>
         </div>
+
         <script>
             (adsbygoogle = window.adsbygoogle || []).push({});
         </script>
@@ -2342,8 +2349,6 @@
         </script>
     </section>
 
-
-
     <!-- دعم الصفحة -->
     <section class="seo-tags" aria-label="الخدمات الأكثر بحثًا">
         <div class="seo-tags-header">
@@ -2351,50 +2356,38 @@
                 <i class="fas fa-bullhorn"></i>
                 التحديثات والدعم للصفحة
             </span>
-
-            <h2>ساهم في تطوير البوابة الجزائرية للخدمات الرقمية
-            </h2>
-
+            <h2>ساهم في تطوير البوابة الجزائرية للخدمات الرقمية </h2>
         </div>
 
         <div class="support-banner">
-
             <div class="support-icon">
                 <img src="assets/images/icon.png" alt="البوابة الجزائرية للخدمات الرقمية" loading="lazy" width="48"
                     height="48">
             </div>
-
             <div class="support-info">
-
                 <div class="support-points">
                     <span>
                         <i class="fas fa-circle-plus"></i>
                         اقتراح خدمات رقمية جديدة
                     </span>
-
                     <span>
                         <i class="fas fa-pen-to-square"></i>
                         الإبلاغ عن معلومات تحتاج إلى تحديث
                     </span>
-
                     <span>
                         <i class="fas fa-link"></i>
                         روابط معطلة أو غير صالحة
                     </span>
-
                     <span>
                         <i class="fas fa-lightbulb"></i>
                         مشاركة الملاحظات والأفكار التطويرية
                     </span>
                 </div>
-
             </div>
-
             <a href="mailto:tabaniimadeddine@gmail.com" class="support-btn">
                 <i class="fas fa-envelope"></i>
                 تواصل معنا
             </a>
-
         </div>
     </section>
 
@@ -2422,62 +2415,48 @@
         </div>
 
         <div class="tags-cloud">
-
             <a href="sectors/interieur.html" class="seo-tag">
                 <i class="fas fa-id-card"></i> #البطاقة البيومترية
             </a>
-
             <a href="sectors/sntf.html" class="seo-tag">
                 <i class="fas fa-train"></i> #مواقيت سير القطارت
             </a>
-
             <a href="sectors/qassimatouka.html" class="seo-tag">
                 <i class="fas fa-car"></i> #قسيمة السيارات
             </a>
-
             <a href="sectors/poste.html" class="seo-tag">
                 <i class="fas fa-credit-card"></i> #البطاقة الذهبية
             </a>
-
             <a href="sectors/progres.mesrs.html" class="seo-tag">
                 <i class="fas fa-user-graduate"></i> #Progres
             </a>
-
             <a href="sectors/mhuv.gov.html" class="seo-tag">
                 <i class="fas fa-home"></i> #AADL
             </a>
-
             <a href="sectors/anem.html" class="seo-tag">
                 <i class="fas fa-briefcase"></i> #منحة البطالة
             </a>
-
             <a href="sectors/sonalgaz.html" class="seo-tag">
                 <i class="fas fa-bolt"></i> #فاتورة الكهرباء
             </a>
-
             <a href="sectors/ade.html" class="seo-tag">
                 <i class="fas fa-tint"></i> #فاتورة الماء
             </a>
-
             <a href="sectors/tabioucom.html" class="seo-tag">
                 <i class="fas fa-stamp"></i> #الطابع الجبائي
             </a>
-
             <a href="sectors/mjustice.html" class="seo-tag">
                 <i class="fas fa-balance-scale"></i> #السوابق العدلية
             </a>
-
             <a href="sectors/telephon.html" class="seo-tag">
                 <i class="fas fa-mobile-alt"></i> #تعبئة الهاتف
             </a>
-
             <a href="sectors/facteur.html" class="seo-tag">
                 <i class="fas fa-file-invoice-dollar"></i> #تسديد الفواتير
             </a>
             <a href="sectors/facture_loyer.html" class="seo-tag">
                 <i class="fas fa-home"></i> #تكاليف كراء السكن
             </a>
-
         </div>
     </section>
 
@@ -2497,16 +2476,13 @@
                 <i class="fas fa-star"></i>
                 تقييم الموقع
             </span>
-
             <h2>نرحّب برأيك لتحسين خدماتنا الرقمية </h2>
-
         </div>
         <div class="tags-cloud">
             <a href="https://forms.gle/yfMJqhsD3XDn9NaJ7" target="_blank" style="display:inline-block; background:#d40000; color:#fff; padding:10px 20px;
             border-radius:8px; text-decoration:none; font-weight:bold;">
                 <i class="fas fa-star"></i> إضغط هنا لتقديم تقييمك
             </a>
-
         </div>
     </section>
 
@@ -2582,8 +2558,8 @@
                     منصة وطنية موحدة تتيح للمواطن الجزائري الوصول السريع والآمن إلى جميع الخدمات الحكومية والعمومية
                     الرقمية من مكان واحد، دون تعقيد أو تنقل إداري.
                 </p>
-                <!-- Social Links -->
 
+                <!-- Social Links -->
                 <div class="social-links">
                     <a href="#" title="فيسبوك"><i class="fab fa-facebook-f"></i></a>
                     <a href="#" title="تويتر"><i class="fab fa-twitter"></i></a>
@@ -2627,33 +2603,19 @@
             <!-- Column 3: Contact Info -->
             <div class="footer-column">
                 <h4><i class="fas fa-address-card"></i> معلومات الاتصال</h4>
-
                 <div class="footer-contact">
-
                     <p>
                         <i class="fas fa-envelope"></i>
-
                         <a href="mailto:tabaniimadeddine@gmail.com" class="footer-link email-link">
                             tabaniimadeddine@gmail.com
                         </a>
                     </p>
 
-                    <p>
-                        <i class="fas fa-phone"></i>
-
-                        <a href="tel:+213" class="footer-link phone-link">
-                            +213
-                        </a>
+                    <p> <i class="fas fa-phone"></i>
+                        <a href="tel:+213" class="footer-link phone-link"> +213 </a>
                     </p>
-
-                    <p>
-                        <i class="fas fa-map-marker-alt"></i> الجزائر العاصمة، الجزائر
-                    </p>
-
-                    <p>
-                        <i class="fas fa-clock"></i> متاح 24/7 - طوال أيام الأسبوع
-                    </p>
-
+                    <p> <i class="fas fa-map-marker-alt"></i> الجزائر العاصمة، الجزائر </p>
+                    <p> <i class="fas fa-clock"></i> متاح 24/7 - طوال أيام الأسبوع </p>
                 </div>
 
                 <div style="margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid rgba(255,255,255,0.1);">
