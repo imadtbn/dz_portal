@@ -22,7 +22,122 @@
     <meta name="author" content="البوابة الجزائرية للخدمات الرقمية">
     <meta name="language" content="Arabic">
 
-    <!-- Structured Data -->
+    <!-- أيقونة الموقع -->
+    <!-- favicon -->
+    <link rel="icon" href="assets/images/icon.png" alt="icon" type="image/png" sizes="32x32" loading="lazy">
+
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/images/android-chrome-192x192.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
+
+    <link rel="icon" href="assets/images/favicon-16x16.png" sizes="any">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+
+    <!-- تحسين الأمان -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link rel="preload" as="style"
+        href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&display=swap"
+        onload="this.onload=null;this.rel='stylesheet'">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/fontawesome.min.css">
+
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style"
+        onload="this.onload=null;this.rel='stylesheet'">
+
+    <link rel="stylesheet" href="assets/css/style-main.css">
+    <link rel="stylesheet" href="assets/css/style-section-header.css">
+
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#006400">
+
+    <script>
+        if ("serviceWorker" in navigator) {
+            navigator.serviceWorker.register("sw.js")
+                .then(() => console.log("Service Worker Registered"));
+        }
+    </script>
+
+    <!-- Google Search Console & Bing Verification -->
+    <meta name="google-site-verification" content="tGjdnUHs9yv4HTGpgnemjCK7YsJ3bI4twWC1WDi5Nqw">
+    <meta name="google-site-verification" content="f5Xi4oFx0v5dN6iPZd9qCw-7vnc3vIbAeYF9jr4vwVM">
+    <meta name="msvalidate.01" content="9BCA38377A234DCCEB9991EAD1A2F6C2">
+
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8310657804532081"
+        crossorigin="anonymous"></script>
+
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+
+    <!-- Microsoft Tiles -->
+    <meta name="msapplication-TileColor" content="#006233">
+    <meta name="msapplication-TileImage" content="assets/images/icon.png">
+    <meta name="msapplication-config" content="browserconfig.xml">
+
+    <!-- Apple Touch Icon -->
+    <link rel="apple-touch-icon" href="assets/images/icon.png">
+    <meta name="apple-mobile-web-app-title" content="البوابة الجزائرية للخدمات الرقمية">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <!-- تحسين الاتصال المسبق بالخوادم الخارجية -->
+    <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
+    <link rel="preconnect" href="https://www.clarity.ms" crossorigin>
+
+    <!-- Google Analytics -->
+    <script defer>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'G-K23WYKK60X');
+    </script>
+
+    <!-- Google Tag Manager -->
+    <script defer>
+        (function (w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                'gtm.start': new Date().getTime(),
+                event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s),
+                dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.defer = true;
+            j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-NW3BWPF6');
+    </script>
+
+    <!-- Microsoft Clarity -->
+    <script defer>
+        (function (c, l, a, r, i, t, y) {
+            c[a] = c[a] || function () {
+                (c[a].q = c[a].q || []).push(arguments)
+            };
+            t = l.createElement(r);
+            t.defer = 1;
+            t.src = "https://www.clarity.ms/tag/" + i + "?ref=bwt";
+            y = l.getElementsByTagName(r)[0];
+            y.parentNode.insertBefore(t, y);
+        })(window, document, "clarity", "script", "tjk39ubxx1");
+    </script>
+
+        <!-- Structured Data -->
     <script type="application/ld+json">
         {
             "@context": "https://schema.org",
@@ -1060,123 +1175,6 @@
                 "url": "https://imadtbn.github.io/dz_portal/pages/terms.html"
             }]
         }
-    </script>
-
-    <!-- أيقونة الموقع -->
-    <!-- favicon -->
-    <link rel="icon" href="assets/images/icon.png" alt="icon" type="image/png" sizes="32x32" loading="lazy">
-
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="assets/images/android-chrome-192x192.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
-
-    <link rel="icon" href="assets/images/favicon-16x16.png" sizes="any">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
-
-    <!-- تحسين الأمان -->
-    <meta http-equiv="X-Content-Type-Options" content="nosniff">
-    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
-
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link rel="preload" as="style"
-        href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&display=swap"
-        onload="this.onload=null;this.rel='stylesheet'">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/fontawesome.min.css">
-
-    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style"
-        onload="this.onload=null;this.rel='stylesheet'">
-
-    <link rel="stylesheet" href="assets/css/style-main.css">
-    <link rel="stylesheet" href="assets/css/style-section-header.css">
-
-    <link rel="manifest" href="manifest.json">
-    <meta name="theme-color" content="#006400">
-
-    <script>
-        if ("serviceWorker" in navigator) {
-            navigator.serviceWorker.register("sw.js")
-                .then(() => console.log("Service Worker Registered"));
-        }
-    </script>
-
-
-    <!-- Google Search Console & Bing Verification -->
-    <meta name="google-site-verification" content="tGjdnUHs9yv4HTGpgnemjCK7YsJ3bI4twWC1WDi5Nqw">
-    <meta name="google-site-verification" content="f5Xi4oFx0v5dN6iPZd9qCw-7vnc3vIbAeYF9jr4vwVM">
-    <meta name="msvalidate.01" content="9BCA38377A234DCCEB9991EAD1A2F6C2">
-
-    <!-- Google AdSense -->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8310657804532081"
-        crossorigin="anonymous"></script>
-
-    <script>
-        (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
-
-    <!-- Microsoft Tiles -->
-    <meta name="msapplication-TileColor" content="#006233">
-    <meta name="msapplication-TileImage" content="assets/images/icon.png">
-    <meta name="msapplication-config" content="browserconfig.xml">
-
-    <!-- Apple Touch Icon -->
-    <link rel="apple-touch-icon" href="assets/images/icon.png">
-    <meta name="apple-mobile-web-app-title" content="البوابة الجزائرية للخدمات الرقمية">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="mobile-web-app-capable" content="yes">
-
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-
-    <!-- تحسين الاتصال المسبق بالخوادم الخارجية -->
-    <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
-    <link rel="preconnect" href="https://www.clarity.ms" crossorigin>
-
-    <!-- Google Analytics -->
-
-    <script defer>
-        window.dataLayer = window.dataLayer || [];
-
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
-        gtag('config', 'G-K23WYKK60X');
-    </script>
-
-    <!-- Google Tag Manager -->
-    <script defer>
-        (function (w, d, s, l, i) {
-            w[l] = w[l] || [];
-            w[l].push({
-                'gtm.start': new Date().getTime(),
-                event: 'gtm.js'
-            });
-            var f = d.getElementsByTagName(s)[0],
-                j = d.createElement(s),
-                dl = l != 'dataLayer' ? '&l=' + l : '';
-            j.defer = true;
-            j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
-            f.parentNode.insertBefore(j, f);
-        })(window, document, 'script', 'dataLayer', 'GTM-NW3BWPF6');
-    </script>
-
-    <!-- Microsoft Clarity -->
-    <script defer>
-        (function (c, l, a, r, i, t, y) {
-            c[a] = c[a] || function () {
-                (c[a].q = c[a].q || []).push(arguments)
-            };
-            t = l.createElement(r);
-            t.defer = 1;
-            t.src = "https://www.clarity.ms/tag/" + i + "?ref=bwt";
-            y = l.getElementsByTagName(r)[0];
-            y.parentNode.insertBefore(t, y);
-        })(window, document, "clarity", "script", "tjk39ubxx1");
     </script>
 </head>
 
@@ -2395,10 +2393,10 @@
     <div class="ad-container">
         <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8310657804532081"
             data-ad-slot="3972494044" data-ad-format="auto" data-full-width-responsive="true"></ins>
-    </div>
     <script>
         (adsbygoogle = window.adsbygoogle || []).push({});
     </script>
+</div>
 
     <!-- SEO Tags / Popular Searches -->
     <section class="seo-tags" aria-label="الخدمات الأكثر بحثًا">
@@ -2464,10 +2462,10 @@
     <div class="ad-container">
         <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8310657804532081"
             data-ad-slot="9506042271" data-ad-format="auto" data-full-width-responsive="true"></ins>
-    </div>
     <script>
         (adsbygoogle = window.adsbygoogle || []).push({});
     </script>
+</div>
 
     <!-- تقييم الصفحة -->
     <section class="seo-tags" aria-label="تقييم الصفحة">
@@ -2641,11 +2639,11 @@
     <script src="assets/js/main.js"></script>
 
     <!-- قاعدة بيانات محرك البحث -->
-
     <script defer src="assets/js/main.js"></script>
 
     <!-- قاعدة بيانات محرك البحث -->
     <script defer src="assets/js/searchData.js"></script>
+
 
 </body>
 
