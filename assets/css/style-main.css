@@ -175,9 +175,12 @@ body {
     opacity: 0.9;
 }
 
+  /* زر التثبيت */
+.pwa-badge {
+    cursor: pointer;
+} 
 
 /* Search Bar */
-
 .search-container {
     max-width: 600px;
     margin: 0 auto 1rem;
@@ -221,10 +224,6 @@ body {
     transform: translateY(-50%) scale(1.1);
 }
 
-  /* زر التثبيت */
-.pwa-badge {
-    cursor: pointer;
-} 
 
 /* Sectors Grid */
 
@@ -997,6 +996,13 @@ body {
     align-items: center;
     justify-content: center;
     contain: layout style paint;
+}
+
+.ad-label{
+    text-align:center;
+    color:#888;
+    font-size:12px;
+    margin-bottom:8px;
 }
 
 .adsbygoogle {
