@@ -1,27 +1,28 @@
 // Hide loader
 // Smart Loader - يظهر مرة واحدة فقط داخل نفس الجلسة
-window.addEventListener('load', () => {
+
+//window.addEventListener('load', () => {
 
   const loader = document.getElementById('loader');
 
   // هل تم عرض اللودر مسبقاً داخل نفس الجلسة؟
-  const loaderShown = sessionStorage.getItem('loaderShown');
+ // const loaderShown = sessionStorage.getItem('loaderShown');
 
   if (loaderShown) {
 
     // إخفاء فوري بدون عرض اللودر
-    loader.style.display = 'none';
+    //loader.style.display = 'none';
 
   } else {
 
     // أول دخول فقط
-    sessionStorage.setItem('loaderShown', 'true');
+    //sessionStorage.setItem('loaderShown', 'true');
 
     setTimeout(() => {
       loader.classList.add('hidden');
 
       // إزالة اللودر نهائياً بعد انتهاء الانيميشن
-      setTimeout(() => {
+      //setTimeout(() => {
         loader.style.display = 'none';
       }, 500);
 
