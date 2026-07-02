@@ -18,12 +18,12 @@
     // أول دخول فقط
     //sessionStorage.setItem('loaderShown', 'true');
 
-    setTimeout(() => {
+    //setTimeout(() => {
       loader.classList.add('hidden');
 
       // إزالة اللودر نهائياً بعد انتهاء الانيميشن
       //setTimeout(() => {
-        loader.style.display = 'none';
+        //loader.style.display = 'none';
       }, 500);
 
     }, 600); // مدة عرض اللودر (600ms)
