@@ -1,3 +1,9 @@
+        // Hide loader
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                document.getElementById('loader').classList.add('hidden');
+            }, 500);
+        });
 
 // Theme toggle
 function toggleTheme() {
