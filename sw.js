@@ -43,20 +43,25 @@ self.addEventListener("activate", (event) => {
 });
 
 // استراتيجية: الشبكة أولًا للصفحات، الكاش أولًا للموارد الثابتة
-self.addEventListener("fetch", (event) => {
-  const { request } = event;
 
-  if (request.method !== "GET") return;
 
-  // تجاهل الطلبات التي ليست http/https (مثل chrome-extension://, moz-extension://, data: ...)
-  if (!request.url.startsWith("http")) return;
 
-  if (request.mode === "navigate") {
+  self.addEventListener('fetch', (event) => {
     event.respondWith(
-      fetch(request).catch(() => caches.match(OFFLINE_URL))
+        caches.match(event.request).then((cachedResponse) => {
+            if (cachedResponse) {
+                return cachedResponse;
+            }
+            return fetch(event.request).catch(() => {
+                // يجب إرجاع استجابة فارغة أو صفحة "أوفلاين" بدلاً من تركها فارغة لتجنب الـ TypeError
+                return new Response('Network error happened', {
+                    status: 408,
+                    headers: { 'Content-Type': 'text/plain' },
+                });
+            });
+        })
     );
-    return;
-  }
+});
 
   event.respondWith(
     caches.match(request).then((cachedResponse) => {
