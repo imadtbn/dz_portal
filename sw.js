@@ -43,9 +43,6 @@ self.addEventListener("activate", (event) => {
 });
 
 // استراتيجية: الشبكة أولًا للصفحات، الكاش أولًا للموارد الثابتة
-
-
-
   self.addEventListener('fetch', (event) => {
     event.respondWith(
         caches.match(event.request).then((cachedResponse) => {
