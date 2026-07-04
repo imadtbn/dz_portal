@@ -73,9 +73,6 @@
     <!-- Google AdSense -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8310657804532081"
         crossorigin="anonymous"></script>
-    <script>
-        (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
 
     <!-- Microsoft Tiles -->
     <meta name="msapplication-TileColor" content="#006233">
@@ -1180,14 +1177,15 @@
     <!-- End Google Tag Manager (noscript) -->
 
     <!-- Loader -->
-
-    <div class="loader" id="loader">
+    <!--
+        <div class="loader" id="loader">
         <div class="loader-content">
             <div class="loader-spinner"></div>
             <p style="color: white; font-size: 1.3rem;">بسم الله، سيتم تحميل البوابة...</p>
             <p style="color: rgb(234, 211, 7); font-size: 1.3rem;"> 05 جويلية 1962 - 2026، رحم الله شهدائنا الأبرار</p>
         </div>
     </div>
+    -->
 
     <!-- Theme Toggle -->
     <button class="theme-toggle" onclick="toggleTheme()" title="تبديل الوضع الليلي">
@@ -1227,23 +1225,16 @@
 
             <!--محرك البحث -->
             <div class="search-container">
-
                 <div class="search-box-wrapper">
-
                     <input type="text" class="search-box" placeholder="ابحث عن خدمة، وزارة، أو معاملة إدارية..."
                         id="globalSearch" autocomplete="off">
-
                     <button class="search-btn">
                         <i class="fas fa-search"></i>
                     </button>
-
                 </div>
-
                 <!-- نتائج البحث -->
                 <div class="search-results" id="searchResults"></div>
-
             </div>
-
             <!-- Scroll Indicator -->
             <div
                 style="position: fixed; bottom: 2rem; left: 50%; transform: translateX(-50%); color: white; animation: bounce 2s infinite;">
@@ -1252,7 +1243,6 @@
     </section>
 
     <!-- Quick Access -->
-
     <div class="quick-access" dir="rtl">
         <a href="sectors/education.html" class="quick-link">
             <i class="fas fa-graduation-cap"></i>
@@ -1262,7 +1252,6 @@
             <i class="fas fa-heartbeat"></i>
             <span>الصحة</span>
         </a>
-
         <a href="sectors/sntf.html" class="quick-link">
             <i class="fas fa-train"></i>
             <span>مواقيت سير القطارات</span>
@@ -1298,11 +1287,9 @@
 
     <!-- Sectors Grid -->
     <section class="sectors-section" id="sectors">
-
         <div class="section-header">
             <h2>القطاعات الحكومية</h2>
             <p>اختر القطاع للوصول إلى الخدمات الرقمية المتاحة</p>
-
             <div class="hero-badge pwa-badge" id="installAppBtn" role="button" tabindex="0" style="cursor:pointer;">
                 <div class="sector-icon app-icon">
                     <img src="assets/images/icon-512.png" alt="تطبيق البوابة الجزائرية للخدمات الرقمية" loading="lazy"
@@ -1320,7 +1307,6 @@
             <button class="filter-btn active" data-filter="all">
                 جميع الخدمات
             </button>
-
             <!--عداد الخدمات-->
             <button id="newServicesBtn" class="filter-btn">
                 الخدمات الجديدة
@@ -1342,6 +1328,20 @@
                 </div>
                 <h3 class="sector-title">تحميل تطبيق البوابة <br> "DZ-Portal"</h3>
                 <p class="sector-desc"> وصول أسرع للخدمات، نسخة أندرويد • حمل الآن</p>
+            </a>
+
+
+            <!-- DZ apostille -->
+            <a href="sectors/mfa.html#e-services" class="sector-card" data-new="true">
+                <span class="sector-count">04 خدمات</span>
+                <div class="service-badge">
+                    <i class="fas fa-gift"></i> جديد
+                </div>
+                <div class="sector-icon">
+                    <img src="assets/images/apostille.webp" alt="seor" loading="lazy" width="200" height="200">
+                </div>
+                <h3 class="sector-title">دليل الابوستيل</h3>
+                <p class="sector-desc">التصديق  على الوثائق الرسمية ( شهادات الميلاد، العقود، والشهادات الجامعية)</p>
             </a>
 
             <!-- DZ orientation -->
@@ -1370,7 +1370,6 @@
                 <h3 class="sector-title">وزارة الرياضة</h3>
                 <p class="sector-desc">وزارة الرياضة، توظيف، نشاطات، خدمات عن بعد</p>
             </a>
-
 
             <!-- sntf -->
             <a href="sectors/sntf.html" class="sector-card" data-new="true">
