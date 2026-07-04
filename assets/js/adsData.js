@@ -31,5 +31,5 @@ window.addEventListener('load', function () {
                 }
             }
         });
-    }, 600); // تأخير نصف ثانية
+    }, 4500); // تأخير نصف ثانية
 });

@@ -2,7 +2,7 @@
 window.addEventListener('load', () => {
             setTimeout(() => {
                 document.getElementById('loader').classList.add('hidden');
-            }, 200);
+            }, 1000);
         });
 
 // Theme toggle
