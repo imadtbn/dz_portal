@@ -43,22 +43,22 @@ self.addEventListener("activate", (event) => {
 });
 
 // استراتيجية: الشبكة أولًا للصفحات، الكاش أولًا للموارد الثابتة
-  self.addEventListener('fetch', (event) => {
-    event.respondWith(
-        caches.match(event.request).then((cachedResponse) => {
-            if (cachedResponse) {
-                return cachedResponse;
-            }
-            return fetch(event.request).catch(() => {
-                // يجب إرجاع استجابة فارغة أو صفحة "أوفلاين" بدلاً من تركها فارغة لتجنب الـ TypeError
-                return new Response('Network error happened', {
-                    status: 408,
-                    headers: { 'Content-Type': 'text/plain' },
-                });
-            });
-        })
-    );
-});
+self.addEventListener('fetch', (event) => {
+  event.respondWith(
+    caches.match(event.request).then((cachedResponse) => {
+      if (cachedResponse) {
+        return cachedResponse;
+      }
+      return fetch(event.request).catch(() => {
+        // يجب إرجاع استجابة فارغة أو صفحة "أوفلاين" بدلاً من تركها فارغة لتجنب الـ TypeError
+        return new Response('Network error happened', {
+          status: 408,
+          headers: { 'Content-Type': 'text/plain' },
+        });
+      });
+    })
+  );
+
 
   event.respondWith(
     caches.match(request).then((cachedResponse) => {
