@@ -42,46 +42,39 @@ self.addEventListener("activate", (event) => {
   self.clients.claim();
 });
 
-// استراتيجية: الشبكة أولًا للصفحات، الكاش أولًا للموارد الثابتة
+// استراتيجية: الشبكة أولًا للصفحات، الكاش أولًا للموارد الثابتة مع التخزين الديناميكي
 self.addEventListener('fetch', (event) => {
   event.respondWith(
     caches.match(event.request).then((cachedResponse) => {
+      // 1. إذا كان الملف موجوداً في الكاش، قم بإرجاعه فوراً
       if (cachedResponse) {
         return cachedResponse;
       }
-      return fetch(event.request).catch(() => {
-        // يجب إرجاع استجابة فارغة أو صفحة "أوفلاين" بدلاً من تركها فارغة لتجنب الـ TypeError
+
+      // 2. إذا لم يكن في الكاش، حاول جلبه من الشبكة
+      return fetch(event.request).then((networkResponse) => {
+        // التأكد من أن الاستجابة صالحة قبل تخزينها في الكاش (فقط لملفات الموقع نفسه لتجنب مشاكل CORS)
+        if (
+          networkResponse &&
+          networkResponse.status === 200 &&
+          networkResponse.type === "basic" &&
+          event.request.url.startsWith(self.location.origin)
+        ) {
+          const responseClone = networkResponse.clone();
+          caches.open(CACHE_NAME).then((cache) => {
+            cache.put(event.request, responseClone).catch((err) => {
+              console.warn("تعذر تخزين الطلب في الكاش:", event.request.url, err);
+            });
+          });
+        }
+        return networkResponse;
+      }).catch(() => {
+        // 3. في حالة انقطاع الشبكة تماماً، قم بإرجاع استجابة فارغة لتجنب خطأ الـ TypeError
         return new Response('Network error happened', {
           status: 408,
           headers: { 'Content-Type': 'text/plain' },
         });
       });
-    })
-  );
-
-
-  event.respondWith(
-    caches.match(request).then((cachedResponse) => {
-      if (cachedResponse) return cachedResponse;
-
-      return fetch(request)
-        .then((networkResponse) => {
-          if (
-            networkResponse &&
-            networkResponse.status === 200 &&
-            networkResponse.type === "basic" &&
-            request.url.startsWith(self.location.origin)
-          ) {
-            const responseClone = networkResponse.clone();
-            caches.open(CACHE_NAME).then((cache) => {
-              cache.put(request, responseClone).catch((err) => {
-                console.warn("تعذر تخزين الطلب في الكاش:", request.url, err);
-              });
-            });
-          }
-          return networkResponse;
-        })
-        .catch(() => cachedResponse);
     })
   );
 });
