@@ -1891,6 +1891,10 @@ video {
     --alert-bg: #8ed1ab;
 }
 
+.protection-theme {
+    --alert-color: #ef6c00;;
+    --alert-bg: #b4e1c7;
+}
 
 /* ===== Algeria Post Theme ===== */
 
