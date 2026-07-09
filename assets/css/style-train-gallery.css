@@ -49,15 +49,27 @@
 }
 
 .international {
-    background: #0057b7;
+    background: #ee5527;
 }
 
-.regional {
+.regional-east {
     background: #16a34a;
+}
+
+.regional-sahara {
+    background: #a45506;
+}
+
+.regional-west {
+    background: #3c41e4;
 }
 
 .suburban {
     background: #ea580c;
+}
+
+.qr-code {
+    background: #5a5958;
 }
 
 .night {
