@@ -9,7 +9,8 @@
         content="مواقيت سير قطارات SNTF في الجزائر، تصفح جداول الرحلات الرسمية للخطوط الدولية والداخلية مع عرض الصور الكاملة للمواقيت وتحديثات النقل بالسكك الحديدية.">
 
     <meta name="keywords"
-        content="SNTF, مواقيت القطارات, جداول القطارات الجزائر, مواقيت سير القطارات, السكك الحديدية الجزائر, قطار الجزائر تونس, قطار الجزائر وهران, قطار الجزائر عنابة, قطار الجزائر باتنة, قطار بشار تندوف, رحلات SNTF, النقل بالسكك الحديدية, مواعيد القطارات الجزائر, خطوط القطارات الجزائرية">
+        content="SNTF, مواقيت قطار عنابة الجزائر 2026, sntf horaires, مواقيت قطار الثنية الجزائر 2026, برنامج سير القطارات, مواقيت قطار زرالدة الجزائر 2026, مواقيت القطار, مواقيت قطار زرالدة الجزائر 2026 اليوم, قطار الجزائر تيزي وزو اليوم, مواقيت قطار عنابة الجزائر 2026,  
+        مواقيت القطارات, جداول القطارات الجزائر, مواقيت سير القطارات, السكك الحديدية الجزائر, قطار الجزائر تونس, قطار الجزائر وهران, قطار الجزائر عنابة, قطار الجزائر باتنة, قطار بشار تندوف, رحلات SNTF, النقل بالسكك الحديدية, مواعيد القطارات الجزائر, خطوط القطارات الجزائرية">
 
     <meta name="author" content="البوابة الجزائرية للخدمات الرقمية">
 
@@ -94,16 +95,16 @@
     <script type="application/ld+json">
         {
             "@context": "https://schema.org",
-            "@graph": [
-
-                {
+            "@graph": [{
                     "@type": "WebSite",
                     "@id": "https://imadtbn.github.io/dz_portal/#website",
                     "url": "https://imadtbn.github.io/dz_portal/",
                     "name": "البوابة الجزائرية للخدمات الرقمية",
-                    "inLanguage": "ar-DZ"
+                    "inLanguage": "ar-DZ",
+                    "publisher": {
+                        "@id": "https://imadtbn.github.io/dz_portal/#organization"
+                    }
                 },
-
                 {
                     "@type": "Organization",
                     "@id": "https://imadtbn.github.io/dz_portal/#organization",
@@ -114,35 +115,36 @@
                         "url": "https://imadtbn.github.io/dz_portal/icons/icon.png"
                     }
                 },
-
                 {
                     "@type": "BreadcrumbList",
                     "@id": "https://imadtbn.github.io/dz_portal/sectors/sntf.html#breadcrumb",
                     "itemListElement": [{
-                        "@type": "ListItem",
-                        "position": 1,
-                        "name": "الرئيسية",
-                        "item": "https://imadtbn.github.io/dz_portal/"
-                    }, {
-                        "@type": "ListItem",
-                        "position": 2,
-                        "name": "النقل والمواصلات",
-                        "item": "https://imadtbn.github.io/dz_portal/sectors/transport.html"
-                    }, {
-                        "@type": "ListItem",
-                        "position": 3,
-                        "name": "السكك الحديدية SNTF",
-                        "item": "https://imadtbn.github.io/dz_portal/sectors/sntf.html"
-                    }]
+                            "@type": "ListItem",
+                            "position": 1,
+                            "name": "الرئيسية",
+                            "item": "https://imadtbn.github.io/dz_portal/"
+                        },
+                        {
+                            "@type": "ListItem",
+                            "position": 2,
+                            "name": "النقل والمواصلات",
+                            "item": "https://imadtbn.github.io/dz_portal/sectors/transport.html"
+                        },
+                        {
+                            "@type": "ListItem",
+                            "position": 3,
+                            "name": "السكك الحديدية SNTF",
+                            "item": "https://imadtbn.github.io/dz_portal/sectors/sntf.html"
+                        }
+                    ]
                 },
-
                 {
                     "@type": "CollectionPage",
                     "@id": "https://imadtbn.github.io/dz_portal/sectors/sntf.html#webpage",
                     "url": "https://imadtbn.github.io/dz_portal/sectors/sntf.html",
                     "name": "مواقيت سير قطارات SNTF في الجزائر",
                     "headline": "جداول ومواقيت سير القطارات في الجزائر",
-                    "description": "عرض جداول ومواقيت سير قطارات الشركة الوطنية للنقل بالسكك الحديدية SNTF للخطوط الدولية والداخلية في الجزائر.",
+                    "description": "عرض جداول ومواقيت سير قطارات الشركة الوطنية للنقل بالسكك الحديدية SNTF للخطوط الدولية والداخلية في الجزائر. تشمل ضاحية الجزائر، الخطوط الجهوية الشرقية والغربية، والخطوط الصحراوية والهضاب العليا.",
                     "inLanguage": "ar-DZ",
                     "isPartOf": {
                         "@id": "https://imadtbn.github.io/dz_portal/#website"
@@ -161,60 +163,246 @@
                         "@id": "#trainSchedules"
                     }
                 },
-
                 {
                     "@type": "ItemList",
                     "@id": "#trainSchedules",
-                    "name": "مواقيت سير قطارات SNTF",
-                    "numberOfItems": 10,
+                    "name": "قائمة مواقيت سير قطارات SNTF",
+                    "description": "قائمة شاملة بجداول مواقيت القطارات في الجزائر حسب الخطوط المختلفة.",
+                    "numberOfItems": 29,
                     "itemListElement": [{
-                        "@type": "ListItem",
-                        "position": 1,
-                        "name": "الجزائر - تونس - الجزائر"
-                    }, {
-                        "@type": "ListItem",
-                        "position": 2,
-                        "name": "الجزائر - باتنة - الجزائر"
-                    }, {
-                        "@type": "ListItem",
-                        "position": 3,
-                        "name": "بشار - تندوف - بشار"
-                    }, {
-                        "@type": "ListItem",
-                        "position": 4,
-                        "name": "الجزائر - عنابة - الجزائر"
-                    }, {
-                        "@type": "ListItem",
-                        "position": 5,
-                        "name": "الجزائر - تقرت - الجزائر"
-                    }, {
-                        "@type": "ListItem",
-                        "position": 6,
-                        "name": "الجزائر - وهران - الجزائر"
-                    },{
-                        "@type": "ListItem",
-                        "position": 7,
-                        "name": "الجزائر - بجاية - الجزائر"
-                    }, {
-                        "@type": "ListItem",
-                        "position": 8,
-                        "name": "الجزائر - تبسة - الجزائر"
-                    }, {
-                        "@type": "ListItem",
-                        "position": 9,
-                        "name": "بشار - تيندوف - بشار يوميا"
-                    }, {
-                        "@type": "ListItem",
-                        "position": 10,
-                        "name": "الثنية - العفرون"
-                    }, {
-                        "@type": "ListItem",
-                        "position": 11,
-                        "name": "آغا - البويرة - قسنطينة - عنابة - بجاية - تقرت - التبسة - باتنة"
-                    }
+                            "@type": "ListItem",
+                            "position": 1,
+                            "name": "الجزائر - الثنية",
+                            "description": "جدول الرحلات الرسمي الصادر عن SNTF",
+                            "image": "https://imadtbn.github.io/dz_portal/assets/train-schedules/suburban/alger-thenia.png",
+                            "url": "https://imadtbn.github.io/dz_portal/sectors/sntf.html#suburban"
+                        },
+                        {
+                            "@type": "ListItem",
+                            "position": 2,
+                            "name": "الثنية - الجزائر",
+                            "description": "جدول الرحلات الرسمي الصادر عن SNTF",
+                            "image": "https://imadtbn.github.io/dz_portal/assets/train-schedules/suburban/thenia-alger.png",
+                            "url": "https://imadtbn.github.io/dz_portal/sectors/sntf.html#suburban"
+                        },
+                        {
+                            "@type": "ListItem",
+                            "position": 3,
+                            "name": "الجزائر - العفرون",
+                            "description": "جدول الرحلات الرسمي الصادر عن SNTF",
+                            "image": "https://imadtbn.github.io/dz_portal/assets/train-schedules/suburban/alger-affroun.png",
+                            "url": "https://imadtbn.github.io/dz_portal/sectors/sntf.html#suburban"
+                        },
+                        {
+                            "@type": "ListItem",
+                            "position": 4,
+                            "name": "العفرون - الجزائر",
+                            "description": "جدول الرحلات الرسمي الصادر عن SNTF",
+                            "image": "https://imadtbn.github.io/dz_portal/assets/train-schedules/suburban/affroun-alger.png",
+                            "url": "https://imadtbn.github.io/dz_portal/sectors/sntf.html#suburban"
+                        },
+                        {
+                            "@type": "ListItem",
+                            "position": 5,
+                            "name": "الجزائر - زرالدة",
+                            "description": "جدول الرحلات الرسمي الصادر عن SNTF",
+                            "image": "https://imadtbn.github.io/dz_portal/assets/train-schedules/suburban/alger-zeralda.png",
+                            "url": "https://imadtbn.github.io/dz_portal/sectors/sntf.html#suburban"
+                        },
+                        {
+                            "@type": "ListItem",
+                            "position": 6,
+                            "name": "زرالدة - الجزائر",
+                            "description": "جدول الرحلات الرسمي الصادر عن SNTF",
+                            "image": "https://imadtbn.github.io/dz_portal/assets/train-schedules/suburban/zeralda-alger.png",
+                            "url": "https://imadtbn.github.io/dz_portal/sectors/sntf.html#suburban"
+                        },
+                        {
+                            "@type": "ListItem",
+                            "position": 7,
+                            "name": "الجزائر - واد عيسى",
+                            "description": "جدول الرحلات الرسمي الصادر عن SNTF",
+                            "image": "https://imadtbn.github.io/dz_portal/assets/train-schedules/suburban/alger-oued-aissa.png",
+                            "url": "https://imadtbn.github.io/dz_portal/sectors/sntf.html#suburban"
+                        },
+                        {
+                            "@type": "ListItem",
+                            "position": 8,
+                            "name": "واد عيسى - الجزائر",
+                            "description": "جدول الرحلات الرسمي الصادر عن SNTF",
+                            "image": "https://imadtbn.github.io/dz_portal/assets/train-schedules/suburban/oued-aissa-alger.png",
+                            "url": "https://imadtbn.github.io/dz_portal/sectors/sntf.html#suburban"
+                        },
+                        {
+                            "@type": "ListItem",
+                            "position": 9,
+                            "name": "الجزائر - مطار هواري بومدين - الجزائر",
+                            "description": "جدول الرحلات الرسمي الصادر عن SNTF",
+                            "image": "https://imadtbn.github.io/dz_portal/assets/train-schedulessuburban/alger-airoport-alger.png",
+                            "url": "https://imadtbn.github.io/dz_portal/sectors/sntf.html#suburban"
+                        },
+                        {
+                            "@type": "ListItem",
+                            "position": 10,
+                            "name": "العفرون - الثنية - العفرون",
+                            "description": "جدول الرحلات الرسمي الصادر عن SNTF",
+                            "image": "https://imadtbn.github.io/dz_portal/assets/train-schedules/suburban/affroun-thenia-affroun.png",
+                            "url": "https://imadtbn.github.io/dz_portal/sectors/sntf.html#suburban"
+                        },
+                        {
+                            "@type": "ListItem",
+                            "position": 11,
+                            "name": "زرالدة - الثنية - زرالدة",
+                            "description": "جدول الرحلات الرسمي الصادر عن SNTF",
+                            "image": "https://imadtbn.github.io/dz_portal/assets/train-schedules/suburban/zeralda-thenia-zeralda.png",
+                            "url": "https://imadtbn.github.io/dz_portal/sectors/sntf.html#suburban"
+                        },
+                        {
+                            "@type": "ListItem",
+                            "position": 12,
+                            "name": "الجزائر - بجاية - الجزائر",
+                            "description": "جدول الرحلات الرسمي الصادر عن SNTF",
+                            "image": "https://imadtbn.github.io/dz_portal/assets/train-schedules/Eastern/alger-bejaia-alger.jpg",
+                            "url": "https://imadtbn.github.io/dz_portal/sectors/sntf.html#eastern-regional"
+                        },
+                        {
+                            "@type": "ListItem",
+                            "position": 13,
+                            "name": "الجزائر - باتنة - الجزائر",
+                            "description": "جدول الرحلات الرسمي الصادر عن SNTF",
+                            "image": "https://imadtbn.github.io/dz_portal/assets/train-schedules/Eastern/alger-batna-alger.jpg",
+                            "url": "https://imadtbn.github.io/dz_portal/sectors/sntf.html#eastern-regional"
+                        },
+                        {
+                            "@type": "ListItem",
+                            "position": 14,
+                            "name": "الجزائر - عنابة - الجزائر (ليلي)",
+                            "description": "جدول الرحلات الرسمي الصادر عن SNTF",
+                            "image": "https://imadtbn.github.io/dz_portal/assets/train-schedules/Eastern/alger-annaba.jpg",
+                            "url": "https://imadtbn.github.io/dz_portal/sectors/sntf.html#eastern-regional"
+                        },
+                        {
+                            "@type": "ListItem",
+                            "position": 15,
+                            "name": "الجزائر - عنابة - الجزائر يوميا",
+                            "description": "جدول الرحلات الرسمي الصادر عن SNTF",
+                            "image": "https://imadtbn.github.io/dz_portal/assets/train-schedules/alger-annaba-tj.jpg",
+                            "url": "https://imadtbn.github.io/dz_portal/sectors/sntf.html#eastern-regional"
+                        },
+                        {
+                            "@type": "ListItem",
+                            "position": 16,
+                            "name": "البويرة - قسنطينة - عنابة - بجاية - تقرت - التبسة - باتنة إلى آغا (1)",
+                            "description": "جدول الرحلات الرسمي الصادر عن SNTF",
+                            "image": "https://imadtbn.github.io/dz_portal/assets/train-schedules/Eastern/abttbb%20to%20agha.png",
+                            "url": "https://imadtbn.github.io/dz_portal/sectors/sntf.html#eastern-regional"
+                        },
+                        {
+                            "@type": "ListItem",
+                            "position": 17,
+                            "name": "البويرة - قسنطينة - عنابة - بجاية - تقرت - التبسة - باتنة إلى آغا (2)",
+                            "description": "جدول الرحلات الرسمي الصادر عن SNTF",
+                            "image": "https://imadtbn.github.io/dz_portal/assets/train-schedules/Eastern/abttbb%20to%20agha2.png",
+                            "url": "https://imadtbn.github.io/dz_portal/sectors/sntf.html#eastern-regional"
+                        },
+                        {
+                            "@type": "ListItem",
+                            "position": 18,
+                            "name": "بجاية - بني منصور - بجاية",
+                            "description": "جدول الرحلات الرسمي الصادر عن SNTF",
+                            "image": "https://imadtbn.github.io/dz_portal/assets/train-schedules/Eastern/beni-mansour-bedjaia.png",
+                            "url": "https://imadtbn.github.io/dz_portal/sectors/sntf.html#eastern-regional"
+                        },
+                        {
+                            "@type": "ListItem",
+                            "position": 19,
+                            "name": "الجزائر - وهران - الجزائر",
+                            "description": "جدول الرحلات الرسمي الصادر عن SNTF",
+                            "image": "https://imadtbn.github.io/dz_portal/assets/train-schedules/Western/alger-oran-alger.jpg",
+                            "url": "https://imadtbn.github.io/dz_portal/sectors/sntf.html#western-regional"
+                        },
+                        {
+                            "@type": "ListItem",
+                            "position": 20,
+                            "name": "وهران - بشار - وهران",
+                            "description": "جدول الرحلات الرسمي الصادر عن SNTF",
+                            "image": "https://imadtbn.github.io/dz_portal/assets/train-schedules/Western/oran-bechar.jpg",
+                            "url": "https://imadtbn.github.io/dz_portal/sectors/sntf.html#western-regional"
+                        },
+                        {
+                            "@type": "ListItem",
+                            "position": 21,
+                            "name": "وهران - الشلف إلى آغا",
+                            "description": "جدول الرحلات الرسمي الصادر عن SNTF",
+                            "image": "https://imadtbn.github.io/dz_portal/assets/train-schedules/Western/oran-chlef-agha.png",
+                            "url": "https://imadtbn.github.io/dz_portal/sectors/sntf.html#western-regional"
+                        },
+                        {
+                            "@type": "ListItem",
+                            "position": 22,
+                            "name": "آغا إلى وهران - الشلف",
+                            "description": "جدول الرحلات الرسمي الصادر عن SNTF",
+                            "image": "https://imadtbn.github.io/dz_portal/assets/train-schedules/Western/agha-chlef-oran.png",
+                            "url": "https://imadtbn.github.io/dz_portal/sectors/sntf.html#western-regional"
+                        },
+                        {
+                            "@type": "ListItem",
+                            "position": 23,
+                            "name": "بشار - تيندوف - بشار",
+                            "description": "جدول الرحلات الرسمي الصادر عن SNTF",
+                            "image": "https://imadtbn.github.io/dz_portal/assets/train-schedules/sahara-plateaux/bechar-tindouf.jpg",
+                            "url": "https://imadtbn.github.io/dz_portal/sectors/sntf.html#sahara-plateau-regional"
+                        },
+                        {
+                            "@type": "ListItem",
+                            "position": 24,
+                            "name": "الجزائر - تقرت - الجزائر",
+                            "description": "جدول الرحلات الرسمي الصادر عن SNTF",
+                            "image": "https://imadtbn.github.io/dz_portal/assets/train-schedules/sahara-plateaux/alger-teggart.jpg",
+                            "url": "https://imadtbn.github.io/dz_portal/sectors/sntf.html#sahara-plateau-regional"
+                        },
+                        {
+                            "@type": "ListItem",
+                            "position": 25,
+                            "name": "بوغزول - الجلفة - الأغواط",
+                            "description": "جدول الرحلات الرسمي الصادر عن SNTF",
+                            "image": "https://imadtbn.github.io/dz_portal/assets/train-schedules/sahara-plateaux/bougezzoul-djelfa-laghouat.jpg",
+                            "url": "https://imadtbn.github.io/dz_portal/sectors/sntf.html#sahara-plateau-regional"
+                        },
+                        {
+                            "@type": "ListItem",
+                            "position": 26,
+                            "name": "بشار - تيندوف - بشار يوميا",
+                            "description": "جدول الرحلات الرسمي الصادر عن SNTF",
+                            "image": "https://imadtbn.github.io/dz_portal/assets/train-schedules/sahara-plateaux/bechar-tindouf-tj.jpg",
+                            "url": "https://imadtbn.github.io/dz_portal/sectors/sntf.html#sahara-plateau-regional"
+                        },
+                        {
+                            "@type": "ListItem",
+                            "position": 27,
+                            "name": "تيسمسيلت - برج بوعريريج - تيسمسيلت",
+                            "description": "جدول الرحلات الرسمي الصادر عن SNTF",
+                            "image": "https://imadtbn.github.io/dz_portal/assets/train-schedules/sahara-plateaux/bba-tisemsilte.png",
+                            "url": "https://imadtbn.github.io/dz_portal/sectors/sntf.html#sahara-plateau-regional"
+                        },
+                        {
+                            "@type": "ListItem",
+                            "position": 28,
+                            "name": "بوغزول - الأغواط - بوغزول",
+                            "description": "جدول الرحلات الرسمي الصادر عن SNTF",
+                            "image": "https://imadtbn.github.io/dz_portal/assets/train-schedules/sahara-plateaux/boughezoul-laghouat.png",
+                            "url": "https://imadtbn.github.io/dz_portal/sectors/sntf.html#sahara-plateau-regional"
+                        },
+                        {
+                            "@type": "ListItem",
+                            "position": 29,
+                            "name": "الجزائر - تونس - الجزائر",
+                            "description": "جدول الرحلات الرسمي الصادر عن SNTF",
+                            "image": "https://imadtbn.github.io/dz_portal/assets/train-schedules/international/alger-tunisia.jpg",
+                            "url": "https://imadtbn.github.io/dz_portal/sectors/sntf.html#international"
+                        }
                     ]
                 }
-
             ]
         }
     </script>
