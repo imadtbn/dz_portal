@@ -82,109 +82,206 @@
     <!-- Structured Data -->
     <script type="application/ld+json">
         {
-            "@context": "https://schema.org",
-            "@graph": [
-
-                {
-                    "@type": "WebSite",
-                    "@id": "https://imadtbn.github.io/dz_portal/#website",
-                    "url": "https://imadtbn.github.io/dz_portal/",
-                    "name": "البوابة الجزائرية للخدمات الرقمية",
-                    "alternateName": "DZ Portal",
-                    "inLanguage": "ar"
-                },
-
-                {
-                    "@type": "Organization",
-                    "@id": "https://imadtbn.github.io/dz_portal/#organization",
-                    "name": "البوابة الجزائرية للخدمات الرقمية",
-                    "url": "https://imadtbn.github.io/dz_portal/",
-                    "logo": {
-                        "@type": "ImageObject",
-                        "url": "https://imadtbn.github.io/dz_portal/icons/icon.png"
-                    },
-                    "contactPoint": {
-                        "@type": "ContactPoint",
-                        "contactType": "customer support",
-                        "areaServed": "DZ",
-                        "availableLanguage": ["ar", "fr"],
-                        "email": "tabaniimadeddine@gmail.com",
-                        "telephone": "+213697743721"
-                    },
-                    "address": {
-                        "@type": "PostalAddress",
-                        "addressLocality": "الجزائر",
-                        "postalCode": "16000",
-                        "addressCountry": "DZ"
-                    },
-                    "sameAs": [
-                        "https://imadtbn.github.io/dz_portal/"
-                    ]
-                },
-
-                {
-                    "@type": "WebPage",
-                    "@id": "https://imadtbn.github.io/dz_portal/sectors/mfa.html#webpage",
-                    "url": "https://imadtbn.github.io/dz_portal/sectors/mfa.html",
-                    "name": "وزارة الشؤون الخارجية والجالية الجزائرية",
-                    "potentialAction": {
-                        "@type": "ReadAction",
-                        "target": [
-                            "https://imadtbn.github.io/dz_portal/sectors/mfa.html"
-                        ]
-                    },
-                    "description": "تقدم وزارة الشؤون الخارجية والجالية الجزائرية مجموعة من الخدمات الرقمية التي تتيح للمواطنين الجزائريين الوصول إلى خدمات الوكالة بكل سهولة ويسر، دون الحاجة للتنقل إلى مكاتب الوكالة.",
-                    "keywords": [
-                        "وزارة الشؤون الخارجية والجالية الجزائرية",
-                        "خدمات رقمية",
-                        "تصديق على الوثائق",
-                        "الممثليات الدبلوماسية والقنصلية",
-                        "التواصل مع كاتب الدولة المكلف بالجالية بالخارج",
-                        "الشؤون الخارجية",
-                        "الجالية الجزائرية",
-                        "dzds",
-                        "apostille",
-                        "أبوستيل",
-                        "خدمات عن بعد",
-                        "مكاتب دبلوماسية",
-                        "منظمات دولية",
-                        "إتصالات"
-                    ],
-                    "inLanguage": "ar",
-                    "isPartOf": {
-                        "@id": "https://imadtbn.github.io/dz_portal/#website"
-                    },
-                    "about": {
-                        "@id": "https://imadtbn.github.io/dz_portal/#organization"
-                    },
-                    "publisher": {
-                        "@id": "https://imadtbn.github.io/dz_portal/#organization"
-                    },
-                    "primaryImageOfPage": {
-                        "@type": "ImageObject",
-                        "url": "https://imadtbn.github.io/dz_portal/assets/images/mfa.png"
-                    },
-                    "breadcrumb": {
-                        "@id": "https://imadtbn.github.io/dz_portal/sectors/mfa.html#breadcrumb"
-                    }
-                }, {
-                    "@type": "BreadcrumbList",
-                    "@id": "https://imadtbn.github.io/dz_portal/sectors/mfa.html#breadcrumb",
-                    "itemListElement": [{
-                        "@type": "ListItem",
-                        "position": 1,
-                        "name": "الرئيسية",
-                        "item": "https://imadtbn.github.io/dz_portal/"
-                    }, {
-                        "@type": "ListItem",
-                        "position": 2,
-                        "name": "وزارة الشؤون الخارجية والجالية الجزائرية",
-                        "item": "https://imadtbn.github.io/dz_portal/sectors/mfa.html"
-                    }]
-                }
-
-            ]
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://imadtbn.github.io/dz_portal/#website",
+      "url": "https://imadtbn.github.io/dz_portal/",
+      "name": "البوابة الجزائرية للخدمات الرقمية",
+      "alternateName": "DZ Portal",
+      "inLanguage": ["ar", "fr"],
+      "publisher": {
+        "@id": "https://imadtbn.github.io/dz_portal/#organization"
+      }
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://imadtbn.github.io/dz_portal/#organization",
+      "name": "البوابة الجزائرية للخدمات الرقمية",
+      "url": "https://imadtbn.github.io/dz_portal/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://imadtbn.github.io/dz_portal/icons/icon.png",
+        "width": 512,
+        "height": 512
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer support",
+        "areaServed": "DZ",
+        "availableLanguage": ["ar", "fr"],
+        "email": "tabaniimadeddine@gmail.com",
+        "telephone": "+213697743721"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "الجزائر العاصمة",
+        "postalCode": "16000",
+        "addressCountry": "DZ"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://imadtbn.github.io/dz_portal/sectors/mfa.html#webpage",
+      "url": "https://imadtbn.github.io/dz_portal/sectors/mfa.html",
+      "name": "وزارة الشؤون الخارجية والجالية الجزائرية | البوابة الجزائرية للخدمات الرقمية",
+      "headline": "خدمات وزارة الشؤون الخارجية والجالية الجزائرية الرقمية",
+      "description": "دليل شامل للخدمات الرقمية التي تقدمها وزارة الشؤون الخارجية والجالية الجزائرية بالخارج، تشمل منصة الأبوستيل، التصديق على الوثائق، الممثليات الدبلوماسية، والاتصال بكاتب الدولة المكلف بالجالية.",
+      "keywords": "وزارة الشؤون الخارجية والجالية الجزائرية, أبوستيل, apostille, تصديق الوثائق, الممثليات الدبلوماسية, الجالية الجزائرية, خدمات قنصلية, منظمات دولية, اتصالات, كاتب الدولة",
+      "inLanguage": "ar",
+      "isPartOf": {
+        "@id": "https://imadtbn.github.io/dz_portal/#website"
+      },
+      "about": {
+        "@type": "GovernmentOrganization",
+        "name": "وزارة الشؤون الخارجية والجالية الجزائرية بالخارج",
+        "url": "https://www.mfa.gov.dz/ar"
+      },
+      "publisher": {
+        "@id": "https://imadtbn.github.io/dz_portal/#organization"
+      },
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://imadtbn.github.io/dz_portal/assets/images/EXTERIEUR.webp"
+      },
+      "breadcrumb": {
+        "@id": "https://imadtbn.github.io/dz_portal/sectors/mfa.html#breadcrumb"
+      },
+      "mainEntity": {
+        "@id": "https://imadtbn.github.io/dz_portal/sectors/mfa.html#services"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://imadtbn.github.io/dz_portal/sectors/mfa.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "الرئيسية",
+          "item": "https://imadtbn.github.io/dz_portal/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "وزارة الشؤون الخارجية والجالية الجزائرية",
+          "item": "https://imadtbn.github.io/dz_portal/sectors/mfa.html"
         }
+      ]
+    },
+    {
+      "@type": "ItemList",
+      "@id": "https://imadtbn.github.io/dz_portal/sectors/mfa.html#services",
+      "name": "قائمة خدمات وزارة الشؤون الخارجية والجالية الجزائرية",
+      "description": "جميع الخدمات الرقمية المتاحة عبر بوابة الوزارة والمقدمة للمواطنين داخل وخارج الجزائر.",
+      "numberOfItems": 7,
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "item": {
+            "@type": "Service",
+            "name": "منصة الأبوستيل",
+            "description": "تسجيل الدخول إلى منصة الأبوستيل للمصادقة على الوثائق إلكترونياً.",
+            "url": "http://apostille.gov.dz/",
+            "provider": {
+              "@type": "Organization",
+              "name": "المحافظة السامية للرقمنة"
+            },
+            "areaServed": {
+              "@type": "Country",
+              "name": "الجزائر"
+            }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "item": {
+            "@type": "Service",
+            "name": "طريقة التسجيل في منصة الأبوستيل",
+            "description": "فيديو توضيحي يشرح خطوات التسجيل في منصة الأبوستيل.",
+            "url": "https://imadtbn.github.io/dz_portal/pages/process/apostille.html",
+            "provider": {
+              "@id": "https://imadtbn.github.io/dz_portal/#organization"
+            }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "item": {
+            "@type": "Service",
+            "name": "ترحيل الوثائق للتصديق",
+            "description": "خدمة ترحيل الوثائق للتصديق عبر بريد الجزائر.",
+            "url": "https://tasdik.poste.dz/",
+            "provider": {
+              "@type": "Organization",
+              "name": "بريد الجزائر"
+            }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "item": {
+            "@type": "Service",
+            "name": "الممثليات الدبلوماسية الجزائرية بالخارج",
+            "description": "قائمة الممثليات الدبلوماسية والقنصلية الجزائرية في مختلف دول العالم.",
+            "url": "https://www.mfa.gov.dz/ar/embassys-locations-list",
+            "provider": {
+              "@type": "GovernmentOrganization",
+              "name": "وزارة الشؤون الخارجية والجالية الجزائرية بالخارج"
+            }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "item": {
+            "@type": "Service",
+            "name": "الممثليات الدبلوماسية الأجنبية في الجزائر",
+            "description": "قائمة الممثليات الدبلوماسية والقنصلية الأجنبية المعتمدة في الجزائر.",
+            "url": "https://emblibreville.mfa.gov.dz/ar/foreign-diplomatic-and-consular-representations-in-algeria",
+            "provider": {
+              "@type": "GovernmentOrganization",
+              "name": "وزارة الشؤون الخارجية والجالية الجزائرية بالخارج"
+            }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 6,
+          "item": {
+            "@type": "Service",
+            "name": "المنظمات الدولية والإقليمية في الجزائر",
+            "description": "قائمة المنظمات الدولية والإقليمية المتواجدة في الجزائر.",
+            "url": "https://www.mfa.gov.dz/ar/international-and-regional-organizations-in-algeria",
+            "provider": {
+              "@type": "GovernmentOrganization",
+              "name": "وزارة الشؤون الخارجية والجالية الجزائرية بالخارج"
+            }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 7,
+          "item": {
+            "@type": "Service",
+            "name": "التواصل مع كاتب الدولة المكلف بالجالية بالخارج",
+            "description": "نموذج إلكتروني للتواصل المباشر مع كاتب الدولة المكلف بالجالية الجزائرية بالخارج.",
+            "url": "https://www.mfa.gov.dz/ar/contact",
+            "provider": {
+              "@type": "GovernmentOrganization",
+              "name": "وزارة الشؤون الخارجية والجالية الجزائرية بالخارج"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
     </script>
 
 </head>
@@ -373,11 +470,24 @@
                             <i class="fas fa-laptop"></i>
                         </div>
                         <div class="service-info">
-                            <h4>الدخول لمنصة الأبوستيل</h4>
-                            <p>تسجيل الدخول لمنصة الأبوستيل الخاص بالوثائق الموجّهة للاستعمال في الخارج </p>
+                            <h4> منصة الأبوستيل</h4>
+                            <p>تسجيل الدخول لمنصة الأبوستيل </p>
                         </div>
                         <i class="fas fa-chevron-left service-arrow"></i>
                     </a>
+
+                    <a href="../pages/process/apostille.html" class="service-item" style="border: 2px solid #f3e5f5;">
+                        <div class="service-icon" style="background: #f3e5f5; color: #7b1fa2;">
+                            <i class="fas fa-video"></i>
+                        </div>
+                        <div class="service-info">
+                            <h4>طريقة تسجيل</h4>
+                            <p>طريقة تسجيل الدخول للمنصة </p>
+                        </div>
+                        <span
+                            style="margin-right: auto; background: #be245f; color: white; padding: 0.5rem 1rem; border-radius: 20px; font-weight: 700;">شاهد</span>
+                    </a>
+
 
                     <a href="https://tasdik.poste.dz/" target="" class="service-item">
                         <div class="service-icon">
