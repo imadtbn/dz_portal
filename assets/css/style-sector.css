@@ -982,32 +982,6 @@ body {
 }
 
 
-/* تحسينات بصرية */
-
-.service-item:hover {
-    background-color: var(--primary);
-    color: #fff;
-    transform: translateX(-5px);
-}
-
-.service-item:hover .service-arrow {
-    color: #fff;
-}
-
-.exam-banner {
-    background: linear-gradient(90deg, #ff7e5f, #feb47b);
-}
-
-.exam-banner:hover {
-    background: linear-gradient(90deg, #feb47b, #ff7e5f);
-}
-
-.exam-banner-btn {
-    background-color: #fff;
-    color: var(--primary);
-}
-
-
 /* تحسينات SEO */
 
 .section-title {
@@ -1020,30 +994,6 @@ body {
 
 .service-info p {
     font-size: 0.95rem;
-}
-
-
-/* تحسينات الأداء */
-
-.hero-icon {
-    width: 100%;
-    max-width: 420px;
-    height: auto;
-    aspect-ratio: 1/1;
-    object-fit: contain;
-    display: block;
-}
-
-.service-item {
-    transition: all 0.3s ease;
-}
-
-.exam-banner {
-    transition: background 0.3s ease;
-}
-
-.exam-banner-btn {
-    transition: all 0.3s ease;
 }
 
 
@@ -1122,17 +1072,6 @@ body {
 }
 
 
-/* تحسينات الوصولية */
-
-.service-item:focus {
-    outline: 2px solid var(--primary);
-    outline-offset: 2px;
-}
-
-.exam-banner-btn:focus {
-    outline: 2px solid var(--primary);
-    outline-offset: 2px;
-}
 
 
 /* ==================================================
