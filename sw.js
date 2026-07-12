@@ -12,7 +12,7 @@ const urlsToCache = [
   "/dz_portal/manifest.json"
 ];
 
-// تثبيت Service Worker وتخزين الملفات الأساسية في الكاش
+// تثبيت Service Worker وتخزين الملفات الأساسية
 self.addEventListener("install", (event) => {
   event.waitUntil(
     caches.open(CACHE_NAME).then((cache) => {
@@ -42,39 +42,44 @@ self.addEventListener("activate", (event) => {
   self.clients.claim();
 });
 
-// استراتيجية: الشبكة أولًا للصفحات، الكاش أولًا للموارد الثابتة مع التخزين الديناميكي
+// 🔄 الاستراتيجية الجديدة: الشبكة أولاً مع التحديث التلقائي للكاش
 self.addEventListener('fetch', (event) => {
-  event.respondWith(
-    caches.match(event.request).then((cachedResponse) => {
-      // 1. إذا كان الملف موجوداً في الكاش، قم بإرجاعه فوراً
-      if (cachedResponse) {
-        return cachedResponse;
-      }
+  // نقوم بتطبيق الاستراتيجية فقط على طلبات GET الآتية من موقعنا
+  if (event.request.method !== 'GET' || !event.request.url.startsWith(self.location.origin)) {
+    return;
+  }
 
-      // 2. إذا لم يكن في الكاش، حاول جلبه من الشبكة
-      return fetch(event.request).then((networkResponse) => {
-        // التأكد من أن الاستجابة صالحة قبل تخزينها في الكاش (فقط لملفات الموقع نفسه لتجنب مشاكل CORS)
-        if (
-          networkResponse &&
-          networkResponse.status === 200 &&
-          networkResponse.type === "basic" &&
-          event.request.url.startsWith(self.location.origin)
-        ) {
+  event.respondWith(
+    // 1. محاولة جلب النسخة الأحدث من الشبكة أولاً
+    fetch(event.request)
+      .then((networkResponse) => {
+        // إذا كانت الاستجابة ناجحة وسليمة، نحدث الكاش بالنسخة الجديدة فوراً
+        if (networkResponse && networkResponse.status === 200 && networkResponse.type === "basic") {
           const responseClone = networkResponse.clone();
           caches.open(CACHE_NAME).then((cache) => {
-            cache.put(event.request, responseClone).catch((err) => {
-              console.warn("تعذر تخزين الطلب في الكاش:", event.request.url, err);
-            });
+            cache.put(event.request, responseClone);
           });
         }
         return networkResponse;
-      }).catch(() => {
-        // 3. في حالة انقطاع الشبكة تماماً، قم بإرجاع استجابة فارغة لتجنب خطأ الـ TypeError
-        return new Response('Network error happened', {
-          status: 408,
-          headers: { 'Content-Type': 'text/plain' },
+      })
+      .catch(() => {
+        // 2. إذا فشلت الشبكة (أوفلاين أو الهواتف ضعيفة التغطية)، نعود للكاش فوراً
+        return caches.match(event.request).then((cachedResponse) => {
+          if (cachedResponse) {
+            return cachedResponse;
+          }
+          
+          // 3. إذا لم يجد الملف في الكاش وكان الطلب لصفحة HTML، نعرض صفحة الأوفلاين
+          if (event.request.mode === 'navigate') {
+            return caches.match(OFFLINE_URL);
+          }
+
+          // استجابة فارغة لتجنب الانهيار
+          return new Response('عذراً، لا يوجد اتصال بالإنترنت والمورد غير مخزن مؤقتاً.', {
+            status: 408,
+            headers: { 'Content-Type': 'text/plain; charset=utf-8' },
+          });
         });
-      });
-    })
+      })
   );
 });
