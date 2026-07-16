@@ -83,223 +83,327 @@
 
     <!-- Structured Data -->
     <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "WebSite",
-      "@id": "https://imadtbn.github.io/dz_portal/#website",
-      "url": "https://imadtbn.github.io/dz_portal/",
-      "name": "البوابة الجزائرية للخدمات الرقمية",
-      "alternateName": "DZ Portal",
-      "description": "بوابة جزائرية تجمع الخدمات الرقمية الحكومية والعمومية في مكان واحد لتسهيل الوصول إليها.",
-      "inLanguage": "ar-DZ",
-      "publisher": { "@id": "https://imadtbn.github.io/dz_portal/#organization" }
-    },
-    {
-      "@type": "Organization",
-      "@id": "https://imadtbn.github.io/dz_portal/#organization",
-      "name": "البوابة الجزائرية للخدمات الرقمية",
-      "url": "https://imadtbn.github.io/dz_portal/",
-      "logo": {
-        "@type": "ImageObject",
-        "@id": "https://imadtbn.github.io/dz_portal/icons/icon.png",
-        "url": "https://imadtbn.github.io/dz_portal/icons/icon.png"
-      },
-      "email": "mailto:tabaniimadeddine@gmail.com",
-      "telephone": "+213697743721",
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "contactType": "customer support",
-        "areaServed": "DZ",
-        "availableLanguage": ["ar", "fr"]
-      },
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "الجزائر العاصمة",
-        "addressCountry": "DZ"
-      }
-    },
-    {
-      "@type": "GovernmentOrganization",
-      "@id": "https://imadtbn.github.io/dz_portal/sectors/mjeunesse.gov.html#ministry",
-      "name": "وزارة الشباب الجزائرية",
-      "alternateName": "Ministère de la Jeunesse",
-      "url": "https://mjeunesse.gov.dz/",
-      "description": "وزارة الشباب الجزائرية تقدم خدمات وبرامج للشباب، بما في ذلك برامج القيادة، الهاكاثونات، التخييم، وبيوت الشباب.",
-      "areaServed": { "@type": "Country", "name": "الجزائر" },
-      "parentOrganization": {
-        "@type": "Organization",
-        "name": "الحكومة الجزائرية"
-      }
-    },
-    {
-      "@type": "ImageObject",
-      "@id": "https://imadtbn.github.io/dz_portal/assets/images/mjeunesse.gov.png",
-      "url": "https://imadtbn.github.io/dz_portal/assets/images/mjeunesse.gov.png",
-      "name": "وزارة الشباب الجزائرية"
-    },
-    {
-      "@type": "WebPage",
-      "@id": "https://imadtbn.github.io/dz_portal/sectors/mjeunesse.gov.html#webpage",
-      "url": "https://imadtbn.github.io/dz_portal/sectors/mjeunesse.gov.html",
-      "name": "وزارة الشباب الجزائرية | البوابة الجزائرية للخدمات الرقمية",
-      "description": "وزارة الشباب الجزائرية تقدم خدمات موجهة للشباب الجزائري، بما في ذلك برامج Dz Young Leaders، الهاكاثون، مراكز العطل، التخييم، وتطبيق بيوت الشباب.",
-      "keywords": "وزارة الشباب, خدمات الشباب, Dz Young Leaders, hackathon الجزائر, مراكز العطل, برامج التخييم, بيوت الشباب الجزائر, تطبيق شباب, mjeunesse.gov.dz",
-      "inLanguage": "ar-DZ",
-      "isPartOf": { "@id": "https://imadtbn.github.io/dz_portal/#website" },
-      "publisher": { "@id": "https://imadtbn.github.io/dz_portal/#organization" },
-      "primaryImageOfPage": { "@id": "https://imadtbn.github.io/dz_portal/assets/images/mjeunesse.gov.png" },
-      "breadcrumb": { "@id": "https://imadtbn.github.io/dz_portal/sectors/mjeunesse.gov.html#breadcrumb" },
-      "datePublished": "2025-01-01",
-      "dateModified": "2025-02-01",
-      "mainEntity": { "@id": "https://imadtbn.github.io/dz_portal/sectors/mjeunesse.gov.html#services-list" }
-    },
-    {
-      "@type": "BreadcrumbList",
-      "@id": "https://imadtbn.github.io/dz_portal/sectors/mjeunesse.gov.html#breadcrumb",
-      "itemListElement": [
         {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "الرئيسية",
-          "item": "https://imadtbn.github.io/dz_portal/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "وزارة الشباب الجزائرية",
-          "item": "https://imadtbn.github.io/dz_portal/sectors/mjeunesse.gov.html"
+            "@context": "https://schema.org",
+            "@graph": [{
+                    "@type": "WebSite",
+                    "@id": "https://imadtbn.github.io/dz_portal/#website",
+                    "url": "https://imadtbn.github.io/dz_portal/",
+                    "name": "البوابة الجزائرية للخدمات الرقمية",
+                    "alternateName": "DZ Portal",
+                    "description": "بوابة جزائرية تجمع الخدمات الرقمية الحكومية والعمومية في مكان واحد لتسهيل الوصول إليها.",
+                    "inLanguage": "ar-DZ",
+                    "publisher": {
+                        "@id": "https://imadtbn.github.io/dz_portal/#organization"
+                    }
+                },
+                {
+                    "@type": "Organization",
+                    "@id": "https://imadtbn.github.io/dz_portal/#organization",
+                    "name": "البوابة الجزائرية للخدمات الرقمية",
+                    "url": "https://imadtbn.github.io/dz_portal/",
+                    "logo": {
+                        "@type": "ImageObject",
+                        "@id": "https://imadtbn.github.io/dz_portal/icons/icon.png",
+                        "url": "https://imadtbn.github.io/dz_portal/icons/icon.png"
+                    },
+                    "email": "mailto:tabaniimadeddine@gmail.com",
+                    "telephone": "+213697743721",
+                    "contactPoint": {
+                        "@type": "ContactPoint",
+                        "contactType": "customer support",
+                        "areaServed": "DZ",
+                        "availableLanguage": ["ar", "fr"]
+                    },
+                    "address": {
+                        "@type": "PostalAddress",
+                        "addressLocality": "الجزائر العاصمة",
+                        "addressCountry": "DZ"
+                    }
+                },
+                {
+                    "@type": "GovernmentOrganization",
+                    "@id": "https://imadtbn.github.io/dz_portal/sectors/mjeunesse.gov.html#ministry",
+                    "name": "وزارة الشباب الجزائرية",
+                    "alternateName": "Ministère de la Jeunesse",
+                    "url": "https://mjeunesse.gov.dz/",
+                    "description": "وزارة الشباب الجزائرية تقدم خدمات وبرامج للشباب، بما في ذلك برامج القيادة، الهاكاثونات، التخييم، وبيوت الشباب.",
+                    "areaServed": {
+                        "@type": "Country",
+                        "name": "الجزائر"
+                    },
+                    "parentOrganization": {
+                        "@type": "Organization",
+                        "name": "الحكومة الجزائرية"
+                    }
+                },
+                {
+                    "@type": "ImageObject",
+                    "@id": "https://imadtbn.github.io/dz_portal/assets/images/mjeunesse.gov.png",
+                    "url": "https://imadtbn.github.io/dz_portal/assets/images/mjeunesse.gov.png",
+                    "name": "وزارة الشباب الجزائرية"
+                },
+                {
+                    "@type": "WebPage",
+                    "@id": "https://imadtbn.github.io/dz_portal/sectors/mjeunesse.gov.html#webpage",
+                    "url": "https://imadtbn.github.io/dz_portal/sectors/mjeunesse.gov.html",
+                    "name": "وزارة الشباب الجزائرية | البوابة الجزائرية للخدمات الرقمية",
+                    "description": "وزارة الشباب الجزائرية تقدم خدمات موجهة للشباب الجزائري، بما في ذلك برامج Dz Young Leaders، الهاكاثون، مراكز العطل، التخييم، وتطبيق بيوت الشباب.",
+                    "keywords": "وزارة الشباب, خدمات الشباب, Dz Young Leaders, hackathon الجزائر, مراكز العطل, برامج التخييم, بيوت الشباب الجزائر, تطبيق شباب, mjeunesse.gov.dz",
+                    "inLanguage": "ar-DZ",
+                    "isPartOf": {
+                        "@id": "https://imadtbn.github.io/dz_portal/#website"
+                    },
+                    "publisher": {
+                        "@id": "https://imadtbn.github.io/dz_portal/#organization"
+                    },
+                    "primaryImageOfPage": {
+                        "@id": "https://imadtbn.github.io/dz_portal/assets/images/mjeunesse.gov.png"
+                    },
+                    "breadcrumb": {
+                        "@id": "https://imadtbn.github.io/dz_portal/sectors/mjeunesse.gov.html#breadcrumb"
+                    },
+                    "datePublished": "2025-01-01",
+                    "dateModified": "2025-02-01",
+                    "mainEntity": {
+                        "@id": "https://imadtbn.github.io/dz_portal/sectors/mjeunesse.gov.html#services-list"
+                    }
+                },
+                {
+                    "@type": "BreadcrumbList",
+                    "@id": "https://imadtbn.github.io/dz_portal/sectors/mjeunesse.gov.html#breadcrumb",
+                    "itemListElement": [{
+                            "@type": "ListItem",
+                            "position": 1,
+                            "name": "الرئيسية",
+                            "item": "https://imadtbn.github.io/dz_portal/"
+                        },
+                        {
+                            "@type": "ListItem",
+                            "position": 2,
+                            "name": "وزارة الشباب الجزائرية",
+                            "item": "https://imadtbn.github.io/dz_portal/sectors/mjeunesse.gov.html"
+                        }
+                    ]
+                },
+                {
+                    "@type": "ItemList",
+                    "@id": "https://imadtbn.github.io/dz_portal/sectors/mjeunesse.gov.html#services-list",
+                    "name": "خدمات وزارة الشباب الجزائرية",
+                    "description": "قائمة بخدمات وبرامج وزارة الشباب الرقمية المخصصة للشباب الجزائري",
+                    "numberOfItems": 8,
+                    "itemListElement": [{
+                            "@type": "ListItem",
+                            "position": 1,
+                            "item": {
+                                "@type": "Service",
+                                "name": "برنامج Dz Young Leaders",
+                                "description": "دليل برنامج Dz Young Leaders - قادة الشباب الجزائريين",
+                                "url": "https://youngleaders.mjeunesse.gov.dz/#participation",
+                                "provider": {
+                                    "@id": "https://imadtbn.github.io/dz_portal/sectors/mjeunesse.gov.html#ministry"
+                                },
+                                "category": "برامج قيادية",
+                                "areaServed": {
+                                    "@type": "Country",
+                                    "name": "الجزائر"
+                                },
+                                "potentialAction": {
+                                    "@type": "UseAction",
+                                    "target": "https://youngleaders.mjeunesse.gov.dz/#participation"
+                                }
+                            }
+                        },
+                        {
+                            "@type": "ListItem",
+                            "position": 2,
+                            "item": {
+                                "@type": "Service",
+                                "name": "النشاطات الشبابية - التسجيل والمشاركة",
+                                "description": "التسجيل في أنشطة Young Leaders والبرامج الشبابية",
+                                "url": "https://youthconnect.mjeunesse.gov.dz/signup",
+                                "provider": {
+                                    "@id": "https://imadtbn.github.io/dz_portal/sectors/mjeunesse.gov.html#ministry"
+                                },
+                                "category": "أنشطة شبابية",
+                                "areaServed": {
+                                    "@type": "Country",
+                                    "name": "الجزائر"
+                                },
+                                "potentialAction": {
+                                    "@type": "UseAction",
+                                    "target": "https://youthconnect.mjeunesse.gov.dz/signup"
+                                }
+                            }
+                        },
+                        {
+                            "@type": "ListItem",
+                            "position": 3,
+                            "item": {
+                                "@type": "Service",
+                                "name": "هاكاثون الجزائر 2025",
+                                "description": "المشاركة في فعاليات الهاكاثون التكنولوجي للشباب الجزائري",
+                                "url": "https://hackathon-2025.mjeunesse.gov.dz/",
+                                "provider": {
+                                    "@id": "https://imadtbn.github.io/dz_portal/sectors/mjeunesse.gov.html#ministry"
+                                },
+                                "category": "تكنولوجيا وابتكار",
+                                "areaServed": {
+                                    "@type": "Country",
+                                    "name": "الجزائر"
+                                },
+                                "potentialAction": {
+                                    "@type": "UseAction",
+                                    "target": "https://hackathon-2025.mjeunesse.gov.dz/"
+                                }
+                            }
+                        },
+                        {
+                            "@type": "ListItem",
+                            "position": 4,
+                            "item": {
+                                "@type": "Service",
+                                "name": "البحث عن مراكز العطل",
+                                "description": "البحث عن مراكز العطل المخصصة للشباب والعائلات في الجزائر",
+                                "url": "https://moukhayami.mjeunesse.gov.dz/center/",
+                                "provider": {
+                                    "@id": "https://imadtbn.github.io/dz_portal/sectors/mjeunesse.gov.html#ministry"
+                                },
+                                "category": "سياحة وترفيه",
+                                "areaServed": {
+                                    "@type": "Country",
+                                    "name": "الجزائر"
+                                },
+                                "potentialAction": {
+                                    "@type": "UseAction",
+                                    "target": "https://moukhayami.mjeunesse.gov.dz/center/"
+                                }
+                            }
+                        },
+                        {
+                            "@type": "ListItem",
+                            "position": 5,
+                            "item": {
+                                "@type": "Service",
+                                "name": "برامج التخييم",
+                                "description": "اكتشاف برامج التخييم والمعسكرات الشبابية في الجزائر",
+                                "url": "https://moukhayami.mjeunesse.gov.dz/programme/",
+                                "provider": {
+                                    "@id": "https://imadtbn.github.io/dz_portal/sectors/mjeunesse.gov.html#ministry"
+                                },
+                                "category": "تخييم وسفر",
+                                "areaServed": {
+                                    "@type": "Country",
+                                    "name": "الجزائر"
+                                },
+                                "potentialAction": {
+                                    "@type": "UseAction",
+                                    "target": "https://moukhayami.mjeunesse.gov.dz/programme/"
+                                }
+                            }
+                        },
+                        {
+                            "@type": "ListItem",
+                            "position": 6,
+                            "item": {
+                                "@type": "Service",
+                                "name": "مراكز مخصصة لأبناء الجالية الجزائرية في الخارج",
+                                "description": "المراكز المخصصة لأبناء الجالية الجزائرية بالخارج للتخييم والأنشطة",
+                                "url": "https://moukhayami.mjeunesse.gov.dz/communaute-algerienne-a-l-etranger/",
+                                "provider": {
+                                    "@id": "https://imadtbn.github.io/dz_portal/sectors/mjeunesse.gov.html#ministry"
+                                },
+                                "category": "خدمات الجالية",
+                                "areaServed": {
+                                    "@type": "Country",
+                                    "name": "الجزائر"
+                                },
+                                "potentialAction": {
+                                    "@type": "UseAction",
+                                    "target": "https://moukhayami.mjeunesse.gov.dz/communaute-algerienne-a-l-etranger/"
+                                }
+                            }
+                        },
+                        {
+                            "@type": "ListItem",
+                            "position": 7,
+                            "item": {
+                                "@type": "Service",
+                                "name": "المدرسة العليا لعلوم وتقنيات تأطير الشباب",
+                                "description": "فتح المدرسة العليا لعلوم وتقنيات تأطير الشباب أبوابها لاستقبال أول دفعة من الطلبة خلال
+                                الموسم الجامعي 2026 -
+                                2027، في تجسيد لأحد أهم مشاريع إصلاح منظومة التكوين بقطاع الشباب.
+                                ",
+                                "url": "https://esstej.mjeunesse.gov.dz/",
+                                "provider": {
+                                    "@id": "https://imadtbn.github.io/dz_portal/sectors/mjeunesse.gov.html#ministry"
+                                },
+                                "category": "خدمات الجالية",
+                                "areaServed": {
+                                    "@type": "Country",
+                                    "name": "الجزائر"
+                                },
+                                "potentialAction": {
+                                    "@type": "UseAction",
+                                    "target": "https://moukhayami.mjeunesse.gov.dz/communaute-algerienne-a-l-etranger/"
+                                }
+                            }
+                        },
+                        {
+                            "@type": "ListItem",
+                            "position": 8,
+                            "item": {
+                                "@type": "SoftwareApplication",
+                                "name": "Algerian Youth Hostel - دليل بيوت الشباب",
+                                "description": "تطبيق دليل بيوت الشباب في الجزائر، يساعد الشباب على اكتشاف بيوت الشباب ومرافق الإيواء",
+                                "applicationCategory": "Travel",
+                                "operatingSystem": "Android",
+                                "url": "https://play.google.com/store/apps/details?id=com.ouledmimounhostel.algeriahostels",
+                                "provider": {
+                                    "@id": "https://imadtbn.github.io/dz_portal/sectors/mjeunesse.gov.html#ministry"
+                                },
+                                "potentialAction": {
+                                    "@type": "UseAction",
+                                    "target": "https://play.google.com/store/apps/details?id=com.ouledmimounhostel.algeriahostels"
+                                },
+                                "offers": {
+                                    "@type": "Offer",
+                                    "price": "0",
+                                    "priceCurrency": "DZD"
+                                }
+                            }
+                        },
+                        {
+                            "@type": "ListItem",
+                            "position": 9,
+                            "item": {
+                                "@type": "Service",
+                                "name": "التواصل مع وزارة الشباب",
+                                "description": "التواصل مع فريق عمل وزارة الشباب عبر البريد الإلكتروني ونموذج الاتصال",
+                                "provider": {
+                                    "@id": "https://imadtbn.github.io/dz_portal/sectors/mjeunesse.gov.html#ministry"
+                                },
+                                "category": "خدمات المواطن",
+                                "areaServed": {
+                                    "@type": "Country",
+                                    "name": "الجزائر"
+                                },
+                                "potentialAction": {
+                                    "@type": "CommunicateAction",
+                                    "recipient": {
+                                        "@type": "EmailMessage",
+                                        "recipient": {
+                                            "@id": "mailto:contact@mjeunesse.gov.dz"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    ]
+                }
+            ]
         }
-      ]
-    },
-    {
-      "@type": "ItemList",
-      "@id": "https://imadtbn.github.io/dz_portal/sectors/mjeunesse.gov.html#services-list",
-      "name": "خدمات وزارة الشباب الجزائرية",
-      "description": "قائمة بخدمات وبرامج وزارة الشباب الرقمية المخصصة للشباب الجزائري",
-      "numberOfItems": 8,
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "item": {
-            "@type": "Service",
-            "name": "برنامج Dz Young Leaders",
-            "description": "دليل برنامج Dz Young Leaders - قادة الشباب الجزائريين",
-            "url": "https://youngleaders.mjeunesse.gov.dz/#participation",
-            "provider": { "@id": "https://imadtbn.github.io/dz_portal/sectors/mjeunesse.gov.html#ministry" },
-            "category": "برامج قيادية",
-            "areaServed": { "@type": "Country", "name": "الجزائر" },
-            "potentialAction": { "@type": "UseAction", "target": "https://youngleaders.mjeunesse.gov.dz/#participation" }
-          }
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "item": {
-            "@type": "Service",
-            "name": "النشاطات الشبابية - التسجيل والمشاركة",
-            "description": "التسجيل في أنشطة Young Leaders والبرامج الشبابية",
-            "url": "https://youthconnect.mjeunesse.gov.dz/signup",
-            "provider": { "@id": "https://imadtbn.github.io/dz_portal/sectors/mjeunesse.gov.html#ministry" },
-            "category": "أنشطة شبابية",
-            "areaServed": { "@type": "Country", "name": "الجزائر" },
-            "potentialAction": { "@type": "UseAction", "target": "https://youthconnect.mjeunesse.gov.dz/signup" }
-          }
-        },
-        {
-          "@type": "ListItem",
-          "position": 3,
-          "item": {
-            "@type": "Service",
-            "name": "هاكاثون الجزائر 2025",
-            "description": "المشاركة في فعاليات الهاكاثون التكنولوجي للشباب الجزائري",
-            "url": "https://hackathon-2025.mjeunesse.gov.dz/",
-            "provider": { "@id": "https://imadtbn.github.io/dz_portal/sectors/mjeunesse.gov.html#ministry" },
-            "category": "تكنولوجيا وابتكار",
-            "areaServed": { "@type": "Country", "name": "الجزائر" },
-            "potentialAction": { "@type": "UseAction", "target": "https://hackathon-2025.mjeunesse.gov.dz/" }
-          }
-        },
-        {
-          "@type": "ListItem",
-          "position": 4,
-          "item": {
-            "@type": "Service",
-            "name": "البحث عن مراكز العطل",
-            "description": "البحث عن مراكز العطل المخصصة للشباب والعائلات في الجزائر",
-            "url": "https://moukhayami.mjeunesse.gov.dz/center/",
-            "provider": { "@id": "https://imadtbn.github.io/dz_portal/sectors/mjeunesse.gov.html#ministry" },
-            "category": "سياحة وترفيه",
-            "areaServed": { "@type": "Country", "name": "الجزائر" },
-            "potentialAction": { "@type": "UseAction", "target": "https://moukhayami.mjeunesse.gov.dz/center/" }
-          }
-        },
-        {
-          "@type": "ListItem",
-          "position": 5,
-          "item": {
-            "@type": "Service",
-            "name": "برامج التخييم",
-            "description": "اكتشاف برامج التخييم والمعسكرات الشبابية في الجزائر",
-            "url": "https://moukhayami.mjeunesse.gov.dz/programme/",
-            "provider": { "@id": "https://imadtbn.github.io/dz_portal/sectors/mjeunesse.gov.html#ministry" },
-            "category": "تخييم وسفر",
-            "areaServed": { "@type": "Country", "name": "الجزائر" },
-            "potentialAction": { "@type": "UseAction", "target": "https://moukhayami.mjeunesse.gov.dz/programme/" }
-          }
-        },
-        {
-          "@type": "ListItem",
-          "position": 6,
-          "item": {
-            "@type": "Service",
-            "name": "مراكز مخصصة لأبناء الجالية الجزائرية في الخارج",
-            "description": "المراكز المخصصة لأبناء الجالية الجزائرية بالخارج للتخييم والأنشطة",
-            "url": "https://moukhayami.mjeunesse.gov.dz/communaute-algerienne-a-l-etranger/",
-            "provider": { "@id": "https://imadtbn.github.io/dz_portal/sectors/mjeunesse.gov.html#ministry" },
-            "category": "خدمات الجالية",
-            "areaServed": { "@type": "Country", "name": "الجزائر" },
-            "potentialAction": { "@type": "UseAction", "target": "https://moukhayami.mjeunesse.gov.dz/communaute-algerienne-a-l-etranger/" }
-          }
-        },
-        {
-          "@type": "ListItem",
-          "position": 7,
-          "item": {
-            "@type": "SoftwareApplication",
-            "name": "Algerian Youth Hostel - دليل بيوت الشباب",
-            "description": "تطبيق دليل بيوت الشباب في الجزائر، يساعد الشباب على اكتشاف بيوت الشباب ومرافق الإيواء",
-            "applicationCategory": "Travel",
-            "operatingSystem": "Android",
-            "url": "https://play.google.com/store/apps/details?id=com.ouledmimounhostel.algeriahostels",
-            "provider": { "@id": "https://imadtbn.github.io/dz_portal/sectors/mjeunesse.gov.html#ministry" },
-            "potentialAction": { "@type": "UseAction", "target": "https://play.google.com/store/apps/details?id=com.ouledmimounhostel.algeriahostels" },
-            "offers": { "@type": "Offer", "price": "0", "priceCurrency": "DZD" }
-          }
-        },
-        {
-          "@type": "ListItem",
-          "position": 8,
-          "item": {
-            "@type": "Service",
-            "name": "التواصل مع وزارة الشباب",
-            "description": "التواصل مع فريق عمل وزارة الشباب عبر البريد الإلكتروني ونموذج الاتصال",
-            "provider": { "@id": "https://imadtbn.github.io/dz_portal/sectors/mjeunesse.gov.html#ministry" },
-            "category": "خدمات المواطن",
-            "areaServed": { "@type": "Country", "name": "الجزائر" },
-            "potentialAction": {
-              "@type": "CommunicateAction",
-              "recipient": { "@type": "EmailMessage", "recipient": { "@id": "mailto:contact@mjeunesse.gov.dz" } }
-            }
-          }
-        }
-      ]
-    }
-  ]
-}
-</script>
+    </script>
 
 </head>
 
@@ -462,6 +566,21 @@
                 </div>
 
                 <div class="services-grid">
+
+                    <a href="https://esstej.mjeunesse.gov.dz/" target="_blank" class="service-item">
+                        <div class="service-icon">
+                            <div class="trusted-badge" title="رابط رسمي وموثوق">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <div class="service-badge">جدبد</div>
+                            <i class="fas -fa-graduation-cap"></i>
+                        </div>
+                        <div class="service-info">
+                            <h4>المدرسة العليا لعلوم وتقنيات تأطير الشباب</h4>
+                            <p> تأهيل كفاءات قادرة على قيادة مؤسسات الشباب والتنشيط التربوي </p>
+                        </div>
+                        <i class="fas fa-chevron-left service-arrow"></i>
+                    </a>
 
                     <a href="https://takwin.mjeunesse.gov.dz/competitions/" target="_blank" class="service-item">
                         <div class="service-icon">
