@@ -1835,6 +1835,11 @@ video {
     --alert-bg: #b4e1c7;
 }
 
+.sonalgaz-theme {
+    --alert-color: #ef6c00;;
+    --alert-bg: #1151d1;
+}
+
 /* ===== Algeria Post Theme ===== */
 
 .poste-theme {
