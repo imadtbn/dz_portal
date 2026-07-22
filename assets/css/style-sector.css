@@ -1725,29 +1725,37 @@ video {
 
 
 /* ===== Alert Modal ===== */
+/* ===== Alert Modal ===== */
 
-.alert-modal {
-    position: fixed;
-    inset: 0;
-    background: rgba(0, 0, 0, .65);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    z-index: 99999;
-    animation: alertFade .3s ease;
+.alert-modal{
+    position:fixed;
+    inset:0;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:20px;
+    background:rgba(0,0,0,.65);
+    z-index:99999;
+
+    overflow-y:auto;
+    -webkit-overflow-scrolling:touch;
 }
 
-.alert-content {
-    width: 100%;
-    max-width: 520px;
-    background: #fff;
-    border-radius: 18px;
-    padding: 28px;
-    text-align: center;
-    position: relative;
-    box-shadow: 0 15px 40px rgba(0, 0, 0, .25);
-    border-top: 6px solid var(--alert-color);
+.alert-content{
+    position:relative;
+
+    width:min(100%,560px);
+
+    background:#fff;
+    border-radius:18px;
+    padding:28px;
+
+    margin:auto;
+
+    max-height:calc(100vh - 40px);
+    overflow-y:auto;
+
+    box-shadow:0 15px 45px rgba(0,0,0,.25);
 }
 
 .alert-icon {
@@ -2037,23 +2045,78 @@ video {
 
 
 /* Responsive */
+@media (max-width:768px){
 
-@media (max-width:768px) {
-    .alert-content {
-        padding: 22px 18px;
-        border-radius: 14px;
+    .alert-modal{
+
+        padding:12px;
+
+        align-items:flex-start;
     }
 
-    .alert-btn {
-        width: 100%;
-        display: block;
+    .alert-content{
+
+        width:100%;
+        max-width:none;
+
+        margin-top:12px;
+        margin-bottom:12px;
+
+        max-height:calc(100vh - 24px);
+
+        border-radius:16px;
+
+        padding:22px 18px;
     }
 
-    .alert-content h2 {
-        font-size: 1.3rem;
+    .alert-icon{
+
+        width:68px;
+        height:68px;
+        font-size:28px;
     }
 
-    .alert-content p {
-        font-size: .95rem;
+    .alert-content h2{
+        font-size:1.25rem;
     }
+
+    .alert-content p,
+    .tip-item span,
+    .welcome-box span{
+        font-size:.95rem;
+        line-height:1.8;
+    }
+
+    .alert-btn{
+        width:100%;
+    }
+
 }
+
+@media (max-width:400px){
+
+    .alert-modal{
+        padding:8px;
+    }
+
+    .alert-content{
+
+        padding:18px 14px;
+
+        border-radius:14px;
+    }
+
+    .alert-icon{
+
+        width:60px;
+        height:60px;
+
+        font-size:24px;
+    }
+
+    .alert-content h2{
+
+        font-size:1.1rem;
+    }
+
+        }
