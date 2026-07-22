@@ -1835,10 +1835,160 @@ video {
     --alert-bg: #b4e1c7;
 }
 
-.sonalgaz-theme {
-    --alert-color: #ef6c00;;
-    --alert-bg: #1151d1;
+/* ===== Sonelgaz Theme ===== */
+
+.sonelgaz-theme{
+    --alert-color:#f28c00;
+    --alert-bg:#fff7e8;
+    --alert-accent:#ffd54f;
 }
+
+.sonelgaz-theme .alert-content{
+    border-top:6px solid var(--alert-color);
+}
+
+.alert-badge{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    padding:8px 16px;
+    margin-bottom:18px;
+    background:#fff4d8;
+    color:#9c6500;
+    border-radius:30px;
+    font-size:.9rem;
+    font-weight:700;
+}
+
+.alert-intro{
+    line-height:1.9;
+    margin-bottom:20px;
+}
+
+.tips-list{
+    display:flex;
+    flex-direction:column;
+    gap:14px;
+    margin-bottom:22px;
+}
+
+.tip-item{
+    display:flex;
+    align-items:flex-start;
+    gap:14px;
+    padding:14px;
+    background:#fafafa;
+    border-right:4px solid var(--alert-color);
+    border-radius:12px;
+    text-align:right;
+}
+
+.tip-item i{
+    color:var(--alert-color);
+    font-size:22px;
+    width:26px;
+    margin-top:3px;
+}
+
+.tip-item span{
+    line-height:1.8;
+    color:#444;
+}
+
+.sonelgaz-theme .alert-btn{
+    background:linear-gradient(135deg,#f28c00,#ffb300);
+    color:#fff;
+}
+
+.sonelgaz-theme .alert-footer{
+    margin-top:18px;
+    color:#b06a00;
+    font-weight:600;
+}
+
+/* ===== University Theme ===== */
+
+.university-theme{
+    --alert-color:#0d6efd;
+    --alert-bg:#eef5ff;
+    --alert-accent:#f4b400;
+}
+
+.university-theme .alert-content{
+    border-top:6px solid var(--alert-accent);
+}
+
+.alert-badge{
+
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+
+    background:#fff7dd;
+    color:#9a6b00;
+
+    padding:8px 16px;
+    border-radius:30px;
+    font-size:.9rem;
+    font-weight:700;
+
+    margin-bottom:18px;
+}
+
+.welcome-text{
+
+    font-size:1.05rem;
+    line-height:2;
+
+    color:#444;
+}
+
+.welcome-box{
+
+    margin:20px 0;
+
+    display:flex;
+    gap:12px;
+    align-items:flex-start;
+
+    background:#f8fbff;
+
+    border-right:4px solid var(--alert-color);
+
+    padding:16px;
+    border-radius:12px;
+
+    text-align:right;
+}
+
+.welcome-box i{
+
+    color:var(--alert-accent);
+
+    font-size:24px;
+    margin-top:3px;
+}
+
+.welcome-box span{
+
+    line-height:1.9;
+    color:#555;
+}
+
+.university-theme .alert-btn{
+
+    background:linear-gradient(135deg,#0d6efd,#0b57d0);
+
+    box-shadow:0 8px 18px rgba(13,110,253,.25);
+}
+
+.university-theme .alert-btn:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 12px 25px rgba(13,110,253,.35);
+}
+
 
 /* ===== Algeria Post Theme ===== */
 
@@ -1848,11 +1998,33 @@ video {
 }
 
 
-/* ===== mdn marin Theme ===== */
+/* ===== Coast Guard Theme ===== */
 
-.marin-theme {
-    --alert-color: #3BB9FF;
-    --alert-bg: #055024;
+.marin-theme{
+    --alert-color:#0066b3;
+    --alert-bg:#eef7ff;
+    --alert-accent:#00a6d6;
+}
+
+.marin-theme .alert-content{
+    border-top:6px solid var(--alert-color);
+}
+
+.marin-theme .alert-icon{
+    background:var(--alert-bg);
+    color:var(--alert-color);
+}
+
+.marin-theme .alert-btn{
+    background:linear-gradient(135deg,#0066b3,#008fd5);
+}
+
+.marin-theme .alert-btn:hover{
+    box-shadow:0 10px 22px rgba(0,102,179,.25);
+}
+
+.marin-theme .alert-footer{
+    color:#0066b3;
 }
 
 
