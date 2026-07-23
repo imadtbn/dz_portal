@@ -624,26 +624,6 @@
 /* Responsive */
 
 @media (max-width:768px) {
-    .alert-content {
-        padding: 22px 18px;
-        border-radius: 14px;
-    }
-
-    .alert-btn {
-        width: 100%;
-        display: block;
-    }
-
-    .alert-content h2 {
-        font-size: 1.3rem;
-    }
-
-    .alert-content p {
-        font-size: .95rem;
-    }
-}
-
-@media (max-width:768px) {
 
     .alert-modal {
 
