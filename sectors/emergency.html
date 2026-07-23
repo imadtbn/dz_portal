@@ -75,6 +75,7 @@
         onload="this.onload=null;this.rel='stylesheet'">
 
     <link rel="stylesheet" href="../assets/css/style-sector.css">
+    <link rel="stylesheet" href="../assets/css/Alert-Modal.css">
 
     <meta name="robots" content="index, follow, max-image-preview:large">
     <meta name="author" content="البوابة الجزائرية للخدمات الرقمية">
@@ -270,7 +271,9 @@
     </section>
 
     <!-- Alert Modal -->
+    <!-- Civil Protection Alert -->
     <div id="securityAlert" class="alert-modal protection-theme">
+
         <div class="alert-content">
 
             <button class="alert-close" aria-label="إغلاق">
@@ -278,34 +281,63 @@
             </button>
 
             <div class="alert-icon">
-                <i class="fas fa-user-shield"></i>
+                <i class="fas fa-shield-alt"></i>
             </div>
-            <h2>الحماية المدنية</h2>
 
-            <li>
-                صيف بلا حوادث... بوعي مستمر
-                سلامتك تبدأ بوعيك: تجنب السباحة في الأماكن الممنوعة و غير محروسة، وساهم في الوقاية من حرائق الغابات
-                والمحاصيل الزراعية.
-            </li>
+            <span class="alert-badge">
+                <i class="fas fa-fire-extinguisher"></i>
+                حملة الوقاية الصيفية
+            </span>
 
-            <li>
-                للسباحة بأمان اختاروا الشواطئ المحروسة واحترموا لون الراية، خضراء سباحة مسموحة، برتقالية سباحة خطيرة،
-                حمراء سباحة ممنوعة.
-            </li>
+            <h2>صيف بلا حوادث... بوعي مستمر</h2>
 
-            <li>
-                غابتنا أمانة... لنساهم معا في المحافظة عليها، الرقم الأخضر 1021 ورقم النجدة 14 للإبلاغ عن أي حريق.
-            </li>
+            <p class="alert-intro">
+                تدعوكم الحماية المدنية إلى التحلي بالحيطة والالتزام بإرشادات السلامة، حفاظًا على الأرواح والممتلكات خلال
+                فصل الصيف.
+            </p>
 
-            <a href="tel:1021" target="_blank" rel="noopener noreferrer" class="alert-btn">
-                <i class="fas fa-phone-alt"></i> 1021 </a>
+            <div class="tips-list">
+
+                <div class="tip-item">
+                    <i class="fas fa-water"></i>
+                    <span>
+                        تجنبوا السباحة في الأماكن غير المحروسة، واحرصوا على اختيار الشواطئ المسموح بها.
+                    </span>
+                </div>
+
+                <div class="tip-item">
+                    <i class="fas fa-flag"></i>
+                    <span>
+                        <strong>احترموا لون الراية:</strong><br>
+                        🟢 خضراء: السباحة مسموحة.<br>
+                        🟠 برتقالية: السباحة خطيرة.<br>
+                        🔴 حمراء: السباحة ممنوعة.
+                    </span>
+                </div>
+
+                <div class="tip-item">
+                    <i class="fas fa-tree"></i>
+                    <span>
+                        حافظوا على الغابات والمحاصيل الزراعية، وأبلغوا فورًا عن أي حريق أو دخان.
+                    </span>
+                </div>
+
+            </div>
+
+            <a href="tel:1021" class="alert-btn">
+                <i class="fas fa-phone-alt"></i>
+                الرقم الأخضر 1021
+            </a>
 
             <p class="alert-footer">
-                الحماية المدنية في خدمتكم 24/24</p>
+                <i class="fas fa-phone-volume"></i>
+                للطوارئ: <strong>14</strong> • الحماية المدنية في خدمتكم 24/24
+            </p>
 
         </div>
-    </div>
 
+    </div>
+    
     <!-- Quick Links -->
     <div class="quick-links">
         <div class="quick-links-content">
@@ -881,7 +913,7 @@
                     </p>
                     <p>
                         <i class="fas fa-phone"></i>
-                        +213 
+                        +213
                     </p>
                     <p>
                         <i class="fas fa-map-marker-alt"></i>

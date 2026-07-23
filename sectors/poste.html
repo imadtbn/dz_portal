@@ -73,6 +73,7 @@
         onload="this.onload=null;this.rel='stylesheet'">
 
     <link rel="stylesheet" href="../assets/css/style-sector.css">
+    <link rel="stylesheet" href="../assets/css/Alert-Modal.css">
 
     <meta name="robots" content="index, follow, max-image-preview:large">
     <meta name="author" content="البوابة الجزائرية للخدمات الرقمية">
@@ -755,8 +756,9 @@
         </div>
     </footer>
 
-    <!-- Alert Modal -->
+    <!-- Algeria Post Alert -->
     <div id="securityAlert" class="alert-modal poste-theme">
+
         <div class="alert-content">
 
             <button class="alert-close" aria-label="إغلاق">
@@ -767,32 +769,61 @@
                 <i class="fas fa-shield-alt"></i>
             </div>
 
-            <h2>تنبيه أمني</h2>
+            <span class="alert-badge">
+                <i class="fas fa-user-shield"></i>
+                الأمن السيبراني
+            </span>
 
-            <p>
-                <strong>بريد الجزائر</strong> لا يتصل بزبائنه هاتفياً أو عبر الرسائل لطلب رقم البطاقة الذهبية أو الرقم
-                السري أو رمز التأكيد (OTP).
+            <h2>احموا حسابكم البريدي من الاحتيال</h2>
+
+            <p class="alert-intro">
+                <strong>بريد الجزائر</strong> لا يتصل بزبائنه هاتفيًا أو عبر الرسائل
+                لطلب رقم البطاقة الذهبية أو الرقم السري أو رمز التحقق (OTP).
             </p>
 
-            <p>
-                <strong>بريد الجزائر</strong> لا تقعوا في فخ الاحتيال الإلكتروني!
-                <li>« ربحت هاتفًا! »</li>
-                <li>« بريد الجزائر يموّل العرض! »</li>
-                <li>« بريد الجزائر يقدّم هدية! »</li>
-                <li> « شارك الآن واربح عمرة لشخصين مع بريد الجزائر! »</li>
-                هذه العبارات المضللة ليست سوى وسائل احتيالية يستعملها المحتالون لاستدراج ضحاياهم، من خلال استغلال اسم
-                وهوية مؤسسة بريد الجزائر ونشر عروض وهمية وهدايا مزيفة.
-            </p>
-            <p>
-                لا تشارك معلوماتك البنكية مع أي شخص مهما كانت صفته.
-            </p>
+            <div class="tips-list">
+
+                <div class="tip-item">
+                    <i class="fas fa-ban"></i>
+                    <span>
+                        تجاهلوا الرسائل أو الصفحات التي تدّعي تقديم جوائز أو هدايا باسم بريد الجزائر.
+                    </span>
+                </div>
+
+                <div class="tip-item">
+                    <i class="fas fa-gift"></i>
+                    <span>
+                        احذروا من العبارات المضللة مثل:
+                        <ul class="fraud-list">
+                            <li>🎁 «ربحت هاتفًا جديدًا!»</li>
+                            <li>💳 «بريد الجزائر يمول هذا العرض!»</li>
+                            <li>🎉 «احصل على هدية مجانية!»</li>
+                            <li>🕋 «شارك الآن واربح عمرة لشخصين!»</li>
+                        </ul>
+                    </span>
+                </div>
+
+                <div class="tip-item">
+                    <i class="fas fa-lock"></i>
+                    <span>
+                        لا تشاركوا رقم البطاقة الذهبية أو الرقم السري أو رمز التحقق (OTP) مع أي شخص مهما كانت صفته.
+                    </span>
+                </div>
+
+            </div>
 
             <button class="alert-btn" type="button">
-                <i class="fas fa-file-signature"></i>
+                <i class="fas fa-check-circle"></i>
                 فهمت
             </button>
 
+            <p class="alert-footer">
+                <i class="fas fa-shield-alt"></i>
+                يقظتكم هي أفضل وسيلة لحماية حسابكم البريدي.
+            </p>
+
         </div>
+
     </div>
 
     <!-- JS الصفحة القطاعات -->
