@@ -501,11 +501,46 @@
 }
 
 
-/* ===== health Theme ===== */
+/* ===== Ministry of Health Theme ===== */
 
-.health-theme {
-    --alert-color: #d62828;
-    --alert-bg: #049c43;
+.health-theme{
+    --alert-color:#c62828;
+    --alert-bg:#fff5f5;
+    --alert-accent:#2e7d32;
+}
+
+.health-theme .alert-content{
+    border-top:6px solid var(--alert-color);
+}
+
+.health-theme .alert-icon{
+    background:var(--alert-bg);
+    color:var(--alert-color);
+}
+
+.health-theme .alert-badge{
+    background:#fdecec;
+    color:var(--alert-color);
+}
+
+.health-theme .tip-item{
+    border-right-color:var(--alert-color);
+}
+
+.health-theme .tip-item i{
+    color:var(--alert-color);
+}
+
+.health-theme .alert-btn{
+    background:linear-gradient(135deg,#c62828,#e53935);
+}
+
+.health-theme .alert-btn:hover{
+    box-shadow:0 10px 22px rgba(198,40,40,.25);
+}
+
+.health-theme .alert-footer{
+    color:#c62828;
 }
 
 
