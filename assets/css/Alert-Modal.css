@@ -93,9 +93,21 @@
 }
 
 
+/* Animation */
 
+@keyframes modalShow{
 
+    from{
+        opacity:0;
+        transform:translateY(30px) scale(.95);
+    }
 
+    to{
+        opacity:1;
+        transform:translateY(0) scale(1);
+    }
+
+}
 
 
 /* ===== SNTF Theme ===== */
@@ -622,6 +634,26 @@
 }
 
 /* Responsive */
+@media (max-width:768px) {
+    .alert-content {
+        padding: 22px 18px;
+        border-radius: 14px;
+    }
+
+    .alert-btn {
+        width: 100%;
+        display: block;
+    }
+
+    .alert-content h2 {
+        font-size: 1.3rem;
+    }
+
+    .alert-content p {
+        font-size: .95rem;
+    }
+}
+
 
 @media (max-width:768px) {
 
@@ -696,5 +728,156 @@
 
         font-size: 1.1rem;
     }
+
+}
+
+
+
+
+
+
+
+/* ==========================
+   Smartphones
+========================== */
+
+
+@media(max-width:768px){
+
+
+    .alert-modal{
+
+        padding:10px;
+
+        align-items:flex-start;
+
+    }
+
+
+
+    .alert-content{
+
+        margin-top:10px;
+
+        max-height:
+        calc(100vh - 20px);
+
+
+        padding:24px 16px 20px;
+
+
+        border-radius:18px;
+
+    }
+
+
+
+    .alert-icon{
+
+        width:65px;
+
+        height:65px;
+
+        font-size:28px;
+
+    }
+
+
+
+    .alert-content h2{
+
+        font-size:1.25rem;
+
+        line-height:1.6;
+
+        padding:0 10px;
+
+    }
+
+
+
+    .alert-intro,
+    .alert-content p{
+
+        font-size:.95rem;
+
+        line-height:1.9;
+
+    }
+
+
+
+    .tip-item{
+
+        padding:12px;
+
+        gap:10px;
+
+    }
+
+
+
+    .tip-item i{
+
+        font-size:20px;
+
+    }
+
+
+}
+
+
+
+/* ==========================
+   Small Phones 320-400px
+========================== */
+
+
+@media(max-width:400px){
+
+
+    .alert-modal{
+
+        padding:6px;
+
+    }
+
+
+    .alert-content{
+
+        padding:20px 12px;
+
+        border-radius:15px;
+
+    }
+
+
+
+    .alert-badge{
+
+        font-size:.8rem;
+
+        padding:6px 12px;
+
+    }
+
+
+
+    .alert-content h2{
+
+        font-size:1.1rem;
+
+    }
+
+
+
+    .alert-btn{
+
+        font-size:.9rem;
+
+        min-height:46px;
+
+    }
+
 
 }
