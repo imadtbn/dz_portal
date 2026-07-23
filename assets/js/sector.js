@@ -47,7 +47,80 @@ document.querySelector('.search-trigger').addEventListener('click', () => {
 
 
 
-// التبديل بين الوضعين
+// زر الطباعة والنشر
+
+function shareNotice(){
+
+    if(navigator.share){
+
+        navigator.share({
+
+            title:"البوابة الجزائرية للخدمات الرقمية",
+
+            text:"بيان / منشور رسمي.",
+
+            url:window.location.href
+
+        });
+
+    }else{
+
+        navigator.clipboard.writeText(window.location.href);
+
+        alert("تم نسخ رابط البيان");
+
+    }
+
+}
+
+
+
+function printNotice(){
+
+    const notice=document.querySelector(".official-title").innerHTML;
+
+    const printWindow=window.open("","_blank");
+
+    printWindow.document.write(`
+
+        <html dir="rtl">
+
+        <head>
+
+        <title>طباعة البيان</title>
+
+        <style>
+
+        body{
+            font-family:Arial;
+            padding:30px;
+            text-align:right;
+        }
+
+        img{
+            max-width:100%;
+        }
+
+        </style>
+
+        </head>
+
+        <body>
+
+        ${notice}
+
+        </body>
+
+        </html>
+
+    `);
+
+
+    printWindow.document.close();
+
+    printWindow.print();
+
+}
 
 //النافذة التحذيرية
 
