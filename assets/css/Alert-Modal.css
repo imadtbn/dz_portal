@@ -109,6 +109,43 @@
 
 }
 
+/* ===== Vehicle Inspection Theme ===== */
+
+.inspection-theme{
+    --alert-color:#1565c0;
+    --alert-bg:#eef6ff;
+    --alert-accent:#ff9800;
+}
+
+.inspection-theme .alert-content{
+    border-top:6px solid var(--alert-color);
+}
+
+.inspection-theme .alert-icon{
+    background:var(--alert-bg);
+    color:var(--alert-color);
+}
+
+.inspection-theme .alert-badge{
+    background:#eef6ff;
+    color:var(--alert-color);
+}
+
+.inspection-theme .tip-item{
+    border-right-color:var(--alert-color);
+}
+
+.inspection-theme .tip-item i{
+    color:var(--alert-color);
+}
+
+.inspection-theme .alert-btn{
+    background:linear-gradient(135deg,#1565c0,#1e88e5);
+}
+
+.inspection-theme .alert-footer{
+    color:#1565c0;
+}
 
 /* ===== SNTF Theme ===== */
 
