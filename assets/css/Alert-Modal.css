@@ -109,6 +109,12 @@
 
 }
 
+.education-theme{
+    --alert-color:#1565c0;
+    --alert-bg:#eef5ff;
+    --alert-accent:#f9a825;
+}
+
 /* ===== Vehicle Inspection Theme ===== */
 
 .inspection-theme{
