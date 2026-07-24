@@ -92,6 +92,12 @@
     }
 }
 
+/* وضع احتياطي إن كان هناك تداخل بأب يحتوي transform */
+.alert-modal {
+  position: fixed !important;
+  inset: 0 !important;
+  z-index: 2147483647 !important;
+}
 
 /* Animation */
 
