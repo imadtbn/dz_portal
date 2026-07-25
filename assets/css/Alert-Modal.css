@@ -1,13 +1,27 @@
 /* Security Modal */
 /* ===== Alert Modal ===== */
 
+html,
+body {
+
+    overflow-x: hidden;
+
+}
+
+
 .alert-modal {
     position: fixed;
     inset: 0;
     background: rgba(0, 0, 0, .65);
-    display: flex;
+    display: grid;
     justify-content: center;
     align-items: center;
+    isolation: isolate;
+    place-items: center;
+
+    overflow-y: auto;
+    overflow-x: hidden;
+
     padding: 20px;
     z-index: 99999;
     animation: alertFade .3s ease;
@@ -94,69 +108,69 @@
 
 /* وضع احتياطي إن كان هناك تداخل بأب يحتوي transform */
 .alert-modal {
-  position: fixed !important;
-  inset: 0 !important;
-  z-index: 2147483647 !important;
+    position: fixed !important;
+    inset: 0 !important;
+    z-index: 2147483647 !important;
 }
 
 /* Animation */
 
-@keyframes modalShow{
+@keyframes modalShow {
 
-    from{
-        opacity:0;
-        transform:translateY(30px) scale(.95);
+    from {
+        opacity: 0;
+        transform: translateY(30px) scale(.95);
     }
 
-    to{
-        opacity:1;
-        transform:translateY(0) scale(1);
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
     }
 
 }
 
-.education-theme{
-    --alert-color:#1565c0;
-    --alert-bg:#eef5ff;
-    --alert-accent:#f9a825;
+.education-theme {
+    --alert-color: #1565c0;
+    --alert-bg: #eef5ff;
+    --alert-accent: #f9a825;
 }
 
 /* ===== Vehicle Inspection Theme ===== */
 
-.inspection-theme{
-    --alert-color:#1565c0;
-    --alert-bg:#eef6ff;
-    --alert-accent:#ff9800;
+.inspection-theme {
+    --alert-color: #1565c0;
+    --alert-bg: #eef6ff;
+    --alert-accent: #ff9800;
 }
 
-.inspection-theme .alert-content{
-    border-top:6px solid var(--alert-color);
+.inspection-theme .alert-content {
+    border-top: 6px solid var(--alert-color);
 }
 
-.inspection-theme .alert-icon{
-    background:var(--alert-bg);
-    color:var(--alert-color);
+.inspection-theme .alert-icon {
+    background: var(--alert-bg);
+    color: var(--alert-color);
 }
 
-.inspection-theme .alert-badge{
-    background:#eef6ff;
-    color:var(--alert-color);
+.inspection-theme .alert-badge {
+    background: #eef6ff;
+    color: var(--alert-color);
 }
 
-.inspection-theme .tip-item{
-    border-right-color:var(--alert-color);
+.inspection-theme .tip-item {
+    border-right-color: var(--alert-color);
 }
 
-.inspection-theme .tip-item i{
-    color:var(--alert-color);
+.inspection-theme .tip-item i {
+    color: var(--alert-color);
 }
 
-.inspection-theme .alert-btn{
-    background:linear-gradient(135deg,#1565c0,#1e88e5);
+.inspection-theme .alert-btn {
+    background: linear-gradient(135deg, #1565c0, #1e88e5);
 }
 
-.inspection-theme .alert-footer{
-    color:#1565c0;
+.inspection-theme .alert-footer {
+    color: #1565c0;
 }
 
 /* ===== SNTF Theme ===== */
@@ -646,40 +660,40 @@
 
 /* ===== Ministry of Environment Theme ===== */
 
-.environment-theme{
-    --alert-color:#2e7d32;
-    --alert-bg:#eef8ef;
-    --alert-accent:#00acc1;
+.environment-theme {
+    --alert-color: #2e7d32;
+    --alert-bg: #eef8ef;
+    --alert-accent: #00acc1;
 }
 
-.environment-theme .alert-content{
-    border-top:6px solid var(--alert-color);
+.environment-theme .alert-content {
+    border-top: 6px solid var(--alert-color);
 }
 
-.environment-theme .alert-icon{
-    background:var(--alert-bg);
-    color:var(--alert-color);
+.environment-theme .alert-icon {
+    background: var(--alert-bg);
+    color: var(--alert-color);
 }
 
-.environment-theme .alert-badge{
-    background:#eef8ef;
-    color:var(--alert-color);
+.environment-theme .alert-badge {
+    background: #eef8ef;
+    color: var(--alert-color);
 }
 
-.environment-theme .tip-item{
-    border-right-color:var(--alert-color);
+.environment-theme .tip-item {
+    border-right-color: var(--alert-color);
 }
 
-.environment-theme .tip-item i{
-    color:var(--alert-color);
+.environment-theme .tip-item i {
+    color: var(--alert-color);
 }
 
-.environment-theme .alert-btn{
-    background:linear-gradient(135deg,#2e7d32,#43a047);
+.environment-theme .alert-btn {
+    background: linear-gradient(135deg, #2e7d32, #43a047);
 }
 
-.environment-theme .alert-footer{
-    color:#2e7d32;
+.environment-theme .alert-footer {
+    color: #2e7d32;
 }
 
 /* Responsive */
@@ -721,7 +735,7 @@
         margin-top: 12px;
         margin-bottom: 12px;
 
-        max-height: calc(100vh - 24px);
+        max-height: calc(100dvh - 24px);
 
         border-radius: 16px;
 
@@ -791,84 +805,84 @@
 ========================== */
 
 
-@media(max-width:768px){
+@media(max-width:768px) {
 
 
-    .alert-modal{
+    .alert-modal {
 
-        padding:10px;
+        padding: 10px;
 
-        align-items:flex-start;
+        align-items: flex-start;
 
     }
 
 
 
-    .alert-content{
+    .alert-content {
 
-        margin-top:10px;
+        margin-top: 10px;
 
         max-height:
-        calc(100vh - 20px);
+            calc(100dvh - 20px);
 
 
-        padding:24px 16px 20px;
+        padding: 24px 16px 20px;
 
 
-        border-radius:18px;
-
-    }
-
-
-
-    .alert-icon{
-
-        width:65px;
-
-        height:65px;
-
-        font-size:28px;
+        border-radius: 18px;
 
     }
 
 
 
-    .alert-content h2{
+    .alert-icon {
 
-        font-size:1.25rem;
+        width: 65px;
 
-        line-height:1.6;
+        height: 65px;
 
-        padding:0 10px;
+        font-size: 28px;
+
+    }
+
+
+
+    .alert-content h2 {
+
+        font-size: 1.25rem;
+
+        line-height: 1.6;
+
+        padding: 0 10px;
 
     }
 
 
 
     .alert-intro,
-    .alert-content p{
+    .alert-content p {
 
-        font-size:.95rem;
+        font-size: .95rem;
 
-        line-height:1.9;
-
-    }
-
-
-
-    .tip-item{
-
-        padding:12px;
-
-        gap:10px;
+        line-height: 1.9;
 
     }
 
 
 
-    .tip-item i{
+    .tip-item {
 
-        font-size:20px;
+        padding: 12px;
+
+        gap: 10px;
+
+    }
+
+
+
+    .tip-item i {
+
+        font-size: 20px;
 
     }
 
@@ -882,49 +896,49 @@
 ========================== */
 
 
-@media(max-width:400px){
+@media(max-width:400px) {
 
 
-    .alert-modal{
+    .alert-modal {
 
-        padding:6px;
-
-    }
-
-
-    .alert-content{
-
-        padding:20px 12px;
-
-        border-radius:15px;
+        padding: 6px;
 
     }
 
 
+    .alert-content {
 
-    .alert-badge{
+        padding: 20px 12px;
 
-        font-size:.8rem;
-
-        padding:6px 12px;
+        border-radius: 15px;
 
     }
 
 
 
-    .alert-content h2{
+    .alert-badge {
 
-        font-size:1.1rem;
+        font-size: .8rem;
+
+        padding: 6px 12px;
 
     }
 
 
 
-    .alert-btn{
+    .alert-content h2 {
 
-        font-size:.9rem;
+        font-size: 1.1rem;
 
-        min-height:46px;
+    }
+
+
+
+    .alert-btn {
+
+        font-size: .9rem;
+
+        min-height: 46px;
 
     }
 
