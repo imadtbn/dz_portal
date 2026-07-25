@@ -734,6 +734,43 @@ body {
     color: #6a1b9a;
 }
 
+/* ===== Ministry of Interior Theme ===== */
+
+.interior-theme{
+    --alert-color:#1b5e20;
+    --alert-bg:#eef8f0;
+    --alert-accent:#c9a227;
+}
+
+.interior-theme .alert-content{
+    border-top:6px solid var(--alert-color);
+}
+
+.interior-theme .alert-icon{
+    background:var(--alert-bg);
+    color:var(--alert-color);
+}
+
+.interior-theme .alert-badge{
+    background:#eef8f0;
+    color:var(--alert-color);
+}
+
+.interior-theme .tip-item{
+    border-right-color:var(--alert-color);
+}
+
+.interior-theme .tip-item i{
+    color:var(--alert-color);
+}
+
+.interior-theme .alert-btn{
+    background:linear-gradient(135deg,#1b5e20,#2e7d32);
+}
+
+.interior-theme .alert-footer{
+    color:#1b5e20;
+}
 
 /* ===== Parents Theme ===== */
 
