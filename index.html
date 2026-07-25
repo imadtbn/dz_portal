@@ -1070,7 +1070,7 @@
                     "position": 49,
                     "item": {
                         "@type": "Service",
-                        "name": "Campuce.jobs",
+                        "name": "mdn",
                         "description": "وزارة الدفاع الوطني",
                         "provider": {
                             "@id": "https://imadtbn.github.io/dz_portal/#organization"
@@ -1104,7 +1104,7 @@
                     "position": 51,
                     "item": {
                         "@type": "Service",
-                        "name": "seor",
+                        "name": "SNTF",
                         "description": "مواقيت سير قطارات SNTF في الجزائر، تصفح جداول الرحلات الرسمية للخطوط الدولية والداخلية مع عرض الصور الكاملة للمواقيت وتحديثات النقل بالسكك الحديدية.",
                         "provider": {
                             "@id": "https://imadtbn.github.io/dz_portal/#organization"
@@ -1121,7 +1121,7 @@
                     "position": 52,
                     "item": {
                         "@type": "Service",
-                        "name": "seor",
+                        "name": "msport",
                         "description": "مواقيت سير اكتشف خدمات وزارة الرياضة الجزائرية الرقمية، من تسجيل رياضيي النخبة والمستوى العالي والتكوين الرياضي إلى تحميل الشهادات ومتابعة الملفات إلكترونياً",
                         "provider": {
                             "@id": "https://imadtbn.github.io/dz_portal/#organization"
@@ -1138,7 +1138,7 @@
                     "position": 53,
                     "item": {
                         "@type": "Service",
-                        "name": "seor",
+                        "name": "dzorientation",
                         "description": "منصة توجيه ودعم الطلاب المتحصلين على شهادة الباكالوريا في الجزائر، حيث يمكنهم الاطلاع على نتائج التوجيه الجامعي واختيار التخصصات والجامعات المناسبة لهم.",
                         "provider": {
                             "@id": "https://imadtbn.github.io/dz_portal/#organization"
@@ -1149,7 +1149,40 @@
                             "@type": "UseAction",
                             "target": "https://dzorientation.com"
                         }
+                    }, {
+                    "@type": "ListItem",
+                    "position": 54,
+                    "item": {
+                        "@type": "Service",
+                        "name": "فضاء الأستاذ",
+                        "description": "التسجيل في الامتحانات، نتائج، فضاء الأستاذ والأولياء، التعليم عن بعد .",
+                        "provider": {
+                            "@id": "https://imadtbn.github.io/dz_portal/#organization"
+                        },
+                        "category": "التربية والتعليم",
+                        "url": "https://imadtbn.github.io/dz_portal/sectors/ostad-education.html",
+                        "potentialAction": {
+                            "@type": "UseAction",
+                            "target": "https://imadtbn.github.io/dz_portal/sectors/ostad-education.html"
+                        }
+                    }, {
+                    "@type": "ListItem",
+                    "position": 55,
+                    "item": {
+                        "@type": "Service",
+                        "name": "فضاء الأولياء",
+                        "description": "التسجيل في الامتحانات، نتائج، فضاء الأستاذ والأولياء، التعليم عن بعد.",
+                        "provider": {
+                            "@id": "https://imadtbn.github.io/dz_portal/#organization"
+                        },
+                        "category": "التربية والتعليم",
+                        "url": "https://imadtbn.github.io/dz_portal/sectors/awlyaa-education.html",
+                        "potentialAction": {
+                            "@type": "UseAction",
+                            "target": "https://imadtbn.github.io/dz_portal/sectors/awlyaa-education.html"
+                        }
                     }
+
                 }]
             }]
         }, {
@@ -2109,6 +2142,29 @@
 
         <!-- 08 sectors -->
         <div class="sectors-grid">
+
+            <!-- فضاء الأولياء -->
+            <a href="sectors/awlyaa-education.html" class="sector-card">
+                <span class="sector-count">02 خدمات</span>
+                <div class="sector-icon">
+                    <img src="assets/images/education.png" alt="dzexams" loading="lazy" width="120" height="120">
+                </div>
+                <h3 class="sector-title">فضاء أولياء التلاميذ</h3>
+                <p class="sector-desc"> متابعةالنتائج الدراسية، الغيابات، والتواصل مع المدرسة
+                </p>
+            </a>
+
+            <!-- فضاء الأستاذ -->
+            <a href="sectors/ostad-education.html" class="sector-card">
+                <span class="sector-count">22 خدمات</span>
+                <div class="sector-icon">
+                    <img src="assets/images/education.png" alt="dzexams" loading="lazy" width="120" height="120">
+                </div>
+                <h3 class="sector-title">فضاء الأستاذ</h3>
+                <p class="sector-desc"> فضاءالأستاذ الشامل لإدارة العملية التربوية والتواصل مع الإدارة
+                </p>
+            </a>
+
             <!-- dzexam.pro -->
             <a href="sectors/dzexams.pro.html" class="sector-card">
                 <span class="sector-count">22 خدمات</span>

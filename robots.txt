@@ -108,6 +108,8 @@ Allow: /sectors/ooredoo.html
 Allow: /sectors/djezzy.html
 Allow: /sectors/sntf.html
 Allow: /sectors/anpdp.html
+Allow: /sectors/awlyaa-education.html
+Allow: /sectors/ostad-education.html
 
 
 
