@@ -50,19 +50,26 @@
 
     <!-- Structured Data -->
     <script type="application/ld+json">
-{
+        {
   "@context": "https://schema.org",
   "@graph": [
-
     {
       "@type": "WebSite",
       "@id": "https://imadtbn.github.io/dz_portal/#website",
       "url": "https://imadtbn.github.io/dz_portal/",
       "name": "البوابة الجزائرية للخدمات الرقمية",
       "alternateName": "DZ Portal",
-      "inLanguage": "ar"
+      "description": "منصة وطنية موحدة تقدم خدمات رقمية للمواطن الجزائري في مختلف القطاعات الحكومية.",
+      "inLanguage": "ar",
+      "publisher": {
+        "@id": "https://imadtbn.github.io/dz_portal/#organization"
+      },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://imadtbn.github.io/dz_portal/search?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
     },
-
     {
       "@type": "Organization",
       "@id": "https://imadtbn.github.io/dz_portal/#organization",
@@ -70,9 +77,12 @@
       "url": "https://imadtbn.github.io/dz_portal/",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://imadtbn.github.io/dz_portal/icons/icon.png"
+        "url": "https://imadtbn.github.io/dz_portal/icons/icon.png",
+        "width": 512,
+        "height": 512
       },
-             "contactPoint": {
+      "description": "بوابة موحدة للخدمات الرقمية في الجزائر، تهدف إلى تسهيل وصول المواطن إلى الخدمات الحكومية بكل أمان وسهولة.",
+      "contactPoint": {
         "@type": "ContactPoint",
         "contactType": "customer support",
         "areaServed": "DZ",
@@ -87,66 +97,48 @@
         "addressCountry": "DZ"
       },
       "sameAs": [
-        "https://imadtbn.github.io/dz_portal/"
+        "https://www.facebook.com/dzportal",
+        "https://twitter.com/dzportal"
       ]
     },
-
     {
-      "@type": "WebPage",
+      "@type": "AboutPage",
       "@id": "https://imadtbn.github.io/dz_portal/pages/about.html#webpage",
       "url": "https://imadtbn.github.io/dz_portal/pages/about.html",
       "name": "من نحن | البوابة الجزائرية للخدمات الرقمية",
-      "description": "البوابة الجزائرية للخدمات الرقمية - منصتكم الموحدة للوصول إلى الخدمات الحكومية",
-      "keywords": [
-        "البوابة الجزائرية للخدمات الرقمية",
-        "من نحن",
-        "قصة البوابة",
-        "رؤية البوابة",
-        "فريق العمل",
-        "خدمات رقمية في الجزائر",
-        "التحول الرقمي في الجزائر",
-        "منصة الخدمات الرقمية",
-        "الوصول إلى الخدمات الحكومية",
-        "تجربة المستخدم الرقمية",
-        "البوابة الرقمية الجزائرية",
-        "خدمات الحكومة الرقمية",
-        "الموارد الرقمية الجزائرية",
-        "الدليل الرقمي الجزائري",
-        "المركز الرقمي الجزائري",
-        "بوابة الخدمات الرقمية الجزائرية",
-        "منصة الخدمات الرقمية الجزائرية",
-        "البوابة الوطنية للخدمات الرقمية",
-        "خدمات الحكومة الإلكترونية الجزائرية",
-        "الموارد الرقمية الحكومية الجزائرية",
-        "الدليل الرقمي الحكومي الجزائري",
-        "يتجربة المستخدم الرقمية في الجزائر",
-        "dz portal",
-        "about us",
-        "our story",
-        "our mission",
-        ],
-        "inLanguage": "ar",
+      "description": "تعرف على رؤيتنا ورسالتنا في تمكين التحول الرقمي بالجزائر. البوابة الجزائرية للخدمات الرقمية – منصتكم الموحدة للوصول السهل والآمن إلى جميع الخدمات الحكومية الإلكترونية.",
+      "keywords": "من نحن, البوابة الجزائرية للخدمات الرقمية, التحول الرقمي الجزائر, منصة الخدمات الحكومية, فريق العمل, رؤية البوابة, الخدمات الرقمية الجزائر, dz portal, about us, الحكومة الإلكترونية, سهولة الوصول, البوابة الوطنية",
+      "inLanguage": "ar",
       "isPartOf": {
         "@id": "https://imadtbn.github.io/dz_portal/#website"
       },
       "about": {
-        "@id": "https://imadtbn.github.io/dz_portal/pages/about.html/#organization"
+        "@type": "Organization",
+        "@id": "https://imadtbn.github.io/dz_portal/#organization"
       },
       "publisher": {
         "@id": "https://imadtbn.github.io/dz_portal/#organization"
       },
       "primaryImageOfPage": {
         "@type": "ImageObject",
-        "url": "https://imadtbn.github.io/dz_portal/assets/images/icon.png"
+        "url": "https://imadtbn.github.io/dz_portal/assets/images/icon.png",
+        "caption": "شعار البوابة الجزائرية للخدمات الرقمية"
       },
+      "datePublished": "2025-01-01",
+      "dateModified": "2026-07-26",
+      "lastReviewed": "2026-07-26",
       "breadcrumb": {
-        "@id": "https://imadtbn.github.io/dz_portal//pages/about.html#breadcrumb"
+        "@id": "https://imadtbn.github.io/dz_portal/pages/about.html#breadcrumb"
+      },
+      "mainEntity": {
+        "@type": "AboutPage",
+        "name": "من نحن",
+        "description": "نقدم منصة رقمية موحدة تهدف إلى تسهيل وصول المواطن الجزائري إلى الخدمات الحكومية، وتعزيز التحول الرقمي في الجزائر من خلال واجهة بسيطة وآمنة."
       }
     },
-
     {
       "@type": "BreadcrumbList",
-      "@id": "https://imadtbn.github.io/dz_portal//pages/about.html#breadcrumb",
+      "@id": "https://imadtbn.github.io/dz_portal/pages/about.html#breadcrumb",
       "itemListElement": [
         {
           "@type": "ListItem",
@@ -162,10 +154,9 @@
         }
       ]
     }
-
   ]
 }
-</script>
+    </script>
 
 </head>
 
