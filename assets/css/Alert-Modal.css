@@ -1,13 +1,12 @@
 /* Security Modal */
+
+
 /* ===== Alert Modal ===== */
 
 html,
 body {
-
     overflow-x: hidden;
-
 }
-
 
 .alert-modal {
     position: fixed;
@@ -18,10 +17,8 @@ body {
     align-items: center;
     isolation: isolate;
     place-items: center;
-
     overflow-y: auto;
     overflow-x: hidden;
-
     padding: 20px;
     z-index: 99999;
     animation: alertFade .3s ease;
@@ -100,33 +97,32 @@ body {
     from {
         opacity: 0;
     }
-
     to {
         opacity: 1;
     }
 }
 
+
 /* وضع احتياطي إن كان هناك تداخل بأب يحتوي transform */
+
 .alert-modal {
     position: fixed !important;
     inset: 0 !important;
     z-index: 2147483647 !important;
 }
 
+
 /* Animation */
 
 @keyframes modalShow {
-
     from {
         opacity: 0;
         transform: translateY(30px) scale(.95);
     }
-
     to {
         opacity: 1;
         transform: translateY(0) scale(1);
     }
-
 }
 
 .education-theme {
@@ -134,6 +130,7 @@ body {
     --alert-bg: #eef5ff;
     --alert-accent: #f9a825;
 }
+
 
 /* ===== Vehicle Inspection Theme ===== */
 
@@ -173,6 +170,7 @@ body {
     color: #1565c0;
 }
 
+
 /* ===== SNTF Theme ===== */
 
 .sntf-theme {
@@ -210,6 +208,7 @@ body {
 .sntf-theme .alert-footer {
     color: #005baa;
 }
+
 
 /* ===== Mobilis Theme ===== */
 
@@ -288,6 +287,7 @@ body {
     color: #003b7a;
 }
 
+
 /* ===== ADE Theme ===== */
 
 .ade-theme {
@@ -330,6 +330,7 @@ body {
     color: #0077c8;
 }
 
+
 /* ===== Civil Protection Theme ===== */
 
 .protection-theme {
@@ -367,6 +368,7 @@ body {
 .protection-theme .alert-footer {
     color: #b71c1c;
 }
+
 
 /* ===== Sonelgaz Theme ===== */
 
@@ -439,6 +441,7 @@ body {
     font-weight: 600;
 }
 
+
 /* ===== University Theme ===== */
 
 .university-theme {
@@ -452,73 +455,54 @@ body {
 }
 
 .alert-badge {
-
     display: inline-flex;
     align-items: center;
     gap: 8px;
-
     background: #fff7dd;
     color: #9a6b00;
-
     padding: 8px 16px;
     border-radius: 30px;
     font-size: .9rem;
     font-weight: 700;
-
     margin-bottom: 18px;
 }
 
 .welcome-text {
-
     font-size: 1.05rem;
     line-height: 2;
-
     color: #444;
 }
 
 .welcome-box {
-
     margin: 20px 0;
-
     display: flex;
     gap: 12px;
     align-items: flex-start;
-
     background: #f8fbff;
-
     border-right: 4px solid var(--alert-color);
-
     padding: 16px;
     border-radius: 12px;
-
     text-align: right;
 }
 
 .welcome-box i {
-
     color: var(--alert-accent);
-
     font-size: 24px;
     margin-top: 3px;
 }
 
 .welcome-box span {
-
     line-height: 1.9;
     color: #555;
 }
 
 .university-theme .alert-btn {
-
     background: linear-gradient(135deg, #0d6efd, #0b57d0);
-
     box-shadow: 0 8px 18px rgba(13, 110, 253, .25);
 }
 
 .university-theme .alert-btn:hover {
-
     transform: translateY(-3px);
-
     box-shadow: 0 12px 25px rgba(13, 110, 253, .35);
 }
 
@@ -529,7 +513,6 @@ body {
     --alert-color: #0056a6;
     --alert-bg: #eef5ff;
 }
-
 
 .fraud-list {
     margin: 10px 0 0;
@@ -696,6 +679,7 @@ body {
     color: #2e7d32;
 }
 
+
 /* ===== Teachers Theme ===== */
 
 .teacher-theme {
@@ -734,43 +718,84 @@ body {
     color: #6a1b9a;
 }
 
+
 /* ===== Ministry of Interior Theme ===== */
 
-.interior-theme{
-    --alert-color:#1b5e20;
-    --alert-bg:#eef8f0;
-    --alert-accent:#c9a227;
+.interior-theme {
+    --alert-color: #1b5e20;
+    --alert-bg: #eef8f0;
+    --alert-accent: #c9a227;
 }
 
-.interior-theme .alert-content{
-    border-top:6px solid var(--alert-color);
+.interior-theme .alert-content {
+    border-top: 6px solid var(--alert-color);
 }
 
-.interior-theme .alert-icon{
-    background:var(--alert-bg);
-    color:var(--alert-color);
+.interior-theme .alert-icon {
+    background: var(--alert-bg);
+    color: var(--alert-color);
 }
 
-.interior-theme .alert-badge{
-    background:#eef8f0;
-    color:var(--alert-color);
+.interior-theme .alert-badge {
+    background: #eef8f0;
+    color: var(--alert-color);
 }
 
-.interior-theme .tip-item{
-    border-right-color:var(--alert-color);
+.interior-theme .tip-item {
+    border-right-color: var(--alert-color);
 }
 
-.interior-theme .tip-item i{
-    color:var(--alert-color);
+.interior-theme .tip-item i {
+    color: var(--alert-color);
 }
 
-.interior-theme .alert-btn{
-    background:linear-gradient(135deg,#1b5e20,#2e7d32);
+.interior-theme .alert-btn {
+    background: linear-gradient(135deg, #1b5e20, #2e7d32);
 }
 
-.interior-theme .alert-footer{
-    color:#1b5e20;
+.interior-theme .alert-footer {
+    color: #1b5e20;
 }
+
+
+/* ===== Public Service Theme ===== */
+
+.public-service-theme {
+    --alert-color: #005b96;
+    --alert-bg: #eef7ff;
+    --alert-accent: #c9a227;
+}
+
+.public-service-theme .alert-content {
+    border-top: 6px solid var(--alert-color);
+}
+
+.public-service-theme .alert-icon {
+    background: var(--alert-bg);
+    color: var(--alert-color);
+}
+
+.public-service-theme .alert-badge {
+    background: #eef7ff;
+    color: var(--alert-color);
+}
+
+.public-service-theme .tip-item {
+    border-right-color: var(--alert-color);
+}
+
+.public-service-theme .tip-item i {
+    color: var(--alert-color);
+}
+
+.public-service-theme .alert-btn {
+    background: linear-gradient(135deg, #005b96, #1976d2);
+}
+
+.public-service-theme .alert-footer {
+    color: #005b96;
+}
+
 
 /* ===== Parents Theme ===== */
 
@@ -810,251 +835,139 @@ body {
     color: #00897b;
 }
 
+
 /* Responsive */
+
 @media (max-width:768px) {
     .alert-content {
         padding: 22px 18px;
         border-radius: 14px;
     }
-
     .alert-btn {
         width: 100%;
         display: block;
     }
-
     .alert-content h2 {
         font-size: 1.3rem;
     }
-
     .alert-content p {
         font-size: .95rem;
     }
 }
 
-
 @media (max-width:768px) {
-
     .alert-modal {
-
         padding: 12px;
-
         align-items: flex-start;
     }
-
     .alert-content {
-
         width: 100%;
         max-width: none;
-
         margin-top: 12px;
         margin-bottom: 12px;
-
         max-height: calc(100dvh - 24px);
-
         border-radius: 16px;
-
         padding: 22px 18px;
     }
-
     .alert-icon {
-
         width: 68px;
         height: 68px;
         font-size: 28px;
     }
-
     .alert-content h2 {
         font-size: 1.25rem;
     }
-
     .alert-content p,
     .tip-item span,
     .welcome-box span {
         font-size: .95rem;
         line-height: 1.8;
     }
-
     .alert-btn {
         width: 100%;
     }
-
 }
 
 @media (max-width:400px) {
-
     .alert-modal {
         padding: 8px;
     }
-
     .alert-content {
-
         padding: 18px 14px;
-
         border-radius: 14px;
     }
-
     .alert-icon {
-
         width: 60px;
         height: 60px;
-
         font-size: 24px;
     }
-
     .alert-content h2 {
-
         font-size: 1.1rem;
     }
-
 }
-
-
-
-
-
 
 
 /* ==========================
    Smartphones
 ========================== */
 
-
 @media(max-width:768px) {
-
-
     .alert-modal {
-
         padding: 10px;
-
         align-items: flex-start;
-
     }
-
-
-
     .alert-content {
-
         margin-top: 10px;
-
-        max-height:
-            calc(100dvh - 20px);
-
-
+        max-height: calc(100dvh - 20px);
         padding: 24px 16px 20px;
-
-
         border-radius: 18px;
-
     }
-
-
-
     .alert-icon {
-
         width: 65px;
-
         height: 65px;
-
         font-size: 28px;
-
     }
-
-
-
     .alert-content h2 {
-
         font-size: 1.25rem;
-
         line-height: 1.6;
-
         padding: 0 10px;
-
     }
-
-
-
     .alert-intro,
     .alert-content p {
-
         font-size: .95rem;
-
         line-height: 1.9;
-
     }
-
-
-
     .tip-item {
-
         padding: 12px;
-
         gap: 10px;
-
     }
-
-
-
     .tip-item i {
-
         font-size: 20px;
-
     }
-
-
 }
-
 
 
 /* ==========================
    Small Phones 320-400px
 ========================== */
 
-
 @media(max-width:400px) {
-
-
     .alert-modal {
-
         padding: 6px;
-
     }
-
-
     .alert-content {
-
         padding: 20px 12px;
-
         border-radius: 15px;
-
     }
-
-
-
     .alert-badge {
-
         font-size: .8rem;
-
         padding: 6px 12px;
-
     }
-
-
-
     .alert-content h2 {
-
         font-size: 1.1rem;
-
     }
-
-
-
     .alert-btn {
-
         font-size: .9rem;
-
         min-height: 46px;
-
     }
-
-
 }
