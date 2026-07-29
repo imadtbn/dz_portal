@@ -83,6 +83,18 @@
       <image:title>التعليم العالي والخدمات الجامعية</image:title>
     </image:image>
   </url>
+
+    <url>
+    <loc>https://imadtbn.github.io/dz_portal/sectors/dgfp.gov.html</loc>
+    <lastmod>2026-07-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://imadtbn.github.io/dz_portal/assets/images/dgfp.jpg</image:loc>
+      <image:title>المديرية العامة للوظيفة العمومية و الإصلاح الإداري</image:title>
+    </image:image>
+  </url>
+
   <url>
     <loc>https://imadtbn.github.io/dz_portal/sectors/dzexam1.html</loc>
     <lastmod>2026-07-25</lastmod>
