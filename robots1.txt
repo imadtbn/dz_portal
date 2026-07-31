@@ -111,6 +111,8 @@ Allow: /sectors/anpdp.html
 Allow: /sectors/awlyaa-education.html
 Allow: /sectors/ostad-education.html
 Allow: /sectors/dgfp.gov.html
+Allow: /sectors/hca.html
+
 
 
 
