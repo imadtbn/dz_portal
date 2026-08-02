@@ -112,6 +112,11 @@ Allow: /sectors/awlyaa-education.html
 Allow: /sectors/ostad-education.html
 Allow: /sectors/dgfp.gov.html
 Allow: /sectors/hca.html
+Allow: /sectors/cnas.html
+Allow: /sectors/casnos.html
+Allow: /sectors/cnr.html
+
+
 
 
 
