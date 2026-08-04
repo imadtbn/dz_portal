@@ -35,7 +35,6 @@ User-agent: Googlebot
 Disallow: /private/
 Disallow: /tmp/
 Disallow: /cgi-bin/
-Disallow: /*?*
 
 # [B.2] الصفحات ذات الأولوية القصوى (1.0 - 0.9)
 # الرئيسية | التربية والتعليم | التعليم العالي | الداخلية
