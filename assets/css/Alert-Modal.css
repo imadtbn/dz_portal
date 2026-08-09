@@ -836,6 +836,44 @@ body {
 }
 
 
+/* ===== Vocational Training Theme ===== */
+
+.vocational-theme {
+    --alert-color: #1565c0;
+    --alert-bg: #eef6ff;
+    --alert-accent: #f9a825;
+}
+
+.vocational-theme .alert-content {
+    border-top: 6px solid var(--alert-color);
+}
+
+.vocational-theme .alert-icon {
+    background: var(--alert-bg);
+    color: var(--alert-color);
+}
+
+.vocational-theme .alert-badge {
+    background: var(--alert-bg);
+    color: var(--alert-color);
+}
+
+.vocational-theme .tip-item {
+    border-right-color: var(--alert-color);
+}
+
+.vocational-theme .tip-item i {
+    color: var(--alert-color);
+}
+
+.vocational-theme .alert-btn {
+    background: linear-gradient(135deg, #1565c0, #1e88e5);
+}
+
+.vocational-theme .alert-footer {
+    color: var(--alert-color);
+}
+
 /* Responsive */
 
 @media (max-width:768px) {
