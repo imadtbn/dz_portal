@@ -125,7 +125,7 @@ Allow: /pages/process/anae.html
 Allow: /pages/process/e-declaration.html
 Allow: /pages/process/apostille.html
 Allow: /pages/process/markabatidz.html
-Allow: /pages/process/naftal.html
+Allow: /pages/process/e-mahata.naftal.html
 Allow: /pages/process/takwin.html
 
 
