@@ -135,6 +135,16 @@
       <image:title>التكوين والتعليم المهنيين</image:title>
     </image:image>
   </url>
+    <url>
+    <loc>https://imadtbn.github.io/dz_portal/pages/process/takwin.html</loc>
+    <lastmod>2026-08-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://imadtbn.github.io/dz_portal/assets/images/formation.png</image:loc>
+      <image:title>التكوين والتعليم المهنيين</image:title>
+    </image:image>
+  </url>
   <!-- ══════════════ قطاع الاتصالات والبريد ══════════════ -->
   <url>
     <loc>https://imadtbn.github.io/dz_portal/sectors/poste.html</loc>

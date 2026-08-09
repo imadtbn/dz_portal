@@ -35,6 +35,7 @@ User-agent: Googlebot
 Disallow: /private/
 Disallow: /tmp/
 Disallow: /cgi-bin/
+Disallow: /*?*
 
 # [B.2] الصفحات ذات الأولوية القصوى (1.0 - 0.9)
 # الرئيسية | التربية والتعليم | التعليم العالي | الداخلية
@@ -117,14 +118,6 @@ Allow: /sectors/cnr.html
 
 
 
-
-
-
-
-
-
-# [B.3] الصفحات ذات الأولوية العالية (0.6 - 0.5)
-# من نحن | اتصل بنا 
 Allow: /pages/process/arpce.html
 Allow: /pages/process/naftal.html
 Allow: /pages/process/adhahi.dz.html
@@ -133,17 +126,14 @@ Allow: /pages/process/e-declaration.html
 Allow: /pages/process/apostille.html
 Allow: /pages/process/markabatidz.html
 Allow: /pages/process/naftal.html
+Allow: /pages/process/takwin.html
 
 
-# [B.4] الصفحات ذات الأولوية المتوسطة (0.4 - 0.2)
-# الخصوصية | الشروط | التأمين
 Allow: /pages/terms.html
 Allow: /pages/about.html
 Allow: /pages/contact.html
 Allow: /pages/privacy.html
 
-# [B.5] الصفحات ذات الأولوية المنخفضة (0.1)
-# التكوين المهني | الهاتف | ARPCE | الشرطة | الانتخابات | المياه | الطاقة | الخارجية | الفلاحة | الاستثمار | الشفافية | قمع الفساد | السكن الترقوي | التشغيل | التضامن | البنوك | التجارة
 
 
 # [B.6] السماح بالموارد الثابتة (CSS/JS/الصور)
