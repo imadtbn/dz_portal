@@ -231,3 +231,28 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
 });
+
+//النافذة التحذيرية
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    const modal = document.getElementById("securityAlert");
+
+    if (!modal) return;
+
+    const closeBtn = modal.querySelector(".alert-close");
+    const actionBtn = modal.querySelector(".alert-btn");
+
+    function closeModal() {
+        modal.style.display = "none";
+    }
+
+    if (closeBtn) {
+        closeBtn.addEventListener("click", closeModal);
+    }
+
+    if (actionBtn && actionBtn.tagName === "BUTTON") {
+        actionBtn.addEventListener("click", closeModal);
+    }
+
+});
