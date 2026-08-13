@@ -127,6 +127,7 @@ Allow: /pages/process/apostille.html
 Allow: /pages/process/markabatidz.html
 Allow: /pages/process/e-mahata.naftal.html
 Allow: /pages/process/takwin.html
+Allow: /pages/process/awlyaa-process.html
 
 
 Allow: /pages/terms.html
