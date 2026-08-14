@@ -33,7 +33,22 @@ window.addEventListener('scroll', () => {
     });
 });
 
+// Automatic service counters
+// Count every service card in each section instead of relying on manual HTML numbers.
+document.querySelectorAll('.section-card').forEach(section => {
+    const counter = section.querySelector('.service-count');
+    if (!counter) return;
+
+    const services = section.querySelectorAll('.service-item');
+    const currentLabel = counter.textContent.trim().replace(/^\s*\d+\s*/u, '');
+    const label = currentLabel || 'خدمات';
+    const formattedCount = String(services.length).padStart(2, '0');
+
+    counter.textContent = `${formattedCount} ${label}`;
+});
+
 // Search functionality
+
 document.querySelector('.search-trigger').addEventListener('click', () => {
     const query = prompt('ابحث عن خدمة:');
     if (query) {
