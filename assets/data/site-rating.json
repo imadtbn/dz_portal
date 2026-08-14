@@ -1,0 +1,14 @@
+{
+  "source": "https://docs.google.com/spreadsheets/d/1TJgv9b2F2olI961PqxRscPqecQK--eqpiv9McaJKnBQ/edit?usp=drivesdk",
+  "sourceQuery": "https://docs.google.com/spreadsheets/d/1TJgv9b2F2olI961PqxRscPqecQK--eqpiv9McaJKnBQ/gviz/tq?tqx=out:csv&gid=0",
+  "syncedAt": "2026-08-14T23:25:23+00:00",
+  "responses": 261,
+  "average": 4.37,
+  "distribution": {
+    "1": 20,
+    "2": 7,
+    "3": 18,
+    "4": 28,
+    "5": 188
+  }
+}

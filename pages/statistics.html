@@ -53,6 +53,19 @@
         .stats-empty { color: var(--stats-muted); text-align: center; padding: 2rem 1rem; }
         .stats-refresh { border: 0; border-radius: 12px; padding: .7rem 1rem; background: var(--stats-green); color: #fff; font: inherit; cursor: pointer; }
         .stats-refresh:hover { background: var(--stats-dark); }
+        .site-rating-widget { display: grid; gap: .65rem; text-align: center; }
+        .site-rating-stars { color: #f2b01e; font-size: 1.7rem; letter-spacing: .12rem; min-height: 2rem; }
+        .rating-star-empty { color: #d9e2dc; }
+        .rating-star-half { color: #f2b01e; }
+        .site-rating-value { color: var(--stats-green); font-size: 1.7rem; direction: ltr; unicode-bidi: isolate; display: inline-block; }
+        .site-rating-meta, .site-rating-updated { color: var(--stats-muted); }
+        .site-rating-distribution { display: grid; gap: .25rem; max-width: 520px; width: 100%; margin: .5rem auto 0; }
+        .rating-distribution-row { display: grid; grid-template-columns: 34px 1fr 30px; align-items: center; gap: .5rem; color: var(--stats-muted); font-size: .78rem; }
+        .rating-distribution-row > span:first-child { direction: ltr; text-align: left; }
+        .rating-distribution-row i { color: #f2b01e; margin-left: .2rem; }
+        .rating-distribution-bar { height: 7px; background: #e5eee7; border-radius: 99px; overflow: hidden; }
+        .rating-distribution-bar > span { display: block; height: 100%; background: #f2b01e; border-radius: inherit; }
+        .stats-rating-widget { padding: .5rem 0 .2rem; }
         @media (max-width: 900px) { .stats-summary { grid-template-columns: repeat(2, 1fr); } .sector-row { grid-template-columns: 1fr auto; } .sector-bar { grid-column: 1 / -1; grid-row: 2; } }
         @media (max-width: 560px) { .stats-summary { grid-template-columns: 1fr 1fr; gap: .65rem; } .summary-card { padding: 1rem .5rem; } .summary-number { font-size: 1.55rem; } .stats-panel-header { align-items: stretch; flex-direction: column; } .stats-filter { width: 100%; } }
     </style>
@@ -81,6 +94,20 @@
             <article class="summary-card"><i class="fas fa-building-columns"></i><span class="summary-number" id="totalSectors">—</span><span class="summary-label">القطاعات المحللة</span></article>
             <article class="summary-card"><i class="fas fa-chart-line"></i><span class="summary-number" id="averageServices">—</span><span class="summary-label">متوسط الخدمات لكل قطاع</span></article>
             <article class="summary-card"><i class="fas fa-trophy"></i><span class="summary-number" id="topSectorCount">—</span><span class="summary-label" id="topSectorLabel">أعلى قطاع</span></article>
+        </section>
+
+        <section class="stats-panel rating-panel" aria-labelledby="siteRatingTitle">
+            <div class="stats-panel-header">
+                <div><h3 id="siteRatingTitle"><i class="fas fa-star"></i> تقييم الموقع</h3><p>متوسط تقييمات الزوار الواردة من جدول التقييمات.</p></div>
+                <a class="stats-refresh" href="https://forms.gle/yfMJqhsD3XDn9NaJ7" target="_blank" rel="noopener noreferrer"><i class="fas fa-star"></i> أرسل تقييمك</a>
+            </div>
+            <div class="site-rating-widget stats-rating-widget" data-rating-widget aria-live="polite">
+                <div class="site-rating-stars" data-rating-stars role="img" aria-label="جارٍ تحميل تقييم الموقع"></div>
+                <strong class="site-rating-value" data-rating-value>— / 5</strong>
+                <span class="site-rating-meta" data-rating-meta>جارٍ تحميل التقييمات...</span>
+                <div class="site-rating-distribution" data-rating-distribution></div>
+                <small class="site-rating-updated" data-rating-updated></small>
+            </div>
         </section>
 
         <section class="stats-panel" aria-labelledby="sectorStatsTitle">
@@ -118,5 +145,6 @@
     </footer>
 
     <script defer src="../assets/js/statistics.js"></script>
+    <script defer src="../assets/js/siteRating.js"></script>
 </body>
 </html>
