@@ -78,30 +78,22 @@ if (digitalServiceStat) {
     }
 }
 
-// Search functionality
-y
-document.querySelector('.search-trigger').addEventListener('click', () => {
+// Local page search
+function loadLocalPageSearch() {
+    if (window.localPageSearchLoaded || document.querySelector('script[data-local-page-search]')) return;
 
-    const query = prompt('ابحث عن خط ، إتجاه أو خدمة:');
+    const script = document.createElement('script');
+    const currentScript = document.currentScript;
+    script.src = currentScript
+        ? new URL('localSearch.js', currentScript.src).href
+        : '../assets/js/localSearch.js';
+    script.defer = true;
+    script.dataset.localPageSearch = 'true';
+    script.onload = () => { window.localPageSearchLoaded = true; };
+    document.head.appendChild(script);
+}
 
-    if (!query) return;
-
-    const cards = document.querySelectorAll(
-        '.service-item, .train-card'
-    );
-
-    cards.forEach(card => {
-
-        const text = card.textContent.toLowerCase();
-
-        card.style.display =
-            text.includes(query.toLowerCase())
-                ? ''
-                : 'none';
-
-    });
-
-});
+loadLocalPageSearch();
 
 
 

@@ -67,18 +67,22 @@ if (digitalServiceStat) {
     }
 }
 
-// Search functionality
+// Local page search
+function loadLocalPageSearch() {
+    if (window.localPageSearchLoaded || document.querySelector('script[data-local-page-search]')) return;
 
-document.querySelector('.search-trigger').addEventListener('click', () => {
-    const query = prompt('ابحث عن خدمة:');
-    if (query) {
-        const services = document.querySelectorAll('.service-item');
-        services.forEach(service => {
-            const text = service.textContent.toLowerCase();
-            service.style.display = text.includes(query.toLowerCase()) ? 'flex' : 'none';
-        });
-    }
-});
+    const script = document.createElement('script');
+    const currentScript = document.currentScript;
+    script.src = currentScript
+        ? new URL('localSearch.js', currentScript.src).href
+        : '../assets/js/localSearch.js';
+    script.defer = true;
+    script.dataset.localPageSearch = 'true';
+    script.onload = () => { window.localPageSearchLoaded = true; };
+    document.head.appendChild(script);
+}
+
+loadLocalPageSearch();
 
 
 
