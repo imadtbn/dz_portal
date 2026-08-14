@@ -16161,6 +16161,8 @@ const searchData = [
 
 const searchInput = document.getElementById("globalSearch");
 const searchResults = document.getElementById("searchResults");
+const voiceSearchBtn = document.getElementById("voiceSearchBtn");
+const SEARCH_SUGGESTION_LIMIT = 8;
 
 /* =========================================
    تطبيع النص العربي واللاتيني
@@ -16222,57 +16224,147 @@ function getSearchScore(item, query, terms) {
    البحث
 ========================================= */
 
+function getSearchMatches(rawQuery) {
+    const query = normalizeSearchText(rawQuery);
+    const terms = query.split(/\s+/).filter(term => term.length >= 2);
+
+    if (query.length < 2 || terms.length === 0) {
+        return { query, matches: [] };
+    }
+
+    const matches = searchData
+        .map(item => ({
+            item,
+            score: getSearchScore(item, query, terms)
+        }))
+        .filter(result => result.score > 0)
+        .sort((a, b) => b.score - a.score || a.item.title.localeCompare(b.item.title, "ar"));
+
+    return { query, matches };
+}
+
+function renderSearchSuggestions(rawQuery) {
+    if (!searchResults) return [];
+
+    const { query, matches } = getSearchMatches(rawQuery);
+    searchResults.innerHTML = "";
+
+    if (query.length < 2) {
+        searchResults.style.display = "none";
+        return matches;
+    }
+
+    if (matches.length === 0) {
+        searchResults.innerHTML = `
+            <div class="no-results" role="status">
+                لا توجد نتائج مطابقة
+            </div>
+        `;
+        searchResults.style.display = "block";
+        return matches;
+    }
+
+    searchResults.innerHTML = matches
+        .slice(0, SEARCH_SUGGESTION_LIMIT)
+        .map(({ item }) => `
+            <a href="${escapeHTML(item.url)}" class="search-result-item" role="option">
+                <div class="search-result-icon">
+                    <i class="fas fa-search"></i>
+                </div>
+                <div class="search-result-content">
+                    <h4>${escapeHTML(item.title)}</h4>
+                    <p>${escapeHTML(item.desc)}</p>
+                </div>
+            </a>
+        `)
+        .join("");
+
+    searchResults.style.display = "block";
+    return matches;
+}
+
 if (searchInput && searchResults) {
+    searchInput.setAttribute("aria-controls", "searchResults");
+    searchInput.setAttribute("aria-autocomplete", "list");
+    searchResults.setAttribute("role", "listbox");
+
     searchInput.addEventListener("input", function () {
-        const query = normalizeSearchText(this.value);
-        const terms = query.split(/\s+/).filter(term => term.length >= 2);
+        renderSearchSuggestions(this.value);
+    });
 
-        searchResults.innerHTML = "";
-
-        if (query.length < 2 || terms.length === 0) {
+    searchInput.addEventListener("keydown", function (event) {
+        if (event.key === "Escape") {
             searchResults.style.display = "none";
             return;
         }
 
-        const filtered = searchData
-            .map(item => ({
-                item,
-                score: getSearchScore(item, query, terms)
-            }))
-            .filter(result => result.score > 0)
-            .sort((a, b) => b.score - a.score);
-
-        if (filtered.length === 0) {
-            searchResults.innerHTML = `
-                <div class="no-results">
-                    لا توجد نتائج مطابقة
-                </div>
-            `;
-            searchResults.style.display = "block";
-            return;
+        if (event.key === "Enter") {
+            const { matches } = getSearchMatches(this.value);
+            if (matches.length > 0) {
+                event.preventDefault();
+                window.location.href = matches[0].item.url;
+            }
         }
-
-        filtered.forEach(({ item }) => {
-            searchResults.innerHTML += `
-                <a href="${escapeHTML(item.url)}" class="search-result-item">
-                    <div class="search-result-icon">
-                        <i class="fas fa-search"></i>
-                    </div>
-                    <div class="search-result-content">
-                        <h4>${escapeHTML(item.title)}</h4>
-                        <p>${escapeHTML(item.desc)}</p>
-                    </div>
-                </a>
-            `;
-        });
-
-        searchResults.style.display = "block";
     });
 
-    /* إخفاء النتائج */
+    /* إخفاء الاقتراحات عند النقر خارج حاوية البحث */
     document.addEventListener("click", (event) => {
         if (!event.target.closest(".search-container")) {
             searchResults.style.display = "none";
         }
     });
 }
+
+/* =========================================
+   البحث الصوتي
+========================================= */
+
+function initializeVoiceSearch() {
+    if (!voiceSearchBtn || !searchInput) return;
+
+    const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+    if (!SpeechRecognition) {
+        voiceSearchBtn.style.display = "none";
+        return;
+    }
+
+    const recognition = new SpeechRecognition();
+    let listening = false;
+
+    recognition.lang = "ar-DZ";
+    recognition.interimResults = false;
+    recognition.maxAlternatives = 1;
+
+    const updateVoiceButton = (isListening) => {
+        listening = isListening;
+        voiceSearchBtn.setAttribute("aria-pressed", String(isListening));
+        voiceSearchBtn.title = isListening ? "إيقاف البحث الصوتي" : "البحث الصوتي";
+        voiceSearchBtn.innerHTML = `<i class="fas ${isListening ? "fa-stop" : "fa-microphone"}"></i>`;
+    };
+
+    voiceSearchBtn.addEventListener("click", () => {
+        if (listening) {
+            recognition.stop();
+            return;
+        }
+
+        try {
+            recognition.start();
+        } catch (error) {
+            updateVoiceButton(false);
+        }
+    });
+
+    recognition.onstart = () => updateVoiceButton(true);
+    recognition.onresult = (event) => {
+        const transcript = event.results[0][0].transcript.trim();
+        searchInput.value = transcript;
+        searchInput.dispatchEvent(new Event("input", { bubbles: true }));
+    };
+    recognition.onerror = () => updateVoiceButton(false);
+    recognition.onend = () => updateVoiceButton(false);
+
+    updateVoiceButton(false);
+}
+
+initializeVoiceSearch();

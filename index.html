@@ -1390,8 +1390,12 @@
                 <div class="search-box-wrapper">
                     <input type="text" class="search-box" placeholder="ابحث عن خدمة، وزارة، أو معاملة إدارية..."
                         id="globalSearch" autocomplete="off">
-                    <button class="search-btn">
+                    <button class="search-btn" type="button" aria-label="تنفيذ البحث" title="تنفيذ البحث">
                         <i class="fas fa-search"></i>
+                    </button>
+                    <button class="search-btn voice-search-btn" id="voiceSearchBtn" type="button"
+                        aria-label="البحث الصوتي" title="البحث الصوتي" style="left: 68px; background: #b71c1c;">
+                        <i class="fas fa-microphone"></i>
                     </button>
                 </div>
                 <!-- نتائج البحث -->
