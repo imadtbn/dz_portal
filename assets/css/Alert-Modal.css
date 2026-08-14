@@ -837,7 +837,6 @@ body {
     color: #00897b;
 }
 
-
 /* ===== Vocational Training Theme ===== */
 
 .vocational-theme {
@@ -876,6 +875,248 @@ body {
     color: var(--alert-color);
 }
 
+
+/* ===== Registration Notice ===== */
+
+.vocational-theme .registration-notice {
+    margin: 18px 0;
+    padding: 16px;
+
+    background: #f7fbff;
+
+    border: 1px solid rgba(21, 101, 192, .15);
+    border-radius: 16px;
+}
+
+.vocational-theme .notice-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    margin-bottom: 12px;
+
+    font-weight: 800;
+    color: #1565c0;
+}
+
+.vocational-theme .registration-notice > p {
+    margin: 0 0 14px;
+
+    text-align: center;
+
+    font-size: .9rem;
+    line-height: 1.8;
+}
+
+.vocational-theme .date-item {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    margin-top: 10px;
+    padding: 11px 12px;
+
+    background: #fff;
+
+    border-radius: 12px;
+
+    text-align: right;
+}
+
+.vocational-theme .date-item > i {
+    flex: 0 0 38px;
+
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 10px;
+
+    background: #eef6ff;
+
+    color: #1565c0;
+}
+
+.vocational-theme .date-item div {
+    display: flex;
+    flex-direction: column;
+
+    min-width: 0;
+
+    gap: 2px;
+}
+
+.vocational-theme .date-item strong {
+    font-size: .85rem;
+    color: #333;
+}
+
+.vocational-theme .date-item span {
+    font-size: .9rem;
+    font-weight: 700;
+    color: #1565c0;
+}
+
+
+/* Mobile */
+
+@media (max-width: 400px) {
+
+    .vocational-theme .registration-notice {
+        padding: 12px;
+    }
+
+    .vocational-theme .date-item {
+        padding: 9px;
+        gap: 9px;
+    }
+
+    .vocational-theme .date-item > i {
+        flex-basis: 34px;
+        width: 34px;
+        height: 34px;
+    }
+
+    .vocational-theme .date-item strong {
+        font-size: .78rem;
+    }
+
+    .vocational-theme .date-item span {
+        font-size: .82rem;
+    }
+}
+
+/* =========================================
+   Algerian Gendarmerie Theme
+========================================= */
+
+.gendarmerie-theme {
+    --alert-color: #174d2b;
+    --alert-dark: #103b21;
+    --alert-bg: #eef7f0;
+    --alert-gold: #c7a449;
+}
+
+
+/* Card */
+
+.gendarmerie-theme .alert-content {
+    border-top: 6px solid var(--alert-color);
+}
+
+
+/* Main Icon */
+
+.gendarmerie-theme .alert-icon {
+    background: var(--alert-bg);
+    color: var(--alert-color);
+}
+
+
+/* Badge */
+
+.gendarmerie-theme .alert-badge {
+    background: var(--alert-bg);
+    color: var(--alert-color);
+}
+
+
+/* Information Items */
+
+.gendarmerie-theme .tip-item {
+    border-right-color: var(--alert-color);
+}
+
+.gendarmerie-theme .tip-item i {
+    color: var(--alert-color);
+}
+
+
+/* Emergency Number */
+
+.gendarmerie-theme .emergency-number {
+    margin: 18px auto;
+    padding: 14px 20px;
+    width: min(100%, 280px);
+
+    text-align: center;
+
+    background: var(--alert-bg);
+
+    border: 2px solid rgba(23, 77, 43, .15);
+    border-radius: 16px;
+}
+
+.gendarmerie-theme .emergency-number span {
+    display: block;
+
+    margin-bottom: 3px;
+
+    font-size: .85rem;
+    font-weight: 700;
+
+    color: var(--alert-color);
+}
+
+.gendarmerie-theme .emergency-number strong {
+    display: block;
+
+    direction: ltr;
+
+    font-size: 2.5rem;
+    line-height: 1.1;
+
+    letter-spacing: 3px;
+
+    color: var(--alert-dark);
+}
+
+
+/* Call Button */
+
+.gendarmerie-theme .alert-btn {
+    background:
+        linear-gradient(
+            135deg,
+            #174d2b,
+            #246b3b
+        );
+
+    box-shadow:
+        0 8px 20px rgba(23, 77, 43, .20);
+}
+
+
+/* Service Hours */
+
+.gendarmerie-theme .service-hours {
+    margin: 15px 0 5px;
+
+    text-align: center;
+
+    font-size: .9rem;
+    line-height: 1.7;
+
+    color: #555;
+}
+
+.gendarmerie-theme .service-hours i {
+    margin-left: 5px;
+
+    color: var(--alert-color);
+}
+
+
+/* Footer */
+
+.gendarmerie-theme .alert-footer {
+    color: var(--alert-color);
+}
 
 /* ===== Kimi Theme ===== */
 
