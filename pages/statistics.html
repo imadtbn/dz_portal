@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الإحصائيات العامة | البوابة الجزائرية للخدمات الرقمية</title>
+    <meta name="description" content="إحصائيات ديناميكية حول عدد الخدمات الرقمية وتوزيعها على قطاعات البوابة الجزائرية للخدمات الرقمية.">
+    <meta name="keywords" content="إحصائيات الخدمات الرقمية، عدد الخدمات، القطاعات الحكومية، البوابة الجزائرية">
+    <link rel="icon" href="../assets/images/icon.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../assets/css/style-about.css">
+    <style>
+        :root {
+            --stats-green: #006233;
+            --stats-dark: #004b27;
+            --stats-gold: #ffd700;
+            --stats-red: #b71c1c;
+            --stats-muted: #6b776f;
+            --stats-surface: #ffffff;
+        }
+        body { background: linear-gradient(135deg, #f4f9f5 0%, #e5f1e8 100%); }
+        .stats-hero { background: linear-gradient(135deg, var(--stats-green), var(--stats-dark)); color: #fff; text-align: center; padding: 4.5rem 1.5rem 5rem; position: relative; overflow: hidden; }
+        .stats-hero::before { content: ""; position: absolute; inset: 0; opacity: .12; background-image: radial-gradient(circle at 15% 25%, #fff 0 2px, transparent 3px), radial-gradient(circle at 85% 70%, #ffd700 0 2px, transparent 3px); background-size: 70px 70px, 110px 110px; }
+        .stats-hero-content { position: relative; z-index: 1; max-width: 850px; margin: 0 auto; }
+        .stats-hero-icon { width: 86px; height: 86px; margin: 0 auto 1.25rem; display: flex; align-items: center; justify-content: center; border-radius: 50%; background: rgba(255,255,255,.14); border: 2px solid rgba(255,215,0,.45); font-size: 2.4rem; color: var(--stats-gold); }
+        .stats-hero h2 { margin: 0 0 .8rem; font-size: clamp(2rem, 4vw, 3.2rem); font-weight: 800; }
+        .stats-hero p { margin: 0; font-size: 1.1rem; opacity: .9; }
+        .stats-main { max-width: 1250px; margin: -2.5rem auto 0; padding: 0 1.25rem 4rem; position: relative; z-index: 2; }
+        .stats-summary { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; }
+        .summary-card { background: var(--stats-surface); border-radius: 18px; padding: 1.35rem 1rem; text-align: center; box-shadow: 0 12px 28px rgba(0, 76, 39, .12); border: 1px solid rgba(0, 98, 51, .08); }
+        .summary-card i { color: var(--stats-green); font-size: 1.25rem; margin-bottom: .55rem; }
+        .summary-number { display: block; color: var(--stats-green); font-size: 2rem; font-weight: 800; min-height: 2.4rem; }
+        .summary-label { display: block; color: var(--stats-muted); font-size: .9rem; margin-top: .25rem; }
+        .stats-panel { background: var(--stats-surface); border-radius: 22px; padding: 1.6rem; margin-top: 1.5rem; box-shadow: 0 10px 28px rgba(0, 76, 39, .08); }
+        .stats-panel-header { display: flex; align-items: center; justify-content: space-between; gap: 1rem; margin-bottom: 1.2rem; }
+        .stats-panel-header h3 { margin: 0; color: var(--stats-green); font-size: 1.35rem; }
+        .stats-panel-header p { margin: .35rem 0 0; color: var(--stats-muted); font-size: .85rem; }
+        .stats-filter { width: min(280px, 100%); border: 1px solid #dce8df; border-radius: 12px; padding: .75rem 1rem; font: inherit; outline: none; }
+        .stats-filter:focus { border-color: var(--stats-green); box-shadow: 0 0 0 3px rgba(0,98,51,.1); }
+        .sector-list { display: grid; gap: .8rem; }
+        .sector-row { display: grid; grid-template-columns: minmax(150px, 1.2fr) 3fr auto; align-items: center; gap: 1rem; padding: .8rem; border-radius: 14px; background: #f8fbf9; transition: .2s ease; }
+        .sector-row:hover { background: #eef7f0; transform: translateX(-3px); }
+        .sector-name { color: #1f3026; font-weight: 700; text-decoration: none; }
+        .sector-name:hover { color: var(--stats-green); }
+        .sector-bar { height: 12px; border-radius: 99px; background: #e1eee4; overflow: hidden; }
+        .sector-bar-fill { height: 100%; border-radius: inherit; background: linear-gradient(90deg, var(--stats-green), #35a866); min-width: 3px; transition: width .6s ease; }
+        .sector-count { color: var(--stats-green); font-weight: 800; min-width: 70px; text-align: left; }
+        .stats-status { text-align: center; color: var(--stats-muted); font-size: .82rem; margin-top: 1.2rem; }
+        .stats-error { color: var(--stats-red); background: #fff3f3; border: 1px solid #f0caca; padding: .85rem 1rem; border-radius: 12px; text-align: center; }
+        .stats-empty { color: var(--stats-muted); text-align: center; padding: 2rem 1rem; }
+        .stats-refresh { border: 0; border-radius: 12px; padding: .7rem 1rem; background: var(--stats-green); color: #fff; font: inherit; cursor: pointer; }
+        .stats-refresh:hover { background: var(--stats-dark); }
+        @media (max-width: 900px) { .stats-summary { grid-template-columns: repeat(2, 1fr); } .sector-row { grid-template-columns: 1fr auto; } .sector-bar { grid-column: 1 / -1; grid-row: 2; } }
+        @media (max-width: 560px) { .stats-summary { grid-template-columns: 1fr 1fr; gap: .65rem; } .summary-card { padding: 1rem .5rem; } .summary-number { font-size: 1.55rem; } .stats-panel-header { align-items: stretch; flex-direction: column; } .stats-filter { width: 100%; } }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <div class="logo-section">
+                <a href="../index.html" class="back-btn" title="العودة إلى الصفحة الرئيسية"><i class="fas fa-arrow-right"></i></a>
+                <div><h1>البوابة الجزائرية</h1><span>للخدمات الرقمية</span></div>
+            </div>
+        </div>
+    </header>
+
+    <section class="stats-hero">
+        <div class="stats-hero-content">
+            <div class="stats-hero-icon"><i class="fas fa-chart-column"></i></div>
+            <h2>الإحصائيات العامة</h2>
+            <p>بيانات ديناميكية تُحتسب مباشرة من صفحات القطاعات والخدمات المنشورة في البوابة.</p>
+        </div>
+    </section>
+
+    <main class="stats-main">
+        <section class="stats-summary" aria-label="ملخص الإحصائيات">
+            <article class="summary-card"><i class="fas fa-layer-group"></i><span class="summary-number" id="totalServices">—</span><span class="summary-label">إجمالي الخدمات</span></article>
+            <article class="summary-card"><i class="fas fa-building-columns"></i><span class="summary-number" id="totalSectors">—</span><span class="summary-label">القطاعات المحللة</span></article>
+            <article class="summary-card"><i class="fas fa-chart-line"></i><span class="summary-number" id="averageServices">—</span><span class="summary-label">متوسط الخدمات لكل قطاع</span></article>
+            <article class="summary-card"><i class="fas fa-trophy"></i><span class="summary-number" id="topSectorCount">—</span><span class="summary-label" id="topSectorLabel">أعلى قطاع</span></article>
+        </section>
+
+        <section class="stats-panel" aria-labelledby="sectorStatsTitle">
+            <div class="stats-panel-header">
+                <div><h3 id="sectorStatsTitle"><i class="fas fa-ranking-star"></i> توزيع الخدمات حسب القطاع</h3><p>اضغط على اسم القطاع للانتقال إلى صفحته.</p></div>
+                <input class="stats-filter" id="sectorFilter" type="search" placeholder="تصفية القطاعات..." aria-label="تصفية القطاعات">
+            </div>
+            <div id="statsState" class="stats-empty">جارٍ تحميل بيانات القطاعات...</div>
+            <div id="sectorList" class="sector-list" hidden></div>
+            <div id="statsStatus" class="stats-status"></div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-column">
+                <div class="footer-brand"><img src="../assets/images/dz.png" alt="علم الجزائر" width="100" height="100"><div><h3>البوابة الجزائرية</h3><span>للخدمات الرقمية</span></div></div>
+                <p class="footer-desc">منصة وطنية موحدة تتيح للمواطن الجزائري الوصول السريع والآمن إلى الخدمات الحكومية والعمومية الرقمية من مكان واحد.</p>
+            </div>
+            <div class="footer-column">
+                <h4><i class="fas fa-link"></i> روابط سريعة</h4>
+                <ul class="footer-links">
+                    <li><a href="../index.html"><i class="fas fa-home"></i> الصفحة الرئيسية</a></li>
+                    <li><a href="statistics.html"><i class="fas fa-chart-column"></i> الإحصائيات العامة</a></li>
+                    <li><a href="about.html"><i class="fas fa-users"></i> من نحن</a></li>
+                    <li><a href="contact.html"><i class="fas fa-envelope"></i> اتصل بنا</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4><i class="fas fa-address-card"></i> معلومات الاتصال</h4>
+                <div class="footer-contact"><p><i class="fas fa-envelope"></i> <a class="footer-link" href="mailto:tabaniimadeddine@gmail.com">tabaniimadeddine@gmail.com</a></p><p><i class="fas fa-clock"></i> متاح 24/7 - طوال أيام الأسبوع</p><p><i class="fas fa-map-marker-alt"></i> الجزائر العاصمة، الجزائر</p></div>
+            </div>
+        </div>
+        <div class="footer-bottom"><p>© 2025 البوابة الجزائرية للخدمات الرقمية - جميع الحقوق محفوظة</p></div>
+    </footer>
+
+    <script defer src="../assets/js/statistics.js"></script>
+</body>
+</html>
