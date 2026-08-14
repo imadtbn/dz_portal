@@ -58,8 +58,28 @@ function closeModal() {
     document.body.style.overflow = '';
 }
 
+// Automatic page service total
+// Update the first hero statistic labeled "خدمة رقمية" from the actual page content.
+const digitalServiceStat = Array.from(document.querySelectorAll('.hero-stat')).find(stat => {
+    const label = stat.querySelector('.hero-stat-label');
+    const text = label ? label.textContent.trim() : '';
+    return text.includes('خدمة رقمية') || text.includes('خدمات رقمية');
+});
+
+if (digitalServiceStat) {
+    const number = digitalServiceStat.querySelector('.hero-stat-number');
+    const standardServices = document.querySelectorAll('.service-item').length;
+    const specializedServices = document.querySelectorAll('.train-card, .promo-card, .video-card').length;
+    const actionServices = document.querySelectorAll('.exam-banner-btn, .video-btn.youtube-btn').length;
+    const totalServices = standardServices || specializedServices || actionServices;
+
+    if (number) {
+        number.textContent = String(totalServices).padStart(2, '0');
+    }
+}
 
 // Search functionality
+y
 document.querySelector('.search-trigger').addEventListener('click', () => {
 
     const query = prompt('ابحث عن خط ، إتجاه أو خدمة:');
