@@ -1,173 +1,59 @@
-# ============================================================
 # robots.txt - البوابة الجزائرية للخدمات الرقمية
 # https://imadtbn.github.io/dz_portal/
-# Generated: 2026-06-02
-# Based on: sitemap.xml priorities + index.html structure
-# ============================================================
+# Updated: 2026-08-15
 
-# --------------------------
-# [A] قواعد عامة - جميع العناكب
-# --------------------------
 User-agent: *
-
-# حماية المسارات الإدارية والتقنية والحساسة
-
+Disallow: /private/
 Disallow: /tmp/
 Disallow: /cgi-bin/
-
-# السماح بالمحتوى العام والموارد الثابتة
+Disallow: /*?*
 Allow: /
 Allow: /pages/
+Allow: /pages/process/
 Allow: /sectors/
+Allow: /sectors/assurance/
+Allow: /sectors/bank/
+Allow: /sectors/mesrs.dz.html
+Allow: /sectors/progres.mesrs.html
 Allow: /assets/
 Allow: /icons/
-Allow: /manifest.webmanifest
-
-# معدل الزحف العام (يُحترم من Bingbot وغيره)
+Allow: /manifest.json
 Crawl-delay: 5
 
-# --------------------------
-# [B] Googlebot - تعليمات مخصصة
-# --------------------------
+# Googlebot لا يدعم Crawl-delay؛ تتم إدارة معدل الزحف عبر Search Console.
 User-agent: Googlebot
-
-# [B.1] حماية المسارات الحساسة
 Disallow: /private/
 Disallow: /tmp/
 Disallow: /cgi-bin/
 Disallow: /*?*
-
-# [B.2] الصفحات ذات الأولوية القصوى (1.0 - 0.9)
-# الرئيسية | التربية والتعليم | التعليم العالي | الداخلية
-Allow: /$
-Allow: /index.html
-Allow: /sectors/education.html
-Allow: /sectors/progres.mesrs.html
-Allow: /sectors/interieur.html
-Allow: /sectors/markabatidz.html
-Allow: /sectors/onpo.html
-Allow: /sectors/anae.html
-Allow: /sectors/sante.html
-Allow: /sectors/facteur.html
-Allow: /sectors/sonalgaz.html
-Allow: /sectors/mf.gov.html
-Allow: /sectors/mtess.html
-Allow: /sectors/poste.html
-Allow: /sectors/algerietelecom.html
-Allow: /sectors/mhuv.gov.html
-Allow: /sectors/mjustice.html
-Allow: /sectors/transport.html
-Allow: /sectors/dzexams.html
-Allow: /sectors/dzexam1.html
-Allow: /sectors/dzexam.pro.html
-Allow: /sectors/qassimatouka.html
-Allow: /sectors/tabioucom.html
-Allow: /sectors/fadaeldjazair.html
-Allow: /sectors/facture_loyer.html
-Allow: /sectors/emergency.html
-Allow: /sectors/mfp.gov.html
-Allow: /sectors/telephon.html
-Allow: /sectors/arpce.html
-Allow: /sectors/dgsn.html
-Allow: /sectors/ina-elections.html
-Allow: /sectors/ade.html
-Allow: /sectors/seaal.html
-Allow: /sectors/naftal.html
-Allow: /sectors/mfa.html
-Allow: /sectors/madr.html
-Allow: /sectors/aapi.html
-Allow: /sectors/hatplc.html
-Allow: /sectors/ocrc.html
-Allow: /sectors/aadl.html
-Allow: /sectors/enpi.html
-Allow: /sectors/opgi.html
-Allow: /sectors/anem.html
-Allow: /sectors/msnfcf.gov.html
-Allow: /sectors/commerce.html
-Allow: /sectors/campuce.jobs.html
-Allow: /sectors/mjeunesse.gov.html
-Allow: /sectors/bank.html
-Allow: /sectors/assurance.html
-Allow: /sectors/markabatidz.html
-Allow: /sectors/facteur.html
-Allow: /pages/about.html
-Allow: /sectors/eddirasa.html
-Allow: /sectors/etudpdf.html
-Allow: /sectors/mf.gov.html
-Allow: /sectors/exam-compos.html
-Allow: /sectors/dztests.html
-Allow: /sectors/me.gov.html
-Allow: /sectors/nifenligne.html
-Allow: /sectors/t-onec.html
-Allow: /sectors/ecolerradja.html
-Allow: /sectors/seor.html
-Allow: /sectors/douane.html
-Allow: /sectors/mdn.html
-Allow: /sectors/mobilis.html
-Allow: /sectors/ooredoo.html
-Allow: /sectors/djezzy.html
-Allow: /sectors/sntf.html
-Allow: /sectors/anpdp.html
-Allow: /sectors/awlyaa-education.html
-Allow: /sectors/ostad-education.html
-Allow: /sectors/dgfp.gov.html
-Allow: /sectors/hca.html
-Allow: /sectors/cnas.html
-Allow: /sectors/casnos.html
-Allow: /sectors/cnr.html
-
-
-
-Allow: /pages/process/arpce.html
-Allow: /pages/process/naftal.html
-Allow: /pages/process/adhahi.dz.html
-Allow: /pages/process/anae.html
-Allow: /pages/process/e-declaration.html
-Allow: /pages/process/apostille.html
-Allow: /pages/process/markabatidz.html
-Allow: /pages/process/e-mahata.naftal.html
-Allow: /pages/process/takwin.html
-Allow: /pages/process/awlyaa-process.html
-
-
-Allow: /pages/terms.html
-Allow: /pages/about.html
-Allow: /pages/contact.html
-Allow: /pages/privacy.html
-
-
-
-# [B.6] السماح بالموارد الثابتة (CSS/JS/الصور)
-Allow: /assets/
-Allow: /icons/
-
-# ملاحظة: Googlebot يتجاهل Crawl-delay في robots.txt
-# يُفضل ضبط معدل الزحف عبر Google Search Console
-
-# --------------------------
-# [C] Bingbot - تعليمات مخصصة
-# --------------------------
-User-agent: Bingbot
-
-# حماية المسارات الحساسة
-Disallow: /private/
-Disallow: /tmp/
-Disallow: /cgi-bin/
-Disallow: /*?*
-
-# السماح بالمحتوى العام
 Allow: /
 Allow: /pages/
+Allow: /pages/process/
 Allow: /sectors/
+Allow: /sectors/assurance/
+Allow: /sectors/bank/
+Allow: /sectors/mesrs.dz.html
+Allow: /sectors/progres.mesrs.html
 Allow: /assets/
 Allow: /icons/
 
-# Bingbot يحترم Crawl-delay بشكل فعّال
+User-agent: Bingbot
+Disallow: /private/
+Disallow: /tmp/
+Disallow: /cgi-bin/
+Disallow: /*?*
+Allow: /
+Allow: /pages/
+Allow: /pages/process/
+Allow: /sectors/
+Allow: /sectors/assurance/
+Allow: /sectors/bank/
+Allow: /sectors/mesrs.dz.html
+Allow: /sectors/progres.mesrs.html
+Allow: /assets/
+Allow: /icons/
 Crawl-delay: 10
 
-# --------------------------
-# [D] عناكب إضافية
-# --------------------------
 User-agent: Slurp
 Crawl-delay: 10
 
@@ -177,12 +63,4 @@ Crawl-delay: 5
 User-agent: Yandex
 Crawl-delay: 10
 
-# --------------------------
-# [E] إعدادات الموقع والفهرسة
-# --------------------------
-Host: https://imadtbn.github.io
-
-# --------------------------
-# [F] خرائط الموقع (Sitemaps)
-# --------------------------
 Sitemap: https://imadtbn.github.io/dz_portal/sitemap.xml

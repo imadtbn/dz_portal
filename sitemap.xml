@@ -678,16 +678,6 @@
     </image:image>
   </url>
   <url>
-    <loc>https://imadtbn.github.io/dz_portal/sectors/assurance.html</loc>
-    <lastmod>2026-08-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-    <image:image>
-      <image:loc>https://imadtbn.github.io/dz_portal/assets/images/asserance.jpg</image:loc>
-      <image:title>وكالات التأمين على الممتلكات</image:title>
-    </image:image>
-  </url>
-  <url>
     <loc>https://imadtbn.github.io/dz_portal/sectors/assurance/saa.html</loc>
     <lastmod>2026-08-13</lastmod>
     <changefreq>weekly</changefreq>
@@ -786,5 +776,328 @@
       <image:loc>https://imadtbn.github.io/dz_portal/assets/images/sntf.jpg</image:loc>
       <image:title>sntf</image:title>
     </image:image>
+  </url>
+
+  <url>
+    <loc>https://imadtbn.github.io/dz_portal/guide.html</loc>
+    <lastmod>2026-08-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://imadtbn.github.io/dz_portal/guide.html" />
+  </url>
+  <url>
+    <loc>https://imadtbn.github.io/dz_portal/pages/process/anae.html</loc>
+    <lastmod>2026-08-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://imadtbn.github.io/dz_portal/pages/process/anae.html" />
+  </url>
+  <url>
+    <loc>https://imadtbn.github.io/dz_portal/pages/process/arpce.html</loc>
+    <lastmod>2026-08-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://imadtbn.github.io/dz_portal/pages/process/arpce.html" />
+  </url>
+  <url>
+    <loc>https://imadtbn.github.io/dz_portal/pages/process/idlaa.html</loc>
+    <lastmod>2026-08-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://imadtbn.github.io/dz_portal/pages/process/idlaa.html" />
+  </url>
+  <url>
+    <loc>https://imadtbn.github.io/dz_portal/pages/process/markabatidz.html</loc>
+    <lastmod>2026-08-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://imadtbn.github.io/dz_portal/pages/process/markabatidz.html" />
+  </url>
+  <url>
+    <loc>https://imadtbn.github.io/dz_portal/pages/statistics.html</loc>
+    <lastmod>2026-08-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://imadtbn.github.io/dz_portal/pages/statistics.html" />
+  </url>
+  <url>
+    <loc>https://imadtbn.github.io/dz_portal/sectors/assurance/alliance-assurances.html</loc>
+    <lastmod>2026-08-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://imadtbn.github.io/dz_portal/sectors/assurance/alliance-assurances.html" />
+  </url>
+  <url>
+    <loc>https://imadtbn.github.io/dz_portal/sectors/assurance/amana.html</loc>
+    <lastmod>2026-08-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://imadtbn.github.io/dz_portal/sectors/assurance/amana.html" />
+  </url>
+  <url>
+    <loc>https://imadtbn.github.io/dz_portal/sectors/assurance/axa.html</loc>
+    <lastmod>2026-08-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://imadtbn.github.io/dz_portal/sectors/assurance/axa.html" />
+  </url>
+  <url>
+    <loc>https://imadtbn.github.io/dz_portal/sectors/assurance/caar.html</loc>
+    <lastmod>2026-08-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://imadtbn.github.io/dz_portal/sectors/assurance/caar.html" />
+  </url>
+  <url>
+    <loc>https://imadtbn.github.io/dz_portal/sectors/assurance/caarama.html</loc>
+    <lastmod>2026-08-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://imadtbn.github.io/dz_portal/sectors/assurance/caarama.html" />
+  </url>
+  <url>
+    <loc>https://imadtbn.github.io/dz_portal/sectors/assurance/caat.html</loc>
+    <lastmod>2026-08-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://imadtbn.github.io/dz_portal/sectors/assurance/caat.html" />
+  </url>
+  <url>
+    <loc>https://imadtbn.github.io/dz_portal/sectors/assurance/cardif-algerie.html</loc>
+    <lastmod>2026-08-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://imadtbn.github.io/dz_portal/sectors/assurance/cardif-algerie.html" />
+  </url>
+  <url>
+    <loc>https://imadtbn.github.io/dz_portal/sectors/assurance/gig.html</loc>
+    <lastmod>2026-08-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://imadtbn.github.io/dz_portal/sectors/assurance/gig.html" />
+  </url>
+  <url>
+    <loc>https://imadtbn.github.io/dz_portal/sectors/assurance/macir-vie.html</loc>
+    <lastmod>2026-08-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://imadtbn.github.io/dz_portal/sectors/assurance/macir-vie.html" />
+  </url>
+  <url>
+    <loc>https://imadtbn.github.io/dz_portal/sectors/assurance/salama.html</loc>
+    <lastmod>2026-08-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://imadtbn.github.io/dz_portal/sectors/assurance/salama.html" />
+  </url>
+  <url>
+    <loc>https://imadtbn.github.io/dz_portal/sectors/assurance/trust-algeria.html</loc>
+    <lastmod>2026-08-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://imadtbn.github.io/dz_portal/sectors/assurance/trust-algeria.html" />
+  </url>
+  <url>
+    <loc>https://imadtbn.github.io/dz_portal/sectors/bank/ag-bank.html</loc>
+    <lastmod>2026-08-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://imadtbn.github.io/dz_portal/sectors/bank/ag-bank.html" />
+  </url>
+  <url>
+    <loc>https://imadtbn.github.io/dz_portal/sectors/bank/albaraka-bank.html</loc>
+    <lastmod>2026-08-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://imadtbn.github.io/dz_portal/sectors/bank/albaraka-bank.html" />
+  </url>
+  <url>
+    <loc>https://imadtbn.github.io/dz_portal/sectors/bank/arabbank.html</loc>
+    <lastmod>2026-08-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://imadtbn.github.io/dz_portal/sectors/bank/arabbank.html" />
+  </url>
+  <url>
+    <loc>https://imadtbn.github.io/dz_portal/sectors/bank/badr.html</loc>
+    <lastmod>2026-08-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://imadtbn.github.io/dz_portal/sectors/bank/badr.html" />
+  </url>
+  <url>
+    <loc>https://imadtbn.github.io/dz_portal/sectors/bank/bank-abc.html</loc>
+    <lastmod>2026-08-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://imadtbn.github.io/dz_portal/sectors/bank/bank-abc.html" />
+  </url>
+  <url>
+    <loc>https://imadtbn.github.io/dz_portal/sectors/bank/bdl.html</loc>
+    <lastmod>2026-08-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://imadtbn.github.io/dz_portal/sectors/bank/bdl.html" />
+  </url>
+  <url>
+    <loc>https://imadtbn.github.io/dz_portal/sectors/bank/bea.html</loc>
+    <lastmod>2026-08-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://imadtbn.github.io/dz_portal/sectors/bank/bea.html" />
+  </url>
+  <url>
+    <loc>https://imadtbn.github.io/dz_portal/sectors/bank/bna.html</loc>
+    <lastmod>2026-08-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://imadtbn.github.io/dz_portal/sectors/bank/bna.html" />
+  </url>
+  <url>
+    <loc>https://imadtbn.github.io/dz_portal/sectors/bank/bnh.html</loc>
+    <lastmod>2026-08-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://imadtbn.github.io/dz_portal/sectors/bank/bnh.html" />
+  </url>
+  <url>
+    <loc>https://imadtbn.github.io/dz_portal/sectors/bank/business.algeria.hsbc.html</loc>
+    <lastmod>2026-08-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://imadtbn.github.io/dz_portal/sectors/bank/business.algeria.hsbc.html" />
+  </url>
+  <url>
+    <loc>https://imadtbn.github.io/dz_portal/sectors/bank/citigroup.html</loc>
+    <lastmod>2026-08-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://imadtbn.github.io/dz_portal/sectors/bank/citigroup.html" />
+  </url>
+  <url>
+    <loc>https://imadtbn.github.io/dz_portal/sectors/bank/cnep.html</loc>
+    <lastmod>2026-08-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://imadtbn.github.io/dz_portal/sectors/bank/cnep.html" />
+  </url>
+  <url>
+    <loc>https://imadtbn.github.io/dz_portal/sectors/bank/cpa.html</loc>
+    <lastmod>2026-08-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://imadtbn.github.io/dz_portal/sectors/bank/cpa.html" />
+  </url>
+  <url>
+    <loc>https://imadtbn.github.io/dz_portal/sectors/bank/ebanking.algerie.natixis.html</loc>
+    <lastmod>2026-08-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://imadtbn.github.io/dz_portal/sectors/bank/ebanking.algerie.natixis.html" />
+  </url>
+  <url>
+    <loc>https://imadtbn.github.io/dz_portal/sectors/bank/fransabank.html</loc>
+    <lastmod>2026-08-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://imadtbn.github.io/dz_portal/sectors/bank/fransabank.html" />
+  </url>
+  <url>
+    <loc>https://imadtbn.github.io/dz_portal/sectors/bank/societegenerale.html</loc>
+    <lastmod>2026-08-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://imadtbn.github.io/dz_portal/sectors/bank/societegenerale.html" />
+  </url>
+  <url>
+    <loc>https://imadtbn.github.io/dz_portal/sectors/dzexams.pro.html</loc>
+    <lastmod>2026-08-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://imadtbn.github.io/dz_portal/sectors/dzexams.pro.html" />
+  </url>
+  <url>
+    <loc>https://imadtbn.github.io/dz_portal/sectors/dztests.html</loc>
+    <lastmod>2026-08-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://imadtbn.github.io/dz_portal/sectors/dztests.html" />
+  </url>
+  <url>
+    <loc>https://imadtbn.github.io/dz_portal/sectors/ecolerradja.html</loc>
+    <lastmod>2026-08-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://imadtbn.github.io/dz_portal/sectors/ecolerradja.html" />
+  </url>
+  <url>
+    <loc>https://imadtbn.github.io/dz_portal/sectors/eddirasa.html</loc>
+    <lastmod>2026-08-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://imadtbn.github.io/dz_portal/sectors/eddirasa.html" />
+  </url>
+  <url>
+    <loc>https://imadtbn.github.io/dz_portal/sectors/educationdz.html</loc>
+    <lastmod>2026-08-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://imadtbn.github.io/dz_portal/sectors/educationdz.html" />
+  </url>
+  <url>
+    <loc>https://imadtbn.github.io/dz_portal/sectors/etudpdf.html</loc>
+    <lastmod>2026-08-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://imadtbn.github.io/dz_portal/sectors/etudpdf.html" />
+  </url>
+  <url>
+    <loc>https://imadtbn.github.io/dz_portal/sectors/exam-compos.html</loc>
+    <lastmod>2026-08-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://imadtbn.github.io/dz_portal/sectors/exam-compos.html" />
+  </url>
+  <url>
+    <loc>https://imadtbn.github.io/dz_portal/sectors/me.gov.html</loc>
+    <lastmod>2026-08-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://imadtbn.github.io/dz_portal/sectors/me.gov.html" />
+  </url>
+  <url>
+    <loc>https://imadtbn.github.io/dz_portal/sectors/medjedel.html</loc>
+    <lastmod>2026-08-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://imadtbn.github.io/dz_portal/sectors/medjedel.html" />
+  </url>
+  <url>
+    <loc>https://imadtbn.github.io/dz_portal/sectors/mesrs.dz.html</loc>
+    <lastmod>2026-08-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://imadtbn.github.io/dz_portal/sectors/mesrs.dz.html" />
+  </url>
+  <url>
+    <loc>https://imadtbn.github.io/dz_portal/sectors/msport.gov.html</loc>
+    <lastmod>2026-08-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://imadtbn.github.io/dz_portal/sectors/msport.gov.html" />
+  </url>
+  <url>
+    <loc>https://imadtbn.github.io/dz_portal/sectors/t-onec.html</loc>
+    <lastmod>2026-08-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://imadtbn.github.io/dz_portal/sectors/t-onec.html" />
+  </url>
+  <url>
+    <loc>https://imadtbn.github.io/dz_portal/sectors/ufc.dz.html</loc>
+    <lastmod>2026-08-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://imadtbn.github.io/dz_portal/sectors/ufc.dz.html" />
   </url>
 </urlset>
