@@ -8,7 +8,7 @@
   <!-- ══════════════ الصفحة الرئيسية ══════════════ -->
   <url>
     <loc>https://imadtbn.github.io/dz_portal/</loc>
-    <lastmod>2026-08-13</lastmod>
+    <lastmod>2026-08-15</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="ar" href="https://imadtbn.github.io/dz_portal/" />
@@ -20,32 +20,32 @@
   <!-- ══════════════ الصفحات العامة ══════════════ -->
   <url>
     <loc>https://imadtbn.github.io/dz_portal/pages/about.html</loc>
-    <lastmod>2026-08-13</lastmod>
+    <lastmod>2026-08-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://imadtbn.github.io/dz_portal/pages/contact.html</loc>
-    <lastmod>2026-08-13</lastmod>
+    <lastmod>2026-08-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://imadtbn.github.io/dz_portal/pages/privacy.html</loc>
-    <lastmod>2026-08-13</lastmod>
+    <lastmod>2026-08-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://imadtbn.github.io/dz_portal/pages/terms.html</loc>
-    <lastmod>2026-08-13</lastmod>
+    <lastmod>2026-08-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <!-- ══════════════ قطاع التعليم والتكوين ══════════════ -->
   <url>
     <loc>https://imadtbn.github.io/dz_portal/sectors/education.html</loc>
-    <lastmod>2026-08-13</lastmod>
+    <lastmod>2026-08-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <image:image>
@@ -55,7 +55,7 @@
   </url>
   <url>
     <loc>https://imadtbn.github.io/dz_portal/sectors/ostad-education.html</loc>
-    <lastmod>2026-08-13</lastmod>
+    <lastmod>2026-08-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <image:image>
@@ -65,7 +65,7 @@
   </url>
   <url>
     <loc>https://imadtbn.github.io/dz_portal/sectors/awlyaa-education.html</loc>
-    <lastmod>2026-08-13</lastmod>
+    <lastmod>2026-08-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <image:image>
@@ -75,7 +75,7 @@
   </url>
     <url>
     <loc>https://imadtbn.github.io/dz_portal/pages/process/awlyaa-process.html</loc>
-    <lastmod>2026-08-13</lastmod>
+    <lastmod>2026-08-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <image:image>
@@ -85,7 +85,7 @@
   </url>
   <url>
     <loc>https://imadtbn.github.io/dz_portal/sectors/progres.mesrs.html</loc>
-    <lastmod>2026-08-13</lastmod>
+    <lastmod>2026-08-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <image:image>
@@ -96,7 +96,7 @@
 
     <url>
     <loc>https://imadtbn.github.io/dz_portal/sectors/dgfp.gov.html</loc>
-    <lastmod>2026-08-13</lastmod>
+    <lastmod>2026-08-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <image:image>
@@ -107,7 +107,7 @@
 
   <url>
     <loc>https://imadtbn.github.io/dz_portal/sectors/dzexam1.html</loc>
-    <lastmod>2026-08-13</lastmod>
+    <lastmod>2026-08-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <image:image>
@@ -117,7 +117,7 @@
   </url>
   <url>
     <loc>https://imadtbn.github.io/dz_portal/sectors/dzexam.pro.html</loc>
-    <lastmod>2026-08-13</lastmod>
+    <lastmod>2026-08-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <image:image>
@@ -127,7 +127,7 @@
   </url>
   <url>
     <loc>https://imadtbn.github.io/dz_portal/sectors/dzexams.html</loc>
-    <lastmod>2026-08-13</lastmod>
+    <lastmod>2026-08-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <image:image>
@@ -137,7 +137,7 @@
   </url>
   <url>
     <loc>https://imadtbn.github.io/dz_portal/sectors/mfp.gov.html</loc>
-    <lastmod>2026-08-13</lastmod>
+    <lastmod>2026-08-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <image:image>
@@ -147,7 +147,7 @@
   </url>
     <url>
     <loc>https://imadtbn.github.io/dz_portal/pages/process/takwin.html</loc>
-    <lastmod>2026-08-13</lastmod>
+    <lastmod>2026-08-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <image:image>
@@ -158,7 +158,7 @@
   <!-- ══════════════ قطاع الاتصالات والبريد ══════════════ -->
   <url>
     <loc>https://imadtbn.github.io/dz_portal/sectors/poste.html</loc>
-    <lastmod>2026-08-13</lastmod>
+    <lastmod>2026-08-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <image:image>
@@ -168,7 +168,7 @@
   </url>
   <url>
     <loc>https://imadtbn.github.io/dz_portal/sectors/algerietelecom.html</loc>
-    <lastmod>2026-08-13</lastmod>
+    <lastmod>2026-08-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <image:image>
@@ -178,7 +178,7 @@
   </url>
   <url>
     <loc>https://imadtbn.github.io/dz_portal/sectors/telephon.html</loc>
-    <lastmod>2026-08-13</lastmod>
+    <lastmod>2026-08-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <image:image>
@@ -188,7 +188,7 @@
   </url>
   <url>
     <loc>https://imadtbn.github.io/dz_portal/sectors/arpce.html</loc>
-    <lastmod>2026-08-13</lastmod>
+    <lastmod>2026-08-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <image:image>
@@ -199,7 +199,7 @@
   <!-- ══════════════ قطاع الداخلية والعدالة والشرطة ══════════════ -->
   <url>
     <loc>https://imadtbn.github.io/dz_portal/sectors/interieur.html</loc>
-    <lastmod>2026-08-13</lastmod>
+    <lastmod>2026-08-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <image:image>
@@ -209,7 +209,7 @@
   </url>
   <url>
     <loc>https://imadtbn.github.io/dz_portal/sectors/mjustice.html</loc>
-    <lastmod>2026-08-13</lastmod>
+    <lastmod>2026-08-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <image:image>
@@ -219,7 +219,7 @@
   </url>
     <url>
     <loc>https://imadtbn.github.io/dz_portal/sectors/hcn.html</loc>
-    <lastmod>2026-08-13</lastmod>
+    <lastmod>2026-08-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <image:image>
@@ -229,7 +229,7 @@
   </url>
   <url>
     <loc>https://imadtbn.github.io/dz_portal/sectors/dgsn.html</loc>
-    <lastmod>2026-08-13</lastmod>
+    <lastmod>2026-08-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <image:image>
@@ -239,7 +239,7 @@
   </url>
   <url>
     <loc>https://imadtbn.github.io/dz_portal/pages/process/e-declaration.html</loc>
-    <lastmod>2026-08-13</lastmod>
+    <lastmod>2026-08-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <image:image>
@@ -249,7 +249,7 @@
   </url>
   <url>
     <loc>https://imadtbn.github.io/dz_portal/sectors/ina-elections.html</loc>
-    <lastmod>2026-08-13</lastmod>
+    <lastmod>2026-08-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <image:image>
@@ -260,7 +260,7 @@
   <!-- ══════════════ قطاع السكن والعمران ══════════════ -->
   <url>
     <loc>https://imadtbn.github.io/dz_portal/sectors/mhuv.gov.html</loc>
-    <lastmod>2026-08-13</lastmod>
+    <lastmod>2026-08-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <image:image>
@@ -270,7 +270,7 @@
   </url>
   <url>
     <loc>https://imadtbn.github.io/dz_portal/sectors/aadl.html</loc>
-    <lastmod>2026-08-13</lastmod>
+    <lastmod>2026-08-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <image:image>
@@ -280,7 +280,7 @@
   </url>
   <url>
     <loc>https://imadtbn.github.io/dz_portal/sectors/enpi.html</loc>
-    <lastmod>2026-08-13</lastmod>
+    <lastmod>2026-08-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <image:image>
@@ -290,7 +290,7 @@
   </url>
   <url>
     <loc>https://imadtbn.github.io/dz_portal/sectors/opgi.html</loc>
-    <lastmod>2026-08-13</lastmod>
+    <lastmod>2026-08-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <image:image>
@@ -301,7 +301,7 @@
   <!-- ══════════════ قطاع التأمين والضمان الاجتماعي ══════════════ -->
   <url>
     <loc>https://imadtbn.github.io/dz_portal/sectors/mtess.html</loc>
-    <lastmod>2026-08-13</lastmod>
+    <lastmod>2026-08-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <image:image>
@@ -311,7 +311,7 @@
   </url>
     <url>
     <loc>https://imadtbn.github.io/dz_portal/sectors/cnr.html</loc>
-    <lastmod>2026-08-13</lastmod>
+    <lastmod>2026-08-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <image:image>
@@ -321,7 +321,7 @@
   </url>
     <url>
     <loc>https://imadtbn.github.io/dz_portal/sectors/cnas.html</loc>
-    <lastmod>2026-08-13</lastmod>
+    <lastmod>2026-08-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <image:image>
@@ -331,7 +331,7 @@
   </url>
     <url>
     <loc>https://imadtbn.github.io/dz_portal/sectors/casnos.html</loc>
-    <lastmod>2026-08-13</lastmod>
+    <lastmod>2026-08-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <image:image>
@@ -341,7 +341,7 @@
   </url>
   <url>
     <loc>https://imadtbn.github.io/dz_portal/sectors/assurance.html</loc>
-    <lastmod>2026-08-13</lastmod>
+    <lastmod>2026-08-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <image:image>
@@ -352,7 +352,7 @@
   <!-- ══════════════ قطاع المالية والاقتصاد ══════════════ -->
   <url>
     <loc>https://imadtbn.github.io/dz_portal/sectors/mf.gov.html</loc>
-    <lastmod>2026-08-13</lastmod>
+    <lastmod>2026-08-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <image:image>
@@ -362,7 +362,7 @@
   </url>
   <url>
     <loc>https://imadtbn.github.io/dz_portal/sectors/qassimatouka.html</loc>
-    <lastmod>2026-08-13</lastmod>
+    <lastmod>2026-08-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <image:image>
@@ -372,7 +372,7 @@
   </url>
   <url>
     <loc>https://imadtbn.github.io/dz_portal/sectors/tabioucom.html</loc>
-    <lastmod>2026-08-13</lastmod>
+    <lastmod>2026-08-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <image:image>
@@ -382,7 +382,7 @@
   </url>
   <url>
     <loc>https://imadtbn.github.io/dz_portal/sectors/fadaeldjazair.html</loc>
-    <lastmod>2026-08-13</lastmod>
+    <lastmod>2026-08-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <image:image>
@@ -392,7 +392,7 @@
   </url>
   <url>
     <loc>https://imadtbn.github.io/dz_portal/sectors/nifenligne.html</loc>
-    <lastmod>2026-08-13</lastmod>
+    <lastmod>2026-08-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <image:image>
@@ -402,7 +402,7 @@
   </url>
   <url>
     <loc>https://imadtbn.github.io/dz_portal/sectors/bank.html</loc>
-    <lastmod>2026-08-13</lastmod>
+    <lastmod>2026-08-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <image:image>
@@ -412,7 +412,7 @@
   </url>
   <url>
     <loc>https://imadtbn.github.io/dz_portal/sectors/bank/bankalgeriane.html</loc>
-    <lastmod>2026-08-13</lastmod>
+    <lastmod>2026-08-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <image:image>
@@ -422,7 +422,7 @@
   </url>
   <url>
     <loc>https://imadtbn.github.io/dz_portal/sectors/bank/banketranger.html</loc>
-    <lastmod>2026-08-13</lastmod>
+    <lastmod>2026-08-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <image:image>
@@ -432,7 +432,7 @@
   </url>
   <url>
     <loc>https://imadtbn.github.io/dz_portal/sectors/commerce.html</loc>
-    <lastmod>2026-08-13</lastmod>
+    <lastmod>2026-08-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <image:image>
@@ -442,7 +442,7 @@
   </url>
   <url>
     <loc>https://imadtbn.github.io/dz_portal/sectors/douane.html</loc>
-    <lastmod>2026-08-13</lastmod>
+    <lastmod>2026-08-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <image:image>
@@ -453,7 +453,7 @@
   <!-- ══════════════ قطاع الطاقة والمياه ══════════════ -->
   <url>
     <loc>https://imadtbn.github.io/dz_portal/sectors/facteur.html</loc>
-    <lastmod>2026-08-13</lastmod>
+    <lastmod>2026-08-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <image:image>
@@ -463,7 +463,7 @@
   </url>
   <url>
     <loc>https://imadtbn.github.io/dz_portal/sectors/sonalgaz.html</loc>
-    <lastmod>2026-08-13</lastmod>
+    <lastmod>2026-08-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <image:image>
@@ -473,7 +473,7 @@
   </url>
   <url>
     <loc>https://imadtbn.github.io/dz_portal/sectors/ade.html</loc>
-    <lastmod>2026-08-13</lastmod>
+    <lastmod>2026-08-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <image:image>
@@ -483,7 +483,7 @@
   </url>
   <url>
     <loc>https://imadtbn.github.io/dz_portal/sectors/seaal.html</loc>
-    <lastmod>2026-08-13</lastmod>
+    <lastmod>2026-08-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <image:image>
@@ -493,7 +493,7 @@
   </url>
   <url>
     <loc>https://imadtbn.github.io/dz_portal/sectors/naftal.html</loc>
-    <lastmod>2026-08-13</lastmod>
+    <lastmod>2026-08-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <image:image>
@@ -503,7 +503,7 @@
   </url>
   <url>
     <loc>https://imadtbn.github.io/dz_portal/pages/process/e-mahata.naftal.html</loc>
-    <lastmod>2026-08-13</lastmod>
+    <lastmod>2026-08-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <image:image>
@@ -514,7 +514,7 @@
   <!-- ══════════════ قطاع الصحة ══════════════ -->
   <url>
     <loc>https://imadtbn.github.io/dz_portal/sectors/sante.html</loc>
-    <lastmod>2026-08-13</lastmod>
+    <lastmod>2026-08-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <image:image>
@@ -525,7 +525,7 @@
   <!-- ══════════════ قطاع النقل والمواصلات ══════════════ -->
   <url>
     <loc>https://imadtbn.github.io/dz_portal/sectors/transport.html</loc>
-    <lastmod>2026-08-13</lastmod>
+    <lastmod>2026-08-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <image:image>
@@ -535,7 +535,7 @@
   </url>
   <url>
     <loc>https://imadtbn.github.io/dz_portal/sectors/markabatidz.html</loc>
-    <lastmod>2026-08-13</lastmod>
+    <lastmod>2026-08-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <image:image>
@@ -547,7 +547,7 @@
   <!-- ══════════════ قطاع الشؤون الخارجية والدينية ══════════════ -->
   <url>
     <loc>https://imadtbn.github.io/dz_portal/sectors/mfa.html</loc>
-    <lastmod>2026-08-13</lastmod>
+    <lastmod>2026-08-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <image:image>
@@ -557,7 +557,7 @@
   </url>
   <url>
     <loc>https://imadtbn.github.io/dz_portal/pages/process/apostille.html</loc>
-    <lastmod>2026-08-13</lastmod>
+    <lastmod>2026-08-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <image:image>
@@ -567,7 +567,7 @@
   </url>
   <url>
     <loc>https://imadtbn.github.io/dz_portal/sectors/onpo.html</loc>
-    <lastmod>2026-08-13</lastmod>
+    <lastmod>2026-08-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <image:image>
@@ -578,7 +578,7 @@
   <!-- ══════════════ قطاع الفلاحة والاستثمار والتشغيل ══════════════ -->
   <url>
     <loc>https://imadtbn.github.io/dz_portal/sectors/madr.html</loc>
-    <lastmod>2026-08-13</lastmod>
+    <lastmod>2026-08-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <image:image>
@@ -588,7 +588,7 @@
   </url>
   <url>
     <loc>https://imadtbn.github.io/dz_portal/pages/process/adhahi.dz.html</loc>
-    <lastmod>2026-08-13</lastmod>
+    <lastmod>2026-08-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <image:image>
@@ -598,7 +598,7 @@
   </url>
   <url>
     <loc>https://imadtbn.github.io/dz_portal/sectors/aapi.html</loc>
-    <lastmod>2026-08-13</lastmod>
+    <lastmod>2026-08-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <image:image>
@@ -608,7 +608,7 @@
   </url>
   <url>
     <loc>https://imadtbn.github.io/dz_portal/sectors/hatplc.html</loc>
-    <lastmod>2026-08-13</lastmod>
+    <lastmod>2026-08-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <image:image>
@@ -618,7 +618,7 @@
   </url>
   <url>
     <loc>https://imadtbn.github.io/dz_portal/sectors/ocrc.html</loc>
-    <lastmod>2026-08-13</lastmod>
+    <lastmod>2026-08-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <image:image>
@@ -628,7 +628,7 @@
   </url>
   <url>
     <loc>https://imadtbn.github.io/dz_portal/sectors/anae.html</loc>
-    <lastmod>2026-08-13</lastmod>
+    <lastmod>2026-08-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <image:image>
@@ -638,7 +638,7 @@
   </url>
   <url>
     <loc>https://imadtbn.github.io/dz_portal/sectors/anem.html</loc>
-    <lastmod>2026-08-13</lastmod>
+    <lastmod>2026-08-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <image:image>
@@ -648,7 +648,7 @@
   </url>
   <url>
     <loc>https://imadtbn.github.io/dz_portal/sectors/msnfcf.gov.html</loc>
-    <lastmod>2026-08-13</lastmod>
+    <lastmod>2026-08-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <image:image>
@@ -658,7 +658,7 @@
   </url>
   <url>
     <loc>https://imadtbn.github.io/dz_portal/sectors/facture_loyer.html</loc>
-    <lastmod>2026-08-13</lastmod>
+    <lastmod>2026-08-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <image:image>
@@ -669,7 +669,7 @@
   <!-- ══════════════ الطوارئ ══════════════ -->
   <url>
     <loc>https://imadtbn.github.io/dz_portal/sectors/emergency.html</loc>
-    <lastmod>2026-08-13</lastmod>
+    <lastmod>2026-08-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <image:image>
@@ -679,7 +679,7 @@
   </url>
   <url>
     <loc>https://imadtbn.github.io/dz_portal/sectors/assurance/saa.html</loc>
-    <lastmod>2026-08-13</lastmod>
+    <lastmod>2026-08-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <image:image>
@@ -689,7 +689,7 @@
   </url>
   <url>
     <loc>https://imadtbn.github.io/dz_portal/sectors/mjeunesse.gov.html</loc>
-    <lastmod>2026-08-13</lastmod>
+    <lastmod>2026-08-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <image:image>
@@ -699,7 +699,7 @@
   </url>
   <url>
     <loc>https://imadtbn.github.io/dz_portal/sectors/campuce.jobs.html</loc>
-    <lastmod>2026-08-13</lastmod>
+    <lastmod>2026-08-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <image:image>
@@ -709,7 +709,7 @@
   </url>
   <url>
     <loc>https://imadtbn.github.io/dz_portal/sectors/anpdp.html</loc>
-    <lastmod>2026-08-13</lastmod>
+    <lastmod>2026-08-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <image:image>
@@ -719,7 +719,7 @@
   </url>
   <url>
     <loc>https://imadtbn.github.io/dz_portal/sectors/seor.html</loc>
-    <lastmod>2026-08-13</lastmod>
+    <lastmod>2026-08-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <image:image>
@@ -729,7 +729,7 @@
   </url>
   <url>
     <loc>https://imadtbn.github.io/dz_portal/sectors/mdn.html</loc>
-    <lastmod>2026-08-13</lastmod>
+    <lastmod>2026-08-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <image:image>
@@ -739,7 +739,7 @@
   </url>
   <url>
     <loc>https://imadtbn.github.io/dz_portal/sectors/mobilis.html</loc>
-    <lastmod>2026-08-13</lastmod>
+    <lastmod>2026-08-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <image:image>
@@ -749,7 +749,7 @@
   </url>
   <url>
     <loc>https://imadtbn.github.io/dz_portal/sectors/djezzy.html</loc>
-    <lastmod>2026-08-13</lastmod>
+    <lastmod>2026-08-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <image:image>
@@ -759,7 +759,7 @@
   </url>
   <url>
     <loc>https://imadtbn.github.io/dz_portal/sectors/ooredoo.html</loc>
-    <lastmod>2026-08-13</lastmod>
+    <lastmod>2026-08-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <image:image>
@@ -769,7 +769,7 @@
   </url>
   <url>
     <loc>https://imadtbn.github.io/dz_portal/sectors/sntf.html</loc>
-    <lastmod>2026-08-13</lastmod>
+    <lastmod>2026-08-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <image:image>
