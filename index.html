@@ -51,7 +51,7 @@
     <link rel="stylesheet" href="assets/css/style-main.css">
     <link rel="stylesheet" href="assets/css/style-section-header.css">
     <link rel="stylesheet" href="assets/css/Alert-Modal.css">
-
+    <link rel="stylesheet" href="assets/css/rating-panel.css">
 
     <link rel="manifest" href="manifest.json">
     <meta name="theme-color" content="#006400">
@@ -2727,27 +2727,17 @@
         </div>
     </section>
 
-    <!-- تقييم الصفحة -->
-    <section class="seo-tags" aria-label="تقييم الصفحة">
-        <div class="seo-tags-header">
-            <span class="seo-badge">
-                <i class="fas fa-star"></i>
-                تقييم الموقع
-            </span>
-            <h2>نرحّب برأيك لتحسين خدماتنا الرقمية </h2>
+    <section class="stats-panel rating-panel" aria-labelledby="siteRatingTitle">
+        <div class="stats-panel-header">
+            <div><h3 id="siteRatingTitle"><i class="fas fa-star"></i> تقييم الموقع</h3><p>متوسط تقييمات الزوار الواردة من جدول التقييمات.</p></div>
+            <a class="stats-refresh" href="https://forms.gle/yfMJqhsD3XDn9NaJ7" target="_blank" rel="noopener noreferrer"><i class="fas fa-star"></i> أرسل تقييمك</a>
         </div>
-        <div class="tags-cloud">
-            <div class="site-rating-widget" data-rating-widget aria-live="polite">
-                <div class="site-rating-stars" data-rating-stars role="img" aria-label="جارٍ تحميل تقييم الموقع"></div>
-                <strong class="site-rating-value" data-rating-value>— / 5</strong>
-                <span class="site-rating-meta" data-rating-meta>جارٍ تحميل التقييمات...</span>
-                <div class="site-rating-distribution" data-rating-distribution></div>
-                <small class="site-rating-updated" data-rating-updated></small>
-            </div>
-            <a class="rating-submit-button" href="https://forms.gle/yfMJqhsD3XDn9NaJ7" target="_blank" rel="noopener noreferrer" style="display:inline-block; background:#d40000; color:#fff; padding:10px 20px;
-            border-radius:8px; text-decoration:none; font-weight:bold;">
-                <i class="fas fa-star"></i> إضغط هنا لتقديم تقييمك
-            </a>
+        <div class="site-rating-widget stats-rating-widget" data-rating-widget aria-live="polite">
+            <div class="site-rating-stars" data-rating-stars role="img" aria-label="جارٍ تحميل تقييم الموقع"></div>
+            <strong class="site-rating-value" data-rating-value>— / 5</strong>
+            <span class="site-rating-meta" data-rating-meta>جارٍ تحميل التقييمات...</span>
+            <div class="site-rating-distribution" data-rating-distribution></div>
+            <small class="site-rating-updated" data-rating-updated></small>
         </div>
     </section>
 

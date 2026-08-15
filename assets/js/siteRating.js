@@ -1,7 +1,10 @@
 (() => {
     "use strict";
 
-    const dataUrl = "../assets/data/site-rating.json";
+    const scriptUrl = document.currentScript?.src || "";
+    const dataUrl = scriptUrl
+        ? new URL("../data/site-rating.json", scriptUrl).href
+        : "assets/data/site-rating.json";
     const numberFormatter = new Intl.NumberFormat("ar-DZ");
     const dateFormatter = new Intl.DateTimeFormat("ar-DZ", { dateStyle: "medium" });
 
