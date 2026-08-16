@@ -799,6 +799,13 @@
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="ar" href="https://imadtbn.github.io/dz_portal/pages/process/arpce.html" />
   </url>
+    <url>
+    <loc>https://imadtbn.github.io/dz_portal/pages/process/arpce2.html</loc>
+    <lastmod>2026-08-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://imadtbn.github.io/dz_portal/pages/process/arpce2.html" />
+  </url>
   <url>
     <loc>https://imadtbn.github.io/dz_portal/pages/process/idlaa.html</loc>
     <lastmod>2026-08-15</lastmod>
