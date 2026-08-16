@@ -358,3 +358,73 @@
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
 }
 
+/* =========================================
+   Facebook Video / Reel Responsive
+   ========================================= */
+
+.facebook-video-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+    border-radius: 18px;
+    background: #000;
+
+    /* مساحة ثابتة ومتجاوبة */
+    aspect-ratio: 16 / 9;
+
+    isolation: isolate;
+}
+
+.facebook-reel {
+    position: absolute;
+    inset: 0;
+
+    display: block;
+
+    width: 100% !important;
+    height: 100% !important;
+
+    max-width: 100% !important;
+    min-width: 0 !important;
+
+    border: 0;
+    margin: 0;
+    padding: 0;
+
+    overflow: hidden;
+}
+
+@media (max-width: 768px) {
+
+    .facebook-video-wrapper {
+        width: 100%;
+        aspect-ratio: 9 / 16;
+        border-radius: 12px;
+    }
+
+    .facebook-reel {
+        width: 100% !important;
+        height: 100% !important;
+    }
+
+}
+
+.facebook-video-wrapper {
+    position: relative;
+    width: min(100%, 520px);
+    aspect-ratio: 9 / 16;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 18px;
+    background: #000;
+}
+
+.facebook-reel {
+    position: absolute;
+    inset: 0;
+    width: 100% !important;
+    height: 100% !important;
+    border: 0;
+    display: block;
+}
