@@ -1,0 +1,226 @@
+/* Shared visual identity for the educational video hub and watch pages. */
+:root {
+    --portal-primary-green: #006233;
+    --portal-dark-green: #004d26;
+    --portal-light-green: #e8f5e9;
+    --portal-accent-red: #d40000;
+    --portal-gold: #ffd700;
+    --portal-white: #ffffff;
+    --portal-gray-100: #f8f9fa;
+    --portal-gray-200: #e9ecef;
+    --portal-gray-600: #6c757d;
+    --portal-gray-900: #212529;
+    --portal-shadow-sm: 0 2px 4px rgba(0, 0, 0, .05);
+    --portal-shadow-md: 0 4px 12px rgba(0, 0, 0, .1);
+    --portal-shadow-lg: 0 10px 40px rgba(0, 0, 0, .15);
+    --portal-radius-sm: 8px;
+    --portal-radius-md: 16px;
+    --portal-radius-lg: 24px;
+    --portal-transition: all .3s cubic-bezier(.4, 0, .2, 1);
+
+    /* Map the current video-index tokens to the portal tokens. */
+    --video-green: var(--portal-primary-green);
+    --video-green-dark: var(--portal-dark-green);
+    --video-red: var(--portal-accent-red);
+    --video-ink: var(--portal-gray-900);
+    --video-muted: var(--portal-gray-600);
+    --video-paper: linear-gradient(135deg, var(--portal-gray-100) 0%, var(--portal-light-green) 100%);
+    --video-line: rgba(0, 98, 51, .16);
+    --video-shadow: var(--portal-shadow-lg);
+}
+
+.portal-video-page,
+.video-index-body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: 'Tajawal', sans-serif;
+    background: linear-gradient(135deg, var(--portal-gray-100) 0%, var(--portal-light-green) 100%);
+    color: var(--portal-gray-900);
+}
+
+.video-index-header,
+.video-watch-header {
+    background: linear-gradient(135deg, var(--portal-primary-green) 0%, var(--portal-dark-green) 100%);
+    border-bottom: 4px solid var(--portal-accent-red);
+    box-shadow: var(--portal-shadow-lg);
+}
+
+.video-index-brand,
+.video-index-home-link,
+.video-watch-brand,
+.video-watch-home {
+    font-family: 'Tajawal', sans-serif;
+}
+
+.video-index-home-link,
+.video-watch-home {
+    border-radius: var(--portal-radius-sm);
+    transition: var(--portal-transition);
+}
+
+.video-index-home-link:hover,
+.video-index-home-link:focus-visible,
+.video-watch-home:hover,
+.video-watch-home:focus-visible {
+    background: var(--portal-white);
+    color: var(--portal-primary-green);
+    transform: translateY(-2px);
+}
+
+.video-index-hero,
+.video-index-featured,
+.video-index-card,
+.video-index-related a,
+.video-watch-article,
+.video-watch-section {
+    border-color: rgba(0, 98, 51, .16);
+    border-radius: var(--portal-radius-md);
+    box-shadow: var(--portal-shadow-md);
+}
+
+.video-index-hero,
+.video-index-featured,
+.video-index-card,
+.video-index-related a,
+.video-watch-article,
+.video-watch-section {
+    background: var(--portal-white);
+}
+
+.video-index-hero-stat {
+    background: linear-gradient(135deg, var(--portal-primary-green), var(--portal-dark-green));
+    border-top-color: var(--portal-accent-red);
+    border-radius: var(--portal-radius-sm);
+}
+
+.video-index-kicker,
+.video-index-card-tag,
+.video-watch-kicker,
+.video-watch-label {
+    color: var(--portal-accent-red);
+}
+
+.video-index-hero h1,
+.video-index-section-heading h2,
+.video-index-card-body h3,
+.video-watch-section h2,
+.video-watch-article h1 {
+    color: var(--portal-primary-green);
+    font-family: 'Tajawal', sans-serif;
+    font-weight: 700;
+}
+
+.video-index-hero p,
+.video-index-section-heading p,
+.video-index-card-body p,
+.video-watch-heading p,
+.video-watch-description,
+.video-watch-caption {
+    color: var(--portal-gray-600);
+    font-family: 'Tajawal', sans-serif;
+}
+
+.video-index-card-media,
+.video-index-featured-media,
+.video-watch-player {
+    background: var(--portal-dark-green);
+}
+
+.video-index-card-actions a,
+.video-watch-actions a,
+.video-watch-service-link {
+    border-radius: var(--portal-radius-sm);
+    transition: var(--portal-transition);
+}
+
+.video-index-primary-link,
+.video-watch-primary,
+.video-watch-service-link {
+    background: var(--portal-primary-green);
+    border-color: var(--portal-primary-green);
+    color: var(--portal-white);
+}
+
+.video-index-secondary-link,
+.video-watch-secondary {
+    background: var(--portal-white);
+    border-color: var(--portal-primary-green);
+    color: var(--portal-primary-green);
+}
+
+.video-index-primary-link:hover,
+.video-index-primary-link:focus-visible,
+.video-watch-primary:hover,
+.video-watch-primary:focus-visible,
+.video-watch-service-link:hover,
+.video-watch-service-link:focus-visible {
+    background: var(--portal-dark-green);
+    border-color: var(--portal-dark-green);
+    transform: translateY(-2px);
+}
+
+.video-index-secondary-link:hover,
+.video-index-secondary-link:focus-visible,
+.video-watch-secondary:hover,
+.video-watch-secondary:focus-visible {
+    background: var(--portal-light-green);
+    transform: translateY(-2px);
+}
+
+.video-index-card:hover,
+.video-index-related a:hover,
+.video-index-related a:focus-visible,
+.video-index-featured:hover {
+    border-color: rgba(212, 0, 0, .45);
+}
+
+.video-index-footer,
+.video-watch-footer {
+    background: linear-gradient(135deg, var(--portal-primary-green), var(--portal-dark-green));
+    border-top-color: var(--portal-accent-red);
+    font-family: 'Tajawal', sans-serif;
+}
+
+/* The watch pages use the same spacing, radius, and type scale as sector pages. */
+.portal-video-page .video-watch-header {
+    min-height: 76px;
+    padding: 1.5rem 2rem;
+}
+
+.portal-video-page .video-watch-page {
+    width: min(1160px, 92vw);
+    padding: 24px 0 56px;
+}
+
+.portal-video-page .video-watch-breadcrumb {
+    background: var(--portal-white);
+    border-bottom: 1px solid var(--portal-gray-200);
+    border-radius: var(--portal-radius-sm);
+    padding: 1rem 1.25rem;
+    color: var(--portal-gray-600);
+    font-family: 'Tajawal', sans-serif;
+}
+
+.portal-video-page .video-watch-breadcrumb a {
+    color: var(--portal-primary-green);
+}
+
+.portal-video-page .video-watch-article {
+    padding: clamp(20px, 4vw, 40px);
+}
+
+.portal-video-page .video-watch-article h1 {
+    font-size: clamp(1.8rem, 4vw, 3rem);
+    line-height: 1.35;
+}
+
+.portal-video-page .video-watch-player,
+.portal-video-page .video-watch-player iframe {
+    border-radius: var(--portal-radius-sm);
+}
+
+@media (max-width: 720px) {
+    .portal-video-page .video-watch-header {
+        padding: 18px 5vw;
+    }
+}
