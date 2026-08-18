@@ -1,14 +1,14 @@
 {
   "source": "https://docs.google.com/spreadsheets/d/1TJgv9b2F2olI961PqxRscPqecQK--eqpiv9McaJKnBQ/edit?usp=drivesdk",
   "sourceQuery": "https://docs.google.com/spreadsheets/d/1TJgv9b2F2olI961PqxRscPqecQK--eqpiv9McaJKnBQ/gviz/tq?tqx=out:csv&gid=0",
-  "responses": 262,
+  "responses": 263,
   "average": 4.37,
   "distribution": {
     "1": 20,
     "2": 7,
     "3": 18,
-    "4": 28,
+    "4": 29,
     "5": 189
   },
-  "syncedAt": "2026-08-15T00:00:03+00:00"
+  "syncedAt": "2026-08-18T03:39:11+00:00"
 }
