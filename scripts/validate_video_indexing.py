@@ -47,6 +47,13 @@ def nodes(data):
 for rel in TARGETS:
     path = ROOT / rel
     soup, data = graphs(path)
+    if rel == 'sectors/mfp.gov.html':
+        assert not soup.select_one('iframe.video-primary-embed'), 'sector page must not embed video: mfp.gov.html'
+        assert not soup.select_one('[data-video-watch-page]'), 'sector page must not claim to be a watch page: mfp.gov.html'
+        assert soup.select_one('a[href*="pages/video/takwin-registration.html"]'), 'missing descriptive watch-page link: mfp.gov.html'
+        videos = [node for node in nodes(data) if 'VideoObject' in (node.get('@type', []) if isinstance(node.get('@type'), list) else [node.get('@type')])]
+        assert not videos, 'sector page must not contain VideoObject without visible video: mfp.gov.html'
+        continue
     assert soup.select_one('[data-video-watch-page]'), f'missing watch-page marker: {rel}'
     assert soup.select_one('iframe.video-primary-embed'), f'missing primary iframe: {rel}'
     assert soup.select_one('link[rel="video-watch-page"]'), f'missing watch link: {rel}'

@@ -80,6 +80,7 @@ VIDEOS = {
         'thumbnail': 'assets/images/formation.png',
         'service_url': 'sectors/mfp.gov.html',
         'service_name': 'التكوين والتعليم المهنيين',
+        'sector_only': True,
     },
 }
 
@@ -126,6 +127,10 @@ def update_video_graph(text: str, cfg: dict) -> str:
     start, end, data = scripts[0]
     graph = data.setdefault('@graph', [])
     watch_url = abs_url(cfg['watch'])
+    if cfg.get('sector_only'):
+        graph[:] = [node for node in graph if not ('VideoObject' in (node.get('@type', []) if isinstance(node, dict) and isinstance(node.get('@type'), list) else [node.get('@type')]) and node.get('@id') == f'{watch_url}#video')]
+        serialized = json.dumps(data, ensure_ascii=False, indent=4)
+        return text[:start] + '\n' + serialized + '\n' + text[end:]
     embed_url, content_url = video_urls(cfg)
     video = {
         '@type': 'VideoObject',
@@ -160,6 +165,8 @@ def update_video_graph(text: str, cfg: dict) -> str:
 
 
 def add_head_assets(text: str, rel: str, cfg: dict) -> str:
+    if cfg.get('sector_only'):
+        return text
     if 'video-watch.css' not in text:
         css_path = relative_asset(rel, CSS_HREF)
         text = text.replace('</head>', f'    <link rel="stylesheet" href="{css_path}">\n</head>', 1)
@@ -202,11 +209,16 @@ def replace_process_video_section(text: str, cfg: dict, rel: str) -> str:
     return new_text
 
 
+def sector_link_section(cfg: dict, rel: str) -> str:
+    watch_href = relative_asset(rel, cfg['watch'])
+    return f'''\n    <section class="section-card content-link-section" id="video-guide" aria-labelledby="videoGuideTitle">\n        <div class="section-header-card">\n            <h3 class="section-title" id="videoGuideTitle">\n                <i class="fas fa-circle-play" aria-hidden="true"></i>\n                شرح طريقة التسجيل في الدخول التكويني 2026\n            </h3>\n            <span class="service-count">صفحة مشاهدة</span>\n        </div>\n        <div class="section-content">\n            <p>للاطلاع على الشرح المرئي لطريقة التسجيل، انتقل إلى صفحة المشاهدة المستقلة. تبقى هذه الصفحة مخصصة لخدمات قطاع التكوين والتعليم المهنيين وروابطها الرقمية.</p>\n            <a class="service-link" href="{watch_href}">\n                <i class="fas fa-external-link-alt" aria-hidden="true"></i>\n                مشاهدة شرح التسجيل بالفيديو\n            </a>\n        </div>\n    </section>\n'''
+
+
 def insert_sector_video(text: str, cfg: dict, rel: str) -> str:
-    if 'data-video-watch-page=' in text:
+    if 'data-video-watch-page=' in text or 'id="video-guide"' in text:
         return text
     marker = '    <!-- Vocational Training Welcome Alert -->'
-    section = primary_section(cfg, rel, sector=True)
+    section = sector_link_section(cfg, rel) if cfg.get('sector_only') else primary_section(cfg, rel, sector=True)
     if marker not in text:
         raise RuntimeError(f'sector insertion marker not found: {rel}')
     return text.replace(marker, section + '\n' + marker, 1)
