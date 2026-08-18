@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml"
-  xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
   <!-- ======================================================== -->
   <!--   Sitemap - البوابة الجزائرية للخدمات الرقمية           -->
   <!--   Base URL : https://imadtbn.github.io/dz_portal/        -->
@@ -1106,5 +1106,65 @@
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="ar" href="https://imadtbn.github.io/dz_portal/sectors/ufc.dz.html" />
+  </url>
+  <url>
+    <loc>https://imadtbn.github.io/dz_portal/pages/video/arpce-777.html</loc>
+    <lastmod>2026-08-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <video:video>
+      <video:thumbnail_loc>https://imadtbn.github.io/dz_portal/assets/images/arpce.png</video:thumbnail_loc>
+      <video:title>برنامج جيل لجيل 777 للإدماج الرقمي</video:title>
+      <video:description>فيديو يشرح برنامج جيل لجيل 777 للتعلم والإدماج الرقمي وتطوير المهارات عن بعد في الجزائر.</video:description>
+      <video:player_loc allow_embed="yes">https://www.youtube.com/embed/opO1dEXGFDw</video:player_loc>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://imadtbn.github.io/dz_portal/pages/video/apostille-registration.html</loc>
+    <lastmod>2026-08-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <video:video>
+      <video:thumbnail_loc>https://imadtbn.github.io/dz_portal/assets/images/logo-hcn.png</video:thumbnail_loc>
+      <video:title>طريقة التسجيل في المنصة الوطنية الرقمية للأبوستيل</video:title>
+      <video:description>شرح مرئي لطريقة التسجيل في المنصة الوطنية الرقمية للأبوستيل وتصديق الوثائق إلكترونيًا.</video:description>
+      <video:player_loc allow_embed="yes">https://www.youtube.com/embed/Abph3zC5gZA</video:player_loc>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://imadtbn.github.io/dz_portal/pages/video/naftal-tyres.html</loc>
+    <lastmod>2026-08-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <video:video>
+      <video:thumbnail_loc>https://imadtbn.github.io/dz_portal/assets/images/naftal.webp</video:thumbnail_loc>
+      <video:title>طريقة التسجيل في منصة محطتي لاقتناء عجلات السيارات</video:title>
+      <video:description>شرح مرئي لطريقة التسجيل في منصة محطتي التابعة لنفطال لاقتناء العجلات المطاطية.</video:description>
+      <video:player_loc allow_embed="yes">https://www.youtube.com/embed/U-3YSOxddEs</video:player_loc>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://imadtbn.github.io/dz_portal/pages/video/awlyaa-registration.html</loc>
+    <lastmod>2026-08-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <video:video>
+      <video:thumbnail_loc>https://imadtbn.github.io/dz_portal/assets/images/education.png</video:thumbnail_loc>
+      <video:title>طريقة التسجيل في فضاء الأولياء 2026</video:title>
+      <video:description>شرح مرئي لطريقة التسجيل في فضاء الأولياء ومتابعة الأبناء دراسيًا عبر المنصة الرسمية.</video:description>
+      <video:player_loc allow_embed="yes">https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fwatch%2F%3Fv%3D485913154242019&amp;show_text=false</video:player_loc>
+    </video:video>
+  </url>
+  <url>
+    <loc>https://imadtbn.github.io/dz_portal/pages/video/takwin-registration.html</loc>
+    <lastmod>2026-08-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <video:video>
+      <video:thumbnail_loc>https://imadtbn.github.io/dz_portal/assets/images/formation.png</video:thumbnail_loc>
+      <video:title>طريقة التسجيل في الدخول التكويني 2026</video:title>
+      <video:description>شرح مرئي لطريقة التسجيل في الدخول التكويني وخدمات وزارة التكوين والتعليم المهنيين في الجزائر.</video:description>
+      <video:player_loc allow_embed="yes">https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Freel%2F1967640217271523&amp;show_text=false</video:player_loc>
+    </video:video>
   </url>
 </urlset>

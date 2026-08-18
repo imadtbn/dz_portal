@@ -1,0 +1,154 @@
+/* Video indexing and watch-page prominence layer. Kept separate from original CSS. */
+.video-watch-section,
+.video-watch-article {
+    width: 100%;
+    background: #ffffff;
+    border: 1px solid rgba(0, 93, 66, 0.18);
+    padding: 24px;
+    margin: 24px 0;
+}
+.video-watch-heading {
+    max-width: 860px;
+    margin-bottom: 18px;
+}
+.video-watch-kicker,
+.video-watch-label {
+    display: inline-block;
+    color: #b12617;
+    font-weight: 800;
+    letter-spacing: .02em;
+    margin-bottom: 8px;
+}
+.video-watch-section h2,
+.video-watch-article h1 {
+    color: #005d42;
+    line-height: 1.35;
+    margin: 0 0 10px;
+}
+.video-watch-heading p,
+.video-watch-description,
+.video-watch-caption {
+    color: #33443e;
+    line-height: 1.8;
+    margin: 0;
+}
+.video-watch-player {
+    width: 100%;
+    max-width: 920px;
+    min-height: 420px;
+    aspect-ratio: 16 / 9;
+    background: #073f31;
+    margin: 18px 0;
+}
+.video-watch-player iframe,
+.video-primary-embed {
+    display: block;
+    width: 100%;
+    height: 100%;
+    min-height: 420px;
+    border: 0;
+}
+.video-watch-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 14px;
+}
+.video-watch-actions a,
+.video-watch-service-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    padding: 10px 16px;
+    border: 1px solid #005d42;
+    font-weight: 700;
+}
+.video-watch-primary,
+.video-watch-service-link {
+    background: #005d42;
+    color: #fff;
+}
+.video-watch-secondary {
+    background: #fff;
+    color: #005d42;
+}
+.video-watch-header {
+    min-height: 76px;
+    padding: 18px 5vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    background: #005d42;
+    color: #fff;
+}
+.video-watch-brand,
+.video-watch-home {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 800;
+}
+.video-watch-brand span {
+    display: block;
+    font-size: .78em;
+    font-weight: 400;
+    opacity: .85;
+}
+.video-watch-page {
+    width: min(1080px, 92vw);
+    margin: 0 auto;
+    padding: 24px 0 48px;
+}
+.video-watch-breadcrumb {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 18px;
+    color: #4b5a55;
+}
+.video-watch-breadcrumb a {
+    color: #005d42;
+    font-weight: 700;
+}
+.video-watch-article {
+    margin: 0;
+}
+.video-watch-article h1 {
+    font-size: clamp(1.8rem, 4vw, 3rem);
+}
+.video-watch-article .video-watch-player {
+    max-width: 100%;
+    min-height: 520px;
+}
+.video-watch-article .video-watch-player iframe {
+    min-height: 520px;
+}
+.video-watch-caption {
+    margin: 16px 0;
+}
+.video-watch-footer {
+    border-top: 1px solid rgba(0, 93, 66, .18);
+    padding: 18px 5vw;
+    color: #4b5a55;
+    text-align: center;
+}
+@media (max-width: 720px) {
+    .video-watch-section,
+    .video-watch-article {
+        padding: 16px;
+    }
+    .video-watch-player,
+    .video-watch-player iframe,
+    .video-primary-embed {
+        min-height: 240px;
+    }
+    .video-watch-article .video-watch-player,
+    .video-watch-article .video-watch-player iframe {
+        min-height: 260px;
+    }
+    .video-watch-header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}
