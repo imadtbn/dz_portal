@@ -134,6 +134,166 @@ body {
 }
 
 
+/* =========================================
+   Preparatory Education Registration Theme
+========================================= */
+
+.education-registration-theme {
+    --alert-color: #1565c0;
+    --alert-dark: #0d47a1;
+    --alert-bg: #eef6ff;
+    --alert-accent: #f9a825;
+}
+
+.education-registration-theme .alert-content {
+    border-top: 6px solid var(--alert-color);
+}
+
+.education-registration-theme .alert-icon {
+    background: var(--alert-bg);
+    color: var(--alert-color);
+}
+
+.education-registration-theme .alert-badge {
+    background: var(--alert-bg);
+    color: var(--alert-color);
+}
+
+
+/* Registration Notice */
+
+.education-registration-theme .registration-notice {
+    margin: 18px 0;
+    padding: 15px;
+
+    background: #f7fbff;
+
+    border: 1px solid rgba(21, 101, 192, .15);
+    border-radius: 16px;
+}
+
+.education-registration-theme .notice-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+    margin-bottom: 12px;
+
+    font-weight: 800;
+    color: var(--alert-color);
+}
+
+
+/* Dates */
+
+.education-registration-theme .date-item {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    margin-top: 10px;
+    padding: 11px;
+
+    background: #fff;
+
+    border-radius: 12px;
+}
+
+.education-registration-theme .date-item > i {
+    flex: 0 0 38px;
+
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 10px;
+
+    background: var(--alert-bg);
+    color: var(--alert-color);
+}
+
+.education-registration-theme .date-item div {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.education-registration-theme .date-item strong {
+    font-size: .84rem;
+    color: #333;
+}
+
+.education-registration-theme .date-item span {
+    font-size: .9rem;
+    font-weight: 700;
+    color: var(--alert-color);
+}
+
+
+/* Information Items */
+
+.education-registration-theme .tip-item {
+    border-right-color: var(--alert-color);
+}
+
+.education-registration-theme .tip-item i {
+    color: var(--alert-color);
+}
+
+
+/* Main Button */
+
+.education-registration-theme .alert-btn {
+    background: linear-gradient(
+        135deg,
+        #1565c0,
+        #1e88e5
+    );
+}
+
+
+/* Footer */
+
+.education-registration-theme .alert-footer {
+    color: var(--alert-color);
+}
+
+
+/* Mobile */
+
+@media (max-width: 480px) {
+
+    .education-registration-theme .registration-notice {
+        padding: 11px;
+    }
+
+    .education-registration-theme .date-item {
+        padding: 9px;
+        gap: 9px;
+    }
+
+    .education-registration-theme .date-item > i {
+        flex: 0 0 34px;
+
+        width: 34px;
+        height: 34px;
+    }
+
+    .education-registration-theme .date-item strong {
+        font-size: .78rem;
+    }
+
+    .education-registration-theme .date-item span {
+        font-size: .82rem;
+    }
+
+}
+
 /* ===== Vehicle Inspection Theme ===== */
 
 .inspection-theme {
