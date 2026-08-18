@@ -1,6 +1,6 @@
 # robots.txt - البوابة الجزائرية للخدمات الرقمية
 # https://imadtbn.github.io/dz_portal/
-# Updated: 2026-08-15
+# Updated: 2026-08-18
 
 User-agent: *
 Disallow: /private/
@@ -10,11 +10,10 @@ Disallow: /*?*
 Allow: /
 Allow: /pages/
 Allow: /pages/process/
+Allow: /pages/video/
 Allow: /sectors/
 Allow: /sectors/assurance/
 Allow: /sectors/bank/
-Allow: /sectors/mesrs.dz.html
-Allow: /sectors/progres.mesrs.html
 Allow: /assets/
 Allow: /icons/
 Allow: /manifest.json
@@ -29,11 +28,8 @@ Disallow: /*?*
 Allow: /
 Allow: /pages/
 Allow: /pages/process/
+Allow: /pages/video/
 Allow: /sectors/
-Allow: /sectors/assurance/
-Allow: /sectors/bank/
-Allow: /sectors/mesrs.dz.html
-Allow: /sectors/progres.mesrs.html
 Allow: /assets/
 Allow: /icons/
 
@@ -45,22 +41,52 @@ Disallow: /*?*
 Allow: /
 Allow: /pages/
 Allow: /pages/process/
+Allow: /pages/video/
 Allow: /sectors/
-Allow: /sectors/assurance/
-Allow: /sectors/bank/
-Allow: /sectors/mesrs.dz.html
-Allow: /sectors/progres.mesrs.html
 Allow: /assets/
 Allow: /icons/
 Crawl-delay: 10
 
 User-agent: Slurp
+Disallow: /private/
+Disallow: /tmp/
+Disallow: /cgi-bin/
+Disallow: /*?*
+Allow: /
+Allow: /pages/
+Allow: /pages/process/
+Allow: /pages/video/
+Allow: /sectors/
+Allow: /assets/
+Allow: /icons/
 Crawl-delay: 10
 
 User-agent: DuckDuckBot
+Disallow: /private/
+Disallow: /tmp/
+Disallow: /cgi-bin/
+Disallow: /*?*
+Allow: /
+Allow: /pages/
+Allow: /pages/process/
+Allow: /pages/video/
+Allow: /sectors/
+Allow: /assets/
+Allow: /icons/
 Crawl-delay: 5
 
 User-agent: Yandex
+Disallow: /private/
+Disallow: /tmp/
+Disallow: /cgi-bin/
+Disallow: /*?*
+Allow: /
+Allow: /pages/
+Allow: /pages/process/
+Allow: /pages/video/
+Allow: /sectors/
+Allow: /assets/
+Allow: /icons/
 Crawl-delay: 10
 
 Sitemap: https://imadtbn.github.io/dz_portal/sitemap.xml
