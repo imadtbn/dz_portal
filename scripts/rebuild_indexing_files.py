@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import copy
+import json
 import re
 import xml.etree.ElementTree as ET
 from datetime import date
@@ -34,6 +35,15 @@ def qname(namespace: str, name: str) -> str:
     return f"{{{namespace}}}{name}"
 
 
+def page_url(path: Path) -> str:
+    relative = path.relative_to(ROOT).as_posix()
+    if relative == "index.html":
+        return BASE
+    if relative.endswith("/index.html"):
+        relative = relative[:-len("index.html")]
+    return urljoin(BASE, relative)
+
+
 def canonical_pages() -> dict[str, tuple[Path, BeautifulSoup]]:
     pages: dict[str, tuple[Path, BeautifulSoup]] = {}
     for path in sorted(ROOT.rglob("*.html")):
@@ -48,8 +58,63 @@ def canonical_pages() -> dict[str, tuple[Path, BeautifulSoup]]:
         if not link or not link.get("href"):
             continue
         url = urljoin(BASE, link["href"])
-        pages.setdefault(url, (path, soup))
+        # لا تمثل صفحة alias URL صفحة أخرى في sitemap؛ يجب أن تكون الصفحة self-canonical.
+        if url.rstrip("/") != page_url(path).rstrip("/"):
+            continue
+        pages[url] = (path, soup)
     return pages
+
+
+def find_video_object(soup: BeautifulSoup) -> dict | None:
+    def walk(value: object) -> dict | None:
+        if isinstance(value, dict):
+            types = value.get("@type", [])
+            if isinstance(types, str):
+                types = [types]
+            if "VideoObject" in types:
+                return value
+            for child in value.values():
+                found = walk(child)
+                if found:
+                    return found
+        elif isinstance(value, list):
+            for child in value:
+                found = walk(child)
+                if found:
+                    return found
+        return None
+
+    for script in soup.find_all("script", attrs={"type": "application/ld+json"}):
+        try:
+            data = json.loads(script.string or script.get_text())
+        except (TypeError, json.JSONDecodeError):
+            continue
+        found = walk(data)
+        if found:
+            return found
+    return None
+
+
+def append_video_from_json(item: ET.Element, soup: BeautifulSoup) -> bool:
+    video = find_video_object(soup)
+    if not video:
+        return False
+    node = ET.SubElement(item, qname(VIDEO, "video"))
+    thumbnail = video.get("thumbnailUrl", "")
+    if isinstance(thumbnail, list):
+        thumbnail = thumbnail[0] if thumbnail else ""
+    if thumbnail:
+        ET.SubElement(node, qname(VIDEO, "thumbnail_loc")).text = thumbnail
+    if video.get("name"):
+        ET.SubElement(node, qname(VIDEO, "title")).text = video["name"]
+    if video.get("description"):
+        ET.SubElement(node, qname(VIDEO, "description")).text = video["description"]
+    player = video.get("embedUrl") or video.get("contentUrl")
+    if player:
+        player_node = ET.SubElement(node, qname(VIDEO, "player_loc"))
+        player_node.set("allow_embed", "yes")
+        player_node.text = player
+    return True
 
 
 def parse_existing_sitemap() -> dict[str, ET.Element]:
@@ -114,9 +179,13 @@ def build_sitemap(pages: dict[str, tuple[Path, BeautifulSoup]], existing: dict[s
         for old_image in old_images:
             item.append(copy.deepcopy(old_image))
 
-        old_videos = old.findall(qname(VIDEO, "video")) if old is not None else []
-        for old_video in old_videos:
-            item.append(copy.deepcopy(old_video))
+        is_standalone_watch_page = path.parent.name == "video" and path.name != "index.html"
+        old_videos = old.findall(qname(VIDEO, "video")) if old is not None and is_standalone_watch_page else []
+        if old_videos:
+            for old_video in old_videos:
+                item.append(copy.deepcopy(old_video))
+        elif is_standalone_watch_page:
+            append_video_from_json(item, soup)
 
     ET.indent(root, space="  ")
     header = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<!-- Sitemap generated from canonical, indexable HTML pages. Updated: 2026-08-18 -->\n"

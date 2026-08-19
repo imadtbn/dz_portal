@@ -18,6 +18,15 @@ def fail(message: str) -> None:
     raise SystemExit(f"FAIL: {message}")
 
 
+def page_url(path: Path) -> str:
+    relative = path.relative_to(ROOT).as_posix()
+    if relative == "index.html":
+        return BASE
+    if relative.endswith("/index.html"):
+        relative = relative[:-len("index.html")]
+    return urljoin(BASE, relative)
+
+
 def get_canonical_pages() -> dict[str, Path]:
     pages: dict[str, Path] = {}
     for path in ROOT.rglob("*.html"):
@@ -28,8 +37,12 @@ def get_canonical_pages() -> dict[str, Path]:
         if robots and "noindex" in robots.get("content", "").lower():
             continue
         canonical = soup.find("link", rel=lambda value: value and ("canonical" in value if isinstance(value, str) else "canonical" in value))
-        if canonical and canonical.get("href"):
-            pages.setdefault(urljoin(BASE, canonical["href"]), path)
+        if not canonical or not canonical.get("href"):
+            continue
+        url = urljoin(BASE, canonical["href"])
+        if url.rstrip("/") != page_url(path).rstrip("/"):
+            continue
+        pages[url] = path
     return pages
 
 
@@ -82,7 +95,11 @@ def main() -> None:
         if soup.find("meta", attrs={"name": "robots", "content": lambda value: value and "noindex" in value.lower()}):
             fail(f"indexable set contains noindex page: {path}")
 
-    print(f"validated indexing files: canonical={len(canonical)} sitemap={len(sitemap_urls)} submit={len(submit_urls)} robots=ok video_entries=5")
+    video_entries = sum(
+        1 for node in nodes
+        if node.find(f"{{{VIDEO}}}video") is not None
+    )
+    print(f"validated indexing files: canonical={len(canonical)} sitemap={len(sitemap_urls)} submit={len(submit_urls)} robots=ok video_entries={video_entries}")
 
 
 if __name__ == "__main__":

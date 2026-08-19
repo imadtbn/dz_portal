@@ -63,6 +63,19 @@
     </video:video>
   </url>
   <url>
+    <loc>https://imadtbn.github.io/dz_portal/pages/video/markabatidz-registration.html</loc>
+    <lastmod>2026-08-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://imadtbn.github.io/dz_portal/pages/video/markabatidz-registration.html" />
+    <video:video>
+      <video:thumbnail_loc>https://imadtbn.github.io/dz_portal/assets/images/markabaty.jpg</video:thumbnail_loc>
+      <video:title>طريقة حجز موعد فحص المركبات عبر منصة مركبتي DZ</video:title>
+      <video:description>شرح مرئي لطريقة التسجيل و حجز موعد فحص المركبات عبر منصة مركبتي DZ.</video:description>
+      <video:player_loc allow_embed="yes">https://www.youtube.com/embed/GD3ymUiI2m0</video:player_loc>
+    </video:video>
+  </url>
+  <url>
     <loc>https://imadtbn.github.io/dz_portal/pages/video/naftal-tyres.html</loc>
     <lastmod>2026-08-18</lastmod>
     <changefreq>monthly</changefreq>
