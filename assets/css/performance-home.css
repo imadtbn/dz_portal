@@ -1,0 +1,75 @@
+/* Performance layer: intentionally additive; original styles remain untouched. */
+
+.stat-number {
+    display: block;
+    min-width: 4ch;
+    min-height: 1.8em;
+    font-variant-numeric: tabular-nums;
+}
+
+.ad-container {
+    min-height: 280px;
+    contain: layout paint style;
+}
+
+.sector-icon picture {
+    display: block;
+    width: 100%;
+    height: 100%;
+    line-height: 0;
+}
+
+.sector-icon picture img {
+    width: 60%;
+    height: 60%;
+    border-radius: 50%;
+    object-fit: contain;
+}
+
+.app-icon picture img {
+    width: 100%;
+    height: 100%;
+    border-radius: 16px;
+    object-fit: cover;
+}
+
+@media (max-width: 768px) {
+    .hero::before,
+    .hero-badge,
+    .pwa-badge,
+    .sector-card::before,
+    .service-badge,
+    .seo-badge,
+    .new-count,
+    .fab {
+        animation: none !important;
+    }
+
+    .hero::before {
+        opacity: .72;
+    }
+
+    .pwa-badge,
+    .sector-card,
+    .quick-access,
+    .search-box {
+        backdrop-filter: none !important;
+    }
+
+    .sectors-section,
+    .seo-tags,
+    .stats-panel,
+    .footer {
+        content-visibility: auto;
+        contain-intrinsic-size: 800px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: .001ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+        transition-duration: .001ms !important;
+    }
+}

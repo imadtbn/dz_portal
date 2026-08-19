@@ -32,15 +32,26 @@
         href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&display=swap"
         onload="this.onload=null;this.rel='stylesheet'">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/fontawesome.min.css">
-
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/fontawesome.min.css" as="style"
+        onload="this.onload=null;this.rel='stylesheet'">
     <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style"
         onload="this.onload=null;this.rel='stylesheet'">
 
     <link rel="stylesheet" href="assets/css/style-main.css">
-    <link rel="stylesheet" href="assets/css/style-section-header.css">
-    <link rel="stylesheet" href="assets/css/Alert-Modal.css">
-    <link rel="stylesheet" href="assets/css/rating-panel.css">
+    <link rel="preload" href="assets/css/style-section-header.css" as="style"
+        onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="assets/css/Alert-Modal.css" as="style"
+        onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="assets/css/rating-panel.css" as="style"
+        onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="assets/css/performance-home.css" as="style"
+        onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="assets/css/style-section-header.css">
+        <link rel="stylesheet" href="assets/css/Alert-Modal.css">
+        <link rel="stylesheet" href="assets/css/rating-panel.css">
+        <link rel="stylesheet" href="assets/css/performance-home.css">
+    </noscript>
 
     <link rel="manifest" href="manifest.json">
     <meta name="theme-color" content="#006400">
@@ -100,9 +111,9 @@
 
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
-    <!-- تحسين الاتصال المسبق بالخوادم الخارجية -->
-    <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
-    <link rel="preconnect" href="https://www.clarity.ms" crossorigin>
+    <!-- DNS prefetch لخدمات التحليل غير الحرجة -->
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.clarity.ms">
 
     <!-- Google Analytics -->
     <script defer>
@@ -3681,6 +3692,7 @@
         <i class="fas fa-moon"></i>
     </button>
 
+    <main id="main-content">
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
@@ -3787,8 +3799,11 @@
             <p>اختر القطاع للوصول إلى الخدمات الرقمية المتاحة</p>
             <div class="hero-badge pwa-badge" id="installAppBtn" role="button" tabindex="0" style="cursor:pointer;">
                 <div class="sector-icon app-icon">
-                    <img src="assets/images/icon-512.png" alt="تطبيق البوابة الجزائرية للخدمات الرقمية" loading="lazy"
-                        width="120" height="120">
+                    <picture>
+                        <source srcset="assets/images/icon-512.webp" type="image/webp">
+                        <img src="assets/images/icon-512.png" alt="تطبيق البوابة الجزائرية للخدمات الرقمية" loading="lazy"
+                            decoding="async" width="120" height="120">
+                    </picture>
                 </div>
                 <div class="badge-content">
                     <span class="badge-title">تثبيت التطبيق</span>
@@ -3832,8 +3847,11 @@
                     <i class="fas fa-gift"></i> جديد
                 </div>
                 <div class="sector-icon">
-                    <img src="assets/images/exam-compos.PNG" alt="بنك الفروض والاختبارات" loading="lazy" width="120"
-                        height="120">
+                    <picture>
+                        <source srcset="assets/images/exam-compos.webp" type="image/webp">
+                        <img src="assets/images/exam-compos.PNG" alt="بنك الفروض والاختبارات" loading="lazy" decoding="async"
+                            width="120" height="120">
+                    </picture>
                 </div>
                 <h3 class="sector-title">بنك <br> الفروض والاختبارات</h3>
                 <p class="sector-desc">جميع منصات الفروض والاختبارات هنا</p>
@@ -5138,6 +5156,8 @@
             data-ad-client="ca-pub-5656416032906373" data-ad-slot="6528123169"></ins>
     </div>
 
+    </main>
+
     <!-- Footer - 3 Columns -->
     <footer class="footer">
         <div class="footer-content">
@@ -5242,16 +5262,9 @@
 
     <!-- JS الصفحة العام -->
     <script defer src="assets/js/main.js"></script>
-    <script defer src="assets/js/homepageStats.js"></script>
 
-    <!-- قاعدة بيانات محرك البحث -->
-    <script defer src="assets/js/searchData.js"></script>
-    <script defer src="assets/js/siteRating.js"></script>
-
-    <!-- AdSense إعلان  -->
-    <script defer src="assets/js/adsData.js"></script>
-
-    </script>
+    <!-- تحميل الإحصائيات والبحث والتقييمات ومساعد الإعلانات بعد العرض الأول -->
+    <script defer src="assets/js/deferred-homepage.js"></script>
 
 </body>
 
