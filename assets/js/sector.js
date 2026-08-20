@@ -1,37 +1,75 @@
 // Smooth scroll for quick links
-document.querySelectorAll('.quick-link, .sidebar-menu a').forEach(link => {
-    link.addEventListener('click', function (e) {
-        const href = this.getAttribute('href');
-        if (href.startsWith('#')) {
-            e.preventDefault();
-            const target = document.querySelector(href);
-            if (target) {
-                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            }
-        }
-    });
-});
-
-// Active state for quick links
+const sectionLinks = document.querySelectorAll('.quick-link, .sidebar-menu a');
 const sections = document.querySelectorAll('.section-card');
 const quickLinks = document.querySelectorAll('.quick-link');
 
-window.addEventListener('scroll', () => {
+// Calculate the visible area occupied by the sticky header and quick-links bar.
+function getSectionScrollOffset() {
+    const header = document.querySelector('.header');
+    const quickLinksBar = document.querySelector('.quick-links');
+    const headerBottom = header ? header.getBoundingClientRect().bottom : 0;
+    const quickLinksBottom = quickLinksBar ? quickLinksBar.getBoundingClientRect().bottom : 0;
+    const cssOffset = Number.parseFloat(
+        getComputedStyle(document.documentElement).getPropertyValue('--section-scroll-offset')
+    ) || 0;
+
+    return Math.ceil(Math.max(headerBottom, quickLinksBottom, cssOffset)) + 16;
+}
+
+function scrollToSection(target, behavior = 'smooth') {
+    const offset = getSectionScrollOffset();
+    const targetTop = target.getBoundingClientRect().top + window.scrollY - offset;
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    window.scrollTo({
+        top: Math.max(0, targetTop),
+        behavior: reducedMotion ? 'auto' : behavior
+    });
+}
+
+sectionLinks.forEach(link => {
+    link.addEventListener('click', function (event) {
+        const href = this.getAttribute('href') || '';
+        if (!href.startsWith('#')) return;
+
+        const target = document.getElementById(href.slice(1));
+        if (!target) return;
+
+        event.preventDefault();
+        history.pushState(null, '', href);
+        scrollToSection(target);
+    });
+});
+
+function updateActiveSection() {
+    const offset = getSectionScrollOffset();
+    const activationLine = window.scrollY + offset + 1;
     let current = '';
+
     sections.forEach(section => {
-        const sectionTop = section.offsetTop;
-        if (scrollY >= sectionTop - 200) {
-            current = section.getAttribute('id');
+        const sectionTop = section.getBoundingClientRect().top + window.scrollY;
+        if (activationLine >= sectionTop) {
+            current = section.id;
         }
     });
 
     quickLinks.forEach(link => {
-        link.classList.remove('active');
-        if (link.getAttribute('href') === `#${current}`) {
-            link.classList.add('active');
-        }
+        link.classList.toggle('active', link.getAttribute('href') === `#${current}`);
     });
-});
+}
+
+window.addEventListener('scroll', updateActiveSection, { passive: true });
+window.addEventListener('resize', updateActiveSection);
+
+// Align direct hash navigation below the sticky controls after the page is laid out.
+if (window.location.hash) {
+    window.addEventListener('load', () => {
+        const target = document.getElementById(window.location.hash.slice(1));
+        if (target) scrollToSection(target, 'auto');
+    }, { once: true });
+}
+
+updateActiveSection();
 
 // Automatic service counters
 // Count every service card in each section instead of relying on manual HTML numbers.

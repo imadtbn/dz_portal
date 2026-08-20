@@ -43,6 +43,17 @@ body {
     line-height: 1.7;
 }
 
+/* Keep hash targets visible below the sticky header and quick-links bar. */
+html {
+    --section-scroll-offset: 180px;
+    scroll-behavior: smooth;
+    scroll-padding-top: var(--section-scroll-offset);
+}
+
+.section-card {
+    scroll-margin-top: var(--section-scroll-offset);
+}
+
 
 /* Header */
 
@@ -1087,7 +1098,8 @@ body {
     }
 
     html {
-        scroll-padding-top: 90px;
+        --section-scroll-offset: 140px;
+        scroll-padding-top: var(--section-scroll-offset);
     }
 
     html {
