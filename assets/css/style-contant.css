@@ -1033,17 +1033,99 @@
 }
 
 @media (max-width: 768px) {
-    .form-side,
-    .contact-info-side {
-        padding: 2rem 1.25rem;
-    }
-
-    .google-form-frame iframe {
-        min-height: 1120px;
-    }
-
     .form-privacy-note {
         align-items: flex-start;
         text-align: right;
+    }
+}
+
+
+/* Professional Google Form launcher in the restored contact platform */
+.form-launch-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 1.5rem;
+    border: 1px solid var(--gray-200);
+    border-radius: var(--radius-lg);
+    background: linear-gradient(180deg, var(--gray-50) 0%, var(--white) 100%);
+    text-align: center;
+}
+
+.form-launch-icon {
+    width: 72px;
+    height: 72px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+    border-radius: 50%;
+    background: var(--primary-light);
+    color: var(--primary);
+    font-size: 2rem;
+}
+
+.form-launch-content h4 {
+    margin-bottom: 0.5rem;
+    color: var(--gray-900);
+    font-size: 1.25rem;
+}
+
+.form-launch-content p {
+    max-width: 520px;
+    color: var(--gray-600);
+    line-height: 1.8;
+}
+
+.form-feature-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.65rem;
+    width: 100%;
+    margin: 1.5rem 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+.form-feature-list li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.45rem;
+    padding: 0.75rem 0.5rem;
+    border-radius: var(--radius);
+    background: var(--white);
+    color: var(--gray-700);
+    font-size: 0.8rem;
+    line-height: 1.5;
+}
+
+.form-feature-list i {
+    color: var(--primary);
+    font-size: 1rem;
+}
+
+.form-launch-btn {
+    margin-top: 1.5rem;
+    text-decoration: none;
+}
+
+.form-launch-btn:hover {
+    color: var(--white);
+}
+
+.form-launch-card .form-privacy-note {
+    margin-bottom: 0;
+}
+
+@media (max-width: 576px) {
+    .form-feature-list {
+        grid-template-columns: 1fr;
+        text-align: right;
+    }
+
+    .form-feature-list li {
+        flex-direction: row;
+        justify-content: flex-start;
     }
 }
