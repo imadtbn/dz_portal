@@ -161,65 +161,108 @@ window.addEventListener('load', () => {
 });
 
 
-// زر الفلترة والعداد
-
+// فلترة الخدمات الجديدة حسب تاريخ الإضافة
+const NEW_SERVICE_WINDOW_DAYS = 25;
+const NEW_SERVICE_WINDOW_MS = NEW_SERVICE_WINDOW_DAYS * 24 * 60 * 60 * 1000;
 const filterBtns = document.querySelectorAll('.filter-btn');
 const cards = document.querySelectorAll('.sector-card');
+const newServicesBtn = document.getElementById('newServicesBtn');
+const newServicesCount = document.getElementById('newServicesCount');
+let activeFilter = 'all';
+let newServicesRefreshTimer = null;
 
-filterBtns.forEach(btn => {
+function parseNewServiceDate(value) {
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(value || '')) return null;
 
-  btn.addEventListener('click', () => {
+  const [year, month, day] = value.split('-').map(Number);
+  const timestamp = Date.UTC(year, month - 1, day);
+  const date = new Date(timestamp);
 
-    filterBtns.forEach(b =>
-      b.classList.remove('active')
-    );
-
-    btn.classList.add('active');
-
-    const filter = btn.dataset.filter;
-
-    cards.forEach(card => {
-
-      const isNew =
-        card.querySelector('.service-badge');
-
-      if (filter === 'all') {
-        card.style.display = '';
-      }
-      else {
-        card.style.display =
-          isNew ? '' : 'none';
-      }
-
-    });
-
-  });
-
-});
-
-
-document.addEventListener("DOMContentLoaded", () => {
-
-  const btn = document.getElementById("newServicesBtn");
-
-  const count = document.querySelectorAll(
-    ".sector-card[data-new='true']"
-  ).length;
-
-  if (count > 0) {
-
-    btn.innerHTML = `
-            <i class="fas fa-sparkles"></i>
-            الخدمات الجديدة (${count})
-        `;
-
-  } else {
-
-    btn.style.display = "none";
-
+  // رفض التواريخ غير الصحيحة مثل 2026-02-31 بدلاً من تطبيعها تلقائياً.
+  if (
+    date.getUTCFullYear() !== year ||
+    date.getUTCMonth() !== month - 1 ||
+    date.getUTCDate() !== day
+  ) {
+    return null;
   }
 
+  return timestamp;
+}
+
+function isNewService(card, now = Date.now()) {
+  const addedAt = parseNewServiceDate(card.dataset.newSince);
+  return addedAt !== null && addedAt <= now && now < addedAt + NEW_SERVICE_WINDOW_MS;
+}
+
+function applyServiceFilter(filter = activeFilter) {
+  activeFilter = filter === 'new' ? 'new' : 'all';
+
+  filterBtns.forEach(btn => {
+    const isActive = btn.dataset.filter === activeFilter;
+    btn.classList.toggle('active', isActive);
+    btn.setAttribute('aria-pressed', String(isActive));
+  });
+
+  cards.forEach(card => {
+    const shouldShow = activeFilter === 'all' || card.dataset.new === 'true';
+    card.style.display = shouldShow ? '' : 'none';
+  });
+}
+
+function refreshNewServices() {
+  const now = Date.now();
+  let newCount = 0;
+  let nextRefreshAt = Infinity;
+
+  cards.forEach(card => {
+    const addedAt = parseNewServiceDate(card.dataset.newSince);
+    const isNew = isNewService(card, now);
+    const badge = card.querySelector('.service-badge');
+
+    card.dataset.new = String(isNew);
+    card.classList.toggle('is-new', isNew);
+
+    if (badge) {
+      badge.hidden = !isNew;
+      badge.setAttribute('aria-hidden', String(!isNew));
+    }
+
+    if (isNew) newCount += 1;
+
+    if (addedAt !== null) {
+      const boundary = addedAt > now ? addedAt : addedAt + NEW_SERVICE_WINDOW_MS;
+      nextRefreshAt = Math.min(nextRefreshAt, boundary);
+    }
+  });
+
+  if (newServicesCount) {
+    newServicesCount.textContent = newCount > 0 ? String(newCount) : '';
+    newServicesCount.hidden = newCount === 0;
+  }
+
+  if (newServicesBtn) {
+    newServicesBtn.style.display = newCount > 0 ? '' : 'none';
+  }
+
+  // إذا انتهت آخر خدمة أثناء تفعيل الفلتر، نعيد العرض تلقائياً إلى جميع الخدمات.
+  if (activeFilter === 'new' && newCount === 0) activeFilter = 'all';
+  applyServiceFilter(activeFilter);
+
+  if (newServicesRefreshTimer) window.clearTimeout(newServicesRefreshTimer);
+  if (Number.isFinite(nextRefreshAt)) {
+    const delay = Math.max(1000, nextRefreshAt - Date.now() + 100);
+    newServicesRefreshTimer = window.setTimeout(refreshNewServices, delay);
+  }
+}
+
+filterBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    applyServiceFilter(btn.dataset.filter);
+  });
 });
+
+document.addEventListener('DOMContentLoaded', refreshNewServices);
 
 //النافذة التحذيرية
 

@@ -31,4 +31,4 @@ jobs:
           node-version: 20
 
       - name: Run site integrity tests
-        run: node --test tests/site-integrity.test.js
+        run: node --test tests/*.test.js

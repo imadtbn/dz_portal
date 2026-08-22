@@ -1427,7 +1427,12 @@ body {
 }
 
 /* شارة جديد */
+.service-badge[hidden] {
+    display: none !important;
+}
+
 .service-badge {
+
     position: absolute;
     top: 10px;
     right: 10px;
