@@ -16,7 +16,19 @@ from bs4 import BeautifulSoup
 ROOT = Path(__file__).resolve().parents[1]
 BASE = "https://imadtbn.github.io/dz_portal/"
 SKIP_FILES = {"google4e08a8803a39e9f9.html", "yandex_eedcfd7f491ddd14.html"}
+KEYWORD_CATALOG = ROOT / "seo" / "keyword-catalog.json"
 META_RE = re.I | re.S
+
+
+def load_keyword_catalog() -> dict[str, list[str]]:
+    try:
+        payload = json.loads(KEYWORD_CATALOG.read_text(encoding="utf-8"))
+        return {item["path"]: item.get("keywords", []) for item in payload.get("sectors", []) if item.get("path")}
+    except (OSError, json.JSONDecodeError, TypeError):
+        return {}
+
+
+KEYWORD_MAP = load_keyword_catalog()
 
 
 def esc(value: str) -> str:
@@ -126,14 +138,16 @@ def git_dates(relative: str) -> tuple[str, str]:
     return today, today
 
 
-def make_keywords(soup: BeautifulSoup, title: str, existing: str) -> str:
+def make_keywords(soup: BeautifulSoup, title: str, existing: str, relative: str = "") -> str:
     candidates: list[str] = []
-    if existing:
+    catalog_keywords = KEYWORD_MAP.get(relative, [])
+    candidates.extend(catalog_keywords)
+    if not catalog_keywords and existing:
         candidates.extend(part.strip() for part in re.split(r"[,،]", existing) if part.strip())
     candidates.append(re.split(r"\s*[|–—-]\s*", title, maxsplit=1)[0].strip())
-    for node in soup.select("main h1, main h2, main h3, .service-title, .sector-title, .section-title")[:18]:
+    for node in soup.select("main h1, main h2, main h3, .service-title, .sector-title, .section-title")[:12]:
         value = clean_text(node.get_text(" ", strip=True), 90)
-        if value:
+        if value and value not in candidates:
             candidates.append(value)
     seen: set[str] = set()
     result: list[str] = []
@@ -384,7 +398,7 @@ def enhance(path: Path) -> bool:
     existing_description = next((m.get("content", "").strip() for m in head.select('meta[name="description"]') if m.get("content")), "")
     description = make_description(soup, title, existing_description)
     existing_keywords = next((m.get("content", "").strip() for m in head.select('meta[name="keywords"]') if m.get("content")), "")
-    keywords = make_keywords(soup, title, existing_keywords)
+    keywords = make_keywords(soup, title, existing_keywords, relative)
     page_url = canonical_for(relative)
     image = image_for(soup, page_url)
     modified, published = git_dates(relative)

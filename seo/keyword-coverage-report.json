@@ -1,0 +1,707 @@
+{
+  "generated_at": "2026-08-24T07:31:11+00:00",
+  "pages": 77,
+  "below_70_percent": 5,
+  "rows": [
+    {
+      "path": "sectors/adsns.html",
+      "sector": "adsns",
+      "tracked": 3,
+      "covered": 0,
+      "coverage_percent": 0.0,
+      "missing": [
+        "الجزائر",
+        "البوابة الجزائرية للخدمات الرقمية",
+        "adsns"
+      ]
+    },
+    {
+      "path": "sectors/bank.html",
+      "sector": "بنوك عمومية وخاصة في الجزائر",
+      "tracked": 9,
+      "covered": 5,
+      "coverage_percent": 55.6,
+      "missing": [
+        "البنوك الجزائرية",
+        "فتح حساب بنكي",
+        "القروض البنكية",
+        "الخدمات البنكية الإلكترونية"
+      ]
+    },
+    {
+      "path": "sectors/nifenligne.html",
+      "sector": "الترقيم الجبائي",
+      "tracked": 7,
+      "covered": 4,
+      "coverage_percent": 57.1,
+      "missing": [
+        "المعرف الجبائي",
+        "الضرائب الجزائرية",
+        "التسجيل الجبائي"
+      ]
+    },
+    {
+      "path": "sectors/assurance.html",
+      "sector": "ووكالات التأمين على الممتلكات في الجزائر",
+      "tracked": 8,
+      "covered": 5,
+      "coverage_percent": 62.5,
+      "missing": [
+        "التأمين في الجزائر",
+        "تأمين الممتلكات",
+        "تعويضات التأمين"
+      ]
+    },
+    {
+      "path": "sectors/transport.html",
+      "sector": "النقل والمواصلات في الجزائر",
+      "tracked": 11,
+      "covered": 7,
+      "coverage_percent": 63.6,
+      "missing": [
+        "النقل في الجزائر",
+        "حجز تذاكر الطيران",
+        "حجز تذاكر القطار",
+        "مواقيت النقل"
+      ]
+    },
+    {
+      "path": "sectors/mhuv.gov.html",
+      "sector": "السكن والعمران - إكتشف خدمات الإلكترونية",
+      "tracked": 12,
+      "covered": 9,
+      "coverage_percent": 75.0,
+      "missing": [
+        "السكن الاجتماعي",
+        "السكن الترقوي المدعم",
+        "العقار في الجزائر"
+      ]
+    },
+    {
+      "path": "sectors/tabioucom.html",
+      "sector": "طابعكم - الطابع الجبائي",
+      "tracked": 8,
+      "covered": 6,
+      "coverage_percent": 75.0,
+      "missing": [
+        "الطابع الجبائي الإلكتروني",
+        "شراء الطابع الجبائي"
+      ]
+    },
+    {
+      "path": "sectors/aadl.html",
+      "sector": "وكالة عدل لتحسين السكن وتطويره",
+      "tracked": 13,
+      "covered": 10,
+      "coverage_percent": 76.9,
+      "missing": [
+        "سكن عدل",
+        "دفع كراء عدل",
+        "التسجيل في عدل"
+      ]
+    },
+    {
+      "path": "sectors/douane.html",
+      "sector": "الجمارك الجزائرية",
+      "tracked": 9,
+      "covered": 7,
+      "coverage_percent": 77.8,
+      "missing": [
+        "الخدمات الجمركية الإلكترونية",
+        "التجارة الخارجية"
+      ]
+    },
+    {
+      "path": "sectors/seaal.html",
+      "sector": "سيال للمياه والتطهير Seeal ، فضائكم الرقمي",
+      "tracked": 10,
+      "covered": 8,
+      "coverage_percent": 80.0,
+      "missing": [
+        "دفع فاتورة الماء",
+        "فاتورة SEAAL"
+      ]
+    },
+    {
+      "path": "sectors/ade.html",
+      "sector": "الجزائرية للمياه ADE ، فضائكم الرقمي",
+      "tracked": 11,
+      "covered": 9,
+      "coverage_percent": 81.8,
+      "missing": [
+        "دفع فاتورة الماء",
+        "فاتورة ADE"
+      ]
+    },
+    {
+      "path": "sectors/casnos.html",
+      "sector": "الصندوق الوطني للضمان الاجتماعي للعمال الغير أجراء (CASNOS الجزائر | الضمان الاجتماعي للعمال غير الأ",
+      "tracked": 11,
+      "covered": 9,
+      "coverage_percent": 81.8,
+      "missing": [
+        "الضمان الاجتماعي لغير الأجراء",
+        "شهادة الانتساب"
+      ]
+    },
+    {
+      "path": "sectors/mfp.gov.html",
+      "sector": "خدمات التكوين والتعليم المهنيين - إكتشف الآن",
+      "tracked": 11,
+      "covered": 9,
+      "coverage_percent": 81.8,
+      "missing": [
+        "التسجيل في التكوين المهني",
+        "منصة مهنتي"
+      ]
+    },
+    {
+      "path": "sectors/sntf.html",
+      "sector": "السكك الحديدية SNTF في الجزائر",
+      "tracked": 19,
+      "covered": 16,
+      "coverage_percent": 84.2,
+      "missing": [
+        "مواقيت قطارات الجزائر",
+        "حجز تذاكر SNTF",
+        "القطار في الجزائر"
+      ]
+    },
+    {
+      "path": "sectors/awlyaa-education.html",
+      "sector": "وزارة التربية الوطنية",
+      "tracked": 15,
+      "covered": 13,
+      "coverage_percent": 86.7,
+      "missing": [
+        "نتائج التلاميذ",
+        "التسجيل في فضاء الأولياء"
+      ]
+    },
+    {
+      "path": "sectors/interieur.html",
+      "sector": "وزارة الداخلية والجماعات المحلية إكتشف خدمات الإلكترونية",
+      "tracked": 15,
+      "covered": 13,
+      "coverage_percent": 86.7,
+      "missing": [
+        "وزارة الداخلية الجزائرية",
+        "بطاقة التعريف البيومترية"
+      ]
+    },
+    {
+      "path": "sectors/qassimatouka.html",
+      "sector": "قسيمتك - قسيمة السيارات",
+      "tracked": 8,
+      "covered": 7,
+      "coverage_percent": 87.5,
+      "missing": [
+        "شراء قسيمة السيارات"
+      ]
+    },
+    {
+      "path": "sectors/mtess.html",
+      "sector": "وزارة العمل و التشغيل والضمان الإجتماعي",
+      "tracked": 17,
+      "covered": 15,
+      "coverage_percent": 88.2,
+      "missing": [
+        "وزارة العمل والتشغيل والضمان الاجتماعي",
+        "منحة البطالة"
+      ]
+    },
+    {
+      "path": "sectors/anem.html",
+      "sector": "الوكالة الوطنية للتشغيل",
+      "tracked": 9,
+      "covered": 8,
+      "coverage_percent": 88.9,
+      "missing": [
+        "التسجيل في وكالة التشغيل"
+      ]
+    },
+    {
+      "path": "sectors/education.html",
+      "sector": "وزارة التربية الوطنية",
+      "tracked": 19,
+      "covered": 17,
+      "coverage_percent": 89.5,
+      "missing": [
+        "التربية والتعليم",
+        "نتائج التلاميذ"
+      ]
+    },
+    {
+      "path": "sectors/mjustice.html",
+      "sector": "وزارة العدال الجزائرية",
+      "tracked": 11,
+      "covered": 10,
+      "coverage_percent": 90.9,
+      "missing": [
+        "السوابق العدلية"
+      ]
+    },
+    {
+      "path": "sectors/seor.html",
+      "sector": "سيور للمياه Seor ، فضائكم الرقمي",
+      "tracked": 11,
+      "covered": 10,
+      "coverage_percent": 90.9,
+      "missing": [
+        "توزيع المياه"
+      ]
+    },
+    {
+      "path": "sectors/mesrs.dz.html",
+      "sector": "وزارة التعليم العالي والبحث العلمي",
+      "tracked": 12,
+      "covered": 11,
+      "coverage_percent": 91.7,
+      "missing": [
+        "الجامعات الجزائرية"
+      ]
+    },
+    {
+      "path": "sectors/poste.html",
+      "sector": "بريد الجزائر - إكتشف خدمات الإلكترونية",
+      "tracked": 12,
+      "covered": 11,
+      "coverage_percent": 91.7,
+      "missing": [
+        "تعبئة البطاقة الذهبية"
+      ]
+    },
+    {
+      "path": "sectors/progres.mesrs.html",
+      "sector": "الخدمات الجامعية",
+      "tracked": 12,
+      "covered": 11,
+      "coverage_percent": 91.7,
+      "missing": [
+        "التسجيل الجامعي"
+      ]
+    },
+    {
+      "path": "sectors/mf.gov.html",
+      "sector": "وزارة المالية",
+      "tracked": 14,
+      "covered": 13,
+      "coverage_percent": 92.9,
+      "missing": [
+        "الضرائب الجزائرية"
+      ]
+    },
+    {
+      "path": "sectors/sonalgaz.html",
+      "sector": "سونلغاز للكهرباء والغاز ، فضائكم الرقمي",
+      "tracked": 14,
+      "covered": 13,
+      "coverage_percent": 92.9,
+      "missing": [
+        "فاتورة الغاز"
+      ]
+    },
+    {
+      "path": "sectors/cnr.html",
+      "sector": "CNR الجزائر | خدمات التقاعد والضمان الاجتماعي(CNR)",
+      "tracked": 15,
+      "covered": 14,
+      "coverage_percent": 93.3,
+      "missing": [
+        "التقاعد في الجزائر"
+      ]
+    },
+    {
+      "path": "sectors/aapi.html",
+      "sector": "الوكالة الوطنية لترقية الإستثمار",
+      "tracked": 7,
+      "covered": 7,
+      "coverage_percent": 100.0,
+      "missing": []
+    },
+    {
+      "path": "sectors/algerietelecom.html",
+      "sector": "إتصالات الجزائر - إكتشف خدمات الإلكترونية",
+      "tracked": 9,
+      "covered": 9,
+      "coverage_percent": 100.0,
+      "missing": []
+    },
+    {
+      "path": "sectors/anae.html",
+      "sector": "المقاول الذاتي - إكتشف الآن",
+      "tracked": 7,
+      "covered": 7,
+      "coverage_percent": 100.0,
+      "missing": []
+    },
+    {
+      "path": "sectors/anpdp.html",
+      "sector": "السلطة الوطنية لحماية المعطيات ذات الطابع الشخصي",
+      "tracked": 7,
+      "covered": 7,
+      "coverage_percent": 100.0,
+      "missing": []
+    },
+    {
+      "path": "sectors/arpce.html",
+      "sector": "خدمات سلطة ضبط البريد والاتصالات الالكترونية (ARPCE)",
+      "tracked": 6,
+      "covered": 6,
+      "coverage_percent": 100.0,
+      "missing": []
+    },
+    {
+      "path": "sectors/campuce.jobs.html",
+      "sector": "منصة توظيف مخصصة للطلبة الجزائريين",
+      "tracked": 5,
+      "covered": 5,
+      "coverage_percent": 100.0,
+      "missing": []
+    },
+    {
+      "path": "sectors/cnas.html",
+      "sector": "الصندوق الوطني للضمان الاجتماعي للعمال الأجراء (CNAS الجزائر | الضمان الاجتماعي للعمال الأجراء)",
+      "tracked": 12,
+      "covered": 12,
+      "coverage_percent": 100.0,
+      "missing": []
+    },
+    {
+      "path": "sectors/commerce.html",
+      "sector": "وزارة التجارة والجمارك",
+      "tracked": 7,
+      "covered": 7,
+      "coverage_percent": 100.0,
+      "missing": []
+    },
+    {
+      "path": "sectors/creg.gov.html",
+      "sector": "لجنة ضبط الكهرباء والغاز CREG، فضاؤكم الرقمي للخدمات التنظيمية والكهرباء والغاز",
+      "tracked": 7,
+      "covered": 7,
+      "coverage_percent": 100.0,
+      "missing": []
+    },
+    {
+      "path": "sectors/dgfp.gov.html",
+      "sector": "المديرية العامة للوظيفة العمومية و الإصلاح الإداري",
+      "tracked": 8,
+      "covered": 8,
+      "coverage_percent": 100.0,
+      "missing": []
+    },
+    {
+      "path": "sectors/dgsn.html",
+      "sector": "الشرطة الجزائرية",
+      "tracked": 7,
+      "covered": 7,
+      "coverage_percent": 100.0,
+      "missing": []
+    },
+    {
+      "path": "sectors/djezzy.html",
+      "sector": "خدمات الهاتف النقال - جازي",
+      "tracked": 7,
+      "covered": 7,
+      "coverage_percent": 100.0,
+      "missing": []
+    },
+    {
+      "path": "sectors/dzexam1.html",
+      "sector": "بنك الفروض والإختبارات dzexam1",
+      "tracked": 6,
+      "covered": 6,
+      "coverage_percent": 100.0,
+      "missing": []
+    },
+    {
+      "path": "sectors/dzexams.html",
+      "sector": "بنك الفروض والإختبارات dzexams",
+      "tracked": 7,
+      "covered": 7,
+      "coverage_percent": 100.0,
+      "missing": []
+    },
+    {
+      "path": "sectors/dzexams.pro.html",
+      "sector": "بنك الفروض والإختبارات dzexams.pro",
+      "tracked": 7,
+      "covered": 7,
+      "coverage_percent": 100.0,
+      "missing": []
+    },
+    {
+      "path": "sectors/dztests.html",
+      "sector": "بنك الفروض والإختبارات dztests",
+      "tracked": 6,
+      "covered": 6,
+      "coverage_percent": 100.0,
+      "missing": []
+    },
+    {
+      "path": "sectors/ecolerradja.html",
+      "sector": "بنك الفروض والإختبارات ecolerradja",
+      "tracked": 5,
+      "covered": 5,
+      "coverage_percent": 100.0,
+      "missing": []
+    },
+    {
+      "path": "sectors/eddirasa.html",
+      "sector": "بنك الفروض والإختبارات Eddirasa",
+      "tracked": 7,
+      "covered": 7,
+      "coverage_percent": 100.0,
+      "missing": []
+    },
+    {
+      "path": "sectors/educationdz.html",
+      "sector": "بنك الفروض والإختبارات education dz",
+      "tracked": 7,
+      "covered": 7,
+      "coverage_percent": 100.0,
+      "missing": []
+    },
+    {
+      "path": "sectors/emergency.html",
+      "sector": "أرقام الطوارئ والنجدة",
+      "tracked": 8,
+      "covered": 8,
+      "coverage_percent": 100.0,
+      "missing": []
+    },
+    {
+      "path": "sectors/enpi.html",
+      "sector": "ديوان الترقية والتسيير العقاري",
+      "tracked": 8,
+      "covered": 8,
+      "coverage_percent": 100.0,
+      "missing": []
+    },
+    {
+      "path": "sectors/etudpdf.html",
+      "sector": "بنك الفروض والإختبارات موقع التعليم الجزائري",
+      "tracked": 7,
+      "covered": 7,
+      "coverage_percent": 100.0,
+      "missing": []
+    },
+    {
+      "path": "sectors/exam-compos.html",
+      "sector": "بنك الفروض والإختبارات",
+      "tracked": 6,
+      "covered": 6,
+      "coverage_percent": 100.0,
+      "missing": []
+    },
+    {
+      "path": "sectors/facteur.html",
+      "sector": "تسديد فاتورة إستهلاك الكهرباء، الغاز والماء",
+      "tracked": 10,
+      "covered": 10,
+      "coverage_percent": 100.0,
+      "missing": []
+    },
+    {
+      "path": "sectors/facture_loyer.html",
+      "sector": "تسديد فاتورة إستئجار السكن",
+      "tracked": 8,
+      "covered": 8,
+      "coverage_percent": 100.0,
+      "missing": []
+    },
+    {
+      "path": "sectors/fadaeldjazair.html",
+      "sector": "المديرية العامة للأملاك الوطنية",
+      "tracked": 6,
+      "covered": 6,
+      "coverage_percent": 100.0,
+      "missing": []
+    },
+    {
+      "path": "sectors/hatplc.html",
+      "sector": "السلطة العليا للشفافية والوقاية من الفساد ومكافحته",
+      "tracked": 6,
+      "covered": 6,
+      "coverage_percent": 100.0,
+      "missing": []
+    },
+    {
+      "path": "sectors/hcn.html",
+      "sector": "المحافظة السامية للرقمنة",
+      "tracked": 6,
+      "covered": 6,
+      "coverage_percent": 100.0,
+      "missing": []
+    },
+    {
+      "path": "sectors/ina-elections.html",
+      "sector": "السلطة الوطنية المستقلة للانتخابات",
+      "tracked": 5,
+      "covered": 5,
+      "coverage_percent": 100.0,
+      "missing": []
+    },
+    {
+      "path": "sectors/madr.html",
+      "sector": "وزارة الفلاحة والتنمية الريفية والصيد البحري",
+      "tracked": 10,
+      "covered": 10,
+      "coverage_percent": 100.0,
+      "missing": []
+    },
+    {
+      "path": "sectors/markabatidz.html",
+      "sector": "منصة فحص المركبات - مركبتي DZ",
+      "tracked": 5,
+      "covered": 5,
+      "coverage_percent": 100.0,
+      "missing": []
+    },
+    {
+      "path": "sectors/mdn.html",
+      "sector": "وزارة الدفاع الوطني",
+      "tracked": 6,
+      "covered": 6,
+      "coverage_percent": 100.0,
+      "missing": []
+    },
+    {
+      "path": "sectors/me.gov.html",
+      "sector": "وزارة البيئة وجودة الحياة",
+      "tracked": 7,
+      "covered": 7,
+      "coverage_percent": 100.0,
+      "missing": []
+    },
+    {
+      "path": "sectors/medjedel.html",
+      "sector": "أمجدل - Medjedel",
+      "tracked": 7,
+      "covered": 7,
+      "coverage_percent": 100.0,
+      "missing": []
+    },
+    {
+      "path": "sectors/mfa.html",
+      "sector": "الشؤون الخارجية والجالية الجزائرية",
+      "tracked": 7,
+      "covered": 7,
+      "coverage_percent": 100.0,
+      "missing": []
+    },
+    {
+      "path": "sectors/mjeunesse.gov.html",
+      "sector": "خدمات وزارة الشباب",
+      "tracked": 6,
+      "covered": 6,
+      "coverage_percent": 100.0,
+      "missing": []
+    },
+    {
+      "path": "sectors/mobilis.html",
+      "sector": "خدمات الهاتف النقال - موبيليس",
+      "tracked": 7,
+      "covered": 7,
+      "coverage_percent": 100.0,
+      "missing": []
+    },
+    {
+      "path": "sectors/msnfcf.gov.html",
+      "sector": "التضامن والأسرة وقضايا المرأة",
+      "tracked": 7,
+      "covered": 7,
+      "coverage_percent": 100.0,
+      "missing": []
+    },
+    {
+      "path": "sectors/msport.gov.html",
+      "sector": "وزارة الرياضة",
+      "tracked": 4,
+      "covered": 4,
+      "coverage_percent": 100.0,
+      "missing": []
+    },
+    {
+      "path": "sectors/naftal.html",
+      "sector": "الشركة الوطنية نفطال للمواد البيترولية",
+      "tracked": 8,
+      "covered": 8,
+      "coverage_percent": 100.0,
+      "missing": []
+    },
+    {
+      "path": "sectors/ocrc.html",
+      "sector": "الديوان المركزي لقمع الفساد",
+      "tracked": 4,
+      "covered": 4,
+      "coverage_percent": 100.0,
+      "missing": []
+    },
+    {
+      "path": "sectors/onpo.html",
+      "sector": "الديوان الوطني للحج والعمرة",
+      "tracked": 4,
+      "covered": 4,
+      "coverage_percent": 100.0,
+      "missing": []
+    },
+    {
+      "path": "sectors/ooredoo.html",
+      "sector": "خدمات الهاتف النقال - أوريدو",
+      "tracked": 7,
+      "covered": 7,
+      "coverage_percent": 100.0,
+      "missing": []
+    },
+    {
+      "path": "sectors/opgi.html",
+      "sector": "ديوان الترقية والتسيير العقاري",
+      "tracked": 6,
+      "covered": 6,
+      "coverage_percent": 100.0,
+      "missing": []
+    },
+    {
+      "path": "sectors/ostad-education.html",
+      "sector": "وزارة التربية الوطنية",
+      "tracked": 11,
+      "covered": 11,
+      "coverage_percent": 100.0,
+      "missing": []
+    },
+    {
+      "path": "sectors/sante.html",
+      "sector": "الصحة العمومية",
+      "tracked": 10,
+      "covered": 10,
+      "coverage_percent": 100.0,
+      "missing": []
+    },
+    {
+      "path": "sectors/t-onec.html",
+      "sector": "بنك الفروض والإختبارات t-onec",
+      "tracked": 6,
+      "covered": 6,
+      "coverage_percent": 100.0,
+      "missing": []
+    },
+    {
+      "path": "sectors/telephon.html",
+      "sector": "خدمات الهاتف النقال - إكتشف الخدمات الرقمية",
+      "tracked": 7,
+      "covered": 7,
+      "coverage_percent": 100.0,
+      "missing": []
+    },
+    {
+      "path": "sectors/ufc.dz.html",
+      "sector": "جامعة التكوين المتواصل",
+      "tracked": 5,
+      "covered": 5,
+      "coverage_percent": 100.0,
+      "missing": []
+    }
+  ]
+}
