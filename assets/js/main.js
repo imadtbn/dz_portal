@@ -69,42 +69,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-// Google Analytics - تحميل عند التفاعل الأول لتحسين الأداء والخصوصية
-
-function loadAnalytics() {
-
-  if (window.analyticsLoaded) return;
-  window.analyticsLoaded = true;
-
-  const gtag = document.createElement('script');
-  gtag.src = 'https://www.googletagmanager.com/gtag/js?id=G-K23WYKK60X';
-  gtag.async = true;
-  document.head.appendChild(gtag);
-
-}
-
-window.addEventListener('scroll', loadAnalytics, { once: true });
-window.addEventListener('click', loadAnalytics, { once: true });
-
-// تحميل تحليلات إضافية بعد 3 ثواني من التحميل لتحسين الأداء
-window.addEventListener('load', () => {
-  setTimeout(() => {
-
-    // analytics هنا
-
-  }, 3000);
-});
-
-// تسجيل حدث زيارة الصفحة
-function trackPageVisit() {
-  if (window.gtag) {
-    gtag('event', 'page_view', {
-      page_title: document.title,
-      page_location: window.location.href,
-      page_path: window.location.pathname
-    });
-  }
-}
+// تتم إدارة Analytics وGTM وAdSense وMicrosoft Clarity مركزياً عبر site-tags.js.
 
 // ====== تثبيت التطبيق (PWA) ======
 let deferredPrompt;

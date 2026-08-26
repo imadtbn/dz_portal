@@ -5,6 +5,12 @@ import test from 'node:test';
 import { fileURLToPath } from 'node:url';
 
 const root = fileURLToPath(new URL('../', import.meta.url));
+const centralLoader = 'assets/js/site-tags.js';
+
+function isVerificationFile(path) {
+  const name = path.split('/').pop();
+  return name.startsWith('yandex_') || /^google[0-9a-f]+\.html$/i.test(name);
+}
 
 function collectHtmlFiles(directory) {
   const files = [];
@@ -19,22 +25,47 @@ function collectHtmlFiles(directory) {
   return files;
 }
 
-test('each HTML page has at most one Analytics and GTM bootstrap', () => {
-  const duplicatePages = [];
+function count(pattern, html) {
+  return (html.match(pattern) || []).length;
+}
+
+test('all HTML documents use one central site-tags loader', () => {
+  const violations = [];
 
   for (const path of collectHtmlFiles(root)) {
     const html = readFileSync(path, 'utf8');
-    const gtagConfigCount = (html.match(/gtag\(\s*["']config["']\s*,/gi) || []).length;
-    const gtmBootstrapCount = (html.match(/['"]gtm\.start['"]/gi) || []).length;
+    if (!/<head\b/i.test(html)) continue;
 
-    if (gtagConfigCount > 1 || gtmBootstrapCount > 1) {
-      duplicatePages.push({
-        page: relative(root, path),
-        gtagConfigCount,
-        gtmBootstrapCount,
-      });
+    const page = relative(root, path);
+    if (isVerificationFile(page)) continue;
+    const depth = page.split('/').length - 1;
+    const expectedLoader = `${'../'.repeat(depth)}${centralLoader}`;
+    const loaderCount = count(/<script\b[^>]*\bsrc\s*=\s*["'][^"']*site-tags\.js[^"']*["'][^>]*>/gi, html);
+    const legacy = {
+      gtagConfig: count(/gtag\s*\(\s*["']config["']\s*,/gi, html),
+      gtagSource: count(/gtag\/js/gi, html),
+      gtmBootstrap: count(/["']gtm\.start["']/gi, html),
+      gtmSource: count(/googletagmanager\.com\/gtm\.js/gi, html),
+      adsenseSource: count(/adsbygoogle\.js/gi, html),
+      claritySource: count(/clarity\.ms\/tag/gi, html),
+      adsDataSource: count(/assets\/js\/adsData\.js/gi, html),
+    };
+
+    if (loaderCount !== 1 || !html.includes(expectedLoader) || Object.values(legacy).some((value) => value > 0)) {
+      violations.push({ page, loaderCount, expectedLoader, legacy });
     }
   }
 
-  assert.deepEqual(duplicatePages, []);
+  assert.deepEqual(violations, []);
+});
+
+test('site-tags.js centrally loads GTM, AdSense, and Clarity with guards', () => {
+  const source = readFileSync(join(root, 'assets/js/site-tags.js'), 'utf8');
+  assert.match(source, /GTM-NW3BWPF6/);
+  assert.match(source, /ca-pub-5656416032906373/);
+  assert.match(source, /tjk39ubxx1/);
+  assert.match(source, /__dzPortalSiteTagsLoaded/);
+  assert.match(source, /dzExternalSrc/);
+  assert.match(source, /data-dz-ads-queued/);
+  assert.doesNotMatch(source, /gtag\s*\(\s*["']config["']/i);
 });
