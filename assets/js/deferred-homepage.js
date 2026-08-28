@@ -1,12 +1,18 @@
 (() => {
   'use strict';
 
+  const loaderScript = document.currentScript;
+  const assetsRoot = loaderScript
+    ? new URL('../', loaderScript.src)
+    : new URL('assets/', document.baseURI);
+
   const loadLocalScript = (src, callback) => {
-    if (document.querySelector(`script[data-deferred-src="${src}"]`)) return;
+    const resolvedSrc = new URL(src, assetsRoot).href;
+    if (document.querySelector(`script[data-deferred-src="${resolvedSrc}"]`)) return;
 
     const script = document.createElement('script');
-    script.src = src;
-    script.dataset.deferredSrc = src;
+    script.src = resolvedSrc;
+    script.dataset.deferredSrc = resolvedSrc;
     script.addEventListener('load', () => callback?.(), { once: true });
     script.addEventListener('error', () => {
       console.warn('تعذر تحميل السكريبت المحلي المؤجل:', src);
@@ -27,7 +33,7 @@
   const loadSearch = () => {
     if (searchRequested) return;
     searchRequested = true;
-    loadLocalScript('assets/js/searchData.js', () => {
+    loadLocalScript('js/searchData.js', () => {
       if (searchInput?.value) {
         searchInput.dispatchEvent(new Event('input', { bubbles: true }));
       }
@@ -39,7 +45,7 @@
   }
 
   window.addEventListener('load', () => {
-    scheduleIdle(() => loadLocalScript('assets/js/homepageStats.js'), 2500);
-    scheduleIdle(() => loadLocalScript('assets/js/siteRating.js'), 3500);
+    scheduleIdle(() => loadLocalScript('js/homepageStats.js'), 2500);
+    scheduleIdle(() => loadLocalScript('js/siteRating.js'), 3500);
   }, { once: true, passive: true });
 })();
