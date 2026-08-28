@@ -332,6 +332,46 @@ body {
     color: #1565c0;
 }
 
+.condolence-theme {
+    --alert-color: #555;
+    --alert-dark: #292929;
+    --alert-bg: #f3f3f3;
+    --alert-accent: #777;
+}
+
+.condolence-theme .alert-content {
+    border-top: 6px solid #555;
+}
+
+.condolence-theme .alert-icon {
+    background: #eeeeee;
+    color: #555;
+}
+
+.condolence-theme .alert-badge {
+    background: #eeeeee;
+    color: #555;
+}
+
+.condolence-theme .condolence-message {
+    margin: 16px 0;
+    padding: 14px;
+
+    background: #f7f7f7;
+    border-radius: 14px;
+
+    text-align: center;
+    line-height: 1.9;
+    color: #444;
+}
+
+.condolence-theme .alert-btn {
+    background: linear-gradient(135deg, #444, #666);
+}
+
+.condolence-theme .alert-footer {
+    color: #555;
+}
 
 /* ===== SNTF Theme ===== */
 
