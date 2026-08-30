@@ -1,1 +1,41 @@
+name: Gemini AI Integration
+
+# تحديد متى يعمل السكربت (عند الدفع للفرع main)
+on:
+  push:
+    branches:
+      - main
+
+# منح الصلاحيات الأساسية لتعديل الكود
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  gemini-task:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js or Python (حسب لغة السكربت الخاص بك)
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Run Gemini Script
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: |
+          # هنا تضع أمر تشغيل السكربت الخاص بك، مثلاً:
+          # node run-gemini.js
+          echo "Running Gemini integration..."
+
+      - name: Commit and Push Changes to Main
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add .
+          # التحقق مما إذا كانت هناك تعديلات فعلية قبل الحفظ
+          git diff --quiet && git diff --staged --quiet || (git commit -m "Auto-update via Gemini AI" && git push origin main)
 
