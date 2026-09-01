@@ -59,8 +59,7 @@
 
     <script type="application/ld+json">
 
-{   
-    "@context": "https://schema.org",
+{   "@context": "https://schema.org",
     "@graph": [
         {
             "@type": "WebSite",
@@ -547,40 +546,46 @@
             </section>
             -->
 
-            <!-- الربط الداخلي (Internal Linking) -->
-            <section class="section-card internal-linking-card">
+            <!-- الربط الداخلي للصفحات والخدمات ذات الصلة (03 بطاقات ذات صلة) -->
+            <section class="section-card related-services-wrapper" id="related" aria-label="خدمات إدارية ورقمية ذات صلة">
                 <div class="section-header-card">
                     <h3 class="section-title">
-                        <i class="fas fa-link"></i>
-                        وكالات تأمين أخرى ذات صلة
+                        <i class="fas fa-link"></i> خدمات رقمية ذات صلة بقطاع التأمين
                     </h3>
                 </div>
                 <div class="services-grid">
-                    <a href="saa.html" class="service-item">
-                        <div class="service-icon"><i class="fas fa-shield-alt"></i></div>
+                    <!-- 1. دليل قطاع التأمين الرئيسي -->
+                    <a href="../assurance.html" class="service-item" title="دليل قطاع التأمين في الجزائر">
+                        <div class="service-icon">
+                            <i class="fas fa-landmark"></i>
+                        </div>
                         <div class="service-info">
-                            <h4>الشركة الوطنية للتأمين (SAA)</h4>
+                            <h4>دليل قطاع التأمين بالجزائر</h4>
+                            <p>استعراض كافة شركات التأمين المعتمدة والخدمات الرقمية المتوفرة في الجزائر</p>
                         </div>
                         <i class="fas fa-chevron-left service-arrow"></i>
                     </a>
-                    <a href="caat.html" class="service-item">
-                        <div class="service-icon"><i class="fas fa-shield-alt"></i></div>
+
+                    <!-- 2. ماكير في للتأمين على الحياة Macir Vie -->
+                    <a href="macir-vie.html" class="service-item" title="ماكير في للتأمين على الحياة Macir Vie">
+                        <div class="service-icon">
+                            <i class="fas fa-plane-departure"></i>
+                        </div>
                         <div class="service-info">
-                            <h4>الشركة الجزائرية للتأمينات (CAAT)</h4>
+                            <h4>ماكير في للتأمين على الحياة (Macir Vie)</h4>
+                            <p>رائد الاكتتاب الإلكتروني في تأمين السفر وبطاقة MyM Pass الرقمية وتأمين القروض</p>
                         </div>
                         <i class="fas fa-chevron-left service-arrow"></i>
                     </a>
-                    <a href="caar.html" class="service-item">
-                        <div class="service-icon"><i class="fas fa-shield-alt"></i></div>
-                        <div class="service-info">
-                            <h4>الشركة الجزائرية للتأمين وإعادة التأمين (CAAR)</h4>
+
+                    <!-- 3. سلامة للتأمينات Salama Assurances -->
+                    <a href="salama.html" class="service-item" title="سلامة للتأمينات Salama Assurances">
+                        <div class="service-icon">
+                            <i class="fas fa-building-shield"></i>
                         </div>
-                        <i class="fas fa-chevron-left service-arrow"></i>
-                    </a>
-                    <a href="trust.html" class="service-item">
-                        <div class="service-icon"><i class="fas fa-shield-alt"></i></div>
                         <div class="service-info">
-                            <h4>ترست للتأمينات (Trust Assurances)</h4>
+                            <h4>سلامة للتأمينات (Salama Assurances)</h4>
+                            <p>الرائد في التأمين التكافلي الإسلامي، تأمين السيارات الشامل، السكن والأخطار المتنوعة</p>
                         </div>
                         <i class="fas fa-chevron-left service-arrow"></i>
                     </a>
