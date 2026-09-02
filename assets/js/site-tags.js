@@ -5,9 +5,7 @@
   window.__dzPortalSiteTagsLoaded = true;
 
   const GTM_ID = 'GTM-NW3BWPF6';
-  const GA4_MEASUREMENT_ID = 'G-K23WYKK60X';
   const ADSENSE_CLIENT = 'ca-pub-5656416032906373';
-  const CLARITY_ID = 'tjk39ubxx1';
 
   // تهيئة dataLayer وgtag القياسي لضمان وصول الأحداث بدقة إلى GA4 وGTM
   window.dataLayer = window.dataLayer || [];
@@ -49,22 +47,18 @@
   };
   window.dzTrackEvent = trackEvent;
 
-  // يستخدم GTM هذا المعرّف لإرسال قياس GA4؛ لا ننشئ gtag.js أو config ثانياً هنا.
+  // تتم تهيئة GA4 مباشرة داخل head؛ يجب تعطيل أي وسم GA4 أو page_view داخل حاوية GTM.
   window.__dzPortalTagConfig = Object.freeze({
     gtmId: GTM_ID,
-    ga4MeasurementId: GA4_MEASUREMENT_ID,
     adsenseClient: ADSENSE_CLIENT,
-    clarityId: CLARITY_ID,
     trackEvent,
   });
 
   const GTM_SRC = `https://www.googletagmanager.com/gtm.js?id=${GTM_ID}`;
   const ADSENSE_SRC = `https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADSENSE_CLIENT}`;
-  const CLARITY_SRC = `https://www.clarity.ms/tag/${CLARITY_ID}?ref=bwt`;
   const state = {
     gtmStarted: false,
     adsenseRequested: false,
-    clarityRequested: false,
     adsObserverStarted: false,
   };
 
@@ -111,17 +105,6 @@
       window.dataLayer.push({
         'gtm.start': Date.now(),
         event: 'gtm.js',
-        ga4_measurement_id: GA4_MEASUREMENT_ID,
-        page_title: document.title,
-        page_location: window.location.href,
-        page_path: window.location.pathname,
-        page_sector: pageHeading,
-        site_language: 'ar',
-      });
-
-      // إرسال حدث page_view لضمان تسجيل الزيارة فوراً في GA4
-      window.dataLayer.push({
-        event: 'page_view',
         page_title: document.title,
         page_location: window.location.href,
         page_path: window.location.pathname,
@@ -166,19 +149,9 @@
     }
   };
 
-  const initializeClarity = () => {
-    if (state.clarityRequested) return;
-    state.clarityRequested = true;
-    window.clarity = window.clarity || function clarity(...args) {
-      (window.clarity.q = window.clarity.q || []).push(args);
-    };
-    loadExternalScript(CLARITY_SRC);
-  };
-
   initializeGtm();
 
   window.addEventListener('load', () => {
     scheduleIdle(initializeAdsense, 4000);
-    scheduleIdle(initializeClarity, 6000);
   }, { once: true, passive: true });
 })();
