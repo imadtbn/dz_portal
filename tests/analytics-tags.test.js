@@ -51,8 +51,8 @@ test('all HTML documents use one central loader and one direct GA4 tag', () => {
       adsDataSource: count(/assets\/js\/adsData\.js/gi, html),
     };
 
-    const directGa4Source = count(/googletagmanager\.com\/gtag\/js\?id=G-K23WYKK60/gi, html);
-    const directGa4Config = count(/gtag\s*\(\s*["']config["']\s*,\s*["']G-K23WYKK60["']/gi, html);
+    const directGa4Source = count(/googletagmanager\.com\/gtag\/js\?id=G-K23WYKK60X/gi, html);
+    const directGa4Config = count(/gtag\s*\(\s*["']config["']\s*,\s*["']G-K23WYKK60X["']/gi, html);
     if (
       loaderCount !== 1
       || !html.includes(expectedLoader)
