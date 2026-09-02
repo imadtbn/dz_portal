@@ -9,8 +9,14 @@ window.addEventListener('load', () => {
 function toggleTheme() {
   document.body.classList.toggle('dark-mode');
   const icon = document.querySelector('.theme-toggle i');
-  icon.classList.toggle('fa-moon');
-  icon.classList.toggle('fa-sun');
+  if (icon) {
+    icon.classList.toggle('fa-moon');
+    icon.classList.toggle('fa-sun');
+  }
+  const currentTheme = document.body.classList.contains('dark-mode') ? 'dark' : 'light';
+  if (typeof window.dzTrackEvent === 'function') {
+    window.dzTrackEvent('theme_change', { theme: currentTheme });
+  }
 }
 
 // Scroll to top
@@ -89,10 +95,16 @@ window.addEventListener('beforeinstallprompt', (e) => {
 if (installBtn) {
   installBtn.addEventListener('click', async () => {
     if (deferredPrompt) {
+      if (typeof window.dzTrackEvent === 'function') {
+        window.dzTrackEvent('pwa_prompt_opened');
+      }
       // عرض نافذة التثبيت
       deferredPrompt.prompt();
       const result = await deferredPrompt.userChoice;
       console.log(`نتيجة التثبيت: ${result.outcome}`);
+      if (typeof window.dzTrackEvent === 'function') {
+        window.dzTrackEvent('pwa_install_outcome', { outcome: result.outcome });
+      }
       if (result.outcome === 'accepted') {
         console.log('تم تثبيت التطبيق بنجاح');
         // إخفاء الزر بعد التثبيت
@@ -111,6 +123,9 @@ if (installBtn) {
 // في حالة نجاح التثبيت (حدث appinstalled)
 window.addEventListener('appinstalled', () => {
   console.log('تم تثبيت التطبيق عبر المتصفح');
+  if (typeof window.dzTrackEvent === 'function') {
+    window.dzTrackEvent('app_installed', { method: 'pwa' });
+  }
   if (installBtn) installBtn.style.display = 'none';
 });
 
@@ -173,6 +188,10 @@ function applyServiceFilter(filter = activeFilter) {
     const shouldShow = activeFilter === 'all' || card.dataset.new === 'true';
     card.style.display = shouldShow ? '' : 'none';
   });
+
+  if (typeof window.dzTrackEvent === 'function') {
+    window.dzTrackEvent('filter_services', { filter_type: activeFilter });
+  }
 }
 
 function refreshNewServices() {

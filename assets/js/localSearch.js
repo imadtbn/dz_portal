@@ -309,21 +309,74 @@
         window.setTimeout(() => input.focus(), 0);
     }
 
+    let localSearchDebounceTimer = null;
+
+    function handleLocalSearchInput() {
+        const matches = renderResults();
+        const query = input.value.trim();
+
+        clearTimeout(localSearchDebounceTimer);
+        if (query.length >= 2) {
+            localSearchDebounceTimer = setTimeout(() => {
+                if (typeof window.dzTrackEvent === "function") {
+                    window.dzTrackEvent("search", {
+                        search_term: query,
+                        search_type: "sector_local_search",
+                        results_count: matches.length,
+                        page_sector: pageTitle
+                    });
+                }
+            }, 600);
+        }
+    }
+
     triggers.forEach(trigger => trigger.addEventListener("click", event => {
         event.preventDefault();
         openSearch();
+        if (typeof window.dzTrackEvent === "function") {
+            window.dzTrackEvent("open_local_search", { page_sector: pageTitle });
+        }
     }));
     closeButton.addEventListener("click", closeSearch);
     overlay.addEventListener("click", event => {
         if (event.target === overlay) closeSearch();
     });
-    input.addEventListener("input", renderResults);
-    submitButton.addEventListener("click", renderResults);
+    input.addEventListener("input", handleLocalSearchInput);
+    submitButton.addEventListener("click", handleLocalSearchInput);
+
+    results.addEventListener("click", event => {
+        const itemLink = event.target.closest(".local-search-result");
+        if (!itemLink) return;
+
+        const title = itemLink.querySelector("h4")?.textContent?.trim() || "";
+        const url = itemLink.getAttribute("href") || "";
+        if (typeof window.dzTrackEvent === "function") {
+            window.dzTrackEvent("select_content", {
+                content_type: "sector_search_result",
+                item_name: title,
+                item_id: url,
+                search_term: input.value.trim(),
+                page_sector: pageTitle
+            });
+        }
+    });
+
     input.addEventListener("keydown", event => {
         if (event.key === "Escape") closeSearch();
         if (event.key === "Enter") {
             const matches = renderResults();
-            if (matches.length) window.location.href = matches[0].item.url;
+            if (matches.length) {
+                if (typeof window.dzTrackEvent === "function") {
+                    window.dzTrackEvent("select_content", {
+                        content_type: "sector_search_result_enter",
+                        item_name: matches[0].item.title,
+                        item_id: matches[0].item.url,
+                        search_term: input.value.trim(),
+                        page_sector: pageTitle
+                    });
+                }
+                window.location.href = matches[0].item.url;
+            }
         }
     });
 

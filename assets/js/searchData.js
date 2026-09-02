@@ -15871,8 +15871,26 @@ if (searchInput && searchResults) {
     searchInput.setAttribute("aria-autocomplete", "list");
     searchResults.setAttribute("role", "listbox");
 
+    let searchDebounceTimer = null;
+
     searchInput.addEventListener("input", function () {
-        renderSearchSuggestions(this.value);
+        const query = this.value;
+        renderSearchSuggestions(query);
+
+        // إرسال حدث البحث إلى GA4 مع تأخير زمني لمنع الإفراط في الإرسال
+        clearTimeout(searchDebounceTimer);
+        if (query && query.trim().length >= 2) {
+            searchDebounceTimer = setTimeout(() => {
+                const { matches } = getSearchMatches(query);
+                if (typeof window.dzTrackEvent === "function") {
+                    window.dzTrackEvent("search", {
+                        search_term: query.trim(),
+                        results_count: matches.length,
+                        search_type: "global_search"
+                    });
+                }
+            }, 600);
+        }
     });
 
     searchInput.addEventListener("keydown", function (event) {
@@ -15885,8 +15903,33 @@ if (searchInput && searchResults) {
             const { matches } = getSearchMatches(this.value);
             if (matches.length > 0) {
                 event.preventDefault();
+                if (typeof window.dzTrackEvent === "function") {
+                    window.dzTrackEvent("select_content", {
+                        content_type: "search_result_enter",
+                        item_name: matches[0].item.title,
+                        item_id: matches[0].item.url,
+                        search_term: this.value.trim()
+                    });
+                }
                 window.location.href = matches[0].item.url;
             }
+        }
+    });
+
+    /* تتبع النقر على عناصر نتائج البحث */
+    searchResults.addEventListener("click", (event) => {
+        const itemLink = event.target.closest(".search-result-item");
+        if (!itemLink) return;
+
+        const title = itemLink.querySelector("h4")?.textContent?.trim() || "";
+        const url = itemLink.getAttribute("href") || "";
+        if (typeof window.dzTrackEvent === "function") {
+            window.dzTrackEvent("select_content", {
+                content_type: "search_result_click",
+                item_name: title,
+                item_id: url,
+                search_term: searchInput.value.trim()
+            });
         }
     });
 
@@ -15942,6 +15985,12 @@ function initializeVoiceSearch() {
     recognition.onresult = (event) => {
         const transcript = event.results[0][0].transcript.trim();
         searchInput.value = transcript;
+        if (typeof window.dzTrackEvent === "function") {
+            window.dzTrackEvent("search", {
+                search_term: transcript,
+                search_type: "voice_search"
+            });
+        }
         searchInput.dispatchEvent(new Event("input", { bubbles: true }));
     };
     recognition.onerror = () => updateVoiceButton(false);
