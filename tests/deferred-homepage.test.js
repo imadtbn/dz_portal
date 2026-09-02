@@ -47,3 +47,15 @@ test('deferred homepage loader resolves assets from nested pages', () => {
   assert.match(source, /loadLocalScript\('js\/homepageStats\.js'/);
   assert.match(source, /loadLocalScript\('js\/siteRating\.js'/);
 });
+
+test('deferred homepage loader includes automated click, search, and conversion tracking', () => {
+  const source = readFileSync(join(root, loader), 'utf8');
+  assert.match(source, /trackEvent/);
+  assert.match(source, /conversion/);
+  assert.match(source, /contact_click/);
+  assert.match(source, /file_download/);
+  assert.match(source, /outbound_click/);
+  assert.match(source, /search/);
+  assert.match(source, /scroll_milestone/);
+});
+

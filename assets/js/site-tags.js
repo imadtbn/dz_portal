@@ -23,15 +23,26 @@
   const trackEvent = (eventName, eventParams = {}) => {
     if (!eventName) return;
     try {
+      const pageHeading = document.querySelector('.sector-hero h1, .sector-hero h2, main h1, h1')?.textContent?.trim() || '';
       const payload = {
         event: eventName,
         page_title: document.title,
         page_location: window.location.href,
         page_path: window.location.pathname,
+        page_sector: pageHeading,
+        site_language: 'ar',
         timestamp: Date.now(),
         ...eventParams,
       };
       window.dataLayer.push(payload);
+
+      if (typeof window.gtag === 'function') {
+        window.gtag('event', eventName, {
+          ...eventParams,
+          page_title: document.title,
+          page_location: window.location.href,
+        });
+      }
     } catch (error) {
       console.warn('Analytics event tracking error:', error);
     }
@@ -95,6 +106,8 @@
   const initializeGtm = () => {
     if (!state.gtmStarted) {
       const pageHeading = document.querySelector('.sector-hero h1, .sector-hero h2, main h1, h1')?.textContent?.trim() || '';
+      
+      // تهيئة بدء GTM مع إرسال بيانات الصفحة بدقة عالية
       window.dataLayer.push({
         'gtm.start': Date.now(),
         event: 'gtm.js',
@@ -105,6 +118,17 @@
         page_sector: pageHeading,
         site_language: 'ar',
       });
+
+      // إرسال حدث page_view لضمان تسجيل الزيارة فوراً في GA4
+      window.dataLayer.push({
+        event: 'page_view',
+        page_title: document.title,
+        page_location: window.location.href,
+        page_path: window.location.pathname,
+        page_sector: pageHeading,
+        site_language: 'ar',
+      });
+
       state.gtmStarted = true;
     }
     loadExternalScript(GTM_SRC);
@@ -151,93 +175,7 @@
     loadExternalScript(CLARITY_SRC);
   };
 
-  // تتبع تلقائي ذكي للنقر على بطاقات الخدمات والروابط الحكومية الخارجية والتحميلات
-  const initializeAutomaticTracking = () => {
-    document.addEventListener('click', (event) => {
-      const link = event.target.closest('a[href]');
-      if (!link) return;
-
-      const rawHref = link.getAttribute('href') || '';
-      if (!rawHref || rawHref.startsWith('#') || rawHref.startsWith('javascript:')) return;
-
-      const card = link.closest('.service-item, .sector-card, .train-card, .promo-card, .video-card, .support-card, .contact-card');
-      const title = card?.querySelector('h1, h2, h3, h4, h5, .service-title, strong')?.textContent?.trim()
-        || link.textContent?.trim()
-        || link.getAttribute('title')
-        || link.getAttribute('aria-label')
-        || '';
-
-      // 1. روابط الاتصال (هاتف، بريد إلكتروني)
-      if (rawHref.startsWith('tel:')) {
-        trackEvent('contact_click', {
-          contact_type: 'phone',
-          contact_value: rawHref.replace('tel:', ''),
-          item_title: title,
-        });
-        return;
-      }
-      if (rawHref.startsWith('mailto:')) {
-        trackEvent('contact_click', {
-          contact_type: 'email',
-          contact_value: rawHref.replace('mailto:', ''),
-          item_title: title,
-        });
-        return;
-      }
-
-      // 2. تحميل الملفات
-      const fileExtensions = /\.(pdf|docx?|xlsx?|pptx?|apk|zip|rar|tar\.gz)$/i;
-      const cleanPath = rawHref.split('?')[0].split('#')[0];
-      if (fileExtensions.test(cleanPath)) {
-        const ext = cleanPath.split('.').pop()?.toLowerCase();
-        trackEvent('file_download', {
-          file_name: cleanPath.split('/').pop(),
-          file_extension: ext,
-          link_url: rawHref,
-          item_title: title,
-        });
-        return;
-      }
-
-      // 3. التحقق من الروابط الخارجية (خاصة البوابات الحكومية الجزائرية)
-      try {
-        const url = new URL(link.href, window.location.href);
-        const isExternal = url.origin !== window.location.origin;
-
-        if (isExternal) {
-          const isGovDz = url.hostname.endsWith('.dz') || url.hostname.includes('.gov.dz') || url.hostname.includes('.mdn.dz');
-          trackEvent('outbound_click', {
-            destination_url: url.href,
-            destination_host: url.hostname,
-            is_government_dz: isGovDz,
-            item_title: title,
-            content_type: card ? 'service_card' : 'external_link',
-          });
-          // أيضاً إرسال حدث select_content للتوافق مع تقارير GA4
-          trackEvent('select_content', {
-            content_type: 'service',
-            item_id: url.href,
-            item_name: title,
-          });
-          return;
-        }
-      } catch (error) {
-        // تجاهل أخطاء تحليل الروابط
-      }
-
-      // 4. النقر على البطاقات والخدمات الداخلية
-      if (card) {
-        trackEvent('select_content', {
-          content_type: 'internal_service',
-          item_name: title,
-          item_url: rawHref,
-        });
-      }
-    }, { capture: true, passive: true });
-  };
-
   initializeGtm();
-  initializeAutomaticTracking();
 
   window.addEventListener('load', () => {
     scheduleIdle(initializeAdsense, 4000);
