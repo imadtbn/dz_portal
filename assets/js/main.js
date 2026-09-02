@@ -1,9 +1,12 @@
 // Hide loader
 window.addEventListener('load', () => {
-            setTimeout(() => {
-                document.getElementById('loader').classList.add('hidden');
-            }, 1000);
-        });
+  setTimeout(() => {
+    const loader = document.getElementById('loader');
+    if (loader) {
+      loader.classList.add('hidden');
+    }
+  }, 1000);
+});
 
 // Theme toggle
 function toggleTheme() {

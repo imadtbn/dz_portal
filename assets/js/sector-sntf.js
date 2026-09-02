@@ -78,21 +78,26 @@ const modalImg = document.getElementById('scheduleImage');
 const modalTitle = document.getElementById('scheduleTitle');
 document.querySelectorAll('.view-schedule-btn').forEach(btn => {
     btn.addEventListener('click', () => {
-        modalImg.src = btn.dataset.image;
-        modalTitle.textContent = btn.dataset.title;
-        modal.classList.add('active');
-        document.body.style.overflow = 'hidden';
+        if (modalImg) modalImg.src = btn.dataset.image;
+        if (modalTitle) modalTitle.textContent = btn.dataset.title;
+        if (modal) {
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
     });
 });
-document.querySelector('.close-modal').addEventListener('click', closeModal);
-modal.addEventListener('click', e => {
-    if (e.target === modal) {
-        closeModal();
-    }
-});
+const closeModalBtn = document.querySelector('.close-modal');
+if (closeModalBtn) closeModalBtn.addEventListener('click', closeModal);
+if (modal) {
+    modal.addEventListener('click', e => {
+        if (e.target === modal) {
+            closeModal();
+        }
+    });
+}
 
 function closeModal() {
-    modal.classList.remove('active');
+    if (modal) modal.classList.remove('active');
     document.body.style.overflow = '';
 }
 
