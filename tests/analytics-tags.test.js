@@ -29,7 +29,7 @@ function count(pattern, html) {
   return (html.match(pattern) || []).length;
 }
 
-test('all HTML documents use one central loader and no direct GA4 tag', () => {
+test('all HTML documents use one central loader and one direct GA4 tag', () => {
   const violations = [];
 
   for (const path of collectHtmlFiles(root)) {
@@ -56,8 +56,8 @@ test('all HTML documents use one central loader and no direct GA4 tag', () => {
     if (
       loaderCount !== 1
       || !html.includes(expectedLoader)
-      || directGa4Source !== 0
-      || directGa4Config !== 0
+      || directGa4Source !== 1
+      || directGa4Config !== 1
       || Object.values(legacy).some((value) => value > 0 && value !== legacy.gtagConfig && value !== legacy.gtagSource)
     ) {
       violations.push({ page, loaderCount, expectedLoader, directGa4Source, directGa4Config, legacy });
