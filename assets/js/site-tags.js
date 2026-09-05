@@ -7,15 +7,12 @@
   const GTM_ID = 'GTM-NW3BWPF6';
   const ADSENSE_CLIENT = 'ca-pub-5656416032906373';
 
-  // تهيئة dataLayer وgtag القياسي لضمان وصول الأحداث بدقة إلى GA4 وGTM
+  // تهيئة dataLayer القياسي لضمان وصول الأحداث بدقة إلى GTM
   window.dataLayer = window.dataLayer || [];
-  window.gtag = window.gtag || function gtag() {
-    window.dataLayer.push(arguments);
-  };
 
   /**
-   * دالة موحدة لإرسال الأحداث التفاعلية إلى GA4 وGTM
-   * @param {string} eventName - اسم الحدث القياسي في GA4
+   * دالة موحدة لإرسال الأحداث التفاعلية إلى GTM
+   * @param {string} eventName - اسم الحدث القياسي
    * @param {Object} [eventParams={}] - معاملات الحدث التفصيلية
    */
   const trackEvent = (eventName, eventParams = {}) => {
@@ -33,14 +30,6 @@
         ...eventParams,
       };
       window.dataLayer.push(payload);
-
-      if (typeof window.gtag === 'function') {
-        window.gtag('event', eventName, {
-          ...eventParams,
-          page_title: document.title,
-          page_location: window.location.href,
-        });
-      }
     } catch (error) {
       console.warn('Analytics event tracking error:', error);
     }
@@ -152,6 +141,6 @@
   initializeGtm();
 
   window.addEventListener('load', () => {
-    scheduleIdle(initializeAdsense, 4000);
+    scheduleIdle(initializeAdsense, 100);
   }, { once: true, passive: true });
 })();
