@@ -51,14 +51,6 @@
 
       window.dataLayer = window.dataLayer || [];
       window.dataLayer.push(payload);
-
-      if (typeof window.gtag === 'function') {
-        window.gtag('event', eventName, {
-          ...params,
-          page_title: document.title,
-          page_location: window.location.href,
-        });
-      }
     } catch (error) {
       console.warn('Deferred analytics tracking error:', error);
     }

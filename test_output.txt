@@ -1,0 +1,1056 @@
+
+> dz-portal@1.0.0 test
+> node --test tests/*.test.js
+
+TAP version 13
+# (node:973979) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///app/tests/adsense-loading.test.js is not specified and it doesn't parse as CommonJS.
+# Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+# To eliminate this warning, add "type": "module" to /app/package.json.
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: each HTML page has at most one direct AdSense library load
+ok 1 - each HTML page has at most one direct AdSense library load
+  ---
+  duration_ms: 52.743804
+  type: 'test'
+  ...
+# (node:973980) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///app/tests/analytics-tags.test.js is not specified and it doesn't parse as CommonJS.
+# Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+# To eliminate this warning, add "type": "module" to /app/package.json.
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: all HTML documents use one central loader and no direct GA4 tag
+not ok 2 - all HTML documents use one central loader and no direct GA4 tag
+  ---
+  duration_ms: 93.791896
+  type: 'test'
+  location: '/app/tests/analytics-tags.test.js:32:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly deep-equal:
+    + actual - expected
+
+    + [
+    +   {
+    +     directGa4Config: 0,
+    +     directGa4Source: 0,
+    +     expectedLoader: '../../assets/js/site-tags.js',
+    +     legacy: {
+    +       adsDataSource: 0,
+    +       adsenseSource: 0,
+    +       claritySource: 0,
+    +       gtagConfig: 0,
+    +       gtagSource: 0,
+    +       gtmBootstrap: 0,
+    +       gtmSource: 0
+    +     },
+    +     loaderCount: 1,
+    +     page: 'sectors/assurance/alliance-assurances.html'
+    +   },
+    +   {
+    +     directGa4Config: 0,
+    +     directGa4Source: 0,
+    +     expectedLoader: '../../assets/js/site-tags.js',
+    +     legacy: {
+    +       adsDataSource: 0,
+    +       adsenseSource: 0,
+    +       claritySource: 0,
+    +       gtagConfig: 0,
+    +       gtagSource: 0,
+    +       gtmBootstrap: 0,
+    +       gtmSource: 0
+    +     },
+    +     loaderCount: 1,
+    +     page: 'sectors/assurance/amana.html'
+    +   },
+    +   {
+    +     directGa4Config: 0,
+    +     directGa4Source: 0,
+    +     expectedLoader: '../../assets/js/site-tags.js',
+    +     legacy: {
+    +       adsDataSource: 0,
+    +       adsenseSource: 0,
+    +       claritySource: 0,
+    +       gtagConfig: 0,
+    +       gtagSource: 0,
+    +       gtmBootstrap: 0,
+    +       gtmSource: 0
+    +     },
+    +     loaderCount: 1,
+    +     page: 'sectors/assurance/axa.html'
+    +   },
+    +   {
+    +     directGa4Config: 0,
+    +     directGa4Source: 0,
+    +     expectedLoader: '../../assets/js/site-tags.js',
+    +     legacy: {
+    +       adsDataSource: 0,
+    +       adsenseSource: 0,
+    +       claritySource: 0,
+    +       gtagConfig: 0,
+    +       gtagSource: 0,
+    +       gtmBootstrap: 0,
+    +       gtmSource: 0
+    +     },
+    +     loaderCount: 1,
+    +     page: 'sectors/assurance/caar.html'
+    +   },
+    +   {
+    +     directGa4Config: 0,
+    +     directGa4Source: 0,
+    +     expectedLoader: '../../assets/js/site-tags.js',
+    +     legacy: {
+    +       adsDataSource: 0,
+    +       adsenseSource: 0,
+    +       claritySource: 0,
+    +       gtagConfig: 0,
+    +       gtagSource: 0,
+    +       gtmBootstrap: 0,
+    +       gtmSource: 0
+    +     },
+    +     loaderCount: 1,
+    +     page: 'sectors/assurance/caarama.html'
+    +   },
+    +   {
+    +     directGa4Config: 0,
+    +     directGa4Source: 0,
+    +     expectedLoader: '../../assets/js/site-tags.js',
+    +     legacy: {
+    +       adsDataSource: 0,
+    +       adsenseSource: 0,
+    +       claritySource: 0,
+    +       gtagConfig: 0,
+    +       gtagSource: 0,
+    +       gtmBootstrap: 0,
+    +       gtmSource: 0
+    +     },
+    +     loaderCount: 1,
+    +     page: 'sectors/assurance/caat.html'
+    +   },
+    +   {
+    +     directGa4Config: 0,
+    +     directGa4Source: 0,
+    +     expectedLoader: '../../assets/js/site-tags.js',
+    +     legacy: {
+    +       adsDataSource: 0,
+    +       adsenseSource: 0,
+    +       claritySource: 0,
+    +       gtagConfig: 0,
+    +       gtagSource: 0,
+    +       gtmBootstrap: 0,
+    +       gtmSource: 0
+    +     },
+    +     loaderCount: 1,
+    +     page: 'sectors/assurance/cardif-algerie.html'
+    +   },
+    +   {
+    +     directGa4Config: 0,
+    +     directGa4Source: 0,
+    +     expectedLoader: '../../assets/js/site-tags.js',
+    +     legacy: {
+    +       adsDataSource: 0,
+    +       adsenseSource: 0,
+    +       claritySource: 0,
+    +       gtagConfig: 0,
+    +       gtagSource: 0,
+    +       gtmBootstrap: 0,
+    +       gtmSource: 0
+    +     },
+    +     loaderCount: 1,
+    +     page: 'sectors/assurance/gig.html'
+    +   },
+    +   {
+    +     directGa4Config: 0,
+    +     directGa4Source: 0,
+    +     expectedLoader: '../../assets/js/site-tags.js',
+    +     legacy: {
+    +       adsDataSource: 0,
+    +       adsenseSource: 0,
+    +       claritySource: 0,
+    +       gtagConfig: 0,
+    +       gtagSource: 0,
+    +       gtmBootstrap: 0,
+    +       gtmSource: 0
+    +     },
+    +     loaderCount: 1,
+    +     page: 'sectors/assurance/macir-vie.html'
+    +   },
+    +   {
+    +     directGa4Config: 0,
+    +     directGa4Source: 0,
+    +     expectedLoader: '../../assets/js/site-tags.js',
+    +     legacy: {
+    +       adsDataSource: 0,
+    +       adsenseSource: 0,
+    +       claritySource: 0,
+    +       gtagConfig: 0,
+    +       gtagSource: 0,
+    +       gtmBootstrap: 0,
+    +       gtmSource: 0
+    +     },
+    +     loaderCount: 1,
+    +     page: 'sectors/assurance/saa.html'
+    +   },
+    +   {
+    +     directGa4Config: 0,
+    +     directGa4Source: 0,
+    +     expectedLoader: '../../assets/js/site-tags.js',
+    +     legacy: {
+    +       adsDataSource: 0,
+    +       adsenseSource: 0,
+    +       claritySource: 0,
+    +       gtagConfig: 0,
+    +       gtagSource: 0,
+    +       gtmBootstrap: 0,
+    +       gtmSource: 0
+    +     },
+    +     loaderCount: 1,
+    +     page: 'sectors/assurance/salama.html'
+    +   },
+    +   {
+    +     directGa4Config: 0,
+    +     directGa4Source: 0,
+    +     expectedLoader: '../../assets/js/site-tags.js',
+    +     legacy: {
+    +       adsDataSource: 0,
+    +       adsenseSource: 0,
+    +       claritySource: 0,
+    +       gtagConfig: 0,
+    +       gtagSource: 0,
+    +       gtmBootstrap: 0,
+    +       gtmSource: 0
+    +     },
+    +     loaderCount: 1,
+    +     page: 'sectors/assurance/trust-algeria.html'
+    +   },
+    +   {
+    +     directGa4Config: 0,
+    +     directGa4Source: 0,
+    +     expectedLoader: '../../assets/js/site-tags.js',
+    +     legacy: {
+    +       adsDataSource: 0,
+    +       adsenseSource: 0,
+    +       claritySource: 0,
+    +       gtagConfig: 0,
+    +       gtagSource: 0,
+    +       gtmBootstrap: 0,
+    +       gtmSource: 0
+    +     },
+    +     loaderCount: 1,
+    +     page: 'sectors/bank/ag-bank.html'
+    +   },
+    +   {
+    +     directGa4Config: 0,
+    +     directGa4Source: 0,
+    +     expectedLoader: '../../assets/js/site-tags.js',
+    +     legacy: {
+    +       adsDataSource: 0,
+    +       adsenseSource: 0,
+    +       claritySource: 0,
+    +       gtagConfig: 0,
+    +       gtagSource: 0,
+    +       gtmBootstrap: 0,
+    +       gtmSource: 0
+    +     },
+    +     loaderCount: 1,
+    +     page: 'sectors/bank/albaraka-bank.html'
+    +   },
+    +   {
+    +     directGa4Config: 0,
+    +     directGa4Source: 0,
+    +     expectedLoader: '../../assets/js/site-tags.js',
+    +     legacy: {
+    +       adsDataSource: 0,
+    +       adsenseSource: 0,
+    +       claritySource: 0,
+    +       gtagConfig: 0,
+    +       gtagSource: 0,
+    +       gtmBootstrap: 0,
+    +       gtmSource: 0
+    +     },
+    +     loaderCount: 1,
+    +     page: 'sectors/bank/arabbank.html'
+    +   },
+    +   {
+    +     directGa4Config: 0,
+    +     directGa4Source: 0,
+    +     expectedLoader: '../../assets/js/site-tags.js',
+    +     legacy: {
+    +       adsDataSource: 0,
+    +       adsenseSource: 0,
+    +       claritySource: 0,
+    +       gtagConfig: 0,
+    +       gtagSource: 0,
+    +       gtmBootstrap: 0,
+    +       gtmSource: 0
+    +     },
+    +     loaderCount: 1,
+    +     page: 'sectors/bank/badr.html'
+    +   },
+    +   {
+    +     directGa4Config: 0,
+    +     directGa4Source: 0,
+    +     expectedLoader: '../../assets/js/site-tags.js',
+    +     legacy: {
+    +       adsDataSource: 0,
+    +       adsenseSource: 0,
+    +       claritySource: 0,
+    +       gtagConfig: 0,
+    +       gtagSource: 0,
+    +       gtmBootstrap: 0,
+    +       gtmSource: 0
+    +     },
+    +     loaderCount: 1,
+    +     page: 'sectors/bank/bank-abc.html'
+    +   },
+    +   {
+    +     directGa4Config: 0,
+    +     directGa4Source: 0,
+    +     expectedLoader: '../../assets/js/site-tags.js',
+    +     legacy: {
+    +       adsDataSource: 0,
+    +       adsenseSource: 0,
+    +       claritySource: 0,
+    +       gtagConfig: 0,
+    +       gtagSource: 0,
+    +       gtmBootstrap: 0,
+    +       gtmSource: 0
+    +     },
+    +     loaderCount: 1,
+    +     page: 'sectors/bank/bankalgeriane.html'
+    +   },
+    +   {
+    +     directGa4Config: 0,
+    +     directGa4Source: 0,
+    +     expectedLoader: '../../assets/js/site-tags.js',
+    +     legacy: {
+    +       adsDataSource: 0,
+    +       adsenseSource: 0,
+    +       claritySource: 0,
+    +       gtagConfig: 0,
+    +       gtagSource: 0,
+    +       gtmBootstrap: 0,
+    +       gtmSource: 0
+    +     },
+    +     loaderCount: 1,
+    +     page: 'sectors/bank/banketranger.html'
+    +   },
+    +   {
+    +     directGa4Config: 0,
+    +     directGa4Source: 0,
+    +     expectedLoader: '../../assets/js/site-tags.js',
+    +     legacy: {
+    +       adsDataSource: 0,
+    +       adsenseSource: 0,
+    +       claritySource: 0,
+    +       gtagConfig: 0,
+    +       gtagSource: 0,
+    +       gtmBootstrap: 0,
+    +       gtmSource: 0
+    +     },
+    +     loaderCount: 1,
+    +     page: 'sectors/bank/bdl.html'
+    +   },
+    +   {
+    +     directGa4Config: 0,
+    +     directGa4Source: 0,
+    +     expectedLoader: '../../assets/js/site-tags.js',
+    +     legacy: {
+    +       adsDataSource: 0,
+    +       adsenseSource: 0,
+    +       claritySource: 0,
+    +       gtagConfig: 0,
+    +       gtagSource: 0,
+    +       gtmBootstrap: 0,
+    +       gtmSource: 0
+    +     },
+    +     loaderCount: 1,
+    +     page: 'sectors/bank/bea.html'
+    +   },
+    +   {
+    +     directGa4Config: 0,
+    +     directGa4Source: 0,
+    +     expectedLoader: '../../assets/js/site-tags.js',
+    +     legacy: {
+    +       adsDataSource: 0,
+    +       adsenseSource: 0,
+    +       claritySource: 0,
+    +       gtagConfig: 0,
+    +       gtagSource: 0,
+    +       gtmBootstrap: 0,
+    +       gtmSource: 0
+    +     },
+    +     loaderCount: 1,
+    +     page: 'sectors/bank/bna.html'
+    +   },
+    +   {
+    +     directGa4Config: 0,
+    +     directGa4Source: 0,
+    +     expectedLoader: '../../assets/js/site-tags.js',
+    +     legacy: {
+    +       adsDataSource: 0,
+    +       adsenseSource: 0,
+    +       claritySource: 0,
+    +       gtagConfig: 0,
+    +       gtagSource: 0,
+    +       gtmBootstrap: 0,
+    +       gtmSource: 0
+    +     },
+    +     loaderCount: 1,
+    +     page: 'sectors/bank/bnh.html'
+    +   },
+    +   {
+    +     directGa4Config: 0,
+    +     directGa4Source: 0,
+    +     expectedLoader: '../../assets/js/site-tags.js',
+    +     legacy: {
+    +       adsDataSource: 0,
+    +       adsenseSource: 0,
+    +       claritySource: 0,
+    +       gtagConfig: 0,
+    +       gtagSource: 0,
+    +       gtmBootstrap: 0,
+    +       gtmSource: 0
+    +     },
+    +     loaderCount: 1,
+    +     page: 'sectors/bank/business.algeria.hsbc.html'
+    +   },
+    +   {
+    +     directGa4Config: 0,
+    +     directGa4Source: 0,
+    +     expectedLoader: '../../assets/js/site-tags.js',
+    +     legacy: {
+    +       adsDataSource: 0,
+    +       adsenseSource: 0,
+    +       claritySource: 0,
+    +       gtagConfig: 0,
+    +       gtagSource: 0,
+    +       gtmBootstrap: 0,
+    +       gtmSource: 0
+    +     },
+    +     loaderCount: 1,
+    +     page: 'sectors/bank/citigroup.html'
+    +   },
+    +   {
+    +     directGa4Config: 0,
+    +     directGa4Source: 0,
+    +     expectedLoader: '../../assets/js/site-tags.js',
+    +     legacy: {
+    +       adsDataSource: 0,
+    +       adsenseSource: 0,
+    +       claritySource: 0,
+    +       gtagConfig: 0,
+    +       gtagSource: 0,
+    +       gtmBootstrap: 0,
+    +       gtmSource: 0
+    +     },
+    +     loaderCount: 1,
+    +     page: 'sectors/bank/cnep.html'
+    +   },
+    +   {
+    +     directGa4Config: 0,
+    +     directGa4Source: 0,
+    +     expectedLoader: '../../assets/js/site-tags.js',
+    +     legacy: {
+    +       adsDataSource: 0,
+    +       adsenseSource: 0,
+    +       claritySource: 0,
+    +       gtagConfig: 0,
+    +       gtagSource: 0,
+    +       gtmBootstrap: 0,
+    +       gtmSource: 0
+    +     },
+    +     loaderCount: 1,
+    +     page: 'sectors/bank/cpa.html'
+    +   },
+    +   {
+    +     directGa4Config: 0,
+    +     directGa4Source: 0,
+    +     expectedLoader: '../../assets/js/site-tags.js',
+    +     legacy: {
+    +       adsDataSource: 0,
+    +       adsenseSource: 0,
+    +       claritySource: 0,
+    +       gtagConfig: 0,
+    +       gtagSource: 0,
+    +       gtmBootstrap: 0,
+    +       gtmSource: 0
+    +     },
+    +     loaderCount: 1,
+    +     page: 'sectors/bank/ebanking.algerie.natixis.html'
+    +   },
+    +   {
+    +     directGa4Config: 0,
+    +     directGa4Source: 0,
+    +     expectedLoader: '../../assets/js/site-tags.js',
+    +     legacy: {
+    +       adsDataSource: 0,
+    +       adsenseSource: 0,
+    +       claritySource: 0,
+    +       gtagConfig: 0,
+    +       gtagSource: 0,
+    +       gtmBootstrap: 0,
+    +       gtmSource: 0
+    +     },
+    +     loaderCount: 1,
+    +     page: 'sectors/bank/fransabank.html'
+    +   },
+    +   {
+    +     directGa4Config: 0,
+    +     directGa4Source: 0,
+    +     expectedLoader: '../../assets/js/site-tags.js',
+    +     legacy: {
+    +       adsDataSource: 0,
+    +       adsenseSource: 0,
+    +       claritySource: 0,
+    +       gtagConfig: 0,
+    +       gtagSource: 0,
+    +       gtmBootstrap: 0,
+    +       gtmSource: 0
+    +     },
+    +     loaderCount: 1,
+    +     page: 'sectors/bank/societegenerale.html'
+    +   }
+    + ]
+    - []
+
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected:
+  actual:
+    0:
+      page: 'sectors/assurance/alliance-assurances.html'
+      loaderCount: 1
+      expectedLoader: '../../assets/js/site-tags.js'
+      directGa4Source: 0
+      directGa4Config: 0
+      legacy:
+        gtagConfig: 0
+        gtagSource: 0
+        gtmBootstrap: 0
+        gtmSource: 0
+        adsenseSource: 0
+        claritySource: 0
+        adsDataSource: 0
+    1:
+      page: 'sectors/assurance/amana.html'
+      loaderCount: 1
+      expectedLoader: '../../assets/js/site-tags.js'
+      directGa4Source: 0
+      directGa4Config: 0
+      legacy:
+        gtagConfig: 0
+        gtagSource: 0
+        gtmBootstrap: 0
+        gtmSource: 0
+        adsenseSource: 0
+        claritySource: 0
+        adsDataSource: 0
+    2:
+      page: 'sectors/assurance/axa.html'
+      loaderCount: 1
+      expectedLoader: '../../assets/js/site-tags.js'
+      directGa4Source: 0
+      directGa4Config: 0
+      legacy:
+        gtagConfig: 0
+        gtagSource: 0
+        gtmBootstrap: 0
+        gtmSource: 0
+        adsenseSource: 0
+        claritySource: 0
+        adsDataSource: 0
+    3:
+      page: 'sectors/assurance/caar.html'
+      loaderCount: 1
+      expectedLoader: '../../assets/js/site-tags.js'
+      directGa4Source: 0
+      directGa4Config: 0
+      legacy:
+        gtagConfig: 0
+        gtagSource: 0
+        gtmBootstrap: 0
+        gtmSource: 0
+        adsenseSource: 0
+        claritySource: 0
+        adsDataSource: 0
+    4:
+      page: 'sectors/assurance/caarama.html'
+      loaderCount: 1
+      expectedLoader: '../../assets/js/site-tags.js'
+      directGa4Source: 0
+      directGa4Config: 0
+      legacy:
+        gtagConfig: 0
+        gtagSource: 0
+        gtmBootstrap: 0
+        gtmSource: 0
+        adsenseSource: 0
+        claritySource: 0
+        adsDataSource: 0
+    5:
+      page: 'sectors/assurance/caat.html'
+      loaderCount: 1
+      expectedLoader: '../../assets/js/site-tags.js'
+      directGa4Source: 0
+      directGa4Config: 0
+      legacy:
+        gtagConfig: 0
+        gtagSource: 0
+        gtmBootstrap: 0
+        gtmSource: 0
+        adsenseSource: 0
+        claritySource: 0
+        adsDataSource: 0
+    6:
+      page: 'sectors/assurance/cardif-algerie.html'
+      loaderCount: 1
+      expectedLoader: '../../assets/js/site-tags.js'
+      directGa4Source: 0
+      directGa4Config: 0
+      legacy:
+        gtagConfig: 0
+        gtagSource: 0
+        gtmBootstrap: 0
+        gtmSource: 0
+        adsenseSource: 0
+        claritySource: 0
+        adsDataSource: 0
+    7:
+      page: 'sectors/assurance/gig.html'
+      loaderCount: 1
+      expectedLoader: '../../assets/js/site-tags.js'
+      directGa4Source: 0
+      directGa4Config: 0
+      legacy:
+        gtagConfig: 0
+        gtagSource: 0
+        gtmBootstrap: 0
+        gtmSource: 0
+        adsenseSource: 0
+        claritySource: 0
+        adsDataSource: 0
+    8:
+      page: 'sectors/assurance/macir-vie.html'
+      loaderCount: 1
+      expectedLoader: '../../assets/js/site-tags.js'
+      directGa4Source: 0
+      directGa4Config: 0
+      legacy:
+        gtagConfig: 0
+        gtagSource: 0
+        gtmBootstrap: 0
+        gtmSource: 0
+        adsenseSource: 0
+        claritySource: 0
+        adsDataSource: 0
+    9:
+      page: 'sectors/assurance/saa.html'
+      loaderCount: 1
+      expectedLoader: '../../assets/js/site-tags.js'
+      directGa4Source: 0
+      directGa4Config: 0
+      legacy:
+        gtagConfig: 0
+        gtagSource: 0
+        gtmBootstrap: 0
+        gtmSource: 0
+        adsenseSource: 0
+        claritySource: 0
+        adsDataSource: 0
+    10:
+      page: 'sectors/assurance/salama.html'
+      loaderCount: 1
+      expectedLoader: '../../assets/js/site-tags.js'
+      directGa4Source: 0
+      directGa4Config: 0
+      legacy:
+        gtagConfig: 0
+        gtagSource: 0
+        gtmBootstrap: 0
+        gtmSource: 0
+        adsenseSource: 0
+        claritySource: 0
+        adsDataSource: 0
+    11:
+      page: 'sectors/assurance/trust-algeria.html'
+      loaderCount: 1
+      expectedLoader: '../../assets/js/site-tags.js'
+      directGa4Source: 0
+      directGa4Config: 0
+      legacy:
+        gtagConfig: 0
+        gtagSource: 0
+        gtmBootstrap: 0
+        gtmSource: 0
+        adsenseSource: 0
+        claritySource: 0
+        adsDataSource: 0
+    12:
+      page: 'sectors/bank/ag-bank.html'
+      loaderCount: 1
+      expectedLoader: '../../assets/js/site-tags.js'
+      directGa4Source: 0
+      directGa4Config: 0
+      legacy:
+        gtagConfig: 0
+        gtagSource: 0
+        gtmBootstrap: 0
+        gtmSource: 0
+        adsenseSource: 0
+        claritySource: 0
+        adsDataSource: 0
+    13:
+      page: 'sectors/bank/albaraka-bank.html'
+      loaderCount: 1
+      expectedLoader: '../../assets/js/site-tags.js'
+      directGa4Source: 0
+      directGa4Config: 0
+      legacy:
+        gtagConfig: 0
+        gtagSource: 0
+        gtmBootstrap: 0
+        gtmSource: 0
+        adsenseSource: 0
+        claritySource: 0
+        adsDataSource: 0
+    14:
+      page: 'sectors/bank/arabbank.html'
+      loaderCount: 1
+      expectedLoader: '../../assets/js/site-tags.js'
+      directGa4Source: 0
+      directGa4Config: 0
+      legacy:
+        gtagConfig: 0
+        gtagSource: 0
+        gtmBootstrap: 0
+        gtmSource: 0
+        adsenseSource: 0
+        claritySource: 0
+        adsDataSource: 0
+    15:
+      page: 'sectors/bank/badr.html'
+      loaderCount: 1
+      expectedLoader: '../../assets/js/site-tags.js'
+      directGa4Source: 0
+      directGa4Config: 0
+      legacy:
+        gtagConfig: 0
+        gtagSource: 0
+        gtmBootstrap: 0
+        gtmSource: 0
+        adsenseSource: 0
+        claritySource: 0
+        adsDataSource: 0
+    16:
+      page: 'sectors/bank/bank-abc.html'
+      loaderCount: 1
+      expectedLoader: '../../assets/js/site-tags.js'
+      directGa4Source: 0
+      directGa4Config: 0
+      legacy:
+        gtagConfig: 0
+        gtagSource: 0
+        gtmBootstrap: 0
+        gtmSource: 0
+        adsenseSource: 0
+        claritySource: 0
+        adsDataSource: 0
+    17:
+      page: 'sectors/bank/bankalgeriane.html'
+      loaderCount: 1
+      expectedLoader: '../../assets/js/site-tags.js'
+      directGa4Source: 0
+      directGa4Config: 0
+      legacy:
+        gtagConfig: 0
+        gtagSource: 0
+        gtmBootstrap: 0
+        gtmSource: 0
+        adsenseSource: 0
+        claritySource: 0
+        adsDataSource: 0
+    18:
+      page: 'sectors/bank/banketranger.html'
+      loaderCount: 1
+      expectedLoader: '../../assets/js/site-tags.js'
+      directGa4Source: 0
+      directGa4Config: 0
+      legacy:
+        gtagConfig: 0
+        gtagSource: 0
+        gtmBootstrap: 0
+        gtmSource: 0
+        adsenseSource: 0
+        claritySource: 0
+        adsDataSource: 0
+    19:
+      page: 'sectors/bank/bdl.html'
+      loaderCount: 1
+      expectedLoader: '../../assets/js/site-tags.js'
+      directGa4Source: 0
+      directGa4Config: 0
+      legacy:
+        gtagConfig: 0
+        gtagSource: 0
+        gtmBootstrap: 0
+        gtmSource: 0
+        adsenseSource: 0
+        claritySource: 0
+        adsDataSource: 0
+    20:
+      page: 'sectors/bank/bea.html'
+      loaderCount: 1
+      expectedLoader: '../../assets/js/site-tags.js'
+      directGa4Source: 0
+      directGa4Config: 0
+      legacy:
+        gtagConfig: 0
+        gtagSource: 0
+        gtmBootstrap: 0
+        gtmSource: 0
+        adsenseSource: 0
+        claritySource: 0
+        adsDataSource: 0
+    21:
+      page: 'sectors/bank/bna.html'
+      loaderCount: 1
+      expectedLoader: '../../assets/js/site-tags.js'
+      directGa4Source: 0
+      directGa4Config: 0
+      legacy:
+        gtagConfig: 0
+        gtagSource: 0
+        gtmBootstrap: 0
+        gtmSource: 0
+        adsenseSource: 0
+        claritySource: 0
+        adsDataSource: 0
+    22:
+      page: 'sectors/bank/bnh.html'
+      loaderCount: 1
+      expectedLoader: '../../assets/js/site-tags.js'
+      directGa4Source: 0
+      directGa4Config: 0
+      legacy:
+        gtagConfig: 0
+        gtagSource: 0
+        gtmBootstrap: 0
+        gtmSource: 0
+        adsenseSource: 0
+        claritySource: 0
+        adsDataSource: 0
+    23:
+      page: 'sectors/bank/business.algeria.hsbc.html'
+      loaderCount: 1
+      expectedLoader: '../../assets/js/site-tags.js'
+      directGa4Source: 0
+      directGa4Config: 0
+      legacy:
+        gtagConfig: 0
+        gtagSource: 0
+        gtmBootstrap: 0
+        gtmSource: 0
+        adsenseSource: 0
+        claritySource: 0
+        adsDataSource: 0
+    24:
+      page: 'sectors/bank/citigroup.html'
+      loaderCount: 1
+      expectedLoader: '../../assets/js/site-tags.js'
+      directGa4Source: 0
+      directGa4Config: 0
+      legacy:
+        gtagConfig: 0
+        gtagSource: 0
+        gtmBootstrap: 0
+        gtmSource: 0
+        adsenseSource: 0
+        claritySource: 0
+        adsDataSource: 0
+    25:
+      page: 'sectors/bank/cnep.html'
+      loaderCount: 1
+      expectedLoader: '../../assets/js/site-tags.js'
+      directGa4Source: 0
+      directGa4Config: 0
+      legacy:
+        gtagConfig: 0
+        gtagSource: 0
+        gtmBootstrap: 0
+        gtmSource: 0
+        adsenseSource: 0
+        claritySource: 0
+        adsDataSource: 0
+    26:
+      page: 'sectors/bank/cpa.html'
+      loaderCount: 1
+      expectedLoader: '../../assets/js/site-tags.js'
+      directGa4Source: 0
+      directGa4Config: 0
+      legacy:
+        gtagConfig: 0
+        gtagSource: 0
+        gtmBootstrap: 0
+        gtmSource: 0
+        adsenseSource: 0
+        claritySource: 0
+        adsDataSource: 0
+    27:
+      page: 'sectors/bank/ebanking.algerie.natixis.html'
+      loaderCount: 1
+      expectedLoader: '../../assets/js/site-tags.js'
+      directGa4Source: 0
+      directGa4Config: 0
+      legacy:
+        gtagConfig: 0
+        gtagSource: 0
+        gtmBootstrap: 0
+        gtmSource: 0
+        adsenseSource: 0
+        claritySource: 0
+        adsDataSource: 0
+    28:
+      page: 'sectors/bank/fransabank.html'
+      loaderCount: 1
+      expectedLoader: '../../assets/js/site-tags.js'
+      directGa4Source: 0
+      directGa4Config: 0
+      legacy:
+        gtagConfig: 0
+        gtagSource: 0
+        gtmBootstrap: 0
+        gtmSource: 0
+        adsenseSource: 0
+        claritySource: 0
+        adsDataSource: 0
+    29:
+      page: 'sectors/bank/societegenerale.html'
+      loaderCount: 1
+      expectedLoader: '../../assets/js/site-tags.js'
+      directGa4Source: 0
+      directGa4Config: 0
+      legacy:
+        gtagConfig: 0
+        gtagSource: 0
+        gtmBootstrap: 0
+        gtmSource: 0
+        adsenseSource: 0
+        claritySource: 0
+        adsDataSource: 0
+  operator: 'deepStrictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///app/tests/analytics-tags.test.js:67:10)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.start (node:internal/test_runner/test:944:17)
+    startSubtestAfterBootstrap (node:internal/test_runner/harness:296:17)
+  ...
+# Subtest: site-tags.js centrally loads GTM, AdSense, and Clarity with guards
+ok 3 - site-tags.js centrally loads GTM, AdSense, and Clarity with guards
+  ---
+  duration_ms: 0.770166
+  type: 'test'
+  ...
+# (node:973981) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///app/tests/deferred-homepage.test.js is not specified and it doesn't parse as CommonJS.
+# Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+# To eliminate this warning, add "type": "module" to /app/package.json.
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: all content pages include the deferred homepage loader once with a valid relative path
+ok 4 - all content pages include the deferred homepage loader once with a valid relative path
+  ---
+  duration_ms: 55.092217
+  type: 'test'
+  ...
+# Subtest: deferred homepage loader resolves assets from nested pages
+ok 5 - deferred homepage loader resolves assets from nested pages
+  ---
+  duration_ms: 0.500997
+  type: 'test'
+  ...
+# Subtest: deferred homepage loader includes automated click, search, and conversion tracking
+ok 6 - deferred homepage loader includes automated click, search, and conversion tracking
+  ---
+  duration_ms: 0.402422
+  type: 'test'
+  ...
+# (node:974002) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///app/tests/naftal-contact.test.js is not specified and it doesn't parse as CommonJS.
+# Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+# To eliminate this warning, add "type": "module" to /app/package.json.
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: Naftal communication section exposes customer support email
+ok 7 - Naftal communication section exposes customer support email
+  ---
+  duration_ms: 1.496099
+  type: 'test'
+  ...
+# Subtest: Naftal support email is represented in structured data and search index
+ok 8 - Naftal support email is represented in structured data and search index
+  ---
+  duration_ms: 1.964444
+  type: 'test'
+  ...
+# (node:974003) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///app/tests/new-services.test.js is not specified and it doesn't parse as CommonJS.
+# Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+# To eliminate this warning, add "type": "module" to /app/package.json.
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: every new homepage card has a valid date and badge
+ok 9 - every new homepage card has a valid date and badge
+  ---
+  duration_ms: 3.732034
+  type: 'test'
+  ...
+# Subtest: new services filter is explicitly wired to the new filter
+ok 10 - new services filter is explicitly wired to the new filter
+  ---
+  duration_ms: 0.283895
+  type: 'test'
+  ...
+# Subtest: the 25-day window has inclusive start and exclusive expiry boundaries
+ok 11 - the 25-day window has inclusive start and exclusive expiry boundaries
+  ---
+  duration_ms: 0.241462
+  type: 'test'
+  ...
+# (node:974016) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///app/tests/related-sectors.test.js is not specified and it doesn't parse as CommonJS.
+# Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+# To eliminate this warning, add "type": "module" to /app/package.json.
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: all eligible sector pages contain one Related Sectors section with exactly three cards
+ok 12 - all eligible sector pages contain one Related Sectors section with exactly three cards
+  ---
+  duration_ms: 34.394787
+  type: 'test'
+  ...
+# Subtest: all Related Sectors links resolve to existing local HTML pages
+ok 13 - all Related Sectors links resolve to existing local HTML pages
+  ---
+  duration_ms: 35.04005
+  type: 'test'
+  ...
+# \# tracked legacy broken page links: 10
+# Subtest: all active local HTML links resolve to existing files and fragments
+ok 14 - all active local HTML links resolve to existing files and fragments
+  ---
+  duration_ms: 296.937795
+  type: 'test'
+  ...
+# Subtest: searchData.js loads and contains valid, resolvable records
+ok 15 - searchData.js loads and contains valid, resolvable records
+  ---
+  duration_ms: 164.822697
+  type: 'test'
+  ...
+# Subtest: searchData.js has no duplicate URLs for exact duplicate records
+ok 16 - searchData.js has no duplicate URLs for exact duplicate records
+  ---
+  duration_ms: 9.166147
+  type: 'test'
+  ...
+1..16
+# tests 16
+# suites 0
+# pass 15
+# fail 1
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 766.944363
