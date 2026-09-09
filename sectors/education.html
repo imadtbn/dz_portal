@@ -89,263 +89,369 @@
 
     <script type="application/ld+json">
 {
-    "@context": "https://schema.org",
-    "@graph": [
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://imadtbn.github.io/dz_portal/#website",
+      "url": "https://imadtbn.github.io/dz_portal/",
+      "name": "البوابة الجزائرية للخدمات الرقمية",
+      "alternateName": ["DZ Portal", "البوابة الرقمية للخدمات الجزائرية"],
+      "inLanguage": "ar-DZ",
+      "publisher": { "@id": "https://imadtbn.github.io/dz_portal/#organization" },
+      "description": "منصة موحدة للوصول إلى الخدمات الحكومية والعمومية الرقمية في الجزائر."
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://imadtbn.github.io/dz_portal/#organization",
+      "name": "البوابة الجزائرية للخدمات الرقمية",
+      "url": "https://imadtbn.github.io/dz_portal/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://imadtbn.github.io/dz_portal/assets/images/icon.png"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer support",
+        "areaServed": "DZ",
+        "availableLanguage": ["ar", "fr"],
+        "email": "tabaniimadeddine@gmail.com",
+        "telephone": "+213697743721"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "الجزائر",
+        "postalCode": "16000",
+        "addressCountry": "DZ"
+      },
+      "sameAs": ["https://imadtbn.github.io/dz_portal/"],
+      "email": "tabaniimadeddine@gmail.com",
+      "areaServed": { "@type": "Country", "name": "الجزائر" }
+    },
+    {
+      "@type": ["WebPage"],
+      "@id": "https://imadtbn.github.io/dz_portal/sectors/education.html#webpage",
+      "url": "https://imadtbn.github.io/dz_portal/sectors/education.html",
+      "name": "وزارة التربية الوطنية | البوابة الجزائرية",
+      "description": "دليل الخدمات الرقمية لوزارة التربية الوطنية في الجزائر: فضاء الأستاذ والأولياء، التسجيل في الامتحانات، النتائج، التعليم عن بعد والتوظيف",
+      "keywords": "وزارة التربية الوطنية | البوابة الجزائرية, خدمات تعليمية, فضاء الأستاذ, فضاء الأولياء, توظيف الأساتذة, مسابقة التوظيف, الامتحانات المهنية, نتائج البكالوريا, نتائج BEM, التعليم عن بعد, الفروض والاختبارات, الجزائر",
+      "inLanguage": "ar-DZ",
+      "isPartOf": { "@id": "https://imadtbn.github.io/dz_portal/#website" },
+      "about": { "@type": "Thing", "name": "البوابة الجزائرية" },
+      "publisher": { "@id": "https://imadtbn.github.io/dz_portal/#organization" },
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://imadtbn.github.io/dz_portal/assets/images/education.png"
+      },
+      "datePublished": "2026-09-09T22:27:14+01:00",
+      "dateModified": "2026-05-07T13:24:51+01:00",
+      "breadcrumb": { "@id": "https://imadtbn.github.io/dz_portal/sectors/education.html#breadcrumb" },
+      "mainEntity": { "@id": "https://imadtbn.github.io/dz_portal/sectors/education.html#itemlist" }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://imadtbn.github.io/dz_portal/sectors/education.html#breadcrumb",
+      "itemListElement": [
         {
-            "@type": "WebSite",
-            "@id": "https://imadtbn.github.io/dz_portal/#website",
-            "url": "https://imadtbn.github.io/dz_portal/",
-            "name": "البوابة الجزائرية للخدمات الرقمية",
-            "alternateName": [
-                "DZ Portal",
-                "البوابة الرقمية للخدمات الجزائرية"
-            ],
-            "inLanguage": "ar-DZ",
-            "publisher": {
-                "@id": "https://imadtbn.github.io/dz_portal/#organization"
-            },
-            "description": "منصة موحدة للوصول إلى الخدمات الحكومية والعمومية الرقمية في الجزائر."
+          "@type": "ListItem",
+          "position": 1,
+          "name": "الرئيسية",
+          "item": "https://imadtbn.github.io/dz_portal/"
         },
         {
-            "@type": "Organization",
-            "@id": "https://imadtbn.github.io/dz_portal/#organization",
-            "name": "البوابة الجزائرية للخدمات الرقمية",
-            "url": "https://imadtbn.github.io/dz_portal/",
-            "logo": {
-                "@type": "ImageObject",
-                "url": "https://imadtbn.github.io/dz_portal/assets/images/icon.png"
-            },
-            "contactPoint": {
-                "@type": "ContactPoint",
-                "contactType": "customer support",
-                "areaServed": "DZ",
-                "availableLanguage": [
-                    "ar",
-                    "fr"
-                ],
-                "email": "tabaniimadeddine@gmail.com",
-                "telephone": "+213697743721"
-            },
-            "address": {
-                "@type": "PostalAddress",
-                "addressLocality": "الجزائر",
-                "postalCode": "16000",
-                "addressCountry": "DZ"
-            },
-            "sameAs": [
-                "https://imadtbn.github.io/dz_portal/"
-            ],
-            "email": "tabaniimadeddine@gmail.com",
-            "areaServed": {
-                "@type": "Country",
-                "name": "الجزائر"
-            }
+          "@type": "ListItem",
+          "position": 2,
+          "name": "القطاعات والخدمات الرقمية",
+          "item": "https://imadtbn.github.io/dz_portal/sectors/"
         },
         {
-            "@type": [
-                "WebPage"
-            ],
-            "@id": "https://imadtbn.github.io/dz_portal/sectors/education.html#webpage",
-            "url": "https://imadtbn.github.io/dz_portal/sectors/education.html",
-            "name": "وزارة التربية الوطنية | البوابة الجزائرية",
-            "description": "دليل الخدمات الرقمية لوزارة التربية الوطنية في الجزائر: فضاء الأستاذ والأولياء، التسجيل في الامتحانات، النتائج، التعليم عن بعد والتوظيف",
-            "keywords": "وزارة التربية الوطنية | البوابة الجزائرية, خدمات تعليمية, فضاء الأستاذ, فضاء الأولياء, توظيف الأساتذة, مسابقة التوظيف, الامتحانات المهنية, نتائج البكالوريا, نتائج BEM, التعليم عن بعد, الفروض والاختبارات, الجزائر",
-            "inLanguage": "ar-DZ",
-            "isPartOf": {
-                "@id": "https://imadtbn.github.io/dz_portal/#website"
-            },
-            "about": {
-                "@type": "Thing",
-                "name": "البوابة الجزائرية"
-            },
-            "publisher": {
-                "@id": "https://imadtbn.github.io/dz_portal/#organization"
-            },
-            "primaryImageOfPage": {
-                "@type": "ImageObject",
-                "url": "https://imadtbn.github.io/dz_portal/assets/images/education.png"
-            },
-            "datePublished": "2026-09-09T22:27:14+01:00",
-            "dateModified": "2026-05-07T13:24:51+01:00",
-            "breadcrumb": {
-                "@id": "https://imadtbn.github.io/dz_portal/sectors/education.html#breadcrumb"
-            },
-            "mainEntity": {
-                "@id": "https://imadtbn.github.io/dz_portal/sectors/education.html#itemlist"
-            }
-        },
-        {
-            "@type": "BreadcrumbList",
-            "@id": "https://imadtbn.github.io/dz_portal/sectors/education.html#breadcrumb",
-            "itemListElement": [
-                {
-                    "@type": "ListItem",
-                    "position": 1,
-                    "name": "الرئيسية",
-                    "item": "https://imadtbn.github.io/dz_portal/"
-                },
-                {
-                    "@type": "ListItem",
-                    "position": 2,
-                    "name": "القطاعات والخدمات الرقمية",
-                    "item": "https://imadtbn.github.io/dz_portal/sectors/"
-                },
-                {
-                    "@type": "ListItem",
-                    "position": 3,
-                    "name": "البوابة الجزائرية",
-                    "item": "https://imadtbn.github.io/dz_portal/sectors/education.html"
-                }
-            ]
-        },
-        {
-            "@type": "ItemList",
-            "@id": "https://imadtbn.github.io/dz_portal/sectors/education.html#itemlist",
-            "name": "الخدمات والروابط الرقمية في البوابة الجزائرية",
-            "description": "قائمة منظمة بالخدمات والروابط المرتبطة بصفحة البوابة الجزائرية.",
-            "numberOfItems": 12,
-            "itemListElement": [
-                {
-                    "@type": "ListItem",
-                    "position": 1,
-                    "item": {
-                        "@type": "Service",
-                        "name": "التصديق على الوثائق عبر الأبوستيل",
-                        "url": "https://imadtbn.github.io/dz_portal/sectors/mfa.html#e-services",
-                        "description": "التصديق على كشوف النقاط وشهادة البكالوريا الموجهة للاستعمال بالخارج"
-                    }
-                },
-                {
-                    "@type": "ListItem",
-                    "position": 2,
-                    "item": {
-                        "@type": "Service",
-                        "name": "الامتحانات المهنية",
-                        "url": "https://imadtbn.github.io/dz_portal/sectors/education.html#results",
-                        "description": "الاطلاع على نتائج الامتحانات المهنية للاسلاك الخاصة"
-                    }
-                },
-                {
-                    "@type": "ListItem",
-                    "position": 3,
-                    "item": {
-                        "@type": "Service",
-                        "name": "الدخول لفضاء للأستاذ",
-                        "url": "https://imadtbn.github.io/dz_portal/sectors/ostad-education.html",
-                        "description": "فضاءالأستاذ الشامل لإدارة العملية التربوية والتواصل مع الإدارة"
-                    }
-                },
-                {
-                    "@type": "ListItem",
-                    "position": 4,
-                    "item": {
-                        "@type": "Service",
-                        "name": "الدخول لفضاء الأولياء",
-                        "url": "https://imadtbn.github.io/dz_portal/sectors/awlyaa-education.html",
-                        "description": "متابعة النتائج الدراسية، الغيابات، والتواصل مع المدرسة"
-                    }
-                },
-                {
-                    "@type": "ListItem",
-                    "position": 5,
-                    "item": {
-                        "@type": "Service",
-                        "name": "التعليم عن بعد",
-                        "url": "https://awlyaa.education.dz/login",
-                        "description": "التسجيل في برامج التعليم عن بعد"
-                    }
-                },
-                {
-                    "@type": "ListItem",
-                    "position": 6,
-                    "item": {
-                        "@type": "Service",
-                        "name": "إثبات المستوى",
-                        "url": "https://www.onefd.edu.dz/att_niv_2025/",
-                        "description": "استخراج شهادات إثبات المستوى"
-                    }
-                },
-                {
-                    "@type": "ListItem",
-                    "position": 7,
-                    "item": {
-                        "@type": "Service",
-                        "name": "شهادة البكالوريا BAC",
-                        "url": "https://bac.onec.dz/",
-                        "description": "التسجيل في امتحان شهادة البكالوريا، متابعة الطلب، وطبع الاستدعاء"
-                    }
-                },
-                {
-                    "@type": "ListItem",
-                    "position": 8,
-                    "item": {
-                        "@type": "Service",
-                        "name": "شهادة التعليم المتوسط BEM",
-                        "url": "https://bem.onec.dz/",
-                        "description": "التسجيل في امتحان السنة الرابعة متوسط، الاطلاع على النتائج"
-                    }
-                },
-                {
-                    "@type": "ListItem",
-                    "position": 9,
-                    "item": {
-                        "@type": "Service",
-                        "name": "الدفع الإلكتروني للامتحانات",
-                        "url": "https://epay.education.dz/auth",
-                        "description": "تسديد مستحقات التسجيل في امتحانات BEM و BAC إلكترونياً"
-                    }
-                },
-                {
-                    "@type": "ListItem",
-                    "position": 10,
-                    "item": {
-                        "@type": "Service",
-                        "name": "الامتحانات المهنية",
-                        "url": "https://mowadaf.education.dz/",
-                        "description": "الاطلاع على نتائج الامتحانات المهنية للاسلاك الخاصة"
-                    }
-                },
-                {
-                    "@type": "ListItem",
-                    "position": 11,
-                    "item": {
-                        "@type": "Service",
-                        "name": "شهادة إثبات المستوى",
-                        "url": "https://www.onefd.edu.dz/att_niv_**/",
-                        "description": "استخراج شهادة إثبات المستوى للتلاميذ المسجلين في التعليم عن بعد"
-                    }
-                },
-                {
-                    "@type": "ListItem",
-                    "position": 12,
-                    "item": {
-                        "@type": "Service",
-                        "name": "الفروض والإختبارات",
-                        "url": "https://imadtbn.github.io/dz_portal/sectors/exam-compos.html",
-                        "description": "لجميع المستويات مع التصحيح"
-                    }
-                },
-                {
-                    "@type": "ListItem",
-                    "position": 13,
-                    "item": {
-                        "@type": "Service",
-                        "name": "بيانات صحفية ومنشورات",
-                        "url": "https://imadtbn.github.io/dz_portal/sectors/education.html#official-notice",
-                        "description": "بيانات صحفية ومنشورات"
-                    }
-                }
-            ]
+          "@type": "ListItem",
+          "position": 3,
+          "name": "البوابة الجزائرية",
+          "item": "https://imadtbn.github.io/dz_portal/sectors/education.html"
         }
-    ]
+      ]
+    },
+    {
+      "@type": "ItemList",
+      "@id": "https://imadtbn.github.io/dz_portal/sectors/education.html#itemlist",
+      "name": "الخدمات والروابط الرقمية في البوابة الجزائرية",
+      "description": "قائمة منظمة بالخدمات والروابط المرتبطة بصفحة البوابة الجزائرية.",
+      "numberOfItems": 13,
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "item": {
+            "@type": "Service",
+            "name": "التصديق على الوثائق عبر الأبوستيل",
+            "url": "https://imadtbn.github.io/dz_portal/sectors/mfa.html#e-services",
+            "description": "التصديق على كشوف النقاط وشهادة البكالوريا الموجهة للاستعمال بالخارج"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "item": {
+            "@type": "Service",
+            "name": "الامتحانات المهنية",
+            "url": "https://imadtbn.github.io/dz_portal/sectors/education.html#results",
+            "description": "الاطلاع على نتائج الامتحانات المهنية للاسلاك الخاصة"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "item": {
+            "@type": "Service",
+            "name": "الدخول لفضاء للأستاذ",
+            "url": "https://imadtbn.github.io/dz_portal/sectors/ostad-education.html",
+            "description": "فضاءالأستاذ الشامل لإدارة العملية التربوية والتواصل مع الإدارة"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "item": {
+            "@type": "Service",
+            "name": "الدخول لفضاء الأولياء",
+            "url": "https://imadtbn.github.io/dz_portal/sectors/awlyaa-education.html",
+            "description": "متابعة النتائج الدراسية، الغيابات، والتواصل مع المدرسة"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "item": {
+            "@type": "Service",
+            "name": "التعليم عن بعد",
+            "url": "https://awlyaa.education.dz/login",
+            "description": "التسجيل في برامج التعليم عن بعد"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 6,
+          "item": {
+            "@type": "Service",
+            "name": "إثبات المستوى",
+            "url": "https://www.onefd.edu.dz/att_niv_2025/",
+            "description": "استخراج شهادات إثبات المستوى"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 7,
+          "item": {
+            "@type": "Service",
+            "name": "شهادة البكالوريا BAC",
+            "url": "https://bac.onec.dz/",
+            "description": "التسجيل في امتحان شهادة البكالوريا، متابعة الطلب، وطبع الاستدعاء"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 8,
+          "item": {
+            "@type": "Service",
+            "name": "شهادة التعليم المتوسط BEM",
+            "url": "https://bem.onec.dz/",
+            "description": "التسجيل في امتحان السنة الرابعة متوسط، الاطلاع على النتائج"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 9,
+          "item": {
+            "@type": "Service",
+            "name": "الدفع الإلكتروني للامتحانات",
+            "url": "https://epay.education.dz/auth",
+            "description": "تسديد مستحقات التسجيل في امتحانات BEM و BAC إلكترونياً"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 10,
+          "item": {
+            "@type": "Service",
+            "name": "الامتحانات المهنية",
+            "url": "https://mowadaf.education.dz/",
+            "description": "الاطلاع على نتائج الامتحانات المهنية للاسلاك الخاصة"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 11,
+          "item": {
+            "@type": "Service",
+            "name": "شهادة إثبات المستوى",
+            "url": "https://www.onefd.edu.dz/att_niv_**/",
+            "description": "استخراج شهادة إثبات المستوى للتلاميذ المسجلين في التعليم عن بعد"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 12,
+          "item": {
+            "@type": "Service",
+            "name": "الفروض والإختبارات",
+            "url": "https://imadtbn.github.io/dz_portal/sectors/exam-compos.html",
+            "description": "لجميع المستويات مع التصحيح"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 13,
+          "item": {
+            "@type": "Service",
+            "name": "بيانات صحفية ومنشورات",
+            "url": "https://imadtbn.github.io/dz_portal/sectors/education.html#official-notice",
+            "description": "الاطلاع على البلاغات الرسمية والمنشورات الصادرة عن وزارة التربية الوطنية"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "ItemList",
+      "@id": "https://imadtbn.github.io/dz_portal/sectors/education.html#official-notice-list",
+      "name": "البيانات الصحفية والمنشورات الرسمية لوزارة التربية الوطنية",
+      "description": "قائمة بالبلاغات الرسمية والمنشورات الصادرة عن وزارة التربية الوطنية الجزائرية.",
+      "numberOfItems": 7,
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "item": {
+            "@type": "Article",
+            "name": "بلاغ 07: تحويل التلاميذ بين المؤسسات التربوية بعنوان السنة الدراسية 2027/2026",
+            "description": "بخصوص تحويل التلاميذ بين المؤسسات التربوية بعنوان السنة الدراسية 2027/2026",
+            "url": "https://imadtbn.github.io/dz_portal/assets/avis-educ/avis7.jpg",
+            "image": "https://imadtbn.github.io/dz_portal/assets/avis-educ/avis7.jpg",
+            "datePublished": "2026-09-09",
+            "publisher": {
+              "@type": "GovernmentOrganization",
+              "name": "وزارة التربية الوطنية الجزائرية",
+              "url": "https://www.education.gov.dz/"
+            }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "item": {
+            "@type": "Article",
+            "name": "بلاغ 06: التسجيل في أقسام التربية التحضيرية والتسجيل الاستثنائي في السنة الأولى ابتدائي 2026/2025",
+            "description": "بخصوص التسجيل في أقسام التربية التحضيرية، وكذا التسجيل الاستثنائي في السنة الأولى ابتدائي بعنوان السنة الدراسية 2026/2025",
+            "url": "https://imadtbn.github.io/dz_portal/assets/avis-educ/avis6.jpg",
+            "image": "https://imadtbn.github.io/dz_portal/assets/avis-educ/avis6.jpg",
+            "datePublished": "2026-09-09",
+            "publisher": {
+              "@type": "GovernmentOrganization",
+              "name": "وزارة التربية الوطنية الجزائرية",
+              "url": "https://www.education.gov.dz/"
+            }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "item": {
+            "@type": "Article",
+            "name": "بلاغ 05: التصديق على كشوف النقاط وشهادة البكالوريا للاستعمال بالخارج",
+            "description": "بخصوص التصديق على كشوف النقاط وشهادة البكالوريا الموجهة للاستعمال بالخارج",
+            "url": "https://imadtbn.github.io/dz_portal/assets/avis-educ/avis5.jpg",
+            "image": "https://imadtbn.github.io/dz_portal/assets/avis-educ/avis5.jpg",
+            "datePublished": "2026-09-09",
+            "publisher": {
+              "@type": "GovernmentOrganization",
+              "name": "وزارة التربية الوطنية الجزائرية",
+              "url": "https://www.education.gov.dz/"
+            }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "item": {
+            "@type": "Article",
+            "name": "بلاغ 04: تعديل رزنامة الدخول المدرسي للسنة الدراسية 2026-2027",
+            "description": "تعديل رزنامة الدخول المدرسي للسنة الدراسية 2026-2027",
+            "url": "https://imadtbn.github.io/dz_portal/assets/avis-educ/avis4.jpg",
+            "image": "https://imadtbn.github.io/dz_portal/assets/avis-educ/avis4.jpg",
+            "datePublished": "2026-09-09",
+            "publisher": {
+              "@type": "GovernmentOrganization",
+              "name": "وزارة التربية الوطنية الجزائرية",
+              "url": "https://www.education.gov.dz/"
+            }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "item": {
+            "@type": "Article",
+            "name": "بلاغ 03: إعلان نتائج الامتحانات المهنية ومسابقة التوظيف على أساس الشهادة للأساتذة",
+            "description": "حول إعلان نتائج الامتحانات المهنية ومسابقة التوظيف على أساس الشهادة للأساتذة",
+            "url": "https://imadtbn.github.io/dz_portal/assets/avis-educ/avis3.jpg",
+            "image": "https://imadtbn.github.io/dz_portal/assets/avis-educ/avis3.jpg",
+            "datePublished": "2026-09-09",
+            "publisher": {
+              "@type": "GovernmentOrganization",
+              "name": "وزارة التربية الوطنية الجزائرية",
+              "url": "https://www.education.gov.dz/"
+            }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 6,
+          "item": {
+            "@type": "Article",
+            "name": "بلاغ 02: رزنامة الدخول المدرسي 2026-2027",
+            "description": "حول رزنامة الدخول المدرسي 2026 - 2027",
+            "url": "https://imadtbn.github.io/dz_portal/assets/avis-educ/avis1.jpg",
+            "image": "https://imadtbn.github.io/dz_portal/assets/avis-educ/avis1.jpg",
+            "datePublished": "2026-09-09",
+            "publisher": {
+              "@type": "GovernmentOrganization",
+              "name": "وزارة التربية الوطنية الجزائرية",
+              "url": "https://www.education.gov.dz/"
+            }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 7,
+          "item": {
+            "@type": "Article",
+            "name": "بلاغ 01: الترتيبات البيداغوجية للموسم الدراسي 2026-2027",
+            "description": "حول الترتيبات البيداغوجية المتخذة للموسم الدراسي 2026 - 2027",
+            "url": "https://imadtbn.github.io/dz_portal/assets/avis-educ/avis2.jpg",
+            "image": "https://imadtbn.github.io/dz_portal/assets/avis-educ/avis2.jpg",
+            "datePublished": "2026-09-09",
+            "publisher": {
+              "@type": "GovernmentOrganization",
+              "name": "وزارة التربية الوطنية الجزائرية",
+              "url": "https://www.education.gov.dz/"
+            }
+          }
+        }
+      ]
+    }
+  ]
 }
-    </script>
+</script>
+
     <script src="../assets/js/site-tags.js" defer></script>
     <!-- Google Analytics 4: التهيئة المباشرة داخل head -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-K23WYKK60X"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
         gtag('js', new Date());
         gtag('config', 'G-K23WYKK60X');
     </script>
@@ -356,7 +462,6 @@
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NW3BWPF6" height="0" width="0"
             style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
-
 
     <!-- Header -->
     <header class="header">
@@ -539,16 +644,16 @@
 
             <span class="alert-badge">
                 <i class="fas fa-bullhorn"></i>
-                تسجيلات الموسم الدراسي 2026-2027
+                التحويلات المدرسية
             </span>
 
-            <h2>انطلاق تسجيلات التربية التحضيرية</h2>
+            <h2>انطلاق التحويلات المدرسية</h2>
 
             <p class="alert-intro">
-                تعلن <strong>وزارة التربية الوطنية</strong> عن انطلاق عملية التسجيل
-                في أقسام التربية التحضيرية للموسم الدراسي
-                <strong>2026-2027</strong>، حصريًا عبر
-                <strong>فضاء الأولياء</strong>.
+                تعلن <strong>وزارة التربية الوطنية</strong> عن انطلاق عملية التحويلات المدرسية التلاميذ الراغبين في
+                الانتقال من مؤسسة تربوية إلى أخرى، وذلك وفقًا للشروط والإجراءات المحددة. يمكن للأولياء تقديم طلبات
+                التحويل عبر <strong>فضاء الأولياء</strong>، مع ضرورة الالتزام بالمواعيد النهائية المحددة.
+                
             </p>
 
             <div class="registration-notice">
@@ -563,27 +668,10 @@
 
                     <div>
                         <strong>فترة التسجيل</strong>
-                        <span>13 إلى 24 سبتمبر 2026</span>
+                        <span>إبتداءً من 13 سبتمبر 2026</span>
                     </div>
                 </div>
 
-                <div class="date-item">
-                    <i class="fas fa-clipboard-check"></i>
-
-                    <div>
-                        <strong>إعلان النتائج</strong>
-                        <span>01 أكتوبر 2026</span>
-                    </div>
-                </div>
-
-                <div class="date-item">
-                    <i class="fas fa-school"></i>
-
-                    <div>
-                        <strong>الالتحاق بمقاعد الدراسة</strong>
-                        <span>ابتداءً من الأحد 04 أكتوبر 2026</span>
-                    </div>
-                </div>
 
             </div>
 
@@ -594,7 +682,7 @@
 
             <p class="alert-footer">
                 <i class="fas fa-info-circle"></i>
-                التسجيلات تتم إلكترونيًا عبر النظام المعلوماتي لوزارة التربية الوطنية.
+                التسجيلات تتم إلكترونيًا عبر فضاء الأولياء لوزارة التربية الوطنية.
             </p>
 
         </div>
@@ -1149,7 +1237,9 @@
                         <p>بخصوص تحويل التلاميذ بين المؤسسات التربوية بعنوان السنة الدراسية 2027/2026</p>
 
                         <a href="../assets/avis-educ/avis7.jpg" class="notice-image">
-                            <img src="../assets/avis-educ/avis7.jpg" alt="بخصوص تحويل التلاميذ بين المؤسسات التربوية بعنوان السنة الدراسية 2027/2026" loading="lazy">
+                            <img src="../assets/avis-educ/avis7.jpg"
+                                alt="بخصوص تحويل التلاميذ بين المؤسسات التربوية بعنوان السنة الدراسية 2027/2026"
+                                loading="lazy">
                             <span class="zoom-btn">
                                 <i class="fas fa-expand"></i>
                                 عرض بالحجم الكامل
