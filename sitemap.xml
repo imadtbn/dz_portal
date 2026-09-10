@@ -19,6 +19,18 @@
       <video:player_loc allow_embed="yes">https://www.youtube.com/embed/Abph3zC5gZA</video:player_loc>
     </video:video>
   </url>
+    <url>
+    <loc>https://imadtbn.github.io/dz_portal/pages/video/mtpib-presentation.html</loc>
+    <lastmod>2026-09-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <video:video>
+      <video:thumbnail_loc>https://imadtbn.github.io/dz_portal/assets/images/mtpib.jpg</video:thumbnail_loc>
+      <video:title>البوابة الرقمية لوزارة الأشغال العمومية والمنشآت الكبرى</video:title>
+      <video:description>شرح مرئي عن البوابة الرقمية لوزارة الأشغال العمومية والمنشآت الكبرى.</video:description>
+      <video:player_loc allow_embed="yes">https://portail.mtpib.dz/portail_v.mp4</video:player_loc>
+    </video:video>
+  </url>
   <url>
     <loc>https://imadtbn.github.io/dz_portal/pages/video/arpce-777.html</loc>
     <lastmod>2026-09-10</lastmod>
