@@ -375,8 +375,8 @@
 
   // 5. جدولة السكربتات المؤجلة للصفحة الرئيسية
   window.addEventListener('load', () => {
-    scheduleIdle(() => loadLocalScript('js/homepageStats.js'), 2500);
-    scheduleIdle(() => loadLocalScript('js/siteRating.js'), 3500);
+    scheduleIdle(() => loadLocalScript('js/homepageStats.js'), 1400);
+    scheduleIdle(() => loadLocalScript('js/siteRating.js'), 1500);
   }, { once: true, passive: true });
 })();
 
