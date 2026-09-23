@@ -1,6 +1,1562 @@
 {
-  "version": 1,
+  "version": 2,
   "updated": "2026-09-23",
-  "trips": [],
-  "note": "Do not add trips without validated origin, destination, times, service calendar and source."
+  "trips": [
+    {
+      "trip_id": "user-zeralda-agha-1500",
+      "route_id": "zeralda-agha",
+      "train_number": "1500",
+      "service_id": "weekday_not_friday",
+      "source_id": "user-zeralda-agha-2026-09-19",
+      "data_status": "user-supplied",
+      "effective_from": "2026-09-19",
+      "stop_times": [
+        {
+          "station_id": "zeralda",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "06:15"
+        },
+        {
+          "station_id": "sidi-abdallah-j",
+          "sequence": 2,
+          "arrival": "06:18",
+          "departure": "06:18"
+        },
+        {
+          "station_id": "sidi-abdallah",
+          "sequence": 3,
+          "arrival": "06:21",
+          "departure": "06:21"
+        },
+        {
+          "station_id": "tessala-el-merdja",
+          "sequence": 4,
+          "arrival": "06:26",
+          "departure": "06:26"
+        },
+        {
+          "station_id": "birtouta",
+          "sequence": 5,
+          "arrival": "06:32",
+          "departure": "06:32"
+        },
+        {
+          "station_id": "baba-ali",
+          "sequence": 6,
+          "arrival": "06:37",
+          "departure": "06:37"
+        },
+        {
+          "station_id": "ain-naadja",
+          "sequence": 7,
+          "arrival": "06:41",
+          "departure": "06:41"
+        },
+        {
+          "station_id": "djasr-constantine",
+          "sequence": 8,
+          "arrival": "06:44",
+          "departure": "06:44"
+        },
+        {
+          "station_id": "el-harrach",
+          "sequence": 9,
+          "arrival": "06:48",
+          "departure": "06:48"
+        },
+        {
+          "station_id": "kharouba",
+          "sequence": 10,
+          "arrival": "06:51",
+          "departure": "06:51"
+        },
+        {
+          "station_id": "hussein-dey",
+          "sequence": 11,
+          "arrival": "06:54",
+          "departure": "06:54"
+        },
+        {
+          "station_id": "ateliers",
+          "sequence": 12,
+          "arrival": "06:57",
+          "departure": "06:57"
+        },
+        {
+          "station_id": "agha",
+          "sequence": 13,
+          "arrival": "07:01",
+          "departure": null
+        }
+      ]
+    },
+    {
+      "trip_id": "user-zeralda-agha-1502",
+      "route_id": "zeralda-agha",
+      "train_number": "1502",
+      "service_id": "daily",
+      "source_id": "user-zeralda-agha-2026-09-19",
+      "data_status": "user-supplied",
+      "effective_from": "2026-09-19",
+      "stop_times": [
+        {
+          "station_id": "zeralda",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "06:55"
+        },
+        {
+          "station_id": "sidi-abdallah-j",
+          "sequence": 2,
+          "arrival": "06:58",
+          "departure": "06:58"
+        },
+        {
+          "station_id": "sidi-abdallah",
+          "sequence": 3,
+          "arrival": "07:01",
+          "departure": "07:01"
+        },
+        {
+          "station_id": "tessala-el-merdja",
+          "sequence": 4,
+          "arrival": "07:07",
+          "departure": "07:07"
+        },
+        {
+          "station_id": "birtouta",
+          "sequence": 5,
+          "arrival": "07:14",
+          "departure": "07:14"
+        },
+        {
+          "station_id": "baba-ali",
+          "sequence": 6,
+          "arrival": "07:19",
+          "departure": "07:19"
+        },
+        {
+          "station_id": "ain-naadja",
+          "sequence": 7,
+          "arrival": "07:23",
+          "departure": "07:23"
+        },
+        {
+          "station_id": "djasr-constantine",
+          "sequence": 8,
+          "arrival": "07:26",
+          "departure": "07:26"
+        },
+        {
+          "station_id": "el-harrach",
+          "sequence": 9,
+          "arrival": "07:30",
+          "departure": "07:30"
+        },
+        {
+          "station_id": "kharouba",
+          "sequence": 10,
+          "arrival": "07:33",
+          "departure": "07:33"
+        },
+        {
+          "station_id": "hussein-dey",
+          "sequence": 11,
+          "arrival": "07:36",
+          "departure": "07:36"
+        },
+        {
+          "station_id": "ateliers",
+          "sequence": 12,
+          "arrival": "07:39",
+          "departure": "07:39"
+        },
+        {
+          "station_id": "agha",
+          "sequence": 13,
+          "arrival": "07:44",
+          "departure": null
+        }
+      ]
+    },
+    {
+      "trip_id": "user-zeralda-agha-B502",
+      "route_id": "zeralda-agha",
+      "train_number": "B502",
+      "service_id": "daily",
+      "source_id": "user-zeralda-agha-2026-09-19",
+      "data_status": "user-supplied",
+      "effective_from": "2026-09-19",
+      "stop_times": [
+        {
+          "station_id": "zeralda",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "07:30"
+        },
+        {
+          "station_id": "sidi-abdallah-j",
+          "sequence": 2,
+          "arrival": "07:33",
+          "departure": "07:33"
+        },
+        {
+          "station_id": "sidi-abdallah",
+          "sequence": 3,
+          "arrival": "07:36",
+          "departure": "07:36"
+        },
+        {
+          "station_id": "tessala-el-merdja",
+          "sequence": 4,
+          "arrival": "07:42",
+          "departure": "07:42"
+        },
+        {
+          "station_id": "birtouta",
+          "sequence": 5,
+          "arrival": "07:49",
+          "departure": "07:49"
+        },
+        {
+          "station_id": "baba-ali",
+          "sequence": 6,
+          "arrival": "07:54",
+          "departure": "07:54"
+        },
+        {
+          "station_id": "ain-naadja",
+          "sequence": 7,
+          "arrival": "07:58",
+          "departure": "07:58"
+        },
+        {
+          "station_id": "djasr-constantine",
+          "sequence": 8,
+          "arrival": "08:01",
+          "departure": "08:01"
+        },
+        {
+          "station_id": "el-harrach",
+          "sequence": 9,
+          "arrival": "08:05",
+          "departure": "08:05"
+        },
+        {
+          "station_id": "kharouba",
+          "sequence": 10,
+          "arrival": "08:08",
+          "departure": "08:08"
+        },
+        {
+          "station_id": "hussein-dey",
+          "sequence": 11,
+          "arrival": "08:11",
+          "departure": "08:11"
+        },
+        {
+          "station_id": "ateliers",
+          "sequence": 12,
+          "arrival": "08:15",
+          "departure": "08:15"
+        },
+        {
+          "station_id": "agha",
+          "sequence": 13,
+          "arrival": "08:18",
+          "departure": null
+        }
+      ]
+    },
+    {
+      "trip_id": "user-zeralda-agha-1504",
+      "route_id": "zeralda-agha",
+      "train_number": "1504",
+      "service_id": "daily",
+      "source_id": "user-zeralda-agha-2026-09-19",
+      "data_status": "user-supplied",
+      "effective_from": "2026-09-19",
+      "stop_times": [
+        {
+          "station_id": "zeralda",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "08:35"
+        },
+        {
+          "station_id": "sidi-abdallah-j",
+          "sequence": 2,
+          "arrival": "08:38",
+          "departure": "08:38"
+        },
+        {
+          "station_id": "sidi-abdallah",
+          "sequence": 3,
+          "arrival": "08:41",
+          "departure": "08:41"
+        },
+        {
+          "station_id": "tessala-el-merdja",
+          "sequence": 4,
+          "arrival": "08:47",
+          "departure": "08:47"
+        },
+        {
+          "station_id": "birtouta",
+          "sequence": 5,
+          "arrival": "08:54",
+          "departure": "08:54"
+        },
+        {
+          "station_id": "baba-ali",
+          "sequence": 6,
+          "arrival": "08:59",
+          "departure": "08:59"
+        },
+        {
+          "station_id": "ain-naadja",
+          "sequence": 7,
+          "arrival": "09:03",
+          "departure": "09:03"
+        },
+        {
+          "station_id": "djasr-constantine",
+          "sequence": 8,
+          "arrival": "09:06",
+          "departure": "09:06"
+        },
+        {
+          "station_id": "el-harrach",
+          "sequence": 9,
+          "arrival": "09:10",
+          "departure": "09:10"
+        },
+        {
+          "station_id": "kharouba",
+          "sequence": 10,
+          "arrival": "09:13",
+          "departure": "09:13"
+        },
+        {
+          "station_id": "hussein-dey",
+          "sequence": 11,
+          "arrival": "09:16",
+          "departure": "09:16"
+        },
+        {
+          "station_id": "ateliers",
+          "sequence": 12,
+          "arrival": "09:20",
+          "departure": "09:20"
+        },
+        {
+          "station_id": "agha",
+          "sequence": 13,
+          "arrival": "09:23",
+          "departure": null
+        }
+      ]
+    },
+    {
+      "trip_id": "user-zeralda-agha-1508",
+      "route_id": "zeralda-agha",
+      "train_number": "1508",
+      "service_id": "daily",
+      "source_id": "user-zeralda-agha-2026-09-19",
+      "data_status": "user-supplied",
+      "effective_from": "2026-09-19",
+      "stop_times": [
+        {
+          "station_id": "zeralda",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "10:00"
+        },
+        {
+          "station_id": "sidi-abdallah-j",
+          "sequence": 2,
+          "arrival": "10:03",
+          "departure": "10:03"
+        },
+        {
+          "station_id": "sidi-abdallah",
+          "sequence": 3,
+          "arrival": "10:06",
+          "departure": "10:06"
+        },
+        {
+          "station_id": "tessala-el-merdja",
+          "sequence": 4,
+          "arrival": "10:12",
+          "departure": "10:12"
+        },
+        {
+          "station_id": "birtouta",
+          "sequence": 5,
+          "arrival": "10:19",
+          "departure": "10:19"
+        },
+        {
+          "station_id": "baba-ali",
+          "sequence": 6,
+          "arrival": "10:24",
+          "departure": "10:24"
+        },
+        {
+          "station_id": "ain-naadja",
+          "sequence": 7,
+          "arrival": "10:28",
+          "departure": "10:28"
+        },
+        {
+          "station_id": "djasr-constantine",
+          "sequence": 8,
+          "arrival": "10:31",
+          "departure": "10:31"
+        },
+        {
+          "station_id": "el-harrach",
+          "sequence": 9,
+          "arrival": "10:35",
+          "departure": "10:35"
+        },
+        {
+          "station_id": "kharouba",
+          "sequence": 10,
+          "arrival": "10:38",
+          "departure": "10:38"
+        },
+        {
+          "station_id": "hussein-dey",
+          "sequence": 11,
+          "arrival": "10:41",
+          "departure": "10:41"
+        },
+        {
+          "station_id": "ateliers",
+          "sequence": 12,
+          "arrival": "10:45",
+          "departure": "10:45"
+        },
+        {
+          "station_id": "agha",
+          "sequence": 13,
+          "arrival": "10:48",
+          "departure": null
+        }
+      ]
+    },
+    {
+      "trip_id": "user-zeralda-agha-1510",
+      "route_id": "zeralda-agha",
+      "train_number": "1510",
+      "service_id": "daily",
+      "source_id": "user-zeralda-agha-2026-09-19",
+      "data_status": "user-supplied",
+      "effective_from": "2026-09-19",
+      "stop_times": [
+        {
+          "station_id": "zeralda",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "10:45"
+        },
+        {
+          "station_id": "sidi-abdallah-j",
+          "sequence": 2,
+          "arrival": "10:48",
+          "departure": "10:48"
+        },
+        {
+          "station_id": "sidi-abdallah",
+          "sequence": 3,
+          "arrival": "10:51",
+          "departure": "10:51"
+        },
+        {
+          "station_id": "tessala-el-merdja",
+          "sequence": 4,
+          "arrival": "10:57",
+          "departure": "10:57"
+        },
+        {
+          "station_id": "birtouta",
+          "sequence": 5,
+          "arrival": "11:04",
+          "departure": "11:04"
+        },
+        {
+          "station_id": "baba-ali",
+          "sequence": 6,
+          "arrival": "11:09",
+          "departure": "11:09"
+        },
+        {
+          "station_id": "ain-naadja",
+          "sequence": 7,
+          "arrival": "11:13",
+          "departure": "11:13"
+        },
+        {
+          "station_id": "djasr-constantine",
+          "sequence": 8,
+          "arrival": "11:16",
+          "departure": "11:16"
+        },
+        {
+          "station_id": "el-harrach",
+          "sequence": 9,
+          "arrival": "11:20",
+          "departure": "11:20"
+        },
+        {
+          "station_id": "kharouba",
+          "sequence": 10,
+          "arrival": "11:24",
+          "departure": "11:24"
+        },
+        {
+          "station_id": "hussein-dey",
+          "sequence": 11,
+          "arrival": "11:27",
+          "departure": "11:27"
+        },
+        {
+          "station_id": "ateliers",
+          "sequence": 12,
+          "arrival": "11:31",
+          "departure": "11:31"
+        },
+        {
+          "station_id": "agha",
+          "sequence": 13,
+          "arrival": "11:34",
+          "departure": null
+        }
+      ]
+    },
+    {
+      "trip_id": "user-zeralda-agha-1512",
+      "route_id": "zeralda-agha",
+      "train_number": "1512",
+      "service_id": "daily",
+      "source_id": "user-zeralda-agha-2026-09-19",
+      "data_status": "user-supplied",
+      "effective_from": "2026-09-19",
+      "stop_times": [
+        {
+          "station_id": "zeralda",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "11:30"
+        },
+        {
+          "station_id": "sidi-abdallah-j",
+          "sequence": 2,
+          "arrival": "11:33",
+          "departure": "11:33"
+        },
+        {
+          "station_id": "sidi-abdallah",
+          "sequence": 3,
+          "arrival": "11:36",
+          "departure": "11:36"
+        },
+        {
+          "station_id": "tessala-el-merdja",
+          "sequence": 4,
+          "arrival": "11:42",
+          "departure": "11:42"
+        },
+        {
+          "station_id": "birtouta",
+          "sequence": 5,
+          "arrival": "11:49",
+          "departure": "11:49"
+        },
+        {
+          "station_id": "baba-ali",
+          "sequence": 6,
+          "arrival": "11:54",
+          "departure": "11:54"
+        },
+        {
+          "station_id": "ain-naadja",
+          "sequence": 7,
+          "arrival": "11:58",
+          "departure": "11:58"
+        },
+        {
+          "station_id": "djasr-constantine",
+          "sequence": 8,
+          "arrival": "12:01",
+          "departure": "12:01"
+        },
+        {
+          "station_id": "el-harrach",
+          "sequence": 9,
+          "arrival": "12:05",
+          "departure": "12:05"
+        },
+        {
+          "station_id": "kharouba",
+          "sequence": 10,
+          "arrival": "12:08",
+          "departure": "12:08"
+        },
+        {
+          "station_id": "hussein-dey",
+          "sequence": 11,
+          "arrival": "12:11",
+          "departure": "12:11"
+        },
+        {
+          "station_id": "ateliers",
+          "sequence": 12,
+          "arrival": "12:15",
+          "departure": "12:15"
+        },
+        {
+          "station_id": "agha",
+          "sequence": 13,
+          "arrival": "12:18",
+          "departure": null
+        }
+      ]
+    },
+    {
+      "trip_id": "user-zeralda-agha-1514",
+      "route_id": "zeralda-agha",
+      "train_number": "1514",
+      "service_id": "daily",
+      "source_id": "user-zeralda-agha-2026-09-19",
+      "data_status": "user-supplied",
+      "effective_from": "2026-09-19",
+      "stop_times": [
+        {
+          "station_id": "zeralda",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "12:55"
+        },
+        {
+          "station_id": "sidi-abdallah-j",
+          "sequence": 2,
+          "arrival": "12:58",
+          "departure": "12:58"
+        },
+        {
+          "station_id": "sidi-abdallah",
+          "sequence": 3,
+          "arrival": "13:01",
+          "departure": "13:01"
+        },
+        {
+          "station_id": "tessala-el-merdja",
+          "sequence": 4,
+          "arrival": "13:07",
+          "departure": "13:07"
+        },
+        {
+          "station_id": "birtouta",
+          "sequence": 5,
+          "arrival": "13:14",
+          "departure": "13:14"
+        },
+        {
+          "station_id": "baba-ali",
+          "sequence": 6,
+          "arrival": "13:19",
+          "departure": "13:19"
+        },
+        {
+          "station_id": "ain-naadja",
+          "sequence": 7,
+          "arrival": "13:23",
+          "departure": "13:23"
+        },
+        {
+          "station_id": "djasr-constantine",
+          "sequence": 8,
+          "arrival": "13:26",
+          "departure": "13:26"
+        },
+        {
+          "station_id": "el-harrach",
+          "sequence": 9,
+          "arrival": "13:30",
+          "departure": "13:30"
+        },
+        {
+          "station_id": "kharouba",
+          "sequence": 10,
+          "arrival": "13:33",
+          "departure": "13:33"
+        },
+        {
+          "station_id": "hussein-dey",
+          "sequence": 11,
+          "arrival": "13:36",
+          "departure": "13:36"
+        },
+        {
+          "station_id": "ateliers",
+          "sequence": 12,
+          "arrival": "13:40",
+          "departure": "13:40"
+        },
+        {
+          "station_id": "agha",
+          "sequence": 13,
+          "arrival": "13:43",
+          "departure": null
+        }
+      ]
+    },
+    {
+      "trip_id": "user-zeralda-agha-1516",
+      "route_id": "zeralda-agha",
+      "train_number": "1516",
+      "service_id": "daily",
+      "source_id": "user-zeralda-agha-2026-09-19",
+      "data_status": "user-supplied",
+      "effective_from": "2026-09-19",
+      "stop_times": [
+        {
+          "station_id": "zeralda",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "14:00"
+        },
+        {
+          "station_id": "sidi-abdallah-j",
+          "sequence": 2,
+          "arrival": "14:03",
+          "departure": "14:03"
+        },
+        {
+          "station_id": "sidi-abdallah",
+          "sequence": 3,
+          "arrival": "14:06",
+          "departure": "14:06"
+        },
+        {
+          "station_id": "tessala-el-merdja",
+          "sequence": 4,
+          "arrival": "14:12",
+          "departure": "14:12"
+        },
+        {
+          "station_id": "birtouta",
+          "sequence": 5,
+          "arrival": "14:19",
+          "departure": "14:19"
+        },
+        {
+          "station_id": "baba-ali",
+          "sequence": 6,
+          "arrival": "14:24",
+          "departure": "14:24"
+        },
+        {
+          "station_id": "ain-naadja",
+          "sequence": 7,
+          "arrival": "14:28",
+          "departure": "14:28"
+        },
+        {
+          "station_id": "djasr-constantine",
+          "sequence": 8,
+          "arrival": "14:31",
+          "departure": "14:31"
+        },
+        {
+          "station_id": "el-harrach",
+          "sequence": 9,
+          "arrival": "14:35",
+          "departure": "14:35"
+        },
+        {
+          "station_id": "kharouba",
+          "sequence": 10,
+          "arrival": "14:38",
+          "departure": "14:38"
+        },
+        {
+          "station_id": "hussein-dey",
+          "sequence": 11,
+          "arrival": "14:41",
+          "departure": "14:41"
+        },
+        {
+          "station_id": "ateliers",
+          "sequence": 12,
+          "arrival": "14:45",
+          "departure": "14:45"
+        },
+        {
+          "station_id": "agha",
+          "sequence": 13,
+          "arrival": "14:48",
+          "departure": null
+        }
+      ]
+    },
+    {
+      "trip_id": "user-zeralda-agha-1518",
+      "route_id": "zeralda-agha",
+      "train_number": "1518",
+      "service_id": "daily",
+      "source_id": "user-zeralda-agha-2026-09-19",
+      "data_status": "user-supplied",
+      "effective_from": "2026-09-19",
+      "stop_times": [
+        {
+          "station_id": "zeralda",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "14:45"
+        },
+        {
+          "station_id": "sidi-abdallah-j",
+          "sequence": 2,
+          "arrival": "14:48",
+          "departure": "14:48"
+        },
+        {
+          "station_id": "sidi-abdallah",
+          "sequence": 3,
+          "arrival": "14:51",
+          "departure": "14:51"
+        },
+        {
+          "station_id": "tessala-el-merdja",
+          "sequence": 4,
+          "arrival": "14:57",
+          "departure": "14:57"
+        },
+        {
+          "station_id": "birtouta",
+          "sequence": 5,
+          "arrival": "15:04",
+          "departure": "15:04"
+        },
+        {
+          "station_id": "baba-ali",
+          "sequence": 6,
+          "arrival": "15:09",
+          "departure": "15:09"
+        },
+        {
+          "station_id": "ain-naadja",
+          "sequence": 7,
+          "arrival": "15:13",
+          "departure": "15:13"
+        },
+        {
+          "station_id": "djasr-constantine",
+          "sequence": 8,
+          "arrival": "15:16",
+          "departure": "15:16"
+        },
+        {
+          "station_id": "el-harrach",
+          "sequence": 9,
+          "arrival": "15:20",
+          "departure": "15:20"
+        },
+        {
+          "station_id": "kharouba",
+          "sequence": 10,
+          "arrival": "15:23",
+          "departure": "15:23"
+        },
+        {
+          "station_id": "hussein-dey",
+          "sequence": 11,
+          "arrival": "15:26",
+          "departure": "15:26"
+        },
+        {
+          "station_id": "ateliers",
+          "sequence": 12,
+          "arrival": "15:30",
+          "departure": "15:30"
+        },
+        {
+          "station_id": "agha",
+          "sequence": 13,
+          "arrival": "15:33",
+          "departure": null
+        }
+      ]
+    },
+    {
+      "trip_id": "user-zeralda-agha-1520",
+      "route_id": "zeralda-agha",
+      "train_number": "1520",
+      "service_id": "daily",
+      "source_id": "user-zeralda-agha-2026-09-19",
+      "data_status": "user-supplied",
+      "effective_from": "2026-09-19",
+      "stop_times": [
+        {
+          "station_id": "zeralda",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "16:00"
+        },
+        {
+          "station_id": "sidi-abdallah-j",
+          "sequence": 2,
+          "arrival": "16:03",
+          "departure": "16:03"
+        },
+        {
+          "station_id": "sidi-abdallah",
+          "sequence": 3,
+          "arrival": "16:06",
+          "departure": "16:06"
+        },
+        {
+          "station_id": "tessala-el-merdja",
+          "sequence": 4,
+          "arrival": "16:12",
+          "departure": "16:12"
+        },
+        {
+          "station_id": "birtouta",
+          "sequence": 5,
+          "arrival": "16:19",
+          "departure": "16:19"
+        },
+        {
+          "station_id": "baba-ali",
+          "sequence": 6,
+          "arrival": "16:24",
+          "departure": "16:24"
+        },
+        {
+          "station_id": "ain-naadja",
+          "sequence": 7,
+          "arrival": "16:28",
+          "departure": "16:28"
+        },
+        {
+          "station_id": "djasr-constantine",
+          "sequence": 8,
+          "arrival": "16:31",
+          "departure": "16:31"
+        },
+        {
+          "station_id": "el-harrach",
+          "sequence": 9,
+          "arrival": "16:35",
+          "departure": "16:35"
+        },
+        {
+          "station_id": "kharouba",
+          "sequence": 10,
+          "arrival": "16:38",
+          "departure": "16:38"
+        },
+        {
+          "station_id": "hussein-dey",
+          "sequence": 11,
+          "arrival": "16:41",
+          "departure": "16:41"
+        },
+        {
+          "station_id": "ateliers",
+          "sequence": 12,
+          "arrival": "16:45",
+          "departure": "16:45"
+        },
+        {
+          "station_id": "agha",
+          "sequence": 13,
+          "arrival": "16:48",
+          "departure": null
+        }
+      ]
+    },
+    {
+      "trip_id": "user-zeralda-agha-1522",
+      "route_id": "zeralda-agha",
+      "train_number": "1522",
+      "service_id": "daily",
+      "source_id": "user-zeralda-agha-2026-09-19",
+      "data_status": "user-supplied",
+      "effective_from": "2026-09-19",
+      "stop_times": [
+        {
+          "station_id": "zeralda",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "16:50"
+        },
+        {
+          "station_id": "sidi-abdallah-j",
+          "sequence": 2,
+          "arrival": "16:53",
+          "departure": "16:53"
+        },
+        {
+          "station_id": "sidi-abdallah",
+          "sequence": 3,
+          "arrival": "16:56",
+          "departure": "16:56"
+        },
+        {
+          "station_id": "tessala-el-merdja",
+          "sequence": 4,
+          "arrival": "17:02",
+          "departure": "17:02"
+        },
+        {
+          "station_id": "birtouta",
+          "sequence": 5,
+          "arrival": "17:09",
+          "departure": "17:09"
+        },
+        {
+          "station_id": "baba-ali",
+          "sequence": 6,
+          "arrival": "17:14",
+          "departure": "17:14"
+        },
+        {
+          "station_id": "ain-naadja",
+          "sequence": 7,
+          "arrival": "17:18",
+          "departure": "17:18"
+        },
+        {
+          "station_id": "djasr-constantine",
+          "sequence": 8,
+          "arrival": "17:21",
+          "departure": "17:21"
+        },
+        {
+          "station_id": "el-harrach",
+          "sequence": 9,
+          "arrival": "17:25",
+          "departure": "17:25"
+        },
+        {
+          "station_id": "kharouba",
+          "sequence": 10,
+          "arrival": "17:28",
+          "departure": "17:28"
+        },
+        {
+          "station_id": "hussein-dey",
+          "sequence": 11,
+          "arrival": "17:31",
+          "departure": "17:31"
+        },
+        {
+          "station_id": "ateliers",
+          "sequence": 12,
+          "arrival": "17:35",
+          "departure": "17:35"
+        },
+        {
+          "station_id": "agha",
+          "sequence": 13,
+          "arrival": "17:38",
+          "departure": null
+        }
+      ]
+    },
+    {
+      "trip_id": "user-zeralda-agha-1524",
+      "route_id": "zeralda-agha",
+      "train_number": "1524",
+      "service_id": "daily",
+      "source_id": "user-zeralda-agha-2026-09-19",
+      "data_status": "user-supplied",
+      "effective_from": "2026-09-19",
+      "stop_times": [
+        {
+          "station_id": "zeralda",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "17:35"
+        },
+        {
+          "station_id": "sidi-abdallah-j",
+          "sequence": 2,
+          "arrival": "17:38",
+          "departure": "17:38"
+        },
+        {
+          "station_id": "sidi-abdallah",
+          "sequence": 3,
+          "arrival": "17:41",
+          "departure": "17:41"
+        },
+        {
+          "station_id": "tessala-el-merdja",
+          "sequence": 4,
+          "arrival": "17:47",
+          "departure": "17:47"
+        },
+        {
+          "station_id": "birtouta",
+          "sequence": 5,
+          "arrival": "17:54",
+          "departure": "17:54"
+        },
+        {
+          "station_id": "baba-ali",
+          "sequence": 6,
+          "arrival": "17:59",
+          "departure": "17:59"
+        },
+        {
+          "station_id": "ain-naadja",
+          "sequence": 7,
+          "arrival": "18:03",
+          "departure": "18:03"
+        },
+        {
+          "station_id": "djasr-constantine",
+          "sequence": 8,
+          "arrival": "18:06",
+          "departure": "18:06"
+        },
+        {
+          "station_id": "el-harrach",
+          "sequence": 9,
+          "arrival": "18:10",
+          "departure": "18:10"
+        },
+        {
+          "station_id": "kharouba",
+          "sequence": 10,
+          "arrival": "18:13",
+          "departure": "18:13"
+        },
+        {
+          "station_id": "hussein-dey",
+          "sequence": 11,
+          "arrival": "18:16",
+          "departure": "18:16"
+        },
+        {
+          "station_id": "ateliers",
+          "sequence": 12,
+          "arrival": "18:20",
+          "departure": "18:20"
+        },
+        {
+          "station_id": "agha",
+          "sequence": 13,
+          "arrival": "18:23",
+          "departure": null
+        }
+      ]
+    },
+    {
+      "trip_id": "user-zeralda-agha-1526",
+      "route_id": "zeralda-agha",
+      "train_number": "1526",
+      "service_id": "daily",
+      "source_id": "user-zeralda-agha-2026-09-19",
+      "data_status": "user-supplied",
+      "effective_from": "2026-09-19",
+      "stop_times": [
+        {
+          "station_id": "zeralda",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "18:50"
+        },
+        {
+          "station_id": "sidi-abdallah-j",
+          "sequence": 2,
+          "arrival": "18:53",
+          "departure": "18:53"
+        },
+        {
+          "station_id": "sidi-abdallah",
+          "sequence": 3,
+          "arrival": "18:56",
+          "departure": "18:56"
+        },
+        {
+          "station_id": "tessala-el-merdja",
+          "sequence": 4,
+          "arrival": "19:02",
+          "departure": "19:02"
+        },
+        {
+          "station_id": "birtouta",
+          "sequence": 5,
+          "arrival": "19:09",
+          "departure": "19:09"
+        },
+        {
+          "station_id": "baba-ali",
+          "sequence": 6,
+          "arrival": "19:14",
+          "departure": "19:14"
+        },
+        {
+          "station_id": "ain-naadja",
+          "sequence": 7,
+          "arrival": "19:18",
+          "departure": "19:18"
+        },
+        {
+          "station_id": "djasr-constantine",
+          "sequence": 8,
+          "arrival": "19:21",
+          "departure": "19:21"
+        },
+        {
+          "station_id": "el-harrach",
+          "sequence": 9,
+          "arrival": "19:25",
+          "departure": "19:25"
+        },
+        {
+          "station_id": "kharouba",
+          "sequence": 10,
+          "arrival": "19:28",
+          "departure": "19:28"
+        },
+        {
+          "station_id": "hussein-dey",
+          "sequence": 11,
+          "arrival": "19:31",
+          "departure": "19:31"
+        },
+        {
+          "station_id": "ateliers",
+          "sequence": 12,
+          "arrival": "19:35",
+          "departure": "19:35"
+        },
+        {
+          "station_id": "agha",
+          "sequence": 13,
+          "arrival": "19:38",
+          "departure": null
+        }
+      ]
+    },
+    {
+      "trip_id": "demo-alger-thenia-1",
+      "route_id": "alger-thenia",
+      "service_id": "daily",
+      "train_number": "D-100",
+      "source_id": "dz-rail-simulation",
+      "data_status": "demo",
+      "demo": true,
+      "stop_times": [
+        {
+          "station_id": "alger",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "07:10"
+        },
+        {
+          "station_id": "el-harrach",
+          "sequence": 2,
+          "arrival": "07:26",
+          "departure": "07:26"
+        },
+        {
+          "station_id": "reghaia",
+          "sequence": 3,
+          "arrival": "07:43",
+          "departure": "07:43"
+        },
+        {
+          "station_id": "boumerdes",
+          "sequence": 4,
+          "arrival": "07:57",
+          "departure": "07:57"
+        },
+        {
+          "station_id": "thenia",
+          "sequence": 5,
+          "arrival": "08:09",
+          "departure": null
+        }
+      ]
+    },
+    {
+      "trip_id": "demo-alger-thenia-2",
+      "route_id": "alger-thenia",
+      "service_id": "friday_holiday",
+      "train_number": "D-101",
+      "source_id": "dz-rail-simulation",
+      "data_status": "demo",
+      "demo": true,
+      "stop_times": [
+        {
+          "station_id": "alger",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "11:00"
+        },
+        {
+          "station_id": "el-harrach",
+          "sequence": 2,
+          "arrival": "11:16",
+          "departure": "11:16"
+        },
+        {
+          "station_id": "reghaia",
+          "sequence": 3,
+          "arrival": "11:31",
+          "departure": "11:31"
+        },
+        {
+          "station_id": "boumerdes",
+          "sequence": 4,
+          "arrival": "11:46",
+          "departure": "11:46"
+        },
+        {
+          "station_id": "thenia",
+          "sequence": 5,
+          "arrival": "12:00",
+          "departure": null
+        }
+      ]
+    },
+    {
+      "trip_id": "demo-thenia-alger-1",
+      "route_id": "thenia-alger",
+      "service_id": "weekday_not_friday",
+      "train_number": "D-102",
+      "source_id": "dz-rail-simulation",
+      "data_status": "demo",
+      "demo": true,
+      "stop_times": [
+        {
+          "station_id": "thenia",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "16:05"
+        },
+        {
+          "station_id": "boumerdes",
+          "sequence": 2,
+          "arrival": "16:19",
+          "departure": "16:19"
+        },
+        {
+          "station_id": "reghaia",
+          "sequence": 3,
+          "arrival": "16:34",
+          "departure": "16:34"
+        },
+        {
+          "station_id": "el-harrach",
+          "sequence": 4,
+          "arrival": "16:51",
+          "departure": "16:51"
+        },
+        {
+          "station_id": "alger",
+          "sequence": 5,
+          "arrival": "17:08",
+          "departure": null
+        }
+      ]
+    },
+    {
+      "trip_id": "demo-alger-oran-1",
+      "route_id": "alger-oran",
+      "service_id": "daily",
+      "train_number": "D-200",
+      "source_id": "dz-rail-simulation",
+      "data_status": "demo",
+      "demo": true,
+      "stop_times": [
+        {
+          "station_id": "alger",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "06:30"
+        },
+        {
+          "station_id": "chlef",
+          "sequence": 2,
+          "arrival": "08:54",
+          "departure": "08:54"
+        },
+        {
+          "station_id": "oran",
+          "sequence": 3,
+          "arrival": "11:15",
+          "departure": null
+        }
+      ]
+    },
+    {
+      "trip_id": "demo-alger-oran-2",
+      "route_id": "alger-oran",
+      "service_id": "friday_holiday",
+      "train_number": "D-201",
+      "source_id": "dz-rail-simulation",
+      "data_status": "demo",
+      "demo": true,
+      "stop_times": [
+        {
+          "station_id": "alger",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "14:00"
+        },
+        {
+          "station_id": "chlef",
+          "sequence": 2,
+          "arrival": "16:24",
+          "departure": "16:24"
+        },
+        {
+          "station_id": "oran",
+          "sequence": 3,
+          "arrival": "18:40",
+          "departure": null
+        }
+      ]
+    },
+    {
+      "trip_id": "demo-alger-bejaia-1",
+      "route_id": "alger-bejaia",
+      "service_id": "weekday_not_friday",
+      "train_number": "D-300",
+      "source_id": "dz-rail-simulation",
+      "data_status": "demo",
+      "demo": true,
+      "stop_times": [
+        {
+          "station_id": "alger",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "07:30"
+        },
+        {
+          "station_id": "bouira",
+          "sequence": 2,
+          "arrival": "09:00",
+          "departure": "09:00"
+        },
+        {
+          "station_id": "beni-mansour",
+          "sequence": 3,
+          "arrival": "10:05",
+          "departure": "10:05"
+        },
+        {
+          "station_id": "bejaia",
+          "sequence": 4,
+          "arrival": "11:15",
+          "departure": null
+        }
+      ]
+    },
+    {
+      "trip_id": "demo-oran-bechar-1",
+      "route_id": "oran-bechar",
+      "service_id": "daily",
+      "train_number": "D-400",
+      "source_id": "dz-rail-simulation",
+      "data_status": "demo",
+      "demo": true,
+      "stop_times": [
+        {
+          "station_id": "oran",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "20:00"
+        },
+        {
+          "station_id": "saida",
+          "sequence": 2,
+          "arrival": "22:15",
+          "departure": "22:15"
+        },
+        {
+          "station_id": "bechar",
+          "sequence": 3,
+          "arrival": "29:40",
+          "departure": null
+        }
+      ]
+    },
+    {
+      "trip_id": "demo-boughezoul-laghouat-1",
+      "route_id": "boughezoul-laghouat",
+      "service_id": "friday_holiday",
+      "train_number": "D-500",
+      "source_id": "dz-rail-simulation",
+      "data_status": "demo",
+      "demo": true,
+      "stop_times": [
+        {
+          "station_id": "boughezoul",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "08:00"
+        },
+        {
+          "station_id": "djelfa",
+          "sequence": 2,
+          "arrival": "09:10",
+          "departure": "09:10"
+        },
+        {
+          "station_id": "laghouat",
+          "sequence": 3,
+          "arrival": "10:45",
+          "departure": null
+        }
+      ]
+    },
+    {
+      "trip_id": "demo-alger-tunis-1",
+      "route_id": "alger-tunis",
+      "service_id": "weekday_not_friday",
+      "train_number": "D-600",
+      "source_id": "dz-rail-simulation",
+      "data_status": "demo",
+      "demo": true,
+      "stop_times": [
+        {
+          "station_id": "alger",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "07:15"
+        },
+        {
+          "station_id": "constantine",
+          "sequence": 2,
+          "arrival": "11:25",
+          "departure": "11:25"
+        },
+        {
+          "station_id": "annaba",
+          "sequence": 3,
+          "arrival": "13:15",
+          "departure": "13:15"
+        },
+        {
+          "station_id": "tunis",
+          "sequence": 4,
+          "arrival": "17:00",
+          "departure": null
+        }
+      ]
+    }
+  ],
+  "note": "User-supplied 2026-09-19 image Zeralda–Agha is not independently reconfirmed. All D-xxx trips are fictional simulations, excluded unless demo toggle enabled."
 }
