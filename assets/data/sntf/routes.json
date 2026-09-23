@@ -1,5 +1,5 @@
 {
-  "version": 3,
+  "version": 4,
   "updated": "2026-09-23",
   "routes": [
     {
@@ -10,7 +10,17 @@
       "name": "الجزائر ← الثنية",
       "source": "dz-portal-gallery",
       "schedule_image": "../assets/train-schedules/suburban/alger-thenia.png",
-      "schedule_status": "requires-current-verification"
+      "schedule_status": "requires-current-verification",
+      "stops": [
+        "alger",
+        "el-harrach",
+        "rouiba",
+        "reghaia",
+        "boumerdes",
+        "thenia"
+      ],
+      "stops_status": "partial_pending_verification",
+      "editor_note": "تسلسل محطات جزئي لأغراض البحث؛ لا يشمل كل المحطات حتى تستكمل من جدول موثق."
     },
     {
       "id": "thenia-alger",
@@ -20,7 +30,17 @@
       "name": "الثنية ← الجزائر",
       "source": "dz-portal-gallery",
       "schedule_image": "../assets/train-schedules/suburban/thenia-alger.png",
-      "schedule_status": "requires-current-verification"
+      "schedule_status": "requires-current-verification",
+      "stops": [
+        "thenia",
+        "boumerdes",
+        "reghaia",
+        "rouiba",
+        "el-harrach",
+        "alger"
+      ],
+      "stops_status": "partial_pending_verification",
+      "editor_note": "تسلسل محطات جزئي لأغراض البحث؛ لا يشمل كل المحطات حتى تستكمل من جدول موثق."
     },
     {
       "id": "alger-affroun",
