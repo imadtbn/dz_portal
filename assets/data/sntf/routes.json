@@ -1,5 +1,5 @@
 {
-  "version": 1,
+  "version": 2,
   "updated": "2026-09-23",
   "routes": [
     {
@@ -251,6 +251,31 @@
       "source": "dz-portal-gallery",
       "schedule_image": "../assets/train-schedules/international/alger-tunisia.jpg",
       "schedule_status": "requires-current-verification"
+    },
+    {
+      "id": "zeralda-agha",
+      "from": "zeralda",
+      "to": "agha",
+      "category": "suburban",
+      "name": "زرالدة ← آغا (مرورًا بـ10 محطات ثانوية)",
+      "source": "user-zeralda-agha-2026-09-19",
+      "schedule_image": null,
+      "schedule_status": "user-supplied",
+      "stops": [
+        "zeralda",
+        "sidi-abdallah-j",
+        "sidi-abdallah",
+        "tessala-el-merdja",
+        "birtouta",
+        "baba-ali",
+        "ain-naadja",
+        "djasr-constantine",
+        "el-harrach",
+        "kharouba",
+        "hussein-dey",
+        "ateliers",
+        "agha"
+      ]
     }
   ]
 }
