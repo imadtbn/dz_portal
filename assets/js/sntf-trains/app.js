@@ -39,7 +39,7 @@ async function loadData(){
    }
    select.appendChild(fragment);
  }
- $("routes-count").textContent=state.routes.length+" جدول خط متاح";
+ $("routes-count").textContent=state.routes.length+" مسار مفهرس";
  $("data-status").textContent=" · "+state.trips.filter(t=>!isDemo(t)).length+" رحلة من الصورة المرفقة و"+state.trips.filter(isDemo).length+" رحلة محاكاة (اختيارية).";
  renderCatalog();renderNearby();
  }catch(error){
@@ -59,7 +59,7 @@ function routeCard(route,extra=""){
 
 function renderCatalog(){
  const text=$("catalog-filter").value.trim().toLocaleLowerCase(),cat=$("category").value;
- const selected=state.routes.filter(r=>(!cat||r.category===cat)&&(!text||[r.name,stationName(r.from),stationName(r.to),categoryNames[r.category]].join(" ").toLocaleLowerCase().includes(text)));
+ const selected=state.routes.filter(r=>(!cat||r.category===cat)&&(!text||[r.name,stationName(r.from),stationName(r.to),...(r.stops||[]).map(stationName),categoryNames[r.category]].join(" ").toLocaleLowerCase().includes(text)));
  $("catalog").innerHTML=selected.length?selected.map(r=>routeCard(r)).join(""):'<div class="empty">لا توجد خطوط مطابقة للبحث.</div>';
 }
 function activeOn(trip,date){
