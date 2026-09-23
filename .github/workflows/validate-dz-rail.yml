@@ -1,0 +1,22 @@
+name: Validate DZ Rail data
+on:
+  push:
+    paths:
+      - "assets/data/sntf/**"
+      - "scripts/validate-sntf-data.mjs"
+      - ".github/workflows/validate-dz-rail.yml"
+  pull_request:
+    paths:
+      - "assets/data/sntf/**"
+      - "scripts/validate-sntf-data.mjs"
+      - ".github/workflows/validate-dz-rail.yml"
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate sourced station, route and trip data
+        run: node scripts/validate-sntf-data.mjs
