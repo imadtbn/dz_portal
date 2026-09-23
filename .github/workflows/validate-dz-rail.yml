@@ -3,12 +3,16 @@ on:
   push:
     paths:
       - "assets/data/sntf/**"
+      - "assets/js/sntf-trains/**"
       - "scripts/validate-sntf-data.mjs"
+      - "scripts/test-dz-rail.mjs"
       - ".github/workflows/validate-dz-rail.yml"
   pull_request:
     paths:
       - "assets/data/sntf/**"
+      - "assets/js/sntf-trains/**"
       - "scripts/validate-sntf-data.mjs"
+      - "scripts/test-dz-rail.mjs"
       - ".github/workflows/validate-dz-rail.yml"
   workflow_dispatch:
 permissions:
@@ -18,5 +22,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Validate sourced station, route and trip data
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Validate station, route and trip data
         run: node scripts/validate-sntf-data.mjs
+      - name: Test station boards and recurrence rules
+        run: node scripts/test-dz-rail.mjs
+      - name: Check JavaScript module syntax
+        run: node --check assets/js/sntf-trains/app.js && node --check assets/js/sntf-trains/engine.js
