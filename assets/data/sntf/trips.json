@@ -6,7 +6,7 @@
       "trip_id": "user-zeralda-agha-1500",
       "route_id": "zeralda-agha",
       "train_number": "1500",
-      "service_id": "weekday_not_friday",
+      "service_id": "except_friday",
       "source_id": "user-zeralda-agha-2026-09-19",
       "data_status": "user-supplied",
       "effective_from": "2026-09-19",
