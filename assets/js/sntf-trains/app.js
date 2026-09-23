@@ -50,11 +50,13 @@ async function loadData(){
 }
 function routeCard(route,extra=""){
  const image=route.schedule_image||"";
- const from=stationName(route.from),to=stationName(route.to);
- const imgLink=image && image.startsWith("../assets/train-schedules/") ? '<a target="_blank" rel="noopener noreferrer" href="'+escapeHtml(image)+'">عرض الجدول المصور ↗</a>':"";
  const source=sourceById(route.source);
- return '<article class="route-card"><div class="badge-row"><span class="tag">'+escapeHtml(categoryNames[route.category]||route.category)+'</span><span class="tag warn">المواعيد بحاجة إلى تحقق</span></div><h4>'+escapeHtml(route.name||from+" — "+to)+'</h4><p>'+escapeHtml(extra||"المصدر: "+(source?.name||"غير محدد"))+'</p><div class="card-actions">'+imgLink+' <button type="button" data-from="'+escapeHtml(route.from)+'" data-to="'+escapeHtml(route.to)+'" class="choose-route">تحديد المسار</button></div></article>';
+ const imgLink=image.startsWith("../assets/train-schedules/")?'<a target="_blank" rel="noopener noreferrer" href="'+escapeHtml(image)+'">عرض الجدول المصور ↗</a>':"";
+ const intermediate=(route.stops||[]).slice(1,-1).map(stationName);
+ const stops=intermediate.length?'<details class="stops"><summary>المحطات الثانوية ('+intermediate.length+')</summary><ol>'+intermediate.map(name=>'<li>'+escapeHtml(name)+'</li>').join("")+'</ol></details>':"";
+ return '<article class="route-card"><div class="badge-row"><span class="tag">'+escapeHtml(categoryNames[route.category]||route.category)+'</span><span class="tag warn">'+(route.schedule_status==="user-supplied"?"من صورة المستخدم · ليس بثًا مباشرًا":"الجدول المصور يحتاج تأكيدًا")+'</span></div><h4>'+escapeHtml(route.name)+'</h4><p>'+escapeHtml(extra||"المصدر: "+(source?.name||"غير محدد"))+'</p>'+stops+'<div class="card-actions">'+imgLink+' <button type="button" data-from="'+escapeHtml(route.from)+'" data-to="'+escapeHtml(route.to)+'" class="choose-route">تحديد المسار</button></div></article>';
 }
+
 function renderCatalog(){
  const text=$("catalog-filter").value.trim().toLocaleLowerCase(),cat=$("category").value;
  const selected=state.routes.filter(r=>(!cat||r.category===cat)&&(!text||[r.name,stationName(r.from),stationName(r.to),categoryNames[r.category]].join(" ").toLocaleLowerCase().includes(text)));
@@ -88,38 +90,44 @@ function getTrips(from,to,date,after){
 
 function minutesLabel(value){const m=minutesOf(value);if(!Number.isFinite(m))return "—";const hours=Math.floor(m/60);return String(hours%24).padStart(2,"0")+":"+String(m%60).padStart(2,"0")+(hours>=24?" (اليوم التالي)":"")}
 function tripCard(trip,from,to){
- const a=trip.stop_times[stopIndex(trip,from)],b=trip.stop_times[stopIndex(trip,to)];
- const route=state.routes.find(r=>r.id===trip.route_id);
- const duration=minutesOf(b.arrival)-minutesOf(a.departure);
- const source=sourceById(trip.source_id);
- return '<article class="trip-card"><div class="badge-row"><span class="tag">'+escapeHtml(categoryNames[route?.category]||"قطار")+'</span><span class="tag">مجدول وليس مباشرًا</span></div><h4>'+escapeHtml(stationName(from))+' ← '+escapeHtml(stationName(to))+'</h4><p>المغادرة: <b dir="ltr">'+minutesLabel(a.departure)+'</b> · الوصول: <b dir="ltr">'+minutesLabel(b.arrival)+'</b>'+ (duration>=0?' · المدة: '+Math.floor(duration/60)+'س '+(duration%60)+'د':"")+'</p><p>قطار '+escapeHtml(trip.train_number||"رقمه غير منشور")+' · المصدر: '+escapeHtml(source?.name||"غير محدد")+'</p></article>';
+ const i=stopIndex(trip,from),j=stopIndex(trip,to),a=trip.stop_times[i],b=trip.stop_times[j];
+ const route=state.routes.find(r=>r.id===trip.route_id),duration=minutesOf(b.arrival)-minutesOf(a.departure);
+ const demo=isDemo(trip);
+ const stops=trip.stop_times.slice(i,j+1).map(stop=>'<li><strong>'+escapeHtml(stationName(stop.station_id))+'</strong><span dir="ltr">'+minutesLabel(stop.departure??stop.arrival)+'</span></li>').join("");
+ const badge=demo?'<span class="tag demo-tag">وهمي للتجربة فقط</span>':'<span class="tag warn">من الصورة المرفقة · غير مؤكد آنيًا</span>';
+ return '<article class="trip-card'+(demo?' demo-card':'')+'"><div class="badge-row"><span class="tag">'+escapeHtml(categoryNames[route?.category]||"قطار")+'</span>'+badge+'<span class="tag">'+escapeHtml(serviceNames[trip.service_id]||trip.service_id)+'</span></div><h4>'+escapeHtml(stationName(from))+' ← '+escapeHtml(stationName(to))+'</h4><p>قطار '+escapeHtml(trip.train_number||"—")+' · المغادرة: <b dir="ltr">'+minutesLabel(a.departure)+'</b> · الوصول: <b dir="ltr">'+minutesLabel(b.arrival)+'</b>'+(duration>=0?' · المدة: '+Math.floor(duration/60)+'س '+duration%60+'د':"")+'</p><details class="stops"><summary>جميع محطات التوقف ('+(j-i+1)+')</summary><ol>'+stops+'</ol></details><p class="source-caption">'+(demo?'أوقات ومسارات تجريبية غير صالحة للتنقل.':'من جدول يبدأ 19 سبتمبر 2026، ولم يتم التحقق من تحديثه.')+'</p></article>';
 }
+
 function search(event){
  event?.preventDefault();
  const from=$("from").value,to=$("to").value,date=$("date").value,after=$("after").value;
  if(!from||!to||!date){$("search-results").innerHTML='<div class="empty">حدد المحطتين وتاريخ الرحلة.</div>';return}
  if(from===to){$("search-results").innerHTML='<div class="empty">اختر محطتين مختلفتين.</div>';return}
  const found=getTrips(from,to,date,after);
- const catalog=state.routes.filter(r=>(r.from===from&&r.to===to)||((r.name||"").includes("↔")&&r.from===to&&r.to===from));
- $("result-count").textContent=found.length+" رحلة موثقة";
+ const catalog=state.routes.filter(r=>{const path=r.stops||[r.from,r.to];return path.indexOf(from)>=0&&path.indexOf(to)>path.indexOf(from)});
+ const hasDemo=state.trips.some(t=>isDemo(t)&&stopIndex(t,from)>=0&&stopIndex(t,to)>stopIndex(t,from));
+ $("result-count").textContent=found.length+" رحلة";
  if(found.length){
- $("search-results").innerHTML=found.map(t=>tripCard(t,from,to)).join("");
+ $("search-results").innerHTML=found.map(t=>tripCard(t,from,to)).join("")+(!state.holidaysComplete&&found.some(t=>["friday_holiday","weekday_not_friday"].includes(t.service_id))?'<div class="notice">تواريخ الأعياد لم تُدرج بعد؛ يتحقق النظام من الجمعة حاليًا، وقد تختلف نتائج الأعياد.</div>':"");
  }else if(catalog.length){
- $("search-results").innerHTML='<div class="empty">لا تتوفر بعد مواقيت رقمية موثقة لهذا المسار في الوقت المحدد. يمكنك مراجعة الجدول المصور؛ لم يتم التأكد من استمرار صلاحيته.</div>'+catalog.map(r=>routeCard(r)).join("");
+ $("search-results").innerHTML='<div class="empty">لا تتوفر رحلات رقمية مطابقة في هذا التوقيت. راجع صورة الجدول، فقد تكون هناك مواعيد أو استثناءات لم تُدرج بعد.'+(hasDemo&&!demoMode()?' يمكن تفعيل المحاكاة لعرض أمثلة وهمية.':'')+'</div>'+catalog.map(r=>routeCard(r)).join("");
  }else{
- $("search-results").innerHTML='<div class="empty">لا تتوفر بيانات رقمية موثقة لهذا المسار. هذا لا يعني عدم وجود قطارات. <a href="sntf.html">راجع جميع الجداول المصورة</a>.</div>';
+ $("search-results").innerHTML='<div class="empty">لا تتوفر بيانات لهذا المسار. غياب النتائج لا يعني عدم وجود قطار. <a href="sntf.html">راجع الجداول المصورة</a>.'+(hasDemo&&!demoMode()?' تتوفر رحلات تجريبية اختيارية.':'')+'</div>';
  }
 }
+
 function renderDepartures(){
  const station=$("station").value;if(!station){$("departures").innerHTML='<div class="empty">اختر محطة لعرض المغادرات.</div>';return}
  const now=algeriaTime(),today=now.year+"-"+now.month+"-"+now.day,elapsed=Number(now.hour)*60+Number(now.minute)+Number(now.second)/60;
- const next=state.trips.filter(t=>activeOn(t,today)&&stopIndex(t,station)>=0&&Number.isFinite(minutesOf(t.stop_times[stopIndex(t,station)].departure))&&minutesOf(t.stop_times[stopIndex(t,station)].departure)>=elapsed).sort((a,b)=>minutesOf(a.stop_times[stopIndex(a,station)].departure)-minutesOf(b.stop_times[stopIndex(b,station)].departure)).slice(0,15);
+ const next=usableTrips().filter(t=>activeOn(t,today)&&stopIndex(t,station)>=0&&Number.isFinite(minutesOf(t.stop_times[stopIndex(t,station)].departure))&&minutesOf(t.stop_times[stopIndex(t,station)].departure)>=elapsed).sort((a,b)=>minutesOf(a.stop_times[stopIndex(a,station)].departure)-minutesOf(b.stop_times[stopIndex(b,station)].departure)).slice(0,20);
  $("departures").innerHTML=next.length?next.map(t=>{
  const at=t.stop_times[stopIndex(t,station)],dest=t.stop_times[t.stop_times.length-1],remaining=Math.max(0,Math.ceil((minutesOf(at.departure)-elapsed)*60));
  const clock=String(Math.floor(remaining/3600)).padStart(2,"0")+":"+String(Math.floor(remaining%3600/60)).padStart(2,"0")+":"+String(remaining%60).padStart(2,"0");
- return '<article class="trip-card"><h4>'+escapeHtml(stationName(dest.station_id))+'</h4><p>الانطلاق المجدول: '+minutesLabel(at.departure)+' · الوقت المتبقي حسب الجدول: <strong dir="ltr">'+clock+'</strong></p></article>';
- }).join(""):'<div class="empty">لا تتوفر مغادرات رقمية موثقة لهذه المحطة في بقية اليوم. <a href="sntf.html">اطّلع على جداول SNTF المصورة</a>.</div>';
+ const demo=isDemo(t);
+ return '<article class="trip-card'+(demo?' demo-card':'')+'"><div class="badge-row"><span class="tag '+(demo?'demo-tag':'warn')+'">'+(demo?'رحلة وهمية':'من الصورة المرفقة')+'</span><span class="tag">'+escapeHtml(serviceNames[t.service_id]||t.service_id)+'</span></div><h4>'+escapeHtml(stationName(dest.station_id))+'</h4><p>قطار '+escapeHtml(t.train_number)+' · الانطلاق المجدول: '+minutesLabel(at.departure)+' · المتبقي حسب الجدول: <strong dir="ltr">'+clock+'</strong></p><details class="stops"><summary>المحطات اللاحقة</summary><ol>'+t.stop_times.slice(stopIndex(t,station)).map(stop=>'<li><strong>'+escapeHtml(stationName(stop.station_id))+'</strong><span dir="ltr">'+minutesLabel(stop.departure??stop.arrival)+'</span></li>').join("")+'</ol></details></article>';
+ }).join(""):'<div class="empty">لا توجد مغادرات مدرجة في بقية اليوم لهذه المحطة وفق البيانات المتاحة. <a href="sntf.html">الجداول المصورة</a>.</div>';
 }
+
 function activateTab(name,focus=false){
  for(const b of document.querySelectorAll('[role="tab"]')){const on=b.dataset.tab===name;b.setAttribute("aria-selected",String(on));b.tabIndex=on?0:-1;if(on&&focus)b.focus()}
  for(const p of document.querySelectorAll('[role="tabpanel"]'))p.hidden=p.id!=="panel-"+name;
