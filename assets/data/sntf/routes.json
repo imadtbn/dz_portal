@@ -1,0 +1,256 @@
+{
+  "version": 1,
+  "updated": "2026-09-23",
+  "routes": [
+    {
+      "id": "alger-thenia",
+      "from": "alger",
+      "to": "thenia",
+      "category": "suburban",
+      "name": "الجزائر ← الثنية",
+      "source": "dz-portal-gallery",
+      "schedule_image": "../assets/train-schedules/suburban/alger-thenia.png",
+      "schedule_status": "requires-current-verification"
+    },
+    {
+      "id": "thenia-alger",
+      "from": "thenia",
+      "to": "alger",
+      "category": "suburban",
+      "name": "الثنية ← الجزائر",
+      "source": "dz-portal-gallery",
+      "schedule_image": "../assets/train-schedules/suburban/thenia-alger.png",
+      "schedule_status": "requires-current-verification"
+    },
+    {
+      "id": "alger-affroun",
+      "from": "alger",
+      "to": "affroun",
+      "category": "suburban",
+      "name": "الجزائر ← العفرون",
+      "source": "dz-portal-gallery",
+      "schedule_image": "../assets/train-schedules/suburban/alger-affroun.png",
+      "schedule_status": "requires-current-verification"
+    },
+    {
+      "id": "affroun-alger",
+      "from": "affroun",
+      "to": "alger",
+      "category": "suburban",
+      "name": "العفرون ← الجزائر",
+      "source": "dz-portal-gallery",
+      "schedule_image": "../assets/train-schedules/suburban/affroun-alger.png",
+      "schedule_status": "requires-current-verification"
+    },
+    {
+      "id": "alger-zeralda",
+      "from": "alger",
+      "to": "zeralda",
+      "category": "suburban",
+      "name": "الجزائر ← زرالدة",
+      "source": "dz-portal-gallery",
+      "schedule_image": "../assets/train-schedules/suburban/alger-zeralda.png",
+      "schedule_status": "requires-current-verification"
+    },
+    {
+      "id": "zeralda-alger",
+      "from": "zeralda",
+      "to": "alger",
+      "category": "suburban",
+      "name": "زرالدة ← الجزائر",
+      "source": "dz-portal-gallery",
+      "schedule_image": "../assets/train-schedules/suburban/zeralda-alger.png",
+      "schedule_status": "requires-current-verification"
+    },
+    {
+      "id": "alger-oued-aissi",
+      "from": "alger",
+      "to": "oued-aissi",
+      "category": "suburban",
+      "name": "الجزائر ← واد عيسى",
+      "source": "dz-portal-gallery",
+      "schedule_image": "../assets/train-schedules/suburban/alger-oued-aissa.png",
+      "schedule_status": "requires-current-verification"
+    },
+    {
+      "id": "oued-aissi-alger",
+      "from": "oued-aissi",
+      "to": "alger",
+      "category": "suburban",
+      "name": "واد عيسى ← الجزائر",
+      "source": "dz-portal-gallery",
+      "schedule_image": "../assets/train-schedules/suburban/oued-aissa-alger.png",
+      "schedule_status": "requires-current-verification"
+    },
+    {
+      "id": "alger-airport",
+      "from": "alger",
+      "to": "airport",
+      "category": "suburban",
+      "name": "الجزائر ↔ مطار هواري بومدين",
+      "source": "dz-portal-gallery",
+      "schedule_image": "../assets/train-schedules/suburban/alger-airoport-alger.png",
+      "schedule_status": "requires-current-verification"
+    },
+    {
+      "id": "affroun-thenia",
+      "from": "affroun",
+      "to": "thenia",
+      "category": "suburban",
+      "name": "العفرون ↔ الثنية",
+      "source": "dz-portal-gallery",
+      "schedule_image": "../assets/train-schedules/suburban/affroun-thenia-affroun.png",
+      "schedule_status": "requires-current-verification"
+    },
+    {
+      "id": "zeralda-thenia",
+      "from": "zeralda",
+      "to": "thenia",
+      "category": "suburban",
+      "name": "زرالدة ↔ الثنية",
+      "source": "dz-portal-gallery",
+      "schedule_image": "../assets/train-schedules/suburban/zeralda-thenia-zeralda.png",
+      "schedule_status": "requires-current-verification"
+    },
+    {
+      "id": "alger-bejaia",
+      "from": "alger",
+      "to": "bejaia",
+      "category": "eastern",
+      "name": "الجزائر ↔ بجاية",
+      "source": "dz-portal-gallery",
+      "schedule_image": "../assets/train-schedules/Eastern/alger-bejaia-alger.jpg",
+      "schedule_status": "requires-current-verification"
+    },
+    {
+      "id": "alger-batna",
+      "from": "alger",
+      "to": "batna",
+      "category": "eastern",
+      "name": "الجزائر ↔ باتنة",
+      "source": "dz-portal-gallery",
+      "schedule_image": "../assets/train-schedules/Eastern/alger-batna-alger.jpg",
+      "schedule_status": "requires-current-verification"
+    },
+    {
+      "id": "alger-annaba",
+      "from": "alger",
+      "to": "annaba",
+      "category": "eastern",
+      "name": "الجزائر ↔ عنابة",
+      "source": "dz-portal-gallery",
+      "schedule_image": "../assets/train-schedules/Eastern/alger-annaba.jpg",
+      "schedule_status": "requires-current-verification"
+    },
+    {
+      "id": "alger-tebessa",
+      "from": "alger",
+      "to": "tebessa",
+      "category": "eastern",
+      "name": "الجزائر ↔ تبسة (ليلي)",
+      "source": "dz-portal-gallery",
+      "schedule_image": "../assets/train-schedules/Eastern/alger-tebessa.jpg",
+      "schedule_status": "requires-current-verification"
+    },
+    {
+      "id": "beni-mansour-bejaia",
+      "from": "beni-mansour",
+      "to": "bejaia",
+      "category": "eastern",
+      "name": "بني منصور ↔ بجاية",
+      "source": "dz-portal-gallery",
+      "schedule_image": "../assets/train-schedules/Eastern/beni-mansour-bedjaia.png",
+      "schedule_status": "requires-current-verification"
+    },
+    {
+      "id": "alger-oran",
+      "from": "alger",
+      "to": "oran",
+      "category": "western",
+      "name": "الجزائر ↔ وهران",
+      "source": "dz-portal-gallery",
+      "schedule_image": "../assets/train-schedules/Western/alger-oran-alger.jpg",
+      "schedule_status": "requires-current-verification"
+    },
+    {
+      "id": "oran-bechar",
+      "from": "oran",
+      "to": "bechar",
+      "category": "western",
+      "name": "وهران ↔ بشار",
+      "source": "dz-portal-gallery",
+      "schedule_image": "../assets/train-schedules/Western/oran-bechar.jpg",
+      "schedule_status": "requires-current-verification"
+    },
+    {
+      "id": "oran-chlef",
+      "from": "oran",
+      "to": "chlef",
+      "category": "western",
+      "name": "وهران - الشلف - آغا",
+      "source": "dz-portal-gallery",
+      "schedule_image": "../assets/train-schedules/Western/oran-chlef-agha.png",
+      "schedule_status": "requires-current-verification"
+    },
+    {
+      "id": "agha-chlef",
+      "from": "agha",
+      "to": "chlef",
+      "category": "western",
+      "name": "آغا - الشلف - وهران",
+      "source": "dz-portal-gallery",
+      "schedule_image": "../assets/train-schedules/Western/agha-chlef-oran.png",
+      "schedule_status": "requires-current-verification"
+    },
+    {
+      "id": "bechar-tindouf",
+      "from": "bechar",
+      "to": "tindouf",
+      "category": "sahara",
+      "name": "بشار ↔ تيندوف",
+      "source": "dz-portal-gallery",
+      "schedule_image": "../assets/train-schedules/sahara-plateaux/bechar-tindouf.jpg",
+      "schedule_status": "requires-current-verification"
+    },
+    {
+      "id": "alger-touggourt",
+      "from": "alger",
+      "to": "touggourt",
+      "category": "sahara",
+      "name": "الجزائر ↔ تقرت",
+      "source": "dz-portal-gallery",
+      "schedule_image": "../assets/train-schedules/sahara-plateaux/alger-teggart.jpg",
+      "schedule_status": "requires-current-verification"
+    },
+    {
+      "id": "boughezoul-laghouat",
+      "from": "boughezoul",
+      "to": "laghouat",
+      "category": "sahara",
+      "name": "بوغزول ↔ الأغواط",
+      "source": "dz-portal-gallery",
+      "schedule_image": "../assets/train-schedules/sahara-plateaux/boughezoul-laghouat.png",
+      "schedule_status": "requires-current-verification"
+    },
+    {
+      "id": "tissemsilt-bordj",
+      "from": "tissemsilt",
+      "to": "bordj",
+      "category": "sahara",
+      "name": "تيسمسيلت ↔ برج بوعريريج",
+      "source": "dz-portal-gallery",
+      "schedule_image": "../assets/train-schedules/sahara-plateaux/bba-tisemsilte.png",
+      "schedule_status": "requires-current-verification"
+    },
+    {
+      "id": "alger-tunis",
+      "from": "alger",
+      "to": "tunis",
+      "category": "international",
+      "name": "الجزائر ↔ تونس",
+      "source": "dz-portal-gallery",
+      "schedule_image": "../assets/train-schedules/international/alger-tunisia.jpg",
+      "schedule_status": "requires-current-verification"
+    }
+  ]
+}
