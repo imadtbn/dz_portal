@@ -36,7 +36,9 @@ for(const t of trips){
  fail(!calendarsById.has(t.service_id),"Unknown service "+t.trip_id);
  fail(!sourcesById.has(t.source_id),"Unknown source "+t.trip_id);
  const source=sources.find(x=>x.id===t.source_id);
- fail(Boolean(t.demo)!==(source?.kind==="demo"),"Demo flag/source mismatch "+t.trip_id);
+ fail(t.data_status==="pending_review"&&source?.kind!=="manual-draft","Draft must use manual-draft provenance "+t.trip_id);
+ fail(t.data_status==="verified"&&(!source?.verified_at||!t.train_number),"Verified trip requires verified source and train number "+t.trip_id);
+ fail(t.data_status!=="pending_review"&&source?.kind==="manual-draft","Unverified manual draft must not appear as published "+t.trip_id);
  fail(!Array.isArray(t.stop_times)||t.stop_times.length<2,"Not enough stops "+t.trip_id);
  if(!Array.isArray(t.stop_times)||t.stop_times.length<2)continue;
  let previous=-1,sequence=0;
@@ -47,7 +49,7 @@ for(const t of trips){
   const arr=stop.arrival===null?null:time(stop.arrival),dep=stop.departure===null?null:time(stop.departure);
   fail(stop.arrival!==null&&arr===null||stop.departure!==null&&dep===null,"Invalid time "+t.trip_id);
   const current=arr??dep;
-  fail(current===null||current<previous,"Nonmonotonic time "+t.trip_id);
+  fail((current===null&&t.data_status!=="pending_review")||(current!==null&&current<previous),"Nonmonotonic or missing published stop time "+t.trip_id);
   fail(arr!==null&&dep!==null&&dep<arr,"Depart before arrival "+t.trip_id);
   previous=dep??arr??previous;
  }
