@@ -1,22 +1,24 @@
-# DZ Rail — local railway data
+# DZ Rail — بيانات مواعيد متكررة ومحطات التوقف
 
-The page is `sectors/sntf-trains.html`. It links from `sectors/sntf.html`.
-This initial delivery indexes 25 named stations and 25 railway gallery entries from the existing DZ Portal SNTF page. These are a *catalogue*, not independently confirmed currently operating services. Digital trips, timetables, station coordinates and calendars are intentionally empty until their source and validity are independently verified. Do not derive times from a route name.
+صفحة الواجهة: `sectors/sntf-trains.html`. قاعدة البيانات JSON محلية، دون API مدفوع. تم إعداد 46 سجل محطة و26 مدخل مسار.
 
-## Publishing a validated timetable
+## بيانات جدول زرالدة ← آغا (19 سبتمبر 2026)
+حُوّلت الصورة المقدّمة من المستخدم إلى 14 رحلة مسارها 13 محطة بالترتيب الصحيح؛ أرقامها 1500، 1502، B502، 1504، 1508، 1510، 1512، 1514، 1516، 1518، 1520، 1522، 1524، 1526. الرحلة 1500 تحمل الرمز [1] (لا تسير الجمعة فقط) والباقي يحمل [*] (يومي). لم توضح الصورة حالة الأعياد للرحلة 1500؛ لذا لا تُفرض عليها قاعدة استثناء الأعياد. المصدر صورة المستخدم، وليس تأكيدًا مباشرًا من SNTF بحدوث الرحلات أو استمرار صلاحية الجدول.
 
-1. Verify the current SNTF document (official website, ticket office or dated publication). Save the authoritative URL or stable reference, document date, effective dates and checked date in `sources.json`.
-2. Add every verified station to `stations.json`; use null coordinates until a credible geographic source is logged in `geo_source`, then set `geo_verified: true`.
-3. Define line orientation in `routes.json` and applicable operating days in `calendars.json`. Put official exceptions in `exceptions` with `service_id`, `date` and `type` (`added` or `removed`).
-4. Only then insert a trip in `trips.json` with `trip_id`, `route_id`, `service_id`, `train_number` (or null), `source_id` and ordered `stop_times` (`station_id`, `arrival`, `departure`, `sequence`). Use GTFS-like 24+ hour times for next-day arrivals. Existing JS supports 00:00 to 47:59.
-5. Run `node scripts/validate-sntf-data.mjs`. Check results against the source manually and publish together.
+## الرحلات التجريبية
+توجد 9 رحلات وهمية بأرقام D-xxx على خطوط مختلفة؛ كل رحلة تحمل `demo: true` ومصدر `dz-rail-simulation`. **ليست مواعيد فعلية ولا يجوز استخدامها للتنقل.** لا تظهر في البحث والمغادرات إلا عند تفعيل مربع عرض الرحلات الوهمية، وتعرض شارات وألوانًا مختلفة وتفاصيل محطات التوقف.
 
-## Design and limitations
+## التقويم المتكرر: لا تحديث يومي للملفات
+كل رحلة تحمل `service_id` ولا تحمل تاريخ سفر واحدًا؛ تُطبق قاعدة الأسبوع وفق تاريخ بحث الزائر بتوقيت الجزائر:
+- `daily`: كل الأيام.
+- `friday_holiday`: أيام الجمعة أو تاريخ مدرج في `holidays.json`.
+- `weekday_not_friday`: باستثناء الجمعة وتواريخ الأعياد المدرجة.
+- `except_friday`: استثناء الجمعة **فقط** لحالة الجدول المرفق التي لا تحدد الأعياد.
 
-- Hosting is static GitHub Pages; no paid API or server is required.
-- Search runs locally against documented direct trips. Gallery cards appear as a fallback when current timetable data is absent.
-- Clock uses `Africa/Algiers` regardless of visitor timezone. Times are scheduled, never claimed live.
-- Map loads Leaflet on demand and displays only stations with verified geographic coordinates. Nearest distances are great-circle distances, not travel distance.
-- Location is requested only after a click and is never persisted. Map tiles require internet and provider attribution.
-- New standalone CSS/JS avoid modifying legacy `sector-sntf.js`, gallery styles or advertising infrastructure.
-- Do not claim all national trains have been populated: the system is nationally extensible; coverage is tied to sourced data.
+`holidays.json` **فارغ حاليًا**؛ لا يجوز افتراض أنه سجل كامل للأعياد. أضف التواريخ المؤكدة لكل سنة بصيغة `YYYY-MM-DD`، وحدّث `complete` إلى `true` فقط إذا اكتملت تغطية الفترة المستهدفة. تظل الرحلات ذات قاعدة الجمعة تعمل حسب اليوم من الأسبوع دون الحاجة إلى تعديل ملفات البيانات يوميًا.
+
+## كيف تضيف محطات ثانوية لمسار
+أضف أسماء المحطات ومعرفاتها المستقرة إلى `stations.json`. يمكن للخط أن يملك مصفوفة `stops` بترتيب المحطات، كما في `zeralda-agha`. لكن **الرحلة الفعلية** يجب أن تحتوي على `stop_times` مرتبة: `station_id`، `sequence`، `arrival`، `departure`. ليس ضروريًا أن تتوقف جميع الرحلات عند جميع محطات الخط؛ لكل رحلة قائمتها الدقيقة. المحرك يدعم البحث بين أي محطتين وسيطتين إذا وردتا في ترتيب الرحلة الصحيح؛ تفاصيل البطاقة تعرض كامل المحطات التي يمر بها الجزء المطلوب. لا تُدرج أوقاتًا تخمينية ضمن الرحلات الفعلية؛ احتفظ بالمحاكاة ضمن `demo`.
+
+## مراقبة الجودة
+شغّل `node scripts/validate-sntf-data.mjs` قبل اعتماد تحديثات البيانات؛ تُشغّل GitHub Actions نفس الفحص بعد الدفع. راجع الجداول المرفقة يدويًا مع مصدر SNTF وتواريخ السريان. المواعيد والصور القديمة قد تتغير.
