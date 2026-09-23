@@ -1,11 +1,15 @@
 // DZ Rail: static-data-first, no synthetic train services or coordinates.
 const base = new URL("../../data/sntf/", import.meta.url);
-const state = { stations:[],routes:[],trips:[],calendars:[],exceptions:[],sources:[],map:null,user:null,locationBusy:false };
+const state = { stations:[],routes:[],trips:[],calendars:[],exceptions:[],holidays:[],holidaysComplete:false,sources:[],map:null,user:null,locationBusy:false };
 const $ = id => document.getElementById(id);
 const escapeHtml = s => String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
 const algeriaTime = () => new Intl.DateTimeFormat("en-CA",{timeZone:"Africa/Algiers",year:"numeric",month:"2-digit",day:"2-digit",hour:"2-digit",minute:"2-digit",second:"2-digit",hourCycle:"h23"}).formatToParts(new Date()).reduce((o,p)=>(o[p.type]=p.value,o),{});
 const localDate = () => {const t=algeriaTime();return t.year+"-"+t.month+"-"+t.day};
 const minutesOf = value => {if(!/^\d{2}:\d{2}(?::\d{2})?$/.test(value||""))return NaN;const [h,m]=value.split(":").map(Number);return h*60+m};
+const serviceNames={daily:"كل يوم",friday_holiday:"الجمعة والأعياد المسجلة",weekday_not_friday:"عدا الجمعة والأعياد المسجلة",except_friday:"عدا الجمعة"};
+const isDemo=t=>t.demo===true||t.data_status==="demo";
+const demoMode=()=>document.getElementById("show-demo")?.checked===true;
+const usableTrips=()=>state.trips.filter(t=>!isDemo(t)||demoMode());
 const categoryNames={suburban:"الضواحي",eastern:"الشرق",western:"الغرب",sahara:"الصحراء والهضاب",international:"الدولي"};
 const stationById = id => state.stations.find(s=>s.id===id);
 const stationName = id => stationById(id)?.name||id;
@@ -26,8 +30,8 @@ async function json(filename,key){
 }
 async function loadData(){
  try{
- const [s,r,t,c,src]=await Promise.all([json("stations.json","stations"),json("routes.json","routes"),json("trips.json","trips"),json("calendars.json","calendars"),json("sources.json","sources")]);
- Object.assign(state,{stations:s.stations,routes:r.routes,trips:t.trips,calendars:c.calendars,exceptions:c.exceptions||[],sources:src.sources});
+ const [s,r,t,c,src,h]=await Promise.all([json("stations.json","stations"),json("routes.json","routes"),json("trips.json","trips"),json("calendars.json","calendars"),json("sources.json","sources"),json("holidays.json","dates")]);
+ Object.assign(state,{stations:s.stations,routes:r.routes,trips:t.trips,calendars:c.calendars,exceptions:c.exceptions||[],holidays:h.dates,holidaysComplete:h.complete===true,sources:src.sources});
  for(const select of [$("from"),$("to"),$("station")]){
    const fragment=document.createDocumentFragment();
    for(const station of state.stations){
@@ -36,7 +40,7 @@ async function loadData(){
    select.appendChild(fragment);
  }
  $("routes-count").textContent=state.routes.length+" جدول خط متاح";
- $("data-status").textContent=state.trips.length ? " · عدد الرحلات المدققة: "+state.trips.length : " · مواقيت رقمية غير متاحة بعد؛ الجداول المصورة متوفرة.";
+ $("data-status").textContent=" · "+state.trips.filter(t=>!isDemo(t)).length+" رحلة من الصورة المرفقة و"+state.trips.filter(isDemo).length+" رحلة محاكاة (اختيارية).";
  renderCatalog();renderNearby();
  }catch(error){
    $("data-status").textContent=" · تعذر تحميل قاعدة البيانات.";
@@ -59,22 +63,29 @@ function renderCatalog(){
 function activeOn(trip,date){
  const calendar=state.calendars.find(c=>c.id===trip.service_id);
  if(!calendar||!validDate(date))return false;
- const exception=state.exceptions.find(e=>e.service_id===trip.service_id && e.date===date);
+ const exception=state.exceptions.find(e=>e.service_id===trip.service_id&&e.date===date);
  if(exception)return exception.type==="added";
- if(date<calendar.start_date||date>calendar.end_date)return false;
- const weekday=new Date(date+"T12:00:00Z").getUTCDay();
- const key=["sunday","monday","tuesday","wednesday","thursday","friday","saturday"][weekday];
- return calendar.days?.[key]===true;
+ const friday=new Date(date+"T12:00:00Z").getUTCDay()===5;
+ const holiday=state.holidays.some(h=>(typeof h==="string"?h:h.date)===date);
+ switch(calendar.rule){
+ case "daily":return true;
+ case "friday_holiday":return friday||holiday;
+ case "weekday_not_friday":return !friday&&!holiday;
+ case "except_friday":return !friday;
+ default:return false;
+ }
 }
+
 function stopIndex(trip,id){return (trip.stop_times||[]).findIndex(s=>s.station_id===id)}
 function getTrips(from,to,date,after){
  const start=minutesOf(after);
- return state.trips.filter(t=>{
+ return usableTrips().filter(t=>{
   if(!activeOn(t,date))return false;
   const i=stopIndex(t,from),j=stopIndex(t,to);
   return i>=0&&j>i&&minutesOf(t.stop_times[i].departure)>=start;
  }).sort((a,b)=>minutesOf(a.stop_times[stopIndex(a,from)].departure)-minutesOf(b.stop_times[stopIndex(b,from)].departure));
 }
+
 function minutesLabel(value){const m=minutesOf(value);if(!Number.isFinite(m))return "—";const hours=Math.floor(m/60);return String(hours%24).padStart(2,"0")+":"+String(m%60).padStart(2,"0")+(hours>=24?" (اليوم التالي)":"")}
 function tripCard(trip,from,to){
  const a=trip.stop_times[stopIndex(trip,from)],b=trip.stop_times[stopIndex(trip,to)];
@@ -172,5 +183,6 @@ $("nearby-from").addEventListener("click",()=>{activateTab("map");locate()});
 $("catalog").addEventListener("click",e=>{const b=e.target.closest(".choose-route");if(!b)return;$("from").value=b.dataset.from;$("to").value=b.dataset.to;window.scrollTo({top:$("route-form").getBoundingClientRect().top+scrollY-90,behavior:"smooth"});search()});
 $("search-results").addEventListener("click",e=>{const b=e.target.closest(".choose-route");if(!b)return;$("from").value=b.dataset.from;$("to").value=b.dataset.to;search()});
 $("nearby").addEventListener("click",e=>{const b=e.target.closest(".choose-station");if(!b)return;$("station").value=b.dataset.station;activateTab("departures")});
-$("date").value=localDate();$("date").min=localDate();
+$("date").value=localDate();
+$("show-demo").addEventListener("change",()=>{if($("from").value&&$("to").value)search();renderDepartures()});
 updateClock();setInterval(updateClock,1000);loadData();
