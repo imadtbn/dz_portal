@@ -26,8 +26,8 @@
  </div>
 </header>
 <main id="main" class="shell">
- <section class="intro"><div><span class="eyebrow">دليل تفاعلي · الجزائر</span><h1>اكتشف رحلتك القادمة</h1><p>ابحث عن الخطوط والمحطات واطّلع على الجداول الأصلية. تظهر المغادرات والعد التنازلي فقط عندما تتوفر بيانات مواعيد موثقة.</p></div><div class="time-box"><span>توقيت الجزائر</span><time id="clock" aria-live="off">--:--:--</time><small id="today">—</small></div></section>
- <aside class="notice" role="note"><strong>تنبيه البيانات:</strong> جداول الصفحة مرتبطة بالمصادر المصورة الموجودة في البوابة. ليست هذه خدمة تتبع مباشر، ويجب التحقق من آخر التغييرات لدى <a href="https://www.sntf.dz/" target="_blank" rel="noopener noreferrer">SNTF</a> قبل السفر. <span id="data-status"></span></aside>
+ <section class="intro"><div><span class="eyebrow">دليل تفاعلي · الجزائر</span><h1>اكتشف رحلتك القادمة</h1><p>ابحث عن الخطوط والمحطات واطّلع على الجداول الأصلية. استكشف المواعيد المتكررة من الجدول المرفق، وشغّل وضع المحاكاة اختياريًا لاستعراض الرحلات الوهمية.</p></div><div class="time-box"><span>توقيت الجزائر</span><time id="clock" aria-live="off">--:--:--</time><small id="today">—</small></div></section>
+ <aside class="notice" role="note"><strong>تنبيه البيانات:</strong> مواعيد زرالدة ← آغا من الصورة المقدمة اعتبارًا من 19 سبتمبر 2026، دون إعادة تأكيد صلاحيتها لدى SNTF. باقي الرحلات التجريبية وهمية ولا تصلح للسفر. ليست هذه خدمة تتبع مباشر، ويجب التحقق من آخر التغييرات لدى <a href="https://www.sntf.dz/" target="_blank" rel="noopener noreferrer">SNTF</a> قبل السفر. <span id="data-status"></span></aside>
  <div class="tabs" role="tablist" aria-label="وظائف DZ Rail">
   <button type="button" role="tab" id="tab-search" aria-controls="panel-search" aria-selected="true" tabindex="0" data-tab="search">⌕ <span>البحث</span></button>
   <button type="button" role="tab" id="tab-departures" aria-controls="panel-departures" aria-selected="false" tabindex="-1" data-tab="departures">◷ <span>المغادرات</span></button>
@@ -43,7 +43,7 @@
    <div class="field"><label for="after">المغادرة بعد</label><input type="time" id="after" value="00:00" required></div>
    <button class="primary" type="submit">البحث عن الرحلات</button>
   </form>
-  <div class="quick-row"><button class="text-btn" type="button" id="nearby-from">استخدام أقرب محطة كنقطة انطلاق</button><label class="field inline-filter" for="category">نوع الخط <select id="category"><option value="">جميع الخطوط</option><option value="suburban">الضواحي</option><option value="eastern">الشرق</option><option value="western">الغرب</option><option value="sahara">الصحراء والهضاب</option><option value="international">الدولي</option></select></label></div>
+  <div class="demo-controls"><label for="show-demo"><input id="show-demo" type="checkbox"> إظهار رحلات وهمية تجريبية في البحث والمغادرات</label><p>أرقام D-xxx ومواعيدها والمحطات الوسيطة أمثلة برمجية غير رسمية. تبقى مخفية افتراضيًا. تُحدد الأعياد فقط عند إدخال تواريخها الموثقة.</p></div><div class="quick-row"><button class="text-btn" type="button" id="nearby-from">استخدام أقرب محطة كنقطة انطلاق</button><label class="field inline-filter" for="category">نوع الخط <select id="category"><option value="">جميع الخطوط</option><option value="suburban">الضواحي</option><option value="eastern">الشرق</option><option value="western">الغرب</option><option value="sahara">الصحراء والهضاب</option><option value="international">الدولي</option></select></label></div>
   <div class="result-head"><h3>نتائج البحث</h3><span id="result-count" aria-live="polite"></span></div>
   <div id="search-results" class="results" aria-live="polite"><div class="empty">اختر محطة الانطلاق والوصول لعرض المسارات المتوفرة.</div></div>
   <div class="catalog-head"><h3>دليل الخطوط</h3><input id="catalog-filter" type="search" aria-label="تصفية الخطوط بالاسم" placeholder="تصفية حسب اسم الخط أو المحطة"></div>
@@ -53,7 +53,7 @@
   <div class="section-head"><div><span class="eyebrow">مواعيد مجدولة</span><h2>المغادرات القادمة</h2></div><span id="departure-clock" class="chip">—</span></div>
   <div class="field"><label for="station">اختر المحطة</label><select id="station"><option value="">اختر محطة</option></select></div>
   <div id="departures" aria-live="polite" class="results"><div class="empty">اختر محطة لعرض المغادرات.</div></div>
-  <p class="footnote">الأوقات، إن وُجدت، مجدولة وليست تأكيدًا لانطلاق القطار أو وصوله الفعلي.</p>
+  <p class="footnote">الأوقات من جداول أو أمثلة محاكاة ولا تمثل تتبعًا مباشرًا. تعطيل وضع المحاكاة يخفي الرحلات الوهمية.</p>
  </section>
  <section role="tabpanel" id="panel-map" aria-labelledby="tab-map" class="panel" hidden>
   <div class="section-head"><div><span class="eyebrow">استكشف بالقرب منك</span><h2>خريطة المحطات</h2></div><button id="locate" type="button" class="primary secondary">تحديد موقعي</button></div>
