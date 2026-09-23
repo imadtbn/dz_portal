@@ -57,4 +57,4 @@ for(const t of trips){
  fail(Boolean(route)&&(route.from!==t.stop_times[0].station_id||route.to!==t.stop_times.at(-1).station_id),"Trip and route endpoints mismatch "+t.trip_id);
 }
 for(const source of sources)fail(!source.url?.startsWith("https://"),"Source URL missing "+source.id);
-if(errors.length){console.error(errors.join("\n"));process.exitCode=1}else console.log("DZ Rail validation OK: "+stations.length+" stations; "+routes.length+" route entries; "+trips.filter(x=>!x.demo).length+" user-provided timetable trips; "+trips.filter(x=>x.demo).length+" DEMO trips; "+holidays.dates.length+" holiday dates.");
+if(errors.length){console.error(errors.join("\\n"));process.exitCode=1}else console.log("DZ Rail validation OK: "+stations.length+" stations; "+routes.length+" routes; "+trips.filter(t=>t.data_status==="source_transcribed").length+" transcribed timetable trips; "+trips.filter(t=>t.data_status==="pending_review").length+" editable unpublished drafts; "+holidays.dates.length+" holiday dates.");
