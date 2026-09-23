@@ -1,5 +1,5 @@
 {
-  "version": 2,
+  "version": 3,
   "updated": "2026-09-23",
   "trips": [
     {
@@ -8,7 +8,7 @@
       "train_number": "1500",
       "service_id": "except_friday",
       "source_id": "user-zeralda-agha-2026-09-19",
-      "data_status": "user-supplied",
+      "data_status": "source_transcribed",
       "effective_from": "2026-09-19",
       "stop_times": [
         {
@@ -89,7 +89,8 @@
           "arrival": "07:01",
           "departure": null
         }
-      ]
+      ],
+      "editor_note": "من صورة جدول زرالدة–آغا المؤرخ 19 سبتمبر 2026؛ يجب مراجعة استمرار السريان لدى SNTF."
     },
     {
       "trip_id": "user-zeralda-agha-1502",
@@ -97,7 +98,7 @@
       "train_number": "1502",
       "service_id": "daily",
       "source_id": "user-zeralda-agha-2026-09-19",
-      "data_status": "user-supplied",
+      "data_status": "source_transcribed",
       "effective_from": "2026-09-19",
       "stop_times": [
         {
@@ -178,7 +179,8 @@
           "arrival": "07:44",
           "departure": null
         }
-      ]
+      ],
+      "editor_note": "من صورة جدول زرالدة–آغا المؤرخ 19 سبتمبر 2026؛ يجب مراجعة استمرار السريان لدى SNTF."
     },
     {
       "trip_id": "user-zeralda-agha-B502",
@@ -186,7 +188,7 @@
       "train_number": "B502",
       "service_id": "daily",
       "source_id": "user-zeralda-agha-2026-09-19",
-      "data_status": "user-supplied",
+      "data_status": "source_transcribed",
       "effective_from": "2026-09-19",
       "stop_times": [
         {
@@ -267,7 +269,8 @@
           "arrival": "08:18",
           "departure": null
         }
-      ]
+      ],
+      "editor_note": "من صورة جدول زرالدة–آغا المؤرخ 19 سبتمبر 2026؛ يجب مراجعة استمرار السريان لدى SNTF."
     },
     {
       "trip_id": "user-zeralda-agha-1504",
@@ -275,7 +278,7 @@
       "train_number": "1504",
       "service_id": "daily",
       "source_id": "user-zeralda-agha-2026-09-19",
-      "data_status": "user-supplied",
+      "data_status": "source_transcribed",
       "effective_from": "2026-09-19",
       "stop_times": [
         {
@@ -356,7 +359,8 @@
           "arrival": "09:23",
           "departure": null
         }
-      ]
+      ],
+      "editor_note": "من صورة جدول زرالدة–آغا المؤرخ 19 سبتمبر 2026؛ يجب مراجعة استمرار السريان لدى SNTF."
     },
     {
       "trip_id": "user-zeralda-agha-1508",
@@ -364,7 +368,7 @@
       "train_number": "1508",
       "service_id": "daily",
       "source_id": "user-zeralda-agha-2026-09-19",
-      "data_status": "user-supplied",
+      "data_status": "source_transcribed",
       "effective_from": "2026-09-19",
       "stop_times": [
         {
@@ -445,7 +449,8 @@
           "arrival": "10:48",
           "departure": null
         }
-      ]
+      ],
+      "editor_note": "من صورة جدول زرالدة–آغا المؤرخ 19 سبتمبر 2026؛ يجب مراجعة استمرار السريان لدى SNTF."
     },
     {
       "trip_id": "user-zeralda-agha-1510",
@@ -453,7 +458,7 @@
       "train_number": "1510",
       "service_id": "daily",
       "source_id": "user-zeralda-agha-2026-09-19",
-      "data_status": "user-supplied",
+      "data_status": "source_transcribed",
       "effective_from": "2026-09-19",
       "stop_times": [
         {
@@ -534,7 +539,8 @@
           "arrival": "11:34",
           "departure": null
         }
-      ]
+      ],
+      "editor_note": "من صورة جدول زرالدة–آغا المؤرخ 19 سبتمبر 2026؛ يجب مراجعة استمرار السريان لدى SNTF."
     },
     {
       "trip_id": "user-zeralda-agha-1512",
@@ -542,7 +548,7 @@
       "train_number": "1512",
       "service_id": "daily",
       "source_id": "user-zeralda-agha-2026-09-19",
-      "data_status": "user-supplied",
+      "data_status": "source_transcribed",
       "effective_from": "2026-09-19",
       "stop_times": [
         {
@@ -623,7 +629,8 @@
           "arrival": "12:18",
           "departure": null
         }
-      ]
+      ],
+      "editor_note": "من صورة جدول زرالدة–آغا المؤرخ 19 سبتمبر 2026؛ يجب مراجعة استمرار السريان لدى SNTF."
     },
     {
       "trip_id": "user-zeralda-agha-1514",
@@ -631,7 +638,7 @@
       "train_number": "1514",
       "service_id": "daily",
       "source_id": "user-zeralda-agha-2026-09-19",
-      "data_status": "user-supplied",
+      "data_status": "source_transcribed",
       "effective_from": "2026-09-19",
       "stop_times": [
         {
@@ -712,7 +719,8 @@
           "arrival": "13:43",
           "departure": null
         }
-      ]
+      ],
+      "editor_note": "من صورة جدول زرالدة–آغا المؤرخ 19 سبتمبر 2026؛ يجب مراجعة استمرار السريان لدى SNTF."
     },
     {
       "trip_id": "user-zeralda-agha-1516",
@@ -720,7 +728,7 @@
       "train_number": "1516",
       "service_id": "daily",
       "source_id": "user-zeralda-agha-2026-09-19",
-      "data_status": "user-supplied",
+      "data_status": "source_transcribed",
       "effective_from": "2026-09-19",
       "stop_times": [
         {
@@ -801,7 +809,8 @@
           "arrival": "14:48",
           "departure": null
         }
-      ]
+      ],
+      "editor_note": "من صورة جدول زرالدة–آغا المؤرخ 19 سبتمبر 2026؛ يجب مراجعة استمرار السريان لدى SNTF."
     },
     {
       "trip_id": "user-zeralda-agha-1518",
@@ -809,7 +818,7 @@
       "train_number": "1518",
       "service_id": "daily",
       "source_id": "user-zeralda-agha-2026-09-19",
-      "data_status": "user-supplied",
+      "data_status": "source_transcribed",
       "effective_from": "2026-09-19",
       "stop_times": [
         {
@@ -890,7 +899,8 @@
           "arrival": "15:33",
           "departure": null
         }
-      ]
+      ],
+      "editor_note": "من صورة جدول زرالدة–آغا المؤرخ 19 سبتمبر 2026؛ يجب مراجعة استمرار السريان لدى SNTF."
     },
     {
       "trip_id": "user-zeralda-agha-1520",
@@ -898,7 +908,7 @@
       "train_number": "1520",
       "service_id": "daily",
       "source_id": "user-zeralda-agha-2026-09-19",
-      "data_status": "user-supplied",
+      "data_status": "source_transcribed",
       "effective_from": "2026-09-19",
       "stop_times": [
         {
@@ -979,7 +989,8 @@
           "arrival": "16:48",
           "departure": null
         }
-      ]
+      ],
+      "editor_note": "من صورة جدول زرالدة–آغا المؤرخ 19 سبتمبر 2026؛ يجب مراجعة استمرار السريان لدى SNTF."
     },
     {
       "trip_id": "user-zeralda-agha-1522",
@@ -987,7 +998,7 @@
       "train_number": "1522",
       "service_id": "daily",
       "source_id": "user-zeralda-agha-2026-09-19",
-      "data_status": "user-supplied",
+      "data_status": "source_transcribed",
       "effective_from": "2026-09-19",
       "stop_times": [
         {
@@ -1068,7 +1079,8 @@
           "arrival": "17:38",
           "departure": null
         }
-      ]
+      ],
+      "editor_note": "من صورة جدول زرالدة–آغا المؤرخ 19 سبتمبر 2026؛ يجب مراجعة استمرار السريان لدى SNTF."
     },
     {
       "trip_id": "user-zeralda-agha-1524",
@@ -1076,7 +1088,7 @@
       "train_number": "1524",
       "service_id": "daily",
       "source_id": "user-zeralda-agha-2026-09-19",
-      "data_status": "user-supplied",
+      "data_status": "source_transcribed",
       "effective_from": "2026-09-19",
       "stop_times": [
         {
@@ -1157,7 +1169,8 @@
           "arrival": "18:23",
           "departure": null
         }
-      ]
+      ],
+      "editor_note": "من صورة جدول زرالدة–آغا المؤرخ 19 سبتمبر 2026؛ يجب مراجعة استمرار السريان لدى SNTF."
     },
     {
       "trip_id": "user-zeralda-agha-1526",
@@ -1165,7 +1178,7 @@
       "train_number": "1526",
       "service_id": "daily",
       "source_id": "user-zeralda-agha-2026-09-19",
-      "data_status": "user-supplied",
+      "data_status": "source_transcribed",
       "effective_from": "2026-09-19",
       "stop_times": [
         {
@@ -1246,16 +1259,16 @@
           "arrival": "19:38",
           "departure": null
         }
-      ]
+      ],
+      "editor_note": "من صورة جدول زرالدة–آغا المؤرخ 19 سبتمبر 2026؛ يجب مراجعة استمرار السريان لدى SNTF."
     },
     {
-      "trip_id": "demo-alger-thenia-1",
+      "trip_id": "draft-alger-thenia-1",
       "route_id": "alger-thenia",
       "service_id": "daily",
-      "train_number": "D-100",
-      "source_id": "dz-rail-simulation",
-      "data_status": "demo",
-      "demo": true,
+      "train_number": null,
+      "source_id": "dz-rail-manual-draft",
+      "data_status": "pending_review",
       "stop_times": [
         {
           "station_id": "alger",
@@ -1287,16 +1300,17 @@
           "arrival": "08:09",
           "departure": null
         }
-      ]
+      ],
+      "previous_simulation": true,
+      "editor_note": "مسودة بيانات أُنشئت من أمثلة افتراضية سابقة. يجب مراجعة جميع المحطات والأوقات ورقم القطار قبل اعتمادها أو عرضها كرحلة مجدولة."
     },
     {
-      "trip_id": "demo-alger-thenia-2",
+      "trip_id": "draft-alger-thenia-2",
       "route_id": "alger-thenia",
       "service_id": "friday_holiday",
-      "train_number": "D-101",
-      "source_id": "dz-rail-simulation",
-      "data_status": "demo",
-      "demo": true,
+      "train_number": null,
+      "source_id": "dz-rail-manual-draft",
+      "data_status": "pending_review",
       "stop_times": [
         {
           "station_id": "alger",
@@ -1328,16 +1342,17 @@
           "arrival": "12:00",
           "departure": null
         }
-      ]
+      ],
+      "previous_simulation": true,
+      "editor_note": "مسودة بيانات أُنشئت من أمثلة افتراضية سابقة. يجب مراجعة جميع المحطات والأوقات ورقم القطار قبل اعتمادها أو عرضها كرحلة مجدولة."
     },
     {
-      "trip_id": "demo-thenia-alger-1",
+      "trip_id": "draft-thenia-alger-1",
       "route_id": "thenia-alger",
       "service_id": "weekday_not_friday",
-      "train_number": "D-102",
-      "source_id": "dz-rail-simulation",
-      "data_status": "demo",
-      "demo": true,
+      "train_number": null,
+      "source_id": "dz-rail-manual-draft",
+      "data_status": "pending_review",
       "stop_times": [
         {
           "station_id": "thenia",
@@ -1369,16 +1384,17 @@
           "arrival": "17:08",
           "departure": null
         }
-      ]
+      ],
+      "previous_simulation": true,
+      "editor_note": "مسودة بيانات أُنشئت من أمثلة افتراضية سابقة. يجب مراجعة جميع المحطات والأوقات ورقم القطار قبل اعتمادها أو عرضها كرحلة مجدولة."
     },
     {
-      "trip_id": "demo-alger-oran-1",
+      "trip_id": "draft-alger-oran-1",
       "route_id": "alger-oran",
       "service_id": "daily",
-      "train_number": "D-200",
-      "source_id": "dz-rail-simulation",
-      "data_status": "demo",
-      "demo": true,
+      "train_number": null,
+      "source_id": "dz-rail-manual-draft",
+      "data_status": "pending_review",
       "stop_times": [
         {
           "station_id": "alger",
@@ -1398,16 +1414,17 @@
           "arrival": "11:15",
           "departure": null
         }
-      ]
+      ],
+      "previous_simulation": true,
+      "editor_note": "مسودة بيانات أُنشئت من أمثلة افتراضية سابقة. يجب مراجعة جميع المحطات والأوقات ورقم القطار قبل اعتمادها أو عرضها كرحلة مجدولة."
     },
     {
-      "trip_id": "demo-alger-oran-2",
+      "trip_id": "draft-alger-oran-2",
       "route_id": "alger-oran",
       "service_id": "friday_holiday",
-      "train_number": "D-201",
-      "source_id": "dz-rail-simulation",
-      "data_status": "demo",
-      "demo": true,
+      "train_number": null,
+      "source_id": "dz-rail-manual-draft",
+      "data_status": "pending_review",
       "stop_times": [
         {
           "station_id": "alger",
@@ -1427,16 +1444,17 @@
           "arrival": "18:40",
           "departure": null
         }
-      ]
+      ],
+      "previous_simulation": true,
+      "editor_note": "مسودة بيانات أُنشئت من أمثلة افتراضية سابقة. يجب مراجعة جميع المحطات والأوقات ورقم القطار قبل اعتمادها أو عرضها كرحلة مجدولة."
     },
     {
-      "trip_id": "demo-alger-bejaia-1",
+      "trip_id": "draft-alger-bejaia-1",
       "route_id": "alger-bejaia",
       "service_id": "weekday_not_friday",
-      "train_number": "D-300",
-      "source_id": "dz-rail-simulation",
-      "data_status": "demo",
-      "demo": true,
+      "train_number": null,
+      "source_id": "dz-rail-manual-draft",
+      "data_status": "pending_review",
       "stop_times": [
         {
           "station_id": "alger",
@@ -1462,16 +1480,17 @@
           "arrival": "11:15",
           "departure": null
         }
-      ]
+      ],
+      "previous_simulation": true,
+      "editor_note": "مسودة بيانات أُنشئت من أمثلة افتراضية سابقة. يجب مراجعة جميع المحطات والأوقات ورقم القطار قبل اعتمادها أو عرضها كرحلة مجدولة."
     },
     {
-      "trip_id": "demo-oran-bechar-1",
+      "trip_id": "draft-oran-bechar-1",
       "route_id": "oran-bechar",
       "service_id": "daily",
-      "train_number": "D-400",
-      "source_id": "dz-rail-simulation",
-      "data_status": "demo",
-      "demo": true,
+      "train_number": null,
+      "source_id": "dz-rail-manual-draft",
+      "data_status": "pending_review",
       "stop_times": [
         {
           "station_id": "oran",
@@ -1491,16 +1510,17 @@
           "arrival": "29:40",
           "departure": null
         }
-      ]
+      ],
+      "previous_simulation": true,
+      "editor_note": "مسودة بيانات أُنشئت من أمثلة افتراضية سابقة. يجب مراجعة جميع المحطات والأوقات ورقم القطار قبل اعتمادها أو عرضها كرحلة مجدولة."
     },
     {
-      "trip_id": "demo-boughezoul-laghouat-1",
+      "trip_id": "draft-boughezoul-laghouat-1",
       "route_id": "boughezoul-laghouat",
       "service_id": "friday_holiday",
-      "train_number": "D-500",
-      "source_id": "dz-rail-simulation",
-      "data_status": "demo",
-      "demo": true,
+      "train_number": null,
+      "source_id": "dz-rail-manual-draft",
+      "data_status": "pending_review",
       "stop_times": [
         {
           "station_id": "boughezoul",
@@ -1520,16 +1540,17 @@
           "arrival": "10:45",
           "departure": null
         }
-      ]
+      ],
+      "previous_simulation": true,
+      "editor_note": "مسودة بيانات أُنشئت من أمثلة افتراضية سابقة. يجب مراجعة جميع المحطات والأوقات ورقم القطار قبل اعتمادها أو عرضها كرحلة مجدولة."
     },
     {
-      "trip_id": "demo-alger-tunis-1",
+      "trip_id": "draft-alger-tunis-1",
       "route_id": "alger-tunis",
       "service_id": "weekday_not_friday",
-      "train_number": "D-600",
-      "source_id": "dz-rail-simulation",
-      "data_status": "demo",
-      "demo": true,
+      "train_number": null,
+      "source_id": "dz-rail-manual-draft",
+      "data_status": "pending_review",
       "stop_times": [
         {
           "station_id": "alger",
@@ -1555,8 +1576,10 @@
           "arrival": "17:00",
           "departure": null
         }
-      ]
+      ],
+      "previous_simulation": true,
+      "editor_note": "مسودة بيانات أُنشئت من أمثلة افتراضية سابقة. يجب مراجعة جميع المحطات والأوقات ورقم القطار قبل اعتمادها أو عرضها كرحلة مجدولة."
     }
   ],
-  "note": "User-supplied 2026-09-19 image Zeralda–Agha is not independently reconfirmed. All D-xxx trips are fictional simulations, excluded unless demo toggle enabled."
+  "note": "Draft entries are editable real database records, but their prior example times are not operational evidence. Dashboard labels these records as unverified and hides them from default scheduled boards until reviewed. Update stop_times/train_number/source to validate."
 }
