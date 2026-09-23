@@ -1,0 +1,231 @@
+{
+  "version": 1,
+  "updated": "2026-09-23",
+  "stations": [
+    {
+      "id": "alger",
+      "name": "الجزائر",
+      "name_fr": "Alger",
+      "lat": null,
+      "lon": null,
+      "geo_source": null,
+      "geo_verified": false
+    },
+    {
+      "id": "thenia",
+      "name": "الثنية",
+      "name_fr": "Thénia",
+      "lat": null,
+      "lon": null,
+      "geo_source": null,
+      "geo_verified": false
+    },
+    {
+      "id": "affroun",
+      "name": "العفرون",
+      "name_fr": "El Affroun",
+      "lat": null,
+      "lon": null,
+      "geo_source": null,
+      "geo_verified": false
+    },
+    {
+      "id": "zeralda",
+      "name": "زرالدة",
+      "name_fr": "Zéralda",
+      "lat": null,
+      "lon": null,
+      "geo_source": null,
+      "geo_verified": false
+    },
+    {
+      "id": "oued-aissi",
+      "name": "واد عيسى",
+      "name_fr": "Oued Aïssi",
+      "lat": null,
+      "lon": null,
+      "geo_source": null,
+      "geo_verified": false
+    },
+    {
+      "id": "airport",
+      "name": "مطار هواري بومدين",
+      "name_fr": "Aéroport Houari Boumédiène",
+      "lat": null,
+      "lon": null,
+      "geo_source": null,
+      "geo_verified": false
+    },
+    {
+      "id": "bejaia",
+      "name": "بجاية",
+      "name_fr": "Béjaïa",
+      "lat": null,
+      "lon": null,
+      "geo_source": null,
+      "geo_verified": false
+    },
+    {
+      "id": "batna",
+      "name": "باتنة",
+      "name_fr": "Batna",
+      "lat": null,
+      "lon": null,
+      "geo_source": null,
+      "geo_verified": false
+    },
+    {
+      "id": "annaba",
+      "name": "عنابة",
+      "name_fr": "Annaba",
+      "lat": null,
+      "lon": null,
+      "geo_source": null,
+      "geo_verified": false
+    },
+    {
+      "id": "tebessa",
+      "name": "تبسة",
+      "name_fr": "Tébessa",
+      "lat": null,
+      "lon": null,
+      "geo_source": null,
+      "geo_verified": false
+    },
+    {
+      "id": "beni-mansour",
+      "name": "بني منصور",
+      "name_fr": "Béni Mansour",
+      "lat": null,
+      "lon": null,
+      "geo_source": null,
+      "geo_verified": false
+    },
+    {
+      "id": "oran",
+      "name": "وهران",
+      "name_fr": "Oran",
+      "lat": null,
+      "lon": null,
+      "geo_source": null,
+      "geo_verified": false
+    },
+    {
+      "id": "bechar",
+      "name": "بشار",
+      "name_fr": "Béchar",
+      "lat": null,
+      "lon": null,
+      "geo_source": null,
+      "geo_verified": false
+    },
+    {
+      "id": "chlef",
+      "name": "الشلف",
+      "name_fr": "Chlef",
+      "lat": null,
+      "lon": null,
+      "geo_source": null,
+      "geo_verified": false
+    },
+    {
+      "id": "agha",
+      "name": "آغا",
+      "name_fr": "Agha",
+      "lat": null,
+      "lon": null,
+      "geo_source": null,
+      "geo_verified": false
+    },
+    {
+      "id": "tindouf",
+      "name": "تيندوف",
+      "name_fr": "Tindouf",
+      "lat": null,
+      "lon": null,
+      "geo_source": null,
+      "geo_verified": false
+    },
+    {
+      "id": "touggourt",
+      "name": "تقرت",
+      "name_fr": "Touggourt",
+      "lat": null,
+      "lon": null,
+      "geo_source": null,
+      "geo_verified": false
+    },
+    {
+      "id": "boughezoul",
+      "name": "بوغزول",
+      "name_fr": "Boughezoul",
+      "lat": null,
+      "lon": null,
+      "geo_source": null,
+      "geo_verified": false
+    },
+    {
+      "id": "djelfa",
+      "name": "الجلفة",
+      "name_fr": "Djelfa",
+      "lat": null,
+      "lon": null,
+      "geo_source": null,
+      "geo_verified": false
+    },
+    {
+      "id": "laghouat",
+      "name": "الأغواط",
+      "name_fr": "Laghouat",
+      "lat": null,
+      "lon": null,
+      "geo_source": null,
+      "geo_verified": false
+    },
+    {
+      "id": "tissemsilt",
+      "name": "تيسمسيلت",
+      "name_fr": "Tissemsilt",
+      "lat": null,
+      "lon": null,
+      "geo_source": null,
+      "geo_verified": false
+    },
+    {
+      "id": "bordj",
+      "name": "برج بوعريريج",
+      "name_fr": "Bordj Bou Arréridj",
+      "lat": null,
+      "lon": null,
+      "geo_source": null,
+      "geo_verified": false
+    },
+    {
+      "id": "tunis",
+      "name": "تونس",
+      "name_fr": "Tunis",
+      "lat": null,
+      "lon": null,
+      "geo_source": null,
+      "geo_verified": false
+    },
+    {
+      "id": "constantine",
+      "name": "قسنطينة",
+      "name_fr": "Constantine",
+      "lat": null,
+      "lon": null,
+      "geo_source": null,
+      "geo_verified": false
+    },
+    {
+      "id": "bouira",
+      "name": "البويرة",
+      "name_fr": "Bouira",
+      "lat": null,
+      "lon": null,
+      "geo_source": null,
+      "geo_verified": false
+    }
+  ]
+}
