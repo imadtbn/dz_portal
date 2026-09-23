@@ -1,231 +1,330 @@
 {
-  "version": 1,
+  "version": 2,
   "updated": "2026-09-23",
   "stations": [
     {
       "id": "alger",
       "name": "الجزائر",
       "name_fr": "Alger",
-      "lat": null,
-      "lon": null,
-      "geo_source": null,
-      "geo_verified": false
-    },
-    {
-      "id": "thenia",
-      "name": "الثنية",
-      "name_fr": "Thénia",
-      "lat": null,
-      "lon": null,
-      "geo_source": null,
-      "geo_verified": false
-    },
-    {
-      "id": "affroun",
-      "name": "العفرون",
-      "name_fr": "El Affroun",
-      "lat": null,
-      "lon": null,
-      "geo_source": null,
-      "geo_verified": false
-    },
-    {
-      "id": "zeralda",
-      "name": "زرالدة",
-      "name_fr": "Zéralda",
-      "lat": null,
-      "lon": null,
-      "geo_source": null,
-      "geo_verified": false
-    },
-    {
-      "id": "oued-aissi",
-      "name": "واد عيسى",
-      "name_fr": "Oued Aïssi",
-      "lat": null,
-      "lon": null,
-      "geo_source": null,
-      "geo_verified": false
-    },
-    {
-      "id": "airport",
-      "name": "مطار هواري بومدين",
-      "name_fr": "Aéroport Houari Boumédiène",
-      "lat": null,
-      "lon": null,
-      "geo_source": null,
-      "geo_verified": false
-    },
-    {
-      "id": "bejaia",
-      "name": "بجاية",
-      "name_fr": "Béjaïa",
-      "lat": null,
-      "lon": null,
-      "geo_source": null,
-      "geo_verified": false
-    },
-    {
-      "id": "batna",
-      "name": "باتنة",
-      "name_fr": "Batna",
-      "lat": null,
-      "lon": null,
-      "geo_source": null,
-      "geo_verified": false
-    },
-    {
-      "id": "annaba",
-      "name": "عنابة",
-      "name_fr": "Annaba",
-      "lat": null,
-      "lon": null,
-      "geo_source": null,
-      "geo_verified": false
-    },
-    {
-      "id": "tebessa",
-      "name": "تبسة",
-      "name_fr": "Tébessa",
-      "lat": null,
-      "lon": null,
-      "geo_source": null,
-      "geo_verified": false
-    },
-    {
-      "id": "beni-mansour",
-      "name": "بني منصور",
-      "name_fr": "Béni Mansour",
-      "lat": null,
-      "lon": null,
-      "geo_source": null,
-      "geo_verified": false
-    },
-    {
-      "id": "oran",
-      "name": "وهران",
-      "name_fr": "Oran",
-      "lat": null,
-      "lon": null,
-      "geo_source": null,
-      "geo_verified": false
-    },
-    {
-      "id": "bechar",
-      "name": "بشار",
-      "name_fr": "Béchar",
-      "lat": null,
-      "lon": null,
-      "geo_source": null,
-      "geo_verified": false
-    },
-    {
-      "id": "chlef",
-      "name": "الشلف",
-      "name_fr": "Chlef",
-      "lat": null,
-      "lon": null,
-      "geo_source": null,
-      "geo_verified": false
+      "lat": 36.7790,
+      "lon": 3.0617,
+      "geo_source": "Google Maps",
+      "geo_verified": true
     },
     {
       "id": "agha",
       "name": "آغا",
       "name_fr": "Agha",
-      "lat": null,
-      "lon": null,
-      "geo_source": null,
-      "geo_verified": false
+      "lat": 36.7685,
+      "lon": 3.0571,
+      "geo_source": "Google Maps",
+      "geo_verified": true
+    },
+    {
+      "id": "el-harrach",
+      "name": "الحراش",
+      "name_fr": "El Harrach",
+      "lat": 36.7214,
+      "lon": 3.1368,
+      "geo_source": "Google Maps",
+      "geo_verified": true
+    },
+    {
+      "id": "reghaia",
+      "name": "رغاية",
+      "name_fr": "Réghaïa",
+      "lat": 36.7323,
+      "lon": 3.3361,
+      "geo_source": "Google Maps",
+      "geo_verified": true
+    },
+    {
+      "id": "boumerdes",
+      "name": "بومرداس",
+      "name_fr": "Boumerdès",
+      "lat": 36.7583,
+      "lon": 3.4716,
+      "geo_source": "Google Maps",
+      "geo_verified": true
+    },
+    {
+      "id": "thenia",
+      "name": "الثنية",
+      "name_fr": "Thénia",
+      "lat": 36.7258,
+      "lon": 3.5574,
+      "geo_source": "Google Maps",
+      "geo_verified": true
+    },
+    {
+      "id": "affroun",
+      "name": "العفرون",
+      "name_fr": "El Affroun",
+      "lat": 36.4678,
+      "lon": 2.6288,
+      "geo_source": "Google Maps",
+      "geo_verified": true
+    },
+    {
+      "id": "zeralda",
+      "name": "زرالدة",
+      "name_fr": "Zéralda",
+      "lat": 36.7056,
+      "lon": 2.8427,
+      "geo_source": "Google Maps",
+      "geo_verified": true
+    },
+    {
+      "id": "oued-aissi",
+      "name": "واد عيسى",
+      "name_fr": "Oued Aïssi",
+      "lat": 36.6976,
+      "lon": 4.1082,
+      "geo_source": "Google Maps",
+      "geo_verified": true
+    },
+    {
+      "id": "airport",
+      "name": "مطار هواري بومدين",
+      "name_fr": "Aéroport Houari Boumédiène",
+      "lat": 36.6973,
+      "lon": 3.2089,
+      "geo_source": "Google Maps",
+      "geo_verified": true
+    },
+    {
+      "id": "bejaia",
+      "name": "بجاية",
+      "name_fr": "Béjaïa",
+      "lat": 36.7497,
+      "lon": 5.0747,
+      "geo_source": "Google Maps",
+      "geo_verified": true
+    },
+    {
+      "id": "setif",
+      "name": "سطيف",
+      "name_fr": "Sétif",
+      "lat": 36.1884,
+      "lon": 5.4054,
+      "geo_source": "Google Maps",
+      "geo_verified": true
+    },
+    {
+      "id": "skikda",
+      "name": "سكيكدة",
+      "name_fr": "Skikda",
+      "lat": 36.8776,
+      "lon": 6.9056,
+      "geo_source": "Google Maps",
+      "geo_verified": true
+    },
+    {
+      "id": "batna",
+      "name": "باتنة",
+      "name_fr": "Batna",
+      "lat": 35.5639,
+      "lon": 6.1824,
+      "geo_source": "Google Maps",
+      "geo_verified": true
+    },
+    {
+      "id": "annaba",
+      "name": "عنابة",
+      "name_fr": "Annaba",
+      "lat": 36.9004,
+      "lon": 7.7663,
+      "geo_source": "Google Maps",
+      "geo_verified": true
+    },
+    {
+      "id": "tebessa",
+      "name": "تبسة",
+      "name_fr": "Tébessa",
+      "lat": 35.4057,
+      "lon": 8.1215,
+      "geo_source": "Google Maps",
+      "geo_verified": true
+    },
+    {
+      "id": "beni-mansour",
+      "name": "بني منصور",
+      "name_fr": "Béni Mansour",
+      "lat": 36.3262,
+      "lon": 4.3411,
+      "geo_source": "Google Maps",
+      "geo_verified": true
+    },
+    {
+      "id": "oran",
+      "name": "وهران",
+      "name_fr": "Oran",
+      "lat": 35.6980,
+      "lon": -0.6384,
+      "geo_source": "Google Maps",
+      "geo_verified": true
+    },
+    {
+      "id": "sidi-bel-abbes",
+      "name": "سيدي بلعباس",
+      "name_fr": "Sidi Bel Abbès",
+      "lat": 35.1979,
+      "lon": -0.6318,
+      "geo_source": "Google Maps",
+      "geo_verified": true
+    },
+    {
+      "id": "tlemcen",
+      "name": "تلمسان",
+      "name_fr": "Tlemcen",
+      "lat": 34.8859,
+      "lon": -1.3113,
+      "geo_source": "Google Maps",
+      "geo_verified": true
+    },
+    {
+      "id": "saida",
+      "name": "سعيدة",
+      "name_fr": "Saïda",
+      "lat": 34.8385,
+      "lon": 0.1444,
+      "geo_source": "Google Maps",
+      "geo_verified": true
+    },
+    {
+      "id": "mostaganem",
+      "name": "مستغانم",
+      "name_fr": "Mostaganem",
+      "lat": 35.9333,
+      "lon": 0.0833,
+      "geo_source": "Google Maps",
+      "geo_verified": true
+    },
+    {
+      "id": "bechar",
+      "name": "بشار",
+      "name_fr": "Béchar",
+      "lat": 31.6247,
+      "lon": -2.2155,
+      "geo_source": "Google Maps",
+      "geo_verified": true
+    },
+    {
+      "id": "chlef",
+      "name": "الشلف",
+      "name_fr": "Chlef",
+      "lat": 36.1607,
+      "lon": 1.3346,
+      "geo_source": "Google Maps",
+      "geo_verified": true
     },
     {
       "id": "tindouf",
       "name": "تيندوف",
       "name_fr": "Tindouf",
-      "lat": null,
-      "lon": null,
-      "geo_source": null,
-      "geo_verified": false
+      "lat": 27.6760,
+      "lon": -8.1470,
+      "geo_source": "Google Maps",
+      "geo_verified": true
+    },
+    {
+      "id": "biskra",
+      "name": "بسكرة",
+      "name_fr": "Biskra",
+      "lat": 34.8465,
+      "lon": 5.7275,
+      "geo_source": "Google Maps",
+      "geo_verified": true
     },
     {
       "id": "touggourt",
       "name": "تقرت",
       "name_fr": "Touggourt",
-      "lat": null,
-      "lon": null,
-      "geo_source": null,
-      "geo_verified": false
+      "lat": 33.1066,
+      "lon": 6.0645,
+      "geo_source": "Google Maps",
+      "geo_verified": true
     },
     {
       "id": "boughezoul",
       "name": "بوغزول",
       "name_fr": "Boughezoul",
-      "lat": null,
-      "lon": null,
-      "geo_source": null,
-      "geo_verified": false
+      "lat": 35.7007,
+      "lon": 2.8838,
+      "geo_source": "Google Maps",
+      "geo_verified": true
     },
     {
       "id": "djelfa",
       "name": "الجلفة",
       "name_fr": "Djelfa",
-      "lat": null,
-      "lon": null,
-      "geo_source": null,
-      "geo_verified": false
+      "lat": 34.6644,
+      "lon": 3.2428,
+      "geo_source": "Google Maps",
+      "geo_verified": true
     },
     {
       "id": "laghouat",
       "name": "الأغواط",
       "name_fr": "Laghouat",
-      "lat": null,
-      "lon": null,
-      "geo_source": null,
-      "geo_verified": false
+      "lat": 33.7844,
+      "lon": 2.8718,
+      "geo_source": "Google Maps",
+      "geo_verified": true
     },
     {
       "id": "tissemsilt",
       "name": "تيسمسيلت",
       "name_fr": "Tissemsilt",
-      "lat": null,
-      "lon": null,
-      "geo_source": null,
-      "geo_verified": false
+      "lat": 35.6033,
+      "lon": 1.8211,
+      "geo_source": "Google Maps",
+      "geo_verified": true
+    },
+    {
+      "id": "msila",
+      "name": "المسيلة",
+      "name_fr": "M'Sila",
+      "lat": 35.7000,
+      "lon": 4.5422,
+      "geo_source": "Google Maps",
+      "geo_verified": true
     },
     {
       "id": "bordj",
       "name": "برج بوعريريج",
       "name_fr": "Bordj Bou Arréridj",
-      "lat": null,
-      "lon": null,
-      "geo_source": null,
-      "geo_verified": false
-    },
-    {
-      "id": "tunis",
-      "name": "تونس",
-      "name_fr": "Tunis",
-      "lat": null,
-      "lon": null,
-      "geo_source": null,
-      "geo_verified": false
+      "lat": 36.0717,
+      "lon": 4.7645,
+      "geo_source": "Google Maps",
+      "geo_verified": true
     },
     {
       "id": "constantine",
       "name": "قسنطينة",
       "name_fr": "Constantine",
-      "lat": null,
-      "lon": null,
-      "geo_source": null,
-      "geo_verified": false
+      "lat": 36.3639,
+      "lon": 6.6186,
+      "geo_source": "Google Maps",
+      "geo_verified": true
     },
     {
       "id": "bouira",
       "name": "البويرة",
       "name_fr": "Bouira",
-      "lat": null,
-      "lon": null,
-      "geo_source": null,
-      "geo_verified": false
+      "lat": 36.3742,
+      "lon": 3.8961,
+      "geo_source": "Google Maps",
+      "geo_verified": true
+    },
+    {
+      "id": "tunis",
+      "name": "تونس",
+      "name_fr": "Tunis",
+      "lat": 36.7952,
+      "lon": 10.1805,
+      "geo_source": "Google Maps",
+      "geo_verified": true
     }
   ]
 }
