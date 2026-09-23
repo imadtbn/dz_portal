@@ -9,7 +9,7 @@ const routeFor=id=>state.routes.find(r=>r.id===id);
 const categoryLabel={suburban:"الضواحي",western:"الغرب",eastern:"الشرق",sahara:"الصحراء والهضاب",international:"الدولي"};
 const serviceLabel={daily:"كل يوم",friday_holiday:"الجمعة والأعياد",weekday_not_friday:"عدا الجمعة والأعياد",except_friday:"عدا الجمعة"};
 const verifiedGeo=s=>s.geo_verified===true&&Number.isFinite(s.lat)&&Number.isFinite(s.lon);
-const editableTrips=()=>eligible(state.trips,$("include-drafts").checked);
+const editableTrips=()=>eligible(state.trips,$("include-drafts").checked).filter(t=>!state.route||t.route_id===state.route);
 async function get(name,key){const response=await fetch(new URL(name+".json",dataRoot),{cache:"no-cache"});if(!response.ok)throw Error(name+": HTTP "+response.status);const data=await response.json();if(!Array.isArray(data[key]))throw Error(name+": بيانات غير صالحة");return data}
 function allowedOnRoute(s){
  if(!state.route)return true;
@@ -121,7 +121,7 @@ function routeStations(){
  $("station").replaceChildren(new Option("اختر محطة",""),...allowed.map(s=>new Option(s.name+" / "+s.name_fr,s.id)));
  if(prev&&allowed.some(s=>s.id===prev))$("station").value=prev;
  else if(prev){state.selected=null;$("selected-name").textContent="اختر محطة";$("selected-subtitle").textContent="اختر محطة من الخريطة أو القائمة.";renderBoards()}
- listStations();fillRouteCatalog();refreshMarkers();
+ listStations();fillRouteCatalog();fillDirections();renderBoards();refreshMarkers();
 }
 function refreshMarkers(){
  if(!state.map)return;
