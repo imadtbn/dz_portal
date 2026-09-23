@@ -1,5 +1,5 @@
 {
-  "version": 3,
+  "version": 4,
   "updated": "2026-09-23",
   "stations": [
     {
@@ -415,6 +415,16 @@
       "lon": null,
       "geo_source": null,
       "geo_verified": false
+    },
+    {
+      "id": "rouiba",
+      "name": "رويبة",
+      "name_fr": "Rouïba",
+      "lat": null,
+      "lon": null,
+      "geo_source": null,
+      "geo_verified": false,
+      "editor_note": "المحطة مذكورة كمحطة وسيطة؛ إحداثياتها قيد المراجعة."
     }
   ]
 }
