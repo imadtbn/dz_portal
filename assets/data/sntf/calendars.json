@@ -1,6 +1,46 @@
 {
-  "version": 1,
+  "version": 2,
   "updated": "2026-09-23",
-  "calendars": [],
+  "calendars": [
+    {
+      "id": "daily",
+      "label": "يسير كل يوم",
+      "rule": "daily",
+      "days": {
+        "sunday": true,
+        "monday": true,
+        "tuesday": true,
+        "wednesday": true,
+        "thursday": true,
+        "friday": true,
+        "saturday": true
+      }
+    },
+    {
+      "id": "friday_holiday",
+      "label": "يسير الجمعة والأعياد المسجلة",
+      "rule": "friday_holiday",
+      "days": {
+        "friday": true
+      },
+      "holiday_source": "holidays.json",
+      "note": "Days flagged in holidays.json only; no automatic guessing of religious/public holiday dates."
+    },
+    {
+      "id": "weekday_not_friday",
+      "label": "لا يسير الجمعة والأعياد المسجلة",
+      "rule": "weekday_not_friday",
+      "days": {
+        "sunday": true,
+        "monday": true,
+        "tuesday": true,
+        "wednesday": true,
+        "thursday": true,
+        "friday": false,
+        "saturday": true
+      },
+      "holiday_source": "holidays.json"
+    }
+  ],
   "exceptions": []
 }
