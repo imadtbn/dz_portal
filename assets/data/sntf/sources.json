@@ -1,5 +1,5 @@
 {
-  "version": 2,
+  "version": 3,
   "updated": "2026-09-23",
   "sources": [
     {
@@ -24,15 +24,14 @@
       "public_status": "user-supplied"
     },
     {
-      "id": "dz-rail-simulation",
-      "name": "بيانات محاكاة DZ Rail — ليست رحلات SNTF",
+      "id": "dz-rail-manual-draft",
+      "name": "مسودة إدخال يدوي — تحتاج تأكيدًا",
       "url": "https://imadtbn.github.io/dz_portal/sectors/sntf-trains.html",
-      "kind": "demo",
+      "kind": "manual-draft",
       "verified_at": null,
       "valid_from": null,
       "valid_until": null,
-      "notice": "جميع أرقام D-xxx والأوقات والمحطات الوسيطة أمثلة برمجية فقط؛ لا تستخدم للسفر.",
-      "public_status": "demo"
+      "notice": "سجلات تحرير جاهزة لإدخال المواعيد الحقيقية يدويًا؛ جميع قيم أوقات الأمثلة القديمة تحتاج مراجعة قبل اعتبارها بيانات تشغيل."
     }
   ]
 }
