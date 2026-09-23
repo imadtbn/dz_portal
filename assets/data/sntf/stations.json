@@ -1,12 +1,12 @@
 {
-  "version": 2,
+  "version": 3,
   "updated": "2026-09-23",
   "stations": [
     {
       "id": "alger",
       "name": "الجزائر",
       "name_fr": "Alger",
-      "lat": 36.7790,
+      "lat": 36.779,
       "lon": 3.0617,
       "geo_source": "Google Maps",
       "geo_verified": true
@@ -159,7 +159,7 @@
       "id": "oran",
       "name": "وهران",
       "name_fr": "Oran",
-      "lat": 35.6980,
+      "lat": 35.698,
       "lon": -0.6384,
       "geo_source": "Google Maps",
       "geo_verified": true
@@ -222,8 +222,8 @@
       "id": "tindouf",
       "name": "تيندوف",
       "name_fr": "Tindouf",
-      "lat": 27.6760,
-      "lon": -8.1470,
+      "lat": 27.676,
+      "lon": -8.147,
       "geo_source": "Google Maps",
       "geo_verified": true
     },
@@ -285,7 +285,7 @@
       "id": "msila",
       "name": "المسيلة",
       "name_fr": "M'Sila",
-      "lat": 35.7000,
+      "lat": 35.7,
       "lon": 4.5422,
       "geo_source": "Google Maps",
       "geo_verified": true
@@ -325,6 +325,96 @@
       "lon": 10.1805,
       "geo_source": "Google Maps",
       "geo_verified": true
+    },
+    {
+      "id": "sidi-abdallah-j",
+      "name": "سيدي عبد الله - ج",
+      "name_fr": "Sidi Abdellah J",
+      "lat": null,
+      "lon": null,
+      "geo_source": null,
+      "geo_verified": false
+    },
+    {
+      "id": "sidi-abdallah",
+      "name": "سيدي عبد الله",
+      "name_fr": "Sidi Abdellah",
+      "lat": null,
+      "lon": null,
+      "geo_source": null,
+      "geo_verified": false
+    },
+    {
+      "id": "tessala-el-merdja",
+      "name": "تسالة المرجة",
+      "name_fr": "Tessala El Merdja",
+      "lat": null,
+      "lon": null,
+      "geo_source": null,
+      "geo_verified": false
+    },
+    {
+      "id": "birtouta",
+      "name": "بئر توتة",
+      "name_fr": "Birtouta",
+      "lat": null,
+      "lon": null,
+      "geo_source": null,
+      "geo_verified": false
+    },
+    {
+      "id": "baba-ali",
+      "name": "بابا علي",
+      "name_fr": "Baba Ali",
+      "lat": null,
+      "lon": null,
+      "geo_source": null,
+      "geo_verified": false
+    },
+    {
+      "id": "ain-naadja",
+      "name": "عين النعجة",
+      "name_fr": "Aïn Naâdja",
+      "lat": null,
+      "lon": null,
+      "geo_source": null,
+      "geo_verified": false
+    },
+    {
+      "id": "djasr-constantine",
+      "name": "جسر قسنطينة",
+      "name_fr": "Gué de Constantine",
+      "lat": null,
+      "lon": null,
+      "geo_source": null,
+      "geo_verified": false
+    },
+    {
+      "id": "kharouba",
+      "name": "خروبة",
+      "name_fr": "Kharouba",
+      "lat": null,
+      "lon": null,
+      "geo_source": null,
+      "geo_verified": false
+    },
+    {
+      "id": "hussein-dey",
+      "name": "حسين داي",
+      "name_fr": "Hussein Dey",
+      "lat": null,
+      "lon": null,
+      "geo_source": null,
+      "geo_verified": false
+    },
+    {
+      "id": "ateliers",
+      "name": "الورشات",
+      "name_fr": "Les Ateliers",
+      "lat": null,
+      "lon": null,
+      "geo_source": null,
+      "geo_verified": false
     }
   ]
 }
