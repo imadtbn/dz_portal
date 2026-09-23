@@ -40,6 +40,20 @@
         "saturday": true
       },
       "holiday_source": "holidays.json"
+    },
+    {
+      "id": "except_friday",
+      "label": "لا يسير الجمعة (الأعياد غير محددة في المصدر)",
+      "rule": "except_friday",
+      "days": {
+        "sunday": true,
+        "monday": true,
+        "tuesday": true,
+        "wednesday": true,
+        "thursday": true,
+        "friday": false,
+        "saturday": true
+      }
     }
   ],
   "exceptions": []
