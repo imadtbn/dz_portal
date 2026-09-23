@@ -1,41 +1,58 @@
 // Run from repository root: node scripts/validate-sntf-data.mjs
 import {readFileSync} from "node:fs";
-const root = "assets/data/sntf/";
-const read = name => JSON.parse(readFileSync(root+name+".json","utf8"));
-const stations=read("stations").stations,routes=read("routes").routes,trips=read("trips").trips,calendars=read("calendars").calendars,sources=read("sources").sources;
+const read = name => JSON.parse(readFileSync("assets/data/sntf/"+name+".json","utf8"));
+const stations=read("stations").stations,routes=read("routes").routes,trips=read("trips").trips,calendarDoc=read("calendars"),calendars=calendarDoc.calendars,sources=read("sources").sources,holidays=read("holidays");
 const errors=[];
-const unique=(arr,type)=>{const ids=new Set();for(const x of arr){if(!x.id)errors.push(type+" missing id");else if(ids.has(x.id))errors.push(type+" duplicate id: "+x.id);ids.add(x.id)}return ids};
-const stationIds=unique(stations,"stations"),routeIds=unique(routes,"routes"),calendarIds=unique(calendars,"calendars"),sourceIds=unique(sources,"sources");
+function index(data,key){const ids=new Set();for(const item of data){const id=item[key];if(!id)errors.push("Missing "+key);else if(ids.has(id))errors.push("Duplicate "+key+": "+id);ids.add(id)}return ids}
+const stationsById=index(stations,"id"),routesById=index(routes,"id"),calendarsById=index(calendars,"id"),sourcesById=index(sources,"id");
+index(trips,"trip_id");
 const time=value=>{if(!/^\d{2}:\d{2}(?::\d{2})?$/.test(value||""))return null;const [h,m,s=0]=value.split(":").map(Number);return h<=47&&m<60&&s<60?h*60+m+s/60:null};
+const date=value=>typeof value==="string"&&/^\d{4}-\d{2}-\d{2}$/.test(value)&&!Number.isNaN(Date.parse(value+"T12:00:00Z"));
+const fail=(cond,message)=>{if(cond)errors.push(message)};
 for(const s of stations){
- if(!s.name||!s.name_fr)errors.push("station name missing: "+s.id);
- if(s.geo_verified===true&&(!Number.isFinite(s.lat)||!Number.isFinite(s.lon)||s.lat<18||s.lat>38||s.lon<-9||s.lon>12)&&s.id!=="tunis")errors.push("invalid verified station coordinates: "+s.id);
- if(s.geo_verified===true&&!s.geo_source)errors.push("geo source missing: "+s.id);
+ fail(!s.name||!s.name_fr,"Missing station name "+s.id);
+ if(s.geo_verified===true){fail(!Number.isFinite(s.lat)||!Number.isFinite(s.lon),"Invalid coordinates "+s.id);fail(!s.geo_source,"Missing geo source "+s.id)}
 }
 for(const r of routes){
- if(!stationIds.has(r.from)||!stationIds.has(r.to))errors.push("unknown route terminal: "+r.id);
- if(!sourceIds.has(r.source))errors.push("route source missing: "+r.id);
- if(!["suburban","eastern","western","sahara","international"].includes(r.category))errors.push("unknown route category: "+r.id);
- if(!/^..\x2fassets\x2ftrain-schedules\x2f/.test(r.schedule_image||""))errors.push("gallery path invalid: "+r.id);
+ fail(!stationsById.has(r.from)||!stationsById.has(r.to),"Unknown route terminal "+r.id);
+ fail(!sourcesById.has(r.source),"Missing route source "+r.id);
+ fail(!["suburban","eastern","western","sahara","international"].includes(r.category),"Invalid route category "+r.id);
+ if(r.schedule_image!==null)fail(!/^\.\.\/assets\/train-schedules\//.test(r.schedule_image||""),"Invalid image path "+r.id);
+ if(r.stops){fail(r.stops[0]!==r.from||r.stops.at(-1)!==r.to,"Route stops endpoints mismatch "+r.id);for(const id of r.stops)fail(!stationsById.has(id),"Unknown route stop "+id)}
+}
+for(const c of calendars){
+ fail(!["daily","friday_holiday","weekday_not_friday","except_friday"].includes(c.rule),"Invalid recurrence "+c.id);
+ if(c.start_date||c.end_date)fail(!date(c.start_date)||!date(c.end_date)||c.end_date<c.start_date,"Invalid optional calendar dates "+c.id);
+}
+for(const holiday of holidays.dates){
+ const dateValue=typeof holiday==="string"?holiday:holiday.date;
+ fail(!date(dateValue),"Invalid holiday date "+dateValue);
+}
+for(const exception of calendarDoc.exceptions){
+ fail(!calendarsById.has(exception.service_id)||!date(exception.date)||!["added","removed"].includes(exception.type),"Invalid calendar exception "+JSON.stringify(exception));
 }
 for(const t of trips){
- if(!t.id&&!t.trip_id)errors.push("trip id missing");
- if(!routeIds.has(t.route_id))errors.push("trip route unknown: "+t.trip_id);
- if(!calendarIds.has(t.service_id))errors.push("trip calendar unknown: "+t.trip_id);
- if(!sourceIds.has(t.source_id))errors.push("trip source unknown: "+t.trip_id);
- if(!Array.isArray(t.stop_times)||t.stop_times.length<2){errors.push("trip needs two or more stops: "+t.trip_id);continue}
- let prev=-1;const sequences=new Set();
+ fail(!routesById.has(t.route_id),"Unknown route "+t.trip_id);
+ fail(!calendarsById.has(t.service_id),"Unknown service "+t.trip_id);
+ fail(!sourcesById.has(t.source_id),"Unknown source "+t.trip_id);
+ const source=sources.find(x=>x.id===t.source_id);
+ fail(Boolean(t.demo)!==(source?.kind==="demo"),"Demo flag/source mismatch "+t.trip_id);
+ fail(!Array.isArray(t.stop_times)||t.stop_times.length<2,"Not enough stops "+t.trip_id);
+ if(!Array.isArray(t.stop_times)||t.stop_times.length<2)continue;
+ let previous=-1,sequence=0;
  for(const stop of t.stop_times){
-  if(!stationIds.has(stop.station_id))errors.push("unknown trip station: "+t.trip_id);
-  if(sequences.has(stop.sequence))errors.push("duplicate stop sequence: "+t.trip_id);sequences.add(stop.sequence);
+  fail(!stationsById.has(stop.station_id),"Unknown stop "+stop.station_id);
+  fail(stop.sequence<=sequence,"Stop sequences not increasing "+t.trip_id);
+  sequence=stop.sequence;
   const arr=stop.arrival===null?null:time(stop.arrival),dep=stop.departure===null?null:time(stop.departure);
-  if(stop.arrival!==null&&arr===null||stop.departure!==null&&dep===null)errors.push("invalid stop time: "+t.trip_id);
-  const cur=arr??dep;
-  if(cur!==null&&cur<prev)errors.push("nonmonotonic trip times: "+t.trip_id);
-  if(arr!==null&&dep!==null&&dep<arr)errors.push("departure before arrival: "+t.trip_id);
-  prev=dep??arr??prev;
+  fail(stop.arrival!==null&&arr===null||stop.departure!==null&&dep===null,"Invalid time "+t.trip_id);
+  const current=arr??dep;
+  fail(current===null||current<previous,"Nonmonotonic time "+t.trip_id);
+  fail(arr!==null&&dep!==null&&dep<arr,"Depart before arrival "+t.trip_id);
+  previous=dep??arr??previous;
  }
+ const route=routes.find(x=>x.id===t.route_id);
+ fail(Boolean(route)&&(route.from!==t.stop_times[0].station_id||route.to!==t.stop_times.at(-1).station_id),"Trip and route endpoints mismatch "+t.trip_id);
 }
-for(const c of calendars){if(!/^\d{4}-\d\d-\d\d$/.test(c.start_date||"")||!/^\d{4}-\d\d-\d\d$/.test(c.end_date||"")||c.end_date<c.start_date)errors.push("invalid calendar: "+c.id)}
-for(const s of sources){if(!s.url?.startsWith("https://"))errors.push("invalid source URL: "+s.id)}
-if(errors.length){console.error(errors.join("\n"));process.exitCode=1}else{console.log("DZ Rail validation OK: "+stations.length+" stations, "+routes.length+" routes, "+trips.length+" trips, "+sources.length+" sources.");if(trips.length===0)console.log("No digital timetables published: gallery fallback enabled.")}
+for(const source of sources)fail(!source.url?.startsWith("https://"),"Source URL missing "+source.id);
+if(errors.length){console.error(errors.join("\n"));process.exitCode=1}else console.log("DZ Rail validation OK: "+stations.length+" stations; "+routes.length+" route entries; "+trips.filter(x=>!x.demo).length+" user-provided timetable trips; "+trips.filter(x=>x.demo).length+" DEMO trips; "+holidays.dates.length+" holiday dates.");
