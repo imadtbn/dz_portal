@@ -5,6 +5,7 @@
   window.__dzPortalSiteTagsLoaded = true;
 
   const GTM_ID = 'GTM-NW3BWPF6';
+  const GA4_ID = 'G-K23WYKK60X';
   const ADSENSE_CLIENT = 'ca-pub-5656416032906373';
 
   // تهيئة dataLayer وgtag القياسي لضمان وصول الأحداث بدقة إلى GA4 وGTM
@@ -32,14 +33,11 @@
         timestamp: Date.now(),
         ...eventParams,
       };
-      window.dataLayer.push(payload);
-
+      // gtag() itself writes to dataLayer. Sending both a custom dataLayer
+      // event and a gtag event can make the same interaction fire twice when
+      // GTM also listens for that event. Use one GA4 event path only.
       if (typeof window.gtag === 'function') {
-        window.gtag('event', eventName, {
-          ...eventParams,
-          page_title: document.title,
-          page_location: window.location.href,
-        });
+        window.gtag('event', eventName, payload);
       }
     } catch (error) {
       console.warn('Analytics event tracking error:', error);
@@ -50,6 +48,7 @@
   // تتم تهيئة GA4 مباشرة داخل head؛ يجب تعطيل أي وسم GA4 أو page_view داخل حاوية GTM.
   window.__dzPortalTagConfig = Object.freeze({
     gtmId: GTM_ID,
+    ga4Id: GA4_ID,
     adsenseClient: ADSENSE_CLIENT,
     trackEvent,
   });
@@ -96,6 +95,44 @@
       window.setTimeout(callback, timeout);
     }
   };
+
+  // Lightweight diagnostics for GA4 verification from DevTools.
+  // Does not create page_view or any additional analytics event.
+  const getAnalyticsDiagnostics = () => new Promise((resolve) => {
+    const report = {
+      ga4Id: GA4_ID,
+      gtmId: GTM_ID,
+      gtagAvailable: typeof window.gtag === 'function',
+      dataLayerAvailable: Array.isArray(window.dataLayer),
+      gtmLoaded: Boolean(findExternalScript(GTM_SRC)),
+      pageLocation: window.location.href,
+      clientId: null,
+      sessionId: null,
+    };
+
+    if (typeof window.gtag !== 'function') {
+      resolve(report);
+      return;
+    }
+
+    let pending = 2;
+    const done = () => {
+      pending -= 1;
+      if (pending === 0) resolve(report);
+    };
+
+    window.gtag('get', GA4_ID, 'client_id', (value) => {
+      report.clientId = value || null;
+      done();
+    });
+    window.gtag('get', GA4_ID, 'session_id', (value) => {
+      report.sessionId = value || null;
+      done();
+    });
+
+    window.setTimeout(() => resolve(report), 2000);
+  });
+  window.dzAnalyticsDiagnostics = getAnalyticsDiagnostics;
 
   const initializeGtm = () => {
     if (!state.gtmStarted) {
