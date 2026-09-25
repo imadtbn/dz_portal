@@ -53,9 +53,12 @@
     trackEvent,
   });
 
+  const GA4_SRC = `https://www.googletagmanager.com/gtag/js?id=${GA4_ID}`;
   const GTM_SRC = `https://www.googletagmanager.com/gtm.js?id=${GTM_ID}`;
   const ADSENSE_SRC = `https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADSENSE_CLIENT}`;
   const state = {
+    ga4Started: false,
+    pageViewSent: false,
     gtmStarted: false,
     adsenseRequested: false,
     adsObserverStarted: false,
@@ -94,6 +97,51 @@
     } else {
       window.setTimeout(callback, timeout);
     }
+  };
+
+  const sendPageView = () => {
+    if (state.pageViewSent || window.__dzPortalGa4PageViewSent) return;
+
+    state.pageViewSent = true;
+    window.__dzPortalGa4PageViewSent = true;
+
+    const pageHeading = document.querySelector('.sector-hero h1, .sector-hero h2, main h1, h1')?.textContent?.trim() || '';
+
+    window.gtag('event', 'page_view', {
+      send_to: GA4_ID,
+      page_title: document.title,
+      page_location: window.location.href,
+      page_path: window.location.pathname,
+      page_sector: pageHeading,
+      site_language: 'ar',
+    });
+  };
+
+  const initializeGa4 = () => {
+    if (state.ga4Started || window.__dzPortalGa4Initialized) {
+      sendPageView();
+      return;
+    }
+
+    state.ga4Started = true;
+    window.__dzPortalGa4Initialized = true;
+
+    // site-tags.js is the canonical GA4 bootstrap. Disable the automatic
+    // config page_view and send exactly one explicit page_view ourselves.
+    window.gtag('js', new Date());
+    window.gtag('config', GA4_ID, {
+      send_page_view: false,
+      page_title: document.title,
+      page_location: window.location.href,
+      page_path: window.location.pathname,
+    });
+
+    loadExternalScript(GA4_SRC, { onload: sendPageView });
+
+    // gtag queues commands before the library is ready, so this fallback
+    // guarantees that the explicit page_view is queued even if load fires
+    // from an already-cached script.
+    sendPageView();
   };
 
   // Lightweight diagnostics for GA4 verification from DevTools.
@@ -186,6 +234,7 @@
     }
   };
 
+  initializeGa4();
   initializeGtm();
 
   window.addEventListener('load', () => {
