@@ -1,57 +1,158 @@
 <!doctype html>
 <html lang="ar" dir="rtl">
+
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#102d42"><meta name="description" content="DZ Rail: خريطة تفاعلية لمحطات القطارات الجزائرية، لوحة المغادرات والوصول حسب المحطة والاتجاه وأيام التشغيل، والوقت المتبقي للقطارات المجدولة.">
-<link rel="icon" href="../assets/images/icon.png"><link rel="canonical" href="https://imadtbn.github.io/dz_portal/sectors/sntf-trains.html">
-<link rel="manifest" href="../manifest.json">
-<meta property="og:type" content="website"><meta property="og:locale" content="ar_DZ"><meta property="og:title" content="DZ Rail | خريطة القطارات ولوحة المحطات"><meta property="og:description" content="اختر محطتك وتابع المغادرات والوصول وأوقات التوقف المجدولة على الخريطة التفاعلية.">
-<meta property="og:url" content="https://imadtbn.github.io/dz_portal/sectors/sntf-trains.html"><meta property="og:image" content="https://imadtbn.github.io/dz_portal/assets/images/sntf.jpg">
-<link rel="stylesheet" href="../assets/css/sntf-trains.css">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"DZ Rail | خريطة القطارات ولوحة المحطات","url":"https://imadtbn.github.io/dz_portal/sectors/sntf-trains.html","inLanguage":"ar-DZ","isPartOf":{"@type":"WebSite","url":"https://imadtbn.github.io/dz_portal/"}}</script>
-<script type="module" src="../assets/js/sntf-trains/app.js"></script>
-<title>DZ Rail | خريطة المحطات ولوحة المغادرات والوصول</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="theme-color" content="#102d42">
+    <meta name="description"
+        content="DZ Rail: خريطة تفاعلية لمحطات القطارات الجزائرية، لوحة المغادرات والوصول حسب المحطة والاتجاه وأيام التشغيل، والوقت المتبقي للقطارات المجدولة.">
+    <link rel="icon" href="../assets/images/icon.png">
+    <link rel="canonical" href="https://imadtbn.github.io/dz_portal/sectors/sntf-trains.html">
+    <link rel="manifest" href="../manifest.json">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="ar_DZ">
+    <meta property="og:title" content="DZ Rail | خريطة القطارات ولوحة المحطات">
+    <meta property="og:description"
+        content="اختر محطتك وتابع المغادرات والوصول وأوقات التوقف المجدولة على الخريطة التفاعلية.">
+    <meta property="og:url" content="https://imadtbn.github.io/dz_portal/sectors/sntf-trains.html">
+    <meta property="og:image" content="https://imadtbn.github.io/dz_portal/assets/images/sntf.jpg">
+    <link rel="stylesheet" href="../assets/css/sntf-trains.css">
+    <script
+        type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"DZ Rail | خريطة القطارات ولوحة المحطات","url":"https://imadtbn.github.io/dz_portal/sectors/sntf-trains.html","inLanguage":"ar-DZ","isPartOf":{"@type":"WebSite","url":"https://imadtbn.github.io/dz_portal/"}}</script>
+    <script type="module" src="../assets/js/sntf-trains/app.js"></script>
+    <title>DZ Rail | خريطة المحطات ولوحة المغادرات والوصول</title>
+
+    <!-- Google AdSense -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5656416032906373"
+     crossorigin="anonymous"></script>
+
+     <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-4BCWP0498L"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-4BCWP0498L');
+</script>
+     
 </head>
+
 <body>
-<a class="skip" href="#station-board">الانتقال إلى لوحة المحطة</a>
-<header class="site-head"><div class="shell head-row">
-<a class="brand" href="sntf.html" aria-label="العودة إلى صفحة السكك الحديدية"><span class="brand-mark" aria-hidden="true">🚆</span><span><strong>DZ Rail</strong><small>محطات قطارات الجزائر</small></span></a>
-<nav aria-label="روابط البوابة"><a href="sntf.html">جداول SNTF المصورة</a><a href="../index.html">البوابة الجزائرية</a></nav>
-</div></header>
-<main class="shell" id="main">
-<section class="intro"><div><span class="eyebrow">خريطة تفاعلية · لوحة المحطات</span><h1>اعرف قطارك من محطتك</h1><p>اختر أي محطة لتظهر المغادرات والوصول والاتجاهات ومحطات التوقف وفق قاعدة البيانات المتاحة.</p></div><div class="clock-box"><span>توقيت الجزائر</span><time id="clock" aria-live="off" dir="ltr">--:--:--</time><small id="date-label">—</small></div></section>
-<div class="disclaimer" role="note"><strong>مهم:</strong> هذه جداول مبرمجة وليست تتبعًا مباشرًا. تم نقل رحلات زرالدة ← آغا من صورة بتاريخ 19 سبتمبر 2026 دون تأكيد مستقل لاستمرار صلاحيتها؛ وتظل مسودات الرحلات الأخرى بحاجة إلى مراجعة يدوية قبل اعتمادها. <a href="https://www.sntf.dz/" target="_blank" rel="noopener noreferrer">تحقق من SNTF ↗</a> <span id="holiday-note"></span></div>
-<section class="dashboard" aria-label="لوحة DZ Rail">
-<div class="map-panel">
- <div class="panel-head"><div><span class="eyebrow">شبكة المحطات</span><h2>خريطة السكك الحديدية</h2></div><button id="locate" type="button" class="button outline">⌖ أقرب محطة</button></div>
- <div class="map-filters">
-  <label for="station-search">ابحث عن محطة</label><input id="station-search" type="search" autocomplete="off" placeholder="اسم المحطة بالعربية أو الفرنسية">
-  <label for="route-filter">المسار</label><select id="route-filter"><option value="">جميع المسارات</option></select>
- </div>
- <div id="map" class="map" aria-label="خريطة تفاعلية لمحطات القطارات" role="region"><div class="empty">يجري تجهيز الخريطة…</div></div>
- <p id="location-status" class="minor" role="status"></p>
- <div class="map-footer"><span id="map-count" class="chip">—</span><span class="minor">النقاط إحداثيات مسجلة؛ خطوط المسار لا تُرسم إلا ببيانات جغرافية موثقة.</span></div>
- <div id="station-results" class="station-results" aria-live="polite"></div>
-</div>
-<aside id="station-board" class="board-panel" aria-label="لوحة المحطة">
- <div class="station-hero"><span class="eyebrow light">لوحة المحطة الذكية</span><h2 id="selected-name">اختر محطة</h2><p id="selected-subtitle">اضغط على المحطة في الخريطة أو استخدم القائمة.</p><label class="select-label" for="station">المحطة</label><select id="station"><option value="">اختر محطة</option></select></div>
- <div class="board-controls">
-  <label for="direction">الاتجاه / مصدر الرحلة</label><select id="direction"><option value="">جميع الاتجاهات</option></select>
-  <label class="draft-toggle" for="include-drafts"><input id="include-drafts" type="checkbox"> عرض المسودات قيد المراجعة</label>
-  <p class="minor">المسودات سجلات قابلة للتعديل يدويًا، لكنها قد تحتوي أوقاتًا افتراضية موروثة. لا تعتمد عليها للسفر.</p>
- </div>
- <div class="board-tabs" role="tablist" aria-label="لوحة المحطة على الهاتف">
-  <button role="tab" type="button" id="tab-departures" aria-controls="departures-panel" aria-selected="true" tabindex="0" data-view="departures">المغادرات <span id="count-departures">0</span></button>
-  <button role="tab" type="button" id="tab-arrivals" aria-controls="arrivals-panel" aria-selected="false" tabindex="-1" data-view="arrivals">الوصول <span id="count-arrivals">0</span></button>
- </div>
- <div class="boards">
-  <section class="board-list" id="departures-panel" role="tabpanel" aria-labelledby="tab-departures"><div class="board-heading"><h3>↗ المغادرات</h3><span id="next-departure" class="chip">—</span></div><div id="departures" class="events" aria-live="polite"><div class="empty">اختر محطة لعرض المغادرات</div></div></section>
-  <section class="board-list" id="arrivals-panel" role="tabpanel" aria-labelledby="tab-arrivals"><div class="board-heading"><h3>↙ الوصول</h3><span id="next-arrival" class="chip">—</span></div><div id="arrivals" class="events" aria-live="polite"><div class="empty">اختر محطة لعرض الوصول</div></div></section>
- </div>
-</aside>
-</section>
-<section class="routes-section"><div class="section-title"><div><span class="eyebrow">قاعدة المسارات</span><h2>الخطوط ومحطات التوقف</h2></div><span id="route-count" class="chip">—</span></div><div id="route-catalog" class="route-grid"></div></section>
-<section class="info-strip"><div><h2>هل تحتاج الجدول الأصلي؟</h2><p>تصفح الصور الأصلية المنشورة في البوابة، وراجع أحدث التغييرات لدى الشركة قبل السفر.</p></div><a class="button" href="sntf.html">الجداول المصورة ↗</a></section>
-</main>
-<footer class="site-foot"><div class="shell"><span>خدمة معلوماتية ضمن البوابة الجزائرية، وليست موقعًا رسميًا لـ SNTF.</span><a href="../index.html">الرئيسية</a></div></footer>
-</body></html>
+    <a class="skip" href="#station-board">الانتقال إلى لوحة المحطة</a>
+    <header class="site-head">
+        <div class="shell head-row">
+            <a class="brand" href="sntf.html" aria-label="العودة إلى صفحة السكك الحديدية"><span class="brand-mark"
+                    aria-hidden="true">🚆</span><span><strong>DZ Rail</strong><small>محطات قطارات
+                        الجزائر</small></span></a>
+            <nav aria-label="روابط البوابة"><a href="sntf.html">جداول SNTF المصورة</a><a href="../index.html">البوابة
+                    الجزائرية</a></nav>
+        </div>
+    </header>
+    <main class="shell" id="main">
+        <section class="intro">
+            <div><span class="eyebrow">خريطة تفاعلية · لوحة المحطات</span>
+                <h1>اعرف قطارك من محطتك</h1>
+                <p>اختر أي محطة لتظهر المغادرات والوصول والاتجاهات ومحطات التوقف وفق قاعدة البيانات المتاحة.</p>
+            </div>
+            <div class="clock-box"><span>توقيت الجزائر</span><time id="clock" aria-live="off"
+                    dir="ltr">--:--:--</time><small id="date-label">—</small></div>
+        </section>
+        <div class="disclaimer" role="note"><strong>مهم:</strong> هذه جداول مبرمجة وليست تتبعًا مباشرًا. تم نقل رحلات
+            زرالدة ← آغا من صورة بتاريخ 19 سبتمبر 2026 دون تأكيد مستقل لاستمرار صلاحيتها؛ وتظل مسودات الرحلات الأخرى
+            بحاجة إلى مراجعة يدوية قبل اعتمادها. <a href="https://www.sntf.dz/" target="_blank"
+                rel="noopener noreferrer">تحقق من SNTF ↗</a> <span id="holiday-note"></span></div>
+        <section class="dashboard" aria-label="لوحة DZ Rail">
+            <div class="map-panel">
+                <div class="panel-head">
+                    <div><span class="eyebrow">شبكة المحطات</span>
+                        <h2>خريطة السكك الحديدية</h2>
+                    </div><button id="locate" type="button" class="button outline">⌖ أقرب محطة</button>
+                </div>
+                <div class="map-filters">
+                    <label for="station-search">ابحث عن محطة</label><input id="station-search" type="search"
+                        autocomplete="off" placeholder="اسم المحطة بالعربية أو الفرنسية">
+                    <label for="route-filter">المسار</label><select id="route-filter">
+                        <option value="">جميع المسارات</option>
+                    </select>
+                </div>
+                <div id="map" class="map" aria-label="خريطة تفاعلية لمحطات القطارات" role="region">
+                    <div class="empty">يجري تجهيز الخريطة…</div>
+                </div>
+                <p id="location-status" class="minor" role="status"></p>
+                <div class="map-footer"><span id="map-count" class="chip">—</span><span class="minor">النقاط إحداثيات
+                        مسجلة؛ خطوط المسار لا تُرسم إلا ببيانات جغرافية موثقة.</span></div>
+                <div id="station-results" class="station-results" aria-live="polite"></div>
+            </div>
+            <aside id="station-board" class="board-panel" aria-label="لوحة المحطة">
+                <div class="station-hero"><span class="eyebrow light">لوحة المحطة الذكية</span>
+                    <h2 id="selected-name">اختر محطة</h2>
+                    <p id="selected-subtitle">اضغط على المحطة في الخريطة أو استخدم القائمة.</p><label
+                        class="select-label" for="station">المحطة</label><select id="station">
+                        <option value="">اختر محطة</option>
+                    </select>
+                </div>
+                <div class="board-controls">
+                    <label for="direction">الاتجاه / مصدر الرحلة</label><select id="direction">
+                        <option value="">جميع الاتجاهات</option>
+                    </select>
+                    <label class="draft-toggle" for="include-drafts"><input id="include-drafts" type="checkbox"> عرض
+                        المسودات قيد المراجعة</label>
+                    <p class="minor">المسودات سجلات قابلة للتعديل يدويًا، لكنها قد تحتوي أوقاتًا افتراضية موروثة. لا
+                        تعتمد عليها للسفر.</p>
+                </div>
+                <div class="board-tabs" role="tablist" aria-label="لوحة المحطة على الهاتف">
+                    <button role="tab" type="button" id="tab-departures" aria-controls="departures-panel"
+                        aria-selected="true" tabindex="0" data-view="departures">المغادرات <span
+                            id="count-departures">0</span></button>
+                    <button role="tab" type="button" id="tab-arrivals" aria-controls="arrivals-panel"
+                        aria-selected="false" tabindex="-1" data-view="arrivals">الوصول <span
+                            id="count-arrivals">0</span></button>
+                </div>
+                <div class="boards">
+                    <section class="board-list" id="departures-panel" role="tabpanel" aria-labelledby="tab-departures">
+                        <div class="board-heading">
+                            <h3>↗ المغادرات</h3><span id="next-departure" class="chip">—</span>
+                        </div>
+                        <div id="departures" class="events" aria-live="polite">
+                            <div class="empty">اختر محطة لعرض المغادرات</div>
+                        </div>
+                    </section>
+                    <section class="board-list" id="arrivals-panel" role="tabpanel" aria-labelledby="tab-arrivals">
+                        <div class="board-heading">
+                            <h3>↙ الوصول</h3><span id="next-arrival" class="chip">—</span>
+                        </div>
+                        <div id="arrivals" class="events" aria-live="polite">
+                            <div class="empty">اختر محطة لعرض الوصول</div>
+                        </div>
+                    </section>
+                </div>
+            </aside>
+        </section>
+        <section class="routes-section">
+            <div class="section-title">
+                <div><span class="eyebrow">قاعدة المسارات</span>
+                    <h2>الخطوط ومحطات التوقف</h2>
+                </div><span id="route-count" class="chip">—</span>
+            </div>
+            <div id="route-catalog" class="route-grid"></div>
+        </section>
+        <section class="info-strip">
+            <div>
+                <h2>هل تحتاج الجدول الأصلي؟</h2>
+                <p>تصفح الصور الأصلية المنشورة في البوابة، وراجع أحدث التغييرات لدى الشركة قبل السفر.</p>
+            </div><a class="button" href="sntf.html">الجداول المصورة ↗</a>
+        </section>
+    </main>
+    <footer class="site-foot">
+        <div class="shell"><span>خدمة معلوماتية ضمن البوابة الجزائرية، وليست موقعًا رسميًا لـ SNTF.</span><a
+                href="../index.html">الرئيسية</a></div>
+    </footer>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+</body>
+
+</html>
