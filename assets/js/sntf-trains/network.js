@@ -60,7 +60,7 @@ export function eligibleStationIds(lineId,routeId,lines,routes,trips){
  const ids=new Set();
  for(const r of selected){
   const t=routeTrips(r,trips);
-  if(t.length)for(const x of t)for(const s of x.stop_times||[])if(s.arrival!=null||s.departure!=null)ids.add(s.station_id);
+  if(t.length){for(const x of t)for(const s of x.stop_times||[])if(s.arrival!=null||s.departure!=null)ids.add(s.station_id);}
   else {ids.add(r.from);ids.add(r.to);}
  }
  return ids;
