@@ -54,7 +54,9 @@ function filterDirection(events,kind){
 function statusBadge(trip){
  if(classify(trip)==="draft")return '<span class="tag draft">قيد المراجعة · غير موثوق للسفر</span>';
  if(classify(trip)==="verified")return '<span class="tag">موثق</span>';
- return '<span class="tag warn">'+(state.sources.find(s=>s.id===trip.source_id)?.kind==="existing-image-gallery"?"من الجدول المصور · غير مؤكد حديثًا":"من الصورة المرفقة · غير مؤكد آنيًا")+"</span>";
+  const source=state.sources.find(s=>s.id===trip.source_id);
+  if(source?.issuing_authority==="SNTF")return '<span class="tag warn">جدول SNTF رسمي · السريان غير مؤكد</span>';
+  return '<span class="tag warn">جدول منقول · السريان غير مؤكد</span>';
 }
 function details(event){
  const t=event.trip,rows=t.stop_times.map((s,i)=>{
