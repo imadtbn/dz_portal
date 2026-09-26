@@ -1,5 +1,5 @@
 {
-  "version": 7,
+  "version": 8,
   "updated": "2026-09-26",
   "sources": [
     {
@@ -190,6 +190,23 @@
       "origin_confirmed_at": "2026-09-26",
       "current_validity": "not_independently_rechecked",
       "notice": "جدول رسمي مؤرخ 19 سبتمبر 2026. لا يعني التأكد من صدوره استمرار تطبيق مواقيته حاليًا."
+    },
+    {
+      "id": "gallery-zeralda-thenia-both-2026-09-19",
+      "name": "جدول SNTF الرسمي: زرالدة ↔ الثنية مع الرحلات القصيرة عبر رغاية",
+      "url": "https://imadtbn.github.io/dz_portal/assets/train-schedules/suburban/zeralda-thenia-zeralda.png",
+      "kind": "official-timetable-image",
+      "verified_at": null,
+      "valid_from": "2026-09-19",
+      "valid_until": null,
+      "official_document": true,
+      "issuing_authority": "SNTF",
+      "official_homepage": "https://www.sntf.dz/",
+      "origin_confirmation": "repository_owner",
+      "origin_status": "official_sntf_document",
+      "origin_confirmed_at": "2026-09-26",
+      "current_validity": "not_independently_rechecked",
+      "notice": "الجدول الرسمي المصور مؤرخ 19 سبتمبر 2026؛ يشمل قطارات كاملة وأخرى تنطلق من رغاية أو تنتهي فيها. جميع الأعمدة الموسومة [*] يومية بحسب الصورة. لا تتوافر متابعة آنية أو تأكيد مستقل لاستمرار التطبيق."
     }
   ],
   "provenance_policy": {
