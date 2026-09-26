@@ -41,6 +41,17 @@ function chooseStation(id,{focusMap=false}={}){
  refreshMarkers();
  if(focusMap&&state.map){const s=station(id);if(verifiedGeo(s))state.map.setView([s.lat,s.lon],Math.max(9,state.map.getZoom()),{animate:true})}
 }
+function fillStationLines(){
+ const root=$("station-services"),count=$("station-line-count");
+ if(!state.selected){count.textContent="—";root.innerHTML='<p class="minor">اختر محطة لعرض الخطوط التي يتوقف بها قطار له توقيت مدخل.</p>';return}
+ const groups=stationLineServices(state.selected,state.lines,state.routes,state.trips);
+ count.textContent=groups.length+" خط";
+ if(!groups.length){root.innerHTML='<p class="minor">هذه المحطة مدرجة في الشبكة، لكن لا توجد لها أوقات توقف منقولة إلى القاعدة بعد. راجع الصور الرسمية إن لزم.</p>';return}
+ root.innerHTML=groups.map(g=>{
+  const buttons=g.route_services.map(x=>'<button type="button" class="service-route" data-station-route="'+esc(x.route_id)+'">'+esc(routeFor(x.route_id)?.name||x.route_id)+' <small>'+x.count+' قطار · '+x.departures+' مغادرة · '+x.arrivals+' وصول</small></button>').join("");
+  return '<div class="station-service-group"><strong>'+esc(g.line_name)+'</strong><span class="tag">'+g.train_count+' رحلة مدخلة</span><div class="service-route-list">'+buttons+'</div></div>';
+ }).join("");
+}
 function fillDirections(){
  const old=$("direction").value,options=new Map();
  for(const t of editableTrips()){
@@ -118,23 +129,54 @@ function boardTab(kind,focus=false){
  $("departures-panel").hidden=mobile&&kind!=="departures";
  $("arrivals-panel").hidden=mobile&&kind!=="arrivals";
 }
+function tripTimeline(trip){
+ const route=routeFor(trip.route_id);
+ const items=trip.stop_times.map(stop=>{
+  const dual=stop.arrival!=null&&stop.departure!=null&&stop.arrival!==stop.departure;
+  const clocks=dual?'<span class="stop-times"><span>وصول <time dir="ltr">'+esc(formatTime(stop.arrival))+'</time></span><span>مغادرة <time dir="ltr">'+esc(formatTime(stop.departure))+'</time></span></span>':
+    '<time dir="ltr">'+esc(formatTime(stop.departure??stop.arrival))+'</time>';
+  return '<li><span>'+esc(name(stop.station_id))+'</span>'+clocks+'</li>';
+ }).join("");
+ return '<p class="minor">القطار '+esc(trip.train_number)+' · '+esc(serviceLabel[trip.service_id]||trip.service_id)+' · '+esc(route?.name||"")+'</p><ol class="stop-list train-timeline">'+items+'</ol>';
+}
+function routeCard(route){
+ const summary=routeStopSummary(route,state.trips),ts=routeTrips(route,state.trips),src=state.sources.find(s=>s.id===route.source);
+ const link=route.schedule_image?'<a class="photo-source" href="'+esc(route.schedule_image)+'" target="_blank" rel="noopener noreferrer">'+(route.schedule_image.endsWith(".svg")?"نسخة معاد تنسيقها من الجدول ↗":"الجدول المصور ↗")+'</a>':"";
+ const stops=summary.known_stops.map((item,i)=>'<li><span>'+ (i+1)+'. '+esc(name(item.station_id))+'</span><small>'+item.train_count+' قطار يتوقف هنا</small></li>').join("");
+ const corridor=summary.corridor_only.length?'<details class="corridor-note"><summary>محطات مذكورة بالممر دون توقف منشور ('+summary.corridor_only.length+')</summary><p class="minor">هذه أسماء ظاهرة في جدول الممر، لكنها غير مدرجة كتوقف مؤقت في أي قطار أدخلناه لهذا المسار.</p><p>'+summary.corridor_only.map(name).map(esc).join(" · ")+'</p></details>':"";
+ const routesStatus=ts.length?'<span class="tag">'+ts.length+' رحلة منقولة</span>':'<span class="tag warn">المواقيت والتوقفات قيد الإدخال</span>';
+ const stopHtml=ts.length?'<details class="route-stops"><summary>عرض محطات التوقف المسجلة ('+summary.known_stops.length+')</summary><ol class="catalog-stops">'+stops+'</ol></details>'+corridor:
+  '<p class="pending-stops">المعروف حاليًا: '+esc(name(route.from))+' ← '+esc(name(route.to))+'. لا توجد محطات وسيطة موثقة في قاعدة الرحلات لهذا المسار بعد.</p>';
+ const options=ts.map(t=>'<option value="'+esc(t.trip_id)+'">'+esc(t.train_number||"غير محدد")+' · '+esc(serviceLabel[t.service_id]||t.service_id)+' · '+esc(formatTime(t.stop_times[0].departure))+' → '+esc(formatTime(t.stop_times.at(-1).arrival))+'</option>').join("");
+ const trainSelect=ts.length?'<label class="trip-select-label" for="trip-'+esc(route.id)+'">محطات قطار محدد</label><select id="trip-'+esc(route.id)+'" data-trip-select="'+esc(route.id)+'"><option value="">اختر القطار لعرض توقفاته ومواقيته</option>'+options+'</select><div class="trip-timeline" data-trip-timeline="'+esc(route.id)+'"></div>':"";
+ return '<article class="route-item" data-route-id="'+esc(route.id)+'"><div class="route-top"><span class="tag">'+esc(categoryLabel[route.category]||route.category)+'</span>'+routesStatus+'</div><h4>'+esc(route.name)+'</h4><p class="route-terminals">'+esc(name(route.from))+' ← '+esc(name(route.to))+'</p><p class="minor">'+esc(src?.name||"مصدر قيد التوثيق")+'</p>'+stopHtml+trainSelect+'<div class="route-actions"><button type="button" class="button outline route-open" data-route="'+esc(route.id)+'">فتح لوحة المسار</button>'+link+'</div></article>';
+}
 function fillRouteCatalog(){
- const selected=state.routes.filter(r=>!state.route||r.id===state.route);
- $("route-count").textContent=selected.length+" خط";
- $("route-catalog").innerHTML=selected.map(r=>{
-  const stops=r.stops||[r.from,r.to];
-  const src=state.sources.find(s=>s.id===r.source);
-  const n=eligible(state.trips,false).filter(t=>t.route_id===(r.alias_of||r.id)).length;
-  return '<article class="route-item"><span class="tag">'+esc(categoryLabel[r.category]||r.category)+'</span><h3>'+esc(r.name)+'</h3><p>'+esc(src?.name||"مصدر غير مسجل")+'</p><p><span class="tag">'+n+' رحلة مدرجة</span></p><button type="button" class="button outline route-open" data-route="'+esc(r.id)+'">عرض لوحة هذا المسار</button><details><summary>عرض المحطات ('+stops.length+')</summary><ol>'+stops.map(id=>'<li>'+esc(name(id))+'</li>').join("")+'</ol></details>'+(r.schedule_image?'<a href="'+esc(r.schedule_image)+'" target="_blank" rel="noopener noreferrer">الجدول المصور ↗</a>':'')+'</article>';
+ const groups=(state.line?state.lines.filter(l=>l.id===state.line):state.lines)
+  .map(line=>({line,routes:lineRoutes(line,state.routes).filter(r=>!state.route||r.id===state.route)}))
+  .filter(g=>g.routes.length);
+ $("route-count").textContent=groups.length+" خط · "+groups.reduce((n,g)=>n+g.routes.length,0)+" مسار";
+ $("route-catalog").innerHTML=groups.map(g=>{
+  const stats=lineSummary(g.line,state.routes,state.trips);
+  const label=stats.has_timetable?stats.train_count+' قطار مسجل · '+stats.served_station_ids.length+' محطة توقف مدخلة':'مواقيت وتوقفات هذا الخط قيد النقل';
+  const title='<div class="line-header"><div><span class="eyebrow">'+esc(categoryLabel[g.line.category]||g.line.category)+'</span><h3>'+esc(g.line.name)+'</h3><p>'+esc(label)+'</p></div><button class="button outline line-open" type="button" data-line="'+esc(g.line.id)+'">تصفية الخط</button></div>';
+  return '<section class="line-group" aria-label="'+esc(g.line.name)+'">'+title+'<div class="route-grid">'+g.routes.map(routeCard).join("")+'</div></section>';
  }).join("");
 }
 function routeStations(){
- const allowed=state.stations.filter(allowedOnRoute);
+ updateAllowedStations();
  const prev=state.selected;
+ let allowed=state.stations.filter(allowedOnRoute);
+ if(state.route){
+  const route=routeFor(state.route),listed=route?routeStopSummary(route,state.trips).known_stops.map(s=>s.station_id):[];
+  const order=listed.length?listed:[route?.from,route?.to].filter(Boolean);
+  const indices=new Map(order.map((id,i)=>[id,i]));
+  allowed=allowed.sort((a,b)=>(indices.get(a.id)??999)-(indices.get(b.id)??999));
+ }else allowed=allowed.sort((a,b)=>a.name.localeCompare(b.name,"ar"));
  $("station").replaceChildren(new Option("اختر محطة",""),...allowed.map(s=>new Option(s.name+" / "+s.name_fr,s.id)));
  if(prev&&allowed.some(s=>s.id===prev))$("station").value=prev;
- else if(prev){state.selected=null;$("selected-name").textContent="اختر محطة";$("selected-subtitle").textContent="اختر محطة من الخريطة أو القائمة.";renderBoards()}
- listStations();fillRouteCatalog();fillDirections();renderBoards();refreshMarkers();
+ else if(prev){state.selected=null;$("selected-name").textContent="اختر محطة";$("selected-subtitle").textContent="اختر محطة من الخريطة أو القائمة."}
+ fillStationLines();listStations();fillRouteCatalog();fillDirections();renderBoards();refreshMarkers();
 }
 function refreshMarkers(){
  if(!state.map)return;
