@@ -1,5 +1,5 @@
 {
-  "version": 11,
+  "version": 12,
   "updated": "2026-09-26",
   "trips": [
     {
@@ -12001,7 +12001,2078 @@
         }
       ],
       "editor_note": "توقيت العمود الرسمي في جدول الثنية → الجزائر المؤرخ 19 سبتمبر 2026؛ خانات - ليست توقفات، والقطار 24 يبدأ في رغاية. استمرار السريان لم يُراجع استقلاليًا."
+    },
+    {
+      "trip_id": "photo-affroun-alger-1022-except_friday-20260919",
+      "route_id": "affroun-alger",
+      "train_number": "1022",
+      "service_id": "except_friday",
+      "source_id": "gallery-affroun-alger-2026-09-19",
+      "data_status": "source_transcribed",
+      "effective_from": "2026-09-19",
+      "station_time_kind": "published_single_time",
+      "stop_times": [
+        {
+          "station_id": "el_affroun",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "05:40"
+        },
+        {
+          "station_id": "mouzaia",
+          "sequence": 2,
+          "arrival": "05:44",
+          "departure": "05:44"
+        },
+        {
+          "station_id": "chiffa",
+          "sequence": 3,
+          "arrival": "05:48",
+          "departure": "05:48"
+        },
+        {
+          "station_id": "blida",
+          "sequence": 4,
+          "arrival": "05:54",
+          "departure": "05:54"
+        },
+        {
+          "station_id": "beni_mered",
+          "sequence": 5,
+          "arrival": "06:01",
+          "departure": "06:01"
+        },
+        {
+          "station_id": "boufarik",
+          "sequence": 6,
+          "arrival": "06:07",
+          "departure": "06:07"
+        },
+        {
+          "station_id": "birtouta",
+          "sequence": 7,
+          "arrival": "06:15",
+          "departure": "06:15"
+        },
+        {
+          "station_id": "baba_ali",
+          "sequence": 8,
+          "arrival": "06:20",
+          "departure": "06:20"
+        },
+        {
+          "station_id": "ain_naadja",
+          "sequence": 9,
+          "arrival": "06:24",
+          "departure": "06:24"
+        },
+        {
+          "station_id": "gue_de_constantine",
+          "sequence": 10,
+          "arrival": "06:27",
+          "departure": "06:27"
+        },
+        {
+          "station_id": "el_harrach",
+          "sequence": 11,
+          "arrival": "06:31",
+          "departure": "06:31"
+        },
+        {
+          "station_id": "caroubier",
+          "sequence": 12,
+          "arrival": "06:34",
+          "departure": "06:34"
+        },
+        {
+          "station_id": "hussein_dey",
+          "sequence": 13,
+          "arrival": "06:37",
+          "departure": "06:37"
+        },
+        {
+          "station_id": "les_ateliers",
+          "sequence": 14,
+          "arrival": "06:41",
+          "departure": "06:41"
+        },
+        {
+          "station_id": "agha",
+          "sequence": 15,
+          "arrival": "06:44",
+          "departure": "06:44"
+        },
+        {
+          "station_id": "alger",
+          "sequence": 16,
+          "arrival": "06:48",
+          "departure": null
+        }
+      ],
+      "editor_note": "نقل يدوي من عمود 1 في الصورة الرسمية للاتجاه العفرون ← الجزائر، ابتداء من 19 سبتمبر 2026. عند المحطات الوسيطة سُجل التوقيت المنشور نفسه للوصول والمغادرة كقيمة جدول واحدة؛ لا يُفترض توقف بزمن محدد ولا تتبع آني."
+    },
+    {
+      "trip_id": "photo-affroun-alger-1024-except_friday-20260919",
+      "route_id": "affroun-alger",
+      "train_number": "1024",
+      "service_id": "except_friday",
+      "source_id": "gallery-affroun-alger-2026-09-19",
+      "data_status": "source_transcribed",
+      "effective_from": "2026-09-19",
+      "station_time_kind": "published_single_time",
+      "stop_times": [
+        {
+          "station_id": "el_affroun",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "06:15"
+        },
+        {
+          "station_id": "mouzaia",
+          "sequence": 2,
+          "arrival": "06:19",
+          "departure": "06:19"
+        },
+        {
+          "station_id": "chiffa",
+          "sequence": 3,
+          "arrival": "06:23",
+          "departure": "06:23"
+        },
+        {
+          "station_id": "blida",
+          "sequence": 4,
+          "arrival": "06:29",
+          "departure": "06:29"
+        },
+        {
+          "station_id": "beni_mered",
+          "sequence": 5,
+          "arrival": "06:35",
+          "departure": "06:35"
+        },
+        {
+          "station_id": "boufarik",
+          "sequence": 6,
+          "arrival": "06:41",
+          "departure": "06:41"
+        },
+        {
+          "station_id": "birtouta",
+          "sequence": 7,
+          "arrival": "06:49",
+          "departure": "06:49"
+        },
+        {
+          "station_id": "baba_ali",
+          "sequence": 8,
+          "arrival": "06:54",
+          "departure": "06:54"
+        },
+        {
+          "station_id": "ain_naadja",
+          "sequence": 9,
+          "arrival": "06:58",
+          "departure": "06:58"
+        },
+        {
+          "station_id": "gue_de_constantine",
+          "sequence": 10,
+          "arrival": "07:01",
+          "departure": "07:01"
+        },
+        {
+          "station_id": "el_harrach",
+          "sequence": 11,
+          "arrival": "07:05",
+          "departure": "07:05"
+        },
+        {
+          "station_id": "caroubier",
+          "sequence": 12,
+          "arrival": "07:08",
+          "departure": "07:08"
+        },
+        {
+          "station_id": "hussein_dey",
+          "sequence": 13,
+          "arrival": "07:11",
+          "departure": "07:11"
+        },
+        {
+          "station_id": "les_ateliers",
+          "sequence": 14,
+          "arrival": "07:15",
+          "departure": "07:15"
+        },
+        {
+          "station_id": "agha",
+          "sequence": 15,
+          "arrival": "07:18",
+          "departure": "07:18"
+        },
+        {
+          "station_id": "alger",
+          "sequence": 16,
+          "arrival": "07:23",
+          "departure": null
+        }
+      ],
+      "editor_note": "نقل يدوي من عمود 2 في الصورة الرسمية للاتجاه العفرون ← الجزائر، ابتداء من 19 سبتمبر 2026. عند المحطات الوسيطة سُجل التوقيت المنشور نفسه للوصول والمغادرة كقيمة جدول واحدة؛ لا يُفترض توقف بزمن محدد ولا تتبع آني."
+    },
+    {
+      "trip_id": "photo-affroun-alger-1028-friday_only-20260919",
+      "route_id": "affroun-alger",
+      "train_number": "1028",
+      "service_id": "friday_only",
+      "source_id": "gallery-affroun-alger-2026-09-19",
+      "data_status": "source_transcribed",
+      "effective_from": "2026-09-19",
+      "station_time_kind": "published_single_time",
+      "stop_times": [
+        {
+          "station_id": "el_affroun",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "06:45"
+        },
+        {
+          "station_id": "mouzaia",
+          "sequence": 2,
+          "arrival": "06:49",
+          "departure": "06:49"
+        },
+        {
+          "station_id": "chiffa",
+          "sequence": 3,
+          "arrival": "06:53",
+          "departure": "06:53"
+        },
+        {
+          "station_id": "blida",
+          "sequence": 4,
+          "arrival": "06:59",
+          "departure": "06:59"
+        },
+        {
+          "station_id": "beni_mered",
+          "sequence": 5,
+          "arrival": "07:06",
+          "departure": "07:06"
+        },
+        {
+          "station_id": "boufarik",
+          "sequence": 6,
+          "arrival": "07:12",
+          "departure": "07:12"
+        },
+        {
+          "station_id": "birtouta",
+          "sequence": 7,
+          "arrival": "07:20",
+          "departure": "07:20"
+        },
+        {
+          "station_id": "baba_ali",
+          "sequence": 8,
+          "arrival": "07:25",
+          "departure": "07:25"
+        },
+        {
+          "station_id": "ain_naadja",
+          "sequence": 9,
+          "arrival": "07:29",
+          "departure": "07:29"
+        },
+        {
+          "station_id": "gue_de_constantine",
+          "sequence": 10,
+          "arrival": "07:32",
+          "departure": "07:32"
+        },
+        {
+          "station_id": "el_harrach",
+          "sequence": 11,
+          "arrival": "07:36",
+          "departure": "07:36"
+        },
+        {
+          "station_id": "caroubier",
+          "sequence": 12,
+          "arrival": "07:40",
+          "departure": "07:40"
+        },
+        {
+          "station_id": "hussein_dey",
+          "sequence": 13,
+          "arrival": "07:43",
+          "departure": "07:43"
+        },
+        {
+          "station_id": "les_ateliers",
+          "sequence": 14,
+          "arrival": "07:47",
+          "departure": "07:47"
+        },
+        {
+          "station_id": "agha",
+          "sequence": 15,
+          "arrival": "07:50",
+          "departure": "07:50"
+        },
+        {
+          "station_id": "alger",
+          "sequence": 16,
+          "arrival": "07:56",
+          "departure": null
+        }
+      ],
+      "editor_note": "نقل يدوي من عمود 3 في الصورة الرسمية للاتجاه العفرون ← الجزائر، ابتداء من 19 سبتمبر 2026. عند المحطات الوسيطة سُجل التوقيت المنشور نفسه للوصول والمغادرة كقيمة جدول واحدة؛ لا يُفترض توقف بزمن محدد ولا تتبع آني."
+    },
+    {
+      "trip_id": "photo-affroun-alger-1028-except_friday-20260919",
+      "route_id": "affroun-alger",
+      "train_number": "1028",
+      "service_id": "except_friday",
+      "source_id": "gallery-affroun-alger-2026-09-19",
+      "data_status": "source_transcribed",
+      "effective_from": "2026-09-19",
+      "station_time_kind": "published_single_time",
+      "stop_times": [
+        {
+          "station_id": "el_affroun",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "07:00"
+        },
+        {
+          "station_id": "mouzaia",
+          "sequence": 2,
+          "arrival": "07:04",
+          "departure": "07:04"
+        },
+        {
+          "station_id": "chiffa",
+          "sequence": 3,
+          "arrival": "07:08",
+          "departure": "07:08"
+        },
+        {
+          "station_id": "blida",
+          "sequence": 4,
+          "arrival": "07:14",
+          "departure": "07:14"
+        },
+        {
+          "station_id": "beni_mered",
+          "sequence": 5,
+          "arrival": "07:21",
+          "departure": "07:21"
+        },
+        {
+          "station_id": "boufarik",
+          "sequence": 6,
+          "arrival": "07:27",
+          "departure": "07:27"
+        },
+        {
+          "station_id": "birtouta",
+          "sequence": 7,
+          "arrival": "07:35",
+          "departure": "07:35"
+        },
+        {
+          "station_id": "baba_ali",
+          "sequence": 8,
+          "arrival": "07:40",
+          "departure": "07:40"
+        },
+        {
+          "station_id": "ain_naadja",
+          "sequence": 9,
+          "arrival": "07:44",
+          "departure": "07:44"
+        },
+        {
+          "station_id": "gue_de_constantine",
+          "sequence": 10,
+          "arrival": "07:47",
+          "departure": "07:47"
+        },
+        {
+          "station_id": "el_harrach",
+          "sequence": 11,
+          "arrival": "07:51",
+          "departure": "07:51"
+        },
+        {
+          "station_id": "caroubier",
+          "sequence": 12,
+          "arrival": "07:54",
+          "departure": "07:54"
+        },
+        {
+          "station_id": "hussein_dey",
+          "sequence": 13,
+          "arrival": "07:57",
+          "departure": "07:57"
+        },
+        {
+          "station_id": "les_ateliers",
+          "sequence": 14,
+          "arrival": "08:01",
+          "departure": "08:01"
+        },
+        {
+          "station_id": "agha",
+          "sequence": 15,
+          "arrival": "08:04",
+          "departure": "08:04"
+        },
+        {
+          "station_id": "alger",
+          "sequence": 16,
+          "arrival": "08:09",
+          "departure": null
+        }
+      ],
+      "editor_note": "نقل يدوي من عمود 4 في الصورة الرسمية للاتجاه العفرون ← الجزائر، ابتداء من 19 سبتمبر 2026. عند المحطات الوسيطة سُجل التوقيت المنشور نفسه للوصول والمغادرة كقيمة جدول واحدة؛ لا يُفترض توقف بزمن محدد ولا تتبع آني."
+    },
+    {
+      "trip_id": "photo-affroun-alger-1032-daily-20260919",
+      "route_id": "affroun-alger",
+      "train_number": "1032",
+      "service_id": "daily",
+      "source_id": "gallery-affroun-alger-2026-09-19",
+      "data_status": "source_transcribed",
+      "effective_from": "2026-09-19",
+      "station_time_kind": "published_single_time",
+      "stop_times": [
+        {
+          "station_id": "el_affroun",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "08:00"
+        },
+        {
+          "station_id": "mouzaia",
+          "sequence": 2,
+          "arrival": "08:04",
+          "departure": "08:04"
+        },
+        {
+          "station_id": "chiffa",
+          "sequence": 3,
+          "arrival": "08:08",
+          "departure": "08:08"
+        },
+        {
+          "station_id": "blida",
+          "sequence": 4,
+          "arrival": "08:14",
+          "departure": "08:14"
+        },
+        {
+          "station_id": "beni_mered",
+          "sequence": 5,
+          "arrival": "08:21",
+          "departure": "08:21"
+        },
+        {
+          "station_id": "boufarik",
+          "sequence": 6,
+          "arrival": "08:27",
+          "departure": "08:27"
+        },
+        {
+          "station_id": "birtouta",
+          "sequence": 7,
+          "arrival": "08:35",
+          "departure": "08:35"
+        },
+        {
+          "station_id": "baba_ali",
+          "sequence": 8,
+          "arrival": "08:40",
+          "departure": "08:40"
+        },
+        {
+          "station_id": "ain_naadja",
+          "sequence": 9,
+          "arrival": "08:44",
+          "departure": "08:44"
+        },
+        {
+          "station_id": "gue_de_constantine",
+          "sequence": 10,
+          "arrival": "08:47",
+          "departure": "08:47"
+        },
+        {
+          "station_id": "el_harrach",
+          "sequence": 11,
+          "arrival": "08:51",
+          "departure": "08:51"
+        },
+        {
+          "station_id": "caroubier",
+          "sequence": 12,
+          "arrival": "08:54",
+          "departure": "08:54"
+        },
+        {
+          "station_id": "hussein_dey",
+          "sequence": 13,
+          "arrival": "08:57",
+          "departure": "08:57"
+        },
+        {
+          "station_id": "les_ateliers",
+          "sequence": 14,
+          "arrival": "09:01",
+          "departure": "09:01"
+        },
+        {
+          "station_id": "agha",
+          "sequence": 15,
+          "arrival": "09:04",
+          "departure": "09:04"
+        },
+        {
+          "station_id": "alger",
+          "sequence": 16,
+          "arrival": "09:09",
+          "departure": null
+        }
+      ],
+      "editor_note": "نقل يدوي من عمود 5 في الصورة الرسمية للاتجاه العفرون ← الجزائر، ابتداء من 19 سبتمبر 2026. عند المحطات الوسيطة سُجل التوقيت المنشور نفسه للوصول والمغادرة كقيمة جدول واحدة؛ لا يُفترض توقف بزمن محدد ولا تتبع آني."
+    },
+    {
+      "trip_id": "photo-affroun-alger-1034-except_friday-20260919",
+      "route_id": "affroun-alger",
+      "train_number": "1034",
+      "service_id": "except_friday",
+      "source_id": "gallery-affroun-alger-2026-09-19",
+      "data_status": "source_transcribed",
+      "effective_from": "2026-09-19",
+      "station_time_kind": "published_single_time",
+      "stop_times": [
+        {
+          "station_id": "el_affroun",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "08:45"
+        },
+        {
+          "station_id": "mouzaia",
+          "sequence": 2,
+          "arrival": "08:49",
+          "departure": "08:49"
+        },
+        {
+          "station_id": "chiffa",
+          "sequence": 3,
+          "arrival": "08:53",
+          "departure": "08:53"
+        },
+        {
+          "station_id": "blida",
+          "sequence": 4,
+          "arrival": "08:59",
+          "departure": "08:59"
+        },
+        {
+          "station_id": "beni_mered",
+          "sequence": 5,
+          "arrival": "09:06",
+          "departure": "09:06"
+        },
+        {
+          "station_id": "boufarik",
+          "sequence": 6,
+          "arrival": "09:12",
+          "departure": "09:12"
+        },
+        {
+          "station_id": "birtouta",
+          "sequence": 7,
+          "arrival": "09:20",
+          "departure": "09:20"
+        },
+        {
+          "station_id": "baba_ali",
+          "sequence": 8,
+          "arrival": "09:25",
+          "departure": "09:25"
+        },
+        {
+          "station_id": "ain_naadja",
+          "sequence": 9,
+          "arrival": "09:29",
+          "departure": "09:29"
+        },
+        {
+          "station_id": "gue_de_constantine",
+          "sequence": 10,
+          "arrival": "09:32",
+          "departure": "09:32"
+        },
+        {
+          "station_id": "el_harrach",
+          "sequence": 11,
+          "arrival": "09:36",
+          "departure": "09:36"
+        },
+        {
+          "station_id": "caroubier",
+          "sequence": 12,
+          "arrival": "09:40",
+          "departure": "09:40"
+        },
+        {
+          "station_id": "hussein_dey",
+          "sequence": 13,
+          "arrival": "09:43",
+          "departure": "09:43"
+        },
+        {
+          "station_id": "les_ateliers",
+          "sequence": 14,
+          "arrival": "09:47",
+          "departure": "09:47"
+        },
+        {
+          "station_id": "agha",
+          "sequence": 15,
+          "arrival": "09:50",
+          "departure": "09:50"
+        },
+        {
+          "station_id": "alger",
+          "sequence": 16,
+          "arrival": "09:56",
+          "departure": null
+        }
+      ],
+      "editor_note": "نقل يدوي من عمود 6 في الصورة الرسمية للاتجاه العفرون ← الجزائر، ابتداء من 19 سبتمبر 2026. عند المحطات الوسيطة سُجل التوقيت المنشور نفسه للوصول والمغادرة كقيمة جدول واحدة؛ لا يُفترض توقف بزمن محدد ولا تتبع آني."
+    },
+    {
+      "trip_id": "photo-affroun-alger-1036-friday_only-20260919",
+      "route_id": "affroun-alger",
+      "train_number": "1036",
+      "service_id": "friday_only",
+      "source_id": "gallery-affroun-alger-2026-09-19",
+      "data_status": "source_transcribed",
+      "effective_from": "2026-09-19",
+      "station_time_kind": "published_single_time",
+      "stop_times": [
+        {
+          "station_id": "el_affroun",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "09:30"
+        },
+        {
+          "station_id": "mouzaia",
+          "sequence": 2,
+          "arrival": "09:34",
+          "departure": "09:34"
+        },
+        {
+          "station_id": "chiffa",
+          "sequence": 3,
+          "arrival": "09:38",
+          "departure": "09:38"
+        },
+        {
+          "station_id": "blida",
+          "sequence": 4,
+          "arrival": "09:44",
+          "departure": "09:44"
+        },
+        {
+          "station_id": "beni_mered",
+          "sequence": 5,
+          "arrival": "09:50",
+          "departure": "09:50"
+        },
+        {
+          "station_id": "boufarik",
+          "sequence": 6,
+          "arrival": "09:56",
+          "departure": "09:56"
+        },
+        {
+          "station_id": "birtouta",
+          "sequence": 7,
+          "arrival": "10:04",
+          "departure": "10:04"
+        },
+        {
+          "station_id": "baba_ali",
+          "sequence": 8,
+          "arrival": "10:09",
+          "departure": "10:09"
+        },
+        {
+          "station_id": "ain_naadja",
+          "sequence": 9,
+          "arrival": "10:13",
+          "departure": "10:13"
+        },
+        {
+          "station_id": "gue_de_constantine",
+          "sequence": 10,
+          "arrival": "10:16",
+          "departure": "10:16"
+        },
+        {
+          "station_id": "el_harrach",
+          "sequence": 11,
+          "arrival": "10:20",
+          "departure": "10:20"
+        },
+        {
+          "station_id": "caroubier",
+          "sequence": 12,
+          "arrival": "10:25",
+          "departure": "10:25"
+        },
+        {
+          "station_id": "hussein_dey",
+          "sequence": 13,
+          "arrival": "10:28",
+          "departure": "10:28"
+        },
+        {
+          "station_id": "les_ateliers",
+          "sequence": 14,
+          "arrival": "10:32",
+          "departure": "10:32"
+        },
+        {
+          "station_id": "agha",
+          "sequence": 15,
+          "arrival": "10:35",
+          "departure": "10:35"
+        },
+        {
+          "station_id": "alger",
+          "sequence": 16,
+          "arrival": "10:39",
+          "departure": null
+        }
+      ],
+      "editor_note": "نقل يدوي من عمود 7 في الصورة الرسمية للاتجاه العفرون ← الجزائر، ابتداء من 19 سبتمبر 2026. عند المحطات الوسيطة سُجل التوقيت المنشور نفسه للوصول والمغادرة كقيمة جدول واحدة؛ لا يُفترض توقف بزمن محدد ولا تتبع آني."
+    },
+    {
+      "trip_id": "photo-affroun-alger-1038-except_friday-20260919",
+      "route_id": "affroun-alger",
+      "train_number": "1038",
+      "service_id": "except_friday",
+      "source_id": "gallery-affroun-alger-2026-09-19",
+      "data_status": "source_transcribed",
+      "effective_from": "2026-09-19",
+      "station_time_kind": "published_single_time",
+      "stop_times": [
+        {
+          "station_id": "el_affroun",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "10:00"
+        },
+        {
+          "station_id": "mouzaia",
+          "sequence": 2,
+          "arrival": "10:04",
+          "departure": "10:04"
+        },
+        {
+          "station_id": "chiffa",
+          "sequence": 3,
+          "arrival": "10:08",
+          "departure": "10:08"
+        },
+        {
+          "station_id": "blida",
+          "sequence": 4,
+          "arrival": "10:14",
+          "departure": "10:14"
+        },
+        {
+          "station_id": "beni_mered",
+          "sequence": 5,
+          "arrival": "10:21",
+          "departure": "10:21"
+        },
+        {
+          "station_id": "boufarik",
+          "sequence": 6,
+          "arrival": "10:27",
+          "departure": "10:27"
+        },
+        {
+          "station_id": "birtouta",
+          "sequence": 7,
+          "arrival": "10:35",
+          "departure": "10:35"
+        },
+        {
+          "station_id": "baba_ali",
+          "sequence": 8,
+          "arrival": "10:40",
+          "departure": "10:40"
+        },
+        {
+          "station_id": "ain_naadja",
+          "sequence": 9,
+          "arrival": "10:44",
+          "departure": "10:44"
+        },
+        {
+          "station_id": "gue_de_constantine",
+          "sequence": 10,
+          "arrival": "10:47",
+          "departure": "10:47"
+        },
+        {
+          "station_id": "el_harrach",
+          "sequence": 11,
+          "arrival": "10:51",
+          "departure": "10:51"
+        },
+        {
+          "station_id": "caroubier",
+          "sequence": 12,
+          "arrival": "10:55",
+          "departure": "10:55"
+        },
+        {
+          "station_id": "hussein_dey",
+          "sequence": 13,
+          "arrival": "10:58",
+          "departure": "10:58"
+        },
+        {
+          "station_id": "les_ateliers",
+          "sequence": 14,
+          "arrival": "11:02",
+          "departure": "11:02"
+        },
+        {
+          "station_id": "agha",
+          "sequence": 15,
+          "arrival": "11:05",
+          "departure": "11:05"
+        },
+        {
+          "station_id": "alger",
+          "sequence": 16,
+          "arrival": "11:09",
+          "departure": null
+        }
+      ],
+      "editor_note": "نقل يدوي من عمود 8 في الصورة الرسمية للاتجاه العفرون ← الجزائر، ابتداء من 19 سبتمبر 2026. عند المحطات الوسيطة سُجل التوقيت المنشور نفسه للوصول والمغادرة كقيمة جدول واحدة؛ لا يُفترض توقف بزمن محدد ولا تتبع آني."
+    },
+    {
+      "trip_id": "photo-affroun-alger-1040-daily-20260919",
+      "route_id": "affroun-alger",
+      "train_number": "1040",
+      "service_id": "daily",
+      "source_id": "gallery-affroun-alger-2026-09-19",
+      "data_status": "source_transcribed",
+      "effective_from": "2026-09-19",
+      "station_time_kind": "published_single_time",
+      "stop_times": [
+        {
+          "station_id": "el_affroun",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "10:45"
+        },
+        {
+          "station_id": "mouzaia",
+          "sequence": 2,
+          "arrival": "10:49",
+          "departure": "10:49"
+        },
+        {
+          "station_id": "chiffa",
+          "sequence": 3,
+          "arrival": "10:53",
+          "departure": "10:53"
+        },
+        {
+          "station_id": "blida",
+          "sequence": 4,
+          "arrival": "10:59",
+          "departure": "10:59"
+        },
+        {
+          "station_id": "beni_mered",
+          "sequence": 5,
+          "arrival": "11:06",
+          "departure": "11:06"
+        },
+        {
+          "station_id": "boufarik",
+          "sequence": 6,
+          "arrival": "11:12",
+          "departure": "11:12"
+        },
+        {
+          "station_id": "birtouta",
+          "sequence": 7,
+          "arrival": "11:20",
+          "departure": "11:20"
+        },
+        {
+          "station_id": "baba_ali",
+          "sequence": 8,
+          "arrival": "11:25",
+          "departure": "11:25"
+        },
+        {
+          "station_id": "ain_naadja",
+          "sequence": 9,
+          "arrival": "11:29",
+          "departure": "11:29"
+        },
+        {
+          "station_id": "gue_de_constantine",
+          "sequence": 10,
+          "arrival": "11:32",
+          "departure": "11:32"
+        },
+        {
+          "station_id": "el_harrach",
+          "sequence": 11,
+          "arrival": "11:36",
+          "departure": "11:36"
+        },
+        {
+          "station_id": "caroubier",
+          "sequence": 12,
+          "arrival": "11:40",
+          "departure": "11:40"
+        },
+        {
+          "station_id": "hussein_dey",
+          "sequence": 13,
+          "arrival": "11:43",
+          "departure": "11:43"
+        },
+        {
+          "station_id": "les_ateliers",
+          "sequence": 14,
+          "arrival": "11:47",
+          "departure": "11:47"
+        },
+        {
+          "station_id": "agha",
+          "sequence": 15,
+          "arrival": "11:50",
+          "departure": "11:50"
+        },
+        {
+          "station_id": "alger",
+          "sequence": 16,
+          "arrival": "11:55",
+          "departure": null
+        }
+      ],
+      "editor_note": "نقل يدوي من عمود 9 في الصورة الرسمية للاتجاه العفرون ← الجزائر، ابتداء من 19 سبتمبر 2026. عند المحطات الوسيطة سُجل التوقيت المنشور نفسه للوصول والمغادرة كقيمة جدول واحدة؛ لا يُفترض توقف بزمن محدد ولا تتبع آني."
+    },
+    {
+      "trip_id": "photo-affroun-alger-1044-daily-20260919",
+      "route_id": "affroun-alger",
+      "train_number": "1044",
+      "service_id": "daily",
+      "source_id": "gallery-affroun-alger-2026-09-19",
+      "data_status": "source_transcribed",
+      "effective_from": "2026-09-19",
+      "station_time_kind": "published_single_time",
+      "stop_times": [
+        {
+          "station_id": "el_affroun",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "12:25"
+        },
+        {
+          "station_id": "mouzaia",
+          "sequence": 2,
+          "arrival": "12:29",
+          "departure": "12:29"
+        },
+        {
+          "station_id": "chiffa",
+          "sequence": 3,
+          "arrival": "12:33",
+          "departure": "12:33"
+        },
+        {
+          "station_id": "blida",
+          "sequence": 4,
+          "arrival": "12:39",
+          "departure": "12:39"
+        },
+        {
+          "station_id": "beni_mered",
+          "sequence": 5,
+          "arrival": "12:45",
+          "departure": "12:45"
+        },
+        {
+          "station_id": "boufarik",
+          "sequence": 6,
+          "arrival": "12:51",
+          "departure": "12:51"
+        },
+        {
+          "station_id": "birtouta",
+          "sequence": 7,
+          "arrival": "12:59",
+          "departure": "12:59"
+        },
+        {
+          "station_id": "baba_ali",
+          "sequence": 8,
+          "arrival": "13:04",
+          "departure": "13:04"
+        },
+        {
+          "station_id": "ain_naadja",
+          "sequence": 9,
+          "arrival": "13:08",
+          "departure": "13:08"
+        },
+        {
+          "station_id": "gue_de_constantine",
+          "sequence": 10,
+          "arrival": "13:11",
+          "departure": "13:11"
+        },
+        {
+          "station_id": "el_harrach",
+          "sequence": 11,
+          "arrival": "13:15",
+          "departure": "13:15"
+        },
+        {
+          "station_id": "caroubier",
+          "sequence": 12,
+          "arrival": "13:18",
+          "departure": "13:18"
+        },
+        {
+          "station_id": "hussein_dey",
+          "sequence": 13,
+          "arrival": "13:21",
+          "departure": "13:21"
+        },
+        {
+          "station_id": "les_ateliers",
+          "sequence": 14,
+          "arrival": "13:25",
+          "departure": "13:25"
+        },
+        {
+          "station_id": "agha",
+          "sequence": 15,
+          "arrival": "13:28",
+          "departure": "13:28"
+        },
+        {
+          "station_id": "alger",
+          "sequence": 16,
+          "arrival": "13:33",
+          "departure": null
+        }
+      ],
+      "editor_note": "نقل يدوي من عمود 10 في الصورة الرسمية للاتجاه العفرون ← الجزائر، ابتداء من 19 سبتمبر 2026. عند المحطات الوسيطة سُجل التوقيت المنشور نفسه للوصول والمغادرة كقيمة جدول واحدة؛ لا يُفترض توقف بزمن محدد ولا تتبع آني."
+    },
+    {
+      "trip_id": "photo-affroun-alger-1048-except_friday-20260919",
+      "route_id": "affroun-alger",
+      "train_number": "1048",
+      "service_id": "except_friday",
+      "source_id": "gallery-affroun-alger-2026-09-19",
+      "data_status": "source_transcribed",
+      "effective_from": "2026-09-19",
+      "station_time_kind": "published_single_time",
+      "stop_times": [
+        {
+          "station_id": "el_affroun",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "13:30"
+        },
+        {
+          "station_id": "mouzaia",
+          "sequence": 2,
+          "arrival": "13:34",
+          "departure": "13:34"
+        },
+        {
+          "station_id": "chiffa",
+          "sequence": 3,
+          "arrival": "13:38",
+          "departure": "13:38"
+        },
+        {
+          "station_id": "blida",
+          "sequence": 4,
+          "arrival": "13:44",
+          "departure": "13:44"
+        },
+        {
+          "station_id": "beni_mered",
+          "sequence": 5,
+          "arrival": "13:50",
+          "departure": "13:50"
+        },
+        {
+          "station_id": "boufarik",
+          "sequence": 6,
+          "arrival": "13:56",
+          "departure": "13:56"
+        },
+        {
+          "station_id": "birtouta",
+          "sequence": 7,
+          "arrival": "14:04",
+          "departure": "14:04"
+        },
+        {
+          "station_id": "baba_ali",
+          "sequence": 8,
+          "arrival": "14:09",
+          "departure": "14:09"
+        },
+        {
+          "station_id": "ain_naadja",
+          "sequence": 9,
+          "arrival": "14:13",
+          "departure": "14:13"
+        },
+        {
+          "station_id": "gue_de_constantine",
+          "sequence": 10,
+          "arrival": "14:16",
+          "departure": "14:16"
+        },
+        {
+          "station_id": "el_harrach",
+          "sequence": 11,
+          "arrival": "14:20",
+          "departure": "14:20"
+        },
+        {
+          "station_id": "caroubier",
+          "sequence": 12,
+          "arrival": "14:23",
+          "departure": "14:23"
+        },
+        {
+          "station_id": "hussein_dey",
+          "sequence": 13,
+          "arrival": "14:26",
+          "departure": "14:26"
+        },
+        {
+          "station_id": "les_ateliers",
+          "sequence": 14,
+          "arrival": "14:30",
+          "departure": "14:30"
+        },
+        {
+          "station_id": "agha",
+          "sequence": 15,
+          "arrival": "14:33",
+          "departure": "14:33"
+        },
+        {
+          "station_id": "alger",
+          "sequence": 16,
+          "arrival": "14:37",
+          "departure": null
+        }
+      ],
+      "editor_note": "نقل يدوي من عمود 11 في الصورة الرسمية للاتجاه العفرون ← الجزائر، ابتداء من 19 سبتمبر 2026. عند المحطات الوسيطة سُجل التوقيت المنشور نفسه للوصول والمغادرة كقيمة جدول واحدة؛ لا يُفترض توقف بزمن محدد ولا تتبع آني."
+    },
+    {
+      "trip_id": "photo-affroun-alger-1052-daily-20260919",
+      "route_id": "affroun-alger",
+      "train_number": "1052",
+      "service_id": "daily",
+      "source_id": "gallery-affroun-alger-2026-09-19",
+      "data_status": "source_transcribed",
+      "effective_from": "2026-09-19",
+      "station_time_kind": "published_single_time",
+      "stop_times": [
+        {
+          "station_id": "el_affroun",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "14:20"
+        },
+        {
+          "station_id": "mouzaia",
+          "sequence": 2,
+          "arrival": "14:24",
+          "departure": "14:24"
+        },
+        {
+          "station_id": "chiffa",
+          "sequence": 3,
+          "arrival": "14:28",
+          "departure": "14:28"
+        },
+        {
+          "station_id": "blida",
+          "sequence": 4,
+          "arrival": "14:34",
+          "departure": "14:34"
+        },
+        {
+          "station_id": "beni_mered",
+          "sequence": 5,
+          "arrival": "14:41",
+          "departure": "14:41"
+        },
+        {
+          "station_id": "boufarik",
+          "sequence": 6,
+          "arrival": "14:47",
+          "departure": "14:47"
+        },
+        {
+          "station_id": "birtouta",
+          "sequence": 7,
+          "arrival": "14:55",
+          "departure": "14:55"
+        },
+        {
+          "station_id": "baba_ali",
+          "sequence": 8,
+          "arrival": "15:00",
+          "departure": "15:00"
+        },
+        {
+          "station_id": "ain_naadja",
+          "sequence": 9,
+          "arrival": "15:04",
+          "departure": "15:04"
+        },
+        {
+          "station_id": "gue_de_constantine",
+          "sequence": 10,
+          "arrival": "15:07",
+          "departure": "15:07"
+        },
+        {
+          "station_id": "el_harrach",
+          "sequence": 11,
+          "arrival": "15:11",
+          "departure": "15:11"
+        },
+        {
+          "station_id": "caroubier",
+          "sequence": 12,
+          "arrival": "15:15",
+          "departure": "15:15"
+        },
+        {
+          "station_id": "hussein_dey",
+          "sequence": 13,
+          "arrival": "15:18",
+          "departure": "15:18"
+        },
+        {
+          "station_id": "les_ateliers",
+          "sequence": 14,
+          "arrival": "15:22",
+          "departure": "15:22"
+        },
+        {
+          "station_id": "agha",
+          "sequence": 15,
+          "arrival": "15:25",
+          "departure": "15:25"
+        },
+        {
+          "station_id": "alger",
+          "sequence": 16,
+          "arrival": "15:30",
+          "departure": null
+        }
+      ],
+      "editor_note": "نقل يدوي من عمود 12 في الصورة الرسمية للاتجاه العفرون ← الجزائر، ابتداء من 19 سبتمبر 2026. عند المحطات الوسيطة سُجل التوقيت المنشور نفسه للوصول والمغادرة كقيمة جدول واحدة؛ لا يُفترض توقف بزمن محدد ولا تتبع آني."
+    },
+    {
+      "trip_id": "photo-affroun-alger-1054-except_friday-20260919",
+      "route_id": "affroun-alger",
+      "train_number": "1054",
+      "service_id": "except_friday",
+      "source_id": "gallery-affroun-alger-2026-09-19",
+      "data_status": "source_transcribed",
+      "effective_from": "2026-09-19",
+      "station_time_kind": "published_single_time",
+      "stop_times": [
+        {
+          "station_id": "el_affroun",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "15:00"
+        },
+        {
+          "station_id": "mouzaia",
+          "sequence": 2,
+          "arrival": "15:04",
+          "departure": "15:04"
+        },
+        {
+          "station_id": "chiffa",
+          "sequence": 3,
+          "arrival": "15:08",
+          "departure": "15:08"
+        },
+        {
+          "station_id": "blida",
+          "sequence": 4,
+          "arrival": "15:14",
+          "departure": "15:14"
+        },
+        {
+          "station_id": "beni_mered",
+          "sequence": 5,
+          "arrival": "15:21",
+          "departure": "15:21"
+        },
+        {
+          "station_id": "boufarik",
+          "sequence": 6,
+          "arrival": "15:27",
+          "departure": "15:27"
+        },
+        {
+          "station_id": "birtouta",
+          "sequence": 7,
+          "arrival": "15:35",
+          "departure": "15:35"
+        },
+        {
+          "station_id": "baba_ali",
+          "sequence": 8,
+          "arrival": "15:40",
+          "departure": "15:40"
+        },
+        {
+          "station_id": "ain_naadja",
+          "sequence": 9,
+          "arrival": "15:44",
+          "departure": "15:44"
+        },
+        {
+          "station_id": "gue_de_constantine",
+          "sequence": 10,
+          "arrival": "15:47",
+          "departure": "15:47"
+        },
+        {
+          "station_id": "el_harrach",
+          "sequence": 11,
+          "arrival": "15:51",
+          "departure": "15:51"
+        },
+        {
+          "station_id": "caroubier",
+          "sequence": 12,
+          "arrival": "15:55",
+          "departure": "15:55"
+        },
+        {
+          "station_id": "hussein_dey",
+          "sequence": 13,
+          "arrival": "15:58",
+          "departure": "15:58"
+        },
+        {
+          "station_id": "les_ateliers",
+          "sequence": 14,
+          "arrival": "16:02",
+          "departure": "16:02"
+        },
+        {
+          "station_id": "agha",
+          "sequence": 15,
+          "arrival": "16:05",
+          "departure": "16:05"
+        },
+        {
+          "station_id": "alger",
+          "sequence": 16,
+          "arrival": "16:10",
+          "departure": null
+        }
+      ],
+      "editor_note": "نقل يدوي من عمود 13 في الصورة الرسمية للاتجاه العفرون ← الجزائر، ابتداء من 19 سبتمبر 2026. عند المحطات الوسيطة سُجل التوقيت المنشور نفسه للوصول والمغادرة كقيمة جدول واحدة؛ لا يُفترض توقف بزمن محدد ولا تتبع آني."
+    },
+    {
+      "trip_id": "photo-affroun-alger-1054-friday_only-20260919",
+      "route_id": "affroun-alger",
+      "train_number": "1054",
+      "service_id": "friday_only",
+      "source_id": "gallery-affroun-alger-2026-09-19",
+      "data_status": "source_transcribed",
+      "effective_from": "2026-09-19",
+      "station_time_kind": "published_single_time",
+      "stop_times": [
+        {
+          "station_id": "el_affroun",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "15:20"
+        },
+        {
+          "station_id": "mouzaia",
+          "sequence": 2,
+          "arrival": "15:24",
+          "departure": "15:24"
+        },
+        {
+          "station_id": "chiffa",
+          "sequence": 3,
+          "arrival": "15:28",
+          "departure": "15:28"
+        },
+        {
+          "station_id": "blida",
+          "sequence": 4,
+          "arrival": "15:34",
+          "departure": "15:34"
+        },
+        {
+          "station_id": "beni_mered",
+          "sequence": 5,
+          "arrival": "15:41",
+          "departure": "15:41"
+        },
+        {
+          "station_id": "boufarik",
+          "sequence": 6,
+          "arrival": "15:47",
+          "departure": "15:47"
+        },
+        {
+          "station_id": "birtouta",
+          "sequence": 7,
+          "arrival": "15:55",
+          "departure": "15:55"
+        },
+        {
+          "station_id": "baba_ali",
+          "sequence": 8,
+          "arrival": "16:00",
+          "departure": "16:00"
+        },
+        {
+          "station_id": "ain_naadja",
+          "sequence": 9,
+          "arrival": "16:04",
+          "departure": "16:04"
+        },
+        {
+          "station_id": "gue_de_constantine",
+          "sequence": 10,
+          "arrival": "16:07",
+          "departure": "16:07"
+        },
+        {
+          "station_id": "el_harrach",
+          "sequence": 11,
+          "arrival": "16:11",
+          "departure": "16:11"
+        },
+        {
+          "station_id": "caroubier",
+          "sequence": 12,
+          "arrival": "16:15",
+          "departure": "16:15"
+        },
+        {
+          "station_id": "hussein_dey",
+          "sequence": 13,
+          "arrival": "16:18",
+          "departure": "16:18"
+        },
+        {
+          "station_id": "les_ateliers",
+          "sequence": 14,
+          "arrival": "16:22",
+          "departure": "16:22"
+        },
+        {
+          "station_id": "agha",
+          "sequence": 15,
+          "arrival": "16:25",
+          "departure": "16:25"
+        },
+        {
+          "station_id": "alger",
+          "sequence": 16,
+          "arrival": "16:30",
+          "departure": null
+        }
+      ],
+      "editor_note": "نقل يدوي من عمود 14 في الصورة الرسمية للاتجاه العفرون ← الجزائر، ابتداء من 19 سبتمبر 2026. عند المحطات الوسيطة سُجل التوقيت المنشور نفسه للوصول والمغادرة كقيمة جدول واحدة؛ لا يُفترض توقف بزمن محدد ولا تتبع آني."
+    },
+    {
+      "trip_id": "photo-affroun-alger-1056-except_friday-20260919",
+      "route_id": "affroun-alger",
+      "train_number": "1056",
+      "service_id": "except_friday",
+      "source_id": "gallery-affroun-alger-2026-09-19",
+      "data_status": "source_transcribed",
+      "effective_from": "2026-09-19",
+      "station_time_kind": "published_single_time",
+      "stop_times": [
+        {
+          "station_id": "el_affroun",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "15:50"
+        },
+        {
+          "station_id": "mouzaia",
+          "sequence": 2,
+          "arrival": "15:54",
+          "departure": "15:54"
+        },
+        {
+          "station_id": "chiffa",
+          "sequence": 3,
+          "arrival": "15:58",
+          "departure": "15:58"
+        },
+        {
+          "station_id": "blida",
+          "sequence": 4,
+          "arrival": "16:04",
+          "departure": "16:04"
+        },
+        {
+          "station_id": "beni_mered",
+          "sequence": 5,
+          "arrival": "16:11",
+          "departure": "16:11"
+        },
+        {
+          "station_id": "boufarik",
+          "sequence": 6,
+          "arrival": "16:17",
+          "departure": "16:17"
+        },
+        {
+          "station_id": "birtouta",
+          "sequence": 7,
+          "arrival": "16:25",
+          "departure": "16:25"
+        },
+        {
+          "station_id": "baba_ali",
+          "sequence": 8,
+          "arrival": "16:31",
+          "departure": "16:31"
+        },
+        {
+          "station_id": "ain_naadja",
+          "sequence": 9,
+          "arrival": "16:35",
+          "departure": "16:35"
+        },
+        {
+          "station_id": "gue_de_constantine",
+          "sequence": 10,
+          "arrival": "16:38",
+          "departure": "16:38"
+        },
+        {
+          "station_id": "el_harrach",
+          "sequence": 11,
+          "arrival": "16:42",
+          "departure": "16:42"
+        },
+        {
+          "station_id": "caroubier",
+          "sequence": 12,
+          "arrival": "16:46",
+          "departure": "16:46"
+        },
+        {
+          "station_id": "hussein_dey",
+          "sequence": 13,
+          "arrival": "16:49",
+          "departure": "16:49"
+        },
+        {
+          "station_id": "les_ateliers",
+          "sequence": 14,
+          "arrival": "16:53",
+          "departure": "16:53"
+        },
+        {
+          "station_id": "agha",
+          "sequence": 15,
+          "arrival": "16:56",
+          "departure": "16:56"
+        },
+        {
+          "station_id": "alger",
+          "sequence": 16,
+          "arrival": "17:01",
+          "departure": null
+        }
+      ],
+      "editor_note": "نقل يدوي من عمود 15 في الصورة الرسمية للاتجاه العفرون ← الجزائر، ابتداء من 19 سبتمبر 2026. عند المحطات الوسيطة سُجل التوقيت المنشور نفسه للوصول والمغادرة كقيمة جدول واحدة؛ لا يُفترض توقف بزمن محدد ولا تتبع آني."
+    },
+    {
+      "trip_id": "photo-affroun-alger-1058-friday_only-20260919",
+      "route_id": "affroun-alger",
+      "train_number": "1058",
+      "service_id": "friday_only",
+      "source_id": "gallery-affroun-alger-2026-09-19",
+      "data_status": "source_transcribed",
+      "effective_from": "2026-09-19",
+      "station_time_kind": "published_single_time",
+      "stop_times": [
+        {
+          "station_id": "el_affroun",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "16:35"
+        },
+        {
+          "station_id": "mouzaia",
+          "sequence": 2,
+          "arrival": "16:39",
+          "departure": "16:39"
+        },
+        {
+          "station_id": "chiffa",
+          "sequence": 3,
+          "arrival": "16:43",
+          "departure": "16:43"
+        },
+        {
+          "station_id": "blida",
+          "sequence": 4,
+          "arrival": "16:49",
+          "departure": "16:49"
+        },
+        {
+          "station_id": "beni_mered",
+          "sequence": 5,
+          "arrival": "16:55",
+          "departure": "16:55"
+        },
+        {
+          "station_id": "boufarik",
+          "sequence": 6,
+          "arrival": "17:01",
+          "departure": "17:01"
+        },
+        {
+          "station_id": "birtouta",
+          "sequence": 7,
+          "arrival": "17:09",
+          "departure": "17:09"
+        },
+        {
+          "station_id": "baba_ali",
+          "sequence": 8,
+          "arrival": "17:14",
+          "departure": "17:14"
+        },
+        {
+          "station_id": "ain_naadja",
+          "sequence": 9,
+          "arrival": "17:18",
+          "departure": "17:18"
+        },
+        {
+          "station_id": "gue_de_constantine",
+          "sequence": 10,
+          "arrival": "17:21",
+          "departure": "17:21"
+        },
+        {
+          "station_id": "el_harrach",
+          "sequence": 11,
+          "arrival": "17:25",
+          "departure": "17:25"
+        },
+        {
+          "station_id": "caroubier",
+          "sequence": 12,
+          "arrival": "17:28",
+          "departure": "17:28"
+        },
+        {
+          "station_id": "hussein_dey",
+          "sequence": 13,
+          "arrival": "17:31",
+          "departure": "17:31"
+        },
+        {
+          "station_id": "les_ateliers",
+          "sequence": 14,
+          "arrival": "17:35",
+          "departure": "17:35"
+        },
+        {
+          "station_id": "agha",
+          "sequence": 15,
+          "arrival": "17:38",
+          "departure": "17:38"
+        },
+        {
+          "station_id": "alger",
+          "sequence": 16,
+          "arrival": "17:43",
+          "departure": null
+        }
+      ],
+      "editor_note": "نقل يدوي من عمود 16 في الصورة الرسمية للاتجاه العفرون ← الجزائر، ابتداء من 19 سبتمبر 2026. عند المحطات الوسيطة سُجل التوقيت المنشور نفسه للوصول والمغادرة كقيمة جدول واحدة؛ لا يُفترض توقف بزمن محدد ولا تتبع آني."
+    },
+    {
+      "trip_id": "photo-affroun-alger-1058-except_friday-20260919",
+      "route_id": "affroun-alger",
+      "train_number": "1058",
+      "service_id": "except_friday",
+      "source_id": "gallery-affroun-alger-2026-09-19",
+      "data_status": "source_transcribed",
+      "effective_from": "2026-09-19",
+      "station_time_kind": "published_single_time",
+      "stop_times": [
+        {
+          "station_id": "el_affroun",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "16:50"
+        },
+        {
+          "station_id": "mouzaia",
+          "sequence": 2,
+          "arrival": "16:54",
+          "departure": "16:54"
+        },
+        {
+          "station_id": "chiffa",
+          "sequence": 3,
+          "arrival": "16:58",
+          "departure": "16:58"
+        },
+        {
+          "station_id": "blida",
+          "sequence": 4,
+          "arrival": "17:04",
+          "departure": "17:04"
+        },
+        {
+          "station_id": "beni_mered",
+          "sequence": 5,
+          "arrival": "17:11",
+          "departure": "17:11"
+        },
+        {
+          "station_id": "boufarik",
+          "sequence": 6,
+          "arrival": "17:17",
+          "departure": "17:17"
+        },
+        {
+          "station_id": "birtouta",
+          "sequence": 7,
+          "arrival": "17:25",
+          "departure": "17:25"
+        },
+        {
+          "station_id": "baba_ali",
+          "sequence": 8,
+          "arrival": "17:31",
+          "departure": "17:31"
+        },
+        {
+          "station_id": "ain_naadja",
+          "sequence": 9,
+          "arrival": "17:35",
+          "departure": "17:35"
+        },
+        {
+          "station_id": "gue_de_constantine",
+          "sequence": 10,
+          "arrival": "17:38",
+          "departure": "17:38"
+        },
+        {
+          "station_id": "el_harrach",
+          "sequence": 11,
+          "arrival": "17:42",
+          "departure": "17:42"
+        },
+        {
+          "station_id": "caroubier",
+          "sequence": 12,
+          "arrival": "17:46",
+          "departure": "17:46"
+        },
+        {
+          "station_id": "hussein_dey",
+          "sequence": 13,
+          "arrival": "17:49",
+          "departure": "17:49"
+        },
+        {
+          "station_id": "les_ateliers",
+          "sequence": 14,
+          "arrival": "17:53",
+          "departure": "17:53"
+        },
+        {
+          "station_id": "agha",
+          "sequence": 15,
+          "arrival": "17:56",
+          "departure": "17:56"
+        },
+        {
+          "station_id": "alger",
+          "sequence": 16,
+          "arrival": "18:01",
+          "departure": null
+        }
+      ],
+      "editor_note": "نقل يدوي من عمود 17 في الصورة الرسمية للاتجاه العفرون ← الجزائر، ابتداء من 19 سبتمبر 2026. عند المحطات الوسيطة سُجل التوقيت المنشور نفسه للوصول والمغادرة كقيمة جدول واحدة؛ لا يُفترض توقف بزمن محدد ولا تتبع آني."
+    },
+    {
+      "trip_id": "photo-affroun-alger-1064-daily-20260919",
+      "route_id": "affroun-alger",
+      "train_number": "1064",
+      "service_id": "daily",
+      "source_id": "gallery-affroun-alger-2026-09-19",
+      "data_status": "source_transcribed",
+      "effective_from": "2026-09-19",
+      "station_time_kind": "published_single_time",
+      "stop_times": [
+        {
+          "station_id": "el_affroun",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "17:50"
+        },
+        {
+          "station_id": "mouzaia",
+          "sequence": 2,
+          "arrival": "17:54",
+          "departure": "17:54"
+        },
+        {
+          "station_id": "chiffa",
+          "sequence": 3,
+          "arrival": "17:58",
+          "departure": "17:58"
+        },
+        {
+          "station_id": "blida",
+          "sequence": 4,
+          "arrival": "18:04",
+          "departure": "18:04"
+        },
+        {
+          "station_id": "beni_mered",
+          "sequence": 5,
+          "arrival": "18:10",
+          "departure": "18:10"
+        },
+        {
+          "station_id": "boufarik",
+          "sequence": 6,
+          "arrival": "18:16",
+          "departure": "18:16"
+        },
+        {
+          "station_id": "birtouta",
+          "sequence": 7,
+          "arrival": "18:24",
+          "departure": "18:24"
+        },
+        {
+          "station_id": "baba_ali",
+          "sequence": 8,
+          "arrival": "18:29",
+          "departure": "18:29"
+        },
+        {
+          "station_id": "ain_naadja",
+          "sequence": 9,
+          "arrival": "18:33",
+          "departure": "18:33"
+        },
+        {
+          "station_id": "gue_de_constantine",
+          "sequence": 10,
+          "arrival": "18:36",
+          "departure": "18:36"
+        },
+        {
+          "station_id": "el_harrach",
+          "sequence": 11,
+          "arrival": "18:40",
+          "departure": "18:40"
+        },
+        {
+          "station_id": "caroubier",
+          "sequence": 12,
+          "arrival": "18:44",
+          "departure": "18:44"
+        },
+        {
+          "station_id": "hussein_dey",
+          "sequence": 13,
+          "arrival": "18:47",
+          "departure": "18:47"
+        },
+        {
+          "station_id": "les_ateliers",
+          "sequence": 14,
+          "arrival": "18:51",
+          "departure": "18:51"
+        },
+        {
+          "station_id": "agha",
+          "sequence": 15,
+          "arrival": "18:54",
+          "departure": "18:54"
+        },
+        {
+          "station_id": "alger",
+          "sequence": 16,
+          "arrival": "18:59",
+          "departure": null
+        }
+      ],
+      "editor_note": "نقل يدوي من عمود 18 في الصورة الرسمية للاتجاه العفرون ← الجزائر، ابتداء من 19 سبتمبر 2026. عند المحطات الوسيطة سُجل التوقيت المنشور نفسه للوصول والمغادرة كقيمة جدول واحدة؛ لا يُفترض توقف بزمن محدد ولا تتبع آني."
+    },
+    {
+      "trip_id": "photo-affroun-alger-1066-daily-20260919",
+      "route_id": "affroun-alger",
+      "train_number": "1066",
+      "service_id": "daily",
+      "source_id": "gallery-affroun-alger-2026-09-19",
+      "data_status": "source_transcribed",
+      "effective_from": "2026-09-19",
+      "station_time_kind": "published_single_time",
+      "stop_times": [
+        {
+          "station_id": "el_affroun",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "18:50"
+        },
+        {
+          "station_id": "mouzaia",
+          "sequence": 2,
+          "arrival": "18:54",
+          "departure": "18:54"
+        },
+        {
+          "station_id": "chiffa",
+          "sequence": 3,
+          "arrival": "18:58",
+          "departure": "18:58"
+        },
+        {
+          "station_id": "blida",
+          "sequence": 4,
+          "arrival": "19:04",
+          "departure": "19:04"
+        },
+        {
+          "station_id": "beni_mered",
+          "sequence": 5,
+          "arrival": "19:11",
+          "departure": "19:11"
+        },
+        {
+          "station_id": "boufarik",
+          "sequence": 6,
+          "arrival": "19:17",
+          "departure": "19:17"
+        },
+        {
+          "station_id": "birtouta",
+          "sequence": 7,
+          "arrival": "19:25",
+          "departure": "19:25"
+        },
+        {
+          "station_id": "baba_ali",
+          "sequence": 8,
+          "arrival": "19:31",
+          "departure": "19:31"
+        },
+        {
+          "station_id": "ain_naadja",
+          "sequence": 9,
+          "arrival": "19:35",
+          "departure": "19:35"
+        },
+        {
+          "station_id": "gue_de_constantine",
+          "sequence": 10,
+          "arrival": "19:38",
+          "departure": "19:38"
+        },
+        {
+          "station_id": "el_harrach",
+          "sequence": 11,
+          "arrival": "19:42",
+          "departure": "19:42"
+        },
+        {
+          "station_id": "caroubier",
+          "sequence": 12,
+          "arrival": "19:46",
+          "departure": "19:46"
+        },
+        {
+          "station_id": "hussein_dey",
+          "sequence": 13,
+          "arrival": "19:49",
+          "departure": "19:49"
+        },
+        {
+          "station_id": "les_ateliers",
+          "sequence": 14,
+          "arrival": "19:53",
+          "departure": "19:53"
+        },
+        {
+          "station_id": "agha",
+          "sequence": 15,
+          "arrival": "19:56",
+          "departure": "19:56"
+        },
+        {
+          "station_id": "alger",
+          "sequence": 16,
+          "arrival": "20:01",
+          "departure": null
+        }
+      ],
+      "editor_note": "نقل يدوي من عمود 19 في الصورة الرسمية للاتجاه العفرون ← الجزائر، ابتداء من 19 سبتمبر 2026. عند المحطات الوسيطة سُجل التوقيت المنشور نفسه للوصول والمغادرة كقيمة جدول واحدة؛ لا يُفترض توقف بزمن محدد ولا تتبع آني."
     }
   ],
-  "note": "Draft entries are editable real database records, but their prior example times are not operational evidence. Dashboard labels these records as unverified and hides them from default scheduled boards until reviewed. Update stop_times/train_number/source to validate. أُضيفت 60 رحلة من 3 صور رسمية مؤرخة 19 سبتمبر 2026: 28 للمطار ذهابًا وإيابًا، و14 آغا–زرالدة، و18 الجزائر–العفرون. لم تُفترض رحلات الاتجاه العكسي للعفرون دون صورتها الصحيحة."
+  "note": "Draft entries are editable real database records, but their prior example times are not operational evidence. Dashboard labels these records as unverified and hides them from default scheduled boards until reviewed. Update stop_times/train_number/source to validate. أُضيفت 60 رحلة من 3 صور رسمية مؤرخة 19 سبتمبر 2026: 28 للمطار ذهابًا وإيابًا، و14 آغا–زرالدة، و18 الجزائر–العفرون. لم تُفترض رحلات الاتجاه العكسي للعفرون دون صورتها الصحيحة. أُدرجت 19 رحلة موثقة من صورة العفرون–الجزائر الرسمية بتاريخ 19 سبتمبر 2026، تشمل قطارات يومية وأخرى مستثناة من الجمعة وأخرى خاصة بيوم الجمعة، بمجموع 150 رحلة منقولة من صور الجداول. نسخة المعاينة SVG مشتقة من الصورة الأصلية المرفقة."
 }
