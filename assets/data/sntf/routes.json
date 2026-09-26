@@ -1,6 +1,6 @@
 {
-  "version": 4,
-  "updated": "2026-09-23",
+  "version": 5,
+  "updated": "2026-09-26",
   "routes": [
     {
       "id": "alger-thenia",
@@ -13,7 +13,7 @@
       "schedule_status": "requires-current-verification",
       "stops": [
         "alger",
-        "el-harrach",
+        "el_harrach",
         "rouiba",
         "reghaia",
         "boumerdes",
@@ -36,7 +36,7 @@
         "boumerdes",
         "reghaia",
         "rouiba",
-        "el-harrach",
+        "el_harrach",
         "alger"
       ],
       "stops_status": "partial_pending_verification",
@@ -45,7 +45,7 @@
     {
       "id": "alger-affroun",
       "from": "alger",
-      "to": "affroun",
+      "to": "el_affroun",
       "category": "suburban",
       "name": "الجزائر ← العفرون",
       "source": "dz-portal-gallery",
@@ -54,7 +54,7 @@
     },
     {
       "id": "affroun-alger",
-      "from": "affroun",
+      "from": "el_affroun",
       "to": "alger",
       "category": "suburban",
       "name": "العفرون ← الجزائر",
@@ -85,7 +85,7 @@
     {
       "id": "alger-oued-aissi",
       "from": "alger",
-      "to": "oued-aissi",
+      "to": "oued_aissi",
       "category": "suburban",
       "name": "الجزائر ← واد عيسى",
       "source": "dz-portal-gallery",
@@ -94,7 +94,7 @@
     },
     {
       "id": "oued-aissi-alger",
-      "from": "oued-aissi",
+      "from": "oued_aissi",
       "to": "alger",
       "category": "suburban",
       "name": "واد عيسى ← الجزائر",
@@ -114,7 +114,7 @@
     },
     {
       "id": "affroun-thenia",
-      "from": "affroun",
+      "from": "el_affroun",
       "to": "thenia",
       "category": "suburban",
       "name": "العفرون ↔ الثنية",
@@ -174,7 +174,7 @@
     },
     {
       "id": "beni-mansour-bejaia",
-      "from": "beni-mansour",
+      "from": "beni_mansour",
       "to": "bejaia",
       "category": "eastern",
       "name": "بني منصور ↔ بجاية",
@@ -255,7 +255,7 @@
     {
       "id": "tissemsilt-bordj",
       "from": "tissemsilt",
-      "to": "bordj",
+      "to": "bordj_bou_arreridj",
       "category": "sahara",
       "name": "تيسمسيلت ↔ برج بوعريريج",
       "source": "dz-portal-gallery",
@@ -283,17 +283,17 @@
       "schedule_status": "user-supplied",
       "stops": [
         "zeralda",
-        "sidi-abdallah-j",
-        "sidi-abdallah",
-        "tessala-el-merdja",
+        "sidi_abdellah_universite",
+        "sidi_abdellah",
+        "tessala_el_merdja",
         "birtouta",
-        "baba-ali",
-        "ain-naadja",
-        "djasr-constantine",
-        "el-harrach",
-        "kharouba",
-        "hussein-dey",
-        "ateliers",
+        "baba_ali",
+        "ain_naadja",
+        "gue_de_constantine",
+        "el_harrach",
+        "caroubier",
+        "hussein_dey",
+        "les_ateliers",
         "agha"
       ]
     }
