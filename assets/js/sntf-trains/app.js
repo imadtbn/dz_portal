@@ -54,7 +54,7 @@ function filterDirection(events,kind){
 function statusBadge(trip){
  if(classify(trip)==="draft")return '<span class="tag draft">قيد المراجعة · غير موثوق للسفر</span>';
  if(classify(trip)==="verified")return '<span class="tag">موثق</span>';
- return '<span class="tag warn">من صورة المستخدم · غير مؤكد آنيًا</span>';
+ return '<span class="tag warn">'+(state.sources.find(s=>s.id===trip.source_id)?.kind==="existing-image-gallery"?"من الجدول المصور · غير مؤكد حديثًا":"من الصورة المرفقة · غير مؤكد آنيًا")+"</span>";
 }
 function details(event){
  const t=event.trip,rows=t.stop_times.map((s,i)=>{
