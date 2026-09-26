@@ -1,5 +1,5 @@
 {
-  "version": 7,
+  "version": 8,
   "updated": "2026-09-26",
   "trips": [
     {
@@ -6350,6 +6350,2092 @@
         }
       ],
       "editor_note": "نُقلت الأوقات من عمود القطار في الصورة الرسمية المؤرخة 19 سبتمبر 2026؛ التوقيت المنشور واحد في المحطات الوسيطة ولا يثبت وقت وصول/مغادرة منفصلين. السريان الحالي غير متحقق منه استقلاليًا."
+    },
+    {
+      "trip_id": "photo-thenia-oued-aissi-103-except_friday-20260919",
+      "route_id": "thenia-oued-aissi",
+      "train_number": "103",
+      "service_id": "except_friday",
+      "source_id": "gallery-alger-oued-aissi-2026-09-19",
+      "data_status": "source_transcribed",
+      "effective_from": "2026-09-19",
+      "station_time_kind": "published_single_time",
+      "stop_times": [
+        {
+          "station_id": "thenia",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "05:15"
+        },
+        {
+          "station_id": "si_mustapha",
+          "sequence": 2,
+          "arrival": "05:19",
+          "departure": "05:19"
+        },
+        {
+          "station_id": "isser",
+          "sequence": 3,
+          "arrival": "05:22",
+          "departure": "05:22"
+        },
+        {
+          "station_id": "bordj_menaiel",
+          "sequence": 4,
+          "arrival": "05:26",
+          "departure": "05:26"
+        },
+        {
+          "station_id": "naciria",
+          "sequence": 5,
+          "arrival": "05:33",
+          "departure": "05:33"
+        },
+        {
+          "station_id": "tadmait",
+          "sequence": 6,
+          "arrival": "05:38",
+          "departure": "05:38"
+        },
+        {
+          "station_id": "draa_ben_khedda",
+          "sequence": 7,
+          "arrival": "05:42",
+          "departure": "05:42"
+        },
+        {
+          "station_id": "boukhalfa",
+          "sequence": 8,
+          "arrival": "05:47",
+          "departure": "05:47"
+        },
+        {
+          "station_id": "tizi_ouzou",
+          "sequence": 9,
+          "arrival": "05:50",
+          "departure": "05:50"
+        },
+        {
+          "station_id": "kef_naadja",
+          "sequence": 10,
+          "arrival": "06:01",
+          "departure": "06:01"
+        },
+        {
+          "station_id": "oued_aissi_universite",
+          "sequence": 11,
+          "arrival": "06:06",
+          "departure": "06:06"
+        },
+        {
+          "station_id": "oued_aissi",
+          "sequence": 12,
+          "arrival": "06:09",
+          "departure": null
+        }
+      ],
+      "editor_note": "أوقات الأعمدة في جدول SNTF المصور المؤرخ 19 سبتمبر 2026؛ فُصل الوصول والمغادرة في الثنية عندما عُرض وقتان في الجدول. استمرار السريان يتطلب مراجعة."
+    },
+    {
+      "trip_id": "photo-thenia-oued-aissi-B133-daily-20260919",
+      "route_id": "thenia-oued-aissi",
+      "train_number": "B133",
+      "service_id": "daily",
+      "source_id": "gallery-alger-oued-aissi-2026-09-19",
+      "data_status": "source_transcribed",
+      "effective_from": "2026-09-19",
+      "station_time_kind": "published_single_time",
+      "stop_times": [
+        {
+          "station_id": "thenia",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "06:25"
+        },
+        {
+          "station_id": "si_mustapha",
+          "sequence": 2,
+          "arrival": "06:29",
+          "departure": "06:29"
+        },
+        {
+          "station_id": "isser",
+          "sequence": 3,
+          "arrival": "06:34",
+          "departure": "06:34"
+        },
+        {
+          "station_id": "bordj_menaiel",
+          "sequence": 4,
+          "arrival": "06:39",
+          "departure": "06:39"
+        },
+        {
+          "station_id": "naciria",
+          "sequence": 5,
+          "arrival": "06:46",
+          "departure": "06:46"
+        },
+        {
+          "station_id": "tadmait",
+          "sequence": 6,
+          "arrival": "06:52",
+          "departure": "06:52"
+        },
+        {
+          "station_id": "draa_ben_khedda",
+          "sequence": 7,
+          "arrival": "06:57",
+          "departure": "06:57"
+        },
+        {
+          "station_id": "boukhalfa",
+          "sequence": 8,
+          "arrival": "07:03",
+          "departure": "07:03"
+        },
+        {
+          "station_id": "tizi_ouzou",
+          "sequence": 9,
+          "arrival": "07:07",
+          "departure": "07:07"
+        },
+        {
+          "station_id": "kef_naadja",
+          "sequence": 10,
+          "arrival": "07:11",
+          "departure": "07:11"
+        },
+        {
+          "station_id": "oued_aissi_universite",
+          "sequence": 11,
+          "arrival": "07:16",
+          "departure": "07:16"
+        },
+        {
+          "station_id": "oued_aissi",
+          "sequence": 12,
+          "arrival": "07:19",
+          "departure": null
+        }
+      ],
+      "editor_note": "أوقات الأعمدة في جدول SNTF المصور المؤرخ 19 سبتمبر 2026؛ فُصل الوصول والمغادرة في الثنية عندما عُرض وقتان في الجدول. استمرار السريان يتطلب مراجعة."
+    },
+    {
+      "trip_id": "photo-alger-oued-aissi-105-daily-20260919",
+      "route_id": "alger-oued-aissi",
+      "train_number": "105",
+      "service_id": "daily",
+      "source_id": "gallery-alger-oued-aissi-2026-09-19",
+      "data_status": "source_transcribed",
+      "effective_from": "2026-09-19",
+      "station_time_kind": "published_single_time",
+      "stop_times": [
+        {
+          "station_id": "agha",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "06:45"
+        },
+        {
+          "station_id": "el_harrach",
+          "sequence": 2,
+          "arrival": "06:52",
+          "departure": "06:52"
+        },
+        {
+          "station_id": "dar_el_beida",
+          "sequence": 3,
+          "arrival": "07:01",
+          "departure": "07:01"
+        },
+        {
+          "station_id": "rouiba",
+          "sequence": 4,
+          "arrival": "07:05",
+          "departure": "07:05"
+        },
+        {
+          "station_id": "reghaia",
+          "sequence": 5,
+          "arrival": "07:10",
+          "departure": "07:10"
+        },
+        {
+          "station_id": "boumerdes",
+          "sequence": 6,
+          "arrival": "07:21",
+          "departure": "07:21"
+        },
+        {
+          "station_id": "thenia",
+          "sequence": 7,
+          "arrival": "07:32",
+          "departure": "07:32"
+        },
+        {
+          "station_id": "si_mustapha",
+          "sequence": 8,
+          "arrival": "07:36",
+          "departure": "07:36"
+        },
+        {
+          "station_id": "isser",
+          "sequence": 9,
+          "arrival": "07:40",
+          "departure": "07:40"
+        },
+        {
+          "station_id": "bordj_menaiel",
+          "sequence": 10,
+          "arrival": "07:45",
+          "departure": "07:45"
+        },
+        {
+          "station_id": "naciria",
+          "sequence": 11,
+          "arrival": "07:52",
+          "departure": "07:52"
+        },
+        {
+          "station_id": "tadmait",
+          "sequence": 12,
+          "arrival": "07:58",
+          "departure": "07:58"
+        },
+        {
+          "station_id": "draa_ben_khedda",
+          "sequence": 13,
+          "arrival": "08:03",
+          "departure": "08:03"
+        },
+        {
+          "station_id": "boukhalfa",
+          "sequence": 14,
+          "arrival": "08:07",
+          "departure": "08:07"
+        },
+        {
+          "station_id": "tizi_ouzou",
+          "sequence": 15,
+          "arrival": "08:11",
+          "departure": "08:11"
+        },
+        {
+          "station_id": "kef_naadja",
+          "sequence": 16,
+          "arrival": "08:15",
+          "departure": "08:15"
+        },
+        {
+          "station_id": "oued_aissi_universite",
+          "sequence": 17,
+          "arrival": "08:20",
+          "departure": "08:20"
+        },
+        {
+          "station_id": "oued_aissi",
+          "sequence": 18,
+          "arrival": "08:23",
+          "departure": null
+        }
+      ],
+      "editor_note": "أوقات الأعمدة في جدول SNTF المصور المؤرخ 19 سبتمبر 2026؛ فُصل الوصول والمغادرة في الثنية عندما عُرض وقتان في الجدول. استمرار السريان يتطلب مراجعة."
+    },
+    {
+      "trip_id": "photo-thenia-oued-aissi-B135-daily-20260919",
+      "route_id": "thenia-oued-aissi",
+      "train_number": "B135",
+      "service_id": "daily",
+      "source_id": "gallery-alger-oued-aissi-2026-09-19",
+      "data_status": "source_transcribed",
+      "effective_from": "2026-09-19",
+      "station_time_kind": "published_single_time",
+      "stop_times": [
+        {
+          "station_id": "thenia",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "09:20"
+        },
+        {
+          "station_id": "si_mustapha",
+          "sequence": 2,
+          "arrival": "09:24",
+          "departure": "09:24"
+        },
+        {
+          "station_id": "isser",
+          "sequence": 3,
+          "arrival": "09:28",
+          "departure": "09:28"
+        },
+        {
+          "station_id": "bordj_menaiel",
+          "sequence": 4,
+          "arrival": "09:33",
+          "departure": "09:33"
+        },
+        {
+          "station_id": "naciria",
+          "sequence": 5,
+          "arrival": "09:40",
+          "departure": "09:40"
+        },
+        {
+          "station_id": "tadmait",
+          "sequence": 6,
+          "arrival": "09:46",
+          "departure": "09:46"
+        },
+        {
+          "station_id": "draa_ben_khedda",
+          "sequence": 7,
+          "arrival": "09:51",
+          "departure": "09:51"
+        },
+        {
+          "station_id": "boukhalfa",
+          "sequence": 8,
+          "arrival": "09:56",
+          "departure": "09:56"
+        },
+        {
+          "station_id": "tizi_ouzou",
+          "sequence": 9,
+          "arrival": "10:00",
+          "departure": "10:00"
+        },
+        {
+          "station_id": "kef_naadja",
+          "sequence": 10,
+          "arrival": "10:04",
+          "departure": "10:04"
+        },
+        {
+          "station_id": "oued_aissi_universite",
+          "sequence": 11,
+          "arrival": "10:09",
+          "departure": "10:09"
+        },
+        {
+          "station_id": "oued_aissi",
+          "sequence": 12,
+          "arrival": "10:12",
+          "departure": null
+        }
+      ],
+      "editor_note": "أوقات الأعمدة في جدول SNTF المصور المؤرخ 19 سبتمبر 2026؛ فُصل الوصول والمغادرة في الثنية عندما عُرض وقتان في الجدول. استمرار السريان يتطلب مراجعة."
+    },
+    {
+      "trip_id": "photo-thenia-oued-aissi-B137-daily-20260919",
+      "route_id": "thenia-oued-aissi",
+      "train_number": "B137",
+      "service_id": "daily",
+      "source_id": "gallery-alger-oued-aissi-2026-09-19",
+      "data_status": "source_transcribed",
+      "effective_from": "2026-09-19",
+      "station_time_kind": "published_single_time",
+      "stop_times": [
+        {
+          "station_id": "thenia",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "11:05"
+        },
+        {
+          "station_id": "si_mustapha",
+          "sequence": 2,
+          "arrival": "11:09",
+          "departure": "11:09"
+        },
+        {
+          "station_id": "isser",
+          "sequence": 3,
+          "arrival": "11:13",
+          "departure": "11:13"
+        },
+        {
+          "station_id": "bordj_menaiel",
+          "sequence": 4,
+          "arrival": "11:18",
+          "departure": "11:18"
+        },
+        {
+          "station_id": "naciria",
+          "sequence": 5,
+          "arrival": "11:30",
+          "departure": "11:30"
+        },
+        {
+          "station_id": "tadmait",
+          "sequence": 6,
+          "arrival": "11:36",
+          "departure": "11:36"
+        },
+        {
+          "station_id": "draa_ben_khedda",
+          "sequence": 7,
+          "arrival": "11:41",
+          "departure": "11:41"
+        },
+        {
+          "station_id": "boukhalfa",
+          "sequence": 8,
+          "arrival": "11:45",
+          "departure": "11:45"
+        },
+        {
+          "station_id": "tizi_ouzou",
+          "sequence": 9,
+          "arrival": "11:49",
+          "departure": "11:49"
+        },
+        {
+          "station_id": "kef_naadja",
+          "sequence": 10,
+          "arrival": "11:53",
+          "departure": "11:53"
+        },
+        {
+          "station_id": "oued_aissi_universite",
+          "sequence": 11,
+          "arrival": "11:58",
+          "departure": "11:58"
+        },
+        {
+          "station_id": "oued_aissi",
+          "sequence": 12,
+          "arrival": "12:01",
+          "departure": null
+        }
+      ],
+      "editor_note": "أوقات الأعمدة في جدول SNTF المصور المؤرخ 19 سبتمبر 2026؛ فُصل الوصول والمغادرة في الثنية عندما عُرض وقتان في الجدول. استمرار السريان يتطلب مراجعة."
+    },
+    {
+      "trip_id": "photo-thenia-oued-aissi-B139-except_friday-20260919",
+      "route_id": "thenia-oued-aissi",
+      "train_number": "B139",
+      "service_id": "except_friday",
+      "source_id": "gallery-alger-oued-aissi-2026-09-19",
+      "data_status": "source_transcribed",
+      "effective_from": "2026-09-19",
+      "station_time_kind": "published_single_time",
+      "stop_times": [
+        {
+          "station_id": "thenia",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "12:05"
+        },
+        {
+          "station_id": "si_mustapha",
+          "sequence": 2,
+          "arrival": "12:09",
+          "departure": "12:09"
+        },
+        {
+          "station_id": "isser",
+          "sequence": 3,
+          "arrival": "12:13",
+          "departure": "12:13"
+        },
+        {
+          "station_id": "bordj_menaiel",
+          "sequence": 4,
+          "arrival": "12:18",
+          "departure": "12:18"
+        },
+        {
+          "station_id": "naciria",
+          "sequence": 5,
+          "arrival": "12:25",
+          "departure": "12:25"
+        },
+        {
+          "station_id": "tadmait",
+          "sequence": 6,
+          "arrival": "12:31",
+          "departure": "12:31"
+        },
+        {
+          "station_id": "draa_ben_khedda",
+          "sequence": 7,
+          "arrival": "12:36",
+          "departure": "12:36"
+        },
+        {
+          "station_id": "boukhalfa",
+          "sequence": 8,
+          "arrival": "12:44",
+          "departure": "12:44"
+        },
+        {
+          "station_id": "tizi_ouzou",
+          "sequence": 9,
+          "arrival": "12:48",
+          "departure": "12:48"
+        },
+        {
+          "station_id": "kef_naadja",
+          "sequence": 10,
+          "arrival": "12:52",
+          "departure": "12:52"
+        },
+        {
+          "station_id": "oued_aissi_universite",
+          "sequence": 11,
+          "arrival": "12:57",
+          "departure": "12:57"
+        },
+        {
+          "station_id": "oued_aissi",
+          "sequence": 12,
+          "arrival": "13:00",
+          "departure": null
+        }
+      ],
+      "editor_note": "أوقات الأعمدة في جدول SNTF المصور المؤرخ 19 سبتمبر 2026؛ فُصل الوصول والمغادرة في الثنية عندما عُرض وقتان في الجدول. استمرار السريان يتطلب مراجعة."
+    },
+    {
+      "trip_id": "photo-thenia-oued-aissi-B141-daily-20260919",
+      "route_id": "thenia-oued-aissi",
+      "train_number": "B141",
+      "service_id": "daily",
+      "source_id": "gallery-alger-oued-aissi-2026-09-19",
+      "data_status": "source_transcribed",
+      "effective_from": "2026-09-19",
+      "station_time_kind": "published_single_time",
+      "stop_times": [
+        {
+          "station_id": "thenia",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "13:45"
+        },
+        {
+          "station_id": "si_mustapha",
+          "sequence": 2,
+          "arrival": "13:49",
+          "departure": "13:49"
+        },
+        {
+          "station_id": "isser",
+          "sequence": 3,
+          "arrival": "13:53",
+          "departure": "13:53"
+        },
+        {
+          "station_id": "bordj_menaiel",
+          "sequence": 4,
+          "arrival": "13:58",
+          "departure": "13:58"
+        },
+        {
+          "station_id": "naciria",
+          "sequence": 5,
+          "arrival": "14:05",
+          "departure": "14:05"
+        },
+        {
+          "station_id": "tadmait",
+          "sequence": 6,
+          "arrival": "14:11",
+          "departure": "14:11"
+        },
+        {
+          "station_id": "draa_ben_khedda",
+          "sequence": 7,
+          "arrival": "14:16",
+          "departure": "14:16"
+        },
+        {
+          "station_id": "boukhalfa",
+          "sequence": 8,
+          "arrival": "14:24",
+          "departure": "14:24"
+        },
+        {
+          "station_id": "tizi_ouzou",
+          "sequence": 9,
+          "arrival": "14:28",
+          "departure": "14:28"
+        },
+        {
+          "station_id": "kef_naadja",
+          "sequence": 10,
+          "arrival": "14:32",
+          "departure": "14:32"
+        },
+        {
+          "station_id": "oued_aissi_universite",
+          "sequence": 11,
+          "arrival": "14:37",
+          "departure": "14:37"
+        },
+        {
+          "station_id": "oued_aissi",
+          "sequence": 12,
+          "arrival": "14:40",
+          "departure": null
+        }
+      ],
+      "editor_note": "أوقات الأعمدة في جدول SNTF المصور المؤرخ 19 سبتمبر 2026؛ فُصل الوصول والمغادرة في الثنية عندما عُرض وقتان في الجدول. استمرار السريان يتطلب مراجعة."
+    },
+    {
+      "trip_id": "photo-thenia-oued-aissi-B143-except_friday-20260919",
+      "route_id": "thenia-oued-aissi",
+      "train_number": "B143",
+      "service_id": "except_friday",
+      "source_id": "gallery-alger-oued-aissi-2026-09-19",
+      "data_status": "source_transcribed",
+      "effective_from": "2026-09-19",
+      "station_time_kind": "published_single_time",
+      "stop_times": [
+        {
+          "station_id": "thenia",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "15:05"
+        },
+        {
+          "station_id": "si_mustapha",
+          "sequence": 2,
+          "arrival": "15:09",
+          "departure": "15:09"
+        },
+        {
+          "station_id": "isser",
+          "sequence": 3,
+          "arrival": "15:13",
+          "departure": "15:13"
+        },
+        {
+          "station_id": "bordj_menaiel",
+          "sequence": 4,
+          "arrival": "15:18",
+          "departure": "15:18"
+        },
+        {
+          "station_id": "naciria",
+          "sequence": 5,
+          "arrival": "15:25",
+          "departure": "15:25"
+        },
+        {
+          "station_id": "tadmait",
+          "sequence": 6,
+          "arrival": "15:31",
+          "departure": "15:31"
+        },
+        {
+          "station_id": "draa_ben_khedda",
+          "sequence": 7,
+          "arrival": "15:36",
+          "departure": "15:36"
+        },
+        {
+          "station_id": "boukhalfa",
+          "sequence": 8,
+          "arrival": "15:44",
+          "departure": "15:44"
+        },
+        {
+          "station_id": "tizi_ouzou",
+          "sequence": 9,
+          "arrival": "15:48",
+          "departure": "15:48"
+        },
+        {
+          "station_id": "kef_naadja",
+          "sequence": 10,
+          "arrival": "15:52",
+          "departure": "15:52"
+        },
+        {
+          "station_id": "oued_aissi_universite",
+          "sequence": 11,
+          "arrival": "15:57",
+          "departure": "15:57"
+        },
+        {
+          "station_id": "oued_aissi",
+          "sequence": 12,
+          "arrival": "16:00",
+          "departure": null
+        }
+      ],
+      "editor_note": "أوقات الأعمدة في جدول SNTF المصور المؤرخ 19 سبتمبر 2026؛ فُصل الوصول والمغادرة في الثنية عندما عُرض وقتان في الجدول. استمرار السريان يتطلب مراجعة."
+    },
+    {
+      "trip_id": "photo-thenia-oued-aissi-B145-daily-20260919",
+      "route_id": "thenia-oued-aissi",
+      "train_number": "B145",
+      "service_id": "daily",
+      "source_id": "gallery-alger-oued-aissi-2026-09-19",
+      "data_status": "source_transcribed",
+      "effective_from": "2026-09-19",
+      "station_time_kind": "published_single_time",
+      "stop_times": [
+        {
+          "station_id": "thenia",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "16:10"
+        },
+        {
+          "station_id": "si_mustapha",
+          "sequence": 2,
+          "arrival": "16:14",
+          "departure": "16:14"
+        },
+        {
+          "station_id": "isser",
+          "sequence": 3,
+          "arrival": "16:18",
+          "departure": "16:18"
+        },
+        {
+          "station_id": "bordj_menaiel",
+          "sequence": 4,
+          "arrival": "16:23",
+          "departure": "16:23"
+        },
+        {
+          "station_id": "naciria",
+          "sequence": 5,
+          "arrival": "16:30",
+          "departure": "16:30"
+        },
+        {
+          "station_id": "tadmait",
+          "sequence": 6,
+          "arrival": "16:36",
+          "departure": "16:36"
+        },
+        {
+          "station_id": "draa_ben_khedda",
+          "sequence": 7,
+          "arrival": "16:41",
+          "departure": "16:41"
+        },
+        {
+          "station_id": "boukhalfa",
+          "sequence": 8,
+          "arrival": "16:49",
+          "departure": "16:49"
+        },
+        {
+          "station_id": "tizi_ouzou",
+          "sequence": 9,
+          "arrival": "16:53",
+          "departure": "16:53"
+        },
+        {
+          "station_id": "kef_naadja",
+          "sequence": 10,
+          "arrival": "16:57",
+          "departure": "16:57"
+        },
+        {
+          "station_id": "oued_aissi_universite",
+          "sequence": 11,
+          "arrival": "17:02",
+          "departure": "17:02"
+        },
+        {
+          "station_id": "oued_aissi",
+          "sequence": 12,
+          "arrival": "17:05",
+          "departure": null
+        }
+      ],
+      "editor_note": "أوقات الأعمدة في جدول SNTF المصور المؤرخ 19 سبتمبر 2026؛ فُصل الوصول والمغادرة في الثنية عندما عُرض وقتان في الجدول. استمرار السريان يتطلب مراجعة."
+    },
+    {
+      "trip_id": "photo-alger-oued-aissi-119-daily-20260919",
+      "route_id": "alger-oued-aissi",
+      "train_number": "119",
+      "service_id": "daily",
+      "source_id": "gallery-alger-oued-aissi-2026-09-19",
+      "data_status": "source_transcribed",
+      "effective_from": "2026-09-19",
+      "station_time_kind": "published_single_time",
+      "stop_times": [
+        {
+          "station_id": "agha",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "16:24"
+        },
+        {
+          "station_id": "el_harrach",
+          "sequence": 2,
+          "arrival": "16:31",
+          "departure": "16:31"
+        },
+        {
+          "station_id": "dar_el_beida",
+          "sequence": 3,
+          "arrival": "16:40",
+          "departure": "16:40"
+        },
+        {
+          "station_id": "rouiba",
+          "sequence": 4,
+          "arrival": "16:44",
+          "departure": "16:44"
+        },
+        {
+          "station_id": "reghaia",
+          "sequence": 5,
+          "arrival": "16:49",
+          "departure": "16:49"
+        },
+        {
+          "station_id": "boumerdes",
+          "sequence": 6,
+          "arrival": "17:00",
+          "departure": "17:00"
+        },
+        {
+          "station_id": "thenia",
+          "sequence": 7,
+          "arrival": "17:12",
+          "departure": "17:12"
+        },
+        {
+          "station_id": "si_mustapha",
+          "sequence": 8,
+          "arrival": "17:16",
+          "departure": "17:16"
+        },
+        {
+          "station_id": "isser",
+          "sequence": 9,
+          "arrival": "17:20",
+          "departure": "17:20"
+        },
+        {
+          "station_id": "bordj_menaiel",
+          "sequence": 10,
+          "arrival": "17:25",
+          "departure": "17:25"
+        },
+        {
+          "station_id": "naciria",
+          "sequence": 11,
+          "arrival": "17:32",
+          "departure": "17:32"
+        },
+        {
+          "station_id": "tadmait",
+          "sequence": 12,
+          "arrival": "17:38",
+          "departure": "17:38"
+        },
+        {
+          "station_id": "draa_ben_khedda",
+          "sequence": 13,
+          "arrival": "17:43",
+          "departure": "17:43"
+        },
+        {
+          "station_id": "boukhalfa",
+          "sequence": 14,
+          "arrival": "17:47",
+          "departure": "17:47"
+        },
+        {
+          "station_id": "tizi_ouzou",
+          "sequence": 15,
+          "arrival": "17:51",
+          "departure": "17:51"
+        },
+        {
+          "station_id": "kef_naadja",
+          "sequence": 16,
+          "arrival": "17:55",
+          "departure": "17:55"
+        },
+        {
+          "station_id": "oued_aissi_universite",
+          "sequence": 17,
+          "arrival": "18:00",
+          "departure": "18:00"
+        },
+        {
+          "station_id": "oued_aissi",
+          "sequence": 18,
+          "arrival": "18:03",
+          "departure": null
+        }
+      ],
+      "editor_note": "أوقات الأعمدة في جدول SNTF المصور المؤرخ 19 سبتمبر 2026؛ فُصل الوصول والمغادرة في الثنية عندما عُرض وقتان في الجدول. استمرار السريان يتطلب مراجعة."
+    },
+    {
+      "trip_id": "photo-alger-oued-aissi-121-except_friday-20260919",
+      "route_id": "alger-oued-aissi",
+      "train_number": "121",
+      "service_id": "except_friday",
+      "source_id": "gallery-alger-oued-aissi-2026-09-19",
+      "data_status": "source_transcribed",
+      "effective_from": "2026-09-19",
+      "station_time_kind": "published_single_time",
+      "stop_times": [
+        {
+          "station_id": "agha",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "17:35"
+        },
+        {
+          "station_id": "el_harrach",
+          "sequence": 2,
+          "arrival": "17:44",
+          "departure": "17:44"
+        },
+        {
+          "station_id": "dar_el_beida",
+          "sequence": 3,
+          "arrival": "17:53",
+          "departure": "17:53"
+        },
+        {
+          "station_id": "rouiba",
+          "sequence": 4,
+          "arrival": "17:57",
+          "departure": "17:57"
+        },
+        {
+          "station_id": "reghaia",
+          "sequence": 5,
+          "arrival": "18:02",
+          "departure": "18:02"
+        },
+        {
+          "station_id": "boumerdes",
+          "sequence": 6,
+          "arrival": "18:13",
+          "departure": "18:13"
+        },
+        {
+          "station_id": "thenia",
+          "sequence": 7,
+          "arrival": "18:22",
+          "departure": "18:22"
+        },
+        {
+          "station_id": "si_mustapha",
+          "sequence": 8,
+          "arrival": "18:26",
+          "departure": "18:26"
+        },
+        {
+          "station_id": "isser",
+          "sequence": 9,
+          "arrival": "18:30",
+          "departure": "18:30"
+        },
+        {
+          "station_id": "bordj_menaiel",
+          "sequence": 10,
+          "arrival": "18:35",
+          "departure": "18:35"
+        },
+        {
+          "station_id": "naciria",
+          "sequence": 11,
+          "arrival": "18:42",
+          "departure": "18:42"
+        },
+        {
+          "station_id": "tadmait",
+          "sequence": 12,
+          "arrival": "18:48",
+          "departure": "18:48"
+        },
+        {
+          "station_id": "draa_ben_khedda",
+          "sequence": 13,
+          "arrival": "18:53",
+          "departure": "18:53"
+        },
+        {
+          "station_id": "boukhalfa",
+          "sequence": 14,
+          "arrival": "18:57",
+          "departure": "18:57"
+        },
+        {
+          "station_id": "tizi_ouzou",
+          "sequence": 15,
+          "arrival": "19:01",
+          "departure": "19:01"
+        },
+        {
+          "station_id": "kef_naadja",
+          "sequence": 16,
+          "arrival": "19:05",
+          "departure": "19:05"
+        },
+        {
+          "station_id": "oued_aissi_universite",
+          "sequence": 17,
+          "arrival": "19:10",
+          "departure": "19:10"
+        },
+        {
+          "station_id": "oued_aissi",
+          "sequence": 18,
+          "arrival": "19:13",
+          "departure": null
+        }
+      ],
+      "editor_note": "أوقات الأعمدة في جدول SNTF المصور المؤرخ 19 سبتمبر 2026؛ فُصل الوصول والمغادرة في الثنية عندما عُرض وقتان في الجدول. استمرار السريان يتطلب مراجعة."
+    },
+    {
+      "trip_id": "photo-oued-aissi-alger-B114-except_friday-20260919",
+      "route_id": "oued-aissi-alger",
+      "train_number": "B114",
+      "service_id": "except_friday",
+      "source_id": "gallery-oued-aissi-alger-2026-09-19",
+      "data_status": "source_transcribed",
+      "effective_from": "2026-09-19",
+      "station_time_kind": "published_single_time",
+      "stop_times": [
+        {
+          "station_id": "oued_aissi",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "05:30"
+        },
+        {
+          "station_id": "oued_aissi_universite",
+          "sequence": 2,
+          "arrival": "05:32",
+          "departure": "05:32"
+        },
+        {
+          "station_id": "kef_naadja",
+          "sequence": 3,
+          "arrival": "05:37",
+          "departure": "05:37"
+        },
+        {
+          "station_id": "tizi_ouzou",
+          "sequence": 4,
+          "arrival": "05:41",
+          "departure": "05:41"
+        },
+        {
+          "station_id": "boukhalfa",
+          "sequence": 5,
+          "arrival": "05:45",
+          "departure": "05:45"
+        },
+        {
+          "station_id": "draa_ben_khedda",
+          "sequence": 6,
+          "arrival": "05:49",
+          "departure": "05:49"
+        },
+        {
+          "station_id": "tadmait",
+          "sequence": 7,
+          "arrival": "05:54",
+          "departure": "05:54"
+        },
+        {
+          "station_id": "naciria",
+          "sequence": 8,
+          "arrival": "06:00",
+          "departure": "06:00"
+        },
+        {
+          "station_id": "bordj_menaiel",
+          "sequence": 9,
+          "arrival": "06:07",
+          "departure": "06:07"
+        },
+        {
+          "station_id": "isser",
+          "sequence": 10,
+          "arrival": "06:13",
+          "departure": "06:13"
+        },
+        {
+          "station_id": "si_mustapha",
+          "sequence": 11,
+          "arrival": "06:17",
+          "departure": "06:17"
+        },
+        {
+          "station_id": "thenia",
+          "sequence": 12,
+          "arrival": "06:21",
+          "departure": "06:23"
+        },
+        {
+          "station_id": "boumerdes",
+          "sequence": 13,
+          "arrival": "06:29",
+          "departure": "06:29"
+        },
+        {
+          "station_id": "reghaia",
+          "sequence": 14,
+          "arrival": "06:39",
+          "departure": "06:39"
+        },
+        {
+          "station_id": "rouiba",
+          "sequence": 15,
+          "arrival": "06:45",
+          "departure": "06:45"
+        },
+        {
+          "station_id": "dar_el_beida",
+          "sequence": 16,
+          "arrival": "06:51",
+          "departure": "06:51"
+        },
+        {
+          "station_id": "el_harrach",
+          "sequence": 17,
+          "arrival": "07:00",
+          "departure": "07:00"
+        },
+        {
+          "station_id": "agha",
+          "sequence": 18,
+          "arrival": "07:10",
+          "departure": null
+        }
+      ],
+      "editor_note": "أوقات الأعمدة في جدول SNTF المصور المؤرخ 19 سبتمبر 2026؛ فُصل الوصول والمغادرة في الثنية عندما عُرض وقتان في الجدول. استمرار السريان يتطلب مراجعة."
+    },
+    {
+      "trip_id": "photo-oued-aissi-alger-104-daily-20260919",
+      "route_id": "oued-aissi-alger",
+      "train_number": "104",
+      "service_id": "daily",
+      "source_id": "gallery-oued-aissi-alger-2026-09-19",
+      "data_status": "source_transcribed",
+      "effective_from": "2026-09-19",
+      "station_time_kind": "published_single_time",
+      "stop_times": [
+        {
+          "station_id": "oued_aissi",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "06:40"
+        },
+        {
+          "station_id": "oued_aissi_universite",
+          "sequence": 2,
+          "arrival": "06:42",
+          "departure": "06:42"
+        },
+        {
+          "station_id": "kef_naadja",
+          "sequence": 3,
+          "arrival": "06:47",
+          "departure": "06:47"
+        },
+        {
+          "station_id": "tizi_ouzou",
+          "sequence": 4,
+          "arrival": "06:51",
+          "departure": "06:51"
+        },
+        {
+          "station_id": "boukhalfa",
+          "sequence": 5,
+          "arrival": "06:55",
+          "departure": "06:55"
+        },
+        {
+          "station_id": "draa_ben_khedda",
+          "sequence": 6,
+          "arrival": "06:58",
+          "departure": "06:58"
+        },
+        {
+          "station_id": "tadmait",
+          "sequence": 7,
+          "arrival": "07:03",
+          "departure": "07:03"
+        },
+        {
+          "station_id": "naciria",
+          "sequence": 8,
+          "arrival": "07:09",
+          "departure": "07:09"
+        },
+        {
+          "station_id": "bordj_menaiel",
+          "sequence": 9,
+          "arrival": "07:16",
+          "departure": "07:16"
+        },
+        {
+          "station_id": "isser",
+          "sequence": 10,
+          "arrival": "07:21",
+          "departure": "07:21"
+        },
+        {
+          "station_id": "si_mustapha",
+          "sequence": 11,
+          "arrival": "07:25",
+          "departure": "07:25"
+        },
+        {
+          "station_id": "thenia",
+          "sequence": 12,
+          "arrival": "07:30",
+          "departure": "07:34"
+        },
+        {
+          "station_id": "boumerdes",
+          "sequence": 13,
+          "arrival": "07:40",
+          "departure": "07:40"
+        },
+        {
+          "station_id": "reghaia",
+          "sequence": 14,
+          "arrival": "07:50",
+          "departure": "07:50"
+        },
+        {
+          "station_id": "rouiba",
+          "sequence": 15,
+          "arrival": "07:56",
+          "departure": "07:56"
+        },
+        {
+          "station_id": "dar_el_beida",
+          "sequence": 16,
+          "arrival": "08:02",
+          "departure": "08:02"
+        },
+        {
+          "station_id": "el_harrach",
+          "sequence": 17,
+          "arrival": "08:10",
+          "departure": "08:10"
+        },
+        {
+          "station_id": "agha",
+          "sequence": 18,
+          "arrival": "08:20",
+          "departure": null
+        }
+      ],
+      "editor_note": "أوقات الأعمدة في جدول SNTF المصور المؤرخ 19 سبتمبر 2026؛ فُصل الوصول والمغادرة في الثنية عندما عُرض وقتان في الجدول. استمرار السريان يتطلب مراجعة."
+    },
+    {
+      "trip_id": "photo-oued-aissi-thenia-B134-daily-20260919",
+      "route_id": "oued-aissi-thenia",
+      "train_number": "B134",
+      "service_id": "daily",
+      "source_id": "gallery-oued-aissi-alger-2026-09-19",
+      "data_status": "source_transcribed",
+      "effective_from": "2026-09-19",
+      "station_time_kind": "published_single_time",
+      "stop_times": [
+        {
+          "station_id": "oued_aissi",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "07:40"
+        },
+        {
+          "station_id": "oued_aissi_universite",
+          "sequence": 2,
+          "arrival": "07:42",
+          "departure": "07:42"
+        },
+        {
+          "station_id": "kef_naadja",
+          "sequence": 3,
+          "arrival": "07:47",
+          "departure": "07:47"
+        },
+        {
+          "station_id": "tizi_ouzou",
+          "sequence": 4,
+          "arrival": "07:51",
+          "departure": "07:51"
+        },
+        {
+          "station_id": "boukhalfa",
+          "sequence": 5,
+          "arrival": "07:55",
+          "departure": "07:55"
+        },
+        {
+          "station_id": "draa_ben_khedda",
+          "sequence": 6,
+          "arrival": "07:59",
+          "departure": "07:59"
+        },
+        {
+          "station_id": "tadmait",
+          "sequence": 7,
+          "arrival": "08:09",
+          "departure": "08:09"
+        },
+        {
+          "station_id": "naciria",
+          "sequence": 8,
+          "arrival": "08:15",
+          "departure": "08:15"
+        },
+        {
+          "station_id": "bordj_menaiel",
+          "sequence": 9,
+          "arrival": "08:22",
+          "departure": "08:22"
+        },
+        {
+          "station_id": "isser",
+          "sequence": 10,
+          "arrival": "08:28",
+          "departure": "08:28"
+        },
+        {
+          "station_id": "si_mustapha",
+          "sequence": 11,
+          "arrival": "08:32",
+          "departure": "08:32"
+        },
+        {
+          "station_id": "thenia",
+          "sequence": 12,
+          "arrival": "08:37",
+          "departure": null
+        }
+      ],
+      "editor_note": "أوقات الأعمدة في جدول SNTF المصور المؤرخ 19 سبتمبر 2026؛ فُصل الوصول والمغادرة في الثنية عندما عُرض وقتان في الجدول. استمرار السريان يتطلب مراجعة."
+    },
+    {
+      "trip_id": "photo-oued-aissi-thenia-B136-daily-20260919",
+      "route_id": "oued-aissi-thenia",
+      "train_number": "B136",
+      "service_id": "daily",
+      "source_id": "gallery-oued-aissi-alger-2026-09-19",
+      "data_status": "source_transcribed",
+      "effective_from": "2026-09-19",
+      "station_time_kind": "published_single_time",
+      "stop_times": [
+        {
+          "station_id": "oued_aissi",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "09:30"
+        },
+        {
+          "station_id": "oued_aissi_universite",
+          "sequence": 2,
+          "arrival": "09:32",
+          "departure": "09:32"
+        },
+        {
+          "station_id": "kef_naadja",
+          "sequence": 3,
+          "arrival": "09:37",
+          "departure": "09:37"
+        },
+        {
+          "station_id": "tizi_ouzou",
+          "sequence": 4,
+          "arrival": "09:41",
+          "departure": "09:41"
+        },
+        {
+          "station_id": "boukhalfa",
+          "sequence": 5,
+          "arrival": "09:45",
+          "departure": "09:45"
+        },
+        {
+          "station_id": "draa_ben_khedda",
+          "sequence": 6,
+          "arrival": "09:49",
+          "departure": "09:49"
+        },
+        {
+          "station_id": "tadmait",
+          "sequence": 7,
+          "arrival": "09:57",
+          "departure": "09:57"
+        },
+        {
+          "station_id": "naciria",
+          "sequence": 8,
+          "arrival": "10:03",
+          "departure": "10:03"
+        },
+        {
+          "station_id": "bordj_menaiel",
+          "sequence": 9,
+          "arrival": "10:08",
+          "departure": "10:08"
+        },
+        {
+          "station_id": "isser",
+          "sequence": 10,
+          "arrival": "10:14",
+          "departure": "10:14"
+        },
+        {
+          "station_id": "si_mustapha",
+          "sequence": 11,
+          "arrival": "10:18",
+          "departure": "10:18"
+        },
+        {
+          "station_id": "thenia",
+          "sequence": 12,
+          "arrival": "10:23",
+          "departure": null
+        }
+      ],
+      "editor_note": "أوقات الأعمدة في جدول SNTF المصور المؤرخ 19 سبتمبر 2026؛ فُصل الوصول والمغادرة في الثنية عندما عُرض وقتان في الجدول. استمرار السريان يتطلب مراجعة."
+    },
+    {
+      "trip_id": "photo-oued-aissi-thenia-B138-daily-20260919",
+      "route_id": "oued-aissi-thenia",
+      "train_number": "B138",
+      "service_id": "daily",
+      "source_id": "gallery-oued-aissi-alger-2026-09-19",
+      "data_status": "source_transcribed",
+      "effective_from": "2026-09-19",
+      "station_time_kind": "published_single_time",
+      "stop_times": [
+        {
+          "station_id": "oued_aissi",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "10:45"
+        },
+        {
+          "station_id": "oued_aissi_universite",
+          "sequence": 2,
+          "arrival": "10:47",
+          "departure": "10:47"
+        },
+        {
+          "station_id": "kef_naadja",
+          "sequence": 3,
+          "arrival": "10:52",
+          "departure": "10:52"
+        },
+        {
+          "station_id": "tizi_ouzou",
+          "sequence": 4,
+          "arrival": "10:56",
+          "departure": "10:56"
+        },
+        {
+          "station_id": "boukhalfa",
+          "sequence": 5,
+          "arrival": "11:00",
+          "departure": "11:00"
+        },
+        {
+          "station_id": "draa_ben_khedda",
+          "sequence": 6,
+          "arrival": "11:04",
+          "departure": "11:04"
+        },
+        {
+          "station_id": "tadmait",
+          "sequence": 7,
+          "arrival": "11:09",
+          "departure": "11:09"
+        },
+        {
+          "station_id": "naciria",
+          "sequence": 8,
+          "arrival": "11:15",
+          "departure": "11:15"
+        },
+        {
+          "station_id": "bordj_menaiel",
+          "sequence": 9,
+          "arrival": "11:22",
+          "departure": "11:22"
+        },
+        {
+          "station_id": "isser",
+          "sequence": 10,
+          "arrival": "11:28",
+          "departure": "11:28"
+        },
+        {
+          "station_id": "si_mustapha",
+          "sequence": 11,
+          "arrival": "11:32",
+          "departure": "11:32"
+        },
+        {
+          "station_id": "thenia",
+          "sequence": 12,
+          "arrival": "11:37",
+          "departure": null
+        }
+      ],
+      "editor_note": "أوقات الأعمدة في جدول SNTF المصور المؤرخ 19 سبتمبر 2026؛ فُصل الوصول والمغادرة في الثنية عندما عُرض وقتان في الجدول. استمرار السريان يتطلب مراجعة."
+    },
+    {
+      "trip_id": "photo-oued-aissi-thenia-B140-except_friday-20260919",
+      "route_id": "oued-aissi-thenia",
+      "train_number": "B140",
+      "service_id": "except_friday",
+      "source_id": "gallery-oued-aissi-alger-2026-09-19",
+      "data_status": "source_transcribed",
+      "effective_from": "2026-09-19",
+      "station_time_kind": "published_single_time",
+      "stop_times": [
+        {
+          "station_id": "oued_aissi",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "12:20"
+        },
+        {
+          "station_id": "oued_aissi_universite",
+          "sequence": 2,
+          "arrival": "12:22",
+          "departure": "12:22"
+        },
+        {
+          "station_id": "kef_naadja",
+          "sequence": 3,
+          "arrival": "12:27",
+          "departure": "12:27"
+        },
+        {
+          "station_id": "tizi_ouzou",
+          "sequence": 4,
+          "arrival": "12:31",
+          "departure": "12:31"
+        },
+        {
+          "station_id": "boukhalfa",
+          "sequence": 5,
+          "arrival": "12:35",
+          "departure": "12:35"
+        },
+        {
+          "station_id": "draa_ben_khedda",
+          "sequence": 6,
+          "arrival": "12:39",
+          "departure": "12:39"
+        },
+        {
+          "station_id": "tadmait",
+          "sequence": 7,
+          "arrival": "12:44",
+          "departure": "12:44"
+        },
+        {
+          "station_id": "naciria",
+          "sequence": 8,
+          "arrival": "12:50",
+          "departure": "12:50"
+        },
+        {
+          "station_id": "bordj_menaiel",
+          "sequence": 9,
+          "arrival": "12:57",
+          "departure": "12:57"
+        },
+        {
+          "station_id": "isser",
+          "sequence": 10,
+          "arrival": "13:03",
+          "departure": "13:03"
+        },
+        {
+          "station_id": "si_mustapha",
+          "sequence": 11,
+          "arrival": "13:07",
+          "departure": "13:07"
+        },
+        {
+          "station_id": "thenia",
+          "sequence": 12,
+          "arrival": "13:12",
+          "departure": null
+        }
+      ],
+      "editor_note": "أوقات الأعمدة في جدول SNTF المصور المؤرخ 19 سبتمبر 2026؛ فُصل الوصول والمغادرة في الثنية عندما عُرض وقتان في الجدول. استمرار السريان يتطلب مراجعة."
+    },
+    {
+      "trip_id": "photo-oued-aissi-thenia-B142-daily-20260919",
+      "route_id": "oued-aissi-thenia",
+      "train_number": "B142",
+      "service_id": "daily",
+      "source_id": "gallery-oued-aissi-alger-2026-09-19",
+      "data_status": "source_transcribed",
+      "effective_from": "2026-09-19",
+      "station_time_kind": "published_single_time",
+      "stop_times": [
+        {
+          "station_id": "oued_aissi",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "13:35"
+        },
+        {
+          "station_id": "oued_aissi_universite",
+          "sequence": 2,
+          "arrival": "13:37",
+          "departure": "13:37"
+        },
+        {
+          "station_id": "kef_naadja",
+          "sequence": 3,
+          "arrival": "13:42",
+          "departure": "13:42"
+        },
+        {
+          "station_id": "tizi_ouzou",
+          "sequence": 4,
+          "arrival": "13:46",
+          "departure": "13:46"
+        },
+        {
+          "station_id": "boukhalfa",
+          "sequence": 5,
+          "arrival": "13:50",
+          "departure": "13:50"
+        },
+        {
+          "station_id": "draa_ben_khedda",
+          "sequence": 6,
+          "arrival": "13:54",
+          "departure": "13:54"
+        },
+        {
+          "station_id": "tadmait",
+          "sequence": 7,
+          "arrival": "14:07",
+          "departure": "14:07"
+        },
+        {
+          "station_id": "naciria",
+          "sequence": 8,
+          "arrival": "14:13",
+          "departure": "14:13"
+        },
+        {
+          "station_id": "bordj_menaiel",
+          "sequence": 9,
+          "arrival": "14:20",
+          "departure": "14:20"
+        },
+        {
+          "station_id": "isser",
+          "sequence": 10,
+          "arrival": "14:26",
+          "departure": "14:26"
+        },
+        {
+          "station_id": "si_mustapha",
+          "sequence": 11,
+          "arrival": "14:30",
+          "departure": "14:30"
+        },
+        {
+          "station_id": "thenia",
+          "sequence": 12,
+          "arrival": "14:35",
+          "departure": null
+        }
+      ],
+      "editor_note": "أوقات الأعمدة في جدول SNTF المصور المؤرخ 19 سبتمبر 2026؛ فُصل الوصول والمغادرة في الثنية عندما عُرض وقتان في الجدول. استمرار السريان يتطلب مراجعة."
+    },
+    {
+      "trip_id": "photo-oued-aissi-thenia-B144-except_friday-20260919",
+      "route_id": "oued-aissi-thenia",
+      "train_number": "B144",
+      "service_id": "except_friday",
+      "source_id": "gallery-oued-aissi-alger-2026-09-19",
+      "data_status": "source_transcribed",
+      "effective_from": "2026-09-19",
+      "station_time_kind": "published_single_time",
+      "stop_times": [
+        {
+          "station_id": "oued_aissi",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "14:55"
+        },
+        {
+          "station_id": "oued_aissi_universite",
+          "sequence": 2,
+          "arrival": "14:57",
+          "departure": "14:57"
+        },
+        {
+          "station_id": "kef_naadja",
+          "sequence": 3,
+          "arrival": "15:02",
+          "departure": "15:02"
+        },
+        {
+          "station_id": "tizi_ouzou",
+          "sequence": 4,
+          "arrival": "15:06",
+          "departure": "15:06"
+        },
+        {
+          "station_id": "boukhalfa",
+          "sequence": 5,
+          "arrival": "15:10",
+          "departure": "15:10"
+        },
+        {
+          "station_id": "draa_ben_khedda",
+          "sequence": 6,
+          "arrival": "15:14",
+          "departure": "15:14"
+        },
+        {
+          "station_id": "tadmait",
+          "sequence": 7,
+          "arrival": "15:19",
+          "departure": "15:19"
+        },
+        {
+          "station_id": "naciria",
+          "sequence": 8,
+          "arrival": "15:25",
+          "departure": "15:25"
+        },
+        {
+          "station_id": "bordj_menaiel",
+          "sequence": 9,
+          "arrival": "15:32",
+          "departure": "15:32"
+        },
+        {
+          "station_id": "isser",
+          "sequence": 10,
+          "arrival": "15:38",
+          "departure": "15:38"
+        },
+        {
+          "station_id": "si_mustapha",
+          "sequence": 11,
+          "arrival": "15:42",
+          "departure": "15:42"
+        },
+        {
+          "station_id": "thenia",
+          "sequence": 12,
+          "arrival": "15:47",
+          "departure": null
+        }
+      ],
+      "editor_note": "أوقات الأعمدة في جدول SNTF المصور المؤرخ 19 سبتمبر 2026؛ فُصل الوصول والمغادرة في الثنية عندما عُرض وقتان في الجدول. استمرار السريان يتطلب مراجعة."
+    },
+    {
+      "trip_id": "photo-oued-aissi-alger-118-daily-20260919",
+      "route_id": "oued-aissi-alger",
+      "train_number": "118",
+      "service_id": "daily",
+      "source_id": "gallery-oued-aissi-alger-2026-09-19",
+      "data_status": "source_transcribed",
+      "effective_from": "2026-09-19",
+      "station_time_kind": "published_single_time",
+      "stop_times": [
+        {
+          "station_id": "oued_aissi",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "16:20"
+        },
+        {
+          "station_id": "oued_aissi_universite",
+          "sequence": 2,
+          "arrival": "16:22",
+          "departure": "16:22"
+        },
+        {
+          "station_id": "kef_naadja",
+          "sequence": 3,
+          "arrival": "16:27",
+          "departure": "16:27"
+        },
+        {
+          "station_id": "tizi_ouzou",
+          "sequence": 4,
+          "arrival": "16:31",
+          "departure": "16:31"
+        },
+        {
+          "station_id": "boukhalfa",
+          "sequence": 5,
+          "arrival": "16:35",
+          "departure": "16:35"
+        },
+        {
+          "station_id": "draa_ben_khedda",
+          "sequence": 6,
+          "arrival": "16:39",
+          "departure": "16:39"
+        },
+        {
+          "station_id": "tadmait",
+          "sequence": 7,
+          "arrival": "16:44",
+          "departure": "16:44"
+        },
+        {
+          "station_id": "naciria",
+          "sequence": 8,
+          "arrival": "16:50",
+          "departure": "16:50"
+        },
+        {
+          "station_id": "bordj_menaiel",
+          "sequence": 9,
+          "arrival": "16:57",
+          "departure": "16:57"
+        },
+        {
+          "station_id": "isser",
+          "sequence": 10,
+          "arrival": "17:02",
+          "departure": "17:02"
+        },
+        {
+          "station_id": "si_mustapha",
+          "sequence": 11,
+          "arrival": "17:06",
+          "departure": "17:06"
+        },
+        {
+          "station_id": "thenia",
+          "sequence": 12,
+          "arrival": "17:11",
+          "departure": "17:11"
+        },
+        {
+          "station_id": "boumerdes",
+          "sequence": 13,
+          "arrival": "17:19",
+          "departure": "17:19"
+        },
+        {
+          "station_id": "reghaia",
+          "sequence": 14,
+          "arrival": "17:29",
+          "departure": "17:29"
+        },
+        {
+          "station_id": "rouiba",
+          "sequence": 15,
+          "arrival": "17:35",
+          "departure": "17:35"
+        },
+        {
+          "station_id": "dar_el_beida",
+          "sequence": 16,
+          "arrival": "17:39",
+          "departure": "17:39"
+        },
+        {
+          "station_id": "el_harrach",
+          "sequence": 17,
+          "arrival": "17:48",
+          "departure": "17:48"
+        },
+        {
+          "station_id": "agha",
+          "sequence": 18,
+          "arrival": "17:58",
+          "departure": null
+        }
+      ],
+      "editor_note": "أوقات الأعمدة في جدول SNTF المصور المؤرخ 19 سبتمبر 2026؛ فُصل الوصول والمغادرة في الثنية عندما عُرض وقتان في الجدول. استمرار السريان يتطلب مراجعة."
+    },
+    {
+      "trip_id": "photo-oued-aissi-thenia-B146-daily-20260919",
+      "route_id": "oued-aissi-thenia",
+      "train_number": "B146",
+      "service_id": "daily",
+      "source_id": "gallery-oued-aissi-alger-2026-09-19",
+      "data_status": "source_transcribed",
+      "effective_from": "2026-09-19",
+      "station_time_kind": "published_single_time",
+      "stop_times": [
+        {
+          "station_id": "oued_aissi",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "17:35"
+        },
+        {
+          "station_id": "oued_aissi_universite",
+          "sequence": 2,
+          "arrival": "17:37",
+          "departure": "17:37"
+        },
+        {
+          "station_id": "kef_naadja",
+          "sequence": 3,
+          "arrival": "17:42",
+          "departure": "17:42"
+        },
+        {
+          "station_id": "tizi_ouzou",
+          "sequence": 4,
+          "arrival": "17:46",
+          "departure": "17:46"
+        },
+        {
+          "station_id": "boukhalfa",
+          "sequence": 5,
+          "arrival": "17:56",
+          "departure": "17:56"
+        },
+        {
+          "station_id": "draa_ben_khedda",
+          "sequence": 6,
+          "arrival": "18:00",
+          "departure": "18:00"
+        },
+        {
+          "station_id": "tadmait",
+          "sequence": 7,
+          "arrival": "18:05",
+          "departure": "18:05"
+        },
+        {
+          "station_id": "naciria",
+          "sequence": 8,
+          "arrival": "18:10",
+          "departure": "18:10"
+        },
+        {
+          "station_id": "bordj_menaiel",
+          "sequence": 9,
+          "arrival": "18:16",
+          "departure": "18:16"
+        },
+        {
+          "station_id": "isser",
+          "sequence": 10,
+          "arrival": "18:21",
+          "departure": "18:21"
+        },
+        {
+          "station_id": "si_mustapha",
+          "sequence": 11,
+          "arrival": "18:25",
+          "departure": "18:25"
+        },
+        {
+          "station_id": "thenia",
+          "sequence": 12,
+          "arrival": "18:32",
+          "departure": null
+        }
+      ],
+      "editor_note": "أوقات الأعمدة في جدول SNTF المصور المؤرخ 19 سبتمبر 2026؛ فُصل الوصول والمغادرة في الثنية عندما عُرض وقتان في الجدول. استمرار السريان يتطلب مراجعة."
+    },
+    {
+      "trip_id": "photo-oued-aissi-thenia-120-except_friday-20260919",
+      "route_id": "oued-aissi-thenia",
+      "train_number": "120",
+      "service_id": "except_friday",
+      "source_id": "gallery-oued-aissi-alger-2026-09-19",
+      "data_status": "source_transcribed",
+      "effective_from": "2026-09-19",
+      "station_time_kind": "published_single_time",
+      "stop_times": [
+        {
+          "station_id": "oued_aissi",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "18:30"
+        },
+        {
+          "station_id": "oued_aissi_universite",
+          "sequence": 2,
+          "arrival": "18:32",
+          "departure": "18:32"
+        },
+        {
+          "station_id": "kef_naadja",
+          "sequence": 3,
+          "arrival": "18:37",
+          "departure": "18:37"
+        },
+        {
+          "station_id": "tizi_ouzou",
+          "sequence": 4,
+          "arrival": "18:41",
+          "departure": "18:41"
+        },
+        {
+          "station_id": "boukhalfa",
+          "sequence": 5,
+          "arrival": "18:45",
+          "departure": "18:45"
+        },
+        {
+          "station_id": "draa_ben_khedda",
+          "sequence": 6,
+          "arrival": "18:49",
+          "departure": "18:49"
+        },
+        {
+          "station_id": "tadmait",
+          "sequence": 7,
+          "arrival": "18:59",
+          "departure": "18:59"
+        },
+        {
+          "station_id": "naciria",
+          "sequence": 8,
+          "arrival": "19:05",
+          "departure": "19:05"
+        },
+        {
+          "station_id": "bordj_menaiel",
+          "sequence": 9,
+          "arrival": "19:12",
+          "departure": "19:12"
+        },
+        {
+          "station_id": "isser",
+          "sequence": 10,
+          "arrival": "19:17",
+          "departure": "19:17"
+        },
+        {
+          "station_id": "si_mustapha",
+          "sequence": 11,
+          "arrival": "19:21",
+          "departure": "19:21"
+        },
+        {
+          "station_id": "thenia",
+          "sequence": 12,
+          "arrival": "19:26",
+          "departure": null
+        }
+      ],
+      "editor_note": "أوقات الأعمدة في جدول SNTF المصور المؤرخ 19 سبتمبر 2026؛ فُصل الوصول والمغادرة في الثنية عندما عُرض وقتان في الجدول. استمرار السريان يتطلب مراجعة."
     }
   ],
   "note": "Draft entries are editable real database records, but their prior example times are not operational evidence. Dashboard labels these records as unverified and hides them from default scheduled boards until reviewed. Update stop_times/train_number/source to validate. أُضيفت 60 رحلة من 3 صور رسمية مؤرخة 19 سبتمبر 2026: 28 للمطار ذهابًا وإيابًا، و14 آغا–زرالدة، و18 الجزائر–العفرون. لم تُفترض رحلات الاتجاه العكسي للعفرون دون صورتها الصحيحة."
