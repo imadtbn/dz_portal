@@ -182,16 +182,6 @@
       "notes": "مدرج ضمن معرض جداول البوابة؛ حالة الصلاحية وتاريخ السريان يحتاجان مراجعة من الصورة أو المصدر الرسمي."
     },
     {
-      "id": "alger-annaba-tj-uncategorized",
-      "path": "assets/train-schedules/alger-annaba-tj.jpg",
-      "category": "uncategorized",
-      "alt": null,
-      "route_ids": [],
-      "source_page": "sectors/sntf.html",
-      "status": "reference_image_unverified",
-      "notes": "مدرج ضمن معرض جداول البوابة؛ حالة الصلاحية وتاريخ السريان يحتاجان مراجعة من الصورة أو المصدر الرسمي."
-    },
-    {
       "id": "alger-tebessa-eastern",
       "path": "assets/train-schedules/Eastern/alger-tebessa.jpg",
       "category": "eastern",
@@ -199,16 +189,6 @@
       "route_ids": [
         "alger-tebessa"
       ],
-      "source_page": "sectors/sntf.html",
-      "status": "reference_image_unverified",
-      "notes": "مدرج ضمن معرض جداول البوابة؛ حالة الصلاحية وتاريخ السريان يحتاجان مراجعة من الصورة أو المصدر الرسمي."
-    },
-    {
-      "id": "alger-tebessa-uncategorized",
-      "path": "assets/train-schedules/alger-tebessa.jpg",
-      "category": "uncategorized",
-      "alt": null,
-      "route_ids": [],
       "source_page": "sectors/sntf.html",
       "status": "reference_image_unverified",
       "notes": "مدرج ضمن معرض جداول البوابة؛ حالة الصلاحية وتاريخ السريان يحتاجان مراجعة من الصورة أو المصدر الرسمي."
