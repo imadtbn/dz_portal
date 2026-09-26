@@ -1,5 +1,5 @@
 {
-  "version": 7,
+  "version": 8,
   "updated": "2026-09-26",
   "routes": [
     {
@@ -185,23 +185,67 @@
     },
     {
       "id": "alger-oued-aissi",
-      "from": "alger",
+      "from": "agha",
       "to": "oued_aissi",
       "category": "suburban",
-      "name": "الجزائر ← واد عيسى",
+      "name": "آغا ← واد عيسى (عبر الثنية)",
       "source": "gallery-alger-oued-aissi-2026-09-19",
       "schedule_image": "../assets/train-schedules/suburban/alger-oued-aissa.png",
-      "schedule_status": "source_image_available"
+      "schedule_status": "source_transcribed",
+      "stops": [
+        "agha",
+        "el_harrach",
+        "dar_el_beida",
+        "rouiba",
+        "reghaia",
+        "boumerdes",
+        "thenia",
+        "si_mustapha",
+        "isser",
+        "bordj_menaiel",
+        "naciria",
+        "tadmait",
+        "draa_ben_khedda",
+        "boukhalfa",
+        "tizi_ouzou",
+        "kef_naadja",
+        "oued_aissi_universite",
+        "oued_aissi"
+      ],
+      "stops_status": "photo_published_stops_corridor",
+      "editor_note": "المعرّف القديم احتُفظ به. تبيّن أن القطاران البعيدان في الصورة ينطلقان من آغا وليس محطة الجزائر؛ توقف كل قطار محدد داخل بياناته الخاصة."
     },
     {
       "id": "oued-aissi-alger",
       "from": "oued_aissi",
-      "to": "alger",
+      "to": "agha",
       "category": "suburban",
-      "name": "واد عيسى ← الجزائر",
+      "name": "واد عيسى ← آغا (عبر الثنية)",
       "source": "gallery-oued-aissi-alger-2026-09-19",
       "schedule_image": "../assets/train-schedules/suburban/oued-aissa-alger.png",
-      "schedule_status": "source_image_available"
+      "schedule_status": "source_transcribed",
+      "stops": [
+        "oued_aissi",
+        "oued_aissi_universite",
+        "kef_naadja",
+        "tizi_ouzou",
+        "boukhalfa",
+        "draa_ben_khedda",
+        "tadmait",
+        "naciria",
+        "bordj_menaiel",
+        "isser",
+        "si_mustapha",
+        "thenia",
+        "boumerdes",
+        "reghaia",
+        "rouiba",
+        "dar_el_beida",
+        "el_harrach",
+        "agha"
+      ],
+      "stops_status": "photo_published_stops_corridor",
+      "editor_note": "المعرّف القديم احتُفظ به. لا تُكرر محطة الثنية في stop_times؛ حين تعرض الصورة وصولاً ومغادرةً منفصلين تُسجّل القيمتان لنفس المحطة."
     },
     {
       "id": "alger-airport",
@@ -423,6 +467,56 @@
         "agha"
       ],
       "stops_status": "source_image_transcribed"
+    },
+    {
+      "id": "thenia-oued-aissi",
+      "from": "thenia",
+      "to": "oued_aissi",
+      "name": "الثنية ← واد عيسى",
+      "category": "suburban",
+      "source": "gallery-alger-oued-aissi-2026-09-19",
+      "schedule_image": "../assets/train-schedules/suburban/alger-oued-aissa.png",
+      "schedule_status": "source_transcribed",
+      "stops": [
+        "thenia",
+        "si_mustapha",
+        "isser",
+        "bordj_menaiel",
+        "naciria",
+        "tadmait",
+        "draa_ben_khedda",
+        "boukhalfa",
+        "tizi_ouzou",
+        "kef_naadja",
+        "oued_aissi_universite",
+        "oued_aissi"
+      ],
+      "stops_status": "source_image_corridor"
+    },
+    {
+      "id": "oued-aissi-thenia",
+      "from": "oued_aissi",
+      "to": "thenia",
+      "name": "واد عيسى ← الثنية",
+      "category": "suburban",
+      "source": "gallery-oued-aissi-alger-2026-09-19",
+      "schedule_image": "../assets/train-schedules/suburban/oued-aissa-alger.png",
+      "schedule_status": "source_transcribed",
+      "stops": [
+        "oued_aissi",
+        "oued_aissi_universite",
+        "kef_naadja",
+        "tizi_ouzou",
+        "boukhalfa",
+        "draa_ben_khedda",
+        "tadmait",
+        "naciria",
+        "bordj_menaiel",
+        "isser",
+        "si_mustapha",
+        "thenia"
+      ],
+      "stops_status": "source_image_corridor"
     }
   ]
 }
