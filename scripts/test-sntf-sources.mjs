@@ -4,6 +4,15 @@ import {lockGeo,matchStation,buildReview,mergeApprovedStations} from "./lib/sntf
 const read=p=>JSON.parse(readFileSync("assets/data/sntf/"+p,"utf8"));
 const stations=read("stations.json").stations,routes=read("routes.json").routes;
 const source=read("review/official-snapshots.json"),saved=read("review/official-review-report.json");
+const geoLock=read("verified-geo-lock.json");
+const byId=new Map(stations.map(s=>[s.id,s]));
+for(const locked of geoLock.stations){
+ const actual=byId.get(locked.id);
+ assert(actual,"Protected station missing: "+locked.id);
+ assert.deepEqual(lockGeo(actual),{...lockGeo(actual),lat:locked.lat,lon:locked.lon,geo_verified:true,geo_source:locked.geo_source},
+  "Manually verified Google Maps coordinates changed: "+locked.id);
+}
+
 const gallery=read("gallery-index.json");
 const expected=buildReview(source,stations,routes);
 assert.deepEqual(saved,expected,"Official snapshot report must be reproducible and current");
@@ -36,4 +45,4 @@ assert.equal(new Set(gallery.images.map(i=>i.id)).size,gallery.images.length);
 assert(gallery.images.every(i=>html.includes(i.path)&&i.status==="reference_image_unverified"&&i.source_page==="sectors/sntf.html"),"Every indexed gallery image must be in SNTF page and marked unverified");
 assert(gallery.images.some(i=>i.route_ids.includes("alger-thenia")),"Gallery must index Alger-Thenia timetable");
 assert.equal(stations.filter(s=>s.geo_verified).length,saved.summary.existing_verified_coordinates_preserved,"Verified coordinate count unchanged since source review");
-console.log("SNTF source ingestion tests PASS:",saved.summary.archived_trip_candidates,"historical candidates,",gallery.images.length,"gallery images, and",oldGeo.size,"original station georecords protected.");
+console.log("SNTF source ingestion tests PASS:",saved.summary.archived_trip_candidates,"historical candidates,",gallery.images.length,"gallery images, and",geoLock.stations.length,"locked verified Google Maps pins protected.");
