@@ -1,5 +1,5 @@
 {
-  "version": 6,
+  "version": 7,
   "updated": "2026-09-26",
   "routes": [
     {
@@ -74,9 +74,29 @@
       "to": "el_affroun",
       "category": "suburban",
       "name": "الجزائر ← العفرون",
-      "source": "dz-portal-gallery",
+      "source": "gallery-alger-affroun-2026-09-19",
       "schedule_image": "../assets/train-schedules/suburban/alger-affroun.png",
-      "schedule_status": "requires-current-verification"
+      "schedule_status": "source_transcribed",
+      "stops": [
+        "alger",
+        "agha",
+        "les_ateliers",
+        "hussein_dey",
+        "caroubier",
+        "el_harrach",
+        "gue_de_constantine",
+        "ain_naadja",
+        "baba_ali",
+        "birtouta",
+        "boufarik",
+        "beni_mered",
+        "blida",
+        "chiffa",
+        "mouzaia",
+        "el_affroun"
+      ],
+      "stops_status": "source_image_corridor",
+      "editor_note": "صورة الجدول الأصلية مؤرخة 19 سبتمبر 2026؛ ليست كل الأوقات في كافة قطارات الخط متطابقة."
     },
     {
       "id": "affroun-alger",
@@ -85,28 +105,83 @@
       "category": "suburban",
       "name": "العفرون ← الجزائر",
       "source": "dz-portal-gallery",
-      "schedule_image": "../assets/train-schedules/suburban/affroun-alger.png",
-      "schedule_status": "requires-current-verification"
+      "schedule_image": null,
+      "schedule_status": "correct_reverse_image_missing",
+      "stops": [
+        "el_affroun",
+        "mouzaia",
+        "chiffa",
+        "blida",
+        "beni_mered",
+        "boufarik",
+        "birtouta",
+        "baba_ali",
+        "ain_naadja",
+        "gue_de_constantine",
+        "el_harrach",
+        "caroubier",
+        "hussein_dey",
+        "les_ateliers",
+        "agha",
+        "alger"
+      ],
+      "stops_status": "reverse_of_official_eastbound_corridor",
+      "editor_note": "الملف affroun-alger.png مطابق بصريًا وثنائيًا لجدول آغا ↔ المطار، وليس جدول العفرون ← الجزائر؛ حُذف الرابط الخاطئ في انتظار صورة الاتجاه الصحيح."
     },
     {
       "id": "alger-zeralda",
-      "from": "alger",
+      "from": "agha",
       "to": "zeralda",
       "category": "suburban",
-      "name": "الجزائر ← زرالدة",
-      "source": "dz-portal-gallery",
+      "name": "آغا ← زرالدة",
+      "source": "gallery-agha-zeralda-2026-09-19",
       "schedule_image": "../assets/train-schedules/suburban/alger-zeralda.png",
-      "schedule_status": "requires-current-verification"
+      "schedule_status": "source_transcribed",
+      "stops": [
+        "agha",
+        "les_ateliers",
+        "hussein_dey",
+        "caroubier",
+        "el_harrach",
+        "gue_de_constantine",
+        "ain_naadja",
+        "baba_ali",
+        "birtouta",
+        "tessala_el_merdja",
+        "sidi_abdellah",
+        "sidi_abdellah_universite",
+        "zeralda"
+      ],
+      "stops_status": "source_image_transcribed",
+      "editor_note": "احتُفظ بمعرف المسار التاريخي alger-zeralda للتوافق، ولكن الصورة تبدأ من محطة آغا وليس محطة الجزائر."
     },
     {
       "id": "zeralda-alger",
       "from": "zeralda",
-      "to": "alger",
+      "to": "agha",
       "category": "suburban",
-      "name": "زرالدة ← الجزائر",
-      "source": "dz-portal-gallery",
-      "schedule_image": "../assets/train-schedules/suburban/zeralda-alger.png",
-      "schedule_status": "requires-current-verification"
+      "name": "زرالدة ← آغا (رابط المسار التاريخي)",
+      "source": "user-zeralda-agha-2026-09-19",
+      "schedule_image": null,
+      "schedule_status": "alias_of_zeralda_agha",
+      "alias_of": "zeralda-agha",
+      "stops": [
+        "zeralda",
+        "sidi_abdellah_universite",
+        "sidi_abdellah",
+        "tessala_el_merdja",
+        "birtouta",
+        "baba_ali",
+        "ain_naadja",
+        "gue_de_constantine",
+        "el_harrach",
+        "caroubier",
+        "hussein_dey",
+        "les_ateliers",
+        "agha"
+      ],
+      "stops_status": "source_image_transcribed",
+      "editor_note": "هذا رابط سابق للمسار نفسه؛ الرحلات الحقيقية مُدرجة تحت معرف zeralda-agha دون تكرار."
     },
     {
       "id": "alger-oued-aissi",
@@ -114,9 +189,9 @@
       "to": "oued_aissi",
       "category": "suburban",
       "name": "الجزائر ← واد عيسى",
-      "source": "dz-portal-gallery",
+      "source": "gallery-alger-oued-aissi-2026-09-19",
       "schedule_image": "../assets/train-schedules/suburban/alger-oued-aissa.png",
-      "schedule_status": "requires-current-verification"
+      "schedule_status": "source_image_available"
     },
     {
       "id": "oued-aissi-alger",
@@ -124,19 +199,27 @@
       "to": "alger",
       "category": "suburban",
       "name": "واد عيسى ← الجزائر",
-      "source": "dz-portal-gallery",
+      "source": "gallery-oued-aissi-alger-2026-09-19",
       "schedule_image": "../assets/train-schedules/suburban/oued-aissa-alger.png",
-      "schedule_status": "requires-current-verification"
+      "schedule_status": "source_image_available"
     },
     {
       "id": "alger-airport",
-      "from": "alger",
+      "from": "agha",
       "to": "airport",
       "category": "suburban",
-      "name": "الجزائر ↔ مطار هواري بومدين",
-      "source": "dz-portal-gallery",
+      "name": "آغا ← مطار هواري بومدين",
+      "source": "gallery-agha-airport-2026-09-19",
       "schedule_image": "../assets/train-schedules/suburban/alger-airoport-alger.png",
-      "schedule_status": "requires-current-verification"
+      "schedule_status": "source_transcribed",
+      "stops": [
+        "agha",
+        "el_harrach",
+        "bab_ezzouar",
+        "airport"
+      ],
+      "stops_status": "source_image_transcribed",
+      "editor_note": "معرف قديم alger-airport احتُفظ به، لكن جدول SNTF المنشور ينطلق من آغا."
     },
     {
       "id": "affroun-thenia",
@@ -305,8 +388,8 @@
       "category": "suburban",
       "name": "زرالدة ← آغا (مرورًا بـ11 محطة ثانوية)",
       "source": "user-zeralda-agha-2026-09-19",
-      "schedule_image": null,
-      "schedule_status": "user-supplied",
+      "schedule_image": "../assets/train-schedules/suburban/zeralda-alger.png",
+      "schedule_status": "source_transcribed",
       "stops": [
         "zeralda",
         "sidi_abdellah_universite",
@@ -321,7 +404,25 @@
         "hussein_dey",
         "les_ateliers",
         "agha"
-      ]
+      ],
+      "stops_status": "source_image_transcribed"
+    },
+    {
+      "id": "airport-agha",
+      "from": "airport",
+      "to": "agha",
+      "name": "مطار هواري بومدين ← آغا",
+      "category": "suburban",
+      "source": "gallery-agha-airport-2026-09-19",
+      "schedule_image": "../assets/train-schedules/suburban/alger-airoport-alger.png",
+      "schedule_status": "source_transcribed",
+      "stops": [
+        "airport",
+        "bab_ezzouar",
+        "el_harrach",
+        "agha"
+      ],
+      "stops_status": "source_image_transcribed"
     }
   ]
 }
