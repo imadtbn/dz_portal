@@ -1,27 +1,34 @@
 import {dayParts,dayISO,recordsAtStation,eligible,formatTime,countdown,classify,mins} from "./engine.js";
+import {canonicalRouteId,routeTrips,routeStopSummary,lineRoutes,lineSummary,stationLineServices,eligibleStationIds} from "./network.js";
 const dataRoot=new URL("../../data/sntf/",import.meta.url);
 const $=id=>document.getElementById(id);
 const esc=x=>String(x??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
-const state={stations:[],routes:[],trips:[],calendars:[],exceptions:[],holidays:[],holidaysComplete:false,sources:[],selected:null,route:"",user:null,map:null,markers:[],userMarker:null,boardMode:"departures",boardLimit:{departure:20,arrival:20},lastMinute:"",busy:false};
+const state={stations:[],routes:[],lines:[],line:"",allowedStopIds:null,trips:[],calendars:[],exceptions:[],holidays:[],holidaysComplete:false,sources:[],selected:null,route:"",user:null,map:null,markers:[],userMarker:null,boardMode:"departures",boardLimit:{departure:20,arrival:20},lastMinute:"",busy:false};
 const station=id=>state.stations.find(s=>s.id===id);
 const name=id=>station(id)?.name||id;
 const routeFor=id=>state.routes.find(r=>r.id===id);
+const lineFor=id=>state.lines.find(l=>l.id===id);
+const canonical=id=>canonicalRouteId(routeFor(id)||{id});
 const categoryLabel={suburban:"الضواحي",western:"الغرب",eastern:"الشرق",sahara:"الصحراء والهضاب",international:"الدولي"};
 const serviceLabel={daily:"كل يوم",friday_holiday:"الجمعة والأعياد",weekday_not_friday:"عدا الجمعة والأعياد",except_friday:"عدا الجمعة",friday_only:"الجمعة فقط"};
 const verifiedGeo=s=>s.geo_verified===true&&Number.isFinite(s.lat)&&Number.isFinite(s.lon);
-const editableTrips=()=>eligible(state.trips,$("include-drafts").checked).filter(t=>!state.route||t.route_id===(routeFor(state.route)?.alias_of||state.route));
+const editableTrips=()=>eligible(state.trips,$("include-drafts").checked).filter(t=>state.route?t.route_id===canonical(state.route):!state.line||lineFor(state.line)?.route_ids.includes(t.route_id));
 async function get(name,key){const response=await fetch(new URL(name+".json",dataRoot),{cache:"no-cache"});if(!response.ok)throw Error(name+": HTTP "+response.status);const data=await response.json();if(!Array.isArray(data[key]))throw Error(name+": بيانات غير صالحة");return data}
-function allowedOnRoute(s){
- if(!state.route)return true;
- const r=routeFor(state.route);
- return r ? (r.stops||[r.from,r.to]).includes(s.id):true;
+function allowedOnRoute(s){return state.allowedStopIds===null||state.allowedStopIds.has(s.id)}
+function updateAllowedStations(){
+ state.allowedStopIds=eligibleStationIds(state.line,state.route,state.lines,state.routes,state.trips);
+}
+function fillRouteOptions(){
+ const available=state.routes.filter(r=>!r.alias_of&&(!state.line||r.line_id===state.line));
+ $("route-filter").replaceChildren(new Option(state.line?"جميع مسارات هذا الخط":"جميع المسارات",""),...available.map(r=>new Option(r.name,r.id)));
+ if(state.route&&available.some(r=>r.id===state.route))$("route-filter").value=state.route;
 }
 function listStations(){
  const term=$("station-search").value.trim().toLocaleLowerCase("ar");
  let matches=state.stations.filter(s=>allowedOnRoute(s)&&[s.name,s.name_fr,...(s.sntf_names||[]),...(s.aliases||[])].join(" ").toLocaleLowerCase().includes(term));
  if(state.user)matches=matches.sort((a,b)=>km(state.user,a)-km(state.user,b));
  else matches=matches.sort((a,b)=>a.name.localeCompare(b.name,"ar"));
- $("station-results").innerHTML=matches.length?matches.slice(0,22).map(s=>'<button type="button" class="station-option" data-id="'+esc(s.id)+'" aria-pressed="'+(s.id===state.selected)+'"><span>'+esc(s.name)+' <small>'+esc(s.name_fr)+'</small></span><small>'+(state.user&&verifiedGeo(s)?km(state.user,s).toFixed(1)+" كم":"عرض اللوحة")+'</small></button>').join(""):'<div class="empty">لا توجد محطات مطابقة.</div>';
+ $("station-results").innerHTML=matches.length?matches.slice(0,50).map(s=>'<button type="button" class="station-option" data-id="'+esc(s.id)+'" aria-pressed="'+(s.id===state.selected)+'"><span>'+esc(s.name)+' <small>'+esc(s.name_fr)+'</small></span><small>'+(state.user&&verifiedGeo(s)?km(state.user,s).toFixed(1)+" كم":"عرض اللوحة")+'</small></button>').join(""):'<div class="empty">لا توجد محطات مطابقة.</div>';
  $("map-count").textContent=state.stations.filter(s=>allowedOnRoute(s)&&verifiedGeo(s)).length+" محطة بإحداثيات مسجلة";
 }
 function km(p,s){const d=Math.PI/180,dLat=(s.lat-p.lat)*d,dLon=(s.lon-p.lon)*d,a=Math.sin(dLat/2)**2+Math.cos(p.lat*d)*Math.cos(s.lat*d)*Math.sin(dLon/2)**2;return 6371*2*Math.atan2(Math.sqrt(a),Math.sqrt(1-a))}
@@ -29,8 +36,8 @@ function chooseStation(id,{focusMap=false}={}){
  if(!station(id))return;
  state.selected=id;state.boardLimit={departure:20,arrival:20};$("station").value=id;
  $("selected-name").textContent=name(id);
- $("selected-subtitle").textContent=station(id).name_fr+" · المغادرات والوصول حسب الجدول";
- fillDirections();listStations();renderBoards();
+ $("selected-subtitle").textContent=station(id).name_fr+" · المغادرات والوصول حسب التوقفات المدخلة";
+ fillStationLines();fillDirections();listStations();renderBoards();
  refreshMarkers();
  if(focusMap&&state.map){const s=station(id);if(verifiedGeo(s))state.map.setView([s.lat,s.lon],Math.max(9,state.map.getZoom()),{animate:true})}
 }
@@ -75,7 +82,7 @@ function eventHtml(event,kind){
  const prevNext=kind==="departure"?event.following:event.previous;
  const subtitle=prevNext?(kind==="departure"?"المحطة التالية: ":"المحطة السابقة: ")+name(prevNext):"";
  const source=state.sources.find(s=>s.id===t.source_id);
- const link=route?.schedule_image&&/^\.\.\/assets\/train-schedules\//.test(route.schedule_image)?'<a class="photo-source" href="'+esc(route.schedule_image)+'" target="_blank" rel="noopener noreferrer">عرض صورة الجدول الرسمي ↗</a>':source?.url?.startsWith('https://')?'<a class="photo-source" href="'+esc(source.url)+'" target="_blank" rel="noopener noreferrer">مصدر المواقيت ↗</a>':'';
+ const link=route?.schedule_image&&/^\.\.\/assets\/train-schedules\//.test(route.schedule_image)?'<a class="photo-source" href="'+esc(route.schedule_image)+'" target="_blank" rel="noopener noreferrer">'+(route.schedule_image.endsWith('.svg')?'عرض إعادة تنسيق الجدول ↗':'عرض صورة الجدول الرسمي ↗')+'</a>':source?.url?.startsWith('https://')?'<a class="photo-source" href="'+esc(source.url)+'" target="_blank" rel="noopener noreferrer">مصدر المواقيت ↗</a>':'';
  return '<article class="event '+(classify(t)==="draft"?"draft":"")+'"><div class="event-top"><div><h4>'+esc(kind==="departure"?"إلى "+name(other):"من "+name(other))+'</h4><span class="minor">'+esc(route?.name||"")+'</span></div><time dir="ltr">'+formatTime(time)+'</time></div><div class="event-meta"><span class="tag">رقم القطار: '+esc(t.train_number||"غير محدد")+'</span><span class="tag">'+esc(serviceLabel[t.service_id]||t.service_id)+'</span>'+statusBadge(t)+dateShown+'</div><p>'+esc(subtitle)+'</p><p>'+(kind==="departure"?"المتبقي للمغادرة: ":"المتبقي للوصول: ")+'<span class="countdown" data-target="'+event.timestamp+'" dir="ltr">'+countdown(event.remaining)+'</span></p><p class="minor">'+esc(classify(t)==="draft"?"المواعيد الحالية مسودة تحرير وليست رحلات مؤكدة.":source?.notice||"الموعد مجدول، وليس تتبعًا مباشرًا.")+'</p>'+link+details(event)+'</article>';
 }
 function panel(kind,events){
