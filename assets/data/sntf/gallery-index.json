@@ -9,7 +9,8 @@
       "category": "suburban",
       "alt": "الجزائر - الثنية",
       "route_ids": [
-        "alger-thenia"
+        "alger-thenia",
+        "alger-reghaia"
       ],
       "source_page": "sectors/sntf.html",
       "issuing_authority": "SNTF",
@@ -22,7 +23,8 @@
       "category": "suburban",
       "alt": "الثنية - الجزائر",
       "route_ids": [
-        "thenia-alger"
+        "thenia-alger",
+        "reghaia-alger"
       ],
       "source_page": "sectors/sntf.html",
       "issuing_authority": "SNTF",
