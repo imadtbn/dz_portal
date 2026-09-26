@@ -1,5 +1,5 @@
 {
-  "version": 11,
+  "version": 12,
   "updated": "2026-09-26",
   "routes": [
     {
@@ -33,7 +33,8 @@
         "thenia"
       ],
       "stops_status": "source_image_transcribed",
-      "editor_note": "ترتيب جميع المحطات في الصورة المرجعية المؤرخة 19 سبتمبر 2026، دون افتراض توقف كل قطار بها؛ تنحصر أوقات التوقف في stop_times لكل رحلة."
+      "editor_note": "ترتيب جميع المحطات في الصورة المرجعية المؤرخة 19 سبتمبر 2026، دون افتراض توقف كل قطار بها؛ تنحصر أوقات التوقف في stop_times لكل رحلة.",
+      "line_id": "alger-thenia"
     },
     {
       "id": "thenia-alger",
@@ -66,7 +67,8 @@
         "alger"
       ],
       "stops_status": "source_image_transcribed",
-      "editor_note": "ترتيب جميع المحطات في الصورة المرجعية المؤرخة 19 سبتمبر 2026، دون افتراض توقف كل قطار بها؛ تنحصر أوقات التوقف في stop_times لكل رحلة."
+      "editor_note": "ترتيب جميع المحطات في الصورة المرجعية المؤرخة 19 سبتمبر 2026، دون افتراض توقف كل قطار بها؛ تنحصر أوقات التوقف في stop_times لكل رحلة.",
+      "line_id": "alger-thenia"
     },
     {
       "id": "alger-affroun",
@@ -96,7 +98,8 @@
         "el_affroun"
       ],
       "stops_status": "source_image_corridor",
-      "editor_note": "صورة الجدول الأصلية مؤرخة 19 سبتمبر 2026؛ ليست كل الأوقات في كافة قطارات الخط متطابقة."
+      "editor_note": "صورة الجدول الأصلية مؤرخة 19 سبتمبر 2026؛ ليست كل الأوقات في كافة قطارات الخط متطابقة.",
+      "line_id": "alger-affroun"
     },
     {
       "id": "affroun-alger",
@@ -126,7 +129,8 @@
         "alger"
       ],
       "stops_status": "source_image_transcribed",
-      "editor_note": "19 رحلة من الصورة الرسمية المرفقة والمحدثة اعتبارًا من 19 سبتمبر 2026؛ صورة المعاينة الحالية SVG أُعيدت من الجدول المرفق لأن affroun-alger.png القديم كان نسخة خاطئة لجدول المطار. لم تُعدل إحداثيات المحطات."
+      "editor_note": "19 رحلة من الصورة الرسمية المرفقة والمحدثة اعتبارًا من 19 سبتمبر 2026؛ صورة المعاينة الحالية SVG أُعيدت من الجدول المرفق لأن affroun-alger.png القديم كان نسخة خاطئة لجدول المطار. لم تُعدل إحداثيات المحطات.",
+      "line_id": "alger-affroun"
     },
     {
       "id": "alger-zeralda",
@@ -153,7 +157,8 @@
         "zeralda"
       ],
       "stops_status": "source_image_transcribed",
-      "editor_note": "احتُفظ بمعرف المسار التاريخي alger-zeralda للتوافق، ولكن الصورة تبدأ من محطة آغا وليس محطة الجزائر."
+      "editor_note": "احتُفظ بمعرف المسار التاريخي alger-zeralda للتوافق، ولكن الصورة تبدأ من محطة آغا وليس محطة الجزائر.",
+      "line_id": "agha-zeralda"
     },
     {
       "id": "zeralda-alger",
@@ -181,7 +186,8 @@
         "agha"
       ],
       "stops_status": "source_image_transcribed",
-      "editor_note": "هذا رابط سابق للمسار نفسه؛ الرحلات الحقيقية مُدرجة تحت معرف zeralda-agha دون تكرار."
+      "editor_note": "هذا رابط سابق للمسار نفسه؛ الرحلات الحقيقية مُدرجة تحت معرف zeralda-agha دون تكرار.",
+      "line_id": "agha-zeralda"
     },
     {
       "id": "alger-oued-aissi",
@@ -213,7 +219,8 @@
         "oued_aissi"
       ],
       "stops_status": "photo_published_stops_corridor",
-      "editor_note": "المعرّف القديم احتُفظ به. تبيّن أن القطاران البعيدان في الصورة ينطلقان من آغا وليس محطة الجزائر؛ توقف كل قطار محدد داخل بياناته الخاصة."
+      "editor_note": "المعرّف القديم احتُفظ به. تبيّن أن القطاران البعيدان في الصورة ينطلقان من آغا وليس محطة الجزائر؛ توقف كل قطار محدد داخل بياناته الخاصة.",
+      "line_id": "agha-oued-aissi"
     },
     {
       "id": "oued-aissi-alger",
@@ -245,7 +252,8 @@
         "agha"
       ],
       "stops_status": "photo_published_stops_corridor",
-      "editor_note": "المعرّف القديم احتُفظ به. لا تُكرر محطة الثنية في stop_times؛ حين تعرض الصورة وصولاً ومغادرةً منفصلين تُسجّل القيمتان لنفس المحطة."
+      "editor_note": "المعرّف القديم احتُفظ به. لا تُكرر محطة الثنية في stop_times؛ حين تعرض الصورة وصولاً ومغادرةً منفصلين تُسجّل القيمتان لنفس المحطة.",
+      "line_id": "agha-oued-aissi"
     },
     {
       "id": "alger-airport",
@@ -263,7 +271,8 @@
         "airport"
       ],
       "stops_status": "source_image_transcribed",
-      "editor_note": "معرف قديم alger-airport احتُفظ به، لكن جدول SNTF المنشور ينطلق من آغا."
+      "editor_note": "معرف قديم alger-airport احتُفظ به، لكن جدول SNTF المنشور ينطلق من آغا.",
+      "line_id": "agha-airport"
     },
     {
       "id": "affroun-thenia",
@@ -273,7 +282,10 @@
       "name": "العفرون ↔ الثنية",
       "source": "dz-portal-gallery",
       "schedule_image": "../assets/train-schedules/suburban/affroun-thenia-affroun.png",
-      "schedule_status": "requires-current-verification"
+      "schedule_status": "requires-current-verification",
+      "line_id": "affroun-thenia",
+      "stops_status": "intermediate_stops_pending_official_transcription",
+      "editor_note": "المحطتان الطرفيتان مثبتتان في مرجع الصورة؛ قائمة المحطات الوسيطة غير مدخلة بعد، فلا تُعرض كمحطات توقف فعلية."
     },
     {
       "id": "zeralda-thenia",
@@ -306,7 +318,8 @@
         "tidjelabine",
         "thenia"
       ],
-      "stops_status": "source_image_transcribed"
+      "stops_status": "source_image_transcribed",
+      "line_id": "zeralda-thenia"
     },
     {
       "id": "alger-bejaia",
@@ -316,7 +329,10 @@
       "name": "الجزائر ↔ بجاية",
       "source": "dz-portal-gallery",
       "schedule_image": "../assets/train-schedules/Eastern/alger-bejaia-alger.jpg",
-      "schedule_status": "requires-current-verification"
+      "schedule_status": "requires-current-verification",
+      "line_id": "alger-bejaia",
+      "stops_status": "intermediate_stops_pending_official_transcription",
+      "editor_note": "المحطتان الطرفيتان مثبتتان في مرجع الصورة؛ قائمة المحطات الوسيطة غير مدخلة بعد، فلا تُعرض كمحطات توقف فعلية."
     },
     {
       "id": "alger-batna",
@@ -326,7 +342,10 @@
       "name": "الجزائر ↔ باتنة",
       "source": "dz-portal-gallery",
       "schedule_image": "../assets/train-schedules/Eastern/alger-batna-alger.jpg",
-      "schedule_status": "requires-current-verification"
+      "schedule_status": "requires-current-verification",
+      "line_id": "alger-batna",
+      "stops_status": "intermediate_stops_pending_official_transcription",
+      "editor_note": "المحطتان الطرفيتان مثبتتان في مرجع الصورة؛ قائمة المحطات الوسيطة غير مدخلة بعد، فلا تُعرض كمحطات توقف فعلية."
     },
     {
       "id": "alger-annaba",
@@ -336,7 +355,10 @@
       "name": "الجزائر ↔ عنابة",
       "source": "dz-portal-gallery",
       "schedule_image": "../assets/train-schedules/Eastern/alger-annaba.jpg",
-      "schedule_status": "requires-current-verification"
+      "schedule_status": "requires-current-verification",
+      "line_id": "alger-annaba",
+      "stops_status": "intermediate_stops_pending_official_transcription",
+      "editor_note": "المحطتان الطرفيتان مثبتتان في مرجع الصورة؛ قائمة المحطات الوسيطة غير مدخلة بعد، فلا تُعرض كمحطات توقف فعلية."
     },
     {
       "id": "alger-tebessa",
@@ -346,7 +368,10 @@
       "name": "الجزائر ↔ تبسة (ليلي)",
       "source": "dz-portal-gallery",
       "schedule_image": "../assets/train-schedules/Eastern/alger-tebessa.jpg",
-      "schedule_status": "requires-current-verification"
+      "schedule_status": "requires-current-verification",
+      "line_id": "alger-tebessa",
+      "stops_status": "intermediate_stops_pending_official_transcription",
+      "editor_note": "المحطتان الطرفيتان مثبتتان في مرجع الصورة؛ قائمة المحطات الوسيطة غير مدخلة بعد، فلا تُعرض كمحطات توقف فعلية."
     },
     {
       "id": "beni-mansour-bejaia",
@@ -356,7 +381,10 @@
       "name": "بني منصور ↔ بجاية",
       "source": "dz-portal-gallery",
       "schedule_image": "../assets/train-schedules/Eastern/beni-mansour-bedjaia.png",
-      "schedule_status": "requires-current-verification"
+      "schedule_status": "requires-current-verification",
+      "line_id": "beni-mansour-bejaia",
+      "stops_status": "intermediate_stops_pending_official_transcription",
+      "editor_note": "المحطتان الطرفيتان مثبتتان في مرجع الصورة؛ قائمة المحطات الوسيطة غير مدخلة بعد، فلا تُعرض كمحطات توقف فعلية."
     },
     {
       "id": "alger-oran",
@@ -366,7 +394,10 @@
       "name": "الجزائر ↔ وهران",
       "source": "dz-portal-gallery",
       "schedule_image": "../assets/train-schedules/Western/alger-oran-alger.jpg",
-      "schedule_status": "requires-current-verification"
+      "schedule_status": "requires-current-verification",
+      "line_id": "alger-oran",
+      "stops_status": "intermediate_stops_pending_official_transcription",
+      "editor_note": "المحطتان الطرفيتان مثبتتان في مرجع الصورة؛ قائمة المحطات الوسيطة غير مدخلة بعد، فلا تُعرض كمحطات توقف فعلية."
     },
     {
       "id": "oran-bechar",
@@ -376,7 +407,10 @@
       "name": "وهران ↔ بشار",
       "source": "dz-portal-gallery",
       "schedule_image": "../assets/train-schedules/Western/oran-bechar.jpg",
-      "schedule_status": "requires-current-verification"
+      "schedule_status": "requires-current-verification",
+      "line_id": "oran-bechar",
+      "stops_status": "intermediate_stops_pending_official_transcription",
+      "editor_note": "المحطتان الطرفيتان مثبتتان في مرجع الصورة؛ قائمة المحطات الوسيطة غير مدخلة بعد، فلا تُعرض كمحطات توقف فعلية."
     },
     {
       "id": "oran-chlef",
@@ -386,7 +420,10 @@
       "name": "وهران - الشلف - آغا",
       "source": "dz-portal-gallery",
       "schedule_image": "../assets/train-schedules/Western/oran-chlef-agha.png",
-      "schedule_status": "requires-current-verification"
+      "schedule_status": "requires-current-verification",
+      "line_id": "oran-chlef",
+      "stops_status": "intermediate_stops_pending_official_transcription",
+      "editor_note": "المحطتان الطرفيتان مثبتتان في مرجع الصورة؛ قائمة المحطات الوسيطة غير مدخلة بعد، فلا تُعرض كمحطات توقف فعلية."
     },
     {
       "id": "agha-chlef",
@@ -396,7 +433,10 @@
       "name": "آغا - الشلف - وهران",
       "source": "dz-portal-gallery",
       "schedule_image": "../assets/train-schedules/Western/agha-chlef-oran.png",
-      "schedule_status": "requires-current-verification"
+      "schedule_status": "requires-current-verification",
+      "line_id": "oran-chlef",
+      "stops_status": "intermediate_stops_pending_official_transcription",
+      "editor_note": "المحطتان الطرفيتان مثبتتان في مرجع الصورة؛ قائمة المحطات الوسيطة غير مدخلة بعد، فلا تُعرض كمحطات توقف فعلية."
     },
     {
       "id": "bechar-tindouf",
@@ -406,7 +446,10 @@
       "name": "بشار ↔ تيندوف",
       "source": "dz-portal-gallery",
       "schedule_image": "../assets/train-schedules/sahara-plateaux/bechar-tindouf.jpg",
-      "schedule_status": "requires-current-verification"
+      "schedule_status": "requires-current-verification",
+      "line_id": "bechar-tindouf",
+      "stops_status": "intermediate_stops_pending_official_transcription",
+      "editor_note": "المحطتان الطرفيتان مثبتتان في مرجع الصورة؛ قائمة المحطات الوسيطة غير مدخلة بعد، فلا تُعرض كمحطات توقف فعلية."
     },
     {
       "id": "alger-touggourt",
@@ -416,7 +459,10 @@
       "name": "الجزائر ↔ تقرت",
       "source": "dz-portal-gallery",
       "schedule_image": "../assets/train-schedules/sahara-plateaux/alger-teggart.jpg",
-      "schedule_status": "requires-current-verification"
+      "schedule_status": "requires-current-verification",
+      "line_id": "alger-touggourt",
+      "stops_status": "intermediate_stops_pending_official_transcription",
+      "editor_note": "المحطتان الطرفيتان مثبتتان في مرجع الصورة؛ قائمة المحطات الوسيطة غير مدخلة بعد، فلا تُعرض كمحطات توقف فعلية."
     },
     {
       "id": "boughezoul-laghouat",
@@ -426,7 +472,10 @@
       "name": "بوغزول ↔ الأغواط",
       "source": "dz-portal-gallery",
       "schedule_image": "../assets/train-schedules/sahara-plateaux/boughezoul-laghouat.png",
-      "schedule_status": "requires-current-verification"
+      "schedule_status": "requires-current-verification",
+      "line_id": "boughezoul-laghouat",
+      "stops_status": "intermediate_stops_pending_official_transcription",
+      "editor_note": "المحطتان الطرفيتان مثبتتان في مرجع الصورة؛ قائمة المحطات الوسيطة غير مدخلة بعد، فلا تُعرض كمحطات توقف فعلية."
     },
     {
       "id": "tissemsilt-bordj",
@@ -436,7 +485,10 @@
       "name": "تيسمسيلت ↔ برج بوعريريج",
       "source": "dz-portal-gallery",
       "schedule_image": "../assets/train-schedules/sahara-plateaux/bba-tisemsilte.png",
-      "schedule_status": "requires-current-verification"
+      "schedule_status": "requires-current-verification",
+      "line_id": "tissemsilt-bordj",
+      "stops_status": "intermediate_stops_pending_official_transcription",
+      "editor_note": "المحطتان الطرفيتان مثبتتان في مرجع الصورة؛ قائمة المحطات الوسيطة غير مدخلة بعد، فلا تُعرض كمحطات توقف فعلية."
     },
     {
       "id": "alger-tunis",
@@ -446,7 +498,10 @@
       "name": "الجزائر ↔ تونس",
       "source": "dz-portal-gallery",
       "schedule_image": "../assets/train-schedules/international/alger-tunisia.jpg",
-      "schedule_status": "requires-current-verification"
+      "schedule_status": "requires-current-verification",
+      "line_id": "alger-tunis",
+      "stops_status": "intermediate_stops_pending_official_transcription",
+      "editor_note": "المحطتان الطرفيتان مثبتتان في مرجع الصورة؛ قائمة المحطات الوسيطة غير مدخلة بعد، فلا تُعرض كمحطات توقف فعلية."
     },
     {
       "id": "zeralda-agha",
@@ -472,7 +527,8 @@
         "les_ateliers",
         "agha"
       ],
-      "stops_status": "source_image_transcribed"
+      "stops_status": "source_image_transcribed",
+      "line_id": "agha-zeralda"
     },
     {
       "id": "airport-agha",
@@ -489,7 +545,8 @@
         "el_harrach",
         "agha"
       ],
-      "stops_status": "source_image_transcribed"
+      "stops_status": "source_image_transcribed",
+      "line_id": "agha-airport"
     },
     {
       "id": "thenia-oued-aissi",
@@ -514,7 +571,8 @@
         "oued_aissi_universite",
         "oued_aissi"
       ],
-      "stops_status": "source_image_corridor"
+      "stops_status": "source_image_corridor",
+      "line_id": "agha-oued-aissi"
     },
     {
       "id": "oued-aissi-thenia",
@@ -539,7 +597,8 @@
         "si_mustapha",
         "thenia"
       ],
-      "stops_status": "source_image_corridor"
+      "stops_status": "source_image_corridor",
+      "line_id": "agha-oued-aissi"
     },
     {
       "id": "thenia-zeralda",
@@ -572,7 +631,8 @@
         "sidi_abdellah_universite",
         "zeralda"
       ],
-      "stops_status": "source_image_transcribed"
+      "stops_status": "source_image_transcribed",
+      "line_id": "zeralda-thenia"
     },
     {
       "id": "zeralda-reghaia",
@@ -600,7 +660,8 @@
         "reghaia_zi",
         "reghaia"
       ],
-      "stops_status": "source_image_transcribed"
+      "stops_status": "source_image_transcribed",
+      "line_id": "zeralda-thenia"
     },
     {
       "id": "reghaia-zeralda",
@@ -628,7 +689,8 @@
         "sidi_abdellah_universite",
         "zeralda"
       ],
-      "stops_status": "source_image_transcribed"
+      "stops_status": "source_image_transcribed",
+      "line_id": "zeralda-thenia"
     },
     {
       "id": "alger-reghaia",
@@ -655,7 +717,8 @@
         "reghaia_zi",
         "reghaia"
       ],
-      "stops_status": "photo_published_stops_corridor"
+      "stops_status": "photo_published_stops_corridor",
+      "line_id": "alger-thenia"
     },
     {
       "id": "reghaia-alger",
@@ -682,7 +745,8 @@
         "agha",
         "alger"
       ],
-      "stops_status": "photo_published_stops_corridor"
+      "stops_status": "photo_published_stops_corridor",
+      "line_id": "alger-thenia"
     }
   ]
 }
