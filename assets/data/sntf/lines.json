@@ -1,0 +1,180 @@
+{
+  "version": 1,
+  "updated": "2026-09-26",
+  "note": "الخط يجمع المسارات ذات الاتجاهات والرحلات القصيرة دون مضاعفة رحلات المسار القديم البديل. وجود صورة رسمية للخط لا يثبت تشغيله الحالي أو محطاته الوسيطة ما لم تنقل بيانات التوقف لكل قطار.",
+  "lines": [
+    {
+      "id": "alger-thenia",
+      "name": "الجزائر – الثنية ورغاية",
+      "category": "suburban",
+      "route_ids": [
+        "alger-thenia",
+        "thenia-alger",
+        "alger-reghaia",
+        "reghaia-alger"
+      ]
+    },
+    {
+      "id": "alger-affroun",
+      "name": "الجزائر – العفرون",
+      "category": "suburban",
+      "route_ids": [
+        "alger-affroun",
+        "affroun-alger"
+      ]
+    },
+    {
+      "id": "agha-zeralda",
+      "name": "آغا – زرالدة",
+      "category": "suburban",
+      "route_ids": [
+        "alger-zeralda",
+        "zeralda-agha"
+      ]
+    },
+    {
+      "id": "agha-airport",
+      "name": "آغا – مطار هواري بومدين",
+      "category": "suburban",
+      "route_ids": [
+        "alger-airport",
+        "airport-agha"
+      ]
+    },
+    {
+      "id": "agha-oued-aissi",
+      "name": "آغا / الثنية – واد عيسى",
+      "category": "suburban",
+      "route_ids": [
+        "alger-oued-aissi",
+        "oued-aissi-alger",
+        "thenia-oued-aissi",
+        "oued-aissi-thenia"
+      ]
+    },
+    {
+      "id": "zeralda-thenia",
+      "name": "زرالدة – الثنية ورغاية",
+      "category": "suburban",
+      "route_ids": [
+        "zeralda-thenia",
+        "thenia-zeralda",
+        "zeralda-reghaia",
+        "reghaia-zeralda"
+      ]
+    },
+    {
+      "id": "affroun-thenia",
+      "name": "العفرون – الثنية",
+      "category": "suburban",
+      "route_ids": [
+        "affroun-thenia"
+      ]
+    },
+    {
+      "id": "alger-bejaia",
+      "name": "الجزائر – بجاية",
+      "category": "eastern",
+      "route_ids": [
+        "alger-bejaia"
+      ]
+    },
+    {
+      "id": "alger-batna",
+      "name": "الجزائر – باتنة",
+      "category": "eastern",
+      "route_ids": [
+        "alger-batna"
+      ]
+    },
+    {
+      "id": "alger-annaba",
+      "name": "الجزائر – عنابة",
+      "category": "eastern",
+      "route_ids": [
+        "alger-annaba"
+      ]
+    },
+    {
+      "id": "alger-tebessa",
+      "name": "الجزائر – تبسة",
+      "category": "eastern",
+      "route_ids": [
+        "alger-tebessa"
+      ]
+    },
+    {
+      "id": "beni-mansour-bejaia",
+      "name": "بني منصور – بجاية",
+      "category": "eastern",
+      "route_ids": [
+        "beni-mansour-bejaia"
+      ]
+    },
+    {
+      "id": "alger-oran",
+      "name": "الجزائر – وهران",
+      "category": "western",
+      "route_ids": [
+        "alger-oran"
+      ]
+    },
+    {
+      "id": "oran-bechar",
+      "name": "وهران – بشار",
+      "category": "western",
+      "route_ids": [
+        "oran-bechar"
+      ]
+    },
+    {
+      "id": "oran-chlef",
+      "name": "وهران – الشلف – آغا",
+      "category": "western",
+      "route_ids": [
+        "oran-chlef",
+        "agha-chlef"
+      ]
+    },
+    {
+      "id": "bechar-tindouf",
+      "name": "بشار – تندوف",
+      "category": "sahara",
+      "route_ids": [
+        "bechar-tindouf"
+      ]
+    },
+    {
+      "id": "alger-touggourt",
+      "name": "الجزائر – تقرت",
+      "category": "sahara",
+      "route_ids": [
+        "alger-touggourt"
+      ]
+    },
+    {
+      "id": "boughezoul-laghouat",
+      "name": "بوغزول – الأغواط",
+      "category": "sahara",
+      "route_ids": [
+        "boughezoul-laghouat"
+      ]
+    },
+    {
+      "id": "tissemsilt-bordj",
+      "name": "تيسمسيلت – برج بوعريريج",
+      "category": "sahara",
+      "route_ids": [
+        "tissemsilt-bordj"
+      ]
+    },
+    {
+      "id": "alger-tunis",
+      "name": "الجزائر – تونس",
+      "category": "international",
+      "route_ids": [
+        "alger-tunis"
+      ]
+    }
+  ]
+}
