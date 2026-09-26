@@ -1,5 +1,5 @@
 {
-  "version": 9,
+  "version": 10,
   "updated": "2026-09-26",
   "routes": [
     {
@@ -629,6 +629,60 @@
         "zeralda"
       ],
       "stops_status": "source_image_transcribed"
+    },
+    {
+      "id": "alger-reghaia",
+      "from": "alger",
+      "to": "reghaia",
+      "category": "suburban",
+      "name": "الجزائر ← رغاية (رحلة قصيرة)",
+      "source": "dz-portal-gallery-alger-thenia-2026-09-19",
+      "schedule_image": "../assets/train-schedules/suburban/alger-thenia.png",
+      "schedule_status": "source_transcribed",
+      "stops": [
+        "alger",
+        "agha",
+        "les_ateliers",
+        "hussein_dey",
+        "caroubier",
+        "el_harrach",
+        "oued_smar",
+        "bab_ezzouar",
+        "dar_el_beida",
+        "rouiba",
+        "rouiba_zi",
+        "rouiba_snvi",
+        "reghaia_zi",
+        "reghaia"
+      ],
+      "stops_status": "photo_published_stops_corridor"
+    },
+    {
+      "id": "reghaia-alger",
+      "from": "reghaia",
+      "to": "alger",
+      "category": "suburban",
+      "name": "رغاية ← الجزائر (رحلة قصيرة)",
+      "source": "dz-portal-gallery-thenia-alger-2026-09-19",
+      "schedule_image": "../assets/train-schedules/suburban/thenia-alger.png",
+      "schedule_status": "source_transcribed",
+      "stops": [
+        "reghaia",
+        "reghaia_zi",
+        "rouiba_snvi",
+        "rouiba_zi",
+        "rouiba",
+        "dar_el_beida",
+        "bab_ezzouar",
+        "oued_smar",
+        "el_harrach",
+        "caroubier",
+        "hussein_dey",
+        "les_ateliers",
+        "agha",
+        "alger"
+      ],
+      "stops_status": "photo_published_stops_corridor"
     }
   ]
 }
