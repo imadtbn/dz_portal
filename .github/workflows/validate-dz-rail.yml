@@ -33,6 +33,8 @@ jobs:
         run: node scripts/validate-sntf-data.mjs
       - name: Test station boards and recurrence rules
         run: node scripts/test-dz-rail.mjs
+      - name: Verify line grouping and documented stopping stations
+        run: node scripts/test-sntf-network.mjs
       - name: Verify gallery images match the current SNTF page
         run: node scripts/build-sntf-gallery.mjs --check
       - name: Verify historical SNTF official source review is current
@@ -43,6 +45,8 @@ jobs:
         run: |
           node --check assets/js/sntf-trains/app.js
           node --check assets/js/sntf-trains/engine.js
+          node --check assets/js/sntf-trains/network.js
+          node --check scripts/test-sntf-network.mjs
           node --check scripts/lib/sntf-reconcile.mjs
           node --check scripts/apply-reviewed-sntf-stations.mjs
           node --check scripts/build-sntf-gallery.mjs
