@@ -40,9 +40,10 @@ assert.throws(()=>mergeApprovedStations(stations,[{...approved,approved:false,ac
 assert.throws(()=>mergeApprovedStations(stations,[{...approved,action:"link_alias",station_id:"thenia",input_name:"OUED AISSI"}]),/alias another station/);
 assert.deepEqual(stations.map(s=>JSON.stringify(lockGeo(s))),stations.map(s=>oldGeo.get(s.id)),"Merge may not mutate input");
 const html=readFileSync("sectors/sntf.html","utf8");
-assert.equal(gallery.images.length,28);
+assert.equal(gallery.images.length,29);
 assert.equal(new Set(gallery.images.map(i=>i.id)).size,gallery.images.length);
 assert(gallery.images.every(i=>html.includes(i.path)&&existsSync(i.path)&&i.status==="official_document_validity_unconfirmed"&&i.issuing_authority==="SNTF"&&i.source_page==="sectors/sntf.html"),"Every indexed gallery image must exist in repository, be referenced on SNTF page and distinguish official origin from schedule validity");
 assert(gallery.images.some(i=>i.route_ids.includes("alger-thenia")),"Gallery must index Alger-Thenia timetable");
+assert(gallery.images.some(i=>i.path==="assets/train-schedules/suburban/affroun-alger-2026-09-19.svg"&&i.route_ids.includes("affroun-alger")&&i.notes.includes("إعادة رسم")),"Correct Affroun–Alger timetable redraw must be indexed and explicitly identified as derived");
 assert.equal(stations.filter(s=>s.geo_verified).length,saved.summary.existing_verified_coordinates_preserved,"Verified coordinate count unchanged since source review");
 console.log("SNTF source ingestion tests PASS:",saved.summary.archived_trip_candidates,"historical candidates,",gallery.images.length,"gallery images, and",geoLock.stations.length,"locked verified Google Maps pins protected.");
