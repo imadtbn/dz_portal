@@ -1,5 +1,5 @@
 {
-  "version": 4,
+  "version": 5,
   "updated": "2026-09-26",
   "sources": [
     {
@@ -10,7 +10,11 @@
       "verified_at": null,
       "valid_from": null,
       "valid_until": null,
-      "notice": "بيانات الخطوط مأخوذة من عناوين الجداول بالبوابة؛ مواعيد القطارات والإحداثيات لم يتم توثيقها بعد."
+      "notice": "الجداول المصورة بالبوابة صادرة عن SNTF وفق توثيق صاحب المشروع. تُراجع حالة سريان كل جدول على حدة؛ توثيق إحداثيات المحطات مستقل.",
+      "issuing_authority": "SNTF",
+      "official_homepage": "https://www.sntf.dz/",
+      "origin_confirmation": "repository_owner",
+      "current_validity": "not_independently_rechecked"
     },
     {
       "id": "user-zeralda-agha-2026-09-19",
@@ -20,8 +24,12 @@
       "verified_at": null,
       "valid_from": "2026-09-19",
       "valid_until": null,
-      "notice": "من صورة قدمها المستخدم، دون تحقق مستقل من SNTF. القطـار 1500 لا يسير الجمعة وفق الرمز [1]، وبقية القطارات يومية وفق [*]. لا يفترض الجدول وضع الأعياد.",
-      "public_status": "user-supplied"
+      "notice": "صورة جدول رسمي صادر عن SNTF قدمها صاحب المشروع؛ نُقلت الأوقات يدويًا. استمرار سريانها لم يُتحقق منه استقلاليًا؛ القطار 1500 مستثنى من الجمعة [1]، والبقية يومية [*]، دون افتراض قواعد الأعياد.",
+      "public_status": "official-sntf-image-owner-supplied",
+      "issuing_authority": "SNTF",
+      "official_homepage": "https://www.sntf.dz/",
+      "origin_confirmation": "repository_owner",
+      "current_validity": "not_independently_rechecked"
     },
     {
       "id": "dz-rail-manual-draft",
@@ -42,8 +50,12 @@
       "valid_from": "2026-09-19",
       "valid_until": null,
       "publication_date": "2026-09-19",
-      "notice": "تم نسخ المواقيت يدويًا من الجدول المصور في المشروع بتاريخ 19 سبتمبر 2026. لم يتم التحقق المستقل من استمرار السريان لدى SNTF.",
-      "data_status": "source_transcribed"
+      "notice": "نُقلت الأوقات يدويًا من صورة جدول رسمي صادر عن SNTF ومؤرخ 19 سبتمبر 2026، وفق توثيق صاحب المشروع. رسمية الوثيقة لا تثبت استمرار السريان أو تعطي بيانات تشغيل آنية.",
+      "data_status": "source_transcribed",
+      "issuing_authority": "SNTF",
+      "official_homepage": "https://www.sntf.dz/",
+      "origin_confirmation": "repository_owner",
+      "current_validity": "not_independently_rechecked"
     },
     {
       "id": "dz-portal-gallery-thenia-alger-2026-09-19",
@@ -54,8 +66,12 @@
       "valid_from": "2026-09-19",
       "valid_until": null,
       "publication_date": "2026-09-19",
-      "notice": "تم نسخ المواقيت يدويًا من الجدول المصور في المشروع بتاريخ 19 سبتمبر 2026. لم يتم التحقق المستقل من استمرار السريان لدى SNTF.",
-      "data_status": "source_transcribed"
+      "notice": "نُقلت الأوقات يدويًا من صورة جدول رسمي صادر عن SNTF ومؤرخ 19 سبتمبر 2026، وفق توثيق صاحب المشروع. رسمية الوثيقة لا تثبت استمرار السريان أو تعطي بيانات تشغيل آنية.",
+      "data_status": "source_transcribed",
+      "issuing_authority": "SNTF",
+      "official_homepage": "https://www.sntf.dz/",
+      "origin_confirmation": "repository_owner",
+      "current_validity": "not_independently_rechecked"
     }
   ]
 }
