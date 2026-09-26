@@ -13,7 +13,7 @@ assert.equal(available.length,131,"131 official image-transcribed journeys are v
 assert.equal(drafts.length,9,"Keep nine editable draft journeys");
 assert.equal(verifiedByUser.length,131,"Preserve 18 baseline plus 113 newly transcribed journeys");
 assert.equal(verifiedByUser.filter(t=>t.route_id==="zeralda-agha").length,14,"All original Zeralda–Agha timetable trips preserved");
-assert.equal(verifiedByUser.filter(t=>["alger-thenia","thenia-alger"].includes(t.route_id)).length,4,"Image gallery adds two trains in each direction");
+assert.equal(verifiedByUser.filter(t=>["alger-thenia","thenia-alger"].includes(t.route_id)&&["27","33","22","28"].includes(t.train_number)).length,4,"Preserve the four baseline Alger–Thenia gallery trains despite later timetable additions");
 assert(stations.some(s=>s.id==="rouiba"),"Rouiba station is indexed");
 assert.equal(new Set(stations.map(s=>s.id)).size,stations.length,"Station IDs must be unique");
 assert(stations.some(s=>s.id==="les_ateliers"),"Canonical station IDs used after geodata update");
