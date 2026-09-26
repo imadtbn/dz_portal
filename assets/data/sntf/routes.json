@@ -1,5 +1,5 @@
 {
-  "version": 10,
+  "version": 11,
   "updated": "2026-09-26",
   "routes": [
     {
@@ -104,9 +104,9 @@
       "to": "alger",
       "category": "suburban",
       "name": "العفرون ← الجزائر",
-      "source": "dz-portal-gallery",
-      "schedule_image": null,
-      "schedule_status": "correct_reverse_image_missing",
+      "source": "gallery-affroun-alger-2026-09-19",
+      "schedule_image": "../assets/train-schedules/suburban/affroun-alger-2026-09-19.svg",
+      "schedule_status": "source_transcribed",
       "stops": [
         "el_affroun",
         "mouzaia",
@@ -125,8 +125,8 @@
         "agha",
         "alger"
       ],
-      "stops_status": "reverse_of_official_eastbound_corridor",
-      "editor_note": "الملف affroun-alger.png مطابق بصريًا وثنائيًا لجدول آغا ↔ المطار، وليس جدول العفرون ← الجزائر؛ حُذف الرابط الخاطئ في انتظار صورة الاتجاه الصحيح."
+      "stops_status": "source_image_transcribed",
+      "editor_note": "19 رحلة من الصورة الرسمية المرفقة والمحدثة اعتبارًا من 19 سبتمبر 2026؛ صورة المعاينة الحالية SVG أُعيدت من الجدول المرفق لأن affroun-alger.png القديم كان نسخة خاطئة لجدول المطار. لم تُعدل إحداثيات المحطات."
     },
     {
       "id": "alger-zeralda",
