@@ -1,5 +1,5 @@
 {
-  "version": 8,
+  "version": 9,
   "updated": "2026-09-26",
   "routes": [
     {
@@ -280,10 +280,33 @@
       "from": "zeralda",
       "to": "thenia",
       "category": "suburban",
-      "name": "زرالدة ↔ الثنية",
-      "source": "dz-portal-gallery",
+      "name": "زرالدة ← الثنية",
+      "source": "gallery-zeralda-thenia-both-2026-09-19",
       "schedule_image": "../assets/train-schedules/suburban/zeralda-thenia-zeralda.png",
-      "schedule_status": "requires-current-verification"
+      "schedule_status": "source_transcribed",
+      "stops": [
+        "zeralda",
+        "sidi_abdellah_universite",
+        "sidi_abdellah",
+        "tessala_el_merdja",
+        "birtouta",
+        "baba_ali",
+        "ain_naadja",
+        "gue_de_constantine",
+        "oued_smar",
+        "bab_ezzouar",
+        "dar_el_beida",
+        "rouiba",
+        "rouiba_zi",
+        "reghaia_zi",
+        "reghaia",
+        "boudouaou",
+        "corso",
+        "boumerdes",
+        "tidjelabine",
+        "thenia"
+      ],
+      "stops_status": "source_image_transcribed"
     },
     {
       "id": "alger-bejaia",
@@ -517,6 +540,95 @@
         "thenia"
       ],
       "stops_status": "source_image_corridor"
+    },
+    {
+      "id": "thenia-zeralda",
+      "name": "الثنية ← زرالدة",
+      "from": "thenia",
+      "to": "zeralda",
+      "category": "suburban",
+      "source": "gallery-zeralda-thenia-both-2026-09-19",
+      "schedule_image": "../assets/train-schedules/suburban/zeralda-thenia-zeralda.png",
+      "schedule_status": "source_transcribed",
+      "stops": [
+        "thenia",
+        "tidjelabine",
+        "boumerdes",
+        "corso",
+        "boudouaou",
+        "reghaia",
+        "reghaia_zi",
+        "rouiba_zi",
+        "rouiba",
+        "dar_el_beida",
+        "bab_ezzouar",
+        "oued_smar",
+        "gue_de_constantine",
+        "ain_naadja",
+        "baba_ali",
+        "birtouta",
+        "tessala_el_merdja",
+        "sidi_abdellah",
+        "sidi_abdellah_universite",
+        "zeralda"
+      ],
+      "stops_status": "source_image_transcribed"
+    },
+    {
+      "id": "zeralda-reghaia",
+      "name": "زرالدة ← رغاية",
+      "from": "zeralda",
+      "to": "reghaia",
+      "category": "suburban",
+      "source": "gallery-zeralda-thenia-both-2026-09-19",
+      "schedule_image": "../assets/train-schedules/suburban/zeralda-thenia-zeralda.png",
+      "schedule_status": "source_transcribed",
+      "stops": [
+        "zeralda",
+        "sidi_abdellah_universite",
+        "sidi_abdellah",
+        "tessala_el_merdja",
+        "birtouta",
+        "baba_ali",
+        "ain_naadja",
+        "gue_de_constantine",
+        "oued_smar",
+        "bab_ezzouar",
+        "dar_el_beida",
+        "rouiba",
+        "rouiba_zi",
+        "reghaia_zi",
+        "reghaia"
+      ],
+      "stops_status": "source_image_transcribed"
+    },
+    {
+      "id": "reghaia-zeralda",
+      "name": "رغاية ← زرالدة",
+      "from": "reghaia",
+      "to": "zeralda",
+      "category": "suburban",
+      "source": "gallery-zeralda-thenia-both-2026-09-19",
+      "schedule_image": "../assets/train-schedules/suburban/zeralda-thenia-zeralda.png",
+      "schedule_status": "source_transcribed",
+      "stops": [
+        "reghaia",
+        "reghaia_zi",
+        "rouiba_zi",
+        "rouiba",
+        "dar_el_beida",
+        "bab_ezzouar",
+        "oued_smar",
+        "gue_de_constantine",
+        "ain_naadja",
+        "baba_ali",
+        "birtouta",
+        "tessala_el_merdja",
+        "sidi_abdellah",
+        "sidi_abdellah_universite",
+        "zeralda"
+      ],
+      "stops_status": "source_image_transcribed"
     }
   ]
 }
