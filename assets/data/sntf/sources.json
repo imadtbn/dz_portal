@@ -1,6 +1,6 @@
 {
-  "version": 3,
-  "updated": "2026-09-23",
+  "version": 4,
+  "updated": "2026-09-26",
   "sources": [
     {
       "id": "dz-portal-gallery",
@@ -32,6 +32,30 @@
       "valid_from": null,
       "valid_until": null,
       "notice": "سجلات تحرير جاهزة لإدخال المواعيد الحقيقية يدويًا؛ جميع قيم أوقات الأمثلة القديمة تحتاج مراجعة قبل اعتبارها بيانات تشغيل."
+    },
+    {
+      "id": "dz-portal-gallery-alger-thenia-2026-09-19",
+      "name": "صورة جدول SNTF الجزائر ← الثنية (بدءًا من 19 سبتمبر 2026)",
+      "url": "https://imadtbn.github.io/dz_portal/assets/train-schedules/suburban/alger-thenia.png",
+      "kind": "existing-image-gallery",
+      "verified_at": null,
+      "valid_from": "2026-09-19",
+      "valid_until": null,
+      "publication_date": "2026-09-19",
+      "notice": "تم نسخ المواقيت يدويًا من الجدول المصور في المشروع بتاريخ 19 سبتمبر 2026. لم يتم التحقق المستقل من استمرار السريان لدى SNTF.",
+      "data_status": "source_transcribed"
+    },
+    {
+      "id": "dz-portal-gallery-thenia-alger-2026-09-19",
+      "name": "صورة جدول SNTF الثنية ← الجزائر (بدءًا من 19 سبتمبر 2026)",
+      "url": "https://imadtbn.github.io/dz_portal/assets/train-schedules/suburban/thenia-alger.png",
+      "kind": "existing-image-gallery",
+      "verified_at": null,
+      "valid_from": "2026-09-19",
+      "valid_until": null,
+      "publication_date": "2026-09-19",
+      "notice": "تم نسخ المواقيت يدويًا من الجدول المصور في المشروع بتاريخ 19 سبتمبر 2026. لم يتم التحقق المستقل من استمرار السريان لدى SNTF.",
+      "data_status": "source_transcribed"
     }
   ]
 }
