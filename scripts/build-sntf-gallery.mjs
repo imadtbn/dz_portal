@@ -6,7 +6,7 @@ const html=readFileSync("sectors/sntf.html","utf8");
 const routes=JSON.parse(readFileSync("assets/data/sntf/routes.json","utf8")).routes;
 const filename="assets/data/sntf/gallery-index.json";
 const previous=existsSync(filename)?JSON.parse(readFileSync(filename,"utf8")):null;
-const assetPattern=/(?:\.\.\/)?assets\/train-schedules\/[^"'<>\s]+?\.(?:png|jpg|jpeg|webp)/gi;
+const assetPattern=/(?:\.\.\/)?assets\/train-schedules\/[^"'<>\s]+?\.(?:png|jpg|jpeg|webp|svg)/gi;
 const paths=[...new Set([...html.matchAll(assetPattern)].map(m=>m[0].replace(/^\.\.\//,"")))]
  .filter(path=>!/(?:^|\/)qr-code\./.test(path));
 const category=p=>p.includes("/suburban/")?"suburban":p.includes("/Eastern/")?"eastern":
@@ -22,7 +22,7 @@ const images=paths.map(path=>{
   source_page:"sectors/sntf.html",
   issuing_authority:"SNTF",
   status:"official_document_validity_unconfirmed",
-  notes:"صورة جدول صادرة عن SNTF وفق توثيق صاحب المشروع؛ تاريخ السريان واستمرار العمل بالمواقيت يحتاجان مراجعة منفصلة، ولا تُستنتج أوقات الرحلات من اسم الصورة."
+  notes:path.endsWith(".svg")?"إعادة رسم رقمية مبنية على الصورة الرسمية لـ SNTF المرفقة من صاحب المشروع، وليست الصورة الفوتوغرافية الأصلية؛ يجب التحقق مستقلاً من استمرار سريان المواقيت.":"صورة جدول صادرة عن SNTF وفق توثيق صاحب المشروع؛ تاريخ السريان واستمرار العمل بالمواقيت يحتاجان مراجعة منفصلة، ولا تُستنتج أوقات الرحلات من اسم الصورة."
  };
 });
 const expected={version:2,generated_at:previous?.generated_at||new Date().toISOString().slice(0,10),source_page:"sectors/sntf.html",images};
