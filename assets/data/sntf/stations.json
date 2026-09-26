@@ -2,437 +2,409 @@
   "version": 4,
   "updated": "2026-09-23",
   "stations": [
-  {
-    "id": "alger",
-    "name": "الجزائر",
-    "name_fr": "Alger",
-    "lat": 36.7794477,
-    "lon": 3.0643129,
-    "geo_source": "Google Maps",
-    "geo_verified": true
-  },
-  {
-    "id": "agha",
-    "name": "آغا",
-    "name_fr": "Agha",
-    "lat": 36.7686091,
-    "lon": 3.0597644,
-    "geo_source": "Google Maps",
-    "geo_verified": true
-  },
-  {
-    "id": "les_ateliers",
-    "name": "الورشات",
-    "name_fr": "Les Ateliers",
-    "lat": 36.7573182,
-    "lon": 3.0671765,
-    "geo_source": "Google Maps",
-    "geo_verified": true
-  },
-  {
-    "id": "hussein_dey",
-    "name": "حسين داي",
-    "name_fr": "Hussein Dey",
-    "lat": 36.7451246,
-    "lon": 3.095307,
-    "geo_source": "Google Maps",
-    "geo_verified": true
-  },
-  {
-    "id": "caroubier",
-    "name": "خروبة",
-    "name_fr": "Caroubier",
-    "lat": 36.7353273,
-    "lon": 3.1226996,
-    "geo_source": "Google Maps",
-    "geo_verified": true
-  },
-  {
-    "id": "el_harrach",
-    "name": "الحراش",
-    "name_fr": "El Harrach",
-    "lat": 36.7220246,
-    "lon": 3.1399068,
-    "geo_source": "Google Maps",
-    "geo_verified": true
-  },
-  {
-    "id": "oued_smar",
-    "name": "وادي السمار",
-    "name_fr": "Oued Smar",
-    "lat": 36.7036224,
-    "lon": 3.1747831,
-    "geo_source": "Google Maps",
-    "geo_verified": true
-  },
-  {
-    "id": "bab_ezzouar",
-    "name": "باب الزوار",
-    "name_fr": "Bab Ezzouar",
-    "lat": 36.7036593,
-    "lon": 3.1928078,
-    "geo_source": "Google Maps",
-    "geo_verified": true
-  },
-  {
-    "id": "dar_el_beida",
-    "name": "الدار البيضاء",
-    "name_fr": "Dar El Beida",
-    "lat": 36.7146837,
-    "lon": 3.2133579,
-    "geo_source": "Google Maps",
-    "geo_verified": true
-  },
-  {
-    "id": "rouiba",
-    "name": "رويبة",
-    "name_fr": "Rouiba",
-    "lat": 36.734152,
-    "lon": 3.2833362,
-    "geo_source": "Google Maps",
-    "geo_verified": true
-  },
-  {
-    "id": "rouiba_zi",
-    "name": "رويبة صناعية",
-    "name_fr": "Rouiba ZI",
-    "lat": 36.7325221,
-    "lon": 3.3065648,
-    "geo_source": "Google Maps",
-    "geo_verified": true
-  },
-  {
-    "id": "rouiba_snvi",
-    "name": "رويبة سوناكوم",
-    "name_fr": "Rouiba SNVI",
-    "lat": 36.7330466,
-    "lon": 3.323334,
-    "geo_source": "Google Maps",
-    "geo_verified": true
-  },
-  {
-    "id": "reghaia_zi",
-    "name": "رغاية صناعية",
-    "name_fr": "Reghaia ZI",
-    "lat": 36.350758,
-    "lon": 3.334964,
-    "geo_source": "Google Maps",
-    "geo_verified": true
-  },
-  {
-    "id": "reghaia",
-    "name": "رغاية",
-    "name_fr": "Reghaia",
-    "lat": 36.7349726,
-    "lon": 3.3431609,
-    "geo_source": "Google Maps",
-    "geo_verified": true
-  },
-  {
-    "id": "boudouaou",
-    "name": "بودواو",
-    "name_fr": "Boudouaou",
-    "lat": 36.7405714,
-    "lon": 3.4154364,
-    "geo_source": "Google Maps",
-    "geo_verified": true
-  },
-  {
-    "id": "corso",
-    "name": "قورصو",
-    "name_fr": "Corso",
-    "lat": 36.7393687,
-    "lon": 3.4387979,
-    "geo_source": "Google Maps",
-    "geo_verified": true
-  },
-  {
-    "id": "boumerdes",
-    "name": "بومرداس",
-    "name_fr": "Boumerdes",
-    "lat": 36.7461777,
-    "lon": 3.5003385,
-    "geo_source": "Google Maps",
-    "geo_verified": true
-  },
-  {
-    "id": "tidjelabine",
-    "name": "تيجلابين",
-    "name_fr": "Tidjelabine",
-    "lat": 36.7295716,
-    "lon": 3.510593,
-    "geo_source": "Google Maps",
-    "geo_verified": true
-  },
-  {
-    "id": "thenia",
-    "name": "الثنية",
-    "name_fr": "Thenia",
-    "lat": 36.7244153,
-    "lon": 3.5552619,
-    "geo_source": "Google Maps",
-    "geo_verified": true
-  },
-  {
-    "id": "si_mustapha",
-    "name": "سي مصطفى",
-    "name_fr": "Si Mustapha",
-    "lat": 36.7202889,
-    "lon": 3.635737,
-    "geo_source": "Google Maps",
-    "geo_verified": true
-  },
-  {
-    "id": "isser",
-    "name": "يسر",
-    "name_fr": "Isser",
-    "lat": 36.7266611,
-    "lon": 3.6913768,
-    "geo_source": "Google Maps",
-    "geo_verified": true
-  },
-  {
-    "id": "bordj_menaiel",
-    "name": "برج منايل",
-    "name_fr": "Bordj Menaïel",
-    "lat": 36.7447172,
-    "lon": 3.7346784,
-    "geo_source": "Google Maps",
-    "geo_verified": true
-  },
-  {
-    "id": "naciria",
-    "name": "ناصرية",
-    "name_fr": "Naciria",
-    "lat": 36.7513268,
-    "lon": 3.8303273,
-    "geo_source": "Google Maps",
-    "geo_verified": true
-  },
-  {
-    "id": "tadmait",
-    "name": "تادمايت",
-    "name_fr": "Tadmaït",
-    "lat": 36.7421831,
-    "lon": 3.9019064,
-    "geo_source": "Google Maps",
-    "geo_verified": true
-  },
-  {
-    "id": "draa_ben_khedda",
-    "name": "ذراع بن خدة",
-    "name_fr": "Draa Ben Khedda",
-    "lat": 36.7412495,
-    "lon": 3.9619982,
-    "geo_source": "Google Maps",
-    "geo_verified": true
-  },
-  {
-    "id": "boukhalfa",
-    "name": "بوخالفة",
-    "name_fr": "Boukhalfa",
-    "lat": 36.7327623,
-    "lon": 4.020407,
-    "geo_source": "Google Maps",
-    "geo_verified": true
-  },
-  {
-    "id": "tizi_ouzou",
-    "name": "تيزي وزو",
-    "name_fr": "Tizi Ouzou",
-    "lat": 36.7096644,
-    "lon": 4.0346665,
-    "geo_source": "Google Maps",
-    "geo_verified": true
-  },
-  {
-    "id": "kef_naadja",
-    "name": "كاف النعجة",
-    "name_fr": "Kef Naadja",
-    "lat": 36.7031,
-    "lon": 4.0722,
-    "geo_source": "Google Maps",
-    "geo_verified": false
-  },
-  {
-    "id": "oued_aissi_universite",
-    "name": "واد عيسى-جامعة",
-    "name_fr": "Oued Aïssi - Université",
-    "lat": 36.7036869,
-    "lon": 4.106242,
-    "geo_source": "Google Maps",
-    "geo_verified": true
-  },
-  {
-    "id": "oued_aissi",
-    "name": "واد عيسى",
-    "name_fr": "Oued Aïssi",
-    "lat": 36.7023693,
-    "lon": 4.1418779,
-    "geo_source": "Google Maps",
-    "geo_verified": true
-  },
-  {
-    "id": "gue_de_constantine",
-    "name": "جسر قسنطينة",
-    "name_fr": "Gué de Constantine",
-    "lat": 36.6975,
-    "lon": 3.0805,
-    "geo_source": "Google Maps",
-    "geo_verified": false
-  },
-  {
-    "id": "ain_naadja",
-    "name": "عين النعجة",
-    "name_fr": "Aïn Naâdja",
-    "lat": 36.6917,
-    "lon": 3.0769,
-    "geo_source": "Google Maps",
-    "geo_verified": false
-  },
-  {
-    "id": "baba_ali",
-    "name": "بابا علي",
-    "name_fr": "Baba Ali",
-    "lat": 36.6575,
-    "lon": 3.0125,
-    "geo_source": "Google Maps",
-    "geo_verified": false
-  },
-  {
-    "id": "birtouta",
-    "name": "بئر توتة",
-    "name_fr": "Birtouta",
-    "lat": 36.6458,
-    "lon": 2.9983,
-    "geo_source": "Google Maps",
-    "geo_verified": false
-  },
-  {
-    "id": "boufarik",
-    "name": "بوفاريك",
-    "name_fr": "Boufarik",
-    "lat": 36.5755,
-    "lon": 2.9138,
-    "geo_source": "Google Maps",
-    "geo_verified": false
-  },
-  {
-    "id": "beni_mered",
-    "name": "بني مراد",
-    "name_fr": "Beni Mered",
-    "lat": 36.5261,
-    "lon": 2.8594,
-    "geo_source": "Google Maps",
-    "geo_verified": false
-  },
-  {
-    "id": "blida",
-    "name": "البليدة",
-    "name_fr": "Blida",
-    "lat": 36.4802,
-    "lon": 2.8277,
-    "geo_source": "Google Maps",
-    "geo_verified": false
-  },
-  {
-    "id": "chiffa",
-    "name": "شفة",
-    "name_fr": "Chiffa",
-    "lat": 36.4633,
-    "lon": 2.7533,
-    "geo_source": "Google Maps",
-    "geo_verified": false
-  },
-  {
-    "id": "mouzaia",
-    "name": "موزاية",
-    "name_fr": "Mouzaia",
-    "lat": 36.4667,
-    "lon": 2.6833,
-    "geo_source": "Google Maps",
-    "geo_verified": false
-  },
-  {
-    "id": "el_affroun",
-    "name": "العفرون",
-    "name_fr": "El Affroun",
-    "lat": 36.4680,
-    "lon": 2.6280,
-    "geo_source": "Google Maps",
-    "geo_verified": false
-  },
     {
-    "id": "ain_naadja",
-    "name": "عين النعجة",
-    "name_fr": "Aïn Naâdja",
-    "lat": 36.6917,
-    "lon": 3.0769,
-    "geo_source": "Google Maps",
-    "geo_verified": false
-  },
-  {
-    "id": "baba_ali",
-    "name": "بابا علي",
-    "name_fr": "Baba Ali",
-    "lat": 36.6575,
-    "lon": 3.0125,
-    "geo_source": "Google Maps",
-    "geo_verified": false
-  },
-  {
-    "id": "birtouta",
-    "name": "بئر توتة",
-    "name_fr": "Birtouta",
-    "lat": 36.6458,
-    "lon": 2.9983,
-    "geo_source": "Google Maps",
-    "geo_verified": false
-  },
-  {
-    "id": "tessala_el_merdja",
-    "name": "تسالة المرجة",
-    "name_fr": "Tessala El Merdja",
-    "lat": 36.6572,
-    "lon": 2.9461,
-    "geo_source": "Google Maps",
-    "geo_verified": false
-  },
-  {
-    "id": "sidi_abdellah",
-    "name": "سيدي عبد الله",
-    "name_fr": "Sidi Abdellah",
-    "lat": 36.6664,
-    "lon": 2.8715,
-    "geo_source": "Google Maps",
-    "geo_verified": false
-  },
-  {
-    "id": "sidi_abdellah_universite",
-    "name": "سيدي عبد الله - ج",
-    "name_fr": "Sidi Abdellah - Université",
-    "lat": 36.6711,
-    "lon": 2.8542,
-    "geo_source": "Google Maps",
-    "geo_verified": false
-  },
-  {
-    "id": "zeralda",
-    "name": "زرالدة",
-    "name_fr": "Zeralda",
-    "lat": 36.7025,
-    "lon": 2.8361,
-    "geo_source": "Google Maps",
-    "geo_verified": false
-  },
-   
+      "id": "alger",
+      "name": "الجزائر",
+      "name_fr": "Alger",
+      "lat": 36.7794477,
+      "lon": 3.0643129,
+      "geo_source": "Google Maps",
+      "geo_verified": true
+    },
+    {
+      "id": "agha",
+      "name": "آغا",
+      "name_fr": "Agha",
+      "lat": 36.7686091,
+      "lon": 3.0597644,
+      "geo_source": "Google Maps",
+      "geo_verified": true
+    },
+    {
+      "id": "les_ateliers",
+      "name": "الورشات",
+      "name_fr": "Les Ateliers",
+      "lat": 36.7573182,
+      "lon": 3.0671765,
+      "geo_source": "Google Maps",
+      "geo_verified": true
+    },
+    {
+      "id": "hussein_dey",
+      "name": "حسين داي",
+      "name_fr": "Hussein Dey",
+      "lat": 36.7451246,
+      "lon": 3.095307,
+      "geo_source": "Google Maps",
+      "geo_verified": true
+    },
+    {
+      "id": "caroubier",
+      "name": "خروبة",
+      "name_fr": "Caroubier",
+      "lat": 36.7353273,
+      "lon": 3.1226996,
+      "geo_source": "Google Maps",
+      "geo_verified": true
+    },
+    {
+      "id": "el_harrach",
+      "name": "الحراش",
+      "name_fr": "El Harrach",
+      "lat": 36.7220246,
+      "lon": 3.1399068,
+      "geo_source": "Google Maps",
+      "geo_verified": true
+    },
+    {
+      "id": "oued_smar",
+      "name": "وادي السمار",
+      "name_fr": "Oued Smar",
+      "lat": 36.7036224,
+      "lon": 3.1747831,
+      "geo_source": "Google Maps",
+      "geo_verified": true
+    },
+    {
+      "id": "bab_ezzouar",
+      "name": "باب الزوار",
+      "name_fr": "Bab Ezzouar",
+      "lat": 36.7036593,
+      "lon": 3.1928078,
+      "geo_source": "Google Maps",
+      "geo_verified": true
+    },
+    {
+      "id": "dar_el_beida",
+      "name": "الدار البيضاء",
+      "name_fr": "Dar El Beida",
+      "lat": 36.7146837,
+      "lon": 3.2133579,
+      "geo_source": "Google Maps",
+      "geo_verified": true
+    },
+    {
+      "id": "rouiba",
+      "name": "رويبة",
+      "name_fr": "Rouiba",
+      "lat": 36.734152,
+      "lon": 3.2833362,
+      "geo_source": "Google Maps",
+      "geo_verified": true
+    },
+    {
+      "id": "rouiba_zi",
+      "name": "رويبة صناعية",
+      "name_fr": "Rouiba ZI",
+      "lat": 36.7325221,
+      "lon": 3.3065648,
+      "geo_source": "Google Maps",
+      "geo_verified": true
+    },
+    {
+      "id": "rouiba_snvi",
+      "name": "رويبة سوناكوم",
+      "name_fr": "Rouiba SNVI",
+      "lat": 36.7330466,
+      "lon": 3.323334,
+      "geo_source": "Google Maps",
+      "geo_verified": true
+    },
+    {
+      "id": "reghaia_zi",
+      "name": "رغاية صناعية",
+      "name_fr": "Reghaia ZI",
+      "lat": 36.350758,
+      "lon": 3.334964,
+      "geo_source": "Google Maps",
+      "geo_verified": true
+    },
+    {
+      "id": "reghaia",
+      "name": "رغاية",
+      "name_fr": "Reghaia",
+      "lat": 36.7349726,
+      "lon": 3.3431609,
+      "geo_source": "Google Maps",
+      "geo_verified": true
+    },
+    {
+      "id": "boudouaou",
+      "name": "بودواو",
+      "name_fr": "Boudouaou",
+      "lat": 36.7405714,
+      "lon": 3.4154364,
+      "geo_source": "Google Maps",
+      "geo_verified": true
+    },
+    {
+      "id": "corso",
+      "name": "قورصو",
+      "name_fr": "Corso",
+      "lat": 36.7393687,
+      "lon": 3.4387979,
+      "geo_source": "Google Maps",
+      "geo_verified": true
+    },
+    {
+      "id": "boumerdes",
+      "name": "بومرداس",
+      "name_fr": "Boumerdes",
+      "lat": 36.7461777,
+      "lon": 3.5003385,
+      "geo_source": "Google Maps",
+      "geo_verified": true
+    },
+    {
+      "id": "tidjelabine",
+      "name": "تيجلابين",
+      "name_fr": "Tidjelabine",
+      "lat": 36.7295716,
+      "lon": 3.510593,
+      "geo_source": "Google Maps",
+      "geo_verified": true
+    },
+    {
+      "id": "thenia",
+      "name": "الثنية",
+      "name_fr": "Thenia",
+      "lat": 36.7244153,
+      "lon": 3.5552619,
+      "geo_source": "Google Maps",
+      "geo_verified": true
+    },
+    {
+      "id": "si_mustapha",
+      "name": "سي مصطفى",
+      "name_fr": "Si Mustapha",
+      "lat": 36.7202889,
+      "lon": 3.635737,
+      "geo_source": "Google Maps",
+      "geo_verified": true
+    },
+    {
+      "id": "isser",
+      "name": "يسر",
+      "name_fr": "Isser",
+      "lat": 36.7266611,
+      "lon": 3.6913768,
+      "geo_source": "Google Maps",
+      "geo_verified": true
+    },
+    {
+      "id": "bordj_menaiel",
+      "name": "برج منايل",
+      "name_fr": "Bordj Menaïel",
+      "lat": 36.7447172,
+      "lon": 3.7346784,
+      "geo_source": "Google Maps",
+      "geo_verified": true
+    },
+    {
+      "id": "naciria",
+      "name": "ناصرية",
+      "name_fr": "Naciria",
+      "lat": 36.7513268,
+      "lon": 3.8303273,
+      "geo_source": "Google Maps",
+      "geo_verified": true
+    },
+    {
+      "id": "tadmait",
+      "name": "تادمايت",
+      "name_fr": "Tadmaït",
+      "lat": 36.7421831,
+      "lon": 3.9019064,
+      "geo_source": "Google Maps",
+      "geo_verified": true
+    },
+    {
+      "id": "draa_ben_khedda",
+      "name": "ذراع بن خدة",
+      "name_fr": "Draa Ben Khedda",
+      "lat": 36.7412495,
+      "lon": 3.9619982,
+      "geo_source": "Google Maps",
+      "geo_verified": true
+    },
+    {
+      "id": "boukhalfa",
+      "name": "بوخالفة",
+      "name_fr": "Boukhalfa",
+      "lat": 36.7327623,
+      "lon": 4.020407,
+      "geo_source": "Google Maps",
+      "geo_verified": true
+    },
+    {
+      "id": "tizi_ouzou",
+      "name": "تيزي وزو",
+      "name_fr": "Tizi Ouzou",
+      "lat": 36.7096644,
+      "lon": 4.0346665,
+      "geo_source": "Google Maps",
+      "geo_verified": true
+    },
+    {
+      "id": "kef_naadja",
+      "name": "كاف النعجة",
+      "name_fr": "Kef Naadja",
+      "lat": 36.7031,
+      "lon": 4.0722,
+      "geo_source": "Google Maps",
+      "geo_verified": false
+    },
+    {
+      "id": "oued_aissi_universite",
+      "name": "واد عيسى-جامعة",
+      "name_fr": "Oued Aïssi - Université",
+      "lat": 36.7036869,
+      "lon": 4.106242,
+      "geo_source": "Google Maps",
+      "geo_verified": true
+    },
+    {
+      "id": "oued_aissi",
+      "name": "واد عيسى",
+      "name_fr": "Oued Aïssi",
+      "lat": 36.7023693,
+      "lon": 4.1418779,
+      "geo_source": "Google Maps",
+      "geo_verified": true
+    },
+    {
+      "id": "gue_de_constantine",
+      "name": "جسر قسنطينة",
+      "name_fr": "Gué de Constantine",
+      "lat": 36.6969671,
+      "lon": 3.0979487,
+      "geo_source": "Google Maps",
+      "geo_verified": true
+    },
+    {
+      "id": "ain_naadja",
+      "name": "عين النعجة",
+      "name_fr": "Aïn Naâdja",
+      "lat": 36.6890783,
+      "lon": 3.0808173,
+      "geo_source": "Google Maps",
+      "geo_verified": true
+    },
+    {
+      "id": "baba_ali",
+      "name": "بابا علي",
+      "name_fr": "Baba Ali",
+      "lat": 36.6669645,
+      "lon": 3.0547571,
+      "geo_source": "Google Maps",
+      "geo_verified": true
+    },
+    {
+      "id": "birtouta",
+      "name": "بئر توتة",
+      "name_fr": "Birtouta",
+      "lat": 36.6308547,
+      "lon": 2.012228,
+      "geo_source": "Google Maps",
+      "geo_verified": true
+    },
+    {
+      "id": "boufarik",
+      "name": "بوفاريك",
+      "name_fr": "Boufarik",
+      "lat": 36.5671025,
+      "lon": 2.916736,
+      "geo_source": "Google Maps",
+      "geo_verified": true
+    },
+    {
+      "id": "beni_mered",
+      "name": "بني مراد",
+      "name_fr": "Beni Mered",
+      "lat": 36.5199473,
+      "lon": 2.8598162,
+      "geo_source": "Google Maps",
+      "geo_verified": true
+    },
+    {
+      "id": "blida",
+      "name": "البليدة",
+      "name_fr": "Blida",
+      "lat": 36.4786264,
+      "lon": 2.818769,
+      "geo_source": "Google Maps",
+      "geo_verified": true
+    },
+    {
+      "id": "chiffa",
+      "name": "شفة",
+      "name_fr": "Chiffa",
+      "lat": 36.4648352,
+      "lon": 2.7424163,
+      "geo_source": "Google Maps",
+      "geo_verified": true
+    },
+    {
+      "id": "mouzaia",
+      "name": "موزاية",
+      "name_fr": "Mouzaia",
+      "lat": 36.4705313,
+      "lon": 2.6943863,
+      "geo_source": "Google Maps",
+      "geo_verified": true
+    },
+    {
+      "id": "el_affroun",
+      "name": "العفرون",
+      "name_fr": "El Affroun",
+      "lat": 36.4734488,
+      "lon": 2.6272909,
+      "geo_source": "Google Maps",
+      "geo_verified": true
+    },
+    {
+      "id": "tessala_el_merdja",
+      "name": "تسالة المرجة",
+      "name_fr": "Tessala El Merdja",
+      "lat": 36.6394172,
+      "lon": 2.938131,
+      "geo_source": "Google Maps",
+      "geo_verified": true
+    },
+    {
+      "id": "sidi_abdellah",
+      "name": "سيدي عبد الله",
+      "name_fr": "Sidi Abdellah",
+      "lat": 36.6796607,
+      "lon": 2.893045,
+      "geo_source": "Google Maps",
+      "geo_verified": true
+    },
+    {
+      "id": "sidi_abdellah_universite",
+      "name": "سيدي عبد الله - ج",
+      "name_fr": "Sidi Abdellah - Université",
+      "lat": 36.6919706,
+      "lon": 2.8738951,
+      "geo_source": "Google Maps",
+      "geo_verified": true
+    },
+    {
+      "id": "zeralda",
+      "name": "زرالدة",
+      "name_fr": "Zeralda",
+      "lat": 36.7011217,
+      "lon": 2.8513601,
+      "geo_source": "Google Maps",
+      "geo_verified": true
+    },
 
     {
       "id": "airport",
       "name": "مطار هواري بومدين",
       "name_fr": "Aéroport Houari Boumédiène",
-      "lat": 36.6973,
-      "lon": 3.2089,
+      "lat": 36.6998535,
+      "lon": 3.2112399,
       "geo_source": "Google Maps",
       "geo_verified": true
     },
@@ -440,20 +412,309 @@
       "id": "bejaia",
       "name": "بجاية",
       "name_fr": "Béjaïa",
-      "lat": 36.7497,
-      "lon": 5.0747,
+      "lat": 36.7510783,
+      "lon": 5.0845546,
       "geo_source": "Google Maps",
       "geo_verified": true
     },
     {
-      "id": "setif",
-      "name": "سطيف",
-      "name_fr": "Sétif",
-      "lat": 36.1884,
-      "lon": 5.4054,
+      "id": "oued_ghir",
+      "name": "واد غير",
+      "name_fr": "Oued Ghir",
+      "lat": 36.7059038,
+      "lon": 4.986192,
       "geo_source": "Google Maps",
       "geo_verified": true
     },
+    {
+      "id": "el_kseur",
+      "name": "القصر",
+      "name_fr": "El Kseur",
+      "lat": 36.6700801,
+      "lon": 4.8580618,
+      "geo_source": "Google Maps",
+      "geo_verified": true
+    },
+    {
+      "id": "sidi_aich",
+      "name": "سيدي عيش",
+      "name_fr": "Sidi Aïch",
+      "lat": 36.6094202,
+      "lon": 4.6951129,
+      "geo_source": "Google Maps",
+      "geo_verified": true
+    },
+    {
+      "id": "takrietz",
+      "name": "تيغرتس",
+      "name_fr": "Takrietz",
+      "lat": 36.5776081,
+      "lon": 4.6506809,
+      "geo_source": "Google Maps",
+      "geo_verified": true
+    },
+    {
+      "id": "ighzer_amokrane",
+      "name": "إيغزر أمقران",
+      "name_fr": "Ighzer Amokrane",
+      "lat": 36.5308795,
+      "lon": 4.6213718,
+      "geo_source": "Google Maps",
+      "geo_verified": true
+    },
+    {
+      "id": "akbou",
+      "name": "أقبو",
+      "name_fr": "Akbou",
+      "lat": 36.456449,
+      "lon": 4.5456177,
+      "geo_source": "Google Maps",
+      "geo_verified": true
+    },
+    {
+      "id": "allaghen",
+      "name": "اللاغن",
+      "name_fr": "Allaghen",
+      "lat": 36.3988946,
+      "lon": 4.4572014,
+      "geo_source": "Google Maps",
+      "geo_verified": true
+    },
+    {
+      "id": "tazmalt",
+      "name": "تازمالت",
+      "name_fr": "Tazmalt",
+      "lat": 36.3796186,
+      "lon": 4.4086278,
+      "geo_source": "Google Maps",
+      "geo_verified": true
+    },
+    {
+      "id": "beni_mansour",
+      "name": "بني منصور",
+      "name_fr": "Beni Mansour",
+      "lat": 36.3360875,
+      "lon": 4.3578718,
+      "geo_source": "Google Maps",
+      "geo_verified": true
+    },
+    {
+      "id": "ahnif",
+      "name": "أحنيف",
+      "name_fr": "Ahnif",
+      "lat": 36.3361629,
+      "lon": 4.2759052,
+      "geo_source": "Google Maps",
+      "geo_verified": true
+    },
+    {
+      "id": "el_adjiba",
+      "name": "العجيبة",
+      "name_fr": "El Adjiba",
+      "lat": 36.3282465,
+      "lon": 4.1546836,
+      "geo_source": "Google Maps",
+      "geo_verified": true
+    },
+    {
+      "id": "bouira",
+      "name": "البويرة",
+      "name_fr": "Bouira",
+      "lat": 36.3728289,
+      "lon": 3.8942873,
+      "geo_source": "Google Maps",
+      "geo_verified": true
+    },
+    {
+      "id": "draa_el_mizan",
+      "name": "ذراع الميزان",
+      "name_fr": "Draa El Mizan",
+      "lat": 36.5306626,
+      "lon": 3.717177,
+      "geo_source": "Google Maps",
+      "geo_verified": true
+    },
+    {
+      "id": "lakhdaria",
+      "name": "الأخضرية",
+      "name_fr": "Lakhdaria",
+      "lat": 36.5612167,
+      "lon": 3.5902179,
+      "geo_source": "Google Maps",
+      "geo_verified": true
+    },
+    {
+    "id": "batna",
+    "name": "باتنة",
+    "name_fr": "Batna",
+    "lat": 35.5606133,
+    "lon": 6.1761025,
+    "geo_source": "Google Maps",
+    "geo_verified": true
+  },
+  {
+    "id": "ain_touta",
+    "name": "عين توتة",
+    "name_fr": "Aïn Touta",
+    "lat": 35.385744,
+    "lon": 5.9041749,
+    "geo_source": "Google Maps",
+    "geo_verified": true
+  },
+  {
+    "id": "seggana",
+    "name": "سقانة",
+    "name_fr": "Seggana",
+    "lat": 35.3674166,
+    "lon": 5.561247,
+    "geo_source": "Google Maps",
+    "geo_verified": true
+  },
+  {
+    "id": "barika",
+    "name": "بريكة",
+    "name_fr": "Barika",
+    "lat": 35.3738155,
+    "lon": 5.3891399,
+    "geo_source": "Google Maps",
+    "geo_verified": true
+  },
+  {
+    "id": "barhoum",
+    "name": "برهوم",
+    "name_fr": "Barhoum",
+    "lat": 35.6459901,
+    "lon": 5.9625255,
+    "geo_source": "Google Maps",
+    "geo_verified": true
+  },
+  {
+    "id": "msila",
+    "name": "المسيلة",
+    "name_fr": "M'Sila",
+    "lat": 35.7066165,
+    "lon": 4.5217803,
+    "geo_source": "Google Maps",
+    "geo_verified": true
+  },
+  {
+    "id": "bordj_bou_arreridj",
+    "name": "برج بوعريريج",
+    "name_fr": "Bordj Bou Arreridj",
+    "lat": 36.0619661,
+    "lon": 4.7547223,
+    "geo_source": "Google Maps",
+    "geo_verified": true
+  },
+    {
+    "id": "el_mansoura",
+    "name": "المنصورة",
+    "name_fr": "El Mansoura",
+    "lat": 36.0825,
+    "lon": 4.4756,
+    "geo_source": "Google Maps",
+    "geo_verified": false
+  },
+  {
+    "id": "setif",
+    "name": "سطيف",
+    "name_fr": "Sétif",
+    "lat": 36.1875623,
+    "lon": 5.417557,
+    "geo_source": "Google Maps",
+    "geo_verified": true
+  },
+  {
+    "id": "el_eulma",
+    "name": "العلمة",
+    "name_fr": "El Eulma",
+    "lat": 36.1485018,
+    "lon": 5.6920517,
+    "geo_source": "Google Maps",
+    "geo_verified": true
+  },
+  {
+    "id": "tadjenanet",
+    "name": "تاجنانت",
+    "name_fr": "Tadjenanet",
+    "lat": 36.1123352,
+    "lon": 5.9870512,
+    "geo_source": "Google Maps",
+    "geo_verified": true
+  },
+  {
+    "id": "teleghma",
+    "name": "تلاغمة",
+    "name_fr": "Teleghma",
+    "lat": 36.1120121,
+    "lon": 6.3560058,
+    "geo_source": "Google Maps",
+    "geo_verified": true
+  },
+  {
+    "id": "el_gourzi",
+    "name": "القرزي",
+    "name_fr": "El Gourzi",
+    "lat": 36.1481,
+    "lon": 6.4522,
+    "geo_source": "Google Maps",
+    "geo_verified": false
+  },
+  {
+    "id": "el_khroub",
+    "name": "الخروب",
+    "name_fr": "El Khroub",
+    "lat": 36.2586664,
+    "lon": 6.685654,
+    "geo_source": "Google Maps",
+    "geo_verified": true
+  },
+  {
+    "id": "constantine",
+    "name": "قسنطينة",
+    "name_fr": "Constantine",
+    "lat": 36.3662977,
+    "lon": 6.6230012,
+    "geo_source": "Google Maps",
+    "geo_verified": true
+  },
+  {
+    "id": "el_harrouch",
+    "name": "الحروش",
+    "name_fr": "El Harrouch",
+    "lat": 36.6616997,
+    "lon": 6.8375162,
+    "geo_source": "Google Maps",
+    "geo_verified": true
+  },
+  {
+    "id": "ramdane_djamel",
+    "name": "رمضان جمال",
+    "name_fr": "Ramdane Djamel",
+    "lat": 36.755631,
+    "lon": 6.9057859,
+    "geo_source": "Google Maps",
+    "geo_verified": true
+  },
+  {
+    "id": "azzaba",
+    "name": "عزابة",
+    "name_fr": "Azzaba",
+    "lat": 36.7383904,
+    "lon": 7.1118592,
+    "geo_source": "Google Maps",
+    "geo_verified": true
+  },
+  {
+    "id": "annaba",
+    "name": "عنابة",
+    "name_fr": "Annaba",
+    "lat": 36.8960434,
+    "lon": 7.759703,
+    "geo_source": "Google Maps",
+    "geo_verified": true
+  },
+
     {
       "id": "skikda",
       "name": "سكيكدة",
