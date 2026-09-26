@@ -29,9 +29,9 @@
       "station_id": "chlef"
     },
     {
-      "status": "new_candidate",
+      "status": "matched",
       "name": "SIDI BOUABIDA",
-      "candidates": []
+      "station_id": "sidi_bouabida"
     },
     {
       "status": "matched",
@@ -39,9 +39,9 @@
       "station_id": "annaba"
     },
     {
-      "status": "new_candidate",
+      "status": "matched",
       "name": "CHEBAITA M",
-      "candidates": []
+      "station_id": "chebaita_m"
     },
     {
       "status": "matched",
@@ -139,9 +139,9 @@
         "station_id": "chlef"
       },
       "destination": {
-        "status": "new_candidate",
+        "status": "matched",
         "name": "SIDI BOUABIDA",
-        "candidates": []
+        "station_id": "sidi_bouabida"
       },
       "candidate_route_ids": [],
       "route_action": "propose_new_route",
@@ -187,9 +187,9 @@
         "station_id": "annaba"
       },
       "destination": {
-        "status": "new_candidate",
+        "status": "matched",
         "name": "CHEBAITA M",
-        "candidates": []
+        "station_id": "chebaita_m"
       },
       "candidate_route_ids": [],
       "route_action": "propose_new_route",
@@ -312,8 +312,8 @@
   ],
   "summary": {
     "station_names": 10,
-    "matched_station_names": 8,
-    "new_station_names": 2,
+    "matched_station_names": 10,
+    "new_station_names": 0,
     "ambiguous_station_names": 0,
     "source_queries": 6,
     "archived_trip_candidates": 12,
