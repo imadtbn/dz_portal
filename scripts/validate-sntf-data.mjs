@@ -58,7 +58,7 @@ for(const t of trips){
 }
 for(const source of sources)fail(!source.url?.startsWith("https://"),"Source URL missing "+source.id);
 const fullIds=new Set(),normalized=new Map();
-const clean=n=>String(n??"").normalize("NFKD").replace(/[\\u0300-\\u036f]/g,"").toLowerCase().replace(/[^\\p{L}\\p{N}]+/gu,"");
+const clean=n=>String(n??"").normalize("NFKD").replace(/[\u0300-\u036f]/g,"").toLowerCase().replace(/[^\p{L}\p{N}]+/gu,"");
 for(const s of stations){for(const name of [s.name_fr,...(s.sntf_names||[])]){
  const n=clean(name);
  if(normalized.has(n)&&normalized.get(n)!==s.id)errors.push("Duplicate station name/alias "+name+": "+s.id+" conflicts with "+normalized.get(n));
