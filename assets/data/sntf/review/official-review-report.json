@@ -1,0 +1,322 @@
+{
+  "version": 1,
+  "generated_from": "2026-09-26",
+  "important": "HISTORICAL QUERY SNAPSHOTS ONLY: these are NOT currently verified train times.",
+  "station_candidates": [
+    {
+      "status": "matched",
+      "name": "OUED AISSI",
+      "station_id": "oued_aissi"
+    },
+    {
+      "status": "matched",
+      "name": "THENIA",
+      "station_id": "thenia"
+    },
+    {
+      "status": "matched",
+      "name": "BORDJ BOU ARRERIDJ",
+      "station_id": "bordj_bou_arreridj"
+    },
+    {
+      "status": "matched",
+      "name": "ALGER",
+      "station_id": "alger"
+    },
+    {
+      "status": "matched",
+      "name": "CHLEF",
+      "station_id": "chlef"
+    },
+    {
+      "status": "new_candidate",
+      "name": "SIDI BOUABIDA",
+      "candidates": []
+    },
+    {
+      "status": "matched",
+      "name": "ANNABA",
+      "station_id": "annaba"
+    },
+    {
+      "status": "new_candidate",
+      "name": "CHEBAITA M",
+      "candidates": []
+    },
+    {
+      "status": "matched",
+      "name": "AGHA",
+      "station_id": "agha"
+    },
+    {
+      "status": "matched",
+      "name": "ORAN",
+      "station_id": "oran"
+    }
+  ],
+  "queries": [
+    {
+      "snapshot_id": "sntf-2026-01-03-oued-aissi-thenia",
+      "query_date": "2026-01-03",
+      "source_url": "https://www.sntf.dz/index.php/component/sntf/?dd=20260103&ga=415&gd=446&h1=0000&h2=2359&o=hd&view=train",
+      "status": "historical_recheck_required",
+      "origin": {
+        "status": "matched",
+        "name": "OUED AISSI",
+        "station_id": "oued_aissi"
+      },
+      "destination": {
+        "status": "matched",
+        "name": "THENIA",
+        "station_id": "thenia"
+      },
+      "candidate_route_ids": [],
+      "route_action": "propose_new_route",
+      "intermediate_stops_known": false,
+      "trips": [
+        {
+          "train_number": "B114",
+          "departure": "05:30",
+          "arrival": "06:23",
+          "service_rule": "weekday_not_friday",
+          "weekdays": null,
+          "approval_status": "pending_official_recheck",
+          "incomplete_stop_times": true
+        },
+        {
+          "train_number": "104",
+          "departure": "06:40",
+          "arrival": "07:34",
+          "service_rule": "daily",
+          "weekdays": null,
+          "approval_status": "pending_official_recheck",
+          "incomplete_stop_times": true
+        }
+      ]
+    },
+    {
+      "snapshot_id": "sntf-2026-01-05-bordj-alger",
+      "query_date": "2026-01-05",
+      "source_url": "https://www.sntf.dz/index.php/component/sntf/?dd=20260105&ga=69&gd=115&h1=0000&h2=2359&o=hd&view=train",
+      "status": "historical_recheck_required",
+      "origin": {
+        "status": "matched",
+        "name": "BORDJ BOU ARRERIDJ",
+        "station_id": "bordj_bou_arreridj"
+      },
+      "destination": {
+        "status": "matched",
+        "name": "ALGER",
+        "station_id": "alger"
+      },
+      "candidate_route_ids": [],
+      "route_action": "propose_new_route",
+      "intermediate_stops_known": false,
+      "trips": [
+        {
+          "train_number": "B32",
+          "departure": "00:40",
+          "arrival": "05:00",
+          "service_rule": "selected_weekdays",
+          "weekdays": [
+            "monday",
+            "wednesday",
+            "saturday"
+          ],
+          "approval_status": "pending_official_recheck",
+          "incomplete_stop_times": true
+        }
+      ]
+    },
+    {
+      "snapshot_id": "sntf-2025-04-05-chlef-sidi-bouabida",
+      "query_date": "2025-04-05",
+      "source_url": "https://www.sntf.dz/index.php/component/sntf/?dd=20250405&ga=543&gd=147&h1=0000&h2=2359&o=hd&view=train",
+      "status": "historical_recheck_required",
+      "origin": {
+        "status": "matched",
+        "name": "CHLEF",
+        "station_id": "chlef"
+      },
+      "destination": {
+        "status": "new_candidate",
+        "name": "SIDI BOUABIDA",
+        "candidates": []
+      },
+      "candidate_route_ids": [],
+      "route_action": "propose_new_route",
+      "intermediate_stops_known": false,
+      "trips": [
+        {
+          "train_number": "1084",
+          "departure": "05:00",
+          "arrival": "05:31",
+          "service_rule": "daily",
+          "weekdays": null,
+          "approval_status": "pending_official_recheck",
+          "incomplete_stop_times": true
+        },
+        {
+          "train_number": "B150",
+          "departure": "10:30",
+          "arrival": "11:00",
+          "service_rule": "daily",
+          "weekdays": null,
+          "approval_status": "pending_official_recheck",
+          "incomplete_stop_times": true
+        },
+        {
+          "train_number": "1088",
+          "departure": "17:20",
+          "arrival": "17:57",
+          "service_rule": "daily",
+          "weekdays": null,
+          "approval_status": "pending_official_recheck",
+          "incomplete_stop_times": true
+        }
+      ]
+    },
+    {
+      "snapshot_id": "sntf-2025-04-28-annaba-chebaita",
+      "query_date": "2025-04-28",
+      "source_url": "https://www.sntf.dz/index.php/component/sntf/?dd=20250428&ga=143&gd=71&h1=0000&h2=2359&o=hd&view=train",
+      "status": "historical_recheck_required",
+      "origin": {
+        "status": "matched",
+        "name": "ANNABA",
+        "station_id": "annaba"
+      },
+      "destination": {
+        "status": "new_candidate",
+        "name": "CHEBAITA M",
+        "candidates": []
+      },
+      "candidate_route_ids": [],
+      "route_action": "propose_new_route",
+      "intermediate_stops_known": false,
+      "trips": [
+        {
+          "train_number": "B317",
+          "departure": "05:25",
+          "arrival": "05:47",
+          "service_rule": "unconfirmed",
+          "weekdays": null,
+          "approval_status": "pending_official_recheck",
+          "incomplete_stop_times": true
+        },
+        {
+          "train_number": "B323",
+          "departure": "12:15",
+          "arrival": "12:37",
+          "service_rule": "unconfirmed",
+          "weekdays": null,
+          "approval_status": "pending_official_recheck",
+          "incomplete_stop_times": true
+        },
+        {
+          "train_number": "B327",
+          "departure": "16:40",
+          "arrival": "17:00",
+          "service_rule": "unconfirmed",
+          "weekdays": null,
+          "approval_status": "pending_official_recheck",
+          "incomplete_stop_times": true
+        },
+        {
+          "train_number": "B319",
+          "departure": "17:00",
+          "arrival": "17:22",
+          "service_rule": "unconfirmed",
+          "weekdays": null,
+          "approval_status": "pending_official_recheck",
+          "incomplete_stop_times": true
+        }
+      ]
+    },
+    {
+      "snapshot_id": "sntf-2025-05-31-agha-chlef",
+      "query_date": "2025-05-31",
+      "source_url": "https://www.sntf.dz/index.php/component/sntf/?dd=20250531&ga=147&gd=37&h1=0000&h2=2359&o=hd&view=train",
+      "status": "historical_recheck_required",
+      "origin": {
+        "status": "matched",
+        "name": "AGHA",
+        "station_id": "agha"
+      },
+      "destination": {
+        "status": "matched",
+        "name": "CHLEF",
+        "station_id": "chlef"
+      },
+      "candidate_route_ids": [
+        "agha-chlef"
+      ],
+      "route_action": "review_existing",
+      "intermediate_stops_known": false,
+      "trips": [
+        {
+          "train_number": "AM",
+          "departure": "08:00",
+          "arrival": "10:25",
+          "service_rule": "selected_weekdays",
+          "weekdays": [
+            "sunday",
+            "monday",
+            "tuesday",
+            "thursday",
+            "friday",
+            "saturday"
+          ],
+          "approval_status": "pending_official_recheck",
+          "incomplete_stop_times": true
+        }
+      ]
+    },
+    {
+      "snapshot_id": "sntf-2025-08-22-oran-agha",
+      "query_date": "2025-08-22",
+      "source_url": "https://www.sntf.dz/index.php/component/sntf/?dd=20250822&ga=37&gd=305&h1=0000&h2=2359&o=hd&view=train",
+      "status": "historical_recheck_required",
+      "origin": {
+        "status": "matched",
+        "name": "ORAN",
+        "station_id": "oran"
+      },
+      "destination": {
+        "status": "matched",
+        "name": "AGHA",
+        "station_id": "agha"
+      },
+      "candidate_route_ids": [],
+      "route_action": "propose_new_route",
+      "intermediate_stops_known": false,
+      "trips": [
+        {
+          "train_number": "MA",
+          "departure": "08:00",
+          "arrival": "12:38",
+          "service_rule": "selected_weekdays",
+          "weekdays": [
+            "sunday",
+            "monday",
+            "tuesday",
+            "thursday",
+            "friday",
+            "saturday"
+          ],
+          "approval_status": "pending_official_recheck",
+          "incomplete_stop_times": true
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "station_names": 10,
+    "matched_station_names": 8,
+    "new_station_names": 2,
+    "ambiguous_station_names": 0,
+    "source_queries": 6,
+    "archived_trip_candidates": 12,
+    "existing_verified_coordinates_preserved": 116
+  }
+}
