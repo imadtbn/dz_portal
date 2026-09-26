@@ -20,11 +20,12 @@ const images=paths.map(path=>{
   path,category:category(path),alt:alt&&alt.length<100?alt:null,
   route_ids:routes.filter(r=>r.schedule_image?.replace(/^\.\.\//,"")===path).map(r=>r.id),
   source_page:"sectors/sntf.html",
-  status:"reference_image_unverified",
-  notes:"مدرج ضمن معرض جداول البوابة؛ حالة الصلاحية وتاريخ السريان يحتاجان مراجعة من الصورة أو المصدر الرسمي."
+  issuing_authority:"SNTF",
+  status:"official_document_validity_unconfirmed",
+  notes:"صورة جدول صادرة عن SNTF وفق توثيق صاحب المشروع؛ تاريخ السريان واستمرار العمل بالمواقيت يحتاجان مراجعة منفصلة، ولا تُستنتج أوقات الرحلات من اسم الصورة."
  };
 });
-const expected={version:1,generated_at:previous?.generated_at||new Date().toISOString().slice(0,10),source_page:"sectors/sntf.html",images};
+const expected={version:2,generated_at:previous?.generated_at||new Date().toISOString().slice(0,10),source_page:"sectors/sntf.html",images};
 const missing=paths.filter(p=>!existsSync(p));
 if(missing.length)console.warn("Gallery references not present locally:",missing.join(", "));
 if(process.argv.includes("--check")){
