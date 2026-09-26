@@ -1,5 +1,5 @@
 {
-  "version": 7,
+  "version": 8,
   "updated": "2026-09-26",
   "timetable_documents": {
     "authority": "SNTF",
@@ -36,7 +36,10 @@
       "lat": 36.7573182,
       "lon": 3.0671765,
       "geo_source": "Google Maps",
-      "geo_verified": true
+      "geo_verified": true,
+      "sntf_names": [
+        "ATELIERS"
+      ]
     },
     {
       "id": "hussein_dey",
@@ -54,7 +57,10 @@
       "lat": 36.7353273,
       "lon": 3.1226996,
       "geo_source": "Google Maps",
-      "geo_verified": true
+      "geo_verified": true,
+      "sntf_names": [
+        "CAROUBIERS"
+      ]
     },
     {
       "id": "el_harrach",
@@ -108,7 +114,10 @@
       "lat": 36.7325221,
       "lon": 3.3065648,
       "geo_source": "Google Maps",
-      "geo_verified": true
+      "geo_verified": true,
+      "sntf_names": [
+        "ROUIBA INDUS"
+      ]
     },
     {
       "id": "rouiba_snvi",
@@ -126,7 +135,10 @@
       "lat": 36.350758,
       "lon": 3.334964,
       "geo_source": "Google Maps",
-      "geo_verified": true
+      "geo_verified": true,
+      "sntf_names": [
+        "REGHAIA IND"
+      ]
     },
     {
       "id": "reghaia",
@@ -171,7 +183,10 @@
       "lat": 36.7295716,
       "lon": 3.510593,
       "geo_source": "Google Maps",
-      "geo_verified": true
+      "geo_verified": true,
+      "sntf_names": [
+        "TIDJALABINE"
+      ]
     },
     {
       "id": "thenia",
@@ -396,7 +411,10 @@
       "lat": 36.6919706,
       "lon": 2.8738951,
       "geo_source": "Google Maps",
-      "geo_verified": true
+      "geo_verified": true,
+      "sntf_names": [
+        "SIDI ABD ALLAH UNIVERSITE"
+      ]
     },
     {
       "id": "zeralda",
@@ -414,7 +432,10 @@
       "lat": 36.6998535,
       "lon": 3.2112399,
       "geo_source": "Google Maps",
-      "geo_verified": true
+      "geo_verified": true,
+      "sntf_names": [
+        "AEROPORT HB"
+      ]
     },
     {
       "id": "bejaia",
@@ -486,7 +507,10 @@
       "lat": 36.3988946,
       "lon": 4.4572014,
       "geo_source": "Google Maps",
-      "geo_verified": true
+      "geo_verified": true,
+      "sntf_names": [
+        "ALLAGHAN"
+      ]
     },
     {
       "id": "tazmalt",
@@ -704,7 +728,10 @@
       "lat": 36.6616997,
       "lon": 6.8375162,
       "geo_source": "Google Maps",
-      "geo_verified": true
+      "geo_verified": true,
+      "sntf_names": [
+        "EL HARROUCHE"
+      ]
     },
     {
       "id": "ramdane_djamel",
@@ -877,7 +904,10 @@
       "lat": 33.9567816,
       "lon": 5.9393727,
       "geo_source": "Google Maps",
-      "geo_verified": true
+      "geo_verified": true,
+      "sntf_names": [
+        "EL M'EGHAIER"
+      ]
     },
     {
       "id": "biskra",
@@ -931,7 +961,10 @@
       "lat": 35.85,
       "lon": 4.6,
       "geo_source": "Google Maps",
-      "geo_verified": false
+      "geo_verified": false,
+      "sntf_names": [
+        "M'DJEZ"
+      ]
     },
     {
       "id": "azib",
@@ -967,7 +1000,11 @@
       "lat": 36.2431787,
       "lon": 2.2273427,
       "geo_source": "Google Maps",
-      "geo_verified": true
+      "geo_verified": true,
+      "sntf_names": [
+        "KHEMIS MILIANA",
+        "KHEMIS.MILLIANA"
+      ]
     },
     {
       "id": "arib",
@@ -1193,6 +1230,655 @@
       "lon": 10.1805,
       "geo_source": "Google Maps",
       "geo_verified": true
+    },
+    {
+      "id": "sidi_bouabida",
+      "name": "سيدي بوعبيدة",
+      "name_fr": "Sidi Bouabida",
+      "wilaya": "Aïn Defla",
+      "sntf_names": [
+        "SIDI BOUABIDA"
+      ],
+      "lat": null,
+      "lon": null,
+      "geo_source": null,
+      "geo_verified": false,
+      "station_source": "https://www.sntf.dz/annuaire_statistiques/ANNEXE_II.pdf",
+      "station_source_type": "official_network_annex",
+      "editor_note": "محطة واردة في الملحق الرسمي لشبكة SNTF؛ إحداثياتها غير محددة حتى التحقق منها يدويًا."
+    },
+    {
+      "id": "chebaita_m",
+      "name": "شبايطة مختار",
+      "name_fr": "Chebaïta Mokhtar",
+      "wilaya": "El Tarf",
+      "sntf_names": [
+        "CHBAITA",
+        "CHEBAITA M"
+      ],
+      "lat": null,
+      "lon": null,
+      "geo_source": null,
+      "geo_verified": false,
+      "station_source": "https://www.sntf.dz/annuaire_statistiques/ANNEXE_II.pdf",
+      "station_source_type": "official_network_annex",
+      "editor_note": "محطة واردة في الملحق الرسمي لشبكة SNTF؛ إحداثياتها غير محددة حتى التحقق منها يدويًا."
+    },
+    {
+      "id": "bir_saf_saf",
+      "name": "بئر صفصاف",
+      "name_fr": "Bir Saf Saf",
+      "wilaya": "Chlef",
+      "sntf_names": [
+        "BIR SAF SAF"
+      ],
+      "lat": null,
+      "lon": null,
+      "geo_source": null,
+      "geo_verified": false,
+      "station_source": "https://www.sntf.dz/annuaire_statistiques/ANNEXE_II.pdf",
+      "station_source_type": "official_network_annex",
+      "editor_note": "محطة واردة في الملحق الرسمي لشبكة SNTF؛ إحداثياتها غير محددة حتى التحقق منها يدويًا."
+    },
+    {
+      "id": "le_barrage",
+      "name": "الباراج",
+      "name_fr": "Le Barrage",
+      "wilaya": "Chlef",
+      "sntf_names": [
+        "LE BARRAGE"
+      ],
+      "lat": null,
+      "lon": null,
+      "geo_source": null,
+      "geo_verified": false,
+      "station_source": "https://www.sntf.dz/annuaire_statistiques/ANNEXE_II.pdf",
+      "station_source_type": "official_network_annex",
+      "editor_note": "محطة واردة في الملحق الرسمي لشبكة SNTF؛ إحداثياتها غير محددة حتى التحقق منها يدويًا."
+    },
+    {
+      "id": "moudrou",
+      "name": "مودرو",
+      "name_fr": "Moudrou",
+      "wilaya": "Chlef",
+      "sntf_names": [
+        "MOUDROU"
+      ],
+      "lat": null,
+      "lon": null,
+      "geo_source": null,
+      "geo_verified": false,
+      "station_source": "https://www.sntf.dz/annuaire_statistiques/ANNEXE_II.pdf",
+      "station_source_type": "official_network_annex",
+      "editor_note": "محطة واردة في الملحق الرسمي لشبكة SNTF؛ إحداثياتها غير محددة حتى التحقق منها يدويًا."
+    },
+    {
+      "id": "sidi_arcine",
+      "name": "سيدي أرسين",
+      "name_fr": "Sidi Arcine",
+      "wilaya": "Alger",
+      "sntf_names": [
+        "SIDI ARCINE"
+      ],
+      "lat": null,
+      "lon": null,
+      "geo_source": null,
+      "geo_verified": false,
+      "station_source": "https://www.sntf.dz/annuaire_statistiques/ANNEXE_II.pdf",
+      "station_source_type": "official_network_annex",
+      "editor_note": "محطة واردة في الملحق الرسمي لشبكة SNTF؛ إحداثياتها غير محددة حتى التحقق منها يدويًا."
+    },
+    {
+      "id": "el_asnam_bouira",
+      "name": "الأصنام",
+      "name_fr": "El Asnam",
+      "wilaya": "Bouira",
+      "sntf_names": [
+        "EL ASNAM"
+      ],
+      "lat": null,
+      "lon": null,
+      "geo_source": null,
+      "geo_verified": false,
+      "station_source": "https://www.sntf.dz/annuaire_statistiques/ANNEXE_II.pdf",
+      "station_source_type": "official_network_annex",
+      "editor_note": "محطة واردة في الملحق الرسمي لشبكة SNTF؛ إحداثياتها غير محددة حتى التحقق منها يدويًا."
+    },
+    {
+      "id": "kadiria",
+      "name": "القادرية",
+      "name_fr": "Kadiria",
+      "wilaya": "Bouira",
+      "sntf_names": [
+        "KADIRIA"
+      ],
+      "lat": null,
+      "lon": null,
+      "geo_source": null,
+      "geo_verified": false,
+      "station_source": "https://www.sntf.dz/annuaire_statistiques/ANNEXE_II.pdf",
+      "station_source_type": "official_network_annex",
+      "editor_note": "محطة واردة في الملحق الرسمي لشبكة SNTF؛ إحداثياتها غير محددة حتى التحقق منها يدويًا."
+    },
+    {
+      "id": "m_zita",
+      "name": "مزيتة",
+      "name_fr": "M'Zita",
+      "wilaya": "Bordj Bou Arréridj",
+      "sntf_names": [
+        "M'ZITA"
+      ],
+      "lat": null,
+      "lon": null,
+      "geo_source": null,
+      "geo_verified": false,
+      "station_source": "https://www.sntf.dz/annuaire_statistiques/ANNEXE_II.pdf",
+      "station_source_type": "official_network_annex",
+      "editor_note": "محطة واردة في الملحق الرسمي لشبكة SNTF؛ إحداثياتها غير محددة حتى التحقق منها يدويًا."
+    },
+    {
+      "id": "bechloul",
+      "name": "بشلول",
+      "name_fr": "Bechloul",
+      "wilaya": "Bouira",
+      "sntf_names": [
+        "BECHLOUL"
+      ],
+      "lat": null,
+      "lon": null,
+      "geo_source": null,
+      "geo_verified": false,
+      "station_source": "https://www.sntf.dz/annuaire_statistiques/ANNEXE_II.pdf",
+      "station_source_type": "official_network_annex",
+      "editor_note": "محطة واردة في الملحق الرسمي لشبكة SNTF؛ إحداثياتها غير محددة حتى التحقق منها يدويًا."
+    },
+    {
+      "id": "ath_mansour",
+      "name": "آث منصور",
+      "name_fr": "Ath Mansour",
+      "wilaya": "Bouira",
+      "sntf_names": [
+        "ATH MANSOUR"
+      ],
+      "lat": null,
+      "lon": null,
+      "geo_source": null,
+      "geo_verified": false,
+      "station_source": "https://www.sntf.dz/annuaire_statistiques/ANNEXE_II.pdf",
+      "station_source_type": "official_network_annex",
+      "editor_note": "محطة واردة في الملحق الرسمي لشبكة SNTF؛ إحداثياتها غير محددة حتى التحقق منها يدويًا."
+    },
+    {
+      "id": "oued_ali",
+      "name": "وادي علي",
+      "name_fr": "Oued Ali",
+      "wilaya": "Bordj Bou Arréridj",
+      "sntf_names": [
+        "OUED ALI"
+      ],
+      "lat": null,
+      "lon": null,
+      "geo_source": null,
+      "geo_verified": false,
+      "station_source": "https://www.sntf.dz/annuaire_statistiques/ANNEXE_II.pdf",
+      "station_source_type": "official_network_annex",
+      "editor_note": "محطة واردة في الملحق الرسمي لشبكة SNTF؛ إحداثياتها غير محددة حتى التحقق منها يدويًا."
+    },
+    {
+      "id": "toghza",
+      "name": "توغزة",
+      "name_fr": "Toghza",
+      "wilaya": "Bouira",
+      "sntf_names": [
+        "TOGHZA"
+      ],
+      "lat": null,
+      "lon": null,
+      "geo_source": null,
+      "geo_verified": false,
+      "station_source": "https://www.sntf.dz/annuaire_statistiques/ANNEXE_II.pdf",
+      "station_source_type": "official_network_annex",
+      "editor_note": "محطة واردة في الملحق الرسمي لشبكة SNTF؛ إحداثياتها غير محددة حتى التحقق منها يدويًا."
+    },
+    {
+      "id": "bou_medfaa",
+      "name": "بومدفع",
+      "name_fr": "Bou Medfaa",
+      "wilaya": "Aïn Defla",
+      "sntf_names": [
+        "BOU MEDFAA"
+      ],
+      "lat": null,
+      "lon": null,
+      "geo_source": null,
+      "geo_verified": false,
+      "station_source": "https://www.sntf.dz/annuaire_statistiques/ANNEXE_II.pdf",
+      "station_source_type": "official_network_annex",
+      "editor_note": "محطة واردة في الملحق الرسمي لشبكة SNTF؛ إحداثياتها غير محددة حتى التحقق منها يدويًا."
+    },
+    {
+      "id": "hoceinia",
+      "name": "الحسينية",
+      "name_fr": "Hoceinia",
+      "wilaya": "Aïn Defla",
+      "sntf_names": [
+        "HOCEINIA"
+      ],
+      "lat": null,
+      "lon": null,
+      "geo_source": null,
+      "geo_verified": false,
+      "station_source": "https://www.sntf.dz/annuaire_statistiques/ANNEXE_II.pdf",
+      "station_source_type": "official_network_annex",
+      "editor_note": "محطة واردة في الملحق الرسمي لشبكة SNTF؛ إحداثياتها غير محددة حتى التحقق منها يدويًا."
+    },
+    {
+      "id": "ain_torki",
+      "name": "عين التركي",
+      "name_fr": "Aïn Torki",
+      "wilaya": "Aïn Defla",
+      "sntf_names": [
+        "AIN TORKI"
+      ],
+      "lat": null,
+      "lon": null,
+      "geo_source": null,
+      "geo_verified": false,
+      "station_source": "https://www.sntf.dz/annuaire_statistiques/ANNEXE_II.pdf",
+      "station_source_type": "official_network_annex",
+      "editor_note": "محطة واردة في الملحق الرسمي لشبكة SNTF؛ إحداثياتها غير محددة حتى التحقق منها يدويًا."
+    },
+    {
+      "id": "selmane",
+      "name": "سلمان",
+      "name_fr": "Selmane",
+      "wilaya": "Aïn Defla",
+      "sntf_names": [
+        "SELMANE"
+      ],
+      "lat": null,
+      "lon": null,
+      "geo_source": null,
+      "geo_verified": false,
+      "station_source": "https://www.sntf.dz/annuaire_statistiques/ANNEXE_II.pdf",
+      "station_source_type": "official_network_annex",
+      "editor_note": "محطة واردة في الملحق الرسمي لشبكة SNTF؛ إحداثياتها غير محددة حتى التحقق منها يدويًا."
+    },
+    {
+      "id": "oued_djer",
+      "name": "وادي جر",
+      "name_fr": "Oued Djer",
+      "wilaya": "Blida",
+      "sntf_names": [
+        "OUED DJER"
+      ],
+      "lat": null,
+      "lon": null,
+      "geo_source": null,
+      "geo_verified": false,
+      "station_source": "https://www.sntf.dz/annuaire_statistiques/ANNEXE_II.pdf",
+      "station_source_type": "official_network_annex",
+      "editor_note": "محطة واردة في الملحق الرسمي لشبكة SNTF؛ إحداثياتها غير محددة حتى التحقق منها يدويًا."
+    },
+    {
+      "id": "sidi_lakhdar",
+      "name": "سيدي لخضر",
+      "name_fr": "Sidi Lakhdar",
+      "wilaya": "Aïn Defla",
+      "sntf_names": [
+        "SIDI LAKHDAR"
+      ],
+      "lat": null,
+      "lon": null,
+      "geo_source": null,
+      "geo_verified": false,
+      "station_source": "https://www.sntf.dz/annuaire_statistiques/ANNEXE_II.pdf",
+      "station_source_type": "official_network_annex",
+      "editor_note": "محطة واردة في الملحق الرسمي لشبكة SNTF؛ إحداثياتها غير محددة حتى التحقق منها يدويًا."
+    },
+    {
+      "id": "el_amra",
+      "name": "العامرة",
+      "name_fr": "El Amra",
+      "wilaya": "Aïn Defla",
+      "sntf_names": [
+        "EL AMRA"
+      ],
+      "lat": null,
+      "lon": null,
+      "geo_source": null,
+      "geo_verified": false,
+      "station_source": "https://www.sntf.dz/annuaire_statistiques/ANNEXE_II.pdf",
+      "station_source_type": "official_network_annex",
+      "editor_note": "محطة واردة في الملحق الرسمي لشبكة SNTF؛ إحداثياتها غير محددة حتى التحقق منها يدويًا."
+    },
+    {
+      "id": "cheik_ben_yahia",
+      "name": "الشيخ بن يحيى",
+      "name_fr": "Cheik Ben Yahia",
+      "wilaya": "Aïn Defla",
+      "sntf_names": [
+        "CHEIK BEN YAHIA"
+      ],
+      "lat": null,
+      "lon": null,
+      "geo_source": null,
+      "geo_verified": false,
+      "station_source": "https://www.sntf.dz/annuaire_statistiques/ANNEXE_II.pdf",
+      "station_source_type": "official_network_annex",
+      "editor_note": "محطة واردة في الملحق الرسمي لشبكة SNTF؛ إحداثياتها غير محددة حتى التحقق منها يدويًا."
+    },
+    {
+      "id": "chabounia",
+      "name": "الشهبونية",
+      "name_fr": "Chabounia",
+      "wilaya": "Médéa",
+      "sntf_names": [
+        "CHABOUNIA"
+      ],
+      "lat": null,
+      "lon": null,
+      "geo_source": null,
+      "geo_verified": false,
+      "station_source": "https://www.sntf.dz/annuaire_statistiques/ANNEXE_II.pdf",
+      "station_source_type": "official_network_annex",
+      "editor_note": "محطة واردة في الملحق الرسمي لشبكة SNTF؛ إحداثياتها غير محددة حتى التحقق منها يدويًا."
+    },
+    {
+      "id": "sidi_makhlouf",
+      "name": "سيدي مخلوف",
+      "name_fr": "Sidi Makhlouf",
+      "wilaya": "Laghouat",
+      "sntf_names": [
+        "SIDI MAKHLOUF"
+      ],
+      "lat": null,
+      "lon": null,
+      "geo_source": null,
+      "geo_verified": false,
+      "station_source": "https://www.sntf.dz/annuaire_statistiques/ANNEXE_II.pdf",
+      "station_source_type": "official_network_annex",
+      "editor_note": "محطة واردة في الملحق الرسمي لشبكة SNTF؛ إحداثياتها غير محددة حتى التحقق منها يدويًا."
+    },
+    {
+      "id": "ain_oussara",
+      "name": "عين وسارة",
+      "name_fr": "Aïn Oussara",
+      "wilaya": "Djelfa",
+      "sntf_names": [
+        "AIN OUSSARA"
+      ],
+      "lat": null,
+      "lon": null,
+      "geo_source": null,
+      "geo_verified": false,
+      "station_source": "https://www.sntf.dz/annuaire_statistiques/ANNEXE_II.pdf",
+      "station_source_type": "official_network_annex",
+      "editor_note": "محطة واردة في الملحق الرسمي لشبكة SNTF؛ إحداثياتها غير محددة حتى التحقق منها يدويًا."
+    },
+    {
+      "id": "boukhadra",
+      "name": "بوخضرة",
+      "name_fr": "Boukhadra",
+      "wilaya": "Annaba",
+      "sntf_names": [
+        "BOUKHADRA"
+      ],
+      "lat": null,
+      "lon": null,
+      "geo_source": null,
+      "geo_verified": false,
+      "station_source": "https://www.sntf.dz/annuaire_statistiques/ANNEXE_II.pdf",
+      "station_source_type": "official_network_annex",
+      "editor_note": "محطة واردة في الملحق الرسمي لشبكة SNTF؛ إحداثياتها غير محددة حتى التحقق منها يدويًا."
+    },
+    {
+      "id": "el_bouni",
+      "name": "البوني",
+      "name_fr": "El Bouni",
+      "wilaya": "Annaba",
+      "sntf_names": [
+        "EL BOUNI"
+      ],
+      "lat": null,
+      "lon": null,
+      "geo_source": null,
+      "geo_verified": false,
+      "station_source": "https://www.sntf.dz/annuaire_statistiques/ANNEXE_II.pdf",
+      "station_source_type": "official_network_annex",
+      "editor_note": "محطة واردة في الملحق الرسمي لشبكة SNTF؛ إحداثياتها غير محددة حتى التحقق منها يدويًا."
+    },
+    {
+      "id": "chihani",
+      "name": "الشيحاني",
+      "name_fr": "Chihani",
+      "wilaya": "El Tarf",
+      "sntf_names": [
+        "CHIHANI"
+      ],
+      "lat": null,
+      "lon": null,
+      "geo_source": null,
+      "geo_verified": false,
+      "station_source": "https://www.sntf.dz/annuaire_statistiques/ANNEXE_II.pdf",
+      "station_source_type": "official_network_annex",
+      "editor_note": "محطة واردة في الملحق الرسمي لشبكة SNTF؛ إحداثياتها غير محددة حتى التحقق منها يدويًا."
+    },
+    {
+      "id": "drean",
+      "name": "الذرعان",
+      "name_fr": "Dréan",
+      "wilaya": "El Tarf",
+      "sntf_names": [
+        "DREAN"
+      ],
+      "lat": null,
+      "lon": null,
+      "geo_source": null,
+      "geo_verified": false,
+      "station_source": "https://www.sntf.dz/annuaire_statistiques/ANNEXE_II.pdf",
+      "station_source_type": "official_network_annex",
+      "editor_note": "محطة واردة في الملحق الرسمي لشبكة SNTF؛ إحداثياتها غير محددة حتى التحقق منها يدويًا."
+    },
+    {
+      "id": "souk_ahras",
+      "name": "سوق أهراس",
+      "name_fr": "Souk Ahras",
+      "wilaya": "Souk Ahras",
+      "sntf_names": [
+        "SOUK-AHRAS"
+      ],
+      "lat": null,
+      "lon": null,
+      "geo_source": null,
+      "geo_verified": false,
+      "station_source": "https://www.sntf.dz/annuaire_statistiques/ANNEXE_II.pdf",
+      "station_source_type": "official_network_annex",
+      "editor_note": "محطة واردة في الملحق الرسمي لشبكة SNTF؛ إحداثياتها غير محددة حتى التحقق منها يدويًا."
+    },
+    {
+      "id": "ghardimaou",
+      "name": "غار الدماء",
+      "name_fr": "Ghardimaou",
+      "wilaya": "Tunisie",
+      "sntf_names": [
+        "GHARDIMAOU"
+      ],
+      "lat": null,
+      "lon": null,
+      "geo_source": null,
+      "geo_verified": false,
+      "station_source": "https://www.sntf.dz/annuaire_statistiques/ANNEXE_II.pdf",
+      "station_source_type": "official_network_annex",
+      "editor_note": "محطة واردة في الملحق الرسمي لشبكة SNTF؛ إحداثياتها غير محددة حتى التحقق منها يدويًا."
+    },
+    {
+      "id": "hadjar_soud",
+      "name": "الحجار السود",
+      "name_fr": "Hadjar Soud",
+      "wilaya": "Skikda",
+      "sntf_names": [
+        "HADJAR SOUD"
+      ],
+      "lat": null,
+      "lon": null,
+      "geo_source": null,
+      "geo_verified": false,
+      "station_source": "https://www.sntf.dz/annuaire_statistiques/ANNEXE_II.pdf",
+      "station_source_type": "official_network_annex",
+      "editor_note": "محطة واردة في الملحق الرسمي لشبكة SNTF؛ إحداثياتها غير محددة حتى التحقق منها يدويًا."
+    },
+    {
+      "id": "ain_yagout",
+      "name": "عين ياقوت",
+      "name_fr": "Aïn Yagout",
+      "wilaya": "Batna",
+      "sntf_names": [
+        "AIN YAGOUT"
+      ],
+      "lat": null,
+      "lon": null,
+      "geo_source": null,
+      "geo_verified": false,
+      "station_source": "https://www.sntf.dz/annuaire_statistiques/ANNEXE_II.pdf",
+      "station_source_type": "official_network_annex",
+      "editor_note": "محطة واردة في الملحق الرسمي لشبكة SNTF؛ إحداثياتها غير محددة حتى التحقق منها يدويًا."
+    },
+    {
+      "id": "mezzloug",
+      "name": "مزلوق",
+      "name_fr": "Mezloug",
+      "wilaya": "Sétif",
+      "sntf_names": [
+        "MEZLOUG"
+      ],
+      "lat": null,
+      "lon": null,
+      "geo_source": null,
+      "geo_verified": false,
+      "station_source": "https://www.sntf.dz/annuaire_statistiques/ANNEXE_II.pdf",
+      "station_source_type": "official_network_annex",
+      "editor_note": "محطة واردة في الملحق الرسمي لشبكة SNTF؛ إحداثياتها غير محددة حتى التحقق منها يدويًا."
+    },
+    {
+      "id": "didouche_mourad",
+      "name": "ديدوش مراد",
+      "name_fr": "Didouche Mourad",
+      "wilaya": "Constantine",
+      "sntf_names": [
+        "DIDOUCHE MOURAD"
+      ],
+      "lat": null,
+      "lon": null,
+      "geo_source": null,
+      "geo_verified": false,
+      "station_source": "https://www.sntf.dz/annuaire_statistiques/ANNEXE_II.pdf",
+      "station_source_type": "official_network_annex",
+      "editor_note": "محطة واردة في الملحق الرسمي لشبكة SNTF؛ إحداثياتها غير محددة حتى التحقق منها يدويًا."
+    },
+    {
+      "id": "fedis_universite",
+      "name": "فيسديس الجامعية",
+      "name_fr": "Fesdis Université",
+      "wilaya": "Batna",
+      "sntf_names": [
+        "FESDIS UNIVERSITE"
+      ],
+      "lat": null,
+      "lon": null,
+      "geo_source": null,
+      "geo_verified": false,
+      "station_source": "https://www.sntf.dz/annuaire_statistiques/ANNEXE_II.pdf",
+      "station_source_type": "official_network_annex",
+      "editor_note": "محطة واردة في الملحق الرسمي لشبكة SNTF؛ إحداثياتها غير محددة حتى التحقق منها يدويًا."
+    },
+    {
+      "id": "ain_bouziane",
+      "name": "عين بوزيان",
+      "name_fr": "Aïn Bouziane",
+      "wilaya": "Skikda",
+      "sntf_names": [
+        "AIN BOUZIANE"
+      ],
+      "lat": null,
+      "lon": null,
+      "geo_source": null,
+      "geo_verified": false,
+      "station_source": "https://www.sntf.dz/annuaire_statistiques/ANNEXE_II.pdf",
+      "station_source_type": "official_network_annex",
+      "editor_note": "محطة واردة في الملحق الرسمي لشبكة SNTF؛ إحداثياتها غير محددة حتى التحقق منها يدويًا."
+    },
+    {
+      "id": "el_milia",
+      "name": "الميلية",
+      "name_fr": "El Milia",
+      "wilaya": "Jijel",
+      "sntf_names": [
+        "EL-MILIA"
+      ],
+      "lat": null,
+      "lon": null,
+      "geo_source": null,
+      "geo_verified": false,
+      "station_source": "https://www.sntf.dz/annuaire_statistiques/ANNEXE_II.pdf",
+      "station_source_type": "official_network_annex",
+      "editor_note": "محطة واردة في الملحق الرسمي لشبكة SNTF؛ إحداثياتها غير محددة حتى التحقق منها يدويًا."
+    },
+    {
+      "id": "el_anser_jijel",
+      "name": "العنصر",
+      "name_fr": "El Anser",
+      "wilaya": "Jijel",
+      "sntf_names": [
+        "EL ANCER"
+      ],
+      "lat": null,
+      "lon": null,
+      "geo_source": null,
+      "geo_verified": false,
+      "station_source": "https://www.sntf.dz/annuaire_statistiques/ANNEXE_II.pdf",
+      "station_source_type": "official_network_annex",
+      "editor_note": "محطة واردة في الملحق الرسمي لشبكة SNTF؛ إحداثياتها غير محددة حتى التحقق منها يدويًا."
+    },
+    {
+      "id": "sidi_abdelaziz",
+      "name": "سيدي عبد العزيز",
+      "name_fr": "Sidi Abdelaziz",
+      "wilaya": "Jijel",
+      "sntf_names": [
+        "SIDI ABDELAZIZ"
+      ],
+      "lat": null,
+      "lon": null,
+      "geo_source": null,
+      "geo_verified": false,
+      "station_source": "https://www.sntf.dz/annuaire_statistiques/ANNEXE_II.pdf",
+      "station_source_type": "official_network_annex",
+      "editor_note": "محطة واردة في الملحق الرسمي لشبكة SNTF؛ إحداثياتها غير محددة حتى التحقق منها يدويًا."
+    },
+    {
+      "id": "berrahal",
+      "name": "برحال",
+      "name_fr": "Berrahal",
+      "wilaya": "Annaba",
+      "sntf_names": [
+        "BERRAHAL"
+      ],
+      "lat": null,
+      "lon": null,
+      "geo_source": null,
+      "geo_verified": false,
+      "station_source": "https://www.sntf.dz/annuaire_statistiques/ANNEXE_II.pdf",
+      "station_source_type": "official_network_annex",
+      "editor_note": "محطة واردة في الملحق الرسمي لشبكة SNTF؛ إحداثياتها غير محددة حتى التحقق منها يدويًا."
     }
-  ]
+  ],
+  "official_station_register": {
+    "source_url": "https://www.sntf.dz/annuaire_statistiques/ANNEXE_II.pdf",
+    "issuer": "SNTF",
+    "imported_at": "2026-09-26",
+    "scope": "محطات الركاب والتوقفات المحددة في الملحق الرسمي للشبكة؛ لم تُستورد محطات الشحن حصريًا",
+    "geolocation_policy": "لا تُمس الإحداثيات السابقة المتحقق منها، وتبدأ جميع المحطات الجديدة بـ geo_verified=false",
+    "note": "وردت أسماء المحطات في الملحق الرسمي؛ لا تُستنتج من الملحق رحلات حالية أو توفر خدمة ركاب اليوم."
+  }
 }
