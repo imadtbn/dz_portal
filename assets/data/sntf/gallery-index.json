@@ -1,5 +1,5 @@
 {
-  "version": 1,
+  "version": 2,
   "generated_at": "2026-09-26",
   "source_page": "sectors/sntf.html",
   "images": [
@@ -12,8 +12,9 @@
         "alger-thenia"
       ],
       "source_page": "sectors/sntf.html",
-      "status": "reference_image_unverified",
-      "notes": "مدرج ضمن معرض جداول البوابة؛ حالة الصلاحية وتاريخ السريان يحتاجان مراجعة من الصورة أو المصدر الرسمي."
+      "issuing_authority": "SNTF",
+      "status": "official_document_validity_unconfirmed",
+      "notes": "صورة جدول صادرة عن SNTF وفق توثيق صاحب المشروع؛ تاريخ السريان واستمرار العمل بالمواقيت يحتاجان مراجعة منفصلة، ولا تُستنتج أوقات الرحلات من اسم الصورة."
     },
     {
       "id": "thenia-alger-suburban",
@@ -24,8 +25,9 @@
         "thenia-alger"
       ],
       "source_page": "sectors/sntf.html",
-      "status": "reference_image_unverified",
-      "notes": "مدرج ضمن معرض جداول البوابة؛ حالة الصلاحية وتاريخ السريان يحتاجان مراجعة من الصورة أو المصدر الرسمي."
+      "issuing_authority": "SNTF",
+      "status": "official_document_validity_unconfirmed",
+      "notes": "صورة جدول صادرة عن SNTF وفق توثيق صاحب المشروع؛ تاريخ السريان واستمرار العمل بالمواقيت يحتاجان مراجعة منفصلة، ولا تُستنتج أوقات الرحلات من اسم الصورة."
     },
     {
       "id": "alger-affroun-suburban",
@@ -36,8 +38,9 @@
         "alger-affroun"
       ],
       "source_page": "sectors/sntf.html",
-      "status": "reference_image_unverified",
-      "notes": "مدرج ضمن معرض جداول البوابة؛ حالة الصلاحية وتاريخ السريان يحتاجان مراجعة من الصورة أو المصدر الرسمي."
+      "issuing_authority": "SNTF",
+      "status": "official_document_validity_unconfirmed",
+      "notes": "صورة جدول صادرة عن SNTF وفق توثيق صاحب المشروع؛ تاريخ السريان واستمرار العمل بالمواقيت يحتاجان مراجعة منفصلة، ولا تُستنتج أوقات الرحلات من اسم الصورة."
     },
     {
       "id": "affroun-alger-suburban",
@@ -48,8 +51,9 @@
         "affroun-alger"
       ],
       "source_page": "sectors/sntf.html",
-      "status": "reference_image_unverified",
-      "notes": "مدرج ضمن معرض جداول البوابة؛ حالة الصلاحية وتاريخ السريان يحتاجان مراجعة من الصورة أو المصدر الرسمي."
+      "issuing_authority": "SNTF",
+      "status": "official_document_validity_unconfirmed",
+      "notes": "صورة جدول صادرة عن SNTF وفق توثيق صاحب المشروع؛ تاريخ السريان واستمرار العمل بالمواقيت يحتاجان مراجعة منفصلة، ولا تُستنتج أوقات الرحلات من اسم الصورة."
     },
     {
       "id": "alger-zeralda-suburban",
@@ -60,8 +64,9 @@
         "alger-zeralda"
       ],
       "source_page": "sectors/sntf.html",
-      "status": "reference_image_unverified",
-      "notes": "مدرج ضمن معرض جداول البوابة؛ حالة الصلاحية وتاريخ السريان يحتاجان مراجعة من الصورة أو المصدر الرسمي."
+      "issuing_authority": "SNTF",
+      "status": "official_document_validity_unconfirmed",
+      "notes": "صورة جدول صادرة عن SNTF وفق توثيق صاحب المشروع؛ تاريخ السريان واستمرار العمل بالمواقيت يحتاجان مراجعة منفصلة، ولا تُستنتج أوقات الرحلات من اسم الصورة."
     },
     {
       "id": "zeralda-alger-suburban",
@@ -72,8 +77,9 @@
         "zeralda-alger"
       ],
       "source_page": "sectors/sntf.html",
-      "status": "reference_image_unverified",
-      "notes": "مدرج ضمن معرض جداول البوابة؛ حالة الصلاحية وتاريخ السريان يحتاجان مراجعة من الصورة أو المصدر الرسمي."
+      "issuing_authority": "SNTF",
+      "status": "official_document_validity_unconfirmed",
+      "notes": "صورة جدول صادرة عن SNTF وفق توثيق صاحب المشروع؛ تاريخ السريان واستمرار العمل بالمواقيت يحتاجان مراجعة منفصلة، ولا تُستنتج أوقات الرحلات من اسم الصورة."
     },
     {
       "id": "alger-oued-aissa-suburban",
@@ -84,8 +90,9 @@
         "alger-oued-aissi"
       ],
       "source_page": "sectors/sntf.html",
-      "status": "reference_image_unverified",
-      "notes": "مدرج ضمن معرض جداول البوابة؛ حالة الصلاحية وتاريخ السريان يحتاجان مراجعة من الصورة أو المصدر الرسمي."
+      "issuing_authority": "SNTF",
+      "status": "official_document_validity_unconfirmed",
+      "notes": "صورة جدول صادرة عن SNTF وفق توثيق صاحب المشروع؛ تاريخ السريان واستمرار العمل بالمواقيت يحتاجان مراجعة منفصلة، ولا تُستنتج أوقات الرحلات من اسم الصورة."
     },
     {
       "id": "oued-aissa-alger-suburban",
@@ -96,8 +103,9 @@
         "oued-aissi-alger"
       ],
       "source_page": "sectors/sntf.html",
-      "status": "reference_image_unverified",
-      "notes": "مدرج ضمن معرض جداول البوابة؛ حالة الصلاحية وتاريخ السريان يحتاجان مراجعة من الصورة أو المصدر الرسمي."
+      "issuing_authority": "SNTF",
+      "status": "official_document_validity_unconfirmed",
+      "notes": "صورة جدول صادرة عن SNTF وفق توثيق صاحب المشروع؛ تاريخ السريان واستمرار العمل بالمواقيت يحتاجان مراجعة منفصلة، ولا تُستنتج أوقات الرحلات من اسم الصورة."
     },
     {
       "id": "alger-airoport-alger-suburban",
@@ -108,8 +116,9 @@
         "alger-airport"
       ],
       "source_page": "sectors/sntf.html",
-      "status": "reference_image_unverified",
-      "notes": "مدرج ضمن معرض جداول البوابة؛ حالة الصلاحية وتاريخ السريان يحتاجان مراجعة من الصورة أو المصدر الرسمي."
+      "issuing_authority": "SNTF",
+      "status": "official_document_validity_unconfirmed",
+      "notes": "صورة جدول صادرة عن SNTF وفق توثيق صاحب المشروع؛ تاريخ السريان واستمرار العمل بالمواقيت يحتاجان مراجعة منفصلة، ولا تُستنتج أوقات الرحلات من اسم الصورة."
     },
     {
       "id": "affroun-thenia-affroun-suburban",
@@ -120,8 +129,9 @@
         "affroun-thenia"
       ],
       "source_page": "sectors/sntf.html",
-      "status": "reference_image_unverified",
-      "notes": "مدرج ضمن معرض جداول البوابة؛ حالة الصلاحية وتاريخ السريان يحتاجان مراجعة من الصورة أو المصدر الرسمي."
+      "issuing_authority": "SNTF",
+      "status": "official_document_validity_unconfirmed",
+      "notes": "صورة جدول صادرة عن SNTF وفق توثيق صاحب المشروع؛ تاريخ السريان واستمرار العمل بالمواقيت يحتاجان مراجعة منفصلة، ولا تُستنتج أوقات الرحلات من اسم الصورة."
     },
     {
       "id": "zeralda-thenia-zeralda-suburban",
@@ -132,8 +142,9 @@
         "zeralda-thenia"
       ],
       "source_page": "sectors/sntf.html",
-      "status": "reference_image_unverified",
-      "notes": "مدرج ضمن معرض جداول البوابة؛ حالة الصلاحية وتاريخ السريان يحتاجان مراجعة من الصورة أو المصدر الرسمي."
+      "issuing_authority": "SNTF",
+      "status": "official_document_validity_unconfirmed",
+      "notes": "صورة جدول صادرة عن SNTF وفق توثيق صاحب المشروع؛ تاريخ السريان واستمرار العمل بالمواقيت يحتاجان مراجعة منفصلة، ولا تُستنتج أوقات الرحلات من اسم الصورة."
     },
     {
       "id": "alger-bejaia-alger-eastern",
@@ -144,8 +155,9 @@
         "alger-bejaia"
       ],
       "source_page": "sectors/sntf.html",
-      "status": "reference_image_unverified",
-      "notes": "مدرج ضمن معرض جداول البوابة؛ حالة الصلاحية وتاريخ السريان يحتاجان مراجعة من الصورة أو المصدر الرسمي."
+      "issuing_authority": "SNTF",
+      "status": "official_document_validity_unconfirmed",
+      "notes": "صورة جدول صادرة عن SNTF وفق توثيق صاحب المشروع؛ تاريخ السريان واستمرار العمل بالمواقيت يحتاجان مراجعة منفصلة، ولا تُستنتج أوقات الرحلات من اسم الصورة."
     },
     {
       "id": "alger-batna-alger-eastern",
@@ -156,8 +168,9 @@
         "alger-batna"
       ],
       "source_page": "sectors/sntf.html",
-      "status": "reference_image_unverified",
-      "notes": "مدرج ضمن معرض جداول البوابة؛ حالة الصلاحية وتاريخ السريان يحتاجان مراجعة من الصورة أو المصدر الرسمي."
+      "issuing_authority": "SNTF",
+      "status": "official_document_validity_unconfirmed",
+      "notes": "صورة جدول صادرة عن SNTF وفق توثيق صاحب المشروع؛ تاريخ السريان واستمرار العمل بالمواقيت يحتاجان مراجعة منفصلة، ولا تُستنتج أوقات الرحلات من اسم الصورة."
     },
     {
       "id": "alger-annaba-eastern",
@@ -168,8 +181,9 @@
         "alger-annaba"
       ],
       "source_page": "sectors/sntf.html",
-      "status": "reference_image_unverified",
-      "notes": "مدرج ضمن معرض جداول البوابة؛ حالة الصلاحية وتاريخ السريان يحتاجان مراجعة من الصورة أو المصدر الرسمي."
+      "issuing_authority": "SNTF",
+      "status": "official_document_validity_unconfirmed",
+      "notes": "صورة جدول صادرة عن SNTF وفق توثيق صاحب المشروع؛ تاريخ السريان واستمرار العمل بالمواقيت يحتاجان مراجعة منفصلة، ولا تُستنتج أوقات الرحلات من اسم الصورة."
     },
     {
       "id": "alger-annaba-tj-eastern",
@@ -178,8 +192,9 @@
       "alt": "الجزائر عنابة الجزائر يوميا",
       "route_ids": [],
       "source_page": "sectors/sntf.html",
-      "status": "reference_image_unverified",
-      "notes": "مدرج ضمن معرض جداول البوابة؛ حالة الصلاحية وتاريخ السريان يحتاجان مراجعة من الصورة أو المصدر الرسمي."
+      "issuing_authority": "SNTF",
+      "status": "official_document_validity_unconfirmed",
+      "notes": "صورة جدول صادرة عن SNTF وفق توثيق صاحب المشروع؛ تاريخ السريان واستمرار العمل بالمواقيت يحتاجان مراجعة منفصلة، ولا تُستنتج أوقات الرحلات من اسم الصورة."
     },
     {
       "id": "alger-tebessa-eastern",
@@ -190,8 +205,9 @@
         "alger-tebessa"
       ],
       "source_page": "sectors/sntf.html",
-      "status": "reference_image_unverified",
-      "notes": "مدرج ضمن معرض جداول البوابة؛ حالة الصلاحية وتاريخ السريان يحتاجان مراجعة من الصورة أو المصدر الرسمي."
+      "issuing_authority": "SNTF",
+      "status": "official_document_validity_unconfirmed",
+      "notes": "صورة جدول صادرة عن SNTF وفق توثيق صاحب المشروع؛ تاريخ السريان واستمرار العمل بالمواقيت يحتاجان مراجعة منفصلة، ولا تُستنتج أوقات الرحلات من اسم الصورة."
     },
     {
       "id": "beni-mansour-bedjaia-eastern",
@@ -202,8 +218,9 @@
         "beni-mansour-bejaia"
       ],
       "source_page": "sectors/sntf.html",
-      "status": "reference_image_unverified",
-      "notes": "مدرج ضمن معرض جداول البوابة؛ حالة الصلاحية وتاريخ السريان يحتاجان مراجعة من الصورة أو المصدر الرسمي."
+      "issuing_authority": "SNTF",
+      "status": "official_document_validity_unconfirmed",
+      "notes": "صورة جدول صادرة عن SNTF وفق توثيق صاحب المشروع؛ تاريخ السريان واستمرار العمل بالمواقيت يحتاجان مراجعة منفصلة، ولا تُستنتج أوقات الرحلات من اسم الصورة."
     },
     {
       "id": "alger-oran-alger-western",
@@ -214,8 +231,9 @@
         "alger-oran"
       ],
       "source_page": "sectors/sntf.html",
-      "status": "reference_image_unverified",
-      "notes": "مدرج ضمن معرض جداول البوابة؛ حالة الصلاحية وتاريخ السريان يحتاجان مراجعة من الصورة أو المصدر الرسمي."
+      "issuing_authority": "SNTF",
+      "status": "official_document_validity_unconfirmed",
+      "notes": "صورة جدول صادرة عن SNTF وفق توثيق صاحب المشروع؛ تاريخ السريان واستمرار العمل بالمواقيت يحتاجان مراجعة منفصلة، ولا تُستنتج أوقات الرحلات من اسم الصورة."
     },
     {
       "id": "oran-bechar-western",
@@ -226,8 +244,9 @@
         "oran-bechar"
       ],
       "source_page": "sectors/sntf.html",
-      "status": "reference_image_unverified",
-      "notes": "مدرج ضمن معرض جداول البوابة؛ حالة الصلاحية وتاريخ السريان يحتاجان مراجعة من الصورة أو المصدر الرسمي."
+      "issuing_authority": "SNTF",
+      "status": "official_document_validity_unconfirmed",
+      "notes": "صورة جدول صادرة عن SNTF وفق توثيق صاحب المشروع؛ تاريخ السريان واستمرار العمل بالمواقيت يحتاجان مراجعة منفصلة، ولا تُستنتج أوقات الرحلات من اسم الصورة."
     },
     {
       "id": "oran-chlef-agha-western",
@@ -238,8 +257,9 @@
         "oran-chlef"
       ],
       "source_page": "sectors/sntf.html",
-      "status": "reference_image_unverified",
-      "notes": "مدرج ضمن معرض جداول البوابة؛ حالة الصلاحية وتاريخ السريان يحتاجان مراجعة من الصورة أو المصدر الرسمي."
+      "issuing_authority": "SNTF",
+      "status": "official_document_validity_unconfirmed",
+      "notes": "صورة جدول صادرة عن SNTF وفق توثيق صاحب المشروع؛ تاريخ السريان واستمرار العمل بالمواقيت يحتاجان مراجعة منفصلة، ولا تُستنتج أوقات الرحلات من اسم الصورة."
     },
     {
       "id": "agha-chlef-oran-western",
@@ -250,8 +270,9 @@
         "agha-chlef"
       ],
       "source_page": "sectors/sntf.html",
-      "status": "reference_image_unverified",
-      "notes": "مدرج ضمن معرض جداول البوابة؛ حالة الصلاحية وتاريخ السريان يحتاجان مراجعة من الصورة أو المصدر الرسمي."
+      "issuing_authority": "SNTF",
+      "status": "official_document_validity_unconfirmed",
+      "notes": "صورة جدول صادرة عن SNTF وفق توثيق صاحب المشروع؛ تاريخ السريان واستمرار العمل بالمواقيت يحتاجان مراجعة منفصلة، ولا تُستنتج أوقات الرحلات من اسم الصورة."
     },
     {
       "id": "bechar-tindouf-sahara",
@@ -262,8 +283,9 @@
         "bechar-tindouf"
       ],
       "source_page": "sectors/sntf.html",
-      "status": "reference_image_unverified",
-      "notes": "مدرج ضمن معرض جداول البوابة؛ حالة الصلاحية وتاريخ السريان يحتاجان مراجعة من الصورة أو المصدر الرسمي."
+      "issuing_authority": "SNTF",
+      "status": "official_document_validity_unconfirmed",
+      "notes": "صورة جدول صادرة عن SNTF وفق توثيق صاحب المشروع؛ تاريخ السريان واستمرار العمل بالمواقيت يحتاجان مراجعة منفصلة، ولا تُستنتج أوقات الرحلات من اسم الصورة."
     },
     {
       "id": "alger-teggart-sahara",
@@ -274,8 +296,9 @@
         "alger-touggourt"
       ],
       "source_page": "sectors/sntf.html",
-      "status": "reference_image_unverified",
-      "notes": "مدرج ضمن معرض جداول البوابة؛ حالة الصلاحية وتاريخ السريان يحتاجان مراجعة من الصورة أو المصدر الرسمي."
+      "issuing_authority": "SNTF",
+      "status": "official_document_validity_unconfirmed",
+      "notes": "صورة جدول صادرة عن SNTF وفق توثيق صاحب المشروع؛ تاريخ السريان واستمرار العمل بالمواقيت يحتاجان مراجعة منفصلة، ولا تُستنتج أوقات الرحلات من اسم الصورة."
     },
     {
       "id": "oran-bechar-sahara",
@@ -284,8 +307,9 @@
       "alt": "وهران بشار وهران",
       "route_ids": [],
       "source_page": "sectors/sntf.html",
-      "status": "reference_image_unverified",
-      "notes": "مدرج ضمن معرض جداول البوابة؛ حالة الصلاحية وتاريخ السريان يحتاجان مراجعة من الصورة أو المصدر الرسمي."
+      "issuing_authority": "SNTF",
+      "status": "official_document_validity_unconfirmed",
+      "notes": "صورة جدول صادرة عن SNTF وفق توثيق صاحب المشروع؛ تاريخ السريان واستمرار العمل بالمواقيت يحتاجان مراجعة منفصلة، ولا تُستنتج أوقات الرحلات من اسم الصورة."
     },
     {
       "id": "bougezzoul-djelfa-laghouat-sahara",
@@ -294,8 +318,9 @@
       "alt": "بوغزول - الجلفة - الاغواط",
       "route_ids": [],
       "source_page": "sectors/sntf.html",
-      "status": "reference_image_unverified",
-      "notes": "مدرج ضمن معرض جداول البوابة؛ حالة الصلاحية وتاريخ السريان يحتاجان مراجعة من الصورة أو المصدر الرسمي."
+      "issuing_authority": "SNTF",
+      "status": "official_document_validity_unconfirmed",
+      "notes": "صورة جدول صادرة عن SNTF وفق توثيق صاحب المشروع؛ تاريخ السريان واستمرار العمل بالمواقيت يحتاجان مراجعة منفصلة، ولا تُستنتج أوقات الرحلات من اسم الصورة."
     },
     {
       "id": "bechar-tindouf-tj-sahara",
@@ -304,8 +329,9 @@
       "alt": "بشار تيندوف بشار يوميا",
       "route_ids": [],
       "source_page": "sectors/sntf.html",
-      "status": "reference_image_unverified",
-      "notes": "مدرج ضمن معرض جداول البوابة؛ حالة الصلاحية وتاريخ السريان يحتاجان مراجعة من الصورة أو المصدر الرسمي."
+      "issuing_authority": "SNTF",
+      "status": "official_document_validity_unconfirmed",
+      "notes": "صورة جدول صادرة عن SNTF وفق توثيق صاحب المشروع؛ تاريخ السريان واستمرار العمل بالمواقيت يحتاجان مراجعة منفصلة، ولا تُستنتج أوقات الرحلات من اسم الصورة."
     },
     {
       "id": "bba-tisemsilte-sahara",
@@ -316,8 +342,9 @@
         "tissemsilt-bordj"
       ],
       "source_page": "sectors/sntf.html",
-      "status": "reference_image_unverified",
-      "notes": "مدرج ضمن معرض جداول البوابة؛ حالة الصلاحية وتاريخ السريان يحتاجان مراجعة من الصورة أو المصدر الرسمي."
+      "issuing_authority": "SNTF",
+      "status": "official_document_validity_unconfirmed",
+      "notes": "صورة جدول صادرة عن SNTF وفق توثيق صاحب المشروع؛ تاريخ السريان واستمرار العمل بالمواقيت يحتاجان مراجعة منفصلة، ولا تُستنتج أوقات الرحلات من اسم الصورة."
     },
     {
       "id": "boughezoul-laghouat-sahara",
@@ -328,8 +355,9 @@
         "boughezoul-laghouat"
       ],
       "source_page": "sectors/sntf.html",
-      "status": "reference_image_unverified",
-      "notes": "مدرج ضمن معرض جداول البوابة؛ حالة الصلاحية وتاريخ السريان يحتاجان مراجعة من الصورة أو المصدر الرسمي."
+      "issuing_authority": "SNTF",
+      "status": "official_document_validity_unconfirmed",
+      "notes": "صورة جدول صادرة عن SNTF وفق توثيق صاحب المشروع؛ تاريخ السريان واستمرار العمل بالمواقيت يحتاجان مراجعة منفصلة، ولا تُستنتج أوقات الرحلات من اسم الصورة."
     },
     {
       "id": "alger-tunisia-international",
@@ -340,8 +368,9 @@
         "alger-tunis"
       ],
       "source_page": "sectors/sntf.html",
-      "status": "reference_image_unverified",
-      "notes": "مدرج ضمن معرض جداول البوابة؛ حالة الصلاحية وتاريخ السريان يحتاجان مراجعة من الصورة أو المصدر الرسمي."
+      "issuing_authority": "SNTF",
+      "status": "official_document_validity_unconfirmed",
+      "notes": "صورة جدول صادرة عن SNTF وفق توثيق صاحب المشروع؛ تاريخ السريان واستمرار العمل بالمواقيت يحتاجان مراجعة منفصلة، ولا تُستنتج أوقات الرحلات من اسم الصورة."
     }
   ]
 }
