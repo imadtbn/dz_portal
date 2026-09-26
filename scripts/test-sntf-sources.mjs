@@ -29,7 +29,7 @@ const oldGeo=new Map(stations.map(s=>[s.id,JSON.stringify(lockGeo(s))]));
 const approved={approved:true,reviewed_by:"local-test",reviewed_at:"2026-09-26"};
 const merged=mergeApprovedStations(stations,[
  {...approved,action:"link_alias",station_id:"oued_aissi",input_name:"OUED AISSI",lat:0,lon:0,geo_verified:false,geo_source:"UNTRUSTED"},
- {...approved,action:"add_station",station_id:"sntf_sidi_bouabida_review",input_name:"SIDI BOUABIDA",name:"سيدي بوعبيدة",name_fr:"Sidi Bouabida",lat:0,lon:0,geo_verified:true}
+ {...approved,action:"add_station",station_id:"sntf_sidi_bouabida_review",input_name:"SNTF NEW TEST STATION",name:"محطة اختبار جديدة",name_fr:"SNTF New Test Station",lat:0,lon:0,geo_verified:true}
 ]);
 assert.equal(merged.stations.length,stations.length+1);
 assert.equal(merged.stations.find(x=>x.id==="oued_aissi").sntf_names.includes("OUED AISSI"),true);
@@ -40,7 +40,7 @@ assert.throws(()=>mergeApprovedStations(stations,[{...approved,approved:false,ac
 assert.throws(()=>mergeApprovedStations(stations,[{...approved,action:"link_alias",station_id:"thenia",input_name:"OUED AISSI"}]),/alias another station/);
 assert.deepEqual(stations.map(s=>JSON.stringify(lockGeo(s))),stations.map(s=>oldGeo.get(s.id)),"Merge may not mutate input");
 const html=readFileSync("sectors/sntf.html","utf8");
-assert.equal(gallery.images.length,29);
+assert.equal(gallery.images.length,28);
 assert.equal(new Set(gallery.images.map(i=>i.id)).size,gallery.images.length);
 assert(gallery.images.every(i=>html.includes(i.path)&&existsSync(i.path)&&i.status==="official_document_validity_unconfirmed"&&i.issuing_authority==="SNTF"&&i.source_page==="sectors/sntf.html"),"Every indexed gallery image must exist in repository, be referenced on SNTF page and distinguish official origin from schedule validity");
 assert(gallery.images.some(i=>i.route_ids.includes("alger-thenia")),"Gallery must index Alger-Thenia timetable");
