@@ -20,9 +20,9 @@ assert(source.publish_to_live===false,"Historical SNTF snapshots must not publis
 assert(source.query_snapshots.every(q=>q.status==="historical_recheck_required"&&q.intermediate_stops_known===false),"Historical snapshots must disclose unknown intermediate stops");
 assert(saved.queries.every(q=>q.trips.every(t=>t.approval_status==="pending_official_recheck"&&t.incomplete_stop_times===true)),"No archived timetable can appear as a complete live trip");
 assert(saved.summary.archived_trip_candidates===12,"Expected 12 historical official search records");
-assert(saved.summary.new_station_names===2,"Expected two unmatched official station names");
-assert(saved.station_candidates.some(x=>x.name==="SIDI BOUABIDA"&&x.status==="new_candidate"));
-assert(saved.station_candidates.some(x=>x.name==="CHEBAITA M"&&x.status==="new_candidate"));
+assert(saved.summary.new_station_names===0,"All ten distinct historical station names should now resolve to canonical station IDs");
+assert(saved.station_candidates.some(x=>x.name==="SIDI BOUABIDA"&&x.status==="matched"&&x.station_id==="sidi_bouabida"));
+assert(saved.station_candidates.some(x=>x.name==="CHEBAITA M"&&x.status==="matched"&&x.station_id==="chebaita_m"));
 assert.equal(matchStation("THENIA",stations).status,"matched");
 assert.equal(matchStation("OUED AISSI",stations).station_id,"oued_aissi");
 const oldGeo=new Map(stations.map(s=>[s.id,JSON.stringify(lockGeo(s))]));
