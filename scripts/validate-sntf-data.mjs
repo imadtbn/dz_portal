@@ -21,7 +21,7 @@ for(const r of routes){
  if(r.stops){fail(r.stops[0]!==r.from||r.stops.at(-1)!==r.to,"Route stops endpoints mismatch "+r.id);for(const id of r.stops)fail(!stationsById.has(id),"Unknown route stop "+id)}
 }
 for(const c of calendars){
- fail(!["daily","friday_holiday","weekday_not_friday","except_friday"].includes(c.rule),"Invalid recurrence "+c.id);
+ fail(!["daily","friday_holiday","weekday_not_friday","except_friday","friday_only"].includes(c.rule),"Invalid recurrence "+c.id);
  if(c.start_date||c.end_date)fail(!date(c.start_date)||!date(c.end_date)||c.end_date<c.start_date,"Invalid optional calendar dates "+c.id);
 }
 for(const holiday of holidays.dates){
@@ -57,4 +57,19 @@ for(const t of trips){
  fail(Boolean(route)&&(route.from!==t.stop_times[0].station_id||route.to!==t.stop_times.at(-1).station_id),"Trip and route endpoints mismatch "+t.trip_id);
 }
 for(const source of sources)fail(!source.url?.startsWith("https://"),"Source URL missing "+source.id);
+const fullIds=new Set(),normalized=new Map();
+const clean=n=>String(n??"").normalize("NFKD").replace(/[\\u0300-\\u036f]/g,"").toLowerCase().replace(/[^\\p{L}\\p{N}]+/gu,"");
+for(const s of stations){for(const name of [s.name_fr,...(s.sntf_names||[])]){
+ const n=clean(name);
+ if(normalized.has(n)&&normalized.get(n)!==s.id)errors.push("Duplicate station name/alias "+name+": "+s.id+" conflicts with "+normalized.get(n));
+ normalized.set(n,s.id);
+}}
+for(const t of trips){
+ const unique=t.route_id+"|"+t.train_number+"|"+t.service_id+"|"+t.stop_times?.[0]?.departure;
+ if(t.data_status!=="pending_review"){
+  if(fullIds.has(unique))errors.push("Duplicate published trip "+unique);
+  fullIds.add(unique);
+ }
+}
+
 if(errors.length){console.error(errors.join("\\n"));process.exitCode=1}else console.log("DZ Rail validation OK: "+stations.length+" stations; "+routes.length+" routes; "+trips.filter(t=>t.data_status==="source_transcribed").length+" transcribed timetable trips; "+trips.filter(t=>t.data_status==="pending_review").length+" editable unpublished drafts; "+holidays.dates.length+" holiday dates.");
