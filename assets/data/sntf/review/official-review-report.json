@@ -70,8 +70,10 @@
         "name": "THENIA",
         "station_id": "thenia"
       },
-      "candidate_route_ids": [],
-      "route_action": "propose_new_route",
+      "candidate_route_ids": [
+        "oued-aissi-thenia"
+      ],
+      "route_action": "review_existing",
       "intermediate_stops_known": false,
       "trips": [
         {
