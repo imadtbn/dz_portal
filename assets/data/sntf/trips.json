@@ -1,5 +1,5 @@
 {
-  "version": 5,
+  "version": 6,
   "updated": "2026-09-26",
   "trips": [
     {
@@ -1600,6 +1600,484 @@
       ],
       "previous_simulation": true,
       "editor_note": "مسودة بيانات أُنشئت من أمثلة افتراضية سابقة. يجب مراجعة جميع المحطات والأوقات ورقم القطار قبل اعتمادها أو عرضها كرحلة مجدولة."
+    },
+    {
+      "trip_id": "gallery-alger-thenia-27-2026-09-19",
+      "route_id": "alger-thenia",
+      "train_number": "27",
+      "service_id": "except_friday",
+      "source_id": "dz-portal-gallery-alger-thenia-2026-09-19",
+      "data_status": "source_transcribed",
+      "effective_from": "2026-09-19",
+      "station_time_kind": "published_single_time",
+      "stop_times": [
+        {
+          "station_id": "alger",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "06:25"
+        },
+        {
+          "station_id": "agha",
+          "sequence": 2,
+          "arrival": "06:28",
+          "departure": "06:28"
+        },
+        {
+          "station_id": "les_ateliers",
+          "sequence": 3,
+          "arrival": "06:31",
+          "departure": "06:31"
+        },
+        {
+          "station_id": "hussein_dey",
+          "sequence": 4,
+          "arrival": "06:35",
+          "departure": "06:35"
+        },
+        {
+          "station_id": "caroubier",
+          "sequence": 5,
+          "arrival": "06:38",
+          "departure": "06:38"
+        },
+        {
+          "station_id": "el_harrach",
+          "sequence": 6,
+          "arrival": "06:41",
+          "departure": "06:41"
+        },
+        {
+          "station_id": "oued_smar",
+          "sequence": 7,
+          "arrival": "06:46",
+          "departure": "06:46"
+        },
+        {
+          "station_id": "bab_ezzouar",
+          "sequence": 8,
+          "arrival": "06:49",
+          "departure": "06:49"
+        },
+        {
+          "station_id": "dar_el_beida",
+          "sequence": 9,
+          "arrival": "06:52",
+          "departure": "06:52"
+        },
+        {
+          "station_id": "rouiba",
+          "sequence": 10,
+          "arrival": "06:57",
+          "departure": "06:57"
+        },
+        {
+          "station_id": "rouiba_zi",
+          "sequence": 11,
+          "arrival": "06:59",
+          "departure": "06:59"
+        },
+        {
+          "station_id": "reghaia",
+          "sequence": 12,
+          "arrival": "07:02",
+          "departure": "07:02"
+        },
+        {
+          "station_id": "boudouaou",
+          "sequence": 13,
+          "arrival": "07:08",
+          "departure": "07:08"
+        },
+        {
+          "station_id": "corso",
+          "sequence": 14,
+          "arrival": "07:11",
+          "departure": "07:11"
+        },
+        {
+          "station_id": "boumerdes",
+          "sequence": 15,
+          "arrival": "07:15",
+          "departure": "07:15"
+        },
+        {
+          "station_id": "tidjelabine",
+          "sequence": 16,
+          "arrival": "07:19",
+          "departure": "07:19"
+        },
+        {
+          "station_id": "thenia",
+          "sequence": 17,
+          "arrival": "07:24",
+          "departure": null
+        }
+      ],
+      "editor_note": "نقل يدوي من عمود القطار 27 في الجدول المصور المؤرخ 19 سبتمبر 2026. الأعمدة تشير إلى وقت واحد لكل محطة وليس إلى مدة توقف منفصلة؛ علامات '-' تعني عدم إدراج توقف لذلك القطار. يتطلب تأكيد استمرار سريان الجدول."
+    },
+    {
+      "trip_id": "gallery-alger-thenia-33-2026-09-19",
+      "route_id": "alger-thenia",
+      "train_number": "33",
+      "service_id": "daily",
+      "source_id": "dz-portal-gallery-alger-thenia-2026-09-19",
+      "data_status": "source_transcribed",
+      "effective_from": "2026-09-19",
+      "station_time_kind": "published_single_time",
+      "stop_times": [
+        {
+          "station_id": "alger",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "07:30"
+        },
+        {
+          "station_id": "agha",
+          "sequence": 2,
+          "arrival": "07:33",
+          "departure": "07:33"
+        },
+        {
+          "station_id": "les_ateliers",
+          "sequence": 3,
+          "arrival": "07:37",
+          "departure": "07:37"
+        },
+        {
+          "station_id": "hussein_dey",
+          "sequence": 4,
+          "arrival": "07:41",
+          "departure": "07:41"
+        },
+        {
+          "station_id": "caroubier",
+          "sequence": 5,
+          "arrival": "07:44",
+          "departure": "07:44"
+        },
+        {
+          "station_id": "el_harrach",
+          "sequence": 6,
+          "arrival": "07:47",
+          "departure": "07:47"
+        },
+        {
+          "station_id": "oued_smar",
+          "sequence": 7,
+          "arrival": "07:53",
+          "departure": "07:53"
+        },
+        {
+          "station_id": "bab_ezzouar",
+          "sequence": 8,
+          "arrival": "07:56",
+          "departure": "07:56"
+        },
+        {
+          "station_id": "dar_el_beida",
+          "sequence": 9,
+          "arrival": "08:00",
+          "departure": "08:00"
+        },
+        {
+          "station_id": "rouiba",
+          "sequence": 10,
+          "arrival": "08:05",
+          "departure": "08:05"
+        },
+        {
+          "station_id": "rouiba_zi",
+          "sequence": 11,
+          "arrival": "08:07",
+          "departure": "08:07"
+        },
+        {
+          "station_id": "reghaia_zi",
+          "sequence": 12,
+          "arrival": "08:09",
+          "departure": "08:09"
+        },
+        {
+          "station_id": "reghaia",
+          "sequence": 13,
+          "arrival": "08:10",
+          "departure": "08:10"
+        },
+        {
+          "station_id": "boudouaou",
+          "sequence": 14,
+          "arrival": "08:13",
+          "departure": "08:13"
+        },
+        {
+          "station_id": "corso",
+          "sequence": 15,
+          "arrival": "08:16",
+          "departure": "08:16"
+        },
+        {
+          "station_id": "boumerdes",
+          "sequence": 16,
+          "arrival": "08:20",
+          "departure": "08:20"
+        },
+        {
+          "station_id": "tidjelabine",
+          "sequence": 17,
+          "arrival": "08:24",
+          "departure": "08:24"
+        },
+        {
+          "station_id": "thenia",
+          "sequence": 18,
+          "arrival": "08:29",
+          "departure": null
+        }
+      ],
+      "editor_note": "نقل يدوي من عمود القطار 33 في الجدول المصور المؤرخ 19 سبتمبر 2026. الأعمدة تشير إلى وقت واحد لكل محطة وليس إلى مدة توقف منفصلة؛ علامات '-' تعني عدم إدراج توقف لذلك القطار. يتطلب تأكيد استمرار سريان الجدول."
+    },
+    {
+      "trip_id": "gallery-thenia-alger-22-2026-09-19",
+      "route_id": "thenia-alger",
+      "train_number": "22",
+      "service_id": "except_friday",
+      "source_id": "dz-portal-gallery-thenia-alger-2026-09-19",
+      "data_status": "source_transcribed",
+      "effective_from": "2026-09-19",
+      "station_time_kind": "published_single_time",
+      "stop_times": [
+        {
+          "station_id": "thenia",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "06:00"
+        },
+        {
+          "station_id": "tidjelabine",
+          "sequence": 2,
+          "arrival": "06:04",
+          "departure": "06:04"
+        },
+        {
+          "station_id": "boumerdes",
+          "sequence": 3,
+          "arrival": "06:08",
+          "departure": "06:08"
+        },
+        {
+          "station_id": "corso",
+          "sequence": 4,
+          "arrival": "06:12",
+          "departure": "06:12"
+        },
+        {
+          "station_id": "boudouaou",
+          "sequence": 5,
+          "arrival": "06:15",
+          "departure": "06:15"
+        },
+        {
+          "station_id": "reghaia",
+          "sequence": 6,
+          "arrival": "06:21",
+          "departure": "06:21"
+        },
+        {
+          "station_id": "reghaia_zi",
+          "sequence": 7,
+          "arrival": "06:23",
+          "departure": "06:23"
+        },
+        {
+          "station_id": "rouiba_zi",
+          "sequence": 8,
+          "arrival": "06:25",
+          "departure": "06:25"
+        },
+        {
+          "station_id": "rouiba",
+          "sequence": 9,
+          "arrival": "06:26",
+          "departure": "06:26"
+        },
+        {
+          "station_id": "dar_el_beida",
+          "sequence": 10,
+          "arrival": "06:32",
+          "departure": "06:32"
+        },
+        {
+          "station_id": "bab_ezzouar",
+          "sequence": 11,
+          "arrival": "06:35",
+          "departure": "06:35"
+        },
+        {
+          "station_id": "oued_smar",
+          "sequence": 12,
+          "arrival": "06:39",
+          "departure": "06:39"
+        },
+        {
+          "station_id": "el_harrach",
+          "sequence": 13,
+          "arrival": "06:44",
+          "departure": "06:44"
+        },
+        {
+          "station_id": "caroubier",
+          "sequence": 14,
+          "arrival": "06:47",
+          "departure": "06:47"
+        },
+        {
+          "station_id": "hussein_dey",
+          "sequence": 15,
+          "arrival": "06:50",
+          "departure": "06:50"
+        },
+        {
+          "station_id": "les_ateliers",
+          "sequence": 16,
+          "arrival": "06:54",
+          "departure": "06:54"
+        },
+        {
+          "station_id": "agha",
+          "sequence": 17,
+          "arrival": "06:57",
+          "departure": "06:57"
+        },
+        {
+          "station_id": "alger",
+          "sequence": 18,
+          "arrival": "07:02",
+          "departure": null
+        }
+      ],
+      "editor_note": "نقل يدوي من عمود القطار 22 في الجدول المصور المؤرخ 19 سبتمبر 2026. الأعمدة تشير إلى وقت واحد لكل محطة وليس إلى مدة توقف منفصلة؛ علامات '-' تعني عدم إدراج توقف لذلك القطار. يتطلب تأكيد استمرار سريان الجدول."
+    },
+    {
+      "trip_id": "gallery-thenia-alger-28-2026-09-19",
+      "route_id": "thenia-alger",
+      "train_number": "28",
+      "service_id": "daily",
+      "source_id": "dz-portal-gallery-thenia-alger-2026-09-19",
+      "data_status": "source_transcribed",
+      "effective_from": "2026-09-19",
+      "station_time_kind": "published_single_time",
+      "stop_times": [
+        {
+          "station_id": "thenia",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "06:45"
+        },
+        {
+          "station_id": "tidjelabine",
+          "sequence": 2,
+          "arrival": "06:49",
+          "departure": "06:49"
+        },
+        {
+          "station_id": "boumerdes",
+          "sequence": 3,
+          "arrival": "06:53",
+          "departure": "06:53"
+        },
+        {
+          "station_id": "corso",
+          "sequence": 4,
+          "arrival": "06:58",
+          "departure": "06:58"
+        },
+        {
+          "station_id": "boudouaou",
+          "sequence": 5,
+          "arrival": "07:01",
+          "departure": "07:01"
+        },
+        {
+          "station_id": "reghaia",
+          "sequence": 6,
+          "arrival": "07:07",
+          "departure": "07:07"
+        },
+        {
+          "station_id": "reghaia_zi",
+          "sequence": 7,
+          "arrival": "07:09",
+          "departure": "07:09"
+        },
+        {
+          "station_id": "rouiba_zi",
+          "sequence": 8,
+          "arrival": "07:11",
+          "departure": "07:11"
+        },
+        {
+          "station_id": "rouiba",
+          "sequence": 9,
+          "arrival": "07:12",
+          "departure": "07:12"
+        },
+        {
+          "station_id": "dar_el_beida",
+          "sequence": 10,
+          "arrival": "07:18",
+          "departure": "07:18"
+        },
+        {
+          "station_id": "bab_ezzouar",
+          "sequence": 11,
+          "arrival": "07:21",
+          "departure": "07:21"
+        },
+        {
+          "station_id": "oued_smar",
+          "sequence": 12,
+          "arrival": "07:24",
+          "departure": "07:24"
+        },
+        {
+          "station_id": "el_harrach",
+          "sequence": 13,
+          "arrival": "07:29",
+          "departure": "07:29"
+        },
+        {
+          "station_id": "caroubier",
+          "sequence": 14,
+          "arrival": "07:32",
+          "departure": "07:32"
+        },
+        {
+          "station_id": "hussein_dey",
+          "sequence": 15,
+          "arrival": "07:35",
+          "departure": "07:35"
+        },
+        {
+          "station_id": "les_ateliers",
+          "sequence": 16,
+          "arrival": "07:39",
+          "departure": "07:39"
+        },
+        {
+          "station_id": "agha",
+          "sequence": 17,
+          "arrival": "07:42",
+          "departure": "07:42"
+        },
+        {
+          "station_id": "alger",
+          "sequence": 18,
+          "arrival": "07:47",
+          "departure": null
+        }
+      ],
+      "editor_note": "نقل يدوي من عمود القطار 28 في الجدول المصور المؤرخ 19 سبتمبر 2026. الأعمدة تشير إلى وقت واحد لكل محطة وليس إلى مدة توقف منفصلة؛ علامات '-' تعني عدم إدراج توقف لذلك القطار. يتطلب تأكيد استمرار سريان الجدول."
     }
   ],
   "note": "Draft entries are editable real database records, but their prior example times are not operational evidence. Dashboard labels these records as unverified and hides them from default scheduled boards until reviewed. Update stop_times/train_number/source to validate."
