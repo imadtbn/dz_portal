@@ -1,5 +1,5 @@
 {
-  "version": 8,
+  "version": 9,
   "updated": "2026-09-26",
   "sources": [
     {
@@ -207,6 +207,28 @@
       "origin_confirmed_at": "2026-09-26",
       "current_validity": "not_independently_rechecked",
       "notice": "الجدول الرسمي المصور مؤرخ 19 سبتمبر 2026؛ يشمل قطارات كاملة وأخرى تنطلق من رغاية أو تنتهي فيها. جميع الأعمدة الموسومة [*] يومية بحسب الصورة. لا تتوافر متابعة آنية أو تأكيد مستقل لاستمرار التطبيق."
+    },
+    {
+      "id": "gallery-affroun-alger-2026-09-19",
+      "name": "جدول SNTF الرسمي: العفرون ← الجزائر، ابتداءً من 19 سبتمبر 2026",
+      "url": "https://imadtbn.github.io/dz_portal/assets/train-schedules/suburban/affroun-alger-2026-09-19.svg",
+      "kind": "official-timetable-image",
+      "verified_at": null,
+      "valid_from": "2026-09-19",
+      "valid_until": null,
+      "official_document": true,
+      "issuing_authority": "SNTF",
+      "official_homepage": "https://www.sntf.dz/",
+      "origin_confirmation": "repository_owner",
+      "origin_status": "official_sntf_document",
+      "origin_confirmed_at": "2026-09-26",
+      "current_validity": "not_independently_rechecked",
+      "original_image_sha256": "ae9e2ead756452bf24179406f546318d15aa0374dc72078650f8cf6b739c5a76",
+      "original_image_media_type": "image/jpeg",
+      "original_image_storage": "owner-provided image in conversation; repository contains a faithful SVG redraw",
+      "derived_schedule_image": "assets/train-schedules/suburban/affroun-alger-2026-09-19.svg",
+      "manual_transcription": "assets/data/sntf/review/affroun-alger-2026-09-19.json",
+      "notice": "الصورة الرسمية للجدول قدّمها صاحب المشروع وهي مؤرخة ابتداءً من 19 سبتمبر 2026؛ رابط العرض نسخة SVG أُعيد تنسيقها من الصورة. أصل الوثيقة رسمي وفق إفادة صاحب المشروع، لكن استمرار سريان المواقيت لم يُتحقق منه استقلاليًا، وهذه ليست حركة القطارات لحظيًا."
     }
   ],
   "provenance_policy": {
