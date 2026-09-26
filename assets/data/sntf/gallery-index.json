@@ -45,6 +45,19 @@
       "notes": "صورة جدول صادرة عن SNTF وفق توثيق صاحب المشروع؛ تاريخ السريان واستمرار العمل بالمواقيت يحتاجان مراجعة منفصلة، ولا تُستنتج أوقات الرحلات من اسم الصورة."
     },
     {
+      "id": "affroun-alger-2026-09-19-suburban",
+      "path": "assets/train-schedules/suburban/affroun-alger-2026-09-19.svg",
+      "category": "suburban",
+      "alt": "جدول مواقيت قطارات العفرون إلى الجزائر، ابتداءً من 19 سبتمبر 2026",
+      "route_ids": [
+        "affroun-alger"
+      ],
+      "source_page": "sectors/sntf.html",
+      "issuing_authority": "SNTF",
+      "status": "official_document_validity_unconfirmed",
+      "notes": "إعادة رسم رقمية مبنية على الصورة الرسمية لـ SNTF المرفقة من صاحب المشروع، وليست الصورة الفوتوغرافية الأصلية؛ يجب التحقق مستقلاً من استمرار سريان المواقيت."
+    },
+    {
       "id": "alger-zeralda-suburban",
       "path": "assets/train-schedules/suburban/alger-zeralda.png",
       "category": "suburban",
