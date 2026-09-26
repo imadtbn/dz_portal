@@ -13,6 +13,8 @@ assert.equal(available.length,14,"Draft journeys must not appear on default boar
 assert.equal(drafts.length,9,"Keep nine editable draft journeys");
 assert.equal(verifiedByUser.length,14,"Preserve fourteen transcribed Zeralda–Agha trains");
 assert(stations.some(s=>s.id==="rouiba"),"Rouiba station is indexed");
+assert.equal(new Set(stations.map(s=>s.id)).size,stations.length,"Station IDs must be unique");
+assert(stations.some(s=>s.id==="les_ateliers"),"Canonical station IDs used after geodata update");
 assert(routes.some(r=>r.id==="alger-thenia"&&r.stops.includes("rouiba")),"Rouiba should be visible in eastbound route");
 assert(routes.some(r=>r.id==="thenia-alger"&&r.stops.includes("rouiba")),"Rouiba should be visible in westbound route");
 const tr1500=available.find(t=>t.train_number==="1500"),tr1502=available.find(t=>t.train_number==="1502");
@@ -33,7 +35,7 @@ const atAgha=engine.recordsAtStation(available,"agha","arrival","2026-09-24",con
 assert(atAgha.some(e=>e.trip.train_number==="1500"&&engine.formatTime(e.stop.arrival)==="07:01"),"Arrivals at terminal should be listed");
 assert(!engine.recordsAtStation(available,"agha","departure","2026-09-24",config,beforeDeparture).some(e=>e.trip.train_number==="1500"),"No false departure at terminating station");
 const mid=engine.recordsAtStation(available,"birtouta","departure","2026-09-24",config,beforeDeparture);
-assert(mid.some(e=>e.trip.train_number==="1502"&&e.destination==="agha"&&e.previous==="tessala-el-merdja"),"Intermediate station events must retain direction and previous stop");
+assert(mid.some(e=>e.trip.train_number==="1502"&&e.destination==="agha"&&e.previous==="tessala_el_merdja"),"Intermediate station events must retain direction and previous stop");
 const draftsFromRouiba=engine.recordsAtStation(drafts,"rouiba","departure","2026-09-24",config,beforeDeparture);
 assert.equal(draftsFromRouiba.length,0,"A draft intermediate stop without time must not appear on departures");
 const night=drafts.find(t=>t.route_id==="oran-bechar");
