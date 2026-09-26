@@ -1,5 +1,5 @@
 {
-  "version": 10,
+  "version": 11,
   "updated": "2026-09-26",
   "trips": [
     {
@@ -10675,6 +10675,1332 @@
         }
       ],
       "editor_note": "عمود رسمي من جدول الجزائر → الثنية المؤرخ 19 سبتمبر 2026؛ الخانات - لم تُسجّل كتوقفات، و77 تنتهي في رغاية. السريان الحالي غير متحقق منه استقلاليًا."
+    },
+    {
+      "trip_id": "photo-reghaia-alger-24-except_friday-20260919",
+      "route_id": "reghaia-alger",
+      "train_number": "24",
+      "service_id": "except_friday",
+      "source_id": "dz-portal-gallery-thenia-alger-2026-09-19",
+      "data_status": "source_transcribed",
+      "effective_from": "2026-09-19",
+      "station_time_kind": "published_single_time",
+      "stop_times": [
+        {
+          "station_id": "reghaia",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "06:50"
+        },
+        {
+          "station_id": "reghaia_zi",
+          "sequence": 2,
+          "arrival": "06:52",
+          "departure": "06:52"
+        },
+        {
+          "station_id": "rouiba_zi",
+          "sequence": 3,
+          "arrival": "06:55",
+          "departure": "06:55"
+        },
+        {
+          "station_id": "rouiba",
+          "sequence": 4,
+          "arrival": "06:56",
+          "departure": "06:56"
+        },
+        {
+          "station_id": "dar_el_beida",
+          "sequence": 5,
+          "arrival": "07:02",
+          "departure": "07:02"
+        },
+        {
+          "station_id": "bab_ezzouar",
+          "sequence": 6,
+          "arrival": "07:05",
+          "departure": "07:05"
+        },
+        {
+          "station_id": "oued_smar",
+          "sequence": 7,
+          "arrival": "07:09",
+          "departure": "07:09"
+        },
+        {
+          "station_id": "el_harrach",
+          "sequence": 8,
+          "arrival": "07:14",
+          "departure": "07:14"
+        },
+        {
+          "station_id": "caroubier",
+          "sequence": 9,
+          "arrival": "07:17",
+          "departure": "07:17"
+        },
+        {
+          "station_id": "hussein_dey",
+          "sequence": 10,
+          "arrival": "07:20",
+          "departure": "07:20"
+        },
+        {
+          "station_id": "les_ateliers",
+          "sequence": 11,
+          "arrival": "07:24",
+          "departure": "07:24"
+        },
+        {
+          "station_id": "agha",
+          "sequence": 12,
+          "arrival": "07:27",
+          "departure": "07:27"
+        },
+        {
+          "station_id": "alger",
+          "sequence": 13,
+          "arrival": "07:32",
+          "departure": null
+        }
+      ],
+      "editor_note": "توقيت العمود الرسمي في جدول الثنية → الجزائر المؤرخ 19 سبتمبر 2026؛ خانات - ليست توقفات، والقطار 24 يبدأ في رغاية. استمرار السريان لم يُراجع استقلاليًا."
+    },
+    {
+      "trip_id": "photo-thenia-alger-34-daily-20260919",
+      "route_id": "thenia-alger",
+      "train_number": "34",
+      "service_id": "daily",
+      "source_id": "dz-portal-gallery-thenia-alger-2026-09-19",
+      "data_status": "source_transcribed",
+      "effective_from": "2026-09-19",
+      "station_time_kind": "published_single_time",
+      "stop_times": [
+        {
+          "station_id": "thenia",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "08:05"
+        },
+        {
+          "station_id": "tidjelabine",
+          "sequence": 2,
+          "arrival": "08:09",
+          "departure": "08:09"
+        },
+        {
+          "station_id": "boumerdes",
+          "sequence": 3,
+          "arrival": "08:13",
+          "departure": "08:13"
+        },
+        {
+          "station_id": "corso",
+          "sequence": 4,
+          "arrival": "08:17",
+          "departure": "08:17"
+        },
+        {
+          "station_id": "boudouaou",
+          "sequence": 5,
+          "arrival": "08:20",
+          "departure": "08:20"
+        },
+        {
+          "station_id": "reghaia",
+          "sequence": 6,
+          "arrival": "08:26",
+          "departure": "08:26"
+        },
+        {
+          "station_id": "reghaia_zi",
+          "sequence": 7,
+          "arrival": "08:28",
+          "departure": "08:28"
+        },
+        {
+          "station_id": "rouiba_zi",
+          "sequence": 8,
+          "arrival": "08:30",
+          "departure": "08:30"
+        },
+        {
+          "station_id": "rouiba",
+          "sequence": 9,
+          "arrival": "08:31",
+          "departure": "08:31"
+        },
+        {
+          "station_id": "dar_el_beida",
+          "sequence": 10,
+          "arrival": "08:37",
+          "departure": "08:37"
+        },
+        {
+          "station_id": "bab_ezzouar",
+          "sequence": 11,
+          "arrival": "08:40",
+          "departure": "08:40"
+        },
+        {
+          "station_id": "oued_smar",
+          "sequence": 12,
+          "arrival": "08:43",
+          "departure": "08:43"
+        },
+        {
+          "station_id": "el_harrach",
+          "sequence": 13,
+          "arrival": "08:48",
+          "departure": "08:48"
+        },
+        {
+          "station_id": "caroubier",
+          "sequence": 14,
+          "arrival": "08:51",
+          "departure": "08:51"
+        },
+        {
+          "station_id": "hussein_dey",
+          "sequence": 15,
+          "arrival": "08:54",
+          "departure": "08:54"
+        },
+        {
+          "station_id": "les_ateliers",
+          "sequence": 16,
+          "arrival": "08:58",
+          "departure": "08:58"
+        },
+        {
+          "station_id": "agha",
+          "sequence": 17,
+          "arrival": "09:01",
+          "departure": "09:01"
+        },
+        {
+          "station_id": "alger",
+          "sequence": 18,
+          "arrival": "09:05",
+          "departure": null
+        }
+      ],
+      "editor_note": "توقيت العمود الرسمي في جدول الثنية → الجزائر المؤرخ 19 سبتمبر 2026؛ خانات - ليست توقفات، والقطار 24 يبدأ في رغاية. استمرار السريان لم يُراجع استقلاليًا."
+    },
+    {
+      "trip_id": "photo-thenia-alger-40-daily-20260919",
+      "route_id": "thenia-alger",
+      "train_number": "40",
+      "service_id": "daily",
+      "source_id": "dz-portal-gallery-thenia-alger-2026-09-19",
+      "data_status": "source_transcribed",
+      "effective_from": "2026-09-19",
+      "station_time_kind": "published_single_time",
+      "stop_times": [
+        {
+          "station_id": "thenia",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "09:25"
+        },
+        {
+          "station_id": "tidjelabine",
+          "sequence": 2,
+          "arrival": "09:29",
+          "departure": "09:29"
+        },
+        {
+          "station_id": "boumerdes",
+          "sequence": 3,
+          "arrival": "09:33",
+          "departure": "09:33"
+        },
+        {
+          "station_id": "corso",
+          "sequence": 4,
+          "arrival": "09:37",
+          "departure": "09:37"
+        },
+        {
+          "station_id": "boudouaou",
+          "sequence": 5,
+          "arrival": "09:40",
+          "departure": "09:40"
+        },
+        {
+          "station_id": "reghaia",
+          "sequence": 6,
+          "arrival": "09:46",
+          "departure": "09:46"
+        },
+        {
+          "station_id": "rouiba",
+          "sequence": 7,
+          "arrival": "09:51",
+          "departure": "09:51"
+        },
+        {
+          "station_id": "dar_el_beida",
+          "sequence": 8,
+          "arrival": "09:57",
+          "departure": "09:57"
+        },
+        {
+          "station_id": "bab_ezzouar",
+          "sequence": 9,
+          "arrival": "10:00",
+          "departure": "10:00"
+        },
+        {
+          "station_id": "oued_smar",
+          "sequence": 10,
+          "arrival": "10:03",
+          "departure": "10:03"
+        },
+        {
+          "station_id": "el_harrach",
+          "sequence": 11,
+          "arrival": "10:08",
+          "departure": "10:08"
+        },
+        {
+          "station_id": "caroubier",
+          "sequence": 12,
+          "arrival": "10:12",
+          "departure": "10:12"
+        },
+        {
+          "station_id": "hussein_dey",
+          "sequence": 13,
+          "arrival": "10:15",
+          "departure": "10:15"
+        },
+        {
+          "station_id": "les_ateliers",
+          "sequence": 14,
+          "arrival": "10:19",
+          "departure": "10:19"
+        },
+        {
+          "station_id": "agha",
+          "sequence": 15,
+          "arrival": "10:22",
+          "departure": "10:22"
+        },
+        {
+          "station_id": "alger",
+          "sequence": 16,
+          "arrival": "10:27",
+          "departure": null
+        }
+      ],
+      "editor_note": "توقيت العمود الرسمي في جدول الثنية → الجزائر المؤرخ 19 سبتمبر 2026؛ خانات - ليست توقفات، والقطار 24 يبدأ في رغاية. استمرار السريان لم يُراجع استقلاليًا."
+    },
+    {
+      "trip_id": "photo-thenia-alger-44-except_friday-20260919",
+      "route_id": "thenia-alger",
+      "train_number": "44",
+      "service_id": "except_friday",
+      "source_id": "dz-portal-gallery-thenia-alger-2026-09-19",
+      "data_status": "source_transcribed",
+      "effective_from": "2026-09-19",
+      "station_time_kind": "published_single_time",
+      "stop_times": [
+        {
+          "station_id": "thenia",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "10:35"
+        },
+        {
+          "station_id": "tidjelabine",
+          "sequence": 2,
+          "arrival": "10:39",
+          "departure": "10:39"
+        },
+        {
+          "station_id": "boumerdes",
+          "sequence": 3,
+          "arrival": "10:43",
+          "departure": "10:43"
+        },
+        {
+          "station_id": "corso",
+          "sequence": 4,
+          "arrival": "10:47",
+          "departure": "10:47"
+        },
+        {
+          "station_id": "boudouaou",
+          "sequence": 5,
+          "arrival": "10:50",
+          "departure": "10:50"
+        },
+        {
+          "station_id": "reghaia",
+          "sequence": 6,
+          "arrival": "10:56",
+          "departure": "10:56"
+        },
+        {
+          "station_id": "rouiba",
+          "sequence": 7,
+          "arrival": "11:01",
+          "departure": "11:01"
+        },
+        {
+          "station_id": "dar_el_beida",
+          "sequence": 8,
+          "arrival": "11:07",
+          "departure": "11:07"
+        },
+        {
+          "station_id": "bab_ezzouar",
+          "sequence": 9,
+          "arrival": "11:10",
+          "departure": "11:10"
+        },
+        {
+          "station_id": "oued_smar",
+          "sequence": 10,
+          "arrival": "11:13",
+          "departure": "11:13"
+        },
+        {
+          "station_id": "el_harrach",
+          "sequence": 11,
+          "arrival": "11:23",
+          "departure": "11:23"
+        },
+        {
+          "station_id": "caroubier",
+          "sequence": 12,
+          "arrival": "11:27",
+          "departure": "11:27"
+        },
+        {
+          "station_id": "hussein_dey",
+          "sequence": 13,
+          "arrival": "11:30",
+          "departure": "11:30"
+        },
+        {
+          "station_id": "les_ateliers",
+          "sequence": 14,
+          "arrival": "11:34",
+          "departure": "11:34"
+        },
+        {
+          "station_id": "agha",
+          "sequence": 15,
+          "arrival": "11:37",
+          "departure": "11:37"
+        },
+        {
+          "station_id": "alger",
+          "sequence": 16,
+          "arrival": "11:42",
+          "departure": null
+        }
+      ],
+      "editor_note": "توقيت العمود الرسمي في جدول الثنية → الجزائر المؤرخ 19 سبتمبر 2026؛ خانات - ليست توقفات، والقطار 24 يبدأ في رغاية. استمرار السريان لم يُراجع استقلاليًا."
+    },
+    {
+      "trip_id": "photo-thenia-alger-46-friday_only-20260919",
+      "route_id": "thenia-alger",
+      "train_number": "46",
+      "service_id": "friday_only",
+      "source_id": "dz-portal-gallery-thenia-alger-2026-09-19",
+      "data_status": "source_transcribed",
+      "effective_from": "2026-09-19",
+      "station_time_kind": "published_single_time",
+      "stop_times": [
+        {
+          "station_id": "thenia",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "11:00"
+        },
+        {
+          "station_id": "tidjelabine",
+          "sequence": 2,
+          "arrival": "11:04",
+          "departure": "11:04"
+        },
+        {
+          "station_id": "boumerdes",
+          "sequence": 3,
+          "arrival": "11:08",
+          "departure": "11:08"
+        },
+        {
+          "station_id": "corso",
+          "sequence": 4,
+          "arrival": "11:12",
+          "departure": "11:12"
+        },
+        {
+          "station_id": "boudouaou",
+          "sequence": 5,
+          "arrival": "11:15",
+          "departure": "11:15"
+        },
+        {
+          "station_id": "reghaia",
+          "sequence": 6,
+          "arrival": "11:21",
+          "departure": "11:21"
+        },
+        {
+          "station_id": "rouiba",
+          "sequence": 7,
+          "arrival": "11:26",
+          "departure": "11:26"
+        },
+        {
+          "station_id": "dar_el_beida",
+          "sequence": 8,
+          "arrival": "11:32",
+          "departure": "11:32"
+        },
+        {
+          "station_id": "bab_ezzouar",
+          "sequence": 9,
+          "arrival": "11:35",
+          "departure": "11:35"
+        },
+        {
+          "station_id": "oued_smar",
+          "sequence": 10,
+          "arrival": "11:39",
+          "departure": "11:39"
+        },
+        {
+          "station_id": "el_harrach",
+          "sequence": 11,
+          "arrival": "11:44",
+          "departure": "11:44"
+        },
+        {
+          "station_id": "caroubier",
+          "sequence": 12,
+          "arrival": "11:47",
+          "departure": "11:47"
+        },
+        {
+          "station_id": "hussein_dey",
+          "sequence": 13,
+          "arrival": "11:50",
+          "departure": "11:50"
+        },
+        {
+          "station_id": "les_ateliers",
+          "sequence": 14,
+          "arrival": "11:54",
+          "departure": "11:54"
+        },
+        {
+          "station_id": "agha",
+          "sequence": 15,
+          "arrival": "11:57",
+          "departure": "11:57"
+        },
+        {
+          "station_id": "alger",
+          "sequence": 16,
+          "arrival": "12:02",
+          "departure": null
+        }
+      ],
+      "editor_note": "توقيت العمود الرسمي في جدول الثنية → الجزائر المؤرخ 19 سبتمبر 2026؛ خانات - ليست توقفات، والقطار 24 يبدأ في رغاية. استمرار السريان لم يُراجع استقلاليًا."
+    },
+    {
+      "trip_id": "photo-thenia-alger-50-daily-20260919",
+      "route_id": "thenia-alger",
+      "train_number": "50",
+      "service_id": "daily",
+      "source_id": "dz-portal-gallery-thenia-alger-2026-09-19",
+      "data_status": "source_transcribed",
+      "effective_from": "2026-09-19",
+      "station_time_kind": "published_single_time",
+      "stop_times": [
+        {
+          "station_id": "thenia",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "12:00"
+        },
+        {
+          "station_id": "tidjelabine",
+          "sequence": 2,
+          "arrival": "12:04",
+          "departure": "12:04"
+        },
+        {
+          "station_id": "boumerdes",
+          "sequence": 3,
+          "arrival": "12:08",
+          "departure": "12:08"
+        },
+        {
+          "station_id": "corso",
+          "sequence": 4,
+          "arrival": "12:12",
+          "departure": "12:12"
+        },
+        {
+          "station_id": "boudouaou",
+          "sequence": 5,
+          "arrival": "12:15",
+          "departure": "12:15"
+        },
+        {
+          "station_id": "reghaia",
+          "sequence": 6,
+          "arrival": "12:21",
+          "departure": "12:21"
+        },
+        {
+          "station_id": "rouiba",
+          "sequence": 7,
+          "arrival": "12:26",
+          "departure": "12:26"
+        },
+        {
+          "station_id": "dar_el_beida",
+          "sequence": 8,
+          "arrival": "12:32",
+          "departure": "12:32"
+        },
+        {
+          "station_id": "bab_ezzouar",
+          "sequence": 9,
+          "arrival": "12:35",
+          "departure": "12:35"
+        },
+        {
+          "station_id": "oued_smar",
+          "sequence": 10,
+          "arrival": "12:39",
+          "departure": "12:39"
+        },
+        {
+          "station_id": "el_harrach",
+          "sequence": 11,
+          "arrival": "12:44",
+          "departure": "12:44"
+        },
+        {
+          "station_id": "caroubier",
+          "sequence": 12,
+          "arrival": "12:48",
+          "departure": "12:48"
+        },
+        {
+          "station_id": "hussein_dey",
+          "sequence": 13,
+          "arrival": "12:51",
+          "departure": "12:51"
+        },
+        {
+          "station_id": "les_ateliers",
+          "sequence": 14,
+          "arrival": "12:55",
+          "departure": "12:55"
+        },
+        {
+          "station_id": "agha",
+          "sequence": 15,
+          "arrival": "12:58",
+          "departure": "12:58"
+        },
+        {
+          "station_id": "alger",
+          "sequence": 16,
+          "arrival": "13:03",
+          "departure": null
+        }
+      ],
+      "editor_note": "توقيت العمود الرسمي في جدول الثنية → الجزائر المؤرخ 19 سبتمبر 2026؛ خانات - ليست توقفات، والقطار 24 يبدأ في رغاية. استمرار السريان لم يُراجع استقلاليًا."
+    },
+    {
+      "trip_id": "photo-thenia-alger-56-except_friday-20260919",
+      "route_id": "thenia-alger",
+      "train_number": "56",
+      "service_id": "except_friday",
+      "source_id": "dz-portal-gallery-thenia-alger-2026-09-19",
+      "data_status": "source_transcribed",
+      "effective_from": "2026-09-19",
+      "station_time_kind": "published_single_time",
+      "stop_times": [
+        {
+          "station_id": "thenia",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "13:30"
+        },
+        {
+          "station_id": "tidjelabine",
+          "sequence": 2,
+          "arrival": "13:34",
+          "departure": "13:34"
+        },
+        {
+          "station_id": "boumerdes",
+          "sequence": 3,
+          "arrival": "13:38",
+          "departure": "13:38"
+        },
+        {
+          "station_id": "corso",
+          "sequence": 4,
+          "arrival": "13:42",
+          "departure": "13:42"
+        },
+        {
+          "station_id": "boudouaou",
+          "sequence": 5,
+          "arrival": "13:45",
+          "departure": "13:45"
+        },
+        {
+          "station_id": "reghaia",
+          "sequence": 6,
+          "arrival": "13:51",
+          "departure": "13:51"
+        },
+        {
+          "station_id": "rouiba",
+          "sequence": 7,
+          "arrival": "13:56",
+          "departure": "13:56"
+        },
+        {
+          "station_id": "dar_el_beida",
+          "sequence": 8,
+          "arrival": "14:02",
+          "departure": "14:02"
+        },
+        {
+          "station_id": "bab_ezzouar",
+          "sequence": 9,
+          "arrival": "14:05",
+          "departure": "14:05"
+        },
+        {
+          "station_id": "oued_smar",
+          "sequence": 10,
+          "arrival": "14:08",
+          "departure": "14:08"
+        },
+        {
+          "station_id": "el_harrach",
+          "sequence": 11,
+          "arrival": "14:13",
+          "departure": "14:13"
+        },
+        {
+          "station_id": "caroubier",
+          "sequence": 12,
+          "arrival": "14:17",
+          "departure": "14:17"
+        },
+        {
+          "station_id": "hussein_dey",
+          "sequence": 13,
+          "arrival": "14:20",
+          "departure": "14:20"
+        },
+        {
+          "station_id": "les_ateliers",
+          "sequence": 14,
+          "arrival": "14:24",
+          "departure": "14:24"
+        },
+        {
+          "station_id": "agha",
+          "sequence": 15,
+          "arrival": "14:27",
+          "departure": "14:27"
+        },
+        {
+          "station_id": "alger",
+          "sequence": 16,
+          "arrival": "14:32",
+          "departure": null
+        }
+      ],
+      "editor_note": "توقيت العمود الرسمي في جدول الثنية → الجزائر المؤرخ 19 سبتمبر 2026؛ خانات - ليست توقفات، والقطار 24 يبدأ في رغاية. استمرار السريان لم يُراجع استقلاليًا."
+    },
+    {
+      "trip_id": "photo-thenia-alger-58-daily-20260919",
+      "route_id": "thenia-alger",
+      "train_number": "58",
+      "service_id": "daily",
+      "source_id": "dz-portal-gallery-thenia-alger-2026-09-19",
+      "data_status": "source_transcribed",
+      "effective_from": "2026-09-19",
+      "station_time_kind": "published_single_time",
+      "stop_times": [
+        {
+          "station_id": "thenia",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "14:15"
+        },
+        {
+          "station_id": "tidjelabine",
+          "sequence": 2,
+          "arrival": "14:19",
+          "departure": "14:19"
+        },
+        {
+          "station_id": "boumerdes",
+          "sequence": 3,
+          "arrival": "14:23",
+          "departure": "14:23"
+        },
+        {
+          "station_id": "corso",
+          "sequence": 4,
+          "arrival": "14:27",
+          "departure": "14:27"
+        },
+        {
+          "station_id": "boudouaou",
+          "sequence": 5,
+          "arrival": "14:30",
+          "departure": "14:30"
+        },
+        {
+          "station_id": "reghaia",
+          "sequence": 6,
+          "arrival": "14:36",
+          "departure": "14:36"
+        },
+        {
+          "station_id": "rouiba",
+          "sequence": 7,
+          "arrival": "14:41",
+          "departure": "14:41"
+        },
+        {
+          "station_id": "dar_el_beida",
+          "sequence": 8,
+          "arrival": "14:47",
+          "departure": "14:47"
+        },
+        {
+          "station_id": "bab_ezzouar",
+          "sequence": 9,
+          "arrival": "14:50",
+          "departure": "14:50"
+        },
+        {
+          "station_id": "oued_smar",
+          "sequence": 10,
+          "arrival": "14:53",
+          "departure": "14:53"
+        },
+        {
+          "station_id": "el_harrach",
+          "sequence": 11,
+          "arrival": "14:58",
+          "departure": "14:58"
+        },
+        {
+          "station_id": "caroubier",
+          "sequence": 12,
+          "arrival": "15:02",
+          "departure": "15:02"
+        },
+        {
+          "station_id": "hussein_dey",
+          "sequence": 13,
+          "arrival": "15:05",
+          "departure": "15:05"
+        },
+        {
+          "station_id": "les_ateliers",
+          "sequence": 14,
+          "arrival": "15:09",
+          "departure": "15:09"
+        },
+        {
+          "station_id": "agha",
+          "sequence": 15,
+          "arrival": "15:12",
+          "departure": "15:12"
+        },
+        {
+          "station_id": "alger",
+          "sequence": 16,
+          "arrival": "15:17",
+          "departure": null
+        }
+      ],
+      "editor_note": "توقيت العمود الرسمي في جدول الثنية → الجزائر المؤرخ 19 سبتمبر 2026؛ خانات - ليست توقفات، والقطار 24 يبدأ في رغاية. استمرار السريان لم يُراجع استقلاليًا."
+    },
+    {
+      "trip_id": "photo-thenia-alger-62-daily-20260919",
+      "route_id": "thenia-alger",
+      "train_number": "62",
+      "service_id": "daily",
+      "source_id": "dz-portal-gallery-thenia-alger-2026-09-19",
+      "data_status": "source_transcribed",
+      "effective_from": "2026-09-19",
+      "station_time_kind": "published_single_time",
+      "stop_times": [
+        {
+          "station_id": "thenia",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "15:35"
+        },
+        {
+          "station_id": "tidjelabine",
+          "sequence": 2,
+          "arrival": "15:39",
+          "departure": "15:39"
+        },
+        {
+          "station_id": "boumerdes",
+          "sequence": 3,
+          "arrival": "15:43",
+          "departure": "15:43"
+        },
+        {
+          "station_id": "corso",
+          "sequence": 4,
+          "arrival": "15:47",
+          "departure": "15:47"
+        },
+        {
+          "station_id": "boudouaou",
+          "sequence": 5,
+          "arrival": "15:50",
+          "departure": "15:50"
+        },
+        {
+          "station_id": "reghaia",
+          "sequence": 6,
+          "arrival": "15:56",
+          "departure": "15:56"
+        },
+        {
+          "station_id": "reghaia_zi",
+          "sequence": 7,
+          "arrival": "15:58",
+          "departure": "15:58"
+        },
+        {
+          "station_id": "rouiba_zi",
+          "sequence": 8,
+          "arrival": "16:00",
+          "departure": "16:00"
+        },
+        {
+          "station_id": "rouiba",
+          "sequence": 9,
+          "arrival": "16:01",
+          "departure": "16:01"
+        },
+        {
+          "station_id": "dar_el_beida",
+          "sequence": 10,
+          "arrival": "16:07",
+          "departure": "16:07"
+        },
+        {
+          "station_id": "bab_ezzouar",
+          "sequence": 11,
+          "arrival": "16:10",
+          "departure": "16:10"
+        },
+        {
+          "station_id": "oued_smar",
+          "sequence": 12,
+          "arrival": "16:13",
+          "departure": "16:13"
+        },
+        {
+          "station_id": "el_harrach",
+          "sequence": 13,
+          "arrival": "16:23",
+          "departure": "16:23"
+        },
+        {
+          "station_id": "caroubier",
+          "sequence": 14,
+          "arrival": "16:27",
+          "departure": "16:27"
+        },
+        {
+          "station_id": "hussein_dey",
+          "sequence": 15,
+          "arrival": "16:30",
+          "departure": "16:30"
+        },
+        {
+          "station_id": "les_ateliers",
+          "sequence": 16,
+          "arrival": "16:34",
+          "departure": "16:34"
+        },
+        {
+          "station_id": "agha",
+          "sequence": 17,
+          "arrival": "16:37",
+          "departure": "16:37"
+        },
+        {
+          "station_id": "alger",
+          "sequence": 18,
+          "arrival": "16:42",
+          "departure": null
+        }
+      ],
+      "editor_note": "توقيت العمود الرسمي في جدول الثنية → الجزائر المؤرخ 19 سبتمبر 2026؛ خانات - ليست توقفات، والقطار 24 يبدأ في رغاية. استمرار السريان لم يُراجع استقلاليًا."
+    },
+    {
+      "trip_id": "photo-thenia-alger-66-daily-20260919",
+      "route_id": "thenia-alger",
+      "train_number": "66",
+      "service_id": "daily",
+      "source_id": "dz-portal-gallery-thenia-alger-2026-09-19",
+      "data_status": "source_transcribed",
+      "effective_from": "2026-09-19",
+      "station_time_kind": "published_single_time",
+      "stop_times": [
+        {
+          "station_id": "thenia",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "16:35"
+        },
+        {
+          "station_id": "tidjelabine",
+          "sequence": 2,
+          "arrival": "16:39",
+          "departure": "16:39"
+        },
+        {
+          "station_id": "boumerdes",
+          "sequence": 3,
+          "arrival": "16:43",
+          "departure": "16:43"
+        },
+        {
+          "station_id": "corso",
+          "sequence": 4,
+          "arrival": "16:47",
+          "departure": "16:47"
+        },
+        {
+          "station_id": "boudouaou",
+          "sequence": 5,
+          "arrival": "16:50",
+          "departure": "16:50"
+        },
+        {
+          "station_id": "reghaia",
+          "sequence": 6,
+          "arrival": "16:56",
+          "departure": "16:56"
+        },
+        {
+          "station_id": "reghaia_zi",
+          "sequence": 7,
+          "arrival": "16:58",
+          "departure": "16:58"
+        },
+        {
+          "station_id": "rouiba_zi",
+          "sequence": 8,
+          "arrival": "17:00",
+          "departure": "17:00"
+        },
+        {
+          "station_id": "rouiba",
+          "sequence": 9,
+          "arrival": "17:01",
+          "departure": "17:01"
+        },
+        {
+          "station_id": "dar_el_beida",
+          "sequence": 10,
+          "arrival": "17:07",
+          "departure": "17:07"
+        },
+        {
+          "station_id": "bab_ezzouar",
+          "sequence": 11,
+          "arrival": "17:10",
+          "departure": "17:10"
+        },
+        {
+          "station_id": "oued_smar",
+          "sequence": 12,
+          "arrival": "17:13",
+          "departure": "17:13"
+        },
+        {
+          "station_id": "el_harrach",
+          "sequence": 13,
+          "arrival": "17:23",
+          "departure": "17:23"
+        },
+        {
+          "station_id": "caroubier",
+          "sequence": 14,
+          "arrival": "17:27",
+          "departure": "17:27"
+        },
+        {
+          "station_id": "hussein_dey",
+          "sequence": 15,
+          "arrival": "17:30",
+          "departure": "17:30"
+        },
+        {
+          "station_id": "les_ateliers",
+          "sequence": 16,
+          "arrival": "17:34",
+          "departure": "17:34"
+        },
+        {
+          "station_id": "agha",
+          "sequence": 17,
+          "arrival": "17:37",
+          "departure": "17:37"
+        },
+        {
+          "station_id": "alger",
+          "sequence": 18,
+          "arrival": "17:42",
+          "departure": null
+        }
+      ],
+      "editor_note": "توقيت العمود الرسمي في جدول الثنية → الجزائر المؤرخ 19 سبتمبر 2026؛ خانات - ليست توقفات، والقطار 24 يبدأ في رغاية. استمرار السريان لم يُراجع استقلاليًا."
+    },
+    {
+      "trip_id": "photo-thenia-alger-74-daily-20260919",
+      "route_id": "thenia-alger",
+      "train_number": "74",
+      "service_id": "daily",
+      "source_id": "dz-portal-gallery-thenia-alger-2026-09-19",
+      "data_status": "source_transcribed",
+      "effective_from": "2026-09-19",
+      "station_time_kind": "published_single_time",
+      "stop_times": [
+        {
+          "station_id": "thenia",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "17:45"
+        },
+        {
+          "station_id": "tidjelabine",
+          "sequence": 2,
+          "arrival": "17:49",
+          "departure": "17:49"
+        },
+        {
+          "station_id": "boumerdes",
+          "sequence": 3,
+          "arrival": "17:53",
+          "departure": "17:53"
+        },
+        {
+          "station_id": "corso",
+          "sequence": 4,
+          "arrival": "17:57",
+          "departure": "17:57"
+        },
+        {
+          "station_id": "boudouaou",
+          "sequence": 5,
+          "arrival": "18:00",
+          "departure": "18:00"
+        },
+        {
+          "station_id": "reghaia",
+          "sequence": 6,
+          "arrival": "18:06",
+          "departure": "18:06"
+        },
+        {
+          "station_id": "rouiba",
+          "sequence": 7,
+          "arrival": "18:11",
+          "departure": "18:11"
+        },
+        {
+          "station_id": "dar_el_beida",
+          "sequence": 8,
+          "arrival": "18:17",
+          "departure": "18:17"
+        },
+        {
+          "station_id": "bab_ezzouar",
+          "sequence": 9,
+          "arrival": "18:20",
+          "departure": "18:20"
+        },
+        {
+          "station_id": "oued_smar",
+          "sequence": 10,
+          "arrival": "18:23",
+          "departure": "18:23"
+        },
+        {
+          "station_id": "el_harrach",
+          "sequence": 11,
+          "arrival": "18:28",
+          "departure": "18:28"
+        },
+        {
+          "station_id": "caroubier",
+          "sequence": 12,
+          "arrival": "18:32",
+          "departure": "18:32"
+        },
+        {
+          "station_id": "hussein_dey",
+          "sequence": 13,
+          "arrival": "18:35",
+          "departure": "18:35"
+        },
+        {
+          "station_id": "les_ateliers",
+          "sequence": 14,
+          "arrival": "18:39",
+          "departure": "18:39"
+        },
+        {
+          "station_id": "agha",
+          "sequence": 15,
+          "arrival": "18:42",
+          "departure": "18:42"
+        },
+        {
+          "station_id": "alger",
+          "sequence": 16,
+          "arrival": "18:46",
+          "departure": null
+        }
+      ],
+      "editor_note": "توقيت العمود الرسمي في جدول الثنية → الجزائر المؤرخ 19 سبتمبر 2026؛ خانات - ليست توقفات، والقطار 24 يبدأ في رغاية. استمرار السريان لم يُراجع استقلاليًا."
+    },
+    {
+      "trip_id": "photo-thenia-alger-78-except_friday-20260919",
+      "route_id": "thenia-alger",
+      "train_number": "78",
+      "service_id": "except_friday",
+      "source_id": "dz-portal-gallery-thenia-alger-2026-09-19",
+      "data_status": "source_transcribed",
+      "effective_from": "2026-09-19",
+      "station_time_kind": "published_single_time",
+      "stop_times": [
+        {
+          "station_id": "thenia",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "18:50"
+        },
+        {
+          "station_id": "tidjelabine",
+          "sequence": 2,
+          "arrival": "18:54",
+          "departure": "18:54"
+        },
+        {
+          "station_id": "boumerdes",
+          "sequence": 3,
+          "arrival": "18:58",
+          "departure": "18:58"
+        },
+        {
+          "station_id": "corso",
+          "sequence": 4,
+          "arrival": "19:02",
+          "departure": "19:02"
+        },
+        {
+          "station_id": "boudouaou",
+          "sequence": 5,
+          "arrival": "19:05",
+          "departure": "19:05"
+        },
+        {
+          "station_id": "reghaia",
+          "sequence": 6,
+          "arrival": "19:11",
+          "departure": "19:11"
+        },
+        {
+          "station_id": "rouiba",
+          "sequence": 7,
+          "arrival": "19:16",
+          "departure": "19:16"
+        },
+        {
+          "station_id": "dar_el_beida",
+          "sequence": 8,
+          "arrival": "19:22",
+          "departure": "19:22"
+        },
+        {
+          "station_id": "bab_ezzouar",
+          "sequence": 9,
+          "arrival": "19:25",
+          "departure": "19:25"
+        },
+        {
+          "station_id": "oued_smar",
+          "sequence": 10,
+          "arrival": "19:28",
+          "departure": "19:28"
+        },
+        {
+          "station_id": "el_harrach",
+          "sequence": 11,
+          "arrival": "19:33",
+          "departure": "19:33"
+        },
+        {
+          "station_id": "caroubier",
+          "sequence": 12,
+          "arrival": "19:36",
+          "departure": "19:36"
+        },
+        {
+          "station_id": "hussein_dey",
+          "sequence": 13,
+          "arrival": "19:39",
+          "departure": "19:39"
+        },
+        {
+          "station_id": "les_ateliers",
+          "sequence": 14,
+          "arrival": "19:43",
+          "departure": "19:43"
+        },
+        {
+          "station_id": "agha",
+          "sequence": 15,
+          "arrival": "19:46",
+          "departure": "19:46"
+        },
+        {
+          "station_id": "alger",
+          "sequence": 16,
+          "arrival": "19:51",
+          "departure": null
+        }
+      ],
+      "editor_note": "توقيت العمود الرسمي في جدول الثنية → الجزائر المؤرخ 19 سبتمبر 2026؛ خانات - ليست توقفات، والقطار 24 يبدأ في رغاية. استمرار السريان لم يُراجع استقلاليًا."
     }
   ],
   "note": "Draft entries are editable real database records, but their prior example times are not operational evidence. Dashboard labels these records as unverified and hides them from default scheduled boards until reviewed. Update stop_times/train_number/source to validate. أُضيفت 60 رحلة من 3 صور رسمية مؤرخة 19 سبتمبر 2026: 28 للمطار ذهابًا وإيابًا، و14 آغا–زرالدة، و18 الجزائر–العفرون. لم تُفترض رحلات الاتجاه العكسي للعفرون دون صورتها الصحيحة."
