@@ -1,5 +1,5 @@
 {
-  "version": 8,
+  "version": 9,
   "updated": "2026-09-26",
   "trips": [
     {
@@ -8436,6 +8436,744 @@
         }
       ],
       "editor_note": "أوقات الأعمدة في جدول SNTF المصور المؤرخ 19 سبتمبر 2026؛ فُصل الوصول والمغادرة في الثنية عندما عُرض وقتان في الجدول. استمرار السريان يتطلب مراجعة."
+    },
+    {
+      "trip_id": "photo-zeralda-thenia-B506-101-20260919",
+      "route_id": "zeralda-thenia",
+      "train_number": "B506/101",
+      "service_id": "daily",
+      "source_id": "gallery-zeralda-thenia-both-2026-09-19",
+      "data_status": "source_transcribed",
+      "effective_from": "2026-09-19",
+      "station_time_kind": "published_single_time",
+      "stop_times": [
+        {
+          "station_id": "zeralda",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "06:35"
+        },
+        {
+          "station_id": "sidi_abdellah_universite",
+          "sequence": 2,
+          "arrival": "06:38",
+          "departure": "06:38"
+        },
+        {
+          "station_id": "sidi_abdellah",
+          "sequence": 3,
+          "arrival": "06:41",
+          "departure": "06:41"
+        },
+        {
+          "station_id": "tessala_el_merdja",
+          "sequence": 4,
+          "arrival": "06:47",
+          "departure": "06:47"
+        },
+        {
+          "station_id": "birtouta",
+          "sequence": 5,
+          "arrival": "06:54",
+          "departure": "06:54"
+        },
+        {
+          "station_id": "baba_ali",
+          "sequence": 6,
+          "arrival": "06:59",
+          "departure": "06:59"
+        },
+        {
+          "station_id": "ain_naadja",
+          "sequence": 7,
+          "arrival": "07:03",
+          "departure": "07:03"
+        },
+        {
+          "station_id": "gue_de_constantine",
+          "sequence": 8,
+          "arrival": "07:06",
+          "departure": "07:06"
+        },
+        {
+          "station_id": "oued_smar",
+          "sequence": 9,
+          "arrival": "07:18",
+          "departure": "07:18"
+        },
+        {
+          "station_id": "bab_ezzouar",
+          "sequence": 10,
+          "arrival": "07:21",
+          "departure": "07:21"
+        },
+        {
+          "station_id": "dar_el_beida",
+          "sequence": 11,
+          "arrival": "07:25",
+          "departure": "07:25"
+        },
+        {
+          "station_id": "rouiba",
+          "sequence": 12,
+          "arrival": "07:28",
+          "departure": "07:28"
+        },
+        {
+          "station_id": "rouiba_zi",
+          "sequence": 13,
+          "arrival": "07:30",
+          "departure": "07:30"
+        },
+        {
+          "station_id": "reghaia_zi",
+          "sequence": 14,
+          "arrival": "07:31",
+          "departure": "07:31"
+        },
+        {
+          "station_id": "reghaia",
+          "sequence": 15,
+          "arrival": "07:33",
+          "departure": "07:33"
+        },
+        {
+          "station_id": "boudouaou",
+          "sequence": 16,
+          "arrival": "07:39",
+          "departure": "07:39"
+        },
+        {
+          "station_id": "corso",
+          "sequence": 17,
+          "arrival": "07:44",
+          "departure": "07:44"
+        },
+        {
+          "station_id": "boumerdes",
+          "sequence": 18,
+          "arrival": "07:48",
+          "departure": "07:48"
+        },
+        {
+          "station_id": "tidjelabine",
+          "sequence": 19,
+          "arrival": "07:53",
+          "departure": "07:53"
+        },
+        {
+          "station_id": "thenia",
+          "sequence": 20,
+          "arrival": "08:00",
+          "departure": null
+        }
+      ],
+      "editor_note": "جدول رسمي مؤرخ 19 سبتمبر 2026، تظهر أوقات المحطات على امتداد عمود القطار. القطارات القصيرة التي تنتهي أو تبدأ في رغاية منفصلة عن مسار الثنية. السريان الحالي لم يُراجع استقلاليًا."
+    },
+    {
+      "trip_id": "photo-zeralda-thenia-B508-103-20260919",
+      "route_id": "zeralda-thenia",
+      "train_number": "B508/103",
+      "service_id": "daily",
+      "source_id": "gallery-zeralda-thenia-both-2026-09-19",
+      "data_status": "source_transcribed",
+      "effective_from": "2026-09-19",
+      "station_time_kind": "published_single_time",
+      "stop_times": [
+        {
+          "station_id": "zeralda",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "12:05"
+        },
+        {
+          "station_id": "sidi_abdellah_universite",
+          "sequence": 2,
+          "arrival": "12:08",
+          "departure": "12:08"
+        },
+        {
+          "station_id": "sidi_abdellah",
+          "sequence": 3,
+          "arrival": "12:11",
+          "departure": "12:11"
+        },
+        {
+          "station_id": "tessala_el_merdja",
+          "sequence": 4,
+          "arrival": "12:17",
+          "departure": "12:17"
+        },
+        {
+          "station_id": "birtouta",
+          "sequence": 5,
+          "arrival": "12:25",
+          "departure": "12:25"
+        },
+        {
+          "station_id": "baba_ali",
+          "sequence": 6,
+          "arrival": "12:30",
+          "departure": "12:30"
+        },
+        {
+          "station_id": "ain_naadja",
+          "sequence": 7,
+          "arrival": "12:35",
+          "departure": "12:35"
+        },
+        {
+          "station_id": "gue_de_constantine",
+          "sequence": 8,
+          "arrival": "12:38",
+          "departure": "12:38"
+        },
+        {
+          "station_id": "oued_smar",
+          "sequence": 9,
+          "arrival": "12:49",
+          "departure": "12:49"
+        },
+        {
+          "station_id": "bab_ezzouar",
+          "sequence": 10,
+          "arrival": "12:52",
+          "departure": "12:52"
+        },
+        {
+          "station_id": "dar_el_beida",
+          "sequence": 11,
+          "arrival": "12:55",
+          "departure": "12:55"
+        },
+        {
+          "station_id": "rouiba",
+          "sequence": 12,
+          "arrival": "13:01",
+          "departure": "13:01"
+        },
+        {
+          "station_id": "rouiba_zi",
+          "sequence": 13,
+          "arrival": "13:03",
+          "departure": "13:03"
+        },
+        {
+          "station_id": "reghaia_zi",
+          "sequence": 14,
+          "arrival": "13:04",
+          "departure": "13:04"
+        },
+        {
+          "station_id": "reghaia",
+          "sequence": 15,
+          "arrival": "13:07",
+          "departure": "13:07"
+        },
+        {
+          "station_id": "boudouaou",
+          "sequence": 16,
+          "arrival": "13:13",
+          "departure": "13:13"
+        },
+        {
+          "station_id": "corso",
+          "sequence": 17,
+          "arrival": "13:18",
+          "departure": "13:18"
+        },
+        {
+          "station_id": "boumerdes",
+          "sequence": 18,
+          "arrival": "13:22",
+          "departure": "13:22"
+        },
+        {
+          "station_id": "tidjelabine",
+          "sequence": 19,
+          "arrival": "13:26",
+          "departure": "13:26"
+        },
+        {
+          "station_id": "thenia",
+          "sequence": 20,
+          "arrival": "13:32",
+          "departure": null
+        }
+      ],
+      "editor_note": "جدول رسمي مؤرخ 19 سبتمبر 2026، تظهر أوقات المحطات على امتداد عمود القطار. القطارات القصيرة التي تنتهي أو تبدأ في رغاية منفصلة عن مسار الثنية. السريان الحالي لم يُراجع استقلاليًا."
+    },
+    {
+      "trip_id": "photo-zeralda-reghaia-B510-B105-20260919",
+      "route_id": "zeralda-reghaia",
+      "train_number": "B510/B105",
+      "service_id": "daily",
+      "source_id": "gallery-zeralda-thenia-both-2026-09-19",
+      "data_status": "source_transcribed",
+      "effective_from": "2026-09-19",
+      "station_time_kind": "published_single_time",
+      "stop_times": [
+        {
+          "station_id": "zeralda",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "16:30"
+        },
+        {
+          "station_id": "sidi_abdellah_universite",
+          "sequence": 2,
+          "arrival": "16:33",
+          "departure": "16:33"
+        },
+        {
+          "station_id": "sidi_abdellah",
+          "sequence": 3,
+          "arrival": "16:36",
+          "departure": "16:36"
+        },
+        {
+          "station_id": "tessala_el_merdja",
+          "sequence": 4,
+          "arrival": "16:42",
+          "departure": "16:42"
+        },
+        {
+          "station_id": "birtouta",
+          "sequence": 5,
+          "arrival": "16:49",
+          "departure": "16:49"
+        },
+        {
+          "station_id": "baba_ali",
+          "sequence": 6,
+          "arrival": "16:54",
+          "departure": "16:54"
+        },
+        {
+          "station_id": "ain_naadja",
+          "sequence": 7,
+          "arrival": "16:58",
+          "departure": "16:58"
+        },
+        {
+          "station_id": "gue_de_constantine",
+          "sequence": 8,
+          "arrival": "17:01",
+          "departure": "17:01"
+        },
+        {
+          "station_id": "oued_smar",
+          "sequence": 9,
+          "arrival": "17:12",
+          "departure": "17:12"
+        },
+        {
+          "station_id": "bab_ezzouar",
+          "sequence": 10,
+          "arrival": "17:16",
+          "departure": "17:16"
+        },
+        {
+          "station_id": "dar_el_beida",
+          "sequence": 11,
+          "arrival": "17:19",
+          "departure": "17:19"
+        },
+        {
+          "station_id": "rouiba",
+          "sequence": 12,
+          "arrival": "17:25",
+          "departure": "17:25"
+        },
+        {
+          "station_id": "rouiba_zi",
+          "sequence": 13,
+          "arrival": "17:28",
+          "departure": "17:28"
+        },
+        {
+          "station_id": "reghaia_zi",
+          "sequence": 14,
+          "arrival": "17:29",
+          "departure": "17:29"
+        },
+        {
+          "station_id": "reghaia",
+          "sequence": 15,
+          "arrival": "17:30",
+          "departure": null
+        }
+      ],
+      "editor_note": "جدول رسمي مؤرخ 19 سبتمبر 2026، تظهر أوقات المحطات على امتداد عمود القطار. القطارات القصيرة التي تنتهي أو تبدأ في رغاية منفصلة عن مسار الثنية. السريان الحالي لم يُراجع استقلاليًا."
+    },
+    {
+      "trip_id": "photo-thenia-zeralda-B100-505-20260919",
+      "route_id": "thenia-zeralda",
+      "train_number": "B100/505",
+      "service_id": "daily",
+      "source_id": "gallery-zeralda-thenia-both-2026-09-19",
+      "data_status": "source_transcribed",
+      "effective_from": "2026-09-19",
+      "station_time_kind": "published_single_time",
+      "stop_times": [
+        {
+          "station_id": "thenia",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "09:10"
+        },
+        {
+          "station_id": "tidjelabine",
+          "sequence": 2,
+          "arrival": "09:15",
+          "departure": "09:15"
+        },
+        {
+          "station_id": "boumerdes",
+          "sequence": 3,
+          "arrival": "09:20",
+          "departure": "09:20"
+        },
+        {
+          "station_id": "corso",
+          "sequence": 4,
+          "arrival": "09:23",
+          "departure": "09:23"
+        },
+        {
+          "station_id": "boudouaou",
+          "sequence": 5,
+          "arrival": "09:27",
+          "departure": "09:27"
+        },
+        {
+          "station_id": "reghaia",
+          "sequence": 6,
+          "arrival": "09:32",
+          "departure": "09:32"
+        },
+        {
+          "station_id": "reghaia_zi",
+          "sequence": 7,
+          "arrival": "09:35",
+          "departure": "09:35"
+        },
+        {
+          "station_id": "rouiba_zi",
+          "sequence": 8,
+          "arrival": "09:36",
+          "departure": "09:36"
+        },
+        {
+          "station_id": "rouiba",
+          "sequence": 9,
+          "arrival": "09:42",
+          "departure": "09:42"
+        },
+        {
+          "station_id": "dar_el_beida",
+          "sequence": 10,
+          "arrival": "09:46",
+          "departure": "09:46"
+        },
+        {
+          "station_id": "bab_ezzouar",
+          "sequence": 11,
+          "arrival": "09:49",
+          "departure": "09:49"
+        },
+        {
+          "station_id": "oued_smar",
+          "sequence": 12,
+          "arrival": "09:52",
+          "departure": "09:52"
+        },
+        {
+          "station_id": "gue_de_constantine",
+          "sequence": 13,
+          "arrival": "10:02",
+          "departure": "10:02"
+        },
+        {
+          "station_id": "ain_naadja",
+          "sequence": 14,
+          "arrival": "10:06",
+          "departure": "10:06"
+        },
+        {
+          "station_id": "baba_ali",
+          "sequence": 15,
+          "arrival": "10:10",
+          "departure": "10:10"
+        },
+        {
+          "station_id": "birtouta",
+          "sequence": 16,
+          "arrival": "10:14",
+          "departure": "10:14"
+        },
+        {
+          "station_id": "tessala_el_merdja",
+          "sequence": 17,
+          "arrival": "10:22",
+          "departure": "10:22"
+        },
+        {
+          "station_id": "sidi_abdellah",
+          "sequence": 18,
+          "arrival": "10:27",
+          "departure": "10:27"
+        },
+        {
+          "station_id": "sidi_abdellah_universite",
+          "sequence": 19,
+          "arrival": "10:30",
+          "departure": "10:30"
+        },
+        {
+          "station_id": "zeralda",
+          "sequence": 20,
+          "arrival": "10:33",
+          "departure": null
+        }
+      ],
+      "editor_note": "جدول رسمي مؤرخ 19 سبتمبر 2026، تظهر أوقات المحطات على امتداد عمود القطار. القطارات القصيرة التي تنتهي أو تبدأ في رغاية منفصلة عن مسار الثنية. السريان الحالي لم يُراجع استقلاليًا."
+    },
+    {
+      "trip_id": "photo-thenia-zeralda-B102-507-20260919",
+      "route_id": "thenia-zeralda",
+      "train_number": "B102/507",
+      "service_id": "daily",
+      "source_id": "gallery-zeralda-thenia-both-2026-09-19",
+      "data_status": "source_transcribed",
+      "effective_from": "2026-09-19",
+      "station_time_kind": "published_single_time",
+      "stop_times": [
+        {
+          "station_id": "thenia",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "14:20"
+        },
+        {
+          "station_id": "tidjelabine",
+          "sequence": 2,
+          "arrival": "14:25",
+          "departure": "14:25"
+        },
+        {
+          "station_id": "boumerdes",
+          "sequence": 3,
+          "arrival": "14:30",
+          "departure": "14:30"
+        },
+        {
+          "station_id": "corso",
+          "sequence": 4,
+          "arrival": "14:35",
+          "departure": "14:35"
+        },
+        {
+          "station_id": "boudouaou",
+          "sequence": 5,
+          "arrival": "14:40",
+          "departure": "14:40"
+        },
+        {
+          "station_id": "reghaia",
+          "sequence": 6,
+          "arrival": "14:44",
+          "departure": "14:44"
+        },
+        {
+          "station_id": "reghaia_zi",
+          "sequence": 7,
+          "arrival": "14:47",
+          "departure": "14:47"
+        },
+        {
+          "station_id": "rouiba_zi",
+          "sequence": 8,
+          "arrival": "14:48",
+          "departure": "14:48"
+        },
+        {
+          "station_id": "rouiba",
+          "sequence": 9,
+          "arrival": "14:50",
+          "departure": "14:50"
+        },
+        {
+          "station_id": "dar_el_beida",
+          "sequence": 10,
+          "arrival": "14:54",
+          "departure": "14:54"
+        },
+        {
+          "station_id": "bab_ezzouar",
+          "sequence": 11,
+          "arrival": "14:57",
+          "departure": "14:57"
+        },
+        {
+          "station_id": "oued_smar",
+          "sequence": 12,
+          "arrival": "15:01",
+          "departure": "15:01"
+        },
+        {
+          "station_id": "gue_de_constantine",
+          "sequence": 13,
+          "arrival": "15:10",
+          "departure": "15:10"
+        },
+        {
+          "station_id": "ain_naadja",
+          "sequence": 14,
+          "arrival": "15:14",
+          "departure": "15:14"
+        },
+        {
+          "station_id": "baba_ali",
+          "sequence": 15,
+          "arrival": "15:18",
+          "departure": "15:18"
+        },
+        {
+          "station_id": "birtouta",
+          "sequence": 16,
+          "arrival": "15:23",
+          "departure": "15:23"
+        },
+        {
+          "station_id": "tessala_el_merdja",
+          "sequence": 17,
+          "arrival": "15:31",
+          "departure": "15:31"
+        },
+        {
+          "station_id": "sidi_abdellah",
+          "sequence": 18,
+          "arrival": "15:36",
+          "departure": "15:36"
+        },
+        {
+          "station_id": "sidi_abdellah_universite",
+          "sequence": 19,
+          "arrival": "15:39",
+          "departure": "15:39"
+        },
+        {
+          "station_id": "zeralda",
+          "sequence": 20,
+          "arrival": "15:43",
+          "departure": null
+        }
+      ],
+      "editor_note": "جدول رسمي مؤرخ 19 سبتمبر 2026، تظهر أوقات المحطات على امتداد عمود القطار. القطارات القصيرة التي تنتهي أو تبدأ في رغاية منفصلة عن مسار الثنية. السريان الحالي لم يُراجع استقلاليًا."
+    },
+    {
+      "trip_id": "photo-reghaia-zeralda-B104-509-20260919",
+      "route_id": "reghaia-zeralda",
+      "train_number": "B104/509",
+      "service_id": "daily",
+      "source_id": "gallery-zeralda-thenia-both-2026-09-19",
+      "data_status": "source_transcribed",
+      "effective_from": "2026-09-19",
+      "station_time_kind": "published_single_time",
+      "stop_times": [
+        {
+          "station_id": "reghaia",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "18:00"
+        },
+        {
+          "station_id": "reghaia_zi",
+          "sequence": 2,
+          "arrival": "18:01",
+          "departure": "18:01"
+        },
+        {
+          "station_id": "rouiba_zi",
+          "sequence": 3,
+          "arrival": "18:02",
+          "departure": "18:02"
+        },
+        {
+          "station_id": "rouiba",
+          "sequence": 4,
+          "arrival": "18:05",
+          "departure": "18:05"
+        },
+        {
+          "station_id": "dar_el_beida",
+          "sequence": 5,
+          "arrival": "18:11",
+          "departure": "18:11"
+        },
+        {
+          "station_id": "bab_ezzouar",
+          "sequence": 6,
+          "arrival": "18:14",
+          "departure": "18:14"
+        },
+        {
+          "station_id": "oued_smar",
+          "sequence": 7,
+          "arrival": "18:17",
+          "departure": "18:17"
+        },
+        {
+          "station_id": "gue_de_constantine",
+          "sequence": 8,
+          "arrival": "18:27",
+          "departure": "18:27"
+        },
+        {
+          "station_id": "ain_naadja",
+          "sequence": 9,
+          "arrival": "18:31",
+          "departure": "18:31"
+        },
+        {
+          "station_id": "baba_ali",
+          "sequence": 10,
+          "arrival": "18:35",
+          "departure": "18:35"
+        },
+        {
+          "station_id": "birtouta",
+          "sequence": 11,
+          "arrival": "18:39",
+          "departure": "18:39"
+        },
+        {
+          "station_id": "tessala_el_merdja",
+          "sequence": 12,
+          "arrival": "18:47",
+          "departure": "18:47"
+        },
+        {
+          "station_id": "sidi_abdellah",
+          "sequence": 13,
+          "arrival": "18:50",
+          "departure": "18:50"
+        },
+        {
+          "station_id": "sidi_abdellah_universite",
+          "sequence": 14,
+          "arrival": "18:52",
+          "departure": "18:52"
+        },
+        {
+          "station_id": "zeralda",
+          "sequence": 15,
+          "arrival": "18:56",
+          "departure": null
+        }
+      ],
+      "editor_note": "جدول رسمي مؤرخ 19 سبتمبر 2026، تظهر أوقات المحطات على امتداد عمود القطار. القطارات القصيرة التي تنتهي أو تبدأ في رغاية منفصلة عن مسار الثنية. السريان الحالي لم يُراجع استقلاليًا."
     }
   ],
   "note": "Draft entries are editable real database records, but their prior example times are not operational evidence. Dashboard labels these records as unverified and hides them from default scheduled boards until reviewed. Update stop_times/train_number/source to validate. أُضيفت 60 رحلة من 3 صور رسمية مؤرخة 19 سبتمبر 2026: 28 للمطار ذهابًا وإيابًا، و14 آغا–زرالدة، و18 الجزائر–العفرون. لم تُفترض رحلات الاتجاه العكسي للعفرون دون صورتها الصحيحة."
