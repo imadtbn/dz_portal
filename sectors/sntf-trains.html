@@ -71,7 +71,11 @@
                 <div class="map-filters">
                     <label for="station-search">ابحث عن محطة</label><input id="station-search" type="search"
                         autocomplete="off" placeholder="اسم المحطة بالعربية أو الفرنسية">
-                    <label for="route-filter">المسار</label><select id="route-filter">
+                    <label for="line-filter">الخط الحديدي</label><select id="line-filter" aria-describedby="line-filter-help">
+                        <option value="">جميع الخطوط</option>
+                    </select>
+                    <small id="line-filter-help" class="filter-hint">تُجمع الاتجاهات والرحلات القصيرة ضمن خط واحد، دون تكرار القطار.</small>
+                    <label for="route-filter">المسار والاتجاه</label><select id="route-filter">
                         <option value="">جميع المسارات</option>
                     </select>
                 </div>
@@ -100,6 +104,15 @@
                     <p class="minor">المسودات سجلات قابلة للتعديل يدويًا، لكنها قد تحتوي أوقاتًا افتراضية موروثة. لا
                         تعتمد عليها للسفر.</p>
                 </div>
+                <section id="station-lines" class="station-lines" aria-labelledby="station-lines-title">
+                    <div class="station-lines-heading">
+                        <h3 id="station-lines-title">الخطوط التي تتوقف في هذه المحطة</h3>
+                        <span class="tag" id="station-line-count">—</span>
+                    </div>
+                    <div id="station-services" class="station-services" aria-live="polite">
+                        <p class="minor">اختر محطة لعرض المسارات الموثقة التي تتوقف بها قطارات مسجلة في القاعدة.</p>
+                    </div>
+                </section>
                 <div class="board-tabs" role="tablist" aria-label="لوحة المحطة على الهاتف">
                     <button role="tab" type="button" id="tab-departures" aria-controls="departures-panel"
                         aria-selected="true" tabindex="0" data-view="departures">المغادرات <span
@@ -134,7 +147,8 @@
                     <h2>الخطوط ومحطات التوقف</h2>
                 </div><span id="route-count" class="chip">—</span>
             </div>
-            <div id="route-catalog" class="route-grid"></div>
+            <p class="minor route-intro">تظهر محطات التوقف التي لها توقيت في جدول قطار مُدخل، مع عدد القطارات التي تتوقف بها. المحطات المرسومة في صور الممر دون أي توقف منشور تُعرض منفصلة؛ ولا تُستنتج محطات وسيطة للخطوط التي لم تُنقل جداولها بعد.</p>
+            <div id="route-catalog" class="line-catalog" aria-live="polite"></div>
         </section>
         <section class="info-strip">
             <div>
