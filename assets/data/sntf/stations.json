@@ -1,6 +1,15 @@
 {
-  "version": 6,
+  "version": 7,
   "updated": "2026-09-26",
+  "timetable_documents": {
+    "authority": "SNTF",
+    "authority_url": "https://www.sntf.dz/",
+    "provenance": "official_issuer_confirmed_by_repository_owner",
+    "sources_file": "sources.json",
+    "trips_file": "trips.json",
+    "gallery_index_file": "gallery-index.json",
+    "validity_note": "The official origin of a timetable does not confirm its current validity. Station coordinates and geo_verified statuses are independent."
+  },
   "stations": [
     {
       "id": "alger",
