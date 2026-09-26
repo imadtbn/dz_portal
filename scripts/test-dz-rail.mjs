@@ -55,7 +55,7 @@ assert.equal(engine.runsOn(other1028,"2026-09-25",calendars,exceptions,holidays)
 assert.equal(engine.runsOn(other1028,"2026-09-24",calendars,exceptions,holidays),true);
 const fridayReverse=engine.recordsAtStation(available,"el_affroun","departure","2026-09-25",config,new Date("2026-09-25T05:00:00Z"));
 assert(fridayReverse.some(e=>e.trip.train_number==="1028"&&e.trip.service_id==="friday_only"&&e.stop.departure==="06:45"));
-assert(!fridayReverse.some(e=>e.trip.train_number==="1028"&&e.trip.service_id==="except_friday"),"Friday board excludes non-Friday reverse timetable");
+assert(!fridayReverse.some(e=>e.serviceDate==="2026-09-25"&&e.trip.train_number==="1028"&&e.trip.service_id==="except_friday"),"Friday board excludes non-Friday reverse timetable on Friday while allowing Saturday events in its 48h horizon");
 assert(available.some(t=>t.route_id==="affroun-alger"&&t.stop_times.some(s=>s.station_id==="birtouta"&&s.departure==="06:15")),"Affroun image intermediate stations are searchable on station boards");
 const tr1500=available.find(t=>t.train_number==="1500"),tr1502=available.find(t=>t.train_number==="1502");
 assert(tr1500&&tr1502);
