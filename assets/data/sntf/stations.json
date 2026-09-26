@@ -132,8 +132,8 @@
     "id": "boudouaou",
     "name": "بودواو",
     "name_fr": "Boudouaou",
-    "lat": 36.7290507,
-    "lon": 3.4096155,
+    "lat": 36.7405714,
+    "lon": 3.4154364,
     "geo_source": "Google Maps",
     "geo_verified": true
   },
@@ -170,6 +170,105 @@
     "name_fr": "Thenia",
     "lat": 36.7244153,
     "lon": 3.5552619,
+    "geo_source": "Google Maps",
+    "geo_verified": true
+  },
+  {
+    "id": "si_mustapha",
+    "name": "سي مصطفى",
+    "name_fr": "Si Mustapha",
+    "lat": 36.7202889,
+    "lon": 3.635737,
+    "geo_source": "Google Maps",
+    "geo_verified": true
+  },
+  {
+    "id": "isser",
+    "name": "يسر",
+    "name_fr": "Isser",
+    "lat": 36.7266611,
+    "lon": 3.6913768,
+    "geo_source": "Google Maps",
+    "geo_verified": true
+  },
+  {
+    "id": "bordj_menaiel",
+    "name": "برج منايل",
+    "name_fr": "Bordj Menaïel",
+    "lat": 36.7447172,
+    "lon": 3.7346784,
+    "geo_source": "Google Maps",
+    "geo_verified": true
+  },
+  {
+    "id": "naciria",
+    "name": "ناصرية",
+    "name_fr": "Naciria",
+    "lat": 36.7513268,
+    "lon": 3.8303273,
+    "geo_source": "Google Maps",
+    "geo_verified": true
+  },
+  {
+    "id": "tadmait",
+    "name": "تادمايت",
+    "name_fr": "Tadmaït",
+    "lat": 36.7421831,
+    "lon": 3.9019064,
+    "geo_source": "Google Maps",
+    "geo_verified": true
+  },
+  {
+    "id": "draa_ben_khedda",
+    "name": "ذراع بن خدة",
+    "name_fr": "Draa Ben Khedda",
+    "lat": 36.7412495,
+    "lon": 3.9619982,
+    "geo_source": "Google Maps",
+    "geo_verified": true
+  },
+  {
+    "id": "boukhalfa",
+    "name": "بوخالفة",
+    "name_fr": "Boukhalfa",
+    "lat": 36.7327623,
+    "lon": 4.020407,
+    "geo_source": "Google Maps",
+    "geo_verified": true
+  },
+  {
+    "id": "tizi_ouzou",
+    "name": "تيزي وزو",
+    "name_fr": "Tizi Ouzou",
+    "lat": 36.7096644,
+    "lon": 4.0346665,
+    "geo_source": "Google Maps",
+    "geo_verified": true
+  },
+  {
+    "id": "kef_naadja",
+    "name": "كاف النعجة",
+    "name_fr": "Kef Naadja",
+    "lat": 36.7031,
+    "lon": 4.0722,
+    "geo_source": "Google Maps",
+    "geo_verified": false
+  },
+  {
+    "id": "oued_aissi_universite",
+    "name": "واد عيسى-جامعة",
+    "name_fr": "Oued Aïssi - Université",
+    "lat": 36.7036869,
+    "lon": 4.106242,
+    "geo_source": "Google Maps",
+    "geo_verified": true
+  },
+  {
+    "id": "oued_aissi",
+    "name": "واد عيسى",
+    "name_fr": "Oued Aïssi",
+    "lat": 36.7023693,
+    "lon": 4.1418779,
     "geo_source": "Google Maps",
     "geo_verified": true
   },
@@ -326,117 +425,8 @@
     "geo_source": "Google Maps",
     "geo_verified": false
   },
-   {
-    "id": "si_mustapha",
-    "name": "سي مصطفى",
-    "name_fr": "Si Mustapha",
-    "lat": 36.7264,
-    "lon": 3.6192,
-    "geo_source": "Google Maps",
-    "geo_verified": false
-  },
-  {
-    "id": "isser",
-    "name": "يسر",
-    "name_fr": "Isser",
-    "lat": 36.7250,
-    "lon": 3.6681,
-    "geo_source": "Google Maps",
-    "geo_verified": false
-  },
-  {
-    "id": "bordj_menaiel",
-    "name": "برج منايل",
-    "name_fr": "Bordj Menaïel",
-    "lat": 36.7417,
-    "lon": 3.7222,
-    "geo_source": "Google Maps",
-    "geo_verified": false
-  },
-  {
-    "id": "naciria",
-    "name": "ناصرية",
-    "name_fr": "Naciria",
-    "lat": 36.7461,
-    "lon": 3.8294,
-    "geo_source": "Google Maps",
-    "geo_verified": false
-  },
-  {
-    "id": "tadmait",
-    "name": "تادمايت",
-    "name_fr": "Tadmaït",
-    "lat": 36.7428,
-    "lon": 3.8967,
-    "geo_source": "Google Maps",
-    "geo_verified": false
-  },
-  {
-    "id": "draa_ben_khedda",
-    "name": "ذراع بن خدة",
-    "name_fr": "Draa Ben Khedda",
-    "lat": 36.7328,
-    "lon": 3.9633,
-    "geo_source": "Google Maps",
-    "geo_verified": false
-  },
-  {
-    "id": "boukhalfa",
-    "name": "بوخالفة",
-    "name_fr": "Boukhalfa",
-    "lat": 36.7342,
-    "lon": 4.0153,
-    "geo_source": "Google Maps",
-    "geo_verified": false
-  },
-  {
-    "id": "tizi_ouzou",
-    "name": "تيزي وزو",
-    "name_fr": "Tizi Ouzou",
-    "lat": 36.7114,
-    "lon": 4.0456,
-    "geo_source": "Google Maps",
-    "geo_verified": false
-  },
-  {
-    "id": "kef_naadja",
-    "name": "كاف النعجة",
-    "name_fr": "Kef Naadja",
-    "lat": 36.7031,
-    "lon": 4.0722,
-    "geo_source": "Google Maps",
-    "geo_verified": false
-  },
-  {
-    "id": "oued_aissi_universite",
-    "name": "واد عيسى-جامعة",
-    "name_fr": "Oued Aïssi - Université",
-    "lat": 36.6975,
-    "lon": 4.0950,
-    "geo_source": "Google Maps",
-    "geo_verified": false
-  },
-  {
-    "id": "oued_aissi",
-    "name": "واد عيسى",
-    "name_fr": "Oued Aïssi",
-    "lat": 36.6961,
-    "lon": 4.1031,
-    "geo_source": "Google Maps",
-    "geo_verified": false
-  },
+   
 
-
-
-    {
-      "id": "oued-aissi",
-      "name": "واد عيسى",
-      "name_fr": "Oued Aïssi",
-      "lat": 36.6976,
-      "lon": 4.1082,
-      "geo_source": "Google Maps",
-      "geo_verified": true
-    },
     {
       "id": "airport",
       "name": "مطار هواري بومدين",
