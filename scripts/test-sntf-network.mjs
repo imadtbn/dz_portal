@@ -1,0 +1,51 @@
+import assert from "node:assert/strict";
+import {readFileSync} from "node:fs";
+const load=name=>JSON.parse(readFileSync("assets/data/sntf/"+name+".json","utf8"));
+const stations=load("stations").stations,routes=load("routes").routes,lines=load("lines").lines,trips=load("trips").trips;
+const networkSource=readFileSync("assets/js/sntf-trains/network.js","utf8");
+const network=await import("data:text/javascript;base64,"+Buffer.from(networkSource).toString("base64"));
+const active=network.publishedTrips(trips),routeById=new Map(routes.map(r=>[r.id,r]));
+assert.equal(stations.length,169,"No station or manually verified coordinate was lost");
+assert.equal(lines.length,20,"Twenty grouped geographical lines");
+assert.equal(routes.length,34,"Preserve all 34 route IDs, including one legacy alias");
+assert.equal(routes.filter(r=>!r.alias_of).length,33,"One legacy alias must not duplicate the real route");
+assert.equal(active.length,150,"No documented train removed or duplicated");
+const membership=new Set();
+for(const line of lines){
+ for(const route of network.lineRoutes(line,routes)){
+  assert(!membership.has(route.id),"Canonical route duplicated between lines: "+route.id);
+  membership.add(route.id);
+  assert.equal(route.line_id,line.id,"Each route belongs to its declared line");
+ }
+}
+assert.equal(membership.size,33,"Every nonalias route is in a line");
+assert.equal(lines.reduce((n,line)=>n+network.lineSummary(line,routes,trips).train_count,0),150,"Line catalog must count each published train exactly once");
+const affroun=network.routeStopSummary(routeById.get("affroun-alger"),trips);
+assert.equal(affroun.train_count,19,"Official reverse Affroun image retains all 19 services");
+assert.equal(affroun.known_stops.length,16,"All 16 stations have a published reverse timetable");
+assert.equal(affroun.known_stops.find(s=>s.station_id==="birtouta").train_count,19,"Count trains stopping at each intermediate station");
+const thenia=network.routeStopSummary(routeById.get("alger-thenia"),trips);
+assert.equal(thenia.train_count,14);
+assert.equal(thenia.known_stops.length,18,"Only stations with published timetable times are labeled service stops");
+assert(thenia.corridor_only.includes("rouiba_snvi"),"The corridor lists Rouiba SNVI but no published service stop currently exists");
+const alias=network.routeStopSummary(routeById.get("zeralda-alger"),trips);
+assert.equal(alias.train_count,14,"Legacy alias resolves without duplicating scheduled trips");
+const aghaLine=lines.find(l=>l.id==="agha-zeralda");
+assert.equal(network.lineSummary(aghaLine,routes,trips).train_count,28,"Route aliases never duplicate the line's total");
+const services=network.stationLineServices("birtouta",lines,routes,trips);
+assert(services.some(s=>s.line_id==="alger-affroun"&&s.route_services.some(r=>r.route_id==="affroun-alger")));
+assert(services.some(s=>s.line_id==="agha-zeralda"),"A station displays every line with a documented stop, not just a corridor");
+assert(!services.some(s=>s.line_id==="alger-bejaia"),"Missing national intermediate stop data must not invent station services");
+assert.equal(network.eligibleStationIds("","",lines,routes,trips),null,"Unfiltered search still contains all registered stations");
+const theniaLineStops=network.eligibleStationIds("alger-thenia","",lines,routes,trips);
+assert(theniaLineStops.has("rouiba")&&!theniaLineStops.has("zeralda"),"Line filter narrows stations by actual trip stops");
+const affrounStops=network.eligibleStationIds("","affroun-alger",lines,routes,trips);
+assert.equal(affrounStops.size,16);
+const unknown=network.routeStopSummary(routeById.get("alger-bejaia"),trips);
+assert.equal(unknown.train_count,0);
+assert.equal(unknown.known_stops.length,0,"No guessed intermediate stops for national timetables pending transcription");
+assert.deepEqual([...network.eligibleStationIds("alger-bejaia","",lines,routes,trips)].sort(),["alger","bejaia"],"A pending timetable filters only to its documented endpoints");
+const html=readFileSync("sectors/sntf-trains.html","utf8"),app=readFileSync("assets/js/sntf-trains/app.js","utf8");
+for(const id of ['id="line-filter"','id="route-filter"','id="station-services"','id="route-catalog"'])assert(html.includes(id),"Missing visible line/route/stop interface: "+id);
+assert(app.includes('get("lines","lines")')&&app.includes("routeStopSummary")&&app.includes("stationLineServices"),"The interactive view uses the same canonical network data as the tests");
+console.log("SNTF network tests PASS: 20 lines, 33 canonical routes, 150 documented trips, 169 stations, 16 Affroun reverse stops, true published station service coverage, and no alias duplication.");

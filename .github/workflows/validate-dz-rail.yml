@@ -1,0 +1,53 @@
+name: Validate DZ Rail data
+on:
+  push:
+    paths:
+      - "assets/data/sntf/**"
+      - "assets/js/sntf-trains/**"
+      - "scripts/validate-sntf-data.mjs"
+      - "scripts/test-dz-rail.mjs"
+      - "scripts/*sntf*.mjs"
+      - "scripts/lib/sntf-reconcile.mjs"
+      - ".github/workflows/validate-dz-rail.yml"
+  pull_request:
+    paths:
+      - "assets/data/sntf/**"
+      - "assets/js/sntf-trains/**"
+      - "scripts/validate-sntf-data.mjs"
+      - "scripts/test-dz-rail.mjs"
+      - "scripts/*sntf*.mjs"
+      - "scripts/lib/sntf-reconcile.mjs"
+      - ".github/workflows/validate-dz-rail.yml"
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Validate published and draft railway data
+        run: node scripts/validate-sntf-data.mjs
+      - name: Test station boards and recurrence rules
+        run: node scripts/test-dz-rail.mjs
+      - name: Verify line grouping and documented stopping stations
+        run: node scripts/test-sntf-network.mjs
+      - name: Verify gallery images match the current SNTF page
+        run: node scripts/build-sntf-gallery.mjs --check
+      - name: Verify historical SNTF official source review is current
+        run: node scripts/review-sntf-sources.mjs --check
+      - name: Test station source reconciliation and immutable Google Maps pins
+        run: node scripts/test-sntf-sources.mjs
+      - name: Check JavaScript module syntax
+        run: |
+          node --check assets/js/sntf-trains/app.js
+          node --check assets/js/sntf-trains/engine.js
+          node --check assets/js/sntf-trains/network.js
+          node --check scripts/test-sntf-network.mjs
+          node --check scripts/lib/sntf-reconcile.mjs
+          node --check scripts/apply-reviewed-sntf-stations.mjs
+          node --check scripts/build-sntf-gallery.mjs
+          node --check scripts/review-sntf-sources.mjs

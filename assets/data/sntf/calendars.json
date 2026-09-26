@@ -1,0 +1,75 @@
+{
+  "version": 3,
+  "updated": "2026-09-26",
+  "calendars": [
+    {
+      "id": "daily",
+      "label": "يسير كل يوم",
+      "rule": "daily",
+      "days": {
+        "sunday": true,
+        "monday": true,
+        "tuesday": true,
+        "wednesday": true,
+        "thursday": true,
+        "friday": true,
+        "saturday": true
+      }
+    },
+    {
+      "id": "friday_holiday",
+      "label": "يسير الجمعة والأعياد المسجلة",
+      "rule": "friday_holiday",
+      "days": {
+        "friday": true
+      },
+      "holiday_source": "holidays.json",
+      "note": "Days flagged in holidays.json only; no automatic guessing of religious/public holiday dates."
+    },
+    {
+      "id": "weekday_not_friday",
+      "label": "لا يسير الجمعة والأعياد المسجلة",
+      "rule": "weekday_not_friday",
+      "days": {
+        "sunday": true,
+        "monday": true,
+        "tuesday": true,
+        "wednesday": true,
+        "thursday": true,
+        "friday": false,
+        "saturday": true
+      },
+      "holiday_source": "holidays.json"
+    },
+    {
+      "id": "except_friday",
+      "label": "لا يسير الجمعة (الأعياد غير محددة في المصدر)",
+      "rule": "except_friday",
+      "days": {
+        "sunday": true,
+        "monday": true,
+        "tuesday": true,
+        "wednesday": true,
+        "thursday": true,
+        "friday": false,
+        "saturday": true
+      }
+    },
+    {
+      "id": "friday_only",
+      "label": "الجمعة فقط",
+      "rule": "friday_only",
+      "days": {
+        "sunday": false,
+        "monday": false,
+        "tuesday": false,
+        "wednesday": false,
+        "thursday": false,
+        "friday": true,
+        "saturday": false
+      },
+      "note": "رمز [2] في جداول SNTF المصورة؛ لا تشمل الأعياد تلقائيًا."
+    }
+  ],
+  "exceptions": []
+}
