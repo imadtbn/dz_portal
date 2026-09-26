@@ -1079,42 +1079,6 @@
       "geo_verified": true
     },
     {
-      "id": "batna",
-      "name": "باتنة",
-      "name_fr": "Batna",
-      "lat": 35.5639,
-      "lon": 6.1824,
-      "geo_source": "Google Maps",
-      "geo_verified": true
-    },
-    {
-      "id": "annaba",
-      "name": "عنابة",
-      "name_fr": "Annaba",
-      "lat": 36.9004,
-      "lon": 7.7663,
-      "geo_source": "Google Maps",
-      "geo_verified": true
-    },
-    {
-      "id": "tebessa",
-      "name": "تبسة",
-      "name_fr": "Tébessa",
-      "lat": 35.4057,
-      "lon": 8.1215,
-      "geo_source": "Google Maps",
-      "geo_verified": true
-    },
-    {
-      "id": "oran",
-      "name": "وهران",
-      "name_fr": "Oran",
-      "lat": 35.698,
-      "lon": -0.6384,
-      "geo_source": "Google Maps",
-      "geo_verified": true
-    },
-    {
       "id": "sidi-bel-abbes",
       "name": "سيدي بلعباس",
       "name_fr": "Sidi Bel Abbès",
@@ -1160,29 +1124,11 @@
       "geo_verified": true
     },
     {
-      "id": "chlef",
-      "name": "الشلف",
-      "name_fr": "Chlef",
-      "lat": 36.1607,
-      "lon": 1.3346,
-      "geo_source": "Google Maps",
-      "geo_verified": true
-    },
-    {
       "id": "tindouf",
       "name": "تيندوف",
       "name_fr": "Tindouf",
       "lat": 27.676,
       "lon": -8.147,
-      "geo_source": "Google Maps",
-      "geo_verified": true
-    },
-    {
-      "id": "biskra",
-      "name": "بسكرة",
-      "name_fr": "Biskra",
-      "lat": 34.8465,
-      "lon": 5.7275,
       "geo_source": "Google Maps",
       "geo_verified": true
     },
@@ -1232,42 +1178,6 @@
       "geo_verified": true
     },
     {
-      "id": "msila",
-      "name": "المسيلة",
-      "name_fr": "M'Sila",
-      "lat": 35.7,
-      "lon": 4.5422,
-      "geo_source": "Google Maps",
-      "geo_verified": true
-    },
-    {
-      "id": "bordj",
-      "name": "برج بوعريريج",
-      "name_fr": "Bordj Bou Arréridj",
-      "lat": 36.0717,
-      "lon": 4.7645,
-      "geo_source": "Google Maps",
-      "geo_verified": true
-    },
-    {
-      "id": "constantine",
-      "name": "قسنطينة",
-      "name_fr": "Constantine",
-      "lat": 36.3639,
-      "lon": 6.6186,
-      "geo_source": "Google Maps",
-      "geo_verified": true
-    },
-    {
-      "id": "bouira",
-      "name": "البويرة",
-      "name_fr": "Bouira",
-      "lat": 36.3742,
-      "lon": 3.8961,
-      "geo_source": "Google Maps",
-      "geo_verified": true
-    },
-    {
       "id": "tunis",
       "name": "تونس",
       "name_fr": "Tunis",
@@ -1276,105 +1186,6 @@
       "geo_source": "Google Maps",
       "geo_verified": true
     },
-    {
-      "id": "sidi-abdallah-j",
-      "name": "سيدي عبد الله - ج",
-      "name_fr": "Sidi Abdellah J",
-      "lat": null,
-      "lon": null,
-      "geo_source": null,
-      "geo_verified": false
-    },
-    {
-      "id": "sidi-abdallah",
-      "name": "سيدي عبد الله",
-      "name_fr": "Sidi Abdellah",
-      "lat": null,
-      "lon": null,
-      "geo_source": null,
-      "geo_verified": false
-    },
-    {
-      "id": "tessala-el-merdja",
-      "name": "تسالة المرجة",
-      "name_fr": "Tessala El Merdja",
-      "lat": null,
-      "lon": null,
-      "geo_source": null,
-      "geo_verified": false
-    },
-    {
-      "id": "birtouta",
-      "name": "بئر توتة",
-      "name_fr": "Birtouta",
-      "lat": null,
-      "lon": null,
-      "geo_source": null,
-      "geo_verified": false
-    },
-    {
-      "id": "baba-ali",
-      "name": "بابا علي",
-      "name_fr": "Baba Ali",
-      "lat": null,
-      "lon": null,
-      "geo_source": null,
-      "geo_verified": false
-    },
-    {
-      "id": "ain-naadja",
-      "name": "عين النعجة",
-      "name_fr": "Aïn Naâdja",
-      "lat": null,
-      "lon": null,
-      "geo_source": null,
-      "geo_verified": false
-    },
-    {
-      "id": "djasr-constantine",
-      "name": "جسر قسنطينة",
-      "name_fr": "Gué de Constantine",
-      "lat": null,
-      "lon": null,
-      "geo_source": null,
-      "geo_verified": false
-    },
-    {
-      "id": "kharouba",
-      "name": "خروبة",
-      "name_fr": "Kharouba",
-      "lat": null,
-      "lon": null,
-      "geo_source": null,
-      "geo_verified": false
-    },
-    {
-      "id": "hussein-dey",
-      "name": "حسين داي",
-      "name_fr": "Hussein Dey",
-      "lat": null,
-      "lon": null,
-      "geo_source": null,
-      "geo_verified": false
-    },
-    {
-      "id": "ateliers",
-      "name": "الورشات",
-      "name_fr": "Les Ateliers",
-      "lat": null,
-      "lon": null,
-      "geo_source": null,
-      "geo_verified": false
-    },
-    {
-      "id": "rouiba",
-      "name": "رويبة",
-      "name_fr": "Rouïba",
-      "lat": null,
-      "lon": null,
-      "geo_source": null,
-      "geo_verified": false,
-      "editor_note": "المحطة مذكورة كمحطة وسيطة؛ إحداثياتها قيد المراجعة."
-    }
+
   ]
 }
