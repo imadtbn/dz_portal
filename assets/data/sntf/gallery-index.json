@@ -43,23 +43,10 @@
       "notes": "صورة جدول صادرة عن SNTF وفق توثيق صاحب المشروع؛ تاريخ السريان واستمرار العمل بالمواقيت يحتاجان مراجعة منفصلة، ولا تُستنتج أوقات الرحلات من اسم الصورة."
     },
     {
-      "id": "affroun-alger-suburban",
-      "path": "assets/train-schedules/suburban/affroun-alger.png",
-      "category": "suburban",
-      "alt": " العفرون الجزائر",
-      "route_ids": [
-        "affroun-alger"
-      ],
-      "source_page": "sectors/sntf.html",
-      "issuing_authority": "SNTF",
-      "status": "official_document_validity_unconfirmed",
-      "notes": "صورة جدول صادرة عن SNTF وفق توثيق صاحب المشروع؛ تاريخ السريان واستمرار العمل بالمواقيت يحتاجان مراجعة منفصلة، ولا تُستنتج أوقات الرحلات من اسم الصورة."
-    },
-    {
       "id": "alger-zeralda-suburban",
       "path": "assets/train-schedules/suburban/alger-zeralda.png",
       "category": "suburban",
-      "alt": "الجزائر - زرالدة",
+      "alt": "آغا - زرالدة",
       "route_ids": [
         "alger-zeralda"
       ],
@@ -72,9 +59,9 @@
       "id": "zeralda-alger-suburban",
       "path": "assets/train-schedules/suburban/zeralda-alger.png",
       "category": "suburban",
-      "alt": "زرالدة - الجزائر",
+      "alt": "زرالدة - آغا",
       "route_ids": [
-        "zeralda-alger"
+        "zeralda-agha"
       ],
       "source_page": "sectors/sntf.html",
       "issuing_authority": "SNTF",
@@ -87,7 +74,8 @@
       "category": "suburban",
       "alt": "الخط الجزائر - واد عيسى",
       "route_ids": [
-        "alger-oued-aissi"
+        "alger-oued-aissi",
+        "thenia-oued-aissi"
       ],
       "source_page": "sectors/sntf.html",
       "issuing_authority": "SNTF",
@@ -100,7 +88,8 @@
       "category": "suburban",
       "alt": "واد عيسى - الجزائر",
       "route_ids": [
-        "oued-aissi-alger"
+        "oued-aissi-alger",
+        "oued-aissi-thenia"
       ],
       "source_page": "sectors/sntf.html",
       "issuing_authority": "SNTF",
@@ -111,9 +100,10 @@
       "id": "alger-airoport-alger-suburban",
       "path": "assets/train-schedules/suburban/alger-airoport-alger.png",
       "category": "suburban",
-      "alt": "الجزائر - مطار هواري بومدين- الجزائر",
+      "alt": "آغا - مطار هواري بومدين - آغا",
       "route_ids": [
-        "alger-airport"
+        "alger-airport",
+        "airport-agha"
       ],
       "source_page": "sectors/sntf.html",
       "issuing_authority": "SNTF",
