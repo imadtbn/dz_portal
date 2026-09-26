@@ -1,5 +1,5 @@
 {
-  "version": 6,
+  "version": 7,
   "updated": "2026-09-26",
   "trips": [
     {
@@ -2078,7 +2078,4279 @@
         }
       ],
       "editor_note": "نقل يدوي من عمود القطار 28 في الجدول المصور المؤرخ 19 سبتمبر 2026. الأعمدة تشير إلى وقت واحد لكل محطة وليس إلى مدة توقف منفصلة؛ علامات '-' تعني عدم إدراج توقف لذلك القطار. يتطلب تأكيد استمرار سريان الجدول."
+    },
+    {
+      "trip_id": "photo-alger-airport-B609-daily-20260919",
+      "route_id": "alger-airport",
+      "train_number": "B609",
+      "service_id": "daily",
+      "source_id": "gallery-agha-airport-2026-09-19",
+      "data_status": "source_transcribed",
+      "effective_from": "2026-09-19",
+      "station_time_kind": "published_single_time",
+      "stop_times": [
+        {
+          "station_id": "agha",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "04:40"
+        },
+        {
+          "station_id": "el_harrach",
+          "sequence": 2,
+          "arrival": "04:49",
+          "departure": "04:49"
+        },
+        {
+          "station_id": "bab_ezzouar",
+          "sequence": 3,
+          "arrival": "04:56",
+          "departure": "04:56"
+        },
+        {
+          "station_id": "airport",
+          "sequence": 4,
+          "arrival": "05:00",
+          "departure": null
+        }
+      ],
+      "editor_note": "نُقلت الأوقات من عمود القطار في الصورة الرسمية المؤرخة 19 سبتمبر 2026؛ التوقيت المنشور واحد في المحطات الوسيطة ولا يثبت وقت وصول/مغادرة منفصلين. السريان الحالي غير متحقق منه استقلاليًا."
+    },
+    {
+      "trip_id": "photo-alger-airport-B611-daily-20260919",
+      "route_id": "alger-airport",
+      "train_number": "B611",
+      "service_id": "daily",
+      "source_id": "gallery-agha-airport-2026-09-19",
+      "data_status": "source_transcribed",
+      "effective_from": "2026-09-19",
+      "station_time_kind": "published_single_time",
+      "stop_times": [
+        {
+          "station_id": "agha",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "06:00"
+        },
+        {
+          "station_id": "el_harrach",
+          "sequence": 2,
+          "arrival": "06:09",
+          "departure": "06:09"
+        },
+        {
+          "station_id": "bab_ezzouar",
+          "sequence": 3,
+          "arrival": "06:16",
+          "departure": "06:16"
+        },
+        {
+          "station_id": "airport",
+          "sequence": 4,
+          "arrival": "06:20",
+          "departure": null
+        }
+      ],
+      "editor_note": "نُقلت الأوقات من عمود القطار في الصورة الرسمية المؤرخة 19 سبتمبر 2026؛ التوقيت المنشور واحد في المحطات الوسيطة ولا يثبت وقت وصول/مغادرة منفصلين. السريان الحالي غير متحقق منه استقلاليًا."
+    },
+    {
+      "trip_id": "photo-alger-airport-B613-daily-20260919",
+      "route_id": "alger-airport",
+      "train_number": "B613",
+      "service_id": "daily",
+      "source_id": "gallery-agha-airport-2026-09-19",
+      "data_status": "source_transcribed",
+      "effective_from": "2026-09-19",
+      "station_time_kind": "published_single_time",
+      "stop_times": [
+        {
+          "station_id": "agha",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "07:20"
+        },
+        {
+          "station_id": "el_harrach",
+          "sequence": 2,
+          "arrival": "07:29",
+          "departure": "07:29"
+        },
+        {
+          "station_id": "bab_ezzouar",
+          "sequence": 3,
+          "arrival": "07:36",
+          "departure": "07:36"
+        },
+        {
+          "station_id": "airport",
+          "sequence": 4,
+          "arrival": "07:40",
+          "departure": null
+        }
+      ],
+      "editor_note": "نُقلت الأوقات من عمود القطار في الصورة الرسمية المؤرخة 19 سبتمبر 2026؛ التوقيت المنشور واحد في المحطات الوسيطة ولا يثبت وقت وصول/مغادرة منفصلين. السريان الحالي غير متحقق منه استقلاليًا."
+    },
+    {
+      "trip_id": "photo-alger-airport-B615-daily-20260919",
+      "route_id": "alger-airport",
+      "train_number": "B615",
+      "service_id": "daily",
+      "source_id": "gallery-agha-airport-2026-09-19",
+      "data_status": "source_transcribed",
+      "effective_from": "2026-09-19",
+      "station_time_kind": "published_single_time",
+      "stop_times": [
+        {
+          "station_id": "agha",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "08:35"
+        },
+        {
+          "station_id": "el_harrach",
+          "sequence": 2,
+          "arrival": "08:44",
+          "departure": "08:44"
+        },
+        {
+          "station_id": "bab_ezzouar",
+          "sequence": 3,
+          "arrival": "08:51",
+          "departure": "08:51"
+        },
+        {
+          "station_id": "airport",
+          "sequence": 4,
+          "arrival": "08:55",
+          "departure": null
+        }
+      ],
+      "editor_note": "نُقلت الأوقات من عمود القطار في الصورة الرسمية المؤرخة 19 سبتمبر 2026؛ التوقيت المنشور واحد في المحطات الوسيطة ولا يثبت وقت وصول/مغادرة منفصلين. السريان الحالي غير متحقق منه استقلاليًا."
+    },
+    {
+      "trip_id": "photo-alger-airport-B617-daily-20260919",
+      "route_id": "alger-airport",
+      "train_number": "B617",
+      "service_id": "daily",
+      "source_id": "gallery-agha-airport-2026-09-19",
+      "data_status": "source_transcribed",
+      "effective_from": "2026-09-19",
+      "station_time_kind": "published_single_time",
+      "stop_times": [
+        {
+          "station_id": "agha",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "09:55"
+        },
+        {
+          "station_id": "el_harrach",
+          "sequence": 2,
+          "arrival": "10:04",
+          "departure": "10:04"
+        },
+        {
+          "station_id": "bab_ezzouar",
+          "sequence": 3,
+          "arrival": "10:11",
+          "departure": "10:11"
+        },
+        {
+          "station_id": "airport",
+          "sequence": 4,
+          "arrival": "10:15",
+          "departure": null
+        }
+      ],
+      "editor_note": "نُقلت الأوقات من عمود القطار في الصورة الرسمية المؤرخة 19 سبتمبر 2026؛ التوقيت المنشور واحد في المحطات الوسيطة ولا يثبت وقت وصول/مغادرة منفصلين. السريان الحالي غير متحقق منه استقلاليًا."
+    },
+    {
+      "trip_id": "photo-alger-airport-B619-daily-20260919",
+      "route_id": "alger-airport",
+      "train_number": "B619",
+      "service_id": "daily",
+      "source_id": "gallery-agha-airport-2026-09-19",
+      "data_status": "source_transcribed",
+      "effective_from": "2026-09-19",
+      "station_time_kind": "published_single_time",
+      "stop_times": [
+        {
+          "station_id": "agha",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "11:20"
+        },
+        {
+          "station_id": "el_harrach",
+          "sequence": 2,
+          "arrival": "11:29",
+          "departure": "11:29"
+        },
+        {
+          "station_id": "bab_ezzouar",
+          "sequence": 3,
+          "arrival": "11:36",
+          "departure": "11:36"
+        },
+        {
+          "station_id": "airport",
+          "sequence": 4,
+          "arrival": "11:40",
+          "departure": null
+        }
+      ],
+      "editor_note": "نُقلت الأوقات من عمود القطار في الصورة الرسمية المؤرخة 19 سبتمبر 2026؛ التوقيت المنشور واحد في المحطات الوسيطة ولا يثبت وقت وصول/مغادرة منفصلين. السريان الحالي غير متحقق منه استقلاليًا."
+    },
+    {
+      "trip_id": "photo-alger-airport-B621-daily-20260919",
+      "route_id": "alger-airport",
+      "train_number": "B621",
+      "service_id": "daily",
+      "source_id": "gallery-agha-airport-2026-09-19",
+      "data_status": "source_transcribed",
+      "effective_from": "2026-09-19",
+      "station_time_kind": "published_single_time",
+      "stop_times": [
+        {
+          "station_id": "agha",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "12:40"
+        },
+        {
+          "station_id": "el_harrach",
+          "sequence": 2,
+          "arrival": "12:49",
+          "departure": "12:49"
+        },
+        {
+          "station_id": "bab_ezzouar",
+          "sequence": 3,
+          "arrival": "12:56",
+          "departure": "12:56"
+        },
+        {
+          "station_id": "airport",
+          "sequence": 4,
+          "arrival": "13:00",
+          "departure": null
+        }
+      ],
+      "editor_note": "نُقلت الأوقات من عمود القطار في الصورة الرسمية المؤرخة 19 سبتمبر 2026؛ التوقيت المنشور واحد في المحطات الوسيطة ولا يثبت وقت وصول/مغادرة منفصلين. السريان الحالي غير متحقق منه استقلاليًا."
+    },
+    {
+      "trip_id": "photo-alger-airport-B623-daily-20260919",
+      "route_id": "alger-airport",
+      "train_number": "B623",
+      "service_id": "daily",
+      "source_id": "gallery-agha-airport-2026-09-19",
+      "data_status": "source_transcribed",
+      "effective_from": "2026-09-19",
+      "station_time_kind": "published_single_time",
+      "stop_times": [
+        {
+          "station_id": "agha",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "14:00"
+        },
+        {
+          "station_id": "el_harrach",
+          "sequence": 2,
+          "arrival": "14:09",
+          "departure": "14:09"
+        },
+        {
+          "station_id": "bab_ezzouar",
+          "sequence": 3,
+          "arrival": "14:16",
+          "departure": "14:16"
+        },
+        {
+          "station_id": "airport",
+          "sequence": 4,
+          "arrival": "14:20",
+          "departure": null
+        }
+      ],
+      "editor_note": "نُقلت الأوقات من عمود القطار في الصورة الرسمية المؤرخة 19 سبتمبر 2026؛ التوقيت المنشور واحد في المحطات الوسيطة ولا يثبت وقت وصول/مغادرة منفصلين. السريان الحالي غير متحقق منه استقلاليًا."
+    },
+    {
+      "trip_id": "photo-alger-airport-B625-daily-20260919",
+      "route_id": "alger-airport",
+      "train_number": "B625",
+      "service_id": "daily",
+      "source_id": "gallery-agha-airport-2026-09-19",
+      "data_status": "source_transcribed",
+      "effective_from": "2026-09-19",
+      "station_time_kind": "published_single_time",
+      "stop_times": [
+        {
+          "station_id": "agha",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "15:25"
+        },
+        {
+          "station_id": "el_harrach",
+          "sequence": 2,
+          "arrival": "15:34",
+          "departure": "15:34"
+        },
+        {
+          "station_id": "bab_ezzouar",
+          "sequence": 3,
+          "arrival": "15:41",
+          "departure": "15:41"
+        },
+        {
+          "station_id": "airport",
+          "sequence": 4,
+          "arrival": "15:45",
+          "departure": null
+        }
+      ],
+      "editor_note": "نُقلت الأوقات من عمود القطار في الصورة الرسمية المؤرخة 19 سبتمبر 2026؛ التوقيت المنشور واحد في المحطات الوسيطة ولا يثبت وقت وصول/مغادرة منفصلين. السريان الحالي غير متحقق منه استقلاليًا."
+    },
+    {
+      "trip_id": "photo-alger-airport-B627-daily-20260919",
+      "route_id": "alger-airport",
+      "train_number": "B627",
+      "service_id": "daily",
+      "source_id": "gallery-agha-airport-2026-09-19",
+      "data_status": "source_transcribed",
+      "effective_from": "2026-09-19",
+      "station_time_kind": "published_single_time",
+      "stop_times": [
+        {
+          "station_id": "agha",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "16:45"
+        },
+        {
+          "station_id": "el_harrach",
+          "sequence": 2,
+          "arrival": "16:54",
+          "departure": "16:54"
+        },
+        {
+          "station_id": "bab_ezzouar",
+          "sequence": 3,
+          "arrival": "17:01",
+          "departure": "17:01"
+        },
+        {
+          "station_id": "airport",
+          "sequence": 4,
+          "arrival": "17:05",
+          "departure": null
+        }
+      ],
+      "editor_note": "نُقلت الأوقات من عمود القطار في الصورة الرسمية المؤرخة 19 سبتمبر 2026؛ التوقيت المنشور واحد في المحطات الوسيطة ولا يثبت وقت وصول/مغادرة منفصلين. السريان الحالي غير متحقق منه استقلاليًا."
+    },
+    {
+      "trip_id": "photo-alger-airport-B629-daily-20260919",
+      "route_id": "alger-airport",
+      "train_number": "B629",
+      "service_id": "daily",
+      "source_id": "gallery-agha-airport-2026-09-19",
+      "data_status": "source_transcribed",
+      "effective_from": "2026-09-19",
+      "station_time_kind": "published_single_time",
+      "stop_times": [
+        {
+          "station_id": "agha",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "18:10"
+        },
+        {
+          "station_id": "el_harrach",
+          "sequence": 2,
+          "arrival": "18:19",
+          "departure": "18:19"
+        },
+        {
+          "station_id": "bab_ezzouar",
+          "sequence": 3,
+          "arrival": "18:26",
+          "departure": "18:26"
+        },
+        {
+          "station_id": "airport",
+          "sequence": 4,
+          "arrival": "18:30",
+          "departure": null
+        }
+      ],
+      "editor_note": "نُقلت الأوقات من عمود القطار في الصورة الرسمية المؤرخة 19 سبتمبر 2026؛ التوقيت المنشور واحد في المحطات الوسيطة ولا يثبت وقت وصول/مغادرة منفصلين. السريان الحالي غير متحقق منه استقلاليًا."
+    },
+    {
+      "trip_id": "photo-alger-airport-B631-daily-20260919",
+      "route_id": "alger-airport",
+      "train_number": "B631",
+      "service_id": "daily",
+      "source_id": "gallery-agha-airport-2026-09-19",
+      "data_status": "source_transcribed",
+      "effective_from": "2026-09-19",
+      "station_time_kind": "published_single_time",
+      "stop_times": [
+        {
+          "station_id": "agha",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "19:30"
+        },
+        {
+          "station_id": "el_harrach",
+          "sequence": 2,
+          "arrival": "19:39",
+          "departure": "19:39"
+        },
+        {
+          "station_id": "bab_ezzouar",
+          "sequence": 3,
+          "arrival": "19:46",
+          "departure": "19:46"
+        },
+        {
+          "station_id": "airport",
+          "sequence": 4,
+          "arrival": "19:50",
+          "departure": null
+        }
+      ],
+      "editor_note": "نُقلت الأوقات من عمود القطار في الصورة الرسمية المؤرخة 19 سبتمبر 2026؛ التوقيت المنشور واحد في المحطات الوسيطة ولا يثبت وقت وصول/مغادرة منفصلين. السريان الحالي غير متحقق منه استقلاليًا."
+    },
+    {
+      "trip_id": "photo-alger-airport-B633-daily-20260919",
+      "route_id": "alger-airport",
+      "train_number": "B633",
+      "service_id": "daily",
+      "source_id": "gallery-agha-airport-2026-09-19",
+      "data_status": "source_transcribed",
+      "effective_from": "2026-09-19",
+      "station_time_kind": "published_single_time",
+      "stop_times": [
+        {
+          "station_id": "agha",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "20:40"
+        },
+        {
+          "station_id": "el_harrach",
+          "sequence": 2,
+          "arrival": "20:49",
+          "departure": "20:49"
+        },
+        {
+          "station_id": "bab_ezzouar",
+          "sequence": 3,
+          "arrival": "20:56",
+          "departure": "20:56"
+        },
+        {
+          "station_id": "airport",
+          "sequence": 4,
+          "arrival": "21:00",
+          "departure": null
+        }
+      ],
+      "editor_note": "نُقلت الأوقات من عمود القطار في الصورة الرسمية المؤرخة 19 سبتمبر 2026؛ التوقيت المنشور واحد في المحطات الوسيطة ولا يثبت وقت وصول/مغادرة منفصلين. السريان الحالي غير متحقق منه استقلاليًا."
+    },
+    {
+      "trip_id": "photo-alger-airport-B635-daily-20260919",
+      "route_id": "alger-airport",
+      "train_number": "B635",
+      "service_id": "daily",
+      "source_id": "gallery-agha-airport-2026-09-19",
+      "data_status": "source_transcribed",
+      "effective_from": "2026-09-19",
+      "station_time_kind": "published_single_time",
+      "stop_times": [
+        {
+          "station_id": "agha",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "21:50"
+        },
+        {
+          "station_id": "el_harrach",
+          "sequence": 2,
+          "arrival": "21:59",
+          "departure": "21:59"
+        },
+        {
+          "station_id": "bab_ezzouar",
+          "sequence": 3,
+          "arrival": "22:06",
+          "departure": "22:06"
+        },
+        {
+          "station_id": "airport",
+          "sequence": 4,
+          "arrival": "22:10",
+          "departure": null
+        }
+      ],
+      "editor_note": "نُقلت الأوقات من عمود القطار في الصورة الرسمية المؤرخة 19 سبتمبر 2026؛ التوقيت المنشور واحد في المحطات الوسيطة ولا يثبت وقت وصول/مغادرة منفصلين. السريان الحالي غير متحقق منه استقلاليًا."
+    },
+    {
+      "trip_id": "photo-airport-agha-B610-daily-20260919",
+      "route_id": "airport-agha",
+      "train_number": "B610",
+      "service_id": "daily",
+      "source_id": "gallery-agha-airport-2026-09-19",
+      "data_status": "source_transcribed",
+      "effective_from": "2026-09-19",
+      "station_time_kind": "published_single_time",
+      "stop_times": [
+        {
+          "station_id": "airport",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "05:20"
+        },
+        {
+          "station_id": "bab_ezzouar",
+          "sequence": 2,
+          "arrival": "05:24",
+          "departure": "05:24"
+        },
+        {
+          "station_id": "el_harrach",
+          "sequence": 3,
+          "arrival": "05:31",
+          "departure": "05:31"
+        },
+        {
+          "station_id": "agha",
+          "sequence": 4,
+          "arrival": "05:40",
+          "departure": null
+        }
+      ],
+      "editor_note": "نُقلت الأوقات من عمود القطار في الصورة الرسمية المؤرخة 19 سبتمبر 2026؛ التوقيت المنشور واحد في المحطات الوسيطة ولا يثبت وقت وصول/مغادرة منفصلين. السريان الحالي غير متحقق منه استقلاليًا."
+    },
+    {
+      "trip_id": "photo-airport-agha-B612-daily-20260919",
+      "route_id": "airport-agha",
+      "train_number": "B612",
+      "service_id": "daily",
+      "source_id": "gallery-agha-airport-2026-09-19",
+      "data_status": "source_transcribed",
+      "effective_from": "2026-09-19",
+      "station_time_kind": "published_single_time",
+      "stop_times": [
+        {
+          "station_id": "airport",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "06:35"
+        },
+        {
+          "station_id": "bab_ezzouar",
+          "sequence": 2,
+          "arrival": "06:39",
+          "departure": "06:39"
+        },
+        {
+          "station_id": "el_harrach",
+          "sequence": 3,
+          "arrival": "06:46",
+          "departure": "06:46"
+        },
+        {
+          "station_id": "agha",
+          "sequence": 4,
+          "arrival": "06:55",
+          "departure": null
+        }
+      ],
+      "editor_note": "نُقلت الأوقات من عمود القطار في الصورة الرسمية المؤرخة 19 سبتمبر 2026؛ التوقيت المنشور واحد في المحطات الوسيطة ولا يثبت وقت وصول/مغادرة منفصلين. السريان الحالي غير متحقق منه استقلاليًا."
+    },
+    {
+      "trip_id": "photo-airport-agha-B614-daily-20260919",
+      "route_id": "airport-agha",
+      "train_number": "B614",
+      "service_id": "daily",
+      "source_id": "gallery-agha-airport-2026-09-19",
+      "data_status": "source_transcribed",
+      "effective_from": "2026-09-19",
+      "station_time_kind": "published_single_time",
+      "stop_times": [
+        {
+          "station_id": "airport",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "08:05"
+        },
+        {
+          "station_id": "bab_ezzouar",
+          "sequence": 2,
+          "arrival": "08:09",
+          "departure": "08:09"
+        },
+        {
+          "station_id": "el_harrach",
+          "sequence": 3,
+          "arrival": "08:16",
+          "departure": "08:16"
+        },
+        {
+          "station_id": "agha",
+          "sequence": 4,
+          "arrival": "08:25",
+          "departure": null
+        }
+      ],
+      "editor_note": "نُقلت الأوقات من عمود القطار في الصورة الرسمية المؤرخة 19 سبتمبر 2026؛ التوقيت المنشور واحد في المحطات الوسيطة ولا يثبت وقت وصول/مغادرة منفصلين. السريان الحالي غير متحقق منه استقلاليًا."
+    },
+    {
+      "trip_id": "photo-airport-agha-B616-daily-20260919",
+      "route_id": "airport-agha",
+      "train_number": "B616",
+      "service_id": "daily",
+      "source_id": "gallery-agha-airport-2026-09-19",
+      "data_status": "source_transcribed",
+      "effective_from": "2026-09-19",
+      "station_time_kind": "published_single_time",
+      "stop_times": [
+        {
+          "station_id": "airport",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "09:15"
+        },
+        {
+          "station_id": "bab_ezzouar",
+          "sequence": 2,
+          "arrival": "09:19",
+          "departure": "09:19"
+        },
+        {
+          "station_id": "el_harrach",
+          "sequence": 3,
+          "arrival": "09:26",
+          "departure": "09:26"
+        },
+        {
+          "station_id": "agha",
+          "sequence": 4,
+          "arrival": "09:35",
+          "departure": null
+        }
+      ],
+      "editor_note": "نُقلت الأوقات من عمود القطار في الصورة الرسمية المؤرخة 19 سبتمبر 2026؛ التوقيت المنشور واحد في المحطات الوسيطة ولا يثبت وقت وصول/مغادرة منفصلين. السريان الحالي غير متحقق منه استقلاليًا."
+    },
+    {
+      "trip_id": "photo-airport-agha-B618-daily-20260919",
+      "route_id": "airport-agha",
+      "train_number": "B618",
+      "service_id": "daily",
+      "source_id": "gallery-agha-airport-2026-09-19",
+      "data_status": "source_transcribed",
+      "effective_from": "2026-09-19",
+      "station_time_kind": "published_single_time",
+      "stop_times": [
+        {
+          "station_id": "airport",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "10:30"
+        },
+        {
+          "station_id": "bab_ezzouar",
+          "sequence": 2,
+          "arrival": "10:34",
+          "departure": "10:34"
+        },
+        {
+          "station_id": "el_harrach",
+          "sequence": 3,
+          "arrival": "10:41",
+          "departure": "10:41"
+        },
+        {
+          "station_id": "agha",
+          "sequence": 4,
+          "arrival": "10:50",
+          "departure": null
+        }
+      ],
+      "editor_note": "نُقلت الأوقات من عمود القطار في الصورة الرسمية المؤرخة 19 سبتمبر 2026؛ التوقيت المنشور واحد في المحطات الوسيطة ولا يثبت وقت وصول/مغادرة منفصلين. السريان الحالي غير متحقق منه استقلاليًا."
+    },
+    {
+      "trip_id": "photo-airport-agha-B620-daily-20260919",
+      "route_id": "airport-agha",
+      "train_number": "B620",
+      "service_id": "daily",
+      "source_id": "gallery-agha-airport-2026-09-19",
+      "data_status": "source_transcribed",
+      "effective_from": "2026-09-19",
+      "station_time_kind": "published_single_time",
+      "stop_times": [
+        {
+          "station_id": "airport",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "12:00"
+        },
+        {
+          "station_id": "bab_ezzouar",
+          "sequence": 2,
+          "arrival": "12:04",
+          "departure": "12:04"
+        },
+        {
+          "station_id": "el_harrach",
+          "sequence": 3,
+          "arrival": "12:11",
+          "departure": "12:11"
+        },
+        {
+          "station_id": "agha",
+          "sequence": 4,
+          "arrival": "12:20",
+          "departure": null
+        }
+      ],
+      "editor_note": "نُقلت الأوقات من عمود القطار في الصورة الرسمية المؤرخة 19 سبتمبر 2026؛ التوقيت المنشور واحد في المحطات الوسيطة ولا يثبت وقت وصول/مغادرة منفصلين. السريان الحالي غير متحقق منه استقلاليًا."
+    },
+    {
+      "trip_id": "photo-airport-agha-B622-daily-20260919",
+      "route_id": "airport-agha",
+      "train_number": "B622",
+      "service_id": "daily",
+      "source_id": "gallery-agha-airport-2026-09-19",
+      "data_status": "source_transcribed",
+      "effective_from": "2026-09-19",
+      "station_time_kind": "published_single_time",
+      "stop_times": [
+        {
+          "station_id": "airport",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "13:20"
+        },
+        {
+          "station_id": "bab_ezzouar",
+          "sequence": 2,
+          "arrival": "13:24",
+          "departure": "13:24"
+        },
+        {
+          "station_id": "el_harrach",
+          "sequence": 3,
+          "arrival": "13:31",
+          "departure": "13:31"
+        },
+        {
+          "station_id": "agha",
+          "sequence": 4,
+          "arrival": "13:40",
+          "departure": null
+        }
+      ],
+      "editor_note": "نُقلت الأوقات من عمود القطار في الصورة الرسمية المؤرخة 19 سبتمبر 2026؛ التوقيت المنشور واحد في المحطات الوسيطة ولا يثبت وقت وصول/مغادرة منفصلين. السريان الحالي غير متحقق منه استقلاليًا."
+    },
+    {
+      "trip_id": "photo-airport-agha-B624-daily-20260919",
+      "route_id": "airport-agha",
+      "train_number": "B624",
+      "service_id": "daily",
+      "source_id": "gallery-agha-airport-2026-09-19",
+      "data_status": "source_transcribed",
+      "effective_from": "2026-09-19",
+      "station_time_kind": "published_single_time",
+      "stop_times": [
+        {
+          "station_id": "airport",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "14:45"
+        },
+        {
+          "station_id": "bab_ezzouar",
+          "sequence": 2,
+          "arrival": "14:49",
+          "departure": "14:49"
+        },
+        {
+          "station_id": "el_harrach",
+          "sequence": 3,
+          "arrival": "14:56",
+          "departure": "14:56"
+        },
+        {
+          "station_id": "agha",
+          "sequence": 4,
+          "arrival": "15:05",
+          "departure": null
+        }
+      ],
+      "editor_note": "نُقلت الأوقات من عمود القطار في الصورة الرسمية المؤرخة 19 سبتمبر 2026؛ التوقيت المنشور واحد في المحطات الوسيطة ولا يثبت وقت وصول/مغادرة منفصلين. السريان الحالي غير متحقق منه استقلاليًا."
+    },
+    {
+      "trip_id": "photo-airport-agha-B626-daily-20260919",
+      "route_id": "airport-agha",
+      "train_number": "B626",
+      "service_id": "daily",
+      "source_id": "gallery-agha-airport-2026-09-19",
+      "data_status": "source_transcribed",
+      "effective_from": "2026-09-19",
+      "station_time_kind": "published_single_time",
+      "stop_times": [
+        {
+          "station_id": "airport",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "16:10"
+        },
+        {
+          "station_id": "bab_ezzouar",
+          "sequence": 2,
+          "arrival": "16:14",
+          "departure": "16:14"
+        },
+        {
+          "station_id": "el_harrach",
+          "sequence": 3,
+          "arrival": "16:21",
+          "departure": "16:21"
+        },
+        {
+          "station_id": "agha",
+          "sequence": 4,
+          "arrival": "16:30",
+          "departure": null
+        }
+      ],
+      "editor_note": "نُقلت الأوقات من عمود القطار في الصورة الرسمية المؤرخة 19 سبتمبر 2026؛ التوقيت المنشور واحد في المحطات الوسيطة ولا يثبت وقت وصول/مغادرة منفصلين. السريان الحالي غير متحقق منه استقلاليًا."
+    },
+    {
+      "trip_id": "photo-airport-agha-B628-daily-20260919",
+      "route_id": "airport-agha",
+      "train_number": "B628",
+      "service_id": "daily",
+      "source_id": "gallery-agha-airport-2026-09-19",
+      "data_status": "source_transcribed",
+      "effective_from": "2026-09-19",
+      "station_time_kind": "published_single_time",
+      "stop_times": [
+        {
+          "station_id": "airport",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "17:25"
+        },
+        {
+          "station_id": "bab_ezzouar",
+          "sequence": 2,
+          "arrival": "17:29",
+          "departure": "17:29"
+        },
+        {
+          "station_id": "el_harrach",
+          "sequence": 3,
+          "arrival": "17:36",
+          "departure": "17:36"
+        },
+        {
+          "station_id": "agha",
+          "sequence": 4,
+          "arrival": "17:45",
+          "departure": null
+        }
+      ],
+      "editor_note": "نُقلت الأوقات من عمود القطار في الصورة الرسمية المؤرخة 19 سبتمبر 2026؛ التوقيت المنشور واحد في المحطات الوسيطة ولا يثبت وقت وصول/مغادرة منفصلين. السريان الحالي غير متحقق منه استقلاليًا."
+    },
+    {
+      "trip_id": "photo-airport-agha-B630-daily-20260919",
+      "route_id": "airport-agha",
+      "train_number": "B630",
+      "service_id": "daily",
+      "source_id": "gallery-agha-airport-2026-09-19",
+      "data_status": "source_transcribed",
+      "effective_from": "2026-09-19",
+      "station_time_kind": "published_single_time",
+      "stop_times": [
+        {
+          "station_id": "airport",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "18:55"
+        },
+        {
+          "station_id": "bab_ezzouar",
+          "sequence": 2,
+          "arrival": "18:59",
+          "departure": "18:59"
+        },
+        {
+          "station_id": "el_harrach",
+          "sequence": 3,
+          "arrival": "19:06",
+          "departure": "19:06"
+        },
+        {
+          "station_id": "agha",
+          "sequence": 4,
+          "arrival": "19:15",
+          "departure": null
+        }
+      ],
+      "editor_note": "نُقلت الأوقات من عمود القطار في الصورة الرسمية المؤرخة 19 سبتمبر 2026؛ التوقيت المنشور واحد في المحطات الوسيطة ولا يثبت وقت وصول/مغادرة منفصلين. السريان الحالي غير متحقق منه استقلاليًا."
+    },
+    {
+      "trip_id": "photo-airport-agha-B632-daily-20260919",
+      "route_id": "airport-agha",
+      "train_number": "B632",
+      "service_id": "daily",
+      "source_id": "gallery-agha-airport-2026-09-19",
+      "data_status": "source_transcribed",
+      "effective_from": "2026-09-19",
+      "station_time_kind": "published_single_time",
+      "stop_times": [
+        {
+          "station_id": "airport",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "20:05"
+        },
+        {
+          "station_id": "bab_ezzouar",
+          "sequence": 2,
+          "arrival": "20:09",
+          "departure": "20:09"
+        },
+        {
+          "station_id": "el_harrach",
+          "sequence": 3,
+          "arrival": "20:16",
+          "departure": "20:16"
+        },
+        {
+          "station_id": "agha",
+          "sequence": 4,
+          "arrival": "20:25",
+          "departure": null
+        }
+      ],
+      "editor_note": "نُقلت الأوقات من عمود القطار في الصورة الرسمية المؤرخة 19 سبتمبر 2026؛ التوقيت المنشور واحد في المحطات الوسيطة ولا يثبت وقت وصول/مغادرة منفصلين. السريان الحالي غير متحقق منه استقلاليًا."
+    },
+    {
+      "trip_id": "photo-airport-agha-B634-daily-20260919",
+      "route_id": "airport-agha",
+      "train_number": "B634",
+      "service_id": "daily",
+      "source_id": "gallery-agha-airport-2026-09-19",
+      "data_status": "source_transcribed",
+      "effective_from": "2026-09-19",
+      "station_time_kind": "published_single_time",
+      "stop_times": [
+        {
+          "station_id": "airport",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "21:15"
+        },
+        {
+          "station_id": "bab_ezzouar",
+          "sequence": 2,
+          "arrival": "21:19",
+          "departure": "21:19"
+        },
+        {
+          "station_id": "el_harrach",
+          "sequence": 3,
+          "arrival": "21:26",
+          "departure": "21:26"
+        },
+        {
+          "station_id": "agha",
+          "sequence": 4,
+          "arrival": "21:35",
+          "departure": null
+        }
+      ],
+      "editor_note": "نُقلت الأوقات من عمود القطار في الصورة الرسمية المؤرخة 19 سبتمبر 2026؛ التوقيت المنشور واحد في المحطات الوسيطة ولا يثبت وقت وصول/مغادرة منفصلين. السريان الحالي غير متحقق منه استقلاليًا."
+    },
+    {
+      "trip_id": "photo-airport-agha-B636-daily-20260919",
+      "route_id": "airport-agha",
+      "train_number": "B636",
+      "service_id": "daily",
+      "source_id": "gallery-agha-airport-2026-09-19",
+      "data_status": "source_transcribed",
+      "effective_from": "2026-09-19",
+      "station_time_kind": "published_single_time",
+      "stop_times": [
+        {
+          "station_id": "airport",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "22:25"
+        },
+        {
+          "station_id": "bab_ezzouar",
+          "sequence": 2,
+          "arrival": "22:29",
+          "departure": "22:29"
+        },
+        {
+          "station_id": "el_harrach",
+          "sequence": 3,
+          "arrival": "22:36",
+          "departure": "22:36"
+        },
+        {
+          "station_id": "agha",
+          "sequence": 4,
+          "arrival": "22:45",
+          "departure": null
+        }
+      ],
+      "editor_note": "نُقلت الأوقات من عمود القطار في الصورة الرسمية المؤرخة 19 سبتمبر 2026؛ التوقيت المنشور واحد في المحطات الوسيطة ولا يثبت وقت وصول/مغادرة منفصلين. السريان الحالي غير متحقق منه استقلاليًا."
+    },
+    {
+      "trip_id": "photo-alger-zeralda-1501-except_friday-20260919",
+      "route_id": "alger-zeralda",
+      "train_number": "1501",
+      "service_id": "except_friday",
+      "source_id": "gallery-agha-zeralda-2026-09-19",
+      "data_status": "source_transcribed",
+      "effective_from": "2026-09-19",
+      "station_time_kind": "published_single_time",
+      "stop_times": [
+        {
+          "station_id": "agha",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "05:30"
+        },
+        {
+          "station_id": "les_ateliers",
+          "sequence": 2,
+          "arrival": "05:32",
+          "departure": "05:32"
+        },
+        {
+          "station_id": "hussein_dey",
+          "sequence": 3,
+          "arrival": "05:36",
+          "departure": "05:36"
+        },
+        {
+          "station_id": "caroubier",
+          "sequence": 4,
+          "arrival": "05:39",
+          "departure": "05:39"
+        },
+        {
+          "station_id": "el_harrach",
+          "sequence": 5,
+          "arrival": "05:42",
+          "departure": "05:42"
+        },
+        {
+          "station_id": "gue_de_constantine",
+          "sequence": 6,
+          "arrival": "05:46",
+          "departure": "05:46"
+        },
+        {
+          "station_id": "ain_naadja",
+          "sequence": 7,
+          "arrival": "05:49",
+          "departure": "05:49"
+        },
+        {
+          "station_id": "baba_ali",
+          "sequence": 8,
+          "arrival": "05:53",
+          "departure": "05:53"
+        },
+        {
+          "station_id": "birtouta",
+          "sequence": 9,
+          "arrival": "05:58",
+          "departure": "05:58"
+        },
+        {
+          "station_id": "tessala_el_merdja",
+          "sequence": 10,
+          "arrival": "06:06",
+          "departure": "06:06"
+        },
+        {
+          "station_id": "sidi_abdellah",
+          "sequence": 11,
+          "arrival": "06:11",
+          "departure": "06:11"
+        },
+        {
+          "station_id": "sidi_abdellah_universite",
+          "sequence": 12,
+          "arrival": "06:14",
+          "departure": "06:14"
+        },
+        {
+          "station_id": "zeralda",
+          "sequence": 13,
+          "arrival": "06:18",
+          "departure": null
+        }
+      ],
+      "editor_note": "نُقلت الأوقات من عمود القطار في الصورة الرسمية المؤرخة 19 سبتمبر 2026؛ التوقيت المنشور واحد في المحطات الوسيطة ولا يثبت وقت وصول/مغادرة منفصلين. السريان الحالي غير متحقق منه استقلاليًا."
+    },
+    {
+      "trip_id": "photo-alger-zeralda-B501-daily-20260919",
+      "route_id": "alger-zeralda",
+      "train_number": "B501",
+      "service_id": "daily",
+      "source_id": "gallery-agha-zeralda-2026-09-19",
+      "data_status": "source_transcribed",
+      "effective_from": "2026-09-19",
+      "station_time_kind": "published_single_time",
+      "stop_times": [
+        {
+          "station_id": "agha",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "06:20"
+        },
+        {
+          "station_id": "les_ateliers",
+          "sequence": 2,
+          "arrival": "06:22",
+          "departure": "06:22"
+        },
+        {
+          "station_id": "hussein_dey",
+          "sequence": 3,
+          "arrival": "06:25",
+          "departure": "06:25"
+        },
+        {
+          "station_id": "caroubier",
+          "sequence": 4,
+          "arrival": "06:28",
+          "departure": "06:28"
+        },
+        {
+          "station_id": "el_harrach",
+          "sequence": 5,
+          "arrival": "06:30",
+          "departure": "06:30"
+        },
+        {
+          "station_id": "gue_de_constantine",
+          "sequence": 6,
+          "arrival": "06:34",
+          "departure": "06:34"
+        },
+        {
+          "station_id": "ain_naadja",
+          "sequence": 7,
+          "arrival": "06:37",
+          "departure": "06:37"
+        },
+        {
+          "station_id": "baba_ali",
+          "sequence": 8,
+          "arrival": "06:40",
+          "departure": "06:40"
+        },
+        {
+          "station_id": "birtouta",
+          "sequence": 9,
+          "arrival": "06:45",
+          "departure": "06:45"
+        },
+        {
+          "station_id": "tessala_el_merdja",
+          "sequence": 10,
+          "arrival": "06:53",
+          "departure": "06:53"
+        },
+        {
+          "station_id": "sidi_abdellah",
+          "sequence": 11,
+          "arrival": "06:57",
+          "departure": "06:57"
+        },
+        {
+          "station_id": "sidi_abdellah_universite",
+          "sequence": 12,
+          "arrival": "06:59",
+          "departure": "06:59"
+        },
+        {
+          "station_id": "zeralda",
+          "sequence": 13,
+          "arrival": "07:03",
+          "departure": null
+        }
+      ],
+      "editor_note": "نُقلت الأوقات من عمود القطار في الصورة الرسمية المؤرخة 19 سبتمبر 2026؛ التوقيت المنشور واحد في المحطات الوسيطة ولا يثبت وقت وصول/مغادرة منفصلين. السريان الحالي غير متحقق منه استقلاليًا."
+    },
+    {
+      "trip_id": "photo-alger-zeralda-1505-daily-20260919",
+      "route_id": "alger-zeralda",
+      "train_number": "1505",
+      "service_id": "daily",
+      "source_id": "gallery-agha-zeralda-2026-09-19",
+      "data_status": "source_transcribed",
+      "effective_from": "2026-09-19",
+      "station_time_kind": "published_single_time",
+      "stop_times": [
+        {
+          "station_id": "agha",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "07:30"
+        },
+        {
+          "station_id": "les_ateliers",
+          "sequence": 2,
+          "arrival": "07:32",
+          "departure": "07:32"
+        },
+        {
+          "station_id": "hussein_dey",
+          "sequence": 3,
+          "arrival": "07:36",
+          "departure": "07:36"
+        },
+        {
+          "station_id": "caroubier",
+          "sequence": 4,
+          "arrival": "07:39",
+          "departure": "07:39"
+        },
+        {
+          "station_id": "el_harrach",
+          "sequence": 5,
+          "arrival": "07:42",
+          "departure": "07:42"
+        },
+        {
+          "station_id": "gue_de_constantine",
+          "sequence": 6,
+          "arrival": "07:46",
+          "departure": "07:46"
+        },
+        {
+          "station_id": "ain_naadja",
+          "sequence": 7,
+          "arrival": "07:49",
+          "departure": "07:49"
+        },
+        {
+          "station_id": "baba_ali",
+          "sequence": 8,
+          "arrival": "07:53",
+          "departure": "07:53"
+        },
+        {
+          "station_id": "birtouta",
+          "sequence": 9,
+          "arrival": "07:58",
+          "departure": "07:58"
+        },
+        {
+          "station_id": "tessala_el_merdja",
+          "sequence": 10,
+          "arrival": "08:06",
+          "departure": "08:06"
+        },
+        {
+          "station_id": "sidi_abdellah",
+          "sequence": 11,
+          "arrival": "08:11",
+          "departure": "08:11"
+        },
+        {
+          "station_id": "sidi_abdellah_universite",
+          "sequence": 12,
+          "arrival": "08:14",
+          "departure": "08:14"
+        },
+        {
+          "station_id": "zeralda",
+          "sequence": 13,
+          "arrival": "08:18",
+          "departure": null
+        }
+      ],
+      "editor_note": "نُقلت الأوقات من عمود القطار في الصورة الرسمية المؤرخة 19 سبتمبر 2026؛ التوقيت المنشور واحد في المحطات الوسيطة ولا يثبت وقت وصول/مغادرة منفصلين. السريان الحالي غير متحقق منه استقلاليًا."
+    },
+    {
+      "trip_id": "photo-alger-zeralda-1509-daily-20260919",
+      "route_id": "alger-zeralda",
+      "train_number": "1509",
+      "service_id": "daily",
+      "source_id": "gallery-agha-zeralda-2026-09-19",
+      "data_status": "source_transcribed",
+      "effective_from": "2026-09-19",
+      "station_time_kind": "published_single_time",
+      "stop_times": [
+        {
+          "station_id": "agha",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "08:40"
+        },
+        {
+          "station_id": "les_ateliers",
+          "sequence": 2,
+          "arrival": "08:42",
+          "departure": "08:42"
+        },
+        {
+          "station_id": "hussein_dey",
+          "sequence": 3,
+          "arrival": "08:46",
+          "departure": "08:46"
+        },
+        {
+          "station_id": "caroubier",
+          "sequence": 4,
+          "arrival": "08:49",
+          "departure": "08:49"
+        },
+        {
+          "station_id": "el_harrach",
+          "sequence": 5,
+          "arrival": "08:52",
+          "departure": "08:52"
+        },
+        {
+          "station_id": "gue_de_constantine",
+          "sequence": 6,
+          "arrival": "08:56",
+          "departure": "08:56"
+        },
+        {
+          "station_id": "ain_naadja",
+          "sequence": 7,
+          "arrival": "08:59",
+          "departure": "08:59"
+        },
+        {
+          "station_id": "baba_ali",
+          "sequence": 8,
+          "arrival": "09:03",
+          "departure": "09:03"
+        },
+        {
+          "station_id": "birtouta",
+          "sequence": 9,
+          "arrival": "09:08",
+          "departure": "09:08"
+        },
+        {
+          "station_id": "tessala_el_merdja",
+          "sequence": 10,
+          "arrival": "09:16",
+          "departure": "09:16"
+        },
+        {
+          "station_id": "sidi_abdellah",
+          "sequence": 11,
+          "arrival": "09:21",
+          "departure": "09:21"
+        },
+        {
+          "station_id": "sidi_abdellah_universite",
+          "sequence": 12,
+          "arrival": "09:24",
+          "departure": "09:24"
+        },
+        {
+          "station_id": "zeralda",
+          "sequence": 13,
+          "arrival": "09:28",
+          "departure": null
+        }
+      ],
+      "editor_note": "نُقلت الأوقات من عمود القطار في الصورة الرسمية المؤرخة 19 سبتمبر 2026؛ التوقيت المنشور واحد في المحطات الوسيطة ولا يثبت وقت وصول/مغادرة منفصلين. السريان الحالي غير متحقق منه استقلاليًا."
+    },
+    {
+      "trip_id": "photo-alger-zeralda-1511-daily-20260919",
+      "route_id": "alger-zeralda",
+      "train_number": "1511",
+      "service_id": "daily",
+      "source_id": "gallery-agha-zeralda-2026-09-19",
+      "data_status": "source_transcribed",
+      "effective_from": "2026-09-19",
+      "station_time_kind": "published_single_time",
+      "stop_times": [
+        {
+          "station_id": "agha",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "09:20"
+        },
+        {
+          "station_id": "les_ateliers",
+          "sequence": 2,
+          "arrival": "09:22",
+          "departure": "09:22"
+        },
+        {
+          "station_id": "hussein_dey",
+          "sequence": 3,
+          "arrival": "09:26",
+          "departure": "09:26"
+        },
+        {
+          "station_id": "caroubier",
+          "sequence": 4,
+          "arrival": "09:29",
+          "departure": "09:29"
+        },
+        {
+          "station_id": "el_harrach",
+          "sequence": 5,
+          "arrival": "09:32",
+          "departure": "09:32"
+        },
+        {
+          "station_id": "gue_de_constantine",
+          "sequence": 6,
+          "arrival": "09:36",
+          "departure": "09:36"
+        },
+        {
+          "station_id": "ain_naadja",
+          "sequence": 7,
+          "arrival": "09:39",
+          "departure": "09:39"
+        },
+        {
+          "station_id": "baba_ali",
+          "sequence": 8,
+          "arrival": "09:43",
+          "departure": "09:43"
+        },
+        {
+          "station_id": "birtouta",
+          "sequence": 9,
+          "arrival": "09:48",
+          "departure": "09:48"
+        },
+        {
+          "station_id": "tessala_el_merdja",
+          "sequence": 10,
+          "arrival": "09:56",
+          "departure": "09:56"
+        },
+        {
+          "station_id": "sidi_abdellah",
+          "sequence": 11,
+          "arrival": "10:01",
+          "departure": "10:01"
+        },
+        {
+          "station_id": "sidi_abdellah_universite",
+          "sequence": 12,
+          "arrival": "10:04",
+          "departure": "10:04"
+        },
+        {
+          "station_id": "zeralda",
+          "sequence": 13,
+          "arrival": "10:08",
+          "departure": null
+        }
+      ],
+      "editor_note": "نُقلت الأوقات من عمود القطار في الصورة الرسمية المؤرخة 19 سبتمبر 2026؛ التوقيت المنشور واحد في المحطات الوسيطة ولا يثبت وقت وصول/مغادرة منفصلين. السريان الحالي غير متحقق منه استقلاليًا."
+    },
+    {
+      "trip_id": "photo-alger-zeralda-1513-daily-20260919",
+      "route_id": "alger-zeralda",
+      "train_number": "1513",
+      "service_id": "daily",
+      "source_id": "gallery-agha-zeralda-2026-09-19",
+      "data_status": "source_transcribed",
+      "effective_from": "2026-09-19",
+      "station_time_kind": "published_single_time",
+      "stop_times": [
+        {
+          "station_id": "agha",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "10:15"
+        },
+        {
+          "station_id": "les_ateliers",
+          "sequence": 2,
+          "arrival": "10:17",
+          "departure": "10:17"
+        },
+        {
+          "station_id": "hussein_dey",
+          "sequence": 3,
+          "arrival": "10:21",
+          "departure": "10:21"
+        },
+        {
+          "station_id": "caroubier",
+          "sequence": 4,
+          "arrival": "10:24",
+          "departure": "10:24"
+        },
+        {
+          "station_id": "el_harrach",
+          "sequence": 5,
+          "arrival": "10:27",
+          "departure": "10:27"
+        },
+        {
+          "station_id": "gue_de_constantine",
+          "sequence": 6,
+          "arrival": "10:31",
+          "departure": "10:31"
+        },
+        {
+          "station_id": "ain_naadja",
+          "sequence": 7,
+          "arrival": "10:34",
+          "departure": "10:34"
+        },
+        {
+          "station_id": "baba_ali",
+          "sequence": 8,
+          "arrival": "10:38",
+          "departure": "10:38"
+        },
+        {
+          "station_id": "birtouta",
+          "sequence": 9,
+          "arrival": "10:43",
+          "departure": "10:43"
+        },
+        {
+          "station_id": "tessala_el_merdja",
+          "sequence": 10,
+          "arrival": "10:51",
+          "departure": "10:51"
+        },
+        {
+          "station_id": "sidi_abdellah",
+          "sequence": 11,
+          "arrival": "10:56",
+          "departure": "10:56"
+        },
+        {
+          "station_id": "sidi_abdellah_universite",
+          "sequence": 12,
+          "arrival": "10:59",
+          "departure": "10:59"
+        },
+        {
+          "station_id": "zeralda",
+          "sequence": 13,
+          "arrival": "11:03",
+          "departure": null
+        }
+      ],
+      "editor_note": "نُقلت الأوقات من عمود القطار في الصورة الرسمية المؤرخة 19 سبتمبر 2026؛ التوقيت المنشور واحد في المحطات الوسيطة ولا يثبت وقت وصول/مغادرة منفصلين. السريان الحالي غير متحقق منه استقلاليًا."
+    },
+    {
+      "trip_id": "photo-alger-zeralda-1515-daily-20260919",
+      "route_id": "alger-zeralda",
+      "train_number": "1515",
+      "service_id": "daily",
+      "source_id": "gallery-agha-zeralda-2026-09-19",
+      "data_status": "source_transcribed",
+      "effective_from": "2026-09-19",
+      "station_time_kind": "published_single_time",
+      "stop_times": [
+        {
+          "station_id": "agha",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "11:35"
+        },
+        {
+          "station_id": "les_ateliers",
+          "sequence": 2,
+          "arrival": "11:37",
+          "departure": "11:37"
+        },
+        {
+          "station_id": "hussein_dey",
+          "sequence": 3,
+          "arrival": "11:41",
+          "departure": "11:41"
+        },
+        {
+          "station_id": "caroubier",
+          "sequence": 4,
+          "arrival": "11:44",
+          "departure": "11:44"
+        },
+        {
+          "station_id": "el_harrach",
+          "sequence": 5,
+          "arrival": "11:47",
+          "departure": "11:47"
+        },
+        {
+          "station_id": "gue_de_constantine",
+          "sequence": 6,
+          "arrival": "11:51",
+          "departure": "11:51"
+        },
+        {
+          "station_id": "ain_naadja",
+          "sequence": 7,
+          "arrival": "11:54",
+          "departure": "11:54"
+        },
+        {
+          "station_id": "baba_ali",
+          "sequence": 8,
+          "arrival": "11:58",
+          "departure": "11:58"
+        },
+        {
+          "station_id": "birtouta",
+          "sequence": 9,
+          "arrival": "12:03",
+          "departure": "12:03"
+        },
+        {
+          "station_id": "tessala_el_merdja",
+          "sequence": 10,
+          "arrival": "12:11",
+          "departure": "12:11"
+        },
+        {
+          "station_id": "sidi_abdellah",
+          "sequence": 11,
+          "arrival": "12:16",
+          "departure": "12:16"
+        },
+        {
+          "station_id": "sidi_abdellah_universite",
+          "sequence": 12,
+          "arrival": "12:19",
+          "departure": "12:19"
+        },
+        {
+          "station_id": "zeralda",
+          "sequence": 13,
+          "arrival": "12:23",
+          "departure": null
+        }
+      ],
+      "editor_note": "نُقلت الأوقات من عمود القطار في الصورة الرسمية المؤرخة 19 سبتمبر 2026؛ التوقيت المنشور واحد في المحطات الوسيطة ولا يثبت وقت وصول/مغادرة منفصلين. السريان الحالي غير متحقق منه استقلاليًا."
+    },
+    {
+      "trip_id": "photo-alger-zeralda-1517-daily-20260919",
+      "route_id": "alger-zeralda",
+      "train_number": "1517",
+      "service_id": "daily",
+      "source_id": "gallery-agha-zeralda-2026-09-19",
+      "data_status": "source_transcribed",
+      "effective_from": "2026-09-19",
+      "station_time_kind": "published_single_time",
+      "stop_times": [
+        {
+          "station_id": "agha",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "12:20"
+        },
+        {
+          "station_id": "les_ateliers",
+          "sequence": 2,
+          "arrival": "12:22",
+          "departure": "12:22"
+        },
+        {
+          "station_id": "hussein_dey",
+          "sequence": 3,
+          "arrival": "12:26",
+          "departure": "12:26"
+        },
+        {
+          "station_id": "caroubier",
+          "sequence": 4,
+          "arrival": "12:29",
+          "departure": "12:29"
+        },
+        {
+          "station_id": "el_harrach",
+          "sequence": 5,
+          "arrival": "12:32",
+          "departure": "12:32"
+        },
+        {
+          "station_id": "gue_de_constantine",
+          "sequence": 6,
+          "arrival": "12:36",
+          "departure": "12:36"
+        },
+        {
+          "station_id": "ain_naadja",
+          "sequence": 7,
+          "arrival": "12:39",
+          "departure": "12:39"
+        },
+        {
+          "station_id": "baba_ali",
+          "sequence": 8,
+          "arrival": "12:43",
+          "departure": "12:43"
+        },
+        {
+          "station_id": "birtouta",
+          "sequence": 9,
+          "arrival": "12:48",
+          "departure": "12:48"
+        },
+        {
+          "station_id": "tessala_el_merdja",
+          "sequence": 10,
+          "arrival": "12:56",
+          "departure": "12:56"
+        },
+        {
+          "station_id": "sidi_abdellah",
+          "sequence": 11,
+          "arrival": "13:01",
+          "departure": "13:01"
+        },
+        {
+          "station_id": "sidi_abdellah_universite",
+          "sequence": 12,
+          "arrival": "13:04",
+          "departure": "13:04"
+        },
+        {
+          "station_id": "zeralda",
+          "sequence": 13,
+          "arrival": "13:08",
+          "departure": null
+        }
+      ],
+      "editor_note": "نُقلت الأوقات من عمود القطار في الصورة الرسمية المؤرخة 19 سبتمبر 2026؛ التوقيت المنشور واحد في المحطات الوسيطة ولا يثبت وقت وصول/مغادرة منفصلين. السريان الحالي غير متحقق منه استقلاليًا."
+    },
+    {
+      "trip_id": "photo-alger-zeralda-1519-daily-20260919",
+      "route_id": "alger-zeralda",
+      "train_number": "1519",
+      "service_id": "daily",
+      "source_id": "gallery-agha-zeralda-2026-09-19",
+      "data_status": "source_transcribed",
+      "effective_from": "2026-09-19",
+      "station_time_kind": "published_single_time",
+      "stop_times": [
+        {
+          "station_id": "agha",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "13:10"
+        },
+        {
+          "station_id": "les_ateliers",
+          "sequence": 2,
+          "arrival": "13:12",
+          "departure": "13:12"
+        },
+        {
+          "station_id": "hussein_dey",
+          "sequence": 3,
+          "arrival": "13:16",
+          "departure": "13:16"
+        },
+        {
+          "station_id": "caroubier",
+          "sequence": 4,
+          "arrival": "13:19",
+          "departure": "13:19"
+        },
+        {
+          "station_id": "el_harrach",
+          "sequence": 5,
+          "arrival": "13:22",
+          "departure": "13:22"
+        },
+        {
+          "station_id": "gue_de_constantine",
+          "sequence": 6,
+          "arrival": "13:26",
+          "departure": "13:26"
+        },
+        {
+          "station_id": "ain_naadja",
+          "sequence": 7,
+          "arrival": "13:29",
+          "departure": "13:29"
+        },
+        {
+          "station_id": "baba_ali",
+          "sequence": 8,
+          "arrival": "13:33",
+          "departure": "13:33"
+        },
+        {
+          "station_id": "birtouta",
+          "sequence": 9,
+          "arrival": "13:38",
+          "departure": "13:38"
+        },
+        {
+          "station_id": "tessala_el_merdja",
+          "sequence": 10,
+          "arrival": "13:46",
+          "departure": "13:46"
+        },
+        {
+          "station_id": "sidi_abdellah",
+          "sequence": 11,
+          "arrival": "13:51",
+          "departure": "13:51"
+        },
+        {
+          "station_id": "sidi_abdellah_universite",
+          "sequence": 12,
+          "arrival": "13:54",
+          "departure": "13:54"
+        },
+        {
+          "station_id": "zeralda",
+          "sequence": 13,
+          "arrival": "13:58",
+          "departure": null
+        }
+      ],
+      "editor_note": "نُقلت الأوقات من عمود القطار في الصورة الرسمية المؤرخة 19 سبتمبر 2026؛ التوقيت المنشور واحد في المحطات الوسيطة ولا يثبت وقت وصول/مغادرة منفصلين. السريان الحالي غير متحقق منه استقلاليًا."
+    },
+    {
+      "trip_id": "photo-alger-zeralda-1521-daily-20260919",
+      "route_id": "alger-zeralda",
+      "train_number": "1521",
+      "service_id": "daily",
+      "source_id": "gallery-agha-zeralda-2026-09-19",
+      "data_status": "source_transcribed",
+      "effective_from": "2026-09-19",
+      "station_time_kind": "published_single_time",
+      "stop_times": [
+        {
+          "station_id": "agha",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "14:20"
+        },
+        {
+          "station_id": "les_ateliers",
+          "sequence": 2,
+          "arrival": "14:22",
+          "departure": "14:22"
+        },
+        {
+          "station_id": "hussein_dey",
+          "sequence": 3,
+          "arrival": "14:26",
+          "departure": "14:26"
+        },
+        {
+          "station_id": "caroubier",
+          "sequence": 4,
+          "arrival": "14:29",
+          "departure": "14:29"
+        },
+        {
+          "station_id": "el_harrach",
+          "sequence": 5,
+          "arrival": "14:32",
+          "departure": "14:32"
+        },
+        {
+          "station_id": "gue_de_constantine",
+          "sequence": 6,
+          "arrival": "14:36",
+          "departure": "14:36"
+        },
+        {
+          "station_id": "ain_naadja",
+          "sequence": 7,
+          "arrival": "14:39",
+          "departure": "14:39"
+        },
+        {
+          "station_id": "baba_ali",
+          "sequence": 8,
+          "arrival": "14:43",
+          "departure": "14:43"
+        },
+        {
+          "station_id": "birtouta",
+          "sequence": 9,
+          "arrival": "14:48",
+          "departure": "14:48"
+        },
+        {
+          "station_id": "tessala_el_merdja",
+          "sequence": 10,
+          "arrival": "14:56",
+          "departure": "14:56"
+        },
+        {
+          "station_id": "sidi_abdellah",
+          "sequence": 11,
+          "arrival": "15:01",
+          "departure": "15:01"
+        },
+        {
+          "station_id": "sidi_abdellah_universite",
+          "sequence": 12,
+          "arrival": "15:04",
+          "departure": "15:04"
+        },
+        {
+          "station_id": "zeralda",
+          "sequence": 13,
+          "arrival": "15:08",
+          "departure": null
+        }
+      ],
+      "editor_note": "نُقلت الأوقات من عمود القطار في الصورة الرسمية المؤرخة 19 سبتمبر 2026؛ التوقيت المنشور واحد في المحطات الوسيطة ولا يثبت وقت وصول/مغادرة منفصلين. السريان الحالي غير متحقق منه استقلاليًا."
+    },
+    {
+      "trip_id": "photo-alger-zeralda-1523-daily-20260919",
+      "route_id": "alger-zeralda",
+      "train_number": "1523",
+      "service_id": "daily",
+      "source_id": "gallery-agha-zeralda-2026-09-19",
+      "data_status": "source_transcribed",
+      "effective_from": "2026-09-19",
+      "station_time_kind": "published_single_time",
+      "stop_times": [
+        {
+          "station_id": "agha",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "15:20"
+        },
+        {
+          "station_id": "les_ateliers",
+          "sequence": 2,
+          "arrival": "15:22",
+          "departure": "15:22"
+        },
+        {
+          "station_id": "hussein_dey",
+          "sequence": 3,
+          "arrival": "15:26",
+          "departure": "15:26"
+        },
+        {
+          "station_id": "caroubier",
+          "sequence": 4,
+          "arrival": "15:29",
+          "departure": "15:29"
+        },
+        {
+          "station_id": "el_harrach",
+          "sequence": 5,
+          "arrival": "15:32",
+          "departure": "15:32"
+        },
+        {
+          "station_id": "gue_de_constantine",
+          "sequence": 6,
+          "arrival": "15:36",
+          "departure": "15:36"
+        },
+        {
+          "station_id": "ain_naadja",
+          "sequence": 7,
+          "arrival": "15:39",
+          "departure": "15:39"
+        },
+        {
+          "station_id": "baba_ali",
+          "sequence": 8,
+          "arrival": "15:43",
+          "departure": "15:43"
+        },
+        {
+          "station_id": "birtouta",
+          "sequence": 9,
+          "arrival": "15:48",
+          "departure": "15:48"
+        },
+        {
+          "station_id": "tessala_el_merdja",
+          "sequence": 10,
+          "arrival": "15:56",
+          "departure": "15:56"
+        },
+        {
+          "station_id": "sidi_abdellah",
+          "sequence": 11,
+          "arrival": "16:01",
+          "departure": "16:01"
+        },
+        {
+          "station_id": "sidi_abdellah_universite",
+          "sequence": 12,
+          "arrival": "16:04",
+          "departure": "16:04"
+        },
+        {
+          "station_id": "zeralda",
+          "sequence": 13,
+          "arrival": "16:08",
+          "departure": null
+        }
+      ],
+      "editor_note": "نُقلت الأوقات من عمود القطار في الصورة الرسمية المؤرخة 19 سبتمبر 2026؛ التوقيت المنشور واحد في المحطات الوسيطة ولا يثبت وقت وصول/مغادرة منفصلين. السريان الحالي غير متحقق منه استقلاليًا."
+    },
+    {
+      "trip_id": "photo-alger-zeralda-1525-daily-20260919",
+      "route_id": "alger-zeralda",
+      "train_number": "1525",
+      "service_id": "daily",
+      "source_id": "gallery-agha-zeralda-2026-09-19",
+      "data_status": "source_transcribed",
+      "effective_from": "2026-09-19",
+      "station_time_kind": "published_single_time",
+      "stop_times": [
+        {
+          "station_id": "agha",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "16:25"
+        },
+        {
+          "station_id": "les_ateliers",
+          "sequence": 2,
+          "arrival": "16:27",
+          "departure": "16:27"
+        },
+        {
+          "station_id": "hussein_dey",
+          "sequence": 3,
+          "arrival": "16:31",
+          "departure": "16:31"
+        },
+        {
+          "station_id": "caroubier",
+          "sequence": 4,
+          "arrival": "16:34",
+          "departure": "16:34"
+        },
+        {
+          "station_id": "el_harrach",
+          "sequence": 5,
+          "arrival": "16:37",
+          "departure": "16:37"
+        },
+        {
+          "station_id": "gue_de_constantine",
+          "sequence": 6,
+          "arrival": "16:41",
+          "departure": "16:41"
+        },
+        {
+          "station_id": "ain_naadja",
+          "sequence": 7,
+          "arrival": "16:44",
+          "departure": "16:44"
+        },
+        {
+          "station_id": "baba_ali",
+          "sequence": 8,
+          "arrival": "16:48",
+          "departure": "16:48"
+        },
+        {
+          "station_id": "birtouta",
+          "sequence": 9,
+          "arrival": "16:53",
+          "departure": "16:53"
+        },
+        {
+          "station_id": "tessala_el_merdja",
+          "sequence": 10,
+          "arrival": "17:01",
+          "departure": "17:01"
+        },
+        {
+          "station_id": "sidi_abdellah",
+          "sequence": 11,
+          "arrival": "17:06",
+          "departure": "17:06"
+        },
+        {
+          "station_id": "sidi_abdellah_universite",
+          "sequence": 12,
+          "arrival": "17:09",
+          "departure": "17:09"
+        },
+        {
+          "station_id": "zeralda",
+          "sequence": 13,
+          "arrival": "17:13",
+          "departure": null
+        }
+      ],
+      "editor_note": "نُقلت الأوقات من عمود القطار في الصورة الرسمية المؤرخة 19 سبتمبر 2026؛ التوقيت المنشور واحد في المحطات الوسيطة ولا يثبت وقت وصول/مغادرة منفصلين. السريان الحالي غير متحقق منه استقلاليًا."
+    },
+    {
+      "trip_id": "photo-alger-zeralda-1527-daily-20260919",
+      "route_id": "alger-zeralda",
+      "train_number": "1527",
+      "service_id": "daily",
+      "source_id": "gallery-agha-zeralda-2026-09-19",
+      "data_status": "source_transcribed",
+      "effective_from": "2026-09-19",
+      "station_time_kind": "published_single_time",
+      "stop_times": [
+        {
+          "station_id": "agha",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "17:30"
+        },
+        {
+          "station_id": "les_ateliers",
+          "sequence": 2,
+          "arrival": "17:32",
+          "departure": "17:32"
+        },
+        {
+          "station_id": "hussein_dey",
+          "sequence": 3,
+          "arrival": "17:36",
+          "departure": "17:36"
+        },
+        {
+          "station_id": "caroubier",
+          "sequence": 4,
+          "arrival": "17:39",
+          "departure": "17:39"
+        },
+        {
+          "station_id": "el_harrach",
+          "sequence": 5,
+          "arrival": "17:42",
+          "departure": "17:42"
+        },
+        {
+          "station_id": "gue_de_constantine",
+          "sequence": 6,
+          "arrival": "17:46",
+          "departure": "17:46"
+        },
+        {
+          "station_id": "ain_naadja",
+          "sequence": 7,
+          "arrival": "17:49",
+          "departure": "17:49"
+        },
+        {
+          "station_id": "baba_ali",
+          "sequence": 8,
+          "arrival": "17:53",
+          "departure": "17:53"
+        },
+        {
+          "station_id": "birtouta",
+          "sequence": 9,
+          "arrival": "17:58",
+          "departure": "17:58"
+        },
+        {
+          "station_id": "tessala_el_merdja",
+          "sequence": 10,
+          "arrival": "18:06",
+          "departure": "18:06"
+        },
+        {
+          "station_id": "sidi_abdellah",
+          "sequence": 11,
+          "arrival": "18:11",
+          "departure": "18:11"
+        },
+        {
+          "station_id": "sidi_abdellah_universite",
+          "sequence": 12,
+          "arrival": "18:14",
+          "departure": "18:14"
+        },
+        {
+          "station_id": "zeralda",
+          "sequence": 13,
+          "arrival": "18:18",
+          "departure": null
+        }
+      ],
+      "editor_note": "نُقلت الأوقات من عمود القطار في الصورة الرسمية المؤرخة 19 سبتمبر 2026؛ التوقيت المنشور واحد في المحطات الوسيطة ولا يثبت وقت وصول/مغادرة منفصلين. السريان الحالي غير متحقق منه استقلاليًا."
+    },
+    {
+      "trip_id": "photo-alger-zeralda-1529-daily-20260919",
+      "route_id": "alger-zeralda",
+      "train_number": "1529",
+      "service_id": "daily",
+      "source_id": "gallery-agha-zeralda-2026-09-19",
+      "data_status": "source_transcribed",
+      "effective_from": "2026-09-19",
+      "station_time_kind": "published_single_time",
+      "stop_times": [
+        {
+          "station_id": "agha",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "18:35"
+        },
+        {
+          "station_id": "les_ateliers",
+          "sequence": 2,
+          "arrival": "18:37",
+          "departure": "18:37"
+        },
+        {
+          "station_id": "hussein_dey",
+          "sequence": 3,
+          "arrival": "18:41",
+          "departure": "18:41"
+        },
+        {
+          "station_id": "caroubier",
+          "sequence": 4,
+          "arrival": "18:44",
+          "departure": "18:44"
+        },
+        {
+          "station_id": "el_harrach",
+          "sequence": 5,
+          "arrival": "18:47",
+          "departure": "18:47"
+        },
+        {
+          "station_id": "gue_de_constantine",
+          "sequence": 6,
+          "arrival": "18:51",
+          "departure": "18:51"
+        },
+        {
+          "station_id": "ain_naadja",
+          "sequence": 7,
+          "arrival": "18:54",
+          "departure": "18:54"
+        },
+        {
+          "station_id": "baba_ali",
+          "sequence": 8,
+          "arrival": "18:58",
+          "departure": "18:58"
+        },
+        {
+          "station_id": "birtouta",
+          "sequence": 9,
+          "arrival": "19:03",
+          "departure": "19:03"
+        },
+        {
+          "station_id": "tessala_el_merdja",
+          "sequence": 10,
+          "arrival": "19:11",
+          "departure": "19:11"
+        },
+        {
+          "station_id": "sidi_abdellah",
+          "sequence": 11,
+          "arrival": "19:16",
+          "departure": "19:16"
+        },
+        {
+          "station_id": "sidi_abdellah_universite",
+          "sequence": 12,
+          "arrival": "19:19",
+          "departure": "19:19"
+        },
+        {
+          "station_id": "zeralda",
+          "sequence": 13,
+          "arrival": "19:23",
+          "departure": null
+        }
+      ],
+      "editor_note": "نُقلت الأوقات من عمود القطار في الصورة الرسمية المؤرخة 19 سبتمبر 2026؛ التوقيت المنشور واحد في المحطات الوسيطة ولا يثبت وقت وصول/مغادرة منفصلين. السريان الحالي غير متحقق منه استقلاليًا."
+    },
+    {
+      "trip_id": "photo-alger-affroun-1025-except_friday-20260919",
+      "route_id": "alger-affroun",
+      "train_number": "1025",
+      "service_id": "except_friday",
+      "source_id": "gallery-alger-affroun-2026-09-19",
+      "data_status": "source_transcribed",
+      "effective_from": "2026-09-19",
+      "station_time_kind": "published_single_time",
+      "stop_times": [
+        {
+          "station_id": "alger",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "05:35"
+        },
+        {
+          "station_id": "agha",
+          "sequence": 2,
+          "arrival": "05:38",
+          "departure": "05:38"
+        },
+        {
+          "station_id": "les_ateliers",
+          "sequence": 3,
+          "arrival": "05:41",
+          "departure": "05:41"
+        },
+        {
+          "station_id": "hussein_dey",
+          "sequence": 4,
+          "arrival": "05:45",
+          "departure": "05:45"
+        },
+        {
+          "station_id": "caroubier",
+          "sequence": 5,
+          "arrival": "05:48",
+          "departure": "05:48"
+        },
+        {
+          "station_id": "el_harrach",
+          "sequence": 6,
+          "arrival": "05:51",
+          "departure": "05:51"
+        },
+        {
+          "station_id": "gue_de_constantine",
+          "sequence": 7,
+          "arrival": "05:56",
+          "departure": "05:56"
+        },
+        {
+          "station_id": "ain_naadja",
+          "sequence": 8,
+          "arrival": "05:59",
+          "departure": "05:59"
+        },
+        {
+          "station_id": "baba_ali",
+          "sequence": 9,
+          "arrival": "06:03",
+          "departure": "06:03"
+        },
+        {
+          "station_id": "birtouta",
+          "sequence": 10,
+          "arrival": "06:08",
+          "departure": "06:08"
+        },
+        {
+          "station_id": "boufarik",
+          "sequence": 11,
+          "arrival": "06:16",
+          "departure": "06:16"
+        },
+        {
+          "station_id": "beni_mered",
+          "sequence": 12,
+          "arrival": "06:22",
+          "departure": "06:22"
+        },
+        {
+          "station_id": "blida",
+          "sequence": 13,
+          "arrival": "06:28",
+          "departure": "06:28"
+        },
+        {
+          "station_id": "chiffa",
+          "sequence": 14,
+          "arrival": "06:35",
+          "departure": "06:35"
+        },
+        {
+          "station_id": "mouzaia",
+          "sequence": 15,
+          "arrival": "06:39",
+          "departure": "06:39"
+        },
+        {
+          "station_id": "el_affroun",
+          "sequence": 16,
+          "arrival": "06:44",
+          "departure": null
+        }
+      ],
+      "editor_note": "نُقلت الأوقات من عمود القطار في الصورة الرسمية المؤرخة 19 سبتمبر 2026؛ التوقيت المنشور واحد في المحطات الوسيطة ولا يثبت وقت وصول/مغادرة منفصلين. السريان الحالي غير متحقق منه استقلاليًا."
+    },
+    {
+      "trip_id": "photo-alger-affroun-1027-daily-20260919",
+      "route_id": "alger-affroun",
+      "train_number": "1027",
+      "service_id": "daily",
+      "source_id": "gallery-alger-affroun-2026-09-19",
+      "data_status": "source_transcribed",
+      "effective_from": "2026-09-19",
+      "station_time_kind": "published_single_time",
+      "stop_times": [
+        {
+          "station_id": "alger",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "06:20"
+        },
+        {
+          "station_id": "agha",
+          "sequence": 2,
+          "arrival": "06:23",
+          "departure": "06:23"
+        },
+        {
+          "station_id": "les_ateliers",
+          "sequence": 3,
+          "arrival": "06:27",
+          "departure": "06:27"
+        },
+        {
+          "station_id": "hussein_dey",
+          "sequence": 4,
+          "arrival": "06:31",
+          "departure": "06:31"
+        },
+        {
+          "station_id": "caroubier",
+          "sequence": 5,
+          "arrival": "06:34",
+          "departure": "06:34"
+        },
+        {
+          "station_id": "el_harrach",
+          "sequence": 6,
+          "arrival": "06:37",
+          "departure": "06:37"
+        },
+        {
+          "station_id": "gue_de_constantine",
+          "sequence": 7,
+          "arrival": "06:42",
+          "departure": "06:42"
+        },
+        {
+          "station_id": "ain_naadja",
+          "sequence": 8,
+          "arrival": "06:45",
+          "departure": "06:45"
+        },
+        {
+          "station_id": "baba_ali",
+          "sequence": 9,
+          "arrival": "06:49",
+          "departure": "06:49"
+        },
+        {
+          "station_id": "birtouta",
+          "sequence": 10,
+          "arrival": "06:54",
+          "departure": "06:54"
+        },
+        {
+          "station_id": "boufarik",
+          "sequence": 11,
+          "arrival": "07:02",
+          "departure": "07:02"
+        },
+        {
+          "station_id": "beni_mered",
+          "sequence": 12,
+          "arrival": "07:08",
+          "departure": "07:08"
+        },
+        {
+          "station_id": "blida",
+          "sequence": 13,
+          "arrival": "07:14",
+          "departure": "07:14"
+        },
+        {
+          "station_id": "chiffa",
+          "sequence": 14,
+          "arrival": "07:21",
+          "departure": "07:21"
+        },
+        {
+          "station_id": "mouzaia",
+          "sequence": 15,
+          "arrival": "07:25",
+          "departure": "07:25"
+        },
+        {
+          "station_id": "el_affroun",
+          "sequence": 16,
+          "arrival": "07:30",
+          "departure": null
+        }
+      ],
+      "editor_note": "نُقلت الأوقات من عمود القطار في الصورة الرسمية المؤرخة 19 سبتمبر 2026؛ التوقيت المنشور واحد في المحطات الوسيطة ولا يثبت وقت وصول/مغادرة منفصلين. السريان الحالي غير متحقق منه استقلاليًا."
+    },
+    {
+      "trip_id": "photo-alger-affroun-1029-daily-20260919",
+      "route_id": "alger-affroun",
+      "train_number": "1029",
+      "service_id": "daily",
+      "source_id": "gallery-alger-affroun-2026-09-19",
+      "data_status": "source_transcribed",
+      "effective_from": "2026-09-19",
+      "station_time_kind": "published_single_time",
+      "stop_times": [
+        {
+          "station_id": "alger",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "07:10"
+        },
+        {
+          "station_id": "agha",
+          "sequence": 2,
+          "arrival": "07:13",
+          "departure": "07:13"
+        },
+        {
+          "station_id": "les_ateliers",
+          "sequence": 3,
+          "arrival": "07:17",
+          "departure": "07:17"
+        },
+        {
+          "station_id": "hussein_dey",
+          "sequence": 4,
+          "arrival": "07:21",
+          "departure": "07:21"
+        },
+        {
+          "station_id": "caroubier",
+          "sequence": 5,
+          "arrival": "07:24",
+          "departure": "07:24"
+        },
+        {
+          "station_id": "el_harrach",
+          "sequence": 6,
+          "arrival": "07:27",
+          "departure": "07:27"
+        },
+        {
+          "station_id": "gue_de_constantine",
+          "sequence": 7,
+          "arrival": "07:32",
+          "departure": "07:32"
+        },
+        {
+          "station_id": "ain_naadja",
+          "sequence": 8,
+          "arrival": "07:35",
+          "departure": "07:35"
+        },
+        {
+          "station_id": "baba_ali",
+          "sequence": 9,
+          "arrival": "07:39",
+          "departure": "07:39"
+        },
+        {
+          "station_id": "birtouta",
+          "sequence": 10,
+          "arrival": "07:44",
+          "departure": "07:44"
+        },
+        {
+          "station_id": "boufarik",
+          "sequence": 11,
+          "arrival": "07:52",
+          "departure": "07:52"
+        },
+        {
+          "station_id": "beni_mered",
+          "sequence": 12,
+          "arrival": "07:58",
+          "departure": "07:58"
+        },
+        {
+          "station_id": "blida",
+          "sequence": 13,
+          "arrival": "08:04",
+          "departure": "08:04"
+        },
+        {
+          "station_id": "chiffa",
+          "sequence": 14,
+          "arrival": "08:11",
+          "departure": "08:11"
+        },
+        {
+          "station_id": "mouzaia",
+          "sequence": 15,
+          "arrival": "08:15",
+          "departure": "08:15"
+        },
+        {
+          "station_id": "el_affroun",
+          "sequence": 16,
+          "arrival": "08:20",
+          "departure": null
+        }
+      ],
+      "editor_note": "نُقلت الأوقات من عمود القطار في الصورة الرسمية المؤرخة 19 سبتمبر 2026؛ التوقيت المنشور واحد في المحطات الوسيطة ولا يثبت وقت وصول/مغادرة منفصلين. السريان الحالي غير متحقق منه استقلاليًا."
+    },
+    {
+      "trip_id": "photo-alger-affroun-1031-except_friday-20260919",
+      "route_id": "alger-affroun",
+      "train_number": "1031",
+      "service_id": "except_friday",
+      "source_id": "gallery-alger-affroun-2026-09-19",
+      "data_status": "source_transcribed",
+      "effective_from": "2026-09-19",
+      "station_time_kind": "published_single_time",
+      "stop_times": [
+        {
+          "station_id": "alger",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "08:10"
+        },
+        {
+          "station_id": "agha",
+          "sequence": 2,
+          "arrival": "08:13",
+          "departure": "08:13"
+        },
+        {
+          "station_id": "les_ateliers",
+          "sequence": 3,
+          "arrival": "08:17",
+          "departure": "08:17"
+        },
+        {
+          "station_id": "hussein_dey",
+          "sequence": 4,
+          "arrival": "08:21",
+          "departure": "08:21"
+        },
+        {
+          "station_id": "caroubier",
+          "sequence": 5,
+          "arrival": "08:24",
+          "departure": "08:24"
+        },
+        {
+          "station_id": "el_harrach",
+          "sequence": 6,
+          "arrival": "08:27",
+          "departure": "08:27"
+        },
+        {
+          "station_id": "gue_de_constantine",
+          "sequence": 7,
+          "arrival": "08:32",
+          "departure": "08:32"
+        },
+        {
+          "station_id": "ain_naadja",
+          "sequence": 8,
+          "arrival": "08:35",
+          "departure": "08:35"
+        },
+        {
+          "station_id": "baba_ali",
+          "sequence": 9,
+          "arrival": "08:39",
+          "departure": "08:39"
+        },
+        {
+          "station_id": "birtouta",
+          "sequence": 10,
+          "arrival": "08:44",
+          "departure": "08:44"
+        },
+        {
+          "station_id": "boufarik",
+          "sequence": 11,
+          "arrival": "08:52",
+          "departure": "08:52"
+        },
+        {
+          "station_id": "beni_mered",
+          "sequence": 12,
+          "arrival": "08:58",
+          "departure": "08:58"
+        },
+        {
+          "station_id": "blida",
+          "sequence": 13,
+          "arrival": "09:04",
+          "departure": "09:04"
+        },
+        {
+          "station_id": "chiffa",
+          "sequence": 14,
+          "arrival": "09:11",
+          "departure": "09:11"
+        },
+        {
+          "station_id": "mouzaia",
+          "sequence": 15,
+          "arrival": "09:15",
+          "departure": "09:15"
+        },
+        {
+          "station_id": "el_affroun",
+          "sequence": 16,
+          "arrival": "09:20",
+          "departure": null
+        }
+      ],
+      "editor_note": "نُقلت الأوقات من عمود القطار في الصورة الرسمية المؤرخة 19 سبتمبر 2026؛ التوقيت المنشور واحد في المحطات الوسيطة ولا يثبت وقت وصول/مغادرة منفصلين. السريان الحالي غير متحقق منه استقلاليًا."
+    },
+    {
+      "trip_id": "photo-alger-affroun-1035-daily-20260919",
+      "route_id": "alger-affroun",
+      "train_number": "1035",
+      "service_id": "daily",
+      "source_id": "gallery-alger-affroun-2026-09-19",
+      "data_status": "source_transcribed",
+      "effective_from": "2026-09-19",
+      "station_time_kind": "published_single_time",
+      "stop_times": [
+        {
+          "station_id": "alger",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "09:00"
+        },
+        {
+          "station_id": "agha",
+          "sequence": 2,
+          "arrival": "09:03",
+          "departure": "09:03"
+        },
+        {
+          "station_id": "les_ateliers",
+          "sequence": 3,
+          "arrival": "09:07",
+          "departure": "09:07"
+        },
+        {
+          "station_id": "hussein_dey",
+          "sequence": 4,
+          "arrival": "09:11",
+          "departure": "09:11"
+        },
+        {
+          "station_id": "caroubier",
+          "sequence": 5,
+          "arrival": "09:14",
+          "departure": "09:14"
+        },
+        {
+          "station_id": "el_harrach",
+          "sequence": 6,
+          "arrival": "09:17",
+          "departure": "09:17"
+        },
+        {
+          "station_id": "gue_de_constantine",
+          "sequence": 7,
+          "arrival": "09:22",
+          "departure": "09:22"
+        },
+        {
+          "station_id": "ain_naadja",
+          "sequence": 8,
+          "arrival": "09:25",
+          "departure": "09:25"
+        },
+        {
+          "station_id": "baba_ali",
+          "sequence": 9,
+          "arrival": "09:29",
+          "departure": "09:29"
+        },
+        {
+          "station_id": "birtouta",
+          "sequence": 10,
+          "arrival": "09:34",
+          "departure": "09:34"
+        },
+        {
+          "station_id": "boufarik",
+          "sequence": 11,
+          "arrival": "09:42",
+          "departure": "09:42"
+        },
+        {
+          "station_id": "beni_mered",
+          "sequence": 12,
+          "arrival": "09:48",
+          "departure": "09:48"
+        },
+        {
+          "station_id": "blida",
+          "sequence": 13,
+          "arrival": "09:54",
+          "departure": "09:54"
+        },
+        {
+          "station_id": "chiffa",
+          "sequence": 14,
+          "arrival": "10:01",
+          "departure": "10:01"
+        },
+        {
+          "station_id": "mouzaia",
+          "sequence": 15,
+          "arrival": "10:05",
+          "departure": "10:05"
+        },
+        {
+          "station_id": "el_affroun",
+          "sequence": 16,
+          "arrival": "10:10",
+          "departure": null
+        }
+      ],
+      "editor_note": "نُقلت الأوقات من عمود القطار في الصورة الرسمية المؤرخة 19 سبتمبر 2026؛ التوقيت المنشور واحد في المحطات الوسيطة ولا يثبت وقت وصول/مغادرة منفصلين. السريان الحالي غير متحقق منه استقلاليًا."
+    },
+    {
+      "trip_id": "photo-alger-affroun-1037-daily-20260919",
+      "route_id": "alger-affroun",
+      "train_number": "1037",
+      "service_id": "daily",
+      "source_id": "gallery-alger-affroun-2026-09-19",
+      "data_status": "source_transcribed",
+      "effective_from": "2026-09-19",
+      "station_time_kind": "published_single_time",
+      "stop_times": [
+        {
+          "station_id": "alger",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "10:20"
+        },
+        {
+          "station_id": "agha",
+          "sequence": 2,
+          "arrival": "10:23",
+          "departure": "10:23"
+        },
+        {
+          "station_id": "les_ateliers",
+          "sequence": 3,
+          "arrival": "10:27",
+          "departure": "10:27"
+        },
+        {
+          "station_id": "hussein_dey",
+          "sequence": 4,
+          "arrival": "10:31",
+          "departure": "10:31"
+        },
+        {
+          "station_id": "caroubier",
+          "sequence": 5,
+          "arrival": "10:34",
+          "departure": "10:34"
+        },
+        {
+          "station_id": "el_harrach",
+          "sequence": 6,
+          "arrival": "10:37",
+          "departure": "10:37"
+        },
+        {
+          "station_id": "gue_de_constantine",
+          "sequence": 7,
+          "arrival": "10:42",
+          "departure": "10:42"
+        },
+        {
+          "station_id": "ain_naadja",
+          "sequence": 8,
+          "arrival": "10:45",
+          "departure": "10:45"
+        },
+        {
+          "station_id": "baba_ali",
+          "sequence": 9,
+          "arrival": "10:49",
+          "departure": "10:49"
+        },
+        {
+          "station_id": "birtouta",
+          "sequence": 10,
+          "arrival": "10:54",
+          "departure": "10:54"
+        },
+        {
+          "station_id": "boufarik",
+          "sequence": 11,
+          "arrival": "11:02",
+          "departure": "11:02"
+        },
+        {
+          "station_id": "beni_mered",
+          "sequence": 12,
+          "arrival": "11:08",
+          "departure": "11:08"
+        },
+        {
+          "station_id": "blida",
+          "sequence": 13,
+          "arrival": "11:14",
+          "departure": "11:14"
+        },
+        {
+          "station_id": "chiffa",
+          "sequence": 14,
+          "arrival": "11:21",
+          "departure": "11:21"
+        },
+        {
+          "station_id": "mouzaia",
+          "sequence": 15,
+          "arrival": "11:25",
+          "departure": "11:25"
+        },
+        {
+          "station_id": "el_affroun",
+          "sequence": 16,
+          "arrival": "11:30",
+          "departure": null
+        }
+      ],
+      "editor_note": "نُقلت الأوقات من عمود القطار في الصورة الرسمية المؤرخة 19 سبتمبر 2026؛ التوقيت المنشور واحد في المحطات الوسيطة ولا يثبت وقت وصول/مغادرة منفصلين. السريان الحالي غير متحقق منه استقلاليًا."
+    },
+    {
+      "trip_id": "photo-alger-affroun-1043-daily-20260919",
+      "route_id": "alger-affroun",
+      "train_number": "1043",
+      "service_id": "daily",
+      "source_id": "gallery-alger-affroun-2026-09-19",
+      "data_status": "source_transcribed",
+      "effective_from": "2026-09-19",
+      "station_time_kind": "published_single_time",
+      "stop_times": [
+        {
+          "station_id": "alger",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "11:30"
+        },
+        {
+          "station_id": "agha",
+          "sequence": 2,
+          "arrival": "11:33",
+          "departure": "11:33"
+        },
+        {
+          "station_id": "les_ateliers",
+          "sequence": 3,
+          "arrival": "11:34",
+          "departure": "11:34"
+        },
+        {
+          "station_id": "hussein_dey",
+          "sequence": 4,
+          "arrival": "11:41",
+          "departure": "11:41"
+        },
+        {
+          "station_id": "caroubier",
+          "sequence": 5,
+          "arrival": "11:44",
+          "departure": "11:44"
+        },
+        {
+          "station_id": "el_harrach",
+          "sequence": 6,
+          "arrival": "11:47",
+          "departure": "11:47"
+        },
+        {
+          "station_id": "gue_de_constantine",
+          "sequence": 7,
+          "arrival": "11:52",
+          "departure": "11:52"
+        },
+        {
+          "station_id": "ain_naadja",
+          "sequence": 8,
+          "arrival": "11:55",
+          "departure": "11:55"
+        },
+        {
+          "station_id": "baba_ali",
+          "sequence": 9,
+          "arrival": "11:59",
+          "departure": "11:59"
+        },
+        {
+          "station_id": "birtouta",
+          "sequence": 10,
+          "arrival": "12:04",
+          "departure": "12:04"
+        },
+        {
+          "station_id": "boufarik",
+          "sequence": 11,
+          "arrival": "12:12",
+          "departure": "12:12"
+        },
+        {
+          "station_id": "beni_mered",
+          "sequence": 12,
+          "arrival": "12:18",
+          "departure": "12:18"
+        },
+        {
+          "station_id": "blida",
+          "sequence": 13,
+          "arrival": "12:24",
+          "departure": "12:24"
+        },
+        {
+          "station_id": "chiffa",
+          "sequence": 14,
+          "arrival": "12:31",
+          "departure": "12:31"
+        },
+        {
+          "station_id": "mouzaia",
+          "sequence": 15,
+          "arrival": "12:35",
+          "departure": "12:35"
+        },
+        {
+          "station_id": "el_affroun",
+          "sequence": 16,
+          "arrival": "12:40",
+          "departure": null
+        }
+      ],
+      "editor_note": "نُقلت الأوقات من عمود القطار في الصورة الرسمية المؤرخة 19 سبتمبر 2026؛ التوقيت المنشور واحد في المحطات الوسيطة ولا يثبت وقت وصول/مغادرة منفصلين. السريان الحالي غير متحقق منه استقلاليًا."
+    },
+    {
+      "trip_id": "photo-alger-affroun-1045-except_friday-20260919",
+      "route_id": "alger-affroun",
+      "train_number": "1045",
+      "service_id": "except_friday",
+      "source_id": "gallery-alger-affroun-2026-09-19",
+      "data_status": "source_transcribed",
+      "effective_from": "2026-09-19",
+      "station_time_kind": "published_single_time",
+      "stop_times": [
+        {
+          "station_id": "alger",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "12:30"
+        },
+        {
+          "station_id": "agha",
+          "sequence": 2,
+          "arrival": "12:33",
+          "departure": "12:33"
+        },
+        {
+          "station_id": "les_ateliers",
+          "sequence": 3,
+          "arrival": "12:34",
+          "departure": "12:34"
+        },
+        {
+          "station_id": "hussein_dey",
+          "sequence": 4,
+          "arrival": "12:41",
+          "departure": "12:41"
+        },
+        {
+          "station_id": "caroubier",
+          "sequence": 5,
+          "arrival": "12:44",
+          "departure": "12:44"
+        },
+        {
+          "station_id": "el_harrach",
+          "sequence": 6,
+          "arrival": "12:47",
+          "departure": "12:47"
+        },
+        {
+          "station_id": "gue_de_constantine",
+          "sequence": 7,
+          "arrival": "12:52",
+          "departure": "12:52"
+        },
+        {
+          "station_id": "ain_naadja",
+          "sequence": 8,
+          "arrival": "12:55",
+          "departure": "12:55"
+        },
+        {
+          "station_id": "baba_ali",
+          "sequence": 9,
+          "arrival": "12:59",
+          "departure": "12:59"
+        },
+        {
+          "station_id": "birtouta",
+          "sequence": 10,
+          "arrival": "13:04",
+          "departure": "13:04"
+        },
+        {
+          "station_id": "boufarik",
+          "sequence": 11,
+          "arrival": "13:12",
+          "departure": "13:12"
+        },
+        {
+          "station_id": "beni_mered",
+          "sequence": 12,
+          "arrival": "13:18",
+          "departure": "13:18"
+        },
+        {
+          "station_id": "blida",
+          "sequence": 13,
+          "arrival": "13:24",
+          "departure": "13:24"
+        },
+        {
+          "station_id": "chiffa",
+          "sequence": 14,
+          "arrival": "13:31",
+          "departure": "13:31"
+        },
+        {
+          "station_id": "mouzaia",
+          "sequence": 15,
+          "arrival": "13:35",
+          "departure": "13:35"
+        },
+        {
+          "station_id": "el_affroun",
+          "sequence": 16,
+          "arrival": "13:40",
+          "departure": null
+        }
+      ],
+      "editor_note": "نُقلت الأوقات من عمود القطار في الصورة الرسمية المؤرخة 19 سبتمبر 2026؛ التوقيت المنشور واحد في المحطات الوسيطة ولا يثبت وقت وصول/مغادرة منفصلين. السريان الحالي غير متحقق منه استقلاليًا."
+    },
+    {
+      "trip_id": "photo-alger-affroun-1049-daily-20260919",
+      "route_id": "alger-affroun",
+      "train_number": "1049",
+      "service_id": "daily",
+      "source_id": "gallery-alger-affroun-2026-09-19",
+      "data_status": "source_transcribed",
+      "effective_from": "2026-09-19",
+      "station_time_kind": "published_single_time",
+      "stop_times": [
+        {
+          "station_id": "alger",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "13:20"
+        },
+        {
+          "station_id": "agha",
+          "sequence": 2,
+          "arrival": "13:23",
+          "departure": "13:23"
+        },
+        {
+          "station_id": "les_ateliers",
+          "sequence": 3,
+          "arrival": "13:27",
+          "departure": "13:27"
+        },
+        {
+          "station_id": "hussein_dey",
+          "sequence": 4,
+          "arrival": "13:31",
+          "departure": "13:31"
+        },
+        {
+          "station_id": "caroubier",
+          "sequence": 5,
+          "arrival": "13:34",
+          "departure": "13:34"
+        },
+        {
+          "station_id": "el_harrach",
+          "sequence": 6,
+          "arrival": "13:37",
+          "departure": "13:37"
+        },
+        {
+          "station_id": "gue_de_constantine",
+          "sequence": 7,
+          "arrival": "13:42",
+          "departure": "13:42"
+        },
+        {
+          "station_id": "ain_naadja",
+          "sequence": 8,
+          "arrival": "13:45",
+          "departure": "13:45"
+        },
+        {
+          "station_id": "baba_ali",
+          "sequence": 9,
+          "arrival": "13:49",
+          "departure": "13:49"
+        },
+        {
+          "station_id": "birtouta",
+          "sequence": 10,
+          "arrival": "13:54",
+          "departure": "13:54"
+        },
+        {
+          "station_id": "boufarik",
+          "sequence": 11,
+          "arrival": "14:02",
+          "departure": "14:02"
+        },
+        {
+          "station_id": "beni_mered",
+          "sequence": 12,
+          "arrival": "14:08",
+          "departure": "14:08"
+        },
+        {
+          "station_id": "blida",
+          "sequence": 13,
+          "arrival": "14:14",
+          "departure": "14:14"
+        },
+        {
+          "station_id": "chiffa",
+          "sequence": 14,
+          "arrival": "14:21",
+          "departure": "14:21"
+        },
+        {
+          "station_id": "mouzaia",
+          "sequence": 15,
+          "arrival": "14:25",
+          "departure": "14:25"
+        },
+        {
+          "station_id": "el_affroun",
+          "sequence": 16,
+          "arrival": "14:30",
+          "departure": null
+        }
+      ],
+      "editor_note": "نُقلت الأوقات من عمود القطار في الصورة الرسمية المؤرخة 19 سبتمبر 2026؛ التوقيت المنشور واحد في المحطات الوسيطة ولا يثبت وقت وصول/مغادرة منفصلين. السريان الحالي غير متحقق منه استقلاليًا."
+    },
+    {
+      "trip_id": "photo-alger-affroun-1051-1-20260919",
+      "route_id": "alger-affroun",
+      "train_number": "1051",
+      "service_id": "except_friday",
+      "source_id": "gallery-alger-affroun-2026-09-19",
+      "data_status": "source_transcribed",
+      "effective_from": "2026-09-19",
+      "station_time_kind": "published_single_time",
+      "stop_times": [
+        {
+          "station_id": "alger",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "14:10"
+        },
+        {
+          "station_id": "agha",
+          "sequence": 2,
+          "arrival": "14:13",
+          "departure": "14:13"
+        },
+        {
+          "station_id": "les_ateliers",
+          "sequence": 3,
+          "arrival": "14:17",
+          "departure": "14:17"
+        },
+        {
+          "station_id": "hussein_dey",
+          "sequence": 4,
+          "arrival": "14:21",
+          "departure": "14:21"
+        },
+        {
+          "station_id": "caroubier",
+          "sequence": 5,
+          "arrival": "14:24",
+          "departure": "14:24"
+        },
+        {
+          "station_id": "el_harrach",
+          "sequence": 6,
+          "arrival": "14:27",
+          "departure": "14:27"
+        },
+        {
+          "station_id": "gue_de_constantine",
+          "sequence": 7,
+          "arrival": "14:32",
+          "departure": "14:32"
+        },
+        {
+          "station_id": "ain_naadja",
+          "sequence": 8,
+          "arrival": "14:35",
+          "departure": "14:35"
+        },
+        {
+          "station_id": "baba_ali",
+          "sequence": 9,
+          "arrival": "14:39",
+          "departure": "14:39"
+        },
+        {
+          "station_id": "birtouta",
+          "sequence": 10,
+          "arrival": "14:44",
+          "departure": "14:44"
+        },
+        {
+          "station_id": "boufarik",
+          "sequence": 11,
+          "arrival": "14:52",
+          "departure": "14:52"
+        },
+        {
+          "station_id": "beni_mered",
+          "sequence": 12,
+          "arrival": "14:58",
+          "departure": "14:58"
+        },
+        {
+          "station_id": "blida",
+          "sequence": 13,
+          "arrival": "15:04",
+          "departure": "15:04"
+        },
+        {
+          "station_id": "chiffa",
+          "sequence": 14,
+          "arrival": "15:11",
+          "departure": "15:11"
+        },
+        {
+          "station_id": "mouzaia",
+          "sequence": 15,
+          "arrival": "15:15",
+          "departure": "15:15"
+        },
+        {
+          "station_id": "el_affroun",
+          "sequence": 16,
+          "arrival": "15:20",
+          "departure": null
+        }
+      ],
+      "editor_note": "نُقلت الأوقات من عمود القطار في الصورة الرسمية المؤرخة 19 سبتمبر 2026؛ التوقيت المنشور واحد في المحطات الوسيطة ولا يثبت وقت وصول/مغادرة منفصلين. السريان الحالي غير متحقق منه استقلاليًا."
+    },
+    {
+      "trip_id": "photo-alger-affroun-1051-2-20260919",
+      "route_id": "alger-affroun",
+      "train_number": "1051",
+      "service_id": "friday_only",
+      "source_id": "gallery-alger-affroun-2026-09-19",
+      "data_status": "source_transcribed",
+      "effective_from": "2026-09-19",
+      "station_time_kind": "published_single_time",
+      "stop_times": [
+        {
+          "station_id": "alger",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "14:30"
+        },
+        {
+          "station_id": "agha",
+          "sequence": 2,
+          "arrival": "14:33",
+          "departure": "14:33"
+        },
+        {
+          "station_id": "les_ateliers",
+          "sequence": 3,
+          "arrival": "14:34",
+          "departure": "14:34"
+        },
+        {
+          "station_id": "hussein_dey",
+          "sequence": 4,
+          "arrival": "14:41",
+          "departure": "14:41"
+        },
+        {
+          "station_id": "caroubier",
+          "sequence": 5,
+          "arrival": "14:44",
+          "departure": "14:44"
+        },
+        {
+          "station_id": "el_harrach",
+          "sequence": 6,
+          "arrival": "14:47",
+          "departure": "14:47"
+        },
+        {
+          "station_id": "gue_de_constantine",
+          "sequence": 7,
+          "arrival": "14:52",
+          "departure": "14:52"
+        },
+        {
+          "station_id": "ain_naadja",
+          "sequence": 8,
+          "arrival": "14:55",
+          "departure": "14:55"
+        },
+        {
+          "station_id": "baba_ali",
+          "sequence": 9,
+          "arrival": "14:59",
+          "departure": "14:59"
+        },
+        {
+          "station_id": "birtouta",
+          "sequence": 10,
+          "arrival": "15:04",
+          "departure": "15:04"
+        },
+        {
+          "station_id": "boufarik",
+          "sequence": 11,
+          "arrival": "15:12",
+          "departure": "15:12"
+        },
+        {
+          "station_id": "beni_mered",
+          "sequence": 12,
+          "arrival": "15:18",
+          "departure": "15:18"
+        },
+        {
+          "station_id": "blida",
+          "sequence": 13,
+          "arrival": "15:24",
+          "departure": "15:24"
+        },
+        {
+          "station_id": "chiffa",
+          "sequence": 14,
+          "arrival": "15:31",
+          "departure": "15:31"
+        },
+        {
+          "station_id": "mouzaia",
+          "sequence": 15,
+          "arrival": "15:35",
+          "departure": "15:35"
+        },
+        {
+          "station_id": "el_affroun",
+          "sequence": 16,
+          "arrival": "15:40",
+          "departure": null
+        }
+      ],
+      "editor_note": "نُقلت الأوقات من عمود القطار في الصورة الرسمية المؤرخة 19 سبتمبر 2026؛ التوقيت المنشور واحد في المحطات الوسيطة ولا يثبت وقت وصول/مغادرة منفصلين. السريان الحالي غير متحقق منه استقلاليًا."
+    },
+    {
+      "trip_id": "photo-alger-affroun-1053-except_friday-20260919",
+      "route_id": "alger-affroun",
+      "train_number": "1053",
+      "service_id": "except_friday",
+      "source_id": "gallery-alger-affroun-2026-09-19",
+      "data_status": "source_transcribed",
+      "effective_from": "2026-09-19",
+      "station_time_kind": "published_single_time",
+      "stop_times": [
+        {
+          "station_id": "alger",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "15:10"
+        },
+        {
+          "station_id": "agha",
+          "sequence": 2,
+          "arrival": "15:13",
+          "departure": "15:13"
+        },
+        {
+          "station_id": "les_ateliers",
+          "sequence": 3,
+          "arrival": "15:17",
+          "departure": "15:17"
+        },
+        {
+          "station_id": "hussein_dey",
+          "sequence": 4,
+          "arrival": "15:21",
+          "departure": "15:21"
+        },
+        {
+          "station_id": "caroubier",
+          "sequence": 5,
+          "arrival": "15:24",
+          "departure": "15:24"
+        },
+        {
+          "station_id": "el_harrach",
+          "sequence": 6,
+          "arrival": "15:27",
+          "departure": "15:27"
+        },
+        {
+          "station_id": "gue_de_constantine",
+          "sequence": 7,
+          "arrival": "15:32",
+          "departure": "15:32"
+        },
+        {
+          "station_id": "ain_naadja",
+          "sequence": 8,
+          "arrival": "15:35",
+          "departure": "15:35"
+        },
+        {
+          "station_id": "baba_ali",
+          "sequence": 9,
+          "arrival": "15:39",
+          "departure": "15:39"
+        },
+        {
+          "station_id": "birtouta",
+          "sequence": 10,
+          "arrival": "15:44",
+          "departure": "15:44"
+        },
+        {
+          "station_id": "boufarik",
+          "sequence": 11,
+          "arrival": "15:52",
+          "departure": "15:52"
+        },
+        {
+          "station_id": "beni_mered",
+          "sequence": 12,
+          "arrival": "15:58",
+          "departure": "15:58"
+        },
+        {
+          "station_id": "blida",
+          "sequence": 13,
+          "arrival": "16:04",
+          "departure": "16:04"
+        },
+        {
+          "station_id": "chiffa",
+          "sequence": 14,
+          "arrival": "16:11",
+          "departure": "16:11"
+        },
+        {
+          "station_id": "mouzaia",
+          "sequence": 15,
+          "arrival": "16:15",
+          "departure": "16:15"
+        },
+        {
+          "station_id": "el_affroun",
+          "sequence": 16,
+          "arrival": "16:20",
+          "departure": null
+        }
+      ],
+      "editor_note": "نُقلت الأوقات من عمود القطار في الصورة الرسمية المؤرخة 19 سبتمبر 2026؛ التوقيت المنشور واحد في المحطات الوسيطة ولا يثبت وقت وصول/مغادرة منفصلين. السريان الحالي غير متحقق منه استقلاليًا."
+    },
+    {
+      "trip_id": "photo-alger-affroun-1057-daily-20260919",
+      "route_id": "alger-affroun",
+      "train_number": "1057",
+      "service_id": "daily",
+      "source_id": "gallery-alger-affroun-2026-09-19",
+      "data_status": "source_transcribed",
+      "effective_from": "2026-09-19",
+      "station_time_kind": "published_single_time",
+      "stop_times": [
+        {
+          "station_id": "alger",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "16:10"
+        },
+        {
+          "station_id": "agha",
+          "sequence": 2,
+          "arrival": "16:13",
+          "departure": "16:13"
+        },
+        {
+          "station_id": "les_ateliers",
+          "sequence": 3,
+          "arrival": "16:17",
+          "departure": "16:17"
+        },
+        {
+          "station_id": "hussein_dey",
+          "sequence": 4,
+          "arrival": "16:21",
+          "departure": "16:21"
+        },
+        {
+          "station_id": "caroubier",
+          "sequence": 5,
+          "arrival": "16:24",
+          "departure": "16:24"
+        },
+        {
+          "station_id": "el_harrach",
+          "sequence": 6,
+          "arrival": "16:27",
+          "departure": "16:27"
+        },
+        {
+          "station_id": "gue_de_constantine",
+          "sequence": 7,
+          "arrival": "16:32",
+          "departure": "16:32"
+        },
+        {
+          "station_id": "ain_naadja",
+          "sequence": 8,
+          "arrival": "16:35",
+          "departure": "16:35"
+        },
+        {
+          "station_id": "baba_ali",
+          "sequence": 9,
+          "arrival": "16:39",
+          "departure": "16:39"
+        },
+        {
+          "station_id": "birtouta",
+          "sequence": 10,
+          "arrival": "16:44",
+          "departure": "16:44"
+        },
+        {
+          "station_id": "boufarik",
+          "sequence": 11,
+          "arrival": "16:52",
+          "departure": "16:52"
+        },
+        {
+          "station_id": "beni_mered",
+          "sequence": 12,
+          "arrival": "16:58",
+          "departure": "16:58"
+        },
+        {
+          "station_id": "blida",
+          "sequence": 13,
+          "arrival": "17:04",
+          "departure": "17:04"
+        },
+        {
+          "station_id": "chiffa",
+          "sequence": 14,
+          "arrival": "17:11",
+          "departure": "17:11"
+        },
+        {
+          "station_id": "mouzaia",
+          "sequence": 15,
+          "arrival": "17:15",
+          "departure": "17:15"
+        },
+        {
+          "station_id": "el_affroun",
+          "sequence": 16,
+          "arrival": "17:20",
+          "departure": null
+        }
+      ],
+      "editor_note": "نُقلت الأوقات من عمود القطار في الصورة الرسمية المؤرخة 19 سبتمبر 2026؛ التوقيت المنشور واحد في المحطات الوسيطة ولا يثبت وقت وصول/مغادرة منفصلين. السريان الحالي غير متحقق منه استقلاليًا."
+    },
+    {
+      "trip_id": "photo-alger-affroun-1061-1-20260919",
+      "route_id": "alger-affroun",
+      "train_number": "1061",
+      "service_id": "except_friday",
+      "source_id": "gallery-alger-affroun-2026-09-19",
+      "data_status": "source_transcribed",
+      "effective_from": "2026-09-19",
+      "station_time_kind": "published_single_time",
+      "stop_times": [
+        {
+          "station_id": "alger",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "16:55"
+        },
+        {
+          "station_id": "agha",
+          "sequence": 2,
+          "arrival": "16:58",
+          "departure": "16:58"
+        },
+        {
+          "station_id": "les_ateliers",
+          "sequence": 3,
+          "arrival": "17:04",
+          "departure": "17:04"
+        },
+        {
+          "station_id": "hussein_dey",
+          "sequence": 4,
+          "arrival": "17:08",
+          "departure": "17:08"
+        },
+        {
+          "station_id": "caroubier",
+          "sequence": 5,
+          "arrival": "17:11",
+          "departure": "17:11"
+        },
+        {
+          "station_id": "el_harrach",
+          "sequence": 6,
+          "arrival": "17:14",
+          "departure": "17:14"
+        },
+        {
+          "station_id": "gue_de_constantine",
+          "sequence": 7,
+          "arrival": "17:18",
+          "departure": "17:18"
+        },
+        {
+          "station_id": "ain_naadja",
+          "sequence": 8,
+          "arrival": "17:21",
+          "departure": "17:21"
+        },
+        {
+          "station_id": "baba_ali",
+          "sequence": 9,
+          "arrival": "17:25",
+          "departure": "17:25"
+        },
+        {
+          "station_id": "birtouta",
+          "sequence": 10,
+          "arrival": "17:30",
+          "departure": "17:30"
+        },
+        {
+          "station_id": "boufarik",
+          "sequence": 11,
+          "arrival": "17:38",
+          "departure": "17:38"
+        },
+        {
+          "station_id": "beni_mered",
+          "sequence": 12,
+          "arrival": "17:44",
+          "departure": "17:44"
+        },
+        {
+          "station_id": "blida",
+          "sequence": 13,
+          "arrival": "17:50",
+          "departure": "17:50"
+        },
+        {
+          "station_id": "chiffa",
+          "sequence": 14,
+          "arrival": "17:56",
+          "departure": "17:56"
+        },
+        {
+          "station_id": "mouzaia",
+          "sequence": 15,
+          "arrival": "18:00",
+          "departure": "18:00"
+        },
+        {
+          "station_id": "el_affroun",
+          "sequence": 16,
+          "arrival": "18:05",
+          "departure": null
+        }
+      ],
+      "editor_note": "نُقلت الأوقات من عمود القطار في الصورة الرسمية المؤرخة 19 سبتمبر 2026؛ التوقيت المنشور واحد في المحطات الوسيطة ولا يثبت وقت وصول/مغادرة منفصلين. السريان الحالي غير متحقق منه استقلاليًا."
+    },
+    {
+      "trip_id": "photo-alger-affroun-1061-2-20260919",
+      "route_id": "alger-affroun",
+      "train_number": "1061",
+      "service_id": "friday_only",
+      "source_id": "gallery-alger-affroun-2026-09-19",
+      "data_status": "source_transcribed",
+      "effective_from": "2026-09-19",
+      "station_time_kind": "published_single_time",
+      "stop_times": [
+        {
+          "station_id": "alger",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "17:10"
+        },
+        {
+          "station_id": "agha",
+          "sequence": 2,
+          "arrival": "17:13",
+          "departure": "17:13"
+        },
+        {
+          "station_id": "les_ateliers",
+          "sequence": 3,
+          "arrival": "17:17",
+          "departure": "17:17"
+        },
+        {
+          "station_id": "hussein_dey",
+          "sequence": 4,
+          "arrival": "17:21",
+          "departure": "17:21"
+        },
+        {
+          "station_id": "caroubier",
+          "sequence": 5,
+          "arrival": "17:24",
+          "departure": "17:24"
+        },
+        {
+          "station_id": "el_harrach",
+          "sequence": 6,
+          "arrival": "17:27",
+          "departure": "17:27"
+        },
+        {
+          "station_id": "gue_de_constantine",
+          "sequence": 7,
+          "arrival": "17:32",
+          "departure": "17:32"
+        },
+        {
+          "station_id": "ain_naadja",
+          "sequence": 8,
+          "arrival": "17:35",
+          "departure": "17:35"
+        },
+        {
+          "station_id": "baba_ali",
+          "sequence": 9,
+          "arrival": "17:39",
+          "departure": "17:39"
+        },
+        {
+          "station_id": "birtouta",
+          "sequence": 10,
+          "arrival": "17:44",
+          "departure": "17:44"
+        },
+        {
+          "station_id": "boufarik",
+          "sequence": 11,
+          "arrival": "17:52",
+          "departure": "17:52"
+        },
+        {
+          "station_id": "beni_mered",
+          "sequence": 12,
+          "arrival": "17:58",
+          "departure": "17:58"
+        },
+        {
+          "station_id": "blida",
+          "sequence": 13,
+          "arrival": "18:04",
+          "departure": "18:04"
+        },
+        {
+          "station_id": "chiffa",
+          "sequence": 14,
+          "arrival": "18:11",
+          "departure": "18:11"
+        },
+        {
+          "station_id": "mouzaia",
+          "sequence": 15,
+          "arrival": "18:15",
+          "departure": "18:15"
+        },
+        {
+          "station_id": "el_affroun",
+          "sequence": 16,
+          "arrival": "18:20",
+          "departure": null
+        }
+      ],
+      "editor_note": "نُقلت الأوقات من عمود القطار في الصورة الرسمية المؤرخة 19 سبتمبر 2026؛ التوقيت المنشور واحد في المحطات الوسيطة ولا يثبت وقت وصول/مغادرة منفصلين. السريان الحالي غير متحقق منه استقلاليًا."
+    },
+    {
+      "trip_id": "photo-alger-affroun-1065-1-20260919",
+      "route_id": "alger-affroun",
+      "train_number": "1065",
+      "service_id": "except_friday",
+      "source_id": "gallery-alger-affroun-2026-09-19",
+      "data_status": "source_transcribed",
+      "effective_from": "2026-09-19",
+      "station_time_kind": "published_single_time",
+      "stop_times": [
+        {
+          "station_id": "alger",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "18:00"
+        },
+        {
+          "station_id": "agha",
+          "sequence": 2,
+          "arrival": "18:03",
+          "departure": "18:03"
+        },
+        {
+          "station_id": "les_ateliers",
+          "sequence": 3,
+          "arrival": "18:07",
+          "departure": "18:07"
+        },
+        {
+          "station_id": "hussein_dey",
+          "sequence": 4,
+          "arrival": "18:11",
+          "departure": "18:11"
+        },
+        {
+          "station_id": "caroubier",
+          "sequence": 5,
+          "arrival": "18:14",
+          "departure": "18:14"
+        },
+        {
+          "station_id": "el_harrach",
+          "sequence": 6,
+          "arrival": "18:17",
+          "departure": "18:17"
+        },
+        {
+          "station_id": "gue_de_constantine",
+          "sequence": 7,
+          "arrival": "18:22",
+          "departure": "18:22"
+        },
+        {
+          "station_id": "ain_naadja",
+          "sequence": 8,
+          "arrival": "18:25",
+          "departure": "18:25"
+        },
+        {
+          "station_id": "baba_ali",
+          "sequence": 9,
+          "arrival": "18:29",
+          "departure": "18:29"
+        },
+        {
+          "station_id": "birtouta",
+          "sequence": 10,
+          "arrival": "18:34",
+          "departure": "18:34"
+        },
+        {
+          "station_id": "boufarik",
+          "sequence": 11,
+          "arrival": "18:42",
+          "departure": "18:42"
+        },
+        {
+          "station_id": "beni_mered",
+          "sequence": 12,
+          "arrival": "18:48",
+          "departure": "18:48"
+        },
+        {
+          "station_id": "blida",
+          "sequence": 13,
+          "arrival": "18:54",
+          "departure": "18:54"
+        },
+        {
+          "station_id": "chiffa",
+          "sequence": 14,
+          "arrival": "19:01",
+          "departure": "19:01"
+        },
+        {
+          "station_id": "mouzaia",
+          "sequence": 15,
+          "arrival": "19:05",
+          "departure": "19:05"
+        },
+        {
+          "station_id": "el_affroun",
+          "sequence": 16,
+          "arrival": "19:10",
+          "departure": null
+        }
+      ],
+      "editor_note": "نُقلت الأوقات من عمود القطار في الصورة الرسمية المؤرخة 19 سبتمبر 2026؛ التوقيت المنشور واحد في المحطات الوسيطة ولا يثبت وقت وصول/مغادرة منفصلين. السريان الحالي غير متحقق منه استقلاليًا."
+    },
+    {
+      "trip_id": "photo-alger-affroun-1065-2-20260919",
+      "route_id": "alger-affroun",
+      "train_number": "1065",
+      "service_id": "friday_only",
+      "source_id": "gallery-alger-affroun-2026-09-19",
+      "data_status": "source_transcribed",
+      "effective_from": "2026-09-19",
+      "station_time_kind": "published_single_time",
+      "stop_times": [
+        {
+          "station_id": "alger",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "18:30"
+        },
+        {
+          "station_id": "agha",
+          "sequence": 2,
+          "arrival": "18:33",
+          "departure": "18:33"
+        },
+        {
+          "station_id": "les_ateliers",
+          "sequence": 3,
+          "arrival": "18:34",
+          "departure": "18:34"
+        },
+        {
+          "station_id": "hussein_dey",
+          "sequence": 4,
+          "arrival": "18:41",
+          "departure": "18:41"
+        },
+        {
+          "station_id": "caroubier",
+          "sequence": 5,
+          "arrival": "18:44",
+          "departure": "18:44"
+        },
+        {
+          "station_id": "el_harrach",
+          "sequence": 6,
+          "arrival": "18:47",
+          "departure": "18:47"
+        },
+        {
+          "station_id": "gue_de_constantine",
+          "sequence": 7,
+          "arrival": "18:52",
+          "departure": "18:52"
+        },
+        {
+          "station_id": "ain_naadja",
+          "sequence": 8,
+          "arrival": "18:55",
+          "departure": "18:55"
+        },
+        {
+          "station_id": "baba_ali",
+          "sequence": 9,
+          "arrival": "18:59",
+          "departure": "18:59"
+        },
+        {
+          "station_id": "birtouta",
+          "sequence": 10,
+          "arrival": "19:04",
+          "departure": "19:04"
+        },
+        {
+          "station_id": "boufarik",
+          "sequence": 11,
+          "arrival": "19:12",
+          "departure": "19:12"
+        },
+        {
+          "station_id": "beni_mered",
+          "sequence": 12,
+          "arrival": "19:18",
+          "departure": "19:18"
+        },
+        {
+          "station_id": "blida",
+          "sequence": 13,
+          "arrival": "19:24",
+          "departure": "19:24"
+        },
+        {
+          "station_id": "chiffa",
+          "sequence": 14,
+          "arrival": "19:31",
+          "departure": "19:31"
+        },
+        {
+          "station_id": "mouzaia",
+          "sequence": 15,
+          "arrival": "19:35",
+          "departure": "19:35"
+        },
+        {
+          "station_id": "el_affroun",
+          "sequence": 16,
+          "arrival": "19:40",
+          "departure": null
+        }
+      ],
+      "editor_note": "نُقلت الأوقات من عمود القطار في الصورة الرسمية المؤرخة 19 سبتمبر 2026؛ التوقيت المنشور واحد في المحطات الوسيطة ولا يثبت وقت وصول/مغادرة منفصلين. السريان الحالي غير متحقق منه استقلاليًا."
+    },
+    {
+      "trip_id": "photo-alger-affroun-1067-except_friday-20260919",
+      "route_id": "alger-affroun",
+      "train_number": "1067",
+      "service_id": "except_friday",
+      "source_id": "gallery-alger-affroun-2026-09-19",
+      "data_status": "source_transcribed",
+      "effective_from": "2026-09-19",
+      "station_time_kind": "published_single_time",
+      "stop_times": [
+        {
+          "station_id": "alger",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "18:50"
+        },
+        {
+          "station_id": "agha",
+          "sequence": 2,
+          "arrival": "18:53",
+          "departure": "18:53"
+        },
+        {
+          "station_id": "les_ateliers",
+          "sequence": 3,
+          "arrival": "18:57",
+          "departure": "18:57"
+        },
+        {
+          "station_id": "hussein_dey",
+          "sequence": 4,
+          "arrival": "19:01",
+          "departure": "19:01"
+        },
+        {
+          "station_id": "caroubier",
+          "sequence": 5,
+          "arrival": "19:04",
+          "departure": "19:04"
+        },
+        {
+          "station_id": "el_harrach",
+          "sequence": 6,
+          "arrival": "19:07",
+          "departure": "19:07"
+        },
+        {
+          "station_id": "gue_de_constantine",
+          "sequence": 7,
+          "arrival": "19:12",
+          "departure": "19:12"
+        },
+        {
+          "station_id": "ain_naadja",
+          "sequence": 8,
+          "arrival": "19:15",
+          "departure": "19:15"
+        },
+        {
+          "station_id": "baba_ali",
+          "sequence": 9,
+          "arrival": "19:19",
+          "departure": "19:19"
+        },
+        {
+          "station_id": "birtouta",
+          "sequence": 10,
+          "arrival": "19:24",
+          "departure": "19:24"
+        },
+        {
+          "station_id": "boufarik",
+          "sequence": 11,
+          "arrival": "19:32",
+          "departure": "19:32"
+        },
+        {
+          "station_id": "beni_mered",
+          "sequence": 12,
+          "arrival": "19:38",
+          "departure": "19:38"
+        },
+        {
+          "station_id": "blida",
+          "sequence": 13,
+          "arrival": "19:44",
+          "departure": "19:44"
+        },
+        {
+          "station_id": "chiffa",
+          "sequence": 14,
+          "arrival": "19:51",
+          "departure": "19:51"
+        },
+        {
+          "station_id": "mouzaia",
+          "sequence": 15,
+          "arrival": "19:55",
+          "departure": "19:55"
+        },
+        {
+          "station_id": "el_affroun",
+          "sequence": 16,
+          "arrival": "20:00",
+          "departure": null
+        }
+      ],
+      "editor_note": "نُقلت الأوقات من عمود القطار في الصورة الرسمية المؤرخة 19 سبتمبر 2026؛ التوقيت المنشور واحد في المحطات الوسيطة ولا يثبت وقت وصول/مغادرة منفصلين. السريان الحالي غير متحقق منه استقلاليًا."
     }
   ],
-  "note": "Draft entries are editable real database records, but their prior example times are not operational evidence. Dashboard labels these records as unverified and hides them from default scheduled boards until reviewed. Update stop_times/train_number/source to validate."
+  "note": "Draft entries are editable real database records, but their prior example times are not operational evidence. Dashboard labels these records as unverified and hides them from default scheduled boards until reviewed. Update stop_times/train_number/source to validate. أُضيفت 60 رحلة من 3 صور رسمية مؤرخة 19 سبتمبر 2026: 28 للمطار ذهابًا وإيابًا، و14 آغا–زرالدة، و18 الجزائر–العفرون. لم تُفترض رحلات الاتجاه العكسي للعفرون دون صورتها الصحيحة."
 }
