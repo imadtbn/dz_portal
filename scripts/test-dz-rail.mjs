@@ -9,9 +9,9 @@ const config={calendars,exceptions,holidays};
 const available=engine.eligible(trips);
 const drafts=trips.filter(t=>t.data_status==="pending_review");
 const verifiedByUser=trips.filter(t=>t.data_status==="source_transcribed");
-assert.equal(available.length,106,"106 official image-transcribed journeys are visible; drafts excluded");
+assert.equal(available.length,131,"131 official image-transcribed journeys are visible; drafts excluded");
 assert.equal(drafts.length,9,"Keep nine editable draft journeys");
-assert.equal(verifiedByUser.length,106,"Preserve 18 baseline plus 88 newly transcribed journeys");
+assert.equal(verifiedByUser.length,131,"Preserve 18 baseline plus 113 newly transcribed journeys");
 assert.equal(verifiedByUser.filter(t=>t.route_id==="zeralda-agha").length,14,"All original Zeralda–Agha timetable trips preserved");
 assert.equal(verifiedByUser.filter(t=>["alger-thenia","thenia-alger"].includes(t.route_id)).length,4,"Image gallery adds two trains in each direction");
 assert(stations.some(s=>s.id==="rouiba"),"Rouiba station is indexed");
@@ -21,8 +21,8 @@ assert(routes.some(r=>r.id==="alger-thenia"&&r.stops.includes("rouiba")),"Rouiba
 assert(routes.some(r=>r.id==="thenia-alger"&&r.stops.includes("rouiba")),"Rouiba should be visible in westbound route");
 assert.equal(stations.length,169,"Official PDF station inventory should include 169 distinct records");
 assert.equal(stations.filter(s=>s.geo_verified===true).length,116,"All original protected Google Maps station coordinates preserved");
-assert.equal(routes.length,32,"32 documented direction-aware routes including short turns and legacy aliases");
-for(const [routeId,n] of [["alger-airport",14],["airport-agha",14],["alger-zeralda",14],["alger-affroun",18],["alger-oued-aissi",3],["thenia-oued-aissi",8],["oued-aissi-alger",3],["oued-aissi-thenia",8],["zeralda-thenia",2],["thenia-zeralda",2],["zeralda-reghaia",1],["reghaia-zeralda",1]]){
+assert.equal(routes.length,34,"34 documented direction-aware routes including short turns and legacy aliases");
+for(const [routeId,n] of [["alger-airport",14],["airport-agha",14],["alger-zeralda",14],["alger-affroun",18],["alger-oued-aissi",3],["thenia-oued-aissi",8],["oued-aissi-alger",3],["oued-aissi-thenia",8],["zeralda-thenia",2],["thenia-zeralda",2],["zeralda-reghaia",1],["reghaia-zeralda",1],["alger-thenia",14],["thenia-alger",13],["alger-reghaia",1],["reghaia-alger",1]]){
  assert.equal(verifiedByUser.filter(t=>t.route_id===routeId).length,n,routeId+" official image-transcribed trains");
 }
 const weekday1051=available.find(t=>t.route_id==="alger-affroun"&&t.train_number==="1051"&&t.service_id==="except_friday");
@@ -72,4 +72,4 @@ const dawn=new Date("2026-09-24T04:00:00Z"); // 05:00 in Algeria.
 const arrivals=engine.recordsAtStation([night],"bechar","arrival","2026-09-24",config,dawn);
 assert(arrivals.some(e=>e.serviceDate==="2026-09-23"&&e.remaining===2400),"Yesterday's overnight service arrives this morning");
 assert.equal(engine.countdown(3661),"01:01:01");
-console.log("DZ Rail board tests PASS: 106 transcribed services, 169 stations, 32 routes, both-direction airport and eastern commuter timetables, Friday-only schedules, distinct arrival/departure, source isolation, overnight rollover and countdown.");
+console.log("DZ Rail board tests PASS: 131 transcribed services, 169 stations, 34 routes, both-direction airport and eastern commuter timetables, Friday-only schedules, distinct arrival/departure, source isolation, overnight rollover and countdown.");
