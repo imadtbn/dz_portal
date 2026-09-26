@@ -72,7 +72,7 @@
       "id": "alger-oued-aissa-suburban",
       "path": "assets/train-schedules/suburban/alger-oued-aissa.png",
       "category": "suburban",
-      "alt": "الخط الجزائر - واد عيسى",
+      "alt": "الخط آغا / الثنية - واد عيسى",
       "route_ids": [
         "alger-oued-aissi",
         "thenia-oued-aissi"
@@ -86,7 +86,7 @@
       "id": "oued-aissa-alger-suburban",
       "path": "assets/train-schedules/suburban/oued-aissa-alger.png",
       "category": "suburban",
-      "alt": "واد عيسى - الجزائر",
+      "alt": "واد عيسى - آغا / الثنية",
       "route_ids": [
         "oued-aissi-alger",
         "oued-aissi-thenia"
@@ -129,7 +129,10 @@
       "category": "suburban",
       "alt": "زرالدة- الثنية - زرالدة",
       "route_ids": [
-        "zeralda-thenia"
+        "zeralda-thenia",
+        "thenia-zeralda",
+        "zeralda-reghaia",
+        "reghaia-zeralda"
       ],
       "source_page": "sectors/sntf.html",
       "issuing_authority": "SNTF",
