@@ -1,5 +1,5 @@
 import assert from "node:assert/strict";
-import {readFileSync} from "node:fs";
+import {readFileSync,existsSync} from "node:fs";
 import {lockGeo,matchStation,buildReview,mergeApprovedStations} from "./lib/sntf-reconcile.mjs";
 const read=p=>JSON.parse(readFileSync("assets/data/sntf/"+p,"utf8"));
 const stations=read("stations.json").stations,routes=read("routes.json").routes;
@@ -40,9 +40,9 @@ assert.throws(()=>mergeApprovedStations(stations,[{...approved,approved:false,ac
 assert.throws(()=>mergeApprovedStations(stations,[{...approved,action:"link_alias",station_id:"thenia",input_name:"OUED AISSI"}]),/alias another station/);
 assert.deepEqual(stations.map(s=>JSON.stringify(lockGeo(s))),stations.map(s=>oldGeo.get(s.id)),"Merge may not mutate input");
 const html=readFileSync("sectors/sntf.html","utf8");
-assert.equal(gallery.images.length,31);
+assert.equal(gallery.images.length,29);
 assert.equal(new Set(gallery.images.map(i=>i.id)).size,gallery.images.length);
-assert(gallery.images.every(i=>html.includes(i.path)&&i.status==="reference_image_unverified"&&i.source_page==="sectors/sntf.html"),"Every indexed gallery image must be in SNTF page and marked unverified");
+assert(gallery.images.every(i=>html.includes(i.path)&&existsSync(i.path)&&i.status==="reference_image_unverified"&&i.source_page==="sectors/sntf.html"),"Every indexed gallery image must exist in repository, be referenced on SNTF page and be marked unverified");
 assert(gallery.images.some(i=>i.route_ids.includes("alger-thenia")),"Gallery must index Alger-Thenia timetable");
 assert.equal(stations.filter(s=>s.geo_verified).length,saved.summary.existing_verified_coordinates_preserved,"Verified coordinate count unchanged since source review");
 console.log("SNTF source ingestion tests PASS:",saved.summary.archived_trip_candidates,"historical candidates,",gallery.images.length,"gallery images, and",geoLock.stations.length,"locked verified Google Maps pins protected.");
