@@ -247,22 +247,25 @@ function locate(){
   if(state.map){if(state.userMarker)state.userMarker.remove();state.userMarker=window.L.circleMarker([state.user.lat,state.user.lon],{radius:9,color:"#1854a5",fillOpacity:.75}).addTo(state.map).bindPopup("موقعك التقريبي")}
  },error=>{state.busy=false;$("location-status").textContent=error.code===1?"لم يُمنح إذن الموقع. اختر محطة يدويًا.":"تعذر تحديد الموقع؛ جرّب مجددًا أو اختر محطة."},{enableHighAccuracy:false,timeout:12000,maximumAge:120000});
 }
-function setNetworkFilters(lineId="",routeId="",selectFirst=false){
- const route=routeId?routeFor(routeId):null;
- state.route=route?canonicalRouteId(route):"";
- state.line=route?route.line_id:(lineFor(lineId)?lineId:"");
- $("line-filter").value=state.line;
+function setCategoryFilters(categoryId="",routeId="",selectFirst=false){
+ const supplied=routeId?routeFor(routeId):null;
+ const route=supplied?routeFor(canonicalRouteId(supplied)):null;
+ const validCategory=railwayCategories.some(item=>item.id===categoryId)?categoryId:"";
+ state.route=route?.id||"";
+ state.category=route?.category||validCategory;
+ $("category-filter").value=state.category;
  fillRouteOptions();
  $("route-filter").value=state.route;
  state.boardLimit={departure:20,arrival:20};
  routeStations();
  if(selectFirst&&!state.selected){
-  const routeIds=state.route?[state.route]:state.line?(lineFor(state.line)?.route_ids||[]):[];
-  const first=state.trips.find(t=>t.data_status==="source_transcribed"&&routeIds.includes(t.route_id))?.stop_times?.[0]?.station_id;
-  const fallback=first||(state.route?routeFor(state.route)?.from:state.line?lineRoutes(lineFor(state.line),state.routes)[0]?.from:null);
-  if(fallback&&station(fallback))chooseStation(fallback,{focusMap:true});
+  const options=state.route?[routeFor(state.route)]:categoryRoutes(state.category,state.routes);
+  const ids=new Set(options.map(r=>r.id));
+  const first=state.trips.find(t=>t.data_status==="source_transcribed"&&ids.has(t.route_id))?.stop_times?.[0]?.station_id;
+  const fallback=first||options[0]?.from;
+  if(fallback&&station(fallback)&&allowedOnRoute(station(fallback)))chooseStation(fallback,{focusMap:true});
  }
- if(state.map&&(state.line||state.route)){
+ if(state.map&&(state.category||state.route)){
   const points=state.stations.filter(x=>allowedOnRoute(x)&&verifiedGeo(x));
   if(points.length)state.map.fitBounds(points.map(x=>[x.lat,x.lon]),{padding:[24,24],maxZoom:10});
  }
@@ -271,23 +274,27 @@ async function start(){
  try{
  const [stations,routes,lines,trips,calendars,sources,holidays]=await Promise.all([get("stations","stations"),get("routes","routes"),get("lines","lines"),get("trips","trips"),get("calendars","calendars"),get("sources","sources"),get("holidays","dates")]);
  Object.assign(state,{stations:stations.stations,routes:routes.routes,lines:lines.lines,trips:trips.trips,calendars:calendars.calendars,exceptions:calendars.exceptions||[],sources:sources.sources,holidays:holidays.dates,holidaysComplete:holidays.complete===true});
- $("line-filter").append(...state.lines.map(l=>new Option(l.name,l.id)));
  $("holiday-note").textContent=state.holidaysComplete?"":" تواريخ الأعياد غير مكتملة، لذا تحتاج نتائج الرحلات المرتبطة بالأعياد إلى مراجعة.";
  const params=new URL(location.href).searchParams;
- const requestedRoute=params.get("route"),requestedLine=params.get("line");
- setNetworkFilters(requestedLine,requestedRoute,false);
+ const oldLine=lineFor(params.get("line"));
+ const hashCategory=railwayCategories.find(c=>"#"+c.anchor===location.hash)?.id;
+ const selectedCategory=params.get("category")||oldLine?.category||hashCategory||"";
+ const oldLineRoutes=oldLine?lineRoutes(oldLine,state.routes):[];
+ // Old ?line= links still work: a single-route line opens directly; multi-route lines open their category.
+ const selectedRoute=params.get("route")||(oldLineRoutes.length===1?oldLineRoutes[0].id:"");
+ setCategoryFilters(selectedCategory,selectedRoute,false);
  const chosen=params.get("station");
  if(chosen&&station(chosen)&&allowedOnRoute(station(chosen)))chooseStation(chosen);
- else if(!state.line&&!state.route&&station("zeralda"))chooseStation("zeralda");
- else setNetworkFilters(state.line,state.route,true);
+ else if(!state.category&&!state.route&&station("zeralda"))chooseStation("zeralda");
+ else setCategoryFilters(state.category,state.route,true);
  await initMap();tick();
  }catch(error){$("map").innerHTML='<div class="empty">تعذر تحميل قاعدة البيانات. أعد تحميل الصفحة أو افتح <a href="sntf.html">الجداول المصورة</a>.</div>';$("location-status").textContent=error.message;console.error("DZ Rail:",error)}
 }
 $("station").addEventListener("change",e=>{if(e.target.value)chooseStation(e.target.value,{focusMap:true})});
 $("station-search").addEventListener("input",listStations);
 $("station-results").addEventListener("click",e=>{const button=e.target.closest("[data-id]");if(button)chooseStation(button.dataset.id,{focusMap:true})});
-$("line-filter").addEventListener("change",e=>setNetworkFilters(e.target.value,"",true));
-$("route-filter").addEventListener("change",e=>setNetworkFilters(state.line,e.target.value,true));
+$("category-filter").addEventListener("change",e=>setCategoryFilters(e.target.value,"",true));
+$("route-filter").addEventListener("change",e=>setCategoryFilters(state.category,e.target.value,true));
 $("direction").addEventListener("change",()=>{state.boardLimit={departure:20,arrival:20};renderBoards()});
 $("include-drafts").addEventListener("change",()=>{state.boardLimit={departure:20,arrival:20};fillDirections();fillRouteCatalog();renderBoards()});
 for(const kind of ["departure","arrival"]){
@@ -300,15 +307,13 @@ for(const kind of ["departure","arrival"]){
 $("station-services").addEventListener("click",event=>{
  const trigger=event.target.closest("[data-station-route]");
  if(!trigger)return;
- setNetworkFilters("",trigger.dataset.stationRoute,true);
+ setCategoryFilters("",trigger.dataset.stationRoute,true);
  $("station-board").scrollIntoView({behavior:"smooth",block:"start"});
 });
 $("route-catalog").addEventListener("click",event=>{
- const lineButton=event.target.closest("[data-line]");
- if(lineButton){setNetworkFilters(lineButton.dataset.line,"",true);return}
  const trigger=event.target.closest("[data-route]");
  if(!trigger)return;
- setNetworkFilters("",trigger.dataset.route,true);
+ setCategoryFilters("",trigger.dataset.route,true);
  $("station-board").scrollIntoView({behavior:"smooth",block:"start"});
 });
 $("route-catalog").addEventListener("change",event=>{
