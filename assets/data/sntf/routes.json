@@ -264,12 +264,7 @@
       "source": "gallery-agha-airport-2026-09-19",
       "schedule_image": "../assets/train-schedules/suburban/alger-airoport-alger.png",
       "schedule_status": "source_transcribed",
-      "stops": [
-        "agha",
-        "el_harrach",
-        "bab_ezzouar",
-        "airport"
-      ],
+      "stops": ["agha", "el_harrach", "bab_ezzouar", "airport"],
       "stops_status": "source_image_transcribed",
       "editor_note": "معرف قديم alger-airport احتُفظ به، لكن جدول SNTF المنشور ينطلق من آغا.",
       "line_id": "agha-airport"
@@ -503,6 +498,51 @@
       "stops_status": "intermediate_stops_pending_official_transcription",
       "editor_note": "المحطتان الطرفيتان مثبتتان في مرجع الصورة؛ قائمة المحطات الوسيطة غير مدخلة بعد، فلا تُعرض كمحطات توقف فعلية."
     },
+
+    {
+      "id": "alger-tunis",
+      "from": "alger",
+      "to": "tunis",
+      "category": "international",
+      "name": "الجزائر ← تونس ",
+      "source": "user-alger-tunis-2026-09-19",
+      "schedule_image": "../assets/train-schedules/international/alger-tunis.png",
+      "schedule_status": "source_transcribed",
+      "stops": [
+        "annaba",
+        "souk_el_had",
+        "sidi_abdellah",
+        "ghardimaou",
+        "Jendouba",
+        "beja",
+        "tunis"
+      ],
+      "stops_status": "source_image_transcribed",
+      "line_id": "alger-tunis"
+    },
+
+    {
+      "id": "tunis-alger",
+      "from": "tunis",
+      "to": "alger",
+      "category": "international",
+      "name": "تونس ← الجزائر ",
+      "source": "user-alger-tunis-2026-09-19",
+      "schedule_image": "../assets/train-schedules/international/alger-tunis.png",
+      "schedule_status": "source_transcribed",
+      "stops": [
+        "tunis",
+        "beja",
+        "Jendouba",
+        "ghardimaou",
+        "sidi_abdellah",
+        "souk_el_had",
+        "annaba"
+      ],
+      "stops_status": "source_image_transcribed",
+      "line_id": "tunis-alger"
+    },
+
     {
       "id": "zeralda-agha",
       "from": "zeralda",
@@ -539,12 +579,7 @@
       "source": "gallery-agha-airport-2026-09-19",
       "schedule_image": "../assets/train-schedules/suburban/alger-airoport-alger.png",
       "schedule_status": "source_transcribed",
-      "stops": [
-        "airport",
-        "bab_ezzouar",
-        "el_harrach",
-        "agha"
-      ],
+      "stops": ["airport", "bab_ezzouar", "el_harrach", "agha"],
       "stops_status": "source_image_transcribed",
       "line_id": "agha-airport"
     },
