@@ -1,6 +1,6 @@
 {
-  "version": 3,
-  "updated": "2026-09-26",
+  "version": 4,
+  "updated": "2026-09-27",
   "calendars": [
     {
       "id": "daily",
@@ -69,6 +69,36 @@
         "saturday": false
       },
       "note": "رمز [2] في جداول SNTF المصورة؛ لا تشمل الأعياد تلقائيًا."
+    },
+    {
+      "id": "sntf_intl_annaba_sun_tue_thu",
+      "label": "عنابة ← تونس: الأحد والثلاثاء والخميس",
+      "rule": "custom_days",
+      "days": {
+        "sunday": true,
+        "monday": false,
+        "tuesday": true,
+        "wednesday": false,
+        "thursday": true,
+        "friday": false,
+        "saturday": false
+      },
+      "note": "أيام التشغيل كما وردت في صورة الجدول الرسمي للقطار الدولي المرفقة بالمشروع؛ لا تُفترض رحلات أيام السبت."
+    },
+    {
+      "id": "sntf_intl_tunis_mon_wed_fri",
+      "label": "تونس ← عنابة: الإثنين والأربعاء والجمعة",
+      "rule": "custom_days",
+      "days": {
+        "sunday": false,
+        "monday": true,
+        "tuesday": false,
+        "wednesday": true,
+        "thursday": false,
+        "friday": true,
+        "saturday": false
+      },
+      "note": "أيام التشغيل كما وردت في صورة الجدول الرسمي للقطار الدولي المرفقة بالمشروع؛ لا تُفترض رحلات أيام السبت."
     }
   ],
   "exceptions": []
