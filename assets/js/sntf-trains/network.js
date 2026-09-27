@@ -1,4 +1,13 @@
 // Canonical, source-aware SNTF line/route presentation. Timetable stops come only from published stop_times.
+// Railway categories mirror the five official timetable sections in sectors/sntf.html.
+export const railwayCategories=Object.freeze([
+ {id:"suburban",label:"ضاحية الجزائر",anchor:"suburban"},
+ {id:"eastern",label:"الخطوط الجهوية الشرقية",anchor:"eastern-regional"},
+ {id:"western",label:"الخطوط الجهوية الغربية",anchor:"western-regional"},
+ {id:"sahara",label:"الصحراء والهضاب العليا",anchor:"sahara-plateau-regional"},
+ {id:"international",label:"الخط الدولي",anchor:"international"}
+]);
+export const categoryRoutes=(category,routes)=>routes.filter(r=>!r.alias_of&&(!category||r.category===category));
 export const canonicalRouteId = route => route.alias_of || route.id;
 export const publishedTrips = trips => trips.filter(t => t.data_status === "source_transcribed" || t.data_status === "verified");
 export function routeTrips(route, trips, includeDrafts = false) {
@@ -64,4 +73,19 @@ export function eligibleStationIds(lineId,routeId,lines,routes,trips){
   else {ids.add(r.from);ids.add(r.to);}
  }
  return ids;
+}
+
+export function eligibleStationIdsByCategory(category,routeId,lines,routes,trips){
+ if(routeId){
+  const route=routes.find(r=>r.id===routeId);
+  if(!route||(category&&route.category!==category))return new Set();
+  return eligibleStationIds("",canonicalRouteId(route),lines,routes,trips);
+ }
+ if(!category)return null; // No filter: all registered stations remain available.
+ const stops=new Set();
+ for(const line of lines.filter(line=>line.category===category)){
+  const ids=eligibleStationIds(line.id,"",lines,routes,trips);
+  if(ids)for(const id of ids)stops.add(id);
+ }
+ return stops;
 }
