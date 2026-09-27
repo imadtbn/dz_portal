@@ -60,7 +60,7 @@ for(const cat of network.railwayCategories){
  assert.equal(page.get("route-filter").disabled,false);
  assert.equal(page.get("category-schedules").href,"sntf.html#"+cat.anchor,"Category gallery anchor must match the official reference section");
  assert(!page.get("category-schedules").hidden);
- assert(!page.get("route-catalog").innerHTML.includes("data-route=\\\"affroun-alger\\\"")||cat.id==="suburban","Unrelated route cards must not be displayed");
+ assert(!page.get("route-catalog").innerHTML.includes('data-route="affroun-alger"')||cat.id==="suburban","Unrelated category cannot show Affroun route");
 }
 page.selectCategory("eastern");
 page.selectRoute("alger-bejaia");
