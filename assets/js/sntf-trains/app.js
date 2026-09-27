@@ -183,8 +183,9 @@ function fillRouteCatalog(){
   .filter(g=>g.routes.length);
  $("route-count").textContent=groups.length+" خط · "+groups.reduce((n,g)=>n+g.routes.length,0)+" مسار";
  $("route-catalog").innerHTML=groups.map(g=>{
-  const stats=lineSummary(g.line,state.routes,state.trips);
-  const label=stats.has_timetable?stats.train_count+' قطار مسجل · '+stats.served_station_ids.length+' محطة توقف مدخلة':'مواقيت وتوقفات هذا الخط قيد النقل';
+  const trainCount=g.routes.reduce((sum,route)=>sum+routeTrips(route,state.trips).length,0);
+  const served=new Set(g.routes.flatMap(route=>routeStopSummary(route,state.trips).known_stops.map(stop=>stop.station_id)));
+  const label=trainCount?trainCount+' قطار مسجل · '+served.size+' محطة توقف مدخلة':'مواقيت وتوقفات هذا الخط قيد النقل';
   const title='<div class="line-header"><div><span class="eyebrow">'+esc(categoryLabel[g.line.category]||g.line.category)+'</span><h3>'+esc(g.line.name)+'</h3><p>'+esc(label)+'</p></div><span class="tag">'+g.routes.length+' مسار</span></div>';
   return '<section class="line-group" aria-label="'+esc(g.line.name)+'">'+title+'<div class="route-grid">'+g.routes.map(routeCard).join("")+'</div></section>';
  }).join("");
@@ -254,6 +255,9 @@ function setCategoryFilters(categoryId="",routeId="",selectFirst=false){
  state.route=route?.id||"";
  state.category=route?.category||validCategory;
  $("category-filter").value=state.category;
+ const gallery=railwayCategories.find(item=>item.id===state.category);
+ $("category-schedules").hidden=!gallery;
+ $("category-schedules").href=gallery?"sntf.html#"+gallery.anchor:"sntf.html";
  fillRouteOptions();
  $("route-filter").value=state.route;
  state.boardLimit={departure:20,arrival:20};
