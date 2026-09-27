@@ -1,0 +1,92 @@
+import assert from "node:assert/strict";
+import {readFileSync} from "node:fs";
+const loadJSON=name=>JSON.parse(readFileSync("assets/data/sntf/"+name+".json","utf8"));
+const loadModule=async path=>import("data:text/javascript;base64,"+Buffer.from(readFileSync(path,"utf8")).toString("base64"));
+const engine=await loadModule("assets/js/sntf-trains/engine.js");
+const network=await loadModule("assets/js/sntf-trains/network.js");
+const engineNames=["dayParts","dayISO","recordsAtStation","eligible","formatTime","countdown","classify","mins"];
+const networkNames=["railwayCategories","categoryRoutes","canonicalRouteId","routeTrips","routeStopSummary","lineRoutes","lineSummary","stationLineServices","eligibleStationIdsByCategory"];
+const src=readFileSync("assets/js/sntf-trains/app.js","utf8")
+ .replace(/^import [^\n]+\n/gm,"")
+ .replaceAll("import.meta.url",'"https://example.invalid/assets/js/sntf-trains/app.js"')
+ .replace('boardTab("departures");tick();setInterval(tick,1000);start();','boardTab("departures");tick();return start().then(()=>state);');
+assert(src.includes("return start().then(()=>state)"),"The UI test must await application initialization");
+const run=new Function("document","window","location","URL","fetch","Option","setInterval","console","Intl",...engineNames,...networkNames,src);
+class FakeElement{
+ constructor(id){this.id=id;this.listeners={};this.value="";this.checked=false;this.children=[];this.disabled=false;this.hidden=false;this.innerHTML="";this.textContent="";this.label="";this.dataset={};}
+ addEventListener(event,callback){this.listeners[event]=callback}
+ append(...children){this.children.push(...children)}
+ replaceChildren(...children){this.children=children;this.value=children[0]?.value||""}
+ setAttribute(){}
+ scrollIntoView(){}
+ focus(){}
+ remove(){}
+}
+class FakeOption{constructor(label,value){this.label=label;this.value=value??""}}
+const example="https://example.invalid/dz_portal/sectors/sntf-trains.html";
+async function boot(path=""){
+ const elements=new Map(),get=id=>{if(!elements.has(id))elements.set(id,new FakeElement(id));return elements.get(id)};
+ const document={getElementById:get,querySelectorAll:()=>[],createElement:tag=>new FakeElement(tag)};
+ const map={setView(){return this},fitBounds(){return this},getZoom(){return 6}};
+ const window={matchMedia:()=>({matches:false,addEventListener(){}}),L:{
+  map:()=>map,tileLayer:()=>({addTo(){}}),
+  circleMarker:()=>({addTo(){return this},bindPopup(){return this},on(){return this},remove(){}})
+ }};
+ const target=new URL(example+path),location={href:target.href,hash:target.hash};
+ const fetch=async url=>{
+  const filename=new URL(String(url)).pathname.split("/").at(-1);
+  assert(["stations.json","routes.json","lines.json","trips.json","calendars.json","sources.json","holidays.json"].includes(filename),"Unexpected remote request "+filename);
+  return {ok:true,json:async()=>loadJSON(filename.slice(0,-5))};
+ };
+ const errors=[];
+ const state=await run(document,window,location,URL,fetch,FakeOption,()=>{},
+  {warn:(...parts)=>errors.push(parts.join(" ")),error:(...parts)=>errors.push(parts.join(" "))},Intl,
+  ...engineNames.map(k=>engine[k]),...networkNames.map(k=>network[k]));
+ assert.deepEqual(errors,[],"The app must start and filter without JavaScript errors");
+ return {state,get,selectCategory(value){get("category-filter").listeners.change({target:{value}})},selectRoute(value){get("route-filter").listeners.change({target:{value}})},
+  optionCount:()=>get("route-filter").children.slice(1).reduce((sum,group)=>sum+group.children.length,0)};
+}
+const page=await boot("?station=zeralda");
+assert.equal(page.state.selected,"zeralda");
+assert.equal(page.state.category,"");
+assert.equal(page.get("route-filter").disabled,true,"Route selector waits for railway category");
+assert.equal(page.get("station").children.length-1,169,"All 169 stations remain accessible before filtering");
+const totals={suburban:19,eastern:5,western:4,sahara:4,international:1};
+for(const cat of network.railwayCategories){
+ page.selectCategory(cat.id);
+ assert.equal(page.state.category,cat.id);
+ assert.equal(page.state.route,"","Changing railway type clears the previous route");
+ assert.equal(page.optionCount(),totals[cat.id],"Only routes from the chosen type should be offered");
+ assert.equal(page.get("route-filter").disabled,false);
+ assert.equal(page.get("category-schedules").href,"sntf.html#"+cat.anchor,"Category gallery anchor must match the official reference section");
+ assert(!page.get("category-schedules").hidden);
+ assert(!page.get("route-catalog").innerHTML.includes("data-route=\\\"affroun-alger\\\"")||cat.id==="suburban","Unrelated route cards must not be displayed");
+}
+page.selectCategory("eastern");
+page.selectRoute("alger-bejaia");
+assert.equal(page.state.category,"eastern");
+assert.equal(page.state.route,"alger-bejaia");
+assert.equal(page.get("station").children.length-1,2,"No invented intermediate stations for a schedule pending transcription");
+page.selectCategory("western");
+assert.equal(page.state.route,"");
+assert.equal(page.optionCount(),4);
+page.selectCategory("suburban");
+page.selectRoute("affroun-alger");
+assert.equal(page.state.route,"affroun-alger");
+assert.equal(page.get("station").children.length-1,16,"The reverse Affroun route has 16 real stopping stations");
+assert(page.get("route-catalog").innerHTML.includes("19 رحلة منقولة"),"The route card has 19 published services, not the grouped two-way total");
+page.selectCategory("");
+assert.equal(page.get("route-filter").disabled,true);
+assert.equal(page.get("station").children.length-1,169);
+assert.equal(page.get("category-schedules").hidden,true);
+const linked=await boot("?route=affroun-alger&station=el_affroun");
+assert.equal(linked.state.category,"suburban","Direct links infer their railway category");
+assert.equal(linked.state.route,"affroun-alger");
+assert.equal(linked.state.selected,"el_affroun");
+const old=await boot("?line=alger-bejaia");
+assert.equal(old.state.category,"eastern","Legacy named-line deep links map to the new category");
+assert.equal(old.state.route,"alger-bejaia","Single-route legacy links retain route selection");
+const alias=await boot("?route=zeralda-alger");
+assert.equal(alias.state.route,"zeralda-agha","Legacy route aliases resolve to a single canonical direction");
+assert.equal(alias.state.category,"suburban");
+console.log("SNTF category UI PASS: five types, dependent grouped routes, gallery anchors, genuine station filters, reset and deep-link compatibility.");
