@@ -71,13 +71,21 @@
                 <div class="map-filters">
                     <label for="station-search">ابحث عن محطة</label><input id="station-search" type="search"
                         autocomplete="off" placeholder="اسم المحطة بالعربية أو الفرنسية">
-                    <label for="line-filter">الخط الحديدي</label><select id="line-filter" aria-describedby="line-filter-help">
-                        <option value="">جميع الخطوط</option>
+                    <label for="category-filter">نوع الخط الحديدي</label>
+                    <select id="category-filter" aria-describedby="category-filter-help">
+                        <option value="">جميع أنواع الخطوط</option>
+                        <option value="suburban">ضاحية الجزائر</option>
+                        <option value="eastern">الخطوط الجهوية الشرقية</option>
+                        <option value="western">الخطوط الجهوية الغربية</option>
+                        <option value="sahara">الصحراء والهضاب العليا</option>
+                        <option value="international">الخط الدولي</option>
                     </select>
-                    <small id="line-filter-help" class="filter-hint">تُجمع الاتجاهات والرحلات القصيرة ضمن خط واحد، دون تكرار القطار.</small>
-                    <label for="route-filter">المسار والاتجاه</label><select id="route-filter">
-                        <option value="">جميع المسارات</option>
+                    <small id="category-filter-help" class="filter-hint">اختر النوع لتظهر المسارات والاتجاهات الخاصة به.</small>
+                    <label for="route-filter">المسار والاتجاه</label>
+                    <select id="route-filter" aria-describedby="route-filter-help">
+                        <option value="">جميع المسارات والاتجاهات</option>
                     </select>
+                    <small id="route-filter-help" class="filter-hint" role="status" aria-live="polite">اختر نوع الخط لتصفية المسارات المتاحة.</small>
                 </div>
                 <div id="map" class="map" aria-label="خريطة تفاعلية لمحطات القطارات" role="region">
                     <div class="empty">يجري تجهيز الخريطة…</div>
