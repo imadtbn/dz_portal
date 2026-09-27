@@ -11,6 +11,7 @@ const lineFor=id=>state.lines.find(l=>l.id===id);
 const canonical=id=>canonicalRouteId(routeFor(id)||{id});
 const categoryLabel=Object.fromEntries(railwayCategories.map(category=>[category.id,category.label]));
 const serviceLabel={daily:"كل يوم",friday_holiday:"الجمعة والأعياد",weekday_not_friday:"عدا الجمعة والأعياد",except_friday:"عدا الجمعة",friday_only:"الجمعة فقط"};
+const serviceName=id=>state.calendars.find(c=>c.id===id)?.label||serviceLabel[id]||id;
 const verifiedGeo=s=>s.geo_verified===true&&Number.isFinite(s.lat)&&Number.isFinite(s.lon);
 const editableTrips=()=>eligible(state.trips,$("include-drafts").checked).filter(t=>state.route?t.route_id===canonical(state.route):!state.category||routeFor(t.route_id)?.category===state.category);
 async function get(name,key){const response=await fetch(new URL(name+".json",dataRoot),{cache:"no-cache"});if(!response.ok)throw Error(name+": HTTP "+response.status);const data=await response.json();if(!Array.isArray(data[key]))throw Error(name+": بيانات غير صالحة");return data}
@@ -120,7 +121,7 @@ function eventHtml(event,kind){
  const subtitle=prevNext?(kind==="departure"?"المحطة التالية: ":"المحطة السابقة: ")+name(prevNext):"";
  const source=state.sources.find(s=>s.id===t.source_id);
  const link=route?.schedule_image&&/^\.\.\/assets\/train-schedules\//.test(route.schedule_image)?'<a class="photo-source" href="'+esc(route.schedule_image)+'" target="_blank" rel="noopener noreferrer">'+(route.schedule_image.endsWith('.svg')?'عرض إعادة تنسيق الجدول ↗':'عرض صورة الجدول الرسمي ↗')+'</a>':source?.url?.startsWith('https://')?'<a class="photo-source" href="'+esc(source.url)+'" target="_blank" rel="noopener noreferrer">مصدر المواقيت ↗</a>':'';
- return '<article class="event '+(classify(t)==="draft"?"draft":"")+'"><div class="event-top"><div><h4>'+esc(kind==="departure"?"إلى "+name(other):"من "+name(other))+'</h4><span class="minor">'+esc(route?.name||"")+'</span></div><time dir="ltr">'+formatTime(time)+'</time></div><div class="event-meta"><span class="tag">رقم القطار: '+esc(t.train_number||"غير محدد")+'</span><span class="tag">'+esc(serviceLabel[t.service_id]||t.service_id)+'</span>'+statusBadge(t)+dateShown+'</div><p>'+esc(subtitle)+'</p><p>'+(kind==="departure"?"المتبقي للمغادرة: ":"المتبقي للوصول: ")+'<span class="countdown" data-target="'+event.timestamp+'" dir="ltr">'+countdown(event.remaining)+'</span></p><p class="minor">'+esc(classify(t)==="draft"?"المواعيد الحالية مسودة تحرير وليست رحلات مؤكدة.":source?.notice||"الموعد مجدول، وليس تتبعًا مباشرًا.")+'</p>'+link+details(event)+'</article>';
+ return '<article class="event '+(classify(t)==="draft"?"draft":"")+'"><div class="event-top"><div><h4>'+esc(kind==="departure"?"إلى "+name(other):"من "+name(other))+'</h4><span class="minor">'+esc(route?.name||"")+'</span></div><time dir="ltr">'+formatTime(time)+'</time></div><div class="event-meta"><span class="tag">رقم القطار: '+esc(t.train_number||"غير محدد")+'</span><span class="tag">'+esc(serviceName(t.service_id))+'</span>'+statusBadge(t)+dateShown+'</div><p>'+esc(subtitle)+'</p><p>'+(kind==="departure"?"المتبقي للمغادرة: ":"المتبقي للوصول: ")+'<span class="countdown" data-target="'+event.timestamp+'" dir="ltr">'+countdown(event.remaining)+'</span></p><p class="minor">'+esc(classify(t)==="draft"?"المواعيد الحالية مسودة تحرير وليست رحلات مؤكدة.":source?.notice||"الموعد مجدول، وليس تتبعًا مباشرًا.")+'</p>'+link+details(event)+'</article>';
 }
 function panel(kind,events){
  const el=$(kind==="departure"?"departures":"arrivals");
@@ -163,7 +164,7 @@ function tripTimeline(trip){
     '<time dir="ltr">'+esc(formatTime(stop.departure??stop.arrival))+'</time>';
   return '<li><span>'+esc(name(stop.station_id))+'</span>'+clocks+'</li>';
  }).join("");
- return '<p class="minor">القطار '+esc(trip.train_number)+' · '+esc(serviceLabel[trip.service_id]||trip.service_id)+' · '+esc(route?.name||"")+'</p><ol class="stop-list train-timeline">'+items+'</ol>';
+ return '<p class="minor">القطار '+esc(trip.train_number)+' · '+esc(serviceName(trip.service_id))+' · '+esc(route?.name||"")+'</p><ol class="stop-list train-timeline">'+items+'</ol>';
 }
 function routeCard(route){
  const summary=routeStopSummary(route,state.trips),ts=routeTrips(route,state.trips),src=state.sources.find(s=>s.id===route.source);
@@ -173,7 +174,7 @@ function routeCard(route){
  const routesStatus=ts.length?'<span class="tag">'+ts.length+' رحلة منقولة</span>':'<span class="tag warn">المواقيت والتوقفات قيد الإدخال</span>';
  const stopHtml=ts.length?'<details class="route-stops"><summary>عرض محطات التوقف المسجلة ('+summary.known_stops.length+')</summary><ol class="catalog-stops">'+stops+'</ol></details>'+corridor:
   '<p class="pending-stops">المعروف حاليًا: '+esc(name(route.from))+' ← '+esc(name(route.to))+'. لا توجد محطات وسيطة موثقة في قاعدة الرحلات لهذا المسار بعد.</p>';
- const options=ts.map(t=>'<option value="'+esc(t.trip_id)+'">'+esc(t.train_number||"غير محدد")+' · '+esc(serviceLabel[t.service_id]||t.service_id)+' · '+esc(formatTime(t.stop_times[0].departure))+' → '+esc(formatTime(t.stop_times.at(-1).arrival))+'</option>').join("");
+ const options=ts.map(t=>'<option value="'+esc(t.trip_id)+'">'+esc(t.train_number||"غير محدد")+' · '+esc(serviceName(t.service_id))+' · '+esc(formatTime(t.stop_times[0].departure))+' → '+esc(formatTime(t.stop_times.at(-1).arrival))+'</option>').join("");
  const trainSelect=ts.length?'<label class="trip-select-label" for="trip-'+esc(route.id)+'">محطات قطار محدد</label><select id="trip-'+esc(route.id)+'" data-trip-select="'+esc(route.id)+'"><option value="">اختر القطار لعرض توقفاته ومواقيته</option>'+options+'</select><div class="trip-timeline" data-trip-timeline="'+esc(route.id)+'"></div>':"";
  return '<article class="route-item" data-route-id="'+esc(route.id)+'"><div class="route-top"><span class="tag">'+esc(categoryLabel[route.category]||route.category)+'</span>'+routesStatus+'</div><h4>'+esc(route.name)+'</h4><p class="route-terminals">'+esc(name(route.from))+' ← '+esc(name(route.to))+'</p><p class="minor">'+esc(src?.name||"مصدر قيد التوثيق")+'</p>'+stopHtml+trainSelect+'<div class="route-actions"><button type="button" class="button outline route-open" data-route="'+esc(route.id)+'">فتح لوحة المسار</button>'+link+'</div></article>';
 }
