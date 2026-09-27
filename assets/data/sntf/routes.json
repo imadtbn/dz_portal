@@ -342,6 +342,63 @@
       "stops_status": "intermediate_stops_pending_official_transcription",
       "editor_note": "المحطتان الطرفيتان مثبتتان في مرجع الصورة؛ قائمة المحطات الوسيطة غير مدخلة بعد، فلا تُعرض كمحطات توقف فعلية."
     },
+
+    {
+      "id": "alger-batna",
+      "from": "alger",
+      "to": "batna",
+      "category": "eastern",
+      "name": "الجزائر ← باتنة ",
+      "source": "user-alger-batna",
+      "schedule_image": null,
+      "schedule_status": "alias_of_alger-batna",
+      "alias_of": "alger-batna",
+      "stops": [
+        "agha",
+        "boumerdes",
+        "bouira",
+        "beni_mansour",
+        "bordj_bou_arreridj",
+        "msila",
+        "barhoum",
+        "barika",
+        "seggana",
+        "ain_touta",
+        "batna"
+      ],
+      "stops_status": "source_image_transcribed",
+      "editor_note": "هذا رابط سابق للمسار نفسه؛ الرحلات الحقيقية مُدرجة تحت معرف alger-batna دون تكرار.",
+      "line_id": "alger-batna"
+    },
+
+    {
+      "id": "batna-alger",
+      "from": "batna",
+      "to": "alger",
+      "category": "eastern",
+      "name": "باتنة ← الجزائر ",
+      "source": "user-alger-batna",
+      "schedule_image": null,
+      "schedule_status": "alias_of_batna-alger",
+      "alias_of": "batna-alger",
+      "stops": [
+        "batna",
+        "ain_touta",
+        "seggana",
+        "barika",
+        "barhoum",
+        "msila",
+        "bordj_bou_arreridj",
+        "beni_mansour",
+        "bouira",
+        "boumerdes",
+        "agha"
+      ],
+      "stops_status": "source_image_transcribed",
+      "editor_note": "هذا رابط سابق للمسار نفسه؛ الرحلات الحقيقية مُدرجة تحت معرف batna-alger دون تكرار.",
+      "line_id": "alger-batna"
+    },
+
     {
       "id": "alger-annaba",
       "from": "alger",
