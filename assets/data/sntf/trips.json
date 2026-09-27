@@ -14072,6 +14072,104 @@
         }
       ],
       "editor_note": "نقل يدوي من عمود 19 في الصورة الرسمية للاتجاه العفرون ← الجزائر، ابتداء من 19 سبتمبر 2026. عند المحطات الوسيطة سُجل التوقيت المنشور نفسه للوصول والمغادرة كقيمة جدول واحدة؛ لا يُفترض توقف بزمن محدد ولا تتبع آني."
+    },
+    {
+      "trip_id": "photo-tunis-alger--daily-",
+      "route_id": "alger-tunis",
+      "train_number": "null",
+      "service_id": "daily",
+      "source_id": "gallery-tunis-alger",
+      "data_status": "source_transcribed",
+      "effective_from": "2026-06-19",
+      "station_time_kind": "published_single_time",
+      "stop_times": [
+        {
+          "station_id": "tunis",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "08:25"
+        },
+        {
+          "station_id": "beja",
+          "sequence": 2,
+          "arrival": "null",
+          "departure": "null"
+        },
+        {
+          "station_id": "Jendouba",
+          "sequence": 3,
+          "arrival": "null",
+          "departure": "null"
+        },
+        {
+          "station_id": "ghardimaou",
+          "sequence": 4,
+          "arrival": "null",
+          "departure": "null"
+        },
+        {
+          "station_id": "souk_ahras",
+          "sequence": 5,
+          "arrival": "null",
+          "departure": "null"
+        },
+        {
+          "station_id": "annaba",
+          "sequence": 6,
+          "arrival": "null",
+          "departure": "null"
+        }
+      ],
+      "editor_note": "نقل يدوي من عمود 19 في الصورة الرسمية للاتجاه العفرون ← الجزائر، ابتداء من 19 سبتمبر 2026. عند المحطات الوسيطة سُجل التوقيت المنشور نفسه للوصول والمغادرة كقيمة جدول واحدة؛ لا يُفترض توقف بزمن محدد ولا تتبع آني."
+    },
+        {
+      "trip_id": "photo-alger-tunis--daily-",
+      "route_id": "alger-tunis",
+      "train_number": "null",
+      "service_id": "daily",
+      "source_id": "gallery-alger-tunis",
+      "data_status": "source_transcribed",
+      "effective_from": "2026-06-19",
+      "station_time_kind": "published_single_time",
+      "stop_times": [
+        {
+          "station_id": "annaba",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "09:00"
+        },
+        {
+          "station_id": "souk_ahras",
+          "sequence": 2,
+          "arrival": "null",
+          "departure": "null"
+        },
+        {
+          "station_id": "ghardimaou",
+          "sequence": 3,
+          "arrival": "null",
+          "departure": "null"
+        },
+        {
+          "station_id": "Jendouba",
+          "sequence": 4,
+          "arrival": "null",
+          "departure": "null"
+        },
+        {
+          "station_id": "beja",
+          "sequence": 5,
+          "arrival": "null",
+          "departure": "null"
+        },
+        {
+          "station_id": "tunis",
+          "sequence": 6,
+          "arrival": "null",
+          "departure": "null"
+        }
+      ],
+      "editor_note": "نقل يدوي من عمود 19 في الصورة الرسمية للاتجاه العفرون ← الجزائر، ابتداء من 19 سبتمبر 2026. عند المحطات الوسيطة سُجل التوقيت المنشور نفسه للوصول والمغادرة كقيمة جدول واحدة؛ لا يُفترض توقف بزمن محدد ولا تتبع آني."
     }
   ],
   "note": "Draft entries are editable real database records, but their prior example times are not operational evidence. Dashboard labels these records as unverified and hides them from default scheduled boards until reviewed. Update stop_times/train_number/source to validate. أُضيفت 60 رحلة من 3 صور رسمية مؤرخة 19 سبتمبر 2026: 28 للمطار ذهابًا وإيابًا، و14 آغا–زرالدة، و18 الجزائر–العفرون. لم تُفترض رحلات الاتجاه العكسي للعفرون دون صورتها الصحيحة. أُدرجت 19 رحلة موثقة من صورة العفرون–الجزائر الرسمية بتاريخ 19 سبتمبر 2026، تشمل قطارات يومية وأخرى مستثناة من الجمعة وأخرى خاصة بيوم الجمعة، بمجموع 150 رحلة منقولة من صور الجداول. نسخة المعاينة SVG مشتقة من الصورة الأصلية المرفقة."
