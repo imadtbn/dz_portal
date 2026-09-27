@@ -41,7 +41,7 @@ for(const route of routes){
  if(!route.stops?.length)fail(route.stops_status!=="intermediate_stops_pending_official_transcription","Undocumented intermediate stops must be explicit "+route.id);
 }
 for(const c of calendars){
- fail(!["daily","friday_holiday","weekday_not_friday","except_friday","friday_only"].includes(c.rule),"Invalid recurrence "+c.id);
+ fail(!["daily","friday_holiday","weekday_not_friday","except_friday","friday_only","custom_days"].includes(c.rule),"Invalid recurrence "+c.id);
  if(c.start_date||c.end_date)fail(!date(c.start_date)||!date(c.end_date)||c.end_date<c.start_date,"Invalid optional calendar dates "+c.id);
 }
 for(const holiday of holidays.dates){
@@ -61,6 +61,11 @@ for(const t of trips){
  fail(t.data_status!=="pending_review"&&source?.kind==="manual-draft","Unverified manual draft must not appear as published "+t.trip_id);
  fail(!Array.isArray(t.stop_times)||t.stop_times.length<2,"Not enough stops "+t.trip_id);
  if(!Array.isArray(t.stop_times)||t.stop_times.length<2)continue;
+ if(t.time_status==="partial"){
+  fail(t.data_status!=="source_transcribed","Partial published timing must be source-transcribed: "+t.trip_id);
+  fail(!t.stop_times[0].departure,"A partial timetable needs its published first departure: "+t.trip_id);
+  fail(t.stop_times.some(stop=>stop.arrival==="null"||stop.departure==="null"),"Unknown times must be JSON null: "+t.trip_id);
+ }
  let previous=-1,sequence=0;
  for(const stop of t.stop_times){
   fail(!stationsById.has(stop.station_id),"Unknown stop "+stop.station_id);
@@ -69,7 +74,7 @@ for(const t of trips){
   const arr=stop.arrival===null?null:time(stop.arrival),dep=stop.departure===null?null:time(stop.departure);
   fail(stop.arrival!==null&&arr===null||stop.departure!==null&&dep===null,"Invalid time "+t.trip_id);
   const current=arr??dep;
-  fail((current===null&&t.data_status!=="pending_review")||(current!==null&&current<previous),"Nonmonotonic or missing published stop time "+t.trip_id);
+  fail((current===null&&t.data_status!=="pending_review"&&t.time_status!=="partial")||(current!==null&&current<previous),"Nonmonotonic or missing published stop time "+t.trip_id);
   fail(arr!==null&&dep!==null&&dep<arr,"Depart before arrival "+t.trip_id);
   previous=dep??arr??previous;
  }
