@@ -126,8 +126,8 @@
       "id": "reghaia_zi",
       "name": "رغاية صناعية",
       "name_fr": "Reghaia ZI",
-      "lat": 36.350758,
-      "lon": 3.334964,
+      "lat": 36.7338401,
+      "lon": 3.3197167,
       "geo_source": "Google Maps",
       "geo_verified": true,
       "sntf_names": ["REGHAIA IND"]
@@ -1424,13 +1424,10 @@
       "name_fr": "Ath Mansour",
       "wilaya": "Bouira",
       "sntf_names": ["ATH MANSOUR"],
-      "lat": null,
-      "lon": null,
-      "geo_source": null,
-      "geo_verified": false,
-      "station_source": "https://www.sntf.dz/annuaire_statistiques/ANNEXE_II.pdf",
-      "station_source_type": "official_network_annex",
-      "editor_note": "محطة واردة في الملحق الرسمي لشبكة SNTF؛ إحداثياتها غير محددة حتى التحقق منها يدويًا."
+      "lat": 36.335909,
+      "lon": 4.3552872,
+      "geo_source": "Google Maps",
+      "geo_verified": true
     },
     {
       "id": "oued_ali",
@@ -1452,13 +1449,10 @@
       "name_fr": "Toghza",
       "wilaya": "Bouira",
       "sntf_names": ["TOGHZA"],
-      "lat": null,
-      "lon": null,
-      "geo_source": null,
-      "geo_verified": false,
-      "station_source": "https://www.sntf.dz/annuaire_statistiques/ANNEXE_II.pdf",
-      "station_source_type": "official_network_annex",
-      "editor_note": "محطة واردة في الملحق الرسمي لشبكة SNTF؛ إحداثياتها غير محددة حتى التحقق منها يدويًا."
+      "lat": 36.3633959,
+      "lon": 4.3704081,
+      "geo_source": "Google Maps",
+      "geo_verified": true
     },
     {
       "id": "bou_medfaa",
@@ -1488,8 +1482,8 @@
       "name_fr": "Aïn Torki",
       "wilaya": "Aïn Defla",
       "sntf_names": ["AIN TORKI"],
-      "lat": null,
-      "lon": null,
+      "lat": 36.3435929,
+      "lon": 2.3842465,
       "geo_source": null,
       "geo_verified": false,
       "station_source": "https://www.sntf.dz/annuaire_statistiques/ANNEXE_II.pdf",
@@ -1680,13 +1674,10 @@
       "name_fr": "Mezloug",
       "wilaya": "Sétif",
       "sntf_names": ["MEZLOUG"],
-      "lat": null,
-      "lon": null,
-      "geo_source": null,
-      "geo_verified": false,
-      "station_source": "https://www.sntf.dz/annuaire_statistiques/ANNEXE_II.pdf",
-      "station_source_type": "official_network_annex",
-      "editor_note": "محطة واردة في الملحق الرسمي لشبكة SNTF؛ إحداثياتها غير محددة حتى التحقق منها يدويًا."
+      "lat": 36.1110437,
+      "lon": 5.345786,
+      "geo_source": "Google Maps",
+      "geo_verified": true
     },
     {
       "id": "didouche_mourad",
@@ -1736,13 +1727,10 @@
       "name_fr": "El Milia",
       "wilaya": "Jijel",
       "sntf_names": ["EL-MILIA"],
-      "lat": null,
-      "lon": null,
-      "geo_source": null,
-      "geo_verified": false,
-      "station_source": "https://www.sntf.dz/annuaire_statistiques/ANNEXE_II.pdf",
-      "station_source_type": "official_network_annex",
-      "editor_note": "محطة واردة في الملحق الرسمي لشبكة SNTF؛ إحداثياتها غير محددة حتى التحقق منها يدويًا."
+      "lat": 36.7831104,
+      "lon": 6.2579666,
+      "geo_source": "Google Maps",
+      "geo_verified": true
     },
     {
       "id": "el_anser_jijel",
@@ -1750,13 +1738,10 @@
       "name_fr": "El Anser",
       "wilaya": "Jijel",
       "sntf_names": ["EL ANCER"],
-      "lat": null,
-      "lon": null,
-      "geo_source": null,
-      "geo_verified": false,
-      "station_source": "https://www.sntf.dz/annuaire_statistiques/ANNEXE_II.pdf",
-      "station_source_type": "official_network_annex",
-      "editor_note": "محطة واردة في الملحق الرسمي لشبكة SNTF؛ إحداثياتها غير محددة حتى التحقق منها يدويًا."
+      "lat": 36.8026389,
+      "lon": 6.1529725,
+      "geo_source": "Google Maps",
+      "geo_verified": true
     },
     {
       "id": "sidi_abdelaziz",
@@ -1764,13 +1749,10 @@
       "name_fr": "Sidi Abdelaziz",
       "wilaya": "Jijel",
       "sntf_names": ["SIDI ABDELAZIZ"],
-      "lat": null,
-      "lon": null,
-      "geo_source": null,
-      "geo_verified": false,
-      "station_source": "https://www.sntf.dz/annuaire_statistiques/ANNEXE_II.pdf",
-      "station_source_type": "official_network_annex",
-      "editor_note": "محطة واردة في الملحق الرسمي لشبكة SNTF؛ إحداثياتها غير محددة حتى التحقق منها يدويًا."
+      "lat": 36.8594766,
+      "lon": 6.0603655,
+      "geo_source": "Google Maps",
+      "geo_verified": true
     },
     {
       "id": "berrahal",
@@ -1778,13 +1760,10 @@
       "name_fr": "Berrahal",
       "wilaya": "Annaba",
       "sntf_names": ["BERRAHAL"],
-      "lat": null,
-      "lon": null,
-      "geo_source": null,
-      "geo_verified": false,
-      "station_source": "https://www.sntf.dz/annuaire_statistiques/ANNEXE_II.pdf",
-      "station_source_type": "official_network_annex",
-      "editor_note": "محطة واردة في الملحق الرسمي لشبكة SNTF؛ إحداثياتها غير محددة حتى التحقق منها يدويًا."
+      "lat": 36.8314887,
+      "lon": 7.4552583,
+      "geo_source": "Google Maps",
+      "geo_verified": true
     }
   ],
   "official_station_register": {
