@@ -173,7 +173,8 @@
       "category": "eastern",
       "alt": "الجزائر باتنة الجزائر",
       "route_ids": [
-        "alger-batna"
+        "alger-batna",
+        "batna-alger"
       ],
       "source_page": "sectors/sntf.html",
       "issuing_authority": "SNTF",
@@ -373,7 +374,10 @@
       "category": "international",
       "alt": "الخط الدولي الجزائر تونس الجزائر",
       "route_ids": [
-        "alger-tunis"
+        "alger-tunis",
+        "tunis-alger",
+        "annaba-tunis",
+        "tunis-annaba"
       ],
       "source_page": "sectors/sntf.html",
       "issuing_authority": "SNTF",
