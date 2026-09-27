@@ -1267,6 +1267,24 @@
       "geo_verified": true
     },
     {
+      "id": "Jendouba",
+      "name": "جندوبة",
+      "name_fr": "Jendouba",
+      "lat": 36.5005057,
+      "lon": 8.7779157,
+      "geo_source": "Google Maps",
+      "geo_verified": true
+    },
+    {
+      "id": "beja",
+      "name": "باجة",
+      "name_fr": "beja",
+      "lat": 36.7248628,
+      "lon": 9.1909492,
+      "geo_source": "Google Maps",
+      "geo_verified": true
+    },
+    {
       "id": "sidi_bouabida",
       "name": "سيدي بوعبيدة",
       "name_fr": "Sidi Bouabida",
@@ -1626,13 +1644,10 @@
       "name_fr": "Ghardimaou",
       "wilaya": "Tunisie",
       "sntf_names": ["GHARDIMAOU"],
-      "lat": null,
-      "lon": null,
-      "geo_source": null,
-      "geo_verified": false,
-      "station_source": "https://www.sntf.dz/annuaire_statistiques/ANNEXE_II.pdf",
-      "station_source_type": "official_network_annex",
-      "editor_note": "محطة واردة في الملحق الرسمي لشبكة SNTF؛ إحداثياتها غير محددة حتى التحقق منها يدويًا."
+      "lat": 36.4476836,
+      "lon": 7.438131,
+      "geo_source": "Google Maps",
+      "geo_verified": true
     },
     {
       "id": "hadjar_soud",
