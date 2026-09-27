@@ -65,12 +65,13 @@ export function stationLineServices(stationId,lines,routes,trips){
 export function eligibleStationIds(lineId,routeId,lines,routes,trips){
  const selected=routeId?routes.filter(r=>r.id===routeId):
   lineId?routes.filter(r=>lineRoutes(lines.find(l=>l.id===lineId)||{route_ids:[]},routes).some(x=>x.id===r.id)):null;
- if(selected===null)return null; // all 169 registered stations remain searchable before filtering
+ if(selected===null)return null; // all registered stations remain searchable before filtering
  const ids=new Set();
  for(const r of selected){
   const t=routeTrips(r,trips);
-  if(t.length){for(const x of t)for(const s of x.stop_times||[])if(s.arrival!=null||s.departure!=null)ids.add(s.station_id);}
-  else {ids.add(r.from);ids.add(r.to);}
+  // Every directional service keeps its two termini selectable even when only its departure is published.
+  ids.add(r.from);ids.add(r.to);
+  if(t.length)for(const x of t)for(const stop of x.stop_times||[])if(stop.arrival!=null||stop.departure!=null)ids.add(stop.station_id);
  }
  return ids;
 }
