@@ -1,27 +1,48 @@
 import {dayParts,dayISO,recordsAtStation,eligible,formatTime,countdown,classify,mins} from "./engine.js";
-import {canonicalRouteId,routeTrips,routeStopSummary,lineRoutes,lineSummary,stationLineServices,eligibleStationIds} from "./network.js";
+import {railwayCategories,categoryRoutes,canonicalRouteId,routeTrips,routeStopSummary,lineRoutes,lineSummary,stationLineServices,eligibleStationIdsByCategory} from "./network.js";
 const dataRoot=new URL("../../data/sntf/",import.meta.url);
 const $=id=>document.getElementById(id);
 const esc=x=>String(x??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
-const state={stations:[],routes:[],lines:[],line:"",allowedStopIds:null,trips:[],calendars:[],exceptions:[],holidays:[],holidaysComplete:false,sources:[],selected:null,route:"",user:null,map:null,markers:[],userMarker:null,boardMode:"departures",boardLimit:{departure:20,arrival:20},lastMinute:"",busy:false};
+const state={stations:[],routes:[],lines:[],category:"",allowedStopIds:null,trips:[],calendars:[],exceptions:[],holidays:[],holidaysComplete:false,sources:[],selected:null,route:"",user:null,map:null,markers:[],userMarker:null,boardMode:"departures",boardLimit:{departure:20,arrival:20},lastMinute:"",busy:false};
 const station=id=>state.stations.find(s=>s.id===id);
 const name=id=>station(id)?.name||id;
 const routeFor=id=>state.routes.find(r=>r.id===id);
 const lineFor=id=>state.lines.find(l=>l.id===id);
 const canonical=id=>canonicalRouteId(routeFor(id)||{id});
-const categoryLabel={suburban:"الضواحي",western:"الغرب",eastern:"الشرق",sahara:"الصحراء والهضاب",international:"الدولي"};
+const categoryLabel=Object.fromEntries(railwayCategories.map(category=>[category.id,category.label]));
 const serviceLabel={daily:"كل يوم",friday_holiday:"الجمعة والأعياد",weekday_not_friday:"عدا الجمعة والأعياد",except_friday:"عدا الجمعة",friday_only:"الجمعة فقط"};
 const verifiedGeo=s=>s.geo_verified===true&&Number.isFinite(s.lat)&&Number.isFinite(s.lon);
-const editableTrips=()=>eligible(state.trips,$("include-drafts").checked).filter(t=>state.route?t.route_id===canonical(state.route):!state.line||lineFor(state.line)?.route_ids.includes(t.route_id));
+const editableTrips=()=>eligible(state.trips,$("include-drafts").checked).filter(t=>state.route?t.route_id===canonical(state.route):!state.category||routeFor(t.route_id)?.category===state.category);
 async function get(name,key){const response=await fetch(new URL(name+".json",dataRoot),{cache:"no-cache"});if(!response.ok)throw Error(name+": HTTP "+response.status);const data=await response.json();if(!Array.isArray(data[key]))throw Error(name+": بيانات غير صالحة");return data}
 function allowedOnRoute(s){return state.allowedStopIds===null||state.allowedStopIds.has(s.id)}
 function updateAllowedStations(){
- state.allowedStopIds=eligibleStationIds(state.line,state.route,state.lines,state.routes,state.trips);
+ state.allowedStopIds=eligibleStationIdsByCategory(state.category,state.route,state.lines,state.routes,state.trips);
 }
 function fillRouteOptions(){
- const available=state.routes.filter(r=>!r.alias_of&&(!state.line||r.line_id===state.line));
- $("route-filter").replaceChildren(new Option(state.line?"جميع مسارات هذا الخط":"جميع المسارات",""),...available.map(r=>new Option(r.name,r.id)));
- if(state.route&&available.some(r=>r.id===state.route))$("route-filter").value=state.route;
+ const select=$("route-filter"),info=$("route-filter-help");
+ if(!state.category){
+  select.replaceChildren(new Option("اختر نوع الخط أولًا",""));
+  select.disabled=true;
+  info.textContent="اختر نوع الخط لتظهر المسارات والاتجاهات المتاحة ضمنه.";
+  return;
+ }
+ select.disabled=false;
+ const filteredLines=state.lines.filter(line=>line.category===state.category);
+ const groups=filteredLines.map(line=>{
+  const options=lineRoutes(line,state.routes);
+  if(!options.length)return null;
+  const group=document.createElement("optgroup");
+  group.label=line.name;
+  group.append(...options.map(route=>{
+   const count=routeTrips(route,state.trips).length;
+   return new Option(route.name+(count?"":" · المواقيت قيد الإدخال"),route.id);
+  }));
+  return group;
+ }).filter(Boolean);
+ select.replaceChildren(new Option("جميع المسارات والاتجاهات ضمن هذا النوع",""),...groups);
+ if(state.route)select.value=state.route;
+ const count=categoryRoutes(state.category,state.routes).length;
+ info.textContent=count+" مسارًا متاحًا ضمن "+categoryLabel[state.category]+"؛ اختر اتجاهًا لعرض محطاته ومواقيته.";
 }
 function listStations(){
  const term=$("station-search").value.trim().toLocaleLowerCase("ar");
@@ -44,9 +65,14 @@ function chooseStation(id,{focusMap=false}={}){
 function fillStationLines(){
  const root=$("station-services"),count=$("station-line-count");
  if(!state.selected){count.textContent="—";root.innerHTML='<p class="minor">اختر محطة لعرض الخطوط التي يتوقف بها قطار له توقيت مدخل.</p>';return}
- const groups=stationLineServices(state.selected,state.lines,state.routes,state.trips);
+ const groups=stationLineServices(state.selected,state.lines,state.routes,state.trips)
+  .filter(group=>!state.category||lineFor(group.line_id)?.category===state.category)
+  .map(group=>{
+   const routes=group.route_services.filter(r=>!state.route||r.route_id===state.route);
+   return {...group,route_services:routes,train_count:routes.reduce((n,r)=>n+r.count,0)};
+  }).filter(group=>group.route_services.length);
  count.textContent=groups.length+" خط";
- if(!groups.length){root.innerHTML='<p class="minor">هذه المحطة مدرجة في الشبكة، لكن لا توجد لها أوقات توقف منقولة إلى القاعدة بعد. راجع الصور الرسمية إن لزم.</p>';return}
+ if(!groups.length){root.innerHTML='<p class="minor">لا توجد توقفات موثقة لهذه المحطة ضمن النوع أو المسار المحدد. يمكن تغيير المرشحات أو مراجعة الجداول المصورة.</p>';return}
  root.innerHTML=groups.map(g=>{
   const buttons=g.route_services.map(x=>'<button type="button" class="service-route" data-station-route="'+esc(x.route_id)+'">'+esc(routeFor(x.route_id)?.name||x.route_id)+' <small>'+x.count+' قطار · '+x.departures+' مغادرة · '+x.arrivals+' وصول</small></button>').join("");
   return '<div class="station-service-group"><strong>'+esc(g.line_name)+'</strong><span class="tag">'+g.train_count+' رحلة مدخلة</span><div class="service-route-list">'+buttons+'</div></div>';
@@ -152,14 +178,14 @@ function routeCard(route){
  return '<article class="route-item" data-route-id="'+esc(route.id)+'"><div class="route-top"><span class="tag">'+esc(categoryLabel[route.category]||route.category)+'</span>'+routesStatus+'</div><h4>'+esc(route.name)+'</h4><p class="route-terminals">'+esc(name(route.from))+' ← '+esc(name(route.to))+'</p><p class="minor">'+esc(src?.name||"مصدر قيد التوثيق")+'</p>'+stopHtml+trainSelect+'<div class="route-actions"><button type="button" class="button outline route-open" data-route="'+esc(route.id)+'">فتح لوحة المسار</button>'+link+'</div></article>';
 }
 function fillRouteCatalog(){
- const groups=(state.line?state.lines.filter(l=>l.id===state.line):state.lines)
+ const groups=state.lines.filter(line=>!state.category||line.category===state.category)
   .map(line=>({line,routes:lineRoutes(line,state.routes).filter(r=>!state.route||r.id===state.route)}))
   .filter(g=>g.routes.length);
  $("route-count").textContent=groups.length+" خط · "+groups.reduce((n,g)=>n+g.routes.length,0)+" مسار";
  $("route-catalog").innerHTML=groups.map(g=>{
   const stats=lineSummary(g.line,state.routes,state.trips);
   const label=stats.has_timetable?stats.train_count+' قطار مسجل · '+stats.served_station_ids.length+' محطة توقف مدخلة':'مواقيت وتوقفات هذا الخط قيد النقل';
-  const title='<div class="line-header"><div><span class="eyebrow">'+esc(categoryLabel[g.line.category]||g.line.category)+'</span><h3>'+esc(g.line.name)+'</h3><p>'+esc(label)+'</p></div><button class="button outline line-open" type="button" data-line="'+esc(g.line.id)+'">تصفية الخط</button></div>';
+  const title='<div class="line-header"><div><span class="eyebrow">'+esc(categoryLabel[g.line.category]||g.line.category)+'</span><h3>'+esc(g.line.name)+'</h3><p>'+esc(label)+'</p></div><span class="tag">'+g.routes.length+' مسار</span></div>';
   return '<section class="line-group" aria-label="'+esc(g.line.name)+'">'+title+'<div class="route-grid">'+g.routes.map(routeCard).join("")+'</div></section>';
  }).join("");
 }
