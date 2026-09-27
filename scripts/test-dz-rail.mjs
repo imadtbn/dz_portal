@@ -9,9 +9,9 @@ const config={calendars,exceptions,holidays};
 const available=engine.eligible(trips);
 const drafts=trips.filter(t=>t.data_status==="pending_review");
 const verifiedByUser=trips.filter(t=>t.data_status==="source_transcribed");
-assert.equal(available.length,150,"150 official image-transcribed journeys are visible; drafts excluded");
-assert.equal(drafts.length,9,"Keep nine editable draft journeys");
-assert.equal(verifiedByUser.length,150,"Preserve 18 baseline plus 132 newly transcribed journeys");
+assert.equal(available.length,152,"152 source-transcribed journeys are visible; drafts excluded");
+assert.equal(drafts.length,10,"Keep ten editable draft journeys");
+assert.equal(verifiedByUser.length,152,"Preserve original suburban services plus two official international departures");
 assert.equal(verifiedByUser.filter(t=>t.route_id==="zeralda-agha").length,14,"All original Zeralda–Agha timetable trips preserved");
 assert.equal(verifiedByUser.filter(t=>["alger-thenia","thenia-alger"].includes(t.route_id)&&["27","33","22","28"].includes(t.train_number)).length,4,"Preserve the four baseline Alger–Thenia gallery trains despite later timetable additions");
 assert(stations.some(s=>s.id==="rouiba"),"Rouiba station is indexed");
@@ -19,12 +19,31 @@ assert.equal(new Set(stations.map(s=>s.id)).size,stations.length,"Station IDs mu
 assert(stations.some(s=>s.id==="les_ateliers"),"Canonical station IDs used after geodata update");
 assert(routes.some(r=>r.id==="alger-thenia"&&r.stops.includes("rouiba")),"Rouiba should be visible in eastbound route");
 assert(routes.some(r=>r.id==="thenia-alger"&&r.stops.includes("rouiba")),"Rouiba should be visible in westbound route");
-assert.equal(stations.length,169,"Official PDF station inventory should include 169 distinct records");
-assert.equal(stations.filter(s=>s.geo_verified===true).length,116,"All original protected Google Maps station coordinates preserved");
-assert.equal(routes.length,34,"34 documented direction-aware routes including short turns and legacy aliases");
+assert.equal(stations.length,177,"Official PDF station inventory should include 177 distinct records");
+assert.equal(stations.filter(s=>s.geo_verified===true).length,140,"All original protected Google Maps station coordinates preserved");
+assert.equal(routes.length,38,"38 direction-aware route and legacy link records including short turns and legacy aliases");
 for(const [routeId,n] of [["alger-airport",14],["airport-agha",14],["alger-zeralda",14],["alger-affroun",18],["alger-oued-aissi",3],["thenia-oued-aissi",8],["oued-aissi-alger",3],["oued-aissi-thenia",8],["zeralda-thenia",2],["thenia-zeralda",2],["zeralda-reghaia",1],["reghaia-zeralda",1],["alger-thenia",14],["thenia-alger",13],["alger-reghaia",1],["reghaia-alger",1],["affroun-alger",19]]){
  assert.equal(verifiedByUser.filter(t=>t.route_id===routeId).length,n,routeId+" official image-transcribed trains");
 }
+const fromAnnaba=available.find(t=>t.route_id==="annaba-tunis"),fromTunis=available.find(t=>t.route_id==="tunis-annaba");
+assert(fromAnnaba&&fromTunis,"Official international services must exist in both real directions");
+assert.equal(fromAnnaba.service_id,"sntf_intl_annaba_sun_tue_thu");
+assert.equal(fromTunis.service_id,"sntf_intl_tunis_mon_wed_fri");
+assert.equal(fromAnnaba.stop_times[0].departure,"09:00");
+assert.equal(fromTunis.stop_times[0].departure,"08:25");
+for(const [day,annabaRuns,tunisRuns] of [["2026-09-27",true,false],["2026-09-28",false,true],["2026-09-29",true,false],["2026-09-30",false,true],["2026-10-01",true,false],["2026-10-02",false,true],["2026-10-03",false,false]]){
+ assert.equal(engine.runsOn(fromAnnaba,day,calendars,exceptions,holidays),annabaRuns,"Annaba origin on "+day);
+ assert.equal(engine.runsOn(fromTunis,day,calendars,exceptions,holidays),tunisRuns,"Tunis origin on "+day);
+}
+assert(fromAnnaba.stop_times.slice(1).every(stop=>stop.arrival===null&&stop.departure===null),"Do not invent international arrival or intermediate stop times");
+assert(fromTunis.stop_times.slice(1).every(stop=>stop.arrival===null&&stop.departure===null),"Unknown Tunis return arrival stays unpublished");
+const sundayIntl=engine.recordsAtStation([fromAnnaba,fromTunis],"annaba","departure","2026-09-27",config,new Date("2026-09-27T07:00:00Z"));
+assert(sundayIntl.some(event=>event.serviceDate==="2026-09-27"&&event.trip.route_id==="annaba-tunis"),"Sunday 09:00 Annaba departure shown");
+const saturdayIntl=engine.recordsAtStation([fromAnnaba,fromTunis],"annaba","departure","2026-10-03",config,new Date("2026-10-03T07:00:00Z"));
+assert(!saturdayIntl.some(event=>event.serviceDate==="2026-10-03"),"No Saturday international service");
+assert(routes.some(r=>r.id==="alger-batna"&&r.schedule_status==="timetable_pending_entry"));
+assert(routes.some(r=>r.id==="batna-alger"&&r.schedule_status==="timetable_pending_entry"));
+assert(!available.some(t=>t.route_id==="alger-batna"||t.route_id==="batna-alger"),"Do not publish Batna draft as real timetable");
 const weekday1051=available.find(t=>t.route_id==="alger-affroun"&&t.train_number==="1051"&&t.service_id==="except_friday");
 const friday1051=available.find(t=>t.route_id==="alger-affroun"&&t.train_number==="1051"&&t.service_id==="friday_only");
 assert(weekday1051&&friday1051,"Separate weekday and Friday-only train 1051 columns");
@@ -93,4 +112,4 @@ const dawn=new Date("2026-09-24T04:00:00Z"); // 05:00 in Algeria.
 const arrivals=engine.recordsAtStation([night],"bechar","arrival","2026-09-24",config,dawn);
 assert(arrivals.some(e=>e.serviceDate==="2026-09-23"&&e.remaining===2400),"Yesterday's overnight service arrives this morning");
 assert.equal(engine.countdown(3661),"01:01:01");
-console.log("DZ Rail board tests PASS: 150 transcribed services, 169 stations, 34 routes, both-direction airport and eastern commuter timetables, Friday-only schedules, distinct arrival/departure, source isolation, overnight rollover and countdown.");
+console.log("DZ Rail board tests PASS: 152 transcribed services, 177 stations, 38 routes, both-direction airport and eastern commuter timetables, Friday-only schedules, distinct arrival/departure, source isolation, overnight rollover and countdown.");
