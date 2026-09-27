@@ -1,5 +1,5 @@
 {
-  "version": 13,
+  "version": 14,
   "updated": "2026-09-27",
   "routes": [
     {
@@ -545,12 +545,12 @@
     {
       "id": "tunis-alger",
       "from": "tunis",
-      "to": "alger",
+      "to": "annaba",
       "category": "international",
-      "name": "تونس ← الجزائر ",
-      "source": "user-alger-tunis-2026-09-19",
-      "schedule_image": "../assets/train-schedules/international/alger-tunis.png",
-      "schedule_status": "source_transcribed",
+      "name": "تونس ← عنابة (معرّف قديم)",
+      "source": "gallery-intl-tunis-annaba",
+      "schedule_image": "../assets/train-schedules/international/alger-tunisia.jpg",
+      "schedule_status": "alias_of_tunis_annaba",
       "stops": [
         "tunis",
         "beja",
@@ -559,8 +559,10 @@
         "souk_ahras",
         "annaba"
       ],
-      "stops_status": "source_image_transcribed",
-      "line_id": "tunis-alger"
+      "stops_status": "source_image_corridor_partial_times",
+      "line_id": "alger-tunis",
+      "alias_of": "tunis-annaba",
+      "editor_note": "معرف روابط قديم يُحال إلى tunis-annaba دون مضاعفة الرحلات في الفهرس."
     },
     {
       "id": "zeralda-agha",
