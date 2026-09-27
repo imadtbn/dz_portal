@@ -5,11 +5,11 @@ const stations=load("stations").stations,routes=load("routes").routes,lines=load
 const networkSource=readFileSync("assets/js/sntf-trains/network.js","utf8");
 const network=await import("data:text/javascript;base64,"+Buffer.from(networkSource).toString("base64"));
 const active=network.publishedTrips(trips),routeById=new Map(routes.map(r=>[r.id,r]));
-assert.equal(stations.length,169,"No station or manually verified coordinate was lost");
+assert.equal(stations.length,177,"No station or manually verified coordinate was lost");
 assert.equal(lines.length,20,"Twenty grouped geographical lines");
-assert.equal(routes.length,34,"Preserve all 34 route IDs, including one legacy alias");
-assert.equal(routes.filter(r=>!r.alias_of).length,33,"One legacy alias must not duplicate the real route");
-assert.equal(active.length,150,"No documented train removed or duplicated");
+assert.equal(routes.length,38,"Preserve all 34 route IDs, including one legacy alias");
+assert.equal(routes.filter(r=>!r.alias_of).length,36,"One legacy alias must not duplicate the real route");
+assert.equal(active.length,152,"No documented train removed or duplicated");
 const membership=new Set();
 for(const line of lines){
  for(const route of network.lineRoutes(line,routes)){
@@ -18,8 +18,14 @@ for(const line of lines){
   assert.equal(route.line_id,line.id,"Each route belongs to its declared line");
  }
 }
-assert.equal(membership.size,33,"Every nonalias route is in a line");
-assert.equal(lines.reduce((n,line)=>n+network.lineSummary(line,routes,trips).train_count,0),150,"Line catalog must count each published train exactly once");
+assert.equal(membership.size,36,"Every nonalias route is in a line");
+assert.equal(lines.reduce((n,line)=>n+network.lineSummary(line,routes,trips).train_count,0),152,"Line catalog must count each published train exactly once");
+assert.equal(network.lineSummary(lines.find(l=>l.id==="alger-tunis"),routes,trips).train_count,2,"Only the two official Annaba/Tunis departures count as published, not the legacy draft or alias");
+const intlStops=network.eligibleStationIdsByCategory("international","annaba-tunis",lines,routes,trips);
+assert(intlStops.has("annaba")&&intlStops.has("tunis"),"Both international termini selectable with partial departure-only times");
+assert.equal(network.routeStopSummary(routeById.get("annaba-tunis"),trips).known_stops.length,1,"Only Annaba's actual published departure is known");
+assert.equal(network.routeStopSummary(routeById.get("tunis-annaba"),trips).known_stops.length,1,"Only Tunis's actual published departure is known");
+for(const direction of ["alger-batna","batna-alger"])assert.equal(network.routeStopSummary(routeById.get(direction),trips).train_count,0,"Batna directions remain pending official timetable entry");
 const affroun=network.routeStopSummary(routeById.get("affroun-alger"),trips);
 assert.equal(affroun.train_count,19,"Official reverse Affroun image retains all 19 services");
 assert.equal(affroun.known_stops.length,16,"All 16 stations have a published reverse timetable");
@@ -52,13 +58,13 @@ for(const category of network.railwayCategories){
  assert(html.includes('<option value="'+category.id+'">'+category.label+'</option>'),"Category selector label must match official timetable sections: "+category.id);
  assert(category.anchor,"Every category links to an SNTF gallery section");
 }
-const categoryCounts={suburban:19,eastern:5,western:4,sahara:4,international:1};
+const categoryCounts={suburban:19,eastern:6,western:4,sahara:4,international:3};
 for(const [category,count] of Object.entries(categoryCounts)){
  assert.equal(network.categoryRoutes(category,routes).length,count,"Only actual directions of the chosen category are available: "+category);
  assert(network.categoryRoutes(category,routes).every(r=>r.category===category&&!r.alias_of));
 }
-assert.equal(network.categoryRoutes("",routes).length,33,"All 33 canonical route choices are available across categories");
-assert.equal(network.eligibleStationIdsByCategory("","",lines,routes,trips),null,"All 169 registered stations remain selectable without a category");
+assert.equal(network.categoryRoutes("",routes).length,36,"All 36 canonical route choices are available across categories");
+assert.equal(network.eligibleStationIdsByCategory("","",lines,routes,trips),null,"All 177 registered stations remain selectable without a category");
 const easternStops=network.eligibleStationIdsByCategory("eastern","",lines,routes,trips);
 assert(easternStops.has("alger")&&easternStops.has("bejaia")&&!easternStops.has("zeralda"),"Eastern type shows only documented endpoints until intermediate stop transcription");
 const suburbanStops=network.eligibleStationIdsByCategory("suburban","",lines,routes,trips);
@@ -67,4 +73,4 @@ assert.equal(network.eligibleStationIdsByCategory("suburban","affroun-alger",lin
 assert.equal(network.eligibleStationIdsByCategory("western","affroun-alger",lines,routes,trips).size,0,"Mismatched type and route never leak stops");
 assert(app.includes('get("lines","lines")')&&app.includes("eligibleStationIdsByCategory")&&app.includes('$("category-filter")'),"Live frontend must use category-aware route and station selectors");
 assert(app.includes("routeStopSummary")&&app.includes("stationLineServices"),"The catalog and station board continue to use canonical published stop data");
-console.log("SNTF network tests PASS: 20 lines, 33 canonical routes, 150 documented trips, 169 stations, 16 Affroun reverse stops, true published station service coverage, and no alias duplication.");
+console.log("SNTF network tests PASS: 20 lines, 36 canonical routes, 152 documented trips, 177 stations, 16 Affroun reverse stops, true published station service coverage, and no alias duplication.");
