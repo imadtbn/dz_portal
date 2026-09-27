@@ -60,3 +60,10 @@
  .route-actions>*{flex:1}
  .map-filters .filter-hint{grid-column:1}
 }
+
+/* Five-category selector and matching official timetable gallery. */
+.map-filters select:disabled{background:#edf2f5;color:#6b7c88;cursor:not-allowed}
+.category-schedules{grid-column:1/-1;display:inline-flex;width:fit-content;align-items:center;min-height:36px;padding:5px 10px;border:1px solid #b8d7df;border-radius:9px;background:#f0fafb;color:#07666e;font-size:13px;font-weight:750;text-decoration:none}
+.category-schedules:hover,.category-schedules:focus-visible{background:#d6f0f1}
+.category-schedules[hidden]{display:none}
+@media(max-width:680px){.category-schedules{grid-column:1;max-width:100%;width:100%;justify-content:center}}
