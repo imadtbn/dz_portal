@@ -46,6 +46,25 @@ assert.equal(unknown.train_count,0);
 assert.equal(unknown.known_stops.length,0,"No guessed intermediate stops for national timetables pending transcription");
 assert.deepEqual([...network.eligibleStationIds("alger-bejaia","",lines,routes,trips)].sort(),["alger","bejaia"],"A pending timetable filters only to its documented endpoints");
 const html=readFileSync("sectors/sntf-trains.html","utf8"),app=readFileSync("assets/js/sntf-trains/app.js","utf8");
-for(const id of ['id="line-filter"','id="route-filter"','id="station-services"','id="route-catalog"'])assert(html.includes(id),"Missing visible line/route/stop interface: "+id);
-assert(app.includes('get("lines","lines")')&&app.includes("routeStopSummary")&&app.includes("stationLineServices"),"The interactive view uses the same canonical network data as the tests");
+for(const id of ['id="category-filter"','id="route-filter"','id="category-schedules"','id="station-services"','id="route-catalog"'])assert(html.includes(id),"Missing category, route or stop interface: "+id);
+assert(!html.includes('id="line-filter"'),"Old geographic-line dropdown must be replaced by category filter");
+for(const category of network.railwayCategories){
+ assert(html.includes('<option value="'+category.id+'">'+category.label+'</option>'),"Category selector label must match official timetable sections: "+category.id);
+ assert(category.anchor,"Every category links to an SNTF gallery section");
+}
+const categoryCounts={suburban:19,eastern:5,western:4,sahara:4,international:1};
+for(const [category,count] of Object.entries(categoryCounts)){
+ assert.equal(network.categoryRoutes(category,routes).length,count,"Only actual directions of the chosen category are available: "+category);
+ assert(network.categoryRoutes(category,routes).every(r=>r.category===category&&!r.alias_of));
+}
+assert.equal(network.categoryRoutes("",routes).length,33,"All 33 canonical route choices are available across categories");
+assert.equal(network.eligibleStationIdsByCategory("","",lines,routes,trips),null,"All 169 registered stations remain selectable without a category");
+const easternStops=network.eligibleStationIdsByCategory("eastern","",lines,routes,trips);
+assert(easternStops.has("alger")&&easternStops.has("bejaia")&&!easternStops.has("zeralda"),"Eastern type shows only documented endpoints until intermediate stop transcription");
+const suburbanStops=network.eligibleStationIdsByCategory("suburban","",lines,routes,trips);
+assert(suburbanStops.has("el_affroun")&&suburbanStops.has("zeralda")&&!suburbanStops.has("tunis"),"Suburban type includes both directions while excluding international stations");
+assert.equal(network.eligibleStationIdsByCategory("suburban","affroun-alger",lines,routes,trips).size,16,"Filtered reverse Affroun route has precisely 16 published stops");
+assert.equal(network.eligibleStationIdsByCategory("western","affroun-alger",lines,routes,trips).size,0,"Mismatched type and route never leak stops");
+assert(app.includes('get("lines","lines")')&&app.includes("eligibleStationIdsByCategory")&&app.includes('$("category-filter")'),"Live frontend must use category-aware route and station selectors");
+assert(app.includes("routeStopSummary")&&app.includes("stationLineServices"),"The catalog and station board continue to use canonical published stop data");
 console.log("SNTF network tests PASS: 20 lines, 33 canonical routes, 150 documented trips, 169 stations, 16 Affroun reverse stops, true published station service coverage, and no alias duplication.");
