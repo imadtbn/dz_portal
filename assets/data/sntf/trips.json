@@ -16101,6 +16101,1274 @@
         }
       ],
       "editor_note": "أوقات الجدول مصورة ومقروءة؛ أيام التشغيل غير مذكورة."
+    },
+    {
+      "trip_id": "photo-west-agha-oran-1001",
+      "route_id": "agha-oran",
+      "train_number": "1001",
+      "service_id": "timetable-days-unresolved",
+      "source_id": "west-out",
+      "data_status": "source_transcribed",
+      "operating_days_status": "review_required",
+      "station_time_kind": "published_departure_or_passage",
+      "stop_times": [
+        {
+          "station_id": "agha",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "05:50"
+        },
+        {
+          "station_id": "el_harrach",
+          "sequence": 2,
+          "arrival": "06:01",
+          "departure": "06:01"
+        },
+        {
+          "station_id": "blida",
+          "sequence": 3,
+          "arrival": "06:42",
+          "departure": "06:42"
+        },
+        {
+          "station_id": "el_affroun",
+          "sequence": 4,
+          "arrival": "07:05",
+          "departure": "07:05"
+        },
+        {
+          "station_id": "khemis_miliana",
+          "sequence": 5,
+          "arrival": "08:00",
+          "departure": "08:00"
+        },
+        {
+          "station_id": "arib",
+          "sequence": 6,
+          "arrival": "08:16",
+          "departure": "08:16"
+        },
+        {
+          "station_id": "ain_defla",
+          "sequence": 7,
+          "arrival": "08:26",
+          "departure": "08:26"
+        },
+        {
+          "station_id": "rouina",
+          "sequence": 8,
+          "arrival": "08:40",
+          "departure": "08:40"
+        },
+        {
+          "station_id": "el_attaf",
+          "sequence": 9,
+          "arrival": "08:53",
+          "departure": "08:53"
+        },
+        {
+          "station_id": "oued_fodda",
+          "sequence": 10,
+          "arrival": "09:06",
+          "departure": "09:06"
+        },
+        {
+          "station_id": "chlef",
+          "sequence": 11,
+          "arrival": "09:24",
+          "departure": "09:24"
+        },
+        {
+          "station_id": "boukadir",
+          "sequence": 12,
+          "arrival": "09:53",
+          "departure": "09:53"
+        },
+        {
+          "station_id": "oued_rhiou",
+          "sequence": 13,
+          "arrival": "10:09",
+          "departure": "10:09"
+        },
+        {
+          "station_id": "relizane",
+          "sequence": 14,
+          "arrival": "10:36",
+          "departure": "10:36"
+        },
+        {
+          "station_id": "mohammadia",
+          "sequence": 15,
+          "arrival": "11:09",
+          "departure": "11:09"
+        },
+        {
+          "station_id": "sig",
+          "sequence": 16,
+          "arrival": "11:28",
+          "departure": "11:28"
+        },
+        {
+          "station_id": "oued_tlelat",
+          "sequence": 17,
+          "arrival": "11:45",
+          "departure": "11:45"
+        },
+        {
+          "station_id": "oran",
+          "sequence": 18,
+          "arrival": "12:05",
+          "departure": null
+        }
+      ],
+      "editor_note": "المواقيت من صورة الجدول المرفقة."
+    },
+    {
+      "trip_id": "photo-west-agha-oran-1003",
+      "route_id": "agha-oran",
+      "train_number": "1003",
+      "service_id": "timetable-days-unresolved",
+      "source_id": "west-out",
+      "data_status": "source_transcribed",
+      "operating_days_status": "review_required",
+      "station_time_kind": "published_departure_or_passage",
+      "stop_times": [
+        {
+          "station_id": "agha",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "14:00"
+        },
+        {
+          "station_id": "el_harrach",
+          "sequence": 2,
+          "arrival": "14:11",
+          "departure": "14:11"
+        },
+        {
+          "station_id": "blida",
+          "sequence": 3,
+          "arrival": "14:50",
+          "departure": "14:50"
+        },
+        {
+          "station_id": "el_affroun",
+          "sequence": 4,
+          "arrival": "15:10",
+          "departure": "15:10"
+        },
+        {
+          "station_id": "khemis_miliana",
+          "sequence": 5,
+          "arrival": "16:02",
+          "departure": "16:02"
+        },
+        {
+          "station_id": "arib",
+          "sequence": 6,
+          "arrival": "16:16",
+          "departure": "16:16"
+        },
+        {
+          "station_id": "ain_defla",
+          "sequence": 7,
+          "arrival": "16:25",
+          "departure": "16:25"
+        },
+        {
+          "station_id": "rouina",
+          "sequence": 8,
+          "arrival": "16:38",
+          "departure": "16:38"
+        },
+        {
+          "station_id": "el_attaf",
+          "sequence": 9,
+          "arrival": "16:50",
+          "departure": "16:50"
+        },
+        {
+          "station_id": "oued_fodda",
+          "sequence": 10,
+          "arrival": "17:01",
+          "departure": "17:01"
+        },
+        {
+          "station_id": "chlef",
+          "sequence": 11,
+          "arrival": "17:18",
+          "departure": "17:18"
+        },
+        {
+          "station_id": "boukadir",
+          "sequence": 12,
+          "arrival": "17:39",
+          "departure": "17:39"
+        },
+        {
+          "station_id": "oued_rhiou",
+          "sequence": 13,
+          "arrival": "17:55",
+          "departure": "17:55"
+        },
+        {
+          "station_id": "relizane",
+          "sequence": 14,
+          "arrival": "18:32",
+          "departure": "18:32"
+        },
+        {
+          "station_id": "mohammadia",
+          "sequence": 15,
+          "arrival": "19:05",
+          "departure": "19:05"
+        },
+        {
+          "station_id": "sig",
+          "sequence": 16,
+          "arrival": "19:24",
+          "departure": "19:24"
+        },
+        {
+          "station_id": "oued_tlelat",
+          "sequence": 17,
+          "arrival": "19:41",
+          "departure": "19:41"
+        },
+        {
+          "station_id": "oran",
+          "sequence": 18,
+          "arrival": "20:01",
+          "departure": null
+        }
+      ],
+      "editor_note": "المواقيت من صورة الجدول المرفقة."
+    },
+    {
+      "trip_id": "photo-west-agha-oran-am",
+      "route_id": "agha-oran",
+      "train_number": null,
+      "service_id": "timetable-days-unresolved",
+      "source_id": "west-out",
+      "data_status": "source_transcribed",
+      "operating_days_status": "review_required",
+      "station_time_kind": "published_departure_or_passage",
+      "stop_times": [
+        {
+          "station_id": "agha",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "08:00"
+        },
+        {
+          "station_id": "blida",
+          "sequence": 2,
+          "arrival": "08:45",
+          "departure": "08:45"
+        },
+        {
+          "station_id": "ain_defla",
+          "sequence": 3,
+          "arrival": "09:59",
+          "departure": "09:59"
+        },
+        {
+          "station_id": "chlef",
+          "sequence": 4,
+          "arrival": "10:38",
+          "departure": "10:38"
+        },
+        {
+          "station_id": "oran",
+          "sequence": 5,
+          "arrival": "12:38",
+          "departure": null
+        }
+      ],
+      "editor_note": "رقم القطار من رأس الجدول؛ رمز AM/MA هو نوع الخدمة وليس رقم قطار."
+    },
+    {
+      "trip_id": "photo-west-agha-oran-1005",
+      "route_id": "agha-oran",
+      "train_number": "1005",
+      "service_id": "timetable-days-unresolved",
+      "source_id": "west-out",
+      "data_status": "source_transcribed",
+      "operating_days_status": "review_required",
+      "station_time_kind": "published_departure_or_passage",
+      "stop_times": [
+        {
+          "station_id": "agha",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "17:00"
+        },
+        {
+          "station_id": "ain_defla",
+          "sequence": 2,
+          "arrival": "18:32",
+          "departure": "18:32"
+        },
+        {
+          "station_id": "chlef",
+          "sequence": 3,
+          "arrival": "19:05",
+          "departure": "19:05"
+        },
+        {
+          "station_id": "relizane",
+          "sequence": 4,
+          "arrival": "19:53",
+          "departure": "19:53"
+        },
+        {
+          "station_id": "mohammadia",
+          "sequence": 5,
+          "arrival": "20:20",
+          "departure": "20:20"
+        },
+        {
+          "station_id": "oran",
+          "sequence": 6,
+          "arrival": "21:01",
+          "departure": null
+        }
+      ],
+      "editor_note": "المواقيت من صورة الجدول المرفقة."
+    },
+    {
+      "trip_id": "photo-west-agha-chlef-1085",
+      "route_id": "agha-chlef",
+      "train_number": "1085",
+      "service_id": "timetable-days-unresolved",
+      "source_id": "west-out",
+      "data_status": "source_transcribed",
+      "operating_days_status": "review_required",
+      "station_time_kind": "published_departure_or_passage",
+      "stop_times": [
+        {
+          "station_id": "agha",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "17:23"
+        },
+        {
+          "station_id": "el_harrach",
+          "sequence": 2,
+          "arrival": "17:36",
+          "departure": "17:36"
+        },
+        {
+          "station_id": "blida",
+          "sequence": 3,
+          "arrival": "18:15",
+          "departure": "18:15"
+        },
+        {
+          "station_id": "el_affroun",
+          "sequence": 4,
+          "arrival": "18:34",
+          "departure": "18:34"
+        },
+        {
+          "station_id": "bou_medfaa",
+          "sequence": 5,
+          "arrival": "19:12",
+          "departure": "19:12"
+        },
+        {
+          "station_id": "khemis_miliana",
+          "sequence": 6,
+          "arrival": "19:42",
+          "departure": "19:42"
+        },
+        {
+          "station_id": "ain_defla",
+          "sequence": 7,
+          "arrival": "20:02",
+          "departure": "20:02"
+        },
+        {
+          "station_id": "el_amra",
+          "sequence": 8,
+          "arrival": "20:12",
+          "departure": "20:12"
+        },
+        {
+          "station_id": "rouina",
+          "sequence": 9,
+          "arrival": "20:18",
+          "departure": "20:18"
+        },
+        {
+          "station_id": "cheik_ben_yahia",
+          "sequence": 10,
+          "arrival": "20:22",
+          "departure": "20:22"
+        },
+        {
+          "station_id": "sidi_bouabida",
+          "sequence": 11,
+          "arrival": "20:28",
+          "departure": "20:28"
+        },
+        {
+          "station_id": "el_attaf",
+          "sequence": 12,
+          "arrival": "20:33",
+          "departure": "20:33"
+        },
+        {
+          "station_id": "oued_fodda",
+          "sequence": 13,
+          "arrival": "20:44",
+          "departure": "20:44"
+        },
+        {
+          "station_id": "chlef",
+          "sequence": 14,
+          "arrival": "21:01",
+          "departure": null
+        }
+      ],
+      "editor_note": "المواقيت من صورة الجدول المرفقة."
+    },
+    {
+      "trip_id": "photo-west-khemis-chlef-1081",
+      "route_id": "khemis-chlef",
+      "train_number": "1081",
+      "service_id": "timetable-days-unresolved",
+      "source_id": "west-out",
+      "data_status": "source_transcribed",
+      "operating_days_status": "review_required",
+      "station_time_kind": "published_departure_or_passage",
+      "stop_times": [
+        {
+          "station_id": "khemis_miliana",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "05:45"
+        },
+        {
+          "station_id": "sidi_lakhdar",
+          "sequence": 2,
+          "arrival": "05:51",
+          "departure": "05:51"
+        },
+        {
+          "station_id": "arib",
+          "sequence": 3,
+          "arrival": "06:01",
+          "departure": "06:01"
+        },
+        {
+          "station_id": "ain_defla",
+          "sequence": 4,
+          "arrival": "06:10",
+          "departure": "06:10"
+        },
+        {
+          "station_id": "el_amra",
+          "sequence": 5,
+          "arrival": "06:21",
+          "departure": "06:21"
+        },
+        {
+          "station_id": "rouina",
+          "sequence": 6,
+          "arrival": "06:28",
+          "departure": "06:28"
+        },
+        {
+          "station_id": "cheik_ben_yahia",
+          "sequence": 7,
+          "arrival": "06:32",
+          "departure": "06:32"
+        },
+        {
+          "station_id": "sidi_bouabida",
+          "sequence": 8,
+          "arrival": "06:38",
+          "departure": "06:38"
+        },
+        {
+          "station_id": "el_attaf",
+          "sequence": 9,
+          "arrival": "06:43",
+          "departure": "06:43"
+        },
+        {
+          "station_id": "bir_saf_saf",
+          "sequence": 10,
+          "arrival": "07:02",
+          "departure": "07:02"
+        },
+        {
+          "station_id": "oued_fodda",
+          "sequence": 11,
+          "arrival": "07:09",
+          "departure": "07:09"
+        },
+        {
+          "station_id": "le_barrage",
+          "sequence": 12,
+          "arrival": "07:18",
+          "departure": "07:18"
+        },
+        {
+          "station_id": "moudrou",
+          "sequence": 13,
+          "arrival": "07:25",
+          "departure": "07:25"
+        },
+        {
+          "station_id": "chlef",
+          "sequence": 14,
+          "arrival": "07:32",
+          "departure": null
+        }
+      ],
+      "editor_note": "المواقيت من صورة الجدول المرفقة."
+    },
+    {
+      "trip_id": "photo-west-oran-agha-1002",
+      "route_id": "oran-agha",
+      "train_number": "1002",
+      "service_id": "timetable-days-unresolved",
+      "source_id": "west-back",
+      "data_status": "source_transcribed",
+      "operating_days_status": "review_required",
+      "station_time_kind": "published_departure_or_passage",
+      "stop_times": [
+        {
+          "station_id": "oran",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "06:00"
+        },
+        {
+          "station_id": "oued_tlelat",
+          "sequence": 2,
+          "arrival": "06:17",
+          "departure": "06:17"
+        },
+        {
+          "station_id": "sig",
+          "sequence": 3,
+          "arrival": "06:34",
+          "departure": "06:34"
+        },
+        {
+          "station_id": "mohammadia",
+          "sequence": 4,
+          "arrival": "06:52",
+          "departure": "06:52"
+        },
+        {
+          "station_id": "relizane",
+          "sequence": 5,
+          "arrival": "07:25",
+          "departure": "07:25"
+        },
+        {
+          "station_id": "oued_rhiou",
+          "sequence": 6,
+          "arrival": "07:53",
+          "departure": "07:53"
+        },
+        {
+          "station_id": "boukadir",
+          "sequence": 7,
+          "arrival": "08:09",
+          "departure": "08:09"
+        },
+        {
+          "station_id": "chlef",
+          "sequence": 8,
+          "arrival": "08:26",
+          "departure": "08:26"
+        },
+        {
+          "station_id": "oued_fodda",
+          "sequence": 9,
+          "arrival": "08:47",
+          "departure": "08:47"
+        },
+        {
+          "station_id": "el_attaf",
+          "sequence": 10,
+          "arrival": "08:58",
+          "departure": "08:58"
+        },
+        {
+          "station_id": "rouina",
+          "sequence": 11,
+          "arrival": "09:10",
+          "departure": "09:10"
+        },
+        {
+          "station_id": "ain_defla",
+          "sequence": 12,
+          "arrival": "09:22",
+          "departure": "09:22"
+        },
+        {
+          "station_id": "arib",
+          "sequence": 13,
+          "arrival": "09:32",
+          "departure": "09:32"
+        },
+        {
+          "station_id": "khemis_miliana",
+          "sequence": 14,
+          "arrival": "09:44",
+          "departure": "09:44"
+        },
+        {
+          "station_id": "el_affroun",
+          "sequence": 15,
+          "arrival": "10:35",
+          "departure": "10:35"
+        },
+        {
+          "station_id": "blida",
+          "sequence": 16,
+          "arrival": "10:53",
+          "departure": "10:53"
+        },
+        {
+          "station_id": "el_harrach",
+          "sequence": 17,
+          "arrival": "11:31",
+          "departure": "11:31"
+        },
+        {
+          "station_id": "agha",
+          "sequence": 18,
+          "arrival": "11:45",
+          "departure": null
+        }
+      ],
+      "editor_note": "المواقيت من صورة الجدول المرفقة."
+    },
+    {
+      "trip_id": "photo-west-oran-agha-1004",
+      "route_id": "oran-agha",
+      "train_number": "1004",
+      "service_id": "timetable-days-unresolved",
+      "source_id": "west-back",
+      "data_status": "source_transcribed",
+      "operating_days_status": "review_required",
+      "station_time_kind": "published_departure_or_passage",
+      "stop_times": [
+        {
+          "station_id": "oran",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "14:00"
+        },
+        {
+          "station_id": "oued_tlelat",
+          "sequence": 2,
+          "arrival": "14:17",
+          "departure": "14:17"
+        },
+        {
+          "station_id": "sig",
+          "sequence": 3,
+          "arrival": "14:34",
+          "departure": "14:34"
+        },
+        {
+          "station_id": "mohammadia",
+          "sequence": 4,
+          "arrival": "14:52",
+          "departure": "14:52"
+        },
+        {
+          "station_id": "relizane",
+          "sequence": 5,
+          "arrival": "15:26",
+          "departure": "15:26"
+        },
+        {
+          "station_id": "oued_rhiou",
+          "sequence": 6,
+          "arrival": "15:53",
+          "departure": "15:53"
+        },
+        {
+          "station_id": "boukadir",
+          "sequence": 7,
+          "arrival": "16:11",
+          "departure": "16:11"
+        },
+        {
+          "station_id": "chlef",
+          "sequence": 8,
+          "arrival": "16:28",
+          "departure": "16:28"
+        },
+        {
+          "station_id": "oued_fodda",
+          "sequence": 9,
+          "arrival": "16:49",
+          "departure": "16:49"
+        },
+        {
+          "station_id": "el_attaf",
+          "sequence": 10,
+          "arrival": "17:00",
+          "departure": "17:00"
+        },
+        {
+          "station_id": "rouina",
+          "sequence": 11,
+          "arrival": "17:12",
+          "departure": "17:12"
+        },
+        {
+          "station_id": "ain_defla",
+          "sequence": 12,
+          "arrival": "17:24",
+          "departure": "17:24"
+        },
+        {
+          "station_id": "arib",
+          "sequence": 13,
+          "arrival": "17:35",
+          "departure": "17:35"
+        },
+        {
+          "station_id": "khemis_miliana",
+          "sequence": 14,
+          "arrival": "17:47",
+          "departure": "17:47"
+        },
+        {
+          "station_id": "el_affroun",
+          "sequence": 15,
+          "arrival": "18:51",
+          "departure": "18:51"
+        },
+        {
+          "station_id": "blida",
+          "sequence": 16,
+          "arrival": "19:09",
+          "departure": "19:09"
+        },
+        {
+          "station_id": "el_harrach",
+          "sequence": 17,
+          "arrival": "19:47",
+          "departure": "19:47"
+        },
+        {
+          "station_id": "agha",
+          "sequence": 18,
+          "arrival": "20:08",
+          "departure": null
+        }
+      ],
+      "editor_note": "المواقيت من صورة الجدول المرفقة."
+    },
+    {
+      "trip_id": "photo-west-oran-agha-ma",
+      "route_id": "oran-agha",
+      "train_number": null,
+      "service_id": "timetable-days-unresolved",
+      "source_id": "west-back",
+      "data_status": "source_transcribed",
+      "operating_days_status": "review_required",
+      "station_time_kind": "published_departure_or_passage",
+      "stop_times": [
+        {
+          "station_id": "oran",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "08:00"
+        },
+        {
+          "station_id": "chlef",
+          "sequence": 2,
+          "arrival": "09:56",
+          "departure": "09:56"
+        },
+        {
+          "station_id": "ain_defla",
+          "sequence": 3,
+          "arrival": "10:41",
+          "departure": "10:41"
+        },
+        {
+          "station_id": "blida",
+          "sequence": 4,
+          "arrival": "11:55",
+          "departure": "11:55"
+        },
+        {
+          "station_id": "agha",
+          "sequence": 5,
+          "arrival": "12:38",
+          "departure": null
+        }
+      ],
+      "editor_note": "رقم القطار من رأس الجدول؛ رمز AM/MA هو نوع الخدمة وليس رقم قطار."
+    },
+    {
+      "trip_id": "photo-west-oran-agha-1006",
+      "route_id": "oran-agha",
+      "train_number": "1006",
+      "service_id": "timetable-days-unresolved",
+      "source_id": "west-back",
+      "data_status": "source_transcribed",
+      "operating_days_status": "review_required",
+      "station_time_kind": "published_departure_or_passage",
+      "stop_times": [
+        {
+          "station_id": "oran",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "17:00"
+        },
+        {
+          "station_id": "mohammadia",
+          "sequence": 2,
+          "arrival": "17:42",
+          "departure": "17:42"
+        },
+        {
+          "station_id": "relizane",
+          "sequence": 3,
+          "arrival": "18:08",
+          "departure": "18:08"
+        },
+        {
+          "station_id": "chlef",
+          "sequence": 4,
+          "arrival": "18:52",
+          "departure": "18:52"
+        },
+        {
+          "station_id": "ain_defla",
+          "sequence": 5,
+          "arrival": "19:29",
+          "departure": "19:29"
+        },
+        {
+          "station_id": "blida",
+          "sequence": 6,
+          "arrival": "20:28",
+          "departure": "20:28"
+        },
+        {
+          "station_id": "agha",
+          "sequence": 7,
+          "arrival": "21:01",
+          "departure": null
+        }
+      ],
+      "editor_note": "المواقيت من صورة الجدول المرفقة."
+    },
+    {
+      "trip_id": "photo-west-chlef-agha-1084",
+      "route_id": "chlef-agha",
+      "train_number": "1084",
+      "service_id": "timetable-days-unresolved",
+      "source_id": "west-back",
+      "data_status": "source_transcribed",
+      "operating_days_status": "review_required",
+      "station_time_kind": "published_departure_or_passage",
+      "stop_times": [
+        {
+          "station_id": "chlef",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "05:00"
+        },
+        {
+          "station_id": "oued_fodda",
+          "sequence": 2,
+          "arrival": "05:16",
+          "departure": "05:16"
+        },
+        {
+          "station_id": "el_attaf",
+          "sequence": 3,
+          "arrival": "05:26",
+          "departure": "05:26"
+        },
+        {
+          "station_id": "sidi_bouabida",
+          "sequence": 4,
+          "arrival": "05:31",
+          "departure": "05:31"
+        },
+        {
+          "station_id": "cheik_ben_yahia",
+          "sequence": 5,
+          "arrival": "05:37",
+          "departure": "05:37"
+        },
+        {
+          "station_id": "rouina",
+          "sequence": 6,
+          "arrival": "05:41",
+          "departure": "05:41"
+        },
+        {
+          "station_id": "el_amra",
+          "sequence": 7,
+          "arrival": "05:47",
+          "departure": "05:47"
+        },
+        {
+          "station_id": "ain_defla",
+          "sequence": 8,
+          "arrival": "05:56",
+          "departure": "05:56"
+        },
+        {
+          "station_id": "arib",
+          "sequence": 9,
+          "arrival": "06:05",
+          "departure": "06:05"
+        },
+        {
+          "station_id": "khemis_miliana",
+          "sequence": 10,
+          "arrival": "06:16",
+          "departure": "06:16"
+        },
+        {
+          "station_id": "bou_medfaa",
+          "sequence": 11,
+          "arrival": "06:45",
+          "departure": "06:45"
+        },
+        {
+          "station_id": "el_affroun",
+          "sequence": 12,
+          "arrival": "07:06",
+          "departure": "07:06"
+        },
+        {
+          "station_id": "blida",
+          "sequence": 13,
+          "arrival": "07:23",
+          "departure": "07:23"
+        },
+        {
+          "station_id": "el_harrach",
+          "sequence": 14,
+          "arrival": "07:59",
+          "departure": "07:59"
+        },
+        {
+          "station_id": "agha",
+          "sequence": 15,
+          "arrival": "08:12",
+          "departure": null
+        }
+      ],
+      "editor_note": "المواقيت من صورة الجدول المرفقة."
+    },
+    {
+      "trip_id": "photo-west-chlef-khemis-1088",
+      "route_id": "chlef-khemis",
+      "train_number": "1088",
+      "service_id": "timetable-days-unresolved",
+      "source_id": "west-back",
+      "data_status": "source_transcribed",
+      "operating_days_status": "review_required",
+      "station_time_kind": "published_departure_or_passage",
+      "stop_times": [
+        {
+          "station_id": "chlef",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "17:10"
+        },
+        {
+          "station_id": "moudrou",
+          "sequence": 2,
+          "arrival": "17:16",
+          "departure": "17:16"
+        },
+        {
+          "station_id": "le_barrage",
+          "sequence": 3,
+          "arrival": "17:23",
+          "departure": "17:23"
+        },
+        {
+          "station_id": "oued_fodda",
+          "sequence": 4,
+          "arrival": "17:32",
+          "departure": "17:32"
+        },
+        {
+          "station_id": "bir_saf_saf",
+          "sequence": 5,
+          "arrival": "17:38",
+          "departure": "17:38"
+        },
+        {
+          "station_id": "el_attaf",
+          "sequence": 6,
+          "arrival": "17:45",
+          "departure": "17:45"
+        },
+        {
+          "station_id": "sidi_bouabida",
+          "sequence": 7,
+          "arrival": "17:50",
+          "departure": "17:50"
+        },
+        {
+          "station_id": "cheik_ben_yahia",
+          "sequence": 8,
+          "arrival": "17:56",
+          "departure": "17:56"
+        },
+        {
+          "station_id": "rouina",
+          "sequence": 9,
+          "arrival": "18:00",
+          "departure": "18:00"
+        },
+        {
+          "station_id": "el_amra",
+          "sequence": 10,
+          "arrival": "18:07",
+          "departure": "18:07"
+        },
+        {
+          "station_id": "ain_defla",
+          "sequence": 11,
+          "arrival": "18:17",
+          "departure": "18:17"
+        },
+        {
+          "station_id": "arib",
+          "sequence": 12,
+          "arrival": "18:26",
+          "departure": "18:26"
+        },
+        {
+          "station_id": "sidi_lakhdar",
+          "sequence": 13,
+          "arrival": "18:35",
+          "departure": "18:35"
+        },
+        {
+          "station_id": "khemis_miliana",
+          "sequence": 14,
+          "arrival": "18:43",
+          "departure": null
+        }
+      ],
+      "editor_note": "المواقيت من صورة الجدول المرفقة."
+    },
+    {
+      "trip_id": "photo-west-oran-bechar-night-out",
+      "route_id": "oran-bechar",
+      "train_number": null,
+      "service_id": "daily",
+      "source_id": "west-bechar",
+      "data_status": "source_transcribed",
+      "operating_days_status": "published",
+      "station_time_kind": "published_departure_or_passage",
+      "stop_times": [
+        {
+          "station_id": "oran",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "21:30"
+        },
+        {
+          "station_id": "sidi-bel-abbes",
+          "sequence": 2,
+          "arrival": "22:34",
+          "departure": "22:34"
+        },
+        {
+          "station_id": "tabia",
+          "sequence": 3,
+          "arrival": "23:08",
+          "departure": "23:08"
+        },
+        {
+          "station_id": "moulay_slissen",
+          "sequence": 4,
+          "arrival": "23:28",
+          "departure": "23:28"
+        },
+        {
+          "station_id": "ras_el_ma",
+          "sequence": 5,
+          "arrival": "23:34",
+          "departure": "23:34"
+        },
+        {
+          "station_id": "redjem_demouche",
+          "sequence": 6,
+          "arrival": "24:21",
+          "departure": "24:21"
+        },
+        {
+          "station_id": "mecheria",
+          "sequence": 7,
+          "arrival": "26:20",
+          "departure": "26:20"
+        },
+        {
+          "station_id": "naama",
+          "sequence": 8,
+          "arrival": "27:01",
+          "departure": "27:01"
+        },
+        {
+          "station_id": "ain_sefra",
+          "sequence": 9,
+          "arrival": "28:08",
+          "departure": "28:08"
+        },
+        {
+          "station_id": "tiout",
+          "sequence": 10,
+          "arrival": "28:20",
+          "departure": "28:20"
+        },
+        {
+          "station_id": "moghrar",
+          "sequence": 11,
+          "arrival": "28:51",
+          "departure": "28:51"
+        },
+        {
+          "station_id": "djenien_bourzeg",
+          "sequence": 12,
+          "arrival": "29:15",
+          "departure": "29:15"
+        },
+        {
+          "station_id": "beni_ounif",
+          "sequence": 13,
+          "arrival": "29:58",
+          "departure": "29:58"
+        },
+        {
+          "station_id": "bechar",
+          "sequence": 14,
+          "arrival": "30:15",
+          "departure": null
+        }
+      ],
+      "editor_note": "المواقيت من صورة الجدول المرفقة."
+    },
+    {
+      "trip_id": "photo-west-bechar-oran-night-back",
+      "route_id": "bechar-oran",
+      "train_number": null,
+      "service_id": "daily",
+      "source_id": "west-bechar",
+      "data_status": "source_transcribed",
+      "operating_days_status": "published",
+      "station_time_kind": "published_departure_or_passage",
+      "stop_times": [
+        {
+          "station_id": "bechar",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "22:00"
+        },
+        {
+          "station_id": "beni_ounif",
+          "sequence": 2,
+          "arrival": "23:13",
+          "departure": "23:13"
+        },
+        {
+          "station_id": "djenien_bourzeg",
+          "sequence": 3,
+          "arrival": "23:57",
+          "departure": "23:57"
+        },
+        {
+          "station_id": "moghrar",
+          "sequence": 4,
+          "arrival": "24:21",
+          "departure": "24:21"
+        },
+        {
+          "station_id": "tiout",
+          "sequence": 5,
+          "arrival": "24:53",
+          "departure": "24:53"
+        },
+        {
+          "station_id": "ain_sefra",
+          "sequence": 6,
+          "arrival": "25:03",
+          "departure": "25:03"
+        },
+        {
+          "station_id": "naama",
+          "sequence": 7,
+          "arrival": "26:09",
+          "departure": "26:09"
+        },
+        {
+          "station_id": "mecheria",
+          "sequence": 8,
+          "arrival": "26:58",
+          "departure": "26:58"
+        },
+        {
+          "station_id": "redjem_demouche",
+          "sequence": 9,
+          "arrival": "29:33",
+          "departure": "29:33"
+        },
+        {
+          "station_id": "ras_el_ma",
+          "sequence": 10,
+          "arrival": "29:52",
+          "departure": "29:52"
+        },
+        {
+          "station_id": "moulay_slissen",
+          "sequence": 11,
+          "arrival": "30:20",
+          "departure": "30:20"
+        },
+        {
+          "station_id": "tabia",
+          "sequence": 12,
+          "arrival": "30:35",
+          "departure": "30:35"
+        },
+        {
+          "station_id": "sidi-bel-abbes",
+          "sequence": 13,
+          "arrival": "31:01",
+          "departure": "31:01"
+        },
+        {
+          "station_id": "oued_tlelat",
+          "sequence": 14,
+          "arrival": "31:52",
+          "departure": "31:52"
+        },
+        {
+          "station_id": "oran",
+          "sequence": 15,
+          "arrival": "32:10",
+          "departure": null
+        }
+      ],
+      "editor_note": "المواقيت من صورة الجدول المرفقة."
     }
   ],
   "note": "Draft entries are editable real database records, but their prior example times are not operational evidence. Dashboard labels these records as unverified and hides them from default scheduled boards until reviewed. Update stop_times/train_number/source to validate. أُضيفت 60 رحلة من 3 صور رسمية مؤرخة 19 سبتمبر 2026: 28 للمطار ذهابًا وإيابًا، و14 آغا–زرالدة، و18 الجزائر–العفرون. لم تُفترض رحلات الاتجاه العكسي للعفرون دون صورتها الصحيحة. أُدرجت 19 رحلة موثقة من صورة العفرون–الجزائر الرسمية بتاريخ 19 سبتمبر 2026، تشمل قطارات يومية وأخرى مستثناة من الجمعة وأخرى خاصة بيوم الجمعة، بمجموع 150 رحلة منقولة من صور الجداول. نسخة المعاينة SVG مشتقة من الصورة الأصلية المرفقة."

@@ -1865,6 +1865,116 @@
       "geo_verified": false,
       "geo_source": null,
       "source": "dz-portal-gallery"
+    },
+    {
+      "id": "tabia",
+      "name": "طابية",
+      "name_fr": "Tabia",
+      "lat": null,
+      "lon": null,
+      "geo_verified": false,
+      "geo_source": null,
+      "source": "dz-portal-gallery"
+    },
+    {
+      "id": "moulay_slissen",
+      "name": "مولاي سليسن",
+      "name_fr": "Moulay Slissen",
+      "lat": null,
+      "lon": null,
+      "geo_verified": false,
+      "geo_source": null,
+      "source": "dz-portal-gallery"
+    },
+    {
+      "id": "ras_el_ma",
+      "name": "رأس الماء",
+      "name_fr": "Ras El Ma",
+      "lat": null,
+      "lon": null,
+      "geo_verified": false,
+      "geo_source": null,
+      "source": "dz-portal-gallery"
+    },
+    {
+      "id": "redjem_demouche",
+      "name": "رجم دموش",
+      "name_fr": "Redjem Demouche",
+      "lat": null,
+      "lon": null,
+      "geo_verified": false,
+      "geo_source": null,
+      "source": "dz-portal-gallery"
+    },
+    {
+      "id": "mecheria",
+      "name": "المشرية",
+      "name_fr": "Mécheria",
+      "lat": null,
+      "lon": null,
+      "geo_verified": false,
+      "geo_source": null,
+      "source": "dz-portal-gallery"
+    },
+    {
+      "id": "naama",
+      "name": "النعامة",
+      "name_fr": "Naâma",
+      "lat": null,
+      "lon": null,
+      "geo_verified": false,
+      "geo_source": null,
+      "source": "dz-portal-gallery"
+    },
+    {
+      "id": "ain_sefra",
+      "name": "عين الصفراء",
+      "name_fr": "Aïn Sefra",
+      "lat": null,
+      "lon": null,
+      "geo_verified": false,
+      "geo_source": null,
+      "source": "dz-portal-gallery"
+    },
+    {
+      "id": "tiout",
+      "name": "تيوت",
+      "name_fr": "Tiout",
+      "lat": null,
+      "lon": null,
+      "geo_verified": false,
+      "geo_source": null,
+      "source": "dz-portal-gallery"
+    },
+    {
+      "id": "moghrar",
+      "name": "مغرار",
+      "name_fr": "Moghrar",
+      "lat": null,
+      "lon": null,
+      "geo_verified": false,
+      "geo_source": null,
+      "source": "dz-portal-gallery"
+    },
+    {
+      "id": "djenien_bourzeg",
+      "name": "جنين بورزق",
+      "name_fr": "Djenien Bourezg",
+      "lat": null,
+      "lon": null,
+      "geo_verified": false,
+      "geo_source": null,
+      "source": "dz-portal-gallery"
+    },
+    {
+      "id": "beni_ounif",
+      "name": "بني ونيف",
+      "name_fr": "Béni Ounif",
+      "lat": null,
+      "lon": null,
+      "geo_verified": false,
+      "geo_source": null,
+      "source": "dz-portal-gallery"
     }
   ],
   "official_station_register": {

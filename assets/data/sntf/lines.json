@@ -125,7 +125,9 @@
       "name": "الجزائر – وهران",
       "category": "western",
       "route_ids": [
-        "alger-oran"
+        "alger-oran",
+        "agha-oran",
+        "oran-agha"
       ]
     },
     {
@@ -133,7 +135,8 @@
       "name": "وهران – بشار",
       "category": "western",
       "route_ids": [
-        "oran-bechar"
+        "oran-bechar",
+        "bechar-oran"
       ]
     },
     {
@@ -142,7 +145,10 @@
       "category": "western",
       "route_ids": [
         "oran-chlef",
-        "agha-chlef"
+        "agha-chlef",
+        "khemis-chlef",
+        "chlef-agha",
+        "chlef-khemis"
       ]
     },
     {

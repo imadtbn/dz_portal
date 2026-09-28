@@ -334,6 +334,39 @@
       "current_validity": "not_independently_rechecked",
       "verified_at": null,
       "notice": "أوقات من صورة SNTF؛ أيام التشغيل غير مذكورة في الصورة، ولذلك لا تُحتسب كمواعيد قادمة."
+    },
+    {
+      "id": "west-out",
+      "name": "جدول SNTF الغربي: agha-chlef-oran.png",
+      "url": "https://imadtbn.github.io/dz_portal/assets/train-schedules/Western/agha-chlef-oran.png",
+      "kind": "official-timetable-image",
+      "official_document": true,
+      "origin_confirmation": "repository_owner",
+      "current_validity": "not_independently_rechecked",
+      "verified_at": null,
+      "notice": "الأوقات من الصورة الرسمية؛ تُراجع أيام التشغيل غير المذكورة قبل ظهورها في اللوحة."
+    },
+    {
+      "id": "west-back",
+      "name": "جدول SNTF الغربي: oran-chlef-agha.png",
+      "url": "https://imadtbn.github.io/dz_portal/assets/train-schedules/Western/oran-chlef-agha.png",
+      "kind": "official-timetable-image",
+      "official_document": true,
+      "origin_confirmation": "repository_owner",
+      "current_validity": "not_independently_rechecked",
+      "verified_at": null,
+      "notice": "الأوقات من الصورة الرسمية؛ تُراجع أيام التشغيل غير المذكورة قبل ظهورها في اللوحة."
+    },
+    {
+      "id": "west-bechar",
+      "name": "جدول SNTF الغربي: oran-bechar.jpg",
+      "url": "https://imadtbn.github.io/dz_portal/assets/train-schedules/Western/oran-bechar.jpg",
+      "kind": "official-timetable-image",
+      "official_document": true,
+      "origin_confirmation": "repository_owner",
+      "current_validity": "not_independently_rechecked",
+      "verified_at": null,
+      "notice": "الأوقات من الصورة الرسمية؛ تُراجع أيام التشغيل غير المذكورة قبل ظهورها في اللوحة."
     }
   ],
   "provenance_policy": {
