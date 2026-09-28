@@ -1975,6 +1975,76 @@
       "geo_verified": false,
       "geo_source": null,
       "source": "dz-portal-gallery"
+    },
+    {
+      "id": "hassi_khebi",
+      "name": "حاسي خبي",
+      "name_fr": "Hassi Khebi",
+      "lat": null,
+      "lon": null,
+      "geo_verified": false,
+      "geo_source": null,
+      "source": "dz-portal-gallery"
+    },
+    {
+      "id": "birine",
+      "name": "بيرين",
+      "name_fr": "Birine",
+      "lat": null,
+      "lon": null,
+      "geo_verified": false,
+      "geo_source": null,
+      "source": "dz-portal-gallery"
+    },
+    {
+      "id": "bougara",
+      "name": "بوقرة",
+      "name_fr": "Bougara",
+      "lat": null,
+      "lon": null,
+      "geo_verified": false,
+      "geo_source": null,
+      "source": "dz-portal-gallery"
+    },
+    {
+      "id": "hassi_fedoul",
+      "name": "حاسي فدول",
+      "name_fr": "Hassi Fedoul",
+      "lat": null,
+      "lon": null,
+      "geo_verified": false,
+      "geo_source": null,
+      "source": "dz-portal-gallery"
+    },
+    {
+      "id": "sidi_ladjel",
+      "name": "سيدي لعجل",
+      "name_fr": "Sidi Ladjel",
+      "lat": null,
+      "lon": null,
+      "geo_verified": false,
+      "geo_source": null,
+      "source": "dz-portal-gallery"
+    },
+    {
+      "id": "bouti_sayeh",
+      "name": "بوطي السايح",
+      "name_fr": "Bouti Sayeh",
+      "lat": null,
+      "lon": null,
+      "geo_verified": false,
+      "geo_source": null,
+      "source": "dz-portal-gallery"
+    },
+    {
+      "id": "ain_hadjel",
+      "name": "عين لحجل",
+      "name_fr": "Aïn El Hadjel",
+      "lat": null,
+      "lon": null,
+      "geo_verified": false,
+      "geo_source": null,
+      "source": "dz-portal-gallery"
     }
   ],
   "official_station_register": {

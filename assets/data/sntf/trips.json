@@ -17369,6 +17369,840 @@
         }
       ],
       "editor_note": "المواقيت من صورة الجدول المرفقة."
+    },
+    {
+      "trip_id": "photo-sahara-agha-touggourt",
+      "route_id": "agha-touggourt",
+      "train_number": null,
+      "service_id": "sahara-touggourt-out",
+      "source_id": "sahara-touggourt",
+      "data_status": "source_transcribed",
+      "station_time_kind": "published_departure_or_passage",
+      "time_status": "partial",
+      "stop_times": [
+        {
+          "station_id": "agha",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "18:13"
+        },
+        {
+          "station_id": "boumerdes",
+          "sequence": 2,
+          "arrival": "18:40",
+          "departure": "18:40"
+        },
+        {
+          "station_id": "thenia",
+          "sequence": 3,
+          "arrival": "18:50",
+          "departure": "18:50"
+        },
+        {
+          "station_id": "bouira",
+          "sequence": 4,
+          "arrival": "20:05",
+          "departure": "20:05"
+        },
+        {
+          "station_id": "beni_mansour",
+          "sequence": 5,
+          "arrival": "20:53",
+          "departure": "20:53"
+        },
+        {
+          "station_id": "bordj_bou_arreridj",
+          "sequence": 6,
+          "arrival": "21:59",
+          "departure": "21:59"
+        },
+        {
+          "station_id": "msila",
+          "sequence": 7,
+          "arrival": "22:50",
+          "departure": "22:50"
+        },
+        {
+          "station_id": "barika",
+          "sequence": 8,
+          "arrival": "24:32",
+          "departure": "24:32"
+        },
+        {
+          "station_id": "seggana",
+          "sequence": 9,
+          "arrival": "24:48",
+          "departure": "24:48"
+        },
+        {
+          "station_id": "ain_touta",
+          "sequence": 10,
+          "arrival": "25:09",
+          "departure": "25:09"
+        },
+        {
+          "station_id": "el_kantara",
+          "sequence": 11,
+          "arrival": "26:41",
+          "departure": "26:41"
+        },
+        {
+          "station_id": "el_outaya",
+          "sequence": 12,
+          "arrival": null,
+          "departure": null
+        },
+        {
+          "station_id": "biskra",
+          "sequence": 13,
+          "arrival": "27:00",
+          "departure": "27:00"
+        },
+        {
+          "station_id": "el_meghair",
+          "sequence": 14,
+          "arrival": "28:02",
+          "departure": "28:02"
+        },
+        {
+          "station_id": "djamaa",
+          "sequence": 15,
+          "arrival": "28:29",
+          "departure": "28:29"
+        },
+        {
+          "station_id": "touggourt",
+          "sequence": 16,
+          "arrival": "29:00",
+          "departure": null
+        }
+      ],
+      "editor_note": "تعارض 02:41 للقنطرة مع 02:31 للوطاية في الصورة؛ وقت الوطاية null حتى مراجعة الأصل."
+    },
+    {
+      "trip_id": "photo-sahara-touggourt-agha",
+      "route_id": "touggourt-agha",
+      "train_number": null,
+      "service_id": "sahara-touggourt-back",
+      "source_id": "sahara-touggourt",
+      "data_status": "source_transcribed",
+      "station_time_kind": "published_departure_or_passage",
+      "time_status": "complete",
+      "stop_times": [
+        {
+          "station_id": "touggourt",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "17:30"
+        },
+        {
+          "station_id": "djamaa",
+          "sequence": 2,
+          "arrival": "17:58",
+          "departure": "17:58"
+        },
+        {
+          "station_id": "el_meghair",
+          "sequence": 3,
+          "arrival": "18:25",
+          "departure": "18:25"
+        },
+        {
+          "station_id": "biskra",
+          "sequence": 4,
+          "arrival": "19:25",
+          "departure": "19:25"
+        },
+        {
+          "station_id": "el_outaya",
+          "sequence": 5,
+          "arrival": "19:54",
+          "departure": "19:54"
+        },
+        {
+          "station_id": "el_kantara",
+          "sequence": 6,
+          "arrival": "20:24",
+          "departure": "20:24"
+        },
+        {
+          "station_id": "ain_touta",
+          "sequence": 7,
+          "arrival": "21:03",
+          "departure": "21:03"
+        },
+        {
+          "station_id": "seggana",
+          "sequence": 8,
+          "arrival": "21:32",
+          "departure": "21:32"
+        },
+        {
+          "station_id": "barika",
+          "sequence": 9,
+          "arrival": "21:50",
+          "departure": "21:50"
+        },
+        {
+          "station_id": "msila",
+          "sequence": 10,
+          "arrival": "23:12",
+          "departure": "23:12"
+        },
+        {
+          "station_id": "bordj_bou_arreridj",
+          "sequence": 11,
+          "arrival": "24:17",
+          "departure": "24:17"
+        },
+        {
+          "station_id": "beni_mansour",
+          "sequence": 12,
+          "arrival": "25:42",
+          "departure": "25:42"
+        },
+        {
+          "station_id": "bouira",
+          "sequence": 13,
+          "arrival": "26:34",
+          "departure": "26:34"
+        },
+        {
+          "station_id": "thenia",
+          "sequence": 14,
+          "arrival": "27:53",
+          "departure": "27:53"
+        },
+        {
+          "station_id": "boumerdes",
+          "sequence": 15,
+          "arrival": "28:07",
+          "departure": "28:07"
+        },
+        {
+          "station_id": "agha",
+          "sequence": 16,
+          "arrival": "28:56",
+          "departure": null
+        }
+      ],
+      "editor_note": "الأوقات ومحطات التوقف من صورة الجدول الرسمية."
+    },
+    {
+      "trip_id": "photo-sahara-b193",
+      "route_id": "boughezoul-laghouat",
+      "train_number": "B193",
+      "service_id": "daily",
+      "source_id": "sahara-laghouat",
+      "data_status": "source_transcribed",
+      "station_time_kind": "published_departure_or_passage",
+      "time_status": "complete",
+      "stop_times": [
+        {
+          "station_id": "boughezoul",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "05:10"
+        },
+        {
+          "station_id": "ain_oussara",
+          "sequence": 2,
+          "arrival": "05:37",
+          "departure": "05:37"
+        },
+        {
+          "station_id": "hasi_bahbah",
+          "sequence": 3,
+          "arrival": "06:05",
+          "departure": "06:05"
+        },
+        {
+          "station_id": "djelfa",
+          "sequence": 4,
+          "arrival": "06:39",
+          "departure": "06:39"
+        },
+        {
+          "station_id": "sidi_makhlouf",
+          "sequence": 5,
+          "arrival": "07:15",
+          "departure": "07:15"
+        },
+        {
+          "station_id": "laghouat",
+          "sequence": 6,
+          "arrival": "07:45",
+          "departure": null
+        }
+      ],
+      "editor_note": "الأوقات ومحطات التوقف من صورة الجدول الرسمية."
+    },
+    {
+      "trip_id": "photo-sahara-b195",
+      "route_id": "djelfa-laghouat",
+      "train_number": "B195",
+      "service_id": "daily",
+      "source_id": "sahara-laghouat",
+      "data_status": "source_transcribed",
+      "station_time_kind": "published_departure_or_passage",
+      "time_status": "complete",
+      "stop_times": [
+        {
+          "station_id": "djelfa",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "11:00"
+        },
+        {
+          "station_id": "sidi_makhlouf",
+          "sequence": 2,
+          "arrival": "11:33",
+          "departure": "11:33"
+        },
+        {
+          "station_id": "laghouat",
+          "sequence": 3,
+          "arrival": "12:03",
+          "departure": null
+        }
+      ],
+      "editor_note": "الأوقات ومحطات التوقف من صورة الجدول الرسمية."
+    },
+    {
+      "trip_id": "photo-sahara-b197",
+      "route_id": "djelfa-laghouat",
+      "train_number": "B197",
+      "service_id": "daily",
+      "source_id": "sahara-laghouat",
+      "data_status": "source_transcribed",
+      "station_time_kind": "published_departure_or_passage",
+      "time_status": "complete",
+      "stop_times": [
+        {
+          "station_id": "djelfa",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "14:30"
+        },
+        {
+          "station_id": "sidi_makhlouf",
+          "sequence": 2,
+          "arrival": "15:03",
+          "departure": "15:03"
+        },
+        {
+          "station_id": "laghouat",
+          "sequence": 3,
+          "arrival": "15:33",
+          "departure": null
+        }
+      ],
+      "editor_note": "الأوقات ومحطات التوقف من صورة الجدول الرسمية."
+    },
+    {
+      "trip_id": "photo-sahara-b194",
+      "route_id": "laghouat-djelfa",
+      "train_number": "B194",
+      "service_id": "daily",
+      "source_id": "sahara-laghouat",
+      "data_status": "source_transcribed",
+      "station_time_kind": "published_departure_or_passage",
+      "time_status": "complete",
+      "stop_times": [
+        {
+          "station_id": "laghouat",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "09:00"
+        },
+        {
+          "station_id": "sidi_makhlouf",
+          "sequence": 2,
+          "arrival": "09:30",
+          "departure": "09:30"
+        },
+        {
+          "station_id": "djelfa",
+          "sequence": 3,
+          "arrival": "10:03",
+          "departure": null
+        }
+      ],
+      "editor_note": "الأوقات ومحطات التوقف من صورة الجدول الرسمية."
+    },
+    {
+      "trip_id": "photo-sahara-b196",
+      "route_id": "laghouat-djelfa",
+      "train_number": "B196",
+      "service_id": "daily",
+      "source_id": "sahara-laghouat",
+      "data_status": "source_transcribed",
+      "station_time_kind": "published_departure_or_passage",
+      "time_status": "complete",
+      "stop_times": [
+        {
+          "station_id": "laghouat",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "12:45"
+        },
+        {
+          "station_id": "sidi_makhlouf",
+          "sequence": 2,
+          "arrival": "13:15",
+          "departure": "13:15"
+        },
+        {
+          "station_id": "djelfa",
+          "sequence": 3,
+          "arrival": "13:48",
+          "departure": null
+        }
+      ],
+      "editor_note": "الأوقات ومحطات التوقف من صورة الجدول الرسمية."
+    },
+    {
+      "trip_id": "photo-sahara-b198",
+      "route_id": "laghouat-boughezoul",
+      "train_number": "B198",
+      "service_id": "daily",
+      "source_id": "sahara-laghouat",
+      "data_status": "source_transcribed",
+      "station_time_kind": "published_departure_or_passage",
+      "time_status": "complete",
+      "stop_times": [
+        {
+          "station_id": "laghouat",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "16:10"
+        },
+        {
+          "station_id": "sidi_makhlouf",
+          "sequence": 2,
+          "arrival": "16:39",
+          "departure": "16:39"
+        },
+        {
+          "station_id": "djelfa",
+          "sequence": 3,
+          "arrival": "17:13",
+          "departure": "17:13"
+        },
+        {
+          "station_id": "hasi_bahbah",
+          "sequence": 4,
+          "arrival": "17:48",
+          "departure": "17:48"
+        },
+        {
+          "station_id": "ain_oussara",
+          "sequence": 5,
+          "arrival": "18:16",
+          "departure": "18:16"
+        },
+        {
+          "station_id": "boughezoul",
+          "sequence": 6,
+          "arrival": "18:39",
+          "departure": null
+        }
+      ],
+      "editor_note": "الأوقات ومحطات التوقف من صورة الجدول الرسمية."
+    },
+    {
+      "trip_id": "photo-sahara-tiss-bordj-b178",
+      "route_id": "tissemsilt-bordj",
+      "train_number": "B178",
+      "service_id": "timetable-days-unresolved",
+      "source_id": "sahara-tissemsilt",
+      "data_status": "source_transcribed",
+      "station_time_kind": "published_departure_or_passage",
+      "time_status": "complete",
+      "stop_times": [
+        {
+          "station_id": "tissemsilt",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "05:00"
+        },
+        {
+          "station_id": "bougara",
+          "sequence": 2,
+          "arrival": "05:15",
+          "departure": "05:15"
+        },
+        {
+          "station_id": "hassi_fedoul",
+          "sequence": 3,
+          "arrival": "05:35",
+          "departure": "05:35"
+        },
+        {
+          "station_id": "sidi_ladjel",
+          "sequence": 4,
+          "arrival": "05:53",
+          "departure": "05:53"
+        },
+        {
+          "station_id": "chabounia",
+          "sequence": 5,
+          "arrival": "06:04",
+          "departure": "06:04"
+        },
+        {
+          "station_id": "boughezoul",
+          "sequence": 6,
+          "arrival": "06:35",
+          "departure": "06:35"
+        },
+        {
+          "station_id": "birine",
+          "sequence": 7,
+          "arrival": "06:55",
+          "departure": "06:55"
+        },
+        {
+          "station_id": "bouti_sayeh",
+          "sequence": 8,
+          "arrival": "07:24",
+          "departure": "07:24"
+        },
+        {
+          "station_id": "ain_hadjel",
+          "sequence": 9,
+          "arrival": "07:38",
+          "departure": "07:38"
+        },
+        {
+          "station_id": "msila",
+          "sequence": 10,
+          "arrival": "08:17",
+          "departure": "08:17"
+        },
+        {
+          "station_id": "medjez",
+          "sequence": 11,
+          "arrival": "08:38",
+          "departure": "08:38"
+        },
+        {
+          "station_id": "bordj_bou_arreridj",
+          "sequence": 12,
+          "arrival": "09:08",
+          "departure": null
+        }
+      ],
+      "editor_note": "الأوقات ومحطات التوقف من صورة الجدول الرسمية."
+    },
+    {
+      "trip_id": "photo-sahara-bordj-tiss-b179",
+      "route_id": "bordj-tissemsilt",
+      "train_number": "B179",
+      "service_id": "timetable-days-unresolved",
+      "source_id": "sahara-tissemsilt",
+      "data_status": "source_transcribed",
+      "station_time_kind": "published_departure_or_passage",
+      "time_status": "complete",
+      "stop_times": [
+        {
+          "station_id": "bordj_bou_arreridj",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "16:30"
+        },
+        {
+          "station_id": "medjez",
+          "sequence": 2,
+          "arrival": "16:58",
+          "departure": "16:58"
+        },
+        {
+          "station_id": "msila",
+          "sequence": 3,
+          "arrival": "17:18",
+          "departure": "17:18"
+        },
+        {
+          "station_id": "ain_hadjel",
+          "sequence": 4,
+          "arrival": "17:58",
+          "departure": "17:58"
+        },
+        {
+          "station_id": "bouti_sayeh",
+          "sequence": 5,
+          "arrival": "18:13",
+          "departure": "18:13"
+        },
+        {
+          "station_id": "birine",
+          "sequence": 6,
+          "arrival": "18:44",
+          "departure": "18:44"
+        },
+        {
+          "station_id": "boughezoul",
+          "sequence": 7,
+          "arrival": "19:07",
+          "departure": "19:07"
+        },
+        {
+          "station_id": "chabounia",
+          "sequence": 8,
+          "arrival": "19:43",
+          "departure": "19:43"
+        },
+        {
+          "station_id": "sidi_ladjel",
+          "sequence": 9,
+          "arrival": "19:54",
+          "departure": "19:54"
+        },
+        {
+          "station_id": "hassi_fedoul",
+          "sequence": 10,
+          "arrival": "20:14",
+          "departure": "20:14"
+        },
+        {
+          "station_id": "bougara",
+          "sequence": 11,
+          "arrival": "20:33",
+          "departure": "20:33"
+        },
+        {
+          "station_id": "tissemsilt",
+          "sequence": 12,
+          "arrival": "20:48",
+          "departure": null
+        }
+      ],
+      "editor_note": "الأوقات ومحطات التوقف من صورة الجدول الرسمية."
+    },
+    {
+      "trip_id": "photo-sahara-bechar-tindouf-evening",
+      "route_id": "bechar-tindouf",
+      "train_number": null,
+      "service_id": "sahara-tindouf-out",
+      "source_id": "sahara-tindouf-days",
+      "data_status": "source_transcribed",
+      "station_time_kind": "published_departure_or_passage",
+      "time_status": "complete",
+      "stop_times": [
+        {
+          "station_id": "bechar",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "19:00"
+        },
+        {
+          "station_id": "abadla",
+          "sequence": 2,
+          "arrival": "20:28",
+          "departure": "20:28"
+        },
+        {
+          "station_id": "Hammaguir",
+          "sequence": 3,
+          "arrival": "21:08",
+          "departure": "21:08"
+        },
+        {
+          "station_id": "tabelbala",
+          "sequence": 4,
+          "arrival": "23:24",
+          "departure": "23:24"
+        },
+        {
+          "station_id": "hasi_khabi",
+          "sequence": 5,
+          "arrival": "25:11",
+          "departure": "25:11"
+        },
+        {
+          "station_id": "oum_lassel",
+          "sequence": 6,
+          "arrival": "27:58",
+          "departure": "27:58"
+        },
+        {
+          "station_id": "tindouf",
+          "sequence": 7,
+          "arrival": "30:20",
+          "departure": null
+        }
+      ],
+      "editor_note": "الأوقات ومحطات التوقف من صورة الجدول الرسمية. صورتا بشار–تيندوف مختلفتان في التوقيت وأيام التشغيل دون تاريخ نفاذ واضح؛ لا تُنشأ رحلات قادمة حتى يتحدد أيهما سارية.",
+      "operating_days_status": "conflicting_source_versions"
+    },
+    {
+      "trip_id": "photo-sahara-tindouf-bechar-evening",
+      "route_id": "tindouf-bechar",
+      "train_number": null,
+      "service_id": "sahara-tindouf-back",
+      "source_id": "sahara-tindouf-days",
+      "data_status": "source_transcribed",
+      "station_time_kind": "published_departure_or_passage",
+      "time_status": "complete",
+      "stop_times": [
+        {
+          "station_id": "tindouf",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "20:00"
+        },
+        {
+          "station_id": "oum_lassel",
+          "sequence": 2,
+          "arrival": "22:21",
+          "departure": "22:21"
+        },
+        {
+          "station_id": "hasi_khabi",
+          "sequence": 3,
+          "arrival": "25:05",
+          "departure": "25:05"
+        },
+        {
+          "station_id": "tabelbala",
+          "sequence": 4,
+          "arrival": "27:10",
+          "departure": "27:10"
+        },
+        {
+          "station_id": "Hammaguir",
+          "sequence": 5,
+          "arrival": "29:26",
+          "departure": "29:26"
+        },
+        {
+          "station_id": "abadla",
+          "sequence": 6,
+          "arrival": "30:06",
+          "departure": "30:06"
+        },
+        {
+          "station_id": "bechar",
+          "sequence": 7,
+          "arrival": "31:35",
+          "departure": null
+        }
+      ],
+      "editor_note": "الأوقات ومحطات التوقف من صورة الجدول الرسمية. صورتا بشار–تيندوف مختلفتان في التوقيت وأيام التشغيل دون تاريخ نفاذ واضح؛ لا تُنشأ رحلات قادمة حتى يتحدد أيهما سارية.",
+      "operating_days_status": "conflicting_source_versions"
+    },
+    {
+      "trip_id": "photo-sahara-bechar-tindouf-day",
+      "route_id": "bechar-tindouf",
+      "train_number": null,
+      "service_id": "daily",
+      "source_id": "sahara-tindouf-daily",
+      "data_status": "source_transcribed",
+      "station_time_kind": "published_departure_or_passage",
+      "time_status": "complete",
+      "stop_times": [
+        {
+          "station_id": "bechar",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "08:00"
+        },
+        {
+          "station_id": "abadla",
+          "sequence": 2,
+          "arrival": "09:28",
+          "departure": "09:28"
+        },
+        {
+          "station_id": "Hammaguir",
+          "sequence": 3,
+          "arrival": "10:08",
+          "departure": "10:08"
+        },
+        {
+          "station_id": "tabelbala",
+          "sequence": 4,
+          "arrival": "12:24",
+          "departure": "12:24"
+        },
+        {
+          "station_id": "hasi_khabi",
+          "sequence": 5,
+          "arrival": "14:11",
+          "departure": "14:11"
+        },
+        {
+          "station_id": "oum_lassel",
+          "sequence": 6,
+          "arrival": "16:58",
+          "departure": "16:58"
+        },
+        {
+          "station_id": "tindouf",
+          "sequence": 7,
+          "arrival": "19:20",
+          "departure": null
+        }
+      ],
+      "editor_note": "الأوقات ومحطات التوقف من صورة الجدول الرسمية. صورتا بشار–تيندوف مختلفتان في التوقيت وأيام التشغيل دون تاريخ نفاذ واضح؛ لا تُنشأ رحلات قادمة حتى يتحدد أيهما سارية.",
+      "operating_days_status": "conflicting_source_versions"
+    },
+    {
+      "trip_id": "photo-sahara-tindouf-bechar-day",
+      "route_id": "tindouf-bechar",
+      "train_number": null,
+      "service_id": "daily",
+      "source_id": "sahara-tindouf-daily",
+      "data_status": "source_transcribed",
+      "station_time_kind": "published_departure_or_passage",
+      "time_status": "complete",
+      "stop_times": [
+        {
+          "station_id": "tindouf",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "09:00"
+        },
+        {
+          "station_id": "oum_lassel",
+          "sequence": 2,
+          "arrival": "11:21",
+          "departure": "11:21"
+        },
+        {
+          "station_id": "hasi_khabi",
+          "sequence": 3,
+          "arrival": "14:05",
+          "departure": "14:05"
+        },
+        {
+          "station_id": "tabelbala",
+          "sequence": 4,
+          "arrival": "15:58",
+          "departure": "15:58"
+        },
+        {
+          "station_id": "Hammaguir",
+          "sequence": 5,
+          "arrival": "18:14",
+          "departure": "18:14"
+        },
+        {
+          "station_id": "abadla",
+          "sequence": 6,
+          "arrival": "18:54",
+          "departure": "18:54"
+        },
+        {
+          "station_id": "bechar",
+          "sequence": 7,
+          "arrival": "20:23",
+          "departure": null
+        }
+      ],
+      "editor_note": "الأوقات ومحطات التوقف من صورة الجدول الرسمية. صورتا بشار–تيندوف مختلفتان في التوقيت وأيام التشغيل دون تاريخ نفاذ واضح؛ لا تُنشأ رحلات قادمة حتى يتحدد أيهما سارية.",
+      "operating_days_status": "conflicting_source_versions"
     }
   ],
   "note": "Draft entries are editable real database records, but their prior example times are not operational evidence. Dashboard labels these records as unverified and hides them from default scheduled boards until reviewed. Update stop_times/train_number/source to validate. أُضيفت 60 رحلة من 3 صور رسمية مؤرخة 19 سبتمبر 2026: 28 للمطار ذهابًا وإيابًا، و14 آغا–زرالدة، و18 الجزائر–العفرون. لم تُفترض رحلات الاتجاه العكسي للعفرون دون صورتها الصحيحة. أُدرجت 19 رحلة موثقة من صورة العفرون–الجزائر الرسمية بتاريخ 19 سبتمبر 2026، تشمل قطارات يومية وأخرى مستثناة من الجمعة وأخرى خاصة بيوم الجمعة، بمجموع 150 رحلة منقولة من صور الجداول. نسخة المعاينة SVG مشتقة من الصورة الأصلية المرفقة."

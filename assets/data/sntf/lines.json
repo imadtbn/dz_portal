@@ -156,7 +156,8 @@
       "name": "بشار – تندوف",
       "category": "sahara",
       "route_ids": [
-        "bechar-tindouf"
+        "bechar-tindouf",
+        "tindouf-bechar"
       ]
     },
     {
@@ -164,7 +165,9 @@
       "name": "الجزائر – تقرت",
       "category": "sahara",
       "route_ids": [
-        "alger-touggourt"
+        "alger-touggourt",
+        "agha-touggourt",
+        "touggourt-agha"
       ]
     },
     {
@@ -172,7 +175,10 @@
       "name": "بوغزول – الأغواط",
       "category": "sahara",
       "route_ids": [
-        "boughezoul-laghouat"
+        "boughezoul-laghouat",
+        "djelfa-laghouat",
+        "laghouat-djelfa",
+        "laghouat-boughezoul"
       ]
     },
     {
@@ -180,7 +186,8 @@
       "name": "تيسمسيلت – برج بوعريريج",
       "category": "sahara",
       "route_ids": [
-        "tissemsilt-bordj"
+        "tissemsilt-bordj",
+        "bordj-tissemsilt"
       ]
     },
     {

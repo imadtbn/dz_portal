@@ -8,6 +8,8 @@ export const shiftISO=(date,days)=>new Date(Date.parse(date+"T12:00:00Z")+days*8
 export const dayOfWeek=date=>new Date(date+"T12:00:00Z").getUTCDay();
 export const isHoliday=(date,holidays)=>holidays.some(x=>(typeof x==="string"?x:x.date)===date);
 export function runsOn(trip,date,calendars,exceptions=[],holidays=[]){
+  // Different undated posters can be successive schedules, not simultaneous trains.
+  if(trip.operating_days_status==="conflicting_source_versions")return false;
   const cal=calendars.find(c=>c.id===trip.service_id);
   if(!cal)return false;
   if(trip.effective_from&&date<trip.effective_from)return false;

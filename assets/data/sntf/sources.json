@@ -367,6 +367,61 @@
       "current_validity": "not_independently_rechecked",
       "verified_at": null,
       "notice": "الأوقات من الصورة الرسمية؛ تُراجع أيام التشغيل غير المذكورة قبل ظهورها في اللوحة."
+    },
+    {
+      "id": "sahara-touggourt",
+      "name": "جدول SNTF للصحراء والهضاب: alger-teggart.jpg",
+      "url": "https://imadtbn.github.io/dz_portal/assets/train-schedules/sahara-plateaux/alger-teggart.jpg",
+      "kind": "official-timetable-image",
+      "official_document": true,
+      "origin_confirmation": "repository_owner",
+      "current_validity": "not_independently_rechecked",
+      "verified_at": null,
+      "notice": "الأوقات وأيام التشغيل من صورة SNTF المرفقة؛ جدول منشور وليس تتبعًا آنيًا."
+    },
+    {
+      "id": "sahara-laghouat",
+      "name": "جدول SNTF للصحراء والهضاب: boughezoul-laghouat.png",
+      "url": "https://imadtbn.github.io/dz_portal/assets/train-schedules/sahara-plateaux/boughezoul-laghouat.png",
+      "kind": "official-timetable-image",
+      "official_document": true,
+      "origin_confirmation": "repository_owner",
+      "current_validity": "not_independently_rechecked",
+      "verified_at": null,
+      "notice": "الأوقات وأيام التشغيل من صورة SNTF المرفقة؛ جدول منشور وليس تتبعًا آنيًا."
+    },
+    {
+      "id": "sahara-tissemsilt",
+      "name": "جدول SNTF للصحراء والهضاب: bba-tisemsilte.png",
+      "url": "https://imadtbn.github.io/dz_portal/assets/train-schedules/sahara-plateaux/bba-tisemsilte.png",
+      "kind": "official-timetable-image",
+      "official_document": true,
+      "origin_confirmation": "repository_owner",
+      "current_validity": "not_independently_rechecked",
+      "verified_at": null,
+      "notice": "الأوقات وأيام التشغيل من صورة SNTF المرفقة؛ جدول منشور وليس تتبعًا آنيًا."
+    },
+    {
+      "id": "sahara-tindouf-days",
+      "name": "جدول SNTF للصحراء والهضاب: bechar-tindouf.jpg",
+      "url": "https://imadtbn.github.io/dz_portal/assets/train-schedules/sahara-plateaux/bechar-tindouf.jpg",
+      "kind": "official-timetable-image",
+      "official_document": true,
+      "origin_confirmation": "repository_owner",
+      "current_validity": "not_independently_rechecked",
+      "verified_at": null,
+      "notice": "الأوقات وأيام التشغيل من صورة SNTF المرفقة؛ جدول منشور وليس تتبعًا آنيًا."
+    },
+    {
+      "id": "sahara-tindouf-daily",
+      "name": "جدول SNTF للصحراء والهضاب: bechar-tindouf-tj.jpg",
+      "url": "https://imadtbn.github.io/dz_portal/assets/train-schedules/sahara-plateaux/bechar-tindouf-tj.jpg",
+      "kind": "official-timetable-image",
+      "official_document": true,
+      "origin_confirmation": "repository_owner",
+      "current_validity": "not_independently_rechecked",
+      "verified_at": null,
+      "notice": "الأوقات وأيام التشغيل من صورة SNTF المرفقة؛ جدول منشور وليس تتبعًا آنيًا."
     }
   ],
   "provenance_policy": {
