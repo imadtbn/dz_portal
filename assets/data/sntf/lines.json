@@ -65,10 +65,13 @@
     },
     {
       "id": "affroun-thenia",
-      "name": "العفرون – الثنية",
+      "name": "الثنية – العفرون",
       "category": "suburban",
       "route_ids": [
-        "affroun-thenia"
+        "thenia-affroun",
+        "reghaia-affroun",
+        "affroun-thenia",
+        "affroun-reghaia"
       ]
     },
     {

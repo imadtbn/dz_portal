@@ -433,6 +433,17 @@
       "current_validity": "not_independently_rechecked",
       "verified_at": null,
       "notice": "أوقات الرحلتين اليوميتين من الصورة الرسمية المرفقة؛ جدول منشور وليس تتبعًا آنيًا."
+    },
+    {
+      "id": "gallery-suburban-thenia-affroun-2026-09-19",
+      "name": "جدول SNTF الثنية – العفرون – الثنية (19 سبتمبر 2026)",
+      "url": "https://imadtbn.github.io/dz_portal/assets/train-schedules/suburban/thenia-affroune-thenia.png",
+      "kind": "official-timetable-image",
+      "official_document": true,
+      "origin_confirmation": "repository_owner",
+      "current_validity": "not_independently_rechecked",
+      "verified_at": null,
+      "notice": "ست رحلات تسير كل يوم حسب الصورة؛ بعض الرحلات تبدأ أو تنتهي في رغاية."
     }
   ],
   "provenance_policy": {

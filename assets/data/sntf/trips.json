@@ -18359,6 +18359,816 @@
         }
       ],
       "editor_note": "مواقيت 11 محطة كما تظهر في الصورة الرسمية؛ يسير يوميًا في هذا الاتجاه."
+    },
+    {
+      "trip_id": "photo-thenia-affroun-B124-125-daily-20260919",
+      "route_id": "thenia-affroun",
+      "train_number": "B124/125",
+      "service_id": "daily",
+      "source_id": "gallery-suburban-thenia-affroun-2026-09-19",
+      "data_status": "source_transcribed",
+      "effective_from": "2026-09-19",
+      "station_time_kind": "published_departure_or_passage",
+      "stop_times": [
+        {
+          "station_id": "thenia",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "08:15"
+        },
+        {
+          "station_id": "tidjelabine",
+          "sequence": 2,
+          "arrival": "08:19",
+          "departure": "08:19"
+        },
+        {
+          "station_id": "boumerdes",
+          "sequence": 3,
+          "arrival": "08:23",
+          "departure": "08:23"
+        },
+        {
+          "station_id": "corso",
+          "sequence": 4,
+          "arrival": "08:27",
+          "departure": "08:27"
+        },
+        {
+          "station_id": "boudouaou",
+          "sequence": 5,
+          "arrival": "08:30",
+          "departure": "08:30"
+        },
+        {
+          "station_id": "reghaia",
+          "sequence": 6,
+          "arrival": "08:36",
+          "departure": "08:36"
+        },
+        {
+          "station_id": "reghaia_zi",
+          "sequence": 7,
+          "arrival": "08:38",
+          "departure": "08:38"
+        },
+        {
+          "station_id": "rouiba_zi",
+          "sequence": 8,
+          "arrival": "08:39",
+          "departure": "08:39"
+        },
+        {
+          "station_id": "rouiba",
+          "sequence": 9,
+          "arrival": "08:41",
+          "departure": "08:41"
+        },
+        {
+          "station_id": "dar_el_beida",
+          "sequence": 10,
+          "arrival": "08:47",
+          "departure": "08:47"
+        },
+        {
+          "station_id": "bab_ezzouar",
+          "sequence": 11,
+          "arrival": "08:50",
+          "departure": "08:50"
+        },
+        {
+          "station_id": "oued_smar",
+          "sequence": 12,
+          "arrival": "08:53",
+          "departure": "08:53"
+        },
+        {
+          "station_id": "gue_de_constantine",
+          "sequence": 13,
+          "arrival": "09:04",
+          "departure": "09:04"
+        },
+        {
+          "station_id": "ain_naadja",
+          "sequence": 14,
+          "arrival": "09:07",
+          "departure": "09:07"
+        },
+        {
+          "station_id": "baba_ali",
+          "sequence": 15,
+          "arrival": "09:11",
+          "departure": "09:11"
+        },
+        {
+          "station_id": "birtouta",
+          "sequence": 16,
+          "arrival": "09:16",
+          "departure": "09:16"
+        },
+        {
+          "station_id": "boufarik",
+          "sequence": 17,
+          "arrival": "09:24",
+          "departure": "09:24"
+        },
+        {
+          "station_id": "beni_mered",
+          "sequence": 18,
+          "arrival": "09:30",
+          "departure": "09:30"
+        },
+        {
+          "station_id": "blida",
+          "sequence": 19,
+          "arrival": "09:36",
+          "departure": "09:36"
+        },
+        {
+          "station_id": "chiffa",
+          "sequence": 20,
+          "arrival": "09:42",
+          "departure": "09:42"
+        },
+        {
+          "station_id": "mouzaia",
+          "sequence": 21,
+          "arrival": "09:46",
+          "departure": "09:46"
+        },
+        {
+          "station_id": "el_affroun",
+          "sequence": 22,
+          "arrival": "09:52",
+          "departure": null
+        }
+      ],
+      "editor_note": "من صورة SNTF المؤرخة 19 سبتمبر 2026؛ وقت واحد منشور لكل محطة. لا تُمد الرحلة خارج محطتها الفعلية."
+    },
+    {
+      "trip_id": "photo-thenia-affroun-B126-127-daily-20260919",
+      "route_id": "reghaia-affroun",
+      "train_number": "B126/127",
+      "service_id": "daily",
+      "source_id": "gallery-suburban-thenia-affroun-2026-09-19",
+      "data_status": "source_transcribed",
+      "effective_from": "2026-09-19",
+      "station_time_kind": "published_departure_or_passage",
+      "stop_times": [
+        {
+          "station_id": "reghaia",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "12:10"
+        },
+        {
+          "station_id": "reghaia_zi",
+          "sequence": 2,
+          "arrival": "12:11",
+          "departure": "12:11"
+        },
+        {
+          "station_id": "rouiba_zi",
+          "sequence": 3,
+          "arrival": "12:13",
+          "departure": "12:13"
+        },
+        {
+          "station_id": "rouiba",
+          "sequence": 4,
+          "arrival": "12:14",
+          "departure": "12:14"
+        },
+        {
+          "station_id": "dar_el_beida",
+          "sequence": 5,
+          "arrival": "12:20",
+          "departure": "12:20"
+        },
+        {
+          "station_id": "bab_ezzouar",
+          "sequence": 6,
+          "arrival": "12:23",
+          "departure": "12:23"
+        },
+        {
+          "station_id": "oued_smar",
+          "sequence": 7,
+          "arrival": "12:26",
+          "departure": "12:26"
+        },
+        {
+          "station_id": "gue_de_constantine",
+          "sequence": 8,
+          "arrival": "12:37",
+          "departure": "12:37"
+        },
+        {
+          "station_id": "ain_naadja",
+          "sequence": 9,
+          "arrival": "12:41",
+          "departure": "12:41"
+        },
+        {
+          "station_id": "baba_ali",
+          "sequence": 10,
+          "arrival": "12:45",
+          "departure": "12:45"
+        },
+        {
+          "station_id": "birtouta",
+          "sequence": 11,
+          "arrival": "12:50",
+          "departure": "12:50"
+        },
+        {
+          "station_id": "boufarik",
+          "sequence": 12,
+          "arrival": "12:58",
+          "departure": "12:58"
+        },
+        {
+          "station_id": "beni_mered",
+          "sequence": 13,
+          "arrival": "13:04",
+          "departure": "13:04"
+        },
+        {
+          "station_id": "blida",
+          "sequence": 14,
+          "arrival": "13:09",
+          "departure": "13:09"
+        },
+        {
+          "station_id": "chiffa",
+          "sequence": 15,
+          "arrival": "13:15",
+          "departure": "13:15"
+        },
+        {
+          "station_id": "mouzaia",
+          "sequence": 16,
+          "arrival": "13:19",
+          "departure": "13:19"
+        },
+        {
+          "station_id": "el_affroun",
+          "sequence": 17,
+          "arrival": "13:25",
+          "departure": null
+        }
+      ],
+      "editor_note": "من صورة SNTF المؤرخة 19 سبتمبر 2026؛ وقت واحد منشور لكل محطة. لا تُمد الرحلة خارج محطتها الفعلية."
+    },
+    {
+      "trip_id": "photo-thenia-affroun-B128-129-daily-20260919",
+      "route_id": "thenia-affroun",
+      "train_number": "B128/129",
+      "service_id": "daily",
+      "source_id": "gallery-suburban-thenia-affroun-2026-09-19",
+      "data_status": "source_transcribed",
+      "effective_from": "2026-09-19",
+      "station_time_kind": "published_departure_or_passage",
+      "stop_times": [
+        {
+          "station_id": "thenia",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "16:10"
+        },
+        {
+          "station_id": "tidjelabine",
+          "sequence": 2,
+          "arrival": "16:14",
+          "departure": "16:14"
+        },
+        {
+          "station_id": "boumerdes",
+          "sequence": 3,
+          "arrival": "16:18",
+          "departure": "16:18"
+        },
+        {
+          "station_id": "corso",
+          "sequence": 4,
+          "arrival": "16:22",
+          "departure": "16:22"
+        },
+        {
+          "station_id": "boudouaou",
+          "sequence": 5,
+          "arrival": "16:26",
+          "departure": "16:26"
+        },
+        {
+          "station_id": "reghaia",
+          "sequence": 6,
+          "arrival": "16:32",
+          "departure": "16:32"
+        },
+        {
+          "station_id": "reghaia_zi",
+          "sequence": 7,
+          "arrival": "16:34",
+          "departure": "16:34"
+        },
+        {
+          "station_id": "rouiba_zi",
+          "sequence": 8,
+          "arrival": "16:35",
+          "departure": "16:35"
+        },
+        {
+          "station_id": "rouiba",
+          "sequence": 9,
+          "arrival": "16:37",
+          "departure": "16:37"
+        },
+        {
+          "station_id": "dar_el_beida",
+          "sequence": 10,
+          "arrival": "16:43",
+          "departure": "16:43"
+        },
+        {
+          "station_id": "bab_ezzouar",
+          "sequence": 11,
+          "arrival": "16:46",
+          "departure": "16:46"
+        },
+        {
+          "station_id": "oued_smar",
+          "sequence": 12,
+          "arrival": "16:48",
+          "departure": "16:48"
+        },
+        {
+          "station_id": "gue_de_constantine",
+          "sequence": 13,
+          "arrival": "16:57",
+          "departure": "16:57"
+        },
+        {
+          "station_id": "ain_naadja",
+          "sequence": 14,
+          "arrival": "17:01",
+          "departure": "17:01"
+        },
+        {
+          "station_id": "baba_ali",
+          "sequence": 15,
+          "arrival": "17:05",
+          "departure": "17:05"
+        },
+        {
+          "station_id": "birtouta",
+          "sequence": 16,
+          "arrival": "17:10",
+          "departure": "17:10"
+        },
+        {
+          "station_id": "boufarik",
+          "sequence": 17,
+          "arrival": "17:18",
+          "departure": "17:18"
+        },
+        {
+          "station_id": "beni_mered",
+          "sequence": 18,
+          "arrival": "17:24",
+          "departure": "17:24"
+        },
+        {
+          "station_id": "blida",
+          "sequence": 19,
+          "arrival": "17:30",
+          "departure": "17:30"
+        },
+        {
+          "station_id": "chiffa",
+          "sequence": 20,
+          "arrival": "17:35",
+          "departure": "17:35"
+        },
+        {
+          "station_id": "mouzaia",
+          "sequence": 21,
+          "arrival": "17:39",
+          "departure": "17:39"
+        },
+        {
+          "station_id": "el_affroun",
+          "sequence": 22,
+          "arrival": "17:45",
+          "departure": null
+        }
+      ],
+      "editor_note": "من صورة SNTF المؤرخة 19 سبتمبر 2026؛ وقت واحد منشور لكل محطة. لا تُمد الرحلة خارج محطتها الفعلية."
+    },
+    {
+      "trip_id": "photo-thenia-affroun-B152-153-daily-20260919",
+      "route_id": "affroun-thenia",
+      "train_number": "B152/153",
+      "service_id": "daily",
+      "source_id": "gallery-suburban-thenia-affroun-2026-09-19",
+      "data_status": "source_transcribed",
+      "effective_from": "2026-09-19",
+      "station_time_kind": "published_departure_or_passage",
+      "stop_times": [
+        {
+          "station_id": "el_affroun",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "06:00"
+        },
+        {
+          "station_id": "mouzaia",
+          "sequence": 2,
+          "arrival": "06:04",
+          "departure": "06:04"
+        },
+        {
+          "station_id": "chiffa",
+          "sequence": 3,
+          "arrival": "06:08",
+          "departure": "06:08"
+        },
+        {
+          "station_id": "blida",
+          "sequence": 4,
+          "arrival": "06:14",
+          "departure": "06:14"
+        },
+        {
+          "station_id": "beni_mered",
+          "sequence": 5,
+          "arrival": "06:19",
+          "departure": "06:19"
+        },
+        {
+          "station_id": "boufarik",
+          "sequence": 6,
+          "arrival": "06:27",
+          "departure": "06:27"
+        },
+        {
+          "station_id": "birtouta",
+          "sequence": 7,
+          "arrival": "06:37",
+          "departure": "06:37"
+        },
+        {
+          "station_id": "baba_ali",
+          "sequence": 8,
+          "arrival": "06:44",
+          "departure": "06:44"
+        },
+        {
+          "station_id": "ain_naadja",
+          "sequence": 9,
+          "arrival": "06:47",
+          "departure": "06:47"
+        },
+        {
+          "station_id": "gue_de_constantine",
+          "sequence": 10,
+          "arrival": "06:50",
+          "departure": "06:50"
+        },
+        {
+          "station_id": "oued_smar",
+          "sequence": 11,
+          "arrival": "07:00",
+          "departure": "07:00"
+        },
+        {
+          "station_id": "bab_ezzouar",
+          "sequence": 12,
+          "arrival": "07:03",
+          "departure": "07:03"
+        },
+        {
+          "station_id": "dar_el_beida",
+          "sequence": 13,
+          "arrival": "07:06",
+          "departure": "07:06"
+        },
+        {
+          "station_id": "rouiba",
+          "sequence": 14,
+          "arrival": "07:12",
+          "departure": "07:12"
+        },
+        {
+          "station_id": "rouiba_zi",
+          "sequence": 15,
+          "arrival": "07:15",
+          "departure": "07:15"
+        },
+        {
+          "station_id": "reghaia_zi",
+          "sequence": 16,
+          "arrival": "07:16",
+          "departure": "07:16"
+        },
+        {
+          "station_id": "reghaia",
+          "sequence": 17,
+          "arrival": "07:18",
+          "departure": "07:18"
+        },
+        {
+          "station_id": "boudouaou",
+          "sequence": 18,
+          "arrival": "07:24",
+          "departure": "07:24"
+        },
+        {
+          "station_id": "corso",
+          "sequence": 19,
+          "arrival": "07:28",
+          "departure": "07:28"
+        },
+        {
+          "station_id": "boumerdes",
+          "sequence": 20,
+          "arrival": "07:32",
+          "departure": "07:32"
+        },
+        {
+          "station_id": "tidjelabine",
+          "sequence": 21,
+          "arrival": "07:36",
+          "departure": "07:36"
+        },
+        {
+          "station_id": "thenia",
+          "sequence": 22,
+          "arrival": "07:41",
+          "departure": null
+        }
+      ],
+      "editor_note": "من صورة SNTF المؤرخة 19 سبتمبر 2026؛ وقت واحد منشور لكل محطة. لا تُمد الرحلة خارج محطتها الفعلية."
+    },
+    {
+      "trip_id": "photo-thenia-affroun-B154-155-daily-20260919",
+      "route_id": "affroun-reghaia",
+      "train_number": "B154/155",
+      "service_id": "daily",
+      "source_id": "gallery-suburban-thenia-affroun-2026-09-19",
+      "data_status": "source_transcribed",
+      "effective_from": "2026-09-19",
+      "station_time_kind": "published_departure_or_passage",
+      "stop_times": [
+        {
+          "station_id": "el_affroun",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "10:25"
+        },
+        {
+          "station_id": "mouzaia",
+          "sequence": 2,
+          "arrival": "10:29",
+          "departure": "10:29"
+        },
+        {
+          "station_id": "chiffa",
+          "sequence": 3,
+          "arrival": "10:33",
+          "departure": "10:33"
+        },
+        {
+          "station_id": "blida",
+          "sequence": 4,
+          "arrival": "10:39",
+          "departure": "10:39"
+        },
+        {
+          "station_id": "beni_mered",
+          "sequence": 5,
+          "arrival": "10:45",
+          "departure": "10:45"
+        },
+        {
+          "station_id": "boufarik",
+          "sequence": 6,
+          "arrival": "10:51",
+          "departure": "10:51"
+        },
+        {
+          "station_id": "birtouta",
+          "sequence": 7,
+          "arrival": "10:59",
+          "departure": "10:59"
+        },
+        {
+          "station_id": "baba_ali",
+          "sequence": 8,
+          "arrival": "11:04",
+          "departure": "11:04"
+        },
+        {
+          "station_id": "ain_naadja",
+          "sequence": 9,
+          "arrival": "11:08",
+          "departure": "11:08"
+        },
+        {
+          "station_id": "gue_de_constantine",
+          "sequence": 10,
+          "arrival": "11:11",
+          "departure": "11:11"
+        },
+        {
+          "station_id": "oued_smar",
+          "sequence": 11,
+          "arrival": "11:22",
+          "departure": "11:22"
+        },
+        {
+          "station_id": "bab_ezzouar",
+          "sequence": 12,
+          "arrival": "11:26",
+          "departure": "11:26"
+        },
+        {
+          "station_id": "dar_el_beida",
+          "sequence": 13,
+          "arrival": "11:32",
+          "departure": "11:32"
+        },
+        {
+          "station_id": "rouiba",
+          "sequence": 14,
+          "arrival": "11:34",
+          "departure": "11:34"
+        },
+        {
+          "station_id": "rouiba_zi",
+          "sequence": 15,
+          "arrival": "11:36",
+          "departure": "11:36"
+        },
+        {
+          "station_id": "reghaia_zi",
+          "sequence": 16,
+          "arrival": "11:37",
+          "departure": "11:37"
+        },
+        {
+          "station_id": "reghaia",
+          "sequence": 17,
+          "arrival": "11:40",
+          "departure": null
+        }
+      ],
+      "editor_note": "من صورة SNTF المؤرخة 19 سبتمبر 2026؛ وقت واحد منشور لكل محطة. لا تُمد الرحلة خارج محطتها الفعلية."
+    },
+    {
+      "trip_id": "photo-thenia-affroun-B156-157-daily-20260919",
+      "route_id": "affroun-thenia",
+      "train_number": "B156/157",
+      "service_id": "daily",
+      "source_id": "gallery-suburban-thenia-affroun-2026-09-19",
+      "data_status": "source_transcribed",
+      "effective_from": "2026-09-19",
+      "station_time_kind": "published_departure_or_passage",
+      "stop_times": [
+        {
+          "station_id": "el_affroun",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "14:00"
+        },
+        {
+          "station_id": "mouzaia",
+          "sequence": 2,
+          "arrival": "14:04",
+          "departure": "14:04"
+        },
+        {
+          "station_id": "chiffa",
+          "sequence": 3,
+          "arrival": "14:08",
+          "departure": "14:08"
+        },
+        {
+          "station_id": "blida",
+          "sequence": 4,
+          "arrival": "14:14",
+          "departure": "14:14"
+        },
+        {
+          "station_id": "beni_mered",
+          "sequence": 5,
+          "arrival": "14:20",
+          "departure": "14:20"
+        },
+        {
+          "station_id": "boufarik",
+          "sequence": 6,
+          "arrival": "14:26",
+          "departure": "14:26"
+        },
+        {
+          "station_id": "birtouta",
+          "sequence": 7,
+          "arrival": "14:34",
+          "departure": "14:34"
+        },
+        {
+          "station_id": "baba_ali",
+          "sequence": 8,
+          "arrival": "14:38",
+          "departure": "14:38"
+        },
+        {
+          "station_id": "ain_naadja",
+          "sequence": 9,
+          "arrival": "14:41",
+          "departure": "14:41"
+        },
+        {
+          "station_id": "gue_de_constantine",
+          "sequence": 10,
+          "arrival": "14:43",
+          "departure": "14:43"
+        },
+        {
+          "station_id": "oued_smar",
+          "sequence": 11,
+          "arrival": "14:51",
+          "departure": "14:51"
+        },
+        {
+          "station_id": "bab_ezzouar",
+          "sequence": 12,
+          "arrival": "14:54",
+          "departure": "14:54"
+        },
+        {
+          "station_id": "dar_el_beida",
+          "sequence": 13,
+          "arrival": "14:56",
+          "departure": "14:56"
+        },
+        {
+          "station_id": "rouiba",
+          "sequence": 14,
+          "arrival": "15:01",
+          "departure": "15:01"
+        },
+        {
+          "station_id": "rouiba_zi",
+          "sequence": 15,
+          "arrival": "15:03",
+          "departure": "15:03"
+        },
+        {
+          "station_id": "reghaia_zi",
+          "sequence": 16,
+          "arrival": "15:04",
+          "departure": "15:04"
+        },
+        {
+          "station_id": "reghaia",
+          "sequence": 17,
+          "arrival": "15:06",
+          "departure": "15:06"
+        },
+        {
+          "station_id": "boudouaou",
+          "sequence": 18,
+          "arrival": "15:11",
+          "departure": "15:11"
+        },
+        {
+          "station_id": "corso",
+          "sequence": 19,
+          "arrival": "15:14",
+          "departure": "15:14"
+        },
+        {
+          "station_id": "boumerdes",
+          "sequence": 20,
+          "arrival": "15:18",
+          "departure": "15:18"
+        },
+        {
+          "station_id": "tidjelabine",
+          "sequence": 21,
+          "arrival": "15:22",
+          "departure": "15:22"
+        },
+        {
+          "station_id": "thenia",
+          "sequence": 22,
+          "arrival": "15:34",
+          "departure": null
+        }
+      ],
+      "editor_note": "من صورة SNTF المؤرخة 19 سبتمبر 2026؛ وقت واحد منشور لكل محطة. لا تُمد الرحلة خارج محطتها الفعلية."
     }
   ],
   "note": "Draft entries are editable real database records, but their prior example times are not operational evidence. Dashboard labels these records as unverified and hides them from default scheduled boards until reviewed. Update stop_times/train_number/source to validate. أُضيفت 60 رحلة من 3 صور رسمية مؤرخة 19 سبتمبر 2026: 28 للمطار ذهابًا وإيابًا، و14 آغا–زرالدة، و18 الجزائر–العفرون. لم تُفترض رحلات الاتجاه العكسي للعفرون دون صورتها الصحيحة. أُدرجت 19 رحلة موثقة من صورة العفرون–الجزائر الرسمية بتاريخ 19 سبتمبر 2026، تشمل قطارات يومية وأخرى مستثناة من الجمعة وأخرى خاصة بيوم الجمعة، بمجموع 150 رحلة منقولة من صور الجداول. نسخة المعاينة SVG مشتقة من الصورة الأصلية المرفقة."

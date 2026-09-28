@@ -126,17 +126,20 @@
       "notes": "صورة جدول صادرة عن SNTF وفق توثيق صاحب المشروع؛ تاريخ السريان واستمرار العمل بالمواقيت يحتاجان مراجعة منفصلة، ولا تُستنتج أوقات الرحلات من اسم الصورة."
     },
     {
-      "id": "affroun-thenia-affroun-suburban",
-      "path": "assets/train-schedules/suburban/affroun-thenia-affroun.png",
+      "id": "thenia-affroun-thenia-suburban",
+      "path": "assets/train-schedules/suburban/thenia-affroune-thenia.png",
       "category": "suburban",
-      "alt": " العفرون - الثنية - العفرون",
+      "alt": "الثنية - العفرون - الثنية",
       "route_ids": [
-        "affroun-thenia"
+        "thenia-affroun",
+        "reghaia-affroun",
+        "affroun-thenia",
+        "affroun-reghaia"
       ],
       "source_page": "sectors/sntf.html",
       "issuing_authority": "SNTF",
       "status": "official_document_validity_unconfirmed",
-      "notes": "صورة جدول صادرة عن SNTF وفق توثيق صاحب المشروع؛ تاريخ السريان واستمرار العمل بالمواقيت يحتاجان مراجعة منفصلة، ولا تُستنتج أوقات الرحلات من اسم الصورة."
+      "notes": "جدول SNTF اليومي المؤرخ 19 سبتمبر 2026، ست رحلات بينها رحلتان من رغاية وإليها؛ نُقلت مواقيت المحطات في بيانات الرحلات."
     },
     {
       "id": "zeralda-thenia-zeralda-suburban",
