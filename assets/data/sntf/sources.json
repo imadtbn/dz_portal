@@ -1,6 +1,6 @@
 {
   "version": 10,
-  "updated": "2026-09-27",
+  "updated": "2026-09-28",
   "sources": [
     {
       "id": "dz-portal-gallery",
@@ -257,6 +257,83 @@
       "verified_at": null,
       "current_validity": "not_independently_rechecked",
       "notice": "الصورة الرسمية الموجودة في المشروع توثّق اتجاه الرحلة وأيام انطلاقها ووقتها من المحطة الأولى. لا تعرض مواقيت الوصول والتوقفات الوسيطة؛ لا تُستنتج هذه الأوقات."
+    },
+    {
+      "id": "eastern-gallery-batna",
+      "name": "صورة جدول SNTF: alger-batna-alger.jpg",
+      "url": "https://imadtbn.github.io/dz_portal/assets/train-schedules/Eastern/alger-batna-alger.jpg",
+      "kind": "official-timetable-image",
+      "official_document": true,
+      "origin_confirmation": "repository_owner",
+      "current_validity": "not_independently_rechecked",
+      "verified_at": null,
+      "notice": "الأوقات من الصورة الرسمية المحفوظة في المشروع. الجدول المعلن ليس تتبعًا آنيًا؛ تُراجع التغييرات التشغيلية من SNTF."
+    },
+    {
+      "id": "eastern-gallery-bejaia",
+      "name": "صورة جدول SNTF: alger-bejaia-alger.jpg",
+      "url": "https://imadtbn.github.io/dz_portal/assets/train-schedules/Eastern/alger-bejaia-alger.jpg",
+      "kind": "official-timetable-image",
+      "official_document": true,
+      "origin_confirmation": "repository_owner",
+      "current_validity": "not_independently_rechecked",
+      "verified_at": null,
+      "notice": "الأوقات من الصورة الرسمية المحفوظة في المشروع. الجدول المعلن ليس تتبعًا آنيًا؛ تُراجع التغييرات التشغيلية من SNTF."
+    },
+    {
+      "id": "eastern-gallery-annaba",
+      "name": "صورة جدول SNTF: alger-annaba.jpg",
+      "url": "https://imadtbn.github.io/dz_portal/assets/train-schedules/Eastern/alger-annaba.jpg",
+      "kind": "official-timetable-image",
+      "official_document": true,
+      "origin_confirmation": "repository_owner",
+      "current_validity": "not_independently_rechecked",
+      "verified_at": null,
+      "notice": "الأوقات من الصورة الرسمية المحفوظة في المشروع. الجدول المعلن ليس تتبعًا آنيًا؛ تُراجع التغييرات التشغيلية من SNTF."
+    },
+    {
+      "id": "eastern-gallery-tebessa",
+      "name": "صورة جدول SNTF: alger-tebessa.jpg",
+      "url": "https://imadtbn.github.io/dz_portal/assets/train-schedules/Eastern/alger-tebessa.jpg",
+      "kind": "official-timetable-image",
+      "official_document": true,
+      "origin_confirmation": "repository_owner",
+      "current_validity": "not_independently_rechecked",
+      "verified_at": null,
+      "notice": "الأوقات من الصورة الرسمية المحفوظة في المشروع. الجدول المعلن ليس تتبعًا آنيًا؛ تُراجع التغييرات التشغيلية من SNTF."
+    },
+    {
+      "id": "eastern-gallery-beni",
+      "name": "صورة جدول SNTF: beni-mansour-bedjaia.png",
+      "url": "https://imadtbn.github.io/dz_portal/assets/train-schedules/Eastern/beni-mansour-bedjaia.png",
+      "kind": "official-timetable-image",
+      "official_document": true,
+      "origin_confirmation": "repository_owner",
+      "current_validity": "not_independently_rechecked",
+      "verified_at": null,
+      "notice": "الأوقات من الصورة الرسمية المحفوظة في المشروع. الجدول المعلن ليس تتبعًا آنيًا؛ تُراجع التغييرات التشغيلية من SNTF."
+    },
+    {
+      "id": "east-agha-out",
+      "name": "جدول آغا والخطوط الشرقية: agha-batna.png",
+      "url": "https://imadtbn.github.io/dz_portal/assets/train-schedules/Eastern/agha-batna.png",
+      "kind": "official-timetable-image",
+      "official_document": true,
+      "origin_confirmation": "repository_owner",
+      "current_validity": "not_independently_rechecked",
+      "verified_at": null,
+      "notice": "أوقات من صورة SNTF؛ أيام التشغيل غير مذكورة في الصورة، ولذلك لا تُحتسب كمواعيد قادمة."
+    },
+    {
+      "id": "east-agha-back",
+      "name": "جدول آغا والخطوط الشرقية: abttbb to agha.png",
+      "url": "https://imadtbn.github.io/dz_portal/assets/train-schedules/Eastern/abttbb%20to%20agha.png",
+      "kind": "official-timetable-image",
+      "official_document": true,
+      "origin_confirmation": "repository_owner",
+      "current_validity": "not_independently_rechecked",
+      "verified_at": null,
+      "notice": "أوقات من صورة SNTF؛ أيام التشغيل غير مذكورة في الصورة، ولذلك لا تُحتسب كمواعيد قادمة."
     }
   ],
   "provenance_policy": {

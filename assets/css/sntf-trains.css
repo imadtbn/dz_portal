@@ -67,3 +67,7 @@
 .category-schedules:hover,.category-schedules:focus-visible{background:#d6f0f1}
 .category-schedules[hidden]{display:none}
 @media(max-width:680px){.category-schedules{grid-column:1;max-width:100%;width:100%;justify-content:center}}
+
+/* Scheduled arrival/departure within the next 15 minutes. */
+.event.imminent{border-color:#ea8c14;background:#fff4dc;box-shadow:inset 4px 0 #e6850d,0 4px 16px #8c500c24}
+.event.imminent .countdown,.event.imminent .event-top time{color:#8b4200;font-weight:900}

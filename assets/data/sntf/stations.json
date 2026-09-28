@@ -1,6 +1,6 @@
 {
   "version": 9,
-  "updated": "2026-09-27",
+  "updated": "2026-09-28",
   "timetable_documents": {
     "authority": "SNTF",
     "authority_url": "https://www.sntf.dz/",
@@ -1855,6 +1855,16 @@
       "lon": 7.4552583,
       "geo_source": "Google Maps",
       "geo_verified": true
+    },
+    {
+      "id": "chelghoum_laid",
+      "name": "شلغوم العيد",
+      "name_fr": "Chelghoum Laïd",
+      "lat": null,
+      "lon": null,
+      "geo_verified": false,
+      "geo_source": null,
+      "source": "dz-portal-gallery"
     }
   ],
   "official_station_register": {

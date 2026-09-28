@@ -1,6 +1,6 @@
 {
   "version": 13,
-  "updated": "2026-09-27",
+  "updated": "2026-09-28",
   "trips": [
     {
       "trip_id": "user-zeralda-agha-1500",
@@ -14329,6 +14329,1778 @@
         "tuesday",
         "thursday"
       ]
+    },
+    {
+      "trip_id": "photo-east-agha-bejaia",
+      "route_id": "agha-bejaia",
+      "train_number": null,
+      "service_id": "eastern-days-unresolved",
+      "source_id": "eastern-gallery-bejaia",
+      "data_status": "source_transcribed",
+      "station_time_kind": "published_departure_or_passage",
+      "stop_times": [
+        {
+          "station_id": "agha",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "14:33"
+        },
+        {
+          "station_id": "boumerdes",
+          "sequence": 2,
+          "arrival": "15:03",
+          "departure": "15:03"
+        },
+        {
+          "station_id": "lakhdaria",
+          "sequence": 3,
+          "arrival": "15:30",
+          "departure": "15:30"
+        },
+        {
+          "station_id": "draa_el_mizan",
+          "sequence": 4,
+          "arrival": "15:51",
+          "departure": "15:51"
+        },
+        {
+          "station_id": "bouira",
+          "sequence": 5,
+          "arrival": "16:14",
+          "departure": "16:14"
+        },
+        {
+          "station_id": "ahnif",
+          "sequence": 6,
+          "arrival": "16:45",
+          "departure": "16:45"
+        },
+        {
+          "station_id": "beni_mansour",
+          "sequence": 7,
+          "arrival": "16:59",
+          "departure": "16:59"
+        },
+        {
+          "station_id": "tazmalt",
+          "sequence": 8,
+          "arrival": "17:13",
+          "departure": "17:13"
+        },
+        {
+          "station_id": "allaghen",
+          "sequence": 9,
+          "arrival": "17:20",
+          "departure": "17:20"
+        },
+        {
+          "station_id": "akbou",
+          "sequence": 10,
+          "arrival": "17:33",
+          "departure": "17:33"
+        },
+        {
+          "station_id": "ighzer_amokrane",
+          "sequence": 11,
+          "arrival": "17:44",
+          "departure": "17:44"
+        },
+        {
+          "station_id": "takrietz",
+          "sequence": 12,
+          "arrival": "17:50",
+          "departure": "17:50"
+        },
+        {
+          "station_id": "sidi_aich",
+          "sequence": 13,
+          "arrival": "17:56",
+          "departure": "17:56"
+        },
+        {
+          "station_id": "el_kseur",
+          "sequence": 14,
+          "arrival": "18:13",
+          "departure": "18:13"
+        },
+        {
+          "station_id": "oued_ghir",
+          "sequence": 15,
+          "arrival": "18:26",
+          "departure": "18:26"
+        },
+        {
+          "station_id": "bejaia",
+          "sequence": 16,
+          "arrival": "18:38",
+          "departure": null
+        }
+      ],
+      "editor_note": "وقت كل محطة من الصورة الرسمية؛ في المحطات الوسيطة عُرض الوقت نفسه للوصول والمغادرة لأن الجدول ينشر وقتًا واحدًا.",
+      "operating_days_status": "review_required"
+    },
+    {
+      "trip_id": "photo-east-bejaia-agha",
+      "route_id": "bejaia-alger",
+      "train_number": null,
+      "service_id": "eastern-days-unresolved",
+      "source_id": "eastern-gallery-bejaia",
+      "data_status": "source_transcribed",
+      "station_time_kind": "published_departure_or_passage",
+      "stop_times": [
+        {
+          "station_id": "bejaia",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "06:30"
+        },
+        {
+          "station_id": "oued_ghir",
+          "sequence": 2,
+          "arrival": "06:42",
+          "departure": "06:42"
+        },
+        {
+          "station_id": "el_kseur",
+          "sequence": 3,
+          "arrival": "06:54",
+          "departure": "06:54"
+        },
+        {
+          "station_id": "sidi_aich",
+          "sequence": 4,
+          "arrival": "07:11",
+          "departure": "07:11"
+        },
+        {
+          "station_id": "takrietz",
+          "sequence": 5,
+          "arrival": "07:19",
+          "departure": "07:19"
+        },
+        {
+          "station_id": "ighzer_amokrane",
+          "sequence": 6,
+          "arrival": "07:25",
+          "departure": "07:25"
+        },
+        {
+          "station_id": "akbou",
+          "sequence": 7,
+          "arrival": "07:35",
+          "departure": "07:35"
+        },
+        {
+          "station_id": "allaghen",
+          "sequence": 8,
+          "arrival": "07:48",
+          "departure": "07:48"
+        },
+        {
+          "station_id": "tazmalt",
+          "sequence": 9,
+          "arrival": "07:54",
+          "departure": "07:54"
+        },
+        {
+          "station_id": "beni_mansour",
+          "sequence": 10,
+          "arrival": "08:03",
+          "departure": "08:03"
+        },
+        {
+          "station_id": "ahnif",
+          "sequence": 11,
+          "arrival": "08:15",
+          "departure": "08:15"
+        },
+        {
+          "station_id": "el_adjiba",
+          "sequence": 12,
+          "arrival": "08:25",
+          "departure": "08:25"
+        },
+        {
+          "station_id": "bouira",
+          "sequence": 13,
+          "arrival": "08:53",
+          "departure": "08:53"
+        },
+        {
+          "station_id": "draa_el_mizan",
+          "sequence": 14,
+          "arrival": "09:23",
+          "departure": "09:23"
+        },
+        {
+          "station_id": "lakhdaria",
+          "sequence": 15,
+          "arrival": "09:41",
+          "departure": "09:41"
+        },
+        {
+          "station_id": "boumerdes",
+          "sequence": 16,
+          "arrival": "10:08",
+          "departure": "10:08"
+        },
+        {
+          "station_id": "agha",
+          "sequence": 17,
+          "arrival": "10:39",
+          "departure": null
+        }
+      ],
+      "editor_note": "وقت كل محطة من الصورة الرسمية؛ في المحطات الوسيطة عُرض الوقت نفسه للوصول والمغادرة لأن الجدول ينشر وقتًا واحدًا.",
+      "operating_days_status": "review_required"
+    },
+    {
+      "trip_id": "photo-east-agha-batna",
+      "route_id": "agha-batna",
+      "train_number": null,
+      "service_id": "daily",
+      "source_id": "eastern-gallery-batna",
+      "data_status": "source_transcribed",
+      "station_time_kind": "published_departure_or_passage",
+      "stop_times": [
+        {
+          "station_id": "agha",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "13:15"
+        },
+        {
+          "station_id": "boumerdes",
+          "sequence": 2,
+          "arrival": "14:01",
+          "departure": "14:01"
+        },
+        {
+          "station_id": "bouira",
+          "sequence": 3,
+          "arrival": "15:21",
+          "departure": "15:21"
+        },
+        {
+          "station_id": "beni_mansour",
+          "sequence": 4,
+          "arrival": "16:02",
+          "departure": "16:02"
+        },
+        {
+          "station_id": "bordj_bou_arreridj",
+          "sequence": 5,
+          "arrival": "17:04",
+          "departure": "17:04"
+        },
+        {
+          "station_id": "msila",
+          "sequence": 6,
+          "arrival": "17:48",
+          "departure": "17:48"
+        },
+        {
+          "station_id": "barhoum",
+          "sequence": 7,
+          "arrival": "18:24",
+          "departure": "18:24"
+        },
+        {
+          "station_id": "barika",
+          "sequence": 8,
+          "arrival": "19:00",
+          "departure": "19:00"
+        },
+        {
+          "station_id": "seggana",
+          "sequence": 9,
+          "arrival": "19:15",
+          "departure": "19:15"
+        },
+        {
+          "station_id": "ain_touta",
+          "sequence": 10,
+          "arrival": "19:38",
+          "departure": "19:38"
+        },
+        {
+          "station_id": "batna",
+          "sequence": 11,
+          "arrival": "20:04",
+          "departure": null
+        }
+      ],
+      "editor_note": "وقت كل محطة من الصورة الرسمية؛ في المحطات الوسيطة عُرض الوقت نفسه للوصول والمغادرة لأن الجدول ينشر وقتًا واحدًا."
+    },
+    {
+      "trip_id": "photo-east-batna-agha",
+      "route_id": "batna-alger",
+      "train_number": null,
+      "service_id": "daily",
+      "source_id": "eastern-gallery-batna",
+      "data_status": "source_transcribed",
+      "station_time_kind": "published_departure_or_passage",
+      "stop_times": [
+        {
+          "station_id": "batna",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "22:50"
+        },
+        {
+          "station_id": "ain_touta",
+          "sequence": 2,
+          "arrival": "23:13",
+          "departure": "23:13"
+        },
+        {
+          "station_id": "seggana",
+          "sequence": 3,
+          "arrival": "23:40",
+          "departure": "23:40"
+        },
+        {
+          "station_id": "barika",
+          "sequence": 4,
+          "arrival": "23:51",
+          "departure": "23:51"
+        },
+        {
+          "station_id": "barhoum",
+          "sequence": 5,
+          "arrival": "24:28",
+          "departure": "24:28"
+        },
+        {
+          "station_id": "msila",
+          "sequence": 6,
+          "arrival": "25:00",
+          "departure": "25:00"
+        },
+        {
+          "station_id": "bordj_bou_arreridj",
+          "sequence": 7,
+          "arrival": "25:45",
+          "departure": "25:45"
+        },
+        {
+          "station_id": "beni_mansour",
+          "sequence": 8,
+          "arrival": "26:48",
+          "departure": "26:48"
+        },
+        {
+          "station_id": "bouira",
+          "sequence": 9,
+          "arrival": "27:28",
+          "departure": "27:28"
+        },
+        {
+          "station_id": "boumerdes",
+          "sequence": 10,
+          "arrival": "28:43",
+          "departure": "28:43"
+        },
+        {
+          "station_id": "agha",
+          "sequence": 11,
+          "arrival": "29:23",
+          "departure": null
+        }
+      ],
+      "editor_note": "وقت كل محطة من الصورة الرسمية؛ في المحطات الوسيطة عُرض الوقت نفسه للوصول والمغادرة لأن الجدول ينشر وقتًا واحدًا."
+    },
+    {
+      "trip_id": "photo-east-agha-annaba",
+      "route_id": "alger-annaba",
+      "train_number": null,
+      "service_id": "eastern-annaba-calendar-conflict",
+      "source_id": "eastern-gallery-annaba",
+      "data_status": "source_transcribed",
+      "station_time_kind": "published_departure_or_passage",
+      "stop_times": [
+        {
+          "station_id": "agha",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "18:40"
+        },
+        {
+          "station_id": "thenia",
+          "sequence": 2,
+          "arrival": "19:35",
+          "departure": "19:35"
+        },
+        {
+          "station_id": "bouira",
+          "sequence": 3,
+          "arrival": "20:51",
+          "departure": "20:51"
+        },
+        {
+          "station_id": "beni_mansour",
+          "sequence": 4,
+          "arrival": "21:38",
+          "departure": "21:38"
+        },
+        {
+          "station_id": "el_mansoura",
+          "sequence": 5,
+          "arrival": "21:59",
+          "departure": "21:59"
+        },
+        {
+          "station_id": "bordj_bou_arreridj",
+          "sequence": 6,
+          "arrival": "22:46",
+          "departure": "22:46"
+        },
+        {
+          "station_id": "setif",
+          "sequence": 7,
+          "arrival": "23:37",
+          "departure": "23:37"
+        },
+        {
+          "station_id": "el_eulma",
+          "sequence": 8,
+          "arrival": "24:06",
+          "departure": "24:06"
+        },
+        {
+          "station_id": "tadjenanet",
+          "sequence": 9,
+          "arrival": "24:29",
+          "departure": "24:29"
+        },
+        {
+          "station_id": "teleghma",
+          "sequence": 10,
+          "arrival": "25:02",
+          "departure": "25:02"
+        },
+        {
+          "station_id": "el_gourzi",
+          "sequence": 11,
+          "arrival": "25:26",
+          "departure": "25:26"
+        },
+        {
+          "station_id": "el_khroub",
+          "sequence": 12,
+          "arrival": "26:00",
+          "departure": "26:00"
+        },
+        {
+          "station_id": "constantine",
+          "sequence": 13,
+          "arrival": "26:28",
+          "departure": "26:28"
+        },
+        {
+          "station_id": "el_harrouch",
+          "sequence": 14,
+          "arrival": "27:44",
+          "departure": "27:44"
+        },
+        {
+          "station_id": "ramdane_djamel",
+          "sequence": 15,
+          "arrival": "28:00",
+          "departure": "28:00"
+        },
+        {
+          "station_id": "azzaba",
+          "sequence": 16,
+          "arrival": "28:25",
+          "departure": "28:25"
+        },
+        {
+          "station_id": "annaba",
+          "sequence": 17,
+          "arrival": "29:28",
+          "departure": null
+        }
+      ],
+      "editor_note": "تعارض أيام التشغيل بين alger-annaba.jpg وalger-annaba-tj.jpg؛ لا تظهر الرحلة القادمة حتى حسم النسخة السارية.",
+      "operating_days_status": "review_required"
+    },
+    {
+      "trip_id": "photo-east-annaba-agha",
+      "route_id": "annaba-alger",
+      "train_number": null,
+      "service_id": "eastern-annaba-calendar-conflict",
+      "source_id": "eastern-gallery-annaba",
+      "data_status": "source_transcribed",
+      "station_time_kind": "published_departure_or_passage",
+      "stop_times": [
+        {
+          "station_id": "annaba",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "21:00"
+        },
+        {
+          "station_id": "azzaba",
+          "sequence": 2,
+          "arrival": "21:56",
+          "departure": "21:56"
+        },
+        {
+          "station_id": "ramdane_djamel",
+          "sequence": 3,
+          "arrival": "22:21",
+          "departure": "22:21"
+        },
+        {
+          "station_id": "el_harrouch",
+          "sequence": 4,
+          "arrival": "22:37",
+          "departure": "22:37"
+        },
+        {
+          "station_id": "constantine",
+          "sequence": 5,
+          "arrival": "23:34",
+          "departure": "23:34"
+        },
+        {
+          "station_id": "el_khroub",
+          "sequence": 6,
+          "arrival": "23:58",
+          "departure": "23:58"
+        },
+        {
+          "station_id": "el_gourzi",
+          "sequence": 7,
+          "arrival": "24:14",
+          "departure": "24:14"
+        },
+        {
+          "station_id": "teleghma",
+          "sequence": 8,
+          "arrival": "24:34",
+          "departure": "24:34"
+        },
+        {
+          "station_id": "tadjenanet",
+          "sequence": 9,
+          "arrival": "25:05",
+          "departure": "25:05"
+        },
+        {
+          "station_id": "el_eulma",
+          "sequence": 10,
+          "arrival": "25:26",
+          "departure": "25:26"
+        },
+        {
+          "station_id": "setif",
+          "sequence": 11,
+          "arrival": "25:57",
+          "departure": "25:57"
+        },
+        {
+          "station_id": "bordj_bou_arreridj",
+          "sequence": 12,
+          "arrival": "26:47",
+          "departure": "26:47"
+        },
+        {
+          "station_id": "el_mansoura",
+          "sequence": 13,
+          "arrival": "27:20",
+          "departure": "27:20"
+        },
+        {
+          "station_id": "beni_mansour",
+          "sequence": 14,
+          "arrival": "27:59",
+          "departure": "27:59"
+        },
+        {
+          "station_id": "bouira",
+          "sequence": 15,
+          "arrival": "28:49",
+          "departure": "28:49"
+        },
+        {
+          "station_id": "thenia",
+          "sequence": 16,
+          "arrival": "30:06",
+          "departure": "30:06"
+        },
+        {
+          "station_id": "el_harrach",
+          "sequence": 17,
+          "arrival": "30:48",
+          "departure": "30:48"
+        },
+        {
+          "station_id": "agha",
+          "sequence": 18,
+          "arrival": "31:06",
+          "departure": null
+        }
+      ],
+      "editor_note": "تعارض أيام التشغيل بين alger-annaba.jpg وalger-annaba-tj.jpg؛ لا تظهر الرحلة القادمة حتى حسم النسخة السارية.",
+      "operating_days_status": "review_required"
+    },
+    {
+      "trip_id": "photo-east-agha-tebessa",
+      "route_id": "alger-tebessa",
+      "train_number": null,
+      "service_id": "eastern-tebessa-out",
+      "source_id": "eastern-gallery-tebessa",
+      "data_status": "source_transcribed",
+      "station_time_kind": "published_departure_or_passage",
+      "stop_times": [
+        {
+          "station_id": "agha",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "19:40"
+        },
+        {
+          "station_id": "boumerdes",
+          "sequence": 2,
+          "arrival": "20:27",
+          "departure": "20:27"
+        },
+        {
+          "station_id": "thenia",
+          "sequence": 3,
+          "arrival": "20:37",
+          "departure": "20:37"
+        },
+        {
+          "station_id": "bouira",
+          "sequence": 4,
+          "arrival": "21:53",
+          "departure": "21:53"
+        },
+        {
+          "station_id": "beni_mansour",
+          "sequence": 5,
+          "arrival": "22:40",
+          "departure": "22:40"
+        },
+        {
+          "station_id": "el_mansoura",
+          "sequence": 6,
+          "arrival": "23:20",
+          "departure": "23:20"
+        },
+        {
+          "station_id": "bordj_bou_arreridj",
+          "sequence": 7,
+          "arrival": "23:48",
+          "departure": "23:48"
+        },
+        {
+          "station_id": "setif",
+          "sequence": 8,
+          "arrival": "24:39",
+          "departure": "24:39"
+        },
+        {
+          "station_id": "el_eulma",
+          "sequence": 9,
+          "arrival": "25:08",
+          "departure": "25:08"
+        },
+        {
+          "station_id": "tadjenanet",
+          "sequence": 10,
+          "arrival": "25:30",
+          "departure": "25:30"
+        },
+        {
+          "station_id": "teleghma",
+          "sequence": 11,
+          "arrival": "26:03",
+          "departure": "26:03"
+        },
+        {
+          "station_id": "el_gourzi",
+          "sequence": 12,
+          "arrival": "26:26",
+          "departure": "26:26"
+        },
+        {
+          "station_id": "ain_mlila",
+          "sequence": 13,
+          "arrival": "26:55",
+          "departure": "26:55"
+        },
+        {
+          "station_id": "ain_fekroun",
+          "sequence": 14,
+          "arrival": "27:33",
+          "departure": "27:33"
+        },
+        {
+          "station_id": "oum_el_bouaghi",
+          "sequence": 15,
+          "arrival": "28:10",
+          "departure": "28:10"
+        },
+        {
+          "station_id": "ain_beida",
+          "sequence": 16,
+          "arrival": "28:43",
+          "departure": "28:43"
+        },
+        {
+          "station_id": "sidi_yahia",
+          "sequence": 17,
+          "arrival": "30:02",
+          "departure": "30:02"
+        },
+        {
+          "station_id": "morsott",
+          "sequence": 18,
+          "arrival": "30:18",
+          "departure": "30:18"
+        },
+        {
+          "station_id": "tebessa",
+          "sequence": 19,
+          "arrival": "30:51",
+          "departure": null
+        }
+      ],
+      "editor_note": "وقت كل محطة من الصورة الرسمية؛ في المحطات الوسيطة عُرض الوقت نفسه للوصول والمغادرة لأن الجدول ينشر وقتًا واحدًا."
+    },
+    {
+      "trip_id": "photo-east-tebessa-agha",
+      "route_id": "tebessa-alger",
+      "train_number": null,
+      "service_id": "eastern-tebessa-back",
+      "source_id": "eastern-gallery-tebessa",
+      "data_status": "source_transcribed",
+      "station_time_kind": "published_departure_or_passage",
+      "stop_times": [
+        {
+          "station_id": "tebessa",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "17:30"
+        },
+        {
+          "station_id": "morsott",
+          "sequence": 2,
+          "arrival": "18:02",
+          "departure": "18:02"
+        },
+        {
+          "station_id": "sidi_yahia",
+          "sequence": 3,
+          "arrival": "18:18",
+          "departure": "18:18"
+        },
+        {
+          "station_id": "ain_beida",
+          "sequence": 4,
+          "arrival": "19:33",
+          "departure": "19:33"
+        },
+        {
+          "station_id": "oum_el_bouaghi",
+          "sequence": 5,
+          "arrival": "20:07",
+          "departure": "20:07"
+        },
+        {
+          "station_id": "ain_fekroun",
+          "sequence": 6,
+          "arrival": "20:45",
+          "departure": "20:45"
+        },
+        {
+          "station_id": "ain_mlila",
+          "sequence": 7,
+          "arrival": "21:23",
+          "departure": "21:23"
+        },
+        {
+          "station_id": "el_gourzi",
+          "sequence": 8,
+          "arrival": "21:35",
+          "departure": "21:35"
+        },
+        {
+          "station_id": "teleghma",
+          "sequence": 9,
+          "arrival": "22:18",
+          "departure": "22:18"
+        },
+        {
+          "station_id": "tadjenanet",
+          "sequence": 10,
+          "arrival": "22:49",
+          "departure": "22:49"
+        },
+        {
+          "station_id": "el_eulma",
+          "sequence": 11,
+          "arrival": "23:11",
+          "departure": "23:11"
+        },
+        {
+          "station_id": "setif",
+          "sequence": 12,
+          "arrival": "23:39",
+          "departure": "23:39"
+        },
+        {
+          "station_id": "bordj_bou_arreridj",
+          "sequence": 13,
+          "arrival": "24:28",
+          "departure": "24:28"
+        },
+        {
+          "station_id": "el_mansoura",
+          "sequence": 14,
+          "arrival": "25:07",
+          "departure": "25:07"
+        },
+        {
+          "station_id": "beni_mansour",
+          "sequence": 15,
+          "arrival": "25:45",
+          "departure": "25:45"
+        },
+        {
+          "station_id": "bouira",
+          "sequence": 16,
+          "arrival": "26:37",
+          "departure": "26:37"
+        },
+        {
+          "station_id": "thenia",
+          "sequence": 17,
+          "arrival": "27:57",
+          "departure": "27:57"
+        },
+        {
+          "station_id": "boumerdes",
+          "sequence": 18,
+          "arrival": "28:08",
+          "departure": "28:08"
+        },
+        {
+          "station_id": "agha",
+          "sequence": 19,
+          "arrival": "28:51",
+          "departure": null
+        }
+      ],
+      "editor_note": "وقت كل محطة من الصورة الرسمية؛ في المحطات الوسيطة عُرض الوقت نفسه للوصول والمغادرة لأن الجدول ينشر وقتًا واحدًا."
+    },
+    {
+      "trip_id": "photo-east-beni-bejaia-151",
+      "route_id": "beni-mansour-bejaia",
+      "train_number": "151",
+      "service_id": "eastern-days-unresolved",
+      "source_id": "eastern-gallery-beni",
+      "data_status": "source_transcribed",
+      "station_time_kind": "published_departure_or_passage",
+      "stop_times": [
+        {
+          "station_id": "beni_mansour",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "05:35"
+        },
+        {
+          "station_id": "toghza",
+          "sequence": 2,
+          "arrival": "05:40",
+          "departure": "05:40"
+        },
+        {
+          "station_id": "tazmalt",
+          "sequence": 3,
+          "arrival": "05:44",
+          "departure": "05:44"
+        },
+        {
+          "station_id": "allaghen",
+          "sequence": 4,
+          "arrival": "05:51",
+          "departure": "05:51"
+        },
+        {
+          "station_id": "akbou",
+          "sequence": 5,
+          "arrival": "06:03",
+          "departure": "06:03"
+        },
+        {
+          "station_id": "azib",
+          "sequence": 6,
+          "arrival": "06:11",
+          "departure": "06:11"
+        },
+        {
+          "station_id": "ighzer_amokrane",
+          "sequence": 7,
+          "arrival": "06:16",
+          "departure": "06:16"
+        },
+        {
+          "station_id": "takrietz",
+          "sequence": 8,
+          "arrival": "06:26",
+          "departure": "06:26"
+        },
+        {
+          "station_id": "sidi_aich",
+          "sequence": 9,
+          "arrival": "06:30",
+          "departure": "06:30"
+        },
+        {
+          "station_id": "lotta",
+          "sequence": 10,
+          "arrival": "06:37",
+          "departure": "06:37"
+        },
+        {
+          "station_id": "il_maten",
+          "sequence": 11,
+          "arrival": "06:42",
+          "departure": "06:42"
+        },
+        {
+          "station_id": "el_kseur",
+          "sequence": 12,
+          "arrival": "06:51",
+          "departure": "06:51"
+        },
+        {
+          "station_id": "oued_ghir",
+          "sequence": 13,
+          "arrival": "07:09",
+          "departure": "07:09"
+        },
+        {
+          "station_id": "bejaia",
+          "sequence": 14,
+          "arrival": "07:23",
+          "departure": null
+        }
+      ],
+      "editor_note": "وقت كل محطة من الصورة الرسمية؛ في المحطات الوسيطة عُرض الوقت نفسه للوصول والمغادرة لأن الجدول ينشر وقتًا واحدًا.",
+      "operating_days_status": "review_required"
+    },
+    {
+      "trip_id": "photo-east-beni-bejaia-153",
+      "route_id": "beni-mansour-bejaia",
+      "train_number": "153",
+      "service_id": "eastern-days-unresolved",
+      "source_id": "eastern-gallery-beni",
+      "data_status": "source_transcribed",
+      "station_time_kind": "published_departure_or_passage",
+      "stop_times": [
+        {
+          "station_id": "beni_mansour",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "10:40"
+        },
+        {
+          "station_id": "toghza",
+          "sequence": 2,
+          "arrival": "10:45",
+          "departure": "10:45"
+        },
+        {
+          "station_id": "tazmalt",
+          "sequence": 3,
+          "arrival": "10:50",
+          "departure": "10:50"
+        },
+        {
+          "station_id": "allaghen",
+          "sequence": 4,
+          "arrival": "10:57",
+          "departure": "10:57"
+        },
+        {
+          "station_id": "akbou",
+          "sequence": 5,
+          "arrival": "11:10",
+          "departure": "11:10"
+        },
+        {
+          "station_id": "azib",
+          "sequence": 6,
+          "arrival": "11:18",
+          "departure": "11:18"
+        },
+        {
+          "station_id": "ighzer_amokrane",
+          "sequence": 7,
+          "arrival": "11:23",
+          "departure": "11:23"
+        },
+        {
+          "station_id": "takrietz",
+          "sequence": 8,
+          "arrival": "11:31",
+          "departure": "11:31"
+        },
+        {
+          "station_id": "sidi_aich",
+          "sequence": 9,
+          "arrival": "11:39",
+          "departure": "11:39"
+        },
+        {
+          "station_id": "lotta",
+          "sequence": 10,
+          "arrival": "11:46",
+          "departure": "11:46"
+        },
+        {
+          "station_id": "il_maten",
+          "sequence": 11,
+          "arrival": "11:52",
+          "departure": "11:52"
+        },
+        {
+          "station_id": "el_kseur",
+          "sequence": 12,
+          "arrival": "12:01",
+          "departure": "12:01"
+        },
+        {
+          "station_id": "oued_ghir",
+          "sequence": 13,
+          "arrival": "12:15",
+          "departure": "12:15"
+        },
+        {
+          "station_id": "bejaia",
+          "sequence": 14,
+          "arrival": "12:29",
+          "departure": null
+        }
+      ],
+      "editor_note": "وقت كل محطة من الصورة الرسمية؛ في المحطات الوسيطة عُرض الوقت نفسه للوصول والمغادرة لأن الجدول ينشر وقتًا واحدًا.",
+      "operating_days_status": "review_required"
+    },
+    {
+      "trip_id": "photo-east-akbou-bejaia-b109",
+      "route_id": "akbou-bejaia",
+      "train_number": "B109",
+      "service_id": "eastern-days-unresolved",
+      "source_id": "eastern-gallery-beni",
+      "data_status": "source_transcribed",
+      "station_time_kind": "published_departure_or_passage",
+      "stop_times": [
+        {
+          "station_id": "akbou",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "15:00"
+        },
+        {
+          "station_id": "azib",
+          "sequence": 2,
+          "arrival": "15:08",
+          "departure": "15:08"
+        },
+        {
+          "station_id": "ighzer_amokrane",
+          "sequence": 3,
+          "arrival": "15:12",
+          "departure": "15:12"
+        },
+        {
+          "station_id": "takrietz",
+          "sequence": 4,
+          "arrival": "15:20",
+          "departure": "15:20"
+        },
+        {
+          "station_id": "sidi_aich",
+          "sequence": 5,
+          "arrival": "15:28",
+          "departure": "15:28"
+        },
+        {
+          "station_id": "lotta",
+          "sequence": 6,
+          "arrival": "15:49",
+          "departure": "15:49"
+        },
+        {
+          "station_id": "il_maten",
+          "sequence": 7,
+          "arrival": "15:55",
+          "departure": "15:55"
+        },
+        {
+          "station_id": "el_kseur",
+          "sequence": 8,
+          "arrival": "16:04",
+          "departure": "16:04"
+        },
+        {
+          "station_id": "oued_ghir",
+          "sequence": 9,
+          "arrival": "16:18",
+          "departure": "16:18"
+        },
+        {
+          "station_id": "bejaia",
+          "sequence": 10,
+          "arrival": "16:32",
+          "departure": null
+        }
+      ],
+      "editor_note": "وقت كل محطة من الصورة الرسمية؛ في المحطات الوسيطة عُرض الوقت نفسه للوصول والمغادرة لأن الجدول ينشر وقتًا واحدًا.",
+      "operating_days_status": "review_required"
+    },
+    {
+      "trip_id": "photo-east-bejaia-beni-152",
+      "route_id": "bejaia-beni-mansour",
+      "train_number": "152",
+      "service_id": "eastern-days-unresolved",
+      "source_id": "eastern-gallery-beni",
+      "data_status": "source_transcribed",
+      "station_time_kind": "published_departure_or_passage",
+      "stop_times": [
+        {
+          "station_id": "bejaia",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "08:00"
+        },
+        {
+          "station_id": "oued_ghir",
+          "sequence": 2,
+          "arrival": "08:13",
+          "departure": "08:13"
+        },
+        {
+          "station_id": "el_kseur",
+          "sequence": 3,
+          "arrival": "08:27",
+          "departure": "08:27"
+        },
+        {
+          "station_id": "il_maten",
+          "sequence": 4,
+          "arrival": "08:38",
+          "departure": "08:38"
+        },
+        {
+          "station_id": "lotta",
+          "sequence": 5,
+          "arrival": "08:44",
+          "departure": "08:44"
+        },
+        {
+          "station_id": "sidi_aich",
+          "sequence": 6,
+          "arrival": "08:51",
+          "departure": "08:51"
+        },
+        {
+          "station_id": "takrietz",
+          "sequence": 7,
+          "arrival": "08:59",
+          "departure": "08:59"
+        },
+        {
+          "station_id": "ighzer_amokrane",
+          "sequence": 8,
+          "arrival": "09:07",
+          "departure": "09:07"
+        },
+        {
+          "station_id": "azib",
+          "sequence": 9,
+          "arrival": "09:13",
+          "departure": "09:13"
+        },
+        {
+          "station_id": "akbou",
+          "sequence": 10,
+          "arrival": "09:21",
+          "departure": "09:21"
+        },
+        {
+          "station_id": "allaghen",
+          "sequence": 11,
+          "arrival": "09:36",
+          "departure": "09:36"
+        },
+        {
+          "station_id": "tazmalt",
+          "sequence": 12,
+          "arrival": "09:42",
+          "departure": "09:42"
+        },
+        {
+          "station_id": "toghza",
+          "sequence": 13,
+          "arrival": "10:00",
+          "departure": "10:00"
+        },
+        {
+          "station_id": "beni_mansour",
+          "sequence": 14,
+          "arrival": "10:07",
+          "departure": null
+        }
+      ],
+      "editor_note": "وقت كل محطة من الصورة الرسمية؛ في المحطات الوسيطة عُرض الوقت نفسه للوصول والمغادرة لأن الجدول ينشر وقتًا واحدًا.",
+      "operating_days_status": "review_required"
+    },
+    {
+      "trip_id": "photo-east-bejaia-beni-154",
+      "route_id": "bejaia-beni-mansour",
+      "train_number": "154",
+      "service_id": "eastern-days-unresolved",
+      "source_id": "eastern-gallery-beni",
+      "data_status": "source_transcribed",
+      "station_time_kind": "published_departure_or_passage",
+      "stop_times": [
+        {
+          "station_id": "bejaia",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "17:00"
+        },
+        {
+          "station_id": "oued_ghir",
+          "sequence": 2,
+          "arrival": "17:13",
+          "departure": "17:13"
+        },
+        {
+          "station_id": "el_kseur",
+          "sequence": 3,
+          "arrival": "17:27",
+          "departure": "17:27"
+        },
+        {
+          "station_id": "il_maten",
+          "sequence": 4,
+          "arrival": "17:38",
+          "departure": "17:38"
+        },
+        {
+          "station_id": "lotta",
+          "sequence": 5,
+          "arrival": "17:44",
+          "departure": "17:44"
+        },
+        {
+          "station_id": "sidi_aich",
+          "sequence": 6,
+          "arrival": "17:51",
+          "departure": "17:51"
+        },
+        {
+          "station_id": "takrietz",
+          "sequence": 7,
+          "arrival": "18:05",
+          "departure": "18:05"
+        },
+        {
+          "station_id": "ighzer_amokrane",
+          "sequence": 8,
+          "arrival": "18:13",
+          "departure": "18:13"
+        },
+        {
+          "station_id": "azib",
+          "sequence": 9,
+          "arrival": "18:19",
+          "departure": "18:19"
+        },
+        {
+          "station_id": "akbou",
+          "sequence": 10,
+          "arrival": "18:26",
+          "departure": "18:26"
+        },
+        {
+          "station_id": "allaghen",
+          "sequence": 11,
+          "arrival": "18:39",
+          "departure": "18:39"
+        },
+        {
+          "station_id": "tazmalt",
+          "sequence": 12,
+          "arrival": "18:45",
+          "departure": "18:45"
+        },
+        {
+          "station_id": "toghza",
+          "sequence": 13,
+          "arrival": "18:52",
+          "departure": "18:52"
+        },
+        {
+          "station_id": "beni_mansour",
+          "sequence": 14,
+          "arrival": "18:59",
+          "departure": null
+        }
+      ],
+      "editor_note": "وقت كل محطة من الصورة الرسمية؛ في المحطات الوسيطة عُرض الوقت نفسه للوصول والمغادرة لأن الجدول ينشر وقتًا واحدًا.",
+      "operating_days_status": "review_required"
+    },
+    {
+      "trip_id": "photo-east-bejaia-akbou-b110",
+      "route_id": "bejaia-akbou",
+      "train_number": "B110",
+      "service_id": "eastern-days-unresolved",
+      "source_id": "eastern-gallery-beni",
+      "data_status": "source_transcribed",
+      "station_time_kind": "published_departure_or_passage",
+      "stop_times": [
+        {
+          "station_id": "bejaia",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "13:00"
+        },
+        {
+          "station_id": "oued_ghir",
+          "sequence": 2,
+          "arrival": "13:13",
+          "departure": "13:13"
+        },
+        {
+          "station_id": "el_kseur",
+          "sequence": 3,
+          "arrival": "13:27",
+          "departure": "13:27"
+        },
+        {
+          "station_id": "il_maten",
+          "sequence": 4,
+          "arrival": "13:38",
+          "departure": "13:38"
+        },
+        {
+          "station_id": "lotta",
+          "sequence": 5,
+          "arrival": "13:44",
+          "departure": "13:44"
+        },
+        {
+          "station_id": "sidi_aich",
+          "sequence": 6,
+          "arrival": "13:51",
+          "departure": "13:51"
+        },
+        {
+          "station_id": "takrietz",
+          "sequence": 7,
+          "arrival": "13:59",
+          "departure": "13:59"
+        },
+        {
+          "station_id": "ighzer_amokrane",
+          "sequence": 8,
+          "arrival": "14:07",
+          "departure": "14:07"
+        },
+        {
+          "station_id": "azib",
+          "sequence": 9,
+          "arrival": "14:13",
+          "departure": "14:13"
+        },
+        {
+          "station_id": "akbou",
+          "sequence": 10,
+          "arrival": "14:20",
+          "departure": null
+        }
+      ],
+      "editor_note": "وقت كل محطة من الصورة الرسمية؛ في المحطات الوسيطة عُرض الوقت نفسه للوصول والمغادرة لأن الجدول ينشر وقتًا واحدًا.",
+      "operating_days_status": "review_required"
+    },
+    {
+      "trip_id": "photo-east-agha-bouira-15",
+      "route_id": "agha-bouira",
+      "train_number": "15",
+      "service_id": "eastern-days-unresolved",
+      "source_id": "east-agha-out",
+      "data_status": "source_transcribed",
+      "operating_days_status": "review_required",
+      "station_time_kind": "published_departure_or_passage",
+      "stop_times": [
+        {
+          "station_id": "agha",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "16:48"
+        },
+        {
+          "station_id": "el_harrach",
+          "sequence": 2,
+          "arrival": "16:59",
+          "departure": "16:59"
+        },
+        {
+          "station_id": "dar_el_beida",
+          "sequence": 3,
+          "arrival": "17:08",
+          "departure": "17:08"
+        },
+        {
+          "station_id": "rouiba",
+          "sequence": 4,
+          "arrival": "17:14",
+          "departure": "17:14"
+        },
+        {
+          "station_id": "boumerdes",
+          "sequence": 5,
+          "arrival": "17:21",
+          "departure": "17:21"
+        },
+        {
+          "station_id": "thenia",
+          "sequence": 6,
+          "arrival": "17:43",
+          "departure": "17:43"
+        },
+        {
+          "station_id": "souk_el_had",
+          "sequence": 7,
+          "arrival": "17:52",
+          "departure": "17:52"
+        },
+        {
+          "station_id": "beni_amrane",
+          "sequence": 8,
+          "arrival": "17:58",
+          "departure": "17:58"
+        },
+        {
+          "station_id": "ammal",
+          "sequence": 9,
+          "arrival": "18:04",
+          "departure": "18:04"
+        },
+        {
+          "station_id": "lakhdaria",
+          "sequence": 10,
+          "arrival": "18:14",
+          "departure": "18:14"
+        },
+        {
+          "station_id": "kadiria",
+          "sequence": 11,
+          "arrival": "18:34",
+          "departure": "18:34"
+        },
+        {
+          "station_id": "m_zita",
+          "sequence": 12,
+          "arrival": "18:50",
+          "departure": "18:50"
+        },
+        {
+          "station_id": "bouira",
+          "sequence": 13,
+          "arrival": "19:20",
+          "departure": null
+        }
+      ],
+      "editor_note": "أوقات الجدول مصورة ومقروءة؛ أيام التشغيل غير مذكورة."
+    },
+    {
+      "trip_id": "photo-east-bouira-agha-12",
+      "route_id": "bouira-agha",
+      "train_number": "12",
+      "service_id": "eastern-days-unresolved",
+      "source_id": "east-agha-back",
+      "data_status": "source_transcribed",
+      "operating_days_status": "review_required",
+      "station_time_kind": "published_departure_or_passage",
+      "stop_times": [
+        {
+          "station_id": "bouira",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "05:35"
+        },
+        {
+          "station_id": "m_zita",
+          "sequence": 2,
+          "arrival": "06:04",
+          "departure": "06:04"
+        },
+        {
+          "station_id": "kadiria",
+          "sequence": 3,
+          "arrival": "06:17",
+          "departure": "06:17"
+        },
+        {
+          "station_id": "lakhdaria",
+          "sequence": 4,
+          "arrival": "06:30",
+          "departure": "06:30"
+        },
+        {
+          "station_id": "ammal",
+          "sequence": 5,
+          "arrival": "06:40",
+          "departure": "06:40"
+        },
+        {
+          "station_id": "beni_amrane",
+          "sequence": 6,
+          "arrival": "06:44",
+          "departure": "06:44"
+        },
+        {
+          "station_id": "souk_el_had",
+          "sequence": 7,
+          "arrival": "06:49",
+          "departure": "06:49"
+        },
+        {
+          "station_id": "thenia",
+          "sequence": 8,
+          "arrival": "06:57",
+          "departure": "06:57"
+        },
+        {
+          "station_id": "boumerdes",
+          "sequence": 9,
+          "arrival": "07:08",
+          "departure": "07:08"
+        },
+        {
+          "station_id": "rouiba",
+          "sequence": 10,
+          "arrival": "07:24",
+          "departure": "07:24"
+        },
+        {
+          "station_id": "dar_el_beida",
+          "sequence": 11,
+          "arrival": "07:30",
+          "departure": "07:30"
+        },
+        {
+          "station_id": "el_harrach",
+          "sequence": 12,
+          "arrival": "07:38",
+          "departure": "07:38"
+        },
+        {
+          "station_id": "agha",
+          "sequence": 13,
+          "arrival": "07:48",
+          "departure": null
+        }
+      ],
+      "editor_note": "أوقات الجدول مصورة ومقروءة؛ أيام التشغيل غير مذكورة."
+    },
+    {
+      "trip_id": "photo-east-agha-constantine-B3",
+      "route_id": "agha-constantine",
+      "train_number": "B3",
+      "service_id": "eastern-days-unresolved",
+      "source_id": "east-agha-out",
+      "data_status": "source_transcribed",
+      "operating_days_status": "review_required",
+      "station_time_kind": "published_departure_or_passage",
+      "stop_times": [
+        {
+          "station_id": "agha",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "06:30"
+        },
+        {
+          "station_id": "boumerdes",
+          "sequence": 2,
+          "arrival": "07:05",
+          "departure": "07:05"
+        },
+        {
+          "station_id": "thenia",
+          "sequence": 3,
+          "arrival": "07:14",
+          "departure": "07:14"
+        },
+        {
+          "station_id": "bouira",
+          "sequence": 4,
+          "arrival": "08:26",
+          "departure": "08:26"
+        },
+        {
+          "station_id": "beni_mansour",
+          "sequence": 5,
+          "arrival": "09:14",
+          "departure": "09:14"
+        },
+        {
+          "station_id": "bordj_bou_arreridj",
+          "sequence": 6,
+          "arrival": "10:18",
+          "departure": "10:18"
+        },
+        {
+          "station_id": "setif",
+          "sequence": 7,
+          "arrival": "11:05",
+          "departure": "11:05"
+        },
+        {
+          "station_id": "el_eulma",
+          "sequence": 8,
+          "arrival": "11:29",
+          "departure": "11:29"
+        },
+        {
+          "station_id": "tadjenanet",
+          "sequence": 9,
+          "arrival": "11:52",
+          "departure": "11:52"
+        },
+        {
+          "station_id": "chelghoum_laid",
+          "sequence": 10,
+          "arrival": "12:03",
+          "departure": "12:03"
+        },
+        {
+          "station_id": "teleghma",
+          "sequence": 11,
+          "arrival": "12:20",
+          "departure": "12:20"
+        },
+        {
+          "station_id": "el_khroub",
+          "sequence": 12,
+          "arrival": "12:54",
+          "departure": "12:54"
+        },
+        {
+          "station_id": "constantine",
+          "sequence": 13,
+          "arrival": "13:14",
+          "departure": null
+        }
+      ],
+      "editor_note": "أوقات الجدول مصورة ومقروءة؛ أيام التشغيل غير مذكورة."
+    },
+    {
+      "trip_id": "photo-east-constantine-agha-B4",
+      "route_id": "constantine-agha",
+      "train_number": "B4",
+      "service_id": "eastern-days-unresolved",
+      "source_id": "east-agha-back",
+      "data_status": "source_transcribed",
+      "operating_days_status": "review_required",
+      "station_time_kind": "published_departure_or_passage",
+      "stop_times": [
+        {
+          "station_id": "constantine",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "09:45"
+        },
+        {
+          "station_id": "el_khroub",
+          "sequence": 2,
+          "arrival": "10:12",
+          "departure": "10:12"
+        },
+        {
+          "station_id": "teleghma",
+          "sequence": 3,
+          "arrival": "11:04",
+          "departure": "11:04"
+        },
+        {
+          "station_id": "chelghoum_laid",
+          "sequence": 4,
+          "arrival": "11:22",
+          "departure": "11:22"
+        },
+        {
+          "station_id": "tadjenanet",
+          "sequence": 5,
+          "arrival": "11:36",
+          "departure": "11:36"
+        },
+        {
+          "station_id": "el_eulma",
+          "sequence": 6,
+          "arrival": "11:58",
+          "departure": "11:58"
+        },
+        {
+          "station_id": "setif",
+          "sequence": 7,
+          "arrival": "12:26",
+          "departure": "12:26"
+        },
+        {
+          "station_id": "bordj_bou_arreridj",
+          "sequence": 8,
+          "arrival": "13:25",
+          "departure": "13:25"
+        },
+        {
+          "station_id": "el_mansoura",
+          "sequence": 9,
+          "arrival": "13:52",
+          "departure": "13:52"
+        },
+        {
+          "station_id": "beni_mansour",
+          "sequence": 10,
+          "arrival": "14:35",
+          "departure": "14:35"
+        },
+        {
+          "station_id": "bouira",
+          "sequence": 11,
+          "arrival": "15:24",
+          "departure": "15:24"
+        },
+        {
+          "station_id": "thenia",
+          "sequence": 12,
+          "arrival": "16:39",
+          "departure": "16:39"
+        },
+        {
+          "station_id": "boumerdes",
+          "sequence": 13,
+          "arrival": "16:49",
+          "departure": "16:49"
+        },
+        {
+          "station_id": "agha",
+          "sequence": 14,
+          "arrival": "17:30",
+          "departure": null
+        }
+      ],
+      "editor_note": "أوقات الجدول مصورة ومقروءة؛ أيام التشغيل غير مذكورة."
     }
   ],
   "note": "Draft entries are editable real database records, but their prior example times are not operational evidence. Dashboard labels these records as unverified and hides them from default scheduled boards until reviewed. Update stop_times/train_number/source to validate. أُضيفت 60 رحلة من 3 صور رسمية مؤرخة 19 سبتمبر 2026: 28 للمطار ذهابًا وإيابًا، و14 آغا–زرالدة، و18 الجزائر–العفرون. لم تُفترض رحلات الاتجاه العكسي للعفرون دون صورتها الصحيحة. أُدرجت 19 رحلة موثقة من صورة العفرون–الجزائر الرسمية بتاريخ 19 سبتمبر 2026، تشمل قطارات يومية وأخرى مستثناة من الجمعة وأخرى خاصة بيوم الجمعة، بمجموع 150 رحلة منقولة من صور الجداول. نسخة المعاينة SVG مشتقة من الصورة الأصلية المرفقة."

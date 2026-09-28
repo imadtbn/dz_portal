@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updated": "2026-09-27",
+  "updated": "2026-09-28",
   "note": "الخط يجمع المسارات ذات الاتجاهات والرحلات القصيرة دون مضاعفة رحلات المسار القديم البديل. وجود صورة رسمية للخط لا يثبت تشغيله الحالي أو محطاته الوسيطة ما لم تنقل بيانات التوقف لكل قطار.",
   "lines": [
     {
@@ -76,7 +76,9 @@
       "name": "الجزائر – بجاية",
       "category": "eastern",
       "route_ids": [
-        "alger-bejaia"
+        "alger-bejaia",
+        "bejaia-alger",
+        "agha-bejaia"
       ]
     },
     {
@@ -85,7 +87,8 @@
       "category": "eastern",
       "route_ids": [
         "alger-batna",
-        "batna-alger"
+        "batna-alger",
+        "agha-batna"
       ]
     },
     {
@@ -93,7 +96,8 @@
       "name": "الجزائر – عنابة",
       "category": "eastern",
       "route_ids": [
-        "alger-annaba"
+        "alger-annaba",
+        "annaba-alger"
       ]
     },
     {
@@ -101,7 +105,8 @@
       "name": "الجزائر – تبسة",
       "category": "eastern",
       "route_ids": [
-        "alger-tebessa"
+        "alger-tebessa",
+        "tebessa-alger"
       ]
     },
     {
@@ -109,7 +114,10 @@
       "name": "بني منصور – بجاية",
       "category": "eastern",
       "route_ids": [
-        "beni-mansour-bejaia"
+        "beni-mansour-bejaia",
+        "akbou-bejaia",
+        "bejaia-beni-mansour",
+        "bejaia-akbou"
       ]
     },
     {
@@ -179,6 +187,24 @@
         "tunis-annaba"
       ],
       "note": "alger-tunis محفوظ كمسار مسودة تاريخية؛ الجدول الرسمي المدخل خاص بعنابة ↔ تونس فقط."
+    },
+    {
+      "id": "agha-bouira",
+      "name": "آغا – البويرة",
+      "category": "eastern",
+      "route_ids": [
+        "agha-bouira",
+        "bouira-agha"
+      ]
+    },
+    {
+      "id": "agha-constantine",
+      "name": "آغا – قسنطينة",
+      "category": "eastern",
+      "route_ids": [
+        "agha-constantine",
+        "constantine-agha"
+      ]
     }
   ]
 }

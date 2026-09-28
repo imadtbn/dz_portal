@@ -121,7 +121,7 @@ function eventHtml(event,kind){
  const subtitle=prevNext?(kind==="departure"?"المحطة التالية: ":"المحطة السابقة: ")+name(prevNext):"";
  const source=state.sources.find(s=>s.id===t.source_id);
  const link=route?.schedule_image&&/^\.\.\/assets\/train-schedules\//.test(route.schedule_image)?'<a class="photo-source" href="'+esc(route.schedule_image)+'" target="_blank" rel="noopener noreferrer">'+(route.schedule_image.endsWith('.svg')?'عرض إعادة تنسيق الجدول ↗':'عرض صورة الجدول الرسمي ↗')+'</a>':source?.url?.startsWith('https://')?'<a class="photo-source" href="'+esc(source.url)+'" target="_blank" rel="noopener noreferrer">مصدر المواقيت ↗</a>':'';
- return '<article class="event '+(classify(t)==="draft"?"draft":"")+'"><div class="event-top"><div><h4>'+esc(kind==="departure"?"إلى "+name(other):"من "+name(other))+'</h4><span class="minor">'+esc(route?.name||"")+'</span></div><time dir="ltr">'+formatTime(time)+'</time></div><div class="event-meta"><span class="tag">رقم القطار: '+esc(t.train_number||"غير محدد")+'</span><span class="tag">'+esc(serviceName(t.service_id))+'</span>'+statusBadge(t)+dateShown+'</div><p>'+esc(subtitle)+'</p><p>'+(kind==="departure"?"المتبقي للمغادرة: ":"المتبقي للوصول: ")+'<span class="countdown" data-target="'+event.timestamp+'" dir="ltr">'+countdown(event.remaining)+'</span></p><p class="minor">'+esc(classify(t)==="draft"?"المواعيد الحالية مسودة تحرير وليست رحلات مؤكدة.":source?.notice||"الموعد مجدول، وليس تتبعًا مباشرًا.")+'</p>'+link+details(event)+'</article>';
+ return '<article class="event '+(classify(t)==="draft"?"draft":"")+(event.remaining>=0&&event.remaining<=900?" imminent":"")+'"><div class="event-top"><div><h4>'+esc(kind==="departure"?"إلى "+name(other):"من "+name(other))+'</h4><span class="minor">'+esc(route?.name||"")+'</span></div><time dir="ltr">'+formatTime(time)+'</time></div><div class="event-meta"><span class="tag">رقم القطار: '+esc(t.train_number||"غير محدد")+'</span><span class="tag">'+esc(serviceName(t.service_id))+'</span>'+statusBadge(t)+dateShown+'</div><p>'+esc(subtitle)+'</p><p>'+(kind==="departure"?"المتبقي للمغادرة: ":"المتبقي للوصول: ")+'<span class="countdown" data-target="'+event.timestamp+'" dir="ltr">'+countdown(event.remaining)+'</span></p><p class="minor">'+esc(classify(t)==="draft"?"المواعيد الحالية مسودة تحرير وليست رحلات مؤكدة.":source?.notice||"الموعد مجدول، وليس تتبعًا مباشرًا.")+'</p>'+link+details(event)+'</article>';
 }
 function panel(kind,events){
  const el=$(kind==="departure"?"departures":"arrivals");
@@ -146,7 +146,7 @@ function tick(){
  const now=new Date(),parts=dayParts(now),clock=[parts.hour,parts.minute,parts.second].join(":"),key=[parts.year,parts.month,parts.day,parts.hour,parts.minute].join("-");
  $("clock").textContent=clock;
  $("date-label").textContent=new Intl.DateTimeFormat("ar-DZ",{timeZone:"Africa/Algiers",dateStyle:"full"}).format(now);
- document.querySelectorAll(".countdown").forEach(el=>{const remaining=Math.floor((Number(el.dataset.target)-now.getTime())/1000);el.textContent=countdown(remaining)});
+ document.querySelectorAll(".countdown").forEach(el=>{const remaining=Math.floor((Number(el.dataset.target)-now.getTime())/1000);el.textContent=countdown(remaining);el.closest(".event")?.classList.toggle("imminent",remaining>=0&&remaining<=900)});
  if(key!==state.lastMinute){state.lastMinute=key;renderBoards(now)}
 }
 function boardTab(kind,focus=false){

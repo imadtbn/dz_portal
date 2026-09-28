@@ -50,8 +50,8 @@ const page=await boot("?station=zeralda");
 assert.equal(page.state.selected,"zeralda");
 assert.equal(page.state.category,"");
 assert.equal(page.get("route-filter").disabled,true,"Route selector waits for railway category");
-assert.equal(page.get("station").children.length-1,177,"All 177 stations remain accessible before filtering");
-const totals={suburban:19,eastern:6,western:4,sahara:4,international:3};
+assert.equal(page.get("station").children.length-1,178,"All 177 stations remain accessible before filtering");
+const totals={suburban:19,eastern:18,western:4,sahara:4,international:3};
 for(const cat of network.railwayCategories){
  page.selectCategory(cat.id);
  assert.equal(page.state.category,cat.id);
@@ -82,7 +82,7 @@ assert.equal(page.get("station").children.length-1,16,"The reverse Affroun route
 assert(page.get("route-catalog").innerHTML.includes("19 رحلة منقولة"),"The route card has 19 published services, not the grouped two-way total");
 page.selectCategory("");
 assert.equal(page.get("route-filter").disabled,true);
-assert.equal(page.get("station").children.length-1,177);
+assert.equal(page.get("station").children.length-1,178);
 assert.equal(page.get("category-schedules").hidden,true);
 const linked=await boot("?route=affroun-alger&station=el_affroun");
 assert.equal(linked.state.category,"suburban","Direct links infer their railway category");
@@ -90,7 +90,7 @@ assert.equal(linked.state.route,"affroun-alger");
 assert.equal(linked.state.selected,"el_affroun");
 const old=await boot("?line=alger-bejaia");
 assert.equal(old.state.category,"eastern","Legacy named-line deep links map to the new category");
-assert.equal(old.state.route,"alger-bejaia","Single-route legacy links retain route selection");
+assert.equal(old.state.route,"","Grouped east line legacy links retain its category without guessing one direction");
 const alias=await boot("?route=zeralda-alger");
 assert.equal(alias.state.route,"zeralda-agha","Legacy route aliases resolve to a single canonical direction");
 assert.equal(alias.state.category,"suburban");
