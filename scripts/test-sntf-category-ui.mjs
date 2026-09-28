@@ -92,6 +92,8 @@ page.get("journey-date").value="2026-09-29";
 page.get("journey-after").value="08:00";
 page.get("journey-form").listeners.submit({preventDefault(){}});
 assert(page.get("journey-results").innerHTML.includes("B124/125"),"Search displays an actual direct train and its station timeline");
+assert(page.get("journey-results").innerHTML.includes('sntf-trip.html?trip='),"Journey results link to the full published trip page");
+assert(page.get("departures").innerHTML.includes('sntf-trip.html?trip='),"Station departure cards link to the trip page");
 assert.equal(page.get("category-schedules").hidden,true);
 const linked=await boot("?route=affroun-alger&station=el_affroun");
 assert.equal(linked.state.category,"suburban","Direct links infer their railway category");

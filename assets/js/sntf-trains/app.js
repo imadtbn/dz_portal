@@ -10,6 +10,7 @@ const name=id=>station(id)?.name||id;
 const routeFor=id=>state.routes.find(r=>r.id===id);
 const lineFor=id=>state.lines.find(l=>l.id===id);
 const canonical=id=>canonicalRouteId(routeFor(id)||{id});
+const tripPageLink=(trip,date,from='',to='')=>{const query=new URLSearchParams({trip:trip.trip_id,date});if(from)query.set('from',from);if(to)query.set('to',to);return 'sntf-trip.html?'+query.toString()};
 const categoryLabel=Object.fromEntries(railwayCategories.map(category=>[category.id,category.label]));
 const serviceLabel={daily:"كل يوم",friday_holiday:"الجمعة والأعياد",weekday_not_friday:"عدا الجمعة والأعياد",except_friday:"عدا الجمعة",friday_only:"الجمعة فقط"};
 const serviceName=id=>state.calendars.find(c=>c.id===id)?.label||serviceLabel[id]||id;
@@ -123,7 +124,8 @@ function eventHtml(event,kind){
  const source=state.sources.find(s=>s.id===t.source_id);
  const photo=source?.kind==="official-timetable-image"&&/^https:\/\/imadtbn\.github\.io\/dz_portal\/assets\/train-schedules\//.test(source.url||"")?source.url:route?.schedule_image;
  const link=photo&&(/^(https:\/\/imadtbn\.github\.io\/dz_portal)?\/assets\/train-schedules\//.test(photo)||/^\.\.\/assets\/train-schedules\//.test(photo))?'<a class="photo-source" href="'+esc(photo)+'" target="_blank" rel="noopener noreferrer">عرض صورة الجدول الرسمي ↗</a>':source?.url?.startsWith("https://")?'<a class="photo-source" href="'+esc(source.url)+'" target="_blank" rel="noopener noreferrer">مصدر المواقيت ↗</a>':"";
- return '<article class="event '+(classify(t)==="draft"?"draft":"")+(event.remaining>=0&&event.remaining<=900?" imminent":"")+'"><div class="event-top"><div><h4>'+esc(kind==="departure"?"إلى "+name(other):"من "+name(other))+'</h4><span class="minor">'+esc(route?.name||"")+'</span></div><time dir="ltr">'+formatTime(time)+'</time></div><div class="event-meta"><span class="tag">رقم القطار: '+esc(t.train_number||"غير محدد")+'</span><span class="tag">'+esc(serviceName(t.service_id))+'</span>'+statusBadge(t)+dateShown+'</div><p>'+esc(subtitle)+'</p><p>'+(kind==="departure"?"المتبقي للمغادرة: ":"المتبقي للوصول: ")+'<span class="countdown" data-target="'+event.timestamp+'" dir="ltr">'+countdown(event.remaining)+'</span></p><p class="minor">'+esc(classify(t)==="draft"?"المواعيد الحالية مسودة تحرير وليست رحلات مؤكدة.":source?.notice||"الموعد مجدول، وليس تتبعًا مباشرًا.")+'</p>'+link+details(event)+'</article>';
+ const page=classify(t)==="draft"?'':'<a class="photo-source" href="'+esc(tripPageLink(t,event.serviceDate,state.selected))+'">صفحة الرحلة كاملة ←</a>';
+ return '<article class="event '+(classify(t)==="draft"?"draft":"")+(event.remaining>=0&&event.remaining<=900?" imminent":"")+'"><div class="event-top"><div><h4>'+esc(kind==="departure"?"إلى "+name(other):"من "+name(other))+'</h4><span class="minor">'+esc(route?.name||"")+'</span></div><time dir="ltr">'+formatTime(time)+'</time></div><div class="event-meta"><span class="tag">رقم القطار: '+esc(t.train_number||"غير محدد")+'</span><span class="tag">'+esc(serviceName(t.service_id))+'</span>'+statusBadge(t)+dateShown+'</div><p>'+esc(subtitle)+'</p><p>'+(kind==="departure"?"المتبقي للمغادرة: ":"المتبقي للوصول: ")+'<span class="countdown" data-target="'+event.timestamp+'" dir="ltr">'+countdown(event.remaining)+'</span></p><p class="minor">'+esc(classify(t)==="draft"?"المواعيد الحالية مسودة تحرير وليست رحلات مؤكدة.":source?.notice||"الموعد مجدول، وليس تتبعًا مباشرًا.")+'</p>'+page+link+details(event)+'</article>';
 }
 function panel(kind,events){
  const el=$(kind==="departure"?"departures":"arrivals");
@@ -158,7 +160,7 @@ function journeyLeg(leg){
   const arrival=stop.arrival==null?'—':formatTime(stop.arrival),departure=stop.departure==null?'—':formatTime(stop.departure);
   return `<li><span>${esc(name(stop.station_id))}</span><span><time dir="ltr">${esc(arrival)}</time> وصول · <time dir="ltr">${esc(departure)}</time> مغادرة</span></li>`;
  }).join('');
- return `<div class="journey-leg"><div><strong>${esc(name(leg.from))} ← ${esc(name(leg.to))}</strong><span>القطار ${esc(leg.trip.train_number||'غير محدد')} · ${esc(serviceName(leg.trip.service_id))}</span></div><div class="journey-times">${journeyTime(leg.departure)} ← ${journeyTime(leg.arrival)}</div><details><summary>تفاصيل الرحلة ومحطات التوقف (${stops.length})</summary><ol class="stop-list">${list}</ol><p class="minor">${esc(source?.name||'جدول مصور')} · ${esc(leg.serviceDate)}</p>${sourceLink}</details></div>`;
+ return `<div class="journey-leg"><div><strong>${esc(name(leg.from))} ← ${esc(name(leg.to))}</strong><span>القطار ${esc(leg.trip.train_number||'غير محدد')} · ${esc(serviceName(leg.trip.service_id))}</span></div><div class="journey-times">${journeyTime(leg.departure)} ← ${journeyTime(leg.arrival)}</div><a class="photo-source" href="${esc(tripPageLink(leg.trip,leg.serviceDate,leg.from,leg.to))}">صفحة القطار وكل توقفاته ←</a><details><summary>تفاصيل الرحلة ومحطات التوقف (${stops.length})</summary><ol class="stop-list">${list}</ol><p class="minor">${esc(source?.name||'جدول مصور')} · ${esc(leg.serviceDate)}</p>${sourceLink}</details></div>`;
 }
 function journeyCard(item,index){
  const transfer=Boolean(item.second),first=transfer?item.first:item,last=transfer?item.second:item;
@@ -245,7 +247,7 @@ function tripTimeline(trip){
     '<time dir="ltr">'+esc(formatTime(stop.departure??stop.arrival))+'</time>';
   return '<li><span>'+esc(name(stop.station_id))+'</span>'+clocks+'</li>';
  }).join("");
- return '<p class="minor">القطار '+esc(trip.train_number||"غير محدد")+' · '+esc(serviceName(trip.service_id))+' · '+esc(route?.name||"")+'</p><ol class="stop-list train-timeline">'+items+'</ol>';
+ return '<p class="minor">القطار '+esc(trip.train_number||"غير محدد")+' · '+esc(serviceName(trip.service_id))+' · '+esc(route?.name||"")+'</p><a class="photo-source" href="'+esc(tripPageLink(trip,dayISO(new Date())))+'">افتح صفحة هذا القطار ←</a><ol class="stop-list train-timeline">'+items+'</ol>';
 }
 function routeCard(route){
  const summary=routeStopSummary(route,state.trips),ts=routeTrips(route,state.trips),src=state.sources.find(s=>s.id===route.source);
