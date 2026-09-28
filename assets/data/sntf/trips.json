@@ -17184,88 +17184,88 @@
           "station_id": "oran",
           "sequence": 1,
           "arrival": null,
-          "departure": "21:30"
+          "departure": "19:30"
         },
         {
           "station_id": "sidi-bel-abbes",
           "sequence": 2,
-          "arrival": "22:34",
-          "departure": "22:34"
+          "arrival": "20:41",
+          "departure": "20:41"
         },
         {
           "station_id": "tabia",
           "sequence": 3,
-          "arrival": "23:08",
-          "departure": "23:08"
+          "arrival": "21:07",
+          "departure": "21:07"
         },
         {
           "station_id": "moulay_slissen",
           "sequence": 4,
-          "arrival": "23:28",
-          "departure": "23:28"
+          "arrival": "21:28",
+          "departure": "21:28"
         },
         {
           "station_id": "ras_el_ma",
           "sequence": 5,
-          "arrival": "23:34",
-          "departure": "23:34"
+          "arrival": "22:10",
+          "departure": "22:10"
         },
         {
           "station_id": "redjem_demouche",
           "sequence": 6,
-          "arrival": "24:21",
-          "departure": "24:21"
+          "arrival": "22:21",
+          "departure": "22:21"
         },
         {
           "station_id": "mecheria",
           "sequence": 7,
-          "arrival": "26:20",
-          "departure": "26:20"
+          "arrival": "24:34",
+          "departure": "24:34"
         },
         {
           "station_id": "naama",
           "sequence": 8,
-          "arrival": "27:01",
-          "departure": "27:01"
+          "arrival": "25:14",
+          "departure": "25:14"
         },
         {
           "station_id": "ain_sefra",
           "sequence": 9,
-          "arrival": "28:08",
-          "departure": "28:08"
+          "arrival": "26:28",
+          "departure": "26:28"
         },
         {
           "station_id": "tiout",
           "sequence": 10,
-          "arrival": "28:20",
-          "departure": "28:20"
+          "arrival": "26:40",
+          "departure": "26:40"
         },
         {
           "station_id": "moghrar",
           "sequence": 11,
-          "arrival": "28:51",
-          "departure": "28:51"
+          "arrival": "27:11",
+          "departure": "27:11"
         },
         {
           "station_id": "djenien_bourzeg",
           "sequence": 12,
-          "arrival": "29:15",
-          "departure": "29:15"
+          "arrival": "27:35",
+          "departure": "27:35"
         },
         {
           "station_id": "beni_ounif",
           "sequence": 13,
-          "arrival": "29:58",
-          "departure": "29:58"
+          "arrival": "28:20",
+          "departure": "28:20"
         },
         {
           "station_id": "bechar",
           "sequence": 14,
-          "arrival": "30:15",
+          "arrival": "29:40",
           "departure": null
         }
       ],
-      "editor_note": "المواقيت من صورة الجدول المرفقة."
+      "editor_note": "مواقيت ومحطات القطار الليلي من صورة SNTF المحدثة المرفقة بتاريخ 28 سبتمبر 2026؛ الوقت بعد منتصف الليل مخزن بصيغة 24+:xx. رقم القطار غير مذكور في الصورة."
     },
     {
       "trip_id": "photo-west-bechar-oran-night-back",
@@ -17281,94 +17281,94 @@
           "station_id": "bechar",
           "sequence": 1,
           "arrival": null,
-          "departure": "22:00"
+          "departure": "21:00"
         },
         {
           "station_id": "beni_ounif",
           "sequence": 2,
-          "arrival": "23:13",
-          "departure": "23:13"
+          "arrival": "22:15",
+          "departure": "22:15"
         },
         {
           "station_id": "djenien_bourzeg",
           "sequence": 3,
-          "arrival": "23:57",
-          "departure": "23:57"
+          "arrival": "23:00",
+          "departure": "23:00"
         },
         {
           "station_id": "moghrar",
           "sequence": 4,
-          "arrival": "24:21",
-          "departure": "24:21"
+          "arrival": "23:25",
+          "departure": "23:25"
         },
         {
           "station_id": "tiout",
           "sequence": 5,
-          "arrival": "24:53",
-          "departure": "24:53"
+          "arrival": "23:58",
+          "departure": "23:58"
         },
         {
           "station_id": "ain_sefra",
           "sequence": 6,
-          "arrival": "25:03",
-          "departure": "25:03"
+          "arrival": "24:08",
+          "departure": "24:08"
         },
         {
           "station_id": "naama",
           "sequence": 7,
-          "arrival": "26:09",
-          "departure": "26:09"
+          "arrival": "25:20",
+          "departure": "25:20"
         },
         {
           "station_id": "mecheria",
           "sequence": 8,
-          "arrival": "26:58",
-          "departure": "26:58"
+          "arrival": "25:58",
+          "departure": "25:58"
         },
         {
           "station_id": "redjem_demouche",
           "sequence": 9,
-          "arrival": "29:33",
-          "departure": "29:33"
+          "arrival": "28:19",
+          "departure": "28:19"
         },
         {
           "station_id": "ras_el_ma",
           "sequence": 10,
-          "arrival": "29:52",
-          "departure": "29:52"
+          "arrival": "28:33",
+          "departure": "28:33"
         },
         {
           "station_id": "moulay_slissen",
           "sequence": 11,
-          "arrival": "30:20",
-          "departure": "30:20"
+          "arrival": "29:16",
+          "departure": "29:16"
         },
         {
           "station_id": "tabia",
           "sequence": 12,
-          "arrival": "30:35",
-          "departure": "30:35"
+          "arrival": "29:36",
+          "departure": "29:36"
         },
         {
           "station_id": "sidi-bel-abbes",
           "sequence": 13,
-          "arrival": "31:01",
-          "departure": "31:01"
+          "arrival": "30:02",
+          "departure": "30:02"
         },
         {
           "station_id": "oued_tlelat",
           "sequence": 14,
-          "arrival": "31:52",
-          "departure": "31:52"
+          "arrival": "30:54",
+          "departure": "30:54"
         },
         {
           "station_id": "oran",
           "sequence": 15,
-          "arrival": "32:10",
+          "arrival": "31:12",
           "departure": null
         }
       ],
-      "editor_note": "المواقيت من صورة الجدول المرفقة."
+      "editor_note": "مواقيت ومحطات القطار الليلي من صورة SNTF المحدثة المرفقة بتاريخ 28 سبتمبر 2026؛ الوقت بعد منتصف الليل مخزن بصيغة 24+:xx. رقم القطار غير مذكور في الصورة."
     },
     {
       "trip_id": "photo-sahara-agha-touggourt",
