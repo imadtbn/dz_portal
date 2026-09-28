@@ -1,5 +1,5 @@
 {
-  "version": 14,
+  "version": 15,
   "updated": "2026-09-28",
   "routes": [
     {
@@ -355,6 +355,8 @@
       "schedule_image": "../assets/train-schedules/Eastern/alger-bejaia-alger.jpg",
       "schedule_status": "timetable_pending_entry",
       "line_id": "alger-bejaia",
+      "catalog_status": "superseded",
+      "superseded_by": ["agha-bejaia", "bejaia-alger"],
       "stops_status": "intermediate_stops_pending_official_transcription",
       "editor_note": "مسودة تحرير قديمة انطلقت من الجزائر؛ الصورة الرسمية التي نُقلت الآن تنطلق من آغا في مسار منفصل."
     },
@@ -368,6 +370,8 @@
       "schedule_image": "../assets/train-schedules/Eastern/alger-batna-alger.jpg",
       "schedule_status": "timetable_pending_entry",
       "line_id": "alger-batna",
+      "catalog_status": "superseded",
+      "superseded_by": ["agha-batna", "batna-alger"],
       "stops_status": "intermediate_stops_pending_official_transcription",
       "editor_note": "مسودة تحرير قديمة انطلقت من الجزائر؛ الصورة الرسمية التي نُقلت الآن تنطلق من آغا في مسار منفصل."
     },
@@ -376,12 +380,12 @@
       "from": "batna",
       "to": "agha",
       "category": "eastern",
-      "name": "باتنة ← الجزائر (المواقيت قيد الإدخال)",
+      "name": "باتنة ← آغا",
       "source": "eastern-gallery-batna",
       "schedule_image": "../assets/train-schedules/Eastern/alger-batna-alger.jpg",
       "schedule_status": "source_transcribed",
       "stops_status": "source_image_transcribed",
-      "editor_note": "أوقات المحطات من صورة SNTF. الأيام غير المذكورة لا تُعرض كرحلات قادمة.",
+      "editor_note": "أوقات التوقف من صورة SNTF؛ الرحلة يومية في الاتجاهين كما في أعلى الجدول.",
       "line_id": "alger-batna",
       "stops": [
         "batna",
@@ -502,6 +506,8 @@
       "schedule_image": "../assets/train-schedules/Western/alger-oran-alger.jpg",
       "schedule_status": "requires-current-verification",
       "line_id": "alger-oran",
+      "catalog_status": "superseded",
+      "superseded_by": ["agha-oran", "oran-agha"],
       "stops_status": "intermediate_stops_pending_official_transcription",
       "editor_note": "المحطتان الطرفيتان مثبتتان في مرجع الصورة؛ قائمة المحطات الوسيطة غير مدخلة بعد، فلا تُعرض كمحطات توقف فعلية."
     },
@@ -544,6 +550,8 @@
       "schedule_image": "../assets/train-schedules/Western/oran-chlef-agha.png",
       "schedule_status": "requires-current-verification",
       "line_id": "oran-chlef",
+      "catalog_status": "superseded",
+      "superseded_by": ["oran-agha", "agha-chlef", "khemis-chlef", "chlef-agha", "chlef-khemis"],
       "stops_status": "intermediate_stops_pending_official_transcription",
       "editor_note": "المحطتان الطرفيتان مثبتتان في مرجع الصورة؛ قائمة المحطات الوسيطة غير مدخلة بعد، فلا تُعرض كمحطات توقف فعلية."
     },
@@ -608,6 +616,8 @@
       "schedule_image": "../assets/train-schedules/sahara-plateaux/alger-teggart.jpg",
       "schedule_status": "requires-current-verification",
       "line_id": "alger-touggourt",
+      "catalog_status": "superseded",
+      "superseded_by": ["agha-touggourt", "touggourt-agha"],
       "stops_status": "intermediate_stops_pending_official_transcription",
       "editor_note": "المحطتان الطرفيتان مثبتتان في مرجع الصورة؛ قائمة المحطات الوسيطة غير مدخلة بعد، فلا تُعرض كمحطات توقف فعلية."
     },
@@ -619,7 +629,7 @@
       "name": "بوغزول ↔ الأغواط",
       "source": "dz-portal-gallery",
       "schedule_image": "../assets/train-schedules/sahara-plateaux/boughezoul-laghouat.png",
-      "schedule_status": "requires-current-verification",
+      "schedule_status": "source_transcribed",
       "line_id": "boughezoul-laghouat",
       "stops_status": "intermediate_stops_pending_official_transcription",
       "editor_note": "المحطتان الطرفيتان مثبتتان في مرجع الصورة؛ قائمة المحطات الوسيطة غير مدخلة بعد، فلا تُعرض كمحطات توقف فعلية."
@@ -661,6 +671,7 @@
       "schedule_image": "../assets/train-schedules/international/alger-tunisia.jpg",
       "schedule_status": "draft_only",
       "line_id": "alger-tunis",
+      "catalog_status": "historical_draft",
       "stops_status": "intermediate_stops_pending_official_transcription",
       "editor_note": "المسودة اليدوية السابقة لا تمثل الخدمة الدولية المنشورة حاليًا التي تنطلق من عنابة؛ أبقي عليها كمسودة غير منشورة منفصلة حتى لا تُحوَّل رحلة الجزائر إلى عنابة تلقائيًا."
     },
@@ -1187,13 +1198,13 @@
       "from": "agha",
       "to": "batna",
       "category": "eastern",
-      "name": "آغا ← باتنة (المواقيت قيد الإدخال)",
+      "name": "آغا ← باتنة",
       "source": "eastern-gallery-batna",
       "schedule_image": "../assets/train-schedules/Eastern/alger-batna-alger.jpg",
       "schedule_status": "source_transcribed",
       "line_id": "alger-batna",
       "stops_status": "source_image_transcribed",
-      "editor_note": "أوقات المحطات من صورة SNTF. الأيام غير المذكورة لا تُعرض كرحلات قادمة.",
+      "editor_note": "أوقات التوقف من صورة SNTF؛ الرحلة يومية في الاتجاهين كما في أعلى الجدول.",
       "stops": [
         "agha",
         "boumerdes",

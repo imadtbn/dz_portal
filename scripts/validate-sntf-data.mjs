@@ -20,6 +20,7 @@ for(const r of routes){
  fail(!["suburban","eastern","western","sahara","international"].includes(r.category),"Invalid route category "+r.id);
  if(r.schedule_image!==null)fail(!/^\.\.\/assets\/train-schedules\//.test(r.schedule_image||""),"Invalid image path "+r.id);
  if(r.stops){fail(r.stops[0]!==r.from||r.stops.at(-1)!==r.to,"Route stops endpoints mismatch "+r.id);for(const id of r.stops)fail(!stationsById.has(id),"Unknown route stop "+id)}
+ if(r.catalog_status)fail(!["superseded","historical_draft"].includes(r.catalog_status),"Unknown archive status "+r.id);
 }
 const membership=new Map(),routeMap=new Map(routes.map(r=>[r.id,r]));
 for(const line of lines){
@@ -39,6 +40,10 @@ for(const route of routes){
  fail(!membership.has(canonical)||route.line_id!==membership.get(canonical),"Route without canonical line membership "+route.id);
  if(route.alias_of)fail(!routesById.has(route.alias_of),"Unknown canonical alias target "+route.id);
  if(!route.stops?.length)fail(route.stops_status!=="intermediate_stops_pending_official_transcription","Undocumented intermediate stops must be explicit "+route.id);
+ if(route.catalog_status==="superseded"){
+  fail(!route.superseded_by?.length,"Superseded route needs published directions "+route.id);
+  for(const id of route.superseded_by||[])fail(!routesById.has(id)||routeMap.get(id)?.category!==route.category,"Invalid published replacement "+route.id+": "+id);
+ }
 }
 for(const c of calendars){
  fail(!["daily","friday_holiday","weekday_not_friday","except_friday","friday_only","custom_days"].includes(c.rule),"Invalid recurrence "+c.id);
@@ -53,6 +58,7 @@ for(const exception of calendarDoc.exceptions){
 }
 for(const t of trips){
  fail(!routesById.has(t.route_id),"Unknown route "+t.trip_id);
+ fail(t.data_status!=="pending_review"&&Boolean(routeMap.get(t.route_id)?.catalog_status),"Archived placeholder has published trip "+t.trip_id);
  fail(!calendarsById.has(t.service_id),"Unknown service "+t.trip_id);
  fail(!sourcesById.has(t.source_id),"Unknown source "+t.trip_id);
  const source=sources.find(x=>x.id===t.source_id);

@@ -7,7 +7,7 @@ export const railwayCategories=Object.freeze([
  {id:"sahara",label:"الصحراء والهضاب العليا",anchor:"sahara-plateau-regional"},
  {id:"international",label:"الخط الدولي",anchor:"international"}
 ]);
-export const categoryRoutes=(category,routes)=>routes.filter(r=>!r.alias_of&&(!category||r.category===category));
+export const categoryRoutes=(category,routes)=>routes.filter(r=>!r.alias_of&&!r.catalog_status&&(!category||r.category===category));
 export const canonicalRouteId = route => route.alias_of || route.id;
 export const publishedTrips = trips => trips.filter(t => t.data_status === "source_transcribed" || t.data_status === "verified");
 export function routeTrips(route, trips, includeDrafts = false) {
@@ -36,7 +36,7 @@ export function routeStopSummary(route,trips) {
 }
 export function lineRoutes(line,routes){
  const routeIds=new Set(line.route_ids);
- return routes.filter(r=>routeIds.has(r.id) && !r.alias_of);
+ return routes.filter(r=>routeIds.has(r.id) && !r.alias_of && !r.catalog_status);
 }
 export function lineSummary(line,routes,trips) {
  const rs=lineRoutes(line,routes),ids=new Set(),activeRoutes=[];

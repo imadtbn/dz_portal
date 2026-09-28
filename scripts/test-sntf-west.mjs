@@ -4,7 +4,7 @@ import {runsOn} from '../assets/js/sntf-trains/engine.js';
 const load=n=>JSON.parse(readFileSync('assets/data/sntf/'+n+'.json','utf8'));
 const trips=load('trips').trips,calendars=load('calendars').calendars;
 const western=trips.filter(t=>t.trip_id.startsWith('photo-west-'));
-assert.equal(western.length,14);
+assert.equal(western.length,16);
 assert(western.every(t=>t.stop_times.length>=5));
 const bechar=western.find(t=>t.trip_id==='photo-west-oran-bechar-night-out');
 assert(bechar);
@@ -19,4 +19,4 @@ assert(runsOn(bechar,'2026-09-29',calendars),'The Oran–Bechar poster explicitl
 const oran=western.find(t=>t.trip_id==='photo-west-agha-oran-1001');
 assert.equal(oran.stop_times.length,18);
 assert(!runsOn(oran,'2026-09-29',calendars),'The Agha–Oran image omits operating days');
-console.log('SNTF West PASS: 14 image columns, night rollover, unknown calendar suppression.');
+console.log('SNTF West PASS: 16 image columns, night rollover, unknown calendar suppression.');

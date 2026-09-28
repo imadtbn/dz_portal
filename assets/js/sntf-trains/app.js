@@ -1,6 +1,6 @@
 import {dayParts,dayISO,recordsAtStation,eligible,formatTime,countdown,classify,mins} from "./engine.js";
 import {planJourney} from "./planner.js";
-import {railwayCategories,categoryRoutes,canonicalRouteId,routeTrips,routeStopSummary,lineRoutes,lineSummary,stationLineServices,eligibleStationIdsByCategory} from "./network.js?v=20260927-international";
+import {railwayCategories,categoryRoutes,canonicalRouteId,routeTrips,routeStopSummary,lineRoutes,lineSummary,stationLineServices,eligibleStationIdsByCategory} from "./network.js?v=20260928-catalog-audit";
 const dataRoot=new URL("../../data/sntf/",import.meta.url);
 const $=id=>document.getElementById(id);
 const esc=x=>String(x??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
@@ -355,7 +355,7 @@ function locate(){
 }
 function setCategoryFilters(categoryId="",routeId="",selectFirst=false){
  const supplied=routeId?routeFor(routeId):null;
- const route=supplied?routeFor(canonicalRouteId(supplied)):null;
+ const route=supplied&&!supplied.catalog_status?routeFor(canonicalRouteId(supplied)):null;
  const validCategory=railwayCategories.some(item=>item.id===categoryId)?categoryId:"";
  state.route=route?.id||"";
  state.category=route?.category||validCategory;

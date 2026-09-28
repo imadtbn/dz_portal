@@ -62,7 +62,7 @@ assert.equal(page.get("panel-explore").hidden,false);
 assert.equal(page.state.category,"");
 assert.equal(page.get("route-filter").disabled,true,"Route selector waits for railway category");
 assert.equal(page.get("station").children.length-1,196,"All 177 stations remain accessible before filtering");
-const totals={suburban:22,eastern:18,western:12,sahara:11,international:3};
+const totals={suburban:22,eastern:16,western:10,sahara:10,international:2};
 for(const cat of network.railwayCategories){
  page.selectCategory(cat.id);
  assert.equal(page.state.category,cat.id);
@@ -74,10 +74,12 @@ for(const cat of network.railwayCategories){
  assert(!page.get("route-catalog").innerHTML.includes('data-route="affroun-alger"')||cat.id==="suburban","Unrelated category cannot show Affroun route");
 }
 page.selectCategory("eastern");
-page.selectRoute("alger-bejaia");
+page.selectRoute("agha-bejaia");
 assert.equal(page.state.category,"eastern");
-assert.equal(page.state.route,"alger-bejaia");
-assert.equal(page.get("station").children.length-1,2,"No invented intermediate stations for a schedule pending transcription");
+assert.equal(page.state.route,"agha-bejaia");
+assert.equal(page.get("station").children.length-1,16,"Documented intermediate stops for the actual Agha–Bejaia departure are available");
+page.selectRoute("alger-bejaia");
+assert.equal(page.state.route,"","Old gallery placeholder cannot hide the published directional timetables");
 page.selectCategory("international");
 page.selectRoute("annaba-tunis");
 assert.equal(page.state.route,"annaba-tunis");
@@ -85,7 +87,7 @@ assert.equal(page.get("station").children.length-1,2,"Both international termini
 assert(page.get("route-catalog").innerHTML.includes("الأحد، الثلاثاء، الخميس"),"International outbound days visible in its route heading");
 page.selectCategory("western");
 assert.equal(page.state.route,"");
-assert.equal(page.optionCount(),12);
+assert.equal(page.optionCount(),10);
 page.selectCategory("suburban");
 page.selectRoute("affroun-alger");
 assert.equal(page.state.route,"affroun-alger");

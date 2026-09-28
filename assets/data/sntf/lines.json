@@ -76,7 +76,7 @@
     },
     {
       "id": "alger-bejaia",
-      "name": "الجزائر – بجاية",
+      "name": "آغا – بجاية",
       "category": "eastern",
       "route_ids": [
         "alger-bejaia",
@@ -86,7 +86,7 @@
     },
     {
       "id": "alger-batna",
-      "name": "الجزائر – باتنة (ذهاب وإياب، المواقيت قيد الإدخال)",
+      "name": "آغا – باتنة",
       "category": "eastern",
       "route_ids": [
         "alger-batna",
@@ -125,7 +125,7 @@
     },
     {
       "id": "alger-oran",
-      "name": "الجزائر – وهران",
+      "name": "آغا – وهران",
       "category": "western",
       "route_ids": [
         "alger-oran",
@@ -165,7 +165,7 @@
     },
     {
       "id": "alger-touggourt",
-      "name": "الجزائر – تقرت",
+      "name": "آغا – تقرت",
       "category": "sahara",
       "route_ids": [
         "alger-touggourt",
