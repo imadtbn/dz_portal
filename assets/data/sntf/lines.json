@@ -218,6 +218,15 @@
         "agha-constantine",
         "constantine-agha"
       ]
+    },
+    {
+      "id": "chlef-affroun",
+      "name": "الشلف – العفرون",
+      "category": "western",
+      "route_ids": [
+        "chlef-affroun",
+        "affroun-chlef"
+      ]
     }
   ]
 }

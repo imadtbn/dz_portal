@@ -1648,6 +1648,58 @@
         "bechar"
       ],
       "editor_note": "محطات الجدول فقط؛ تحفظ الخانات الزمنية المتعارضة كـ null للمراجعة."
+    },
+    {
+      "id": "chlef-affroun",
+      "from": "chlef",
+      "to": "el_affroun",
+      "category": "western",
+      "name": "الشلف ← العفرون",
+      "line_id": "chlef-affroun",
+      "source": "gallery-west-chlef-affroun",
+      "schedule_image": "../assets/train-schedules/Western/chlef-affroun-chlef.jpg",
+      "schedule_status": "source_transcribed",
+      "stops_status": "source_image_transcribed",
+      "stops": [
+        "chlef",
+        "oued_fodda",
+        "el_attaf",
+        "cheik_ben_yahia",
+        "rouina",
+        "ain_defla",
+        "arib",
+        "khemis_miliana",
+        "hoceinia",
+        "bou_medfaa",
+        "el_affroun"
+      ],
+      "editor_note": "رحلة يومية حسب الصورة الرسمية؛ وقت واحد منشور لكل محطة، ولا يظهر رقم قطار."
+    },
+    {
+      "id": "affroun-chlef",
+      "from": "el_affroun",
+      "to": "chlef",
+      "category": "western",
+      "name": "العفرون ← الشلف",
+      "line_id": "chlef-affroun",
+      "source": "gallery-west-chlef-affroun",
+      "schedule_image": "../assets/train-schedules/Western/chlef-affroun-chlef.jpg",
+      "schedule_status": "source_transcribed",
+      "stops_status": "source_image_transcribed",
+      "stops": [
+        "el_affroun",
+        "bou_medfaa",
+        "hoceinia",
+        "khemis_miliana",
+        "arib",
+        "ain_defla",
+        "rouina",
+        "cheik_ben_yahia",
+        "el_attaf",
+        "oued_fodda",
+        "chlef"
+      ],
+      "editor_note": "رحلة يومية حسب الصورة الرسمية؛ وقت واحد منشور لكل محطة، ولا يظهر رقم قطار."
     }
   ]
 }

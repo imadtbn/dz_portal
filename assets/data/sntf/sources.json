@@ -422,6 +422,17 @@
       "current_validity": "not_independently_rechecked",
       "verified_at": null,
       "notice": "الأوقات وأيام التشغيل من صورة SNTF المرفقة؛ جدول منشور وليس تتبعًا آنيًا."
+    },
+    {
+      "id": "gallery-west-chlef-affroun",
+      "name": "جدول SNTF الشلف – العفرون – الشلف",
+      "url": "https://imadtbn.github.io/dz_portal/assets/train-schedules/Western/chlef-affroun-chlef.jpg",
+      "kind": "official-timetable-image",
+      "official_document": true,
+      "origin_confirmation": "repository_owner",
+      "current_validity": "not_independently_rechecked",
+      "verified_at": null,
+      "notice": "أوقات الرحلتين اليوميتين من الصورة الرسمية المرفقة؛ جدول منشور وليس تتبعًا آنيًا."
     }
   ],
   "provenance_policy": {

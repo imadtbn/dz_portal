@@ -18203,6 +18203,162 @@
       ],
       "editor_note": "الأوقات ومحطات التوقف من صورة الجدول الرسمية. صورتا بشار–تيندوف مختلفتان في التوقيت وأيام التشغيل دون تاريخ نفاذ واضح؛ لا تُنشأ رحلات قادمة حتى يتحدد أيهما سارية.",
       "operating_days_status": "conflicting_source_versions"
+    },
+    {
+      "trip_id": "photo-west-chlef-affroun-daily",
+      "route_id": "chlef-affroun",
+      "train_number": null,
+      "service_id": "daily",
+      "source_id": "gallery-west-chlef-affroun",
+      "data_status": "source_transcribed",
+      "station_time_kind": "published_departure_or_passage",
+      "stop_times": [
+        {
+          "station_id": "chlef",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "10:30"
+        },
+        {
+          "station_id": "oued_fodda",
+          "sequence": 2,
+          "arrival": "10:46",
+          "departure": "10:46"
+        },
+        {
+          "station_id": "el_attaf",
+          "sequence": 3,
+          "arrival": "10:56",
+          "departure": "10:56"
+        },
+        {
+          "station_id": "cheik_ben_yahia",
+          "sequence": 4,
+          "arrival": "11:02",
+          "departure": "11:02"
+        },
+        {
+          "station_id": "rouina",
+          "sequence": 5,
+          "arrival": "11:07",
+          "departure": "11:07"
+        },
+        {
+          "station_id": "ain_defla",
+          "sequence": 6,
+          "arrival": "11:19",
+          "departure": "11:19"
+        },
+        {
+          "station_id": "arib",
+          "sequence": 7,
+          "arrival": "11:28",
+          "departure": "11:28"
+        },
+        {
+          "station_id": "khemis_miliana",
+          "sequence": 8,
+          "arrival": "11:40",
+          "departure": "11:40"
+        },
+        {
+          "station_id": "hoceinia",
+          "sequence": 9,
+          "arrival": "12:04",
+          "departure": "12:04"
+        },
+        {
+          "station_id": "bou_medfaa",
+          "sequence": 10,
+          "arrival": "12:14",
+          "departure": "12:14"
+        },
+        {
+          "station_id": "el_affroun",
+          "sequence": 11,
+          "arrival": "12:36",
+          "departure": null
+        }
+      ],
+      "editor_note": "مواقيت 11 محطة كما تظهر في الصورة الرسمية؛ يسير يوميًا في هذا الاتجاه."
+    },
+    {
+      "trip_id": "photo-west-affroun-chlef-daily",
+      "route_id": "affroun-chlef",
+      "train_number": null,
+      "service_id": "daily",
+      "source_id": "gallery-west-chlef-affroun",
+      "data_status": "source_transcribed",
+      "station_time_kind": "published_departure_or_passage",
+      "stop_times": [
+        {
+          "station_id": "el_affroun",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "13:55"
+        },
+        {
+          "station_id": "bou_medfaa",
+          "sequence": 2,
+          "arrival": "14:15",
+          "departure": "14:15"
+        },
+        {
+          "station_id": "hoceinia",
+          "sequence": 3,
+          "arrival": "14:23",
+          "departure": "14:23"
+        },
+        {
+          "station_id": "khemis_miliana",
+          "sequence": 4,
+          "arrival": "14:47",
+          "departure": "14:47"
+        },
+        {
+          "station_id": "arib",
+          "sequence": 5,
+          "arrival": "15:00",
+          "departure": "15:00"
+        },
+        {
+          "station_id": "ain_defla",
+          "sequence": 6,
+          "arrival": "15:09",
+          "departure": "15:09"
+        },
+        {
+          "station_id": "rouina",
+          "sequence": 7,
+          "arrival": "15:20",
+          "departure": "15:20"
+        },
+        {
+          "station_id": "cheik_ben_yahia",
+          "sequence": 8,
+          "arrival": "15:24",
+          "departure": "15:24"
+        },
+        {
+          "station_id": "el_attaf",
+          "sequence": 9,
+          "arrival": "15:34",
+          "departure": "15:34"
+        },
+        {
+          "station_id": "oued_fodda",
+          "sequence": 10,
+          "arrival": "15:48",
+          "departure": "15:48"
+        },
+        {
+          "station_id": "chlef",
+          "sequence": 11,
+          "arrival": "16:03",
+          "departure": null
+        }
+      ],
+      "editor_note": "مواقيت 11 محطة كما تظهر في الصورة الرسمية؛ يسير يوميًا في هذا الاتجاه."
     }
   ],
   "note": "Draft entries are editable real database records, but their prior example times are not operational evidence. Dashboard labels these records as unverified and hides them from default scheduled boards until reviewed. Update stop_times/train_number/source to validate. أُضيفت 60 رحلة من 3 صور رسمية مؤرخة 19 سبتمبر 2026: 28 للمطار ذهابًا وإيابًا، و14 آغا–زرالدة، و18 الجزائر–العفرون. لم تُفترض رحلات الاتجاه العكسي للعفرون دون صورتها الصحيحة. أُدرجت 19 رحلة موثقة من صورة العفرون–الجزائر الرسمية بتاريخ 19 سبتمبر 2026، تشمل قطارات يومية وأخرى مستثناة من الجمعة وأخرى خاصة بيوم الجمعة، بمجموع 150 رحلة منقولة من صور الجداول. نسخة المعاينة SVG مشتقة من الصورة الأصلية المرفقة."
