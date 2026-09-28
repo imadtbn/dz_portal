@@ -98,3 +98,17 @@
 .journey-actions .button{font-size:12px;min-height:38px;padding:6px 10px}
 @media(max-width:1150px){.journey-form{grid-template-columns:repeat(2,minmax(0,1fr))}.journey-form .button{grid-column:1/-1}.journey-list{grid-template-columns:1fr}}
 @media(max-width:680px){.journey-section{padding:12px}.journey-form{grid-template-columns:1fr}.journey-card-head{flex-direction:column}.journey-card-head>span{text-align:right;white-space:normal}.journey-actions .button{flex:1}}
+
+/* One task at a time keeps the search, station board, and network easy to scan. */
+.task-tabs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:0 0 15px}
+.task-tab{display:flex;flex-wrap:wrap;align-items:center;gap:3px 10px;text-align:right;padding:14px 18px;border:1px solid #c5dbe5;border-radius:14px;background:#fff;color:var(--navy);box-shadow:0 3px 14px #193c560c}
+.task-tab>span{grid-row:span 2;display:grid;place-items:center;border-radius:10px;width:38px;height:38px;background:#eaf5f5;color:var(--teal);font-size:23px}
+.task-tab strong{font-size:16px}.task-tab small{width:100%;padding-right:48px;color:var(--muted);font-size:12px}
+.task-tab[aria-selected=true]{background:#e7f5f4;border-color:#087f8c;box-shadow:inset 0 -3px #087f8c}
+.task-panel[hidden]{display:none}.task-panel{margin-bottom:28px}.task-panel .board-panel,.task-panel .map-panel{width:100%}
+.task-panel .map-panel{margin-bottom:18px}.task-panel .routes-section{margin-bottom:18px}
+.journey-section{margin-bottom:0}.journey-list{grid-template-columns:1fr}
+.journey-card{padding:14px 18px}.journey-card-head{align-items:baseline}.journey-links{display:flex;flex-wrap:wrap;gap:8px}.journey-links .photo-source{margin:0}
+.journey-extra{border-top:1px solid #e1eaee;margin-top:10px;padding-top:7px}.journey-extra>summary{cursor:pointer;color:#096676;font-weight:750;font-size:13px}
+.journey-extra .journey-leg:first-of-type{margin-top:8px}.journey-more{margin:11px 0 4px;width:100%}
+@media(max-width:680px){.task-tabs{gap:5px}.task-tab{display:grid;justify-items:center;text-align:center;gap:4px;padding:9px 4px;min-height:79px}.task-tab>span{width:26px;height:26px;font-size:18px}.task-tab strong{font-size:12px;line-height:1.25}.task-tab small{display:none}.journey-card{padding:12px}.journey-card-head{align-items:flex-start}}

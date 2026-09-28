@@ -4,7 +4,22 @@ import {railwayCategories,categoryRoutes,canonicalRouteId,routeTrips,routeStopSu
 const dataRoot=new URL("../../data/sntf/",import.meta.url);
 const $=id=>document.getElementById(id);
 const esc=x=>String(x??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
-const state={stations:[],routes:[],lines:[],category:"",allowedStopIds:null,trips:[],calendars:[],exceptions:[],holidays:[],holidaysComplete:false,sources:[],selected:null,route:"",user:null,map:null,markers:[],userMarker:null,boardMode:"departures",boardLimit:{departure:20,arrival:20},lastMinute:"",busy:false,journeys:[]};
+const state={stations:[],routes:[],lines:[],category:"",allowedStopIds:null,trips:[],calendars:[],exceptions:[],holidays:[],holidaysComplete:false,sources:[],selected:null,route:"",user:null,map:null,mapPending:null,markers:[],userMarker:null,activeTask:"search",boardMode:"departures",boardLimit:{departure:20,arrival:20},lastMinute:"",busy:false,journeys:[],journeyResults:null,journeyLimit:{direct:4,connections:3}};
+function showTask(task,focus=false,updateUrl=false){
+ if(!["search","station","explore"].includes(task))task="search";
+ state.activeTask=task;
+ for(const id of ["search","station","explore"]){
+  $("panel-"+id).hidden=id!==task;
+  const tab=$("task-"+id);tab.setAttribute("aria-selected",String(id===task));tab.tabIndex=id===task?0:-1;
+  if(id===task&&focus)tab.focus();
+ }
+ if(task==="explore"){
+  fillRouteCatalog();
+  if(state.map)state.map.invalidateSize?.();
+  else if(state.stations.length&&!state.mapPending)state.mapPending=initMap().finally(()=>{state.mapPending=null});
+ }
+ if(updateUrl)window.history?.replaceState(null,"","#panel-"+task);
+}
 const station=id=>state.stations.find(s=>s.id===id);
 const name=id=>station(id)?.name||id;
 const routeFor=id=>state.routes.find(r=>r.id===id);
@@ -165,7 +180,8 @@ function journeyLeg(leg){
 function journeyCard(item,index){
  const transfer=Boolean(item.second),first=transfer?item.first:item,last=transfer?item.second:item;
  const title=transfer?`تبديل في ${name(item.station)} · انتظار ${journeyDuration(item.wait)}`:'رحلة مباشرة';
- return `<article class="journey-card"><div class="journey-card-head"><strong>${esc(title)}</strong><span>${journeyTime(first.departure)} ← ${journeyTime(last.arrival)}</span></div><p class="minor">المدة الإجمالية ${esc(journeyDuration((last.arrival-first.departure)/60000))} · أوقات مجدولة حسب الصور الرسمية، وليست تتبعًا مباشرًا.</p>${journeyLeg(first)}${transfer?journeyLeg(last):''}<div class="journey-actions"><button class="button outline" type="button" data-calendar="${index}">إضافة تذكير إلى التقويم</button><button class="button outline" type="button" data-remind="${index}">تنبيه أثناء فتح الصفحة</button></div></article>`;
+ const links=[first,last].filter((leg,i)=>!i||transfer).map((leg,i)=>`<a class="photo-source" href="${esc(tripPageLink(leg.trip,leg.serviceDate,leg.from,leg.to))}">${transfer?'القطار '+(i+1):'صفحة الرحلة'} · ${esc(leg.trip.train_number||'غير محدد')} ←</a>`).join('');
+ return `<article class="journey-card"><div class="journey-card-head"><strong>${esc(title)}</strong><span>${journeyTime(first.departure)} ← ${journeyTime(last.arrival)}</span></div><p class="minor">${esc(name(first.from))} ← ${esc(name(last.to))} · المدة ${esc(journeyDuration((last.arrival-first.departure)/60000))}</p><div class="journey-links">${links}</div><details class="journey-extra"><summary>التوقفات والتذكيرات</summary>${journeyLeg(first)}${transfer?journeyLeg(last):''}<div class="journey-actions"><button class="button outline" type="button" data-calendar="${index}">إضافة تذكير إلى التقويم</button><button class="button outline" type="button" data-remind="${index}">تنبيه أثناء فتح الصفحة</button></div></details></article>`;
 }
 function populateJourneyStations(){
  const ids=new Set(state.trips.filter(t=>t.data_status==='source_transcribed'||t.data_status==='verified').flatMap(t=>t.stop_times.filter(s=>s.arrival!=null||s.departure!=null).map(s=>s.station_id)));
@@ -177,14 +193,18 @@ function populateJourneyStations(){
 }
 function searchJourneys(){
  const origin=$('journey-from').value,destination=$('journey-to').value,date=$('journey-date').value,after=$('journey-after').value;
- if(origin===destination){$('journey-results').innerHTML='<div class="empty">اختر محطتين مختلفتين.</div>';return}
+ if(origin===destination){state.journeys=[];state.journeyResults=null;$('journey-results').innerHTML='<div class="empty">اختر محطتين مختلفتين.</div>';return}
  const result=planJourney({trips:state.trips,origin,destination,date,after,calendars:state.calendars,exceptions:state.exceptions,holidays:state.holidays});
  state.journeys=[...result.direct,...result.connections];
+ state.journeyResults={...result,date};state.journeyLimit={direct:4,connections:3};renderJourneyResults();
+}
+function renderJourneyResults(){
+ const {direct,connections,date}=state.journeyResults;
  const holiday=state.holidays.find(h=>(typeof h==='string'?h:h.date)===date);
  const notice=holiday?`<p class="journey-notice">${esc(holiday.name||'يوم عيد')} · فُعّلت قاعدة تشغيل الأعياد لهذا اليوم.</p>`:
-  !state.holidaysComplete?'<p class="journey-notice">رزنامة الأعياد غير مكتملة؛ راجع الرحلات التي تختلف أيام تشغيلها في الأعياد.</p>':'';
- const section=(title,items,offset)=>`<h3>${title} <span class="chip">${items.length}</span></h3>`+(items.length?`<div class="journey-list">${items.map((x,i)=>journeyCard(x,offset+i)).join('')}</div>`:'<div class="empty">لا توجد رحلة مدخلة مطابقة لهذا التاريخ والاتجاه.</div>');
- $('journey-results').innerHTML=notice+section('الرحلات المباشرة',result.direct,0)+section('رحلات بتبديل واحد',result.connections,result.direct.length);
+  !state.holidaysComplete&&state.journeys.some(x=>[x.first||x,x.second].filter(Boolean).some(leg=>['friday_holiday','weekday_not_friday'].includes(leg.trip.service_id)))?'<p class="journey-notice">رزنامة الأعياد غير مكتملة؛ راجع تشغيل هذه القطارات في الأعياد.</p>':'';
+ const section=(title,items,offset,key)=>`<h3>${title} <span class="chip">${items.length}</span></h3>`+(items.length?`<div class="journey-list">${items.slice(0,state.journeyLimit[key]).map((x,i)=>journeyCard(x,offset+i)).join('')}</div>${items.length>state.journeyLimit[key]?`<button class="button outline journey-more" type="button" data-more-journeys="${key}">عرض المزيد (${items.length-state.journeyLimit[key]})</button>`:''}`:'<div class="empty">لا توجد رحلة مدخلة مطابقة لهذا التاريخ والاتجاه.</div>');
+ $('journey-results').innerHTML=notice+section('الرحلات المباشرة',direct,0,'direct')+section('رحلات بتبديل واحد',connections,direct.length,'connections');
 }
 function itineraryReminder(item){
  const first=item.first||item,last=item.second||item;
@@ -288,7 +308,7 @@ function routeStations(){
  $("station").replaceChildren(new Option("اختر محطة",""),...allowed.map(s=>new Option(s.name+" / "+s.name_fr,s.id)));
  if(prev&&allowed.some(s=>s.id===prev))$("station").value=prev;
  else if(prev){state.selected=null;$("selected-name").textContent="اختر محطة";$("selected-subtitle").textContent="اختر محطة من الخريطة أو القائمة."}
- fillStationLines();listStations();fillRouteCatalog();fillDirections();renderBoards();refreshMarkers();
+ fillStationLines();listStations();if(state.activeTask==="explore")fillRouteCatalog();fillDirections();renderBoards();refreshMarkers();
 }
 function refreshMarkers(){
  if(!state.map)return;
@@ -299,7 +319,7 @@ function refreshMarkers(){
   const marker=window.L.circleMarker([s.lat,s.lon],{radius:s.id===state.selected?10:6,color:"#fff",weight:2,fillColor:color,fillOpacity:1}).addTo(state.map);
   const container=document.createElement("div");container.dir="rtl";
   const h=document.createElement("strong");h.textContent=s.name;container.append(h,document.createElement("br"));
-  const button=document.createElement("button");button.type="button";button.textContent="عرض المغادرات والوصول";button.addEventListener("click",()=>chooseStation(s.id));container.append(button);
+  const button=document.createElement("button");button.type="button";button.textContent="عرض المغادرات والوصول";button.addEventListener("click",()=>{chooseStation(s.id);showTask("station",false,true)});container.append(button);
   marker.bindPopup(container);
   marker.on("click",()=>chooseStation(s.id));
   state.markers.push(marker);
@@ -364,7 +384,7 @@ async function start(){
  const [stations,routes,lines,trips,calendars,sources,holidays]=await Promise.all([get("stations","stations"),get("routes","routes"),get("lines","lines"),get("trips","trips"),get("calendars","calendars"),get("sources","sources"),get("holidays","dates")]);
  Object.assign(state,{stations:stations.stations,routes:routes.routes,lines:lines.lines,trips:trips.trips,calendars:calendars.calendars,exceptions:calendars.exceptions||[],sources:sources.sources,holidays:holidays.dates,holidaysComplete:holidays.complete===true});
  populateJourneyStations();
- $("holiday-note").textContent=state.holidaysComplete?"":" تواريخ الأعياد غير مكتملة، لذا تحتاج نتائج الرحلات المرتبطة بالأعياد إلى مراجعة.";
+ $("holiday-note").textContent="";
  const params=new URL(location.href).searchParams;
  const oldLine=lineFor(params.get("line"));
  const hashCategory=railwayCategories.find(c=>"#"+c.anchor===location.hash)?.id;
@@ -377,13 +397,17 @@ async function start(){
  if(chosen&&station(chosen)&&allowedOnRoute(station(chosen)))chooseStation(chosen);
  else if(!state.category&&!state.route&&station("zeralda"))chooseStation("zeralda");
  else setCategoryFilters(state.category,state.route,true);
- await initMap();tick();
+ const explicitTask=location.hash.match(/^#panel-(search|station|explore)$/)?.[1];
+ const initialTask=explicitTask||((chosen&&station(chosen))||location.hash==="#station-board"?"station":params.has("route")||params.has("category")||params.has("line")||hashCategory?"explore":"search");
+ showTask(initialTask);tick();
  }catch(error){$("map").innerHTML='<div class="empty">تعذر تحميل قاعدة البيانات. أعد تحميل الصفحة أو افتح <a href="sntf.html">الجداول المصورة</a>.</div>';$("location-status").textContent=error.message;console.error("DZ Rail:",error)}
 }
 $("station").addEventListener("change",e=>{if(e.target.value)chooseStation(e.target.value,{focusMap:true})});
 $("journey-form").addEventListener("submit",event=>{event.preventDefault();searchJourneys()});
 $("journey-date").addEventListener("change",()=>{$("journey-after").value="00:00"});
 $("journey-results").addEventListener("click",event=>{
+ const more=event.target.closest('[data-more-journeys]');
+ if(more){const key=more.dataset.moreJourneys;if(!['direct','connections'].includes(key))return;state.journeyLimit[key]+=key==='direct'?4:3;renderJourneyResults();return}
  const calendar=event.target.closest('[data-calendar]'),reminder=event.target.closest('[data-remind]');
  const index=Number((calendar||reminder)?.dataset.calendar??reminder?.dataset.remind);
  if(!Number.isInteger(index)||!state.journeys[index])return;
@@ -394,7 +418,7 @@ $("station-results").addEventListener("click",e=>{const button=e.target.closest(
 $("category-filter").addEventListener("change",e=>setCategoryFilters(e.target.value,"",true));
 $("route-filter").addEventListener("change",e=>setCategoryFilters(state.category,e.target.value,true));
 $("direction").addEventListener("change",()=>{state.boardLimit={departure:20,arrival:20};renderBoards()});
-$("include-drafts").addEventListener("change",()=>{state.boardLimit={departure:20,arrival:20};fillDirections();fillRouteCatalog();renderBoards()});
+$("include-drafts").addEventListener("change",()=>{state.boardLimit={departure:20,arrival:20};fillDirections();if(state.activeTask==="explore")fillRouteCatalog();renderBoards()});
 for(const kind of ["departure","arrival"]){
  const el=$(kind==="departure"?"departures":"arrivals");
  el.addEventListener("click",event=>{
@@ -412,6 +436,7 @@ $("route-catalog").addEventListener("click",event=>{
  const trigger=event.target.closest("[data-route]");
  if(!trigger)return;
  setCategoryFilters("",trigger.dataset.route,true);
+ showTask("station",false,true);
  $("station-board").scrollIntoView({behavior:"smooth",block:"start"});
 });
 $("route-catalog").addEventListener("change",event=>{
@@ -423,6 +448,10 @@ $("route-catalog").addEventListener("change",event=>{
  target.innerHTML=trip?tripTimeline(trip):"";
 });
 $("locate").addEventListener("click",locate);
+for(const [i,id] of ["search","station","explore"].entries()){
+ const button=$("task-"+id);button.addEventListener("click",()=>showTask(id,false,true));
+ button.addEventListener("keydown",event=>{if(!["ArrowLeft","ArrowRight","Home","End"].includes(event.key))return;event.preventDefault();const all=["search","station","explore"];const next=event.key==="Home"?0:event.key==="End"?2:(i+(event.key==="ArrowLeft"?1:-1)+3)%3;showTask(all[next],true,true)});
+}
 document.querySelectorAll(".board-tabs button").forEach((b,i,all)=>{b.addEventListener("click",()=>boardTab(b.dataset.view));b.addEventListener("keydown",e=>{if(!["ArrowLeft","ArrowRight","Home","End"].includes(e.key))return;e.preventDefault();const target=e.key==="Home"?0:e.key==="End"?all.length-1:(i+(e.key==="ArrowLeft"?1:-1)+all.length)%all.length;boardTab(all[target].dataset.view,true)})});
 window.matchMedia("(max-width:680px)").addEventListener("change",()=>boardTab(state.boardMode));
 boardTab("departures");tick();setInterval(tick,1000);start();

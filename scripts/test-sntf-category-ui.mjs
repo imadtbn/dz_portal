@@ -15,11 +15,11 @@ const src=readFileSync("assets/js/sntf-trains/app.js","utf8")
 assert(src.includes("return start().then(()=>state)"),"The UI test must await application initialization");
 const run=new Function("document","window","location","URL","fetch","Option","setInterval","console","Intl","planJourney",...engineNames,...networkNames,src);
 class FakeElement{
- constructor(id){this.id=id;this.listeners={};this.value="";this.checked=false;this.children=[];this.disabled=false;this.hidden=false;this.innerHTML="";this.textContent="";this.label="";this.dataset={};}
+ constructor(id){this.id=id;this.listeners={};this.attributes={};this.value="";this.checked=false;this.children=[];this.disabled=false;this.hidden=false;this.innerHTML="";this.textContent="";this.label="";this.dataset={};}
  addEventListener(event,callback){this.listeners[event]=callback}
  append(...children){this.children.push(...children)}
  replaceChildren(...children){this.children=children;this.value=children[0]?.value||""}
- setAttribute(){}
+ setAttribute(key,value){this.attributes[key]=value}
  scrollIntoView(){}
  focus(){}
  remove(){}
@@ -29,9 +29,10 @@ const example="https://example.invalid/dz_portal/sectors/sntf-trains.html";
 async function boot(path=""){
  const elements=new Map(),get=id=>{if(!elements.has(id))elements.set(id,new FakeElement(id));return elements.get(id)};
  const document={getElementById:get,querySelectorAll:()=>[],createElement:tag=>new FakeElement(tag)};
- const map={setView(){return this},fitBounds(){return this},getZoom(){return 6}};
+ let mapsCreated=0;
+ const map={setView(){return this},fitBounds(){return this},getZoom(){return 6},invalidateSize(){return this}};
  const window={matchMedia:()=>({matches:false,addEventListener(){}}),L:{
-  map:()=>map,tileLayer:()=>({addTo(){}}),
+  map:()=>{mapsCreated++;return map},tileLayer:()=>({addTo(){}}),
   circleMarker:()=>({addTo(){return this},bindPopup(){return this},on(){return this},remove(){}})
  }};
  const target=new URL(example+path),location={href:target.href,hash:target.hash};
@@ -45,11 +46,19 @@ async function boot(path=""){
   {warn:(...parts)=>errors.push(parts.join(" ")),error:(...parts)=>errors.push(parts.join(" "))},Intl,
   planJourney,...engineNames.map(k=>engine[k]),...networkNames.map(k=>network[k]));
  assert.deepEqual(errors,[],"The app must start and filter without JavaScript errors");
- return {state,get,selectCategory(value){get("category-filter").listeners.change({target:{value}})},selectRoute(value){get("route-filter").listeners.change({target:{value}})},
+ return {state,get,mapsCreated:()=>mapsCreated,task(id){get('task-'+id).listeners.click()},selectCategory(value){get("category-filter").listeners.change({target:{value}})},selectRoute(value){get("route-filter").listeners.change({target:{value}})},
   optionCount:()=>get("route-filter").children.slice(1).reduce((sum,group)=>sum+group.children.length,0)};
 }
 const page=await boot("?station=zeralda");
 assert.equal(page.state.selected,"zeralda");
+assert.equal(page.state.activeTask,"station","Station links open the station task");
+assert.equal(page.mapsCreated(),0,"Station task does not download or create the map");
+page.task("search");
+assert.equal(page.get("panel-station").hidden,true);
+assert.equal(page.get("task-search").attributes["aria-selected"],"true");
+page.task("explore");
+assert.equal(page.mapsCreated(),1,"Map initializes when exploring the network");
+assert.equal(page.get("panel-explore").hidden,false);
 assert.equal(page.state.category,"");
 assert.equal(page.get("route-filter").disabled,true,"Route selector waits for railway category");
 assert.equal(page.get("station").children.length-1,196,"All 177 stations remain accessible before filtering");
@@ -93,16 +102,31 @@ page.get("journey-after").value="08:00";
 page.get("journey-form").listeners.submit({preventDefault(){}});
 assert(page.get("journey-results").innerHTML.includes("B124/125"),"Search displays an actual direct train and its station timeline");
 assert(page.get("journey-results").innerHTML.includes('sntf-trip.html?trip='),"Journey results link to the full published trip page");
+assert(page.get("journey-results").innerHTML.includes('class="journey-extra"'),"Stop details and reminders remain available in collapsed results");
+assert(page.state.journeyResults.direct.length>0);
+page.state.journeyResults.direct=Array(8).fill(page.state.journeyResults.direct[0]);
+page.get("journey-results").listeners.click({target:{closest:selector=>selector==='[data-more-journeys]'?{dataset:{moreJourneys:'direct'}}:null}});
+assert.equal(page.state.journeyLimit.direct,8,"The show-more control reveals additional journeys on demand");
+assert.equal((page.get("journey-results").innerHTML.match(/class="journey-card"/g)||[]).length,8+Math.min(3,page.state.journeyResults.connections.length));
 assert(page.get("departures").innerHTML.includes('sntf-trip.html?trip='),"Station departure cards link to the trip page");
 assert.equal(page.get("category-schedules").hidden,true);
 const linked=await boot("?route=affroun-alger&station=el_affroun");
 assert.equal(linked.state.category,"suburban","Direct links infer their railway category");
 assert.equal(linked.state.route,"affroun-alger");
 assert.equal(linked.state.selected,"el_affroun");
+assert.equal(linked.state.activeTask,"station");
 const old=await boot("?line=alger-bejaia");
 assert.equal(old.state.category,"eastern","Legacy named-line deep links map to the new category");
+assert.equal(old.state.activeTask,"explore");
 assert.equal(old.state.route,"","Grouped east line legacy links retain its category without guessing one direction");
 const alias=await boot("?route=zeralda-alger");
 assert.equal(alias.state.route,"zeralda-agha","Legacy route aliases resolve to a single canonical direction");
 assert.equal(alias.state.category,"suburban");
+const home=await boot();
+assert.equal(home.state.activeTask,"search");
+assert.equal(home.mapsCreated(),0,"Default search avoids initializing the map");
+assert.equal(home.get("route-catalog").innerHTML,"","Catalog waits for the explore task");
+const searchLink=await boot("?station=zeralda#panel-search");
+assert.equal(searchLink.state.activeTask,"search","Explicit task hash takes precedence over a station link");
+assert.equal(searchLink.mapsCreated(),0);
 console.log("SNTF category UI PASS: five types, dependent grouped routes, gallery anchors, genuine station filters, reset and deep-link compatibility.");
