@@ -165,7 +165,7 @@ function tripTimeline(trip){
     '<time dir="ltr">'+esc(formatTime(stop.departure??stop.arrival))+'</time>';
   return '<li><span>'+esc(name(stop.station_id))+'</span>'+clocks+'</li>';
  }).join("");
- return '<p class="minor">القطار '+esc(trip.train_number)+' · '+esc(serviceName(trip.service_id))+' · '+esc(route?.name||"")+'</p><ol class="stop-list train-timeline">'+items+'</ol>';
+ return '<p class="minor">القطار '+esc(trip.train_number||"غير محدد")+' · '+esc(serviceName(trip.service_id))+' · '+esc(route?.name||"")+'</p><ol class="stop-list train-timeline">'+items+'</ol>';
 }
 function routeCard(route){
  const summary=routeStopSummary(route,state.trips),ts=routeTrips(route,state.trips),src=state.sources.find(s=>s.id===route.source);
@@ -173,11 +173,12 @@ function routeCard(route){
  const stops=summary.known_stops.map((item,i)=>'<li><span>'+ (i+1)+'. '+esc(name(item.station_id))+'</span><small>'+item.train_count+' قطار يتوقف هنا</small></li>').join("");
  const corridor=summary.corridor_only.length?'<details class="corridor-note"><summary>محطات مذكورة بالممر دون توقف منشور ('+summary.corridor_only.length+')</summary><p class="minor">هذه أسماء ظاهرة في جدول الممر، لكنها غير مدرجة كتوقف مؤقت في أي قطار أدخلناه لهذا المسار.</p><p>'+summary.corridor_only.map(name).map(esc).join(" · ")+'</p></details>':"";
  const routesStatus=ts.length?'<span class="tag">'+ts.length+' رحلة منقولة</span>':'<span class="tag warn">المواقيت والتوقفات قيد الإدخال</span>';
+ const partialNotice=route.category==="international"&&ts.some(t=>t.time_status==="partial")?'<p class="minor">ينشر الجدول وقت الانطلاق فقط؛ أوقات الوصول والمحطات الوسيطة غير منشورة (—).</p>':'';
  const stopHtml=ts.length?'<details class="route-stops"><summary>عرض محطات التوقف المسجلة ('+summary.known_stops.length+')</summary><ol class="catalog-stops">'+stops+'</ol></details>'+corridor:
   '<p class="pending-stops">المعروف حاليًا: '+esc(name(route.from))+' ← '+esc(name(route.to))+'. لا توجد محطات وسيطة موثقة في قاعدة الرحلات لهذا المسار بعد.</p>';
  const options=ts.map(t=>'<option value="'+esc(t.trip_id)+'">'+esc(t.train_number||"غير محدد")+' · '+esc(serviceName(t.service_id))+' · '+esc(formatTime(t.stop_times[0].departure))+' → '+esc(formatTime(t.stop_times.at(-1).arrival))+'</option>').join("");
  const trainSelect=ts.length?'<label class="trip-select-label" for="trip-'+esc(route.id)+'">محطات قطار محدد</label><select id="trip-'+esc(route.id)+'" data-trip-select="'+esc(route.id)+'"><option value="">اختر القطار لعرض توقفاته ومواقيته</option>'+options+'</select><div class="trip-timeline" data-trip-timeline="'+esc(route.id)+'"></div>':"";
- return '<article class="route-item" data-route-id="'+esc(route.id)+'"><div class="route-top"><span class="tag">'+esc(categoryLabel[route.category]||route.category)+'</span>'+routesStatus+'</div><h4>'+esc(route.name)+'</h4><p class="route-terminals">'+esc(name(route.from))+' ← '+esc(name(route.to))+'</p><p class="minor">'+esc(src?.name||"مصدر قيد التوثيق")+'</p>'+stopHtml+trainSelect+'<div class="route-actions"><button type="button" class="button outline route-open" data-route="'+esc(route.id)+'">فتح لوحة المسار</button>'+link+'</div></article>';
+ return '<article class="route-item" data-route-id="'+esc(route.id)+'"><div class="route-top"><span class="tag">'+esc(categoryLabel[route.category]||route.category)+'</span>'+routesStatus+'</div><h4>'+esc(route.name)+'</h4><p class="route-terminals">'+esc(name(route.from))+' ← '+esc(name(route.to))+'</p><p class="minor">'+esc(src?.name||"مصدر قيد التوثيق")+'</p>'+partialNotice+stopHtml+trainSelect+'<div class="route-actions"><button type="button" class="button outline route-open" data-route="'+esc(route.id)+'">فتح لوحة المسار</button>'+link+'</div></article>';
 }
 function fillRouteCatalog(){
  const groups=state.lines.filter(line=>!state.category||line.category===state.category)
