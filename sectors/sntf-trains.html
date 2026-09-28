@@ -5,8 +5,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="theme-color" content="#102d42">
+
     <meta name="description"
-        content="DZ Rail: خريطة تفاعلية لمحطات القطارات الجزائرية، لوحة المغادرات والوصول حسب المحطة والاتجاه وأيام التشغيل، والوقت المتبقي للقطارات المجدولة.">
+        content="DZ Rail: خريطة تفاعلية لمحطات القطارات الجزائرية، لوحة المغادرات والوصول حسب المحطة والاتجاه وأيام التشغيل، والوقت المتبقي للقطارات المجدولة من SNTF." />
+
+    <meta name="keywords"
+        content="مواقيت القطارات, محطات القطارات الجزائر, SNTF, DZ Rail, خريطة القطارات, لوحة المغادرات, جدول الرحلات, ضاحية الجزائر, قطار وهران, قطار عنابة, قطار تونس" />
+
     <link rel="icon" href="../assets/images/icon.png">
     <link rel="canonical" href="https://imadtbn.github.io/dz_portal/sectors/sntf-trains.html">
     <link rel="manifest" href="../manifest.json">
@@ -15,28 +20,324 @@
     <meta property="og:title" content="DZ Rail | خريطة القطارات ولوحة المحطات">
     <meta property="og:description"
         content="اختر محطتك وتابع المغادرات والوصول وأوقات التوقف المجدولة على الخريطة التفاعلية.">
+
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="خريطة DZ Rail التفاعلية لمحطات القطارات الجزائرية">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="DZ Rail | خريطة القطارات ولوحة المحطات">
+    <meta name="twitter:description" content="اعرف قطارك من محطتك عبر خريطة تفاعلية ولوحة مغادرات ووصول محدثة.">
+    <meta name="twitter:image" content="https://imadtbn.github.io/dz_portal/assets/images/sntf.jpg">
+
+
     <meta property="og:url" content="https://imadtbn.github.io/dz_portal/sectors/sntf-trains.html">
     <meta property="og:image" content="https://imadtbn.github.io/dz_portal/assets/images/sntf.jpg">
     <link rel="stylesheet" href="../assets/css/sntf-trains.css?v=20260928-east">
-    <script
-        type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"DZ Rail | خريطة القطارات ولوحة المحطات","url":"https://imadtbn.github.io/dz_portal/sectors/sntf-trains.html","inLanguage":"ar-DZ","isPartOf":{"@type":"WebSite","url":"https://imadtbn.github.io/dz_portal/"}}</script>
+
+    <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@graph": [{
+                        "@type": "WebSite",
+                        "@id": "https://imadtbn.github.io/dz_portal/#website",
+                        "url": "https://imadtbn.github.io/dz_portal/",
+                        "name": "البوابة الجزائرية للخدمات الرقمية",
+                        "alternateName": "DZ Portal",
+                        "inLanguage": "ar-DZ",
+                        "publisher": {
+                            "@id": "https://imadtbn.github.io/dz_portal/#organization"
+                        }
+                    },
+                    {
+                        "@type": "Organization",
+                        "@id": "https://imadtbn.github.io/dz_portal/#organization",
+                        "name": "البوابة الجزائرية للخدمات الرقمية",
+                        "url": "https://imadtbn.github.io/dz_portal/",
+                        "logo": {
+                            "@type": "ImageObject",
+                            "url": "https://imadtbn.github.io/dz_portal/assets/images/icon.png",
+                            "width": 512,
+                            "height": 512
+                        }
+                    },
+                    {
+                        "@type": "BreadcrumbList",
+                        "@id": "https://imadtbn.github.io/dz_portal/sectors/sntf-trains.html#breadcrumb",
+                        "itemListElement": [{
+                                "@type": "ListItem",
+                                "position": 1,
+                                "name": "الرئيسية",
+                                "item": "https://imadtbn.github.io/dz_portal/"
+                            },
+                            {
+                                "@type": "ListItem",
+                                "position": 2,
+                                "name": "النقل والمواصلات",
+                                "item": "https://imadtbn.github.io/dz_portal/sectors/transport.html"
+                            },
+                            {
+                                "@type": "ListItem",
+                                "position": 3,
+                                "name": "السكك الحديدية SNTF",
+                                "item": "https://imadtbn.github.io/dz_portal/sectors/sntf.html"
+                            },
+                            {
+                                "@type": "ListItem",
+                                "position": 4,
+                                "name": "DZ Rail - خريطة القطارات ولوحة المحطات",
+                                "item": "https://imadtbn.github.io/dz_portal/sectors/sntf-trains.html"
+                            }
+                        ]
+                    },
+                    {
+                        "@type": "WebPage",
+                        "@id": "https://imadtbn.github.io/dz_portal/sectors/sntf-trains.html#webpage",
+                        "url": "https://imadtbn.github.io/dz_portal/sectors/sntf-trains.html",
+                        "name": "DZ Rail | خريطة المحطات ولوحة المغادرات والوصول",
+                        "headline": "خريطة تفاعلية لمحطات القطارات الجزائرية ولوحة المغادرات والوصول",
+                        "description": "DZ Rail: خريطة تفاعلية لمحطات القطارات الجزائرية، لوحة المغادرات والوصول حسب المحطة والاتجاه وأيام التشغيل، والوقت المتبقي للقطارات المجدولة.",
+                        "inLanguage": "ar-DZ",
+                        "isPartOf": {
+                            "@id": "https://imadtbn.github.io/dz_portal/#website"
+                        },
+                        "publisher": {
+                            "@id": "https://imadtbn.github.io/dz_portal/#organization"
+                        },
+                        "breadcrumb": {
+                            "@id": "https://imadtbn.github.io/dz_portal/sectors/sntf-trains.html#breadcrumb"
+                        },
+                        "primaryImageOfPage": {
+                            "@type": "ImageObject",
+                            "url": "https://imadtbn.github.io/dz_portal/assets/images/sntf.jpg"
+                        },
+                        "about": [{
+                                "@type": "Thing",
+                                "name": "SNTF",
+                                "description": "الشركة الوطنية للنقل بالسكك الحديدية في الجزائر"
+                            },
+                            {
+                                "@type": "Thing",
+                                "name": "محطات القطارات الجزائرية"
+                            },
+                            {
+                                "@type": "Thing",
+                                "name": "مواقيت القطارات"
+                            }
+                        ],
+                        "mainEntity": {
+                            "@id": "https://imadtbn.github.io/dz_portal/sectors/sntf-trains.html#app"
+                        },
+                        "potentialAction": [{
+                            "@type": "SearchAction",
+                            "name": "البحث عن محطة",
+                            "target": {
+                                "@type": "EntryPoint",
+                                "urlTemplate": "https://imadtbn.github.io/dz_portal/sectors/sntf-trains.html?station={search_term_string}",
+                                "actionPlatform": [
+                                    "http://schema.org/DesktopWebPlatform",
+                                    "http://schema.org/MobileWebPlatform"
+                                ]
+                            },
+                            "query-input": "required name=search_term_string"
+                        }]
+                    },
+                    {
+                        "@type": ["WebApplication", "SoftwareApplication"],
+                        "@id": "https://imadtbn.github.io/dz_portal/sectors/sntf-trains.html#app",
+                        "name": "DZ Rail - خريطة القطارات ولوحة المحطات",
+                        "alternateName": "DZ Rail",
+                        "url": "https://imadtbn.github.io/dz_portal/sectors/sntf-trains.html",
+                        "applicationCategory": "TravelApplication",
+                        "applicationSubCategory": "Transportation & Public Transit",
+                        "operatingSystem": "Web (متوافق مع جميع المتصفحات الحديثة)",
+                        "browserRequirements": "يتطلب JavaScript مُفعّل",
+                        "inLanguage": "ar-DZ",
+                        "isAccessibleForFree": true,
+                        "offers": {
+                            "@type": "Offer",
+                            "price": "0",
+                            "priceCurrency": "DZD"
+                        },
+                        "featureList": [
+                            "خريطة تفاعلية لمحطات القطارات الجزائرية",
+                            "لوحة المغادرات حسب المحطة",
+                            "لوحة الوصول حسب المحطة",
+                            "تصفية حسب نوع الخط الحديدي (ضاحية، شرق، غرب، صحراء، دولي)",
+                            "تصفية حسب المسار والاتجاه",
+                            "البحث عن محطة بالعربية أو الفرنسية",
+                            "تحديد أقرب محطة عبر الموقع الجغرافي",
+                            "عرض الوقت المتبقي للقطارات المجدولة",
+                            "عرض أيام التشغيل لكل قطار",
+                            "قاعدة الخطوط ومحطات التوقف"
+                        ],
+                        "screenshot": "https://imadtbn.github.io/dz_portal/assets/images/sntf.jpg",
+                        "about": [{
+                                "@type": "Thing",
+                                "name": "SNTF"
+                            },
+                            {
+                                "@type": "Thing",
+                                "name": "السكك الحديدية في الجزائر"
+                            },
+                            {
+                                "@type": "Thing",
+                                "name": "مواقيت القطارات"
+                            }
+                        ],
+                        "publisher": {
+                            "@id": "https://imadtbn.github.io/dz_portal/#organization"
+                        }
+                    },
+                    {
+                        "@type": "Dataset",
+                        "@id": "https://imadtbn.github.io/dz_portal/sectors/sntf-trains.html#dataset",
+                        "name": "قاعدة بيانات مواقيت قطارات SNTF",
+                        "description": "قاعدة بيانات يدوية لمواقيت قطارات SNTF تغطي الخطوط الدولية والداخلية والجهوية وضاحية الجزائر، مع معلومات المحطات والاتجاهات وأيام التشغيل ومحطات التوقف.",
+                        "inLanguage": "ar-DZ",
+                        "isAccessibleForFree": true,
+                        "creator": {
+                            "@id": "https://imadtbn.github.io/dz_portal/#organization"
+                        },
+                        "license": "https://imadtbn.github.io/dz_portal/pages/terms.html",
+                        "keywords": [
+                            "SNTF",
+                            "مواقيت القطارات",
+                            "محطات القطارات",
+                            "السكك الحديدية الجزائرية",
+                            "جدول الرحلات",
+                            "ضاحية الجزائر",
+                            "الخطوط الجهوية",
+                            "الخط الدولي"
+                        ],
+                        "variableMeasured": [
+                            "اسم المحطة",
+                            "وقت المغادرة",
+                            "وقت الوصول",
+                            "الاتجاه",
+                            "أيام التشغيل",
+                            "محطات التوقف"
+                        ],
+                        "temporalCoverage": "2026",
+                        "spatialCoverage": {
+                            "@type": "Place",
+                            "name": "الجزائر",
+                            "address": {
+                                "@type": "PostalAddress",
+                                "addressCountry": "DZ"
+                            }
+                        },
+                        "distribution": {
+                            "@type": "DataDownload",
+                            "contentUrl": "https://imadtbn.github.io/dz_portal/assets/js/sntf-trains/",
+                            "encodingFormat": "application/javascript"
+                        }
+                    },
+                    {
+                        "@type": "ItemList",
+                        "@id": "https://imadtbn.github.io/dz_portal/sectors/sntf-trains.html#line-categories",
+                        "name": "أنواع الخطوط الحديدية في DZ Rail",
+                        "description": "تصنيفات الخطوط الحديدية المدعومة في قاعدة بيانات SNTF.",
+                        "numberOfItems": 5,
+                        "itemListOrder": "https://schema.org/ItemListOrderAscending",
+                        "itemListElement": [{
+                                "@type": "ListItem",
+                                "position": 1,
+                                "name": "ضاحية الجزائر",
+                                "description": "قطارات الضاحية حول الجزائر العاصمة (الثنية، زرالدة، العفرون، واد عيسى، المطار)."
+                            },
+                            {
+                                "@type": "ListItem",
+                                "position": 2,
+                                "name": "الخطوط الجهوية الشرقية",
+                                "description": "خطوط جهوية وكبرى شرق الجزائر (بجاية، باتنة، عنابة، قسنطينة)."
+                            },
+                            {
+                                "@type": "ListItem",
+                                "position": 3,
+                                "name": "الخطوط الجهوية الغربية",
+                                "description": "خطوط جهوية وكبرى غرب الجزائر (وهران، الشلف، بشار)."
+                            },
+                            {
+                                "@type": "ListItem",
+                                "position": 4,
+                                "name": "الصحراء والهضاب العليا",
+                                "description": "خطوط الصحراء والهضاب العليا (تقرت، بشار - تندوف، الجلفة - الأغواط)."
+                            },
+                            {
+                                "@type": "ListItem",
+                                "position": 5,
+                                "name": "الخط الدولي",
+                                "description": "الخط الدولي الجزائر - تونس."
+                            }
+                        ]
+                    },
+                    {
+                        "@type": "FAQPage",
+                        "@id": "https://imadtbn.github.io/dz_portal/sectors/sntf-trains.html#faq",
+                        "inLanguage": "ar-DZ",
+                        "mainEntity": [{
+                                "@type": "Question",
+                                "name": "هل DZ Rail موقع رسمي لشركة SNTF؟",
+                                "acceptedAnswer": {
+                                    "@type": "Answer",
+                                    "text": "لا، DZ Rail خدمة معلوماتية ضمن البوابة الجزائرية للخدمات الرقمية، وليست موقعًا رسميًا لشركة SNTF. المواقيت المنشورة منقولة يدويًا من جداول رسمية صادرة عن SNTF ولا يُضمن استمرار سريانها."
+                                }
+                            },
+                            {
+                                "@type": "Question",
+                                "name": "هل المواقيت المعروضة آنية أم مجدولة؟",
+                                "acceptedAnswer": {
+                                    "@type": "Answer",
+                                    "text": "المواقيت المعروضة في DZ Rail هي مواقيت مجدولة، وليست تتبعًا مباشرًا للقطارات. تعتمد على قاعدة بيانات يدوية مستخرجة من جداول SNTF الرسمية."
+                                }
+                            },
+                            {
+                                "@type": "Question",
+                                "name": "كيف أبحث عن قطار من محطة معينة؟",
+                                "acceptedAnswer": {
+                                    "@type": "Answer",
+                                    "text": "اختر المحطة من القائمة، أو اضغط عليها على الخريطة التفاعلية، أو استخدم خاصية 'أقرب محطة' عبر تحديد موقعك. ستظهر لوحة المغادرات والوصول مباشرة."
+                                }
+                            },
+                            {
+                                "@type": "Question",
+                                "name": "ما هي أنواع الخطوط المدعومة في DZ Rail؟",
+                                "acceptedAnswer": {
+                                    "@type": "Answer",
+                                    "text": "يدعم DZ Rail خمسة أنواع من الخطوط: ضاحية الجزائر، الخطوط الجهوية الشرقية، الخطوط الجهوية الغربية، خطوط الصحراء والهضاب العليا، والخط الدولي الجزائر - تونس."
+                                }
+                            },
+                            {
+                                "@type": "Question",
+                                "name": "ما معنى 'المسودات قيد المراجعة' في DZ Rail؟",
+                                "acceptedAnswer": {
+                                    "@type": "Answer",
+                                    "text": " سجلات قابلة للتعديل يدويًا قد تحتوي على أوقات افتراضية موروثة. لا يُنصح بالاعتماد عليها للسفر قبل التحقق من الجداول الرسمية لـ SNTF."
+                                }
+                            }
+                        ]
+                    }
+                ]
+            }
+        </script>
+
     <script type="module" src="../assets/js/sntf-trains/app.js?v=20260928-international"></script>
     <title>DZ Rail | خريطة المحطات ولوحة المغادرات والوصول</title>
 
     <!-- Google AdSense -->
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5656416032906373"
-     crossorigin="anonymous"></script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5656416032906373"
+        crossorigin="anonymous"></script>
 
-     <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-4BCWP0498L"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4BCWP0498L"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
-  gtag('config', 'G-4BCWP0498L');
-</script>
-     
+        gtag('config', 'G-4BCWP0498L');
+    </script>
+
 </head>
 
 <body>
@@ -59,7 +360,9 @@
             <div class="clock-box"><span>توقيت الجزائر</span><time id="clock" aria-live="off"
                     dir="ltr">--:--:--</time><small id="date-label">—</small></div>
         </section>
-        <div class="disclaimer" role="note"><strong>مهم:</strong> الرحلات المنشورة منقولة يدويًا من جداول رسمية صادرة عن SNTF وفق توثيق صاحب المشروع. هذه مواقيت مجدولة وليست تتبعًا مباشرًا، ولا يؤكد مصدرها الرسمي استمرار سريانها اليوم. تبقى المسودات غير معتمدة؛ تحقق من آخر تحديث قبل السفر. <a href="https://www.sntf.dz/" target="_blank"
+        <div class="disclaimer" role="note"><strong>مهم:</strong> الرحلات المنشورة منقولة يدويًا من جداول رسمية صادرة عن
+            SNTF وفق توثيق صاحب المشروع. هذه مواقيت مجدولة وليست تتبعًا مباشرًا، ولا يؤكد مصدرها الرسمي استمرار سريانها
+            اليوم. تبقى المسودات غير معتمدة؛ تحقق من آخر تحديث قبل السفر. <a href="https://www.sntf.dz/" target="_blank"
                 rel="noopener noreferrer">الموقع الرسمي لـ SNTF ↗</a> <span id="holiday-note"></span></div>
         <section class="dashboard" aria-label="لوحة DZ Rail">
             <div class="map-panel">
@@ -80,13 +383,16 @@
                         <option value="sahara">الصحراء والهضاب العليا</option>
                         <option value="international">الخط الدولي</option>
                     </select>
-                    <small id="category-filter-help" class="filter-hint">اختر النوع لتظهر المسارات والاتجاهات الخاصة به.</small>
+                    <small id="category-filter-help" class="filter-hint">اختر النوع لتظهر المسارات والاتجاهات الخاصة
+                        به.</small>
                     <label for="route-filter">المسار والاتجاه</label>
                     <select id="route-filter" aria-describedby="route-filter-help">
                         <option value="">جميع المسارات والاتجاهات</option>
                     </select>
-                    <small id="route-filter-help" class="filter-hint" role="status" aria-live="polite">اختر نوع الخط لتصفية المسارات المتاحة.</small>
-                    <a id="category-schedules" class="category-schedules" href="sntf.html" hidden>عرض الجداول المصورة لهذا النوع ↗</a>
+                    <small id="route-filter-help" class="filter-hint" role="status" aria-live="polite">اختر نوع الخط
+                        لتصفية المسارات المتاحة.</small>
+                    <a id="category-schedules" class="category-schedules" href="sntf.html" hidden>عرض الجداول المصورة
+                        لهذا النوع ↗</a>
                 </div>
                 <div id="map" class="map" aria-label="خريطة تفاعلية لمحطات القطارات" role="region">
                     <div class="empty">يجري تجهيز الخريطة…</div>
@@ -156,7 +462,9 @@
                     <h2>الخطوط ومحطات التوقف</h2>
                 </div><span id="route-count" class="chip">—</span>
             </div>
-            <p class="minor route-intro">تظهر محطات التوقف التي لها توقيت في جدول قطار مُدخل، مع عدد القطارات التي تتوقف بها. المحطات المرسومة في صور الممر دون أي توقف منشور تُعرض منفصلة؛ ولا تُستنتج محطات وسيطة للخطوط التي لم تُنقل جداولها بعد.</p>
+            <p class="minor route-intro">تظهر محطات التوقف التي لها توقيت في جدول قطار مُدخل، مع عدد القطارات التي تتوقف
+                بها. المحطات المرسومة في صور الممر دون أي توقف منشور تُعرض منفصلة؛ ولا تُستنتج محطات وسيطة للخطوط التي
+                لم تُنقل جداولها بعد.</p>
             <div id="route-catalog" class="line-catalog" aria-live="polite"></div>
         </section>
         <section class="info-strip">
@@ -170,9 +478,9 @@
         <div class="shell"><span>خدمة معلوماتية ضمن البوابة الجزائرية، وليست موقعًا رسميًا لـ SNTF.</span><a
                 href="../index.html">الرئيسية</a></div>
     </footer>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
 
 </body>
 
