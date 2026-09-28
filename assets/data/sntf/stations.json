@@ -1180,8 +1180,7 @@
       "lat": 29.4065467,
       "lon": -3.2536538,
       "geo_source": "Google Maps",
-      "geo_verified": false,
-      "editor_note": "اسم المحطة تبلبالة؛ صحح حقل الاسم الفرنسي الذي كان مكررًا من محطة بشار. الإحداثيات وحالة التحقق الجغرافي لم تتغير."
+      "geo_verified": false
     },
     {
       "id": "hasi_khabi",
@@ -1860,41 +1859,37 @@
       "id": "chelghoum_laid",
       "name": "شلغوم العيد",
       "name_fr": "Chelghoum Laïd",
-      "lat": null,
-      "lon": null,
-      "geo_verified": false,
-      "geo_source": null,
-      "source": "dz-portal-gallery"
+      "lat": 36.0880051,
+      "lon": 6.1590228,
+      "geo_source": "Google Maps",
+      "geo_verified": true
     },
     {
       "id": "tabia",
       "name": "طابية",
       "name_fr": "Tabia",
-      "lat": null,
-      "lon": null,
-      "geo_verified": false,
-      "geo_source": null,
-      "source": "dz-portal-gallery"
+      "lat": 35.0212511,
+      "lon": 0.7410893,
+      "geo_source": "Google Maps",
+      "geo_verified": true
     },
     {
       "id": "moulay_slissen",
       "name": "مولاي سليسن",
       "name_fr": "Moulay Slissen",
-      "lat": null,
-      "lon": null,
-      "geo_verified": false,
-      "geo_source": null,
-      "source": "dz-portal-gallery"
+      "lat": 34.8234595,
+      "lon": -0.7560541,
+      "geo_source": "Google Maps",
+      "geo_verified": true
     },
     {
       "id": "ras_el_ma",
       "name": "رأس الماء",
       "name_fr": "Ras El Ma",
-      "lat": null,
-      "lon": null,
-      "geo_verified": false,
-      "geo_source": null,
-      "source": "dz-portal-gallery"
+      "lat": 34.492769,
+      "lon": -0.807371,
+      "geo_source": "Google Maps",
+      "geo_verified": true
     },
     {
       "id": "redjem_demouche",
