@@ -4,6 +4,8 @@ const loadJSON=name=>JSON.parse(readFileSync("assets/data/sntf/"+name+".json","u
 const loadModule=async path=>import("data:text/javascript;base64,"+Buffer.from(readFileSync(path,"utf8")).toString("base64"));
 const engine=await loadModule("assets/js/sntf-trains/engine.js");
 const network=await loadModule("assets/js/sntf-trains/network.js");
+const plannerSource=readFileSync("assets/js/sntf-trains/planner.js","utf8").replace(/^import [^\n]+\n/gm,"").replace(/^export /gm,"");
+const {planJourney}=new Function("mins","runsOn","shiftISO",plannerSource+"\nreturn {planJourney};")(engine.mins,engine.runsOn,engine.shiftISO);
 const engineNames=["dayParts","dayISO","recordsAtStation","eligible","formatTime","countdown","classify","mins"];
 const networkNames=["railwayCategories","categoryRoutes","canonicalRouteId","routeTrips","routeStopSummary","lineRoutes","lineSummary","stationLineServices","eligibleStationIdsByCategory"];
 const src=readFileSync("assets/js/sntf-trains/app.js","utf8")
@@ -11,7 +13,7 @@ const src=readFileSync("assets/js/sntf-trains/app.js","utf8")
  .replaceAll("import.meta.url",'"https://example.invalid/assets/js/sntf-trains/app.js"')
  .replace('boardTab("departures");tick();setInterval(tick,1000);start();','boardTab("departures");tick();return start().then(()=>state);');
 assert(src.includes("return start().then(()=>state)"),"The UI test must await application initialization");
-const run=new Function("document","window","location","URL","fetch","Option","setInterval","console","Intl",...engineNames,...networkNames,src);
+const run=new Function("document","window","location","URL","fetch","Option","setInterval","console","Intl","planJourney",...engineNames,...networkNames,src);
 class FakeElement{
  constructor(id){this.id=id;this.listeners={};this.value="";this.checked=false;this.children=[];this.disabled=false;this.hidden=false;this.innerHTML="";this.textContent="";this.label="";this.dataset={};}
  addEventListener(event,callback){this.listeners[event]=callback}
@@ -41,7 +43,7 @@ async function boot(path=""){
  const errors=[];
  const state=await run(document,window,location,URL,fetch,FakeOption,()=>{},
   {warn:(...parts)=>errors.push(parts.join(" ")),error:(...parts)=>errors.push(parts.join(" "))},Intl,
-  ...engineNames.map(k=>engine[k]),...networkNames.map(k=>network[k]));
+  planJourney,...engineNames.map(k=>engine[k]),...networkNames.map(k=>network[k]));
  assert.deepEqual(errors,[],"The app must start and filter without JavaScript errors");
  return {state,get,selectCategory(value){get("category-filter").listeners.change({target:{value}})},selectRoute(value){get("route-filter").listeners.change({target:{value}})},
   optionCount:()=>get("route-filter").children.slice(1).reduce((sum,group)=>sum+group.children.length,0)};
@@ -83,6 +85,13 @@ assert(page.get("route-catalog").innerHTML.includes("19 رحلة منقولة"),
 page.selectCategory("");
 assert.equal(page.get("route-filter").disabled,true);
 assert.equal(page.get("station").children.length-1,196);
+assert(page.get("journey-from").children.length>150,"Planner offers stations with documented stops");
+page.get("journey-from").value="thenia";
+page.get("journey-to").value="el_affroun";
+page.get("journey-date").value="2026-09-29";
+page.get("journey-after").value="08:00";
+page.get("journey-form").listeners.submit({preventDefault(){}});
+assert(page.get("journey-results").innerHTML.includes("B124/125"),"Search displays an actual direct train and its station timeline");
 assert.equal(page.get("category-schedules").hidden,true);
 const linked=await boot("?route=affroun-alger&station=el_affroun");
 assert.equal(linked.state.category,"suburban","Direct links infer their railway category");

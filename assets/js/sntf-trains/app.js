@@ -1,9 +1,10 @@
 import {dayParts,dayISO,recordsAtStation,eligible,formatTime,countdown,classify,mins} from "./engine.js";
+import {planJourney} from "./planner.js";
 import {railwayCategories,categoryRoutes,canonicalRouteId,routeTrips,routeStopSummary,lineRoutes,lineSummary,stationLineServices,eligibleStationIdsByCategory} from "./network.js?v=20260927-international";
 const dataRoot=new URL("../../data/sntf/",import.meta.url);
 const $=id=>document.getElementById(id);
 const esc=x=>String(x??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
-const state={stations:[],routes:[],lines:[],category:"",allowedStopIds:null,trips:[],calendars:[],exceptions:[],holidays:[],holidaysComplete:false,sources:[],selected:null,route:"",user:null,map:null,markers:[],userMarker:null,boardMode:"departures",boardLimit:{departure:20,arrival:20},lastMinute:"",busy:false};
+const state={stations:[],routes:[],lines:[],category:"",allowedStopIds:null,trips:[],calendars:[],exceptions:[],holidays:[],holidaysComplete:false,sources:[],selected:null,route:"",user:null,map:null,markers:[],userMarker:null,boardMode:"departures",boardLimit:{departure:20,arrival:20},lastMinute:"",busy:false,journeys:[]};
 const station=id=>state.stations.find(s=>s.id===id);
 const name=id=>station(id)?.name||id;
 const routeFor=id=>state.routes.find(r=>r.id===id);
@@ -100,7 +101,7 @@ function statusBadge(trip){
  if(classify(trip)==="draft")return '<span class="tag draft">قيد المراجعة · غير موثوق للسفر</span>';
  if(classify(trip)==="verified")return '<span class="tag">موثق</span>';
   const source=state.sources.find(s=>s.id===trip.source_id);
-  if(source?.issuing_authority==="SNTF")return '<span class="tag warn">جدول SNTF رسمي · السريان غير مؤكد</span>';
+  if(source?.official_document||source?.issuing_authority==="SNTF")return '<span class="tag">جدول SNTF مصور</span>';
   return '<span class="tag warn">جدول منقول · السريان غير مؤكد</span>';
 }
 function details(event){
@@ -143,12 +144,91 @@ function renderBoards(now=new Date()){
  const arrivals=filterDirection(recordsAtStation(trips,state.selected,"arrival",day,options,now),"arrival");
  panel("departure",departures);panel("arrival",arrivals);
 }
+const journeyClock = ms => new Intl.DateTimeFormat('ar-DZ-u-nu-latn',{timeZone:'Africa/Algiers',hour:'2-digit',minute:'2-digit',hourCycle:'h23'}).format(ms);
+const journeyDay = ms => new Intl.DateTimeFormat('ar-DZ-u-nu-latn',{timeZone:'Africa/Algiers',day:'numeric',month:'short'}).format(ms);
+const journeyDuration = minutes => `${Math.floor(minutes/60)} س ${Math.round(minutes%60)} د`;
+const journeyTime = ms => `<time datetime="${new Date(ms).toISOString()}">${esc(journeyClock(ms))} <small>${esc(journeyDay(ms))}</small></time>`;
+function journeyLeg(leg){
+ const stops=leg.trip.stop_times.slice(leg.fromIndex,leg.toIndex+1);
+ const route=routeFor(leg.trip.route_id),source=state.sources.find(s=>s.id===leg.trip.source_id);
+ const img=source?.kind==='official-timetable-image'?source.url:route?.schedule_image;
+ const sourceLink=img&&(/^(https:\/\/imadtbn\.github\.io\/dz_portal)?\/assets\/train-schedules\//.test(img)||/^\.\.\/assets\/train-schedules\//.test(img))
+  ?`<a href="${esc(img)}" target="_blank" rel="noopener noreferrer">صورة الجدول ↗</a>`:'';
+ const list=stops.map((stop,i)=>{
+  const arrival=stop.arrival==null?'—':formatTime(stop.arrival),departure=stop.departure==null?'—':formatTime(stop.departure);
+  return `<li><span>${esc(name(stop.station_id))}</span><span><time dir="ltr">${esc(arrival)}</time> وصول · <time dir="ltr">${esc(departure)}</time> مغادرة</span></li>`;
+ }).join('');
+ return `<div class="journey-leg"><div><strong>${esc(name(leg.from))} ← ${esc(name(leg.to))}</strong><span>القطار ${esc(leg.trip.train_number||'غير محدد')} · ${esc(serviceName(leg.trip.service_id))}</span></div><div class="journey-times">${journeyTime(leg.departure)} ← ${journeyTime(leg.arrival)}</div><details><summary>تفاصيل الرحلة ومحطات التوقف (${stops.length})</summary><ol class="stop-list">${list}</ol><p class="minor">${esc(source?.name||'جدول مصور')} · ${esc(leg.serviceDate)}</p>${sourceLink}</details></div>`;
+}
+function journeyCard(item,index){
+ const transfer=Boolean(item.second),first=transfer?item.first:item,last=transfer?item.second:item;
+ const title=transfer?`تبديل في ${name(item.station)} · انتظار ${journeyDuration(item.wait)}`:'رحلة مباشرة';
+ return `<article class="journey-card"><div class="journey-card-head"><strong>${esc(title)}</strong><span>${journeyTime(first.departure)} ← ${journeyTime(last.arrival)}</span></div><p class="minor">المدة الإجمالية ${esc(journeyDuration((last.arrival-first.departure)/60000))} · أوقات مجدولة حسب الصور الرسمية، وليست تتبعًا مباشرًا.</p>${journeyLeg(first)}${transfer?journeyLeg(last):''}<div class="journey-actions"><button class="button outline" type="button" data-calendar="${index}">إضافة تذكير إلى التقويم</button><button class="button outline" type="button" data-remind="${index}">تنبيه أثناء فتح الصفحة</button></div></article>`;
+}
+function populateJourneyStations(){
+ const ids=new Set(state.trips.filter(t=>t.data_status==='source_transcribed'||t.data_status==='verified').flatMap(t=>t.stop_times.filter(s=>s.arrival!=null||s.departure!=null).map(s=>s.station_id)));
+ const stations=state.stations.filter(s=>ids.has(s.id)).sort((a,b)=>a.name.localeCompare(b.name,'ar'));
+ $('journey-from').append(...stations.map(s=>new Option(s.name,s.id)));
+ $('journey-to').append(...stations.map(s=>new Option(s.name,s.id)));
+ $('journey-date').value=dayISO(new Date());
+ const p=dayParts(new Date());$('journey-after').value=p.hour+':'+p.minute;
+}
+function searchJourneys(){
+ const origin=$('journey-from').value,destination=$('journey-to').value,date=$('journey-date').value,after=$('journey-after').value;
+ if(origin===destination){$('journey-results').innerHTML='<div class="empty">اختر محطتين مختلفتين.</div>';return}
+ const result=planJourney({trips:state.trips,origin,destination,date,after,calendars:state.calendars,exceptions:state.exceptions,holidays:state.holidays});
+ state.journeys=[...result.direct,...result.connections];
+ const holiday=state.holidays.find(h=>(typeof h==='string'?h:h.date)===date);
+ const notice=holiday?`<p class="journey-notice">${esc(holiday.name||'يوم عيد')} · فُعّلت قاعدة تشغيل الأعياد لهذا اليوم.</p>`:
+  !state.holidaysComplete?'<p class="journey-notice">رزنامة الأعياد غير مكتملة؛ راجع الرحلات التي تختلف أيام تشغيلها في الأعياد.</p>':'';
+ const section=(title,items,offset)=>`<h3>${title} <span class="chip">${items.length}</span></h3>`+(items.length?`<div class="journey-list">${items.map((x,i)=>journeyCard(x,offset+i)).join('')}</div>`:'<div class="empty">لا توجد رحلة مدخلة مطابقة لهذا التاريخ والاتجاه.</div>');
+ $('journey-results').innerHTML=notice+section('الرحلات المباشرة',result.direct,0)+section('رحلات بتبديل واحد',result.connections,result.direct.length);
+}
+function itineraryReminder(item){
+ const first=item.first||item,last=item.second||item;
+ return {departure:first.departure,arrival:last.arrival,title:`قطار ${name(first.from)} إلى ${name(last.to)}`,key:[first.trip.trip_id,first.serviceDate,first.from,item.second?.trip.trip_id||'',last.to].join('|')};
+}
+function addCalendar(item){
+ const info=itineraryReminder(item);
+ const utc=ms=>new Date(ms).toISOString().replace(/[-:]/g,'').replace(/\.\d{3}Z$/,'Z');
+ const safe=s=>s.replace(/[\\;,\n]/g,c=>({'\\':'\\\\',';':'\\;',',':'\\,','\n':'\\n'}[c]));
+ const body=['BEGIN:VCALENDAR','VERSION:2.0','PRODID:-//DZ Portal//DZ Rail//AR','BEGIN:VEVENT','UID:'+encodeURIComponent(info.key)+'@dz-portal','DTSTAMP:'+utc(Date.now()),'DTSTART:'+utc(info.departure),'DTEND:'+utc(info.arrival),'SUMMARY:'+safe(info.title),'DESCRIPTION:'+safe('وقت مجدول من صورة جدول SNTF؛ تحقق من تحديثات الشركة قبل السفر.'),'BEGIN:VALARM','TRIGGER:-PT30M','ACTION:DISPLAY','DESCRIPTION:'+safe(info.title),'END:VALARM','END:VEVENT','END:VCALENDAR',''].join('\r\n');
+ const url=URL.createObjectURL(new Blob([body],{type:'text/calendar;charset=utf-8'}));
+ const a=document.createElement('a');a.href=url;a.download='dz-rail-'+new Date(info.departure).toISOString().slice(0,10)+'.ics';document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),60000);
+}
+const reminderKey='dz-rail-foreground-reminders-v1';
+function loadReminders(){try{return JSON.parse(localStorage.getItem(reminderKey)||'[]')}catch{return []}}
+function checkReminders(now=Date.now()){
+ if(!('Notification' in window))return;
+ const pending=[];
+ for(const item of loadReminders()){
+  if(!Number.isFinite(item.departure)||item.departure<=now)continue;
+  if(item.departure-now<=30*60000 && Notification.permission==='granted'){
+   try{new Notification('موعد قطارك يقترب',{body:item.title+' · موعد مجدول، تحقق من أي تغيير لدى SNTF.',tag:item.key})}
+   catch{pending.push(item)}
+  }else pending.push(item);
+ }
+ try{localStorage.setItem(reminderKey,JSON.stringify(pending))}catch{}
+}
+async function addForegroundReminder(item){
+ const status=$('journey-reminder-status');
+ if(!('Notification' in window)){status.textContent='التنبيهات غير مدعومة في هذا المتصفح. استخدم تذكير التقويم.';return}
+ const permission=Notification.permission==='default'?await Notification.requestPermission():Notification.permission;
+ if(permission!=='granted'){status.textContent='لم تُفعّل إشعارات المتصفح. يمكنك إضافة تذكير إلى التقويم.';return}
+ const info=itineraryReminder(item);
+ if(info.departure<=Date.now()){status.textContent='فات موعد مغادرة هذه الرحلة.';return}
+ const values=loadReminders().filter(x=>x.key!==info.key);values.push(info);
+ try{localStorage.setItem(reminderKey,JSON.stringify(values))}catch{status.textContent='تعذر حفظ التذكير في المتصفح. استخدم تذكير التقويم.';return}
+ status.textContent='حُفظ التنبيه. يظهر قبل المغادرة بنصف ساعة إذا بقيت الصفحة مفتوحة؛ استخدم التقويم للتذكير بعد إغلاقها.';
+ checkReminders();
+}
+
 function tick(){
  const now=new Date(),parts=dayParts(now),clock=[parts.hour,parts.minute,parts.second].join(":"),key=[parts.year,parts.month,parts.day,parts.hour,parts.minute].join("-");
  $("clock").textContent=clock;
  $("date-label").textContent=new Intl.DateTimeFormat("ar-DZ",{timeZone:"Africa/Algiers",dateStyle:"full"}).format(now);
  document.querySelectorAll(".countdown").forEach(el=>{const remaining=Math.floor((Number(el.dataset.target)-now.getTime())/1000);el.textContent=countdown(remaining);el.closest(".event")?.classList.toggle("imminent",remaining>=0&&remaining<=900)});
- if(key!==state.lastMinute){state.lastMinute=key;renderBoards(now)}
+ if(key!==state.lastMinute){state.lastMinute=key;renderBoards(now);checkReminders(now.getTime())}
 }
 function boardTab(kind,focus=false){
  state.boardMode=kind;
@@ -281,6 +361,7 @@ async function start(){
  try{
  const [stations,routes,lines,trips,calendars,sources,holidays]=await Promise.all([get("stations","stations"),get("routes","routes"),get("lines","lines"),get("trips","trips"),get("calendars","calendars"),get("sources","sources"),get("holidays","dates")]);
  Object.assign(state,{stations:stations.stations,routes:routes.routes,lines:lines.lines,trips:trips.trips,calendars:calendars.calendars,exceptions:calendars.exceptions||[],sources:sources.sources,holidays:holidays.dates,holidaysComplete:holidays.complete===true});
+ populateJourneyStations();
  $("holiday-note").textContent=state.holidaysComplete?"":" تواريخ الأعياد غير مكتملة، لذا تحتاج نتائج الرحلات المرتبطة بالأعياد إلى مراجعة.";
  const params=new URL(location.href).searchParams;
  const oldLine=lineFor(params.get("line"));
@@ -298,6 +379,14 @@ async function start(){
  }catch(error){$("map").innerHTML='<div class="empty">تعذر تحميل قاعدة البيانات. أعد تحميل الصفحة أو افتح <a href="sntf.html">الجداول المصورة</a>.</div>';$("location-status").textContent=error.message;console.error("DZ Rail:",error)}
 }
 $("station").addEventListener("change",e=>{if(e.target.value)chooseStation(e.target.value,{focusMap:true})});
+$("journey-form").addEventListener("submit",event=>{event.preventDefault();searchJourneys()});
+$("journey-date").addEventListener("change",()=>{$("journey-after").value="00:00"});
+$("journey-results").addEventListener("click",event=>{
+ const calendar=event.target.closest('[data-calendar]'),reminder=event.target.closest('[data-remind]');
+ const index=Number((calendar||reminder)?.dataset.calendar??reminder?.dataset.remind);
+ if(!Number.isInteger(index)||!state.journeys[index])return;
+ if(calendar)addCalendar(state.journeys[index]);else addForegroundReminder(state.journeys[index]);
+});
 $("station-search").addEventListener("input",listStations);
 $("station-results").addEventListener("click",e=>{const button=e.target.closest("[data-id]");if(button)chooseStation(button.dataset.id,{focusMap:true})});
 $("category-filter").addEventListener("change",e=>setCategoryFilters(e.target.value,"",true));

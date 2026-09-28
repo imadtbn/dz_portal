@@ -17,7 +17,7 @@
         content="اختر محطتك وتابع المغادرات والوصول وأوقات التوقف المجدولة على الخريطة التفاعلية.">
     <meta property="og:url" content="https://imadtbn.github.io/dz_portal/sectors/sntf-trains.html">
     <meta property="og:image" content="https://imadtbn.github.io/dz_portal/assets/images/sntf.jpg">
-    <link rel="stylesheet" href="../assets/css/sntf-trains.css?v=20260928-east">
+    <link rel="stylesheet" href="../assets/css/sntf-trains.css?v=20260928-journey">
     
         <script type="application/ld+json">
         {
@@ -306,7 +306,7 @@
         }
     </script>
 
-    <script type="module" src="../assets/js/sntf-trains/app.js?v=20260928-international"></script>
+    <script type="module" src="../assets/js/sntf-trains/app.js?v=20260928-journey"></script>
     <title>DZ Rail | خريطة المحطات ولوحة المغادرات والوصول</title>
 
     <!-- Google AdSense -->
@@ -349,6 +349,19 @@
             SNTF . هذه مواقيت مجدولة وليست تتبعًا مباشرًا، ولا يؤكد مصدرها الرسمي استمرار سريانها
              تحقق من آخر تحديث قبل السفر. <a href="https://www.sntf.dz/" target="_blank"
                 rel="noopener noreferrer">الموقع الرسمي لـ SNTF ↗</a> <span id="holiday-note"></span></div>
+        <section class="journey-section" id="journey-planner" aria-labelledby="journey-title">
+            <div class="section-title"><div><span class="eyebrow">ابحث عن رحلتك</span><h2 id="journey-title">من محطة إلى محطة</h2></div></div>
+            <form id="journey-form" class="journey-form">
+                <label>محطة الانطلاق<select id="journey-from" required><option value="">اختر محطة</option></select></label>
+                <label>محطة الوصول<select id="journey-to" required><option value="">اختر محطة</option></select></label>
+                <label>تاريخ السفر<input id="journey-date" type="date" required></label>
+                <label>بعد الساعة<input id="journey-after" type="time" value="00:00" required></label>
+                <button type="submit" class="button">ابحث عن القطارات</button>
+            </form>
+            <p class="minor">تظهر الرحلات التي لها وقت منشور في محطتي الانطلاق والوصول. التبديل في المحطة نفسها بمهلة 30 إلى 180 دقيقة بين القطارين.</p>
+            <p id="journey-reminder-status" class="minor" role="status"></p>
+            <div id="journey-results" aria-live="polite"><div class="empty">اختر المحطتين والتاريخ لعرض الرحلات المباشرة والوصلات.</div></div>
+        </section>
         <section class="dashboard" aria-label="لوحة DZ Rail">
             <div class="map-panel">
                 <div class="panel-head">

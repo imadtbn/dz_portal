@@ -71,3 +71,30 @@
 /* Scheduled arrival/departure within the next 15 minutes. */
 .event.imminent{border-color:#ea8c14;background:#fff4dc;box-shadow:inset 4px 0 #e6850d,0 4px 16px #8c500c24}
 .event.imminent .countdown,.event.imminent .event-top time{color:#8b4200;font-weight:900}
+
+/* Journey search: date-aware direct trains and safe, same-station transfers. */
+.journey-section{background:#fff;border:1px solid var(--line);border-radius:19px;padding:20px;margin-bottom:20px;box-shadow:0 10px 36px #193c5610;min-width:0}
+.journey-form{display:grid;grid-template-columns:repeat(4,minmax(0,1fr)) auto;align-items:end;gap:10px;margin:16px 0}
+.journey-form label{display:grid;gap:5px;font-size:13px;font-weight:750;min-width:0}
+.journey-form select,.journey-form input{min-height:46px;min-width:0;width:100%;border:1px solid #b7cbd6;border-radius:10px;padding:8px;background:white;color:var(--ink)}
+.journey-form .button{min-height:46px}
+#journey-results>h3{margin:18px 0 8px;font-size:18px;display:flex;align-items:center;gap:9px}
+.journey-notice{border-right:4px solid #d99c27;padding:9px 12px;background:#fff7e5;border-radius:8px;color:#76521a;font-size:13px}
+.journey-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.journey-card{min-width:0;border:1px solid #d6e6ed;border-radius:13px;padding:13px;background:#fbfdff}
+.journey-card-head{display:flex;justify-content:space-between;gap:10px;align-items:flex-start;color:#124358}
+.journey-card-head>span{text-align:left;white-space:nowrap}
+.journey-card time{font-variant-numeric:tabular-nums;font-weight:750;white-space:nowrap}
+.journey-card time small{font-size:11px;color:#587384}
+.journey-leg{border-top:1px solid #e1eaee;padding:9px 0}
+.journey-leg>div:first-child{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;font-size:13px}
+.journey-leg>div:first-child span{color:#537284}
+.journey-times{font-size:15px;color:#076c77;margin:4px 0}
+.journey-leg details{border:1px solid #dbe9ee;border-radius:9px;padding:8px 10px;background:#fff;font-size:12px}
+.journey-leg summary{cursor:pointer;font-weight:750;color:#086571}
+.journey-leg .stop-list li{flex-wrap:wrap}
+.journey-leg a{font-weight:700}
+.journey-actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:5px}
+.journey-actions .button{font-size:12px;min-height:38px;padding:6px 10px}
+@media(max-width:1150px){.journey-form{grid-template-columns:repeat(2,minmax(0,1fr))}.journey-form .button{grid-column:1/-1}.journey-list{grid-template-columns:1fr}}
+@media(max-width:680px){.journey-section{padding:12px}.journey-form{grid-template-columns:1fr}.journey-card-head{flex-direction:column}.journey-card-head>span{text-align:right;white-space:normal}.journey-actions .button{flex:1}}
