@@ -29,7 +29,8 @@ const tripPageLink=(trip,date,from='',to='')=>{const query=new URLSearchParams({
 const categoryLabel=Object.fromEntries(railwayCategories.map(category=>[category.id,category.label]));
 const serviceLabel={daily:"كل يوم",friday_holiday:"الجمعة والأعياد",weekday_not_friday:"عدا الجمعة والأعياد",except_friday:"عدا الجمعة",friday_only:"الجمعة فقط"};
 const serviceName=id=>state.calendars.find(c=>c.id===id)?.label||serviceLabel[id]||id;
-const verifiedGeo=s=>s.geo_verified===true&&Number.isFinite(s.lat)&&Number.isFinite(s.lon);
+const hasGeo=s=>Number.isFinite(s.lat)&&Number.isFinite(s.lon)&&Math.abs(s.lat)<=90&&Math.abs(s.lon)<=180;
+const verifiedGeo=s=>s.geo_verified===true&&hasGeo(s);
 const editableTrips=()=>eligible(state.trips).filter(t=>state.route?t.route_id===canonical(state.route):!state.category||routeFor(t.route_id)?.category===state.category);
 async function get(name,key){const response=await fetch(new URL(name+".json",dataRoot),{cache:"no-cache"});if(!response.ok)throw Error(name+": HTTP "+response.status);const data=await response.json();if(!Array.isArray(data[key]))throw Error(name+": بيانات غير صالحة");return data}
 function allowedOnRoute(s){return state.allowedStopIds===null||state.allowedStopIds.has(s.id)}
@@ -68,7 +69,8 @@ function listStations(){
  if(state.user)matches=matches.sort((a,b)=>km(state.user,a)-km(state.user,b));
  else matches=matches.sort((a,b)=>a.name.localeCompare(b.name,"ar"));
  $("station-results").innerHTML=matches.length?matches.slice(0,50).map(s=>'<button type="button" class="station-option" data-id="'+esc(s.id)+'" aria-pressed="'+(s.id===state.selected)+'"><span>'+esc(s.name)+' <small>'+esc(s.name_fr)+'</small></span><small>'+(state.user&&verifiedGeo(s)?km(state.user,s).toFixed(1)+" كم":"عرض اللوحة")+'</small></button>').join(""):'<div class="empty">لا توجد محطات مطابقة.</div>';
- $("map-count").textContent=state.stations.filter(s=>allowedOnRoute(s)&&verifiedGeo(s)).length+" محطة بإحداثيات مسجلة";
+ const mapped=state.stations.filter(s=>allowedOnRoute(s)&&hasGeo(s));
+ $("map-count").textContent=mapped.length+" محطة على الخريطة · "+mapped.filter(s=>!verifiedGeo(s)).length+" موقع قيد التحقق";
 }
 function km(p,s){const d=Math.PI/180,dLat=(s.lat-p.lat)*d,dLon=(s.lon-p.lon)*d,a=Math.sin(dLat/2)**2+Math.cos(p.lat*d)*Math.cos(s.lat*d)*Math.sin(dLon/2)**2;return 6371*2*Math.atan2(Math.sqrt(a),Math.sqrt(1-a))}
 function chooseStation(id,{focusMap=false}={}){
@@ -79,7 +81,7 @@ function chooseStation(id,{focusMap=false}={}){
  fillStationLines();fillDirections();listStations();renderBoards();
  refreshMarkers();
  if(focusMap&&state.map&&state.activeTask==="explore"){
-  const s=station(id);if(verifiedGeo(s)){
+  const s=station(id);if(hasGeo(s)){
    state.map.setView([s.lat,s.lon],Math.max(9,state.map.getZoom()),{animate:true});
    state.markers.find(marker=>marker.stationId===id)?.openPopup();
   }
@@ -361,18 +363,19 @@ function refreshMarkers(){
  if(!state.map)return;
  state.activePopup=null;
  for(const marker of state.markers)marker.remove();state.markers=[];
- const selected=state.stations.filter(s=>allowedOnRoute(s)&&verifiedGeo(s));
+ const selected=state.stations.filter(s=>allowedOnRoute(s)&&hasGeo(s));
  for(const s of selected){
-  const color=s.id===state.selected?"#ed9e32":"#087f8c";
-  const marker=window.L.circleMarker([s.lat,s.lon],{radius:s.id===state.selected?10:6,color:"#fff",weight:2,fillColor:color,fillOpacity:1}).addTo(state.map);
+  const verified=verifiedGeo(s),color=s.id===state.selected?"#ed9e32":verified?"#087f8c":"#b46813";
+  const marker=window.L.circleMarker([s.lat,s.lon],{radius:s.id===state.selected?10:verified?6:7,color:verified?"#fff":"#773f09",weight:verified?2:2.5,fillColor:color,fillOpacity:verified?1:.8,...(verified?{}:{dashArray:"3 3"})}).addTo(state.map);
   marker.stationId=s.id;
   const container=document.createElement("div");container.dir="rtl";container.className="station-map-card";
   const title=document.createElement("a");title.href=stationBoardUrl(s.id);title.className="station-map-link";title.textContent=s.name;
   title.addEventListener("click",event=>{if(event.button!==0||event.metaKey||event.ctrlKey||event.shiftKey||event.altKey)return;event.preventDefault();openStation(s.id)});
   const subtitle=document.createElement("small");subtitle.textContent=s.name_fr;
+  const geoNote=document.createElement("small");geoNote.className="station-map-geo-note";geoNote.textContent=verified?"موقع محطة موثق":"موقع تقريبي · الإحداثيات قيد التحقق";
   const schedule=document.createElement("div");schedule.className="station-map-schedule";
   const hint=document.createElement("span");hint.textContent="مواقيت مجدولة من صور الجداول · افتح لوحة المحطة ←";
-  container.append(title,subtitle,schedule,hint);
+  container.append(title,subtitle,geoNote,schedule,hint);
   marker.bindPopup(container);
   marker.on("popupopen",()=>{state.activePopup={stationId:s.id,root:schedule};renderPopupSchedule(schedule,s.id)});
   marker.on("popupclose",()=>{if(state.activePopup?.root===schedule)state.activePopup=null});
@@ -390,7 +393,7 @@ async function initMap(){
   state.map=window.L.map("map",{scrollWheelZoom:false}).setView([28.1,2.7],5);
   window.L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",{attribution:'&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>',maxZoom:18}).addTo(state.map);
   refreshMarkers();
-  const geos=state.stations.filter(verifiedGeo);
+  const geos=state.stations.filter(hasGeo);
   if(geos.length)state.map.fitBounds(geos.map(s=>[s.lat,s.lon]),{padding:[20,20],maxZoom:7});
  }catch(error){$("map").innerHTML='<div class="empty">تعذر تحميل خريطة الإنترنت. اختر المحطة من القائمة المجاورة.</div>';console.warn("DZ Rail map:",error)}
 }
@@ -429,7 +432,7 @@ function setCategoryFilters(categoryId="",routeId="",selectFirst=false){
   if(fallback&&station(fallback)&&allowedOnRoute(station(fallback)))chooseStation(fallback,{focusMap:true});
  }
  if(state.map&&(state.category||state.route)){
-  const points=state.stations.filter(x=>allowedOnRoute(x)&&verifiedGeo(x));
+  const points=state.stations.filter(x=>allowedOnRoute(x)&&hasGeo(x));
   if(points.length)state.map.fitBounds(points.map(x=>[x.lat,x.lon]),{padding:[24,24],maxZoom:10});
  }
 }

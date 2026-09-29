@@ -33,7 +33,7 @@ async function boot(path=""){
  const map={setView(){return this},fitBounds(){return this},getZoom(){return 6},invalidateSize(){return this}};
  const window={history:{replaceState(_state,_title,url){lastUrl=String(url)}},matchMedia:()=>({matches:false,addEventListener(){}}),L:{
   map:()=>{mapsCreated++;return map},tileLayer:()=>({addTo(){}}),
-  circleMarker:()=>{const marker={handlers:{},addTo(){return this},bindPopup(content){this.popup=content;return this},openPopup(){this.opened=true;this.handlers.popupopen?.();return this},on(event,callback){this.handlers[event]=callback;return this},remove(){}};markers.push(marker);return marker}
+  circleMarker:(point,options)=>{const marker={point,options,handlers:{},addTo(){return this},bindPopup(content){this.popup=content;return this},openPopup(){this.opened=true;this.handlers.popupopen?.();return this},on(event,callback){this.handlers[event]=callback;return this},remove(){}};markers.push(marker);return marker}
  }};
  const target=new URL(example+path),location={href:target.href,hash:target.hash};
  const fetch=async url=>{
@@ -59,7 +59,7 @@ assert.equal(page.get("task-search").attributes["aria-selected"],"true");
 page.task("explore");
 page.get("station-results").listeners.click({target:{closest:()=>({dataset:{id:"zeralda"}})}});
 assert(page.state.markers.find(marker=>marker.stationId==="zeralda")?.opened,"Selecting a station from the map list opens its map card");
-const schedule=page.state.markers.find(marker=>marker.stationId==="zeralda").popup.children[2];
+const schedule=page.state.markers.find(marker=>marker.stationId==="zeralda").popup.children[3];
 assert.equal(schedule.children.length,2,"The card shows one departure and one arrival slot");
 assert.deepEqual(schedule.children.map(row=>row.children[0].textContent),["أقرب مغادرة","أقرب وصول"]);
 assert(schedule.children.some(row=>row.children[1].textContent!=="—"),"Known daily service supplies an upcoming scheduled time");
@@ -187,5 +187,17 @@ unpublished.task("explore");
 unpublished.state.trips.forEach(trip=>{trip.data_status="pending_review"});
 const emptyMarker=unpublished.state.markers.find(marker=>marker.stationId==="zeralda");
 emptyMarker.handlers.popupopen();
-assert(emptyMarker.popup.children[2].children.every(row=>row.children[1].textContent==="—"),"When no published service is eligible, neither direction invents a timetable");
+assert(emptyMarker.popup.children[3].children.every(row=>row.children[1].textContent==="—"),"When no published service is eligible, neither direction invents a timetable");
+const provisional=await boot("?category=sahara&station=touggourt");
+provisional.task("explore");
+const touggourt=provisional.state.stations.find(s=>s.id==="touggourt");
+assert.equal(touggourt.geo_verified,false,"Displaying a station must not falsely mark its coordinates verified");
+const provisionalMarker=provisional.state.markers.find(marker=>marker.stationId==="touggourt");
+assert(provisionalMarker,"Touggourt is displayed even while its coordinates await verification");
+assert.deepEqual(provisionalMarker.point,[touggourt.lat,touggourt.lon]);
+assert.equal(provisionalMarker.options.dashArray,"3 3","Provisional locations have a distinct dashed marker");
+assert(provisionalMarker.popup.children[2].textContent.includes("قيد التحقق"));
+assert(provisional.get("map-count").textContent.includes("موقع قيد التحقق"));
+provisional.get("station-results").listeners.click({target:{closest:()=>({dataset:{id:"touggourt"}})}});
+assert(provisional.state.markers.find(marker=>marker.stationId==="touggourt")?.opened,"Station search focuses the provisional Touggourt marker");
 console.log("SNTF category UI PASS: five types, dependent grouped routes, gallery anchors, genuine station filters, reset and deep-link compatibility.");
