@@ -104,18 +104,26 @@
 @media(max-width:680px){.journey-section{padding:12px}.journey-form{grid-template-columns:1fr}.journey-card-head{flex-direction:column}.journey-card-head>span{text-align:right;white-space:normal}.journey-actions .button{flex:1}}
 
 /* One task at a time keeps the search, station board, and network easy to scan. */
-.task-tabs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:0 0 15px}
-.task-tab{display:flex;flex-wrap:wrap;align-items:center;gap:3px 10px;text-align:right;padding:14px 18px;border:1px solid #c5dbe5;border-radius:14px;background:#fff;color:var(--navy);box-shadow:0 3px 14px #193c560c}
-.task-tab>span{grid-row:span 2;display:grid;place-items:center;border-radius:10px;width:38px;height:38px;background:#eaf5f5;color:var(--teal);font-size:23px}
-.task-tab strong{font-size:16px}.task-tab small{width:100%;padding-right:48px;color:var(--muted);font-size:12px}
-.task-tab[aria-selected=true]{background:#e7f5f4;border-color:#087f8c;box-shadow:inset 0 -3px #087f8c}
+.task-tabs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:0 0 17px}
+.task-tab{position:relative;display:grid;grid-template-columns:46px minmax(0,1fr) 18px;align-items:center;gap:12px;min-height:82px;padding:13px 16px;border:1px solid #cbdfe7;border-radius:16px;background:#fff;color:var(--navy);text-align:right;overflow:hidden;box-shadow:0 5px 18px #193c560d;transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease,background-color .18s ease}
+.task-tab::before{content:"";position:absolute;inset-block:0;inset-inline-start:0;width:4px;background:var(--teal);opacity:0;transition:opacity .18s ease}
+.task-tab-icon{display:grid;place-items:center;width:46px;height:46px;border-radius:13px;background:#e8f3f5;color:#087f8c;transition:transform .18s ease,background-color .18s ease,color .18s ease}
+.task-tab-icon svg{width:25px;height:25px}.task-tab-copy{display:grid;gap:2px;min-width:0}.task-tab-copy strong{font-size:16px;line-height:1.35}.task-tab-copy small{font-size:12px;color:var(--muted)}
+.task-tab-arrow{font-size:18px;color:#8299a7;transition:transform .18s ease,color .18s ease}
+.task-tab:hover{transform:translateY(-2px);border-color:#83b9c1;box-shadow:0 10px 24px #193c5620}.task-tab:hover .task-tab-icon{transform:scale(1.06)}.task-tab:hover .task-tab-arrow{transform:translateX(-3px);color:var(--teal)}
+.task-tab:active{transform:translateY(0);box-shadow:0 3px 10px #193c561a}
+.task-tab[aria-selected=true]{background:linear-gradient(120deg,#e8f7f6,#f7fcfc);border-color:#087f8c;box-shadow:0 6px 20px #087f8c21}
+.task-tab[aria-selected=true]::before{opacity:1}.task-tab[aria-selected=true] .task-tab-icon{background:#087f8c;color:#fff}.task-tab[aria-selected=true] .task-tab-arrow{color:#087f8c}
+.task-tab:focus-visible{outline:3px solid #e79f26;outline-offset:3px}
 .task-panel[hidden]{display:none}.task-panel{margin-bottom:28px}.task-panel .board-panel,.task-panel .map-panel{width:100%}
 .task-panel .map-panel{margin-bottom:18px}.task-panel .routes-section{margin-bottom:18px}
 .journey-section{margin-bottom:0}.journey-list{grid-template-columns:1fr}
 .journey-card{padding:14px 18px}.journey-card-head{align-items:baseline}.journey-links{display:flex;flex-wrap:wrap;gap:8px}.journey-links .photo-source{margin:0}
 .journey-extra{border-top:1px solid #e1eaee;margin-top:10px;padding-top:7px}.journey-extra>summary{cursor:pointer;color:#096676;font-weight:750;font-size:13px}
 .journey-extra .journey-leg:first-of-type{margin-top:8px}.journey-more{margin:11px 0 4px;width:100%}
-@media(max-width:680px){.task-tabs{gap:5px}.task-tab{display:grid;justify-items:center;text-align:center;gap:4px;padding:9px 4px;min-height:79px}.task-tab>span{width:26px;height:26px;font-size:18px}.task-tab strong{font-size:12px;line-height:1.25}.task-tab small{display:none}.journey-card{padding:12px}.journey-card-head{align-items:flex-start}}
+@media(max-width:680px){.task-tabs{gap:6px}.task-tab{grid-template-columns:1fr;justify-items:center;text-align:center;gap:5px;min-height:88px;padding:9px 4px}.task-tab-icon{width:32px;height:32px;border-radius:9px}.task-tab-icon svg{width:19px;height:19px}.task-tab-copy strong{font-size:12px;line-height:1.25}.task-tab-copy small,.task-tab-arrow{display:none}.journey-card{padding:12px}.journey-card-head{align-items:flex-start}}
+@media(max-width:380px){.task-tab-copy strong{font-size:11px}}
+@media(prefers-reduced-motion:reduce){.task-tab,.task-tab::before,.task-tab-icon,.task-tab-arrow{transition:none}.task-tab:hover,.task-tab:active,.task-tab:hover .task-tab-icon,.task-tab:hover .task-tab-arrow{transform:none}}
 
 .map .leaflet-popup-content{min-width:205px;margin:11px 14px;direction:rtl}
 .station-map-card{display:grid;gap:3px;text-align:right;line-height:1.45}

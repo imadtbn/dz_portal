@@ -17,7 +17,7 @@
         content="اختر محطتك وتابع المغادرات والوصول وأوقات التوقف المجدولة على الخريطة التفاعلية.">
     <meta property="og:url" content="https://imadtbn.github.io/dz_portal/sectors/sntf-trains.html">
     <meta property="og:image" content="https://imadtbn.github.io/dz_portal/assets/images/sntf.jpg">
-    <link rel="stylesheet" href="../assets/css/sntf-trains.css?v=20260929-provisional-map">
+    <link rel="stylesheet" href="../assets/css/sntf-trains.css?v=20260929-task-buttons">
     
         <script type="application/ld+json">
         {
@@ -339,9 +339,18 @@
         </section>
         <div class="disclaimer" role="note">مواقيت مجدولة من صور SNTF الرسمية، وليست تتبعًا مباشرًا. <a href="https://www.sntf.dz/" target="_blank" rel="noopener noreferrer">موقع SNTF ↗</a><span id="holiday-note"></span></div>
         <nav class="task-tabs" role="tablist" aria-label="اختر مهمتك في منصة القطارات">
-            <button id="task-search" class="task-tab" type="button" role="tab" aria-controls="panel-search" aria-selected="true" tabindex="0" data-task="search"><span aria-hidden="true">⌕</span><strong>ابحث عن رحلة</strong><small>من محطة إلى محطة</small></button>
-            <button id="task-station" class="task-tab" type="button" role="tab" aria-controls="panel-station" aria-selected="false" tabindex="-1" data-task="station"><span aria-hidden="true">↗</span><strong>لوحة محطة</strong><small>المغادرات والوصول</small></button>
-            <button id="task-explore" class="task-tab" type="button" role="tab" aria-controls="panel-explore" aria-selected="false" tabindex="-1" data-task="explore"><span aria-hidden="true">◎</span><strong>الخريطة والخطوط</strong><small>استكشف الشبكة</small></button>
+            <button id="task-search" class="task-tab" type="button" role="tab" aria-controls="panel-search" aria-selected="true" tabindex="0" data-task="search">
+                <span class="task-tab-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m15.5 15.5 5 5"/></svg></span>
+                <span class="task-tab-copy"><strong>ابحث عن رحلة</strong><small>من محطة إلى محطة</small></span><span class="task-tab-arrow" aria-hidden="true">←</span>
+            </button>
+            <button id="task-station" class="task-tab" type="button" role="tab" aria-controls="panel-station" aria-selected="false" tabindex="-1" data-task="station">
+                <span class="task-tab-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 16V6.5A2.5 2.5 0 0 1 8.5 4h7A2.5 2.5 0 0 1 18 6.5V16a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2Z"/><path d="M6 12h12M8.5 8h7M8 21l2-3m6 0 2 3"/><circle cx="9" cy="15" r=".7" fill="currentColor" stroke="none"/><circle cx="15" cy="15" r=".7" fill="currentColor" stroke="none"/></svg></span>
+                <span class="task-tab-copy"><strong>لوحة المحطة</strong><small>المغادرات والوصول</small></span><span class="task-tab-arrow" aria-hidden="true">←</span>
+            </button>
+            <button id="task-explore" class="task-tab" type="button" role="tab" aria-controls="panel-explore" aria-selected="false" tabindex="-1" data-task="explore">
+                <span class="task-tab-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m3 5 6-2 6 2 6-2v16l-6 2-6-2-6 2V5Z"/><path d="M9 3v16m6-14v16"/><circle cx="12" cy="10" r="1.5" fill="currentColor" stroke="none"/></svg></span>
+                <span class="task-tab-copy"><strong>الخريطة والخطوط</strong><small>استكشف الشبكة</small></span><span class="task-tab-arrow" aria-hidden="true">←</span>
+            </button>
         </nav>
         <section class="task-panel" id="panel-search" role="tabpanel" aria-labelledby="task-search">
         <section class="journey-section" id="journey-planner" aria-labelledby="journey-title">
