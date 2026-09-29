@@ -126,3 +126,6 @@
 .station-map-row{display:grid;grid-template-columns:1fr auto;gap:1px 8px;align-items:baseline}
 .station-map-row strong{font-size:12px;color:#17364c}.station-map-row time{color:#075e6b;font-size:15px;font-weight:800;font-variant-numeric:tabular-nums}
 .station-map-row small{grid-column:1/-1;color:#536f80;font-size:11px}
+
+.station-hero .station-board-search{display:block;width:100%;min-height:46px;margin:7px 0 12px;padding:10px;border:1px solid #a9c9d3;border-radius:11px;background:#fff;color:var(--ink)}
+.station-board-count{display:block;min-height:1.3em;margin-top:5px;color:#d7e8ef;font-size:11px}
