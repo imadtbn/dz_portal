@@ -19,6 +19,48 @@ async function read(name,key){const response=await fetch(new URL(name+'.json',ro
 const params=new URL(location.href).searchParams;
 let trip,route,source,calendar,stations,calendars,exceptions,holidays,complete,date,from,to,image;
 const station=id=>stations.find(s=>s.id===id)?.name||id;
+const canonicalTrip=()=>new URL('sntf-trip.html?'+new URLSearchParams({trip:trip.trip_id}),location.href).href;
+const scheduledDateTime=value=>{
+ const minutes=mins(value);
+ if(!Number.isFinite(minutes))return null;
+ return shiftISO(date,Math.floor(minutes/1440))+'T'+formatTime(value).slice(0,5)+':00+01:00';
+};
+function updateIndexing(){
+ const first=trip.stop_times[0],last=trip.stop_times.at(-1),url=canonicalTrip();
+ const name=`قطار ${station(first.station_id)} إلى ${station(last.station_id)}${trip.train_number?' رقم '+trip.train_number:''}`;
+ const description=`مواقيت ومحطات ${name}، ${daysLabel()}، وفق صورة جدول SNTF. الأوقات مجدولة وليست تتبعًا مباشرًا.`;
+ const trainStation=id=>({ '@type':'TrainStation',name:station(id) });
+ const service={
+  '@type':'TrainTrip','@id':url+'#train-trip',name,description,url,
+  departureStation:trainStation(first.station_id),arrivalStation:trainStation(last.station_id),
+  provider:{'@type':'Organization',name:'الشركة الوطنية للنقل بالسكك الحديدية (SNTF)',url:'https://www.sntf.dz/'},
+  itinerary:{'@type':'ItemList',itemListElement:trip.stop_times.map((stop,i)=>({
+   '@type':'ListItem',position:i+1,item:trainStation(stop.station_id)
+  }))}
+ };
+ if(trip.train_number)service.trainNumber=String(trip.train_number);
+ if(image)service.image=new URL(image,location.href).href;
+ if(runsOn(trip,date,calendars,exceptions,holidays)){
+  const departureTime=scheduledDateTime(first.departure),arrivalTime=scheduledDateTime(last.arrival);
+  if(departureTime)service.departureTime=departureTime;
+  if(arrivalTime)service.arrivalTime=arrivalTime;
+ }
+ const schema={'@context':'https://schema.org','@graph':[
+  {'@type':'WebPage','@id':url+'#webpage',url,name,description,inLanguage:'ar-DZ',mainEntity:{'@id':service['@id']},
+   breadcrumb:{'@id':url+'#breadcrumb'}},
+  {'@type':'BreadcrumbList','@id':url+'#breadcrumb',itemListElement:[
+   {'@type':'ListItem',position:1,name:'الرئيسية',item:'https://imadtbn.github.io/dz_portal/'},
+   {'@type':'ListItem',position:2,name:'منصة القطارات',item:'https://imadtbn.github.io/dz_portal/sectors/sntf-trains.html'},
+   {'@type':'ListItem',position:3,name,item:url}
+  ]},service
+ ]};
+ $('trip-canonical').href=url;
+ $('trip-og-url').content=url;
+ $('trip-schema').textContent=JSON.stringify(schema);
+ document.querySelector('meta[name="description"]').content=description;
+ document.querySelector('meta[property="og:title"]').content=name;
+ document.querySelector('meta[property="og:description"]').content=description;
+}
 const clock=value=>{
  if(!Number.isFinite(mins(value)))return '<span class="unknown">غير منشور</span>';
  const day=Math.floor(mins(value)/1440),on=shiftISO(date,day);
@@ -97,6 +139,7 @@ function render(){
   catch(error){if(error.name!=='AbortError')$('share-status').textContent='تعذرت المشاركة؛ انسخ الرابط من شريط العنوان.'}
  });
  document.title=`${station(first.station_id)} ← ${station(last.station_id)} | DZ Rail`;
+ updateIndexing();
 }
 $('close-photo').addEventListener('click',()=>$('photo-dialog').close());
 $('photo-dialog').addEventListener('click',event=>{if(event.target===$('photo-dialog'))$('photo-dialog').close()});
