@@ -29,11 +29,11 @@ const example="https://example.invalid/dz_portal/sectors/sntf-trains.html";
 async function boot(path=""){
  const elements=new Map(),get=id=>{if(!elements.has(id))elements.set(id,new FakeElement(id));return elements.get(id)};
  const document={getElementById:get,querySelectorAll:()=>[],createElement:tag=>new FakeElement(tag)};
- let mapsCreated=0;
+ let mapsCreated=0,lastUrl="";const markers=[];
  const map={setView(){return this},fitBounds(){return this},getZoom(){return 6},invalidateSize(){return this}};
- const window={matchMedia:()=>({matches:false,addEventListener(){}}),L:{
+ const window={history:{replaceState(_state,_title,url){lastUrl=String(url)}},matchMedia:()=>({matches:false,addEventListener(){}}),L:{
   map:()=>{mapsCreated++;return map},tileLayer:()=>({addTo(){}}),
-  circleMarker:()=>({addTo(){return this},bindPopup(){return this},on(){return this},remove(){}})
+  circleMarker:()=>{const marker={addTo(){return this},bindPopup(content){this.popup=content;return this},openPopup(){this.opened=true;return this},on(){return this},remove(){}};markers.push(marker);return marker}
  }};
  const target=new URL(example+path),location={href:target.href,hash:target.hash};
  const fetch=async url=>{
@@ -46,7 +46,7 @@ async function boot(path=""){
   {warn:(...parts)=>errors.push(parts.join(" ")),error:(...parts)=>errors.push(parts.join(" "))},Intl,
   planJourney,...engineNames.map(k=>engine[k]),...networkNames.map(k=>network[k]));
  assert.deepEqual(errors,[],"The app must start and filter without JavaScript errors");
- return {state,get,mapsCreated:()=>mapsCreated,task(id){get('task-'+id).listeners.click()},selectCategory(value){get("category-filter").listeners.change({target:{value}})},selectRoute(value){get("route-filter").listeners.change({target:{value}})},
+ return {state,get,markers,lastUrl:()=>lastUrl,mapsCreated:()=>mapsCreated,task(id){get('task-'+id).listeners.click()},selectCategory(value){get("category-filter").listeners.change({target:{value}})},selectRoute(value){get("route-filter").listeners.change({target:{value}})},
   optionCount:()=>get("route-filter").children.slice(1).reduce((sum,group)=>sum+group.children.length,0)};
 }
 const page=await boot("?station=zeralda");
@@ -57,8 +57,21 @@ page.task("search");
 assert.equal(page.get("panel-station").hidden,true);
 assert.equal(page.get("task-search").attributes["aria-selected"],"true");
 page.task("explore");
+page.get("station-results").listeners.click({target:{closest:()=>({dataset:{id:"zeralda"}})}});
+assert(page.state.markers.find(marker=>marker.stationId==="zeralda")?.opened,"Selecting a station from the map list opens its map card");
 assert.equal(page.mapsCreated(),1,"Map initializes when exploring the network");
 assert.equal(page.get("panel-explore").hidden,false);
+const popup=page.markers.find(marker=>marker.popup?.children[0]?.href?.includes('station=zeralda'))?.popup;
+assert(popup,"A map marker exposes a station information card");
+const stationLink=popup.children[0];
+assert.equal(stationLink.textContent,"زرالدة");
+assert(stationLink.href.endsWith('station=zeralda#panel-station'),"Station name has a shareable board link");
+assert.equal(page.state.activeTask,"explore","Opening a map marker does not prematurely leave the map");
+stationLink.listeners.click({button:0,preventDefault(){}});
+assert.equal(page.state.activeTask,"station","Clicking the station name opens its board");
+assert.equal(page.state.selected,"zeralda");
+assert(page.lastUrl().includes('station=zeralda#panel-station'));
+page.task("explore");
 assert.equal(page.state.category,"");
 assert.equal(page.get("route-filter").disabled,true,"Route selector waits for railway category");
 assert.equal(page.get("station").children.length-1,196,"All 177 stations remain accessible before filtering");

@@ -112,3 +112,9 @@
 .journey-extra{border-top:1px solid #e1eaee;margin-top:10px;padding-top:7px}.journey-extra>summary{cursor:pointer;color:#096676;font-weight:750;font-size:13px}
 .journey-extra .journey-leg:first-of-type{margin-top:8px}.journey-more{margin:11px 0 4px;width:100%}
 @media(max-width:680px){.task-tabs{gap:5px}.task-tab{display:grid;justify-items:center;text-align:center;gap:4px;padding:9px 4px;min-height:79px}.task-tab>span{width:26px;height:26px;font-size:18px}.task-tab strong{font-size:12px;line-height:1.25}.task-tab small{display:none}.journey-card{padding:12px}.journey-card-head{align-items:flex-start}}
+
+.map .leaflet-popup-content{min-width:175px;margin:11px 14px;direction:rtl}
+.station-map-card{display:grid;gap:3px;text-align:right;line-height:1.45}
+.station-map-link{display:block;padding:4px 0;color:#075e6b;font-size:16px;font-weight:800;text-decoration:underline;text-underline-offset:4px}
+.station-map-link:hover{color:#103c50}.station-map-card small{color:#506d7a;font-size:12px}
+.station-map-card span{color:#315c69;font-size:11px}
