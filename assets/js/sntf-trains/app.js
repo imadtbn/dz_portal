@@ -376,7 +376,7 @@ function refreshMarkers(){
   const schedule=document.createElement("div");schedule.className="station-map-schedule";
   const hint=document.createElement("span");hint.textContent="مواقيت مجدولة من صور الجداول · افتح لوحة المحطة ←";
   container.append(title,subtitle,geoNote,schedule,hint);
-  marker.bindPopup(container);
+  marker.bindPopup(container,{className:"station-map-popup",maxWidth:260,minWidth:0,autoPanPadding:[12,12]});
   marker.on("popupopen",()=>{state.activePopup={stationId:s.id,root:schedule};renderPopupSchedule(schedule,s.id)});
   marker.on("popupclose",()=>{if(state.activePopup?.root===schedule)state.activePopup=null});
   state.markers.push(marker);
