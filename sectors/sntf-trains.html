@@ -17,7 +17,7 @@
         content="اختر محطتك وتابع المغادرات والوصول وأوقات التوقف المجدولة على الخريطة التفاعلية.">
     <meta property="og:url" content="https://imadtbn.github.io/dz_portal/sectors/sntf-trains.html">
     <meta property="og:image" content="https://imadtbn.github.io/dz_portal/assets/images/sntf.jpg">
-    <link rel="stylesheet" href="../assets/css/sntf-trains.css?v=20260929-next-events">
+    <link rel="stylesheet" href="../assets/css/sntf-trains.css?v=20260929-station-search">
     
         <script type="application/ld+json">
         {
@@ -298,7 +298,7 @@
         }
     </script>
 
-    <script type="module" src="../assets/js/sntf-trains/app.js?v=20260929-next-events"></script>
+    <script type="module" src="../assets/js/sntf-trains/app.js?v=20260929-station-search"></script>
     <title>DZ Rail | خريطة المحطات ولوحة المغادرات والوصول</title>
 
     <!-- Google AdSense -->
@@ -347,8 +347,18 @@
         <section class="journey-section" id="journey-planner" aria-labelledby="journey-title">
             <div class="section-title"><div><span class="eyebrow">ابحث عن رحلتك</span><h2 id="journey-title">من محطة إلى محطة</h2></div></div>
             <form id="journey-form" class="journey-form">
-                <label>محطة الانطلاق<select id="journey-from" required><option value="">اختر محطة</option></select></label>
-                <label>محطة الوصول<select id="journey-to" required><option value="">اختر محطة</option></select></label>
+                <div class="journey-station-field">
+                    <label for="journey-from">محطة الانطلاق</label>
+                    <input id="journey-from-search" type="search" placeholder="اكتب اسم محطة الانطلاق" aria-label="ابحث عن محطة الانطلاق" aria-controls="journey-from" autocomplete="off">
+                    <select id="journey-from" required aria-describedby="journey-from-count"><option value="">اختر محطة الانطلاق من القائمة</option></select>
+                    <small id="journey-from-count" class="journey-station-count" role="status" aria-live="polite"></small>
+                </div>
+                <div class="journey-station-field">
+                    <label for="journey-to">محطة الوصول</label>
+                    <input id="journey-to-search" type="search" placeholder="اكتب اسم محطة الوصول" aria-label="ابحث عن محطة الوصول" aria-controls="journey-to" autocomplete="off">
+                    <select id="journey-to" required aria-describedby="journey-to-count"><option value="">اختر محطة الوصول من القائمة</option></select>
+                    <small id="journey-to-count" class="journey-station-count" role="status" aria-live="polite"></small>
+                </div>
                 <label>تاريخ السفر<input id="journey-date" type="date" required></label>
                 <label>بعد الساعة<input id="journey-after" type="time" value="00:00" required></label>
                 <button type="submit" class="button">ابحث عن القطارات</button>

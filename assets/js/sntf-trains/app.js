@@ -4,7 +4,7 @@ import {railwayCategories,categoryRoutes,canonicalRouteId,routeTrips,routeStopSu
 const dataRoot=new URL("../../data/sntf/",import.meta.url);
 const $=id=>document.getElementById(id);
 const esc=x=>String(x??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
-const state={stations:[],routes:[],lines:[],category:"",allowedStopIds:null,trips:[],calendars:[],exceptions:[],holidays:[],holidaysComplete:false,sources:[],selected:null,route:"",user:null,map:null,mapPending:null,markers:[],userMarker:null,activePopup:null,activeTask:"search",boardMode:"departures",boardLimit:{departure:20,arrival:20},lastMinute:"",busy:false,journeys:[],journeyResults:null,journeyLimit:{direct:4,connections:3}};
+const state={stations:[],routes:[],lines:[],category:"",allowedStopIds:null,trips:[],calendars:[],exceptions:[],holidays:[],holidaysComplete:false,sources:[],selected:null,route:"",user:null,map:null,mapPending:null,markers:[],userMarker:null,activePopup:null,activeTask:"search",boardMode:"departures",boardLimit:{departure:20,arrival:20},lastMinute:"",busy:false,journeys:[],journeyStations:[],journeyResults:null,journeyLimit:{direct:4,connections:3}};
 function showTask(task,focus=false,updateUrl=false){
  if(!["search","station","explore"].includes(task))task="search";
  state.activeTask=task;
@@ -199,14 +199,23 @@ function journeyCard(item,index){
 }
 function populateJourneyStations(){
  const ids=new Set(state.trips.filter(t=>t.data_status==='source_transcribed'||t.data_status==='verified').flatMap(t=>t.stop_times.filter(s=>s.arrival!=null||s.departure!=null).map(s=>s.station_id)));
- const stations=state.stations.filter(s=>ids.has(s.id)).sort((a,b)=>a.name.localeCompare(b.name,'ar'));
- $('journey-from').append(...stations.map(s=>new Option(s.name,s.id)));
- $('journey-to').append(...stations.map(s=>new Option(s.name,s.id)));
+ state.journeyStations=state.stations.filter(s=>ids.has(s.id)).sort((a,b)=>a.name.localeCompare(b.name,'ar'));
+ for(const kind of ['from','to'])filterJourneyStations(kind);
  $('journey-date').value=dayISO(new Date());
  const p=dayParts(new Date());$('journey-after').value=p.hour+':'+p.minute;
 }
+const normalizeStationQuery=value=>String(value||'').normalize('NFKD').replace(/[\u0300-\u036f\u064b-\u065f]/g,'').toLocaleLowerCase('ar').replace(/[أإآٱ]/g,'ا').replace(/ى/g,'ي').replace(/ة/g,'ه').replace(/[^\p{L}\p{N}]/gu,'');
+function filterJourneyStations(kind){
+ const input=$('journey-'+kind+'-search'),select=$('journey-'+kind),status=$('journey-'+kind+'-count');
+ const query=normalizeStationQuery(input.value),previous=select.value;
+ const matches=query?state.journeyStations.filter(s=>[s.name,s.name_fr,...(s.sntf_names||[]),...(s.aliases||[])].some(value=>normalizeStationQuery(value).includes(query))):state.journeyStations;
+ select.replaceChildren(new Option(kind==='from'?'اختر محطة الانطلاق من القائمة':'اختر محطة الوصول من القائمة',''),...matches.map(s=>new Option(s.name,s.id)));
+ if(matches.some(s=>s.id===previous))select.value=previous;
+ status.textContent=query?(matches.length?matches.length+' محطة مطابقة · اختر من القائمة':'لا توجد محطة مطابقة؛ غيّر عبارة البحث'):'';
+}
 function searchJourneys(){
  const origin=$('journey-from').value,destination=$('journey-to').value,date=$('journey-date').value,after=$('journey-after').value;
+ if(!origin||!destination){$('journey-results').innerHTML='<div class="empty">اختر محطة الانطلاق والوصول من القائمتين.</div>';return}
  if(origin===destination){state.journeys=[];state.journeyResults=null;$('journey-results').innerHTML='<div class="empty">اختر محطتين مختلفتين.</div>';return}
  const result=planJourney({trips:state.trips,origin,destination,date,after,calendars:state.calendars,exceptions:state.exceptions,holidays:state.holidays});
  state.journeys=[...result.direct,...result.connections];
@@ -441,6 +450,11 @@ async function start(){
 }
 $("station").addEventListener("change",e=>{if(e.target.value)chooseStation(e.target.value,{focusMap:true})});
 $("journey-form").addEventListener("submit",event=>{event.preventDefault();searchJourneys()});
+for(const kind of ['from','to']){
+ const input=$('journey-'+kind+'-search');
+ input.addEventListener('input',()=>filterJourneyStations(kind));
+ input.addEventListener('keydown',event=>{if(event.key==='Enter'){event.preventDefault();$('journey-'+kind).focus()}});
+}
 $("journey-date").addEventListener("change",()=>{$("journey-after").value="00:00"});
 $("journey-results").addEventListener("click",event=>{
  const more=event.target.closest('[data-more-journeys]');
