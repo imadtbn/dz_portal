@@ -864,7 +864,7 @@
       "lat": 33.111543,
       "lon": 6.069783,
       "geo_source": "Google Maps",
-      "geo_verified": false
+      "geo_verified": true
     },
     {
       "id": "djamaa",
