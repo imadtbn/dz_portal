@@ -4,7 +4,7 @@ import {railwayCategories,categoryRoutes,canonicalRouteId,routeTrips,routeStopSu
 const dataRoot=new URL("../../data/sntf/",import.meta.url);
 const $=id=>document.getElementById(id);
 const esc=x=>String(x??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
-const state={stations:[],routes:[],lines:[],category:"",allowedStopIds:null,trips:[],calendars:[],exceptions:[],holidays:[],holidaysComplete:false,sources:[],selected:null,route:"",user:null,map:null,mapPending:null,markers:[],userMarker:null,activeTask:"search",boardMode:"departures",boardLimit:{departure:20,arrival:20},lastMinute:"",busy:false,journeys:[],journeyResults:null,journeyLimit:{direct:4,connections:3}};
+const state={stations:[],routes:[],lines:[],category:"",allowedStopIds:null,trips:[],calendars:[],exceptions:[],holidays:[],holidaysComplete:false,sources:[],selected:null,route:"",user:null,map:null,mapPending:null,markers:[],userMarker:null,activePopup:null,activeTask:"search",boardMode:"departures",boardLimit:{departure:20,arrival:20},lastMinute:"",busy:false,journeys:[],journeyResults:null,journeyLimit:{direct:4,connections:3}};
 function showTask(task,focus=false,updateUrl=false){
  if(!["search","station","explore"].includes(task))task="search";
  state.activeTask=task;
@@ -264,7 +264,7 @@ function tick(){
  $("clock").textContent=clock;
  $("date-label").textContent=new Intl.DateTimeFormat("ar-DZ",{timeZone:"Africa/Algiers",dateStyle:"full"}).format(now);
  document.querySelectorAll(".countdown").forEach(el=>{const remaining=Math.floor((Number(el.dataset.target)-now.getTime())/1000);el.textContent=countdown(remaining);el.closest(".event")?.classList.toggle("imminent",remaining>=0&&remaining<=900)});
- if(key!==state.lastMinute){state.lastMinute=key;renderBoards(now);checkReminders(now.getTime())}
+ if(key!==state.lastMinute){state.lastMinute=key;renderBoards(now);if(state.activePopup)renderPopupSchedule(state.activePopup.root,state.activePopup.stationId,now);checkReminders(now.getTime())}
 }
 function boardTab(kind,focus=false){
  state.boardMode=kind;
@@ -324,8 +324,25 @@ function routeStations(){
  else if(prev){state.selected=null;$("selected-name").textContent="اختر محطة";$("selected-subtitle").textContent="اختر محطة من الخريطة أو القائمة."}
  fillStationLines();listStations();if(state.activeTask==="explore")fillRouteCatalog();fillDirections();renderBoards();refreshMarkers();
 }
+function renderPopupSchedule(root,id,now=new Date()){
+ const config={calendars:state.calendars,exceptions:state.exceptions,holidays:state.holidays};
+ const trips=editableTrips(),date=dayISO(now);
+ const rows=[["departure","أقرب مغادرة","إلى"],["arrival","أقرب وصول","من"]].map(([kind,label,preposition])=>{
+  const event=recordsAtStation(trips,id,kind,date,config,now)[0];
+  const row=document.createElement("div");row.className="station-map-row";
+  const heading=document.createElement("strong");heading.textContent=label;
+  const time=document.createElement("time");time.dir="ltr";
+  if(event){time.dateTime=new Date(event.timestamp).toISOString();time.textContent=journeyClock(event.timestamp)}
+  else time.textContent="—";
+  const details=document.createElement("small");
+  details.textContent=event?`${preposition} ${name(kind==="departure"?event.destination:event.origin)} · ${journeyDay(event.timestamp)}`:"لا موعد منشور خلال 48 ساعة";
+  row.append(heading,time,details);return row;
+ });
+ root.replaceChildren(...rows);
+}
 function refreshMarkers(){
  if(!state.map)return;
+ state.activePopup=null;
  for(const marker of state.markers)marker.remove();state.markers=[];
  const selected=state.stations.filter(s=>allowedOnRoute(s)&&verifiedGeo(s));
  for(const s of selected){
@@ -336,9 +353,12 @@ function refreshMarkers(){
   const title=document.createElement("a");title.href=stationBoardUrl(s.id);title.className="station-map-link";title.textContent=s.name;
   title.addEventListener("click",event=>{if(event.button!==0||event.metaKey||event.ctrlKey||event.shiftKey||event.altKey)return;event.preventDefault();openStation(s.id)});
   const subtitle=document.createElement("small");subtitle.textContent=s.name_fr;
-  const hint=document.createElement("span");hint.textContent="افتح لوحة المغادرات والوصول ←";
-  container.append(title,subtitle,hint);
+  const schedule=document.createElement("div");schedule.className="station-map-schedule";
+  const hint=document.createElement("span");hint.textContent="مواقيت مجدولة من صور الجداول · افتح لوحة المحطة ←";
+  container.append(title,subtitle,schedule,hint);
   marker.bindPopup(container);
+  marker.on("popupopen",()=>{state.activePopup={stationId:s.id,root:schedule};renderPopupSchedule(schedule,s.id)});
+  marker.on("popupclose",()=>{if(state.activePopup?.root===schedule)state.activePopup=null});
   state.markers.push(marker);
  }
  // Route polylines are deliberately omitted: station-to-station straight lines are not railway tracks.
