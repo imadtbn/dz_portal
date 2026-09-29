@@ -1333,13 +1333,10 @@
       "sntf_names": [
         "BIR SAF SAF"
       ],
-      "lat": null,
-      "lon": null,
-      "geo_source": null,
-      "geo_verified": false,
-      "station_source": "https://www.sntf.dz/annuaire_statistiques/ANNEXE_II.pdf",
-      "station_source_type": "official_network_annex",
-      "editor_note": "محطة واردة في الملحق الرسمي لشبكة SNTF؛ إحداثياتها غير محددة حتى التحقق منها يدويًا."
+      "lat": 36.205792,
+      "lon": 1.5911052,
+      "geo_source": "Google Maps",
+      "geo_verified": true
     },
     {
       "id": "le_barrage",
@@ -1364,22 +1361,6 @@
       "wilaya": "Chlef",
       "sntf_names": [
         "MOUDROU"
-      ],
-      "lat": null,
-      "lon": null,
-      "geo_source": null,
-      "geo_verified": false,
-      "station_source": "https://www.sntf.dz/annuaire_statistiques/ANNEXE_II.pdf",
-      "station_source_type": "official_network_annex",
-      "editor_note": "محطة واردة في الملحق الرسمي لشبكة SNTF؛ إحداثياتها غير محددة حتى التحقق منها يدويًا."
-    },
-    {
-      "id": "sidi_arcine",
-      "name": "سيدي أرسين",
-      "name_fr": "Sidi Arcine",
-      "wilaya": "Alger",
-      "sntf_names": [
-        "SIDI ARCINE"
       ],
       "lat": null,
       "lon": null,
@@ -1429,13 +1410,10 @@
       "sntf_names": [
         "M'ZITA"
       ],
-      "lat": null,
-      "lon": null,
-      "geo_source": null,
-      "geo_verified": false,
-      "station_source": "https://www.sntf.dz/annuaire_statistiques/ANNEXE_II.pdf",
-      "station_source_type": "official_network_annex",
-      "editor_note": "محطة واردة في الملحق الرسمي لشبكة SNTF؛ إحداثياتها غير محددة حتى التحقق منها يدويًا."
+      "lat": 36.1192268,
+      "lon": 4.3873962,
+      "geo_source": "Google Maps",
+      "geo_verified": true
     },
     {
       "id": "bechloul",
@@ -1445,13 +1423,10 @@
       "sntf_names": [
         "BECHLOUL"
       ],
-      "lat": null,
-      "lon": null,
-      "geo_source": null,
-      "geo_verified": false,
-      "station_source": "https://www.sntf.dz/annuaire_statistiques/ANNEXE_II.pdf",
-      "station_source_type": "official_network_annex",
-      "editor_note": "محطة واردة في الملحق الرسمي لشبكة SNTF؛ إحداثياتها غير محددة حتى التحقق منها يدويًا."
+      "lat": 36.313595, 
+      "lon": 4.072923,
+      "geo_source": "Google Maps",
+      "geo_verified": true
     },
     {
       "id": "ath_mansour",
@@ -1531,11 +1506,8 @@
       ],
       "lat": 36.3435929,
       "lon": 2.3842465,
-      "geo_source": null,
-      "geo_verified": false,
-      "station_source": "https://www.sntf.dz/annuaire_statistiques/ANNEXE_II.pdf",
-      "station_source_type": "official_network_annex",
-      "editor_note": "محطة واردة في الملحق الرسمي لشبكة SNTF؛ إحداثياتها غير محددة حتى التحقق منها يدويًا."
+      "geo_source": "Google Maps",
+      "geo_verified": true
     },
     {
       "id": "selmane",
@@ -1561,13 +1533,10 @@
       "sntf_names": [
         "OUED DJER"
       ],
-      "lat": null,
-      "lon": null,
-      "geo_source": null,
-      "geo_verified": false,
-      "station_source": "https://www.sntf.dz/annuaire_statistiques/ANNEXE_II.pdf",
-      "station_source_type": "official_network_annex",
-      "editor_note": "محطة واردة في الملحق الرسمي لشبكة SNTF؛ إحداثياتها غير محددة حتى التحقق منها يدويًا."
+      "lat": 36.4275365,
+      "lon": 2.5671186,
+      "geo_source": "Google Maps",
+      "geo_verified": true
     },
     {
       "id": "sidi_lakhdar",
@@ -1635,13 +1604,10 @@
       "sntf_names": [
         "BOUKHADRA"
       ],
-      "lat": null,
-      "lon": null,
-      "geo_source": null,
-      "geo_verified": false,
-      "station_source": "https://www.sntf.dz/annuaire_statistiques/ANNEXE_II.pdf",
-      "station_source_type": "official_network_annex",
-      "editor_note": "محطة واردة في الملحق الرسمي لشبكة SNTF؛ إحداثياتها غير محددة حتى التحقق منها يدويًا."
+      "lat": 36.8704412,
+      "lon": 7.7249271,
+     "geo_source": "Google Maps",
+      "geo_verified": true
     },
     {
       "id": "el_bouni",
@@ -1667,13 +1633,10 @@
       "sntf_names": [
         "CHIHANI"
       ],
-      "lat": null,
-      "lon": null,
-      "geo_source": null,
-      "geo_verified": false,
-      "station_source": "https://www.sntf.dz/annuaire_statistiques/ANNEXE_II.pdf",
-      "station_source_type": "official_network_annex",
-      "editor_note": "محطة واردة في الملحق الرسمي لشبكة SNTF؛ إحداثياتها غير محددة حتى التحقق منها يدويًا."
+      "lat": 36.6503385,
+      "lon": 7.7759322,
+     "geo_source": "Google Maps",
+      "geo_verified": true
     },
     {
       "id": "drean",
@@ -1779,13 +1742,10 @@
       "sntf_names": [
         "FESDIS UNIVERSITE"
       ],
-      "lat": null,
-      "lon": null,
-      "geo_source": null,
-      "geo_verified": false,
-      "station_source": "https://www.sntf.dz/annuaire_statistiques/ANNEXE_II.pdf",
-      "station_source_type": "official_network_annex",
-      "editor_note": "محطة واردة في الملحق الرسمي لشبكة SNTF؛ إحداثياتها غير محددة حتى التحقق منها يدويًا."
+      "lat": 35.6303536,
+      "lon": 6.2834304,
+      "geo_source": "Google Maps",
+      "geo_verified": true
     },
     {
       "id": "ain_bouziane",
@@ -1795,13 +1755,10 @@
       "sntf_names": [
         "AIN BOUZIANE"
       ],
-      "lat": null,
-      "lon": null,
-      "geo_source": null,
-      "geo_verified": false,
-      "station_source": "https://www.sntf.dz/annuaire_statistiques/ANNEXE_II.pdf",
-      "station_source_type": "official_network_annex",
-      "editor_note": "محطة واردة في الملحق الرسمي لشبكة SNTF؛ إحداثياتها غير محددة حتى التحقق منها يدويًا."
+      "lat": 36.598405,
+      "lon": 6.750183,
+      "geo_source": "Google Maps",
+      "geo_verified": true
     },
     {
       "id": "el_milia",
@@ -1895,81 +1852,73 @@
       "id": "redjem_demouche",
       "name": "رجم دموش",
       "name_fr": "Redjem Demouche",
-      "lat": null,
-      "lon": null,
-      "geo_verified": false,
-      "geo_source": null,
-      "source": "dz-portal-gallery"
+      "lat": 34.4252748,
+      "lon": -0.7855246,
+      "geo_source": "Google Maps",
+      "geo_verified": true
     },
     {
       "id": "mecheria",
       "name": "المشرية",
       "name_fr": "Mécheria",
-      "lat": null,
-      "lon": null,
-      "geo_verified": false,
-      "geo_source": null,
-      "source": "dz-portal-gallery"
+      "lat": 33.5469766,
+      "lon": -0.2476297,
+      "geo_source": "Google Maps",
+      "geo_verified": true
     },
     {
       "id": "naama",
       "name": "النعامة",
       "name_fr": "Naâma",
-      "lat": null,
-      "lon": null,
-      "geo_verified": false,
-      "geo_source": null,
-      "source": "dz-portal-gallery"
+      "lat": 33.2647117,
+      "lon": -0.3150491,
+      "geo_source": "Google Maps",
+      "geo_verified": true
     },
     {
       "id": "ain_sefra",
       "name": "عين الصفراء",
       "name_fr": "Aïn Sefra",
-      "lat": null,
-      "lon": null,
-      "geo_verified": false,
-      "geo_source": null,
-      "source": "dz-portal-gallery"
+      "lat": 32.7653108,
+      "lon": -0.565652,
+      "geo_source": "Google Maps",
+      "geo_verified": true
     },
     {
       "id": "tiout",
       "name": "تيوت",
       "name_fr": "Tiout",
-      "lat": null,
-      "lon": null,
-      "geo_verified": false,
-      "geo_source": null,
-      "source": "dz-portal-gallery"
+      "lat": 32.7587224,
+      "lon": -0.4656157,
+      "geo_source": "Google Maps",
+      "geo_verified": true
     },
     {
       "id": "moghrar",
       "name": "مغرار",
       "name_fr": "Moghrar",
-      "lat": null,
-      "lon": null,
-      "geo_verified": false,
-      "geo_source": null,
-      "source": "dz-portal-gallery"
+      "lat": 32.5234581,
+      "lon": -0.5712655,
+      "geo_source": "Google Maps",
+      "geo_verified": true
     },
     {
       "id": "djenien_bourzeg",
       "name": "جنين بورزق",
       "name_fr": "Djenien Bourezg",
-      "lat": null,
-      "lon": null,
-      "geo_verified": false,
-      "geo_source": null,
-      "source": "dz-portal-gallery"
+      "lat": 32.3699165,
+      "lon": -0.7976696,
+      "geo_source": "Google Maps",
+      "geo_verified": true
     },
     {
       "id": "beni_ounif",
       "name": "بني ونيف",
       "name_fr": "Béni Ounif",
-      "lat": null,
-      "lon": null,
-      "geo_verified": false,
-      "geo_source": null,
-      "source": "dz-portal-gallery"
+      "lat": 32.0507115,
+      "lon": -1.2452819,
+      "geo_source": "Google Maps",
+      "geo_verified": true
     },
     {
       "id": "hassi_khebi",
@@ -1985,61 +1934,55 @@
       "id": "birine",
       "name": "بيرين",
       "name_fr": "Birine",
-      "lat": null,
-      "lon": null,
-      "geo_verified": false,
-      "geo_source": null,
-      "source": "dz-portal-gallery"
+      "lat": 35.6597755,
+      "lon": 3.2105083,
+      "geo_source": "Google Maps",
+      "geo_verified": true
     },
     {
       "id": "bougara",
       "name": "بوقرة",
       "name_fr": "Bougara",
-      "lat": null,
-      "lon": null,
-      "geo_verified": false,
-      "geo_source": null,
-      "source": "dz-portal-gallery"
+      "lat": 35.5470843,
+      "lon": 1.9906129,
+      "geo_source": "Google Maps",
+      "geo_verified": true
     },
     {
       "id": "hassi_fedoul",
       "name": "حاسي فدول",
       "name_fr": "Hassi Fedoul",
-      "lat": null,
-      "lon": null,
-      "geo_verified": false,
-      "geo_source": null,
-      "source": "dz-portal-gallery"
+      "lat": 35.4406621,
+      "lon": 2.2219205,
+      "geo_source": "Google Maps",
+      "geo_verified": true
     },
     {
       "id": "sidi_ladjel",
       "name": "سيدي لعجل",
       "name_fr": "Sidi Ladjel",
-      "lat": null,
-      "lon": null,
-      "geo_verified": false,
-      "geo_source": null,
-      "source": "dz-portal-gallery"
+      "lat": 35.9800765,
+      "lon": 6.6915054,
+      "geo_source": "Google Maps",
+      "geo_verified": true
     },
     {
       "id": "bouti_sayeh",
       "name": "بوطي السايح",
       "name_fr": "Bouti Sayeh",
-      "lat": null,
-      "lon": null,
-      "geo_verified": false,
-      "geo_source": null,
-      "source": "dz-portal-gallery"
+      "lat": 35.6358285,
+      "lon": 3.6990865,
+      "geo_source": "Google Maps",
+      "geo_verified": true
     },
     {
       "id": "ain_hadjel",
       "name": "عين لحجل",
       "name_fr": "Aïn El Hadjel",
-      "lat": null,
-      "lon": null,
-      "geo_verified": false,
-      "geo_source": null,
-      "source": "dz-portal-gallery"
+      "lat": 35.6571052,
+      "lon": 3.9143642,
+      "geo_source": "Google Maps",
+      "geo_verified": true
     }
   ],
   "official_station_register": {
