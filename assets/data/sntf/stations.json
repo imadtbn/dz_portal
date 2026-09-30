@@ -201,8 +201,8 @@
       "id": "si_mustapha",
       "name": "سي مصطفى",
       "name_fr": "Si Mustapha",
-      "lat": 36.7202889,
-      "lon": 3.635737,
+      "lat": 36.722110,
+      "lon": 3.624579,
       "geo_source": "Google Maps",
       "geo_verified": true
     },
@@ -210,8 +210,8 @@
       "id": "isser",
       "name": "يسر",
       "name_fr": "Isser",
-      "lat": 36.7266611,
-      "lon": 3.6913768,
+      "lat": 36.729645,
+      "lon": 3.664925,
       "geo_source": "Google Maps",
       "geo_verified": true
     },
@@ -219,8 +219,8 @@
       "id": "bordj_menaiel",
       "name": "برج منايل",
       "name_fr": "Bordj Menaïel",
-      "lat": 36.7447172,
-      "lon": 3.7346784,
+      "lat": 36.753559,
+      "lon": 3.719731,
       "geo_source": "Google Maps",
       "geo_verified": true
     },
