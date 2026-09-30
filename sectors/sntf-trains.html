@@ -17,7 +17,7 @@
         content="اختر محطتك وتابع المغادرات والوصول وأوقات التوقف المجدولة على الخريطة التفاعلية.">
     <meta property="og:url" content="https://imadtbn.github.io/dz_portal/sectors/sntf-trains.html">
     <meta property="og:image" content="https://imadtbn.github.io/dz_portal/assets/images/sntf.jpg">
-    <link rel="stylesheet" href="../assets/css/sntf-trains.css?v=20260930-board-location">
+    <link rel="stylesheet" href="../assets/css/sntf-trains.css?v=20260930-map-fullscreen">
 
     <link rel="stylesheet" href="../assets/css/style-main.css">
 
@@ -301,7 +301,7 @@
         }
     </script>
 
-    <script type="module" src="../assets/js/sntf-trains/app.js?v=20260930-board-location"></script>
+    <script type="module" src="../assets/js/sntf-trains/app.js?v=20260930-map-fullscreen"></script>
     <title>DZ Rail | خريطة المحطات ولوحة المغادرات والوصول</title>
 
     <!-- Google AdSense -->
@@ -520,8 +520,11 @@
                     <a id="category-schedules" class="category-schedules" href="sntf.html" hidden>عرض الجداول المصورة
                         لهذا النوع ↗</a>
                 </div>
+                <div id="map-viewer" class="map-viewer">
+                <button id="map-fullscreen" class="map-fullscreen" type="button" aria-controls="map-viewer" aria-pressed="false" title="ملء الشاشة"><span aria-hidden="true">⛶</span> ملء الشاشة</button>
                 <div id="map" class="map" aria-label="خريطة تفاعلية لمحطات القطارات" role="region">
                     <div class="empty">يجري تجهيز الخريطة…</div>
+                </div>
                 </div>
                 <p id="location-status" class="minor" role="status"></p>
                 <div class="map-footer"><span id="map-count" class="chip">—</span><span class="minor">العلامات

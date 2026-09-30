@@ -5,8 +5,35 @@ const dataRoot=new URL("../../data/sntf/",import.meta.url);
 const $=id=>document.getElementById(id);
 const esc=x=>String(x??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
 const state={stations:[],routes:[],lines:[],category:"",allowedStopIds:null,trips:[],calendars:[],exceptions:[],holidays:[],holidaysComplete:false,sources:[],selected:null,route:"",user:null,map:null,mapPending:null,markers:[],userMarker:null,activePopup:null,activeTask:"search",boardMode:"departures",boardLimit:{departure:20,arrival:20},lastMinute:"",busy:false,journeys:[],journeyStations:[],boardStations:[],journeyResults:null,journeyLimit:{direct:4,connections:3}};
+let mapExpanded=false,nativeMapFullscreen=false;
+function setMapExpanded(expanded){
+ mapExpanded=expanded;
+ $("map-viewer").classList.toggle("is-expanded",expanded);
+ document.body.classList.toggle("map-expanded",expanded);
+ const button=$("map-fullscreen"),label=expanded?"تصغير الخريطة":"ملء الشاشة";
+ button.innerHTML='<span aria-hidden="true">'+(expanded?'⤢':'⛶')+'</span> '+label;
+ button.setAttribute("aria-pressed",String(expanded));button.title=label;
+ state.map?.invalidateSize({pan:false});
+}
+async function closeMapFullscreen(restoreFocus=true){
+ setMapExpanded(false);
+ if(document.fullscreenElement===$("map-viewer")){
+  try{await document.exitFullscreen()}catch{/* Restore the layout even if the browser has already exited. */}
+ }
+ nativeMapFullscreen=false;if(restoreFocus&&state.activeTask==="explore")$("map-fullscreen").focus();
+}
+async function toggleMapFullscreen(){
+ if(mapExpanded){await closeMapFullscreen();return}
+ setMapExpanded(true);
+ if($("map-viewer").requestFullscreen){
+  try{await $("map-viewer").requestFullscreen();nativeMapFullscreen=true}
+  catch{/* The viewport layout also supports browsers without native fullscreen. */}
+ }
+ state.map?.invalidateSize({pan:false});
+}
 function showTask(task,focus=false,updateUrl=false){
  if(!["search","station","explore"].includes(task))task="search";
+ if(task!=="explore"&&mapExpanded)closeMapFullscreen(false);
  state.activeTask=task;
  for(const id of ["search","station","explore"]){
   $("panel-"+id).hidden=id!==task;
@@ -514,6 +541,20 @@ $("route-catalog").addEventListener("change",event=>{
 });
 $("locate").addEventListener("click",()=>locate());
 $("locate-board").addEventListener("click",()=>locate(true));
+$("map-fullscreen").addEventListener("click",toggleMapFullscreen);
+document.addEventListener("fullscreenchange",()=>{
+ if(document.fullscreenElement===$("map-viewer")){nativeMapFullscreen=true;setMapExpanded(true)}
+ else if(nativeMapFullscreen){nativeMapFullscreen=false;setMapExpanded(false);if(state.activeTask==="explore")$("map-fullscreen").focus()}
+});
+document.addEventListener("keydown",event=>{
+ if(!mapExpanded)return;
+ if(event.key==="Escape"){event.preventDefault();closeMapFullscreen();return}
+ if(event.key!=="Tab")return;
+ const controls=[...$("map-viewer").querySelectorAll('button,a[href],[tabindex]:not([tabindex="-1"])')].filter(el=>!el.disabled&&el.getClientRects().length);
+ const first=controls[0],last=controls.at(-1);
+ if(event.shiftKey&&document.activeElement===first){event.preventDefault();last?.focus()}
+ else if(!event.shiftKey&&document.activeElement===last){event.preventDefault();first?.focus()}
+});
 for(const [i,id] of ["search","station","explore"].entries()){
  const button=$("task-"+id);button.addEventListener("click",()=>showTask(id,false,true));
  button.addEventListener("keydown",event=>{if(!["ArrowLeft","ArrowRight","Home","End"].includes(event.key))return;event.preventDefault();const all=["search","station","explore"];const next=event.key==="Home"?0:event.key==="End"?2:(i+(event.key==="ArrowLeft"?1:-1)+3)%3;showTask(all[next],true,true)});

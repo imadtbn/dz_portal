@@ -15,7 +15,7 @@ const src=readFileSync("assets/js/sntf-trains/app.js","utf8")
 assert(src.includes("return start().then(()=>state)"),"The UI test must await application initialization");
 const run=new Function("document","window","location","URL","fetch","Option","setInterval","console","navigator","Intl","planJourney",...engineNames,...networkNames,src);
 class FakeElement{
- constructor(id){this.id=id;this.listeners={};this.attributes={};this.value="";this.checked=false;this.children=[];this.disabled=false;this.hidden=false;this.innerHTML="";this.textContent="";this.label="";this.dataset={};}
+ constructor(id){this.id=id;this.listeners={};this.attributes={};this.value="";this.checked=false;this.children=[];this.disabled=false;this.hidden=false;this.innerHTML="";this.textContent="";this.label="";this.dataset={};const classes=new Set();this.classList={toggle(name,yes){if(yes)classes.add(name);else classes.delete(name)},contains:name=>classes.has(name)};}
  addEventListener(event,callback){this.listeners[event]=callback}
  append(...children){this.children.push(...children)}
  replaceChildren(...children){this.children=children;this.value=children[0]?.value||""}
@@ -28,7 +28,7 @@ class FakeOption{constructor(label,value){this.label=label;this.value=value??""}
 const example="https://example.invalid/dz_portal/sectors/sntf-trains.html";
 async function boot(path="",geolocation){
  const elements=new Map(),get=id=>{if(!elements.has(id))elements.set(id,new FakeElement(id));return elements.get(id)};
- const document={getElementById:get,querySelectorAll:()=>[],createElement:tag=>new FakeElement(tag)};
+ const document={getElementById:get,querySelectorAll:()=>[],createElement:tag=>new FakeElement(tag),body:new FakeElement('body'),listeners:{},addEventListener(event,callback){this.listeners[event]=callback}};
  let mapsCreated=0,lastUrl="";const markers=[];
  const map={setView(){return this},fitBounds(){return this},getZoom(){return 6},invalidateSize(){return this}};
  const window={history:{replaceState(_state,_title,url){lastUrl=String(url)}},matchMedia:()=>({matches:false,addEventListener(){}}),L:{
@@ -46,7 +46,7 @@ async function boot(path="",geolocation){
   {warn:(...parts)=>errors.push(parts.join(" ")),error:(...parts)=>errors.push(parts.join(" "))},{geolocation},Intl,
   planJourney,...engineNames.map(k=>engine[k]),...networkNames.map(k=>network[k]));
  assert.deepEqual(errors,[],"The app must start and filter without JavaScript errors");
- return {state,get,markers,lastUrl:()=>lastUrl,mapsCreated:()=>mapsCreated,task(id){get('task-'+id).listeners.click()},selectCategory(value){get("category-filter").listeners.change({target:{value}})},selectRoute(value){get("route-filter").listeners.change({target:{value}})},
+ return {state,get,markers,document,lastUrl:()=>lastUrl,mapsCreated:()=>mapsCreated,task(id){get('task-'+id).listeners.click()},selectCategory(value){get("category-filter").listeners.change({target:{value}})},selectRoute(value){get("route-filter").listeners.change({target:{value}})},
   optionCount:()=>get("route-filter").children.slice(1).reduce((sum,group)=>sum+group.children.length,0)};
 }
 const page=await boot("?station=zeralda");
@@ -223,4 +223,23 @@ assert(!nearby.get("locate-board").disabled,"Location can be retried after denia
 const unsupported=await boot("#panel-station");
 unsupported.get("locate-board").listeners.click();
 assert(unsupported.get("board-location-status").textContent.includes("غير مدعوم"));
-console.log("SNTF category UI PASS: station location selection, permission failures, grouped routes, station filters and deep links.");
+const fullscreen=await boot('#panel-explore');
+const selectedBefore=fullscreen.state.selected;
+await fullscreen.get('map-fullscreen').listeners.click();
+assert(fullscreen.get('map-viewer').classList.contains('is-expanded'));
+assert(fullscreen.document.body.classList.contains('map-expanded'));
+assert.equal(fullscreen.get('map-fullscreen').attributes['aria-pressed'],'true');
+await fullscreen.get('map-fullscreen').listeners.click();
+assert(!fullscreen.get('map-viewer').classList.contains('is-expanded'));
+assert(!fullscreen.document.body.classList.contains('map-expanded'));
+assert.equal(fullscreen.state.selected,selectedBefore,'Changing map size preserves station selection');
+await fullscreen.get('map-fullscreen').listeners.click();
+fullscreen.document.listeners.keydown({key:'Escape',preventDefault(){}});
+assert(!fullscreen.get('map-viewer').classList.contains('is-expanded'),'Escape exits viewport fullscreen');
+fullscreen.get('map-viewer').requestFullscreen=async()=>{fullscreen.document.fullscreenElement=fullscreen.get('map-viewer');fullscreen.document.listeners.fullscreenchange()};
+fullscreen.document.exitFullscreen=async()=>{fullscreen.document.fullscreenElement=null;fullscreen.document.listeners.fullscreenchange()};
+await fullscreen.get('map-fullscreen').listeners.click();
+assert(fullscreen.get('map-viewer').classList.contains('is-expanded'));
+fullscreen.document.fullscreenElement=null;fullscreen.document.listeners.fullscreenchange();
+assert(!fullscreen.get('map-viewer').classList.contains('is-expanded'),'Browser fullscreen exit restores the layout');
+console.log("SNTF category UI PASS: fullscreen map controls, station location selection, grouped routes, filters and deep links.");
