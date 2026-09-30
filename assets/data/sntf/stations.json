@@ -957,19 +957,19 @@
       "id": "lotta",
       "name": "لوطة",
       "name_fr": "Lotta",
-      "lat": 36.621,
-      "lon": 4.733,
+      "lat": 36.6286168,
+      "lon": 4.7421369,
       "geo_source": "Google Maps",
-      "geo_verified": false
+      "geo_verified": true
     },
     {
       "id": "il_maten",
       "name": "إيل ماتن",
-      "name_fr": "Il Maten",
-      "lat": 36.635,
-      "lon": 4.766,
+      "name_fr": "IlMaten",
+      "lat": 36.633105,
+      "lon": 4.7896124,
       "geo_source": "Google Maps",
-      "geo_verified": false
+      "geo_verified": true
     },
     {
       "id": "khemis_miliana",
