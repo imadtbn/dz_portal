@@ -273,10 +273,10 @@
       "id": "kef_naadja",
       "name": "كاف النعجة",
       "name_fr": "Kef Naadja",
-      "lat": 36.7031,
-      "lon": 4.0722,
+      "lat": 36.692668, 
+      "lon": 4.046522,
       "geo_source": "Google Maps",
-      "geo_verified": false
+      "geo_verified": true
     },
     {
       "id": "oued_aissi_universite",
