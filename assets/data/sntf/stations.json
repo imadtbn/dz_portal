@@ -1206,8 +1206,8 @@
       "id": "boughezoul",
       "name": "بوغزول",
       "name_fr": "Boughezoul",
-      "lat": 35.7018182,
-      "lon": 2.8884075,
+      "lat": 35.701538,
+      "lon": 2.886014,
       "geo_source": "Google Maps",
       "geo_verified": true
     },
@@ -1215,8 +1215,8 @@
       "id": "ain_oussara",
       "name": "عين وسارة",
       "name_fr": "Aïn Oussara",
-      "lat": 35.442735,
-      "lon": 2.9407499,
+      "lat": 35.442675,
+      "lon": 2.938207,
       "geo_source": "Google Maps",
       "geo_verified": true
     },
@@ -1224,8 +1224,8 @@
       "id": "hasi_bahbah",
       "name": "حاسي بحبح",
       "name_fr": "hasi bahbah",
-      "lat": 35.441992,
-      "lon": 2.9421661,
+      "lat": 35.053854,
+      "lon": 3.052579,
       "geo_source": "Google Maps",
       "geo_verified": true
     },
