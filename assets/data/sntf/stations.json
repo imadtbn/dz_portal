@@ -635,10 +635,10 @@
       "id": "el_mansoura",
       "name": "المنصورة",
       "name_fr": "El Mansoura",
-      "lat": 36.0825,
-      "lon": 4.4756,
+      "lat": 36.081682, 
+      "lon": 4.461321,
       "geo_source": "Google Maps",
-      "geo_verified": false
+      "geo_verified": true
     },
     {
       "id": "setif",
@@ -907,10 +907,10 @@
       "id": "ouled_ammar",
       "name": "أولاد عمار",
       "name_fr": "Ouled Ammar",
-      "lat": 35.617,
-      "lon": 5.105,
+      "lat": 35.480208,
+      "lon": 5.150635,
       "geo_source": "Google Maps",
-      "geo_verified": false
+      "geo_verified": true
     },
     {
       "id": "Ouled_Derradj",
