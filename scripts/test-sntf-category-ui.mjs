@@ -13,7 +13,7 @@ const src=readFileSync("assets/js/sntf-trains/app.js","utf8")
  .replaceAll("import.meta.url",'"https://example.invalid/assets/js/sntf-trains/app.js"')
  .replace('boardTab("departures");tick();setInterval(tick,1000);start();','boardTab("departures");tick();return start().then(()=>state);');
 assert(src.includes("return start().then(()=>state)"),"The UI test must await application initialization");
-const run=new Function("document","window","location","URL","fetch","Option","setInterval","console","Intl","planJourney",...engineNames,...networkNames,src);
+const run=new Function("document","window","location","URL","fetch","Option","setInterval","console","navigator","Intl","planJourney",...engineNames,...networkNames,src);
 class FakeElement{
  constructor(id){this.id=id;this.listeners={};this.attributes={};this.value="";this.checked=false;this.children=[];this.disabled=false;this.hidden=false;this.innerHTML="";this.textContent="";this.label="";this.dataset={};}
  addEventListener(event,callback){this.listeners[event]=callback}
@@ -26,7 +26,7 @@ class FakeElement{
 }
 class FakeOption{constructor(label,value){this.label=label;this.value=value??""}}
 const example="https://example.invalid/dz_portal/sectors/sntf-trains.html";
-async function boot(path=""){
+async function boot(path="",geolocation){
  const elements=new Map(),get=id=>{if(!elements.has(id))elements.set(id,new FakeElement(id));return elements.get(id)};
  const document={getElementById:get,querySelectorAll:()=>[],createElement:tag=>new FakeElement(tag)};
  let mapsCreated=0,lastUrl="";const markers=[];
@@ -43,7 +43,7 @@ async function boot(path=""){
  };
  const errors=[];
  const state=await run(document,window,location,URL,fetch,FakeOption,()=>{},
-  {warn:(...parts)=>errors.push(parts.join(" ")),error:(...parts)=>errors.push(parts.join(" "))},Intl,
+  {warn:(...parts)=>errors.push(parts.join(" ")),error:(...parts)=>errors.push(parts.join(" "))},{geolocation},Intl,
   planJourney,...engineNames.map(k=>engine[k]),...networkNames.map(k=>network[k]));
  assert.deepEqual(errors,[],"The app must start and filter without JavaScript errors");
  return {state,get,markers,lastUrl:()=>lastUrl,mapsCreated:()=>mapsCreated,task(id){get('task-'+id).listeners.click()},selectCategory(value){get("category-filter").listeners.change({target:{value}})},selectRoute(value){get("route-filter").listeners.change({target:{value}})},
@@ -200,4 +200,27 @@ assert(provisionalMarker.popup.children[2].textContent.includes("قيد التح
 assert(provisional.get("map-count").textContent.includes("موقع قيد التحقق"));
 provisional.get("station-results").listeners.click({target:{closest:()=>({dataset:{id:"touggourt"}})}});
 assert(provisional.state.markers.find(marker=>marker.stationId==="touggourt")?.opened,"Station search focuses the provisional Touggourt marker");
-console.log("SNTF category UI PASS: five types, dependent grouped routes, gallery anchors, genuine station filters, reset and deep-link compatibility.");
+let locationSuccess,locationFailure,locationRequests=0;
+const nearby=await boot("#panel-station",{getCurrentPosition(success,failure){locationRequests++;locationSuccess=success;locationFailure=failure}});
+const nearest=nearby.state.boardStations.find(s=>s.geo_verified===true&&Number.isFinite(s.lat)&&Number.isFinite(s.lon));
+assert(nearest,"A listed station must have verified coordinates for the location test");
+nearby.get("locate-board").listeners.click();
+assert(nearby.get("locate-board").disabled&&nearby.get("locate").disabled,"Both location buttons are disabled during a request");
+nearby.get("locate-board").listeners.click();
+assert.equal(locationRequests,1,"Repeated clicks do not trigger duplicate permission requests");
+locationSuccess({coords:{latitude:nearest.lat,longitude:nearest.lon}});
+assert.equal(nearby.state.selected,nearest.id);
+assert.equal(nearby.get("station").value,nearest.id,"Nearest station is selected in the dropdown");
+assert.equal(nearby.state.activeTask,"station");
+assert.equal(nearby.mapsCreated(),0,"Locating from the board does not load the map");
+assert(nearby.get("board-location-status").textContent.includes(nearest.name));
+assert(!nearby.get("locate-board").disabled);
+nearby.get("locate-board").listeners.click();
+locationFailure({code:1});
+assert.equal(nearby.state.selected,nearest.id,"Denied location preserves the station selection");
+assert(nearby.get("board-location-status").textContent.includes("لم يُمنح"));
+assert(!nearby.get("locate-board").disabled,"Location can be retried after denial");
+const unsupported=await boot("#panel-station");
+unsupported.get("locate-board").listeners.click();
+assert(unsupported.get("board-location-status").textContent.includes("غير مدعوم"));
+console.log("SNTF category UI PASS: station location selection, permission failures, grouped routes, station filters and deep links.");

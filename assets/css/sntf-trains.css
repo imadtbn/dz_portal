@@ -148,3 +148,8 @@
 
 .station-hero .station-board-search{display:block;width:100%;min-height:46px;margin:7px 0 12px;padding:10px;border:1px solid #a9c9d3;border-radius:11px;background:#fff;color:var(--ink)}
 .station-board-count{display:block;min-height:1.3em;margin-top:5px;color:#d7e8ef;font-size:11px}
+.station-hero .station-locate{gap:7px;background:#eaf8f8;color:#075e6b;border-color:#b9e0e4;margin-bottom:5px;min-height:44px}
+.station-locate span{font-size:21px;line-height:1}.station-locate:disabled{opacity:.65;cursor:wait}
+.station-location-status{display:block;color:#d7e8ef;font-size:12px;line-height:1.5;margin-bottom:12px}
+.station-location-status:empty{display:none}
+@media(max-width:680px){.station-hero .station-locate{width:100%}}

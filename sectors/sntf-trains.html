@@ -17,7 +17,7 @@
         content="اختر محطتك وتابع المغادرات والوصول وأوقات التوقف المجدولة على الخريطة التفاعلية.">
     <meta property="og:url" content="https://imadtbn.github.io/dz_portal/sectors/sntf-trains.html">
     <meta property="og:image" content="https://imadtbn.github.io/dz_portal/assets/images/sntf.jpg">
-    <link rel="stylesheet" href="../assets/css/sntf-trains.css?v=20260929-map-card-mobile">
+    <link rel="stylesheet" href="../assets/css/sntf-trains.css?v=20260930-board-location">
 
     <link rel="stylesheet" href="../assets/css/style-main.css">
 
@@ -301,7 +301,7 @@
         }
     </script>
 
-    <script type="module" src="../assets/js/sntf-trains/app.js?v=20260929-map-card-mobile"></script>
+    <script type="module" src="../assets/js/sntf-trains/app.js?v=20260930-board-location"></script>
     <title>DZ Rail | خريطة المحطات ولوحة المغادرات والوصول</title>
 
     <!-- Google AdSense -->
@@ -436,6 +436,8 @@
                 <div class="station-hero"><span class="eyebrow light">لوحة المحطة الذكية</span>
                     <h2 id="selected-name">اختر محطة</h2>
                     <p id="selected-subtitle">اضغط على المحطة في الخريطة أو استخدم القائمة.</p>
+                    <button id="locate-board" type="button" class="button station-locate" aria-describedby="board-location-status"><span aria-hidden="true">⌖</span> أقرب محطة لموقعي</button>
+                    <small id="board-location-status" class="station-location-status" role="status" aria-live="polite"></small>
                     <label class="select-label" for="station-search-board">ابحث عن محطة</label>
                     <input id="station-search-board" class="station-board-search" type="search"
                         placeholder="اكتب اسم المحطة بالعربية أو الفرنسية" aria-controls="station" autocomplete="off">

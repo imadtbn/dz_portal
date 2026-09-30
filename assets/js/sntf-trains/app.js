@@ -397,18 +397,20 @@ async function initMap(){
   if(geos.length)state.map.fitBounds(geos.map(s=>[s.lat,s.lon]),{padding:[20,20],maxZoom:7});
  }catch(error){$("map").innerHTML='<div class="empty">تعذر تحميل خريطة الإنترنت. اختر المحطة من القائمة المجاورة.</div>';console.warn("DZ Rail map:",error)}
 }
-function locate(){
+function locate(board=false){
  if(state.busy)return;
- if(!navigator.geolocation){$("location-status").textContent="الموقع الجغرافي غير مدعوم، اختر المحطة يدويًا.";return}
- state.busy=true;$("location-status").textContent="جار طلب إذن الموقع…";
+ const status=$(board?"board-location-status":"location-status");
+ if(!navigator.geolocation){status.textContent="الموقع الجغرافي غير مدعوم، اختر المحطة يدويًا.";return}
+ const busy=value=>{state.busy=value;for(const id of ["locate","locate-board"]){$(id).disabled=value;$(id).setAttribute("aria-busy",String(value))}};
+ busy(true);status.textContent="جار تحديد موقعك… اسمح بالوصول إلى الموقع لاختيار أقرب محطة.";
  navigator.geolocation.getCurrentPosition(position=>{
-  state.busy=false;state.user={lat:position.coords.latitude,lon:position.coords.longitude};
+  busy(false);state.user={lat:position.coords.latitude,lon:position.coords.longitude};
   const available=state.stations.filter(s=>allowedOnRoute(s)&&verifiedGeo(s)).sort((a,b)=>km(state.user,a)-km(state.user,b));
-  if(!available.length){$("location-status").textContent="لا توجد محطات ذات إحداثيات مسجلة في هذا المسار.";return}
-  chooseStation(available[0].id,{focusMap:true});
-  $("location-status").textContent="أقرب محطة وفق المسافة المباشرة: "+available[0].name+" ("+km(state.user,available[0]).toFixed(1)+" كم). هذه ليست مسافة الطريق.";
+  if(!available.length){status.textContent="لا توجد محطات ذات إحداثيات موثقة ضمن القائمة الحالية. اختر محطة يدويًا.";return}
+  chooseStation(available[0].id,{focusMap:!board});
+  status.textContent="أقرب محطة وفق المسافة المباشرة: "+available[0].name+" ("+km(state.user,available[0]).toFixed(1)+" كم). هذه ليست مسافة الطريق.";
   if(state.map){if(state.userMarker)state.userMarker.remove();state.userMarker=window.L.circleMarker([state.user.lat,state.user.lon],{radius:9,color:"#1854a5",fillOpacity:.75}).addTo(state.map).bindPopup("موقعك التقريبي")}
- },error=>{state.busy=false;$("location-status").textContent=error.code===1?"لم يُمنح إذن الموقع. اختر محطة يدويًا.":"تعذر تحديد الموقع؛ جرّب مجددًا أو اختر محطة."},{enableHighAccuracy:false,timeout:12000,maximumAge:120000});
+ },error=>{busy(false);status.textContent=error.code===1?"لم يُمنح إذن الموقع. اختر محطة يدويًا.":"تعذر تحديد الموقع؛ جرّب مجددًا أو اختر محطة."},{enableHighAccuracy:false,timeout:12000,maximumAge:120000});
 }
 function setCategoryFilters(categoryId="",routeId="",selectFirst=false){
  const supplied=routeId?routeFor(routeId):null;
@@ -510,7 +512,8 @@ $("route-catalog").addEventListener("change",event=>{
  const trip=routeTrips(routeFor(select.dataset.tripSelect),state.trips).find(t=>t.trip_id===select.value);
  target.innerHTML=trip?tripTimeline(trip):"";
 });
-$("locate").addEventListener("click",locate);
+$("locate").addEventListener("click",()=>locate());
+$("locate-board").addEventListener("click",()=>locate(true));
 for(const [i,id] of ["search","station","explore"].entries()){
  const button=$("task-"+id);button.addEventListener("click",()=>showTask(id,false,true));
  button.addEventListener("keydown",event=>{if(!["ArrowLeft","ArrowRight","Home","End"].includes(event.key))return;event.preventDefault();const all=["search","station","explore"];const next=event.key==="Home"?0:event.key==="End"?2:(i+(event.key==="ArrowLeft"?1:-1)+3)%3;showTask(all[next],true,true)});
