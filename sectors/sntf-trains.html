@@ -18,8 +18,11 @@
     <meta property="og:url" content="https://imadtbn.github.io/dz_portal/sectors/sntf-trains.html">
     <meta property="og:image" content="https://imadtbn.github.io/dz_portal/assets/images/sntf.jpg">
     <link rel="stylesheet" href="../assets/css/sntf-trains.css?v=20260929-map-card-mobile">
-    
-        <script type="application/ld+json">
+
+    <link rel="stylesheet" href="../assets/css/style-main.css">
+
+
+    <script type="application/ld+json">
         {
             "@context": "https://schema.org",
             "@graph": [{
@@ -337,45 +340,96 @@
             <div class="clock-box"><span>توقيت الجزائر</span><time id="clock" aria-live="off"
                     dir="ltr">--:--:--</time><small id="date-label">—</small></div>
         </section>
-        <div class="disclaimer" role="note">مواقيت مجدولة من صور SNTF الرسمية، وليست تتبعًا مباشرًا. <a href="https://www.sntf.dz/" target="_blank" rel="noopener noreferrer">موقع SNTF ↗</a><span id="holiday-note"></span></div>
+
+
+        <div class="disclaimer" role="note">مواقيت مجدولة من صور SNTF الرسمية، وليست تتبعًا مباشرًا. <a
+                href="sntf.html" rel="noopener noreferrer">السكك الحديدية SNTF ↗</a><span
+                id="holiday-note"></span></div>
         <nav class="task-tabs" role="tablist" aria-label="اختر مهمتك في منصة القطارات">
-            <button id="task-search" class="task-tab" type="button" role="tab" aria-controls="panel-search" aria-selected="true" tabindex="0" data-task="search">
-                <span class="task-tab-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m15.5 15.5 5 5"/></svg></span>
-                <span class="task-tab-copy"><strong>ابحث عن رحلة</strong><small>من محطة إلى محطة</small></span><span class="task-tab-arrow" aria-hidden="true">←</span>
+            <button id="task-search" class="task-tab" type="button" role="tab" aria-controls="panel-search"
+                aria-selected="true" tabindex="0" data-task="search">
+                <span class="task-tab-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="10.5" cy="10.5" r="6.5" />
+                        <path d="m15.5 15.5 5 5" />
+                    </svg></span>
+                <span class="task-tab-copy"><strong>ابحث عن رحلة</strong><small>من محطة إلى محطة</small></span><span
+                    class="task-tab-arrow" aria-hidden="true">←</span>
             </button>
-            <button id="task-station" class="task-tab" type="button" role="tab" aria-controls="panel-station" aria-selected="false" tabindex="-1" data-task="station">
-                <span class="task-tab-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 16V6.5A2.5 2.5 0 0 1 8.5 4h7A2.5 2.5 0 0 1 18 6.5V16a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2Z"/><path d="M6 12h12M8.5 8h7M8 21l2-3m6 0 2 3"/><circle cx="9" cy="15" r=".7" fill="currentColor" stroke="none"/><circle cx="15" cy="15" r=".7" fill="currentColor" stroke="none"/></svg></span>
-                <span class="task-tab-copy"><strong>لوحة المحطة</strong><small>المغادرات والوصول</small></span><span class="task-tab-arrow" aria-hidden="true">←</span>
+
+            <button id="task-station" class="task-tab" type="button" role="tab" aria-controls="panel-station"
+                aria-selected="false" tabindex="-1" data-task="station">
+                <span class="task-tab-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                        <path
+                            d="M6 16V6.5A2.5 2.5 0 0 1 8.5 4h7A2.5 2.5 0 0 1 18 6.5V16a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2Z" />
+                        <path d="M6 12h12M8.5 8h7M8 21l2-3m6 0 2 3" />
+                        <circle cx="9" cy="15" r=".7" fill="currentColor" stroke="none" />
+                        <circle cx="15" cy="15" r=".7" fill="currentColor" stroke="none" />
+                    </svg></span>
+                <span class="task-tab-copy"><strong>لوحة المحطة</strong><small>المغادرات والوصول</small></span><span
+                    class="task-tab-arrow" aria-hidden="true">←</span>
             </button>
-            <button id="task-explore" class="task-tab" type="button" role="tab" aria-controls="panel-explore" aria-selected="false" tabindex="-1" data-task="explore">
-                <span class="task-tab-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m3 5 6-2 6 2 6-2v16l-6 2-6-2-6 2V5Z"/><path d="M9 3v16m6-14v16"/><circle cx="12" cy="10" r="1.5" fill="currentColor" stroke="none"/></svg></span>
-                <span class="task-tab-copy"><strong>الخريطة والخطوط</strong><small>استكشف الشبكة</small></span><span class="task-tab-arrow" aria-hidden="true">←</span>
+
+            <button id="task-explore" class="task-tab" type="button" role="tab" aria-controls="panel-explore"
+                aria-selected="false" tabindex="-1" data-task="explore">
+                <span class="task-tab-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="m3 5 6-2 6 2 6-2v16l-6 2-6-2-6 2V5Z" />
+                        <path d="M9 3v16m6-14v16" />
+                        <circle cx="12" cy="10" r="1.5" fill="currentColor" stroke="none" />
+                    </svg></span>
+                <span class="task-tab-copy"><strong>الخريطة والخطوط</strong><small>استكشف الشبكة</small></span><span
+                    class="task-tab-arrow" aria-hidden="true">←</span>
             </button>
+
         </nav>
+
+        <!-- إعلان داخل الخلاصة 01-->
+        <div class="ad-container">
+            <ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-fr+56+4k-d4+74"
+                data-ad-client="ca-pub-5656416032906373" data-ad-slot="7867079394"></ins>
+        </div>
+
         <section class="task-panel" id="panel-search" role="tabpanel" aria-labelledby="task-search">
-        <section class="journey-section" id="journey-planner" aria-labelledby="journey-title">
-            <div class="section-title"><div><span class="eyebrow">ابحث عن رحلتك</span><h2 id="journey-title">من محطة إلى محطة</h2></div></div>
-            <form id="journey-form" class="journey-form">
-                <div class="journey-station-field">
-                    <label for="journey-from">محطة الانطلاق</label>
-                    <input id="journey-from-search" type="search" placeholder="اكتب اسم محطة الانطلاق" aria-label="ابحث عن محطة الانطلاق" aria-controls="journey-from" autocomplete="off">
-                    <select id="journey-from" required aria-describedby="journey-from-count"><option value="">اختر محطة الانطلاق من القائمة</option></select>
-                    <small id="journey-from-count" class="journey-station-count" role="status" aria-live="polite"></small>
+            <section class="journey-section" id="journey-planner" aria-labelledby="journey-title">
+                <div class="section-title">
+                    <div><span class="eyebrow">ابحث عن رحلتك</span>
+                        <h2 id="journey-title">من محطة إلى محطة</h2>
+                    </div>
                 </div>
-                <div class="journey-station-field">
-                    <label for="journey-to">محطة الوصول</label>
-                    <input id="journey-to-search" type="search" placeholder="اكتب اسم محطة الوصول" aria-label="ابحث عن محطة الوصول" aria-controls="journey-to" autocomplete="off">
-                    <select id="journey-to" required aria-describedby="journey-to-count"><option value="">اختر محطة الوصول من القائمة</option></select>
-                    <small id="journey-to-count" class="journey-station-count" role="status" aria-live="polite"></small>
+                <form id="journey-form" class="journey-form">
+                    <div class="journey-station-field">
+                        <label for="journey-from">محطة الانطلاق</label>
+                        <input id="journey-from-search" type="search" placeholder="اكتب اسم محطة الانطلاق"
+                            aria-label="ابحث عن محطة الانطلاق" aria-controls="journey-from" autocomplete="off">
+                        <select id="journey-from" required aria-describedby="journey-from-count">
+                            <option value="">اختر محطة الانطلاق من القائمة</option>
+                        </select>
+                        <small id="journey-from-count" class="journey-station-count" role="status"
+                            aria-live="polite"></small>
+                    </div>
+                    <div class="journey-station-field">
+                        <label for="journey-to">محطة الوصول</label>
+                        <input id="journey-to-search" type="search" placeholder="اكتب اسم محطة الوصول"
+                            aria-label="ابحث عن محطة الوصول" aria-controls="journey-to" autocomplete="off">
+                        <select id="journey-to" required aria-describedby="journey-to-count">
+                            <option value="">اختر محطة الوصول من القائمة</option>
+                        </select>
+                        <small id="journey-to-count" class="journey-station-count" role="status"
+                            aria-live="polite"></small>
+                    </div>
+                    <label>تاريخ السفر<input id="journey-date" type="date" required></label>
+                    <label>بعد الساعة<input id="journey-after" type="time" value="00:00" required></label>
+                    <button type="submit" class="button">ابحث عن القطارات</button>
+                </form>
+                <p class="minor">تظهر الرحلات التي لها وقت منشور في محطتي الانطلاق والوصول. التبديل في المحطة نفسها
+                    بمهلة 30 إلى 180 دقيقة بين القطارين.</p>
+                <p id="journey-reminder-status" class="minor" role="status"></p>
+                <div id="journey-results" aria-live="polite">
+                    <div class="empty">اختر المحطتين والتاريخ لعرض الرحلات المباشرة والوصلات.</div>
                 </div>
-                <label>تاريخ السفر<input id="journey-date" type="date" required></label>
-                <label>بعد الساعة<input id="journey-after" type="time" value="00:00" required></label>
-                <button type="submit" class="button">ابحث عن القطارات</button>
-            </form>
-            <p class="minor">تظهر الرحلات التي لها وقت منشور في محطتي الانطلاق والوصول. التبديل في المحطة نفسها بمهلة 30 إلى 180 دقيقة بين القطارين.</p>
-            <p id="journey-reminder-status" class="minor" role="status"></p>
-            <div id="journey-results" aria-live="polite"><div class="empty">اختر المحطتين والتاريخ لعرض الرحلات المباشرة والوصلات.</div></div>
-        </section>
+            </section>
         </section>
         <section class="task-panel" id="panel-station" role="tabpanel" aria-labelledby="task-station" hidden>
             <aside id="station-board" class="board-panel" aria-label="لوحة المحطة">
@@ -383,11 +437,14 @@
                     <h2 id="selected-name">اختر محطة</h2>
                     <p id="selected-subtitle">اضغط على المحطة في الخريطة أو استخدم القائمة.</p>
                     <label class="select-label" for="station-search-board">ابحث عن محطة</label>
-                    <input id="station-search-board" class="station-board-search" type="search" placeholder="اكتب اسم المحطة بالعربية أو الفرنسية" aria-controls="station" autocomplete="off">
-                    <label class="select-label" for="station">المحطة</label><select id="station" aria-describedby="station-search-board-count">
+                    <input id="station-search-board" class="station-board-search" type="search"
+                        placeholder="اكتب اسم المحطة بالعربية أو الفرنسية" aria-controls="station" autocomplete="off">
+                    <label class="select-label" for="station">المحطة</label><select id="station"
+                        aria-describedby="station-search-board-count">
                         <option value="">اختر محطة</option>
                     </select>
-                    <small id="station-search-board-count" class="station-board-count" role="status" aria-live="polite"></small>
+                    <small id="station-search-board-count" class="station-board-count" role="status"
+                        aria-live="polite"></small>
                 </div>
                 <div class="board-controls">
                     <label for="direction">الاتجاه / مصدر الرحلة</label><select id="direction">
@@ -465,26 +522,30 @@
                     <div class="empty">يجري تجهيز الخريطة…</div>
                 </div>
                 <p id="location-status" class="minor" role="status"></p>
-                <div class="map-footer"><span id="map-count" class="chip">—</span><span class="minor">العلامات الكهرمانية مواقع تحتاج مراجعة إحداثياتها. خطوط المسار لا تُرسم إلا ببيانات جغرافية موثقة.</span></div>
+                <div class="map-footer"><span id="map-count" class="chip">—</span><span class="minor">العلامات
+                        الكهرمانية مواقع تحتاج مراجعة إحداثياتها. خطوط المسار لا تُرسم إلا ببيانات جغرافية موثقة.</span>
+                </div>
                 <div id="station-results" class="station-results" aria-live="polite"></div>
             </div>
-        <section class="routes-section">
-            <div class="section-title">
-                <div><span class="eyebrow">قاعدة المسارات</span>
-                    <h2>الخطوط ومحطات التوقف</h2>
-                </div><span id="route-count" class="chip">—</span>
-            </div>
-            <p class="minor route-intro">تظهر محطات التوقف التي لها توقيت في جدول قطار مُدخل، مع عدد القطارات التي تتوقف
-                بها. المحطات المرسومة في صور الممر دون أي توقف منشور تُعرض منفصلة؛ ولا تُستنتج محطات وسيطة للخطوط التي
-                لم تُنقل جداولها بعد.</p>
-            <div id="route-catalog" class="line-catalog" aria-live="polite"></div>
-        </section>
-        <section class="info-strip">
-            <div>
-                <h2>هل تحتاج الجدول الأصلي؟</h2>
-                <p>تصفح الصور الأصلية المنشورة في البوابة، وراجع أحدث التغييرات لدى الشركة قبل السفر.</p>
-            </div><a class="button" href="sntf.html">الجداول المصورة ↗</a>
-        </section>
+            <section class="routes-section">
+                <div class="section-title">
+                    <div><span class="eyebrow">قاعدة المسارات</span>
+                        <h2>الخطوط ومحطات التوقف</h2>
+                    </div><span id="route-count" class="chip">—</span>
+                </div>
+                <p class="minor route-intro">تظهر محطات التوقف التي لها توقيت في جدول قطار مُدخل، مع عدد القطارات التي
+                    تتوقف
+                    بها. المحطات المرسومة في صور الممر دون أي توقف منشور تُعرض منفصلة؛ ولا تُستنتج محطات وسيطة للخطوط
+                    التي
+                    لم تُنقل جداولها بعد.</p>
+                <div id="route-catalog" class="line-catalog" aria-live="polite"></div>
+            </section>
+            <section class="info-strip">
+                <div>
+                    <h2>هل تحتاج الجدول الأصلي؟</h2>
+                    <p>تصفح الصور الأصلية المنشورة في البوابة، وراجع أحدث التغييرات لدى الشركة قبل السفر.</p>
+                </div><a class="button" href="sntf.html">الجداول المصورة ↗</a>
+            </section>
         </section>
     </main>
     <footer class="site-foot">
