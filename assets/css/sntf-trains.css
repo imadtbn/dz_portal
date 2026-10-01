@@ -74,14 +74,22 @@
 
 /* Journey search: date-aware direct trains and safe, same-station transfers. */
 .journey-section{background:#fff;border:1px solid var(--line);border-radius:19px;padding:20px;margin-bottom:20px;box-shadow:0 10px 36px #193c5610;min-width:0}
-.journey-form{display:grid;grid-template-columns:repeat(4,minmax(0,1fr)) auto;align-items:end;gap:10px;margin:16px 0}
+.journey-form{display:grid;grid-template-columns:repeat(4,minmax(0,1fr)) auto;align-items:start;gap:10px;margin:16px 0}
 .journey-form label{display:grid;gap:5px;font-size:13px;font-weight:750;min-width:0}
 .journey-form select,.journey-form input{min-height:46px;min-width:0;width:100%;border:1px solid #b7cbd6;border-radius:10px;padding:8px;background:white;color:var(--ink)}
-.journey-station-field{display:grid;gap:5px;min-width:0;align-content:start}
+.journey-station-field{display:grid;gap:5px;min-width:0;align-content:start;position:relative}
 .journey-station-field label{font-size:13px;font-weight:750}
 .journey-station-field input[type=search]{background:#f7fbfd;border-color:#a5c4d0}
 .journey-station-count{min-height:1.25em;font-size:11px;color:#416977}
-.journey-form .button{min-height:46px}
+.journey-station-input{position:relative;min-width:0}
+.journey-station-options{position:absolute;inset-inline:0;top:calc(100% + 5px);z-index:100;margin:0;padding:5px;list-style:none;border:1px solid #b7cbd6;border-radius:11px;background:#fff;box-shadow:0 12px 28px #17364c24;max-height:260px;overflow-y:auto;overscroll-behavior:contain}
+.journey-station-options[hidden]{display:none}
+.journey-station-options li{display:flex;justify-content:space-between;align-items:center;gap:8px;min-height:46px;padding:8px 10px;border-radius:7px;cursor:pointer}
+.journey-station-options strong{font-size:13px;overflow-wrap:anywhere}.journey-station-options small{font-size:11px;color:#526b7e;text-align:left;overflow-wrap:anywhere}
+.journey-station-options li:hover,.journey-station-options li[aria-selected=true]{background:#e7f5f4;color:#075e6b}
+.journey-station-field:focus-within{z-index:101}.journey-form .button:disabled{opacity:.6;cursor:wait}
+@media(max-width:680px){.journey-station-field input[type=search]{font-size:16px;min-height:48px}.journey-station-options{max-height:min(240px,40vh)}.journey-station-count{min-height:1.5em}}
+.journey-form .button{min-height:46px;margin-top:26px}
 #journey-results>h3{margin:18px 0 8px;font-size:18px;display:flex;align-items:center;gap:9px}
 .journey-notice{border-right:4px solid #d99c27;padding:9px 12px;background:#fff7e5;border-radius:8px;color:#76521a;font-size:13px}
 .journey-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
@@ -100,7 +108,7 @@
 .journey-leg a{font-weight:700}
 .journey-actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:5px}
 .journey-actions .button{font-size:12px;min-height:38px;padding:6px 10px}
-@media(max-width:1150px){.journey-form{grid-template-columns:repeat(2,minmax(0,1fr))}.journey-form .button{grid-column:1/-1}.journey-list{grid-template-columns:1fr}}
+@media(max-width:1150px){.journey-form{grid-template-columns:repeat(2,minmax(0,1fr))}.journey-form .button{grid-column:1/-1;margin-top:0}.journey-list{grid-template-columns:1fr}}
 @media(max-width:680px){.journey-section{padding:12px}.journey-form{grid-template-columns:1fr}.journey-card-head{flex-direction:column}.journey-card-head>span{text-align:right;white-space:normal}.journey-actions .button{flex:1}}
 
 /* One task at a time keeps the search, station board, and network easy to scan. */

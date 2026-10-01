@@ -17,7 +17,7 @@
         content="اختر محطتك وتابع المغادرات والوصول وأوقات التوقف المجدولة على الخريطة التفاعلية.">
     <meta property="og:url" content="https://imadtbn.github.io/dz_portal/sectors/sntf-trains.html">
     <meta property="og:image" content="https://imadtbn.github.io/dz_portal/assets/images/sntf.jpg">
-    <link rel="stylesheet" href="../assets/css/sntf-trains.css?v=20260930-map-fullscreen">
+    <link rel="stylesheet" href="../assets/css/sntf-trains.css?v=20261001-station-picker">
 
     <link rel="stylesheet" href="../assets/css/style-main.css">
 
@@ -301,7 +301,7 @@
         }
     </script>
 
-    <script type="module" src="../assets/js/sntf-trains/app.js?v=20260930-map-fullscreen"></script>
+    <script type="module" src="../assets/js/sntf-trains/app.js?v=20261001-station-picker"></script>
     <title>DZ Rail | خريطة المحطات ولوحة المغادرات والوصول</title>
 
     <!-- Google AdSense -->
@@ -400,28 +400,30 @@
                 </div>
                 <form id="journey-form" class="journey-form">
                     <div class="journey-station-field">
-                        <label for="journey-from">محطة الانطلاق</label>
+                        <label for="journey-from-search">محطة الانطلاق</label>
+                        <div class="journey-station-input">
                         <input id="journey-from-search" type="search" placeholder="اكتب اسم محطة الانطلاق"
-                            aria-label="ابحث عن محطة الانطلاق" aria-controls="journey-from" autocomplete="off">
-                        <select id="journey-from" required aria-describedby="journey-from-count">
-                            <option value="">اختر محطة الانطلاق من القائمة</option>
-                        </select>
+                            role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="journey-from-options" aria-describedby="journey-from-count" autocomplete="off" autocapitalize="off" spellcheck="false" required disabled>
+                        <input id="journey-from" type="hidden">
+                        <ul id="journey-from-options" class="journey-station-options" role="listbox" aria-label="اقتراحات محطة الانطلاق" hidden></ul>
+                        </div>
                         <small id="journey-from-count" class="journey-station-count" role="status"
                             aria-live="polite"></small>
                     </div>
                     <div class="journey-station-field">
-                        <label for="journey-to">محطة الوصول</label>
+                        <label for="journey-to-search">محطة الوصول</label>
+                        <div class="journey-station-input">
                         <input id="journey-to-search" type="search" placeholder="اكتب اسم محطة الوصول"
-                            aria-label="ابحث عن محطة الوصول" aria-controls="journey-to" autocomplete="off">
-                        <select id="journey-to" required aria-describedby="journey-to-count">
-                            <option value="">اختر محطة الوصول من القائمة</option>
-                        </select>
+                            role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="journey-to-options" aria-describedby="journey-to-count" autocomplete="off" autocapitalize="off" spellcheck="false" required disabled>
+                        <input id="journey-to" type="hidden">
+                        <ul id="journey-to-options" class="journey-station-options" role="listbox" aria-label="اقتراحات محطة الوصول" hidden></ul>
+                        </div>
                         <small id="journey-to-count" class="journey-station-count" role="status"
                             aria-live="polite"></small>
                     </div>
                     <label>تاريخ السفر<input id="journey-date" type="date" required></label>
                     <label>بعد الساعة<input id="journey-after" type="time" value="00:00" required></label>
-                    <button type="submit" class="button">ابحث عن القطارات</button>
+                    <button id="journey-submit" type="submit" class="button" disabled>ابحث عن القطارات</button>
                 </form>
                 <p class="minor">تظهر الرحلات التي لها وقت منشور في محطتي الانطلاق والوصول. التبديل في المحطة نفسها
                     بمهلة 30 إلى 180 دقيقة بين القطارين.</p>

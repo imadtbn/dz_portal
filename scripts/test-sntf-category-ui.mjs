@@ -4,6 +4,7 @@ const loadJSON=name=>JSON.parse(readFileSync("assets/data/sntf/"+name+".json","u
 const loadModule=async path=>import("data:text/javascript;base64,"+Buffer.from(readFileSync(path,"utf8")).toString("base64"));
 const engine=await loadModule("assets/js/sntf-trains/engine.js");
 const network=await loadModule("assets/js/sntf-trains/network.js");
+const {stationPicker}=await loadModule("assets/js/sntf-trains/station-picker.js");
 const plannerSource=readFileSync("assets/js/sntf-trains/planner.js","utf8").replace(/^import [^\n]+\n/gm,"").replace(/^export /gm,"");
 const {planJourney}=new Function("mins","runsOn","shiftISO",plannerSource+"\nreturn {planJourney};")(engine.mins,engine.runsOn,engine.shiftISO);
 const engineNames=["dayParts","dayISO","recordsAtStation","eligible","formatTime","countdown","classify","mins"];
@@ -13,13 +14,16 @@ const src=readFileSync("assets/js/sntf-trains/app.js","utf8")
  .replaceAll("import.meta.url",'"https://example.invalid/assets/js/sntf-trains/app.js"')
  .replace('boardTab("departures");tick();setInterval(tick,1000);start();','boardTab("departures");tick();return start().then(()=>state);');
 assert(src.includes("return start().then(()=>state)"),"The UI test must await application initialization");
-const run=new Function("document","window","location","URL","fetch","Option","setInterval","console","navigator","Intl","planJourney",...engineNames,...networkNames,src);
+const run=new Function("document","window","location","URL","fetch","Option","setInterval","console","navigator","Intl","planJourney","stationPicker",...engineNames,...networkNames,src);
 class FakeElement{
  constructor(id){this.id=id;this.listeners={};this.attributes={};this.value="";this.checked=false;this.children=[];this.disabled=false;this.hidden=false;this.innerHTML="";this.textContent="";this.label="";this.dataset={};const classes=new Set();this.classList={toggle(name,yes){if(yes)classes.add(name);else classes.delete(name)},contains:name=>classes.has(name)};}
  addEventListener(event,callback){this.listeners[event]=callback}
  append(...children){this.children.push(...children)}
  replaceChildren(...children){this.children=children;this.value=children[0]?.value||""}
  setAttribute(key,value){this.attributes[key]=value}
+ removeAttribute(key){delete this.attributes[key]}
+ setCustomValidity(message){this.validationMessage=message}
+ reportValidity(){}
  scrollIntoView(){}
  focus(){}
  remove(){}
@@ -44,7 +48,7 @@ async function boot(path="",geolocation){
  const errors=[];
  const state=await run(document,window,location,URL,fetch,FakeOption,()=>{},
   {warn:(...parts)=>errors.push(parts.join(" ")),error:(...parts)=>errors.push(parts.join(" "))},{geolocation},Intl,
-  planJourney,...engineNames.map(k=>engine[k]),...networkNames.map(k=>network[k]));
+  planJourney,stationPicker,...engineNames.map(k=>engine[k]),...networkNames.map(k=>network[k]));
  assert.deepEqual(errors,[],"The app must start and filter without JavaScript errors");
  return {state,get,markers,document,lastUrl:()=>lastUrl,mapsCreated:()=>mapsCreated,task(id){get('task-'+id).listeners.click()},selectCategory(value){get("category-filter").listeners.change({target:{value}})},selectRoute(value){get("route-filter").listeners.change({target:{value}})},
   optionCount:()=>get("route-filter").children.slice(1).reduce((sum,group)=>sum+group.children.length,0)};
@@ -126,28 +130,38 @@ assert(page.get("route-catalog").innerHTML.includes("19 رحلة منقولة"),
 page.selectCategory("");
 assert.equal(page.get("route-filter").disabled,true);
 assert.equal(page.get("station").children.length-1,196);
-assert(page.get("journey-from").children.length>150,"Planner offers stations with documented stops");
-const allJourneyStations=page.get("journey-from").children.length;
+assert(page.state.journeyStations.length>150,"Planner indexes stations with documented stops");
+assert.equal(page.get("journey-from-options").children.length,0,"No station options are rendered before typing");
 page.get("journey-from-search").value="اغا";
 page.get("journey-from-search").listeners.input();
-assert(page.get("journey-from").children.some(option=>option.value==="agha"),"Arabic search ignores hamza variants");
-assert.equal(page.get("journey-to").children.length,allJourneyStations,"Origin filtering does not change destination choices");
+assert(page.get("journey-from-options").children.some(option=>option.children[0].textContent==="آغا"),"Arabic search ignores hamza variants");
+assert.equal(page.get("journey-to-options").children.length,0,"Origin filtering does not open destination choices");
+page.get('journey-from-search').listeners.keydown({key:'ArrowDown',preventDefault(){}});
+page.get('journey-from-search').listeners.keydown({key:'Enter',preventDefault(){}});
+assert.equal(page.get('journey-from').value,'agha','Keyboard selection stores the station ID');
 page.get("journey-from").value="agha";
 page.get("journey-from-search").value="Chlef";
 page.get("journey-from-search").listeners.input();
-assert(page.get("journey-from").children.some(option=>option.value==="chlef"),"French station names filter the dropdown");
+assert(page.get("journey-from-options").children.some(option=>option.children[1].textContent==="Chlef"),"French station names filter the suggestions");
 assert.equal(page.get("journey-from").value,"","Changing the query clears a selected station that no longer matches");
 page.get("journey-to-search").value="El Affroun";
 page.get("journey-to-search").listeners.input();
-assert(page.get("journey-to").children.some(option=>option.value==="el_affroun"),"Destination supports written French names");
+assert(page.get("journey-to-options").children.some(option=>option.children[0].textContent==="العفرون"),"Destination supports written French names");
+page.get('journey-to-options').listeners.pointerdown({target:{closest:()=>page.get('journey-to-options').children[0]},preventDefault(){}});
+assert.equal(page.get('journey-to').value,'el_affroun','Touch selection stores the station ID');
+assert(page.get('journey-to-options').hidden,'Choosing a result closes the list');
 page.get("journey-from-search").value="zz-no-station";
 page.get("journey-from-search").listeners.input();
-assert.equal(page.get("journey-from").children.length,1,"No-match search leaves only the placeholder");
+assert.equal(page.get("journey-from-options").children.length,0,"No-match search renders no options");
 assert(page.get("journey-from-count").textContent.includes("لا توجد محطة"));
 page.get("journey-from-search").value="";
 page.get("journey-to-search").value="";
 page.get("journey-from-search").listeners.input();page.get("journey-to-search").listeners.input();
-assert.equal(page.get("journey-from").children.length,allJourneyStations,"Clearing search restores the complete dropdown");
+assert.equal(page.get("journey-from-options").children.length,0,"Clearing search hides all station options");
+page.get('journey-from-search').value='ا';page.get('journey-from-search').listeners.input();
+assert.equal(page.get('journey-from-options').children.length,8,'Broad queries render at most eight options');
+page.get('journey-from-search').listeners.keydown({key:'Escape'});
+assert(page.get('journey-from-options').hidden,'Escape closes station suggestions');
 page.get("journey-from").value="thenia";
 page.get("journey-to").value="el_affroun";
 page.get("journey-date").value="2026-09-29";
