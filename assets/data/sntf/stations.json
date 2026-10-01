@@ -1113,9 +1113,9 @@
       "geo_verified": true
     },
     {
-      "id": "mohammadia1",
-      "name": "المحمدية 1",
-      "name_fr": "Mohammadia1",
+      "id": "mohammadia",
+      "name": "المحمدية",
+      "name_fr": "Mohammadia",
       "lat": 35.587998,
       "lon": 0.062321,
       "geo_source": "Google Maps",
@@ -2282,8 +2282,8 @@
       "id": "ain_hadjel",
       "name": "عين لحجل",
       "name_fr": "Aïn El Hadjel",
-      "lat": 35.6571052,
-      "lon": 3.9143642,
+      "lat": 35.656895, 
+      "lon": 3.912002,
       "geo_source": "Google Maps",
       "geo_verified": true
     }
