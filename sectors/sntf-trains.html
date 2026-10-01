@@ -17,7 +17,7 @@
         content="اختر محطتك وتابع المغادرات والوصول وأوقات التوقف المجدولة على الخريطة التفاعلية.">
     <meta property="og:url" content="https://imadtbn.github.io/dz_portal/sectors/sntf-trains.html">
     <meta property="og:image" content="https://imadtbn.github.io/dz_portal/assets/images/sntf.jpg">
-    <link rel="stylesheet" href="../assets/css/sntf-trains.css?v=20261001-station-picker">
+    <link rel="stylesheet" href="../assets/css/sntf-trains.css?v=20261001-all-station-pickers">
 
     <link rel="stylesheet" href="../assets/css/style-main.css">
 
@@ -301,7 +301,7 @@
         }
     </script>
 
-    <script type="module" src="../assets/js/sntf-trains/app.js?v=20261001-station-picker"></script>
+    <script type="module" src="../assets/js/sntf-trains/app.js?v=20261001-all-station-pickers"></script>
     <title>DZ Rail | خريطة المحطات ولوحة المغادرات والوصول</title>
 
     <!-- Google AdSense -->
@@ -441,12 +441,12 @@
                     <button id="locate-board" type="button" class="button station-locate" aria-describedby="board-location-status"><span aria-hidden="true">⌖</span> أقرب محطة لموقعي</button>
                     <small id="board-location-status" class="station-location-status" role="status" aria-live="polite"></small>
                     <label class="select-label" for="station-search-board">ابحث عن محطة</label>
+                    <div class="journey-station-input board-station-picker">
                     <input id="station-search-board" class="station-board-search" type="search"
-                        placeholder="اكتب اسم المحطة بالعربية أو الفرنسية" aria-controls="station" autocomplete="off">
-                    <label class="select-label" for="station">المحطة</label><select id="station"
-                        aria-describedby="station-search-board-count">
-                        <option value="">اختر محطة</option>
-                    </select>
+                        placeholder="اكتب اسم المحطة بالعربية أو الفرنسية" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="station-board-options" aria-describedby="station-search-board-count" autocomplete="off" autocapitalize="off" spellcheck="false">
+                    <input id="station" type="hidden">
+                    <ul id="station-board-options" class="journey-station-options" role="listbox" aria-label="اقتراحات محطة اللوحة" hidden></ul>
+                    </div>
                     <small id="station-search-board-count" class="station-board-count" role="status"
                         aria-live="polite"></small>
                 </div>
@@ -500,8 +500,15 @@
                     </div><button id="locate" type="button" class="button outline">⌖ أقرب محطة</button>
                 </div>
                 <div class="map-filters">
-                    <label for="station-search">ابحث عن محطة</label><input id="station-search" type="search"
-                        autocomplete="off" placeholder="اسم المحطة بالعربية أو الفرنسية">
+                    <label for="station-search">ابحث عن محطة</label>
+                    <div class="map-station-picker">
+                    <div class="journey-station-input">
+                    <input id="station-search" type="search" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="station-results" aria-describedby="map-search-count" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="اسم المحطة بالعربية أو الفرنسية">
+                    <input id="map-station" type="hidden">
+                    <ul id="station-results" class="journey-station-options" role="listbox" aria-label="اقتراحات محطات الخريطة" hidden></ul>
+                    </div>
+                    <small id="map-search-count" class="journey-station-count" role="status" aria-live="polite"></small>
+                    </div>
                     <label for="category-filter">نوع الخط الحديدي</label>
                     <select id="category-filter" aria-describedby="category-filter-help">
                         <option value="">جميع أنواع الخطوط</option>
@@ -532,7 +539,6 @@
                 <div class="map-footer"><span id="map-count" class="chip">—</span><span class="minor">العلامات
                         الكهرمانية مواقع تحتاج مراجعة إحداثياتها. خطوط المسار لا تُرسم إلا ببيانات جغرافية موثقة.</span>
                 </div>
-                <div id="station-results" class="station-results" aria-live="polite"></div>
             </div>
             <section class="routes-section">
                 <div class="section-title">

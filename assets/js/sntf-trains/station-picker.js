@@ -1,11 +1,11 @@
 export const normalizeStation=value=>String(value??'').normalize('NFKD').replace(/[\u0300-\u036f\u064b-\u065f\u0670]/g,'').replace(/[أإآٱ]/g,'ا').replace(/ى/g,'ي').replace(/ة/g,'ه').toLocaleLowerCase().replace(/[^\p{L}\p{N}]/gu,'');
 const names=station=>[station.name,station.name_fr,...(station.aliases||[]),...(station.sntf_names||[])].map(normalizeStation);
-export function stationPicker({input,value,list,note},stations,createElement){
- const index=stations.map(station=>({station,names:names(station)}));
+export function stationPicker({input,value,list,note,onChoose},stations,createElement){
+ let index=stations.map(station=>({station,names:names(station)}));
  let matches=[],active=-1;
  const help='اكتب بالعربية أو الفرنسية ثم اختر المحطة.';
  const close=()=>{list.hidden=true;input.setAttribute('aria-expanded','false');input.removeAttribute('aria-activedescendant');active=-1};
- const choose=station=>{value.value=station?.id||'';input.value=station?.name||'';input.setCustomValidity('');note.textContent=station?'تم اختيار '+station.name:help;close()};
+ const choose=(station,notify=true)=>{value.value=station?.id||'';input.value=station?.name||'';input.setCustomValidity('');note.textContent=station?'تم اختيار '+station.name:help;close();if(notify&&station)onChoose?.(station)};
  function render(){
   const query=normalizeStation(input.value);
   list.replaceChildren();active=-1;input.removeAttribute('aria-activedescendant');
@@ -33,7 +33,7 @@ export function stationPicker({input,value,list,note},stations,createElement){
   else if(event.key==='Tab')close();
  });
  note.textContent=help;close();
- return {set:choose,validate(){
+ return {set:station=>choose(station,false),updateStations(next){stations=next;index=stations.map(station=>({station,names:names(station)}));list.replaceChildren();matches=[];choose(stations.find(station=>station.id===value.value),false)},validate(){
   if(stations.some(station=>station.id===value.value))return true;
   const query=normalizeStation(input.value),exact=index.filter(item=>query&&item.names.includes(query));
   if(exact.length===1){choose(exact[0].station);return true}

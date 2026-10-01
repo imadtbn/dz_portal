@@ -84,6 +84,10 @@
 .journey-station-input{position:relative;min-width:0}
 .journey-station-options{position:absolute;inset-inline:0;top:calc(100% + 5px);z-index:100;margin:0;padding:5px;list-style:none;border:1px solid #b7cbd6;border-radius:11px;background:#fff;box-shadow:0 12px 28px #17364c24;max-height:260px;overflow-y:auto;overscroll-behavior:contain}
 .journey-station-options[hidden]{display:none}
+.journey-station-options{color:var(--ink);text-align:right}
+.board-station-picker{margin-top:7px}.station-hero .board-station-picker .station-board-search{margin:0}
+.map-station-picker{min-width:0;position:relative;z-index:110}.map-station-picker .journey-station-count{display:block;margin-top:4px}
+.map-filters .map-station-picker input[type=search],.station-hero .board-station-picker input[type=search]{font-size:16px;min-height:48px}
 .journey-station-options li{display:flex;justify-content:space-between;align-items:center;gap:8px;min-height:46px;padding:8px 10px;border-radius:7px;cursor:pointer}
 .journey-station-options strong{font-size:13px;overflow-wrap:anywhere}.journey-station-options small{font-size:11px;color:#526b7e;text-align:left;overflow-wrap:anywhere}
 .journey-station-options li:hover,.journey-station-options li[aria-selected=true]{background:#e7f5f4;color:#075e6b}
