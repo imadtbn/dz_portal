@@ -30,7 +30,7 @@ class FakeElement{
 }
 class FakeOption{constructor(label,value){this.label=label;this.value=value??""}}
 const example="https://example.invalid/dz_portal/sectors/sntf-trains.html";
-async function boot(path="",geolocation){
+async function boot(path="",geolocation,stationOverrides={}){
  const elements=new Map(),get=id=>{if(!elements.has(id))elements.set(id,new FakeElement(id));return elements.get(id)};
  const document={getElementById:get,querySelectorAll:()=>[],createElement:tag=>new FakeElement(tag),body:new FakeElement('body'),listeners:{},addEventListener(event,callback){this.listeners[event]=callback}};
  let mapsCreated=0,lastUrl="";const markers=[];
@@ -43,7 +43,11 @@ async function boot(path="",geolocation){
  const fetch=async url=>{
   const filename=new URL(String(url)).pathname.split("/").at(-1);
   assert(["stations.json","routes.json","lines.json","trips.json","calendars.json","sources.json","holidays.json"].includes(filename),"Unexpected remote request "+filename);
-  return {ok:true,json:async()=>loadJSON(filename.slice(0,-5))};
+  return {ok:true,json:async()=>{
+   const data=loadJSON(filename.slice(0,-5));
+   if(filename==='stations.json')for(const station of data.stations)Object.assign(station,stationOverrides[station.id]||{});
+   return data;
+  }};
  };
  const errors=[];
  const state=await run(document,window,location,URL,fetch,FakeOption,()=>{},
@@ -53,6 +57,25 @@ async function boot(path="",geolocation){
  return {state,get,markers,document,lastUrl:()=>lastUrl,mapsCreated:()=>mapsCreated,task(id){get('task-'+id).listeners.click()},selectCategory(value){get("category-filter").listeners.change({target:{value}})},selectRoute(value){get("route-filter").listeners.change({target:{value}})},
   optionCount:()=>get("route-filter").children.slice(1).reduce((sum,group)=>sum+group.children.length,0)};
 }
+
+for(const path of ['', '#panel-station', '#panel-explore', '?category=suburban#panel-station', '?route=zeralda-agha#panel-explore']){
+ const empty=await boot(path);
+ assert.equal(empty.state.selected,null,'Opening without an explicit station never selects a default: '+path);
+ for(const id of ['station','station-map','station-search-board','station-search'])assert.equal(empty.get(id).value,'','Station input starts empty: '+id);
+ assert(empty.get('departures').innerHTML.includes('حدّد موقعك'),'Empty boards explain how to select a station');
+ assert.equal(empty.get('station-search-board-count').textContent,'اكتب بالعربية أو اللاتينية ثم اختر المحطة');
+ empty.selectCategory('suburban');empty.selectRoute('zeralda-agha');
+ assert.equal(empty.state.selected,null,'Changing a route does not silently select its first station');
+}
+let mapLocationSuccess;
+const locatedMap=await boot('#panel-explore',{getCurrentPosition(success){mapLocationSuccess=success}});
+const mapNearest=locatedMap.state.stations.find(s=>s.geo_verified===true&&Number.isFinite(s.lat)&&Number.isFinite(s.lon));
+locatedMap.get('locate').listeners.click();
+mapLocationSuccess({coords:{latitude:mapNearest.lat,longitude:mapNearest.lon}});
+assert.equal(locatedMap.state.selected,mapNearest.id,'Map location selects the closest verified station');
+assert.equal(locatedMap.get('station-search').value,mapNearest.name);
+assert.equal(locatedMap.state.activeTask,'explore');
+
 const page=await boot("?station=zeralda");
 assert.equal(page.state.selected,"zeralda");
 assert.equal(page.state.activeTask,"station","Station links open the station task");
@@ -84,7 +107,7 @@ assert(page.lastUrl().includes('station=zeralda#panel-station'));
 page.task("explore");
 assert.equal(page.state.category,"");
 assert.equal(page.get("route-filter").disabled,true,"Route selector waits for railway category");
-assert.equal(page.state.boardStations.length,196,"All stations remain searchable before filtering");
+assert.equal(page.state.boardStations.length,loadJSON("stations").stations.length,"All stations remain searchable before filtering");
 const totals={suburban:22,eastern:16,western:10,sahara:10,international:2};
 for(const cat of network.railwayCategories){
  page.selectCategory(cat.id);
@@ -131,7 +154,7 @@ assert.equal(page.state.boardStations.length,16,"The reverse Affroun route has 1
 assert(page.get("route-catalog").innerHTML.includes("19 رحلة منقولة"),"The route card has 19 published services, not the grouped two-way total");
 page.selectCategory("");
 assert.equal(page.get("route-filter").disabled,true);
-assert.equal(page.state.boardStations.length,196);
+assert.equal(page.state.boardStations.length,loadJSON("stations").stations.length);
 assert(page.state.journeyStations.length>150,"Planner indexes stations with documented stops");
 assert.equal(page.get("journey-from-options").children.length,0,"No station options are rendered before typing");
 page.get("journey-from-search").value="اغا";
@@ -177,6 +200,8 @@ page.state.journeyResults.direct=Array(8).fill(page.state.journeyResults.direct[
 page.get("journey-results").listeners.click({target:{closest:selector=>selector==='[data-more-journeys]'?{dataset:{moreJourneys:'direct'}}:null}});
 assert.equal(page.state.journeyLimit.direct,8,"The show-more control reveals additional journeys on demand");
 assert.equal((page.get("journey-results").innerHTML.match(/class="journey-card"/g)||[]).length,8+Math.min(3,page.state.journeyResults.connections.length));
+page.get('station-search-board').value='Zeralda';page.get('station-search-board').listeners.input();
+page.get('station-board-options').listeners.pointerdown({target:{closest:()=>page.get('station-board-options').children[0]},preventDefault(){}});
 assert(page.get("departures").innerHTML.includes('sntf-trip.html?trip='),"Station departure cards link to the trip page");
 assert.equal(page.get("category-schedules").hidden,true);
 const linked=await boot("?route=affroun-alger&station=el_affroun");
@@ -204,7 +229,7 @@ unpublished.state.trips.forEach(trip=>{trip.data_status="pending_review"});
 const emptyMarker=unpublished.state.markers.find(marker=>marker.stationId==="zeralda");
 emptyMarker.handlers.popupopen();
 assert(emptyMarker.popup.children[3].children.every(row=>row.children[1].textContent==="—"),"When no published service is eligible, neither direction invents a timetable");
-const provisional=await boot("?category=sahara&station=touggourt");
+const provisional=await boot("?category=sahara&station=touggourt",undefined,{touggourt:{geo_verified:false}});
 provisional.task("explore");
 const touggourt=provisional.state.stations.find(s=>s.id==="touggourt");
 assert.equal(touggourt.geo_verified,false,"Displaying a station must not falsely mark its coordinates verified");
