@@ -3,7 +3,7 @@ const names=station=>[station.name,station.name_fr,...(station.aliases||[]),...(
 export function stationPicker({input,value,list,note,onChoose},stations,createElement){
  let index=stations.map(station=>({station,names:names(station)}));
  let matches=[],active=-1;
- const help='اكتب بالعربية أو الفرنسية ثم اختر المحطة.';
+ const help='اكتب بالعربية أو اللاتينية ثم اختر المحطة';
  const close=()=>{list.hidden=true;input.setAttribute('aria-expanded','false');input.removeAttribute('aria-activedescendant');active=-1};
  const choose=(station,notify=true)=>{value.value=station?.id||'';input.value=station?.name||'';input.setCustomValidity('');note.textContent=station?'تم اختيار '+station.name:help;close();if(notify&&station)onChoose?.(station)};
  function render(){

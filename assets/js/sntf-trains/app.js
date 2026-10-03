@@ -1,6 +1,6 @@
 import {dayParts,dayISO,recordsAtStation,eligible,formatTime,countdown,classify,mins} from "./engine.js";
 import {planJourney} from "./planner.js";
-import {stationPicker} from "./station-picker.js?v=20261001-all-station-pickers";
+import {stationPicker} from "./station-picker.js?v=20261003-no-default-station";
 import {railwayCategories,categoryRoutes,canonicalRouteId,routeTrips,routeStopSummary,lineRoutes,lineSummary,stationLineServices,eligibleStationIdsByCategory} from "./network.js?v=20260928-catalog-audit";
 const dataRoot=new URL("../../data/sntf/",import.meta.url);
 const $=id=>document.getElementById(id);
@@ -190,7 +190,7 @@ function panel(kind,events){
  const next=$(kind==="departure"?"next-departure":"next-arrival");
  count.textContent=String(events.length);
  next.textContent=events.length?"التالي "+countdown(events[0].remaining):"—";
- if(!state.selected){el.innerHTML='<div class="empty">اختر محطة على الخريطة أو من القائمة.</div>';return}
+ if(!state.selected){el.innerHTML='<div class="empty">حدّد موقعك لجلب أقرب محطة أو اختر محطة بالبحث أو من الخريطة.</div>';return}
  if(!events.length){el.innerHTML='<div class="empty">لا توجد '+(kind==="departure"?"مغادرات":"وصولات")+' مدرجة خلال 48 ساعة وفق الجداول المدخلة. عدم ظهور نتيجة لا يعني عدم وجود قطارات. <a href="sntf.html">راجع الجداول المصورة</a>.</div>';return}
  const limit=state.boardLimit[kind];
  el.innerHTML=events.slice(0,limit).map(e=>eventHtml(e,kind)).join("")+(events.length>limit?'<button type="button" class="button outline board-more" data-more="'+kind+'">عرض 20 رحلة إضافية (المتبقي '+(events.length-limit)+')</button>':"");
@@ -361,7 +361,7 @@ function routeStations(){
  }else allowed=allowed.sort((a,b)=>a.name.localeCompare(b.name,"ar"));
  state.boardStations=allowed;refreshStationPickers(allowed);
  if(prev&&allowed.some(s=>s.id===prev)){boardPicker.set(station(prev));mapPicker.set(station(prev))}
- else if(prev){state.selected=null;$("selected-name").textContent="اختر محطة";$("selected-subtitle").textContent="اختر محطة من الخريطة أو القائمة."}
+ else if(prev){state.selected=null;$("selected-name").textContent="اختر محطة";$("selected-subtitle").textContent="اضغط «أقرب محطة لموقعي» أو اختر محطة بالبحث أو من الخريطة."}
  fillStationLines();listStations();if(state.activeTask==="explore")fillRouteCatalog();fillDirections();renderBoards();refreshMarkers();
 }
 function renderPopupSchedule(root,id,now=new Date()){
@@ -433,7 +433,7 @@ function locate(board=false){
   if(state.map){if(state.userMarker)state.userMarker.remove();state.userMarker=window.L.circleMarker([state.user.lat,state.user.lon],{radius:9,color:"#1854a5",fillOpacity:.75}).addTo(state.map).bindPopup("موقعك التقريبي")}
  },error=>{busy(false);status.textContent=error.code===1?"لم يُمنح إذن الموقع. اختر محطة يدويًا.":"تعذر تحديد الموقع؛ جرّب مجددًا أو اختر محطة."},{enableHighAccuracy:false,timeout:12000,maximumAge:120000});
 }
-function setCategoryFilters(categoryId="",routeId="",selectFirst=false){
+function setCategoryFilters(categoryId="",routeId=""){
  const supplied=routeId?routeFor(routeId):null;
  const route=supplied&&!supplied.catalog_status?routeFor(canonicalRouteId(supplied)):null;
  const validCategory=railwayCategories.some(item=>item.id===categoryId)?categoryId:"";
@@ -447,13 +447,6 @@ function setCategoryFilters(categoryId="",routeId="",selectFirst=false){
  $("route-filter").value=state.route;
  state.boardLimit={departure:20,arrival:20};
  routeStations();
- if(selectFirst&&!state.selected){
-  const options=state.route?[routeFor(state.route)]:categoryRoutes(state.category,state.routes);
-  const ids=new Set(options.map(r=>r.id));
-  const first=state.trips.find(t=>t.data_status==="source_transcribed"&&ids.has(t.route_id))?.stop_times?.[0]?.station_id;
-  const fallback=first||options[0]?.from;
-  if(fallback&&station(fallback)&&allowedOnRoute(station(fallback)))chooseStation(fallback,{focusMap:true});
- }
  if(state.map&&(state.category||state.route)){
   const points=state.stations.filter(x=>allowedOnRoute(x)&&hasGeo(x));
   if(points.length)state.map.fitBounds(points.map(x=>[x.lat,x.lon]),{padding:[24,24],maxZoom:10});
@@ -472,11 +465,9 @@ async function start(){
  const oldLineRoutes=oldLine?lineRoutes(oldLine,state.routes):[];
  // Old ?line= links still work: a single-route line opens directly; multi-route lines open their category.
  const selectedRoute=params.get("route")||(oldLineRoutes.length===1?oldLineRoutes[0].id:"");
- setCategoryFilters(selectedCategory,selectedRoute,false);
+ setCategoryFilters(selectedCategory,selectedRoute);
  const chosen=params.get("station");
  if(chosen&&station(chosen)&&allowedOnRoute(station(chosen)))chooseStation(chosen);
- else if(!state.category&&!state.route&&station("zeralda"))chooseStation("zeralda");
- else setCategoryFilters(state.category,state.route,true);
  const explicitTask=location.hash.match(/^#panel-(search|station|explore)$/)?.[1];
  const initialTask=explicitTask||((chosen&&station(chosen))||location.hash==="#station-board"?"station":params.has("route")||params.has("category")||params.has("line")||hashCategory?"explore":"search");
  showTask(initialTask);tick();
@@ -493,8 +484,8 @@ $("journey-results").addEventListener("click",event=>{
  if(!Number.isInteger(index)||!state.journeys[index])return;
  if(calendar)addCalendar(state.journeys[index]);else addForegroundReminder(state.journeys[index]);
 });
-$("category-filter").addEventListener("change",e=>setCategoryFilters(e.target.value,"",true));
-$("route-filter").addEventListener("change",e=>setCategoryFilters(state.category,e.target.value,true));
+$("category-filter").addEventListener("change",e=>setCategoryFilters(e.target.value));
+$("route-filter").addEventListener("change",e=>setCategoryFilters(state.category,e.target.value));
 $("direction").addEventListener("change",()=>{state.boardLimit={departure:20,arrival:20};renderBoards()});
 for(const kind of ["departure","arrival"]){
  const el=$(kind==="departure"?"departures":"arrivals");
@@ -506,13 +497,13 @@ for(const kind of ["departure","arrival"]){
 $("station-services").addEventListener("click",event=>{
  const trigger=event.target.closest("[data-station-route]");
  if(!trigger)return;
- setCategoryFilters("",trigger.dataset.stationRoute,true);
+ setCategoryFilters("",trigger.dataset.stationRoute);
  $("station-board").scrollIntoView({behavior:"smooth",block:"start"});
 });
 $("route-catalog").addEventListener("click",event=>{
  const trigger=event.target.closest("[data-route]");
  if(!trigger)return;
- setCategoryFilters("",trigger.dataset.route,true);
+ setCategoryFilters("",trigger.dataset.route);
  showTask("station",false,true);
  $("station-board").scrollIntoView({behavior:"smooth",block:"start"});
 });
