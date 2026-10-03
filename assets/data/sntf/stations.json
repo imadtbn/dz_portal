@@ -744,8 +744,8 @@
       "id": "ain_mlila",
       "name": "عين مليلة",
       "name_fr": "Aïn M'lila",
-      "lat": 36.0380111,
-      "lon": 6.5885881,
+      "lat": 36.038513,
+      "lon": 6.586320,
       "geo_source": "Google Maps",
       "geo_verified": true
     },
@@ -870,8 +870,18 @@
       "id": "el_meghair",
       "name": "المغير",
       "name_fr": "El Meghair",
-      "lat": 33.9567816,
-      "lon": 5.9393727,
+      "lat": 33.957039,
+      "lon": 5.935326,
+      "geo_source": "Google Maps",
+      "geo_verified": true,
+      "sntf_names": ["EL M'EGHAIER"]
+    },
+        {
+      "id": "nsigha",
+      "name": "انسيغة",
+      "name_fr": "nsigha",
+      "lat": 34.018994,
+      "lon": 5.948587,
       "geo_source": "Google Maps",
       "geo_verified": true,
       "sntf_names": ["EL M'EGHAIER"]
@@ -889,8 +899,8 @@
       "id": "el_outaya",
       "name": "الوطاية",
       "name_fr": "El Outaya",
-      "lat": 35.0387953,
-      "lon": 5.5900837,
+      "lat": 35.040215,
+      "lon": 5.587736,
       "geo_source": "Google Maps",
       "geo_verified": true
     },
@@ -934,8 +944,8 @@
       "id": "oued_taria",
       "name": "وادي التاغية",
       "name_fr": "Oued Taria",
-      "lat": 35.023394,
-      "lon": 0.106352,
+      "lat": 35.124445,
+      "lon": 0.091066,
       "geo_source": "Google Maps",
       "geo_verified": true
     },
@@ -981,6 +991,70 @@
       "name_fr": "Ouled Derradj",
       "lat": 35.6825595,
       "lon": 4.7385581,
+      "geo_source": "Google Maps",
+      "geo_verified": true
+    },
+    {
+      "id": "sidi-medjahed",
+      "name": "سيدي مجاهد",
+      "name_fr": "sidi-medjahed",
+      "lat": 34.774808,
+      "lon": -1.638749,
+      "geo_source": "Google Maps",
+      "geo_verified": true,
+      "sntf_names": ["SIDI MEDJAHED"]
+    },
+    {
+      "id": "tralimit",
+      "name": "ترالميت",
+      "name_fr": "tralimit",
+      "lat": 34.781047,
+      "lon": -1.67093,
+      "geo_source": "Google Maps",
+      "geo_verified": true
+    },
+    {
+      "id": "maghnia",
+      "name": "مغنية",
+      "name_fr": "maghnia",
+      "lat": 34.84291,
+      "lon": -1.726881,
+      "geo_source": "Google Maps",
+      "geo_verified": true
+    },
+    {
+      "id": "zoudj-bghal",
+      "name": "زوج بغال",
+      "name_fr": "Zoudj Bghal",
+      "lat": 34.787277,
+      "lon": -1.803855,
+      "geo_source": "Google Maps",
+      "geo_verified": true
+    },
+    {
+      "id": "ghazaouet",
+      "name": "الغزوات",
+      "name_fr": "ghazaouet",
+      "lat": 35.096242,
+      "lon": -1.861517,
+      "geo_source": "Google Maps",
+      "geo_verified": true
+    },
+    {
+      "id": "ain-talout",
+      "name": "عين تالوت",
+      "name_fr": "ain talout",
+      "lat": 34.929802,
+      "lon": -0.956722,
+      "geo_source": "Google Maps",
+      "geo_verified": true
+    },
+    {
+      "id": "ouled-mimoun",
+      "name": "أولاد ميمون",
+      "name_fr": "Ouled M'Imoun",
+      "lat": 34.902334,
+      "lon": -1.027179,
       "geo_source": "Google Maps",
       "geo_verified": true
     },
@@ -1347,11 +1421,47 @@
       "geo_verified": true
     },
     {
+      "id": "sidi-bel-abbes 2",
+      "name": "سيدي بلعباس 2",
+      "name_fr": "Sidi Bel Abbès 2",
+      "lat": 35.228864,
+      "lon": -0.628919,
+      "geo_source": "Google Maps",
+      "geo_verified": true
+    },
+    {
       "id": "tlemcen",
       "name": "تلمسان",
       "name_fr": "Tlemcen",
-      "lat": 34.8848819,
-      "lon": -1.298493,
+      "lat": 34.885088,
+      "lon": -1.30115,
+      "geo_source": "Google Maps",
+      "geo_verified": true
+    },
+    {
+      "id": "ain-douz",
+      "name": "عين دوز",
+      "name_fr": "Ain Douz",
+      "lat": 34.853973,
+      "lon": -1.405346,
+      "geo_source": "Google Maps",
+      "geo_verified": true
+    },
+    {
+      "id": "zalboun",
+      "name": "زلبون",
+      "name_fr": "zalboun",
+      "lat": 34.855453,
+      "lon": -1.432858,
+      "geo_source": "Google Maps",
+      "geo_verified": true
+    },
+    {
+      "id": "sebra",
+      "name": "صبرة",
+      "name_fr": "sebra",
+      "lat": 34.826786,
+      "lon": -1.522433,
       "geo_source": "Google Maps",
       "geo_verified": true
     },
@@ -1359,8 +1469,17 @@
       "id": "saida",
       "name": "سعيدة",
       "name_fr": "Saïda",
-      "lat": 34.329741,
-      "lon": 0.1477946,
+      "lat": 34.842021,
+      "lon": 0.120109,
+      "geo_source": "Google Maps",
+      "geo_verified": true
+    },
+        {
+      "id": "saida",
+      "name": "سعيدة",
+      "name_fr": "Saïda",
+      "lat": 34.842021,
+      "lon": 0.120109,
       "geo_source": "Google Maps",
       "geo_verified": true
     },
@@ -1530,8 +1649,8 @@
       "id": "laghouat",
       "name": "الأغواط",
       "name_fr": "Laghouat",
-      "lat": 33.7989939,
-      "lon": 2.821112,
+      "lat": 33.798630,
+      "lon": 2.819747,
       "geo_source": "Google Maps",
       "geo_verified": true
     },
@@ -2037,8 +2156,8 @@
       "id": "tabia",
       "name": "طابية",
       "name_fr": "Tabia",
-      "lat": 35.0212511,
-      "lon": 0.7410893,
+      "lat": 35.022034,
+      "lon": -0.743017,
       "geo_source": "Google Maps",
       "geo_verified": true
     },
@@ -2064,8 +2183,8 @@
       "id": "ras_el_ma",
       "name": "رأس الماء",
       "name_fr": "Ras El Ma",
-      "lat": 34.492769,
-      "lon": -0.807371,
+      "lat": 34.488227,
+      "lon": -0.808209,
       "geo_source": "Google Maps",
       "geo_verified": true
     },
@@ -2083,8 +2202,8 @@
       "id": "redjem_demouche",
       "name": "رجم دموش",
       "name_fr": "Redjem Demouche",
-      "lat": 34.425209,
-      "lon": -0.786373,
+      "lat": 34.425452,
+      "lon": -0.786574,
       "geo_source": "Google Maps",
       "geo_verified": true
     },
@@ -2264,8 +2383,8 @@
       "id": "sidi_ladjel",
       "name": "سيدي لعجل",
       "name_fr": "Sidi Ladjel",
-      "lat": 35.9800765,
-      "lon": 6.6915054,
+      "lat": 35.452892,
+      "lon": 2.518578,
       "geo_source": "Google Maps",
       "geo_verified": true
     },
@@ -2282,7 +2401,7 @@
       "id": "ain_hadjel",
       "name": "عين لحجل",
       "name_fr": "Aïn El Hadjel",
-      "lat": 35.656895, 
+      "lat": 35.656895,
       "lon": 3.912002,
       "geo_source": "Google Maps",
       "geo_verified": true
