@@ -1,0 +1,129 @@
+{
+  "version": 1,
+  "transcribed_on": "2026-09-28",
+  "issuing_authority": "SNTF",
+  "source_images": {
+    "bejaia": "assets/train-schedules/Eastern/alger-bejaia-alger.jpg",
+    "batna": "assets/train-schedules/Eastern/alger-batna-alger.jpg",
+    "annaba": "assets/train-schedules/Eastern/alger-annaba.jpg",
+    "annaba_daily_variant": "assets/train-schedules/Eastern/alger-annaba-tj.jpg",
+    "tebessa": "assets/train-schedules/Eastern/alger-tebessa.jpg",
+    "beni_mansour": "assets/train-schedules/Eastern/beni-mansour-bedjaia.png"
+  },
+  "source_type": "repository_official_timetable_images",
+  "notes": "These 14 columns were manually read from the project's original SNTF posters, retaining individual directions and short-turn termini. Blank cells are not fabricated. The Agha terminus replaces historical 'Alger' in several filenames. Overnight stops are normalized to 24:xx–29:xx in trips.json. The Annaba daily (tous les jours) variant conflicts with the 3-days poster; the latter's B35 Mon/Wed/Fri and B1/2 Sun/Tue/Thu are corroborated by the official SNTF dated booking pages (2026-01-04/2026-01-03), and no second duplicate daily run is manufactured. The Bejaia posters omit days; days_not_specified does not produce live board predictions.",
+  "columns": [
+    {
+      "id": "alger-bejaia",
+      "line_id": "alger-bejaia",
+      "train_number": null,
+      "service": "days_not_specified",
+      "image": "bejaia",
+      "stops": "agha 14:33;boumerdes 15:03;lakhdaria 15:30;draa_el_mizan 15:51;bouira 16:14;ahnif 16:45;beni_mansour 16:59;tazmalt 17:13;allaghen 17:20;akbou 17:33;ighzer_amokrane 17:44;takrietz 17:50;sidi_aich 17:56;el_kseur 18:13;oued_ghir 18:26;bejaia 18:38"
+    },
+    {
+      "id": "bejaia-agha",
+      "line_id": "alger-bejaia",
+      "train_number": null,
+      "service": "days_not_specified",
+      "image": "bejaia",
+      "stops": "bejaia 06:30;oued_ghir 06:42;el_kseur 06:54;sidi_aich 07:11;takrietz 07:19;ighzer_amokrane 07:25;akbou 07:35;allaghen 07:48;tazmalt 07:54;beni_mansour 08:03;ahnif 08:15;el_adjiba 08:25;bouira 08:53;draa_el_mizan 09:23;lakhdaria 09:41;boumerdes 10:08;agha 10:39"
+    },
+    {
+      "id": "alger-batna",
+      "line_id": "alger-batna",
+      "train_number": null,
+      "service": "daily",
+      "image": "batna",
+      "stops": "agha 13:15;boumerdes 14:01;bouira 15:21;beni_mansour 16:02;bordj_bou_arreridj 17:04;msila 17:48;barhoum 18:24;barika 19:00;seggana 19:15;ain_touta 19:38;batna 20:04"
+    },
+    {
+      "id": "batna-alger",
+      "line_id": "alger-batna",
+      "train_number": null,
+      "service": "daily",
+      "image": "batna",
+      "stops": "batna 22:50;ain_touta 23:13;seggana 23:40;barika 23:51;barhoum 00:28;msila 01:00;bordj_bou_arreridj 01:45;beni_mansour 02:48;bouira 03:28;boumerdes 04:43;agha 05:23"
+    },
+    {
+      "id": "alger-annaba",
+      "line_id": "alger-annaba",
+      "train_number": "B1/2",
+      "service": "sntf_east_sun_tue_thu",
+      "image": "annaba",
+      "stops": "agha 18:40;thenia 19:35;bouira 20:51;beni_mansour 21:38;el_mansoura 21:59;bordj_bou_arreridj 22:46;setif 23:37;el_eulma 00:06;tadjenanet 00:29;teleghma 01:02;el_gourzi 01:26;el_khroub 02:00;constantine 02:28;el_harrouch 03:44;ramdane_djamel 04:00;azzaba 04:25;annaba 05:28"
+    },
+    {
+      "id": "annaba-agha",
+      "line_id": "alger-annaba",
+      "train_number": "B35",
+      "service": "sntf_east_mon_wed_fri",
+      "image": "annaba",
+      "stops": "annaba 21:00;azzaba 21:56;ramdane_djamel 22:21;el_harrouch 22:37;constantine 23:34;el_khroub 23:58;el_gourzi 00:14;teleghma 00:34;tadjenanet 01:05;el_eulma 01:26;setif 01:57;bordj_bou_arreridj 02:47;el_mansoura 03:20;beni_mansour 03:59;bouira 04:49;thenia 06:06;el_harrach 06:48;agha 07:06"
+    },
+    {
+      "id": "alger-tebessa",
+      "line_id": "alger-tebessa",
+      "train_number": null,
+      "service": "sntf_east_sun_tue_thu",
+      "image": "tebessa",
+      "stops": "agha 19:40;boumerdes 20:27;thenia 20:37;bouira 21:53;beni_mansour 22:40;el_mansoura 23:20;bordj_bou_arreridj 23:48;setif 00:39;el_eulma 01:08;tadjenanet 01:30;teleghma 02:03;el_gourzi 02:26;ain_mlila 02:55;ain_fekroun 03:33;oum_el_bouaghi 04:10;ain_beida 04:43;sidi_yahia 06:02;morsott 06:18;tebessa 06:51"
+    },
+    {
+      "id": "tebessa-agha",
+      "line_id": "alger-tebessa",
+      "train_number": null,
+      "service": "sntf_east_sat_mon_wed",
+      "image": "tebessa",
+      "stops": "tebessa 17:30;morsott 18:02;sidi_yahia 18:18;ain_beida 19:33;oum_el_bouaghi 20:07;ain_fekroun 20:45;ain_mlila 21:23;el_gourzi 21:35;teleghma 22:18;tadjenanet 22:49;el_eulma 23:11;setif 23:39;bordj_bou_arreridj 00:28;el_mansoura 01:07;beni_mansour 01:45;bouira 02:37;thenia 03:57;boumerdes 04:08;agha 05:50"
+    },
+    {
+      "id": "beni-mansour-bejaia",
+      "line_id": "beni-mansour-bejaia",
+      "train_number": "151",
+      "service": "days_not_specified",
+      "image": "beni_mansour",
+      "stops": "beni_mansour 05:35;toghza 05:40;tazmalt 05:44;allaghen 05:51;akbou 06:03;azib 06:11;ighzer_amokrane 06:16;takrietz 06:26;sidi_aich 06:30;lotta 06:37;il_maten 06:42;el_kseur 06:51;oued_ghir 07:09;bejaia 07:23"
+    },
+    {
+      "id": "beni-mansour-bejaia",
+      "line_id": "beni-mansour-bejaia",
+      "train_number": "153",
+      "service": "days_not_specified",
+      "image": "beni_mansour",
+      "stops": "beni_mansour 10:40;toghza 10:45;tazmalt 10:50;allaghen 10:57;akbou 11:10;azib 11:18;ighzer_amokrane 11:23;takrietz 11:31;sidi_aich 11:39;lotta 11:46;il_maten 11:52;el_kseur 12:01;oued_ghir 12:15;bejaia 12:29"
+    },
+    {
+      "id": "akbou-bejaia",
+      "line_id": "beni-mansour-bejaia",
+      "train_number": "B109",
+      "service": "days_not_specified",
+      "image": "beni_mansour",
+      "stops": "akbou 15:00;azib 15:08;ighzer_amokrane 15:12;takrietz 15:20;sidi_aich 15:28;lotta 15:49;il_maten 15:55;el_kseur 16:04;oued_ghir 16:18;bejaia 16:32"
+    },
+    {
+      "id": "bejaia-beni-mansour",
+      "line_id": "beni-mansour-bejaia",
+      "train_number": "152",
+      "service": "days_not_specified",
+      "image": "beni_mansour",
+      "stops": "bejaia 08:00;oued_ghir 08:13;el_kseur 08:27;il_maten 08:38;lotta 08:44;sidi_aich 08:51;takrietz 08:59;ighzer_amokrane 09:07;azib 09:13;akbou 09:21;allaghen 09:36;tazmalt 09:42;toghza 10:00;beni_mansour 10:07"
+    },
+    {
+      "id": "bejaia-akbou",
+      "line_id": "beni-mansour-bejaia",
+      "train_number": "B110",
+      "service": "days_not_specified",
+      "image": "beni_mansour",
+      "stops": "bejaia 13:00;oued_ghir 13:13;el_kseur 13:27;il_maten 13:38;lotta 13:44;sidi_aich 13:51;takrietz 13:59;ighzer_amokrane 14:07;azib 14:13;akbou 14:20"
+    },
+    {
+      "id": "bejaia-beni-mansour",
+      "line_id": "beni-mansour-bejaia",
+      "train_number": "154",
+      "service": "days_not_specified",
+      "image": "beni_mansour",
+      "stops": "bejaia 17:00;oued_ghir 17:13;el_kseur 17:27;il_maten 17:38;lotta 17:44;sidi_aich 17:51;takrietz 18:05;ighzer_amokrane 18:13;azib 18:19;akbou 18:26;allaghen 18:39;tazmalt 18:45;toghza 18:52;beni_mansour 18:59"
+    }
+  ]
+}
