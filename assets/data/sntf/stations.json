@@ -572,8 +572,8 @@
       "id": "batna",
       "name": "باتنة",
       "name_fr": "Batna",
-      "lat": 35.5606133,
-      "lon": 6.1761025,
+      "lat": 35.560503,
+      "lon": 6.17348,
       "geo_source": "Google Maps",
       "geo_verified": true
     },
@@ -581,8 +581,17 @@
       "id": "ain_touta",
       "name": "عين توتة",
       "name_fr": "Aïn Touta",
-      "lat": 35.385744,
-      "lon": 5.9041749,
+      "lat": 35.38597,
+      "lon": 5.90107,
+      "geo_source": "Google Maps",
+      "geo_verified": true
+    },
+    {
+      "id": "hadj-lakhder-universite",
+      "name": "جامعة الحاج لخضر",
+      "name_fr": "hadj lakhder universite",
+      "lat": 35.544333,
+      "lon": 6.146478,
       "geo_source": "Google Maps",
       "geo_verified": true
     },
@@ -689,8 +698,35 @@
       "id": "el_khroub",
       "name": "الخروب",
       "name_fr": "El Khroub",
-      "lat": 36.2586664,
-      "lon": 6.685654,
+      "lat": 36.258798,
+      "lon": 6.685261,
+      "geo_source": "Google Maps",
+      "geo_verified": true
+    },
+    {
+      "id": "oued-hammime",
+      "name": "واد حميم",
+      "name_fr": "Oued Hammime",
+      "lat": 36.295386,
+      "lon": 6.68406,
+      "geo_source": "Google Maps",
+      "geo_verified": true
+    },
+    {
+      "id": "sidi-Mabrouk",
+      "name": "سيدي مبروك",
+      "name_fr": "Sidi Mabrouk",
+      "lat": 36.354225,
+      "lon": 6.630319,
+      "geo_source": "Google Maps",
+      "geo_verified": true
+    },
+    {
+      "id": "koudjile-khader",
+      "name": "قوجيل لخضر",
+      "name_fr": "Koudjile Khader",
+      "lat": 36.356364,
+      "lon": 6.621594,
       "geo_source": "Google Maps",
       "geo_verified": true
     },
@@ -698,8 +734,17 @@
       "id": "constantine",
       "name": "قسنطينة",
       "name_fr": "Constantine",
-      "lat": 36.3662977,
-      "lon": 6.6230012,
+      "lat": 36.367241,
+      "lon": 6.619037,
+      "geo_source": "Google Maps",
+      "geo_verified": true
+    },
+    {
+      "id": "bekira",
+      "name": "بكيرة",
+      "name_fr": "Bekira",
+      "lat": 36.392302,
+      "lon": 6.607179,
       "geo_source": "Google Maps",
       "geo_verified": true
     },
@@ -707,18 +752,27 @@
       "id": "el_harrouch",
       "name": "الحروش",
       "name_fr": "El Harrouch",
-      "lat": 36.6616997,
-      "lon": 6.8375162,
+      "lat": 36.662115,
+      "lon": 6.837214,
       "geo_source": "Google Maps",
       "geo_verified": true,
       "sntf_names": ["EL HARROUCHE"]
+    },
+    {
+      "id": "salah-bouchaour",
+      "name": "صالح بوشغور",
+      "name_fr": "Salah Bouchaour",
+      "lat": 36.705715,
+      "lon": 6.851778,
+      "geo_source": "Google Maps",
+      "geo_verified": true
     },
     {
       "id": "ramdane_djamel",
       "name": "رمضان جمال",
       "name_fr": "Ramdane Djamel",
       "lat": 36.755631,
-      "lon": 6.9057859,
+      "lon": 6.903148,
       "geo_source": "Google Maps",
       "geo_verified": true
     },
@@ -745,7 +799,25 @@
       "name": "عين مليلة",
       "name_fr": "Aïn M'lila",
       "lat": 36.038513,
-      "lon": 6.586320,
+      "lon": 6.58632,
+      "geo_source": "Google Maps",
+      "geo_verified": true
+    },
+    {
+      "id": "el-guerrah",
+      "name": "القراح",
+      "name_fr": "El Guerrah",
+      "lat": 36.136467,
+      "lon": 6.608191,
+      "geo_source": "Google Maps",
+      "geo_verified": true
+    },
+    {
+      "id": "ouled-rahmoun",
+      "name": "أولاد رحمون",
+      "name_fr": "Ouled Rahmoun",
+      "lat": 36.170945,
+      "lon": 6.692664,
       "geo_source": "Google Maps",
       "geo_verified": true
     },
@@ -876,7 +948,7 @@
       "geo_verified": true,
       "sntf_names": ["EL M'EGHAIER"]
     },
-        {
+    {
       "id": "nsigha",
       "name": "انسيغة",
       "name_fr": "nsigha",
@@ -1060,14 +1132,50 @@
     },
     {
       "id": "medjez",
-      "name": "مجاز",
+      "name": "أمجاز",
       "name_fr": "M'jaz",
-      "lat": 35.85,
-      "lon": 4.6,
+      "lat": 36.712047,
+      "lon": 6.806084,
       "geo_source": "Google Maps",
-      "geo_verified": false,
-      "sntf_names": ["M'DJEZ"]
+      "geo_verified": true
     },
+    {
+      "id": "sidi-mezghiche",
+      "name": "سيدي مزغيش",
+      "name_fr": "sidi mezghiche",
+      "lat": 36.674466,
+      "lon": 6.718343,
+      "geo_source": "Google Maps",
+      "geo_verified": true
+    },
+        {
+      "id": "tamalous",
+      "name": "تامالوس",
+      "name_fr": "tamalous",
+      "lat": 36.824509, 
+      "lon": 6.626263,
+      "geo_source": "Google Maps",
+      "geo_verified": true
+    },
+            {
+      "id": "tahouna",
+      "name": "طاحونة",
+      "name_fr": "tahouna",
+      "lat": 36.799184, 
+      "lon": 6.512264,
+      "geo_source": "Google Maps",
+      "geo_verified": true
+    },
+                {
+      "id": "ain-kechra",
+      "name": "عين قشرة",
+      "name_fr": "Ain Kechra",
+      "lat": 36.744395, 
+      "lon": 6.422407,
+      "geo_source": "Google Maps",
+      "geo_verified": true
+    },
+
     {
       "id": "azib",
       "name": "عزيب",
@@ -1474,7 +1582,7 @@
       "geo_source": "Google Maps",
       "geo_verified": true
     },
-        {
+    {
       "id": "saida",
       "name": "سعيدة",
       "name_fr": "Saïda",
@@ -1649,7 +1757,7 @@
       "id": "laghouat",
       "name": "الأغواط",
       "name_fr": "Laghouat",
-      "lat": 33.798630,
+      "lat": 33.79863,
       "lon": 2.819747,
       "geo_source": "Google Maps",
       "geo_verified": true
@@ -2029,11 +2137,21 @@
       "name_fr": "Aïn Yagout",
       "wilaya": "Batna",
       "sntf_names": ["AIN YAGOUT"],
-      "lat": 35.7690351,
-      "lon": 6.4012559,
+      "lat": 35.76938,
+      "lon": 6.400322,
       "geo_source": "Google Maps",
       "geo_verified": true
     },
+    {
+      "id": "sebbakh",
+      "name": "سباخ",
+      "name_fr": "sebbakh",
+      "lat": 35.88801,
+      "lon": 6.49981,
+      "geo_source": "Google Maps",
+      "geo_verified": true
+    },
+
     {
       "id": "mezzloug",
       "name": "مزلوق",
@@ -2046,18 +2164,37 @@
       "geo_verified": true
     },
     {
+      "id": "djerma",
+      "name": "جرمة",
+      "name_fr": "Mezloug",
+      "wilaya": "Batna",
+      "sntf_names": ["djerma"],
+      "lat": 35.658386,
+      "lon": 6.308145,
+      "geo_source": "Google Maps",
+      "geo_verified": true
+    },
+    {
       "id": "didouche_mourad",
       "name": "ديدوش مراد",
       "name_fr": "Didouche Mourad",
       "wilaya": "Constantine",
       "sntf_names": ["DIDOUCHE MOURAD"],
-      "lat": null,
-      "lon": null,
-      "geo_source": null,
-      "geo_verified": false,
-      "station_source": "https://www.sntf.dz/annuaire_statistiques/ANNEXE_II.pdf",
-      "station_source_type": "official_network_annex",
-      "editor_note": "محطة واردة في الملحق الرسمي لشبكة SNTF؛ إحداثياتها غير محددة حتى التحقق منها يدويًا."
+      "lat": 36.444778,
+      "lon": 6.633615,
+      "geo_source": "Google Maps",
+      "geo_verified": true
+    },
+    {
+      "id": "zighout-youcef",
+      "name": "زيغوت يوسف",
+      "name_fr": "Zighout Youcef",
+      "wilaya": "Constantine",
+      "sntf_names": ["ZIGHOUT YOUCEF"],
+      "lat": 36.530855,
+      "lon": 6.71306,
+      "geo_source": "Google Maps",
+      "geo_verified": true
     },
     {
       "id": "fedis_universite",
@@ -2065,8 +2202,8 @@
       "name_fr": "Fesdis Université",
       "wilaya": "Batna",
       "sntf_names": ["FESDIS UNIVERSITE"],
-      "lat": 35.6303536,
-      "lon": 6.2834304,
+      "lat": 35.630778,
+      "lon": 6.281755,
       "geo_source": "Google Maps",
       "geo_verified": true
     },
@@ -2087,8 +2224,28 @@
       "name_fr": "El Milia",
       "wilaya": "Jijel",
       "sntf_names": ["EL-MILIA"],
-      "lat": 36.7831104,
-      "lon": 6.2579666,
+      "lat": 36.783266, 
+      "lon": 6.257333,
+      "geo_source": "Google Maps",
+      "geo_verified": true
+    },
+        {
+      "id": "jijel",
+      "name": "جيجل",
+      "name_fr": "jijel",
+      "wilaya": "Jijel",
+      "lat": 36.809703, 
+      "lon": 5.773573,
+      "geo_source": "Google Maps",
+      "geo_verified": true
+    },
+            {
+      "id": "blara-zi",
+      "name": "بلارة - الصناعية",
+      "name_fr": "blara-zi",
+      "wilaya": "Jijel",
+      "lat": 36.741876, 
+      "lon": 6.256188,
       "geo_source": "Google Maps",
       "geo_verified": true
     },
