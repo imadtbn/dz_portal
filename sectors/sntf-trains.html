@@ -152,7 +152,7 @@
                         "لوحة الوصول حسب المحطة",
                         "تصفية حسب نوع الخط الحديدي (ضاحية، شرق، غرب، صحراء، دولي)",
                         "تصفية حسب المسار والاتجاه",
-                        "البحث عن محطة بالعربية أو الفرنسية",
+                        "البحث عن محطة بالعربية أو اللاتينية",
                         "تحديد أقرب محطة عبر الموقع الجغرافي",
                         "عرض الوقت المتبقي للقطارات المجدولة",
                         "عرض أيام التشغيل لكل قطار",
@@ -342,9 +342,8 @@
         </section>
 
 
-        <div class="disclaimer" role="note">مواقيت مجدولة من صور SNTF الرسمية، وليست تتبعًا مباشرًا. <a
-                href="sntf.html" rel="noopener noreferrer">السكك الحديدية SNTF ↗</a><span
-                id="holiday-note"></span></div>
+        <div class="disclaimer" role="note">مواقيت مجدولة من صور SNTF الرسمية، وليست تتبعًا مباشرًا. <a href="sntf.html"
+                rel="noopener noreferrer">السكك الحديدية SNTF ↗</a><span id="holiday-note"></span></div>
         <nav class="task-tabs" role="tablist" aria-label="اختر مهمتك في منصة القطارات">
             <button id="task-search" class="task-tab" type="button" role="tab" aria-controls="panel-search"
                 aria-selected="true" tabindex="0" data-task="search">
@@ -402,10 +401,13 @@
                     <div class="journey-station-field">
                         <label for="journey-from-search">محطة الانطلاق</label>
                         <div class="journey-station-input">
-                        <input id="journey-from-search" type="search" placeholder="اكتب اسم محطة الانطلاق"
-                            role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="journey-from-options" aria-describedby="journey-from-count" autocomplete="off" autocapitalize="off" spellcheck="false" required disabled>
-                        <input id="journey-from" type="hidden">
-                        <ul id="journey-from-options" class="journey-station-options" role="listbox" aria-label="اقتراحات محطة الانطلاق" hidden></ul>
+                            <input id="journey-from-search" type="search" placeholder="اكتب اسم محطة الانطلاق"
+                                role="combobox" aria-autocomplete="list" aria-expanded="false"
+                                aria-controls="journey-from-options" aria-describedby="journey-from-count"
+                                autocomplete="off" autocapitalize="off" spellcheck="false" required disabled>
+                            <input id="journey-from" type="hidden">
+                            <ul id="journey-from-options" class="journey-station-options" role="listbox"
+                                aria-label="اقتراحات محطة الانطلاق" hidden></ul>
                         </div>
                         <small id="journey-from-count" class="journey-station-count" role="status"
                             aria-live="polite"></small>
@@ -413,10 +415,13 @@
                     <div class="journey-station-field">
                         <label for="journey-to-search">محطة الوصول</label>
                         <div class="journey-station-input">
-                        <input id="journey-to-search" type="search" placeholder="اكتب اسم محطة الوصول"
-                            role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="journey-to-options" aria-describedby="journey-to-count" autocomplete="off" autocapitalize="off" spellcheck="false" required disabled>
-                        <input id="journey-to" type="hidden">
-                        <ul id="journey-to-options" class="journey-station-options" role="listbox" aria-label="اقتراحات محطة الوصول" hidden></ul>
+                            <input id="journey-to-search" type="search" placeholder="اكتب اسم محطة الوصول"
+                                role="combobox" aria-autocomplete="list" aria-expanded="false"
+                                aria-controls="journey-to-options" aria-describedby="journey-to-count"
+                                autocomplete="off" autocapitalize="off" spellcheck="false" required disabled>
+                            <input id="journey-to" type="hidden">
+                            <ul id="journey-to-options" class="journey-station-options" role="listbox"
+                                aria-label="اقتراحات محطة الوصول" hidden></ul>
                         </div>
                         <small id="journey-to-count" class="journey-station-count" role="status"
                             aria-live="polite"></small>
@@ -438,14 +443,21 @@
                 <div class="station-hero"><span class="eyebrow light">لوحة المحطة الذكية</span>
                     <h2 id="selected-name">اختر محطة</h2>
                     <p id="selected-subtitle">اضغط على المحطة في الخريطة أو استخدم القائمة.</p>
-                    <button id="locate-board" type="button" class="button station-locate" aria-describedby="board-location-status"><span aria-hidden="true">⌖</span> أقرب محطة لموقعي</button>
-                    <small id="board-location-status" class="station-location-status" role="status" aria-live="polite"></small>
+                    <button id="locate-board" type="button" class="button station-locate"
+                        aria-describedby="board-location-status"><span aria-hidden="true">⌖</span> أقرب محطة
+                        لموقعي</button>
+                    <small id="board-location-status" class="station-location-status" role="status"
+                        aria-live="polite"></small>
                     <label class="select-label" for="station-search-board">ابحث عن محطة</label>
                     <div class="journey-station-input board-station-picker">
-                    <input id="station-search-board" class="station-board-search" type="search"
-                        placeholder="اكتب اسم المحطة بالعربية أو الفرنسية" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="station-board-options" aria-describedby="station-search-board-count" autocomplete="off" autocapitalize="off" spellcheck="false">
-                    <input id="station" type="hidden">
-                    <ul id="station-board-options" class="journey-station-options" role="listbox" aria-label="اقتراحات محطة اللوحة" hidden></ul>
+                        <input id="station-search-board" class="station-board-search" type="search"
+                            placeholder="اكتب اسم المحطة بالعربية أو اللاتينية" role="combobox" aria-autocomplete="list"
+                            aria-expanded="false" aria-controls="station-board-options"
+                            aria-describedby="station-search-board-count" autocomplete="off" autocapitalize="off"
+                            spellcheck="false">
+                        <input id="station" type="hidden">
+                        <ul id="station-board-options" class="journey-station-options" role="listbox"
+                            aria-label="اقتراحات محطة اللوحة" hidden></ul>
                     </div>
                     <small id="station-search-board-count" class="station-board-count" role="status"
                         aria-live="polite"></small>
@@ -502,12 +514,17 @@
                 <div class="map-filters">
                     <label for="station-search">ابحث عن محطة</label>
                     <div class="map-station-picker">
-                    <div class="journey-station-input">
-                    <input id="station-search" type="search" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="station-results" aria-describedby="map-search-count" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="اسم المحطة بالعربية أو الفرنسية">
-                    <input id="map-station" type="hidden">
-                    <ul id="station-results" class="journey-station-options" role="listbox" aria-label="اقتراحات محطات الخريطة" hidden></ul>
-                    </div>
-                    <small id="map-search-count" class="journey-station-count" role="status" aria-live="polite"></small>
+                        <div class="journey-station-input">
+                            <input id="station-search" type="search" role="combobox" aria-autocomplete="list"
+                                aria-expanded="false" aria-controls="station-results"
+                                aria-describedby="map-search-count" autocomplete="off" autocapitalize="off"
+                                spellcheck="false" placeholder="اسم المحطة بالعربية أو اللاتينية">
+                            <input id="map-station" type="hidden">
+                            <ul id="station-results" class="journey-station-options" role="listbox"
+                                aria-label="اقتراحات محطات الخريطة" hidden></ul>
+                        </div>
+                        <small id="map-search-count" class="journey-station-count" role="status"
+                            aria-live="polite"></small>
                     </div>
                     <label for="category-filter">نوع الخط الحديدي</label>
                     <select id="category-filter" aria-describedby="category-filter-help">
@@ -530,10 +547,11 @@
                         لهذا النوع ↗</a>
                 </div>
                 <div id="map-viewer" class="map-viewer">
-                <button id="map-fullscreen" class="map-fullscreen" type="button" aria-controls="map-viewer" aria-pressed="false" title="ملء الشاشة"><span aria-hidden="true">⛶</span> ملء الشاشة</button>
-                <div id="map" class="map" aria-label="خريطة تفاعلية لمحطات القطارات" role="region">
-                    <div class="empty">يجري تجهيز الخريطة…</div>
-                </div>
+                    <button id="map-fullscreen" class="map-fullscreen" type="button" aria-controls="map-viewer"
+                        aria-pressed="false" title="ملء الشاشة"><span aria-hidden="true">⛶</span> ملء الشاشة</button>
+                    <div id="map" class="map" aria-label="خريطة تفاعلية لمحطات القطارات" role="region">
+                        <div class="empty">يجري تجهيز الخريطة…</div>
+                    </div>
                 </div>
                 <p id="location-status" class="minor" role="status"></p>
                 <div class="map-footer"><span id="map-count" class="chip">—</span><span class="minor">العلامات
