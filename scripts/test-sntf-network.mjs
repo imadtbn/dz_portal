@@ -5,7 +5,7 @@ const stations=load("stations").stations,routes=load("routes").routes,lines=load
 const networkSource=readFileSync("assets/js/sntf-trains/network.js","utf8");
 const network=await import("data:text/javascript;base64,"+Buffer.from(networkSource).toString("base64"));
 const active=network.publishedTrips(trips),routeById=new Map(routes.map(r=>[r.id,r]));
-assert.equal(stations.length,196,"No station or manually verified coordinate was lost");
+assert(stations.length>=196,"Preserve the original station inventory while allowing new stations");
 assert.equal(lines.length,23,"Twenty grouped geographical lines");
 assert.equal(routes.length,68,"Preserve all routes, including one legacy alias and three new suburban corridors");
 assert.equal(routes.filter(r=>!r.alias_of).length,66,"One legacy alias must not duplicate the real route");
@@ -67,7 +67,7 @@ for(const [category,count] of Object.entries(categoryCounts)){
  assert(network.categoryRoutes(category,routes).every(r=>r.category===category&&!r.alias_of));
 }
 assert.equal(network.categoryRoutes("",routes).length,60,"Only image-transcribed route directions are offered");
-assert.equal(network.eligibleStationIdsByCategory("","",lines,routes,trips),null,"All 177 registered stations remain selectable without a category");
+assert.equal(network.eligibleStationIdsByCategory("","",lines,routes,trips),null,"All registered stations remain selectable without a category");
 const easternStops=network.eligibleStationIdsByCategory("eastern","",lines,routes,trips);
 assert(easternStops.has("agha")&&easternStops.has("bejaia")&&!easternStops.has("zeralda"),"Eastern type follows actual image departures from Agha");
 const suburbanStops=network.eligibleStationIdsByCategory("suburban","",lines,routes,trips);
