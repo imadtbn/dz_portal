@@ -1,5 +1,5 @@
 export function createViewer(viewport,stage,image,output){
- let zoom=1,base=0,max=8,loaded=false,drag=null,pinch=null,lastTap=null;
+ let zoom=1,base=0,max=8,loaded=false,drag=null,pinch=null,lastTap=null,lastTouchZoom=0;
  const pointers=new Map();
  const clamp=z=>Math.max(1,Math.min(max,z));
  const point=()=>{const r=viewport.getBoundingClientRect();return {x:r.left+viewport.clientWidth/2,y:r.top+viewport.clientHeight/2}};
@@ -32,13 +32,13 @@ export function createViewer(viewport,stage,image,output){
   const wasPinch=!!pinch;
   if(e.type==='pointerup'&&!wasPinch&&drag&&!drag.moved&&e.pointerType==='touch'){
    const now=Date.now(),p={x:e.clientX,y:e.clientY};
-   if(lastTap&&now-lastTap.time<350&&Math.hypot(p.x-lastTap.x,p.y-lastTap.y)<30){update(zoom<2?2:1,p);lastTap=null}else lastTap={...p,time:now};
+   if(lastTap&&now-lastTap.time<350&&Math.hypot(p.x-lastTap.x,p.y-lastTap.y)<30){update(zoom<2?2:1,p);lastTouchZoom=now;lastTap=null}else lastTap={...p,time:now};
   }
   pointers.delete(e.pointerId);pinch=null;drag=null;
   if(pointers.size===1){const p=[...pointers.values()][0];drag={...p,left:viewport.scrollLeft,top:viewport.scrollTop,moved:true}}
  }
  viewport.addEventListener('pointerup',end);viewport.addEventListener('pointercancel',end);
- viewport.addEventListener('dblclick',e=>{if(e.pointerType==='touch')return;e.preventDefault();update(zoom<2?2:1,{x:e.clientX,y:e.clientY})});
+ viewport.addEventListener('dblclick',e=>{if(e.pointerType==='touch'||Date.now()-lastTouchZoom<500)return;e.preventDefault();update(zoom<2?2:1,{x:e.clientX,y:e.clientY})});
  viewport.addEventListener('keydown',e=>{if(e.key==='+'||e.key==='='){e.preventDefault();update(zoom*1.25)}else if(e.key==='-'){e.preventDefault();update(zoom/1.25)}else if(e.key==='0'){e.preventDefault();fit()}});
  let width=viewport.clientWidth;new ResizeObserver(()=>{if(viewport.clientWidth&&viewport.clientWidth!==width){width=viewport.clientWidth;fit()}}).observe(viewport);
  return {in:()=>update(zoom*1.25),out:()=>update(zoom/1.25),reset:fit,refresh:fit};
