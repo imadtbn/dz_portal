@@ -459,6 +459,10 @@ async function start(){
  populateJourneyStations();
  $("holiday-note").textContent="";
  const params=new URL(location.href).searchParams;
+ for(const field of ["from","to"]){
+  const chosen=state.journeyStations.find(s=>s.id===params.get(field));
+  if(chosen)journeyPickers[field]?.set(chosen);
+ }
  const oldLine=lineFor(params.get("line"));
  const hashCategory=railwayCategories.find(c=>"#"+c.anchor===location.hash)?.id;
  const selectedCategory=params.get("category")||oldLine?.category||hashCategory||"";

@@ -2095,4 +2095,37 @@
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
+
+  <url><loc>https://imadtbn.github.io/dz_portal/sectors/sntf-schedule.html?schedule=alger-thenia</loc><lastmod>2026-10-04</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://imadtbn.github.io/dz_portal/sectors/sntf-schedule.html?schedule=thenia-alger</loc><lastmod>2026-10-04</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://imadtbn.github.io/dz_portal/sectors/sntf-schedule.html?schedule=alger-affroun</loc><lastmod>2026-10-04</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://imadtbn.github.io/dz_portal/sectors/sntf-schedule.html?schedule=affroun-alger</loc><lastmod>2026-10-04</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://imadtbn.github.io/dz_portal/sectors/sntf-schedule.html?schedule=alger-zeralda</loc><lastmod>2026-10-04</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://imadtbn.github.io/dz_portal/sectors/sntf-schedule.html?schedule=zeralda-alger</loc><lastmod>2026-10-04</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://imadtbn.github.io/dz_portal/sectors/sntf-schedule.html?schedule=alger-oued-aissa</loc><lastmod>2026-10-04</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://imadtbn.github.io/dz_portal/sectors/sntf-schedule.html?schedule=oued-aissa-alger</loc><lastmod>2026-10-04</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://imadtbn.github.io/dz_portal/sectors/sntf-schedule.html?schedule=alger-airoport-alger</loc><lastmod>2026-10-04</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://imadtbn.github.io/dz_portal/sectors/sntf-schedule.html?schedule=thenia-affroune-thenia</loc><lastmod>2026-10-04</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://imadtbn.github.io/dz_portal/sectors/sntf-schedule.html?schedule=zeralda-thenia-zeralda</loc><lastmod>2026-10-04</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://imadtbn.github.io/dz_portal/sectors/sntf-schedule.html?schedule=alger-bejaia-alger</loc><lastmod>2026-10-04</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://imadtbn.github.io/dz_portal/sectors/sntf-schedule.html?schedule=alger-batna-alger</loc><lastmod>2026-10-04</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://imadtbn.github.io/dz_portal/sectors/sntf-schedule.html?schedule=alger-annaba</loc><lastmod>2026-10-04</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://imadtbn.github.io/dz_portal/sectors/sntf-schedule.html?schedule=alger-annaba-tj</loc><lastmod>2026-10-04</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://imadtbn.github.io/dz_portal/sectors/sntf-schedule.html?schedule=alger-tebessa</loc><lastmod>2026-10-04</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://imadtbn.github.io/dz_portal/sectors/sntf-schedule.html?schedule=abttbb-to-agha</loc><lastmod>2026-10-04</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://imadtbn.github.io/dz_portal/sectors/sntf-schedule.html?schedule=abttbb-to-agha2</loc><lastmod>2026-10-04</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://imadtbn.github.io/dz_portal/sectors/sntf-schedule.html?schedule=beni-mansour-bedjaia</loc><lastmod>2026-10-04</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://imadtbn.github.io/dz_portal/sectors/sntf-schedule.html?schedule=alger-oran-alger</loc><lastmod>2026-10-04</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://imadtbn.github.io/dz_portal/sectors/sntf-schedule.html?schedule=chlef-affroun-chlef</loc><lastmod>2026-10-04</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://imadtbn.github.io/dz_portal/sectors/sntf-schedule.html?schedule=oran-bechar</loc><lastmod>2026-10-04</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://imadtbn.github.io/dz_portal/sectors/sntf-schedule.html?schedule=oran-chlef-agha</loc><lastmod>2026-10-04</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://imadtbn.github.io/dz_portal/sectors/sntf-schedule.html?schedule=agha-chlef-oran</loc><lastmod>2026-10-04</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://imadtbn.github.io/dz_portal/sectors/sntf-schedule.html?schedule=bechar-tindouf</loc><lastmod>2026-10-04</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://imadtbn.github.io/dz_portal/sectors/sntf-schedule.html?schedule=alger-teggart</loc><lastmod>2026-10-04</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://imadtbn.github.io/dz_portal/sectors/sntf-schedule.html?schedule=oran-bechar-sahara-plateaux</loc><lastmod>2026-10-04</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://imadtbn.github.io/dz_portal/sectors/sntf-schedule.html?schedule=bougezzoul-djelfa-laghouat</loc><lastmod>2026-10-04</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://imadtbn.github.io/dz_portal/sectors/sntf-schedule.html?schedule=bechar-tindouf-tj</loc><lastmod>2026-10-04</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://imadtbn.github.io/dz_portal/sectors/sntf-schedule.html?schedule=bba-tisemsilte</loc><lastmod>2026-10-04</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://imadtbn.github.io/dz_portal/sectors/sntf-schedule.html?schedule=boughezoul-laghouat</loc><lastmod>2026-10-04</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://imadtbn.github.io/dz_portal/sectors/sntf-schedule.html?schedule=alger-tunisia</loc><lastmod>2026-10-04</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
 </urlset>

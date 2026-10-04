@@ -216,6 +216,11 @@ assert.equal(old.state.route,"","Grouped east line legacy links retain its categ
 const alias=await boot("?route=zeralda-alger");
 assert.equal(alias.state.route,"zeralda-agha","Legacy route aliases resolve to a single canonical direction");
 assert.equal(alias.state.category,"suburban");
+const plannerLink=await boot('?from=alger&to=thenia#panel-search');
+assert.equal(plannerLink.get('journey-from').value,'alger','Contextual schedule links pre-fill departure');
+assert.equal(plannerLink.get('journey-to').value,'thenia','Contextual schedule links pre-fill arrival');
+const unsafePlannerLink=await boot('?from=invalid&to=invalid#panel-search');
+assert.equal(unsafePlannerLink.get('journey-from').value,'','Unknown station IDs do not pre-fill the planner');
 const home=await boot();
 assert.equal(home.state.activeTask,"search");
 assert.equal(home.mapsCreated(),0,"Default search avoids initializing the map");
