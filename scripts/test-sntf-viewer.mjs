@@ -1,0 +1,28 @@
+import assert from 'node:assert/strict';
+import {readFileSync} from 'node:fs';
+const {createViewer}=await import('data:text/javascript;base64,'+Buffer.from(readFileSync('assets/js/sntf-schedules/viewer.js')).toString('base64'));
+let observer,writes=0,nextFrame=0;const frames=new Map();
+globalThis.getComputedStyle=()=>({paddingLeft:'16',paddingRight:'16'});
+globalThis.requestAnimationFrame=fn=>{frames.set(++nextFrame,fn);return nextFrame};
+globalThis.cancelAnimationFrame=id=>frames.delete(id);
+globalThis.ResizeObserver=class {constructor(fn){observer=fn}observe(){}};
+let outerWidth=1000;
+const handlers={},viewport={clientWidth:984,clientHeight:600,scrollLeft:0,scrollTop:0,getBoundingClientRect:()=>({left:0,top:0,width:outerWidth}),addEventListener:(name,fn)=>handlers[name]=fn,setPointerCapture(){},scrollTo(x,y){this.scrollLeft=x;this.scrollTop=y}};
+const stage={style:new Proxy({},{set(target,key,value){writes++;target[key]=value;return true}}),getBoundingClientRect:()=>({left:0,top:0,width:parseFloat(stage.style.width)||1,height:parseFloat(stage.style.height)||1})};
+const image={complete:true,naturalWidth:8000,naturalHeight:12000,addEventListener(){}},output={};
+const viewer=createViewer(viewport,stage,image,output);
+viewer.in();assert.equal(output.value,'125%');
+const before=writes;
+for(let i=0;i<100;i++){viewport.clientWidth=i%2?984:1000;observer()}
+assert.equal(writes,before,'Scrollbar changes must not trigger an image resize feedback loop');
+assert.equal(frames.size,0,'Scrollbar oscillation schedules no animation frames');
+assert.equal(output.value,'125%','Scrollbar changes preserve zoom');
+outerWidth=900;viewport.clientWidth=884;observer();assert.equal(frames.size,1);
+for(const fn of frames.values())fn();frames.clear();
+assert.equal(output.value,'125%','A real viewport resize preserves zoom');
+viewer.native();assert.equal(parseFloat(stage.style.width),8000,'Original size displays one image pixel per CSS pixel');
+viewer.reset();assert.equal(output.value,'100%');assert.equal(parseFloat(stage.style.width),852,'Reset fits within padding and reserved scrollbar space');
+handlers.pointerdown({button:0,pointerId:1,clientX:100,clientY:100});handlers.pointerdown({button:0,pointerId:2,clientX:200,clientY:100});handlers.pointermove({pointerId:2,clientX:300,clientY:100,preventDefault(){}});
+assert.equal(output.value,'200%','Pinch gesture doubles the image size');
+handlers.pointerup({type:'pointerup',pointerId:1});handlers.pointerup({type:'pointerup',pointerId:2});
+console.log('Viewer PASS: large portrait image, no scrollbar resize loop, retained zoom on resize, original size, reset and pinch zoom.');

@@ -1,5 +1,5 @@
-import {findSchedule} from './catalog.js?v=20261004';
-import {createViewer} from './viewer.js?v=20261004a';
+import {findSchedule} from './catalog.js?v=20261004-stable';
+import {createViewer} from './viewer.js?v=20261004-stable';
 const $=id=>document.getElementById(id),params=new URL(location.href).searchParams,schedule=findSchedule(params.get('schedule'));
 const clock=()=>{$('algeria-time').textContent=new Intl.DateTimeFormat('fr-DZ',{timeZone:'Africa/Algiers',hour:'2-digit',minute:'2-digit',second:'2-digit',hour12:false}).format(new Date());$('algeria-time').dateTime=new Date().toISOString()};clock();setInterval(clock,1000);
 if(!schedule){

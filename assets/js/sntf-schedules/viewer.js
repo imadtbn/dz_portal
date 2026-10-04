@@ -10,9 +10,9 @@ export function createViewer(viewport,stage,image,output){
   const after=stage.getBoundingClientRect();viewport.scrollLeft+=after.left+ratio.x*after.width-anchor.x;viewport.scrollTop+=after.top+ratio.y*after.height-anchor.y;
   output.value=Math.round(zoom*100)+'%';output.textContent=output.value;
  }
- function fit(){
+ function fit(reset=true){
   if(!loaded)return;
-  const style=getComputedStyle(viewport);base=Math.min(image.naturalWidth,viewport.clientWidth-parseFloat(style.paddingLeft)-parseFloat(style.paddingRight));max=Math.max(8,image.naturalWidth/base*2);zoom=1;
+  const style=getComputedStyle(viewport);base=Math.min(image.naturalWidth,viewport.clientWidth-parseFloat(style.paddingLeft)-parseFloat(style.paddingRight));max=Math.max(8,image.naturalWidth/base*2);if(!reset){update(zoom);return}zoom=1;
   stage.style.width=base+'px';stage.style.height=base*image.naturalHeight/image.naturalWidth+'px';viewport.scrollTo(0,0);output.value='100%';output.textContent='100%';
  }
  image.addEventListener('load',()=>{loaded=true;fit()});
@@ -40,6 +40,14 @@ export function createViewer(viewport,stage,image,output){
  viewport.addEventListener('pointerup',end);viewport.addEventListener('pointercancel',end);
  viewport.addEventListener('dblclick',e=>{if(e.pointerType==='touch'||Date.now()-lastTouchZoom<500)return;e.preventDefault();update(zoom<2?2:1,{x:e.clientX,y:e.clientY})});
  viewport.addEventListener('keydown',e=>{if(e.key==='+'||e.key==='='){e.preventDefault();update(zoom*1.25)}else if(e.key==='-'){e.preventDefault();update(zoom/1.25)}else if(e.key==='0'){e.preventDefault();fit()}});
- let width=viewport.clientWidth;new ResizeObserver(()=>{if(viewport.clientWidth&&viewport.clientWidth!==width){width=viewport.clientWidth;fit()}}).observe(viewport);
- return {in:()=>update(zoom*1.25),out:()=>update(zoom/1.25),reset:fit,refresh:fit};
+ // Observe the outer width, which cannot oscillate when image scrollbars appear.
+ let width=viewport.getBoundingClientRect().width,resizeFrame=0;
+ new ResizeObserver(()=>{
+  const next=viewport.getBoundingClientRect().width;
+  if(next<=0||Math.abs(next-width)<1)return;
+  width=next;
+  cancelAnimationFrame(resizeFrame);
+  resizeFrame=requestAnimationFrame(()=>fit(false));
+ }).observe(viewport,{box:'border-box'});
+ return {in:()=>update(zoom*1.25),out:()=>update(zoom/1.25),native:()=>update(image.naturalWidth/base),reset:()=>fit(),refresh:()=>fit()};
 }

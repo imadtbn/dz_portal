@@ -1,3 +1,4 @@
+import {schedulePageForImage} from "../sntf-schedules/catalog.js?v=20261004-stable";
 import {dayParts,dayISO,recordsAtStation,eligible,formatTime,countdown,classify,mins} from "./engine.js";
 import {planJourney} from "./planner.js";
 import {stationPicker} from "./station-picker.js?v=20261003-no-default-station";
@@ -180,7 +181,8 @@ function eventHtml(event,kind){
  const subtitle=prevNext?(kind==="departure"?"المحطة التالية: ":"المحطة السابقة: ")+name(prevNext):"";
  const source=state.sources.find(s=>s.id===t.source_id);
  const photo=source?.kind==="official-timetable-image"&&/^https:\/\/imadtbn\.github\.io\/dz_portal\/assets\/train-schedules\//.test(source.url||"")?source.url:route?.schedule_image;
- const link=photo&&(/^(https:\/\/imadtbn\.github\.io\/dz_portal)?\/assets\/train-schedules\//.test(photo)||/^\.\.\/assets\/train-schedules\//.test(photo))?'<a class="photo-source" href="'+esc(photo)+'" target="_blank" rel="noopener noreferrer">عرض صورة الجدول الرسمي ↗</a>':source?.url?.startsWith("https://")?'<a class="photo-source" href="'+esc(source.url)+'" target="_blank" rel="noopener noreferrer">مصدر المواقيت ↗</a>':"";
+ const photoPage=schedulePageForImage(photo);
+ const link=photoPage?'<a class="photo-source" href="'+esc(photoPage)+'">عرض الجدول الرسمي ↗</a>':photo&&(/^(https:\/\/imadtbn\.github\.io\/dz_portal)?\/assets\/train-schedules\//.test(photo)||/^\.\.\/assets\/train-schedules\//.test(photo))?'<a class="photo-source" href="'+esc(photo)+'" target="_blank" rel="noopener noreferrer">عرض صورة الجدول الرسمي ↗</a>':source?.url?.startsWith("https://")?'<a class="photo-source" href="'+esc(source.url)+'" target="_blank" rel="noopener noreferrer">مصدر المواقيت ↗</a>':"";
  const page='<a class="photo-source" href="'+esc(tripPageLink(t,event.serviceDate,state.selected))+'">صفحة الرحلة كاملة ←</a>';
  return '<article class="event '+(event.remaining>=0&&event.remaining<=900?" imminent":"")+'"><div class="event-top"><div><h4>'+esc(kind==="departure"?"إلى "+name(other):"من "+name(other))+'</h4><span class="minor">'+esc(route?.name||"")+'</span></div><time dir="ltr">'+formatTime(time)+'</time></div><div class="event-meta"><span class="tag">رقم القطار: '+esc(t.train_number||"غير محدد")+'</span><span class="tag">'+esc(serviceName(t.service_id))+'</span>'+statusBadge(t)+dateShown+'</div><p>'+esc(subtitle)+'</p><p>'+(kind==="departure"?"المتبقي للمغادرة: ":"المتبقي للوصول: ")+'<span class="countdown" data-target="'+event.timestamp+'" dir="ltr">'+countdown(event.remaining)+'</span></p><p class="minor">'+esc(source?.notice||"الموعد مجدول، وليس تتبعًا مباشرًا.")+'</p>'+page+link+details(event)+'</article>';
 }
@@ -211,7 +213,8 @@ function journeyLeg(leg){
  const stops=leg.trip.stop_times.slice(leg.fromIndex,leg.toIndex+1);
  const route=routeFor(leg.trip.route_id),source=state.sources.find(s=>s.id===leg.trip.source_id);
  const img=source?.kind==='official-timetable-image'?source.url:route?.schedule_image;
- const sourceLink=img&&(/^(https:\/\/imadtbn\.github\.io\/dz_portal)?\/assets\/train-schedules\//.test(img)||/^\.\.\/assets\/train-schedules\//.test(img))
+ const imagePage=schedulePageForImage(img);
+ const sourceLink=imagePage?`<a href="${esc(imagePage)}">عرض الجدول المصوّر ↗</a>`:img&&(/^(https:\/\/imadtbn\.github\.io\/dz_portal)?\/assets\/train-schedules\//.test(img)||/^\.\.\/assets\/train-schedules\//.test(img))
   ?`<a href="${esc(img)}" target="_blank" rel="noopener noreferrer">صورة الجدول ↗</a>`:'';
  const list=stops.map((stop,i)=>{
   const arrival=stop.arrival==null?'—':formatTime(stop.arrival),departure=stop.departure==null?'—':formatTime(stop.departure);
@@ -325,7 +328,8 @@ function tripTimeline(trip){
 }
 function routeCard(route){
  const summary=routeStopSummary(route,state.trips),ts=routeTrips(route,state.trips),src=state.sources.find(s=>s.id===route.source);
- const link=route.schedule_image?'<a class="photo-source" href="'+esc(route.schedule_image)+'" target="_blank" rel="noopener noreferrer">'+(route.schedule_image.endsWith(".svg")?"نسخة معاد تنسيقها من الجدول ↗":"الجدول المصور ↗")+'</a>':"";
+ const schedulePage=schedulePageForImage(route.schedule_image);
+ const link=schedulePage?'<a class="photo-source" href="'+esc(schedulePage)+'">الجدول المصور ↗</a>':route.schedule_image?'<a class="photo-source" href="'+esc(route.schedule_image)+'" target="_blank" rel="noopener noreferrer">'+(route.schedule_image.endsWith(".svg")?"نسخة معاد تنسيقها من الجدول ↗":"الجدول المصور ↗")+'</a>':"";
  const stops=summary.known_stops.map((item,i)=>'<li><span>'+ (i+1)+'. '+esc(name(item.station_id))+'</span><small>'+item.train_count+' قطار يتوقف هنا</small></li>').join("");
  const corridor=summary.corridor_only.length?'<details class="corridor-note"><summary>محطات مذكورة بالممر دون توقف منشور ('+summary.corridor_only.length+')</summary><p class="minor">هذه أسماء ظاهرة في جدول الممر، لكنها غير مدرجة كتوقف مؤقت في أي قطار أدخلناه لهذا المسار.</p><p>'+summary.corridor_only.map(name).map(esc).join(" · ")+'</p></details>':"";
  const routesStatus=ts.length?'<span class="tag">'+ts.length+' رحلة منقولة</span>':'<span class="tag warn">المواقيت والتوقفات قيد الإدخال</span>';

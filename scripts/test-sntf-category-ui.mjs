@@ -4,6 +4,7 @@ const loadJSON=name=>JSON.parse(readFileSync("assets/data/sntf/"+name+".json","u
 const loadModule=async path=>import("data:text/javascript;base64,"+Buffer.from(readFileSync(path,"utf8")).toString("base64"));
 const engine=await loadModule("assets/js/sntf-trains/engine.js");
 const network=await loadModule("assets/js/sntf-trains/network.js");
+const {schedulePageForImage}=await loadModule("assets/js/sntf-schedules/catalog.js");
 const {stationPicker}=await loadModule("assets/js/sntf-trains/station-picker.js");
 const plannerSource=readFileSync("assets/js/sntf-trains/planner.js","utf8").replace(/^import [^\n]+\n/gm,"").replace(/^export /gm,"");
 const {planJourney}=new Function("mins","runsOn","shiftISO",plannerSource+"\nreturn {planJourney};")(engine.mins,engine.runsOn,engine.shiftISO);
@@ -14,7 +15,7 @@ const src=readFileSync("assets/js/sntf-trains/app.js","utf8")
  .replaceAll("import.meta.url",'"https://example.invalid/assets/js/sntf-trains/app.js"')
  .replace('boardTab("departures");tick();setInterval(tick,1000);start();','boardTab("departures");tick();return start().then(()=>state);');
 assert(src.includes("return start().then(()=>state)"),"The UI test must await application initialization");
-const run=new Function("document","window","location","URL","fetch","Option","setInterval","console","navigator","Intl","planJourney","stationPicker",...engineNames,...networkNames,src);
+const run=new Function("document","window","location","URL","fetch","Option","setInterval","console","navigator","Intl","planJourney","stationPicker","schedulePageForImage",...engineNames,...networkNames,src);
 class FakeElement{
  constructor(id){this.id=id;this.listeners={};this.attributes={};this.value="";this.checked=false;this.children=[];this.disabled=false;this.hidden=false;this.innerHTML="";this.textContent="";this.label="";this.dataset={};const classes=new Set();this.classList={toggle(name,yes){if(yes)classes.add(name);else classes.delete(name)},contains:name=>classes.has(name)};}
  addEventListener(event,callback){this.listeners[event]=callback}
@@ -52,7 +53,7 @@ async function boot(path="",geolocation,stationOverrides={}){
  const errors=[];
  const state=await run(document,window,location,URL,fetch,FakeOption,()=>{},
   {warn:(...parts)=>errors.push(parts.join(" ")),error:(...parts)=>errors.push(parts.join(" "))},{geolocation},Intl,
-  planJourney,stationPicker,...engineNames.map(k=>engine[k]),...networkNames.map(k=>network[k]));
+  planJourney,stationPicker,schedulePageForImage,...engineNames.map(k=>engine[k]),...networkNames.map(k=>network[k]));
  assert.deepEqual(errors,[],"The app must start and filter without JavaScript errors");
  return {state,get,markers,document,lastUrl:()=>lastUrl,mapsCreated:()=>mapsCreated,task(id){get('task-'+id).listeners.click()},selectCategory(value){get("category-filter").listeners.change({target:{value}})},selectRoute(value){get("route-filter").listeners.change({target:{value}})},
   optionCount:()=>get("route-filter").children.slice(1).reduce((sum,group)=>sum+group.children.length,0)};
@@ -204,6 +205,10 @@ page.get('station-search-board').value='Zeralda';page.get('station-search-board'
 page.get('station-board-options').listeners.pointerdown({target:{closest:()=>page.get('station-board-options').children[0]},preventDefault(){}});
 assert(page.get("departures").innerHTML.includes('sntf-trip.html?trip='),"Station departure cards link to the trip page");
 assert.equal(page.get("category-schedules").hidden,true);
+assert(page.get('departures').innerHTML.includes('sntf-schedule.html?schedule='),'Board timetable links open the viewer');
+page.task('explore');
+assert(page.get('route-catalog').innerHTML.includes('sntf-schedule.html?schedule=alger-thenia'),'Map route cards link to the viewer');
+assert(!/href="[^"]*assets\/train-schedules\//.test(page.get('route-catalog').innerHTML),'Map cards never point to a raw known image');
 const linked=await boot("?route=affroun-alger&station=el_affroun");
 assert.equal(linked.state.category,"suburban","Direct links infer their railway category");
 assert.equal(linked.state.route,"affroun-alger");

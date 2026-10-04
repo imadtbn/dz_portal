@@ -476,6 +476,34 @@ export const schedules = [
     "routeId": "annaba-tunis",
     "width": 1138,
     "height": 1522
+  },
+  {
+    "id": "agha-batna",
+    "title": "آغا - باتنة",
+    "category": "الخطوط الجهوية الشرقية",
+    "anchor": "eastern-regional",
+    "image": "../assets/train-schedules/Eastern/agha-batna.png",
+    "hero": "../assets/images/sntf.jpg",
+    "from": "آغا",
+    "to": "باتنة",
+    "fromId": "agha",
+    "toId": "batna",
+    "routeId": "agha-batna",
+    "width": 2048,
+    "height": 1536
   }
 ];
 export const findSchedule = id => schedules.find(s => s.id === id) || schedules.find(s => s.id + "-" + ({suburban:"suburban","eastern-regional":"eastern","western-regional":"western","sahara-plateau-regional":"sahara",international:"international"}[s.anchor]) === id);
+
+// Only known timetable images on this project can resolve to a viewer page.
+export function schedulePageForImage(value){
+ if(typeof value!=='string'||!value)return '';
+ try{
+  const base='https://imadtbn.github.io/dz_portal/sectors/';
+  const url=new URL(value,base);
+  if(url.origin!=='https://imadtbn.github.io')return '';
+  const path=decodeURIComponent(url.pathname).replace(/^\/(?:dz_portal\/)?/,'');
+  const record=schedules.find(s=>s.image.replace(/^\.\.\//,'')===path);
+  return record?'sntf-schedule.html?schedule='+encodeURIComponent(record.id):'';
+ }catch{return ''}
+}
