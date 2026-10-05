@@ -78,33 +78,71 @@
 
 .train-content {
     padding: 1rem;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: .65rem;
+    align-items: stretch;
 }
 
 .train-content h4 {
-    margin-bottom: .5rem;
+    grid-column: 1 / -1;
+    margin: 0 0 .15rem;
     color: var(--primary-color);
 }
 
 .train-content p {
+    grid-column: 1 / -1;
     color: #666;
-    margin-bottom: 1rem;
+    margin: 0 0 .35rem;
     font-size: .9rem;
 }
 
 .view-schedule-btn {
     width: 100%;
-    border: none;
-    background: var(--primary-color);
-    color: #d91313;
-    padding: .9rem;
+    min-width: 0;
+    min-height: 44px;
+    box-sizing: border-box;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: .4rem;
+    padding: .7rem .55rem;
+    border: 1px solid #dc2626;
     border-radius: 10px;
+    background: #fff;
+    color: #c81e1e;
+    text-decoration: none;
+    text-align: center;
+    line-height: 1.35;
+    font-size: .9rem;
+    font-weight: 700;
     cursor: pointer;
-    font-weight: 600;
-    transition: .3s;
+    transition: transform .2s ease, box-shadow .2s ease, background-color .2s ease, color .2s ease;
+}
+
+.view-schedule-btn i {
+    flex: 0 0 auto;
+    font-size: .95rem;
+}
+
+.train-content > .view-schedule-btn:first-of-type {
+    background: #dc2626;
+    color: #fff;
+}
+
+.train-content > .view-schedule-btn:nth-of-type(2) {
+    background: #fff;
+    color: #c81e1e;
 }
 
 .view-schedule-btn:hover {
-    opacity: .9;
+    transform: translateY(-1px);
+    box-shadow: 0 5px 14px rgba(220, 38, 38, .16);
+}
+
+.view-schedule-btn:focus-visible {
+    outline: 3px solid rgba(220, 38, 38, .25);
+    outline-offset: 2px;
 }
 
 @media(max-width:768px) {
@@ -115,6 +153,28 @@
 
     .train-thumbnail {
         height: 180px;
+    }
+
+    .train-content {
+        padding: .85rem;
+        gap: .5rem;
+    }
+
+    .view-schedule-btn {
+        min-height: 42px;
+        padding: .62rem .4rem;
+        font-size: .82rem;
+    }
+}
+
+@media (max-width: 360px) {
+    .train-content {
+        grid-template-columns: 1fr;
+    }
+
+    .train-content h4,
+    .train-content p {
+        grid-column: 1;
     }
 }
 
