@@ -2,55 +2,174 @@
 <html lang="ar" dir="rtl">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>تفاصيل رحلة قطار | DZ Rail</title>
-  <meta name="theme-color" content="#102d42">
-  <meta name="description"
-    content="تفاصيل رحلة قطار SNTF: جميع المحطات ومواقيت التوقف وأيام التشغيل ورقم القطار وصورة الجدول الأصلي.">
-  <link rel="icon" href="../assets/images/icon.png">
-  <link rel="manifest" href="../manifest.json">
-  <link id="trip-canonical" rel="canonical">
-  <meta property="og:type" content="website">
-  <meta property="og:locale" content="ar_DZ">
-  <meta property="og:title" content="تفاصيل رحلة قطار | DZ Rail">
-  <meta property="og:description" content="محطات الرحلة ومواعيدها وأيام التشغيل وصورة جدول SNTF الأصلي في صفحة واحدة.">
-  <meta id="trip-og-url" property="og:url" content="">
-  <meta property="og:image" content="https://imadtbn.github.io/dz_portal/assets/images/sntf.jpg">
-  <script id="trip-schema" type="application/ld+json"></script>
-  <link rel="stylesheet" href="../assets/css/sntf-trip.css?v=20260928-trip">
-  <script type="module" src="../assets/js/sntf-trains/trip-page.js?v=20260929-schema"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>عارض جداول مواقيت القطارات SNTF | البوابة الجزائرية</title>
 
-  <!-- Google AdSense -->
+  <!-- Meta أساسية -->
+  <meta name="author" content="البوابة الجزائرية للخدمات الرقمية">
+  <meta name="language" content="Arabic">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="theme-color" content="#006400">
+
+  <!-- Manifest & Icons -->
+  <link rel="manifest" href="../manifest.json">
+  <link rel="icon" href="../assets/images/icon.png" type="image/png">
+  <link rel="apple-touch-icon" href="https://imadtbn.github.io/dz_portal/assets/images/icon.png">
+  <link rel="preload" as="image" href="../assets/images/sntf.jpg" fetchpriority="high">
+
+  <!-- Security -->
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+
+  <!-- Preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://pagead2.googlesyndication.com" crossorigin>
+  <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+
+  <!-- Canonical و hreflang -->
+  <link rel="canonical" href="https://imadtbn.github.io/dz_portal/sectors/sntf-schedule.html" id="canonical-link">
+  <link rel="alternate" hreflang="ar-DZ" href="https://imadtbn.github.io/dz_portal/sectors/sntf-schedule.html">
+  <link rel="alternate" hreflang="ar" href="https://imadtbn.github.io/dz_portal/sectors/sntf-schedule.html">
+  <link rel="alternate" hreflang="x-default" href="https://imadtbn.github.io/dz_portal/sectors/sntf-schedule.html">
+
+  <!-- Primary Meta (تُحدَّث ديناميكياً عبر JS حسب الجدول) -->
+  <meta name="description"
+    content="راجع جداول مواقيت قطارات SNTF المصوّرة مع إمكانية التكبير، السحب، وملء الشاشة. اختر الخط لعرض الجدول الرسمي الكامل.">
+  <meta name="keywords"
+    content="جداول مواقيت SNTF, عارض جداول القطارات, مواقيت القطارات الجزائر, صور جداول SNTF, خطوط القطارات الجزائر, sntf schedule">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="البوابة الجزائرية للخدمات الرقمية">
+  <meta property="og:locale" content="ar_DZ">
+  <meta property="og:title" content="عارض جداول مواقيت القطارات SNTF | البوابة الجزائرية">
+  <meta property="og:description" content="راجع جداول مواقيت قطارات SNTF المصوّرة مع أدوات التكبير والسحب وملء الشاشة.">
+  <meta property="og:url" content="https://imadtbn.github.io/dz_portal/sectors/sntf-schedule.html">
+  <meta property="og:image" content="https://imadtbn.github.io/dz_portal/assets/images/sntf.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="عارض جداول مواقيت قطارات SNTF">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="عارض جداول مواقيت القطارات SNTF">
+  <meta name="twitter:description" content="راجع جداول مواقيت قطارات SNTF المصوّرة مع أدوات التكبير وملء الشاشة.">
+  <meta name="twitter:image" content="https://imadtbn.github.io/dz_portal/assets/images/sntf.jpg">
+  <meta name="twitter:image:alt" content="عارض جداول مواقيت قطارات SNTF">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="../assets/css/style-sector.css">
+  <link rel="stylesheet" href="../assets/css/sntf-schedule.css?v=20261004-stable">
+
+  <!-- JSON-LD ثابت (Structured Data أساسي) -->
+  <script id="schedule-schema-base" type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "@id": "https://imadtbn.github.io/dz_portal/#website",
+          "url": "https://imadtbn.github.io/dz_portal/",
+          "name": "البوابة الجزائرية للخدمات الرقمية",
+          "inLanguage": "ar-DZ",
+          "publisher": { "@id": "https://imadtbn.github.io/dz_portal/#organization" }
+        },
+        {
+          "@type": "Organization",
+          "@id": "https://imadtbn.github.io/dz_portal/#organization",
+          "name": "البوابة الجزائرية للخدمات الرقمية",
+          "url": "https://imadtbn.github.io/dz_portal/",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://imadtbn.github.io/dz_portal/assets/images/icon.png"
+          }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://imadtbn.github.io/dz_portal/sectors/sntf-schedule.html#breadcrumb",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "الرئيسية", "item": "https://imadtbn.github.io/dz_portal/" },
+            { "@type": "ListItem", "position": 2, "name": "السكك الحديدية SNTF", "item": "https://imadtbn.github.io/dz_portal/sectors/sntf.html" },
+            { "@type": "ListItem", "position": 3, "name": "عارض الجداول", "item": "https://imadtbn.github.io/dz_portal/sectors/sntf-schedule.html" }
+          ]
+        },
+        {
+          "@type": "WebApplication",
+          "@id": "https://imadtbn.github.io/dz_portal/sectors/sntf-schedule.html#app",
+          "name": "عارض جداول مواقيت SNTF",
+          "url": "https://imadtbn.github.io/dz_portal/sectors/sntf-schedule.html",
+          "applicationCategory": "TravelApplication",
+          "operatingSystem": "Web Browser",
+          "browserRequirements": "JavaScript",
+          "offers": { "@type": "Offer", "price": "0", "priceCurrency": "DZD" }
+        }
+      ]
+    }
+    </script>
+
+  <!-- JSON-LD ديناميكي (يُملأ عبر JS حسب ?schedule=) -->
+  <script id="schedule-schema" type="application/ld+json">{}</script>
+
+  <!-- Main Script -->
+  <script type="module" src="../assets/js/sntf-schedules/page.js?v=20261004-stable"></script>
+  <script defer src="../assets/js/deferred-homepage.js"></script>
+
+  <!-- AdSense -->
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5656416032906373"
     crossorigin="anonymous"></script>
 
-  <!-- Google tag (gtag.js) -->
+  <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-4BCWP0498L"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
-
     gtag('config', 'G-4BCWP0498L');
   </script>
-
 </head>
 
 <body>
   <a class="skip" href="#trip-main">الانتقال إلى تفاصيل الرحلة</a>
 
   <header class="site-head">
-    <div class="shell head-row"><a class="brand" href="sntf-trains.html">🚆 <span>DZ Rail<small>مواقيت القطارات
+    <div class="shell head-row">
+      <a class="brand" href="sntf-trains.html">🚆
+        <span>DZ Rail<small>مواقيت القطارات
             الجزائرية</small></span></a>
-      <nav aria-label="التنقل"><a href="sntf-trains.html#journey-planner">البحث عن رحلة</a><a href="sntf.html">الجداول
-          المصورة</a></nav>
+      <nav aria-label="التنقل">
+        <a href="sntf-trains.html#journey-planner">البحث عن رحلة</a>
+        <a href="sntf.html">الجداول
+          المصورة</a>
+      </nav>
     </div>
   </header>
 
   <main class="shell" id="trip-main">
-    <nav class="breadcrumbs" aria-label="مسار الصفحة"><a href="../index.html">الرئيسية</a> / <a
-        href="sntf-trains.html">منصة القطارات</a> / <span>تفاصيل الرحلة</span></nav>
+<nav class="breadcrumb" aria-label="مسار التنقل">
+    <ol class="breadcrumb-content" itemscope itemtype="https://schema.org/BreadcrumbList">
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+            <a href="../index.html" itemprop="item"><span itemprop="name">الرئيسية</span></a>
+            <meta itemprop="position" content="1">
+        </li>
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+            <a href="sntf.html" itemprop="item"><span itemprop="name">السكك الحديدية SNTF</span></a>
+            <meta itemprop="position" content="2">
+        </li>
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+            <a id="crumb-category" href="sntf.html" itemprop="item"><span itemprop="name">جداول القطارات</span></a>
+            <meta itemprop="position" content="3">
+        </li>
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" aria-current="page">
+            <span id="crumb-title" itemprop="name">عرض الجدول</span>
+            <meta itemprop="position" content="4">
+        </li>
+    </ol>
+</nav>
+
     <div id="trip-content" aria-live="polite">
       <div class="loading" role="status">يجري تحميل تفاصيل الرحلة…</div>
     </div>
@@ -75,6 +194,27 @@
   <script>
     (adsbygoogle = window.adsbygoogle || []).push({});
   </script>
+
+  <script src="../assets/js/page.js" defer></script>
+
+  <script>
+    // بعد جلب بيانات الجدول
+    injectScheduleSchema({
+      slug: "alger-thenia",
+      title: "الجزائر - الثنية",
+      category: "suburban",
+      image: "alger-thenia.png",
+      from: "الجزائر",
+      to: "الثنية"
+    });
+  </script>
+
+  <script>
+    document.querySelectorAll('ins.adsbygoogle').forEach(() => {
+      (adsbygoogle = window.adsbygoogle || []).push({});
+    });
+  </script>
+
 </body>
 
 </html>
