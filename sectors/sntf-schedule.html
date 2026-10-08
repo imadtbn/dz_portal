@@ -4,9 +4,120 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>عارض جداول القطارات | البوابة الجزائرية</title>
-    <meta name="description" content="راجع جداول القطارات المصورة مع التكبير والسحب وملء الشاشة.">
+
+  <!-- ==== العنوان والوصف (يُحدَّثان ديناميكياً عبر JS) ==== -->
+    <title>عارض جداول مواقيت قطارات SNTF | البوابة الجزائرية</title>
+    <meta name="description" content="راجع جداول مواقيت قطارات SNTF المصوّرة مع إمكانية التكبير والسحب وملء الشاشة. اختر الخط لعرض الجدول الرسمي الكامل.">
+    <meta name="keywords" content="جداول مواقيت SNTF, عارض جداول القطارات, مواقيت القطارات الجزائر, صور جداول SNTF, خطوط القطارات الجزائر">
+    <meta name="author" content="البوابة الجزائرية للخدمات الرقمية">
+    <meta name="language" content="Arabic">
     <meta name="theme-color" content="#006400">
+
+    <!-- ==== توجيهات الفهرسة ==== -->
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="googlebot" content="index, follow">
+
+    <!-- ==== Manifest & Icons ==== -->
+    <link rel="manifest" href="../manifest.json">
+    <link rel="icon" href="../assets/images/icon.png" type="image/png">
+    <link rel="apple-touch-icon" href="https://imadtbn.github.io/dz_portal/assets/images/icon.png">
+    <link rel="preload" as="image" href="../assets/images/sntf.jpg" fetchpriority="high">
+
+    <!-- ==== أمان ==== -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+
+    <!-- ==== Preconnect ==== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://pagead2.googlesyndication.com" crossorigin>
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+
+    <!-- ==== Canonical (يُحدَّث ديناميكياً حسب ?schedule=) ==== -->
+    <link rel="canonical" id="canonical-link" href="https://imadtbn.github.io/dz_portal/sectors/sntf-schedule.html">
+    <link rel="alternate" hreflang="ar-DZ" href="https://imadtbn.github.io/dz_portal/sectors/sntf-schedule.html">
+    <link rel="alternate" hreflang="ar" href="https://imadtbn.github.io/dz_portal/sectors/sntf-schedule.html">
+    <link rel="alternate" hreflang="x-default" href="https://imadtbn.github.io/dz_portal/sectors/sntf-schedule.html">
+
+    <!-- ==== Open Graph ==== -->
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="البوابة الجزائرية للخدمات الرقمية">
+    <meta property="og:locale" content="ar_DZ">
+    <meta property="og:title" content="عارض جداول مواقيت القطارات SNTF | البوابة الجزائرية">
+    <meta property="og:description" content="راجع جداول مواقيت قطارات SNTF المصوّرة مع أدوات التكبير والسحب وملء الشاشة.">
+    <meta property="og:url" content="https://imadtbn.github.io/dz_portal/sectors/sntf-schedule.html">
+    <meta property="og:image" content="https://imadtbn.github.io/dz_portal/assets/images/sntf.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="عارض جداول مواقيت قطارات SNTF">
+    <meta property="article:published_time" content="2026-10-04T07:56:50+00:00">
+
+    <!-- ==== Twitter ==== -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="عارض جداول مواقيت القطارات SNTF">
+    <meta name="twitter:description" content="راجع جداول مواقيت قطارات SNTF المصوّرة مع أدوات التكبير وملء الشاشة.">
+    <meta name="twitter:image" content="https://imadtbn.github.io/dz_portal/assets/images/sntf.jpg">
+    <meta name="twitter:image:alt" content="عارض جداول مواقيت قطارات SNTF">
+
+    <!-- ==== CSS ==== -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../assets/css/style-sector.css">
+    <link rel="stylesheet" href="../assets/css/sntf-schedule.css?v=20261004-stable">
+
+    <!-- ==== JSON-LD أساسي (ثابت) ==== -->
+    <script id="schedule-schema-base" type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "@id": "https://imadtbn.github.io/dz_portal/#website",
+          "url": "https://imadtbn.github.io/dz_portal/",
+          "name": "البوابة الجزائرية للخدمات الرقمية",
+          "inLanguage": "ar-DZ",
+          "publisher": { "@id": "https://imadtbn.github.io/dz_portal/#organization" }
+        },
+        {
+          "@type": "Organization",
+          "@id": "https://imadtbn.github.io/dz_portal/#organization",
+          "name": "البوابة الجزائرية للخدمات الرقمية",
+          "url": "https://imadtbn.github.io/dz_portal/",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://imadtbn.github.io/dz_portal/assets/images/icon.png",
+            "width": 512,
+            "height": 512
+          },
+          "email": "tabaniimadeddine@gmail.com",
+          "areaServed": { "@type": "Country", "name": "الجزائر" }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://imadtbn.github.io/dz_portal/sectors/sntf-schedule.html#breadcrumb-static",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "الرئيسية", "item": "https://imadtbn.github.io/dz_portal/" },
+            { "@type": "ListItem", "position": 2, "name": "السكك الحديدية SNTF", "item": "https://imadtbn.github.io/dz_portal/sectors/sntf.html" },
+            { "@type": "ListItem", "position": 3, "name": "عارض الجداول", "item": "https://imadtbn.github.io/dz_portal/sectors/sntf-schedule.html" }
+          ]
+        },
+        {
+          "@type": "WebApplication",
+          "@id": "https://imadtbn.github.io/dz_portal/sectors/sntf-schedule.html#app",
+          "name": "عارض جداول مواقيت SNTF",
+          "url": "https://imadtbn.github.io/dz_portal/sectors/sntf-schedule.html",
+          "applicationCategory": "TravelApplication",
+          "operatingSystem": "Web Browser",
+          "browserRequirements": "JavaScript",
+          "offers": { "@type": "Offer", "price": "0", "priceCurrency": "DZD" }
+        }
+      ]
+    }
+    </script>
+
+    <!-- ==== JSON-LD ديناميكي (يُملأ عبر page.js) ==== -->
+    <script id="schedule-schema" type="application/ld+json">{}</script>
+    
     <link rel="manifest" href="../manifest.json">
     <link rel="icon" href="../assets/images/icon.png">
     <link rel="canonical" href="https://imadtbn.github.io/dz_portal/sectors/sntf-schedule.html">
