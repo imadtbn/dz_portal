@@ -143,15 +143,23 @@
       ]
     },
     {
-      "id": "oran-chlef",
+      "id": "oran-chlef-regional-corridor",
       "name": "وهران – الشلف – آغا",
       "category": "western",
       "route_ids": [
-        "oran-chlef",
         "agha-chlef",
         "khemis-chlef",
         "chlef-agha",
         "chlef-khemis"
+      ]
+    },
+    {
+      "id": "oran-chlef",
+      "name": "وهران – الشلف",
+      "category": "western",
+      "route_ids": [
+        "oran-chlef",
+        "chlef-oran"
       ]
     },
     {
@@ -229,6 +237,16 @@
       "route_ids": [
         "chlef-affroun",
         "affroun-chlef"
+      ]
+    },
+    {
+      "id": "telagh-oran-saida-frenda",
+      "name": "تلاغ – وهران / سعيدة – فرندة",
+      "category": "western",
+      "route_ids": [
+        "telagh-oran",
+        "oran-telagh",
+        "telagh-saida-frenda"
       ]
     }
   ]

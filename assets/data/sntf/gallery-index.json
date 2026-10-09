@@ -386,6 +386,21 @@
       "issuing_authority": "SNTF",
       "status": "official_document_validity_confirmed",
       "notes": "صورة جدول صادرة عن SNTF ؛ تاريخ السريان واستمرار العمل بالمواقيت يحتاجان مراجعة منفصلة، يمكن التأكد من جدول الرحلات."
+    },
+    {
+      "id": "telagh-oran-saida-frenda-western",
+      "path": "assets/train-schedules/Western/telagh-oran-saida-frenda.jpg",
+      "category": "western",
+      "alt": "إعلان عودة قطار تلاغ – وهران وقطار تلاغ – سعيدة – فرندة",
+      "route_ids": [
+        "telagh-oran",
+        "oran-telagh",
+        "telagh-saida-frenda"
+      ],
+      "source_page": "sectors/sntf-station.html",
+      "issuing_authority": "SNTF",
+      "status": "official_departures_confirmed",
+      "notes": "انطلاق 07:09 من تلاغ نحو وهران، 15:20 من وهران نحو تلاغ، 17:17 من تلاغ نحو سعيدة وفرندة؛ أوقات الوصول وأيام التشغيل غير مذكورة."
     }
   ]
 }

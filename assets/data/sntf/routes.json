@@ -356,7 +356,10 @@
       "schedule_status": "timetable_pending_entry",
       "line_id": "alger-bejaia",
       "catalog_status": "superseded",
-      "superseded_by": ["agha-bejaia", "bejaia-alger"],
+      "superseded_by": [
+        "agha-bejaia",
+        "bejaia-alger"
+      ],
       "stops_status": "intermediate_stops_pending_official_transcription",
       "editor_note": "مسودة تحرير قديمة انطلقت من الجزائر؛ الصورة الرسمية التي نُقلت الآن تنطلق من آغا في مسار منفصل."
     },
@@ -371,7 +374,10 @@
       "schedule_status": "timetable_pending_entry",
       "line_id": "alger-batna",
       "catalog_status": "superseded",
-      "superseded_by": ["agha-batna", "batna-alger"],
+      "superseded_by": [
+        "agha-batna",
+        "batna-alger"
+      ],
       "stops_status": "intermediate_stops_pending_official_transcription",
       "editor_note": "مسودة تحرير قديمة انطلقت من الجزائر؛ الصورة الرسمية التي نُقلت الآن تنطلق من آغا في مسار منفصل."
     },
@@ -507,7 +513,10 @@
       "schedule_status": "requires-current-verification",
       "line_id": "alger-oran",
       "catalog_status": "superseded",
-      "superseded_by": ["agha-oran", "oran-agha"],
+      "superseded_by": [
+        "agha-oran",
+        "oran-agha"
+      ],
       "stops_status": "intermediate_stops_pending_official_transcription",
       "editor_note": "المحطتان الطرفيتان مثبتتان في مرجع الصورة؛ قائمة المحطات الوسيطة غير مدخلة بعد، فلا تُعرض كمحطات توقف فعلية."
     },
@@ -541,7 +550,7 @@
       ]
     },
     {
-      "id": "oran-chlef",
+      "id": "legacy-oran-chlef-agha",
       "from": "oran",
       "to": "chlef",
       "category": "western",
@@ -551,9 +560,28 @@
       "schedule_status": "requires-current-verification",
       "line_id": "oran-chlef",
       "catalog_status": "superseded",
-      "superseded_by": ["oran-agha", "agha-chlef", "khemis-chlef", "chlef-agha", "chlef-khemis"],
+      "superseded_by": [
+        "oran-agha",
+        "agha-chlef",
+        "khemis-chlef",
+        "chlef-agha",
+        "chlef-khemis"
+      ],
       "stops_status": "intermediate_stops_pending_official_transcription",
       "editor_note": "المحطتان الطرفيتان مثبتتان في مرجع الصورة؛ قائمة المحطات الوسيطة غير مدخلة بعد، فلا تُعرض كمحطات توقف فعلية."
+    },
+    {
+      "id": "oran-chlef",
+      "from": "oran",
+      "to": "chlef",
+      "category": "western",
+      "name": "وهران - الشلف",
+      "source": "sntf-oran-chlef-resumption-20260921",
+      "schedule_image": "../assets/train-schedules/Western/oran-chlef-oran.jpg",
+      "schedule_status": "official_departures_confirmed",
+      "line_id": "oran-chlef",
+      "stops_status": "intermediate_stops_pending_official_transcription",
+      "editor_note": "استئناف 21 سبتمبر 2026؛ مغادرة وهران 16:00. لم تُذكر مواعيد الوصول أو التوقفات."
     },
     {
       "id": "agha-chlef",
@@ -564,7 +592,7 @@
       "source": "west-out",
       "schedule_image": "../assets/train-schedules/Western/agha-chlef-oran.png",
       "schedule_status": "source_transcribed",
-      "line_id": "oran-chlef",
+      "line_id": "oran-chlef-regional-corridor",
       "stops_status": "source_image_transcribed",
       "editor_note": "محطات الوقوف من الصورة. الشرطة تعني لا يوجد وقت توقف منشور لهذا القطار؛ لم تُنشأ محطة توقف تخمينية.",
       "stops": [
@@ -617,7 +645,10 @@
       "schedule_status": "requires-current-verification",
       "line_id": "alger-touggourt",
       "catalog_status": "superseded",
-      "superseded_by": ["agha-touggourt", "touggourt-agha"],
+      "superseded_by": [
+        "agha-touggourt",
+        "touggourt-agha"
+      ],
       "stops_status": "intermediate_stops_pending_official_transcription",
       "editor_note": "المحطتان الطرفيتان مثبتتان في مرجع الصورة؛ قائمة المحطات الوسيطة غير مدخلة بعد، فلا تُعرض كمحطات توقف فعلية."
     },
@@ -1370,7 +1401,7 @@
       "from": "khemis_miliana",
       "to": "chlef",
       "category": "western",
-      "line_id": "oran-chlef",
+      "line_id": "oran-chlef-regional-corridor",
       "name": "khemis_miliana ← chlef",
       "source": "west-out",
       "schedule_image": "../assets/train-schedules/Western/agha-chlef-oran.png",
@@ -1432,7 +1463,7 @@
       "from": "chlef",
       "to": "agha",
       "category": "western",
-      "line_id": "oran-chlef",
+      "line_id": "oran-chlef-regional-corridor",
       "name": "chlef ← agha",
       "source": "west-back",
       "schedule_image": "../assets/train-schedules/Western/oran-chlef-agha.png",
@@ -1462,7 +1493,7 @@
       "from": "chlef",
       "to": "khemis_miliana",
       "category": "western",
-      "line_id": "oran-chlef",
+      "line_id": "oran-chlef-regional-corridor",
       "name": "chlef ← khemis_miliana",
       "source": "west-back",
       "schedule_image": "../assets/train-schedules/Western/oran-chlef-agha.png",
@@ -1836,6 +1867,71 @@
         "reghaia"
       ],
       "editor_note": "جدول يومي منشور اعتبارًا من 19 سبتمبر 2026؛ المحطات المظللة بلا وقت في الرحلتين القصيرتين ليست توقفات للرحلة."
+    },
+    {
+      "id": "chlef-oran",
+      "from": "chlef",
+      "to": "oran",
+      "category": "western",
+      "name": "الشلف - وهران",
+      "source": "sntf-oran-chlef-resumption-20260921",
+      "schedule_image": "../assets/train-schedules/Western/oran-chlef-oran.jpg",
+      "schedule_status": "official_departures_confirmed",
+      "line_id": "oran-chlef",
+      "stops_status": "intermediate_stops_pending_official_transcription",
+      "editor_note": "استئناف 21 سبتمبر 2026؛ مغادرة الشلف 05:45. لم تُذكر مواعيد الوصول أو التوقفات."
+    },
+    {
+      "id": "telagh-oran",
+      "from": "telagh",
+      "to": "oran",
+      "category": "western",
+      "name": "تلاغ ← وهران",
+      "source": "sntf-telagh-oran-saida-frenda-announcement",
+      "schedule_image": "../assets/train-schedules/Western/telagh-oran-saida-frenda.jpg",
+      "schedule_status": "official_departures_confirmed",
+      "line_id": "telagh-oran-saida-frenda",
+      "stops_status": "intermediate_stops_pending_official_transcription",
+      "stops": [
+        "telagh",
+        "oran"
+      ],
+      "editor_note": "أوقات المغادرة من إعلان SNTF المرفق. لم يذكر الإعلان أوقات الوصول أو توقيت التوقف في سعيدة، ولم يحدد أيام التشغيل."
+    },
+    {
+      "id": "oran-telagh",
+      "from": "oran",
+      "to": "telagh",
+      "category": "western",
+      "name": "وهران ← تلاغ",
+      "source": "sntf-telagh-oran-saida-frenda-announcement",
+      "schedule_image": "../assets/train-schedules/Western/telagh-oran-saida-frenda.jpg",
+      "schedule_status": "official_departures_confirmed",
+      "line_id": "telagh-oran-saida-frenda",
+      "stops_status": "intermediate_stops_pending_official_transcription",
+      "stops": [
+        "oran",
+        "telagh"
+      ],
+      "editor_note": "أوقات المغادرة من إعلان SNTF المرفق. لم يذكر الإعلان أوقات الوصول أو توقيت التوقف في سعيدة، ولم يحدد أيام التشغيل."
+    },
+    {
+      "id": "telagh-saida-frenda",
+      "from": "telagh",
+      "to": "frenda",
+      "category": "western",
+      "name": "تلاغ ← سعيدة ← فرندة",
+      "source": "sntf-telagh-oran-saida-frenda-announcement",
+      "schedule_image": "../assets/train-schedules/Western/telagh-oran-saida-frenda.jpg",
+      "schedule_status": "official_departures_confirmed",
+      "line_id": "telagh-oran-saida-frenda",
+      "stops_status": "intermediate_stops_pending_official_transcription",
+      "stops": [
+        "telagh",
+        "saida",
+        "frenda"
+      ],
+      "editor_note": "أوقات المغادرة من إعلان SNTF المرفق. لم يذكر الإعلان أوقات الوصول أو توقيت التوقف في سعيدة، ولم يحدد أيام التشغيل."
     }
   ]
 }

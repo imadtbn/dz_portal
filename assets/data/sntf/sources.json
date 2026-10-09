@@ -443,6 +443,24 @@
       "current_validity": "not_independently_rechecked",
       "verified_at": null,
       "notice": "ست رحلات تسير كل يوم حسب الصورة؛ بعض الرحلات تبدأ أو تنتهي في رغاية."
+    },
+    {
+      "id": "sntf-oran-chlef-resumption-20260921",
+      "name": "إعلان SNTF وهران – استئناف رحلة وهران/الشلف",
+      "kind": "official-service-announcement",
+      "official_document": true,
+      "origin_confirmation": "official-poster-provided-by-user",
+      "valid_from": "2026-09-21",
+      "notice": "مغادرة وهران 16:00 ومغادرة الشلف 05:45؛ لم يتضمن الإعلان توقيت الوصول أو أيام التشغيل."
+    },
+    {
+      "id": "sntf-telagh-oran-saida-frenda-announcement",
+      "name": "إعلان SNTF استئناف قطار تلاغ – وهران / سعيدة – فرندة",
+      "kind": "official-service-announcement",
+      "official_document": true,
+      "origin_confirmation": "official-poster-provided-by-user",
+      "url": "https://imadtbn.github.io/trains-dz/assets/train-schedules/Western/telagh-oran-saida-frenda.jpg",
+      "notice": "الانطلاق تلاغ 07:09 إلى وهران، وهران 15:20 إلى تلاغ، تلاغ 17:17 نحو سعيدة–فرندة؛ الوصول وأيام التشغيل غير مذكورة في الإعلان."
     }
   ],
   "provenance_policy": {

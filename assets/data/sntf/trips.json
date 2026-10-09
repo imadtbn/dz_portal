@@ -1,6 +1,6 @@
 {
-  "version": 13,
-  "updated": "2026-09-28",
+  "version": 14,
+  "updated": "2026-10-09",
   "trips": [
     {
       "trip_id": "user-zeralda-agha-1500",
@@ -19022,8 +19022,57 @@
           "arrival": "11:40",
           "departure": null
         }
+      ]
+    },
+    {
+      "trip_id": "sntf-oran-chlef-1600-20260921",
+      "route_id": "oran-chlef",
+      "service_id": "daily",
+      "train_number": null,
+      "source_id": "sntf-oran-chlef-resumption-20260921",
+      "data_status": "source_transcribed",
+      "stop_times": [
+        {
+          "station_id": "oran",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "16:00"
+        },
+        {
+          "station_id": "chlef",
+          "sequence": 2,
+          "arrival": null,
+          "departure": null
+        }
       ],
-      "editor_note": "من صورة SNTF المؤرخة 19 سبتمبر 2026؛ وقت واحد منشور لكل محطة. لا تُمد الرحلة خارج محطتها الفعلية."
+      "effective_from": "2026-09-21",
+      "operating_days_note": "أيام التشغيل غير مذكورة في الإعلان الرسمي؛ الخدمة اليومية واردة من الإدخال اليدوي السابق وتحتاج التأكيد.",
+      "editor_note": "توقيت المغادرة فقط مؤكد في إعلان الاستئناف؛ الوصول والمحطات الوسيطة غير مذكورة."
+    },
+    {
+      "trip_id": "sntf-chlef-oran-0545-20260921",
+      "route_id": "chlef-oran",
+      "service_id": "daily",
+      "train_number": null,
+      "source_id": "sntf-oran-chlef-resumption-20260921",
+      "data_status": "source_transcribed",
+      "stop_times": [
+        {
+          "station_id": "chlef",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "05:45"
+        },
+        {
+          "station_id": "oran",
+          "sequence": 2,
+          "arrival": null,
+          "departure": null
+        }
+      ],
+      "effective_from": "2026-09-21",
+      "operating_days_note": "أيام التشغيل غير مذكورة في الإعلان الرسمي؛ الخدمة اليومية واردة من الإدخال اليدوي السابق وتحتاج التأكيد.",
+      "editor_note": "توقيت المغادرة فقط مؤكد في إعلان الاستئناف؛ الوصول والمحطات الوسيطة غير مذكورة."
     },
     {
       "trip_id": "photo-thenia-affroun-B156-157-daily-20260919",
@@ -19169,6 +19218,84 @@
         }
       ],
       "editor_note": "من صورة SNTF المؤرخة 19 سبتمبر 2026؛ وقت واحد منشور لكل محطة. لا تُمد الرحلة خارج محطتها الفعلية."
+    },
+    {
+      "trip_id": "sntf-telagh-oran-0709",
+      "route_id": "telagh-oran",
+      "train_number": null,
+      "service_id": "daily",
+      "source_id": "sntf-telagh-oran-saida-frenda-announcement",
+      "data_status": "source_transcribed",
+      "operating_days_note": "تكرار الرحلة يوميًا يحتاج تأكيدًا، فالإعلان لم يذكر أيام التشغيل.",
+      "stop_times": [
+        {
+          "station_id": "telagh",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "07:09"
+        },
+        {
+          "station_id": "oran",
+          "sequence": 2,
+          "arrival": null,
+          "departure": null
+        }
+      ],
+      "editor_note": "ساعة الانطلاق فقط مؤكدة بالإعلان؛ لا تفترض أوقات وصول أو توقفات. جدول التشغيل اليومي افتراضي إلى حين التأكيد."
+    },
+    {
+      "trip_id": "sntf-oran-telagh-1520",
+      "route_id": "oran-telagh",
+      "train_number": null,
+      "service_id": "daily",
+      "source_id": "sntf-telagh-oran-saida-frenda-announcement",
+      "data_status": "source_transcribed",
+      "operating_days_note": "تكرار الرحلة يوميًا يحتاج تأكيدًا، فالإعلان لم يذكر أيام التشغيل.",
+      "stop_times": [
+        {
+          "station_id": "oran",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "15:20"
+        },
+        {
+          "station_id": "telagh",
+          "sequence": 2,
+          "arrival": null,
+          "departure": null
+        }
+      ],
+      "editor_note": "ساعة الانطلاق فقط مؤكدة بالإعلان؛ لا تفترض أوقات وصول أو توقفات. جدول التشغيل اليومي افتراضي إلى حين التأكيد."
+    },
+    {
+      "trip_id": "sntf-telagh-saida-frenda-1717",
+      "route_id": "telagh-saida-frenda",
+      "train_number": null,
+      "service_id": "daily",
+      "source_id": "sntf-telagh-oran-saida-frenda-announcement",
+      "data_status": "source_transcribed",
+      "operating_days_note": "تكرار الرحلة يوميًا يحتاج تأكيدًا، فالإعلان لم يذكر أيام التشغيل.",
+      "stop_times": [
+        {
+          "station_id": "telagh",
+          "sequence": 1,
+          "arrival": null,
+          "departure": "17:17"
+        },
+        {
+          "station_id": "saida",
+          "sequence": 2,
+          "arrival": null,
+          "departure": null
+        },
+        {
+          "station_id": "frenda",
+          "sequence": 3,
+          "arrival": null,
+          "departure": null
+        }
+      ],
+      "editor_note": "ساعة الانطلاق فقط مؤكدة بالإعلان؛ لا تفترض أوقات وصول أو توقفات. جدول التشغيل اليومي افتراضي إلى حين التأكيد."
     }
   ],
   "note": "Draft entries are editable real database records, but their prior example times are not operational evidence. Dashboard labels these records as unverified and hides them from default scheduled boards until reviewed. Update stop_times/train_number/source to validate. أُضيفت 60 رحلة من 3 صور رسمية مؤرخة 19 سبتمبر 2026: 28 للمطار ذهابًا وإيابًا، و14 آغا–زرالدة، و18 الجزائر–العفرون. لم تُفترض رحلات الاتجاه العكسي للعفرون دون صورتها الصحيحة. أُدرجت 19 رحلة موثقة من صورة العفرون–الجزائر الرسمية بتاريخ 19 سبتمبر 2026، تشمل قطارات يومية وأخرى مستثناة من الجمعة وأخرى خاصة بيوم الجمعة، بمجموع 150 رحلة منقولة من صور الجداول. نسخة المعاينة SVG مشتقة من الصورة الأصلية المرفقة."
