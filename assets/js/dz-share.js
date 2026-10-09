@@ -12,6 +12,25 @@ function init(){
  const slot=document.createElement('div');slot.className='dz-share-slot';slot.setAttribute('dir','rtl');
  const btn=document.createElement('button');btn.className='dz-share-button';btn.type='button';btn.setAttribute('aria-label','مشاركة رابط هذه الصفحة');btn.innerHTML=ICON+'<span>مشاركة الصفحة</span>';
  slot.appendChild(btn);
+ const hint=document.createElement('div');hint.className='dz-share-hint';hint.hidden=true;hint.id='dz-share-hint';
+ const hintBtn=document.createElement('button');hintBtn.type='button';hintBtn.className='dz-share-help';hintBtn.setAttribute('aria-label','لماذا أشارك هذه الصفحة؟');hintBtn.setAttribute('aria-expanded','false');hintBtn.setAttribute('aria-controls',hint.id);
+ hintBtn.innerHTML='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M9.2 9a3 3 0 1 1 5.1 2.1c-1.3 1-2.3 1.5-2.3 3"/><path d="M12 17h.01"/></svg>';
+ const customHint=document.body.getAttribute('data-share-hint');
+ const path=location.pathname;
+ const sectorHint=/sntf(?:-|\\.)|train/i.test(path)?'قد يحتاج أحد أصدقائك إلى مواقيت القطارات. شارك الصفحة لتصل إليه بسهولة.':/progres|universit|education|dzexams/i.test(path)?'قد يحتاج طالب آخر إلى هذه المعلومات. شارك الصفحة ليستفيد منها.':/poste|eccp/i.test(path)?'ساعد أصدقاءك في الوصول إلى الخدمات البريدية بسهولة.':'قد يحتاج أحد أصدقائك إلى هذه الخدمة. شارك الصفحة وساهم في تسهيل وصول الجميع إلى الخدمات الرقمية.';
+ hint.textContent=customHint||sectorHint;hint.setAttribute('role','tooltip');
+ slot.appendChild(hintBtn);slot.appendChild(hint);
+ let hintTimer;
+ const hoverCapable=window.matchMedia('(hover: hover) and (pointer: fine)');
+ function setHint(open){clearTimeout(hintTimer);hint.hidden=!open;hintBtn.setAttribute('aria-expanded',String(open));}
+ hintBtn.addEventListener('click',()=>setHint(hint.hidden));
+ hintBtn.addEventListener('pointerenter',()=>{if(hoverCapable.matches)hintTimer=setTimeout(()=>setHint(true),300);});
+ hintBtn.addEventListener('pointerleave',()=>{clearTimeout(hintTimer);if(hoverCapable.matches)hintTimer=setTimeout(()=>setHint(false),200);});
+ hint.addEventListener('pointerenter',()=>clearTimeout(hintTimer));
+ hint.addEventListener('pointerleave',()=>{if(hoverCapable.matches)setHint(false);});
+ hintBtn.addEventListener('keydown',e=>{if(e.key==='Escape'){setHint(false);hintBtn.focus();}});
+ document.addEventListener('pointerdown',e=>{if(!hint.hidden&&!hintBtn.contains(e.target)&&!hint.contains(e.target))setHint(false);});
+ document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!hint.hidden){setHint(false);hintBtn.focus();}});
  if(anchor){slot.classList.add('dz-share-in-hero');anchor.appendChild(slot);}
  else {const main=document.querySelector('main,[role="main"]');if(main)main.insertBefore(slot,main.firstChild);else{const footer=document.querySelector('footer');if(footer)footer.before(slot);else document.body.appendChild(slot);}}
  const panel=document.createElement('div');panel.className='dz-share-panel';panel.hidden=true;
