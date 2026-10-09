@@ -18,3 +18,14 @@
 .dz-share-status{font-size:13px;color:#006233;min-height:20px;margin:12px 0 0}
 @media(max-width:767px){.dz-share-slot{width:100%;margin:14px 0 8px;justify-content:stretch}.dz-share-button{width:100%;font-size:14px;padding:11px 12px}.dz-share-dialog{padding:16px}}
 @media(prefers-reduced-motion:reduce){.dz-share-button{transition:none}}
+
+/* Optional sharing explanation; original share button appearance is unchanged. */
+.dz-share-help{appearance:none;display:inline-flex;align-items:center;justify-content:center;flex:0 0 44px;width:44px;height:44px;border:1px solid #b9d3c2;border-radius:50%;background:#f2f8f4;color:#006233;cursor:pointer;box-sizing:border-box}
+.dz-share-help svg{width:21px;height:21px}
+.dz-share-help:hover,.dz-share-help[aria-expanded="true"]{background:#e0f0e6}
+.dz-share-help:focus-visible{outline:3px solid #daa520;outline-offset:3px}
+.dz-share-hint[hidden]{display:none!important}
+.dz-share-hint{position:absolute;bottom:calc(100% + 10px);right:0;z-index:20;width:max-content;max-width:min(310px,calc(100vw - 32px));padding:12px 14px;border:1px solid #d5e7db;border-radius:12px;background:#fff;color:#24372c;box-shadow:0 8px 24px #0002;font:500 14px/1.65 Tajawal,Arial,sans-serif;white-space:normal;text-align:right;direction:rtl;box-sizing:border-box}
+.dz-share-hint::after{content:"";position:absolute;right:18px;bottom:-6px;width:10px;height:10px;background:#fff;border-right:1px solid #d5e7db;border-bottom:1px solid #d5e7db;transform:rotate(45deg)}
+@media(max-width:767px){.dz-share-slot .dz-share-button{width:auto;flex:1 1 auto;min-width:0}.dz-share-slot{flex-wrap:nowrap}.dz-share-hint{width:min(310px,calc(100vw - 32px));max-width:calc(100vw - 32px)}}
+@media(prefers-reduced-motion:reduce){.dz-share-help{transition:none}}
