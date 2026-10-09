@@ -33,3 +33,15 @@ const fridayHoliday=mk('holiday','a-b',[['a','08:00',null],['b',null,'09:00']],'
 assert(runsOn(fridayHoliday,'2026-11-01',calendars,exceptions,holidays.dates));
 assert(!runsOn(fridayHoliday,'2026-11-10',calendars,exceptions,holidays.dates));
 console.log('SNTF journey planner PASS: direct trains, safe transfer, overnight, holiday coverage and pending dates.');
+
+const partial=mk('departure-only','a-b',[['a','08:00',null],['b',null,null]]);
+const onward=mk('onward','b-c',[['b','09:10',null],['c',null,'10:00']]);
+const config={date:'2026-10-09',after:'00:00',calendars,holidays:[]};
+assert.equal(planJourney({...config,trips:[partial],origin:'a',destination:'b'}).direct[0].arrival,null);
+assert.equal(planJourney({...config,trips:[partial],origin:'a',destination:'b',after:'08:01'}).direct.length,0);
+assert.equal(planJourney({...config,trips:[partial,onward],origin:'a',destination:'c'}).connections.length,0,'Unknown interchange arrival cannot establish a safe transfer');
+const lastPartial=mk('last-partial','b-c',[['b','09:10',null],['c',null,null]]);
+assert.equal(planJourney({...config,trips:[sample[0],lastPartial],origin:'a',destination:'c'}).connections.length,0,'Incomplete services are direct results only');
+assert.equal(planJourney({...config,trips:[partial],origin:'b',destination:'a'}).direct.length,0,'No guessed return or untimed departure');
+assert.equal(planJourney({...config,origin:'a',destination:'b',date:'2026-09-20',trips:[{...partial,effective_from:'2026-09-21'}]}).direct.length,0);
+console.log('Departure-only planner PASS: direct results, time filtering and safe transfers.');

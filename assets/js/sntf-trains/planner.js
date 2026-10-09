@@ -6,7 +6,7 @@ const DAY = 86400000;
 const timestamp = (date, clock) => Date.parse(date + 'T00:00:00+01:00') + mins(clock) * 60000;
 const published = trip => trip.data_status === 'source_transcribed' || trip.data_status === 'verified';
 
-// A leg needs a published departure and arrival in the right station order.
+// Direct services may have an unpublished arrival; connections require both times.
 function legsForDate(trips, date, config, earliest) {
   const start = timestamp(date, '00:00');
   const end = start + DAY;
@@ -22,9 +22,9 @@ function legsForDate(trips, date, config, earliest) {
         if (dep < earliest || dep >= end + DAY) continue;
         for (let j = i + 1; j < stops.length; j++) {
           const arrival = mins(stops[j].arrival);
-          if (!Number.isFinite(arrival)) continue;
-          const arr = timestamp(serviceDate, stops[j].arrival);
-          if (arr <= dep) continue;
+          if (stops[j].arrival != null && !Number.isFinite(arrival)) continue;
+          const arr = Number.isFinite(arrival) ? timestamp(serviceDate, stops[j].arrival) : null;
+          if (arr !== null && arr <= dep) continue;
           legs.push({trip, serviceDate, from:stops[i].station_id, to:stops[j].station_id,
             fromIndex:i, toIndex:j, departure:dep, arrival:arr});
         }
@@ -40,15 +40,16 @@ export function planJourney({trips, origin, destination, date, after='00:00', ca
   const {legs, start, end} = legsForDate(trips, date, config, timestamp(date, after));
   const first = legs.filter(l => l.from === origin && l.departure >= start && l.departure < end);
   const direct = first.filter(l => l.to === destination)
-    .sort((a,b) => a.departure-b.departure || a.arrival-b.arrival).slice(0,20);
+    .sort((a,b) => a.departure-b.departure || (a.arrival ?? Infinity)-(b.arrival ?? Infinity)).slice(0,20);
   const byOrigin = new Map();
   for (const leg of legs) {
+    if (leg.arrival === null) continue;
     if (!byOrigin.has(leg.from)) byOrigin.set(leg.from, []);
     byOrigin.get(leg.from).push(leg);
   }
   const connections = [];
   for (const a of first) {
-    if (a.to === destination || a.to === origin) continue;
+    if (a.arrival === null || a.to === destination || a.to === origin) continue;
     for (const b of byOrigin.get(a.to) || []) {
       if (b.to !== destination || a.trip.trip_id === b.trip.trip_id && a.serviceDate === b.serviceDate) continue;
       const wait = (b.departure - a.arrival) / 60000;

@@ -1,6 +1,6 @@
 import {schedulePageForImage} from "../sntf-schedules/catalog.js?v=20261004-stable";
 import {dayParts,dayISO,recordsAtStation,eligible,formatTime,countdown,classify,mins} from "./engine.js";
-import {planJourney} from "./planner.js";
+import {planJourney} from "./planner.js?v=20261009-partial-journeys";
 import {stationPicker} from "./station-picker.js?v=20261003-no-default-station";
 import {railwayCategories,categoryRoutes,canonicalRouteId,routeTrips,routeStopSummary,lineRoutes,lineSummary,stationLineServices,eligibleStationIdsByCategory} from "./network.js?v=20260928-catalog-audit";
 const dataRoot=new URL("../../data/sntf/",import.meta.url);
@@ -208,7 +208,7 @@ function renderBoards(now=new Date()){
 const journeyClock = ms => new Intl.DateTimeFormat('ar-DZ-u-nu-latn',{timeZone:'Africa/Algiers',hour:'2-digit',minute:'2-digit',hourCycle:'h23'}).format(ms);
 const journeyDay = ms => new Intl.DateTimeFormat('ar-DZ-u-nu-latn',{timeZone:'Africa/Algiers',day:'numeric',month:'short'}).format(ms);
 const journeyDuration = minutes => `${Math.floor(minutes/60)} س ${Math.round(minutes%60)} د`;
-const journeyTime = ms => `<time datetime="${new Date(ms).toISOString()}">${esc(journeyClock(ms))} <small>${esc(journeyDay(ms))}</small></time>`;
+const journeyTime = ms => ms === null ? '<span class="minor">وقت الوصول غير منشور</span>' : `<time datetime="${new Date(ms).toISOString()}">${esc(journeyClock(ms))} <small>${esc(journeyDay(ms))}</small></time>`;
 function journeyLeg(leg){
  const stops=leg.trip.stop_times.slice(leg.fromIndex,leg.toIndex+1);
  const route=routeFor(leg.trip.route_id),source=state.sources.find(s=>s.id===leg.trip.source_id);
@@ -226,10 +226,10 @@ function journeyCard(item,index){
  const transfer=Boolean(item.second),first=transfer?item.first:item,last=transfer?item.second:item;
  const title=transfer?`تبديل في ${name(item.station)} · انتظار ${journeyDuration(item.wait)}`:'رحلة مباشرة';
  const links=[first,last].filter((leg,i)=>!i||transfer).map((leg,i)=>`<a class="photo-source" href="${esc(tripPageLink(leg.trip,leg.serviceDate,leg.from,leg.to))}">${transfer?'القطار '+(i+1):'صفحة الرحلة'} · ${esc(leg.trip.train_number||'غير محدد')} ←</a>`).join('');
- return `<article class="journey-card"><div class="journey-card-head"><strong>${esc(title)}</strong><span>${journeyTime(first.departure)} ← ${journeyTime(last.arrival)}</span></div><p class="minor">${esc(name(first.from))} ← ${esc(name(last.to))} · المدة ${esc(journeyDuration((last.arrival-first.departure)/60000))}</p><div class="journey-links">${links}</div><details class="journey-extra"><summary>التوقفات والتذكيرات</summary>${journeyLeg(first)}${transfer?journeyLeg(last):''}<div class="journey-actions"><button class="button outline" type="button" data-calendar="${index}">إضافة تذكير إلى التقويم</button><button class="button outline" type="button" data-remind="${index}">تنبيه أثناء فتح الصفحة</button></div></details></article>`;
+ return `<article class="journey-card"><div class="journey-card-head"><strong>${esc(title)}</strong><span>${journeyTime(first.departure)} ← ${journeyTime(last.arrival)}</span></div><p class="minor">${esc(name(first.from))} ← ${esc(name(last.to))} · ${last.arrival === null ? 'المدة غير منشورة' : 'المدة '+esc(journeyDuration((last.arrival-first.departure)/60000))}</p><div class="journey-links">${links}</div>${first.trip.operating_days_note?`<p class="journey-notice">${esc(first.trip.operating_days_note)}</p>`:''}<details class="journey-extra"><summary>التوقفات والتذكيرات</summary>${journeyLeg(first)}${transfer?journeyLeg(last):''}<div class="journey-actions"><button class="button outline" type="button" data-calendar="${index}">إضافة تذكير إلى التقويم</button><button class="button outline" type="button" data-remind="${index}">تنبيه أثناء فتح الصفحة</button></div></details></article>`;
 }
 function populateJourneyStations(){
- const ids=new Set(state.trips.filter(t=>t.data_status==='source_transcribed'||t.data_status==='verified').flatMap(t=>t.stop_times.filter(s=>s.arrival!=null||s.departure!=null).map(s=>s.station_id)));
+ const ids=new Set(state.trips.filter(t=>t.data_status==='source_transcribed'||t.data_status==='verified').flatMap(t=>t.stop_times.map(s=>s.station_id)));
  state.journeyStations=state.stations.filter(s=>ids.has(s.id)).sort((a,b)=>a.name.localeCompare(b.name,'ar'));
  for(const kind of ['from','to']){
   const input=$('journey-'+kind+'-search');
@@ -271,7 +271,7 @@ function addCalendar(item){
  const info=itineraryReminder(item);
  const utc=ms=>new Date(ms).toISOString().replace(/[-:]/g,'').replace(/\.\d{3}Z$/,'Z');
  const safe=s=>s.replace(/[\\;,\n]/g,c=>({'\\':'\\\\',';':'\\;',',':'\\,','\n':'\\n'}[c]));
- const body=['BEGIN:VCALENDAR','VERSION:2.0','PRODID:-//DZ Portal//DZ Rail//AR','BEGIN:VEVENT','UID:'+encodeURIComponent(info.key)+'@dz-portal','DTSTAMP:'+utc(Date.now()),'DTSTART:'+utc(info.departure),'DTEND:'+utc(info.arrival),'SUMMARY:'+safe(info.title),'DESCRIPTION:'+safe('وقت مجدول من صورة جدول SNTF؛ تحقق من تحديثات الشركة قبل السفر.'),'BEGIN:VALARM','TRIGGER:-PT30M','ACTION:DISPLAY','DESCRIPTION:'+safe(info.title),'END:VALARM','END:VEVENT','END:VCALENDAR',''].join('\r\n');
+ const body=['BEGIN:VCALENDAR','VERSION:2.0','PRODID:-//DZ Portal//DZ Rail//AR','BEGIN:VEVENT','UID:'+encodeURIComponent(info.key)+'@dz-portal','DTSTAMP:'+utc(Date.now()),'DTSTART:'+utc(info.departure),...(info.arrival === null ? [] : ['DTEND:'+utc(info.arrival)]),'SUMMARY:'+safe(info.title),'DESCRIPTION:'+safe('وقت مجدول من صورة جدول SNTF؛ تحقق من تحديثات الشركة قبل السفر.'),'BEGIN:VALARM','TRIGGER:-PT30M','ACTION:DISPLAY','DESCRIPTION:'+safe(info.title),'END:VALARM','END:VEVENT','END:VCALENDAR',''].join('\r\n');
  const url=URL.createObjectURL(new Blob([body],{type:'text/calendar;charset=utf-8'}));
  const a=document.createElement('a');a.href=url;a.download='dz-rail-'+new Date(info.departure).toISOString().slice(0,10)+'.ics';document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),60000);
 }
