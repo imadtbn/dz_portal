@@ -1,4 +1,5 @@
 import {dayISO,mins,formatTime,runsOn,shiftISO,isHoliday} from './engine.js';
+import {schedules} from '../sntf-schedules/catalog.js';
 const root=new URL('../../data/sntf/',import.meta.url);
 const $=id=>document.getElementById(id);
 const esc=value=>String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
@@ -14,6 +15,14 @@ const safeImage=value=>{
  if(/^\.\.\/assets\/train-schedules\/[\w./ -]+\.(?:png|jpe?g|webp|svg)$/i.test(value)&&!value.includes('..',3))return value;
  if(/^https:\/\/imadtbn\.github\.io\/dz_portal\/assets\/train-schedules\/[\w./ -]+\.(?:png|jpe?g|webp|svg)$/i.test(value)&&!value.includes('/../'))return value;
  return null;
+};
+// Map the source image to the matching schedule viewer entry, rather than opening raw files.
+const scheduleViewerLink=(image,route)=>{
+ if(!image)return null;
+ const imagePath=new URL(image,location.href).pathname;
+ const entry=schedules.find(s=>new URL(s.image,location.href).pathname===imagePath)
+   || schedules.find(s=>s.routeId&&s.routeId===route?.id);
+ return entry?'sntf-schedule.html?schedule='+encodeURIComponent(entry.id):null;
 };
 async function read(name,key){const response=await fetch(new URL(name+'.json',root),{cache:'no-cache'});if(!response.ok)throw Error('تعذر تحميل '+name);const data=await response.json();if(!Array.isArray(data[key]))throw Error('ملف غير صالح: '+name);return data}
 const params=new URL(location.href).searchParams;
@@ -118,20 +127,20 @@ function render(){
  const diff=Number.isFinite(dep)&&Number.isFinite(arr)&&arr>=dep?duration(arr-dep):'غير منشورة';
  const validity=source?.valid_from||trip.effective_from;
  const note=trip.time_status==='partial'?'<p class="notice">الصورة تنشر وقت الانطلاق فقط؛ أوقات التوقف والوصول غير منشورة، والمحطات المبيّنة دون وقت لا تمثل وعدًا بالتوقف.</p>':'';
- const img=image?`<button class="source-preview" id="open-photo" type="button" aria-label="تكبير صورة الجدول"><img src="${esc(image)}" alt="صورة جدول SNTF للرحلة" loading="lazy"></button>`:'<p class="empty">لا توجد صورة محددة لهذه الرحلة.</p>';
+ const scheduleUrl=scheduleViewerLink(image,route);
+ const img=image?`<a class="source-preview" href="${esc(scheduleUrl||'#')}" aria-label="عرض الجدول المصور في عارض الجداول"><img src="${esc(image)}" alt="صورة جدول SNTF للرحلة" loading="lazy"></a>`:'<p class="empty">لا توجد صورة محددة لهذه الرحلة.</p>';
  const canRemind=runsOn(trip,date,calendars,exceptions,holidays)&&trip.stop_times.some(s=>s.station_id===(from||trip.stop_times[0].station_id)&&Number.isFinite(mins(s.departure)));
  const actions=`${canRemind?'<button class="button" type="button" id="calendar-trip">تذكير تقويم قبل 30 دقيقة</button>':''}<a class="button" href="sntf-trains.html#journey-planner">البحث عن رحلة أخرى</a><button class="button" type="button" id="share-trip">مشاركة الرحلة</button>`;
  $('trip-content').innerHTML=`<section class="trip-hero"><span class="eyebrow">${esc(route?.category||'رحلة قطار')} · جدول مجدول</span><h1>${esc(station(first.station_id))} ← ${esc(station(last.station_id))}</h1><p>${esc(route?.name||'تفاصيل الرحلة')} · ${esc(readableDate(date))}</p><div class="chips"><span class="chip">القطار: ${esc(trip.train_number||'رقم غير منشور')}</span><span class="chip">${esc(daysLabel())}</span><span class="chip">المدة: ${esc(diff)}</span></div><div class="time-grid"><div><small>الانطلاق</small><strong dir="ltr">${esc(summaryTime(first,'departure'))}</strong></div><div><small>الوصول</small><strong dir="ltr">${esc(summaryTime(last,'arrival'))}</strong></div></div></section>
  <section class="panel"><h2>تاريخ السفر وأيام التشغيل</h2><div class="date-row"><label for="travel-date">اختر تاريخًا لعرض حالة التشغيل<input id="travel-date" type="date" value="${esc(date)}"></label><span class="chip">${esc(daysLabel())}</span></div><div id="operating-status">${dateStatus()}</div><dl class="meta-grid"><div><dt>رقم القطار</dt><dd>${esc(trip.train_number||'غير منشور')}</dd></div><div><dt>بداية سريان الجدول المنشورة</dt><dd>${esc(validity||'غير محددة')}</dd></div><div><dt>عدد المحطات المدرجة</dt><dd>${trip.stop_times.length}</dd></div></dl><p class="notice">هذه أوقات مجدولة من صورة SNTF الرسمية، وليست بيانات تتبع حي أو إعلانًا بتأخير القطار.</p></section>
  <section class="panel"><h2>جميع المحطات والأوقات</h2><p>يظهر وقت الوصول والمغادرة منفصلين عندما ينشر الجدول قيمتين مختلفتين. الشرطة تعني أن الوقت غير منشور.</p>${note}<table class="time-table"><thead><tr><th scope="col">المحطة</th><th scope="col">الوصول</th><th scope="col">المغادرة</th></tr></thead><tbody>${stopsHtml()}</tbody></table></section>
- <section class="panel"><h2>صورة الجدول الأصلي</h2><div class="source-layout"><div class="source-info"><p><strong>${esc(source?.name||'جدول SNTF المصور')}</strong></p><p>مصدر التوقيت: الصورة المرتبطة بهذه الرحلة. ${esc(source?.notice||'')}</p><div class="actions">${image?`<a class="button primary" href="${esc(image)}" target="_blank" rel="noopener noreferrer">فتح الصورة بالحجم الكامل ↗</a>`:''}${actions}</div><p id="share-status" role="status"></p></div>${img}</div></section>`;
+ <section class="panel"><h2>صورة الجدول الأصلي</h2><div class="source-layout"><div class="source-info"><p><strong>${esc(source?.name||'جدول SNTF المصور')}</strong></p><p>مصدر التوقيت: الصورة المرتبطة بهذه الرحلة. ${esc(source?.notice||'')}</p><div class="actions">${scheduleUrl?`<a class="button primary" href="${esc(scheduleUrl)}">عرض الجدول الأصلي بوضوح ←</a>`:''}${actions}</div><p id="share-status" role="status"></p></div>${img}</div></section>`;
  $('travel-date').addEventListener('change',event=>{
   if(!validDate(event.target.value))return;
   date=event.target.value;
   history.replaceState(null,'',tripLink(trip,date,from,to));
   render();
  });
- $('open-photo')?.addEventListener('click',()=>{$('photo-expanded').src=image;$('photo-dialog').showModal()});
  $('calendar-trip')?.addEventListener('click',calendarReminder);
  $('share-trip').addEventListener('click',async()=>{
   const url=new URL(tripLink(trip,date,from,to),location.href).href;
