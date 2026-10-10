@@ -1,0 +1,240 @@
+{
+  "version": 4,
+  "updated": "2026-09-28",
+  "calendars": [
+    {
+      "id": "daily",
+      "label": "يسير كل يوم",
+      "rule": "daily",
+      "days": {
+        "sunday": true,
+        "monday": true,
+        "tuesday": true,
+        "wednesday": true,
+        "thursday": true,
+        "friday": true,
+        "saturday": true
+      }
+    },
+    {
+      "id": "friday_holiday",
+      "label": "يسير الجمعة والأعياد المسجلة",
+      "rule": "friday_holiday",
+      "days": {
+        "friday": true
+      },
+      "holiday_source": "holidays.json",
+      "note": "Days flagged in holidays.json only; no automatic guessing of religious/public holiday dates."
+    },
+    {
+      "id": "weekday_not_friday",
+      "label": "لا يسير الجمعة والأعياد المسجلة",
+      "rule": "weekday_not_friday",
+      "days": {
+        "sunday": true,
+        "monday": true,
+        "tuesday": true,
+        "wednesday": true,
+        "thursday": true,
+        "friday": false,
+        "saturday": true
+      },
+      "holiday_source": "holidays.json"
+    },
+    {
+      "id": "except_friday",
+      "label": "لا يسير الجمعة (الأعياد غير محددة في المصدر)",
+      "rule": "except_friday",
+      "days": {
+        "sunday": true,
+        "monday": true,
+        "tuesday": true,
+        "wednesday": true,
+        "thursday": true,
+        "friday": false,
+        "saturday": true
+      }
+    },
+    {
+      "id": "friday_only",
+      "label": "الجمعة فقط",
+      "rule": "friday_only",
+      "days": {
+        "sunday": false,
+        "monday": false,
+        "tuesday": false,
+        "wednesday": false,
+        "thursday": false,
+        "friday": true,
+        "saturday": false
+      },
+      "note": "رمز [2] في جداول SNTF المصورة؛ لا تشمل الأعياد تلقائيًا."
+    },
+    {
+      "id": "sntf_intl_annaba_sun_tue_thu",
+      "label": "عنابة ← تونس: الأحد والثلاثاء والخميس",
+      "rule": "custom_days",
+      "days": {
+        "sunday": true,
+        "monday": false,
+        "tuesday": true,
+        "wednesday": false,
+        "thursday": true,
+        "friday": false,
+        "saturday": false
+      },
+      "note": "أيام التشغيل كما وردت في صورة الجدول الرسمي للقطار الدولي المرفقة بالمشروع؛ لا تُفترض رحلات أيام السبت."
+    },
+    {
+      "id": "sntf_intl_tunis_mon_wed_fri",
+      "label": "تونس ← عنابة: الإثنين والأربعاء والجمعة",
+      "rule": "custom_days",
+      "days": {
+        "sunday": false,
+        "monday": true,
+        "tuesday": false,
+        "wednesday": true,
+        "thursday": false,
+        "friday": true,
+        "saturday": false
+      },
+      "note": "أيام التشغيل كما وردت في صورة الجدول الرسمي للقطار الدولي المرفقة بالمشروع؛ لا تُفترض رحلات أيام السبت."
+    },
+    {
+      "id": "eastern-days-unresolved",
+      "label": "أيام التشغيل غير مذكورة في الصورة",
+      "rule": "custom_days",
+      "days": {
+        "sunday": false,
+        "monday": false,
+        "tuesday": false,
+        "wednesday": false,
+        "thursday": false,
+        "friday": false,
+        "saturday": false
+      },
+      "note": "الأيام غير محسومة: لا تنشئ أحداثًا قادمة حتى المراجعة."
+    },
+    {
+      "id": "eastern-annaba-calendar-conflict",
+      "label": "تعارض صور عنابة في أيام التشغيل",
+      "rule": "custom_days",
+      "days": {
+        "sunday": false,
+        "monday": false,
+        "tuesday": false,
+        "wednesday": false,
+        "thursday": false,
+        "friday": false,
+        "saturday": false
+      },
+      "note": "الأيام غير محسومة: لا تنشئ أحداثًا قادمة حتى المراجعة."
+    },
+    {
+      "id": "eastern-tebessa-out",
+      "label": "الجزائر ← تبسة: الأحد والثلاثاء والخميس",
+      "rule": "custom_days",
+      "days": {
+        "sunday": true,
+        "monday": false,
+        "tuesday": true,
+        "wednesday": false,
+        "thursday": true,
+        "friday": false,
+        "saturday": false
+      },
+      "note": "أيام التشغيل من صورة الجدول المرفقة؛ لا تُفترض الأعياد."
+    },
+    {
+      "id": "eastern-tebessa-back",
+      "label": "تبسة ← الجزائر: السبت والإثنين والأربعاء",
+      "rule": "custom_days",
+      "days": {
+        "sunday": false,
+        "monday": true,
+        "tuesday": false,
+        "wednesday": true,
+        "thursday": false,
+        "friday": false,
+        "saturday": true
+      },
+      "note": "أيام التشغيل من صورة الجدول المرفقة؛ لا تُفترض الأعياد."
+    },
+    {
+      "id": "timetable-days-unresolved",
+      "label": "أيام التشغيل غير مذكورة في الصورة",
+      "rule": "custom_days",
+      "days": {
+        "sunday": false,
+        "monday": false,
+        "tuesday": false,
+        "wednesday": false,
+        "thursday": false,
+        "friday": false,
+        "saturday": false
+      },
+      "note": "لا تنشأ رحلات قادمة حتى يراجع المحرر أيام التشغيل من المصدر."
+    },
+    {
+      "id": "sahara-touggourt-out",
+      "label": "آغا ← تقرت: السبت والإثنين والأربعاء",
+      "rule": "custom_days",
+      "days": {
+        "sunday": false,
+        "monday": true,
+        "tuesday": false,
+        "wednesday": true,
+        "thursday": false,
+        "friday": false,
+        "saturday": true
+      },
+      "note": "أيام الجدول المصور؛ الأعياد ليست مضافة تلقائيًا."
+    },
+    {
+      "id": "sahara-touggourt-back",
+      "label": "تقرت ← آغا: الأحد والثلاثاء والخميس",
+      "rule": "custom_days",
+      "days": {
+        "sunday": true,
+        "monday": false,
+        "tuesday": true,
+        "wednesday": false,
+        "thursday": true,
+        "friday": false,
+        "saturday": false
+      },
+      "note": "أيام الجدول المصور؛ الأعياد ليست مضافة تلقائيًا."
+    },
+    {
+      "id": "sahara-tindouf-out",
+      "label": "بشار ← تيندوف: السبت والإثنين والأربعاء",
+      "rule": "custom_days",
+      "days": {
+        "sunday": false,
+        "monday": true,
+        "tuesday": false,
+        "wednesday": true,
+        "thursday": false,
+        "friday": false,
+        "saturday": true
+      },
+      "note": "أيام الجدول المصور؛ الأعياد ليست مضافة تلقائيًا."
+    },
+    {
+      "id": "sahara-tindouf-back",
+      "label": "تيندوف ← بشار: الأحد والثلاثاء والخميس",
+      "rule": "custom_days",
+      "days": {
+        "sunday": true,
+        "monday": false,
+        "tuesday": true,
+        "wednesday": false,
+        "thursday": true,
+        "friday": false,
+        "saturday": false
+      },
+      "note": "أيام الجدول المصور؛ الأعياد ليست مضافة تلقائيًا."
+    }
+  ],
+  "exceptions": []
+}

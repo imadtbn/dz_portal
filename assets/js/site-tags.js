@@ -5,6 +5,7 @@
   window.__dzPortalSiteTagsLoaded = true;
 
   const GTM_ID = 'GTM-NW3BWPF6';
+  const GA4_ID = 'G-K23WYKK60X';
   const ADSENSE_CLIENT = 'ca-pub-5656416032906373';
 
   // تهيئة dataLayer وgtag القياسي لضمان وصول الأحداث بدقة إلى GA4 وGTM
@@ -32,14 +33,11 @@
         timestamp: Date.now(),
         ...eventParams,
       };
-      window.dataLayer.push(payload);
-
+      // gtag() itself writes to dataLayer. Sending both a custom dataLayer
+      // event and a gtag event can make the same interaction fire twice when
+      // GTM also listens for that event. Use one GA4 event path only.
       if (typeof window.gtag === 'function') {
-        window.gtag('event', eventName, {
-          ...eventParams,
-          page_title: document.title,
-          page_location: window.location.href,
-        });
+        window.gtag('event', eventName, payload);
       }
     } catch (error) {
       console.warn('Analytics event tracking error:', error);
@@ -50,13 +48,17 @@
   // تتم تهيئة GA4 مباشرة داخل head؛ يجب تعطيل أي وسم GA4 أو page_view داخل حاوية GTM.
   window.__dzPortalTagConfig = Object.freeze({
     gtmId: GTM_ID,
+    ga4Id: GA4_ID,
     adsenseClient: ADSENSE_CLIENT,
     trackEvent,
   });
 
+  const GA4_SRC = `https://www.googletagmanager.com/gtag/js?id=${GA4_ID}`;
   const GTM_SRC = `https://www.googletagmanager.com/gtm.js?id=${GTM_ID}`;
   const ADSENSE_SRC = `https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADSENSE_CLIENT}`;
   const state = {
+    ga4Started: false,
+    pageViewSent: false,
     gtmStarted: false,
     adsenseRequested: false,
     adsObserverStarted: false,
@@ -96,6 +98,89 @@
       window.setTimeout(callback, timeout);
     }
   };
+
+  const sendPageView = () => {
+    if (state.pageViewSent || window.__dzPortalGa4PageViewSent) return;
+
+    state.pageViewSent = true;
+    window.__dzPortalGa4PageViewSent = true;
+
+    const pageHeading = document.querySelector('.sector-hero h1, .sector-hero h2, main h1, h1')?.textContent?.trim() || '';
+
+    window.gtag('event', 'page_view', {
+      send_to: GA4_ID,
+      page_title: document.title,
+      page_location: window.location.href,
+      page_path: window.location.pathname,
+      page_sector: pageHeading,
+      site_language: 'ar',
+    });
+  };
+
+  const initializeGa4 = () => {
+    if (state.ga4Started || window.__dzPortalGa4Initialized) {
+      sendPageView();
+      return;
+    }
+
+    state.ga4Started = true;
+    window.__dzPortalGa4Initialized = true;
+
+    // site-tags.js is the canonical GA4 bootstrap. Disable the automatic
+    // config page_view and send exactly one explicit page_view ourselves.
+    window.gtag('js', new Date());
+    window.gtag('config', GA4_ID, {
+      send_page_view: false,
+      page_title: document.title,
+      page_location: window.location.href,
+      page_path: window.location.pathname,
+    });
+
+    loadExternalScript(GA4_SRC, { onload: sendPageView });
+
+    // gtag queues commands before the library is ready, so this fallback
+    // guarantees that the explicit page_view is queued even if load fires
+    // from an already-cached script.
+    sendPageView();
+  };
+
+  // Lightweight diagnostics for GA4 verification from DevTools.
+  // Does not create page_view or any additional analytics event.
+  const getAnalyticsDiagnostics = () => new Promise((resolve) => {
+    const report = {
+      ga4Id: GA4_ID,
+      gtmId: GTM_ID,
+      gtagAvailable: typeof window.gtag === 'function',
+      dataLayerAvailable: Array.isArray(window.dataLayer),
+      gtmLoaded: Boolean(findExternalScript(GTM_SRC)),
+      pageLocation: window.location.href,
+      clientId: null,
+      sessionId: null,
+    };
+
+    if (typeof window.gtag !== 'function') {
+      resolve(report);
+      return;
+    }
+
+    let pending = 2;
+    const done = () => {
+      pending -= 1;
+      if (pending === 0) resolve(report);
+    };
+
+    window.gtag('get', GA4_ID, 'client_id', (value) => {
+      report.clientId = value || null;
+      done();
+    });
+    window.gtag('get', GA4_ID, 'session_id', (value) => {
+      report.sessionId = value || null;
+      done();
+    });
+
+    window.setTimeout(() => resolve(report), 2000);
+  });
+  window.dzAnalyticsDiagnostics = getAnalyticsDiagnostics;
 
   const initializeGtm = () => {
     if (!state.gtmStarted) {
@@ -149,6 +234,7 @@
     }
   };
 
+  initializeGa4();
   initializeGtm();
 
   window.addEventListener('load', () => {

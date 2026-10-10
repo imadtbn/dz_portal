@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- ==== العنوان والوصف (يُحدَّثان ديناميكياً عبر JS) ==== -->
+    <title>عارض جداول مواقيت قطارات SNTF | البوابة الجزائرية</title>
+    <meta name="description" content="راجع جداول مواقيت قطارات SNTF المصوّرة مع إمكانية التكبير والسحب وملء الشاشة. اختر الخط لعرض الجدول الرسمي الكامل.">
+    <meta name="keywords" content="جداول مواقيت SNTF, عارض جداول القطارات, مواقيت القطارات الجزائر, صور جداول SNTF, خطوط القطارات الجزائر">
+    <meta name="author" content="البوابة الجزائرية للخدمات الرقمية">
+    <meta name="language" content="Arabic">
+    <meta name="theme-color" content="#006400">
+
+    <!-- ==== توجيهات الفهرسة ==== -->
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="googlebot" content="index, follow">
+
+    <!-- ==== Manifest & Icons ==== -->
+    <link rel="manifest" href="../manifest.json">
+    <link rel="icon" href="../assets/images/icon.png" type="image/png">
+    <link rel="apple-touch-icon" href="https://imadtbn.github.io/dz_portal/assets/images/icon.png">
+    <link rel="preload" as="image" href="../assets/images/sntf.jpg" fetchpriority="high">
+
+    <!-- ==== أمان ==== -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+
+    <!-- ==== Preconnect ==== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://pagead2.googlesyndication.com" crossorigin>
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+
+    <!-- ==== Canonical (يُحدَّث ديناميكياً حسب ?schedule=) ==== -->
+    <link rel="canonical" id="canonical-link" href="https://imadtbn.github.io/dz_portal/sectors/sntf-schedule.html">
+    <link rel="alternate" hreflang="ar-DZ" href="https://imadtbn.github.io/dz_portal/sectors/sntf-schedule.html">
+    <link rel="alternate" hreflang="ar" href="https://imadtbn.github.io/dz_portal/sectors/sntf-schedule.html">
+    <link rel="alternate" hreflang="x-default" href="https://imadtbn.github.io/dz_portal/sectors/sntf-schedule.html">
+
+    <!-- ==== Open Graph ==== -->
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="البوابة الجزائرية للخدمات الرقمية">
+    <meta property="og:locale" content="ar_DZ">
+    <meta property="og:title" content="عارض جداول مواقيت القطارات SNTF | البوابة الجزائرية">
+    <meta property="og:description" content="راجع جداول مواقيت قطارات SNTF المصوّرة مع أدوات التكبير والسحب وملء الشاشة.">
+    <meta property="og:url" content="https://imadtbn.github.io/dz_portal/sectors/sntf-schedule.html">
+    <meta property="og:image" content="https://imadtbn.github.io/dz_portal/assets/images/sntf.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="عارض جداول مواقيت قطارات SNTF">
+    <meta property="article:published_time" content="2026-10-04T07:56:50+00:00">
+
+    <!-- ==== Twitter ==== -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="عارض جداول مواقيت القطارات SNTF">
+    <meta name="twitter:description" content="راجع جداول مواقيت قطارات SNTF المصوّرة مع أدوات التكبير وملء الشاشة.">
+    <meta name="twitter:image" content="https://imadtbn.github.io/dz_portal/assets/images/sntf.jpg">
+    <meta name="twitter:image:alt" content="عارض جداول مواقيت قطارات SNTF">
+
+    <!-- ==== CSS ==== -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../assets/css/style-sector.css">
+    <link rel="stylesheet" href="../assets/css/sntf-schedule.css?v=20261004-stable">
+
+    <!-- ==== JSON-LD أساسي (ثابت) ==== -->
+    <script id="schedule-schema-base" type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "@id": "https://imadtbn.github.io/dz_portal/#website",
+          "url": "https://imadtbn.github.io/dz_portal/",
+          "name": "البوابة الجزائرية للخدمات الرقمية",
+          "inLanguage": "ar-DZ",
+          "publisher": { "@id": "https://imadtbn.github.io/dz_portal/#organization" }
+        },
+        {
+          "@type": "Organization",
+          "@id": "https://imadtbn.github.io/dz_portal/#organization",
+          "name": "البوابة الجزائرية للخدمات الرقمية",
+          "url": "https://imadtbn.github.io/dz_portal/",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://imadtbn.github.io/dz_portal/assets/images/icon.png",
+            "width": 512,
+            "height": 512
+          },
+          "email": "tabaniimadeddine@gmail.com",
+          "areaServed": { "@type": "Country", "name": "الجزائر" }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://imadtbn.github.io/dz_portal/sectors/sntf-schedule.html#breadcrumb-static",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "الرئيسية", "item": "https://imadtbn.github.io/dz_portal/" },
+            { "@type": "ListItem", "position": 2, "name": "السكك الحديدية SNTF", "item": "https://imadtbn.github.io/dz_portal/sectors/sntf.html" },
+            { "@type": "ListItem", "position": 3, "name": "عارض الجداول", "item": "https://imadtbn.github.io/dz_portal/sectors/sntf-schedule.html" }
+          ]
+        },
+        {
+          "@type": "WebApplication",
+          "@id": "https://imadtbn.github.io/dz_portal/sectors/sntf-schedule.html#app",
+          "name": "عارض جداول مواقيت SNTF",
+          "url": "https://imadtbn.github.io/dz_portal/sectors/sntf-schedule.html",
+          "applicationCategory": "TravelApplication",
+          "operatingSystem": "Web Browser",
+          "browserRequirements": "JavaScript",
+          "offers": { "@type": "Offer", "price": "0", "priceCurrency": "DZD" }
+        }
+      ]
+    }
+    </script>
+
+    <!-- ==== JSON-LD ديناميكي (يُملأ عبر page.js) ==== -->
+    <script id="schedule-schema" type="application/ld+json">{}</script>
+    
+    <link rel="manifest" href="../manifest.json">
+    <link rel="icon" href="../assets/images/icon.png">
+    <link rel="canonical" href="https://imadtbn.github.io/dz_portal/sectors/sntf-schedule.html">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="عارض جداول القطارات">
+    <meta property="og:description" content="راجع جدول الرحلات المصوّر.">
+    <meta property="og:url" content="https://imadtbn.github.io/dz_portal/sectors/sntf-schedule.html">
+    <meta property="og:image" content="https://imadtbn.github.io/dz_portal/assets/images/sntf.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../assets/css/style-sector.css">
+    <link rel="stylesheet" href="../assets/css/sntf-schedule.css?v=20261004-stable">
+    <script id="schedule-schema" type="application/ld+json">{}</script>
+    <script type="module" src="../assets/js/sntf-schedules/page.js?v=20261004-stable"></script>
+    <script defer src="../assets/js/deferred-homepage.js"></script>
+
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5656416032906373"
+        crossorigin="anonymous"></script>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4BCWP0498L"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-4BCWP0498L');
+    </script>
+
+
+    <!-- DZ Share: responsive page sharing -->
+    <link rel="stylesheet" href="../assets/css/dz-share.css">
+    <script defer src="../assets/js/dz-share.js"></script>
+</head>
+
+<body>
+    <header class="header">
+        <div class="header-content">
+            <div class="logo-section">
+                <button class="back-btn" onclick="history.back()" title="العودة للصفحة الرئيسية">
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+                <div>
+                    <h1>البوابة الجزائرية</h1>
+                    <span>للخدمات الرقمية</span>
+                </div>
+            </div>
+            <div class="header-actions">
+                <button class="search-trigger" title="بحث">
+                    <i class="fas fa-search" alt="بحث"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <nav class="breadcrumb" aria-label="مسار التنقل">
+        <div class="breadcrumb-content"><a href="../index.html">الرئيسية</a><span>/</span><a href="sntf.html">الجداول
+                والخدمات</a><span>/</span><a id="crumb-category" href="sntf.html">جداول القطارات</a><span>/</span><span
+                id="crumb-title" aria-current="page">عرض الجدول</span></div>
+    </nav>
+
+    <main class="schedule-main">
+
+        <section class="schedule-hero" aria-labelledby="schedule-title">
+            <div><span id="schedule-category" class="category-label">جداول القطارات</span>
+                <h1 id="schedule-title">عارض جداول القطارات</h1>
+                <p>راجع الجدول المصوّر الرسمي ومواقيت الرحلات على الخط.</p><a class="schedule-button hero-button"
+                    href="#schedule-viewer">عرض الجدول ↓</a>
+                <p class="algeria-clock">توقيت الجزائر <time id="algeria-time" dir="ltr">—</time></p>
+            </div><img id="hero-image" src="../assets/images/sntf.jpg" alt="قطارات الجزائر" width="600" height="360">
+        </section>
+
+        <p id="schedule-error" class="schedule-error" role="alert" hidden></p>
+        <div id="schedule-content" hidden>
+            <section class="schedule-info" aria-label="معلومات الجدول">
+                <div><strong id="info-title"></strong><span id="info-category"></span><span>جدول مصوّر</span></div>
+                <button type="button" class="schedule-button" data-action="share">مشاركة</button>
+            </section>
+
+            <section id="schedule-viewer" class="schedule-viewer" aria-label="عارض الجدول المصور">
+                <div class="viewer-toolbar" role="toolbar" aria-label="أدوات قراءة الجدول"><button type="button"
+                        data-action="out" aria-label="تصغير الجدول">−</button><output id="zoom-level"
+                        aria-live="polite">100%</output><button type="button" data-action="in"
+                        aria-label="تكبير الجدول">+</button><button type="button" data-action="fullscreen">ملء
+                        الشاشة</button><button type="button" data-action="native">الحجم الأصلي</button><button
+                        type="button" data-action="reset">إعادة الحجم</button></div>
+                <p class="viewer-hint">كبّر لقراءة المواقيت، ثم اسحب الصورة. على الهاتف: انقر مرتين أو استخدم إصبعين
+                    للتكبير.</p>
+                <div id="image-viewport" class="image-viewport" tabindex="0" role="region"
+                    aria-label="صورة الجدول؛ استخدم الأسهم للسحب وأزرار التكبير">
+                    <div id="image-stage" class="image-stage"><img id="schedule-image" alt="" loading="eager"
+                            fetchpriority="high" decoding="async" draggable="false"></div>
+                </div>
+                <p id="image-status" role="status">جار تحميل الجدول…</p>
+            </section>
+
+            <div class="schedule-actions"><button type="button" class="schedule-button"
+                    data-action="in">تكبير</button><button type="button" class="schedule-button"
+                    data-action="fullscreen">ملء الشاشة</button><a id="original-image" class="schedule-button"
+                    target="_blank" rel="noopener">فتح الصورة الأصلية ↗</a><button type="button" class="schedule-button"
+                    data-action="share">مشاركة</button></div>
+            <p id="share-status" role="status" aria-live="polite"></p>
+            <p class="schedule-notice">المواقيت المعروضة مأخوذة من الجدول المصوّر المدرج في المنصة. يرجى مراعاة أيام
+                التشغيل والتحديثات الاستثنائية.</p>
+
+            <aside class="schedule-ad" aria-label="إعلان"><ins class="adsbygoogle" style="display:block"
+                    data-ad-client="ca-pub-5656416032906373" data-ad-slot="3143411927" data-ad-format="auto"
+                    data-full-width-responsive="true"></ins></aside>
+
+            <nav class="schedule-context" aria-label="روابط ذات صلة"><a class="schedule-button" href="sntf.html">←
+                    العودة إلى جميع الجداول</a><a id="plan-journey" class="schedule-button"
+                    href="sntf-trains.html#panel-search">خطط رحلة ←</a></nav>
+        </div>
+        <noscript>
+            <p>يلزم تفعيل JavaScript لعرض الجدول والتكبير. <a href="sntf.html">العودة إلى جميع الجداول</a></p>
+        </noscript>
+    </main>
+    <dialog id="schedule-dialog" aria-labelledby="dialog-title">
+        <div class="dialog-heading"><strong id="dialog-title">الجدول المصوّر</strong><button id="close-dialog"
+                type="button" class="schedule-button">إغلاق ×</button></div>
+        <div id="dialog-viewer"></div>
+    </dialog>
+
+
+    <div class="ad-container">
+        <!-- إعلانات صورية 02 -->
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5656416032906373"
+            data-ad-slot="1760836049" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    </div>
+
+    <!-- Footer - 3 Columns -->
+    <footer class="footer">
+        <div class="footer-content">
+            <!-- Column 1: Brand -->
+            <div class="footer-column">
+                <div class="footer-brand">
+                    <img src="../assets/images/dz.png" alt="علم دولة الجزائر" loading="lazy" width="120" height="120"
+                        decoding="async">
+                    <div>
+                        <h3>البوابة الجزائرية</h3>
+                        <span>للخدمات الرقمية</span>
+                    </div>
+                </div>
+                <p class="footer-desc">
+                    منصة وطنية موحدة تتيح للمواطن الجزائري الوصول السريع والآمن إلى جميع الخدمات الحكومية والعمومية
+                    الرقمية من مكان واحد، دون تعقيد أو تنقل إداري.
+                </p>
+                <div class="social-links">
+                    <a href="#" title="فيسبوك"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" title="تويتر"><i class="fab fa-twitter"></i></a>
+                    <a href="#" title="إنستغرام"><i class="fab fa-instagram"></i></a>
+                    <a href="#" title="يوتيوب"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+
+            <!-- Column 2: Quick Links -->
+            <div class="footer-column">
+                <h4><i class="fas fa-link"></i> روابط سريعة</h4>
+                <ul class="footer-links">
+                    <li>
+                        <a href="../index.html">
+                            <i class="fas fa-home"></i> الصفحة الرئيسية
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../pages/about.html">
+                            <i class="fas fa-users"></i> من نحن
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../pages/contact.html">
+                            <i class="fas fa-envelope"></i> اتصل بنا
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../pages/privacy.html">
+                            <i class="fas fa-shield-alt"></i> سياسة الخصوصية
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../pages/terms.html">
+                            <i class="fas fa-file-contract"></i> شروط الاستخدام
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Column 3: Contact Info -->
+            <div class="footer-column">
+                <h4><i class="fas fa-address-card"></i> معلومات الاتصال</h4>
+                <div class="footer-contact">
+                    <p>
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:tabaniimadeddine@gmail.com" class="footer-link email-link">
+                            tabaniimadeddine@gmail.com
+                        </a>
+                    </p>
+
+                    <p>
+                        <i class="fas fa-phone"></i>
+                        <a href="tel:+213" class="footer-link phone-link">
+                            +213 697
+                        </a>
+                    </p>
+
+                    <p>
+                        <i class="fas fa-map-marker-alt"></i> الجزائر العاصمة، الجزائر
+                    </p>
+
+                    <p>
+                        <i class="fas fa-clock"></i> متاح 24/7 - طوال أيام الأسبوع
+                    </p>
+
+                </div>
+                <div style="margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid rgba(255,255,255,0.1);">
+                    <p style="color: var(--gray-300); font-size: 0.9rem;">
+                        <i class="fas fa-code" style="color: var(--gold); margin-left: 0.5rem;"></i> آخر تحديث <span
+                            class="heart">:</span> في 2026/10/04
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2025 البوابة الجزائرية للخدمات الرقمية - جميع الحقوق محفوظة</p>
+            <p style="margin-top: 0.5rem; font-size: 0.85rem;">❀ لا تنسونا من صالح دعائكم ❀</p>
+        </div>
+    </footer>
+
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+
+</body>
+
+</html>
