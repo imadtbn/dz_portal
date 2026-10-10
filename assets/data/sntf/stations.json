@@ -1700,15 +1700,6 @@
       "geo_verified": true
     },
     {
-      "id": "saida",
-      "name": "سعيدة",
-      "name_fr": "Saïda",
-      "lat": 34.842021,
-      "lon": 0.120109,
-      "geo_source": "Google Maps",
-      "geo_verified": true
-    },
-    {
       "id": "telagh",
       "name": "تلاغ",
       "name_fr": "Telagh",
