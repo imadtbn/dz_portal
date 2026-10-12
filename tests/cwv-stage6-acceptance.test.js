@@ -65,7 +65,7 @@ test('PWA PNG icon dimensions agree with manifest declarations', () => {
   const manifest = JSON.parse(read('manifest.json'));
   const seen = new Set();
   for (const icon of manifest.icons) {
-    const declared = icon.sizes.match(/^(\\d+)x(\\d+)$/);
+    const declared = icon.sizes.match(/^(\d+)x(\d+)$/);
     if (!declared || seen.has(icon.src)) continue;
     seen.add(icon.src);
     const png = readFileSync(url(icon.src.slice('/dz_portal/'.length)));
