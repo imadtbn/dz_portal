@@ -57,7 +57,8 @@ test('all priority pages retain the expected number of service and sector cards'
   ];
   for (const [path, className, count] of pages) {
     const html = load(path);
-    const actual = (html.match(new RegExp('class=["\\\'][^"\\\']*\\b' + className + '\\b', 'g')) || []).length;
+    const classes = [...html.matchAll(/class=["']([^"']+)["']/g)];
+    const actual = classes.filter((match) => match[1].split(/\s+/).includes(className)).length;
     assert.equal(actual, count, path);
   }
 });
