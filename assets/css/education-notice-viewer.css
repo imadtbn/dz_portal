@@ -77,10 +77,24 @@ body.education-notice-page{margin:0;direction:rtl;font-family:"Tajawal",system-u
   .reader-toolbar .reader-control{font-size:.72rem;gap:3px;padding-inline:2px}
   .reader-toolbar #bulletinZoomLabel{font-size:.78rem}
 }
+/* Single bottom-of-page AdSense placement for bulletin readers. */
+.reader-ad{
+  width:100%;
+  min-width:0;
+  max-width:100%;
+  margin:20px auto 0;
+  padding:0;
+  overflow:hidden;
+  text-align:center;
+}
+.reader-ad .adsbygoogle{width:100%;max-width:100%}
+@media(max-width:600px){
+  .reader-ad{margin-top:16px}
+}
 @media print{
   @page{size:auto;margin:9mm}
   body.education-notice-page{background:white}
-  .reader-header,.reader-breadcrumb,.reader-toolbar,.reader-note,.reader-pager,.reader-status{display:none!important}
+  .reader-header,.reader-breadcrumb,.reader-toolbar,.reader-note,.reader-pager,.reader-status,.reader-ad{display:none!important}
   .reader-main{width:100%;margin:0}
   .reader-panel{border:0;box-shadow:none;border-radius:0}
   .reader-info{padding:0 0 10px;border:0}
