@@ -29,3 +29,20 @@
 .dz-share-hint::after{content:"";position:absolute;right:18px;bottom:-6px;width:10px;height:10px;background:#fff;border-right:1px solid #d5e7db;border-bottom:1px solid #d5e7db;transform:rotate(45deg)}
 @media(max-width:767px){.dz-share-slot .dz-share-button{width:auto;flex:1 1 auto;min-width:0}.dz-share-slot{flex-wrap:nowrap}.dz-share-hint{width:min(310px,calc(100vw - 32px));max-width:calc(100vw - 32px)}}
 @media(prefers-reduced-motion:reduce){.dz-share-help{transition:none}}
+
+/* Desktop: center the existing share action and help icon together beneath hero content/search. */
+@media (min-width:768px){
+  .dz-share-slot{
+    width:100%;
+    margin-inline:auto;
+    justify-content:center;
+    align-self:center;
+  }
+  .dz-share-hint{
+    right:50%;
+    transform:translateX(50%);
+  }
+  .dz-share-hint::after{
+    right:calc(50% - 5px);
+  }
+}
