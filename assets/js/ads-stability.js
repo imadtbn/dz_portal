@@ -108,7 +108,10 @@
     // Pages migrated to this controller have no legacy push to account for.
     const queue = window.adsbygoogle;
     if (Array.isArray(queue) && queue.length) {
-      let toAccountFor = Math.min(queue.length, slots.length);
+      // A loaded AdSense library may retain already-consumed commands in its
+      // queue. Do not reserve additional slots for those completed requests.
+      const completed = slots.filter((slot) => slot.hasAttribute('data-adsbygoogle-status')).length;
+      let toAccountFor = Math.min(Math.max(0, queue.length - completed), slots.length);
       for (const slot of slots) {
         if (!toAccountFor) break;
         if (!isAlreadyHandled(slot)) {
