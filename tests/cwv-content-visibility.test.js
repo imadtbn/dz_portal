@@ -9,7 +9,7 @@ const load = (name) => readFileSync(new URL('../' + name, import.meta.url), 'utf
 const affected = [
   ['assets/css/style-main.css', '.sector-card'],
   ['assets/css/style-sector.css', '.services-grid'],
-  ['assets/css/performance-home.css', '.sectors-section'],
+  ['assets/css/performance-home.css', '.stat-number'],
   ['assets/css/style-train-gallery.css', '.train-card']
 ];
 
@@ -28,6 +28,7 @@ test('existing grid, card and responsive layout rules remain in the stylesheets'
   const main = load('assets/css/style-main.css');
   assert.match(main, /\.sector-card\s*\{[^}]*display:\s*flex\s*;/s);
   assert.match(main, /\.sectors-grid\s*\{[^}]*display:\s*grid\s*;/s);
+  assert.match(main, /\.sectors-section\s*\{/);
   assert.match(main, /@media\s*\(max-width:\s*768px\)/);
   const sector = load('assets/css/style-sector.css');
   assert.match(sector, /\.services-grid\s*\{[^}]*display:\s*grid\s*;/s);
