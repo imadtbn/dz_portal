@@ -1747,3 +1747,25 @@ body {
         min-height: 170px;
     }
 }
+
+/* CWV stage 04: reserve one stable row for all three home-hero statistics
+   on small screens, even when the counters update asynchronously. */
+@media (max-width: 768px) {
+    .hero .hero-content { width: min(100%, 1000px); min-width: 0; }
+    .hero .stats-bar {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: clamp(.4rem, 2vw, 1rem);
+        width: 100%;
+    }
+    .hero .stats-bar > .stat-item { min-width: 0; }
+    .hero .stat-number {
+        font-variant-numeric: tabular-nums;
+        white-space: nowrap;
+    }
+    .hero .stat-label {
+        display: block;
+        font-size: clamp(.68rem, 2.6vw, .9rem);
+        overflow-wrap: anywhere;
+    }
+}
