@@ -428,3 +428,25 @@
     border: 0;
     display: block;
 }
+
+/* CWV stage 01 — one predictable player box before an external embed loads.
+   Avoid the earlier 500px/240px min-height conflicting with aspect-ratio. */
+.video-wrapper:has(> .tutorial-frame) {
+    aspect-ratio: 16 / 9;
+}
+.video-wrapper > .tutorial-frame {
+    width: 100%;
+    height: 100%;
+    min-height: 0;
+    aspect-ratio: auto;
+    display: block;
+}
+@media (max-width: 768px) {
+    .video-wrapper:has(> .tutorial-frame) {
+        aspect-ratio: 16 / 10;
+    }
+}
+/* Facebook reel wrappers keep their existing portrait geometry. */
+.facebook-video-wrapper {
+    flex-shrink: 0;
+}
