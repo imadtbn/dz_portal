@@ -6,7 +6,8 @@
 
   if (window.__dzAdsStability?.started) return;
 
-  const MIN_AVAILABLE_WIDTH = 220; // Don't queue a zero/narrow auto slot.
+  const MIN_AVAILABLE_WIDTH = 220; // Base safeguard for automatic display units.
+  const MIN_IN_FEED_WIDTH = 250; // Google's published minimum for in-feed ads.
   const state = {
     started: true,
     queued: 0,
@@ -46,7 +47,9 @@
       if (!slot) return;
 
       const availableWidth = widthOf(slot);
-      if (availableWidth < MIN_AVAILABLE_WIDTH) {
+      const minWidth = slot.dataset.adFormat === 'fluid' || slot.dataset.adFormat === 'autorelaxed'
+        ? MIN_IN_FEED_WIDTH : MIN_AVAILABLE_WIDTH;
+      if (availableWidth < minWidth) {
         state.skippedForWidth += 1;
         return; // Retry on resize or a DOM/layout change; no permanent lock.
       }
