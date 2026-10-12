@@ -45,10 +45,25 @@
     <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&display=swap">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Font Awesome is noncritical to first paint; reserve icon geometry until it arrives. -->
+    <style>
+      .quick-link > i, .header i, .sector-hero i {
+        display: inline-flex;
+        inline-size: 1em;
+        min-inline-size: 1em;
+        align-items: center;
+        justify-content: center;
+        line-height: 1;
+        font-style: normal;
+      }
+    </style>
+    <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
 
     <link rel="stylesheet" href="../../assets/css/style-sector.css">
-    <link rel="stylesheet" href="../../assets/css/Alert-Modal.css">
+    <!-- Alert modal styling is only needed when its modal is displayed. -->
+    <link rel="preload" as="style" href="../../assets/css/Alert-Modal.css" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="../../assets/css/Alert-Modal.css"></noscript>
     <link rel="stylesheet" href="../../assets/css/style-sector-video.css">
     <meta name="author" content="البوابة الجزائرية للخدمات الرقمية">
     <meta name="language" content="Arabic">
