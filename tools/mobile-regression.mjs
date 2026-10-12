@@ -177,8 +177,27 @@ async function measure(version, base, name, relative, width) {
         }
         const sw = await page.request.get(new URL('sw.js', base).href);
         check('PWA service worker script reachable', sw.ok());
+        const swActive = await page.evaluate(async () => {
+          if (!('serviceWorker' in navigator)) return false;
+          return Promise.race([
+            navigator.serviceWorker.ready.then((registration) => Boolean(registration.active)),
+            new Promise((resolve) => setTimeout(() => resolve(false), 9000)),
+          ]);
+        });
+        check('PWA service worker active', swActive);
       }
       if (name === 'education' && width === 390) {
+        const quickLink = page.locator('.quick-links .quick-link[href^="#"]').first();
+        if (await quickLink.count()) {
+          const hash = await quickLink.getAttribute('href');
+          const exists = hash && await page.locator(hash).count() > 0;
+          check('Quick-link points to an existing section', Boolean(exists), String(hash));
+          if (exists) {
+            await quickLink.click();
+            check('Quick-link updates navigation hash',
+              (new URL(page.url()).hash === hash), String(hash));
+          }
+        }
         const open = page.locator('.search-trigger').first();
         await open.click();
         const dialog = page.locator('.local-search-dialog');
