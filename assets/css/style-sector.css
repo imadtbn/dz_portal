@@ -2164,3 +2164,20 @@ video {
     }
     .sector-hero .hero-stats > .hero-stat { min-width: 0; }
 }
+
+/* CWV stage 01 — keep reserved ad geometry stable in sector/process layouts.
+   No fixed/max height, display:none or ad fill gating is introduced. */
+.ad-container:has(> ins.adsbygoogle) {
+    flex-shrink: 0;
+    min-inline-size: 0;
+    margin-inline: auto;
+}
+.ad-container:has(> ins.adsbygoogle) > ins.adsbygoogle {
+    max-inline-size: 100%;
+}
+/* Images with intrinsic HTML dimensions preserve those dimensions responsively. */
+.notice-image img,
+.press-card img {
+    max-inline-size: 100%;
+    block-size: auto;
+}
