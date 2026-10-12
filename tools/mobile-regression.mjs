@@ -171,8 +171,21 @@ async function measure(version, base, name, relative, width) {
           check('PWA start URL remains in scope', manifest.scope === '/dz_portal/' &&
             manifest.start_url?.startsWith(manifest.scope));
           for (const icon of manifest.icons || []) {
-            const iconResponse = await page.request.get(new URL(icon.src, manifestUrl).href);
+            const iconUrl = new URL(icon.src, manifestUrl).href;
+            const iconResponse = await page.request.get(iconUrl);
             check('PWA icon ' + icon.sizes + ' reachable', iconResponse.ok());
+            if (iconResponse.ok() && /^\\d+x\\d+$/.test(icon.sizes || '')) {
+              const actual = await page.evaluate((url) => new Promise((resolve) => {
+                const img = new Image();
+                img.onload = () => resolve([img.naturalWidth, img.naturalHeight]);
+                img.onerror = () => resolve([]);
+                img.src = url;
+              }), iconUrl);
+              const declared = icon.sizes.split('x').map(Number);
+              check('PWA icon intrinsic dimensions ' + icon.sizes,
+                actual.length === 2 && actual[0] === declared[0] && actual[1] === declared[1],
+                'actual=' + actual.join('x'));
+            }
           }
         }
         const sw = await page.request.get(new URL('sw.js', base).href);
