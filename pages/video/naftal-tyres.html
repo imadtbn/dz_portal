@@ -226,11 +226,17 @@
             <h1>طريقة التسجيل في منصة محطتي لاقتناء عجلات السيارات</h1>
             <p class="video-watch-description">شرح مرئي لطريقة التسجيل في منصة محطتي التابعة لنفطال لاقتناء العجلات
                 المطاطية.</p>
-            <div class="video-watch-player video-watch-primary-player">
-                <iframe class="video-primary-embed" src="https://www.youtube.com/embed/U-3YSOxddEs"
+            <div class="video-watch-player video-watch-primary-player" data-video-on-demand>
+                <a class="video-watch-launch" data-video-launch href="https://www.youtube.com/watch?v=U-3YSOxddEs"
+                   aria-label="تحميل مشغل الفيديو: طريقة التسجيل في منصة محطتي لاقتناء عجلات السيارات">
+                    <img src="../../assets/images/naftal.webp" alt="" width="88" height="76" loading="lazy" decoding="async">
+                    <span class="video-watch-launch-play" aria-hidden="true">▶</span>
+                    <span class="video-watch-launch-label">اضغط لتشغيل الفيديو</span>
+                </a>
+                <template data-video-embed><iframe class="video-primary-embed" src="https://www.youtube.com/embed/U-3YSOxddEs"
                     title="طريقة التسجيل في منصة محطتي لاقتناء عجلات السيارات" loading="eager"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowfullscreen width="560" height="315"></iframe>
+                    allowfullscreen width="560" height="315"></iframe></template>
             </div>
             <p class="video-watch-caption">هذا الفيديو هو المحتوى الرئيسي لهذه الصفحة، ويمكن العودة إلى صفحة الخدمة
                 للاطلاع على التفاصيل والروابط الرقمية المرتبطة.</p>
@@ -254,6 +260,7 @@
      (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
 
+    <script defer src="../../assets/js/video-embed-on-demand.js"></script>
 </body>
 
 </html>
