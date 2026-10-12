@@ -311,7 +311,7 @@
                 </div>
             </div>
             <div class="hero-visual">
-                <img src="../../assets/images/markabaty.jpg" alt="markabatidz" class="hero-icon" loading="lazy">
+                <img src="../../assets/images/markabaty.jpg" alt="markabatidz" class="hero-icon" loading="eager" decoding="async" fetchpriority="high">
             </div>
         </div>
     </section>
@@ -399,15 +399,17 @@
                 <div class="video-card">
 
                     <!-- Video Container -->
-                    <div class="video-wrapper">
-
-                        <!-- YouTube Video -->
-                        <iframe class="tutorial-frame" src="https://www.youtube.com/embed/GD3ymUiI2m0"
+                    <div class="video-wrapper" data-video-on-demand>
+                        <a class="video-watch-launch" data-video-launch href="https://www.youtube.com/watch?v=GD3ymUiI2m0" aria-label="تحميل فيديو: طريقة حجز موعد فحص المركبةت عبر منصة مركبتي DZ">
+                            <img src="../../assets/images/markabaty.jpg" alt="" width="76" height="76" loading="lazy" decoding="async">
+                            <span class="video-watch-launch-play" aria-hidden="true">▶</span>
+                            <span class="video-watch-launch-label">اضغط لتشغيل الفيديو</span>
+                        </a>
+                        <template data-video-embed><iframe class="tutorial-frame" src="https://www.youtube.com/embed/GD3ymUiI2m0"
                             title="طريقة حجز موعد فحص المركبةت عبر منصة مركبتي DZ"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                             allowfullscreen loading="lazy">
-                        </iframe>
-
+                        </iframe></template>
                     </div>
 
                     <!-- Facebook Video Example -->
@@ -638,6 +640,7 @@
      (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
 
+    <script defer src="../../assets/js/video-embed-on-demand.js"></script>
 </body>
 
 </html>
