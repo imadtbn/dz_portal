@@ -56,13 +56,9 @@
         backdrop-filter: none !important;
     }
 
-    .sectors-section,
-    .seo-tags,
-    .stats-panel,
-    .footer {
-        content-visibility: auto;
-        contain-intrinsic-size: 800px;
-    }
+    /* CWV stage 03: these sections can be much taller or shorter than
+       800px, particularly the entire sectors listing. Keep natural layout
+       on mobile rather than skipping variable-height section content. */
 }
 
 @media (prefers-reduced-motion: reduce) {
