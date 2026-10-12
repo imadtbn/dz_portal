@@ -47,7 +47,9 @@
   };
 
   // التحميل المؤجل لبيانات البحث بدون أي تتبع أو Analytics.
-  const searchInput = document.getElementById('globalSearch') || document.querySelector('.search-input');
+  // Sector dialogs are served by localSearch.js, not by the global index.
+  const searchInput = document.getElementById('globalSearch')
+    || (document.getElementById('searchResults') ? document.querySelector('.search-input') : null);
   let searchRequested = false;
 
   const loadSearch = (onComplete) => {
@@ -70,9 +72,11 @@
     searchInput.addEventListener('input', () => loadSearch(), { once: true, passive: true });
   }
 
-  document.querySelectorAll('.search-trigger, [data-search-trigger]').forEach((trigger) => {
-    trigger.addEventListener('click', () => loadSearch(), { once: true, passive: true });
-  });
+  if (searchInput) {
+    document.querySelectorAll('.search-trigger, [data-search-trigger]').forEach((trigger) => {
+      trigger.addEventListener('click', () => loadSearch(), { once: true, passive: true });
+    });
+  }
 
   // Stable AdSense initialization runs on all standard portal pages, without
   // changing the tracking or ad script already declared in each HTML file.
