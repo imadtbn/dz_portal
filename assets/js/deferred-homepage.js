@@ -8,15 +8,30 @@
 
   const loadLocalScript = (src, callback) => {
     const resolvedSrc = new URL(src, assetsRoot).href;
-    if (document.querySelector(`script[data-deferred-src="${resolvedSrc}"]`)) {
-      callback?.();
+    // Recognize ordinary <script defer src="..."> as well as inserted scripts.
+    // siteRating.js is already declared directly on the statistics page.
+    const existing = Array.from(document.scripts).find((tag) => (
+      tag.src === resolvedSrc || tag.dataset.deferredSrc === resolvedSrc
+    ));
+    if (existing) {
+      if (callback) {
+        if (existing.dataset.dzDeferredLoaded === 'true'
+          || (!existing.dataset.deferredSrc && document.readyState === 'complete')) {
+          callback();
+        } else {
+          existing.addEventListener('load', callback, { once: true });
+        }
+      }
       return;
     }
 
     const script = document.createElement('script');
     script.src = resolvedSrc;
     script.dataset.deferredSrc = resolvedSrc;
-    script.addEventListener('load', () => callback?.(), { once: true });
+    script.addEventListener('load', () => {
+      script.dataset.dzDeferredLoaded = 'true';
+      callback?.();
+    }, { once: true });
     script.addEventListener('error', () => {
       console.warn('تعذر تحميل السكريبت المحلي المؤجل:', src);
     }, { once: true });
@@ -66,9 +81,17 @@
     loadLocalScript('js/ads-stability.js');
   }
 
-  // جدولة وظائف الصفحة الرئيسية غير المتعلقة بالتتبع.
+  // Load each optional feature only where its HTML host exists.
+  // This avoids downloading homepage stats and rating code on sector pages,
+  // without altering search, AdSense, analytics or the widgets themselves.
   window.addEventListener('load', () => {
-    scheduleIdle(() => loadLocalScript('js/homepageStats.js'), 1400);
-    scheduleIdle(() => loadLocalScript('js/siteRating.js'), 1500);
+    if (document.querySelector('[data-homepage-stat="sectors"]')
+        && document.querySelector('[data-homepage-stat="services"]')
+        && document.querySelector('.sectors-section .sector-card')) {
+      scheduleIdle(() => loadLocalScript('js/homepageStats.js'), 1400);
+    }
+    if (document.querySelector('[data-rating-widget]')) {
+      scheduleIdle(() => loadLocalScript('js/siteRating.js'), 1500);
+    }
   }, { once: true, passive: true });
 })();
