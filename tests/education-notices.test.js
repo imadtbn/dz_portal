@@ -80,6 +80,14 @@ test('reader supports zoom, printing, sharing, keyboard focus, and reduced layou
   assert.match(css, /focus-visible/);
 });
 
+test('shared sector counter detects all seven official bulletins instead of displaying 00', () => {
+  const sector = load('assets/js/sector.js');
+  assert.match(sector, /section\.id === 'official-notice'/);
+  assert.match(sector, /querySelectorAll\('\.education-notice-card'\)/);
+  assert.match(sector, /String\(bulletinCount \|\| services\.length\)/);
+  assert.ok(education.includes('<span class="service-count">07 بيانات</span>'));
+});
+
 test('SEO sitemap and original ads and services survive the notice redesign', () => {
   const sitemap = load('sitemap.xml');
   for (const id of ids) {
