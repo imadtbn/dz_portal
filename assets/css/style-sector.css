@@ -2134,3 +2134,33 @@ video {
         min-height: 170px;
     }
 }
+
+/* CWV stage 04: stabilize existing mobile header/hero geometry.
+   This keeps the established three-column hero statistics unchanged. */
+.header-content .logo-section,
+.header-content .logo-section > div,
+.sector-hero .hero-text {
+    min-width: 0;
+}
+.header-content .header-actions {
+    flex: 0 0 auto;
+}
+.sector-hero .hero-visual {
+    aspect-ratio: 1 / 1;
+    flex-shrink: 0;
+}
+.sector-hero .hero-visual > img.hero-icon {
+    display: block;
+}
+.sector-hero .hero-stat-number {
+    font-variant-numeric: tabular-nums;
+    white-space: nowrap;
+}
+@media (max-width: 768px) {
+    .header-content { min-height: 40px; }
+    .sector-hero .hero-stats {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        width: 100%;
+    }
+    .sector-hero .hero-stats > .hero-stat { min-width: 0; }
+}
