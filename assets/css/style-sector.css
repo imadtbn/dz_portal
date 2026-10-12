@@ -1436,10 +1436,9 @@ html {
     contain: layout style;
 }
 
-.services-grid {
-    content-visibility: auto;
-    contain-intrinsic-size: 1px 1000px;
-}
+/* CWV stage 03: service grids have variable numbers of items and nested ads.
+   Use their actual flow height instead of a 1000px content-visibility estimate.
+   Existing .services-grid display/grid layout rules remain unchanged. */
 
 .contact-link {
     display: inline-block;
