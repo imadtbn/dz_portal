@@ -104,7 +104,7 @@ try {
         try {
           await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 45000 });
           const snap = () => page.evaluate(() => {
-            const selectors = ['.ad-container', '.sector-hero', '.hero', '.hero-stats', '.sectors-section', '.services-grid', '.video-watch-player', '.stats-bar', '.pwa-badge'];
+            const selectors = ['.ad-container', '.sector-hero', '.hero', '.hero-stats', '.sectors-section', '.sectors-grid', '.sector-card', '.services-grid', '.service-item', '.train-card', '.seo-tags', '.stats-panel', '.footer', '.video-watch-player', '.stats-bar', '.pwa-badge'];
             const output = {};
             for (const selector of selectors) {
               output[selector] = Array.from(document.querySelectorAll(selector)).slice(0, 30).map((el, i) => {
