@@ -1,0 +1,11 @@
+{
+  "name": "dz-portal-cls-audit",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "audit": "node cls-audit.mjs"
+  },
+  "devDependencies": {
+    "playwright": "^1.55.0"
+  }
+}
