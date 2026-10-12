@@ -223,11 +223,17 @@
             <h1>برنامج جيل لجيل 777 للإدماج الرقمي</h1>
             <p class="video-watch-description">فيديو يشرح برنامج جيل لجيل 777 للتعلم والإدماج الرقمي وتطوير المهارات عن
                 بعد في الجزائر.</p>
-            <div class="video-watch-player video-watch-primary-player">
-                <iframe class="video-primary-embed" src="https://www.youtube.com/embed/opO1dEXGFDw"
+            <div class="video-watch-player video-watch-primary-player" data-video-on-demand>
+                <a class="video-watch-launch" data-video-launch href="https://www.youtube.com/watch?v=opO1dEXGFDw"
+                   aria-label="تحميل مشغل الفيديو: برنامج جيل لجيل 777 للإدماج الرقمي">
+                    <img src="../../assets/images/arpce.png" alt="" width="88" height="76" loading="lazy" decoding="async">
+                    <span class="video-watch-launch-play" aria-hidden="true">▶</span>
+                    <span class="video-watch-launch-label">اضغط لتشغيل الفيديو</span>
+                </a>
+                <template data-video-embed><iframe class="video-primary-embed" src="https://www.youtube.com/embed/opO1dEXGFDw"
                     title="برنامج جيل لجيل 777 للإدماج الرقمي" loading="eager"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowfullscreen width="560" height="315"></iframe>
+                    allowfullscreen width="560" height="315"></iframe></template>
             </div>
             <p class="video-watch-caption">هذا الفيديو هو المحتوى الرئيسي لهذه الصفحة، ويمكن العودة إلى صفحة الخدمة
                 للاطلاع على التفاصيل والروابط الرقمية المرتبطة.</p>
@@ -250,6 +256,7 @@
      (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
 
+    <script defer src="../../assets/js/video-embed-on-demand.js"></script>
 </body>
 
 </html>
