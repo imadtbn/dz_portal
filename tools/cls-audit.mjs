@@ -138,6 +138,23 @@ try {
           item.cls = clsSessionScore(collected.shifts);
           item.topShifts = collected.shifts.filter((s) => !s.hadRecentInput).sort((a, b) => b.value - a.value).slice(0, 8);
           item.pageErrors = errors.slice(0, 20);
+          // CWV stage 05: capture stylesheets, scripts and font readiness so
+          // cache/style-loading regressions can be investigated per viewport.
+          item.loadAudit = await page.evaluate(() => ({
+            fontStatus: document.fonts?.status || 'unsupported',
+            fontFamily: getComputedStyle(document.body).fontFamily,
+            cssLinks: Array.from(document.querySelectorAll('link[rel="stylesheet"]'))
+              .map((link) => link.href),
+            jsScripts: Array.from(document.querySelectorAll('script[src]'))
+              .map((script) => script.src),
+            resources: performance.getEntriesByType('resource')
+              .filter((entry) => /\\.css(?:\\?|$)|\\.js(?:\\?|$)|fonts\\.(?:googleapis|gstatic)\\.com/.test(entry.name))
+              .map((entry) => ({
+                name: entry.name, durationMs: Math.round(entry.duration),
+                transferSize: entry.transferSize || 0
+              }))
+              .slice(0, 80)
+          }));
           item.afterScroll = await snap();
           await page.screenshot({ path: path.join(folder, '03-end.png') });
         } catch (error) {
