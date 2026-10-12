@@ -102,5 +102,7 @@ test('styles and AdSense remain present on priority pages', () => {
   assert.match(sector, /\.ad-container:has\(ins\.adsbygoogle/);
   assert.match(home, /\.ad-container:has\(ins\.adsbygoogle/);
   assert.equal((read('index.html').match(/class="sector-card"/g) || []).length, 88);
-  assert.equal((read('sectors/education.html').match(/class="service-item"/g) || []).length, 29);
+  const services = [...read('sectors/education.html').matchAll(/class=["']([^"']+)["']/g)]
+    .filter((match) => match[1].split(/\s+/).includes('service-item'));
+  assert.equal(services.length, 29);
 });
