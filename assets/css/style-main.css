@@ -268,8 +268,8 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    content-visibility: auto;
-    contain-intrinsic-size: 300px;
+    /* CWV stage 03: render card content at its natural height, avoiding
+       the 300px offscreen estimate when responsive text wraps. */
 }
 
 .sector-card::before {
