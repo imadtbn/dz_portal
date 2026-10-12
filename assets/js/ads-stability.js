@@ -21,6 +21,7 @@
 
   function isAlreadyHandled(slot) {
     return slot.hasAttribute('data-adsbygoogle-status')
+      || slot.hasAttribute('data-dz-ads-queued')
       || slot.hasAttribute('data-dz-ad-requested');
   }
 
@@ -52,11 +53,13 @@
 
       window.adsbygoogle = window.adsbygoogle || [];
       slot.setAttribute('data-dz-ad-requested', 'true');
+      slot.setAttribute('data-dz-ads-queued', 'true');
       try {
         window.adsbygoogle.push({});
         state.queued += 1;
       } catch (error) {
         slot.removeAttribute('data-dz-ad-requested');
+        slot.removeAttribute('data-dz-ads-queued');
         state.lastError = String(error);
         console.warn('DZ Portal: AdSense unit was not queued:', error);
         return;
@@ -110,6 +113,7 @@
         if (!toAccountFor) break;
         if (!isAlreadyHandled(slot)) {
           slot.setAttribute('data-dz-ad-requested', 'legacy');
+          slot.setAttribute('data-dz-ads-queued', 'true');
           toAccountFor -= 1;
         }
       }
