@@ -59,6 +59,12 @@
     trigger.addEventListener('click', () => loadSearch(), { once: true, passive: true });
   });
 
+  // Stable AdSense initialization runs on all standard portal pages, without
+  // changing the tracking or ad script already declared in each HTML file.
+  if (document.querySelector('ins.adsbygoogle')) {
+    loadLocalScript('js/ads-stability.js');
+  }
+
   // جدولة وظائف الصفحة الرئيسية غير المتعلقة بالتتبع.
   window.addEventListener('load', () => {
     scheduleIdle(() => loadLocalScript('js/homepageStats.js'), 1400);
