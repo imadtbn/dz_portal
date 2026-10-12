@@ -148,7 +148,7 @@ try {
             jsScripts: Array.from(document.querySelectorAll('script[src]'))
               .map((script) => script.src),
             resources: performance.getEntriesByType('resource')
-              .filter((entry) => /\\.css(?:\\?|$)|\\.js(?:\\?|$)|fonts\\.(?:googleapis|gstatic)\\.com/.test(entry.name))
+              .filter((entry) => /\.css(?:\?|$)|\.js(?:\?|$)|fonts\.(?:googleapis|gstatic)\.com/.test(entry.name))
               .map((entry) => ({
                 name: entry.name, durationMs: Math.round(entry.duration),
                 transferSize: entry.transferSize || 0
