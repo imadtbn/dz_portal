@@ -31,7 +31,52 @@ body.education-notice-page{margin:0;direction:rtl;font-family:"Tajawal",system-u
 .reader-pager a:hover{background:#eef6f0}
 .reader-status{display:block;color:#006233;font-size:.85rem;min-height:1.4em;padding:4px 0}
 .reader-control:focus-visible,.reader-return:focus-visible,.reader-pager a:focus-visible{outline:3px solid var(--notice-gold);outline-offset:2px}
-@media(max-width:600px){.reader-toolbar{gap:7px}.reader-control{font-size:.8rem;padding:7px 9px}.reader-image-area{max-height:70vh;min-height:220px;padding:10px}.reader-header__inner{padding-block:12px}}
+/* Keep zoom, reading actions and original-image download in predictable mobile rows. */
+@media(max-width:600px){
+  .reader-toolbar{
+    display:grid;
+    grid-template-columns:repeat(12,minmax(0,1fr));
+    gap:8px;
+    padding:12px;
+    align-items:stretch;
+  }
+  .reader-toolbar > *{min-width:0}
+  .reader-toolbar .reader-control{
+    width:100%;
+    min-height:44px;
+    padding:8px 4px;
+    font-size:.78rem;
+    line-height:1.35;
+    gap:5px;
+    white-space:normal;
+    text-align:center;
+  }
+  .reader-toolbar #bulletinZoomOut{grid-column:span 3}
+  .reader-toolbar #bulletinZoomLabel{
+    grid-column:span 3;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border:1px solid #d9e7df;
+    background:#fff;
+    border-radius:10px;
+    font-variant-numeric:tabular-nums;
+    font-weight:800;
+    font-size:.85rem;
+  }
+  .reader-toolbar #bulletinZoomIn{grid-column:span 3}
+  .reader-toolbar #bulletinZoomReset{grid-column:span 3}
+  .reader-toolbar #bulletinPrint,
+  .reader-toolbar #bulletinShare{grid-column:span 6}
+  .reader-toolbar .reader-control--primary{grid-column:1/-1;font-size:.88rem}
+  .reader-image-area{max-height:70vh;min-height:220px;padding:10px}
+  .reader-header__inner{padding-block:12px}
+}
+@media(max-width:360px){
+  .reader-toolbar{gap:6px;padding:9px}
+  .reader-toolbar .reader-control{font-size:.72rem;gap:3px;padding-inline:2px}
+  .reader-toolbar #bulletinZoomLabel{font-size:.78rem}
+}
 @media print{
   @page{size:auto;margin:9mm}
   body.education-notice-page{background:white}
