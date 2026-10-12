@@ -61,6 +61,21 @@ test('PWA manifest and all advertised icons exist, and SW keeps the installation
   assert.match(read('index.html'), /serviceWorker\.register\("sw\.js"\)/);
 });
 
+test('PWA PNG icon dimensions agree with manifest declarations', () => {
+  const manifest = JSON.parse(read('manifest.json'));
+  const seen = new Set();
+  for (const icon of manifest.icons) {
+    const declared = icon.sizes.match(/^(\\d+)x(\\d+)$/);
+    if (!declared || seen.has(icon.src)) continue;
+    seen.add(icon.src);
+    const png = readFileSync(url(icon.src.slice('/dz_portal/'.length)));
+    assert.equal(png.subarray(1, 4).toString(), 'PNG', icon.src);
+    const actual = [png.readUInt32BE(16), png.readUInt32BE(20)];
+    assert.deepEqual(actual, [Number(declared[1]), Number(declared[2])],
+      `PWA icon dimensions differ: ${icon.src} is ${actual.join('x')}; generate assets via tools/build-pwa-icons.py`);
+  }
+});
+
 test('AdSense units and original card counts stay intact on priority pages', () => {
   const pages = [
     ['index.html', 13],
