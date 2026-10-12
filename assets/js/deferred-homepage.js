@@ -61,7 +61,8 @@
 
   // Stable AdSense initialization runs on all standard portal pages, without
   // changing the tracking or ad script already declared in each HTML file.
-  if (document.querySelector('ins.adsbygoogle')) {
+  if (document.querySelector('ins.adsbygoogle')
+    && !document.querySelector('script[src$="/ads-stability.js"]')) {
     loadLocalScript('js/ads-stability.js');
   }
 
