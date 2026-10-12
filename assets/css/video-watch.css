@@ -152,3 +152,22 @@
         flex-direction: column;
     }
 }
+
+/* CWV stage 04: the existing 16:9 video placeholder remains in flow
+   while an external Facebook/YouTube iframe loads.  Keep current min-heights
+   and background; only remove iframe sizing from its parent's layout. */
+.video-watch-player {
+    position: relative;
+    overflow: hidden;
+}
+.video-watch-player > iframe,
+.video-watch-player > .video-primary-embed,
+.video-watch-article .video-watch-player > iframe {
+    position: absolute;
+    inset: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    min-height: 0;
+    border: 0;
+}
