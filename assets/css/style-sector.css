@@ -2181,3 +2181,17 @@ video {
     max-inline-size: 100%;
     block-size: auto;
 }
+
+
+/* CLS correction: tutorial pages have an in-content fluid unit directly
+   before the video. Reserve a realistic feed-sized area *before* AdSense
+   responds, while allowing the creative to expand freely if necessary. */
+@media (max-width: 768px) {
+    .ad-container:has(> ins.adsbygoogle[data-ad-format="fluid"]):has(+ .video-primary-section) {
+        min-height: 320px;
+    }
+}
+/* Avoid stretching an ad container as a flex item when content fills. */
+.ad-container:has(> ins.adsbygoogle) {
+    align-self: auto;
+}
