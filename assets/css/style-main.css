@@ -1773,3 +1773,14 @@ body {
         overflow-wrap: anywhere;
     }
 }
+
+/* CWV stage 01 — prevent flexible/grid ad slots from shrinking before fill.
+   Reserve existing responsive space; AdSense still controls creative height. */
+.ad-container:has(> ins.adsbygoogle) {
+    flex-shrink: 0;
+    min-inline-size: 0;
+    margin-inline: auto;
+}
+.ad-container:has(> ins.adsbygoogle) > ins.adsbygoogle {
+    max-inline-size: 100%;
+}
