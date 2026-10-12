@@ -1,0 +1,29 @@
+/* Minimal ad layout layer for standalone SNTF pages.
+   Main portal pages receive the same rules via style-main/style-sector. */
+.ad-container:has(ins.adsbygoogle) {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+  display: block;
+  position: relative;
+  min-height: 110px;
+  overflow: visible;
+  contain: layout style;
+  margin-inline: auto;
+}
+.ad-container:has(ins.adsbygoogle[data-ad-format="fluid"]) { min-height: 190px; }
+.ad-container:has(ins.adsbygoogle[data-ad-format="autorelaxed"]) { min-height: 200px; }
+.ad-container ins.adsbygoogle {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+  margin-inline: auto;
+}
+@media (max-width: 600px) {
+  .ad-container:has(ins.adsbygoogle) { min-height: 115px; }
+  .ad-container:has(ins.adsbygoogle[data-ad-format="fluid"]) { min-height: 210px; }
+  .ad-container:has(ins.adsbygoogle[data-ad-format="autorelaxed"]) { min-height: 190px; }
+}
