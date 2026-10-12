@@ -174,7 +174,7 @@ async function measure(version, base, name, relative, width) {
             const iconUrl = new URL(icon.src, manifestUrl).href;
             const iconResponse = await page.request.get(iconUrl);
             check('PWA icon ' + icon.sizes + ' reachable', iconResponse.ok());
-            if (iconResponse.ok() && /^\\d+x\\d+$/.test(icon.sizes || '')) {
+            if (iconResponse.ok() && /^\d+x\d+$/.test(icon.sizes || '')) {
               const actual = await page.evaluate((url) => new Promise((resolve) => {
                 const img = new Image();
                 img.onload = () => resolve([img.naturalWidth, img.naturalHeight]);
