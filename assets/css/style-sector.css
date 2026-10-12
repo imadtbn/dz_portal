@@ -2079,3 +2079,60 @@ video {
         font-size: clamp(.6rem, 2.4vw, .75rem);
     }
 }
+
+/* CWV stage 02 — responsive AdSense slots.
+   Reserve a modest, format-aware space without constraining a filled ad's height.
+   The space is present before JavaScript and is never collapsed on no-fill. */
+.ad-container:has(ins.adsbygoogle) {
+    box-sizing: border-box;
+    display: block;
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    /* Don't clip Google full-width responsive units or impose a fixed height. */
+    overflow: visible;
+    contain: layout style;
+}
+.ad-container:has(ins.adsbygoogle[data-ad-format="auto"]),
+.ad-container:has(ins.adsbygoogle:not([data-ad-format])) {
+    min-height: 110px;
+}
+.ad-container:has(ins.adsbygoogle[data-ad-format="fluid"]) {
+    min-height: 190px;
+}
+.ad-container:has(ins.adsbygoogle[data-ad-format="autorelaxed"]) {
+    min-height: 200px;
+}
+.ad-container ins.adsbygoogle {
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+    margin-inline: auto;
+}
+.sectors-grid > .ad-container,
+.services-grid > .ad-container {
+    grid-column: 1 / -1;
+}
+@media (max-width: 600px) {
+    .ad-container:has(ins.adsbygoogle[data-ad-format="auto"]),
+    .ad-container:has(ins.adsbygoogle:not([data-ad-format])) {
+        min-height: 115px;
+    }
+    .ad-container:has(ins.adsbygoogle[data-ad-format="fluid"]) {
+        min-height: 210px;
+    }
+    .ad-container:has(ins.adsbygoogle[data-ad-format="autorelaxed"]) {
+        min-height: 190px;
+    }
+}
+@media (max-width: 360px) {
+    .ad-container:has(ins.adsbygoogle[data-ad-format="fluid"]) {
+        min-height: 190px;
+    }
+    .ad-container:has(ins.adsbygoogle[data-ad-format="autorelaxed"]) {
+        min-height: 170px;
+    }
+}
