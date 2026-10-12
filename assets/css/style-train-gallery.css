@@ -349,11 +349,8 @@
 
 }
 
-/* Performance Optimization */
-.train-card {
-    content-visibility: auto;
-    contain-intrinsic-size: 350px;
-}
+/* CWV stage 03: train schedule cards vary in height with text and buttons.
+   Render their real height to avoid jumpy rows during mobile scrolling. */
 
 
 
