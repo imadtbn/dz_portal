@@ -24,6 +24,7 @@ const videoPages = [
   'pages/video/arpce-777.html',
   'pages/video/dronet.mdn.html',
   'pages/process/arpce.html',
+  'pages/process/arpce2.html',
   'pages/video/naftal-tyres.html',
   'pages/process/apostille.html',
   'pages/video/mtpib-presentation.html',
