@@ -450,3 +450,70 @@
 .facebook-video-wrapper {
     flex-shrink: 0;
 }
+
+
+/* Click-to-load embeds inside the original tutorial video cards.
+   Preserve the pre-existing min-height and aspect-ratio at each breakpoint. */
+.video-wrapper[data-video-on-demand] {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    min-height: 500px;
+    background: #073f31;
+}
+.video-wrapper[data-video-on-demand] > .video-watch-launch {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    background: linear-gradient(145deg, #073f31, #005d42);
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+}
+.video-wrapper[data-video-on-demand] > .video-watch-launch img {
+    width: 76px;
+    height: 76px;
+    max-width: 100%;
+    object-fit: contain;
+}
+.video-wrapper[data-video-on-demand] .video-watch-launch-play {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    color: #005d42;
+    border-radius: 50%;
+    width: 52px;
+    height: 52px;
+    font-size: 23px;
+    flex-shrink: 0;
+}
+.video-wrapper[data-video-on-demand] .video-watch-launch-label {
+    font: 700 1rem/1.6 Tajawal, sans-serif;
+}
+.video-wrapper[data-video-on-demand] > .video-watch-launch:focus-visible {
+    outline: 3px solid #e8bd43;
+    outline-offset: -6px;
+}
+@media (max-width: 768px) {
+    .video-wrapper[data-video-on-demand] {
+        aspect-ratio: 16 / 10;
+        min-height: 240px;
+    }
+    .video-wrapper[data-video-on-demand] > .video-watch-launch {
+        gap: 8px;
+        padding: 12px;
+    }
+    .video-wrapper[data-video-on-demand] > .video-watch-launch img {
+        width: 58px;
+        height: 58px;
+    }
+}
