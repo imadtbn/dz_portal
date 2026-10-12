@@ -167,7 +167,11 @@ body {
     font-size: 1.5rem;
     font-weight: 800;
     color: var(--gold);
-    display: block00;
+    display: block;
+    /* Reserve counter dimensions before the deferred statistics update. */
+    min-width: 4ch;
+    min-height: 1.8em;
+    font-variant-numeric: tabular-nums;
 }
 
 .stat-label {
