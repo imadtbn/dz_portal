@@ -1401,7 +1401,6 @@ div[style*="border-radius"] i:hover {
     box-sizing: border-box;
     width: 100%;
     min-width: 0;
-    max-width: 100%;
     margin-inline: auto;
 }
 .sectors-grid > .ad-container,
