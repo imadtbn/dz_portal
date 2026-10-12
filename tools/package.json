@@ -3,7 +3,8 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "audit": "node cls-audit.mjs"
+    "audit": "node cls-audit.mjs",
+    "qa:mobile": "node mobile-regression.mjs"
   },
   "devDependencies": {
     "playwright": "^1.55.0"
