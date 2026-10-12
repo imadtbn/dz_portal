@@ -141,6 +141,8 @@
     });
     mo.observe(document.body, { childList: true, subtree: true });
     window.addEventListener('resize', schedule, { passive: true });
+    // Also retry slots inside content-visibility:auto sections as users scroll.
+    window.addEventListener('scroll', schedule, { passive: true });
     window.addEventListener('pageshow', schedule, { passive: true });
     schedule();
   }
