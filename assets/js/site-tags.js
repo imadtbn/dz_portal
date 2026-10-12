@@ -203,6 +203,8 @@
   };
 
   const pushAds = () => {
+    // CWV stage 02: the width-aware controller owns unit initialization when present.
+    if (window.__dzAdsStability?.started) return;
     if (!window.adsbygoogle) window.adsbygoogle = [];
 
     document.querySelectorAll('ins.adsbygoogle').forEach((adBlock) => {
