@@ -2195,3 +2195,30 @@ video {
 .ad-container:has(> ins.adsbygoogle) {
     align-self: auto;
 }
+
+
+/* CLS: reserve stable quick-navigation geometry while icon fonts load.
+   Maintain current colors, padding, horizontal scrolling and hover styles. */
+.quick-links-content {
+    align-items: center;
+    min-height: 46px;
+}
+.quick-links-content > .quick-link {
+    box-sizing: border-box;
+    min-height: 44px;
+    flex: 0 0 auto;
+    justify-content: center;
+    line-height: 1.35;
+}
+.quick-link > i {
+    display: inline-flex;
+    flex: 0 0 1em;
+    align-items: center;
+    justify-content: center;
+    width: 1em;
+    line-height: 1;
+}
+@media (max-width: 768px) {
+    .quick-links-content { min-height: 44px; }
+    .quick-links-content > .quick-link { min-height: 42px; }
+}
