@@ -83,7 +83,7 @@
 
         if (!filtered.length) {
             if (!sectorListEl) return;
-        sectorListEl.hidden = false;
+            sectorListEl.hidden = false;
             sectorListEl.innerHTML = '<div class="stats-empty">لا توجد قطاعات مطابقة.</div>';
             return;
         }
@@ -130,11 +130,13 @@
         } catch (error) {
             if (statsStateEl) statsStateEl.className = "stats-error";
             if (statsStateEl) statsStateEl.textContent = "تعذر تحميل قائمة القطاعات من الصفحة الرئيسية.";
+            if (statsStatusEl) statsStatusEl.textContent = "تعذر تحديث الإحصائيات. حاول إعادة تحميل الصفحة.";
             return;
         }
         if (!links.length) {
-            statsStateEl.className = "stats-error";
+            if (statsStateEl) statsStateEl.className = "stats-error";
             if (statsStateEl) statsStateEl.textContent = "لم يتم العثور على روابط قطاعات صالحة في الصفحة الرئيسية.";
+            if (statsStatusEl) statsStatusEl.textContent = "لا تتوفر بيانات قطاعات قابلة للتحليل حاليًا.";
             return;
         }
 
