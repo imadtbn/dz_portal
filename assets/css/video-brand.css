@@ -304,3 +304,77 @@
     .video-index-brand,.video-watch-brand{font-size:.83rem}
     .video-index-home-link,.video-watch-home{font-size:.75rem;padding-inline:7px}
 }
+
+/* Video-page width containment and full-width chrome (mobile overflow fix). */
+html{max-width:100%;overflow-x:clip}
+body{max-width:100%;overflow-x:clip}
+body,.video-watch-header,.video-index-header,.video-watch-footer,.video-index-footer,
+.video-watch-page,.video-index-main,.video-watch-article{box-sizing:border-box}
+.video-watch-header,.video-index-header,.video-watch-footer,.video-index-footer{
+    width:100%;
+    max-width:100%;
+    margin-inline:0;
+}
+.video-watch-header{padding-inline:max(16px,calc((100% - 1160px)/2))!important}
+.video-index-header-inner{width:min(1160px,calc(100% - 32px));max-width:100%}
+.video-watch-page,.portal-video-page .video-watch-page,.video-index-main{
+    width:min(1080px,calc(100% - 32px));
+    max-width:100%;
+    margin-inline:auto;
+    min-width:0;
+}
+.video-watch-article{
+    width:100%;
+    max-width:100%;
+    min-width:0;
+    margin-inline:auto;
+    padding:clamp(16px,3vw,32px);
+}
+.video-watch-article .video-watch-player{
+    width:100%;
+    max-width:920px;
+    margin:18px auto;
+    min-height:0;
+    aspect-ratio:16/9;
+}
+.video-watch-article .video-watch-player iframe{
+    max-width:100%;
+    min-height:0;
+}
+.video-watch-article .video-watch-service-link{
+    max-width:100%;
+    text-align:center;
+    justify-content:center;
+    white-space:normal;
+}
+.video-watch-page .ad-container,
+body > .ad-container,
+.video-index-main .ad-container{
+    box-sizing:border-box;
+    width:min(100%,980px);
+    max-width:100%;
+    min-width:0;
+    margin-inline:auto;
+    text-align:center;
+}
+body > .ad-container{margin-block:20px}
+.video-watch-page .ad-container ins.adsbygoogle,
+body > .ad-container ins.adsbygoogle,
+.video-index-main .ad-container ins.adsbygoogle{max-width:100%}
+.video-watch-footer,.video-index-footer{clear:both}
+@media(max-width:720px){
+    .video-watch-header{padding:10px 16px!important}
+    .video-watch-page,.portal-video-page .video-watch-page,.video-index-main{
+        width:calc(100% - 24px);
+        padding-top:16px;
+    }
+    .video-watch-article,.portal-video-page .video-watch-article{padding:16px}
+    .video-watch-article h1,.portal-video-page .video-watch-article h1{
+        font-size:clamp(1.3rem,5.4vw,1.8rem);
+        line-height:1.45;
+        overflow-wrap:anywhere;
+    }
+    .video-watch-article .video-watch-player{min-height:0}
+    .video-watch-article .video-watch-player iframe{min-height:0}
+    body > .ad-container{width:calc(100% - 24px)}
+}
