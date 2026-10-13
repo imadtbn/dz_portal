@@ -9,7 +9,8 @@
 
 .ad-container {
     min-height: 280px;
-    contain: layout paint style;
+    /* Keep AdSense creatives free to paint beyond their own reserved area. */
+    contain: layout style;
 }
 
 .sector-icon picture {
@@ -67,5 +68,62 @@
         animation-iteration-count: 1 !important;
         scroll-behavior: auto !important;
         transition-duration: .001ms !important;
+    }
+}
+
+/* Homepage CLS stabilization (Lighthouse desktop, 2026-10-13).
+   Keep the design and the natural heights of the long sector listing intact. */
+#main-content > .hero .stats-bar {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    inline-size: min(100%, 26rem);
+    gap: clamp(.4rem, 2vw, 1.5rem);
+    margin-inline: auto;
+}
+#main-content > .hero .stat-item {
+    min-inline-size: 0;
+}
+#main-content > .hero .stat-number {
+    white-space: nowrap;
+    font-variant-numeric: tabular-nums;
+}
+#main-content > .hero .stat-label {
+    display: block;
+    min-block-size: 1.4em;
+}
+
+/* The filter count and asynchronously updated sector counters must not
+   change their badge height or wrap when data replaces the initial text. */
+#sectors .filter-actions {
+    min-block-size: 3.5rem;
+    align-items: center;
+    flex-wrap: wrap;
+}
+#sectors .sector-card {
+    min-inline-size: 0;
+}
+#sectors .sector-count {
+    box-sizing: border-box;
+    min-inline-size: 6.5em;
+    white-space: nowrap;
+    text-align: center;
+}
+#sectors .section-header .pwa-badge {
+    box-sizing: border-box;
+    max-inline-size: 100%;
+    min-inline-size: 0;
+}
+#sectors .section-header .badge-content {
+    min-inline-size: 0;
+}
+
+/* Preserve room for all 13 original in-content ad slots; no ad is removed,
+   fixed-height capped, hidden, or deferred by these rules. */
+#sectors > .ad-container {
+    min-block-size: 280px;
+}
+@media (max-width: 420px) {
+    #sectors .section-header .badge-subtitle {
+        overflow-wrap: anywhere;
     }
 }
