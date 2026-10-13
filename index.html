@@ -79,8 +79,10 @@
                                 installingWorker.onstatechange = () => {
                                     if (installingWorker.state === "installed" && navigator
                                         .serviceWorker.controller) {
-                                        console.log("نسخة جديدة متوفرة! جاري تحديث التطبيق...");
-                                        window.location.reload();
+                                        // Preserve scroll position and Lighthouse measurements.
+                                        // The new worker activates in the background and applies
+                                        // on the next natural navigation; never force a reload.
+                                        console.info("تم تحديث التطبيق في الخلفية؛ ستُستخدم النسخة الجديدة عند التنقل التالي.");
                                     }
                                 };
                             }
