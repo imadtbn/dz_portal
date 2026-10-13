@@ -127,3 +127,22 @@
         overflow-wrap: anywhere;
     }
 }
+
+/* First-paint icon metrics: Font Awesome is intentionally non-render-blocking.
+   These inline boxes prevent labels from moving when glyphs become available. */
+:where(.hero, .header, .quick-access, #sectors) i:is(.fa, .fas, .far, .fab) {
+    display: inline-block;
+    width: 1.2em;
+    min-width: 1.2em;
+    text-align: center;
+    line-height: 1;
+    font-style: normal;
+    vertical-align: -0.075em;
+}
+
+/* The real image replaces a 1px transparent placeholder *inside* the
+   pre-existing 70x70 sector-icon. Never let the swap alter card geometry. */
+#sectors .sector-icon img[data-dz-src] {
+    aspect-ratio: 1 / 1;
+    object-fit: contain;
+}
