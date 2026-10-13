@@ -1784,3 +1784,18 @@ body {
 .ad-container:has(> ins.adsbygoogle) > ins.adsbygoogle {
     max-inline-size: 100%;
 }
+
+/* CWV stage 01: center existing AdSense containers on desktop and mobile.
+   The creative keeps its responsive width; no unit is hidden, repositioned
+   outside the document flow or assigned a fixed height. */
+.ad-container:has(ins.adsbygoogle) {
+    width: 100%;
+    max-width: min(100%, 970px);
+    margin-inline: auto;
+}
+.ad-container:has(ins.adsbygoogle) > ins.adsbygoogle {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    margin-inline: auto;
+}
