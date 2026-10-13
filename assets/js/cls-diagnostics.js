@@ -48,6 +48,8 @@
   // Inspect the actual geometry instead of guessing which ancestor changed.
   const geometry = [];
   const mutations = [];
+  const resizes = [];
+  let baseline = null;
   const fontEvents = [];
   const selectors = [
     '#main-content', '#main-content > .hero', '#main-content > .quick-access',
@@ -68,6 +70,7 @@
         width: Math.round(rect.width)
       });
     }
+    if (!baseline) baseline = dimensions.map((item) => ({ ...item }));
     geometry.push({ reason, timeMs: Math.round(performance.now()), dimensions });
     if (geometry.length > 40) geometry.shift();
   };
@@ -101,6 +104,35 @@
     mutationObserver.observe(document.body, {
       childList: true, subtree: true, attributes: true, attributeFilter: ['style']
     });
+    // Detailed resize tracing for the sectors section and each original ad
+    // wrapper. The observer runs only when ?cls-debug=1 is explicitly enabled.
+    if ('ResizeObserver' in window) {
+      let queued = false;
+      const geometryObserver = new ResizeObserver((entries) => {
+        for (const entry of entries) {
+          if (resizes.length >= 80) break;
+          const target = entry.target;
+          resizes.push({
+            timeMs: Math.round(performance.now()), element: describe(target),
+            height: Math.round(entry.contentRect.height),
+            width: Math.round(entry.contentRect.width),
+            type: target.matches('.ad-container') ? 'ad-slot' : 'layout'
+          });
+        }
+        if (!queued) {
+          queued = true;
+          requestAnimationFrame(() => {
+            queued = false;
+            measure('ResizeObserver');
+          });
+        }
+      });
+      const monitored = document.querySelectorAll(
+        '#main-content, #main-content > .hero, #sectors, ' +
+        '#sectors > .section-header, #sectors .sectors-grid, #sectors .ad-container'
+      );
+      monitored.forEach((element) => geometryObserver.observe(element));
+    }
     for (const delay of [250, 1000, 2500, 5000]) {
       setTimeout(() => measure('+' + delay + 'ms'), delay);
     }
@@ -118,7 +150,7 @@
       });
     }
     document.querySelectorAll('#sectors .sector-icon img').forEach((img) => {
-      if (img.complete) return;
+      if (img.complete && !img.hasAttribute('data-dz-src')) return;
       img.addEventListener('load', () => {
         if (geometry.length < 40) measure('sector image loaded');
       }, { once: true });
@@ -130,7 +162,7 @@
 
   window.__dzCLSReport = () => {
     const cls = sessions.reduce((maximum, session) => Math.max(maximum, session.value), 0);
-    const previous = geometry[0]?.dimensions || [];
+    const previous = baseline || [];
     const latest = geometry.at(-1)?.dimensions || [];
     const changed = latest.map((item) => {
       const initial = previous.find((record) => record.selector === item.selector);
@@ -146,7 +178,8 @@
     const result = { cls, entries: shifts.length, shifts: shifts.slice(),
       sessions: sessions.slice(), geometry: geometry.slice(),
       dimensionsChanged: changed, adOrLayoutMutations: mutations.slice(),
-      fontEvents: fontEvents.slice(), fontsStatus: document.fonts?.status };
+      fontEvents: fontEvents.slice(), resizes: resizes.slice(),
+      fontsStatus: document.fonts?.status };
     console.info('[DZ Portal CLS diagnostics]', 'CLS:', cls.toFixed(4),
       '| Entries:', shifts.length, '| use window.__dzCLSReport() again after scrolling');
     console.table(shifts.map(({ timeMs, value, sources }) => ({
@@ -156,6 +189,7 @@
     })));
     if (changed.length) console.table(changed);
     if (mutations.length) console.table(mutations);
+    if (resizes.length) console.table(resizes);
     return result;
   };
   console.info('[DZ Portal] CLS debug enabled. Run window.__dzCLSReport() in DevTools.');
