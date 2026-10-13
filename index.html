@@ -43,6 +43,14 @@
     <link rel="stylesheet" href="assets/css/Alert-Modal.css">
     <link rel="stylesheet" href="assets/css/rating-panel.css">
     <link rel="stylesheet" href="assets/css/performance-home.css">
+    <!-- Debug-only CLS measurement; normal visits do not load this script. -->
+    <script>
+        if (new URLSearchParams(location.search).get('cls-debug') === '1') {
+            const clsDebug = document.createElement('script');
+            clsDebug.src = 'assets/js/cls-diagnostics.js';
+            document.head.appendChild(clsDebug);
+        }
+    </script>
 <link rel="manifest" href="manifest.json">
     <meta name="theme-color" content="#006400">
 
