@@ -335,26 +335,28 @@
                 data-ad-client="ca-pub-5656416032906373" data-ad-slot="8546947691"></ins>
         </div>
 
-        <!-- Stats Section -->
-        <section class="stats-section">
+        <!-- Site statistics: measured from published sector pages, not fixed claims. -->
+        <section class="stats-section" aria-label="إحصائيات البوابة">
             <div class="stats-grid">
                 <div class="stat-item-hero">
-                    <span class="stat-number-hero">30+</span>
-                    <span class="stat-label-hero">قطاع حكومي</span>
+                    <span class="stat-number-hero" id="totalSectors" aria-live="polite">—</span>
+                    <span class="stat-label-hero">القطاعات المحللة</span>
                 </div>
                 <div class="stat-item-hero">
-                    <span class="stat-number-hero">280+</span>
-                    <span class="stat-label-hero">خدمة رقمية</span>
+                    <span class="stat-number-hero" id="totalServices" aria-live="polite">—</span>
+                    <span class="stat-label-hero">الخدمات المحصاة</span>
                 </div>
                 <div class="stat-item-hero">
-                    <span class="stat-number-hero">24/7</span>
-                    <span class="stat-label-hero">خدمة متواصلة</span>
+                    <span class="stat-number-hero" id="averageServices" aria-live="polite">—</span>
+                    <span class="stat-label-hero">متوسط الخدمات لكل قطاع</span>
                 </div>
                 <div class="stat-item-hero">
-                    <span class="stat-number-hero">100%</span>
-                    <span class="stat-label-hero">مجانية</span>
+                    <span class="stat-number-hero" id="topSectorCount" aria-live="polite">—</span>
+                    <span class="stat-label-hero" id="topSectorLabel">خدمات أكبر قطاع</span>
                 </div>
             </div>
+            <p id="statsStatus" role="status" style="text-align:center;margin:1rem auto 0;max-width:800px;font-size:.85rem;color:#f3fff6;">جارٍ احتساب الإحصائيات من صفحات القطاعات المنشورة...</p>
+            <p style="text-align:center;margin:.5rem auto 0;"><a href="statistics.html" style="color:#fff;text-decoration:underline;font-weight:700;">تفاصيل إحصائيات القطاعات والخدمات</a></p>
         </section>
 
         <div class="ad-container">
@@ -611,6 +613,7 @@
 
     <!-- AdSense إعلان  -->
     <!-- تحميل الإحصائيات والبحث والتقييمات ومساعد الإعلانات بعد العرض الأول -->
+    <script defer src="../assets/js/statistics.js"></script>
     <script defer src="../assets/js/deferred-homepage.js"></script>
 <script>
      (adsbygoogle = window.adsbygoogle || []).push({});
