@@ -2222,3 +2222,22 @@ video {
     .quick-links-content { min-height: 44px; }
     .quick-links-content > .quick-link { min-height: 42px; }
 }
+
+
+/* Center in-content AdSense creatives (including narrower fluid / related-search
+   frames) on RTL pages at desktop and mobile widths.
+   Keep Google-assigned creative dimensions, heights and display behavior. */
+.ad-container:has(ins.adsbygoogle) {
+    max-inline-size: min(100%, 970px);
+    margin-inline: auto;
+    text-align: center;
+}
+.ad-container:has(ins.adsbygoogle) ins.adsbygoogle {
+    max-inline-size: 100%;
+    margin-inline: auto;
+}
+.ad-container:has(ins.adsbygoogle) ins.adsbygoogle > iframe,
+.ad-container:has(ins.adsbygoogle) ins.adsbygoogle > div,
+.ad-container:has(ins.adsbygoogle) ins.adsbygoogle > div > iframe {
+    margin-inline: auto !important;
+}
