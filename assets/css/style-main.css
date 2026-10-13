@@ -1836,3 +1836,13 @@ body {
 .search-box-wrapper > .search-box:focus{
   transform:none;
 }
+
+/* Homepage hero: compact mobile typography and spacing, desktop unchanged. */
+@media (max-width: 600px) {
+  .hero { padding-block: 1.1rem 1.35rem; }
+  .hero .hero-content { padding-inline: 12px; }
+  .hero .hero-badge { font-size: .76rem; padding: .35rem .65rem; margin-bottom: .85rem; }
+  .hero h1 { font-size: clamp(1.45rem, 5.4vw, 1.95rem); line-height: 1.35; margin: 0 0 .55rem; }
+  .hero .hero-subtitle { font-size: .92rem; line-height: 1.6; max-width: 37ch; margin: 0 auto 1rem; }
+  .hero .search-container { margin-top: 1rem; margin-bottom: .7rem; }
+}
