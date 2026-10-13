@@ -33,8 +33,15 @@ function init(){
  document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!hint.hidden){setHint(false);hintBtn.focus();}});
  if(anchor){slot.classList.add('dz-share-in-hero');anchor.appendChild(slot);}
  else {const main=document.querySelector('main,[role="main"]');if(main)main.insertBefore(slot,main.firstChild);else{const footer=document.querySelector('footer');if(footer)footer.before(slot);else document.body.appendChild(slot);}}
+ // Set valid share hrefs at creation time so crawlers and keyboard users see real links.
+ const initialShareTitle=document.querySelector('meta[property="og:title"]')?.content||document.title||'البوابة الجزائرية للخدمات الرقمية';
+ const initialShareUrl=encodeURIComponent(location.href);
+ const initialShareText=encodeURIComponent(initialShareTitle+' — '+location.href);
+ const initialWhatsApp='https://api.whatsapp.com/send?text='+initialShareText;
+ const initialTelegram='https://t.me/share/url?url='+initialShareUrl+'&text='+encodeURIComponent(initialShareTitle);
+ const initialFacebook='https://www.facebook.com/sharer/sharer.php?u='+initialShareUrl;
  const panel=document.createElement('div');panel.className='dz-share-panel';panel.hidden=true;
- panel.innerHTML='<section class="dz-share-dialog" role="dialog" aria-modal="true" aria-labelledby="dz-share-heading"><div class="dz-share-dialog-header"><h2 id="dz-share-heading">مشاركة هذه الصفحة</h2><button type="button" class="dz-share-close" aria-label="إغلاق">×</button></div><p class="dz-share-page-title"></p><div class="dz-share-options"><a class="dz-share-option dz-whatsapp" target="_blank" rel="noopener noreferrer">واتساب</a><a class="dz-share-option dz-telegram" target="_blank" rel="noopener noreferrer">تيليغرام</a><a class="dz-share-option dz-facebook" target="_blank" rel="noopener noreferrer">فيسبوك</a><button type="button" class="dz-share-option dz-copy">نسخ الرابط</button></div><p class="dz-share-status" role="status" aria-live="polite"></p></section>';
+ panel.innerHTML='<section class="dz-share-dialog" role="dialog" aria-modal="true" aria-labelledby="dz-share-heading"><div class="dz-share-dialog-header"><h2 id="dz-share-heading">مشاركة هذه الصفحة</h2><button type="button" class="dz-share-close" aria-label="إغلاق">×</button></div><p class="dz-share-page-title"></p><div class="dz-share-options"><a class="dz-share-option dz-whatsapp" href="'+initialWhatsApp+'" target="_blank" rel="noopener noreferrer">واتساب</a><a class="dz-share-option dz-telegram" href="'+initialTelegram+'" target="_blank" rel="noopener noreferrer">تيليغرام</a><a class="dz-share-option dz-facebook" href="'+initialFacebook+'" target="_blank" rel="noopener noreferrer">فيسبوك</a><button type="button" class="dz-share-option dz-copy">نسخ الرابط</button></div><p class="dz-share-status" role="status" aria-live="polite"></p></section>';
  document.body.appendChild(panel);
  const close=panel.querySelector('.dz-share-close'),status=panel.querySelector('.dz-share-status');
  let focusReturn=btn;
