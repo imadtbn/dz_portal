@@ -32,6 +32,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <!-- Priority: Arabic Tajawal faces identified in the mobile and desktop Lighthouse traces.
+         Preload before CSS to reduce fallback-font swaps while preserving every font weight. -->
+    <link rel="preload" href="https://fonts.gstatic.com/s/tajawal/v12/Iura6YBj_oCad4k1nzSBC5xLhLFw4Q.woff2"
+        as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="https://fonts.gstatic.com/s/tajawal/v12/Iurf6YBj_oCad4k1l4qkHrFpiZtK6Gw.woff2"
+        as="font" type="font/woff2" crossorigin>
     <!-- Fonts -->
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&display=swap">
