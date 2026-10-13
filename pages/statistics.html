@@ -371,6 +371,36 @@
                 width: 100%;
             }
         }
+
+        /* Statistics-only responsive site navigation */
+        .stats-navigation { display:flex; align-items:center; gap:5px; flex-wrap:wrap; }
+        .stats-navigation a { color:#fff; text-decoration:none; padding:9px 11px; border-radius:9px; font-weight:700; font-size:.87rem; white-space:nowrap; display:inline-flex; align-items:center; gap:7px; }
+        .stats-navigation a:hover,.stats-navigation a[aria-current="page"] { background:rgba(255,255,255,.19); }
+        .stats-navigation a[aria-current="page"] { box-shadow:inset 0 -2px 0 var(--stats-gold); }
+        .stats-mobile-navigation { display:none; position:relative; }
+        .stats-breadcrumb { display:flex; align-items:center; gap:12px; max-width:1250px; width:calc(100% - 40px); margin:12px auto; font-size:.9rem; color:#4f675a; }
+        .stats-breadcrumb a { color:var(--stats-green); text-decoration:none; font-weight:700; }
+        .stats-breadcrumb i { font-size:.7rem; color:#7f9788; }
+        .stats-navigation a:focus-visible,.stats-mobile-navigation summary:focus-visible,.stats-mobile-navigation a:focus-visible,.stats-breadcrumb a:focus-visible { outline:3px solid var(--stats-gold); outline-offset:3px; }
+        @media(max-width:1050px) {
+            .stats-navigation { display:none; }
+            .stats-mobile-navigation { display:block; }
+            .stats-mobile-navigation summary { list-style:none; display:flex; align-items:center; justify-content:center; gap:9px; cursor:pointer; border:1px solid rgba(255,255,255,.55); color:#fff; border-radius:10px; padding:9px 13px; min-height:44px; font-weight:700; }
+            .stats-mobile-navigation summary::-webkit-details-marker { display:none; }
+            .stats-mobile-navigation nav { position:absolute; top:calc(100% + 8px); left:0; z-index:120; width:min(260px,calc(100vw - 28px)); padding:8px; border-radius:12px; background:white; border:1px solid #cce1d2; box-shadow:0 12px 28px #002d1c30; display:grid; gap:4px; }
+            .stats-mobile-navigation nav a { color:#00552b; padding:11px; border-radius:8px; text-decoration:none; font-weight:700; }
+            .stats-mobile-navigation nav a:hover,.stats-mobile-navigation nav a[aria-current="page"] { background:#e8f5e9; }
+        }
+        @media(max-width:560px) {
+            .header { padding:10px 12px; }
+            .header-content { gap:10px; }
+            .logo-section { gap:8px; min-width:0; }
+            .logo-section h1 { font-size:1rem; line-height:1.35; }
+            .logo-section span { font-size:.72rem; }
+            .back-btn { width:38px; height:38px; flex-shrink:0; }
+            .stats-mobile-navigation summary { padding:8px 10px; font-size:.8rem; }
+            .stats-breadcrumb { width:calc(100% - 24px); font-size:.83rem; }
+        }
     </style>
 
          <!-- Google tag (gtag.js) -->
@@ -543,8 +573,30 @@
                     <h1>البوابة الجزائرية</h1><span>للخدمات الرقمية</span>
                 </div>
             </div>
+        <nav class="stats-navigation" aria-label="التنقل الرئيسي">
+            <a href="../index.html"><i class="fas fa-house" aria-hidden="true"></i> الرئيسية</a>
+            <a href="../index.html#services"><i class="fas fa-grid-2" aria-hidden="true"></i> الخدمات</a>
+            <a href="statistics.html" aria-current="page"><i class="fas fa-chart-column" aria-hidden="true"></i> الإحصائيات</a>
+            <a href="about.html"><i class="fas fa-circle-info" aria-hidden="true"></i> من نحن</a>
+            <a href="contact.html"><i class="fas fa-envelope" aria-hidden="true"></i> اتصل بنا</a>
+        </nav>
+        <details class="stats-mobile-navigation">
+            <summary aria-label="فتح قائمة التنقل"><i class="fas fa-bars" aria-hidden="true"></i><span>القائمة</span></summary>
+            <nav aria-label="القائمة الرئيسية للهاتف">
+                <a href="../index.html">الرئيسية</a>
+                <a href="../index.html#services">الخدمات</a>
+                <a href="statistics.html" aria-current="page">الإحصائيات</a>
+                <a href="about.html">من نحن</a>
+                <a href="contact.html">اتصل بنا</a>
+            </nav>
+        </details>
         </div>
     </header>
+    <nav class="stats-breadcrumb" aria-label="مسار التنقل">
+        <a href="../index.html">الرئيسية</a>
+        <i class="fas fa-chevron-left" aria-hidden="true"></i>
+        <span aria-current="page">الإحصائيات العامة</span>
+    </nav>
 
     <section class="stats-hero">
         <div class="stats-hero-content">
