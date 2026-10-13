@@ -397,3 +397,19 @@ body > .ad-container ins.adsbygoogle,
 .ad-container:has(ins.adsbygoogle) ins.adsbygoogle > div > iframe {
     margin-inline: auto !important;
 }
+
+
+/* Shared portal footer, visually matching education notice pages. */
+/* Consistent, responsive portal footer for standalone bulletin pages. */
+.reader-footer{background:linear-gradient(125deg,#004b27,#003e2b);color:#fff;width:100%;margin-top:auto}
+.reader-footer__inner{max-width:1100px;margin:auto;padding:clamp(22px,4vw,38px) clamp(14px,3vw,28px);display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:26px;align-items:start}
+.reader-footer__brand{display:inline-flex;align-items:center;gap:10px;color:#fff;text-decoration:none;font-weight:800;line-height:1.5}
+.reader-footer__brand img{height:38px;width:38px;object-fit:contain;flex-shrink:0}
+.reader-footer__about p{margin:10px 0 0;color:#dcebe3;font-size:.9rem;max-width:420px}
+.reader-footer__links{display:flex;flex-wrap:wrap;gap:10px 20px;align-items:center;align-content:start}
+.reader-footer__links a{color:#eef7f0;text-decoration:none;font-size:.91rem;padding:4px 0}
+.reader-footer__links a:hover,.reader-footer__links a:focus-visible,.reader-footer__brand:focus-visible{color:#ffdb75;text-decoration:underline;text-underline-offset:4px}
+.reader-footer__links a:focus-visible,.reader-footer__brand:focus-visible{outline:2px solid #ffdb75;outline-offset:4px}
+.reader-footer__bottom{border-top:1px solid #ffffff30;text-align:center;padding:14px 12px;color:#dcebe3;font-size:.83rem}
+@media(max-width:650px){.reader-footer__inner{grid-template-columns:1fr;gap:18px}.reader-footer__links{gap:8px 16px}.reader-footer__brand{font-size:.95rem}}
+@media print{.reader-footer{display:none!important}}
