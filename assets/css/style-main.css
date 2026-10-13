@@ -1818,3 +1818,21 @@ body {
 .ad-container:has(ins.adsbygoogle) ins.adsbygoogle > div > iframe {
     margin-inline: auto !important;
 }
+
+/* Search controls: neutralize legacy absolute-button translate in the flex search bar. */
+.search-box-wrapper > .search-btn,
+.search-box-wrapper > .voice-search-btn{
+  position:static;
+  top:auto;
+  transform:none;
+  margin:0;
+  align-self:center;
+  flex-shrink:0;
+}
+.search-box-wrapper > .search-btn:hover,
+.search-box-wrapper > .voice-search-btn:hover{
+  transform:scale(1.04);
+}
+.search-box-wrapper > .search-box:focus{
+  transform:none;
+}
