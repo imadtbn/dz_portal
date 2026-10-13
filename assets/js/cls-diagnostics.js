@@ -44,9 +44,109 @@
   });
 
   observer.observe({ type: 'layout-shift', buffered: true });
+
+  // Inspect the actual geometry instead of guessing which ancestor changed.
+  const geometry = [];
+  const mutations = [];
+  const fontEvents = [];
+  const selectors = [
+    '#main-content', '#main-content > .hero', '#main-content > .quick-access',
+    '#sectors', '#sectors > .section-header', '#sectors > .filter-actions',
+    '#sectors > .sectors-grid', '#sectors > .ad-container',
+    '#sectors .sector-card', '#sectors .sector-icon'
+  ];
+  const measure = (reason) => {
+    const dimensions = [];
+    for (const selector of selectors) {
+      const element = document.querySelector(selector);
+      if (!element) continue;
+      const rect = element.getBoundingClientRect();
+      dimensions.push({
+        selector,
+        top: Math.round(rect.top + scrollY),
+        height: Math.round(rect.height),
+        width: Math.round(rect.width)
+      });
+    }
+    geometry.push({ reason, timeMs: Math.round(performance.now()), dimensions });
+    if (geometry.length > 40) geometry.shift();
+  };
+  const collectMutation = (record) => {
+    if (mutations.length >= 60) return;
+    if (record.type === 'attributes') {
+      if (record.target.matches?.('#main-content, #sectors, .hero')) {
+        mutations.push({
+          timeMs: Math.round(performance.now()), type: 'style',
+          element: describe(record.target),
+          style: record.target.getAttribute('style') || ''
+        });
+      }
+      return;
+    }
+    for (const node of record.addedNodes) {
+      if (!(node instanceof Element)) continue;
+      if (node.matches?.('.google-auto-placed, ins.adsbygoogle, [id*="google_ads"], [class*="adsbygoogle"]')
+        || node.querySelector?.('.google-auto-placed, ins.adsbygoogle, [id*="google_ads"]')) {
+        mutations.push({ timeMs: Math.round(performance.now()),
+          type: 'ad-inserted', element: describe(node),
+          parent: describe(record.target) });
+      }
+    }
+  };
+  const startGeometry = () => {
+    measure('DOMContentLoaded');
+    const mutationObserver = new MutationObserver((records) => {
+      for (const record of records) collectMutation(record);
+    });
+    mutationObserver.observe(document.body, {
+      childList: true, subtree: true, attributes: true, attributeFilter: ['style']
+    });
+    for (const delay of [250, 1000, 2500, 5000]) {
+      setTimeout(() => measure('+' + delay + 'ms'), delay);
+    }
+    window.addEventListener('load', () => measure('window.load'), { once: true });
+    if (document.fonts) {
+      const ready = () => measure('fonts.ready');
+      document.fonts.ready.then(ready);
+      document.fonts.addEventListener?.('loadingdone', (event) => {
+        fontEvents.push({
+          timeMs: Math.round(performance.now()),
+          fonts: Array.from(event.fontfaces || [], (font) =>
+            font.family + ' ' + font.weight).slice(0, 10)
+        });
+        measure('font loadingdone');
+      });
+    }
+    document.querySelectorAll('#sectors .sector-icon img').forEach((img) => {
+      if (img.complete) return;
+      img.addEventListener('load', () => {
+        if (geometry.length < 40) measure('sector image loaded');
+      }, { once: true });
+    });
+  };
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', startGeometry, { once: true });
+  } else startGeometry();
+
   window.__dzCLSReport = () => {
     const cls = sessions.reduce((maximum, session) => Math.max(maximum, session.value), 0);
-    const result = { cls, entries: shifts.length, shifts: shifts.slice(), sessions: sessions.slice() };
+    const previous = geometry[0]?.dimensions || [];
+    const latest = geometry.at(-1)?.dimensions || [];
+    const changed = latest.map((item) => {
+      const initial = previous.find((record) => record.selector === item.selector);
+      return {
+        selector: item.selector,
+        heightBefore: initial?.height ?? null,
+        heightNow: item.height,
+        deltaHeight: initial ? item.height - initial.height : null,
+        deltaTop: initial ? item.top - initial.top : null
+      };
+    }).filter((item) => Math.abs(item.deltaHeight || 0) > 1
+      || Math.abs(item.deltaTop || 0) > 1);
+    const result = { cls, entries: shifts.length, shifts: shifts.slice(),
+      sessions: sessions.slice(), geometry: geometry.slice(),
+      dimensionsChanged: changed, adOrLayoutMutations: mutations.slice(),
+      fontEvents: fontEvents.slice(), fontsStatus: document.fonts?.status };
     console.info('[DZ Portal CLS diagnostics]', 'CLS:', cls.toFixed(4),
       '| Entries:', shifts.length, '| use window.__dzCLSReport() again after scrolling');
     console.table(shifts.map(({ timeMs, value, sources }) => ({
@@ -54,6 +154,8 @@
       shift: Number(value.toFixed(5)),
       elements: sources.map((source) => source.element).join(', ')
     })));
+    if (changed.length) console.table(changed);
+    if (mutations.length) console.table(mutations);
     return result;
   };
   console.info('[DZ Portal] CLS debug enabled. Run window.__dzCLSReport() in DevTools.');
