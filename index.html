@@ -34,19 +34,20 @@
     <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
     <!-- Priority: Arabic Tajawal faces identified in the mobile and desktop Lighthouse traces.
          Preload before CSS to reduce fallback-font swaps while preserving every font weight. -->
-    <link rel="preload" href="https://fonts.gstatic.com/s/tajawal/v12/Iura6YBj_oCad4k1nzSBC5xLhLFw4Q.woff2"
-        as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="https://fonts.gstatic.com/s/tajawal/v12/Iurf6YBj_oCad4k1l4qkHrFpiZtK6Gw.woff2"
-        as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="https://fonts.gstatic.com/s/tajawal/v12/Iura6YBj_oCad4k1nzSBC5xLhLFw4Q.woff2" as="font"
+        type="font/woff2" crossorigin>
+    <link rel="preload" href="https://fonts.gstatic.com/s/tajawal/v12/Iurf6YBj_oCad4k1l4qkHrFpiZtK6Gw.woff2" as="font"
+        type="font/woff2" crossorigin>
     <!-- Fonts -->
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&display=swap">
 
     <!-- Icons are noncritical for first content paint; preserve original library. -->
-    <link rel="preload" as="style"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
+    <noscript>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    </noscript>
 
     <link rel="stylesheet" href="assets/css/style-main.css">
     <link rel="stylesheet" href="assets/css/style-section-header.css">
@@ -61,7 +62,7 @@
             document.head.appendChild(clsDebug);
         }
     </script>
-<link rel="manifest" href="manifest.json">
+    <link rel="manifest" href="manifest.json">
     <meta name="theme-color" content="#006400">
 
     <script>
@@ -1174,7 +1175,13 @@
     <!-- DZ Share: responsive page sharing -->
     <link rel="stylesheet" href="assets/css/dz-share.css">
     <script defer src="assets/js/dz-share.js"></script>
-    <noscript><style>#sectors .sector-icon img[data-dz-src]{display:none!important}</style></noscript>
+    <noscript>
+        <style>
+            #sectors .sector-icon img[data-dz-src] {
+                display: none !important
+            }
+        </style>
+    </noscript>
 </head>
 
 <body>
@@ -1250,9 +1257,13 @@
 
         <!-- Quick Access -->
         <div class="quick-access" dir="rtl">
+            <a href="https://imadtbn.github.io/quran-mp3/" class="quick-link">
+                <i class="fas fa-quran"></i>
+                <span>القرآن الكريم</span>
+            </a>
             <a href="sectors/sntf.html" class="quick-link">
                 <i class="fas fa-train"></i>
-                <span>مواقيت سير القطارات</span>
+                <span>جداول القطارات</span>
             </a>
             <a href="sectors/markabatidz.html" class="quick-link">
                 <i class="fas fa-car"></i>
@@ -1268,7 +1279,7 @@
             </a>
             <a href="sectors/sntf-trains.html" class="quick-link">
                 <i class="fas fa-train"></i>
-                <span>اللوحة الذكية لمواقيت سير القطارات</span>
+                <span>اللوحة القطارات</span>
             </a>
             <a href="sectors/education.html" class="quick-link">
                 <i class="fas fa-graduation-cap"></i>
@@ -1278,13 +1289,13 @@
                 <i class="fas fa-graduation-cap"></i>
                 <span>خدمات جامعية</span>
             </a>
+            <a href="https://imadtbn.github.io/trains-dz/" class="quick-link">
+                <i class="fas fa-train"></i>
+                <span>قطارات الجزائر</span>
+            </a>
             <a href="sectors/interieur.html" class="quick-link">
                 <i class="fas fa-id-card"></i>
                 <span>الحالة المدنية</span>
-            </a>
-            <a href="sectors/facteur.html" class="quick-link">
-                <i class="fas fa-file-invoice-dollar"></i>
-                <span>الفواتير</span>
             </a>
             <a href="sectors/mtess.html" class="quick-link">
                 <i class="fas fa-hand-holding-usd"></i>
@@ -1449,7 +1460,20 @@
                     <p class="sector-desc">مركبتي" لفحص مطابقة المركبات</p>
                 </a>
 
-
+                <!-- قطارات الجزائر - Trains-Dz -->
+                <a href="https://imadtbn.github.io/trains-dz/" class="sector-card" data-new="true"
+                    data-new-since="2026-10-13">
+                    <span class="sector-count">6 خدمات</span>
+                    <div class="service-badge">
+                        <i class="fas fa-gift"></i> جديد
+                    </div>
+                    <div class="sector-icon">
+                        <img src="assets/images/train-dz.png" alt="trains-dz logo" loading="lazy" width="120"
+                            height="120">
+                    </div>
+                    <h3 class="sector-title">قطارات الجزائر - Trains-Dz</h3>
+                    <p class="sector-desc">تخطّط رحلتك، تشوف المحطات والجداول والخريطة بسهولة وفي بلاصة وحدة </p>
+                </a>
             </div>
 
             <div class="ad-container">
@@ -1703,7 +1727,10 @@
                     data-new-since="2026-09-19">
                     <span class="sector-count">40 خدمات</span>
                     <div class="sector-icon">
-                        <img src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs" data-dz-src="assets/images/student.png" alt="student-dz" loading="lazy" decoding="async" fetchpriority="low" width="120" height="120"><noscript><img src="assets/images/student.png" alt="" width="120" height="120" loading="lazy"></noscript>
+                        <img src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs"
+                            data-dz-src="assets/images/student.png" alt="student-dz" loading="lazy" decoding="async"
+                            fetchpriority="low" width="120" height="120"><noscript><img src="assets/images/student.png"
+                                alt="" width="120" height="120" loading="lazy"></noscript>
                     </div>
                     <h3 class="sector-title"> Student-DZ</h3>
                     <p class="sector-desc">مساعد الطالب الجزائري، كل ما يحتاجه الطالب الجزائري في مكان واحد، الجامعات،
@@ -1715,7 +1742,10 @@
                     data-new-since="2026-09-19">
                     <span class="sector-count">20 خدمات</span>
                     <div class="sector-icon">
-                        <img src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs" data-dz-src="assets/images/tool-dz.png" alt="tool-dz" loading="lazy" decoding="async" fetchpriority="low" width="120" height="120"><noscript><img src="assets/images/tool-dz.png" alt="" width="120" height="120" loading="lazy"></noscript>
+                        <img src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs"
+                            data-dz-src="assets/images/tool-dz.png" alt="tool-dz" loading="lazy" decoding="async"
+                            fetchpriority="low" width="120" height="120"><noscript><img src="assets/images/tool-dz.png"
+                                alt="" width="120" height="120" loading="lazy"></noscript>
                     </div>
                     <h3 class="sector-title">Tools-dz </h3>
                     <p class="sector-desc">منصة الأدوات الرقمية مصممة لتسهيل حياتك اليومية، كل الأدوات التي تحتاجها
@@ -1732,7 +1762,10 @@
                         <i class="fas fa-gift"></i> جديد
                     </div>
                     <div class="sector-icon">
-                        <img src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs" data-dz-src="assets/images/elect.jpg" alt="seor" loading="lazy" decoding="async" fetchpriority="low" width="120" height="120"><noscript><img src="assets/images/elect.jpg" alt="" width="120" height="120" loading="lazy"></noscript>
+                        <img src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs"
+                            data-dz-src="assets/images/elect.jpg" alt="seor" loading="lazy" decoding="async"
+                            fetchpriority="low" width="120" height="120"><noscript><img src="assets/images/elect.jpg"
+                                alt="" width="120" height="120" loading="lazy"></noscript>
                     </div>
                     <h3 class="sector-title">دليل أعطال الأجهزة الكهرومنزلية</h3>
                     <p class="sector-desc">أكبر مرجع عربي يشرح أعطال غسالة الأواني وغسالة الملابس بطريقة احترافية معتمدة
@@ -1775,8 +1808,11 @@
                         <i class="fas fa-gift"></i> جديد
                     </div>
                     <div class="sector-icon">
-                        <img src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs" data-dz-src="assets/images/service-telephon.png" alt="خدمات الهاتف النقال" loading="lazy" decoding="async" fetchpriority="low"
-                            width="120" height="120"><noscript><img src="assets/images/service-telephon.png" alt="" width="120" height="120" loading="lazy"></noscript>
+                        <img src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs"
+                            data-dz-src="assets/images/service-telephon.png" alt="خدمات الهاتف النقال" loading="lazy"
+                            decoding="async" fetchpriority="low" width="120" height="120"><noscript><img
+                                src="assets/images/service-telephon.png" alt="" width="120" height="120"
+                                loading="lazy"></noscript>
                     </div>
                     <h3 class="sector-title">خدمات الهاتف النقال</h3>
                     <p class="sector-desc">موبيليس، جازي، أوريدو، تطبيقات وأرقام، مصلحة الزبائن
@@ -1791,7 +1827,10 @@
                         <i class="fas fa-gift"></i> جديد
                     </div>
                     <div class="sector-icon">
-                        <img src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs" data-dz-src="assets/images/mafqouda.png" alt="seor" loading="lazy" decoding="async" fetchpriority="low" width="120" height="120"><noscript><img src="assets/images/mafqouda.png" alt="" width="120" height="120" loading="lazy"></noscript>
+                        <img src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs"
+                            data-dz-src="assets/images/mafqouda.png" alt="seor" loading="lazy" decoding="async"
+                            fetchpriority="low" width="120" height="120"><noscript><img src="assets/images/mafqouda.png"
+                                alt="" width="120" height="120" loading="lazy"></noscript>
                     </div>
                     <h3 class="sector-title">مفقودات الجزائر </h3>
                     <p class="sector-desc"> نعيد المفقودات إلى
@@ -1858,7 +1897,10 @@
                         <i class="fas fa-gift"></i> جديد
                     </div>
                     <div class="sector-icon">
-                        <img src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs" data-dz-src="assets/images/mdn.jpeg" alt="seor" loading="lazy" decoding="async" fetchpriority="low" width="120" height="120"><noscript><img src="assets/images/mdn.jpeg" alt="" width="120" height="120" loading="lazy"></noscript>
+                        <img src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs"
+                            data-dz-src="assets/images/mdn.jpeg" alt="seor" loading="lazy" decoding="async"
+                            fetchpriority="low" width="120" height="120"><noscript><img src="assets/images/mdn.jpeg"
+                                alt="" width="120" height="120" loading="lazy"></noscript>
                     </div>
                     <h3 class="sector-title">وزارة الدفاع الوطني</h3>
                     <p class="sector-desc">تسجيلات، تجنيد، توظيف، عروض، مجلات، أخبار </p>
@@ -1979,7 +2021,10 @@
                         <i class="fas fa-gift"></i> جديد
                     </div>
                     <div class="sector-icon">
-                        <img src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs" data-dz-src="assets/images/joradp.png" alt="seor" loading="lazy" decoding="async" fetchpriority="low" width="120" height="120"><noscript><img src="assets/images/joradp.png" alt="" width="120" height="120" loading="lazy"></noscript>
+                        <img src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs"
+                            data-dz-src="assets/images/joradp.png" alt="seor" loading="lazy" decoding="async"
+                            fetchpriority="low" width="120" height="120"><noscript><img src="assets/images/joradp.png"
+                                alt="" width="120" height="120" loading="lazy"></noscript>
                     </div>
                     <h3 class="sector-title">الجريدة الرسمية</h3>
                     <p class="sector-desc">قوانين، منشورات، إتفاقيات ...</p>
@@ -1992,7 +2037,10 @@
                         <i class="fas fa-gift"></i> جديد
                     </div>
                     <div class="sector-icon">
-                        <img src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs" data-dz-src="assets/images/hcn.png" alt="seor" loading="lazy" decoding="async" fetchpriority="low" width="200" height="200"><noscript><img src="assets/images/hcn.png" alt="" width="200" height="200" loading="lazy"></noscript>
+                        <img src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs"
+                            data-dz-src="assets/images/hcn.png" alt="seor" loading="lazy" decoding="async"
+                            fetchpriority="low" width="200" height="200"><noscript><img src="assets/images/hcn.png"
+                                alt="" width="200" height="200" loading="lazy"></noscript>
                     </div>
                     <h3 class="sector-title">المحافظة السامية للرقمة</h3>
                     <p class="sector-desc">البوابة الحكومية للخدمات الرقمية، دعم المستخدمين، تطبيقات</p>
@@ -2019,7 +2067,10 @@
                         <i class="fas fa-gift"></i> جديد
                     </div>
                     <div class="sector-icon">
-                        <img src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs" data-dz-src="assets/images/anpdp.png" alt="seor" loading="lazy" decoding="async" fetchpriority="low" width="200" height="200"><noscript><img src="assets/images/anpdp.png" alt="" width="200" height="200" loading="lazy"></noscript>
+                        <img src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs"
+                            data-dz-src="assets/images/anpdp.png" alt="seor" loading="lazy" decoding="async"
+                            fetchpriority="low" width="200" height="200"><noscript><img src="assets/images/anpdp.png"
+                                alt="" width="200" height="200" loading="lazy"></noscript>
                     </div>
                     <h3 class="sector-title">السلطة الوطنية لحماية المعطيات ذات الطابع الشخصي
                     </h3>
