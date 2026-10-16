@@ -41,6 +41,17 @@
     ]
   }
   </script>
+  <!-- Google AdSense: معرّف الناشر الخاص بالبوابة -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5656416032906373" crossorigin="anonymous"></script>
+  <!-- Google Analytics 4: معرّف القياس الخاص بالموقع -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4BCWP0498L"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-4BCWP0498L');
+  </script>
+
   <style>
     .bill-guide{--bg:#f4f8f5;--green:#006400;--deep:#064e3b;--gold:#d6a83f;--ink:#183329;color:#20352c}
     .bill-guide *{box-sizing:border-box}
@@ -60,6 +71,9 @@
     .bill-guide .heading-icon{width:44px;height:44px;flex:0 0 44px;border-radius:13px;background:#e6f3e9;color:#087443;display:grid;place-items:center;font-size:1.2rem}
     .bill-guide .section-heading h2{font-size:clamp(1.2rem,2.3vw,1.65rem);margin:0 0 5px;color:#12462e}
     .bill-guide .section-heading p{margin:0;color:#60736a;line-height:1.7}
+    .bill-guide .summary-ad{margin:18px auto;padding:12px;min-height:110px;border:1px solid #e2ebe4;border-radius:14px;background:#fff;overflow:hidden}
+    .bill-guide .summary-ad-label{margin:0 0 8px;color:#708176;font-size:.78rem;text-align:center}
+    @media print{.bill-guide .summary-ad{display:none!important}}
     .bill-guide .guide-preview-figure{margin:0;border:1px solid #dce8de;border-radius:14px;overflow:hidden;background:#f7faf8}
     .bill-guide .guide-preview-figure a{display:block;text-align:center;background:#f0f6f2}
     .bill-guide .guide-preview-figure img{display:block;width:100%;height:auto;max-height:1100px;object-fit:contain;margin:0 auto}
@@ -287,6 +301,11 @@
       <div class="guide-alert"><strong>تنبيه:</strong> لا تعتمد على أسعار أو نسب ضريبية منشورة في أمثلة قديمة دون التأكد من سريانها. راجع التعريفة والرسوم في فاتورتك أو لدى سونلغاز/CREG.</div>
     </section>
 
+    <aside class="summary-ad" id="bill-guide-summary-ad" aria-label="إعلان">
+      <p class="summary-ad-label">إعلان</p>
+      <ins class="adsbygoogle" style="display:block;min-height:90px" data-ad-client="ca-pub-5656416032906373" data-ad-slot="3143411927" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    </aside>
+
     <section class="guide-section" id="faq">
       <div class="section-heading">
         <div class="heading-icon"><i class="fas fa-circle-question"></i></div>
@@ -493,6 +512,15 @@
   });
   document.getElementById("print-guide").addEventListener("click",function(){window.print();});
 })();
+</script>
+<script>
+  (function () {
+    var ad = document.querySelector('#bill-guide-summary-ad ins.adsbygoogle');
+    if (ad && !ad.dataset.requested) {
+      ad.dataset.requested = 'true';
+      (window.adsbygoogle = window.adsbygoogle || []).push({});
+    }
+  })();
 </script>
 </body>
 </html>
