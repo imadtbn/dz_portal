@@ -60,6 +60,10 @@
     .bill-guide .heading-icon{width:44px;height:44px;flex:0 0 44px;border-radius:13px;background:#e6f3e9;color:#087443;display:grid;place-items:center;font-size:1.2rem}
     .bill-guide .section-heading h2{font-size:clamp(1.2rem,2.3vw,1.65rem);margin:0 0 5px;color:#12462e}
     .bill-guide .section-heading p{margin:0;color:#60736a;line-height:1.7}
+    .bill-guide .guide-preview-figure{margin:0;border:1px solid #dce8de;border-radius:14px;overflow:hidden;background:#f7faf8}
+    .bill-guide .guide-preview-figure a{display:block;text-align:center;background:#f0f6f2}
+    .bill-guide .guide-preview-figure img{display:block;width:100%;height:auto;max-height:1100px;object-fit:contain;margin:0 auto}
+    .bill-guide .guide-preview-figure figcaption{padding:12px 15px;color:#5c7164;font-size:.9rem;line-height:1.8}
     .bill-guide .bill-layout{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:18px;align-items:start}
     .bill-guide .sample-bill{border:1px solid #d4ddd6;border-radius:14px;background:#fbfcfb;overflow:hidden;box-shadow:0 7px 20px #123c2410}
     .bill-guide .sample-head{background:#075b35;color:#fff;padding:16px;display:flex;align-items:center;gap:12px}
@@ -176,6 +180,19 @@
       <a href="#amount-due"><i class="fas fa-wallet"></i> المبلغ المستحق</a>
       <a href="#faq"><i class="fas fa-circle-question"></i> أسئلة شائعة</a>
     </nav>
+
+    <section class="guide-section guide-preview" aria-labelledby="guide-preview-title">
+      <div class="section-heading">
+        <div class="heading-icon"><i class="fas fa-image"></i></div>
+        <div><h2 id="guide-preview-title">نظرة شاملة على شرح الفاتورة</h2><p>عرض بصري يلخص طريقة قراءة فاتورة سونلغاز ومواقع أهم المعلومات قبل الانتقال إلى الشرح التفصيلي.</p></div>
+      </div>
+      <figure class="guide-preview-figure">
+        <a href="../assets/images/sonalgaz-bill-guide-preview.png" target="_blank" rel="noopener noreferrer" aria-label="فتح الصورة التوضيحية بحجمها الكامل">
+          <img src="../assets/images/sonalgaz-bill-guide-preview.png" alt="تصميم توضيحي لصفحة كيف تقرأ فاتورة سونلغاز، يبيّن نموذج الفاتورة المرقمة وأقسام الشرح التفاعلي وحاسبة الاستهلاك" width="1024" height="1536" loading="eager" decoding="async">
+        </a>
+        <figcaption>الصورة التوضيحية المولّدة لدعم الشرح. انقر عليها لعرضها بحجم أكبر، ثم استخدم النموذج التفاعلي أدناه للتعرّف على تفاصيل كل جزء.</figcaption>
+      </figure>
+    </section>
 
     <section class="guide-section" id="interactive-bill">
       <div class="section-heading">
