@@ -9,7 +9,8 @@
 
 .ad-container {
     min-height: 280px;
-    contain: layout paint style;
+    /* Keep AdSense creatives free to paint beyond their own reserved area. */
+    contain: layout style;
 }
 
 .sector-icon picture {
@@ -56,13 +57,9 @@
         backdrop-filter: none !important;
     }
 
-    .sectors-section,
-    .seo-tags,
-    .stats-panel,
-    .footer {
-        content-visibility: auto;
-        contain-intrinsic-size: 800px;
-    }
+    /* CWV stage 03: these sections can be much taller or shorter than
+       800px, particularly the entire sectors listing. Keep natural layout
+       on mobile rather than skipping variable-height section content. */
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -72,4 +69,80 @@
         scroll-behavior: auto !important;
         transition-duration: .001ms !important;
     }
+}
+
+/* Homepage CLS stabilization (Lighthouse desktop, 2026-10-13).
+   Keep the design and the natural heights of the long sector listing intact. */
+#main-content > .hero .stats-bar {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    inline-size: min(100%, 26rem);
+    gap: clamp(.4rem, 2vw, 1.5rem);
+    margin-inline: auto;
+}
+#main-content > .hero .stat-item {
+    min-inline-size: 0;
+}
+#main-content > .hero .stat-number {
+    white-space: nowrap;
+    font-variant-numeric: tabular-nums;
+}
+#main-content > .hero .stat-label {
+    display: block;
+    min-block-size: 1.4em;
+}
+
+/* The filter count and asynchronously updated sector counters must not
+   change their badge height or wrap when data replaces the initial text. */
+#sectors .filter-actions {
+    min-block-size: 3.5rem;
+    align-items: center;
+    flex-wrap: wrap;
+}
+#sectors .sector-card {
+    min-inline-size: 0;
+}
+#sectors .sector-count {
+    box-sizing: border-box;
+    min-inline-size: 6.5em;
+    white-space: nowrap;
+    text-align: center;
+}
+#sectors .section-header .pwa-badge {
+    box-sizing: border-box;
+    max-inline-size: 100%;
+    min-inline-size: 0;
+}
+#sectors .section-header .badge-content {
+    min-inline-size: 0;
+}
+
+/* Preserve room for all 13 original in-content ad slots; no ad is removed,
+   fixed-height capped, hidden, or deferred by these rules. */
+#sectors > .ad-container {
+    min-block-size: 280px;
+}
+@media (max-width: 420px) {
+    #sectors .section-header .badge-subtitle {
+        overflow-wrap: anywhere;
+    }
+}
+
+/* First-paint icon metrics: Font Awesome is intentionally non-render-blocking.
+   These inline boxes prevent labels from moving when glyphs become available. */
+:where(.hero, .header, .quick-access, #sectors) i:is(.fa, .fas, .far, .fab) {
+    display: inline-block;
+    width: 1.2em;
+    min-width: 1.2em;
+    text-align: center;
+    line-height: 1;
+    font-style: normal;
+    vertical-align: -0.075em;
+}
+
+/* The real image replaces a 1px transparent placeholder *inside* the
+   pre-existing 70x70 sector-icon. Never let the swap alter card geometry. */
+#sectors .sector-icon img[data-dz-src] {
+    aspect-ratio: 1 / 1;
+    object-fit: contain;
 }

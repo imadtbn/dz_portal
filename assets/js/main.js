@@ -84,6 +84,17 @@ document.addEventListener("DOMContentLoaded", function () {
 let deferredPrompt;
 const installBtn = document.getElementById('installAppBtn');
 
+// The install badge is a <div role="button"> in the existing layout.
+ // Keep its styling but enable keyboard activation like a native button.
+if (installBtn && installBtn.getAttribute('role') === 'button') {
+  installBtn.addEventListener('keydown', (event) => {
+    if (event.key === 'Enter' || event.key === ' ') {
+      event.preventDefault();
+      installBtn.click();
+    }
+  });
+}
+
 // استقبال حدث beforeinstallprompt
 window.addEventListener('beforeinstallprompt', (e) => {
   e.preventDefault();

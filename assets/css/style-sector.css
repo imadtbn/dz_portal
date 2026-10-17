@@ -1436,10 +1436,9 @@ html {
     contain: layout style;
 }
 
-.services-grid {
-    content-visibility: auto;
-    contain-intrinsic-size: 1px 1000px;
-}
+/* CWV stage 03: service grids have variable numbers of items and nested ads.
+   Use their actual flow height instead of a 1000px content-visibility estimate.
+   Existing .services-grid display/grid layout rules remain unchanged. */
 
 .contact-link {
     display: inline-block;
@@ -2028,4 +2027,217 @@ video {
     transform:translateY(-2px);
     opacity:.9;
 
+}
+
+/* Compact sector heroes: keep statistics on one row across screen sizes. */
+.sector-hero {
+    padding-block: 2.25rem;
+}
+.sector-hero .hero-content {
+    gap: 1.75rem;
+}
+.sector-hero .hero-stats {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: .75rem;
+    margin-top: 1.25rem;
+    min-height: 0;
+}
+.sector-hero .hero-stat {
+    min-width: 0;
+    padding: .7rem .45rem;
+}
+.sector-hero .hero-stat-number {
+    font-size: clamp(1.05rem, 2vw, 1.65rem);
+    line-height: 1.3;
+}
+.sector-hero .hero-stat-label {
+    font-size: clamp(.65rem, 1.3vw, .8rem);
+    line-height: 1.35;
+    overflow-wrap: anywhere;
+}
+@media (max-width: 768px) {
+    .sector-hero {
+        padding: 1.4rem .85rem;
+    }
+    .sector-hero .hero-content {
+        gap: 1rem;
+    }
+    .sector-hero .hero-stats {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: .4rem;
+        margin-top: 1rem;
+    }
+    .sector-hero .hero-stat {
+        padding: .55rem .2rem;
+    }
+    .sector-hero .hero-stat-number {
+        font-size: clamp(.95rem, 3.8vw, 1.3rem);
+    }
+    .sector-hero .hero-stat-label {
+        font-size: clamp(.6rem, 2.4vw, .75rem);
+    }
+}
+
+/* CWV stage 02 — responsive AdSense slots.
+   Reserve a modest, format-aware space without constraining a filled ad's height.
+   The space is present before JavaScript and is never collapsed on no-fill. */
+.ad-container:has(ins.adsbygoogle) {
+    box-sizing: border-box;
+    display: block;
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    /* Don't clip Google full-width responsive units or impose a fixed height. */
+    overflow: visible;
+    contain: layout style;
+}
+.ad-container:has(ins.adsbygoogle[data-ad-format="auto"]),
+.ad-container:has(ins.adsbygoogle:not([data-ad-format])) {
+    min-height: 110px;
+}
+.ad-container:has(ins.adsbygoogle[data-ad-format="fluid"]) {
+    min-height: 190px;
+}
+.ad-container:has(ins.adsbygoogle[data-ad-format="autorelaxed"]) {
+    min-height: 200px;
+}
+.ad-container ins.adsbygoogle {
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    min-width: 0;
+    margin-inline: auto;
+}
+.sectors-grid > .ad-container,
+.services-grid > .ad-container {
+    grid-column: 1 / -1;
+}
+@media (max-width: 600px) {
+    .ad-container:has(ins.adsbygoogle[data-ad-format="auto"]),
+    .ad-container:has(ins.adsbygoogle:not([data-ad-format])) {
+        min-height: 115px;
+    }
+    .ad-container:has(ins.adsbygoogle[data-ad-format="fluid"]) {
+        min-height: 210px;
+    }
+    .ad-container:has(ins.adsbygoogle[data-ad-format="autorelaxed"]) {
+        min-height: 190px;
+    }
+}
+@media (max-width: 360px) {
+    .ad-container:has(ins.adsbygoogle[data-ad-format="fluid"]) {
+        min-height: 190px;
+    }
+    .ad-container:has(ins.adsbygoogle[data-ad-format="autorelaxed"]) {
+        min-height: 170px;
+    }
+}
+
+/* CWV stage 04: stabilize existing mobile header/hero geometry.
+   This keeps the established three-column hero statistics unchanged. */
+.header-content .logo-section,
+.header-content .logo-section > div,
+.sector-hero .hero-text {
+    min-width: 0;
+}
+.header-content .header-actions {
+    flex: 0 0 auto;
+}
+.sector-hero .hero-visual {
+    aspect-ratio: 1 / 1;
+    flex-shrink: 0;
+}
+.sector-hero .hero-visual > img.hero-icon {
+    display: block;
+}
+.sector-hero .hero-stat-number {
+    font-variant-numeric: tabular-nums;
+    white-space: nowrap;
+}
+@media (max-width: 768px) {
+    .header-content { min-height: 40px; }
+    .sector-hero .hero-stats {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        width: 100%;
+    }
+    .sector-hero .hero-stats > .hero-stat { min-width: 0; }
+}
+
+/* CWV stage 01 — keep reserved ad geometry stable in sector/process layouts.
+   No fixed/max height, display:none or ad fill gating is introduced. */
+.ad-container:has(> ins.adsbygoogle) {
+    flex-shrink: 0;
+    min-inline-size: 0;
+    margin-inline: auto;
+}
+.ad-container:has(> ins.adsbygoogle) > ins.adsbygoogle {
+    max-inline-size: 100%;
+}
+/* Images with intrinsic HTML dimensions preserve those dimensions responsively. */
+.notice-image img,
+.press-card img {
+    max-inline-size: 100%;
+    block-size: auto;
+}
+
+
+/* CLS correction: tutorial pages have an in-content fluid unit directly
+   before the video. Reserve a realistic feed-sized area *before* AdSense
+   responds, while allowing the creative to expand freely if necessary. */
+@media (max-width: 768px) {
+    .ad-container:has(> ins.adsbygoogle[data-ad-format="fluid"]):has(+ .video-primary-section) {
+        min-height: 320px;
+    }
+}
+/* Avoid stretching an ad container as a flex item when content fills. */
+.ad-container:has(> ins.adsbygoogle) {
+    align-self: auto;
+}
+
+
+/* CLS: reserve stable quick-navigation geometry while icon fonts load.
+   Maintain current colors, padding, horizontal scrolling and hover styles. */
+.quick-links-content {
+    align-items: center;
+    min-height: 46px;
+}
+.quick-links-content > .quick-link {
+    box-sizing: border-box;
+    min-height: 44px;
+    flex: 0 0 auto;
+    justify-content: center;
+    line-height: 1.35;
+}
+.quick-link > i {
+    display: inline-flex;
+    flex: 0 0 1em;
+    align-items: center;
+    justify-content: center;
+    width: 1em;
+    line-height: 1;
+}
+@media (max-width: 768px) {
+    .quick-links-content { min-height: 44px; }
+    .quick-links-content > .quick-link { min-height: 42px; }
+}
+
+
+/* Center in-content AdSense creatives (including narrower fluid / related-search
+   frames) on RTL pages at desktop and mobile widths.
+   Keep Google-assigned creative dimensions, heights and display behavior. */
+.ad-container:has(ins.adsbygoogle) {
+    max-inline-size: min(100%, 970px);
+    margin-inline: auto;
+    text-align: center;
+}
+.ad-container:has(ins.adsbygoogle) ins.adsbygoogle {
+    max-inline-size: 100%;
+    margin-inline: auto;
+}
+.ad-container:has(ins.adsbygoogle) ins.adsbygoogle > iframe,
+.ad-container:has(ins.adsbygoogle) ins.adsbygoogle > div,
+.ad-container:has(ins.adsbygoogle) ins.adsbygoogle > div > iframe {
+    margin-inline: auto !important;
 }

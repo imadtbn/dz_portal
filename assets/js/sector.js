@@ -78,9 +78,14 @@ document.querySelectorAll('.section-card').forEach(section => {
     if (!counter) return;
 
     const services = section.querySelectorAll('.service-item');
+    // The education bulletin section contains article cards, not service-item
+    // cards. Count them without affecting other service sections.
+    const bulletinCount = section.id === 'official-notice'
+        ? section.querySelectorAll('.education-notice-card').length
+        : 0;
     const currentLabel = counter.textContent.trim().replace(/^\s*\d+\s*/u, '');
     const label = currentLabel || 'خدمات';
-    const formattedCount = String(services.length).padStart(2, '0');
+    const formattedCount = String(bulletinCount || services.length).padStart(2, '0');
 
     counter.textContent = `${formattedCount} ${label}`;
 });
