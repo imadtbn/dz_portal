@@ -2241,3 +2241,48 @@ video {
 .ad-container:has(ins.adsbygoogle) ins.adsbygoogle > div > iframe {
     margin-inline: auto !important;
 }
+
+
+/* Shared AdSense mobile overflow guard — RTL-safe and content-only.
+   Ads stay in normal document flow; Google controls the creative's height. */
+.ad-container:has(ins.adsbygoogle) {
+  box-sizing: border-box;
+  inline-size: 100%;
+  max-inline-size: 100%;
+  min-inline-size: 0;
+  margin-inline: auto;
+  align-self: stretch;
+  position: relative;
+  float: none;
+}
+.ad-container:has(ins.adsbygoogle) ins.adsbygoogle {
+  display: block;
+  box-sizing: border-box;
+  inline-size: 100%;
+  max-inline-size: 100%;
+  min-inline-size: 0;
+  margin-inline: auto;
+}
+.ad-container:has(ins.adsbygoogle) iframe,
+.ad-container:has(ins.adsbygoogle) ins.adsbygoogle > iframe,
+.ad-container:has(ins.adsbygoogle) ins.adsbygoogle > div,
+.ad-container:has(ins.adsbygoogle) ins.adsbygoogle > div > iframe,
+ins.adsbygoogle iframe,
+.google-auto-placed iframe {
+  box-sizing: border-box;
+  max-inline-size: 100% !important;
+}
+/* Prevent grid/flex children and nested Google frames from widening the page. */
+.ad-container:has(ins.adsbygoogle),
+.ad-container:has(ins.adsbygoogle) *,
+.google-auto-placed,
+.google-auto-placed * {
+  min-inline-size: 0;
+}
+@media (max-width: 600px) {
+  .ad-container:has(ins.adsbygoogle) {
+    inline-size: 100%;
+    max-inline-size: 100%;
+    margin-inline: 0;
+  }
+}
