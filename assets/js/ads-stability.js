@@ -20,10 +20,19 @@
   let running = false;
   const watchers = new WeakSet();
 
+  function isExcludedPlacement(slot) {
+    // Manual ads belong in the document content, never in structural navigation.
+    const structural = slot.closest('header, nav, .header, .site-header, .main-nav, #main-nav, #mainnav, .mainnav, .hero, .sector-hero, .home-hero, [role="banner"], [role="navigation"]');
+    if (!structural) return false;
+    slot.setAttribute('data-dz-ad-excluded', 'structural-placement');
+    return true;
+  }
+
   function isAlreadyHandled(slot) {
     return slot.hasAttribute('data-adsbygoogle-status')
       || slot.hasAttribute('data-dz-ads-queued')
-      || slot.hasAttribute('data-dz-ad-requested');
+      || slot.hasAttribute('data-dz-ad-requested')
+      || isExcludedPlacement(slot);
   }
 
   function widthOf(slot) {
