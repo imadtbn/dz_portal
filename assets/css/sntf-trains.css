@@ -182,7 +182,6 @@ body { min-inline-size:0; }
 .journey-section, .journey-form, .journey-list, .task-tabs, .task-panel {
   box-sizing:border-box; min-inline-size:0; max-inline-size:100%;
 }
-.dashboard, .route-grid, .boards, .journey-form, .journey-list { grid-template-columns:repeat(2,minmax(0,1fr)); }
 .map, .map-viewer, .map .leaflet-pane, .map .leaflet-control-container { max-inline-size:100%; }
 .ad-container, .ad-container:has(ins.adsbygoogle) {
   display:block; position:relative; float:none; clear:both; box-sizing:border-box;
