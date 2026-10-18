@@ -37,3 +37,11 @@ body{overflow-x:clip}
 .sntf-portal-footer .footer-content{width:100%}
 }
 @media(max-width:370px){.site-head nav a,.sntf-portal-header .rail-header-links a{font-size:.67rem;padding:6px}.sntf-portal-header .logo-section h1{font-size:.9rem}}
+
+
+/* Rail pages: prevent document-level horizontal scroll without disabling the schedule image's own scroller. */
+html, body { inline-size:100%; max-inline-size:100%; overflow-x:clip; }
+body, .sntf-portal-header, .sntf-portal-footer { min-inline-size:0; }
+.sntf-portal-header *, .sntf-portal-footer *, .site-head *, .site-foot * { box-sizing:border-box; }
+.sntf-portal-header .header-content, .sntf-portal-header .logo-section,
+.sntf-portal-header .rail-header-links, .site-head .head-row, .site-head nav { min-inline-size:0; max-inline-size:100%; }
