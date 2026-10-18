@@ -54,3 +54,39 @@
  .viewer-toolbar [data-action="reset"]{grid-column:1/-1;grid-row:4}
  .schedule-actions,.schedule-context{grid-template-columns:minmax(0,1fr)}
 }
+
+
+/* SNTF schedule mobile overflow correction. Keep zoomable image scrolling local to its viewer. */
+html, body { inline-size:100%; max-inline-size:100%; overflow-x:clip; }
+body { min-inline-size:0; }
+.schedule-main, .schedule-main > *, .schedule-hero, .schedule-hero > *,
+.schedule-info, .schedule-info > *, .schedule-viewer, .viewer-toolbar,
+.schedule-actions, .schedule-context, .schedule-footer, .schedule-ad {
+  box-sizing:border-box; min-inline-size:0; max-inline-size:100%;
+}
+.schedule-main { inline-size:100%; }
+.schedule-hero { inline-size:100%; }
+.schedule-hero img { max-inline-size:100%; }
+.viewer-toolbar { inline-size:100%; }
+/* The schedule image may exceed the viewport only inside this intentional scroller. */
+.image-viewport { inline-size:100%; max-inline-size:100%; min-inline-size:0; overflow-x:auto; overscroll-behavior-x:contain; }
+.image-stage { min-inline-size:0; }
+.schedule-ad, .ad-container:has(ins.adsbygoogle) {
+  display:block; position:relative; float:none; clear:both; box-sizing:border-box;
+  inline-size:100%; max-inline-size:100%; min-inline-size:0; margin-inline:auto;
+}
+.schedule-ad ins.adsbygoogle, .ad-container ins.adsbygoogle, ins.adsbygoogle {
+  display:block; box-sizing:border-box; inline-size:100%; max-inline-size:100%; min-inline-size:0; margin-inline:auto;
+}
+.schedule-ad iframe, .schedule-ad ins.adsbygoogle > iframe,
+.schedule-ad ins.adsbygoogle > div, .schedule-ad ins.adsbygoogle > div > iframe,
+.ad-container iframe, ins.adsbygoogle iframe, .google-auto-placed iframe {
+  box-sizing:border-box; max-inline-size:100% !important;
+}
+@media(max-width:650px) {
+  .schedule-main { padding-inline:10px; }
+  .schedule-hero { padding-inline:16px; }
+  .schedule-info { flex-wrap:wrap; }
+  .schedule-actions, .schedule-context { grid-template-columns:repeat(2,minmax(0,1fr)); }
+  .schedule-ad, .ad-container:has(ins.adsbygoogle) { inline-size:100%; margin-inline:0; }
+}
