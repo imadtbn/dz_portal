@@ -172,3 +172,32 @@
 .map-viewer.is-expanded .map,.map-viewer:fullscreen .map{width:100%;height:100%;min-height:0;border:0;border-radius:0}
 .map-viewer.is-expanded .map-fullscreen,.map-viewer:fullscreen .map-fullscreen{top:max(12px,env(safe-area-inset-top));right:max(12px,env(safe-area-inset-right))}
 body.map-expanded{overflow:hidden}
+
+
+/* SNTF mobile overflow correction: keep wide map layers and ad frames inside viewport. */
+html, body { inline-size:100%; max-inline-size:100%; overflow-x:clip; }
+body { min-inline-size:0; }
+#main, #main > *, .shell, .intro, .dashboard, .routes-section, .info-strip,
+.map-panel, .board-panel, .route-grid, .route-item, .line-catalog, .line-group,
+.journey-section, .journey-form, .journey-list, .task-tabs, .task-panel {
+  box-sizing:border-box; min-inline-size:0; max-inline-size:100%;
+}
+.dashboard, .route-grid, .boards, .journey-form, .journey-list { grid-template-columns:repeat(2,minmax(0,1fr)); }
+.map, .map-viewer, .map .leaflet-pane, .map .leaflet-control-container { max-inline-size:100%; }
+.ad-container, .ad-container:has(ins.adsbygoogle) {
+  display:block; position:relative; float:none; clear:both; box-sizing:border-box;
+  inline-size:100%; max-inline-size:100%; min-inline-size:0; margin-inline:auto;
+}
+.ad-container ins.adsbygoogle, ins.adsbygoogle {
+  display:block; box-sizing:border-box; inline-size:100%; max-inline-size:100%; min-inline-size:0; margin-inline:auto;
+}
+.ad-container iframe, .ad-container ins.adsbygoogle > iframe,
+.ad-container ins.adsbygoogle > div, .ad-container ins.adsbygoogle > div > iframe,
+ins.adsbygoogle iframe, .google-auto-placed iframe { max-inline-size:100% !important; box-sizing:border-box; }
+@media (max-width:680px) {
+  #main { inline-size:calc(100% - 22px); padding-inline:0; }
+  .dashboard, .route-grid, .boards, .journey-form, .journey-list { grid-template-columns:minmax(0,1fr); }
+  .map-panel, .board-panel, .routes-section { inline-size:100%; }
+  .ad-container, .ad-container:has(ins.adsbygoogle) { inline-size:100%; margin-inline:0; }
+  .map { inline-size:100%; }
+}
