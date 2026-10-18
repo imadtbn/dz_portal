@@ -2286,3 +2286,33 @@ ins.adsbygoogle iframe,
     margin-inline: 0;
   }
 }
+
+
+/* Hero copy refinement — concise descriptions with tighter vertical rhythm. */
+.sector-hero .hero-text h2 {
+    margin-bottom: .55rem;
+    line-height: 1.3;
+}
+
+.sector-hero .hero-text p {
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.6;
+    max-width: 56ch;
+}
+
+@media (max-width: 768px) {
+    .sector-hero {
+        padding: 1.15rem .85rem;
+    }
+
+    .sector-hero .hero-text p {
+        font-size: .92rem;
+        line-height: 1.55;
+        max-width: 100%;
+    }
+
+    .sector-hero .hero-text h2 {
+        margin-bottom: .4rem;
+    }
+}
