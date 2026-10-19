@@ -1326,12 +1326,14 @@
 
             <!--أزرار الفلترة-->
             <div class="filter-actions">
-                <button class="filter-btn active" data-filter="all">
-                    جميع الخدمات
+                <button class="filter-btn active" data-filter="all" type="button">
+                    <i class="fas fa-layer-group" aria-hidden="true"></i>
+                    <span>جميع الخدمات</span>
                 </button>
                 <!-- عند إضافة خدمة جديدة: أضف data-new="true" data-new-since="YYYY-MM-DD" إلى بطاقة sector-card. -->
                 <button id="newServicesBtn" class="filter-btn" data-filter="new" type="button">
-                    الخدمات الجديدة
+                    <i class="fas fa-sparkles" aria-hidden="true"></i>
+                    <span>الخدمات الجديدة</span>
                     <span class="new-count" id="newServicesCount"></span>
                 </button>
             </div>
