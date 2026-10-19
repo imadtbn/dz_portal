@@ -146,3 +146,94 @@
     aspect-ratio: 1 / 1;
     object-fit: contain;
 }
+
+
+/* Mobile homepage density: compact quick links, section heading and filters. */
+@media (max-width: 768px) {
+    #main-content > .quick-access {
+        margin-block: .55rem .7rem !important;
+        padding: .65rem .75rem !important;
+        gap: .5rem !important;
+        min-height: 0;
+        max-height: none;
+    }
+
+    #main-content > #sectors {
+        margin-block-start: 0 !important;
+        padding-block-start: .25rem;
+    }
+
+    #sectors .section-header {
+        margin-block: .45rem .55rem !important;
+        padding: .8rem .75rem !important;
+        min-height: 0;
+        gap: .35rem !important;
+    }
+
+    #sectors .section-header h2 {
+        font-size: clamp(1.35rem, 5.2vw, 1.8rem) !important;
+        line-height: 1.25 !important;
+        white-space: nowrap;
+        word-break: keep-all;
+        margin-block: 0 .25rem !important;
+    }
+
+    #sectors .section-header p {
+        margin-block: .25rem .4rem !important;
+        line-height: 1.45;
+    }
+
+    #sectors .section-header .pwa-badge {
+        margin-block: .35rem !important;
+    }
+
+    #sectors .filter-actions {
+        display: flex;
+        flex-wrap: nowrap !important;
+        align-items: stretch;
+        gap: .45rem !important;
+        margin-block: .4rem .7rem !important;
+        padding-inline: .1rem;
+        min-height: 0 !important;
+        width: 100%;
+    }
+
+    #sectors .filter-btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: .4rem;
+        flex: 1 1 0;
+        min-width: 0;
+        padding: .65rem .45rem !important;
+        margin: 0 !important;
+        font-size: clamp(.78rem, 3.2vw, .95rem);
+        line-height: 1.25;
+        white-space: nowrap;
+    }
+
+    #sectors .filter-btn i {
+        flex: 0 0 auto;
+        font-size: .95em;
+    }
+
+    #sectors .sectors-grid {
+        margin-block-start: 0 !important;
+    }
+}
+
+@media (max-width: 360px) {
+    #sectors .section-header h2 {
+        font-size: 1.25rem !important;
+        letter-spacing: -.02em;
+    }
+
+    #sectors .filter-actions {
+        gap: .3rem !important;
+    }
+
+    #sectors .filter-btn {
+        padding-inline: .3rem !important;
+        font-size: .76rem;
+    }
+}
