@@ -45,3 +45,13 @@
 .ad-container:has(ins.adsbygoogle) ins.adsbygoogle > div > iframe {
     margin-inline: auto !important;
 }
+
+
+/* Collapse only when Google confirms that the ad slot is unfilled.
+   Pending units keep their responsive reservation to avoid premature layout shifts. */
+.ad-container:has(> ins.adsbygoogle[data-ad-status="unfilled"]) {
+  display: none !important;
+  min-height: 0 !important;
+  margin-block: 0 !important;
+  padding-block: 0 !important;
+}
