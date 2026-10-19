@@ -2317,60 +2317,69 @@ ins.adsbygoogle iframe,
     }
 }
 
-/* Sector page spacing refinement: reduce excess vertical whitespace while
-   preserving reserved ad geometry and the existing responsive layout. */
+/* Consistent vertical rhythm for sector pages.
+   Keep pending ad reservations to limit layout shifts; collapse only confirmed
+   unfilled units so empty ads do not leave a tall blank block. */
 .content-area {
-    gap: 1.25rem;
+    gap: 1rem;
 }
 
 .content-area > .ad-container {
-    margin-block: .5rem;
+    margin-block: .25rem;
 }
 
 .main-content {
-    padding-block: 1.75rem 2rem;
-    gap: 1.5rem;
+    padding-block: 1.25rem 1.5rem;
+    gap: 1.25rem;
 }
 
 .footer {
-    margin-top: 1.5rem;
-    padding: 2.5rem 2rem 1.25rem;
+    margin-top: 1rem;
+    padding: 2rem 2rem 1rem;
 }
 
 .footer-content {
-    gap: 2rem;
-    margin-bottom: 1.5rem;
+    gap: 1.5rem;
+    margin-bottom: 1rem;
 }
 
 .footer-bottom {
-    padding-top: 1rem;
+    padding-top: .75rem;
+}
+
+/* Google marks these units only after confirming that no ad was served. */
+.ad-container:has(> ins.adsbygoogle[data-ad-status="unfilled"]) {
+    display: none !important;
+    min-height: 0 !important;
+    margin-block: 0 !important;
+    padding-block: 0 !important;
 }
 
 @media (max-width: 768px) {
     .main-content {
-        padding: .75rem .85rem 1rem;
-        gap: 1rem;
-    }
-
-    .content-area {
+        padding: .65rem .85rem .85rem;
         gap: .85rem;
     }
 
+    .content-area {
+        gap: .75rem;
+    }
+
     .content-area > .ad-container {
-        margin-block: .35rem;
+        margin-block: .2rem;
     }
 
     .footer {
-        margin-top: 1rem;
-        padding: 1.5rem .85rem .75rem;
+        margin-top: .75rem;
+        padding: 1.25rem .85rem .65rem;
     }
 
     .footer-content {
-        gap: 1.25rem;
-        margin-bottom: 1rem;
+        gap: 1rem;
+        margin-bottom: .75rem;
     }
 
     .footer-bottom {
-        padding-top: .75rem;
+        padding-top: .6rem;
     }
 }
