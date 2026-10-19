@@ -2316,3 +2316,61 @@ ins.adsbygoogle iframe,
         margin-bottom: .4rem;
     }
 }
+
+/* Sector page spacing refinement: reduce excess vertical whitespace while
+   preserving reserved ad geometry and the existing responsive layout. */
+.content-area {
+    gap: 1.25rem;
+}
+
+.content-area > .ad-container {
+    margin-block: .5rem;
+}
+
+.main-content {
+    padding-block: 1.75rem 2rem;
+    gap: 1.5rem;
+}
+
+.footer {
+    margin-top: 1.5rem;
+    padding: 2.5rem 2rem 1.25rem;
+}
+
+.footer-content {
+    gap: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.footer-bottom {
+    padding-top: 1rem;
+}
+
+@media (max-width: 768px) {
+    .main-content {
+        padding: .75rem .85rem 1rem;
+        gap: 1rem;
+    }
+
+    .content-area {
+        gap: .85rem;
+    }
+
+    .content-area > .ad-container {
+        margin-block: .35rem;
+    }
+
+    .footer {
+        margin-top: 1rem;
+        padding: 1.5rem .85rem .75rem;
+    }
+
+    .footer-content {
+        gap: 1.25rem;
+        margin-bottom: 1rem;
+    }
+
+    .footer-bottom {
+        padding-top: .75rem;
+    }
+}
