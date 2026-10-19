@@ -1891,3 +1891,91 @@ ins.adsbygoogle iframe,
     margin-inline: 0;
   }
 }
+
+
+/* Mobile layout alignment: consistent side gutters for service cards and ad slots. */
+@media (max-width: 600px) {
+    .sectors-section {
+        box-sizing: border-box;
+        inline-size: 100%;
+        max-inline-size: 100%;
+        padding-inline: 12px;
+    }
+
+    .sectors-grid,
+    .services-grid {
+        box-sizing: border-box;
+        inline-size: 100%;
+        max-inline-size: 100%;
+        min-inline-size: 0;
+        margin-inline: 0;
+        gap: 12px;
+    }
+
+    .sector-card,
+    .service-card {
+        box-sizing: border-box;
+        inline-size: 100%;
+        max-inline-size: 100%;
+        min-inline-size: 0;
+        margin-inline: 0;
+    }
+
+    .sector-card {
+        padding: 1.25rem 1rem;
+    }
+
+    .related-services-wrapper {
+        box-sizing: border-box;
+        inline-size: 100%;
+        max-inline-size: 100%;
+        min-inline-size: 0;
+        margin-inline: 0;
+        padding-inline: 12px;
+    }
+
+    /* Ad slots follow the same content edges as cards, including RTL pages.
+       Keep ads in normal flow and let AdSense determine the creative height. */
+    .ad-container:has(ins.adsbygoogle) {
+        box-sizing: border-box;
+        inline-size: 100%;
+        max-inline-size: 100%;
+        min-inline-size: 0;
+        margin-inline: auto;
+        padding-inline: 0;
+        justify-self: stretch;
+        align-self: stretch;
+        float: none;
+    }
+
+    .sectors-grid > .ad-container,
+    .services-grid > .ad-container {
+        grid-column: 1 / -1;
+        justify-self: stretch;
+        inline-size: 100%;
+        max-inline-size: 100%;
+        margin-inline: 0;
+    }
+
+    .ad-container:has(ins.adsbygoogle) ins.adsbygoogle {
+        box-sizing: border-box;
+        inline-size: 100%;
+        max-inline-size: 100%;
+        min-inline-size: 0;
+        margin-inline: auto;
+    }
+}
+
+@media (max-width: 380px) {
+    .sectors-section {
+        padding-inline: 9px;
+    }
+
+    .related-services-wrapper {
+        padding-inline: 9px;
+    }
+
+    .sector-card {
+        padding-inline: .85rem;
+    }
+}
