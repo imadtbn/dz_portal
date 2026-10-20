@@ -18,6 +18,7 @@
       if (!['absolute', 'fixed', 'sticky'].includes(style.position)) return;
       const visible = style.display !== 'none' && style.visibility !== 'hidden' && Number(style.opacity || 1) > 0;
       const overlaps = r.left < sr.right && r.right > sr.left && r.top < sr.bottom && r.bottom > sr.top;
+      if (el.dataset.searchOverlapFixed === '1' && visible && !overlaps) return;
       if (!visible || !overlaps) {
         if (el.dataset.searchOverlapFixed === '1') {
           ['position','top','left','right','bottom','transform','width','max-width','max-height','overflow-y','z-index','box-sizing'].forEach(k => el.style.removeProperty(k));
