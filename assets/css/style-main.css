@@ -1979,3 +1979,53 @@ ins.adsbygoogle iframe,
         padding-inline: .85rem;
     }
 }
+
+
+/* Homepage help popovers must remain readable above the search bar on mobile. */
+#main-content > .hero {
+    position: relative;
+    isolation: isolate;
+}
+
+#main-content > .hero .search-container {
+    z-index: 20;
+}
+
+#main-content > .hero .search-box-wrapper {
+    position: relative;
+    z-index: 2;
+}
+
+#main-content > .hero .search-results {
+    z-index: 30;
+}
+
+/* Help content may be injected by the page helper; keep it above hero controls
+   and prevent the search field from visually covering its text. */
+[role="tooltip"],
+.tooltip,
+.help-tooltip,
+.help-popover,
+.help-popup,
+.page-help-popover,
+.page-help-tooltip,
+#helpTooltip,
+#helpPopover {
+    z-index: 10050;
+}
+
+@media (max-width: 768px) {
+    [role="tooltip"],
+    .tooltip,
+    .help-tooltip,
+    .help-popover,
+    .help-popup,
+    .page-help-popover,
+    .page-help-tooltip,
+    #helpTooltip,
+    #helpPopover {
+        max-inline-size: min( calc(100vw - 24px), 360px );
+        box-sizing: border-box;
+        overflow-wrap: anywhere;
+    }
+}
