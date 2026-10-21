@@ -2396,3 +2396,5 @@ ins.adsbygoogle iframe,
 @media (max-width: 420px) {
     .ramadan-grant-service .service-info { padding-inline-start: 0; padding-top: 1.25rem; }
 }
+
+.ramadan-grant-service .service-new-label[hidden] { display: none !important; }
