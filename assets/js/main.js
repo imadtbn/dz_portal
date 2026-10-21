@@ -211,7 +211,7 @@ function refreshNewServices() {
     if (isNew) newCount += 1;
     if (addedAt !== null) {
       const boundary = addedAt > now ? addedAt : addedAt + NEW_SERVICE_WINDOW_MS;
-      nextRefreshAt = Math.min(nextRefreshAt, boundary);
+      if (boundary > now) nextRefreshAt = Math.min(nextRefreshAt, boundary);
     }
   });
   if (newServicesCount) {
