@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-10-21",
+  "services": [
+    {
+      "id": "ramadan-grant-1448",
+      "title": "منحة التضامن لشهر رمضان 1448 هـ / 2027",
+      "description": "الاطلاع على منصة طلب الاستفادة من منحة التضامن الخاصة بشهر رمضان.",
+      "sector": "وزارة الداخلية والجماعات المحلية والنقل",
+      "sectorUrl": "sectors/interieur.html",
+      "url": "https://prestations.interieur.gov.dz/solidariteramdhan/",
+      "addedAt": "2026-10-21",
+      "sourceUrl": "https://prestations.interieur.gov.dz/solidariteramdhan/"
+    }
+  ]
+}
