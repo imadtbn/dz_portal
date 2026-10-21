@@ -155,8 +155,8 @@ window.addEventListener('load', () => {
 });
 
 
-// فلترة الخدمات الجديدة حسب تاريخ الإضافة
-const NEW_SERVICE_WINDOW_DAYS = 25;
+// إشعارات الخدمات الجديدة: مدة الظهور 20 يومًا، من سجل مركزي واحد.
+const NEW_SERVICE_WINDOW_DAYS = 20;
 const NEW_SERVICE_WINDOW_MS = NEW_SERVICE_WINDOW_DAYS * 24 * 60 * 60 * 1000;
 const filterBtns = document.querySelectorAll('.filter-btn');
 const cards = document.querySelectorAll('.sector-card');
@@ -167,20 +167,10 @@ let newServicesRefreshTimer = null;
 
 function parseNewServiceDate(value) {
   if (!/^\d{4}-\d{2}-\d{2}$/.test(value || '')) return null;
-
   const [year, month, day] = value.split('-').map(Number);
   const timestamp = Date.UTC(year, month - 1, day);
   const date = new Date(timestamp);
-
-  // رفض التواريخ غير الصحيحة مثل 2026-02-31 بدلاً من تطبيعها تلقائياً.
-  if (
-    date.getUTCFullYear() !== year ||
-    date.getUTCMonth() !== month - 1 ||
-    date.getUTCDate() !== day
-  ) {
-    return null;
-  }
-
+  if (date.getUTCFullYear() !== year || date.getUTCMonth() !== month - 1 || date.getUTCDate() !== day) return null;
   return timestamp;
 }
 
@@ -191,18 +181,14 @@ function isNewService(card, now = Date.now()) {
 
 function applyServiceFilter(filter = activeFilter) {
   activeFilter = filter === 'new' ? 'new' : 'all';
-
   filterBtns.forEach(btn => {
     const isActive = btn.dataset.filter === activeFilter;
     btn.classList.toggle('active', isActive);
     btn.setAttribute('aria-pressed', String(isActive));
   });
-
   cards.forEach(card => {
-    const shouldShow = activeFilter === 'all' || card.dataset.new === 'true';
-    card.style.display = shouldShow ? '' : 'none';
+    card.style.display = activeFilter === 'all' || card.dataset.new === 'true' ? '' : 'none';
   });
-
   if (typeof window.dzTrackEvent === 'function') {
     window.dzTrackEvent('filter_services', { filter_type: activeFilter });
   }
@@ -212,55 +198,127 @@ function refreshNewServices() {
   const now = Date.now();
   let newCount = 0;
   let nextRefreshAt = Infinity;
-
   cards.forEach(card => {
     const addedAt = parseNewServiceDate(card.dataset.newSince);
     const isNew = isNewService(card, now);
     const badge = card.querySelector('.service-badge');
-
     card.dataset.new = String(isNew);
     card.classList.toggle('is-new', isNew);
-
     if (badge) {
       badge.hidden = !isNew;
       badge.setAttribute('aria-hidden', String(!isNew));
     }
-
     if (isNew) newCount += 1;
-
     if (addedAt !== null) {
       const boundary = addedAt > now ? addedAt : addedAt + NEW_SERVICE_WINDOW_MS;
       nextRefreshAt = Math.min(nextRefreshAt, boundary);
     }
   });
-
   if (newServicesCount) {
     newServicesCount.textContent = newCount > 0 ? String(newCount) : '';
     newServicesCount.hidden = newCount === 0;
   }
-
-  if (newServicesBtn) {
-    newServicesBtn.style.display = newCount > 0 ? '' : 'none';
-  }
-
-  // إذا انتهت آخر خدمة أثناء تفعيل الفلتر، نعيد العرض تلقائياً إلى جميع الخدمات.
+  if (newServicesBtn) newServicesBtn.style.display = newCount > 0 ? '' : 'none';
   if (activeFilter === 'new' && newCount === 0) activeFilter = 'all';
   applyServiceFilter(activeFilter);
-
   if (newServicesRefreshTimer) window.clearTimeout(newServicesRefreshTimer);
   if (Number.isFinite(nextRefreshAt)) {
-    const delay = Math.max(1000, nextRefreshAt - Date.now() + 100);
-    newServicesRefreshTimer = window.setTimeout(refreshNewServices, delay);
+    newServicesRefreshTimer = window.setTimeout(refreshNewServices, Math.max(1000, nextRefreshAt - Date.now() + 100));
   }
 }
 
-filterBtns.forEach(btn => {
-  btn.addEventListener('click', () => {
-    applyServiceFilter(btn.dataset.filter);
-  });
-});
+function renderNewServiceNotice(services) {
+  const section = document.getElementById('newServicesNotice');
+  const feed = document.getElementById('newServicesFeed');
+  const total = document.getElementById('newServicesTotal');
+  if (!section || !feed || !Array.isArray(services)) return;
 
-document.addEventListener('DOMContentLoaded', refreshNewServices);
+  const now = Date.now();
+  const active = services
+    .filter(service => service && parseNewServiceDate(service.addedAt) !== null)
+    .filter(service => {
+      const addedAt = parseNewServiceDate(service.addedAt);
+      return addedAt <= now && now < addedAt + NEW_SERVICE_WINDOW_MS &&
+        typeof service.title === 'string' && typeof service.url === 'string' &&
+        typeof service.sector === 'string' && typeof service.sectorUrl === 'string';
+    })
+    .sort((a, b) => parseNewServiceDate(b.addedAt) - parseNewServiceDate(a.addedAt));
+
+  if (!active.length) {
+    section.hidden = true;
+    return;
+  }
+
+  const groups = new Map();
+  active.forEach(service => {
+    if (!groups.has(service.sector)) groups.set(service.sector, { url: service.sectorUrl, services: [] });
+    groups.get(service.sector).services.push(service);
+  });
+
+  feed.replaceChildren();
+  groups.forEach((group, sectorName) => {
+    const groupEl = document.createElement('section');
+    groupEl.className = 'new-services-group';
+    const heading = document.createElement('h3');
+    heading.className = 'new-services-sector';
+    const sectorIcon = document.createElement('i');
+    sectorIcon.className = 'fas fa-building';
+    sectorIcon.setAttribute('aria-hidden', 'true');
+    heading.append(sectorIcon, document.createTextNode(' ' + sectorName));
+    const sectorLink = document.createElement('a');
+    sectorLink.className = 'new-services-sector-link';
+    sectorLink.href = group.url;
+    sectorLink.textContent = 'صفحة القطاع';
+    heading.append(sectorLink);
+    groupEl.append(heading);
+
+    group.services.forEach(service => {
+      const item = document.createElement('article');
+      item.className = 'new-service-item';
+      const title = document.createElement('h4');
+      title.textContent = service.title;
+      const description = document.createElement('p');
+      description.textContent = service.description || 'خدمة جديدة متاحة عبر البوابة.';
+      const link = document.createElement('a');
+      link.className = 'new-service-link';
+      link.href = service.url;
+      link.textContent = 'عرض الخدمة';
+      if (/^https?:/.test(service.url) && new URL(service.url, window.location.href).origin !== window.location.origin) {
+        link.target = '_blank';
+        link.rel = 'noopener noreferrer';
+      }
+      item.append(title, description, link);
+      groupEl.append(item);
+    });
+    feed.append(groupEl);
+  });
+
+  total.textContent = String(active.length);
+  total.hidden = false;
+  section.hidden = false;
+  const nextExpiry = Math.min(...active.map(service => parseNewServiceDate(service.addedAt) + NEW_SERVICE_WINDOW_MS));
+  window.setTimeout(loadNewServiceNotice, Math.max(1000, nextExpiry - Date.now() + 100));
+}
+
+async function loadNewServiceNotice() {
+  const section = document.getElementById('newServicesNotice');
+  if (!section) return;
+  try {
+    const response = await fetch('assets/data/new-services.json', { cache: 'no-cache' });
+    if (!response.ok) throw new Error('Could not load the new-services registry');
+    const registry = await response.json();
+    renderNewServiceNotice(registry.services);
+  } catch (error) {
+    section.hidden = true;
+    console.warn('تعذر تحميل سجل الخدمات الجديدة:', error);
+  }
+}
+
+filterBtns.forEach(btn => btn.addEventListener('click', () => applyServiceFilter(btn.dataset.filter)));
+document.addEventListener('DOMContentLoaded', () => {
+  refreshNewServices();
+  loadNewServiceNotice();
+});
 
 //النافذة التحذيرية
 
