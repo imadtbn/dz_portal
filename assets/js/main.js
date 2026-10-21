@@ -231,6 +231,7 @@ function renderNewServiceNotice(services) {
   const section = document.getElementById('newServicesNotice');
   const feed = document.getElementById('newServicesFeed');
   const total = document.getElementById('newServicesTotal');
+  const moreButton = document.getElementById('newServicesMore');
   if (!section || !feed || !Array.isArray(services)) return;
 
   const now = Date.now();
@@ -239,8 +240,8 @@ function renderNewServiceNotice(services) {
     .filter(service => {
       const addedAt = parseNewServiceDate(service.addedAt);
       return addedAt <= now && now < addedAt + NEW_SERVICE_WINDOW_MS &&
-        typeof service.title === 'string' && typeof service.url === 'string' &&
-        typeof service.sector === 'string' && typeof service.sectorUrl === 'string';
+        typeof service.title === 'string' && typeof service.sector === 'string' &&
+        typeof service.sectorUrl === 'string';
     })
     .sort((a, b) => parseNewServiceDate(b.addedAt) - parseNewServiceDate(a.addedAt));
 
@@ -249,53 +250,68 @@ function renderNewServiceNotice(services) {
     return;
   }
 
-  const groups = new Map();
-  active.forEach(service => {
-    if (!groups.has(service.sector)) groups.set(service.sector, { url: service.sectorUrl, services: [] });
-    groups.get(service.sector).services.push(service);
-  });
-
+  const visibleLimit = 2;
+  let expanded = false;
   feed.replaceChildren();
-  groups.forEach((group, sectorName) => {
-    const groupEl = document.createElement('section');
-    groupEl.className = 'new-services-group';
-    const heading = document.createElement('h3');
-    heading.className = 'new-services-sector';
+
+  active.forEach((service, index) => {
+    const item = document.createElement('article');
+    item.className = 'new-service-item';
+    if (index >= visibleLimit) item.hidden = true;
+    item.dataset.extraService = String(index >= visibleLimit);
+
+    const sectorHeading = document.createElement('h3');
+    sectorHeading.className = 'new-services-sector';
     const sectorIcon = document.createElement('i');
-    sectorIcon.className = 'fas fa-building';
+    sectorIcon.className = 'fas ' + (
+      /داخلية|جماعات محلية/.test(service.sector) ? 'fa-building' :
+      /تربية|تعليم|جامعة/.test(service.sector) ? 'fa-graduation-cap' :
+      /نقل|قطار/.test(service.sector) ? 'fa-train' : 'fa-landmark'
+    );
     sectorIcon.setAttribute('aria-hidden', 'true');
-    heading.append(sectorIcon, document.createTextNode(' ' + sectorName));
+    const sectorName = document.createElement('span');
+    sectorName.className = 'new-services-sector-name';
+    sectorName.textContent = service.sector;
+    sectorHeading.append(sectorIcon, sectorName);
+
+    const title = document.createElement('h4');
+    title.textContent = service.title;
+
+    const footer = document.createElement('div');
+    footer.className = 'new-service-footer';
     const sectorLink = document.createElement('a');
     sectorLink.className = 'new-services-sector-link';
-    sectorLink.href = group.url;
+    sectorLink.href = service.sectorUrl;
     sectorLink.textContent = 'صفحة القطاع';
-    heading.append(sectorLink);
-    groupEl.append(heading);
+    sectorLink.setAttribute('aria-label', 'زيارة صفحة قطاع ' + service.sector);
+    footer.append(sectorLink);
 
-    group.services.forEach(service => {
-      const item = document.createElement('article');
-      item.className = 'new-service-item';
-      const title = document.createElement('h4');
-      title.textContent = service.title;
-      const description = document.createElement('p');
-      description.textContent = service.description || 'خدمة جديدة متاحة عبر البوابة.';
-      const link = document.createElement('a');
-      link.className = 'new-service-link';
-      link.href = service.url;
-      link.textContent = 'عرض الخدمة';
-      if (/^https?:/.test(service.url) && new URL(service.url, window.location.href).origin !== window.location.origin) {
-        link.target = '_blank';
-        link.rel = 'noopener noreferrer';
-      }
-      item.append(title, description, link);
-      groupEl.append(item);
-    });
-    feed.append(groupEl);
+    item.append(sectorHeading, title, footer);
+    feed.append(item);
   });
 
   total.textContent = String(active.length);
   total.hidden = false;
+  if (moreButton) {
+    moreButton.hidden = active.length <= visibleLimit;
+    moreButton.setAttribute('aria-expanded', 'false');
+    moreButton.innerHTML = 'عرض المزيد من الخدمات الجديدة <i class="fas fa-chevron-down" aria-hidden="true"></i>';
+    moreButton.onclick = () => {
+      expanded = !expanded;
+      feed.querySelectorAll('[data-extra-service="true"]').forEach(item => {
+        item.hidden = !expanded;
+      });
+      moreButton.setAttribute('aria-expanded', String(expanded));
+      moreButton.innerHTML = expanded
+        ? 'عرض عدد أقل <i class="fas fa-chevron-up" aria-hidden="true"></i>'
+        : 'عرض المزيد من الخدمات الجديدة <i class="fas fa-chevron-down" aria-hidden="true"></i>';
+      if (typeof window.dzTrackEvent === 'function') {
+        window.dzTrackEvent('new_services_expand', { expanded, total: active.length });
+      }
+    };
+  }
   section.hidden = false;
+
   const nextExpiry = Math.min(...active.map(service => parseNewServiceDate(service.addedAt) + NEW_SERVICE_WINDOW_MS));
   window.setTimeout(loadNewServiceNotice, Math.max(1000, nextExpiry - Date.now() + 100));
 }
