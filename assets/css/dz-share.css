@@ -72,7 +72,7 @@
     position: absolute;
     inset: -3px;
     z-index: -1;
-    border: 1.5px solid rgba(0, 98, 51, .35);
+    border: 1.5px solid rgba(229, 9, 20, .58);
     border-radius: inherit;
     pointer-events: none;
     animation: dzHelpSoftPulse 6s ease-out infinite;
@@ -81,7 +81,7 @@
   .dz-share-help:hover,
   .dz-share-help[aria-expanded="true"] {
     transform: translateY(-1px);
-    box-shadow: 0 4px 12px rgba(0, 98, 51, .12);
+    box-shadow: 0 4px 12px rgba(229, 9, 20, .18);
   }
   .dz-share-help svg {
     transition: transform .22s ease;
@@ -94,7 +94,7 @@
 }
 @keyframes dzShareSoftGlow {
   0%, 86%, 100% { box-shadow: 0 0 0 rgba(0, 98, 51, 0); }
-  91% { box-shadow: 0 0 0 4px rgba(0, 98, 51, .08), 0 5px 15px rgba(0, 98, 51, .10); }
+  91% { box-shadow: 0 0 0 4px rgba(229, 9, 20, .22), 0 5px 18px rgba(229, 9, 20, .24); }
   96% { box-shadow: 0 0 0 rgba(0, 98, 51, 0); }
 }
 @keyframes dzHelpSoftPulse {
