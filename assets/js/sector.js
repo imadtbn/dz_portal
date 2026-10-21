@@ -228,3 +228,22 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 });
+
+
+// Hide sector-page service badges automatically after the shared 20-day window.
+document.querySelectorAll('.service-item[data-new-since] .service-new-label').forEach(label => {
+    const card = label.closest('.service-item');
+    const value = card ? card.dataset.newSince : '';
+    if (!/^\d{4}-\d{2}-\d{2}$/.test(value)) {
+        label.hidden = true;
+        return;
+    }
+    const [year, month, day] = value.split('-').map(Number);
+    const addedAt = Date.UTC(year, month - 1, day);
+    const parsed = new Date(addedAt);
+    const validDate = parsed.getUTCFullYear() === year &&
+        parsed.getUTCMonth() === month - 1 && parsed.getUTCDate() === day;
+    const isNew = validDate && addedAt <= Date.now() &&
+        Date.now() < addedAt + 20 * 24 * 60 * 60 * 1000;
+    label.hidden = !isNew;
+});
