@@ -252,6 +252,7 @@ function renderNewServiceNotice(services) {
 
   const visibleLimit = 2;
   let expanded = false;
+  section.classList.toggle('has-new-services', active.length > 0);
   feed.replaceChildren();
 
   active.forEach((service, index) => {
