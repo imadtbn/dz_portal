@@ -2383,3 +2383,16 @@ ins.adsbygoogle iframe,
         padding-top: .6rem;
     }
 }
+
+
+/* New Ramadan grant service label */
+.ramadan-grant-service { position: relative; }
+.ramadan-grant-service .service-new-label {
+    position: absolute; top: 8px; inset-inline-start: 8px; z-index: 2;
+    display: inline-flex; align-items: center; gap: 4px; padding: 3px 9px;
+    border-radius: 999px; color: #fff; background: #006233; font-size: .75rem; font-weight: 800;
+}
+.ramadan-grant-service .service-info { padding-inline-start: 4.8rem; }
+@media (max-width: 420px) {
+    .ramadan-grant-service .service-info { padding-inline-start: 0; padding-top: 1.25rem; }
+}
