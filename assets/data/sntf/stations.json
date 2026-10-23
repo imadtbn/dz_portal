@@ -764,7 +764,7 @@
       "lat": 36.1481,
       "lon": 6.4522,
       "geo_source": "Google Maps",
-      "geo_verified": false
+      "geo_verified": true
     },
     {
       "id": "el_khroub",
