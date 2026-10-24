@@ -37,7 +37,9 @@
       "lon": 3.065719,
       "geo_source": "Google Maps",
       "geo_verified": true,
-      "sntf_names": ["ATELIERS"]
+      "sntf_names": [
+        "ATELIERS"
+      ]
     },
     {
       "id": "hussein_dey",
@@ -56,7 +58,9 @@
       "lon": 3.119441,
       "geo_source": "Google Maps",
       "geo_verified": true,
-      "sntf_names": ["CAROUBIERS"]
+      "sntf_names": [
+        "CAROUBIERS"
+      ]
     },
     {
       "id": "el_harrach",
@@ -111,7 +115,9 @@
       "lon": 3.301638,
       "geo_source": "Google Maps",
       "geo_verified": true,
-      "sntf_names": ["ROUIBA INDUS"]
+      "sntf_names": [
+        "ROUIBA INDUS"
+      ]
     },
     {
       "id": "rouiba_snvi",
@@ -130,7 +136,9 @@
       "lon": 3.331145,
       "geo_source": "Google Maps",
       "geo_verified": true,
-      "sntf_names": ["REGHAIA IND"]
+      "sntf_names": [
+        "REGHAIA IND"
+      ]
     },
     {
       "id": "reghaia",
@@ -176,7 +184,9 @@
       "lon": 3.501018,
       "geo_source": "Google Maps",
       "geo_verified": true,
-      "sntf_names": ["TIDJALABINE"]
+      "sntf_names": [
+        "TIDJALABINE"
+      ]
     },
     {
       "id": "thenia",
@@ -348,7 +358,9 @@
       "lon": 2.871417,
       "geo_source": "Google Maps",
       "geo_verified": true,
-      "sntf_names": ["SIDI ABD ALLAH UNIVERSITE"]
+      "sntf_names": [
+        "SIDI ABD ALLAH UNIVERSITE"
+      ]
     },
     {
       "id": "zeralda",
@@ -421,7 +433,9 @@
       "lon": 3.2112399,
       "geo_source": "Google Maps",
       "geo_verified": true,
-      "sntf_names": ["AEROPORT HB"]
+      "sntf_names": [
+        "AEROPORT HB"
+      ]
     },
     {
       "id": "bejaia",
@@ -503,7 +517,9 @@
       "lon": 4.4572014,
       "geo_source": "Google Maps",
       "geo_verified": true,
-      "sntf_names": ["ALLAGHAN"]
+      "sntf_names": [
+        "ALLAGHAN"
+      ]
     },
     {
       "id": "tazmalt",
@@ -828,7 +844,9 @@
       "lon": 6.837214,
       "geo_source": "Google Maps",
       "geo_verified": true,
-      "sntf_names": ["EL HARROUCHE"]
+      "sntf_names": [
+        "EL HARROUCHE"
+      ]
     },
     {
       "id": "salah-bouchaour",
@@ -1018,7 +1036,9 @@
       "lon": 5.935326,
       "geo_source": "Google Maps",
       "geo_verified": true,
-      "sntf_names": ["EL M'EGHAIER"]
+      "sntf_names": [
+        "EL M'EGHAIER"
+      ]
     },
     {
       "id": "nsigha",
@@ -1028,7 +1048,7 @@
       "lon": 5.948587,
       "geo_source": "Google Maps",
       "geo_verified": true,
-      "sntf_names": ["EL M'EGHAIER"]
+      "sntf_names": []
     },
     {
       "id": "biskra",
@@ -1146,7 +1166,9 @@
       "lon": -1.638749,
       "geo_source": "Google Maps",
       "geo_verified": true,
-      "sntf_names": ["SIDI MEDJAHED"]
+      "sntf_names": [
+        "SIDI MEDJAHED"
+      ]
     },
     {
       "id": "tralimit",
@@ -1247,7 +1269,6 @@
       "geo_source": "Google Maps",
       "geo_verified": true
     },
-
     {
       "id": "azib",
       "name": "عزيب",
@@ -1283,7 +1304,10 @@
       "lon": 2.2273427,
       "geo_source": "Google Maps",
       "geo_verified": true,
-      "sntf_names": ["KHEMIS MILIANA", "KHEMIS.MILLIANA"]
+      "sntf_names": [
+        "KHEMIS MILIANA",
+        "KHEMIS.MILLIANA"
+      ]
     },
     {
       "id": "arib",
@@ -1444,15 +1468,6 @@
       "name_fr": "oued el djemeaa",
       "lat": 35.82088,
       "lon": 0.66096,
-      "geo_source": "Google Maps",
-      "geo_verified": true
-    },
-    {
-      "id": "djidiouia",
-      "name": "جديوية",
-      "name_fr": "djidiouia",
-      "lat": 35.933684,
-      "lon": 0.826689,
       "geo_source": "Google Maps",
       "geo_verified": true
     },
@@ -1910,7 +1925,9 @@
       "id": "sidi_bouabida",
       "name": "سيدي بوعبيدة",
       "name_fr": "Sidi Bouabida",
-      "sntf_names": ["SIDI BOUABIDA"],
+      "sntf_names": [
+        "SIDI BOUABIDA"
+      ],
       "lat": 36.2324063,
       "lon": 1.7136512,
       "geo_source": "Google Maps",
@@ -1921,7 +1938,10 @@
       "name": "شبايطة مختار",
       "name_fr": "Chebaïta Mokhtar",
       "wilaya": "El Tarf",
-      "sntf_names": ["CHBAITA", "CHEBAITA M"],
+      "sntf_names": [
+        "CHBAITA",
+        "CHEBAITA M"
+      ],
       "lat": 36.7589204,
       "lon": 7.7430149,
       "geo_source": "Google Maps",
@@ -1932,7 +1952,9 @@
       "name": "بئر صفصاف",
       "name_fr": "Bir Saf Saf",
       "wilaya": "Chlef",
-      "sntf_names": ["BIR SAF SAF"],
+      "sntf_names": [
+        "BIR SAF SAF"
+      ],
       "lat": 36.205792,
       "lon": 1.5911052,
       "geo_source": "Google Maps",
@@ -1943,7 +1965,9 @@
       "name": "الباراج",
       "name_fr": "Le Barrage",
       "wilaya": "Chlef",
-      "sntf_names": ["LE BARRAGE"],
+      "sntf_names": [
+        "LE BARRAGE"
+      ],
       "lat": null,
       "lon": null,
       "geo_source": null,
@@ -1957,7 +1981,9 @@
       "name": "مودرو",
       "name_fr": "Moudrou",
       "wilaya": "Chlef",
-      "sntf_names": ["MOUDROU"],
+      "sntf_names": [
+        "MOUDROU"
+      ],
       "lat": null,
       "lon": null,
       "geo_source": null,
@@ -1971,7 +1997,9 @@
       "name": "الأصنام",
       "name_fr": "El Asnam",
       "wilaya": "Bouira",
-      "sntf_names": ["EL ASNAM"],
+      "sntf_names": [
+        "EL ASNAM"
+      ],
       "lat": null,
       "lon": null,
       "geo_source": null,
@@ -1985,7 +2013,9 @@
       "name": "القادرية",
       "name_fr": "Kadiria",
       "wilaya": "Bouira",
-      "sntf_names": ["KADIRIA"],
+      "sntf_names": [
+        "KADIRIA"
+      ],
       "lat": 36.534687,
       "lon": 3.688078,
       "geo_source": "Google Maps",
@@ -1996,7 +2026,9 @@
       "name": "مزيتة",
       "name_fr": "M'Zita",
       "wilaya": "Bordj Bou Arréridj",
-      "sntf_names": ["M'ZITA"],
+      "sntf_names": [
+        "M'ZITA"
+      ],
       "lat": 36.1192268,
       "lon": 4.3873962,
       "geo_source": "Google Maps",
@@ -2007,7 +2039,9 @@
       "name": "بشلول",
       "name_fr": "Bechloul",
       "wilaya": "Bouira",
-      "sntf_names": ["BECHLOUL"],
+      "sntf_names": [
+        "BECHLOUL"
+      ],
       "lat": 36.313595,
       "lon": 4.072923,
       "geo_source": "Google Maps",
@@ -2018,7 +2052,9 @@
       "name": "وادي علي",
       "name_fr": "Oued Ali",
       "wilaya": "Bordj Bou Arréridj",
-      "sntf_names": ["OUED ALI"],
+      "sntf_names": [
+        "OUED ALI"
+      ],
       "lat": null,
       "lon": null,
       "geo_source": null,
@@ -2032,7 +2068,9 @@
       "name": "توغزة",
       "name_fr": "Toghza",
       "wilaya": "Bouira",
-      "sntf_names": ["TOGHZA"],
+      "sntf_names": [
+        "TOGHZA"
+      ],
       "lat": 36.3634531,
       "lon": 4.3705385,
       "geo_source": "Google Maps",
@@ -2043,7 +2081,9 @@
       "name": "بومدفع",
       "name_fr": "Bou Medfaa",
       "wilaya": "Aïn Defla",
-      "sntf_names": ["BOU MEDFAA"],
+      "sntf_names": [
+        "BOU MEDFAA"
+      ],
       "lat": 36.366563,
       "lon": 2.463038,
       "geo_source": "Google Maps",
@@ -2054,7 +2094,9 @@
       "name": "الحسينية",
       "name_fr": "Hoceinia",
       "wilaya": "Aïn Defla",
-      "sntf_names": ["HOCEINIA"],
+      "sntf_names": [
+        "HOCEINIA"
+      ],
       "lat": 36.323316,
       "lon": 2.403857,
       "geo_source": "Google Maps",
@@ -2065,7 +2107,9 @@
       "name": "عين التركي",
       "name_fr": "Aïn Torki",
       "wilaya": "Aïn Defla",
-      "sntf_names": ["AIN TORKI"],
+      "sntf_names": [
+        "AIN TORKI"
+      ],
       "lat": 36.3435929,
       "lon": 2.3842465,
       "geo_source": "Google Maps",
@@ -2076,7 +2120,9 @@
       "name": "سلمان",
       "name_fr": "Selmane",
       "wilaya": "Aïn Defla",
-      "sntf_names": ["SELMANE"],
+      "sntf_names": [
+        "SELMANE"
+      ],
       "lat": null,
       "lon": null,
       "geo_source": null,
@@ -2090,7 +2136,9 @@
       "name": "وادي جر",
       "name_fr": "Oued Djer",
       "wilaya": "Blida",
-      "sntf_names": ["OUED DJER"],
+      "sntf_names": [
+        "OUED DJER"
+      ],
       "lat": 36.421228,
       "lon": 2.565208,
       "geo_source": "Google Maps",
@@ -2101,7 +2149,9 @@
       "name": "سيدي لخضر",
       "name_fr": "Sidi Lakhdar",
       "wilaya": "Aïn Defla",
-      "sntf_names": ["SIDI LAKHDAR"],
+      "sntf_names": [
+        "SIDI LAKHDAR"
+      ],
       "lat": 36.2675389,
       "lon": 2.1640283,
       "geo_source": "Google Maps",
@@ -2112,7 +2162,9 @@
       "name": "العامرة",
       "name_fr": "El Amra",
       "wilaya": "Aïn Defla",
-      "sntf_names": ["EL AMRA"],
+      "sntf_names": [
+        "EL AMRA"
+      ],
       "lat": null,
       "lon": null,
       "geo_source": null,
@@ -2126,7 +2178,9 @@
       "name": "الشيخ بن يحيى",
       "name_fr": "Cheik Ben Yahia",
       "wilaya": "Aïn Defla",
-      "sntf_names": ["CHEIK BEN YAHIA"],
+      "sntf_names": [
+        "CHEIK BEN YAHIA"
+      ],
       "lat": 36.24407,
       "lon": 1.771905,
       "geo_source": "Google Maps",
@@ -2137,7 +2191,9 @@
       "name": "الشهبونية",
       "name_fr": "Chabounia",
       "wilaya": "Médéa",
-      "sntf_names": ["CHABOUNIA"],
+      "sntf_names": [
+        "CHABOUNIA"
+      ],
       "lat": 35.5363357,
       "lon": 2.6116595,
       "geo_source": "Google Maps",
@@ -2148,7 +2204,9 @@
       "name": "بوخضرة",
       "name_fr": "Boukhadra",
       "wilaya": "Annaba",
-      "sntf_names": ["BOUKHADRA"],
+      "sntf_names": [
+        "BOUKHADRA"
+      ],
       "lat": 36.8704412,
       "lon": 7.7249271,
       "geo_source": "Google Maps",
@@ -2159,7 +2217,9 @@
       "name": "البوني",
       "name_fr": "El Bouni",
       "wilaya": "Annaba",
-      "sntf_names": ["EL BOUNI"],
+      "sntf_names": [
+        "EL BOUNI"
+      ],
       "lat": null,
       "lon": null,
       "geo_source": null,
@@ -2173,7 +2233,9 @@
       "name": "الشيحاني",
       "name_fr": "Chihani",
       "wilaya": "El Tarf",
-      "sntf_names": ["CHIHANI"],
+      "sntf_names": [
+        "CHIHANI"
+      ],
       "lat": 36.6503385,
       "lon": 7.7759322,
       "geo_source": "Google Maps",
@@ -2184,7 +2246,9 @@
       "name": "الذرعان",
       "name_fr": "Dréan",
       "wilaya": "El Tarf",
-      "sntf_names": ["DREAN"],
+      "sntf_names": [
+        "DREAN"
+      ],
       "lat": 36.6879128,
       "lon": 7.7499745,
       "geo_source": "Google Maps",
@@ -2194,7 +2258,9 @@
       "id": "souk_ahras",
       "name": "سوق أهراس",
       "name_fr": "Souk Ahras",
-      "sntf_names": ["SOUK-AHRAS"],
+      "sntf_names": [
+        "SOUK-AHRAS"
+      ],
       "lat": 36.2809613,
       "lon": 7.9557431,
       "geo_source": "Google Maps",
@@ -2205,7 +2271,9 @@
       "name": "غار الدماء",
       "name_fr": "Ghardimaou",
       "wilaya": "Tunisie",
-      "sntf_names": ["GHARDIMAOU"],
+      "sntf_names": [
+        "GHARDIMAOU"
+      ],
       "lat": 36.4476836,
       "lon": 7.438131,
       "geo_source": "Google Maps",
@@ -2216,7 +2284,9 @@
       "name": "الحجار السود",
       "name_fr": "Hadjar Soud",
       "wilaya": "Skikda",
-      "sntf_names": ["HADJAR SOUD"],
+      "sntf_names": [
+        "HADJAR SOUD"
+      ],
       "lat": null,
       "lon": null,
       "geo_source": null,
@@ -2230,7 +2300,9 @@
       "name": "عين ياقوت",
       "name_fr": "Aïn Yagout",
       "wilaya": "Batna",
-      "sntf_names": ["AIN YAGOUT"],
+      "sntf_names": [
+        "AIN YAGOUT"
+      ],
       "lat": 35.76938,
       "lon": 6.400322,
       "geo_source": "Google Maps",
@@ -2245,13 +2317,14 @@
       "geo_source": "Google Maps",
       "geo_verified": true
     },
-
     {
       "id": "mezzloug",
       "name": "مزلوق",
       "name_fr": "Mezloug",
       "wilaya": "Sétif",
-      "sntf_names": ["MEZLOUG"],
+      "sntf_names": [
+        "MEZLOUG"
+      ],
       "lat": 36.1110437,
       "lon": 5.345786,
       "geo_source": "Google Maps",
@@ -2260,9 +2333,11 @@
     {
       "id": "djerma",
       "name": "جرمة",
-      "name_fr": "Mezloug",
+      "name_fr": "Djerma",
       "wilaya": "Batna",
-      "sntf_names": ["djerma"],
+      "sntf_names": [
+        "djerma"
+      ],
       "lat": 35.658386,
       "lon": 6.308145,
       "geo_source": "Google Maps",
@@ -2273,7 +2348,9 @@
       "name": "ديدوش مراد",
       "name_fr": "Didouche Mourad",
       "wilaya": "Constantine",
-      "sntf_names": ["DIDOUCHE MOURAD"],
+      "sntf_names": [
+        "DIDOUCHE MOURAD"
+      ],
       "lat": 36.444778,
       "lon": 6.633615,
       "geo_source": "Google Maps",
@@ -2284,7 +2361,9 @@
       "name": "زيغوت يوسف",
       "name_fr": "Zighout Youcef",
       "wilaya": "Constantine",
-      "sntf_names": ["ZIGHOUT YOUCEF"],
+      "sntf_names": [
+        "ZIGHOUT YOUCEF"
+      ],
       "lat": 36.530855,
       "lon": 6.71306,
       "geo_source": "Google Maps",
@@ -2295,7 +2374,9 @@
       "name": "فيسديس الجامعية",
       "name_fr": "Fesdis Université",
       "wilaya": "Batna",
-      "sntf_names": ["FESDIS UNIVERSITE"],
+      "sntf_names": [
+        "FESDIS UNIVERSITE"
+      ],
       "lat": 35.630778,
       "lon": 6.281755,
       "geo_source": "Google Maps",
@@ -2306,7 +2387,9 @@
       "name": "عين بوزيان",
       "name_fr": "Aïn Bouziane",
       "wilaya": "Skikda",
-      "sntf_names": ["AIN BOUZIANE"],
+      "sntf_names": [
+        "AIN BOUZIANE"
+      ],
       "lat": 36.598405,
       "lon": 6.750183,
       "geo_source": "Google Maps",
@@ -2317,7 +2400,9 @@
       "name": "الميلية",
       "name_fr": "El Milia",
       "wilaya": "Jijel",
-      "sntf_names": ["EL-MILIA"],
+      "sntf_names": [
+        "EL-MILIA"
+      ],
       "lat": 36.783266,
       "lon": 6.257333,
       "geo_source": "Google Maps",
@@ -2348,7 +2433,9 @@
       "name": "العنصر",
       "name_fr": "El Anser",
       "wilaya": "Jijel",
-      "sntf_names": ["EL ANCER"],
+      "sntf_names": [
+        "EL ANCER"
+      ],
       "lat": 36.8026389,
       "lon": 6.1529725,
       "geo_source": "Google Maps",
@@ -2359,7 +2446,9 @@
       "name": "سيدي عبد العزيز",
       "name_fr": "Sidi Abdelaziz",
       "wilaya": "Jijel",
-      "sntf_names": ["SIDI ABDELAZIZ"],
+      "sntf_names": [
+        "SIDI ABDELAZIZ"
+      ],
       "lat": 36.8594766,
       "lon": 6.0603655,
       "geo_source": "Google Maps",
@@ -2370,7 +2459,9 @@
       "name": "برحال",
       "name_fr": "Berrahal",
       "wilaya": "Annaba",
-      "sntf_names": ["BERRAHAL"],
+      "sntf_names": [
+        "BERRAHAL"
+      ],
       "lat": 36.8314887,
       "lon": 7.4552583,
       "geo_source": "Google Maps",
@@ -2448,7 +2539,6 @@
       "geo_source": "Google Maps",
       "geo_verified": true
     },
-
     {
       "id": "redjem_demouche",
       "name": "رجم دموش",
