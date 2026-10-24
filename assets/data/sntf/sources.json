@@ -451,7 +451,8 @@
       "official_document": true,
       "origin_confirmation": "official-poster-provided-by-user",
       "valid_from": "2026-09-21",
-      "notice": "مغادرة وهران 16:00 ومغادرة الشلف 05:45؛ لم يتضمن الإعلان توقيت الوصول أو أيام التشغيل."
+      "notice": "مغادرة وهران 16:00 ومغادرة الشلف 05:45؛ لم يتضمن الإعلان توقيت الوصول أو أيام التشغيل.",
+      "url": "https://imadtbn.github.io/dz_portal/assets/train-schedules/Western/oran-chlef-oran.jpg"
     },
     {
       "id": "sntf-telagh-oran-saida-frenda-announcement",
