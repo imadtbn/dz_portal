@@ -1,6 +1,6 @@
 {
   "version": 10,
-  "updated": "2026-09-28",
+  "updated": "2026-10-24",
   "sources": [
     {
       "id": "dz-portal-gallery",
@@ -281,14 +281,14 @@
     },
     {
       "id": "eastern-gallery-annaba",
-      "name": "صورة جدول SNTF: alger-annaba.jpg",
+      "name": "نسخة أخرى من جدول SNTF للقطار الليلي الجزائر–عنابة (أيام محددة)",
       "url": "https://imadtbn.github.io/dz_portal/assets/train-schedules/Eastern/alger-annaba.jpg",
       "kind": "official-timetable-image",
       "official_document": true,
       "origin_confirmation": "repository_owner",
       "current_validity": "not_independently_rechecked",
       "verified_at": null,
-      "notice": "الأوقات من الصورة الرسمية المحفوظة في المشروع. الجدول المعلن ليس تتبعًا آنيًا؛ تُراجع التغييرات التشغيلية من SNTF."
+      "notice": "صورة رسمية بديلة تعرض أيام تشغيل محددة. تُحفظ للمقارنة؛ تعتمد قاعدة البحث الصورة الرسمية الأخرى التي تنص على السير يوميًا في الاتجاهين."
     },
     {
       "id": "eastern-gallery-tebessa",
@@ -461,6 +461,20 @@
       "origin_confirmation": "official-poster-provided-by-user",
       "url": "https://imadtbn.github.io/trains-dz/assets/train-schedules/Western/telagh-oran-saida-frenda.jpg",
       "notice": "الانطلاق تلاغ 07:09 إلى وهران، وهران 15:20 إلى تلاغ، تلاغ 17:17 نحو سعيدة–فرندة؛ الوصول وأيام التشغيل غير مذكورة في الإعلان."
+    },
+    {
+      "id": "eastern-gallery-annaba-daily",
+      "name": "جدول SNTF الرسمي للقطار الليلي الجزائر–عنابة — السير يوميًا في الاتجاهين",
+      "url": "https://imadtbn.github.io/dz_portal/assets/train-schedules/Eastern/alger-annaba-tj.jpg",
+      "kind": "official-timetable-image",
+      "official_document": true,
+      "issuing_authority": "SNTF",
+      "official_homepage": "https://www.sntf.dz/",
+      "origin_confirmation": "repository_owner",
+      "origin_status": "official_sntf_document",
+      "current_validity": "not_independently_rechecked",
+      "verified_at": null,
+      "notice": "تنص الصورة الرسمية صراحةً على أن القطار يسير يوميًا في الاتجاهين. أوقات المحطات منشورة في الجدول؛ هذا ليس تتبعًا آنيًا."
     }
   ],
   "provenance_policy": {
