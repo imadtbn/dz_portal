@@ -14712,7 +14712,7 @@
     },
     {
       "trip_id": "photo-east-agha-annaba",
-      "route_id": "alger-annaba",
+      "route_id": "agha-annaba",
       "train_number": null,
       "service_id": "eastern-annaba-calendar-conflict",
       "source_id": "eastern-gallery-annaba",
@@ -14827,7 +14827,7 @@
     },
     {
       "trip_id": "photo-east-annaba-agha",
-      "route_id": "annaba-alger",
+      "route_id": "annaba-agha",
       "train_number": null,
       "service_id": "eastern-annaba-calendar-conflict",
       "source_id": "eastern-gallery-annaba",
