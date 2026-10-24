@@ -2437,3 +2437,77 @@ ins.adsbygoogle iframe,
         overflow-wrap: anywhere;
     }
 }
+
+
+/* تحسين عرض أرقام الاتصال في بطاقات الطوارئ */
+#medical .services-grid > .service-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    min-width: 0;
+}
+
+#medical .services-grid > .service-item > span {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 auto;
+    width: auto;
+    min-width: 3.25rem;
+    max-width: none;
+    min-height: 2.5rem;
+    box-sizing: border-box;
+    padding: .55rem 1rem !important;
+    margin-inline-start: auto;
+    margin-inline-end: 0;
+    border-radius: 999px !important;
+    white-space: nowrap;
+    direction: ltr;
+    writing-mode: horizontal-tb;
+    line-height: 1.2;
+    font-size: 1.05rem;
+    text-align: center;
+}
+
+#medical .services-grid > .service-item .service-info {
+    flex: 1 1 auto;
+    min-width: 0;
+    overflow-wrap: anywhere;
+}
+
+#medical .services-grid > .service-item .service-icon {
+    flex: 0 0 4rem;
+}
+
+@media (max-width: 600px) {
+    #medical .services-grid {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    #medical .services-grid > .service-item {
+        gap: .75rem;
+        padding: .85rem !important;
+    }
+
+    #medical .services-grid > .service-item > span {
+        min-width: 3rem;
+        padding: .5rem .8rem !important;
+        font-size: 1rem;
+    }
+
+    #medical .services-grid > .service-item .service-icon {
+        flex-basis: 3.25rem;
+        width: 3.25rem;
+        height: 3.25rem;
+    }
+
+    #medical .services-grid > .service-item .service-info h4 {
+        font-size: .98rem;
+        line-height: 1.5;
+    }
+
+    #medical .services-grid > .service-item .service-info p {
+        font-size: .88rem;
+        line-height: 1.6;
+    }
+}
