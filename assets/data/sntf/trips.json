@@ -1,6 +1,6 @@
 {
   "version": 14,
-  "updated": "2026-10-09",
+  "updated": "2026-10-24",
   "trips": [
     {
       "trip_id": "user-zeralda-agha-1500",
@@ -14714,8 +14714,8 @@
       "trip_id": "photo-east-agha-annaba",
       "route_id": "alger-annaba",
       "train_number": null,
-      "service_id": "eastern-annaba-calendar-conflict",
-      "source_id": "eastern-gallery-annaba",
+      "service_id": "daily",
+      "source_id": "eastern-gallery-annaba-daily",
       "data_status": "source_transcribed",
       "station_time_kind": "published_departure_or_passage",
       "stop_times": [
@@ -14822,15 +14822,15 @@
           "departure": null
         }
       ],
-      "editor_note": "تعارض أيام التشغيل بين alger-annaba.jpg وalger-annaba-tj.jpg؛ لا تظهر الرحلة القادمة حتى حسم النسخة السارية.",
-      "operating_days_status": "review_required"
+      "operating_days_status": "daily_confirmed_by_official_image",
+      "operating_days_note": "يسير القطار يوميًا في الاتجاهين وفق الصورة الرسمية alger-annaba-tj.jpg. أوقات التوقف مأخوذة من الجدول الرسمي، وأيام السير لا تعتمد النسخة البديلة ذات الأيام المحددة."
     },
     {
       "trip_id": "photo-east-annaba-agha",
       "route_id": "annaba-alger",
       "train_number": null,
-      "service_id": "eastern-annaba-calendar-conflict",
-      "source_id": "eastern-gallery-annaba",
+      "service_id": "daily",
+      "source_id": "eastern-gallery-annaba-daily",
       "data_status": "source_transcribed",
       "station_time_kind": "published_departure_or_passage",
       "stop_times": [
@@ -14943,8 +14943,8 @@
           "departure": null
         }
       ],
-      "editor_note": "تعارض أيام التشغيل بين alger-annaba.jpg وalger-annaba-tj.jpg؛ لا تظهر الرحلة القادمة حتى حسم النسخة السارية.",
-      "operating_days_status": "review_required"
+      "operating_days_status": "daily_confirmed_by_official_image",
+      "operating_days_note": "يسير القطار يوميًا في الاتجاهين وفق الصورة الرسمية alger-annaba-tj.jpg. أوقات التوقف مأخوذة من الجدول الرسمي، وأيام السير لا تعتمد النسخة البديلة ذات الأيام المحددة."
     },
     {
       "trip_id": "photo-east-agha-tebessa",
@@ -19298,5 +19298,5 @@
       "editor_note": "ساعة الانطلاق فقط مؤكدة بالإعلان؛ لا تفترض أوقات وصول أو توقفات. جدول التشغيل اليومي افتراضي إلى حين التأكيد."
     }
   ],
-  "note": "Draft entries are editable real database records, but their prior example times are not operational evidence. Dashboard labels these records as unverified and hides them from default scheduled boards until reviewed. Update stop_times/train_number/source to validate. أُضيفت 60 رحلة من 3 صور رسمية مؤرخة 19 سبتمبر 2026: 28 للمطار ذهابًا وإيابًا، و14 آغا–زرالدة، و18 الجزائر–العفرون. لم تُفترض رحلات الاتجاه العكسي للعفرون دون صورتها الصحيحة. أُدرجت 19 رحلة موثقة من صورة العفرون–الجزائر الرسمية بتاريخ 19 سبتمبر 2026، تشمل قطارات يومية وأخرى مستثناة من الجمعة وأخرى خاصة بيوم الجمعة، بمجموع 150 رحلة منقولة من صور الجداول. نسخة المعاينة SVG مشتقة من الصورة الأصلية المرفقة."
+  "note": "Draft entries are editable real database records, but their prior example times are not operational evidence. Dashboard labels these records as unverified and hides them from default scheduled boards until reviewed. Update stop_times/train_number/source to validate. أُضيفت 60 رحلة من 3 صور رسمية مؤرخة 19 سبتمبر 2026: 28 للمطار ذهابًا وإيابًا، و14 آغا–زرالدة، و18 الجزائر–العفرون. لم تُفترض رحلات الاتجاه العكسي للعفرون دون صورتها الصحيحة. أُدرجت 19 رحلة موثقة من صورة العفرون–الجزائر الرسمية بتاريخ 19 سبتمبر 2026، تشمل قطارات يومية وأخرى مستثناة من الجمعة وأخرى خاصة بيوم الجمعة، بمجموع 150 رحلة منقولة من صور الجداول. نسخة المعاينة SVG مشتقة من الصورة الأصلية المرفقة. تم إصلاح رحلتي عنابة–آغا وآغا–عنابة: اعتماد الصورة الرسمية التي تنص على السير يوميًا، وربطهما بجدول alger-annaba."
 }
