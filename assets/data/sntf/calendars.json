@@ -1,6 +1,6 @@
 {
   "version": 4,
-  "updated": "2026-09-28",
+  "updated": "2026-10-24",
   "calendars": [
     {
       "id": "daily",
@@ -117,7 +117,7 @@
     },
     {
       "id": "eastern-annaba-calendar-conflict",
-      "label": "تعارض صور عنابة في أيام التشغيل",
+      "label": "نسخة أرشيفية متعارضة — لا تستخدمها الرحلتان المنشورتان",
       "rule": "custom_days",
       "days": {
         "sunday": false,
@@ -128,7 +128,7 @@
         "friday": false,
         "saturday": false
       },
-      "note": "الأيام غير محسومة: لا تنشئ أحداثًا قادمة حتى المراجعة."
+      "note": "محتفظ بها للتدقيق التاريخي فقط. الرحلتان المنشورتان تستخدمان قاعدة daily استنادًا إلى الصورة الرسمية alger-annaba-tj.jpg التي تنص على السير يوميًا في الاتجاهين."
     },
     {
       "id": "eastern-tebessa-out",
