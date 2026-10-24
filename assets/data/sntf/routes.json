@@ -558,7 +558,7 @@
       "source": "dz-portal-gallery",
       "schedule_image": "../assets/train-schedules/Western/oran-chlef-agha.png",
       "schedule_status": "requires-current-verification",
-      "line_id": "oran-chlef",
+      "line_id": "oran-chlef-regional-corridor",
       "catalog_status": "superseded",
       "superseded_by": [
         "oran-agha",
