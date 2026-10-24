@@ -1,4 +1,4 @@
-import {schedulePageForImage} from "../sntf-schedules/catalog.js?v=20261004-stable";
+import {schedulePageForImage} from "../sntf-schedules/catalog.js?v=20261024-annaba-daily";
 import {dayParts,dayISO,recordsAtStation,eligible,formatTime,countdown,classify,mins} from "./engine.js";
 import {planJourney} from "./planner.js?v=20261009-partial-journeys";
 import {stationPicker} from "./station-picker.js?v=20261003-no-default-station";
