@@ -2398,3 +2398,42 @@ ins.adsbygoogle iframe,
 }
 
 .ramadan-grant-service .service-new-label[hidden] { display: none !important; }
+
+
+/* تخطيط مركزي أحادي العمود لصفحة أرقام الطوارئ */
+.main-container {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 1400px;
+    min-width: 0;
+    margin-inline: auto;
+    padding: 1.25rem 2rem 1.5rem;
+}
+
+.main-container.content-area {
+    width: 100%;
+    min-width: 0;
+}
+
+.main-container .section-card,
+.main-container .ad-container,
+.main-container .services-grid {
+    min-width: 0;
+    max-width: 100%;
+}
+
+@media (max-width: 768px) {
+    .main-container {
+        padding: .65rem .85rem .85rem;
+    }
+
+    .main-container .services-grid {
+        grid-template-columns: minmax(0, 1fr);
+        padding: 1rem;
+    }
+
+    .main-container .service-item {
+        min-width: 0;
+        overflow-wrap: anywhere;
+    }
+}
