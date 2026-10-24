@@ -188,10 +188,8 @@
       "id": "alger-annaba-eastern",
       "path": "assets/train-schedules/Eastern/alger-annaba.jpg",
       "category": "eastern",
-      "alt": "الجزائر عنابة الجزائر",
-      "route_ids": [
-        "alger-annaba"
-      ],
+      "alt": "نسخة جدول القطار الجزائر عنابة بأيام محددة",
+      "route_ids": [],
       "source_page": "sectors/sntf.html",
       "issuing_authority": "SNTF",
       "status": "official_document_validity_confirmed",
@@ -201,8 +199,11 @@
       "id": "alger-annaba-tj-eastern",
       "path": "assets/train-schedules/Eastern/alger-annaba-tj.jpg",
       "category": "eastern",
-      "alt": "الجزائر عنابة الجزائر يوميا",
-      "route_ids": [],
+      "alt": "جدول القطار الليلي الجزائر عنابة يوميًا",
+      "route_ids": [
+        "alger-annaba",
+        "annaba-alger"
+      ],
       "source_page": "sectors/sntf.html",
       "issuing_authority": "SNTF",
       "status": "official_document_validity_confirmed",
