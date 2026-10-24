@@ -1371,3 +1371,123 @@ div[style*="border-radius"] i:hover {
     display: block;
     min-height: 90px;
 }
+
+/* CWV stage 02 — responsive AdSense slots.
+   Reserve a modest, format-aware space without constraining a filled ad's height.
+   The space is present before JavaScript and is never collapsed on no-fill. */
+.ad-container:has(ins.adsbygoogle) {
+    box-sizing: border-box;
+    display: block;
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    /* Don't clip Google full-width responsive units or impose a fixed height. */
+    overflow: visible;
+    contain: layout style;
+}
+.ad-container:has(ins.adsbygoogle[data-ad-format="auto"]),
+.ad-container:has(ins.adsbygoogle:not([data-ad-format])) {
+    min-height: 110px;
+}
+.ad-container:has(ins.adsbygoogle[data-ad-format="fluid"]) {
+    min-height: 190px;
+}
+.ad-container:has(ins.adsbygoogle[data-ad-format="autorelaxed"]) {
+    min-height: 200px;
+}
+.ad-container ins.adsbygoogle {
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    min-width: 0;
+    margin-inline: auto;
+}
+.sectors-grid > .ad-container,
+.services-grid > .ad-container {
+    grid-column: 1 / -1;
+}
+@media (max-width: 600px) {
+    .ad-container:has(ins.adsbygoogle[data-ad-format="auto"]),
+    .ad-container:has(ins.adsbygoogle:not([data-ad-format])) {
+        min-height: 115px;
+    }
+    .ad-container:has(ins.adsbygoogle[data-ad-format="fluid"]) {
+        min-height: 210px;
+    }
+    .ad-container:has(ins.adsbygoogle[data-ad-format="autorelaxed"]) {
+        min-height: 190px;
+    }
+}
+@media (max-width: 360px) {
+    .ad-container:has(ins.adsbygoogle[data-ad-format="fluid"]) {
+        min-height: 190px;
+    }
+    .ad-container:has(ins.adsbygoogle[data-ad-format="autorelaxed"]) {
+        min-height: 170px;
+    }
+}
+
+
+/* Center in-content AdSense creatives (including narrower fluid / related-search
+   frames) on RTL pages at desktop and mobile widths.
+   Keep Google-assigned creative dimensions, heights and display behavior. */
+.ad-container:has(ins.adsbygoogle) {
+    max-inline-size: min(100%, 970px);
+    margin-inline: auto;
+    text-align: center;
+}
+.ad-container:has(ins.adsbygoogle) ins.adsbygoogle {
+    max-inline-size: 100%;
+    margin-inline: auto;
+}
+.ad-container:has(ins.adsbygoogle) ins.adsbygoogle > iframe,
+.ad-container:has(ins.adsbygoogle) ins.adsbygoogle > div,
+.ad-container:has(ins.adsbygoogle) ins.adsbygoogle > div > iframe {
+    margin-inline: auto !important;
+}
+
+
+/* Shared AdSense mobile overflow guard — RTL-safe and content-only.
+   Ads stay in normal document flow; Google controls the creative's height. */
+.ad-container:has(ins.adsbygoogle) {
+  box-sizing: border-box;
+  inline-size: 100%;
+  max-inline-size: 100%;
+  min-inline-size: 0;
+  margin-inline: auto;
+  align-self: stretch;
+  position: relative;
+  float: none;
+}
+.ad-container:has(ins.adsbygoogle) ins.adsbygoogle {
+  display: block;
+  box-sizing: border-box;
+  inline-size: 100%;
+  max-inline-size: 100%;
+  min-inline-size: 0;
+  margin-inline: auto;
+}
+.ad-container:has(ins.adsbygoogle) iframe,
+.ad-container:has(ins.adsbygoogle) ins.adsbygoogle > iframe,
+.ad-container:has(ins.adsbygoogle) ins.adsbygoogle > div,
+.ad-container:has(ins.adsbygoogle) ins.adsbygoogle > div > iframe,
+ins.adsbygoogle iframe,
+.google-auto-placed iframe {
+  box-sizing: border-box;
+  max-inline-size: 100% !important;
+}
+/* Prevent grid/flex children and nested Google frames from widening the page. */
+.ad-container:has(ins.adsbygoogle),
+.ad-container:has(ins.adsbygoogle) *,
+.google-auto-placed,
+.google-auto-placed * {
+  min-inline-size: 0;
+}
+@media (max-width: 600px) {
+  .ad-container:has(ins.adsbygoogle) {
+    inline-size: 100%;
+    max-inline-size: 100%;
+    margin-inline: 0;
+  }
+}

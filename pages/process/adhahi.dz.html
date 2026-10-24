@@ -12,9 +12,21 @@
     <meta name="google-site-verification" content="tGjdnUHs9yv4HTGpgnemjCK7YsJ3bI4twWC1WDi5Nqw">
     <meta name="google-site-verification" content="f5Xi4oFx0v5dN6iPZd9qCw-7vnc3vIbAeYF9jr4vwVM">
     <meta name="msvalidate.01" content="9BCA38377A234DCCEB9991EAD1A2F6C2">
+     <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-4BCWP0498L"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-4BCWP0498L');
+</script>
+
 <!-- Google AdSense -->
-<!-- https://publishers.ad-maven.com/ -->
-    <script data-cfasync="false" src="//dcbbwymp1bhlf.cloudfront.net/?wbbcd=1520539"></script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5656416032906373"
+     crossorigin="anonymous"></script>
+
+    
 
     <script async custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"></script>
 
@@ -210,22 +222,16 @@
     ]
 }
     </script>
-    <script src="../../assets/js/site-tags.js" defer></script>
-    <!-- Google Analytics 4: التهيئة المباشرة داخل head -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-K23WYKK60X"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-K23WYKK60X');
-    </script>
+    
+    
+    
+    
+
+<link rel="stylesheet" href="../../assets/css/dz-share.css"><script defer src="../../assets/js/dz-share.js"></script>
 </head>
 
 <body>
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NW3BWPF6" height="0" width="0"
-            style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
+    
 
 
     <!-- Header -->
@@ -303,7 +309,7 @@
             </div>
             <div class="hero-visual">
                 <img src="../../assets/images/madr.png" alt="وزارة الفلاحة والتنمية الريفية والصيد البحري"
-                    class="hero-icon" loading="lazy">
+                    class="hero-icon" loading="eager" decoding="async" fetchpriority="high">
             </div>
         </div>
     </section>
@@ -389,15 +395,19 @@
                 <div class="video-card">
 
                     <!-- Video Container -->
-                    <div class="video-wrapper">
-
-                        <!-- YouTube Video -->
-                        <iframe class="tutorial-frame" src="https://www.youtube.com/embed/pfYIDYoVE5g"
+                    <div class="video-wrapper" data-video-on-demand>
+                        <a class="video-watch-launch" data-video-launch
+                           href="https://www.youtube.com/watch?v=pfYIDYoVE5g"
+                           aria-label="تحميل فيديو: طريقة حجز أضحية">
+                            <img src="../../assets/images/madr.png" alt="" width="76" height="76" loading="lazy" decoding="async">
+                            <span class="video-watch-launch-play" aria-hidden="true">▶</span>
+                            <span class="video-watch-launch-label">اضغط لتشغيل الفيديو</span>
+                        </a>
+                        <template data-video-embed><iframe class="tutorial-frame" src="https://www.youtube.com/embed/pfYIDYoVE5g"
                             title="طريقة حجز أضحية"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                             allowfullscreen loading="lazy">
-                        </iframe>
-
+                        </iframe></template>
                     </div>
 
                     <!-- Facebook Video Example -->
@@ -627,6 +637,11 @@
 
     <!-- تحميل الإحصائيات والبحث والتقييمات ومساعد الإعلانات بعد العرض الأول -->
     <script defer src="../../assets/js/deferred-homepage.js"></script>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+    <script defer src="../../assets/js/video-embed-on-demand.js"></script>
 </body>
 
 </html>

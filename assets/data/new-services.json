@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-10-21",
+  "services": [
+    {
+      "id": "ramadan-grant-1448",
+      "title": "اعلان التسجيلات في منحة التضامن لرمضان 1448 هـ",
+      "sector": "وزارة الداخلية والجماعات المحلية والنقل",
+      "sectorUrl": "sectors/interieur.html",
+      "url": "https://prestations.interieur.gov.dz/solidariteramdhan/",
+      "addedAt": "2026-10-21",
+      "sourceUrl": "https://prestations.interieur.gov.dz/solidariteramdhan/"
+    },
+    {
+      "id": "جداول رحلات القطارات",
+      "title": "تحديثات في جداول رحلات القطارات",
+      "sector": "السكك الحديدية",
+      "sectorUrl": "sectors/sntf.html",
+      "url": "",
+      "addedAt": "2026-10-21",
+      "sourceUrl": ""
+    }
+  ]
+}

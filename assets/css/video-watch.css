@@ -152,3 +152,130 @@
         flex-direction: column;
     }
 }
+
+/* CWV stage 04: the existing 16:9 video placeholder remains in flow
+   while an external Facebook/YouTube iframe loads.  Keep current min-heights
+   and background; only remove iframe sizing from its parent's layout. */
+.video-watch-player {
+    position: relative;
+    overflow: hidden;
+}
+.video-watch-player > iframe,
+.video-watch-player > .video-primary-embed,
+.video-watch-article .video-watch-player > iframe {
+    position: absolute;
+    inset: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    min-height: 0;
+    border: 0;
+}
+
+/* Process video actions: balanced desktop layout and touch-friendly mobile controls. */
+.video-watch-section .video-watch-actions{
+    display:grid;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    width:100%;
+    max-width:640px;
+    gap:12px;
+    margin:18px auto 0;
+    align-items:stretch;
+}
+.video-watch-section .video-watch-actions > a{
+    display:inline-flex;
+    width:100%;
+    min-width:0;
+    min-height:46px;
+    align-items:center;
+    justify-content:center;
+    gap:9px;
+    padding:11px 16px;
+    border-radius:11px;
+    text-align:center;
+    line-height:1.5;
+    white-space:normal;
+    overflow-wrap:anywhere;
+    transition:background-color .2s ease,border-color .2s ease,transform .2s ease;
+}
+.video-watch-section .video-watch-actions > a:hover{transform:translateY(-1px)}
+.video-watch-section .video-watch-actions > a:focus-visible{
+    outline:3px solid #dba934;
+    outline-offset:3px;
+}
+@media(max-width:600px){
+    .video-watch-section .video-watch-actions{
+        grid-template-columns:1fr;
+        gap:9px;
+        max-width:100%;
+        margin-top:14px;
+    }
+    .video-watch-section .video-watch-actions > a{
+        min-height:48px;
+        padding:12px;
+        font-size:.95rem;
+    }
+}
+@media(prefers-reduced-motion:reduce){
+    .video-watch-section .video-watch-actions > a{transition:none}
+    .video-watch-section .video-watch-actions > a:hover{transform:none}
+}
+
+
+/* Lightweight, accessible poster for on-demand external tutorial video.
+   The wrapper's existing aspect ratio/min-height stays unchanged: no CLS. */
+.video-watch-player > .video-watch-launch {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    background: linear-gradient(145deg, #073f31, #005d42);
+    color: #fff;
+    box-sizing: border-box;
+}
+.video-watch-player > .video-watch-launch img {
+    display: block;
+    width: clamp(64px, 13vw, 88px);
+    height: 76px;
+    max-width: 100%;
+    object-fit: contain;
+    border-radius: 12px;
+}
+.video-watch-player .video-watch-launch-play {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 52px;
+    height: 52px;
+    flex: 0 0 52px;
+    border-radius: 50%;
+    background: #fff;
+    color: #005d42;
+    font-size: 23px;
+    line-height: 1;
+    box-shadow: 0 2px 12px rgba(0,0,0,.2);
+}
+.video-watch-player .video-watch-launch-label {
+    font: 700 clamp(.9rem, 2.8vw, 1.05rem)/1.5 Tajawal, sans-serif;
+}
+.video-watch-player > .video-watch-launch:focus-visible {
+    outline: 3px solid #e8bd43;
+    outline-offset: -6px;
+}
+@media (max-width: 400px) {
+    .video-watch-player > .video-watch-launch { gap: 9px; padding: 12px; }
+    .video-watch-player > .video-watch-launch img { height: 58px; }
+    .video-watch-player .video-watch-launch-play {
+        width: 44px;
+        height: 44px;
+        flex-basis: 44px;
+    }
+}

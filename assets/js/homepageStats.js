@@ -43,7 +43,7 @@
   const loadSectorCount = async (url) => {
     const cardsForUrl = sectorCards.filter((card) => normalizePath(card.href) === url);
     try {
-      const response = await fetch(url, { credentials: 'same-origin' });
+      const response = await fetch(url, { credentials: 'same-origin', priority: 'low' });
       if (!response.ok) throw new Error(`HTTP ${response.status}`);
       const markup = await response.text();
       const parsedDocument = new DOMParser().parseFromString(markup, 'text/html');
@@ -68,7 +68,26 @@
       });
   };
 
-  Promise.all(uniqueUrls.map(loadSectorCount)).then((results) => {
+  // Avoid flooding the first-load network with dozens of sector HTML requests.
+  // Calculate exactly the same real totals, but allow critical fonts, images
+  // and advertising resources to load without competing with 60+ fetches.
+  const loadCountsInBatches = async (urls, concurrency = 6) => {
+    const results = new Array(urls.length);
+    let cursor = 0;
+    const worker = async () => {
+      while (cursor < urls.length) {
+        const index = cursor++;
+        results[index] = await loadSectorCount(urls[index]);
+      }
+    };
+    await Promise.all(Array.from(
+      { length: Math.min(concurrency, urls.length) },
+      () => worker()
+    ));
+    return results;
+  };
+
+  loadCountsInBatches(uniqueUrls).then((results) => {
     results.forEach(({ url, count }) => updateCardCount(url, count));
 
     const totalServices = results.reduce((total, result) => total + result.count, 0);
