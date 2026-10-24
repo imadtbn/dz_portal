@@ -9,9 +9,9 @@ const config={calendars,exceptions,holidays};
 const available=engine.eligible(trips);
 const drafts=trips.filter(t=>t.data_status==="pending_review");
 const verifiedByUser=trips.filter(t=>t.data_status==="source_transcribed");
-assert.equal(available.length,152,"152 source-transcribed journeys are visible; drafts excluded");
+assert.equal(available.length,211,"All 211 source-transcribed journeys are visible; drafts excluded");
 assert.equal(drafts.length,10,"Keep ten editable draft journeys");
-assert.equal(verifiedByUser.length,152,"Preserve original suburban services plus two official international departures");
+assert.equal(verifiedByUser.length,211,"Preserve all source-transcribed services, including the official eastern timetables");
 assert.equal(verifiedByUser.filter(t=>t.route_id==="zeralda-agha").length,14,"All original Zeralda–Agha timetable trips preserved");
 assert.equal(verifiedByUser.filter(t=>["alger-thenia","thenia-alger"].includes(t.route_id)&&["27","33","22","28"].includes(t.train_number)).length,4,"Preserve the four baseline Alger–Thenia gallery trains despite later timetable additions");
 assert(stations.some(s=>s.id==="rouiba"),"Rouiba station is indexed");
@@ -112,4 +112,4 @@ const dawn=new Date("2026-09-24T04:00:00Z"); // 05:00 in Algeria.
 const arrivals=engine.recordsAtStation([night],"bechar","arrival","2026-09-24",config,dawn);
 assert(arrivals.some(e=>e.serviceDate==="2026-09-23"&&e.remaining===2400),"Yesterday's overnight service arrives this morning");
 assert.equal(engine.countdown(3661),"01:01:01");
-console.log("DZ Rail board tests PASS: 152 transcribed services, 177 stations, 38 routes, both-direction airport and eastern commuter timetables, Friday-only schedules, distinct arrival/departure, source isolation, overnight rollover and countdown.");
+console.log("DZ Rail board tests PASS: 211 transcribed services, 177 stations, 38 routes, both-direction airport and eastern commuter timetables, Friday-only schedules, distinct arrival/departure, source isolation, overnight rollover and countdown.");
