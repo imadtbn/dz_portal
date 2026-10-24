@@ -194,7 +194,22 @@ export const schedules = [
   },
   {
     "id": "alger-annaba",
-    "title": "الجزائر - عنابة - الجزائر",
+    "title": "الجزائر - عنابة - الجزائر (يوميًا)",
+    "category": "الخطوط الجهوية الشرقية",
+    "anchor": "eastern-regional",
+    "image": "../assets/train-schedules/Eastern/alger-annaba-tj.jpg",
+    "hero": "../assets/images/sntf.jpg",
+    "from": "آغا",
+    "to": "عنابة",
+    "fromId": "agha",
+    "toId": "annaba",
+    "routeId": "alger-annaba",
+    "width": 879,
+    "height": 1347
+  },
+  {
+    "id": "alger-annaba-days",
+    "title": "الجزائر - عنابة - الجزائر (نسخة أيام محددة)",
     "category": "الخطوط الجهوية الشرقية",
     "anchor": "eastern-regional",
     "image": "../assets/train-schedules/Eastern/alger-annaba.jpg",
@@ -203,24 +218,9 @@ export const schedules = [
     "to": "عنابة",
     "fromId": "agha",
     "toId": "annaba",
-    "routeId": "alger-annaba",
+    "routeId": "",
     "width": 907,
     "height": 1210
-  },
-  {
-    "id": "alger-annaba-tj",
-    "title": "الجزائر - عنابة - الجزائر يوميا",
-    "category": "الخطوط الجهوية الشرقية",
-    "anchor": "eastern-regional",
-    "image": "../assets/train-schedules/Eastern/alger-annaba-tj.jpg",
-    "hero": "../assets/images/sntf.jpg",
-    "from": "",
-    "to": "",
-    "fromId": "",
-    "toId": "",
-    "routeId": "",
-    "width": 879,
-    "height": 1347
   },
   {
     "id": "alger-tebessa",
@@ -493,7 +493,8 @@ export const schedules = [
     "height": 1536
   }
 ];
-export const findSchedule = id => schedules.find(s => s.id === id) || schedules.find(s => s.id + "-" + ({suburban:"suburban","eastern-regional":"eastern","western-regional":"western","sahara-plateau-regional":"sahara",international:"international"}[s.anchor]) === id);
+const legacyScheduleAliases = Object.freeze({"alger-annaba-tj":"alger-annaba"});
+export const findSchedule = id => schedules.find(s => s.id === id) || schedules.find(s => s.id === legacyScheduleAliases[id]) || schedules.find(s => s.id + "-" + ({suburban:"suburban","eastern-regional":"eastern","western-regional":"western","sahara-plateau-regional":"sahara",international:"international"}[s.anchor]) === id);
 
 // Only known timetable images on this project can resolve to a viewer page.
 export function schedulePageForImage(value){
