@@ -1,6 +1,6 @@
 {
   "version": 15,
-  "updated": "2026-09-28",
+  "updated": "2026-10-24",
   "routes": [
     {
       "id": "alger-thenia",
@@ -413,12 +413,12 @@
       "to": "annaba",
       "category": "eastern",
       "name": "الجزائر ↔ عنابة",
-      "source": "eastern-gallery-annaba",
-      "schedule_image": "../assets/train-schedules/Eastern/alger-annaba.jpg",
+      "source": "eastern-gallery-annaba-daily",
+      "schedule_image": "../assets/train-schedules/Eastern/alger-annaba-tj.jpg",
       "schedule_status": "source_transcribed",
       "line_id": "alger-annaba",
       "stops_status": "source_image_transcribed",
-      "editor_note": "الأوقات متطابقة في صورتين، لكن إحداهما تقول يوميًا والأخرى تحدد الأحد/الثلاثاء/الخميس. أيام التشغيل قيد المراجعة.",
+      "editor_note": "تم اعتماد الصورة الرسمية alger-annaba-tj.jpg التي تنص على السير يوميًا في الاتجاهين. صورة alger-annaba.jpg محفوظة في المعرض كنسخة أخرى تعرض أيامًا محددة.",
       "stops": [
         "agha",
         "thenia",
@@ -1053,8 +1053,8 @@
       "to": "agha",
       "category": "eastern",
       "name": "annaba ← agha",
-      "source": "eastern-gallery-annaba",
-      "schedule_image": "../assets/train-schedules/Eastern/alger-annaba.jpg",
+      "source": "eastern-gallery-annaba-daily",
+      "schedule_image": "../assets/train-schedules/Eastern/alger-annaba-tj.jpg",
       "schedule_status": "source_transcribed",
       "line_id": "alger-annaba",
       "stops_status": "source_image_transcribed",
@@ -1078,7 +1078,7 @@
         "el_harrach",
         "agha"
       ],
-      "editor_note": "الأوقات متطابقة في صورتين، لكن إحداهما تقول يوميًا والأخرى تحدد الإثنين/الأربعاء/الجمعة. أيام التشغيل قيد المراجعة."
+      "editor_note": "تم اعتماد الصورة الرسمية alger-annaba-tj.jpg التي تنص على السير يوميًا في الاتجاهين. صورة alger-annaba.jpg محفوظة في المعرض كنسخة أخرى تعرض أيامًا محددة."
     },
     {
       "id": "tebessa-alger",
