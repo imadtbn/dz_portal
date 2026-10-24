@@ -37,6 +37,8 @@ jobs:
         run: node scripts/validate-sntf-data.mjs
       - name: Test station boards and recurrence rules
         run: node scripts/test-dz-rail.mjs
+      - name: Verify Annaba daily trains appear in journey search and use the canonical schedule
+        run: node scripts/test-sntf-annaba-search.mjs
       - name: Verify line grouping and documented stopping stations
         run: node scripts/test-sntf-network.mjs
       - name: Verify railway type selector, dependent routes and deep links
@@ -52,6 +54,7 @@ jobs:
           node --check assets/js/sntf-trains/app.js
           node --check assets/js/sntf-trains/engine.js
           node --check assets/js/sntf-trains/network.js
+          node --check scripts/test-sntf-annaba-search.mjs
           node --check scripts/test-sntf-network.mjs
           node --check scripts/test-sntf-category-ui.mjs
           node --check scripts/lib/sntf-reconcile.mjs
