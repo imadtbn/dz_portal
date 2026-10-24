@@ -2439,15 +2439,16 @@ ins.adsbygoogle iframe,
 }
 
 
-/* تحسين عرض أرقام الاتصال في بطاقات الطوارئ */
-#medical .services-grid > .service-item {
+/* توحيد شارات أرقام الاتصال في جميع بطاقات صفحة الطوارئ */
+.main-container .services-grid > .service-item:has(> span[style*="border-radius"]) {
     display: flex;
     align-items: center;
     gap: 1rem;
     min-width: 0;
+    box-sizing: border-box;
 }
 
-#medical .services-grid > .service-item > span {
+.main-container .services-grid > .service-item > span[style*="border-radius"] {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -2458,8 +2459,9 @@ ins.adsbygoogle iframe,
     min-height: 2.5rem;
     box-sizing: border-box;
     padding: .55rem 1rem !important;
-    margin-inline-start: auto;
-    margin-inline-end: 0;
+    margin-right: 0 !important;
+    margin-inline-start: auto !important;
+    margin-inline-end: 0 !important;
     border-radius: 999px !important;
     white-space: nowrap;
     direction: ltr;
@@ -2467,47 +2469,67 @@ ins.adsbygoogle iframe,
     line-height: 1.2;
     font-size: 1.05rem;
     text-align: center;
+    overflow: visible;
 }
 
-#medical .services-grid > .service-item .service-info {
+.main-container .services-grid > .service-item:has(> span[style*="border-radius"]) .service-info {
     flex: 1 1 auto;
     min-width: 0;
     overflow-wrap: anywhere;
 }
 
-#medical .services-grid > .service-item .service-icon {
+.main-container .services-grid > .service-item:has(> span[style*="border-radius"]) .service-icon {
     flex: 0 0 4rem;
+    width: 4rem;
+    height: 4rem;
 }
 
 @media (max-width: 600px) {
-    #medical .services-grid {
-        grid-template-columns: minmax(0, 1fr);
+    .main-container .services-grid > .service-item:has(> span[style*="border-radius"]) {
+        gap: .65rem;
+        padding: .8rem !important;
     }
 
-    #medical .services-grid > .service-item {
-        gap: .75rem;
-        padding: .85rem !important;
-    }
-
-    #medical .services-grid > .service-item > span {
+    .main-container .services-grid > .service-item > span[style*="border-radius"] {
         min-width: 3rem;
-        padding: .5rem .8rem !important;
-        font-size: 1rem;
-    }
-
-    #medical .services-grid > .service-item .service-icon {
-        flex-basis: 3.25rem;
-        width: 3.25rem;
-        height: 3.25rem;
-    }
-
-    #medical .services-grid > .service-item .service-info h4 {
+        padding: .5rem .7rem !important;
         font-size: .98rem;
-        line-height: 1.5;
     }
 
-    #medical .services-grid > .service-item .service-info p {
-        font-size: .88rem;
-        line-height: 1.6;
+    .main-container .services-grid > .service-item:has(> span[style*="border-radius"]) .service-icon {
+        flex-basis: 3.1rem;
+        width: 3.1rem;
+        height: 3.1rem;
+        flex-shrink: 0;
+    }
+
+    .main-container .services-grid > .service-item:has(> span[style*="border-radius"]) .service-info h4 {
+        font-size: .95rem;
+        line-height: 1.45;
+        overflow-wrap: anywhere;
+    }
+
+    .main-container .services-grid > .service-item:has(> span[style*="border-radius"]) .service-info p {
+        font-size: .86rem;
+        line-height: 1.55;
+    }
+}
+
+@media (max-width: 380px) {
+    .main-container .services-grid > .service-item:has(> span[style*="border-radius"]) {
+        gap: .45rem;
+        padding: .65rem !important;
+    }
+
+    .main-container .services-grid > .service-item > span[style*="border-radius"] {
+        min-width: 2.7rem;
+        padding: .45rem .55rem !important;
+        font-size: .9rem;
+    }
+
+    .main-container .services-grid > .service-item:has(> span[style*="border-radius"]) .service-icon {
+        flex-basis: 2.75rem;
+        width: 2.75rem;
+        height: 2.75rem;
     }
 }
