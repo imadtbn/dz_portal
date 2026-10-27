@@ -4,6 +4,15 @@
   "services": [
     {
       "id": "ramadan-grant-1448",
+      "title": "التقويم البيداغوجي المراحل التعليمية الثلاث للسنة الدراسية 2026-2027",
+      "sector": "وزارة التربية الوطنية",
+      "sectorUrl": "sectors/education.html",
+      "url": "https://imadtbn.github.io/dz_portal/sectors/education.html#official-notice",
+      "addedAt": "2026-10-24",
+      "sourceUrl": "https://imadtbn.github.io/dz_portal/sectors/education.html#official-notice"
+    },    
+    {
+      "id": "ramadan-grant-1448",
       "title": "اعلان التسجيلات في منحة التضامن لرمضان 1448 هـ",
       "sector": "وزارة الداخلية والجماعات المحلية والنقل",
       "sectorUrl": "sectors/interieur.html",
