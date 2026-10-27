@@ -10,9 +10,21 @@
     <meta name="google-site-verification" content="tGjdnUHs9yv4HTGpgnemjCK7YsJ3bI4twWC1WDi5Nqw">
     <meta name="google-site-verification" content="f5Xi4oFx0v5dN6iPZd9qCw-7vnc3vIbAeYF9jr4vwVM">
     <meta name="msvalidate.01" content="9BCA38377A234DCCEB9991EAD1A2F6C2">
+     <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-4BCWP0498L"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-4BCWP0498L');
+</script>
+
 <!-- Google AdSense -->
-<!-- https://publishers.ad-maven.com/ -->
-    <script data-cfasync="false" src="//dcbbwymp1bhlf.cloudfront.net/?wbbcd=1520539"></script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5656416032906373"
+     crossorigin="anonymous"></script>
+
+    
 
     <!-- أيقونات الموقع -->
     <link rel="icon" href="../../assets/images/icon.png" type="image/png">
@@ -30,14 +42,28 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" as="style"
-        href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&display=swap"
-        onload="this.onload=null;this.rel='stylesheet'">
-    <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-        onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap">
+    <!-- Font Awesome is noncritical to first paint; reserve icon geometry until it arrives. -->
+    <style>
+      .quick-link > i, .header i, .sector-hero i {
+        display: inline-flex;
+        inline-size: 1em;
+        min-inline-size: 1em;
+        align-items: center;
+        justify-content: center;
+        line-height: 1;
+        font-style: normal;
+      }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.onload=null;this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
 
     <link rel="stylesheet" href="../../assets/css/style-sector.css">
-    <link rel="stylesheet" href="../../assets/css/Alert-Modal.css">
+    <!-- Alert modal styling is only needed when its modal is displayed. -->
+    <link rel="stylesheet" href="../../assets/css/Alert-Modal.css" media="print" onload="this.onload=null;this.media='all'">
+    <noscript><link rel="stylesheet" href="../../assets/css/Alert-Modal.css"></noscript>
     <link rel="stylesheet" href="../../assets/css/style-sector-video.css">
     <meta name="author" content="البوابة الجزائرية للخدمات الرقمية">
     <meta name="language" content="Arabic">
@@ -213,27 +239,22 @@
             "potentialAction": {
                 "@type": "WatchAction",
                 "target": "https://imadtbn.github.io/dz_portal/pages/video/awlyaa-registration.html"
-            }
+            },
+            "uploadDate": "2024-09-02"
         }
     ]
 }
     </script>
-    <script src="../../assets/js/site-tags.js" defer></script>
-    <!-- Google Analytics 4: التهيئة المباشرة داخل head -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-K23WYKK60X"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-K23WYKK60X');
-    </script>
+    
+    
+    
+    
+
+<link rel="stylesheet" href="../../assets/css/dz-share.css"><script defer src="../../assets/js/dz-share.js"></script>
 </head>
 
 <body>
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NW3BWPF6" height="0" width="0"
-            style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
+    
 
 
     <!-- Header -->
@@ -315,7 +336,7 @@
             </div>
             <div class="hero-visual">
                 <img src="../../assets/images/education.png" alt="وزارة التربية والتعليم" class="hero-icon"
-                    loading="lazy">
+                    loading="eager" width="125" height="107" decoding="async" fetchpriority="high">
             </div>
         </div>
     </section>
@@ -390,7 +411,21 @@
             <h2>طريقة التسجيل في فضاء الأولياء 2026</h2>
             <p>شرح مرئي لطريقة التسجيل في فضاء الأولياء ومتابعة الأبناء دراسيًا عبر المنصة الرسمية.</p>
         </div>
-        <div class="video-watch-player"><iframe class="tutorial-frame video-primary-embed" src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fwatch%2F%3Fv%3D485913154242019&show_text=false" title="طريقة التسجيل في فضاء الأولياء 2026" loading="eager" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+        <div class="video-watch-player" data-video-on-demand>
+            <a class="video-watch-launch" data-video-launch href="../../pages/video/awlyaa-registration.html"
+                aria-label="تشغيل فيديو شرح التسجيل في فضاء الأولياء">
+                <img src="../../assets/images/education.png" alt="" width="125" height="107" loading="lazy" decoding="async">
+                <span class="video-watch-launch-play" aria-hidden="true">▶</span>
+                <span class="video-watch-launch-label">اضغط لمشاهدة الشرح بالفيديو</span>
+            </a>
+            <template data-video-embed>
+                <iframe class="tutorial-frame video-primary-embed"
+                    src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fwatch%2F%3Fv%3D485913154242019&show_text=false"
+                    title="طريقة التسجيل في فضاء الأولياء 2026"
+                    loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen width="560" height="315"></iframe>
+            </template>
+        </div>
         <div class="video-watch-actions">
             <a class="video-watch-primary" href="../../pages/video/awlyaa-registration.html"><i class="fas fa-expand"></i> صفحة مشاهدة الفيديو</a>
             <a class="video-watch-secondary" href="../../sectors/awlyaa-education.html"><i class="fas fa-arrow-right"></i> العودة إلى الخدمة</a>
@@ -546,6 +581,10 @@
 
     <!-- تحميل الإحصائيات والبحث والتقييمات ومساعد الإعلانات بعد العرض الأول -->
     <script defer src="../../assets/js/deferred-homepage.js"></script>
+<!-- CWV mobile: queue existing ads only when their layout width is valid -->
+    <script defer src="../../assets/js/ads-stability.js"></script>
+
+    <script defer src="../../assets/js/video-embed-on-demand.js"></script>
 </body>
 
 </html>

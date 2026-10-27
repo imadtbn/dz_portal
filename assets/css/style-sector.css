@@ -1436,10 +1436,9 @@ html {
     contain: layout style;
 }
 
-.services-grid {
-    content-visibility: auto;
-    contain-intrinsic-size: 1px 1000px;
-}
+/* CWV stage 03: service grids have variable numbers of items and nested ads.
+   Use their actual flow height instead of a 1000px content-visibility estimate.
+   Existing .services-grid display/grid layout rules remain unchanged. */
 
 .contact-link {
     display: inline-block;
@@ -2028,4 +2027,509 @@ video {
     transform:translateY(-2px);
     opacity:.9;
 
+}
+
+/* Compact sector heroes: keep statistics on one row across screen sizes. */
+.sector-hero {
+    padding-block: 2.25rem;
+}
+.sector-hero .hero-content {
+    gap: 1.75rem;
+}
+.sector-hero .hero-stats {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: .75rem;
+    margin-top: 1.25rem;
+    min-height: 0;
+}
+.sector-hero .hero-stat {
+    min-width: 0;
+    padding: .7rem .45rem;
+}
+.sector-hero .hero-stat-number {
+    font-size: clamp(1.05rem, 2vw, 1.65rem);
+    line-height: 1.3;
+}
+.sector-hero .hero-stat-label {
+    font-size: clamp(.65rem, 1.3vw, .8rem);
+    line-height: 1.35;
+    overflow-wrap: anywhere;
+}
+@media (max-width: 768px) {
+    .sector-hero {
+        padding: 1.4rem .85rem;
+    }
+    .sector-hero .hero-content {
+        gap: 1rem;
+    }
+    .sector-hero .hero-stats {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: .4rem;
+        margin-top: 1rem;
+    }
+    .sector-hero .hero-stat {
+        padding: .55rem .2rem;
+    }
+    .sector-hero .hero-stat-number {
+        font-size: clamp(.95rem, 3.8vw, 1.3rem);
+    }
+    .sector-hero .hero-stat-label {
+        font-size: clamp(.6rem, 2.4vw, .75rem);
+    }
+}
+
+/* CWV stage 02 — responsive AdSense slots.
+   Reserve a modest, format-aware space without constraining a filled ad's height.
+   The space is present before JavaScript and is never collapsed on no-fill. */
+.ad-container:has(ins.adsbygoogle) {
+    box-sizing: border-box;
+    display: block;
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    /* Don't clip Google full-width responsive units or impose a fixed height. */
+    overflow: visible;
+    contain: layout style;
+}
+.ad-container:has(ins.adsbygoogle[data-ad-format="auto"]),
+.ad-container:has(ins.adsbygoogle:not([data-ad-format])) {
+    min-height: 110px;
+}
+.ad-container:has(ins.adsbygoogle[data-ad-format="fluid"]) {
+    min-height: 190px;
+}
+.ad-container:has(ins.adsbygoogle[data-ad-format="autorelaxed"]) {
+    min-height: 200px;
+}
+.ad-container ins.adsbygoogle {
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    min-width: 0;
+    margin-inline: auto;
+}
+.sectors-grid > .ad-container,
+.services-grid > .ad-container {
+    grid-column: 1 / -1;
+}
+@media (max-width: 600px) {
+    .ad-container:has(ins.adsbygoogle[data-ad-format="auto"]),
+    .ad-container:has(ins.adsbygoogle:not([data-ad-format])) {
+        min-height: 115px;
+    }
+    .ad-container:has(ins.adsbygoogle[data-ad-format="fluid"]) {
+        min-height: 210px;
+    }
+    .ad-container:has(ins.adsbygoogle[data-ad-format="autorelaxed"]) {
+        min-height: 190px;
+    }
+}
+@media (max-width: 360px) {
+    .ad-container:has(ins.adsbygoogle[data-ad-format="fluid"]) {
+        min-height: 190px;
+    }
+    .ad-container:has(ins.adsbygoogle[data-ad-format="autorelaxed"]) {
+        min-height: 170px;
+    }
+}
+
+/* CWV stage 04: stabilize existing mobile header/hero geometry.
+   This keeps the established three-column hero statistics unchanged. */
+.header-content .logo-section,
+.header-content .logo-section > div,
+.sector-hero .hero-text {
+    min-width: 0;
+}
+.header-content .header-actions {
+    flex: 0 0 auto;
+}
+.sector-hero .hero-visual {
+    aspect-ratio: 1 / 1;
+    flex-shrink: 0;
+}
+.sector-hero .hero-visual > img.hero-icon {
+    display: block;
+}
+.sector-hero .hero-stat-number {
+    font-variant-numeric: tabular-nums;
+    white-space: nowrap;
+}
+@media (max-width: 768px) {
+    .header-content { min-height: 40px; }
+    .sector-hero .hero-stats {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        width: 100%;
+    }
+    .sector-hero .hero-stats > .hero-stat { min-width: 0; }
+}
+
+/* CWV stage 01 — keep reserved ad geometry stable in sector/process layouts.
+   No fixed/max height, display:none or ad fill gating is introduced. */
+.ad-container:has(> ins.adsbygoogle) {
+    flex-shrink: 0;
+    min-inline-size: 0;
+    margin-inline: auto;
+}
+.ad-container:has(> ins.adsbygoogle) > ins.adsbygoogle {
+    max-inline-size: 100%;
+}
+/* Images with intrinsic HTML dimensions preserve those dimensions responsively. */
+.notice-image img,
+.press-card img {
+    max-inline-size: 100%;
+    block-size: auto;
+}
+
+
+/* CLS correction: tutorial pages have an in-content fluid unit directly
+   before the video. Reserve a realistic feed-sized area *before* AdSense
+   responds, while allowing the creative to expand freely if necessary. */
+@media (max-width: 768px) {
+    .ad-container:has(> ins.adsbygoogle[data-ad-format="fluid"]):has(+ .video-primary-section) {
+        min-height: 320px;
+    }
+}
+/* Avoid stretching an ad container as a flex item when content fills. */
+.ad-container:has(> ins.adsbygoogle) {
+    align-self: auto;
+}
+
+
+/* CLS: reserve stable quick-navigation geometry while icon fonts load.
+   Maintain current colors, padding, horizontal scrolling and hover styles. */
+.quick-links-content {
+    align-items: center;
+    min-height: 46px;
+}
+.quick-links-content > .quick-link {
+    box-sizing: border-box;
+    min-height: 44px;
+    flex: 0 0 auto;
+    justify-content: center;
+    line-height: 1.35;
+}
+.quick-link > i {
+    display: inline-flex;
+    flex: 0 0 1em;
+    align-items: center;
+    justify-content: center;
+    width: 1em;
+    line-height: 1;
+}
+@media (max-width: 768px) {
+    .quick-links-content { min-height: 44px; }
+    .quick-links-content > .quick-link { min-height: 42px; }
+}
+
+
+/* Center in-content AdSense creatives (including narrower fluid / related-search
+   frames) on RTL pages at desktop and mobile widths.
+   Keep Google-assigned creative dimensions, heights and display behavior. */
+.ad-container:has(ins.adsbygoogle) {
+    max-inline-size: min(100%, 970px);
+    margin-inline: auto;
+    text-align: center;
+}
+.ad-container:has(ins.adsbygoogle) ins.adsbygoogle {
+    max-inline-size: 100%;
+    margin-inline: auto;
+}
+.ad-container:has(ins.adsbygoogle) ins.adsbygoogle > iframe,
+.ad-container:has(ins.adsbygoogle) ins.adsbygoogle > div,
+.ad-container:has(ins.adsbygoogle) ins.adsbygoogle > div > iframe {
+    margin-inline: auto !important;
+}
+
+
+/* Shared AdSense mobile overflow guard — RTL-safe and content-only.
+   Ads stay in normal document flow; Google controls the creative's height. */
+.ad-container:has(ins.adsbygoogle) {
+  box-sizing: border-box;
+  inline-size: 100%;
+  max-inline-size: 100%;
+  min-inline-size: 0;
+  margin-inline: auto;
+  align-self: stretch;
+  position: relative;
+  float: none;
+}
+.ad-container:has(ins.adsbygoogle) ins.adsbygoogle {
+  display: block;
+  box-sizing: border-box;
+  inline-size: 100%;
+  max-inline-size: 100%;
+  min-inline-size: 0;
+  margin-inline: auto;
+}
+.ad-container:has(ins.adsbygoogle) iframe,
+.ad-container:has(ins.adsbygoogle) ins.adsbygoogle > iframe,
+.ad-container:has(ins.adsbygoogle) ins.adsbygoogle > div,
+.ad-container:has(ins.adsbygoogle) ins.adsbygoogle > div > iframe,
+ins.adsbygoogle iframe,
+.google-auto-placed iframe {
+  box-sizing: border-box;
+  max-inline-size: 100% !important;
+}
+/* Prevent grid/flex children and nested Google frames from widening the page. */
+.ad-container:has(ins.adsbygoogle),
+.ad-container:has(ins.adsbygoogle) *,
+.google-auto-placed,
+.google-auto-placed * {
+  min-inline-size: 0;
+}
+@media (max-width: 600px) {
+  .ad-container:has(ins.adsbygoogle) {
+    inline-size: 100%;
+    max-inline-size: 100%;
+    margin-inline: 0;
+  }
+}
+
+
+/* Hero copy refinement — concise descriptions with tighter vertical rhythm. */
+.sector-hero .hero-text h2 {
+    margin-bottom: .55rem;
+    line-height: 1.3;
+}
+
+.sector-hero .hero-text p {
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.6;
+    max-width: 56ch;
+}
+
+@media (max-width: 768px) {
+    .sector-hero {
+        padding: 1.15rem .85rem;
+    }
+
+    .sector-hero .hero-text p {
+        font-size: .92rem;
+        line-height: 1.55;
+        max-width: 100%;
+    }
+
+    .sector-hero .hero-text h2 {
+        margin-bottom: .4rem;
+    }
+}
+
+/* Consistent vertical rhythm for sector pages.
+   Keep pending ad reservations to limit layout shifts; collapse only confirmed
+   unfilled units so empty ads do not leave a tall blank block. */
+.content-area {
+    gap: 1rem;
+}
+
+.content-area > .ad-container {
+    margin-block: .25rem;
+}
+
+.main-content {
+    padding-block: 1.25rem 1.5rem;
+    gap: 1.25rem;
+}
+
+.footer {
+    margin-top: 1rem;
+    padding: 2rem 2rem 1rem;
+}
+
+.footer-content {
+    gap: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.footer-bottom {
+    padding-top: .75rem;
+}
+
+/* Google marks these units only after confirming that no ad was served. */
+.ad-container:has(> ins.adsbygoogle[data-ad-status="unfilled"]) {
+    display: none !important;
+    min-height: 0 !important;
+    margin-block: 0 !important;
+    padding-block: 0 !important;
+}
+
+@media (max-width: 768px) {
+    .main-content {
+        padding: .65rem .85rem .85rem;
+        gap: .85rem;
+    }
+
+    .content-area {
+        gap: .75rem;
+    }
+
+    .content-area > .ad-container {
+        margin-block: .2rem;
+    }
+
+    .footer {
+        margin-top: .75rem;
+        padding: 1.25rem .85rem .65rem;
+    }
+
+    .footer-content {
+        gap: 1rem;
+        margin-bottom: .75rem;
+    }
+
+    .footer-bottom {
+        padding-top: .6rem;
+    }
+}
+
+
+/* New Ramadan grant service label */
+.ramadan-grant-service { position: relative; }
+.ramadan-grant-service .service-new-label {
+    position: absolute; top: 8px; inset-inline-start: 8px; z-index: 2;
+    display: inline-flex; align-items: center; gap: 4px; padding: 3px 9px;
+    border-radius: 999px; color: #fff; background: #006233; font-size: .75rem; font-weight: 800;
+}
+.ramadan-grant-service .service-info { padding-inline-start: 4.8rem; }
+@media (max-width: 420px) {
+    .ramadan-grant-service .service-info { padding-inline-start: 0; padding-top: 1.25rem; }
+}
+
+.ramadan-grant-service .service-new-label[hidden] { display: none !important; }
+
+
+/* تخطيط مركزي أحادي العمود لصفحة أرقام الطوارئ */
+.main-container {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 1400px;
+    min-width: 0;
+    margin-inline: auto;
+    padding: 1.25rem 2rem 1.5rem;
+}
+
+.main-container.content-area {
+    width: 100%;
+    min-width: 0;
+}
+
+.main-container .section-card,
+.main-container .ad-container,
+.main-container .services-grid {
+    min-width: 0;
+    max-width: 100%;
+}
+
+@media (max-width: 768px) {
+    .main-container {
+        padding: .65rem .85rem .85rem;
+    }
+
+    .main-container .services-grid {
+        grid-template-columns: minmax(0, 1fr);
+        padding: 1rem;
+    }
+
+    .main-container .service-item {
+        min-width: 0;
+        overflow-wrap: anywhere;
+    }
+}
+
+
+/* توحيد شارات أرقام الاتصال في جميع بطاقات صفحة الطوارئ */
+.main-container .services-grid > .service-item:has(> span[style*="border-radius"]) {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    min-width: 0;
+    box-sizing: border-box;
+}
+
+.main-container .services-grid > .service-item > span[style*="border-radius"] {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 auto;
+    width: auto;
+    min-width: 3.25rem;
+    max-width: none;
+    min-height: 2.5rem;
+    box-sizing: border-box;
+    padding: .55rem 1rem !important;
+    margin-right: 0 !important;
+    margin-inline-start: auto !important;
+    margin-inline-end: 0 !important;
+    border-radius: 999px !important;
+    white-space: nowrap;
+    direction: ltr;
+    writing-mode: horizontal-tb;
+    line-height: 1.2;
+    font-size: 1.05rem;
+    text-align: center;
+    overflow: visible;
+}
+
+.main-container .services-grid > .service-item:has(> span[style*="border-radius"]) .service-info {
+    flex: 1 1 auto;
+    min-width: 0;
+    overflow-wrap: anywhere;
+}
+
+.main-container .services-grid > .service-item:has(> span[style*="border-radius"]) .service-icon {
+    flex: 0 0 4rem;
+    width: 4rem;
+    height: 4rem;
+}
+
+@media (max-width: 600px) {
+    .main-container .services-grid > .service-item:has(> span[style*="border-radius"]) {
+        gap: .65rem;
+        padding: .8rem !important;
+    }
+
+    .main-container .services-grid > .service-item > span[style*="border-radius"] {
+        min-width: 3rem;
+        padding: .5rem .7rem !important;
+        font-size: .98rem;
+    }
+
+    .main-container .services-grid > .service-item:has(> span[style*="border-radius"]) .service-icon {
+        flex-basis: 3.1rem;
+        width: 3.1rem;
+        height: 3.1rem;
+        flex-shrink: 0;
+    }
+
+    .main-container .services-grid > .service-item:has(> span[style*="border-radius"]) .service-info h4 {
+        font-size: .95rem;
+        line-height: 1.45;
+        overflow-wrap: anywhere;
+    }
+
+    .main-container .services-grid > .service-item:has(> span[style*="border-radius"]) .service-info p {
+        font-size: .86rem;
+        line-height: 1.55;
+    }
+}
+
+@media (max-width: 380px) {
+    .main-container .services-grid > .service-item:has(> span[style*="border-radius"]) {
+        gap: .45rem;
+        padding: .65rem !important;
+    }
+
+    .main-container .services-grid > .service-item > span[style*="border-radius"] {
+        min-width: 2.7rem;
+        padding: .45rem .55rem !important;
+        font-size: .9rem;
+    }
+
+    .main-container .services-grid > .service-item:has(> span[style*="border-radius"]) .service-icon {
+        flex-basis: 2.75rem;
+        width: 2.75rem;
+        height: 2.75rem;
+    }
 }

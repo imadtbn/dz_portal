@@ -78,6 +78,7 @@ const modalImg = document.getElementById('scheduleImage');
 const modalTitle = document.getElementById('scheduleTitle');
 document.querySelectorAll('.view-schedule-btn').forEach(btn => {
     btn.addEventListener('click', () => {
+        if (btn.matches('a[href*="sntf-schedule.html"]')) return;
         if (modalImg) modalImg.src = btn.dataset.image;
         if (modalTitle) modalTitle.textContent = btn.dataset.title;
         if (modal) {

@@ -167,7 +167,11 @@ body {
     font-size: 1.5rem;
     font-weight: 800;
     color: var(--gold);
-    display: block00;
+    display: block;
+    /* Reserve counter dimensions before the deferred statistics update. */
+    min-width: 4ch;
+    min-height: 1.8em;
+    font-variant-numeric: tabular-nums;
 }
 
 .stat-label {
@@ -268,8 +272,8 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    content-visibility: auto;
-    contain-intrinsic-size: 300px;
+    /* CWV stage 03: render card content at its natural height, avoiding
+       the 300px offscreen estimate when responsive text wraps. */
 }
 
 .sector-card::before {
@@ -352,7 +356,7 @@ body {
     border-radius: var(--radius-lg);
     box-shadow: var(--shadow-md);
     margin: 2rem auto;
-    max-width: 1000px;
+    max-width: 1085px;
     display: flex;
     gap: 1rem;
     overflow-x: auto;
@@ -1165,119 +1169,26 @@ body {
 
 
 /* ===== محرك البحث ===== */
-
-.search-container {
-    position: relative;
-    z-index: 20;
-    width: 100%;
-    max-width: 700px;
-    margin: 2rem auto;
-}
-
-.search-box-wrapper {
-    position: relative;
-    display: flex;
-    align-items: center;
-}
-
-.search-box {
-    width: 100%;
-    height: 64px;
-    border: none;
-    outline: none;
-    border-radius: 20px;
-    padding: 0 70px 0 20px;
-    font-size: 1rem;
-    background: #fff;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, .12);
-    transition: .3s ease;
-}
-
-.search-box:focus {
-    transform: translateY(-2px);
-    box-shadow: 0 15px 40px rgba(0, 0, 0, .18);
-}
-
-.search-btn {
-    position: absolute;
-    left: 12px;
-    width: 48px;
-    height: 48px;
-    border: none;
-    border-radius: 14px;
-    background: #006233;
-    color: #fff;
-    cursor: pointer;
-    font-size: 1rem;
-    transition: .3s ease;
-}
-
-.search-btn:hover {
-    transform: scale(1.06);
-}
-
-
-/* النتائج */
-
-.search-results {
-    position: absolute;
-    top: 75px;
-    right: 0;
-    width: 100%;
-    background: #fff;
-    border-radius: 20px;
-    overflow: hidden;
-    box-shadow: 0 20px 50px rgba(0, 0, 0, .15);
-    z-index: 10000;
-    display: none;
-    max-height: 420px;
-    overflow-y: auto;
-}
-
-.search-result-item {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    padding: 1rem;
-    text-decoration: none;
-    color: #222;
-    border-bottom: 1px solid #f1f1f1;
-    transition: .25s ease;
-}
-
-.search-result-item:hover {
-    background: #f8f8f8;
-    transform: translateX(-3px);
-}
-
-.search-result-icon {
-    width: 48px;
-    height: 48px;
-    min-width: 48px;
-    border-radius: 14px;
-    background: #006233;
-    color: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.search-result-content h4 {
-    margin: 0;
-    font-size: 1rem;
-}
-
-.search-result-content p {
-    margin: .3rem 0 0;
-    font-size: .85rem;
-    color: #666;
-}
-
-.no-results {
-    padding: 1rem;
-    text-align: center;
-    color: #777;
-}
+.search-container{position:relative;z-index:20;width:min(100%,760px);margin:2rem auto;padding-inline:.25rem}
+.search-box-wrapper{position:relative;display:flex;align-items:center;gap:8px;min-height:68px;padding:6px;direction:rtl;background:rgba(255,255,255,.96);border:1px solid rgba(255,255,255,.72);border-radius:22px;box-shadow:0 14px 36px rgba(0,0,0,.16);backdrop-filter:blur(12px);transition:border-color .25s ease,box-shadow .25s ease,transform .25s ease}
+.search-box-wrapper:focus-within{transform:translateY(-2px);border-color:rgba(0,98,51,.42);box-shadow:0 18px 42px rgba(0,0,0,.2),0 0 0 4px rgba(0,98,51,.1)}
+.search-box{flex:1 1 auto;min-width:0;height:56px;padding:0 16px;border:0;outline:0;border-radius:16px;color:#17211b;background:transparent;font-family:inherit;font-size:1rem;font-weight:500;text-align:right}
+.search-box::placeholder{color:#6b756f;opacity:1}
+.search-btn{position:static;flex:0 0 50px;width:50px;height:50px;display:inline-flex;align-items:center;justify-content:center;border:0;border-radius:15px;background:#006233;color:#fff;cursor:pointer;font-size:1.05rem;box-shadow:0 6px 16px rgba(0,98,51,.22);transition:transform .2s ease,box-shadow .2s ease}
+.search-btn:hover{transform:translateY(-2px);box-shadow:0 9px 20px rgba(0,98,51,.3)}
+.search-btn:focus-visible{outline:3px solid rgba(255,255,255,.9);outline-offset:-5px}
+.voice-search-btn{left:auto!important;background:#b71c1c!important;box-shadow:0 6px 16px rgba(183,28,28,.2)}
+.search-results{position:absolute;top:calc(100% + 10px);right:.25rem;left:.25rem;width:auto;max-height:min(430px,55vh);display:none;overflow-x:hidden;overflow-y:auto;overscroll-behavior:contain;background:#fff;border:1px solid rgba(0,98,51,.1);border-radius:18px;box-shadow:0 22px 55px rgba(0,0,0,.2);z-index:10000;scrollbar-width:thin;scrollbar-color:#9ab5a5 transparent}
+.search-result-item{display:flex;align-items:center;gap:.85rem;min-height:72px;padding:.85rem 1rem;text-decoration:none;text-align:right;color:#1f2923;background:#fff;border-bottom:1px solid #edf1ee;transition:background-color .2s ease,transform .2s ease}
+.search-result-item:last-child{border-bottom:0}
+.search-result-item:hover,.search-result-item:focus-visible{background:#f3f8f5;transform:translateX(-2px);outline:none}
+.search-result-icon{width:44px;height:44px;min-width:44px;border-radius:13px;background:#006233;color:#fff;display:flex;align-items:center;justify-content:center}
+.search-result-content{min-width:0;flex:1}
+.search-result-content h4{margin:0;color:#153221;font-size:.98rem;line-height:1.45}
+.search-result-content p{margin:.25rem 0 0;color:#68736c;font-size:.82rem;line-height:1.5}
+.no-results{padding:1.2rem;text-align:center;color:#66736b}
+@media(max-width:600px){.search-container{width:100%;margin:1.4rem auto;padding-inline:0}.search-box-wrapper{gap:5px;min-height:60px;padding:5px;border-radius:18px}.search-box{height:50px;padding-inline:11px;font-size:.92rem}.search-box::placeholder{font-size:.86rem}.search-btn{flex-basis:44px;width:44px;height:44px;border-radius:13px;font-size:.95rem}.search-results{top:calc(100% + 8px);right:0;left:0;max-height:50vh;border-radius:16px}.search-result-item{gap:.7rem;min-height:66px;padding:.75rem .8rem}.search-result-icon{width:40px;height:40px;min-width:40px;border-radius:12px}}
+@media(max-width:380px){.search-box{font-size:.86rem}.search-box::placeholder{font-size:.78rem}.search-btn{flex-basis:42px;width:42px;height:42px}}
 
 
 /* =========================
@@ -1783,4 +1694,401 @@ body {
 .rating-submit-button {
     align-self: center;
     height: fit-content;
+}
+
+/* CWV stage 02 — responsive AdSense slots.
+   Reserve a modest, format-aware space without constraining a filled ad's height.
+   The space is present before JavaScript and is never collapsed on no-fill. */
+.ad-container:has(ins.adsbygoogle) {
+    box-sizing: border-box;
+    display: block;
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    /* Don't clip Google full-width responsive units or impose a fixed height. */
+    overflow: visible;
+    contain: layout style;
+}
+.ad-container:has(ins.adsbygoogle[data-ad-format="auto"]),
+.ad-container:has(ins.adsbygoogle:not([data-ad-format])) {
+    min-height: 110px;
+}
+.ad-container:has(ins.adsbygoogle[data-ad-format="fluid"]) {
+    min-height: 190px;
+}
+.ad-container:has(ins.adsbygoogle[data-ad-format="autorelaxed"]) {
+    min-height: 200px;
+}
+.ad-container ins.adsbygoogle {
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    min-width: 0;
+    margin-inline: auto;
+}
+.sectors-grid > .ad-container,
+.services-grid > .ad-container {
+    grid-column: 1 / -1;
+}
+@media (max-width: 600px) {
+    .ad-container:has(ins.adsbygoogle[data-ad-format="auto"]),
+    .ad-container:has(ins.adsbygoogle:not([data-ad-format])) {
+        min-height: 115px;
+    }
+    .ad-container:has(ins.adsbygoogle[data-ad-format="fluid"]) {
+        min-height: 210px;
+    }
+    .ad-container:has(ins.adsbygoogle[data-ad-format="autorelaxed"]) {
+        min-height: 190px;
+    }
+}
+@media (max-width: 360px) {
+    .ad-container:has(ins.adsbygoogle[data-ad-format="fluid"]) {
+        min-height: 190px;
+    }
+    .ad-container:has(ins.adsbygoogle[data-ad-format="autorelaxed"]) {
+        min-height: 170px;
+    }
+}
+
+/* CWV stage 04: reserve one stable row for all three home-hero statistics
+   on small screens, even when the counters update asynchronously. */
+@media (max-width: 768px) {
+    .hero .hero-content { width: min(100%, 1000px); min-width: 0; }
+    .hero .stats-bar {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: clamp(.4rem, 2vw, 1rem);
+        width: 100%;
+    }
+    .hero .stats-bar > .stat-item { min-width: 0; }
+    .hero .stat-number {
+        font-variant-numeric: tabular-nums;
+        white-space: nowrap;
+    }
+    .hero .stat-label {
+        display: block;
+        font-size: clamp(.68rem, 2.6vw, .9rem);
+        overflow-wrap: anywhere;
+    }
+}
+
+/* CWV stage 01 — prevent flexible/grid ad slots from shrinking before fill.
+   Reserve existing responsive space; AdSense still controls creative height. */
+.ad-container:has(> ins.adsbygoogle) {
+    flex-shrink: 0;
+    min-inline-size: 0;
+    margin-inline: auto;
+}
+.ad-container:has(> ins.adsbygoogle) > ins.adsbygoogle {
+    max-inline-size: 100%;
+}
+
+/* CWV stage 01: center existing AdSense containers on desktop and mobile.
+   The creative keeps its responsive width; no unit is hidden, repositioned
+   outside the document flow or assigned a fixed height. */
+.ad-container:has(ins.adsbygoogle) {
+    width: 100%;
+    max-width: min(100%, 970px);
+    margin-inline: auto;
+}
+.ad-container:has(ins.adsbygoogle) > ins.adsbygoogle {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    margin-inline: auto;
+}
+
+
+/* Center in-content AdSense creatives (including narrower fluid / related-search
+   frames) on RTL pages at desktop and mobile widths.
+   Keep Google-assigned creative dimensions, heights and display behavior. */
+.ad-container:has(ins.adsbygoogle) {
+    max-inline-size: min(100%, 970px);
+    margin-inline: auto;
+    text-align: center;
+}
+.ad-container:has(ins.adsbygoogle) ins.adsbygoogle {
+    max-inline-size: 100%;
+    margin-inline: auto;
+}
+.ad-container:has(ins.adsbygoogle) ins.adsbygoogle > iframe,
+.ad-container:has(ins.adsbygoogle) ins.adsbygoogle > div,
+.ad-container:has(ins.adsbygoogle) ins.adsbygoogle > div > iframe {
+    margin-inline: auto !important;
+}
+
+/* Search controls: neutralize legacy absolute-button translate in the flex search bar. */
+.search-box-wrapper > .search-btn,
+.search-box-wrapper > .voice-search-btn{
+  position:static;
+  top:auto;
+  transform:none;
+  margin:0;
+  align-self:center;
+  flex-shrink:0;
+}
+.search-box-wrapper > .search-btn:hover,
+.search-box-wrapper > .voice-search-btn:hover{
+  transform:scale(1.04);
+}
+.search-box-wrapper > .search-box:focus{
+  transform:none;
+}
+
+/* Homepage hero: compact mobile typography and spacing, desktop unchanged. */
+@media (max-width: 600px) {
+  .hero { padding-block: 1.1rem 1.35rem; }
+  .hero .hero-content { padding-inline: 12px; }
+  .hero .hero-badge { font-size: .76rem; padding: .35rem .65rem; margin-bottom: .85rem; }
+  .hero h1 { font-size: clamp(1.45rem, 5.4vw, 1.95rem); line-height: 1.35; margin: 0 0 .55rem; }
+  .hero .hero-subtitle { font-size: .92rem; line-height: 1.6; max-width: 37ch; margin: 0 auto 1rem; }
+  .hero .search-container { margin-top: 1rem; margin-bottom: .7rem; }
+}
+
+
+/* Shared AdSense mobile overflow guard — RTL-safe and content-only.
+   Ads stay in normal document flow; Google controls the creative's height. */
+.ad-container:has(ins.adsbygoogle) {
+  box-sizing: border-box;
+  inline-size: 100%;
+  max-inline-size: 100%;
+  min-inline-size: 0;
+  margin-inline: auto;
+  align-self: stretch;
+  position: relative;
+  float: none;
+}
+.ad-container:has(ins.adsbygoogle) ins.adsbygoogle {
+  display: block;
+  box-sizing: border-box;
+  inline-size: 100%;
+  max-inline-size: 100%;
+  min-inline-size: 0;
+  margin-inline: auto;
+}
+.ad-container:has(ins.adsbygoogle) iframe,
+.ad-container:has(ins.adsbygoogle) ins.adsbygoogle > iframe,
+.ad-container:has(ins.adsbygoogle) ins.adsbygoogle > div,
+.ad-container:has(ins.adsbygoogle) ins.adsbygoogle > div > iframe,
+ins.adsbygoogle iframe,
+.google-auto-placed iframe {
+  box-sizing: border-box;
+  max-inline-size: 100% !important;
+}
+/* Prevent grid/flex children and nested Google frames from widening the page. */
+.ad-container:has(ins.adsbygoogle),
+.ad-container:has(ins.adsbygoogle) *,
+.google-auto-placed,
+.google-auto-placed * {
+  min-inline-size: 0;
+}
+@media (max-width: 600px) {
+  .ad-container:has(ins.adsbygoogle) {
+    inline-size: 100%;
+    max-inline-size: 100%;
+    margin-inline: 0;
+  }
+}
+
+
+/* Mobile layout alignment: consistent side gutters for service cards and ad slots. */
+@media (max-width: 600px) {
+    .sectors-section {
+        box-sizing: border-box;
+        inline-size: 100%;
+        max-inline-size: 100%;
+        padding-inline: 12px;
+    }
+
+    .sectors-grid,
+    .services-grid {
+        box-sizing: border-box;
+        inline-size: 100%;
+        max-inline-size: 100%;
+        min-inline-size: 0;
+        margin-inline: 0;
+        gap: 12px;
+    }
+
+    .sector-card,
+    .service-card {
+        box-sizing: border-box;
+        inline-size: 100%;
+        max-inline-size: 100%;
+        min-inline-size: 0;
+        margin-inline: 0;
+    }
+
+    .sector-card {
+        padding: 1.25rem 1rem;
+    }
+
+    .related-services-wrapper {
+        box-sizing: border-box;
+        inline-size: 100%;
+        max-inline-size: 100%;
+        min-inline-size: 0;
+        margin-inline: 0;
+        padding-inline: 12px;
+    }
+
+    /* Ad slots follow the same content edges as cards, including RTL pages.
+       Keep ads in normal flow and let AdSense determine the creative height. */
+    .ad-container:has(ins.adsbygoogle) {
+        box-sizing: border-box;
+        inline-size: 100%;
+        max-inline-size: 100%;
+        min-inline-size: 0;
+        margin-inline: auto;
+        padding-inline: 0;
+        justify-self: stretch;
+        align-self: stretch;
+        float: none;
+    }
+
+    .sectors-grid > .ad-container,
+    .services-grid > .ad-container {
+        grid-column: 1 / -1;
+        justify-self: stretch;
+        inline-size: 100%;
+        max-inline-size: 100%;
+        margin-inline: 0;
+    }
+
+    .ad-container:has(ins.adsbygoogle) ins.adsbygoogle {
+        box-sizing: border-box;
+        inline-size: 100%;
+        max-inline-size: 100%;
+        min-inline-size: 0;
+        margin-inline: auto;
+    }
+}
+
+@media (max-width: 380px) {
+    .sectors-section {
+        padding-inline: 9px;
+    }
+
+    .related-services-wrapper {
+        padding-inline: 9px;
+    }
+
+    .sector-card {
+        padding-inline: .85rem;
+    }
+}
+
+
+/* Homepage help popovers must remain readable above the search bar on mobile. */
+#main-content > .hero {
+    position: relative;
+    isolation: isolate;
+}
+
+#main-content > .hero .search-container {
+    z-index: 20;
+}
+
+#main-content > .hero .search-box-wrapper {
+    position: relative;
+    z-index: 2;
+}
+
+#main-content > .hero .search-results {
+    z-index: 30;
+}
+
+/* Help content may be injected by the page helper; keep it above hero controls
+   and prevent the search field from visually covering its text. */
+[role="tooltip"],
+.tooltip,
+.help-tooltip,
+.help-popover,
+.help-popup,
+.page-help-popover,
+.page-help-tooltip,
+#helpTooltip,
+#helpPopover {
+    z-index: 10050;
+}
+
+@media (max-width: 768px) {
+    [role="tooltip"],
+    .tooltip,
+    .help-tooltip,
+    .help-popover,
+    .help-popup,
+    .page-help-popover,
+    .page-help-tooltip,
+    #helpTooltip,
+    #helpPopover {
+        max-inline-size: min( calc(100vw - 24px), 360px );
+        box-sizing: border-box;
+        overflow-wrap: anywhere;
+    }
+}
+
+
+/* Homepage new-services notice: compact cards, RTL-safe and mobile-first. */
+.new-services-notice {
+  box-sizing: border-box; width: min(calc(100% - 24px), 1200px); max-width: 1200px;
+  min-width: 0; margin: 0 auto 1.25rem; padding: clamp(14px, 2.2vw, 22px);
+  border: 1px solid #d7e9df; border-radius: 20px;
+  background: linear-gradient(135deg, #f5fbf7, #fff);
+  box-shadow: 0 5px 20px rgba(0, 98, 51, .08); color: #202a23;
+}
+.new-services-notice[hidden], .new-service-item[hidden], .new-services-more[hidden] { display: none !important; }
+.new-services-heading { display:flex; align-items:center; gap:12px; min-width:0; margin-bottom:14px; }
+.new-services-heading-icon { position:relative; flex:0 0 44px; width:44px; height:44px; display:grid; place-items:center; border-radius:50%; background:#006233; color:#fff; font-size:1.2rem; transform-origin:50% 12%; }
+.new-services-heading-icon i { display:block; transform-origin:50% 12%; }
+.new-services-notice.has-new-services .new-services-heading-icon { animation: noticeBellSwing 3.8s ease-in-out infinite; }
+.new-services-notice.has-new-services .new-services-heading-icon::before { content:''; position:absolute; inset:-7px; border:2px solid rgba(0,145,78,.28); border-radius:50%; animation: noticeBellPulse 2.4s ease-out infinite; pointer-events:none; }
+.new-services-notice.has-new-services .new-services-heading-icon::after { content:''; position:absolute; inset:-2px; border-radius:50%; background:rgba(0,145,78,.12); animation: noticeBellGlow 2.4s ease-in-out infinite; pointer-events:none; }
+.new-services-notice.has-new-services .new-services-total { animation: noticeCountPulse 2.2s ease-in-out infinite; }
+.new-service-item { transition: transform .24s ease, border-color .24s ease, box-shadow .24s ease, background-color .24s ease; }
+.new-service-item:hover, .new-service-item:focus-within { transform:translateY(-3px); border-color:#8dd8b0; box-shadow:0 10px 24px rgba(0,98,51,.12); background:#fdfffd; }
+.new-service-item:focus-within { outline:2px solid rgba(0,145,78,.24); outline-offset:2px; }
+@keyframes noticeBellSwing { 0%,72%,100% { transform:rotate(0); } 75% { transform:rotate(12deg); } 78% { transform:rotate(-10deg); } 81% { transform:rotate(7deg); } 84% { transform:rotate(-5deg); } 87% { transform:rotate(2deg); } 90% { transform:rotate(0); } }
+@keyframes noticeBellPulse { 0% { transform:scale(.82); opacity:.7; } 70%,100% { transform:scale(1.32); opacity:0; } }
+@keyframes noticeBellGlow { 0%,100% { opacity:.05; transform:scale(.94); } 50% { opacity:.45; transform:scale(1.08); } }
+@keyframes noticeCountPulse { 0%,100% { box-shadow:0 3px 9px rgba(229,9,20,.2); } 50% { box-shadow:0 0 0 5px rgba(229,9,20,.12), 0 4px 14px rgba(229,9,20,.3); } }
+@media (hover:hover) and (prefers-reduced-motion:no-preference) {
+  .new-services-notice:hover .new-services-heading-icon i { animation:noticeBellNudge .65s ease-in-out; }
+  @keyframes noticeBellNudge { 0%,100% { transform:rotate(0); } 20%,60% { transform:rotate(13deg); } 40%,80% { transform:rotate(-11deg); } }
+}
+.new-services-heading-copy { flex:1; min-width:0; }
+.new-services-heading h2 { margin:0 0 2px; color:#006233; font-size:clamp(1.05rem,2.4vw,1.35rem); line-height:1.35; }
+.new-services-heading p { margin:0; color:#66736b; font-size:.9rem; line-height:1.5; }
+.new-services-total { flex:0 0 auto; min-width:34px; height:34px; padding:0 9px; display:inline-flex; align-items:center; justify-content:center; border-radius:50%; background:#e50914; color:#fff; border:2px solid #fff; box-shadow:0 3px 9px rgba(229,9,20,.2); font-weight:800; font-size:1rem; }
+.new-services-total[hidden] { display:none !important; }
+.new-services-feed { display:grid; gap:12px; min-width:0; }
+.new-service-item { box-sizing:border-box; min-width:0; padding:14px; border:1px solid #deebe4; border-radius:16px; background:#fff; box-shadow:0 2px 5px rgba(0,98,51,.035); overflow-wrap:anywhere; }
+.new-services-sector { display:flex; align-items:flex-start; gap:8px; margin:0 0 9px; color:#00723d; font-size:.96rem; font-weight:700; line-height:1.5; }
+.new-services-sector > i { flex:0 0 auto; margin-top:.22em; color:#00723d; font-size:1.05rem; }
+.new-services-sector-name { min-width:0; }
+.new-service-item h4 { margin:0 0 16px; color:#161d19; font-size:1rem; font-weight:800; line-height:1.55; }
+.new-service-footer { display:flex; align-items:center; justify-content:flex-start; direction:ltr; }
+.new-services-sector-link { direction:rtl; display:inline-flex; align-items:center; gap:8px; color:#006b38; background:#eff8f2; border-radius:999px; padding:7px 12px; font-size:.9rem; font-weight:800; text-decoration:none; }
+.new-services-sector-link::before { content:'←'; font-size:1.1em; }
+.new-services-sector-link:hover { background:#e0f2e7; text-decoration:underline; }
+.new-services-more { display:flex; align-items:center; justify-content:center; gap:10px; width:100%; min-height:48px; margin-top:14px; padding:10px 14px; border:1px solid #dceee4; border-radius:13px; background:#eaf5ef; color:#006233; font:inherit; font-weight:800; cursor:pointer; transition:background .2s ease, transform .2s ease; }
+.new-services-more:hover { background:#dff0e6; }
+.new-services-more:focus-visible { outline:3px solid #e50914; outline-offset:3px; }
+@media (max-width:600px) {
+  .new-services-notice { width:calc(100% - 18px); margin-bottom:12px; padding:12px; border-radius:16px; }
+  .new-services-heading { gap:9px; margin-bottom:11px; }
+  .new-services-heading-icon { flex-basis:40px; width:40px; height:40px; }
+  .new-services-heading h2 { font-size:1.08rem; }
+  .new-services-heading p { font-size:.82rem; }
+  .new-services-total { min-width:32px; height:32px; }
+  .new-services-feed { gap:10px; }
+  .new-service-item { padding:12px; border-radius:14px; }
+  .new-services-sector { gap:7px; margin-bottom:7px; font-size:.9rem; }
+  .new-service-item h4 { margin-bottom:12px; font-size:.96rem; }
+  .new-services-sector-link { padding:6px 11px; font-size:.86rem; }
+}
+@media (prefers-reduced-motion:reduce) {
+  .new-services-notice *, .new-services-notice *::before, .new-services-notice *::after { animation:none !important; transition:none !important; }
 }
