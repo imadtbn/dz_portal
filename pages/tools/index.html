@@ -34,6 +34,20 @@
 .tools-directory .directory-hero p{color:#effcf4;line-height:1.8;margin:0;max-width:760px}
 .tools-directory .directory-search{display:flex;align-items:center;gap:10px;background:var(--surface-color,#fff);border:1px solid var(--border-color,#dce9e0);border-radius:14px;padding:12px 15px;margin:18px 0}
 .tools-directory .directory-search input{border:0;outline:0;background:transparent;color:inherit;min-width:0;width:100%;font:inherit}
+.tools-directory .search-clear{flex:0 0 auto;border:0;border-radius:9px;background:#edf7ef;color:#155b37;padding:7px 10px;font:inherit;font-weight:700;cursor:pointer}
+.tools-directory .search-clear[hidden]{display:none}
+.tools-directory .filter-toolbar{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;margin:16px 0 8px}
+.tools-directory .filter-heading{font-weight:800;margin:0}
+.tools-directory .filter-reset{border:1px solid #cfe2d4;background:transparent;color:var(--text-color,#20352c);border-radius:10px;padding:7px 11px;font:inherit;font-weight:700;cursor:pointer}
+.tools-directory .category-filters{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0 14px}
+.tools-directory .category-filter{display:inline-flex;align-items:center;gap:7px;white-space:nowrap}
+.tools-directory .filter-count{display:inline-grid;place-items:center;min-width:22px;height:22px;padding:0 5px;border-radius:999px;background:#ffffffb8;color:inherit;font-size:.78rem;font-variant-numeric:tabular-nums}
+.tools-directory .category-filter[aria-pressed=true] .filter-count{background:#ffffff2b;color:#fff}
+.tools-directory .directory-status-row{display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap;margin:10px 0 14px}
+.tools-directory .directory-status-row .category-intro{margin:0}
+.tools-directory .tool-card[hidden]{display:none!important}
+.tools-directory .tool-card:focus-visible,.tools-directory .category-filter:focus-visible,.tools-directory .search-clear:focus-visible,.tools-directory .filter-reset:focus-visible{outline:3px solid #83c99d;outline-offset:3px}
+.tools-directory .category-filters{scrollbar-width:thin;scrollbar-color:#a8cdb3 transparent}
 .tools-directory .category-filters{display:flex;gap:8px;flex-wrap:wrap;margin:16px 0 20px}
 .tools-directory .category-filter{border:1px solid #cfe2d4;background:#edf7ef;color:#155b37;border-radius:999px;padding:9px 13px;font:inherit;font-weight:700;cursor:pointer}
 .tools-directory .category-filter[aria-pressed=true]{background:#087443;color:#fff;border-color:#087443}
@@ -48,7 +62,7 @@
 .tools-directory .empty-state{padding:24px;border:1px dashed #b7d5c0;border-radius:14px;text-align:center;grid-column:1/-1}
 .tools-directory .category-intro{margin:16px 0;color:var(--text-muted,#617667);line-height:1.8}
 @media(max-width:800px){.tools-directory .tool-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media(max-width:520px){.tools-directory{width:calc(100% - 20px)}.tools-directory .directory-hero{margin:14px auto;border-radius:17px}.tools-directory .tool-grid{grid-template-columns:1fr}.tools-directory .category-filters{flex-wrap:nowrap;overflow-x:auto;padding-bottom:6px}.tools-directory .category-filter{flex:0 0 auto}}
+@media(max-width:520px){.tools-directory{width:calc(100% - 20px)}.tools-directory .directory-hero{margin:14px auto;border-radius:17px}.tools-directory .tool-grid{grid-template-columns:1fr}.tools-directory .category-filters{flex-wrap:nowrap;overflow-x:auto;overscroll-behavior-x:contain;scroll-snap-type:x proximity;padding:4px 2px 10px}.tools-directory .category-filter{flex:0 0 auto;scroll-snap-align:start}.tools-directory .directory-search{padding:10px 11px}.tools-directory .directory-status-row{align-items:flex-start}.tools-directory .filter-toolbar{align-items:center}}
 </style>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-K23WYKK60X"></script>
   <script>
@@ -63,17 +77,18 @@
 <main class="tools-directory">
 <section class="directory-hero hero" aria-labelledby="directory-title"><h1 id="directory-title">الأدوات الرقمية</h1><p>مكتبة موحدة للأدوات المجانية التي تساعدك في الحساب والدراسة وتنظيم المهام اليومية. يجري دمج الأدوات تدريجيًا بعد مراجعة وظائفها وتوافقها مع قالب البوابة.</p></section>
 <section class="ad-container" aria-label="إعلان" style="width:100%;max-width:970px;min-width:0;box-sizing:border-box;margin:18px auto;padding:10px 12px;text-align:center;border:1px solid #e2ebe4;border-radius:14px;overflow:hidden"><p style="margin:0 0 8px;color:#708176;font-size:.78rem">إعلان</p><ins class="adsbygoogle" style="display:block;width:100%;max-width:100%;min-width:0" data-ad-client="ca-pub-5656416032906373" data-ad-slot="3143411927" data-ad-format="fluid" data-ad-layout-key="-fr+57+4a-dc+8g"></ins></section>
-<div class="directory-search" role="search"><i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i><input id="tool-search" type="search" placeholder="ابحث باسم الأداة أو وظيفتها..." aria-label="ابحث في الأدوات الرقمية"></div>
+<div class="directory-search" role="search"><i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i><input id="tool-search" type="search" placeholder="ابحث باسم الأداة أو وظيفتها..." aria-label="ابحث في الأدوات الرقمية" autocomplete="off"><button class="search-clear" id="clear-tool-search" type="button" aria-label="مسح البحث" hidden>مسح</button></div>
+<div class="filter-toolbar"><p class="filter-heading">تصفية الأدوات</p><button class="filter-reset" id="reset-tool-filters" type="button"><i class="fa-solid fa-rotate-right" aria-hidden="true"></i> عرض الكل</button></div>
 <div class="category-filters" role="group" aria-label="تصفية حسب التصنيف">
-<button class="category-filter" type="button" data-filter="all" aria-pressed="true">كل الأدوات</button>
-<button class="category-filter" type="button" data-filter="calculators" aria-pressed="false">الحاسبات والتحويلات</button>
-<button class="category-filter" type="button" data-filter="study" aria-pressed="false">الدراسة والطلاب</button>
-<button class="category-filter" type="button" data-filter="health" aria-pressed="false">الصحة والتغذية</button>
-<button class="category-filter" type="button" data-filter="islamic" aria-pressed="false">إسلامية وتقويم</button>
-<button class="category-filter" type="button" data-filter="productivity" aria-pressed="false">المستندات والإنتاجية</button>
-<button class="category-filter" type="button" data-filter="daily-life" aria-pressed="false">الحياة اليومية</button>
+<button class="category-filter" type="button" data-filter="all" aria-pressed="true">كل الأدوات<span class="filter-count" data-count-for="all" aria-label="عدد الأدوات">0</span></button>
+<button class="category-filter" type="button" data-filter="calculators" aria-pressed="false">الحاسبات والتحويلات<span class="filter-count" data-count-for="calculators" aria-label="عدد الأدوات">0</span></button>
+<button class="category-filter" type="button" data-filter="study" aria-pressed="false">الدراسة والطلاب<span class="filter-count" data-count-for="study" aria-label="عدد الأدوات">0</span></button>
+<button class="category-filter" type="button" data-filter="health" aria-pressed="false">الصحة والتغذية<span class="filter-count" data-count-for="health" aria-label="عدد الأدوات">0</span></button>
+<button class="category-filter" type="button" data-filter="islamic" aria-pressed="false">إسلامية وتقويم<span class="filter-count" data-count-for="islamic" aria-label="عدد الأدوات">0</span></button>
+<button class="category-filter" type="button" data-filter="productivity" aria-pressed="false">المستندات والإنتاجية<span class="filter-count" data-count-for="productivity" aria-label="عدد الأدوات">0</span></button>
+<button class="category-filter" type="button" data-filter="daily-life" aria-pressed="false">الحياة اليومية<span class="filter-count" data-count-for="daily-life" aria-label="عدد الأدوات">0</span></button>
 </div>
-<p class="category-intro" id="directory-status" aria-live="polite">الأدوات المدمجة حاليًا: أربع حاسبات، مؤقت بومودورو، بطاقات المراجعة، ومخطط الامتحانات والمهام.</p>
+<div class="directory-status-row"><p class="category-intro" id="directory-status" aria-live="polite" aria-atomic="true">جارٍ تجهيز فهرس الأدوات...</p><span class="category-intro" id="active-filter-label">كل الأدوات</span></div>
 <section class="tool-grid" id="tool-grid" aria-label="قائمة الأدوات">
 <a class="tool-card" href="calculators/number-to-words.html" data-category="calculators" data-search="محول الأرقام إلى الحروف الدينار الجزائري المبالغ الفواتير السنتيم الحساب كتابة المبلغ">
 <span class="tool-icon"><i class="fa-solid fa-money-bill-wave" aria-hidden="true"></i></span>
@@ -116,32 +131,82 @@
 <script>
 (function(){
 const input=document.getElementById('tool-search');
-const cards=Array.from(document.querySelectorAll('.tool-card'));
+const clearButton=document.getElementById('clear-tool-search');
+const resetButton=document.getElementById('reset-tool-filters');
+const cards=Array.from(document.querySelectorAll('#tool-grid .tool-card'));
 const filters=Array.from(document.querySelectorAll('.category-filter'));
 const empty=document.getElementById('empty-state');
 const status=document.getElementById('directory-status');
+const activeLabel=document.getElementById('active-filter-label');
+const labels={all:'كل الأدوات',calculators:'الحاسبات والتحويلات',study:'الدراسة والطلاب',health:'الصحة والتغذية',islamic:'إسلامية وتقويم',productivity:'المستندات والإنتاجية','daily-life':'الحياة اليومية'};
 let active='all';
-function apply(){
-const q=input.value.trim().toLocaleLowerCase('ar');
-let visible=0;
-cards.forEach(card=>{
-const matchCategory=active==='all'||card.dataset.category===active;
-const matchText=(card.dataset.search+' '+card.textContent).toLocaleLowerCase('ar').includes(q);
-const show=matchCategory&&matchText;
-card.hidden=!show;
-if(show)visible++;
-});
-empty.hidden=visible>0;
-status.textContent=visible+' أداة متاحة ضمن التصنيفات المحددة. تُضاف بقية الأدوات بعد فحصها ودمجها.';
+function normalize(value){
+ return String(value||'').toLocaleLowerCase('ar')
+  .normalize('NFD').replace(/[\u064B-\u065F\u0670\u0640]/g,'')
+  .replace(/[أإآٱ]/g,'ا').replace(/ى/g,'ي').replace(/ة/g,'ه')
+  .replace(/[ـ\s]+/g,' ').trim();
 }
-filters.forEach(btn=>btn.addEventListener('click',()=>{
-active=btn.dataset.filter;
-filters.forEach(item=>item.setAttribute('aria-pressed',String(item===btn)));
-apply();
-}));
+function updateCounts(){
+ filters.forEach(btn=>{
+  const key=btn.dataset.filter;
+  const count=key==='all'?cards.length:cards.filter(card=>card.dataset.category===key).length;
+  const target=btn.querySelector('[data-count-for]');
+  if(target) target.textContent=String(count);
+  btn.setAttribute('aria-label',labels[key]+'، '+count+' أداة');
+ });
+}
+function apply(){
+ const query=normalize(input.value);
+ let visible=0;
+ cards.forEach(card=>{
+  const categoryMatch=active==='all'||card.dataset.category===active;
+  const haystack=normalize((card.dataset.search||'')+' '+card.textContent);
+  const textMatch=!query||haystack.includes(query);
+  const show=categoryMatch&&textMatch;
+  card.hidden=!show;
+  if(show) visible++;
+ });
+ empty.hidden=visible!==0;
+ clearButton.hidden=input.value.length===0;
+ activeLabel.textContent=labels[active]||labels.all;
+ status.textContent=query
+  ? 'نتائج البحث: '+visible+' من '+cards.length+' أداة.'
+  : 'عرض '+visible+' من '+cards.length+' أداة ضمن تصنيف '+(labels[active]||labels.all)+'.';
+}
+function chooseCategory(key){
+ active=labels[key]?key:'all';
+ filters.forEach(btn=>btn.setAttribute('aria-pressed',String(btn.dataset.filter===active)));
+ apply();
+}
+filters.forEach(btn=>btn.addEventListener('click',()=>chooseCategory(btn.dataset.filter)));
 input.addEventListener('input',apply);
+clearButton.addEventListener('click',()=>{
+ input.value='';
+ apply();
+ input.focus();
+});
+resetButton.addEventListener('click',()=>{
+ input.value='';
+ chooseCategory('all');
+ input.focus();
+});
+input.addEventListener('keydown',event=>{
+ if(event.key==='Escape'&&input.value){
+  input.value='';
+  apply();
+ }
+});
+empty.innerHTML='لا توجد أدوات مطابقة. <button type="button" class="filter-reset" id="empty-reset">مسح البحث وعرض كل الأدوات</button>';
+empty.addEventListener('click',event=>{
+ if(event.target.closest('#empty-reset')){
+  input.value='';
+  chooseCategory('all');
+  input.focus();
+ }
+});
+updateCounts();
 apply();
 })();
-</script>
+</script>>
 </body>
 </html>
