@@ -74,6 +74,53 @@
       hero.after(topAd);
     }
   }
+  function buildToolAds() {
+    const main = document.querySelector('main') || document.body;
+    const hero = document.querySelector('.dz-unified-hero');
+    const footer = document.querySelector('.dz-unified-footer');
+    if (!main || !hero || !footer) return;
+
+    const makeAd = (placement, slot, format, layoutKey) => {
+      const existing = document.querySelector('.dz-tool-ad[data-dz-placement="' + placement + '"]');
+      if (existing) return existing;
+      const wrap = document.createElement('section');
+      wrap.className = 'ad-container dz-tool-ad dz-tool-ad-' + placement;
+      wrap.dataset.dzPlacement = placement;
+      wrap.setAttribute('aria-label', 'إعلان');
+      wrap.innerHTML = '<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5656416032906373" data-ad-slot="' + slot + '" data-ad-format="' + format + '"' +
+        (layoutKey ? ' data-ad-layout-key="' + layoutKey + '"' : '') +
+        (format === 'auto' ? ' data-full-width-responsive="true"' : '') + '></ins>';
+      return wrap;
+    };
+
+    const topAd = makeAd('top', '7867079394', 'fluid', '-fr+57+4a-dc+8g');
+    if (!topAd.isConnected) hero.insertAdjacentElement('afterend', topAd);
+
+    const bottomAd = makeAd('bottom', '3143411927', 'auto', '');
+    if (!bottomAd.isConnected) footer.parentNode.insertBefore(bottomAd, footer);
+
+    // Reuse the portal's width-aware ad controller; it prevents requests from
+    // narrow/hidden containers and observes dynamically inserted units.
+    const stabilitySrc = ROOT + 'assets/js/ads-stability.js';
+    if (!document.querySelector('script[data-dz-tool-ads-stability]') &&
+        !document.querySelector('script[src="' + stabilitySrc + '"]')) {
+      const controller = document.createElement('script');
+      controller.src = stabilitySrc;
+      controller.async = false;
+      controller.dataset.dzToolAdsStability = 'true';
+      document.head.appendChild(controller);
+    }
+    const adsSrc = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5656416032906373';
+    if (!document.querySelector('script[src="' + adsSrc + '"]') &&
+        !document.querySelector('script[data-dz-external-src="' + adsSrc + '"]')) {
+      const script = document.createElement('script');
+      script.src = adsSrc;
+      script.async = true;
+      script.crossOrigin = 'anonymous';
+      script.dataset.dzExternalSrc = adsSrc;
+      document.head.appendChild(script);
+    }
+  }
   function buildFooter() {
     document.querySelectorAll('body > footer, main footer').forEach(el => el.remove());
     const footer = document.createElement('footer');
@@ -106,6 +153,7 @@
     buildHeader();
     buildHero();
     buildFooter();
+    buildToolAds();
     normalizeLegacyControls();
     const observer = new MutationObserver(() => {
       if (document.getElementById('share-help-tools') || document.querySelector('.share-help-tools__share,.share-help-tools__help')) {
