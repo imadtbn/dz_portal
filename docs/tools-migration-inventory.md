@@ -14,6 +14,87 @@
 | tools-dz | 41 | يضم أدوات حسابية ومالية وصحية وإدارية وإنتاجية |
 | DZ Portal قبل الدمج | 0 صفحات أدوات ضمن `pages/tools/` | مجلد `tools/` الحالي مخصص لسكربتات التطوير والاختبار، لذلك لا تُنقل صفحات الأدوات إلى داخله |
 
+## قائمة الملفات التفصيلية
+
+### Student DZ — 26 ملفًا
+
+| الملف الأصلي | التصنيف المقترح | ملاحظة أولية |
+|---|---|---|
+| `tools/apa-generator.html` | الدراسة والإنتاجية | لا |
+| `tools/arabic-dictionary.html` | المستندات واللغة | فريد |
+| `tools/average-calculator.html` | الحاسبات والدراسة | مقارب لحاسبات النقاط |
+| `tools/budget-calculator.html` | الحياة اليومية والمال | تداخل وظيفي مع إدارة الميزانية |
+| `tools/calculator.html` | الحاسبات | لا |
+| `tools/countdown.html` | الدراسة والإنتاجية | تداخل محتمل مع مؤقتات الدراسة |
+| `tools/cv-builder.html` | المستندات والإنتاجية | تداخل مباشر مع Tools DZ |
+| `tools/date-difference.html` | الحاسبات والتقويم | لا |
+| `tools/exam-planner.html` | الدراسة والطلاب | تداخل مع مخطط الامتحانات |
+| `tools/flashcards.html` | الدراسة والطلاب | فريد |
+| `tools/hijri-calendar.html` | إسلامية وتقويم | تداخل مباشر |
+| `tools/image-compressor.html` | المستندات والإنتاجية | تداخل مباشر |
+| `tools/maps.html` | الخرائط والتنقل | لا |
+| `tools/notes-calendar.html` | الدراسة والتنظيم | تداخل جزئي مع التقويم والمهام |
+| `tools/nutrition-calculator.html` | الصحة والتغذية | تداخل جزئي مع أدوات السعرات |
+| `tools/pdf-tools.html` | المستندات والإنتاجية | تداخل مباشر |
+| `tools/percentage-calculator.html` | الحاسبات | لا |
+| `tools/points-ranking.html` | الدراسة والطلاب | تداخل مع حاسبة المعدل |
+| `tools/pomodoro.html` | الدراسة والإنتاجية | لا |
+| `tools/qibla-compass.html` | إسلامية وتقويم | تداخل مباشر |
+| `tools/qr-generator.html` | المستندات والإنتاجية | تداخل مباشر |
+| `tools/research-plan.html` | الدراسة والطلاب | فريد |
+| `tools/semester-calculator.html` | الدراسة والطلاب | تداخل محتمل مع حاسبات المعدل |
+| `tools/study-schedule.html` | الدراسة والطلاب | تداخل مع مخطط الامتحانات |
+| `tools/text-tools.html` | المستندات واللغة | لا |
+| `tools/unit-converter.html` | الحاسبات والتحويلات | تداخل مباشر |
+
+
+### Tools DZ — 41 ملفًا
+
+| الملف الأصلي | التصنيف المقترح | ملاحظة أولية |
+|---|---|---|
+| `tools/admin-procedures-assistant.html` | الإجراءات والخدمات | فريد |
+| `tools/age-calculator.html` | الحاسبات | لا |
+| `tools/anxiety-screening.html` | الصحة والتوعية | فريد |
+| `tools/asthma-control.html` | الصحة والتوعية | فريد |
+| `tools/budget-manager.html` | الحياة اليومية والمال | تداخل وظيفي مع حاسبة الميزانية |
+| `tools/calorie-calculator.html` | الصحة والتغذية | تداخل جزئي مع حاسبة التغذية |
+| `tools/car-cost-calculator.html` | الحاسبات والمال | فريد |
+| `tools/child-bmi-calculator.html` | الصحة والتغذية | فريد |
+| `tools/currency-converter.html` | الحاسبات والتحويلات | فريد |
+| `tools/cv-builder.html` | المستندات والإنتاجية | تداخل مباشر |
+| `tools/depression-screening.html` | الصحة والتوعية | فريد |
+| `tools/diabetes-awareness.html` | الصحة والتوعية | فريد |
+| `tools/eating-awareness.html` | الصحة والتوعية | فريد |
+| `tools/electricity-calculator.html` | الحاسبات والمال | فريد |
+| `tools/exam-study-planner.html` | الدراسة والطلاب | تداخل مع مخطط الدراسة والامتحانات |
+| `tools/farm-planner.html` | الحياة اليومية والمشاريع | فريد |
+| `tools/fertile-window.html` | الصحة والتوعية | فريد |
+| `tools/fuel-calculator.html` | الحاسبات والمال | فريد |
+| `tools/health-tools.html` | فهرس الصحة | دليل تصنيف وليس أداة منفردة |
+| `tools/hijri-calendar.html` | إسلامية وتقويم | تداخل مباشر |
+| `tools/ideal-weight-calculator.html` | الصحة والتغذية | تداخل جزئي مع أدوات الوزن |
+| `tools/image-compressor.html` | المستندات والإنتاجية | تداخل مباشر |
+| `tools/infant-growth-calculator.html` | الصحة والتغذية | فريد |
+| `tools/inventory-manager.html` | الإنتاجية والمشاريع | فريد |
+| `tools/invoice-generator.html` | المستندات والمال | فريد |
+| `tools/loan-calculator.html` | الحاسبات والمال | فريد |
+| `tools/meal-planner.html` | الحياة اليومية | فريد |
+| `tools/number-to-words.html` | الحاسبات والمال | عينة تجريبية منقولة |
+| `tools/pdf-tools.html` | المستندات والإنتاجية | تداخل مباشر |
+| `tools/pilgrim-health-checklist.html` | الصحة والتوعية | فريد |
+| `tools/prediabetes-risk.html` | الصحة والتوعية | فريد |
+| `tools/pregnancy-calorie-calculator.html` | الصحة والتغذية | فريد |
+| `tools/pregnancy-due-date.html` | الصحة والتوعية | فريد |
+| `tools/qibla-compass.html` | إسلامية وتقويم | تداخل مباشر |
+| `tools/qr-generator.html` | المستندات والإنتاجية | تداخل مباشر |
+| `tools/salary-calculator.html` | الحاسبات والمال | فريد |
+| `tools/sleep-assessment.html` | الصحة والتوعية | فريد |
+| `tools/unit-converter.html` | الحاسبات والتحويلات | تداخل مباشر |
+| `tools/vaccine-tracker.html` | الصحة والتغذية | فريد |
+| `tools/visual-acuity-screening.html` | الصحة والتوعية | فريد |
+| `tools/water-calculator.html` | الصحة والتغذية | فريد |
+
+
 ## التصنيفات المقترحة
 
 | التصنيف | الأدوات المرشحة |
