@@ -212,11 +212,12 @@ test('tools directory and calculator and study tools are present in the existing
   assert.match(sitemap, /<video:video>/);
 });
 
+
 function walkHtml(dir) {
   return fs.readdirSync(path.join(root, dir), { withFileTypes: true }).flatMap((entry) => {
     const relative = path.join(dir, entry.name);
     if (entry.isDirectory()) return walkHtml(relative);
-    return entry.isFile() && entry.name.endsWith('.html') ? [relative.replace(/\\\\/g, '/')] : [];
+    return entry.isFile() && entry.name.endsWith('.html') ? [relative.replace(/\\/g, '/')] : [];
   });
 }
 
@@ -226,19 +227,19 @@ test('all migrated tool pages have canonical URLs, portal navigation, and sitema
   assert.equal(pages.length, 60);
   for (const file of pages) {
     const html = read(file);
-    const canonical = html.match(/<link\\s+rel=["']canonical["']\\s+href=["']([^"']+)["']/i);
-    assert.ok(canonical, `missing canonical: ${file}`);
-    assert.equal(canonical[1], `https://imadtbn.github.io/dz_portal/${file}`, `wrong canonical: ${file}`);
-    assert.ok(sitemap.includes(`<loc>https://imadtbn.github.io/dz_portal/${file}</loc>`), `missing sitemap URL: ${file}`);
-    assert.match(html, /site-tags\\.js/);
-    assert.match(html, /ads-stability\\.js/);
-    assert.match(html, /dz-share\\.js/);
+    const canonical = html.match(/<link\s+rel=["']canonical["']\s+href=["']([^"']+)["']/i);
+    assert.ok(canonical, 'missing canonical: ' + file);
+    assert.equal(canonical[1], 'https://imadtbn.github.io/dz_portal/' + file, 'wrong canonical: ' + file);
+    assert.ok(sitemap.includes('<loc>https://imadtbn.github.io/dz_portal/' + file + '</loc>'), 'missing sitemap URL: ' + file);
+    assert.match(html, /site-tags\.js/);
+    assert.match(html, /ads-stability\.js/);
+    assert.match(html, /dz-share\.js/);
   }
 });
 
 test('imported pages use the portal shell and do not retain source analytics or duplicate AdSense loaders', () => {
   const pages = walkHtml('pages/tools').filter((file) => !file.endsWith('/index.html'));
-  const imported = pages.filter((file) => ![
+  const existing = [
     'pages/tools/calculators/age-calculator.html',
     'pages/tools/calculators/number-to-words.html',
     'pages/tools/calculators/percentage-calculator.html',
@@ -246,18 +247,19 @@ test('imported pages use the portal shell and do not retain source analytics or 
     'pages/tools/study/pomodoro.html',
     'pages/tools/study/flashcards.html',
     'pages/tools/study/exam-planner.html',
-  ].includes(file));
+  ];
+  const imported = pages.filter((file) => !existing.includes(file));
   for (const file of imported) {
     const html = read(file);
-    assert.match(html, /dz-import-header/ , `missing portal shell: ${file}`);
-    assert.match(html, /data-ad-slot="3143411927"/, `missing reserved portal ad slot: ${file}`);
-    assert.doesNotMatch(html, /G-1FG97932S6|GTM-WG6CX4F5|adsbygoogle\\.js\\?client=/, `source tracking/ads loader retained: ${file}`);
+    assert.match(html, /dz-import-header/, 'missing portal shell: ' + file);
+    assert.match(html, /data-ad-slot="3143411927"/, 'missing reserved portal ad slot: ' + file);
+    assert.doesNotMatch(html, /G-1FG97932S6|GTM-WG6CX4F5|adsbygoogle\.js\?client=/, 'source tracking/ads loader retained: ' + file);
   }
 });
 
 test('sitemap retains video structured entries and has no duplicate URL locations', () => {
   const sitemap = read('sitemap.xml');
-  const locations = [...sitemap.matchAll(/<loc>(.*?)<\\/loc>/g)].map((match) => match[1]);
+  const locations = [...sitemap.matchAll(/<loc>(.*?)<\/loc>/g)].map((match) => match[1]);
   assert.match(sitemap, /xmlns:video=/);
   assert.match(sitemap, /<video:video>/);
   assert.equal(new Set(locations).size, locations.length);
