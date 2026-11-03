@@ -27,7 +27,8 @@ test('number-to-words pilot preserves tool logic and uses the portal template', 
   assert.match(page, /assets\/js\/tools\/number-to-words\.js/);
   assert.match(page, /data-ad-client="ca-pub-5656416032906373"/);
   assert.match(page, /data-ad-slot="7867079394"/);
-  assert.doesNotMatch(page, /googletagmanager\.com\/gtag\/js\?id=/);
+  assert.equal((page.match(/googletagmanager\\.com\\/gtag\\/js\\?id=G-K23WYKK60X/g) || []).length, 1);
+  assert.match(page, /gtag\\('config', 'G-K23WYKK60X'/);
   assert.doesNotMatch(page, /G-4BCWP0498L|G-BT30MKHK77/);
   assert.doesNotMatch(page, /adsbygoogle\s*\)\.push|adsbygoogle\s*=\s*window\.adsbygoogle/);
   assert.match(script, /function parseAmount/);
