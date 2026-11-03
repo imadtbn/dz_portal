@@ -5,7 +5,9 @@ if(window.__dzShareInitialized)return;window.__dzShareInitialized=true;
 const ICON='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="m8.7 13.5 6.6 4m0-11-6.6 4"/></svg>';
 const root=new URL('../..',document.currentScript?.src||location.href);
 function init(){
- if(document.querySelector('.dz-share-slot'))return;
+ // Pages with a purpose-built share/help row (currently the Qibla compass)
+ // already provide both actions; do not add a second universal row.
+ if(document.querySelector('.dz-share-slot,.qibla-share-row'))return;
  const options=['.hero .hero-content','.hero-content','.section-hero .container','.section-hero','.page-hero .container','.page-hero','.hero','.page-header','.page-heading','.section-header','.site-hero'];
  let anchor=null;
  for(const s of options){const candidate=document.querySelector(s);if(candidate&&!candidate.closest('nav,header.site-header,footer')&&!candidate.matches('header')){anchor=candidate;break;}}
