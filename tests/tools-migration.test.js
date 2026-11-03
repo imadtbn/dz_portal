@@ -141,6 +141,20 @@ test('flashcards tool preserves creation, spaced review, quiz, and backup featur
   assert.match(styles, /flash-app/);
 });
 
+test('all migrated standalone tool scripts have valid JavaScript syntax', () => {
+  const scripts = [
+    'assets/js/tools/number-to-words.js',
+    'assets/js/tools/age-calculator.js',
+    'assets/js/tools/percentage-calculator.js',
+    'assets/js/tools/date-difference.js',
+    'assets/js/tools/pomodoro.js',
+    'assets/js/tools/flashcards.js',
+  ];
+  for (const file of scripts) {
+    assert.doesNotThrow(() => new vm.Script(read(file), { filename: file }), file);
+  }
+});
+
 test('tools directory and calculator and study tools are present in the existing sitemap', () => {
   const sitemap = read('sitemap.xml');
   assert.match(sitemap, /https:\/\/imadtbn\.github\.io\/dz_portal\/pages\/tools\//);
