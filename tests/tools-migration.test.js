@@ -38,9 +38,23 @@ test('number-to-words pilot preserves tool logic and uses the portal template', 
   assert.match(styles, /overflow-wrap:anywhere/);
 });
 
-test('tools directory and pilot tool are present in the existing sitemap', () => {
+test('age calculator keeps the portal template, date validation, and responsive result fields', () => {
+  const page = read('pages/tools/calculators/age-calculator.html');
+  const script = read('assets/js/tools/age-calculator.js');
+  assert.match(page, /canonical.*calculators\/age-calculator\.html/);
+  assert.match(page, /assets\/js\/site-tags\.js/);
+  assert.match(page, /data-ad-client="ca-pub-5656416032906373"/);
+  assert.match(script, /function calculateAge/);
+  assert.match(script, /function dateFromInput/);
+  assert.match(script, /daysToBirthday/);
+  assert.match(page, /id="years-res"/);
+  assert.match(page, /id="total-days"/);
+});
+
+test('tools directory and pilot tools are present in the existing sitemap', () => {
   const sitemap = read('sitemap.xml');
   assert.match(sitemap, /https:\/\/imadtbn\.github\.io\/dz_portal\/pages\/tools\//);
   assert.match(sitemap, /https:\/\/imadtbn\.github\.io\/dz_portal\/pages\/tools\/calculators\/number-to-words\.html/);
+  assert.match(sitemap, /https:\/\/imadtbn\.github\.io\/dz_portal\/pages\/tools\/calculators\/age-calculator\.html/);
   assert.match(sitemap, /<video:video>/);
 });
