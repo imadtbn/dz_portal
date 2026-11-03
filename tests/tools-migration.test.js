@@ -155,6 +155,30 @@ test('all migrated standalone tool scripts have valid JavaScript syntax', () => 
   }
 });
 
+test('all migrated tool pages have resolvable local asset and navigation paths', () => {
+  const pages = [
+    'pages/tools/index.html',
+    'pages/tools/calculators/number-to-words.html',
+    'pages/tools/calculators/age-calculator.html',
+    'pages/tools/calculators/percentage-calculator.html',
+    'pages/tools/calculators/date-difference.html',
+    'pages/tools/study/pomodoro.html',
+    'pages/tools/study/flashcards.html',
+  ];
+  for (const file of pages) {
+    const html = read(file);
+    const refs = [...html.matchAll(/(?:href|src)="([^"]+)"/g)]
+      .map((match) => match[1])
+      .filter((ref) => ref && !/^(?:[a-z]+:|#|data:|\/)/i.test(ref));
+    for (const ref of refs) {
+      const clean = ref.split(/[?#]/, 1)[0];
+      let target = path.resolve(root, path.dirname(file), clean);
+      if (fs.existsSync(target) && fs.statSync(target).isDirectory()) target = path.join(target, 'index.html');
+      assert.ok(fs.existsSync(target), file + ' -> ' + ref);
+    }
+  }
+});
+
 test('tools directory and calculator and study tools are present in the existing sitemap', () => {
   const sitemap = read('sitemap.xml');
   assert.match(sitemap, /https:\/\/imadtbn\.github\.io\/dz_portal\/pages\/tools\//);
