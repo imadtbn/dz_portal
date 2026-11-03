@@ -51,10 +51,29 @@ test('age calculator keeps the portal template, date validation, and responsive 
   assert.match(page, /id="total-days"/);
 });
 
-test('tools directory and pilot tools are present in the existing sitemap', () => {
+test('percentage and date-difference calculators have local logic and portal tracking', () => {
+  const pctPage = read('pages/tools/calculators/percentage-calculator.html');
+  const pctJS = read('assets/js/tools/percentage-calculator.js');
+  const datePage = read('pages/tools/calculators/date-difference.html');
+  const dateJS = read('assets/js/tools/date-difference.js');
+  for (const page of [pctPage, datePage]) {
+    assert.match(page, /assets\/js\/site-tags\.js/);
+    assert.match(page, /assets\/js\/deferred-homepage\.js/);
+    assert.match(page, /data-ad-client="ca-pub-5656416032906373"/);
+  }
+  assert.match(pctPage, /canonical.*percentage-calculator\.html/);
+  assert.match(pctJS, /const pct=\(a\/b\)\*100/);
+  assert.match(datePage, /canonical.*date-difference\.html/);
+  assert.match(dateJS, /function parseDay/);
+  assert.match(dateJS, /Math\.abs/);
+});
+
+test('tools directory and calculator tools are present in the existing sitemap', () => {
   const sitemap = read('sitemap.xml');
   assert.match(sitemap, /https:\/\/imadtbn\.github\.io\/dz_portal\/pages\/tools\//);
   assert.match(sitemap, /https:\/\/imadtbn\.github\.io\/dz_portal\/pages\/tools\/calculators\/number-to-words\.html/);
   assert.match(sitemap, /https:\/\/imadtbn\.github\.io\/dz_portal\/pages\/tools\/calculators\/age-calculator\.html/);
+  assert.match(sitemap, /https:\/\/imadtbn\.github\.io\/dz_portal\/pages\/tools\/calculators\/percentage-calculator\.html/);
+  assert.match(sitemap, /https:\/\/imadtbn\.github\.io\/dz_portal\/pages\/tools\/calculators\/date-difference\.html/);
   assert.match(sitemap, /<video:video>/);
 });
