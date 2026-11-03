@@ -54,3 +54,10 @@
  .dz-unified-footer{margin-top:24px;padding:20px 12px 16px}
 }
 @media(prefers-reduced-motion:reduce){.dz-unified-tool-page *{scroll-behavior:auto!important;animation-duration:.01ms!important;transition-duration:.01ms!important}}
+/* Imported tool pages: eliminate the pre-hero gap and keep one canonical share row. */
+.dz-unified-tool-page .dz-unified-hero{margin-top:16px!important}
+.dz-unified-tool-page .dz-unified-hero .dz-share-slot{width:100%;justify-content:center;align-items:center;margin:18px 0 0!important}
+.dz-unified-tool-page .dz-unified-hero .dz-share-button{background:#fff!important;color:#006233!important;border-color:#fff!important}
+.dz-unified-tool-page .dz-unified-hero .dz-share-help{background:#f2f8f4;color:#006233;border-color:#b9d3c2}
+.dz-unified-tool-page>.dz-import-header,.dz-unified-tool-page>.ad-container.dz-import-ad{display:none!important}
+.dz-unified-tool-page main>.bm-hero,.dz-unified-tool-page main>.tool-hero{margin-top:16px!important}

@@ -14,7 +14,7 @@
 
   function buildHeader() {
     if (document.querySelector('.dz-unified-header')) return;
-    document.querySelectorAll('body > header').forEach(el => el.remove());
+    document.querySelectorAll('body > header:not(.dz-unified-header)').forEach(el => el.remove());
     const header = document.createElement('header');
     header.className = 'dz-unified-header';
     header.innerHTML = '<div class="dz-unified-header-inner"><a class="dz-unified-brand" href="' + ROOT + '" aria-label="الرئيسية - البوابة الجزائرية للخدمات الرقمية"><img src="' + ASSETS + 'images/icon.png" width="40" height="40" alt=""><span><strong>البوابة الجزائرية</strong><small>للخدمات الرقمية</small></span></a><nav class="dz-unified-nav" aria-label="التنقل الرئيسي"><a href="' + ROOT + '">الرئيسية</a><a href="' + ROOT + 'pages/tools/index.html" aria-current="page">الأدوات الرقمية</a></nav><button class="dz-unified-menu" type="button" aria-expanded="false" aria-label="فتح قائمة التنقل">القائمة</button></div>';
@@ -27,7 +27,7 @@
     });
   }
   function buildHero() {
-    const selectors = ['.age-hero','.tool-hero','.page-intro','.page-hero','.section-hero','.hero','.tool-intro','.health-tool-hero'];
+    const selectors = ['.dz-unified-hero','.age-hero','.bm-hero','.tool-hero','.page-intro','.page-hero','.section-hero','.hero','.tool-intro','.health-tool-hero'];
     let hero = null;
     for (const selector of selectors) {
       hero = [...document.querySelectorAll(selector)].find(el => el.querySelector('h1') && !el.closest('footer'));
@@ -63,9 +63,19 @@
       }
     }
     if (main && !main.contains(hero)) main.insertBefore(hero, main.firstChild);
+    const shareSlot = document.querySelector('.dz-share-slot');
+    if (shareSlot && !hero.contains(shareSlot)) {
+      shareSlot.classList.add('dz-share-in-hero');
+      hero.appendChild(shareSlot);
+    }
+    const topAd = document.querySelector('body > .dz-import-ad, body > .ad-container.dz-import-ad');
+    if (topAd && topAd !== hero && !hero.contains(topAd)) {
+      const share = hero.querySelector('.dz-share-slot');
+      (share || hero).after(topAd);
+    }
   }
   function buildFooter() {
-    document.querySelectorAll('body > footer').forEach(el => el.remove());
+    document.querySelectorAll('body > footer, main footer').forEach(el => el.remove());
     const footer = document.createElement('footer');
     footer.className = 'dz-unified-footer';
     footer.innerHTML = '<div class="dz-unified-footer-inner"><div class="dz-unified-footer-brand"><img src="' + ASSETS + 'images/icon.png" width="34" height="34" alt=""><span><strong>البوابة الجزائرية</strong><small>للخدمات الرقمية</small></span></div><nav aria-label="روابط التذييل"><a href="' + ROOT + '">الرئيسية</a><a href="' + ROOT + 'pages/tools/index.html">الأدوات الرقمية</a><a href="' + ROOT + 'pages/privacy.html">سياسة الخصوصية</a><a href="' + ROOT + 'pages/contact.html">اتصل بنا</a></nav><p>© ' + new Date().getFullYear() + ' البوابة الجزائرية للخدمات الرقمية. جميع الحقوق محفوظة.</p></div>';
@@ -74,6 +84,9 @@
   function normalizeLegacyControls() {
     document.getElementById('share-help-tools')?.remove();
     document.getElementById('share-help-tools-styles')?.remove();
+    document.querySelectorAll('.share-help-tools__share,.share-help-tools__help,.share-fab,.floating-share,.social-share,.share-widget,.share-container').forEach(el => {
+      if (!el.closest('.dz-share-slot,.qibla-share-row')) el.remove();
+    });
     document.querySelectorAll('button,a,[role="button"]').forEach(el => {
       if (el.closest('.dz-share-slot,.qibla-share-row,.dz-unified-header,.dz-unified-footer')) return;
       const text = [el.getAttribute('aria-label'),el.getAttribute('title'),el.getAttribute('data-tooltip'),el.innerText,el.textContent].filter(Boolean).join(' ').replace(/\s+/g,' ').trim();
