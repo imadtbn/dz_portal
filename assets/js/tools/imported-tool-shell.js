@@ -28,4 +28,26 @@ function cleanupLegacyShareControls(){
  const crumbs=document.querySelector('.tool-breadcrumb');
  if(crumbs)crumbs.querySelectorAll('a').forEach(a=>{const label=(a.textContent||'').trim();if(label==='الرئيسية')a.href=root;else if(['جميع الأدوات','الأدوات الرقمية','التصنيفات','الأدوات الصحية'].includes(label))a.href=root+'pages/tools/index.html';});
 }
+ // The upstream tools-dz app.js injects its own #share-help-tools section.
+ // Remove that entire duplicate block (not just its two buttons), including
+ // its injected stylesheet, and watch for any late re-injection.
+ function removeToolsDzShareBlock(){
+  document.getElementById('share-help-tools')?.remove();
+  document.getElementById('share-help-tools-styles')?.remove();
+  cleanupLegacyShareControls();
+ }
+ if(document.readyState==='loading'){
+  document.addEventListener('DOMContentLoaded',removeToolsDzShareBlock,{once:true});
+ }else{
+  removeToolsDzShareBlock();
+ }
+ const shareCleanupObserver=new MutationObserver(()=>{
+  if(document.getElementById('share-help-tools')||document.querySelector('.share-help-tools__share,.share-help-tools__help')){
+   removeToolsDzShareBlock();
+  }else{
+   cleanupLegacyShareControls();
+  }
+ });
+ shareCleanupObserver.observe(document.documentElement,{childList:true,subtree:true});
+
 })();
