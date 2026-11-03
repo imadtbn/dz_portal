@@ -11,7 +11,7 @@ function cleanupLegacyShareControls(){
  };
  const iconSelector='.fa-share,.fa-share-alt,.fa-share-nodes,.fa-share-from-square,[data-share-button],[data-action="share"],[aria-label*="share" i],[title*="share" i]';
  document.querySelectorAll(iconSelector).forEach(removeControl);
- document.querySelectorAll('button,a,[role="button"],[tabindex="0"],div').forEach(el=>{
+ document.querySelectorAll('button,a,[role="button"],[tabindex="0"]').forEach(el=>{
   if(isCanonical(el))return;
   const label=[el.getAttribute('aria-label'),el.getAttribute('title'),el.getAttribute('data-tooltip'),el.innerText,el.textContent].filter(Boolean).join(' ').replace(/\s+/g,' ').trim();
   const cls=typeof el.className==='string'?el.className:'';
