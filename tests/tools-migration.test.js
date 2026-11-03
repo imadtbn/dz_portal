@@ -111,12 +111,26 @@ test('percentage, date-difference, and age calculator logic runs with valid inpu
   assert.ok(age.elements['total-days'].textContent.length > 0);
 });
 
-test('tools directory and calculator tools are present in the existing sitemap', () => {
+test('Pomodoro study timer is linked to the study category and uses the portal template', () => {
+  const page = read('pages/tools/study/pomodoro.html');
+  const script = read('assets/js/tools/pomodoro.js');
+  const directory = read('pages/tools/index.html');
+  assert.match(page, /canonical.*pages\/tools\/study\/pomodoro\.html/);
+  assert.match(page, /assets\/js\/site-tags\.js/);
+  assert.match(page, /data-ad-client="ca-pub-5656416032906373"/);
+  assert.match(directory, /href="study\/pomodoro\.html" data-category="study"/);
+  assert.match(script, /setInterval/);
+  assert.match(script, /data-minutes/);
+  assert.match(script, /pomodoro_completed/);
+});
+
+test('tools directory and calculator and study tools are present in the existing sitemap', () => {
   const sitemap = read('sitemap.xml');
   assert.match(sitemap, /https:\/\/imadtbn\.github\.io\/dz_portal\/pages\/tools\//);
   assert.match(sitemap, /https:\/\/imadtbn\.github\.io\/dz_portal\/pages\/tools\/calculators\/number-to-words\.html/);
   assert.match(sitemap, /https:\/\/imadtbn\.github\.io\/dz_portal\/pages\/tools\/calculators\/age-calculator\.html/);
   assert.match(sitemap, /https:\/\/imadtbn\.github\.io\/dz_portal\/pages\/tools\/calculators\/percentage-calculator\.html/);
   assert.match(sitemap, /https:\/\/imadtbn\.github\.io\/dz_portal\/pages\/tools\/calculators\/date-difference\.html/);
+  assert.match(sitemap, /https:\/\/imadtbn\.github\.io\/dz_portal\/pages\/tools\/study\/pomodoro\.html/);
   assert.match(sitemap, /<video:video>/);
 });
