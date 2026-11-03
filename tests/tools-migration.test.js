@@ -1,0 +1,45 @@
+const test = require('node:test');
+const assert = require('node:assert/strict');
+const fs = require('node:fs');
+const path = require('node:path');
+
+const root = path.resolve(__dirname, '..');
+const read = (file) => fs.readFileSync(path.join(root, file), 'utf8');
+
+test('unified tools directory exposes the pilot calculator with searchable categories', () => {
+  const directory = read('pages/tools/index.html');
+  assert.match(directory, /id="tool-search"/);
+  assert.match(directory, /data-filter="calculators"/);
+  assert.match(directory, /href="calculators\/number-to-words\.html"/);
+  assert.match(directory, /canonical" href="https:\/\/imadtbn\.github\.io\/dz_portal\/pages\/tools\//);
+  assert.doesNotMatch(directory, /imadtbn\.github\.io\/tools-dz/);
+});
+
+test('number-to-words pilot preserves tool logic and uses the portal template', () => {
+  const page = read('pages/tools/calculators/number-to-words.html');
+  const script = read('assets/js/tools/number-to-words.js');
+  const styles = read('assets/css/tools/number-to-words.css');
+  assert.match(page, /<html lang="ar" dir="rtl">/);
+  assert.match(page, /canonical" href="https:\/\/imadtbn\.github\.io\/dz_portal\/pages\/tools\/calculators\/number-to-words\.html"/);
+  assert.match(page, /assets\/js\/site-tags\.js/);
+  assert.match(page, /assets\/js\/ads-stability\.js/);
+  assert.match(page, /assets\/js\/dz-share\.js/);
+  assert.match(page, /assets\/js\/tools\/number-to-words\.js/);
+  assert.match(page, /data-ad-client="ca-pub-5656416032906373"/);
+  assert.match(page, /data-ad-slot="7867079394"/);
+  assert.doesNotMatch(page, /googletagmanager\.com\/gtag\/js\?id=/);
+  assert.doesNotMatch(page, /G-4BCWP0498L|G-BT30MKHK77/);
+  assert.doesNotMatch(page, /adsbygoogle\s*\)\.push|adsbygoogle\s*=\s*window\.adsbygoogle/);
+  assert.match(script, /function parseAmount/);
+  assert.match(script, /ntw-copy/);
+  assert.match(script, /ntw-print/);
+  assert.match(styles, /@media\(max-width:700px\)/);
+  assert.match(styles, /overflow-wrap:anywhere/);
+});
+
+test('tools directory and pilot tool are present in the existing sitemap', () => {
+  const sitemap = read('sitemap.xml');
+  assert.match(sitemap, /https:\/\/imadtbn\.github\.io\/dz_portal\/pages\/tools\//);
+  assert.match(sitemap, /https:\/\/imadtbn\.github\.io\/dz_portal\/pages\/tools\/calculators\/number-to-words\.html/);
+  assert.match(sitemap, /<video:video>/);
+});
