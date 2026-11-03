@@ -9,7 +9,8 @@ const mainJs = readFileSync(new URL('assets/js/main.js', root), 'utf8');
 const newCardPattern = /<a\b(?=[^>]*class="[^"]*\bsector-card\b[^"]*")(?=[^>]*data-new="true")[^>]*>[\s\S]*?<\/a>/g;
 const newCards = [...indexHtml.matchAll(newCardPattern)].map(match => match[0]);
 const datePattern = /data-new-since="(\d{4}-\d{2}-\d{2})"/;
-const windowMs = 25 * 24 * 60 * 60 * 1000;
+const windowMs = 20 * 24 * 60 * 60 * 1000;
+const registry = JSON.parse(readFileSync(new URL('assets/data/new-services.json', root), 'utf8'));
 
 function isValidIsoDate(value) {
   if (!/^\d{4}-\d{2}-\d{2}$/.test(value)) return false;
@@ -38,16 +39,29 @@ test('every new homepage card has a valid date and badge', () => {
 test('new services filter is explicitly wired to the new filter', () => {
   assert.match(indexHtml, /id="newServicesBtn" class="filter-btn" data-filter="new"/);
   assert.match(indexHtml, /id="newServicesCount"/);
-  assert.match(mainJs, /const NEW_SERVICE_WINDOW_DAYS = 25;/);
+  assert.match(mainJs, /const NEW_SERVICE_WINDOW_DAYS = 20;/);
+  assert.match(indexHtml, /id="newServicesNotice"/);
+  assert.match(mainJs, /assets\/data\/new-services\.json/);
   assert.match(mainJs, /card\.dataset\.newSince/);
   assert.match(mainJs, /badge\.hidden = !isNew/);
   assert.match(mainJs, /setTimeout\(refreshNewServices/);
 });
 
-test('the 25-day window has inclusive start and exclusive expiry boundaries', () => {
+test('the 20-day window has inclusive start and exclusive expiry boundaries', () => {
   const start = Date.UTC(2026, 7, 22);
   assert.equal(start + windowMs - 1 > start, true);
   assert.equal(start + windowMs > start + windowMs, false);
   assert.equal(isValidIsoDate('2026-02-31'), false);
   assert.equal(isValidIsoDate('2026-08-22'), true);
+});
+
+
+test('Ramadan grant is present in the central registry and Interior sector page', () => {
+  const grant = registry.services.find(service => service.id === 'ramadan-grant-1448');
+  assert.ok(grant, 'registry should include Ramadan grant service');
+  assert.equal(grant.sector, 'وزارة الداخلية والجماعات المحلية والنقل');
+  assert.equal(grant.addedAt, '2026-10-21');
+  const interior = readFileSync(new URL('sectors/interieur.html', root), 'utf8');
+  assert.match(interior, /ramadan-grant-service/);
+  assert.match(interior, /https:\/\/prestations\.interieur\.gov\.dz\/solidariteramdhan\//);
 });

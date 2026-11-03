@@ -1,0 +1,155 @@
+{
+  "version": 2,
+  "updated": "2026-09-28",
+  "country": "DZ",
+  "timezone": "Africa/Algiers",
+  "complete": false,
+  "dates": [
+    {
+      "date": "2026-01-01",
+      "name": "رأس السنة الميلادية",
+      "type": "national",
+      "source": "https://www.mtess.gov.dz/fr/legislation-du-travail/",
+      "status": "fixed-date"
+    },
+    {
+      "date": "2026-01-12",
+      "name": "رأس السنة الأمازيغية",
+      "type": "national",
+      "source": "https://www.mtess.gov.dz/ar/%D8%A7%D9%84%D9%85%D8%AC%D9%84%D8%B3-%D8%A7%D9%84%D8%B4%D8%B9%D8%A8%D9%8A-%D8%A7%D9%84%D9%88%D8%B7%D9%86%D9%8A-%D8%A7%D9%84%D9%85%D8%B5%D8%A7%D8%AF%D9%82%D8%A9-%D8%B9%D9%84%D9%89-%D9%85%D8%B4%D8%B1/",
+      "status": "fixed-date"
+    },
+    {
+      "date": "2026-03-20",
+      "name": "عيد الفطر - اليوم الأول",
+      "type": "religious",
+      "source": "https://www.aps.dz/fr/algerie/societe/mmxv408r-vendredi-premier-jour-de-l-aid-el-fitr-en-algerie",
+      "status": "announced-2026"
+    },
+    {
+      "date": "2026-03-21",
+      "name": "عيد الفطر - اليوم الثاني",
+      "type": "religious",
+      "source": "https://www.joradp.dz/FTP/jo-francais/2023/F2023043.pdf",
+      "status": "announced-2026"
+    },
+    {
+      "date": "2026-03-22",
+      "name": "عيد الفطر - اليوم الثالث",
+      "type": "religious",
+      "source": "https://www.joradp.dz/FTP/jo-francais/2023/F2023043.pdf",
+      "status": "announced-2026"
+    },
+    {
+      "date": "2026-05-01",
+      "name": "عيد العمال",
+      "type": "national",
+      "source": "https://www.mtess.gov.dz/fr/legislation-du-travail/",
+      "status": "fixed-date"
+    },
+    {
+      "date": "2026-05-27",
+      "name": "عيد الأضحى - اليوم الأول",
+      "type": "religious",
+      "source": "https://www.aps.dz/fr/algerie/societe/mpnt7cck-les-algeriens-celebrent-l-aid-el-adha-dans-une-ambiance-particuliere",
+      "status": "announced-2026"
+    },
+    {
+      "date": "2026-05-28",
+      "name": "عيد الأضحى - اليوم الثاني",
+      "type": "religious",
+      "source": "https://www.joradp.dz/FTP/jo-francais/2023/F2023043.pdf",
+      "status": "announced-2026"
+    },
+    {
+      "date": "2026-05-29",
+      "name": "عيد الأضحى - اليوم الثالث",
+      "type": "religious",
+      "source": "https://www.joradp.dz/FTP/jo-francais/2023/F2023043.pdf",
+      "status": "announced-2026"
+    },
+    {
+      "date": "2026-06-16",
+      "name": "أول محرم",
+      "type": "religious",
+      "source": "https://www.aps.dz/fr/algerie/societe/mqfou4lc-le-mardi-16-juin-premier-jour-de-moharem-1448",
+      "status": "announced-2026"
+    },
+    {
+      "date": "2026-06-25",
+      "name": "عاشوراء",
+      "type": "religious",
+      "source": "https://www.aps.dz/fr/algerie/societe/mqph1tla-jeudi-prochain-chome-et-paye",
+      "status": "announced-2026"
+    },
+    {
+      "date": "2026-07-05",
+      "name": "عيد الاستقلال",
+      "type": "national",
+      "source": "https://www.mtess.gov.dz/fr/legislation-du-travail/",
+      "status": "fixed-date"
+    },
+    {
+      "date": "2026-08-25",
+      "name": "المولد النبوي الشريف",
+      "type": "religious",
+      "source": "https://www.aps.dz/algerie/societe/msryy08u-%D8%B0%D9%83%D8%B1%D9%89-%D8%A7%D9%84%D9%85%D9%88%D9%84%D8%AF-%D8%A7%D9%84%D9%86%D8%A8%D9%88%D9%8A-%D8%A7%D9%84%D8%B4%D8%B1%D9%8A%D9%81-%D8%B3%D8%AA%D9%83%D9%88%D9%86-%D9%8A%D9%88%D9%85-%D8%A7%D9%84%D8%AB%D9%84%D8%A7%D8%AB%D8%A7%D8%A1-25-%D8%A7%D9%94%D8%BA%D8%B3%D8%B7%D8%B3",
+      "status": "announced-2026"
+    },
+    {
+      "date": "2026-11-01",
+      "name": "ذكرى اندلاع الثورة التحريرية",
+      "type": "national",
+      "source": "https://www.mtess.gov.dz/fr/legislation-du-travail/",
+      "status": "fixed-date"
+    },
+    {
+      "date": "2027-01-01",
+      "name": "رأس السنة الميلادية",
+      "type": "national",
+      "source": "https://www.mtess.gov.dz/fr/legislation-du-travail/",
+      "status": "fixed-date"
+    },
+    {
+      "date": "2027-01-12",
+      "name": "رأس السنة الأمازيغية",
+      "type": "national",
+      "source": "https://www.mtess.gov.dz/ar/%D8%A7%D9%84%D9%85%D8%AC%D9%84%D8%B3-%D8%A7%D9%84%D8%B4%D8%B9%D8%A8%D9%8A-%D8%A7%D9%84%D9%88%D8%B7%D9%86%D9%8A-%D8%A7%D9%84%D9%85%D8%B5%D8%A7%D8%AF%D9%82%D8%A9-%D8%B9%D9%84%D9%89-%D9%85%D8%B4%D8%B1/",
+      "status": "fixed-date"
+    },
+    {
+      "date": "2027-05-01",
+      "name": "عيد العمال",
+      "type": "national",
+      "source": "https://www.mtess.gov.dz/fr/legislation-du-travail/",
+      "status": "fixed-date"
+    },
+    {
+      "date": "2027-07-05",
+      "name": "عيد الاستقلال",
+      "type": "national",
+      "source": "https://www.mtess.gov.dz/fr/legislation-du-travail/",
+      "status": "fixed-date"
+    },
+    {
+      "date": "2027-11-01",
+      "name": "ذكرى اندلاع الثورة التحريرية",
+      "type": "national",
+      "source": "https://www.mtess.gov.dz/fr/legislation-du-travail/",
+      "status": "fixed-date"
+    }
+  ],
+  "pending_review": [
+    {
+      "month_day": "11-10",
+      "name": "10 نوفمبر المذكور من صاحب المشروع",
+      "reason": "لم أجد عيدًا وطنيًا ثابتًا في هذا التاريخ؛ ذكرى الثورة في 1 نوفمبر. لا يؤثر هذا البند في حساب الرحلات."
+    },
+    {
+      "year": 2027,
+      "type": "religious",
+      "reason": "تحدد تواريخ الأعياد الدينية بعد إعلانها في الجزائر؛ لم تضاف تخمينات لسنة 2027."
+    }
+  ],
+  "note": "تواريخ الأعياد الثابتة لسنتي 2026 و2027 وتواريخ 2026 الدينية المعلنة. النطاق غير مكتمل؛ الأيام غير المدرجة لا تعني عدم وجود عطلة."
+}

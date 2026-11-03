@@ -1,0 +1,47 @@
+/* Consistent SNTF header/footer across three rail pages */
+:root{--rail-green:#006233;--rail-dark:#004b27}
+html,body{max-width:100%}
+body{overflow-x:clip}
+.site-head,.site-foot,.sntf-portal-header,.sntf-portal-footer{box-sizing:border-box;width:100%;max-width:100%}
+.site-head,.sntf-portal-header{background:linear-gradient(125deg,var(--rail-green),var(--rail-dark));color:#fff;border-bottom:3px solid #d40000}
+.site-head .head-row{width:min(1160px,calc(100% - 32px));max-width:100%;margin:auto;min-height:70px;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 0}
+.site-head .brand{display:inline-flex;align-items:center;gap:9px;min-width:0;color:#fff;text-decoration:none;font-weight:800}
+.site-head .brand small{display:block;font-size:.75em;font-weight:500;line-height:1.35}
+.site-head nav{display:flex;align-items:center;justify-content:flex-end;gap:8px;flex-wrap:wrap;text-align:initial}
+.site-head nav a,.sntf-portal-header .rail-header-links a{display:inline-flex;align-items:center;justify-content:center;min-height:40px;padding:8px 11px;color:#fff;text-decoration:none;border:1px solid #ffffff55;border-radius:9px;font-size:.86rem;line-height:1.4}
+.site-head nav a:hover,.sntf-portal-header .rail-header-links a:hover{background:#ffffff22}
+.site-foot,.sntf-portal-footer{background:linear-gradient(125deg,var(--rail-green),var(--rail-dark));color:#f1fff6;border-top:3px solid #d40000;margin-top:24px;padding:20px 16px;font-size:.88rem}
+.site-foot .shell{width:min(1160px,100%);max-width:100%;margin:auto;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.site-foot a,.sntf-portal-footer a{color:#fff}
+.sntf-portal-header{padding:0 16px;position:relative}
+.sntf-portal-header .header-content{width:min(1160px,100%);max-width:100%;margin:auto;min-height:70px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.sntf-portal-header .logo-section{display:flex;align-items:center;gap:10px;min-width:0}
+.sntf-portal-header .logo-section h1{font-size:clamp(1rem,2vw,1.25rem);line-height:1.3;margin:0;color:#fff}
+.sntf-portal-header .logo-section span{font-size:.8rem;color:#ffffffdf}
+.sntf-portal-header .rail-header-links{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.sntf-portal-header .back-btn{flex-shrink:0}
+.sntf-portal-footer .footer-content{width:min(1160px,100%);max-width:100%;margin:auto}
+.site-head a:focus-visible,.site-foot a:focus-visible,.sntf-portal-header a:focus-visible,.sntf-portal-footer a:focus-visible{outline:3px solid #ffd700;outline-offset:2px}
+@media(max-width:650px){
+.site-head .head-row{min-height:64px;gap:8px;flex-direction:row;align-items:center;padding:9px 0}
+.site-head .brand{font-size:.9rem}
+.site-head nav{display:flex;gap:5px;justify-content:flex-end}
+.site-head nav a{min-height:38px;padding:7px;font-size:.72rem;text-align:center}
+.site-foot,.sntf-portal-footer{padding:18px 12px;text-align:center}
+.site-foot .shell{justify-content:center}
+.sntf-portal-header{padding:0 12px}
+.sntf-portal-header .header-content{min-height:64px;gap:8px}
+.sntf-portal-header .logo-section{gap:7px}
+.sntf-portal-header .rail-header-links{gap:4px}
+.sntf-portal-header .rail-header-links a{min-height:38px;padding:7px;font-size:.73rem}
+.sntf-portal-footer .footer-content{width:100%}
+}
+@media(max-width:370px){.site-head nav a,.sntf-portal-header .rail-header-links a{font-size:.67rem;padding:6px}.sntf-portal-header .logo-section h1{font-size:.9rem}}
+
+
+/* Rail pages: prevent document-level horizontal scroll without disabling the schedule image's own scroller. */
+html, body { inline-size:100%; max-inline-size:100%; overflow-x:clip; }
+body, .sntf-portal-header, .sntf-portal-footer { min-inline-size:0; }
+.sntf-portal-header *, .sntf-portal-footer *, .site-head *, .site-foot * { box-sizing:border-box; }
+.sntf-portal-header .header-content, .sntf-portal-header .logo-section,
+.sntf-portal-header .rail-header-links, .site-head .head-row, .site-head nav { min-inline-size:0; max-inline-size:100%; }

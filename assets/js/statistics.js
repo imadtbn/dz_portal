@@ -82,11 +82,13 @@
         const maximum = Math.max(...rows.map(row => row.count), 1);
 
         if (!filtered.length) {
+            if (!sectorListEl) return;
             sectorListEl.hidden = false;
             sectorListEl.innerHTML = '<div class="stats-empty">لا توجد قطاعات مطابقة.</div>';
             return;
         }
 
+        if (!sectorListEl) return;
         sectorListEl.hidden = false;
         sectorListEl.innerHTML = filtered.map(row => {
             const width = Math.max((row.count / maximum) * 100, 2);
@@ -107,16 +109,16 @@
         const average = loadedRows.length ? totalServices / loadedRows.length : 0;
         const topSector = [...loadedRows].sort((a, b) => b.count - a.count)[0];
 
-        totalServicesEl.textContent = formatNumber(totalServices);
-        totalSectorsEl.textContent = formatNumber(loadedRows.length);
-        averageServicesEl.textContent = average.toLocaleString("ar-DZ", { maximumFractionDigits: 1 });
-        topSectorCountEl.textContent = topSector ? formatNumber(topSector.count) : "—";
-        topSectorLabelEl.textContent = topSector ? `أعلى قطاع: ${topSector.title}` : "أعلى قطاع";
+        if (totalServicesEl) totalServicesEl.textContent = formatNumber(totalServices);
+        if (totalSectorsEl) totalSectorsEl.textContent = formatNumber(loadedRows.length);
+        if (averageServicesEl) averageServicesEl.textContent = average.toLocaleString("ar-DZ", { maximumFractionDigits: 1 });
+        if (topSectorCountEl) topSectorCountEl.textContent = topSector ? formatNumber(topSector.count) : "—";
+        if (topSectorLabelEl) topSectorLabelEl.textContent = topSector ? `أعلى قطاع: ${topSector.title}` : "أعلى قطاع";
 
         renderRows(rows);
         const failedCount = rows.length - loadedRows.length;
         const timestamp = new Intl.DateTimeFormat("ar-DZ", { dateStyle: "medium", timeStyle: "short" }).format(new Date());
-        statsStatusEl.textContent = failedCount
+        if (statsStatusEl) statsStatusEl.textContent = failedCount
             ? `تم تحليل ${formatNumber(loadedRows.length)} قطاعًا. تعذر تحميل ${formatNumber(failedCount)}. آخر تحديث: ${timestamp}`
             : `تم احتساب الخدمات من ${formatNumber(loadedRows.length)} قطاعًا مباشرة من صفحات الموقع. آخر تحديث: ${timestamp}`;
     }
@@ -126,13 +128,15 @@
         try {
             links = await getSectorLinks();
         } catch (error) {
-            statsStateEl.className = "stats-error";
-            statsStateEl.textContent = "تعذر تحميل قائمة القطاعات من الصفحة الرئيسية.";
+            if (statsStateEl) statsStateEl.className = "stats-error";
+            if (statsStateEl) statsStateEl.textContent = "تعذر تحميل قائمة القطاعات من الصفحة الرئيسية.";
+            if (statsStatusEl) statsStatusEl.textContent = "تعذر تحديث الإحصائيات. حاول إعادة تحميل الصفحة.";
             return;
         }
         if (!links.length) {
-            statsStateEl.className = "stats-error";
-            statsStateEl.textContent = "لم يتم العثور على روابط قطاعات صالحة في الصفحة الرئيسية.";
+            if (statsStateEl) statsStateEl.className = "stats-error";
+            if (statsStateEl) statsStateEl.textContent = "لم يتم العثور على روابط قطاعات صالحة في الصفحة الرئيسية.";
+            if (statsStatusEl) statsStatusEl.textContent = "لا تتوفر بيانات قطاعات قابلة للتحليل حاليًا.";
             return;
         }
 
@@ -141,10 +145,10 @@
         for (let index = 0; index < links.length; index += batchSize) {
             const batch = await Promise.all(links.slice(index, index + batchSize).map(fetchSector));
             rows.push(...batch);
-            statsStateEl.textContent = `جارٍ تحليل القطاع ${formatNumber(Math.min(index + batch.length, links.length))} من ${formatNumber(links.length)}...`;
+            if (statsStateEl) statsStateEl.textContent = `جارٍ تحليل القطاع ${formatNumber(Math.min(index + batch.length, links.length))} من ${formatNumber(links.length)}...`;
         }
 
-        statsStateEl.hidden = true;
+        if (statsStateEl) statsStateEl.hidden = true;
         renderSummary(rows.sort((a, b) => b.count - a.count || a.title.localeCompare(b.title, "ar")));
         sectorFilterEl?.addEventListener("input", () => renderRows(rows));
     }

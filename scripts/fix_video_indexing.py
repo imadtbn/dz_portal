@@ -67,6 +67,8 @@ VIDEOS = {
         'name': 'طريقة التسجيل في فضاء الأولياء 2026',
         'description': 'شرح مرئي لطريقة التسجيل في فضاء الأولياء ومتابعة الأبناء دراسيًا عبر المنصة الرسمية.',
         'facebook': 'https://www.facebook.com/watch/?v=485913154242019',
+        # Original Facebook publication date confirmed by the site owner.
+        'uploadDate': '2024-09-02',
         'thumbnail': 'assets/images/education.png',
         'service_url': 'sectors/awlyaa-education.html',
         'service_name': 'فضاء الأولياء',

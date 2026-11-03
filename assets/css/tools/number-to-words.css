@@ -1,0 +1,70 @@
+/* محول الأرقام إلى الحروف بالدينار الجزائري */
+.ntw-page{max-width:1050px;margin:0 auto;padding:24px 0 48px}
+.ntw-page *{box-sizing:border-box}
+.ntw-hero{background:linear-gradient(120deg,#123e2e,#278359);border-radius:22px;color:#fff;padding:clamp(22px,4vw,42px);margin-bottom:20px}
+.ntw-hero h1{color:#fff;font-size:clamp(1.55rem,4vw,2.35rem);line-height:1.45;margin:0 0 10px}
+.ntw-hero>p{color:#f0fff7;line-height:1.9;max-width:780px;margin:0 0 15px}
+.ntw-tag{display:inline-block;margin-bottom:12px;padding:5px 13px;border-radius:22px;background:#ffffff25;font-size:.88rem}
+.ntw-panel,.ntw-result-panel{background:var(--surface-color,#fff);color:var(--text-color,#183e2a);border:1px solid var(--border-color,#dce9e0);border-radius:18px;padding:clamp(16px,3vw,26px);margin:18px 0;box-shadow:0 8px 28px #102f1a0a;min-width:0}
+.ntw-panel h2,.ntw-result-panel h2{font-size:1.2rem;margin:0 0 9px;line-height:1.6}
+.ntw-panel h2 i,.ntw-result-panel h2 i{color:#187a50;margin-left:7px}
+.ntw-help{color:var(--text-muted,#617667);line-height:1.8;font-size:.92rem;margin:0 0 16px}
+.ntw-label{display:block;font-weight:800;margin-bottom:7px}
+.ntw-input-wrap{display:flex;align-items:stretch;width:100%;max-width:650px;min-width:0}
+.ntw-input-wrap input{flex:1;min-width:0;width:100%;border:1.5px solid var(--border-color,#cdded4);background:var(--surface-color,#fff);color:var(--text-color,#243d2d);border-radius:12px 0 0 12px;padding:14px 15px;font:inherit;font-size:1.1rem;direction:ltr;text-align:left;unicode-bidi:plaintext}
+.ntw-currency{display:flex;align-items:center;padding:0 15px;background:var(--bg-color,#edf5ef);border:1.5px solid var(--border-color,#cdded4);border-right:0;border-radius:0 12px 12px 0;font-weight:800;white-space:nowrap}
+.ntw-input-wrap input:focus{outline:0;border-color:#19895a;box-shadow:0 0 0 3px #17915c20}
+.ntw-error{color:#b42318;font-weight:700;margin:8px 0 0}
+.ntw-options{display:flex;flex-wrap:wrap;gap:12px 22px;margin:17px 0}
+.ntw-check{display:flex;align-items:center;gap:8px;line-height:1.7;font-size:.93rem;cursor:pointer}
+.ntw-check input{width:18px;height:18px;accent-color:#187a50;flex-shrink:0}
+.ntw-actions{display:flex;flex-wrap:wrap;gap:9px;margin-top:18px}
+.ntw-btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;padding:11px 16px;border:1px solid #187a50;border-radius:11px;background:#187a50;color:#fff;font:inherit;font-weight:750;cursor:pointer}
+.ntw-btn:hover{background:#105d3c;color:#fff}
+.ntw-btn-secondary{background:var(--bg-color,#edf5ef);border-color:var(--border-color,#cdded4);color:var(--text-color,#185b3b)}
+.ntw-btn-secondary:hover{background:var(--border-color,#d6ebdf);color:var(--text-color,#185b3b)}
+.ntw-btn:focus-visible,.ntw-example:focus-visible{outline:3px solid #8bc6a0;outline-offset:3px}
+.ntw-status{min-height:1.5em;margin:8px 0 0;color:var(--text-muted,#617667);font-size:.9rem}
+.ntw-result-panel{border-color:#a9d4b8;background:var(--surface-color,#fff)}
+.ntw-result-heading{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.ntw-result-heading h2{margin:0}
+.ntw-live{font-size:.78rem;color:#187a50;background:#e9f6ed;border-radius:20px;padding:4px 9px}
+.ntw-result{padding:19px;background:var(--bg-color,#f3f8f4);border:1px dashed var(--border-color,#b9d8c3);border-radius:13px;line-height:2;font-size:clamp(1.05rem,2.5vw,1.25rem);overflow-wrap:anywhere;white-space:normal;margin-top:15px}
+.ntw-note{color:var(--text-muted,#617667);font-size:.85rem;line-height:1.8;margin:12px 0 0}
+.ntw-example-list{display:flex;flex-wrap:wrap;gap:9px}
+.ntw-example{border:1px solid var(--border-color,#cdded4);background:var(--bg-color,#f2f7f3);color:var(--text-color,#234a32);border-radius:10px;padding:9px 13px;font:inherit;font-weight:700;cursor:pointer}
+.ntw-example:hover{border-color:#187a50;background:#e6f4eb}
+.ntw-guide ol{padding-right:22px;line-height:2;margin:8px 0 16px}
+.ntw-privacy{display:flex;gap:9px;align-items:flex-start;color:var(--text-muted,#617667);font-size:.9rem;line-height:1.8;margin:0}
+.ntw-privacy i{color:#187a50;margin-top:5px}
+.ntw-faq details{border-top:1px solid var(--border-color,#dce9e0);padding:12px 0}
+.ntw-faq details:last-child{padding-bottom:0}
+.ntw-faq summary{font-weight:750;cursor:pointer;line-height:1.8}
+.ntw-faq details p{color:var(--text-muted,#617667);line-height:1.9;margin:8px 0 0}
+[hidden]{display:none!important}
+@media(max-width:700px){.ntw-page{padding:14px 0 30px}.ntw-hero{border-radius:17px;margin-bottom:14px}.ntw-panel,.ntw-result-panel{margin:12px 0;border-radius:15px}.ntw-actions{display:grid;grid-template-columns:1fr}.ntw-btn{width:100%}.ntw-options{display:grid;gap:10px}.ntw-result{padding:14px}.ntw-input-wrap input{font-size:1rem;padding:12px}.ntw-currency{padding:0 11px}}
+@media(prefers-reduced-motion:reduce){.ntw-page *{scroll-behavior:auto!important;transition:none!important}}
+@media print{body{background:#fff!important;color:#111!important}.ntw-page{max-width:none;padding:0}.ntw-hero{background:#fff!important;color:#111!important;border:1px solid #bbb;padding:12px}.ntw-hero h1,.ntw-hero>p{color:#111!important}.ntw-panel,.ntw-actions,.ntw-options,.ntw-examples,.ntw-guide,.ntw-faq,.ads-container,#main-header,#main-footer{display:none!important}.ntw-result-panel{box-shadow:none;border:1px solid #aaa;margin:12px 0;padding:18px;break-inside:avoid}.ntw-result{background:#fff!important;color:#111!important;border:1px solid #aaa}}
+
+/* تكامل أداة محول الأرقام مع قالب البوابة الجزائرية */
+.portal-tool-brand{display:flex;flex-direction:column;text-decoration:none;color:inherit;line-height:1.25}
+.portal-tool-brand strong{font-size:1.08rem;font-weight:800}
+.portal-tool-brand span{font-size:.85rem}
+.portal-tools-home{display:inline-flex;align-items:center;gap:8px;text-decoration:none;font-weight:700;color:inherit;padding:9px 12px;border:1px solid currentColor;border-radius:10px}
+.tool-ad{width:100%;max-width:970px;min-width:0;box-sizing:border-box;margin:18px auto;padding:10px 12px;text-align:center;border:1px solid #e2ebe4;border-radius:14px;overflow:hidden}
+.tool-ad-label{margin:0 0 8px;color:#708176;font-size:.78rem}
+.tool-ad ins.adsbygoogle{display:block;width:100%;max-width:100%;min-width:0;margin-inline:auto}
+.tool-page .ntw-page{width:min(1050px,calc(100% - 28px))}
+.tool-page .ntw-page,.tool-page .ntw-page *{min-width:0}
+.tool-page .ntw-hero{overflow-wrap:anywhere}
+.tool-page .ntw-input-wrap{max-width:100%}
+.tool-page .footer-content{width:min(1160px,calc(100% - 28px));margin-inline:auto}
+.tool-page .footer-links{display:flex;flex-wrap:wrap;gap:12px}
+@media(max-width:600px){.tool-page .ntw-page{width:calc(100% - 20px)}.portal-tool-brand strong{font-size:.95rem}.portal-tool-brand span{font-size:.78rem}.portal-tools-home{padding:8px;font-size:.85rem}.tool-page .ntw-actions{grid-template-columns:1fr}}
+@media print{.tool-page .header,.tool-page .footer,.tool-page .dz-share-slot,.tool-page .tool-ad{display:none!important}}
+
+.tool-page .tool-breadcrumb{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-top:16px;font-size:.88rem;line-height:1.7}
+.tool-page .tool-breadcrumb a{color:#e8f8ed;text-decoration:underline;text-underline-offset:3px}
+.tool-page .tool-breadcrumb span{color:#fff}
+.tool-page .tool-breadcrumb i{font-size:.75rem;opacity:.8}
+.tool-page .ntw-hero .ntw-tag{color:#fff}

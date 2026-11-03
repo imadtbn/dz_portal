@@ -224,3 +224,192 @@
         padding: 18px 5vw;
     }
 }
+
+/* Shared compact navigation for the complete educational video directory. */
+.video-index-header-inner,
+.video-watch-header{
+    box-sizing:border-box;
+    width:100%;
+    min-height:72px;
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    justify-content:space-between;
+    gap:12px;
+}
+.video-watch-header{padding:12px max(18px,calc((100vw - 1160px)/2))!important}
+.video-index-brand,.video-watch-brand{
+    display:inline-flex;
+    flex-direction:column;
+    min-width:0;
+    font-size:clamp(.94rem,1.7vw,1.2rem);
+    line-height:1.35;
+    overflow-wrap:anywhere;
+}
+.video-index-brand span,.video-watch-brand span{font-size:.79em;font-weight:500;opacity:.9}
+.video-index-home-link,.video-watch-home{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    min-height:44px;
+    flex-shrink:0;
+    padding:8px 13px;
+    border:1px solid rgba(255,255,255,.6);
+    border-radius:10px;
+    color:white;
+    text-decoration:none;
+    font-weight:700;
+    white-space:nowrap;
+}
+.video-index-breadcrumb,.video-watch-breadcrumb{
+    display:flex;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:7px 10px;
+    min-width:0;
+    padding:12px 16px;
+    margin:0 0 18px;
+    background:#fff;
+    border:1px solid rgba(0,98,51,.15);
+    border-radius:12px;
+    color:#4b5a55;
+    line-height:1.6;
+    font-size:.91rem;
+    box-shadow:0 2px 8px rgba(0,65,34,.04);
+}
+.video-index-breadcrumb a,.video-watch-breadcrumb a{
+    color:#006233;
+    font-weight:800;
+    text-decoration:none;
+}
+.video-index-breadcrumb a:hover,.video-watch-breadcrumb a:hover{text-decoration:underline}
+.video-index-breadcrumb [aria-current="page"],.video-watch-breadcrumb [aria-current="page"]{
+    min-width:0;
+    overflow-wrap:anywhere;
+    font-weight:700;
+    color:#263c32;
+}
+.video-index-breadcrumb .breadcrumb-separator,.video-watch-breadcrumb .breadcrumb-separator{color:#83958a}
+.video-index-header a:focus-visible,.video-watch-header a:focus-visible,
+.video-index-breadcrumb a:focus-visible,.video-watch-breadcrumb a:focus-visible{
+    outline:3px solid #ffd700;outline-offset:3px;
+}
+@media(max-width:720px){
+    .video-index-header-inner{flex-direction:row;align-items:center;gap:10px;padding:10px 0;min-height:66px}
+    .video-watch-header{min-height:66px;padding:10px 4vw!important}
+    .video-index-home-link,.video-watch-home{font-size:.83rem;padding:8px 10px}
+    .video-index-breadcrumb,.video-watch-breadcrumb{padding:10px 12px;font-size:.84rem;gap:5px 8px}
+}
+@media(max-width:370px){
+    .video-index-brand,.video-watch-brand{font-size:.83rem}
+    .video-index-home-link,.video-watch-home{font-size:.75rem;padding-inline:7px}
+}
+
+/* Video-page width containment and full-width chrome (mobile overflow fix). */
+html{max-width:100%;overflow-x:clip}
+body{max-width:100%;overflow-x:clip}
+body,.video-watch-header,.video-index-header,.video-watch-footer,.video-index-footer,
+.video-watch-page,.video-index-main,.video-watch-article{box-sizing:border-box}
+.video-watch-header,.video-index-header,.video-watch-footer,.video-index-footer{
+    width:100%;
+    max-width:100%;
+    margin-inline:0;
+}
+.video-watch-header{padding-inline:max(16px,calc((100% - 1160px)/2))!important}
+.video-index-header-inner{width:min(1160px,calc(100% - 32px));max-width:100%}
+.video-watch-page,.portal-video-page .video-watch-page,.video-index-main{
+    width:min(1080px,calc(100% - 32px));
+    max-width:100%;
+    margin-inline:auto;
+    min-width:0;
+}
+.video-watch-article{
+    width:100%;
+    max-width:100%;
+    min-width:0;
+    margin-inline:auto;
+    padding:clamp(16px,3vw,32px);
+}
+.video-watch-article .video-watch-player{
+    width:100%;
+    max-width:920px;
+    margin:18px auto;
+    min-height:0;
+    aspect-ratio:16/9;
+}
+.video-watch-article .video-watch-player iframe{
+    max-width:100%;
+    min-height:0;
+}
+.video-watch-article .video-watch-service-link{
+    max-width:100%;
+    text-align:center;
+    justify-content:center;
+    white-space:normal;
+}
+.video-watch-page .ad-container,
+body > .ad-container,
+.video-index-main .ad-container{
+    box-sizing:border-box;
+    width:min(100%,980px);
+    max-width:100%;
+    min-width:0;
+    margin-inline:auto;
+    text-align:center;
+}
+body > .ad-container{margin-block:20px}
+.video-watch-page .ad-container ins.adsbygoogle,
+body > .ad-container ins.adsbygoogle,
+.video-index-main .ad-container ins.adsbygoogle{max-width:100%}
+.video-watch-footer,.video-index-footer{clear:both}
+@media(max-width:720px){
+    .video-watch-header{padding:10px 16px!important}
+    .video-watch-page,.portal-video-page .video-watch-page,.video-index-main{
+        width:calc(100% - 24px);
+        padding-top:16px;
+    }
+    .video-watch-article,.portal-video-page .video-watch-article{padding:16px}
+    .video-watch-article h1,.portal-video-page .video-watch-article h1{
+        font-size:clamp(1.3rem,5.4vw,1.8rem);
+        line-height:1.45;
+        overflow-wrap:anywhere;
+    }
+    .video-watch-article .video-watch-player{min-height:0}
+    .video-watch-article .video-watch-player iframe{min-height:0}
+    body > .ad-container{width:calc(100% - 24px)}
+}
+
+
+/* Center in-content AdSense creatives (including narrower fluid / related-search
+   frames) on RTL pages at desktop and mobile widths.
+   Keep Google-assigned creative dimensions, heights and display behavior. */
+.ad-container:has(ins.adsbygoogle) {
+    max-inline-size: min(100%, 970px);
+    margin-inline: auto;
+    text-align: center;
+}
+.ad-container:has(ins.adsbygoogle) ins.adsbygoogle {
+    max-inline-size: 100%;
+    margin-inline: auto;
+}
+.ad-container:has(ins.adsbygoogle) ins.adsbygoogle > iframe,
+.ad-container:has(ins.adsbygoogle) ins.adsbygoogle > div,
+.ad-container:has(ins.adsbygoogle) ins.adsbygoogle > div > iframe {
+    margin-inline: auto !important;
+}
+
+
+/* Shared portal footer, visually matching education notice pages. */
+/* Consistent, responsive portal footer for standalone bulletin pages. */
+.reader-footer{background:linear-gradient(125deg,#004b27,#003e2b);color:#fff;width:100%;margin-top:auto}
+.reader-footer__inner{max-width:1100px;margin:auto;padding:clamp(22px,4vw,38px) clamp(14px,3vw,28px);display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:26px;align-items:start}
+.reader-footer__brand{display:inline-flex;align-items:center;gap:10px;color:#fff;text-decoration:none;font-weight:800;line-height:1.5}
+.reader-footer__brand img{height:38px;width:38px;object-fit:contain;flex-shrink:0}
+.reader-footer__about p{margin:10px 0 0;color:#dcebe3;font-size:.9rem;max-width:420px}
+.reader-footer__links{display:flex;flex-wrap:wrap;gap:10px 20px;align-items:center;align-content:start}
+.reader-footer__links a{color:#eef7f0;text-decoration:none;font-size:.91rem;padding:4px 0}
+.reader-footer__links a:hover,.reader-footer__links a:focus-visible,.reader-footer__brand:focus-visible{color:#ffdb75;text-decoration:underline;text-underline-offset:4px}
+.reader-footer__links a:focus-visible,.reader-footer__brand:focus-visible{outline:2px solid #ffdb75;outline-offset:4px}
+.reader-footer__bottom{border-top:1px solid #ffffff30;text-align:center;padding:14px 12px;color:#dcebe3;font-size:.83rem}
+@media(max-width:650px){.reader-footer__inner{grid-template-columns:1fr;gap:18px}.reader-footer__links{gap:8px 16px}.reader-footer__brand{font-size:.95rem}}
+@media print{.reader-footer{display:none!important}}

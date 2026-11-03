@@ -8,7 +8,7 @@ import re
 import xml.etree.ElementTree as ET
 from datetime import date
 from pathlib import Path
-from urllib.parse import urljoin
+from urllib.parse import urljoin, urlencode
 
 from bs4 import BeautifulSoup
 
@@ -62,6 +62,14 @@ def canonical_pages() -> dict[str, tuple[Path, BeautifulSoup]]:
         if url.rstrip("/") != page_url(path).rstrip("/"):
             continue
         pages[url] = (path, soup)
+    # The trip page is a shared HTML shell; each published trip has its own canonical query URL.
+    trip_path = ROOT / "sectors/sntf-trip.html"
+    trip_soup = BeautifulSoup(trip_path.read_text(encoding="utf-8"), "html.parser")
+    data = json.loads((ROOT / "assets/data/sntf/trips.json").read_text(encoding="utf-8"))
+    for trip in data["trips"]:
+        if trip.get("data_status") in {"source_transcribed", "verified"}:
+            url = page_url(trip_path) + "?" + urlencode({"trip": trip["trip_id"]})
+            pages[url] = (trip_path, trip_soup)
     return pages
 
 
@@ -217,7 +225,6 @@ def build_robots() -> None:
         "Disallow: /private/",
         "Disallow: /tmp/",
         "Disallow: /cgi-bin/",
-        "Disallow: /*?*",
         "Allow: /",
         "Allow: /pages/",
         "Allow: /pages/process/",
@@ -235,7 +242,6 @@ def build_robots() -> None:
         "Disallow: /private/",
         "Disallow: /tmp/",
         "Disallow: /cgi-bin/",
-        "Disallow: /*?*",
         "Allow: /",
         "Allow: /pages/",
         "Allow: /pages/process/",
@@ -248,7 +254,6 @@ def build_robots() -> None:
         "Disallow: /private/",
         "Disallow: /tmp/",
         "Disallow: /cgi-bin/",
-        "Disallow: /*?*",
         "Allow: /",
         "Allow: /pages/",
         "Allow: /pages/process/",
@@ -262,7 +267,6 @@ def build_robots() -> None:
         "Disallow: /private/",
         "Disallow: /tmp/",
         "Disallow: /cgi-bin/",
-        "Disallow: /*?*",
         "Allow: /",
         "Allow: /pages/",
         "Allow: /pages/process/",
@@ -276,7 +280,6 @@ def build_robots() -> None:
         "Disallow: /private/",
         "Disallow: /tmp/",
         "Disallow: /cgi-bin/",
-        "Disallow: /*?*",
         "Allow: /",
         "Allow: /pages/",
         "Allow: /pages/process/",
@@ -290,7 +293,6 @@ def build_robots() -> None:
         "Disallow: /private/",
         "Disallow: /tmp/",
         "Disallow: /cgi-bin/",
-        "Disallow: /*?*",
         "Allow: /",
         "Allow: /pages/",
         "Allow: /pages/process/",

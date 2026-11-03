@@ -1,0 +1,819 @@
+{
+  "version": 1,
+  "locked_on": "2026-09-26",
+  "purpose": "Protect manually validated Google Maps station coordinates from automated SNTF imports or accidental edits. Update only with an explicit independent geolocation review.",
+  "stations": [
+    {
+      "id": "agha",
+      "lat": 36.7686091,
+      "lon": 3.0597644,
+      "geo_verified": true,
+      "geo_source": "Google Maps"
+    },
+    {
+      "id": "ahnif",
+      "lat": 36.3361629,
+      "lon": 4.2759052,
+      "geo_verified": true,
+      "geo_source": "Google Maps"
+    },
+    {
+      "id": "ain_beida",
+      "lat": 35.7924396,
+      "lon": 7.3662552,
+      "geo_verified": true,
+      "geo_source": "Google Maps"
+    },
+    {
+      "id": "ain_defla",
+      "lat": 36.2677037,
+      "lon": 1.9721371,
+      "geo_verified": true,
+      "geo_source": "Google Maps"
+    },
+    {
+      "id": "ain_fekroun",
+      "lat": 35.9701622,
+      "lon": 6.85735,
+      "geo_verified": true,
+      "geo_source": "Google Maps"
+    },
+    {
+      "id": "ain_mlila",
+      "lat": 36.0380111,
+      "lon": 6.5885881,
+      "geo_verified": true,
+      "geo_source": "Google Maps"
+    },
+    {
+      "id": "ain_naadja",
+      "lat": 36.6890783,
+      "lon": 3.0808173,
+      "geo_verified": true,
+      "geo_source": "Google Maps"
+    },
+    {
+      "id": "ain_touta",
+      "lat": 35.385744,
+      "lon": 5.9041749,
+      "geo_verified": true,
+      "geo_source": "Google Maps"
+    },
+    {
+      "id": "airport",
+      "lat": 36.6998535,
+      "lon": 3.2112399,
+      "geo_verified": true,
+      "geo_source": "Google Maps"
+    },
+    {
+      "id": "akbou",
+      "lat": 36.456449,
+      "lon": 4.5456177,
+      "geo_verified": true,
+      "geo_source": "Google Maps"
+    },
+    {
+      "id": "alger",
+      "lat": 36.7794477,
+      "lon": 3.0643129,
+      "geo_verified": true,
+      "geo_source": "Google Maps"
+    },
+    {
+      "id": "allaghen",
+      "lat": 36.3988946,
+      "lon": 4.4572014,
+      "geo_verified": true,
+      "geo_source": "Google Maps"
+    },
+    {
+      "id": "ammal",
+      "lat": 36.6332468,
+      "lon": 3.5915717,
+      "geo_verified": true,
+      "geo_source": "Google Maps"
+    },
+    {
+      "id": "annaba",
+      "lat": 36.8960434,
+      "lon": 7.759703,
+      "geo_verified": true,
+      "geo_source": "Google Maps"
+    },
+    {
+      "id": "arib",
+      "lat": 36.288425,
+      "lon": 2.0688649,
+      "geo_verified": true,
+      "geo_source": "Google Maps"
+    },
+    {
+      "id": "azib",
+      "lat": 36.5008187,
+      "lon": 4.5888081,
+      "geo_verified": true,
+      "geo_source": "Google Maps"
+    },
+    {
+      "id": "azzaba",
+      "lat": 36.7383904,
+      "lon": 7.1118592,
+      "geo_verified": true,
+      "geo_source": "Google Maps"
+    },
+    {
+      "id": "bab_ezzouar",
+      "lat": 36.7036593,
+      "lon": 3.1928078,
+      "geo_verified": true,
+      "geo_source": "Google Maps"
+    },
+    {
+      "id": "baba_ali",
+      "lat": 36.6669645,
+      "lon": 3.0547571,
+      "geo_verified": true,
+      "geo_source": "Google Maps"
+    },
+    {
+      "id": "barika",
+      "lat": 35.3738155,
+      "lon": 5.3891399,
+      "geo_verified": true,
+      "geo_source": "Google Maps"
+    },
+    {
+      "id": "batna",
+      "lat": 35.5606133,
+      "lon": 6.1761025,
+      "geo_verified": true,
+      "geo_source": "Google Maps"
+    },
+    {
+      "id": "bechar",
+      "lat": 31.6247,
+      "lon": -2.2155,
+      "geo_verified": true,
+      "geo_source": "Google Maps"
+    },
+    {
+      "id": "bejaia",
+      "lat": 36.7510783,
+      "lon": 5.0845546,
+      "geo_verified": true,
+      "geo_source": "Google Maps"
+    },
+    {
+      "id": "beni_mansour",
+      "lat": 36.3360875,
+      "lon": 4.3578718,
+      "geo_verified": true,
+      "geo_source": "Google Maps"
+    },
+    {
+      "id": "beni_mered",
+      "lat": 36.5199473,
+      "lon": 2.8598162,
+      "geo_verified": true,
+      "geo_source": "Google Maps"
+    },
+    {
+      "id": "birtouta",
+      "lat": 36.6308547,
+      "lon": 2.012228,
+      "geo_verified": true,
+      "geo_source": "Google Maps"
+    },
+    {
+      "id": "biskra",
+      "lat": 34.8596706,
+      "lon": 5.7262151,
+      "geo_verified": true,
+      "geo_source": "true Maps"
+    },
+    {
+      "id": "blida",
+      "lat": 36.4786264,
+      "lon": 2.818769,
+      "geo_verified": true,
+      "geo_source": "Google Maps"
+    },
+    {
+      "id": "bordj_bou_arreridj",
+      "lat": 36.0619661,
+      "lon": 4.7547223,
+      "geo_verified": true,
+      "geo_source": "Google Maps"
+    },
+    {
+      "id": "bordj_menaiel",
+      "lat": 36.7447172,
+      "lon": 3.7346784,
+      "geo_verified": true,
+      "geo_source": "Google Maps"
+    },
+    {
+      "id": "boudouaou",
+      "lat": 36.7405714,
+      "lon": 3.4154364,
+      "geo_verified": true,
+      "geo_source": "Google Maps"
+    },
+    {
+      "id": "boufarik",
+      "lat": 36.5671025,
+      "lon": 2.916736,
+      "geo_verified": true,
+      "geo_source": "Google Maps"
+    },
+    {
+      "id": "boughezoul",
+      "lat": 35.7007,
+      "lon": 2.8838,
+      "geo_verified": true,
+      "geo_source": "Google Maps"
+    },
+    {
+      "id": "bouira",
+      "lat": 36.3728289,
+      "lon": 3.8942873,
+      "geo_verified": true,
+      "geo_source": "Google Maps"
+    },
+    {
+      "id": "boukadir",
+      "lat": 36.0668416,
+      "lon": 1.1265499,
+      "geo_verified": true,
+      "geo_source": "Google Maps"
+    },
+    {
+      "id": "boukhalfa",
+      "lat": 36.7327623,
+      "lon": 4.020407,
+      "geo_verified": true,
+      "geo_source": "Google Maps"
+    },
+    {
+      "id": "boumerdes",
+      "lat": 36.7461777,
+      "lon": 3.5003385,
+      "geo_verified": true,
+      "geo_source": "Google Maps"
+    },
+    {
+      "id": "caroubier",
+      "lat": 36.7353273,
+      "lon": 3.1226996,
+      "geo_verified": true,
+      "geo_source": "Google Maps"
+    },
+    {
+      "id": "chiffa",
+      "lat": 36.4648352,
+      "lon": 2.7424163,
+      "geo_verified": true,
+      "geo_source": "Google Maps"
+    },
+    {
+      "id": "chlef",
+      "lat": 36.1666368,
+      "lon": 1.3752269,
+      "geo_verified": true,
+      "geo_source": "Google Maps"
+    },
+    {
+      "id": "constantine",
+      "lat": 36.3662977,
+      "lon": 6.6230012,
+      "geo_verified": true,
+      "geo_source": "Google Maps"
+    },
+    {
+      "id": "corso",
+      "lat": 36.7393687,
+      "lon": 3.4387979,
+      "geo_verified": true,
+      "geo_source": "Google Maps"
+    },
+    {
+      "id": "dar_el_beida",
+      "lat": 36.7146837,
+      "lon": 3.2133579,
+      "geo_verified": true,
+      "geo_source": "Google Maps"
+    },
+    {
+      "id": "djamaa",
+      "lat": 33.5317575,
+      "lon": 5.995409,
+      "geo_verified": true,
+      "geo_source": "Google Maps"
+    },
+    {
+      "id": "djelfa",
+      "lat": 34.6644,
+      "lon": 3.2428,
+      "geo_verified": true,
+      "geo_source": "Google Maps"
+    },
+    {
+      "id": "draa_ben_khedda",
+      "lat": 36.7412495,
+      "lon": 3.9619982,
+      "geo_verified": true,
+      "geo_source": "Google Maps"
+    },
+    {
+      "id": "draa_el_mizan",
+      "lat": 36.5306626,
+      "lon": 3.717177,
+      "geo_verified": true,
+      "geo_source": "Google Maps"
+    },
+    {
+      "id": "el_adjiba",
+      "lat": 36.3282465,
+      "lon": 4.1546836,
+      "geo_verified": true,
+      "geo_source": "Google Maps"
+    },
+    {
+      "id": "el_affroun",
+      "lat": 36.4734488,
+      "lon": 2.6272909,
+      "geo_verified": true,
+      "geo_source": "Google Maps"
+    },
+    {
+      "id": "el_attaf",
+      "lat": 36.2253822,
+      "lon": 1.6717003,
+      "geo_verified": true,
+      "geo_source": "Google Maps"
+    },
+    {
+      "id": "el_eulma",
+      "lat": 36.1485018,
+      "lon": 5.6920517,
+      "geo_verified": true,
+      "geo_source": "Google Maps"
+    },
+    {
+      "id": "el_harrach",
+      "lat": 36.7220246,
+      "lon": 3.1399068,
+      "geo_verified": true,
+      "geo_source": "Google Maps"
+    },
+    {
+      "id": "el_harrouch",
+      "lat": 36.6616997,
+      "lon": 6.8375162,
+      "geo_verified": true,
+      "geo_source": "Google Maps"
+    },
+    {
+      "id": "el_kantara",
+      "lat": 35.2406063,
+      "lon": 5.7008444,
+      "geo_verified": true,
+      "geo_source": "Google Maps"
+    },
+    {
+      "id": "el_khroub",
+      "lat": 36.2586664,
+      "lon": 6.685654,
+      "geo_verified": true,
+      "geo_source": "Google Maps"
+    },
+    {
+      "id": "el_kseur",
+      "lat": 36.6700801,
+      "lon": 4.8580618,
+      "geo_verified": true,
+      "geo_source": "Google Maps"
+    },
+    {
+      "id": "el_meghair",
+      "lat": 33.9567816,
+      "lon": 5.9393727,
+      "geo_verified": true,
+      "geo_source": "Google Maps"
+    },
+    {
+      "id": "el_outaya",
+      "lat": 35.0387953,
+      "lon": 5.5900837,
+      "geo_verified": true,
+      "geo_source": "Google Maps"
+    },
+    {
+      "id": "gue_de_constantine",
+      "lat": 36.6969671,
+      "lon": 3.0979487,
+      "geo_verified": true,
+      "geo_source": "Google Maps"
+    },
+    {
+      "id": "hussein_dey",
+      "lat": 36.7451246,
+      "lon": 3.095307,
+      "geo_verified": true,
+      "geo_source": "Google Maps"
+    },
+    {
+      "id": "ighzer_amokrane",
+      "lat": 36.5308795,
+      "lon": 4.6213718,
+      "geo_verified": true,
+      "geo_source": "Google Maps"
+    },
+    {
+      "id": "isser",
+      "lat": 36.7266611,
+      "lon": 3.6913768,
+      "geo_verified": true,
+      "geo_source": "Google Maps"
+    },
+    {
+      "id": "khemis_miliana",
+      "lat": 36.2431787,
+      "lon": 2.2273427,
+      "geo_verified": true,
+      "geo_source": "Google Maps"
+    },
+    {
+      "id": "laghouat",
+      "lat": 33.7844,
+      "lon": 2.8718,
+      "geo_verified": true,
+      "geo_source": "Google Maps"
+    },
+    {
+      "id": "lakhdaria",
+      "lat": 36.5612167,
+      "lon": 3.5902179,
+      "geo_verified": true,
+      "geo_source": "Google Maps"
+    },
+    {
+      "id": "les_ateliers",
+      "lat": 36.7573182,
+      "lon": 3.0671765,
+      "geo_verified": true,
+      "geo_source": "Google Maps"
+    },
+    {
+      "id": "mohammadia",
+      "lat": 35.5907496,
+      "lon": 0.0687727,
+      "geo_verified": true,
+      "geo_source": "Google Maps"
+    },
+    {
+      "id": "morsott",
+      "lat": 35.6680277,
+      "lon": 8.0068738,
+      "geo_verified": true,
+      "geo_source": "Google Maps"
+    },
+    {
+      "id": "mostaganem",
+      "lat": 35.9333,
+      "lon": 0.0833,
+      "geo_verified": true,
+      "geo_source": "Google Maps"
+    },
+    {
+      "id": "mouzaia",
+      "lat": 36.4705313,
+      "lon": 2.6943863,
+      "geo_verified": true,
+      "geo_source": "Google Maps"
+    },
+    {
+      "id": "msila",
+      "lat": 35.7066165,
+      "lon": 4.5217803,
+      "geo_verified": true,
+      "geo_source": "Google Maps"
+    },
+    {
+      "id": "naciria",
+      "lat": 36.7513268,
+      "lon": 3.8303273,
+      "geo_verified": true,
+      "geo_source": "Google Maps"
+    },
+    {
+      "id": "oran",
+      "lat": 35.6942147,
+      "lon": -0.6128087,
+      "geo_verified": true,
+      "geo_source": "Google Maps"
+    },
+    {
+      "id": "oued_aissi",
+      "lat": 36.7023693,
+      "lon": 4.1418779,
+      "geo_verified": true,
+      "geo_source": "Google Maps"
+    },
+    {
+      "id": "oued_aissi_universite",
+      "lat": 36.7036869,
+      "lon": 4.106242,
+      "geo_verified": true,
+      "geo_source": "Google Maps"
+    },
+    {
+      "id": "oued_fodda",
+      "lat": 36.1896958,
+      "lon": 1.5386304,
+      "geo_verified": true,
+      "geo_source": "Google Maps"
+    },
+    {
+      "id": "oued_ghir",
+      "lat": 36.7059038,
+      "lon": 4.986192,
+      "geo_verified": true,
+      "geo_source": "Google Maps"
+    },
+    {
+      "id": "oued_rhiou",
+      "lat": 35.9676711,
+      "lon": 0.9182418,
+      "geo_verified": true,
+      "geo_source": "Google Maps"
+    },
+    {
+      "id": "oued_smar",
+      "lat": 36.7036224,
+      "lon": 3.1747831,
+      "geo_verified": true,
+      "geo_source": "Google Maps"
+    },
+    {
+      "id": "oued_tlelat",
+      "lat": 35.5464101,
+      "lon": -0.5464068,
+      "geo_verified": true,
+      "geo_source": "Google Maps"
+    },
+    {
+      "id": "Ouled_Derradj",
+      "lat": 35.6825595,
+      "lon": 4.7385581,
+      "geo_verified": true,
+      "geo_source": "Google Maps"
+    },
+    {
+      "id": "oum_el_bouaghi",
+      "lat": 35.8588992,
+      "lon": 7.1152967,
+      "geo_verified": true,
+      "geo_source": "Google Maps"
+    },
+    {
+      "id": "ramdane_djamel",
+      "lat": 36.755631,
+      "lon": 6.9057859,
+      "geo_verified": true,
+      "geo_source": "Google Maps"
+    },
+    {
+      "id": "reghaia",
+      "lat": 36.7349726,
+      "lon": 3.3431609,
+      "geo_verified": true,
+      "geo_source": "Google Maps"
+    },
+    {
+      "id": "reghaia_zi",
+      "lat": 36.350758,
+      "lon": 3.334964,
+      "geo_verified": true,
+      "geo_source": "Google Maps"
+    },
+    {
+      "id": "relizane",
+      "lat": 35.7473735,
+      "lon": 0.5567925,
+      "geo_verified": true,
+      "geo_source": "Google Maps"
+    },
+    {
+      "id": "rouiba",
+      "lat": 36.734152,
+      "lon": 3.2833362,
+      "geo_verified": true,
+      "geo_source": "Google Maps"
+    },
+    {
+      "id": "rouiba_snvi",
+      "lat": 36.7330466,
+      "lon": 3.323334,
+      "geo_verified": true,
+      "geo_source": "Google Maps"
+    },
+    {
+      "id": "rouiba_zi",
+      "lat": 36.7325221,
+      "lon": 3.3065648,
+      "geo_verified": true,
+      "geo_source": "Google Maps"
+    },
+    {
+      "id": "rouina",
+      "lat": 36.2487843,
+      "lon": 1.8123656,
+      "geo_verified": true,
+      "geo_source": "Google Maps"
+    },
+    {
+      "id": "saida",
+      "lat": 34.8385,
+      "lon": 0.1444,
+      "geo_verified": true,
+      "geo_source": "Google Maps"
+    },
+    {
+      "id": "seggana",
+      "lat": 35.3674166,
+      "lon": 5.561247,
+      "geo_verified": true,
+      "geo_source": "Google Maps"
+    },
+    {
+      "id": "setif",
+      "lat": 36.1875623,
+      "lon": 5.417557,
+      "geo_verified": true,
+      "geo_source": "Google Maps"
+    },
+    {
+      "id": "si_mustapha",
+      "lat": 36.7202889,
+      "lon": 3.635737,
+      "geo_verified": true,
+      "geo_source": "Google Maps"
+    },
+    {
+      "id": "sidi_abdellah",
+      "lat": 36.6796607,
+      "lon": 2.893045,
+      "geo_verified": true,
+      "geo_source": "Google Maps"
+    },
+    {
+      "id": "sidi_abdellah_universite",
+      "lat": 36.6919706,
+      "lon": 2.8738951,
+      "geo_verified": true,
+      "geo_source": "Google Maps"
+    },
+    {
+      "id": "sidi_aich",
+      "lat": 36.6094202,
+      "lon": 4.6951129,
+      "geo_verified": true,
+      "geo_source": "Google Maps"
+    },
+    {
+      "id": "sidi-bel-abbes",
+      "lat": 35.1979,
+      "lon": -0.6318,
+      "geo_verified": true,
+      "geo_source": "Google Maps"
+    },
+    {
+      "id": "sig",
+      "lat": 35.5295324,
+      "lon": -0.1607662,
+      "geo_verified": true,
+      "geo_source": "Google Maps"
+    },
+    {
+      "id": "skikda",
+      "lat": 36.8776,
+      "lon": 6.9056,
+      "geo_verified": true,
+      "geo_source": "Google Maps"
+    },
+    {
+      "id": "souk_el_had",
+      "lat": 36.6732416,
+      "lon": 3.6069022,
+      "geo_verified": true,
+      "geo_source": "Google Maps"
+    },
+    {
+      "id": "tadjenanet",
+      "lat": 36.1123352,
+      "lon": 5.9870512,
+      "geo_verified": true,
+      "geo_source": "Google Maps"
+    },
+    {
+      "id": "tadmait",
+      "lat": 36.7421831,
+      "lon": 3.9019064,
+      "geo_verified": true,
+      "geo_source": "Google Maps"
+    },
+    {
+      "id": "takrietz",
+      "lat": 36.5776081,
+      "lon": 4.6506809,
+      "geo_verified": true,
+      "geo_source": "Google Maps"
+    },
+    {
+      "id": "tazmalt",
+      "lat": 36.3796186,
+      "lon": 4.4086278,
+      "geo_verified": true,
+      "geo_source": "Google Maps"
+    },
+    {
+      "id": "tebessa",
+      "lat": 35.4067967,
+      "lon": 8.1230018,
+      "geo_verified": true,
+      "geo_source": "Google Maps"
+    },
+    {
+      "id": "teleghma",
+      "lat": 36.1120121,
+      "lon": 6.3560058,
+      "geo_verified": true,
+      "geo_source": "Google Maps"
+    },
+    {
+      "id": "tessala_el_merdja",
+      "lat": 36.6394172,
+      "lon": 2.938131,
+      "geo_verified": true,
+      "geo_source": "Google Maps"
+    },
+    {
+      "id": "thenia",
+      "lat": 36.7244153,
+      "lon": 3.5552619,
+      "geo_verified": true,
+      "geo_source": "Google Maps"
+    },
+    {
+      "id": "tidjelabine",
+      "lat": 36.7295716,
+      "lon": 3.510593,
+      "geo_verified": true,
+      "geo_source": "Google Maps"
+    },
+    {
+      "id": "tindouf",
+      "lat": 27.676,
+      "lon": -8.147,
+      "geo_verified": true,
+      "geo_source": "Google Maps"
+    },
+    {
+      "id": "tissemsilt",
+      "lat": 35.6033,
+      "lon": 1.8211,
+      "geo_verified": true,
+      "geo_source": "Google Maps"
+    },
+    {
+      "id": "tizi_ouzou",
+      "lat": 36.7096644,
+      "lon": 4.0346665,
+      "geo_verified": true,
+      "geo_source": "Google Maps"
+    },
+    {
+      "id": "tlemcen",
+      "lat": 34.8859,
+      "lon": -1.3113,
+      "geo_verified": true,
+      "geo_source": "Google Maps"
+    },
+    {
+      "id": "tunis",
+      "lat": 36.7952,
+      "lon": 10.1805,
+      "geo_verified": true,
+      "geo_source": "Google Maps"
+    },
+    {
+      "id": "zeralda",
+      "lat": 36.7011217,
+      "lon": 2.8513601,
+      "geo_verified": true,
+      "geo_source": "Google Maps"
+    }
+  ]
+}

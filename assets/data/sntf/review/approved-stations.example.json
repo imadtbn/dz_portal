@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "warning": "EXAMPLE ONLY. No items have been approved, applying this file must fail until manually reviewed.",
+  "decisions": [
+    {
+      "input_name": "OUED AISSI",
+      "action": "link_alias",
+      "station_id": "oued_aissi",
+      "approved": false,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "source_url": "https://www.sntf.dz/",
+      "comment": "Verify the official station label before changing approved to true."
+    },
+    {
+      "input_name": "SIDI BOUABIDA",
+      "action": "add_station",
+      "station_id": "sntf_sidi_bouabida",
+      "name": "سيدي بوعبيدة",
+      "name_fr": "Sidi Bouabida",
+      "approved": false,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "source_url": "https://www.sntf.dz/",
+      "comment": "Review Arabic spelling and evidence. Coordinates will be null and geo_verified=false."
+    }
+  ]
+}
