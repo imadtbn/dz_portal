@@ -62,3 +62,9 @@
 .tool-page .footer-links{display:flex;flex-wrap:wrap;gap:12px}
 @media(max-width:600px){.tool-page .ntw-page{width:calc(100% - 20px)}.portal-tool-brand strong{font-size:.95rem}.portal-tool-brand span{font-size:.78rem}.portal-tools-home{padding:8px;font-size:.85rem}.tool-page .ntw-actions{grid-template-columns:1fr}}
 @media print{.tool-page .header,.tool-page .footer,.tool-page .dz-share-slot,.tool-page .tool-ad{display:none!important}}
+
+.tool-page .tool-breadcrumb{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-top:16px;font-size:.88rem;line-height:1.7}
+.tool-page .tool-breadcrumb a{color:#e8f8ed;text-decoration:underline;text-underline-offset:3px}
+.tool-page .tool-breadcrumb span{color:#fff}
+.tool-page .tool-breadcrumb i{font-size:.75rem;opacity:.8}
+.tool-page .ntw-hero .ntw-tag{color:#fff}
