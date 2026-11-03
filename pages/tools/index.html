@@ -63,7 +63,37 @@
 .tools-directory .directory-status-row .category-intro{margin:0}
 .tools-directory .tool-card[hidden]{display:none!important}
 .tools-directory .tool-card:focus-visible,.tools-directory .category-filter:focus-visible,.tools-directory .search-clear:focus-visible,.tools-directory .filter-reset:focus-visible{outline:3px solid #83c99d;outline-offset:3px}
-@media(max-width:520px){.tools-directory .category-filters{flex-wrap:nowrap;overflow-x:auto;overscroll-behavior-x:contain;scroll-snap-type:x proximity;padding:4px 2px 10px}.tools-directory .category-filter{flex:0 0 auto;scroll-snap-align:start}.tools-directory .directory-search{padding:10px 11px}.tools-directory .directory-status-row{align-items:flex-start}.tools-directory .filter-toolbar{align-items:center}}
+/* Header and category controls aligned with the portal's shared green identity. */
+.tools-page-header{padding:10px clamp(12px,3vw,28px);background:linear-gradient(135deg,#006233 0%,#004d26 100%);color:#fff}
+.tools-page-header .header-content{width:min(1180px,100%);gap:16px}
+.tools-page-header .logo-section{min-width:0}
+.tools-page-header .portal-tool-brand{display:flex;align-items:center;gap:10px;color:#fff;text-decoration:none;min-width:0}
+.tools-page-header .portal-tool-brand img{width:38px;height:38px;object-fit:contain;border-radius:50%;flex:none}
+.tools-page-header .portal-tool-brand>span{display:flex;flex-direction:column;line-height:1.25}
+.tools-page-header .portal-tool-brand strong{font-size:clamp(15px,2.4vw,20px);font-weight:800}
+.tools-page-header .portal-tool-brand>span>span{font-size:13px;font-weight:500;opacity:.92}
+.tools-page-header .header-actions{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.tools-page-header .portal-tools-home,.tools-page-header .portal-tools-current{display:inline-flex;align-items:center;justify-content:center;gap:7px;padding:9px 12px;border:1px solid #ffffff45;border-radius:11px;color:#fff;text-decoration:none;font-weight:700;white-space:nowrap}
+.tools-page-header .portal-tools-home:hover,.tools-page-header .portal-tools-current:hover{background:#ffffff1b}
+.tools-page-header .portal-tools-current{background:#ffffff18}
+.tools-directory .filter-toolbar{margin-top:18px}
+.tools-directory .category-filters{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin:12px 0 18px}
+.tools-directory .category-filter{display:flex;align-items:center;justify-content:center;gap:8px;min-width:0;min-height:46px;padding:9px 12px;white-space:normal;text-align:center;line-height:1.35;border-radius:12px;overflow-wrap:anywhere}
+.tools-directory .filter-count{flex:0 0 auto}
+@media(max-width:800px){.tools-directory .category-filters{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:560px){
+ .tools-page-header{padding:9px 10px}
+ .tools-page-header .header-content{align-items:center;gap:8px}
+ .tools-page-header .portal-tool-brand img{width:32px;height:32px}
+ .tools-page-header .portal-tool-brand strong{font-size:14px}
+ .tools-page-header .portal-tool-brand>span>span{font-size:11px}
+ .tools-page-header .header-actions{gap:5px}
+ .tools-page-header .portal-tools-home,.tools-page-header .portal-tools-current{padding:8px 9px;font-size:12px;gap:5px}
+ .tools-directory .category-filters{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;overflow:visible;padding:0}
+ .tools-directory .category-filter{min-height:44px;padding:8px 7px;font-size:.9rem}
+ .tools-directory .directory-status-row{align-items:flex-start}
+}
+@media(max-width:360px){.tools-page-header .portal-tools-current span{display:none}.tools-page-header .portal-tools-home span{display:none}.tools-page-header .portal-tools-home,.tools-page-header .portal-tools-current{width:38px;height:38px;padding:0}.tools-directory .category-filter{font-size:.82rem}}
 </style>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-K23WYKK60X"></script>
   <script>
@@ -74,7 +104,7 @@
   </script>
 </head>
 <body class="tool-page">
-<header class="header" id="main-header"><div class="header-content"><div class="logo-section"><a href="../../index.html" class="portal-tool-brand"><strong>البوابة الجزائرية</strong><span>للخدمات الرقمية</span></a></div><div class="header-actions"><a class="portal-tools-home" href="../../index.html"><i class="fa-solid fa-house" aria-hidden="true"></i> الرئيسية</a></div></div></header>
+<header class="header tools-page-header" id="main-header"><div class="header-content"><div class="logo-section"><a href="../../index.html" class="portal-tool-brand" aria-label="العودة إلى البوابة الجزائرية للخدمات الرقمية"><img src="../../assets/images/icon.png" alt="" width="40" height="40"><span><strong>البوابة الجزائرية</strong><span>للخدمات الرقمية</span></span></a></div><div class="header-actions"><a class="portal-tools-home" href="../../index.html"><i class="fa-solid fa-house" aria-hidden="true"></i><span>الرئيسية</span></a><a class="portal-tools-current" href="./" aria-current="page"><i class="fa-solid fa-toolbox" aria-hidden="true"></i><span>الأدوات الرقمية</span></a></div></div></header>
 <main class="tools-directory">
 <section class="directory-hero hero" aria-labelledby="directory-title"><h1 id="directory-title">الأدوات الرقمية</h1><p>مكتبة موحدة للأدوات المجانية التي تساعدك في الحساب والدراسة وتنظيم المهام اليومية. يجري دمج الأدوات تدريجيًا بعد مراجعة وظائفها وتوافقها مع قالب البوابة.</p></section>
 <section class="ad-container" aria-label="إعلان" style="width:100%;max-width:970px;min-width:0;box-sizing:border-box;margin:18px auto;padding:10px 12px;text-align:center;border:1px solid #e2ebe4;border-radius:14px;overflow:hidden"><p style="margin:0 0 8px;color:#708176;font-size:.78rem">إعلان</p><ins class="adsbygoogle" style="display:block;width:100%;max-width:100%;min-width:0" data-ad-client="ca-pub-5656416032906373" data-ad-slot="3143411927" data-ad-format="fluid" data-ad-layout-key="-fr+57+4a-dc+8g"></ins></section>
