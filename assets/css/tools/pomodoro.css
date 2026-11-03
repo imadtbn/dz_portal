@@ -1,0 +1,12 @@
+.pomodoro-panel{text-align:center}
+.pomodoro-modes{display:flex;flex-wrap:wrap;justify-content:center;gap:9px;margin:18px 0}
+.pomodoro-mode{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;padding:10px 14px;border:1px solid var(--border-color,#cdded4);border-radius:12px;background:var(--surface-color,#fff);color:var(--text-color,#20352c);font:inherit;font-weight:800;cursor:pointer}
+.pomodoro-mode.active,.pomodoro-mode[aria-pressed=true]{background:#087443;color:#fff;border-color:#087443}
+.pomodoro-clock{width:min(300px,80vw);aspect-ratio:1;border-radius:50%;border:10px solid #d8ebde;background:var(--bg-color,#f3f8f4);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;margin:22px auto;color:#087443}
+.pomodoro-clock span{font-size:clamp(2.7rem,11vw,4.4rem);font-weight:800;line-height:1;direction:ltr;font-variant-numeric:tabular-nums}
+.pomodoro-clock small{font-size:1rem;font-weight:800}
+.pomodoro-actions{justify-content:center}
+.pomodoro-actions .simple-button{min-width:150px}
+.pomodoro-sound{display:flex;justify-content:center;align-items:center;gap:9px;margin-top:16px;color:var(--text-muted,#617667)}
+.pomodoro-sound input{width:18px;height:18px;accent-color:#087443}
+@media(max-width:520px){.pomodoro-modes{display:grid;grid-template-columns:1fr}.pomodoro-mode{width:100%}.pomodoro-actions{display:grid;grid-template-columns:1fr}}
