@@ -61,3 +61,54 @@
 .dz-unified-tool-page .dz-unified-hero .dz-share-help{background:#f2f8f4;color:#006233;border-color:#b9d3c2}
 .dz-unified-tool-page>.dz-import-header,.dz-unified-tool-page>.ad-container.dz-import-ad{display:none!important}
 .dz-unified-tool-page main>.bm-hero,.dz-unified-tool-page main>.tool-hero{margin-top:16px!important}
+
+
+/* Shared AdSense placements for all individual tool pages.
+   Reserve space before the creative arrives and constrain the box to the
+   viewport width so mobile ads cannot create horizontal page overflow. */
+.dz-unified-tool-page .dz-tool-ad {
+  display: block;
+  position: relative;
+  clear: both;
+  float: none;
+  width: 100%;
+  max-width: 970px;
+  min-width: 0;
+  box-sizing: border-box;
+  margin: 16px auto 22px;
+  padding: 0;
+  overflow: clip;
+  contain: layout style;
+  text-align: center;
+}
+.dz-unified-tool-page .dz-tool-ad ins.adsbygoogle {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  margin-inline: auto;
+  box-sizing: border-box;
+}
+.dz-unified-tool-page .dz-tool-ad-top { min-height: 190px; }
+.dz-unified-tool-page .dz-tool-ad-bottom { min-height: 110px; margin-top: 24px; }
+.dz-unified-tool-page .dz-tool-ad[data-dz-placement="top"] ins[data-ad-format="fluid"] { min-height: 190px; }
+.dz-unified-tool-page .dz-tool-ad ins.adsbygoogle > iframe,
+.dz-unified-tool-page .dz-tool-ad ins.adsbygoogle > div,
+.dz-unified-tool-page .dz-tool-ad ins.adsbygoogle > div > iframe {
+  max-width: 100%;
+  margin-inline: auto !important;
+}
+.dz-unified-tool-page .dz-tool-ad:has(> ins.adsbygoogle[data-ad-status="unfilled"]) {
+  display: none !important;
+  min-height: 0 !important;
+  margin-block: 0 !important;
+}
+@media (max-width: 600px) {
+  .dz-unified-tool-page .dz-tool-ad {
+    width: 100%;
+    max-width: 100%;
+    margin-block: 12px 18px;
+  }
+  .dz-unified-tool-page .dz-tool-ad-top { min-height: 210px; }
+  .dz-unified-tool-page .dz-tool-ad-bottom { min-height: 115px; }
+}
