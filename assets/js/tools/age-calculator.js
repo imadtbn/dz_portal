@@ -32,7 +32,7 @@
     }
     let nextYear = current.getFullYear();
     let nextBirthday = new Date(nextYear, birth.getMonth(), birth.getDate());
-    if (nextBirthday < current || nextBirthday.getTime() === current.getTime() && birth.getTime() !== current.getTime()) {
+    if (nextBirthday < current) {
       nextYear += 1;
       nextBirthday = new Date(nextYear, birth.getMonth(), birth.getDate());
     }
