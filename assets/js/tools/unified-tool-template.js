@@ -71,7 +71,7 @@
     const topAd = document.querySelector('body > .dz-import-ad, body > .ad-container.dz-import-ad');
     if (topAd && topAd !== hero && !hero.contains(topAd)) {
       const share = hero.querySelector('.dz-share-slot');
-      (share || hero).after(topAd);
+      hero.after(topAd);
     }
   }
   function buildFooter() {
