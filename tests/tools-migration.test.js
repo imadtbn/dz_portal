@@ -141,6 +141,24 @@ test('flashcards tool preserves creation, spaced review, quiz, and backup featur
   assert.match(styles, /flash-app/);
 });
 
+test('exam planner preserves calendar, reminders, revision planning, and export/import features', () => {
+  const page = read('pages/tools/study/exam-planner.html');
+  const script = read('assets/js/tools/exam-planner.js');
+  const directory = read('pages/tools/index.html');
+  assert.match(page, /canonical.*pages\/tools\/study\/exam-planner\.html/);
+  assert.match(page, /assets\/js\/site-tags\.js/);
+  assert.match(page, /data-ad-client="ca-pub-5656416032906373"/);
+  assert.match(page, /id="eventForm"/);
+  assert.match(page, /id="calendar"/);
+  assert.match(page, /id="buildPlan"/);
+  assert.match(page, /id="exportIcs"/);
+  assert.match(script, /studentDzExamPlannerV1/);
+  assert.match(script, /importJson/);
+  assert.match(script, /renderNotifications/);
+  assert.match(directory, /href="study\/exam-planner\.html" data-category="study"/);
+  assert.doesNotMatch(page, /KEY='studentDzExamPlannerV1'/);
+});
+
 test('all migrated standalone tool scripts have valid JavaScript syntax', () => {
   const scripts = [
     'assets/js/tools/number-to-words.js',
@@ -149,6 +167,7 @@ test('all migrated standalone tool scripts have valid JavaScript syntax', () => 
     'assets/js/tools/date-difference.js',
     'assets/js/tools/pomodoro.js',
     'assets/js/tools/flashcards.js',
+    'assets/js/tools/exam-planner.js',
   ];
   for (const file of scripts) {
     assert.doesNotThrow(() => new vm.Script(read(file), { filename: file }), file);
@@ -164,6 +183,7 @@ test('all migrated tool pages have resolvable local asset and navigation paths',
     'pages/tools/calculators/date-difference.html',
     'pages/tools/study/pomodoro.html',
     'pages/tools/study/flashcards.html',
+    'pages/tools/study/exam-planner.html',
   ];
   for (const file of pages) {
     const html = read(file);
@@ -188,5 +208,6 @@ test('tools directory and calculator and study tools are present in the existing
   assert.match(sitemap, /https:\/\/imadtbn\.github\.io\/dz_portal\/pages\/tools\/calculators\/date-difference\.html/);
   assert.match(sitemap, /https:\/\/imadtbn\.github\.io\/dz_portal\/pages\/tools\/study\/pomodoro\.html/);
   assert.match(sitemap, /https:\/\/imadtbn\.github\.io\/dz_portal\/pages\/tools\/study\/flashcards\.html/);
+  assert.match(sitemap, /https:\/\/imadtbn\.github\.io\/dz_portal\/pages\/tools\/study\/exam-planner\.html/);
   assert.match(sitemap, /<video:video>/);
 });
