@@ -1,0 +1,860 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <!-- SEO Foundation -->
+    <link rel="canonical" href="https://imadtbn.github.io/dz_portal/pages/tools/study/notes-calendar.html">
+    <meta name="description" content="نظم ملاحظاتك ومواعيدك ومهامك الدراسية في تقويم عملي مع الحفظ داخل المتصفح.">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://imadtbn.github.io/dz_portal/pages/tools/study/notes-calendar.html">
+    <meta property="og:title" content="سجل الملاحظات والمواعيد والمهام - Student DZ">
+    <meta property="og:description"
+        content="نظم ملاحظاتك ومواعيدك ومهامك الدراسية في تقويم عملي مع الحفظ داخل المتصفح.">
+    <meta property="og:image"
+        content="https://raw.githubusercontent.com/imadtbn/student-dz/main/assets/images/icon-512.png">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://imadtbn.github.io/dz_portal/pages/tools/study/notes-calendar.html">
+    <meta name="twitter:title" content="سجل الملاحظات والمواعيد والمهام - Student DZ">
+    <meta name="twitter:description"
+        content="نظم ملاحظاتك ومواعيدك ومهامك الدراسية في تقويم عملي مع الحفظ داخل المتصفح.">
+    <meta name="twitter:image"
+        content="https://raw.githubusercontent.com/imadtbn/student-dz/main/assets/images/icon-512.png">
+
+    <!-- SEO Foundation -->
+    <!-- Open Graph -->
+
+
+
+
+    <!-- Twitter -->
+
+
+
+
+    <title>notes calendar | البوابة الجزائرية للخدمات الرقمية</title>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://imadtbn.github.io/student-dz/assets/css/main.css">
+    <link rel="stylesheet" href="https://imadtbn.github.io/student-dz/assets/css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/png" href="https://imadtbn.github.io/student-dz/assets/images/icon.png">
+    <style>
+        * {
+            box-sizing: border-box
+        }
+
+        .planner {
+            max-width: 1100px;
+            margin: 2rem auto;
+            padding-bottom: 2rem
+        }
+
+        .planner-card {
+            background: var(--bg-card);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-md);
+            padding: 1.4rem;
+            margin-bottom: 1rem;
+            min-width: 0
+        }
+
+        .planner-form {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr 1fr;
+            gap: 12px
+        }
+
+        .field {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            min-width: 0
+        }
+
+        .field label {
+            font-weight: 700
+        }
+
+        .field input,
+        .field select,
+        .field textarea {
+            width: 100%;
+            padding: 11px;
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-md);
+            background: var(--bg-main);
+            color: var(--text-main);
+            font: inherit;
+            min-width: 0
+        }
+
+        .field textarea {
+            min-height: 80px;
+            resize: vertical
+        }
+
+        .field.full {
+            grid-column: 1/-1
+        }
+
+        .form-actions {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 8px;
+            margin-top: 12px
+        }
+
+        .form-actions .btn {
+            width: 100%;
+            min-height: 44px
+        }
+
+        .btn.danger {
+            background: #dc3545;
+            border-color: #dc3545
+        }
+
+        .btn.small {
+            padding: .5rem .7rem;
+            font-size: .9rem;
+            min-height: 40px
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px
+        }
+
+        .stat {
+            padding: 1rem;
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-md);
+            text-align: center;
+            background: var(--bg-main)
+        }
+
+        .stat strong {
+            display: block;
+            font-size: 1.4rem
+        }
+
+        .toolbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 10px;
+            flex-wrap: wrap
+        }
+
+        .toolbar-actions {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap
+        }
+
+        .toolbar-actions select {
+            min-height: 40px;
+            padding: .45rem;
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-md);
+            background: var(--bg-main);
+            color: var(--text-main);
+            font: inherit
+        }
+
+        .entries {
+            display: grid;
+            gap: 10px
+        }
+
+        .entry {
+            border: 1px solid var(--border-color);
+            border-right: 5px solid var(--primary-color);
+            border-radius: var(--radius-md);
+            padding: 1rem;
+            background: var(--bg-main);
+            min-width: 0
+        }
+
+        .entry.type-appointment {
+            border-right-color: #0d6efd
+        }
+
+        .entry.type-task {
+            border-right-color: #198754
+        }
+
+        .entry.done {
+            opacity: .65
+        }
+
+        .entry-top {
+            display: flex;
+            justify-content: space-between;
+            gap: 12px;
+            align-items: flex-start
+        }
+
+        .entry-title {
+            font-size: 1.05rem;
+            font-weight: 800;
+            overflow-wrap: anywhere
+        }
+
+        .entry-meta {
+            color: var(--text-muted);
+            font-size: .9rem;
+            margin: .4rem 0;
+            line-height: 1.8
+        }
+
+        .entry-note {
+            white-space: pre-wrap;
+            line-height: 1.7;
+            overflow-wrap: anywhere
+        }
+
+        .entry-actions {
+            display: flex;
+            gap: 7px;
+            flex-wrap: wrap;
+            margin-top: .8rem
+        }
+
+        .entry-actions .btn {
+            flex: 0 1 auto
+        }
+
+        .badge {
+            display: inline-block;
+            padding: .25rem .55rem;
+            border-radius: 999px;
+            background: var(--primary-light);
+            color: #fff;
+            font-size: .78rem
+        }
+
+        .badge.appointment {
+            background: #0d6efd
+        }
+
+        .badge.task {
+            background: #198754
+        }
+
+        .badge.note {
+            background: #6f42c1
+        }
+
+        .overdue {
+            border-right-color: #dc3545 !important
+        }
+
+        .soon {
+            border-right-color: #d97706 !important
+        }
+
+        .notice {
+            display: none;
+            padding: .85rem 1rem;
+            border-radius: var(--radius-md);
+            background: var(--bg-main);
+            border: 1px solid var(--border-color);
+            margin-bottom: 1rem;
+            line-height: 1.7
+        }
+
+        .notice.show {
+            display: block
+        }
+
+        .notice.reminder-alert {
+            border-width: 2px;
+            font-weight: 700
+        }
+
+        .calendar-head {
+            display: grid;
+            grid-template-columns: 44px 1fr 44px;
+            gap: 10px;
+            align-items: center;
+            margin-bottom: 1rem
+        }
+
+        .calendar-head h2 {
+            text-align: center;
+            margin: 0;
+            font-size: 1.25rem
+        }
+
+        .calendar-head .btn {
+            width: 44px;
+            height: 44px;
+            padding: 0
+        }
+
+        .calendar-grid {
+            display: grid;
+            grid-template-columns: repeat(7, minmax(0, 1fr));
+            gap: 6px
+        }
+
+        .cal-day-name {
+            text-align: center;
+            font-weight: 800;
+            padding: .55rem .2rem;
+            color: var(--text-muted);
+            font-size: .9rem
+        }
+
+        .cal-cell {
+            min-height: 95px;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 6px;
+            background: var(--bg-main);
+            cursor: pointer;
+            min-width: 0;
+            overflow: hidden
+        }
+
+        .cal-cell:hover {
+            border-color: var(--primary-color)
+        }
+
+        .cal-cell.muted {
+            opacity: .4
+        }
+
+        .cal-cell.today {
+            outline: 2px solid var(--primary-color);
+            outline-offset: -2px
+        }
+
+        .cal-cell.selected {
+            box-shadow: inset 0 0 0 2px var(--primary-light)
+        }
+
+        .cal-num {
+            font-weight: 800
+        }
+
+        .cal-item {
+            font-size: .74rem;
+            padding: 3px 4px;
+            margin-top: 4px;
+            border-radius: 5px;
+            background: var(--primary-light);
+            color: #fff;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap
+        }
+
+        .cal-more {
+            font-size: .7rem;
+            color: var(--text-muted);
+            margin-top: 3px
+        }
+
+        .empty {
+            text-align: center;
+            padding: 1.5rem;
+            color: var(--text-muted)
+        }
+
+        .notification-status {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-top: 8px;
+            color: var(--text-muted);
+            font-size: .86rem
+        }
+
+        .next-reminder {
+            margin-top: .7rem;
+            padding: .7rem .8rem;
+            border-radius: var(--radius-md);
+            background: var(--bg-main);
+            border: 1px dashed var(--border-color);
+            font-size: .9rem
+        }
+
+        .toast {
+            position: fixed;
+            right: 16px;
+            bottom: 16px;
+            z-index: 9999;
+            max-width: min(420px, calc(100vw - 32px));
+            padding: 1rem 1.1rem;
+            border-radius: 12px;
+            background: var(--bg-card);
+            color: var(--text-main);
+            box-shadow: var(--shadow-lg);
+            border: 1px solid var(--border-color);
+            transform: translateY(130%);
+            transition: transform .25s ease
+        }
+
+        .toast.show {
+            transform: translateY(0)
+        }
+
+        @media(max-width:900px) {
+            .planner {
+                margin: 1.25rem auto
+            }
+
+            .planner-form {
+                grid-template-columns: 1fr 1fr
+            }
+
+            .calendar-grid {
+                gap: 4px
+            }
+
+            .cal-cell {
+                min-height: 82px
+            }
+
+            .cal-item {
+                font-size: .68rem
+            }
+        }
+
+        @media(max-width:600px) {
+            .planner {
+                margin: .7rem auto;
+                padding: 0 .15rem 1.5rem
+            }
+
+            .planner-card {
+                padding: .85rem;
+                border-radius: 14px
+            }
+
+            .section-title {
+                font-size: 1.25rem !important;
+                line-height: 1.5
+            }
+
+            .planner>p {
+                font-size: .9rem;
+                line-height: 1.7
+            }
+
+            .planner-form {
+                grid-template-columns: 1fr;
+                gap: 10px
+            }
+
+            .field.full {
+                grid-column: auto
+            }
+
+            .form-actions {
+                grid-template-columns: 1fr 1fr
+            }
+
+            .form-actions #notifyBtn {
+                grid-column: 1/-1
+            }
+
+            .stats {
+                grid-template-columns: 1fr 1fr;
+                gap: 7px
+            }
+
+            .stat {
+                padding: .7rem .4rem
+            }
+
+            .stat strong {
+                font-size: 1.2rem
+            }
+
+            .toolbar {
+                align-items: stretch
+            }
+
+            .toolbar h2 {
+                font-size: 1.1rem;
+                margin: 0
+            }
+
+            .toolbar-actions {
+                width: 100%;
+                display: grid;
+                grid-template-columns: 1fr 1fr
+            }
+
+            .toolbar-actions select,
+            .toolbar-actions .btn {
+                width: 100%;
+                min-width: 0
+            }
+
+            .entry {
+                padding: .85rem
+            }
+
+            .entry-top {
+                flex-direction: column;
+                gap: 7px
+            }
+
+            .entry-top>div:last-child {
+                width: 100%
+            }
+
+            .entry-top .btn {
+                width: 100%
+            }
+
+            .entry-actions {
+                display: grid;
+                grid-template-columns: 1fr 1fr
+            }
+
+            .entry-actions .btn {
+                width: 100%;
+                min-width: 0
+            }
+
+            .entry-meta {
+                font-size: .82rem
+            }
+
+            .calendar-head {
+                grid-template-columns: 40px 1fr 40px;
+                gap: 6px
+            }
+
+            .calendar-head h2 {
+                font-size: 1rem
+            }
+
+            .calendar-head .btn {
+                width: 40px;
+                height: 40px
+            }
+
+            .calendar-grid {
+                gap: 2px
+            }
+
+            .cal-day-name {
+                font-size: .68rem;
+                padding: .4rem .05rem;
+                white-space: nowrap;
+                overflow: hidden
+            }
+
+            .cal-cell {
+                min-height: 64px;
+                padding: 4px;
+                border-radius: 6px
+            }
+
+            .cal-num {
+                font-size: .8rem
+            }
+
+            .cal-item {
+                display: block;
+                font-size: 0;
+                background: transparent;
+                padding: 0;
+                margin: 3px 0 0;
+                white-space: normal
+            }
+
+            .cal-item::before {
+                content: '•';
+                font-size: 1rem;
+                color: var(--primary-color);
+                font-weight: 900
+            }
+
+            .cal-more {
+                font-size: .62rem;
+                text-align: center
+            }
+
+            .notification-status {
+                font-size: .78rem
+            }
+
+            .next-reminder {
+                font-size: .82rem
+            }
+
+            .toast {
+                right: 10px;
+                bottom: 10px;
+                max-width: calc(100vw - 20px)
+            }
+        }
+
+        @media(max-width:360px) {
+            .planner-card {
+                padding: .7rem
+            }
+
+            .stats {
+                gap: 5px
+            }
+
+            .stat {
+                font-size: .8rem
+            }
+
+            .cal-day-name {
+                font-size: .62rem
+            }
+
+            .cal-cell {
+                min-height: 58px
+            }
+
+            .entry-actions,
+            .form-actions {
+                grid-template-columns: 1fr
+            }
+
+            .form-actions #notifyBtn {
+                grid-column: auto
+            }
+
+            .toolbar-actions {
+                grid-template-columns: 1fr
+            }
+
+            .calendar-head h2 {
+                font-size: .9rem
+            }
+        }
+
+        @media(prefers-reduced-motion:reduce) {
+            .toast {
+                transition: none
+            }
+        }
+    </style>
+
+    <meta name="google-site-verification" content="f5Xi4oFx0v5dN6iPZd9qCw-7vnc3vIbAeYF9jr4vwVM" />
+    <meta name="msvalidate.01" content="9BCA38377A234DCCEB9991EAD1A2F6C2" />
+
+
+    <script type="text/javascript">
+        (function (c, l, a, r, i, t, y) {
+            c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
+            t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
+            y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
+        })(window, document, "clarity", "script", "yi4hhmflse");
+    </script>
+
+    <!-- Google tag (gtag.js) -->
+    
+    
+
+
+    <!-- Google Tag Manager -->
+    
+    <!-- End Google Tag Manager -->
+
+    <!-- Student DZ: WebApplication JSON-LD START -->
+    <script type="application/ld+json" id="studentDzToolSchema">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "@id": "https://imadtbn.github.io/dz_portal/pages/tools/study/notes-calendar.html#webapplication",
+  "name": "سجل الملاحظات والمواعيد والمهام",
+  "url": "https://imadtbn.github.io/dz_portal/pages/tools/study/notes-calendar.html",
+  "inLanguage": "ar-DZ",
+  "applicationCategory": "EducationalApplication",
+  "operatingSystem": "Web Browser",
+  "isPartOf": {
+    "@id": "https://imadtbn.github.io/student-dz/#website"
+  },
+  "author": {
+    "@id": "https://imadtbn.github.io/student-dz/#organization"
+  },
+  "description": "نظم ملاحظاتك ومواعيدك ومهامك الدراسية في تقويم عملي مع الحفظ داخل المتصفح."
+}
+</script>
+    <!-- Student DZ: WebApplication JSON-LD END -->
+
+</head>
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M27X7VLD" height="0" width="0"
+        style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+
+<body>
+    <header class="site-header">
+        <div class="container"><a href="https://imadtbn.github.io/dz_portal/" class="logo"><img src="https://imadtbn.github.io/student-dz/assets/images/icon.png"
+                    alt="Student DZ" width="32" height="32"> Student DZ</a>
+            <nav class="main-nav" id="mainNav">
+                <a href="https://imadtbn.github.io/dz_portal/" class="nav-link">الرئيسية</a>
+                <a href="https://imadtbn.github.io/student-dz/universities/index.html" class="nav-link">جامعات</a>
+                <a href="https://imadtbn.github.io/student-dz/ecoles/index.html" class="nav-link">مدارس ومعاهد</a>
+                <a href="https://imadtbn.github.io/student-dz/residences/index.html" class="nav-link">إقامات</a>
+                <a href="https://imadtbn.github.io/student-dz/transport/index.html" class="nav-link">نقل</a>
+                <a href="../tools/maps.html" class="nav-link">خريطة</a>
+                <a href="https://imadtbn.github.io/student-dz/categories/student-life.html" class="nav-link">حياة جامعية</a>
+                <a href="https://imadtbn.github.io/student-dz/platforms/index.html" class="nav-link">منصات</a>
+                <a href="../pages/favorites.html" class="nav-link">مفضلة</a>
+            </nav>
+            <div class="header-actions"><button class="icon-btn" id="themeToggle" aria-label="تبديل الوضع"><i
+                        class="fa-solid fa-moon"></i></button><button class="hamburger" id="menuToggle"
+                    aria-label="القائمة">☰</button></div>
+        </div>
+    </header>
+    <main class="container planner">
+
+        <nav class="page-breadcrumb" aria-label="مسار التنقل">
+            <a href="https://imadtbn.github.io/dz_portal/">الرئيسية</a><span aria-hidden="true">›</span><span>سجل الملاحظات والمواعيد
+                والمهام</span>
+        </nav>
+
+        <section class="page-intro" aria-labelledby="planner-title">
+            <div class="page-intro-icon" aria-hidden="true"><i class="fa-solid fa-calendar-check"></i></div>
+            <h1 id="planner-title"> سجل الملاحظات والمواعيد والمهام</h1>
+            <p>نظّم دراستك ومواعيدك ومهامك، واحفظها على جهازك مباشرة دون حساب.</p>
+        </section>
+
+        <div id="notice" class="notice" role="status" aria-live="polite"></div>
+        <section class="planner-card">
+            <h2 id="formTitle"><i class="fa-solid fa-plus"></i> إضافة سجل جديد</h2>
+            <form id="entryForm">
+                <div class="planner-form">
+                    <div class="field"><label for="title">العنوان</label><input id="title" required maxlength="120"
+                            placeholder="مثال: مراجعة الرياضيات"></div>
+                    <div class="field"><label for="type">النوع</label><select id="type">
+                            <option value="note">ملاحظة</option>
+                            <option value="appointment">موعد</option>
+                            <option value="task">مهمة</option>
+                        </select></div>
+                    <div class="field"><label for="date">التاريخ</label><input id="date" type="date" required></div>
+                    <div class="field"><label for="time">الساعة</label><input id="time" type="time" required></div>
+                    <div class="field"><label for="reminder">التذكير</label><select id="reminder">
+                            <option value="0">عند الموعد</option>
+                            <option value="5">قبل 5 دقائق</option>
+                            <option value="15" selected>قبل 15 دقيقة</option>
+                            <option value="30">قبل 30 دقيقة</option>
+                            <option value="60">قبل ساعة</option>
+                            <option value="1440">قبل يوم</option>
+                        </select></div>
+                    <div class="field full"><label for="details">تفاصيل / ملاحظة إضافية</label><textarea id="details"
+                            maxlength="1000" placeholder="اكتب التفاصيل التي تريد تذكرها..."></textarea></div>
+                </div>
+                <div class="form-actions"><button class="btn" type="submit" id="saveBtn"><i
+                            class="fa-solid fa-floppy-disk"></i> حفظ</button><button class="btn btn-outline"
+                        type="button" id="cancelBtn" hidden>إلغاء التعديل</button><button class="btn btn-outline"
+                        type="button" id="notifyBtn"><i class="fa-solid fa-bell"></i> تفعيل إشعارات المتصفح</button>
+                </div>
+                <div id="notificationStatus" class="notification-status" aria-live="polite"></div>
+            </form>
+        </section>
+        <section class="planner-card">
+            <div class="stats">
+                <div class="stat"><strong id="totalCount">0</strong><span>الإجمالي</span></div>
+                <div class="stat"><strong id="todayCount">0</strong><span>اليوم</span></div>
+                <div class="stat"><strong id="taskCount">0</strong><span>المهام المتبقية</span></div>
+                <div class="stat"><strong id="upcomingCount">0</strong><span>القادمة</span></div>
+            </div>
+            <div id="nextReminder" class="next-reminder" hidden></div>
+        </section>
+        <section class="planner-card">
+            <div class="toolbar">
+                <h2><i class="fa-solid fa-list-check"></i> سجلي</h2>
+                <div class="toolbar-actions"><select id="filterType" aria-label="تصفية النوع">
+                        <option value="all">كل السجلات</option>
+                        <option value="note">ملاحظات</option>
+                        <option value="appointment">مواعيد</option>
+                        <option value="task">مهام</option>
+                    </select><button class="btn small" id="clearDone" type="button">حذف المكتمل</button></div>
+            </div>
+            <div id="entries" class="entries"></div>
+        </section>
+        <section class="planner-card">
+            <div class="calendar-head"><button class="btn btn-outline small" id="prevMonth" type="button"
+                    aria-label="الشهر السابق"><i class="fa-solid fa-chevron-right"></i></button>
+                <h2 id="monthTitle"></h2><button class="btn btn-outline small" id="nextMonth" type="button"
+                    aria-label="الشهر التالي"><i class="fa-solid fa-chevron-left"></i></button>
+            </div>
+            <div id="calendar" class="calendar-grid"></div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3><img src="https://imadtbn.github.io/student-dz/assets/images/icon.png" alt="Student DZ Logo" width="24" height="24"
+                            style="border-radius:4px;vertical-align:middle"> Student DZ</h3>
+                    <p>المنصة الرقمية الشاملة للطالب الجزائري. رفيقك من التسجيل إلى التخرج.</p>
+                </div>
+                <div class="footer-col">
+                    <h3>روابط سريعة</h3>
+                    <ul class="footer-links">
+                        <li><a href="https://imadtbn.github.io/student-dz/categories/tools.html">الأدوات</a></li>
+                        <li><a href="https://imadtbn.github.io/student-dz/universities/index.html">الجامعات</a></li>
+                        <li><a href="https://imadtbn.github.io/student-dz/ecoles/index.html">المدارس والمعاهد</a></li>
+                        <li><a href="https://imadtbn.github.io/student-dz/platforms/index.html">المنصات</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>قانوني</h3>
+                    <ul class="footer-links">
+                        <li><a href="../pages/about.html">عن المنصة</a></li>
+                        <li><a href="https://imadtbn.github.io/dz_portal/pages/privacy.html">سياسة الخصوصية</a></li>
+                        <li><a href="https://imadtbn.github.io/dz_portal/pages/contact.html">اتصل بنا</a></li>
+                        <li><a href="../pages/guides.html">دليل المستخدم</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">&copy; <span id="currentYear"></span> Student DZ. جميع الحقوق محفوظة.</div>
+        </div>
+    </footer>
+
+    <div id="toast" class="toast" role="status" aria-live="assertive"></div>
+    <script src="https://imadtbn.github.io/student-dz/assets/js/theme.js"></script>
+    <script src="https://imadtbn.github.io/student-dz/assets/js/navigation.js"></script>
+    <script>
+        (function () {
+            'use strict'; const KEY = 'studentDzPlannerEntries'; let entries = load(), editingId = null, viewDate = new Date(); viewDate.setDate(1); let lastReminderCheck = 0; const $ = id => document.getElementById(id), form = $('entryForm'), notice = $('notice'), labels = { note: 'ملاحظة', appointment: 'موعد', task: 'مهمة' };
+            function load() { try { const x = JSON.parse(localStorage.getItem(KEY) || '[]'); return Array.isArray(x) ? x : [] } catch (e) { return [] } } function save() { localStorage.setItem(KEY, JSON.stringify(entries)) } function esc(v) { return String(v ?? '').replace(/[&<>'"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#39;', '"': '&quot;' }[c])) } function localDateTime(e) { return new Date(e.date + 'T' + e.time + ':00') } function fmtDate(e) { return new Intl.DateTimeFormat('ar-DZ', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' }).format(localDateTime(e)) }
+            function showNotice(text, alert = false) { notice.textContent = text; notice.classList.toggle('reminder-alert', alert); notice.classList.add('show'); clearTimeout(showNotice.t); showNotice.t = setTimeout(() => notice.classList.remove('show'), alert ? 7000 : 3500) } function toast(text) { const t = $('toast'); t.textContent = text; t.classList.add('show'); clearTimeout(toast.t); toast.t = setTimeout(() => t.classList.remove('show'), 6000) }
+            function resetForm() { editingId = null; form.reset(); const now = new Date(); $('date').value = now.getFullYear() + '-' + String(now.getMonth() + 1).padStart(2, '0') + '-' + String(now.getDate()).padStart(2, '0'); $('time').value = '18:00'; $('reminder').value = '15'; $('formTitle').innerHTML = '<i class="fa-solid fa-plus"></i> إضافة سجل جديد'; $('saveBtn').innerHTML = '<i class="fa-solid fa-floppy-disk"></i> حفظ'; $('cancelBtn').hidden = true }
+            function updateNotificationStatus() { const s = $('notificationStatus'), b = $('notifyBtn'); if (!('Notification' in window)) { s.innerHTML = '<i class="fa-solid fa-circle-info"></i> الإشعارات غير مدعومة في هذا المتصفح.'; b.disabled = true; return } if (Notification.permission === 'granted') { s.innerHTML = '<i class="fa-solid fa-circle-check"></i> إشعارات التذكير مفعّلة.'; b.innerHTML = '<i class="fa-solid fa-bell"></i> الإشعارات مفعّلة'; } else if (Notification.permission === 'denied') { s.innerHTML = '<i class="fa-solid fa-circle-xmark"></i> الإشعارات محظورة. يمكنك السماح بها من إعدادات الموقع في المتصفح.'; } else { s.innerHTML = '<i class="fa-solid fa-bell"></i> فعّل الإشعارات للحصول على تنبيه عند اقتراب الموعد.' } }
+            function render() { const filter = $('filterType').value, now = new Date(), list = entries.filter(e => filter === 'all' || e.type === filter).sort((a, b) => localDateTime(a) - localDateTime(b)); $('entries').innerHTML = list.length ? list.map(e => { const dt = localDateTime(e), diff = dt - now, state = e.type === 'task' && e.done ? 'done' : (diff < 0 ? 'overdue' : diff <= 86400000 ? 'soon' : ''); return `<article class="entry type-${e.type} ${state}"><div class="entry-top"><div><span class="badge ${e.type}">${labels[e.type]}</span><div class="entry-title">${esc(e.title)}</div><div class="entry-meta"><i class="fa-regular fa-calendar"></i> ${esc(fmtDate(e))}<br><i class="fa-regular fa-clock"></i> ${esc(e.time)} &nbsp; <i class="fa-regular fa-bell"></i> ${e.reminder == 0 ? 'عند الموعد' : 'قبل ' + esc(e.reminder) + ' دقيقة'}</div></div>${e.type === 'task' ? `<button class="btn small ${e.done ? '' : 'btn-outline'}" data-action="done" data-id="${e.id}">${e.done ? 'مكتملة' : 'إتمام المهمة'}</button>` : ''}</div>${e.details ? `<div class="entry-note">${esc(e.details)}</div>` : ''}<div class="entry-actions"><button class="btn small btn-outline" data-action="edit" data-id="${e.id}"><i class="fa-solid fa-pen"></i> تعديل</button><button class="btn small danger" data-action="delete" data-id="${e.id}"><i class="fa-solid fa-trash"></i> حذف</button></div></article>` }).join('') : '<div class="empty">لا توجد سجلات حالياً. أضف أول ملاحظة أو موعد أو مهمة.</div>'; const todayKey = new Date().toISOString().slice(0, 10); $('totalCount').textContent = entries.length; $('todayCount').textContent = entries.filter(e => e.date === todayKey).length; $('taskCount').textContent = entries.filter(e => e.type === 'task' && !e.done).length; $('upcomingCount').textContent = entries.filter(e => localDateTime(e) >= now && !(e.type === 'task' && e.done)).length; updateNextReminder(now); renderCalendar() }
+            function updateNextReminder(now = new Date()) { const n = entries.filter(e => !(e.type === 'task' && e.done) && localDateTime(e) > now).sort((a, b) => localDateTime(a) - localDateTime(b))[0], box = $('nextReminder'); if (!n) { box.hidden = true; return } const mins = Math.max(0, Math.round((localDateTime(n) - now) / 60000)); box.hidden = false; box.innerHTML = '<i class="fa-solid fa-bell"></i> <strong>أقرب موعد:</strong> ' + esc(n.title) + ' — ' + esc(fmtDate(n)) + '، ' + esc(n.time) + (mins < 1440 ? ' <span>(' + mins + ' دقيقة تقريباً)</span>' : '') }
+            form.addEventListener('submit', e => { e.preventDefault(); const data = { id: editingId || Date.now().toString(), title: $('title').value.trim(), type: $('type').value, date: $('date').value, time: $('time').value, reminder: Number($('reminder').value), details: $('details').value.trim(), done: editingId ? (entries.find(x => x.id === editingId)?.done || false) : false }; if (!data.title || !data.date || !data.time) return; const old = entries.findIndex(x => x.id === data.id); if (old > -1) entries[old] = data; else entries.push(data); save(); resetForm(); render(); showNotice(old > -1 ? 'تم تحديث السجل بنجاح.' : 'تم حفظ السجل في المتصفح.') });
+            $('entries').addEventListener('click', e => { const b = e.target.closest('[data-action]'); if (!b) return; const id = b.dataset.id, action = b.dataset.action, item = entries.find(x => x.id === id); if (!item) return; if (action === 'delete') { if (confirm('هل تريد حذف هذا السجل؟')) { entries = entries.filter(x => x.id !== id); save(); if (editingId === id) resetForm(); render(); showNotice('تم حذف السجل.') } } else if (action === 'edit') { $('title').value = item.title; $('type').value = item.type; $('date').value = item.date; $('time').value = item.time; $('reminder').value = item.reminder; $('details').value = item.details || ''; editingId = id; $('formTitle').innerHTML = '<i class="fa-solid fa-pen"></i> تعديل السجل'; $('saveBtn').innerHTML = '<i class="fa-solid fa-floppy-disk"></i> حفظ التعديل'; $('cancelBtn').hidden = false; window.scrollTo({ top: 0, behavior: 'smooth' }) } else if (action === 'done') { item.done = !item.done; save(); render() } });
+            $('cancelBtn').onclick = resetForm; $('filterType').onchange = render; $('clearDone').onclick = () => { const before = entries.length; entries = entries.filter(e => !(e.type === 'task' && e.done)); if (entries.length !== before) { save(); render(); showNotice('تم حذف المهام المكتملة.') } };
+            $('notifyBtn').onclick = async () => { if (!('Notification' in window)) return; try { const p = await Notification.requestPermission(); updateNotificationStatus(); showNotice(p === 'granted' ? 'تم تفعيل إشعارات التذكير.' : 'لم يتم تفعيل الإشعارات.') } catch (e) { showNotice('تعذر طلب إذن الإشعارات من المتصفح.') } };
+            function renderCalendar() { const y = viewDate.getFullYear(), m = viewDate.getMonth(), monthName = new Intl.DateTimeFormat('ar-DZ', { month: 'long', year: 'numeric' }).format(viewDate); $('monthTitle').textContent = monthName; const names = ['الأحد', 'الإثنين', 'الثلاثاء', 'الأربعاء', 'الخميس', 'الجمعة', 'السبت']; let html = names.map(n => `<div class="cal-day-name">${n}</div>`).join(''); const first = new Date(y, m, 1).getDay(), days = new Date(y, m + 1, 0).getDate(), todayKey = new Date().toISOString().slice(0, 10); for (let i = 0; i < 42; i++) { const d = i - first + 1; let day = d, mm = m, yy = y, muted = false; if (d < 1) { day = new Date(y, m, 0).getDate() + d; mm = m - 1; if (mm < 0) { mm = 11; yy = y - 1 } muted = true } else if (d > days) { day = d - days; mm = m + 1; if (mm > 11) { mm = 0; yy = y + 1 } muted = true } const ds = `${yy}-${String(mm + 1).padStart(2, '0')}-${String(day).padStart(2, '0')}`, items = entries.filter(e => e.date === ds).sort((a, b) => a.time.localeCompare(b.time)); html += `<div class="cal-cell ${muted ? 'muted' : ''} ${ds === todayKey ? 'today' : ''} ${$('date').value === ds ? 'selected' : ''}" data-date="${ds}" aria-label="${ds}"><div class="cal-num">${day}</div>${items.slice(0, 3).map(e => `<div class="cal-item" title="${esc(e.title)}">${esc(e.time)} ${esc(e.title)}</div>`).join('')}${items.length > 3 ? `<div class="cal-more">+${items.length - 3} أخرى</div>` : ''}</div>` } $('calendar').innerHTML = html }
+            $('prevMonth').onclick = () => { viewDate.setMonth(viewDate.getMonth() - 1); renderCalendar() }; $('nextMonth').onclick = () => { viewDate.setMonth(viewDate.getMonth() + 1); renderCalendar() }; $('calendar').addEventListener('click', e => { const c = e.target.closest('.cal-cell'); if (!c) return; $('date').value = c.dataset.date; renderCalendar(); $('title').focus() });
+            function notifyEntry(e) { const stamp = e.id + '-' + e.date + '-' + e.time + '-' + e.reminder; if (sessionStorage.getItem('reminded:' + stamp)) return false; sessionStorage.setItem('reminded:' + stamp, '1'); const text = 'تذكير: ' + e.title + ' — ' + e.time; showNotice(text, true); toast(text); if (navigator.vibrate) navigator.vibrate([150, 80, 150]); if ('Notification' in window && Notification.permission === 'granted') { try { new Notification('Student DZ — تذكير', { body: e.title + ' — ' + e.time, icon: '../assets/images/icon.png', tag: 'student-dz-' + e.id, renotify: false }) } catch (err) { } } return true }
+            function checkReminders() { const now = Date.now(); if (now - lastReminderCheck < 15000) return; lastReminderCheck = now; entries.forEach(e => { if (e.type === 'task' && e.done) return; const due = localDateTime(e).getTime() - Number(e.reminder) * 60000; if (Math.abs(due - now) <= 60000) notifyEntry(e) }); updateNextReminder(new Date()) } document.addEventListener('visibilitychange', () => { if (!document.hidden) checkReminders() }); window.addEventListener('focus', checkReminders); resetForm(); updateNotificationStatus(); render(); checkReminders(); setInterval(checkReminders, 30000); setInterval(render, 60000); $('currentYear').textContent = new Date().getFullYear();
+        })();
+    </script>
+
+<script defer src="https://imadtbn.github.io/dz_portal/assets/js/site-tags.js"></script>
+<script defer src="https://imadtbn.github.io/dz_portal/assets/js/ads-stability.js"></script>
+<script defer src="https://imadtbn.github.io/dz_portal/assets/js/dz-share.js"></script>
+</body>
+
+</html>
