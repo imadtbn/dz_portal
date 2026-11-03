@@ -139,14 +139,15 @@
 |---|---|---|
 | مؤقت بومودورو | `student-dz/tools/pomodoro.html` | `pages/tools/study/pomodoro.html` |
 | البطاقات التعليمية والاختبارات | `student-dz/tools/flashcards.html` | `pages/tools/study/flashcards.html` |
+| مخطط الامتحانات والمهام الجامعية | `student-dz/tools/exam-planner.html` | `pages/tools/study/exam-planner.html` |
 
 ### الملفات المشتركة
 
 - الفهرس الموحد: `pages/tools/index.html`
 - التنسيقات المشتركة للحاسبات: `assets/css/tools/simple-calculator.css`
 - منطق البطاقات التعليمية نُقل إلى `assets/js/tools/flashcards.js`، وتنسيقاتها إلى `assets/css/tools/flashcards.css`.
-- أُضيفت صفحات الأدوات الست إلى `sitemap.xml` مع الحفاظ على بيانات الفيديو المنظمة.
-- هذه دفعة أولى؛ بقية الأدوات ما زالت في مرحلة التدقيق ولم تُنقل بعد.
+- أُضيفت صفحات الأدوات السبع إلى `sitemap.xml` مع الحفاظ على بيانات الفيديو المنظمة.
+- هذه دفعة أولى تضم 4 حاسبات و3 أدوات دراسية؛ بقية الأدوات ما زالت في مرحلة التدقيق ولم تُنقل بعد.
 
 ## قواعد الحماية
 
