@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <!-- SEO Foundation -->
+    <link rel="canonical" href="https://imadtbn.github.io/dz_portal/pages/tools/daily-life/maps.html">
+    <meta name="description" content="استخدم خريطة الطالب للبحث عن الجامعات والمدارس والمعاهد والإقامات في الجزائر.">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://imadtbn.github.io/dz_portal/pages/tools/daily-life/maps.html">
+    <meta property="og:title" content="خريطة الطالب - Student DZ">
+    <meta property="og:description"
+        content="استخدم خريطة الطالب للبحث عن الجامعات والمدارس والمعاهد والإقامات في الجزائر.">
+    <meta property="og:image"
+        content="https://raw.githubusercontent.com/imadtbn/student-dz/main/assets/images/icon-512.png">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://imadtbn.github.io/dz_portal/pages/tools/daily-life/maps.html">
+    <meta name="twitter:title" content="خريطة الطالب - Student DZ">
+    <meta name="twitter:description"
+        content="استخدم خريطة الطالب للبحث عن الجامعات والمدارس والمعاهد والإقامات في الجزائر.">
+    <meta name="twitter:image"
+        content="https://raw.githubusercontent.com/imadtbn/student-dz/main/assets/images/icon-512.png">
+
+    <!-- SEO Foundation -->
+    <!-- Open Graph -->
+
+
+
+
+    <!-- Twitter -->
+
+
+
+
+    <title>maps | البوابة الجزائرية للخدمات الرقمية</title>
+    <meta name="theme-color" content="#007A5E">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://imadtbn.github.io/student-dz/assets/css/main.css">
+    <link rel="stylesheet" href="https://imadtbn.github.io/student-dz/assets/css/responsive.css">
+    <script src="https://imadtbn.github.io/student-dz/assets/js/config.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" href="https://imadtbn.github.io/student-dz/assets/images/icon.png">
+    <style>
+        .map-container {
+            width: 100%;
+            height: 65vh;
+            border-radius: var(--radius-lg);
+            margin: 20px 0;
+            z-index: 1
+        }
+
+        .map-tools {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin: 20px 0
+        }
+
+        .map-search {
+            grid-column: 1/-1;
+            position: relative;
+            z-index: 100
+        }
+
+        .map-search .search-input {
+            padding: 13px 45px 13px 15px;
+            border: 1px solid var(--border-color);
+            box-shadow: var(--shadow-sm);
+            background: var(--bg-card);
+            color: var(--text-main)
+        }
+
+        .map-search>i {
+            position: absolute;
+            right: 17px;
+            top: 15px;
+            color: var(--text-muted);
+            z-index: 2
+        }
+
+        .map-search .search-results-container {
+            top: calc(100% + 8px)
+        }
+
+        .map-category-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            grid-column: 1/-1
+        }
+
+        .map-category-buttons .btn {
+            flex: 1 1 180px;
+            text-align: center
+        }
+
+        .map-category-buttons .btn.active {
+            background: var(--primary-color);
+            color: #fff;
+            border-color: var(--primary-color);
+            box-shadow: var(--shadow-sm)
+        }
+
+        .map-status {
+            grid-column: 1/-1;
+            text-align: right;
+            color: var(--text-muted);
+            font-size: .85rem;
+            margin-top: -3px
+        }
+
+        @media(max-width:600px) {
+            .map-tools {
+                grid-template-columns: 1fr
+            }
+
+            .map-container {
+                height: 62vh
+            }
+
+            .map-category-buttons .btn {
+                flex: 1 1 calc(50% - 8px);
+                min-width: 140px
+            }
+
+            .map-status {
+                text-align: center
+            }
+        }
+    </style>
+
+    <meta name="google-site-verification" content="f5Xi4oFx0v5dN6iPZd9qCw-7vnc3vIbAeYF9jr4vwVM" />
+    <meta name="msvalidate.01" content="9BCA38377A234DCCEB9991EAD1A2F6C2" />
+
+
+    <script type="text/javascript">
+        (function (c, l, a, r, i, t, y) {
+            c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
+            t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
+            y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
+        })(window, document, "clarity", "script", "yi4hhmflse");
+    </script>
+
+    <!-- Google tag (gtag.js) -->
+    
+    
+
+
+    <!-- Google Tag Manager -->
+    
+    <!-- End Google Tag Manager -->
+
+    <!-- Student DZ: WebApplication JSON-LD START -->
+    <script type="application/ld+json" id="studentDzToolSchema">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "@id": "https://imadtbn.github.io/dz_portal/pages/tools/daily-life/maps.html#webapplication",
+  "name": "خريطة الطالب",
+  "url": "https://imadtbn.github.io/dz_portal/pages/tools/daily-life/maps.html",
+  "inLanguage": "ar-DZ",
+  "applicationCategory": "EducationalApplication",
+  "operatingSystem": "Web Browser",
+  "isPartOf": {
+    "@id": "https://imadtbn.github.io/student-dz/#website"
+  },
+  "author": {
+    "@id": "https://imadtbn.github.io/student-dz/#organization"
+  },
+  "description": "استخدم خريطة الطالب للبحث عن الجامعات والمدارس والمعاهد والإقامات في الجزائر."
+}
+</script>
+    <!-- Student DZ: WebApplication JSON-LD END -->
+
+<link rel="stylesheet" href="https://imadtbn.github.io/dz_portal/assets/css/tools/imported-tool-shell.css">
+</head>
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M27X7VLD" height="0" width="0"
+        style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+
+
+<body>
+<header class="dz-import-header"><div class="dz-import-container"><a class="dz-import-brand" href="https://imadtbn.github.io/dz_portal/"><img src="https://imadtbn.github.io/dz_portal/assets/images/icon.png" alt="" width="38" height="38"><span>البوابة الجزائرية للخدمات الرقمية</span></a><button class="dz-import-toggle" id="dz-tools-nav-toggle" type="button" aria-expanded="false" aria-controls="dz-tools-nav">القائمة</button><nav class="dz-import-nav" id="dz-tools-nav" aria-label="التنقل الرئيسي"><a href="https://imadtbn.github.io/dz_portal/">الرئيسية</a><a href="https://imadtbn.github.io/dz_portal/pages/tools/index.html">الأدوات الرقمية</a><a href="https://imadtbn.github.io/dz_portal/pages/privacy.html">الخصوصية</a><a href="https://imadtbn.github.io/dz_portal/pages/contact.html">اتصل بنا</a></nav></div></header><div class="ad-container dz-import-ad"><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5656416032906373" data-ad-slot="3143411927" data-ad-format="auto" data-full-width-responsive="true"></ins></div>
+    <header class="site-header">
+        <div class="container"><a href="https://imadtbn.github.io/dz_portal/" class="logo"><img src="https://imadtbn.github.io/student-dz/assets/images/icon.png"
+                    alt="Student DZ" width="32" height="32" style="border-radius:8px"> Student DZ</a>
+
+            <nav class="main-nav" id="mainNav">
+                <a href="https://imadtbn.github.io/dz_portal/" class="nav-link">الرئيسية</a>
+                <a href="https://imadtbn.github.io/student-dz/universities/index.html" class="nav-link">جامعات</a>
+                <a href="https://imadtbn.github.io/student-dz/ecoles/index.html" class="nav-link">مدارس ومعاهد</a>
+                <a href="https://imadtbn.github.io/student-dz/residences/index.html" class="nav-link">إقامات</a>
+                <a href="https://imadtbn.github.io/student-dz/transport/index.html" class="nav-link">نقل</a>
+                <a href="https://imadtbn.github.io/dz_portal/pages/tools/daily-life/maps.html" class="nav-link">خريطة</a>
+                <a href="https://imadtbn.github.io/student-dz/categories/student-life.html" class="nav-link">حياة جامعية</a>
+                <a href="https://imadtbn.github.io/student-dz/platforms/index.html" class="nav-link">منصات</a>
+                <a href="https://imadtbn.github.io/dz_portal/pages/tools/index.html" class="nav-link">مفضلة</a>
+            </nav>
+
+            <div class="header-actions"><button class="icon-btn" id="themeToggle" aria-label="تبديل الوضع"><i
+                        class="fa-solid fa-moon"></i></button><button class="hamburger" id="menuToggle" type="button"
+                    aria-label="القائمة" aria-expanded="false" aria-controls="mainNav">☰</button></div>
+        </div>
+    </header>
+    <main class="container">
+
+        <nav class="page-breadcrumb" aria-label="مسار التنقل">
+            <a href="https://imadtbn.github.io/dz_portal/">الرئيسية</a><span aria-hidden="true">›</span><span>خريطة الطالب</span>
+        </nav>
+
+        <section class="page-intro" aria-labelledby="map-title">
+            <div class="page-intro-icon" aria-hidden="true"><i class="fa-solid fa-map-location-dot"></i></div>
+            <h1 id="map-title"> خريطة الطالب</h1>
+            <p>جامعات ومدارس عليا ومعاهد، إقامات، تكوين مسارات.</p>
+        </section>
+
+        <div class="map-tools">
+            <div class="map-category-buttons" aria-label="أقسام الخريطة">
+                <button class="btn active" type="button" data-category="all" aria-pressed="true"><i
+                        class="fa-solid fa-layer-group"></i> الكل</button>
+                <button class="btn btn-outline" type="button" data-category="جامعة" aria-pressed="false"><i
+                        class="fa-solid fa-building-columns"></i> الجامعات</button>
+                <button class="btn btn-outline" type="button" data-category="مدرسة / معهد" aria-pressed="false"><i
+                        class="fa-solid fa-school"></i> المدارس والمعاهد</button>
+                <button class="btn btn-outline" type="button" data-category="إقامة" aria-pressed="false"><i
+                        class="fa-solid fa-building"></i> الإقامات</button>
+            </div>
+            <div class="map-search"><i class="fa-solid fa-magnifying-glass"></i><input id="mapSearch"
+                    class="search-input" type="search" autocomplete="off"
+                    placeholder="🔎 ابحث عن جامعة، مدرسة، معهد أو إقامة" aria-label="البحث في خريطة الطالب"
+                    aria-expanded="false" aria-controls="mapResults" aria-autocomplete="list">
+                <div id="mapResults" class="search-results-container" role="listbox" aria-label="نتائج البحث في الخريطة"
+                    style="display:none"></div>
+            </div>
+            <div id="mapStatus" class="map-status" aria-live="polite">جاري تحميل بيانات الخريطة...</div>
+            <button class="btn btn-outline" id="btnNearMe"><i class="fa-solid fa-location-crosshairs"></i>
+                موقعي</button>
+            <button class="btn btn-outline" id="clearMapBtn"><i class="fa-solid fa-eraser"></i> محو العلامات</button>
+        </div>
+        <div id="map" class="map-container"></div>
+    </main>
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3><img src="https://imadtbn.github.io/student-dz/assets/images/icon.png" alt="Student DZ Logo" width="24" height="24"
+                            style="border-radius:4px;vertical-align:middle"> Student DZ</h3>
+                    <p>المنصة الرقمية الشاملة للطالب الجزائري. رفيقك من التسجيل إلى التخرج.</p>
+                </div>
+                <div class="footer-col">
+                    <h3>روابط سريعة</h3>
+                    <ul class="footer-links">
+                        <li><a href="https://imadtbn.github.io/student-dz/categories/tools.html">الأدوات</a></li>
+                        <li><a href="https://imadtbn.github.io/student-dz/universities/index.html">الجامعات</a></li>
+                        <li><a href="https://imadtbn.github.io/student-dz/ecoles/index.html">المدارس والمعاهد</a></li>
+                        <li><a href="https://imadtbn.github.io/student-dz/platforms/index.html">المنصات</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>قانوني</h3>
+                    <ul class="footer-links">
+                        <li><a href="https://imadtbn.github.io/dz_portal/pages/tools/index.html">عن المنصة</a></li>
+                        <li><a href="https://imadtbn.github.io/dz_portal/pages/privacy.html">سياسة الخصوصية</a></li>
+                        <li><a href="https://imadtbn.github.io/dz_portal/pages/contact.html">اتصل بنا</a></li>
+                        <li><a href="https://imadtbn.github.io/dz_portal/pages/tools/index.html">دليل المستخدم</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">&copy; <span id="currentYear"></span> Student DZ. جميع الحقوق محفوظة.</div>
+        </div>
+    </footer>
+    <script src="https://imadtbn.github.io/student-dz/assets/js/app.js"></script>
+    <script src="https://imadtbn.github.io/student-dz/assets/js/maps.js"></script>
+    <script src="https://imadtbn.github.io/student-dz/assets/js/storage.js"></script>
+    <script src="https://imadtbn.github.io/student-dz/assets/js/theme.js"></script>
+    <script src="https://imadtbn.github.io/student-dz/assets/js/navigation.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', async () => {
+            let userLocation = null, markers = [], places = [], activeCategory = 'all';
+            const map = await initMap('map', 36.7538, 3.0588, 12);
+            const search = document.getElementById('mapSearch'), results = document.getElementById('mapResults'), status = document.getElementById('mapStatus');
+            const categoryButtons = [...document.querySelectorAll('[data-category]')];
+            const iconForType = type => type === 'جامعة' ? 'fa-building-columns' : type === 'إقامة' ? 'fa-building' : 'fa-school';
+            const classForType = type => type === 'جامعة' ? 'university' : type === 'إقامة' ? 'residence' : 'ecole';
+            function route(lat, lng) { let u = `https://www.google.com/maps/dir/?api=1&destination=${lat},${lng}`; if (userLocation) u += `&origin=${userLocation.lat},${userLocation.lng}`; return `<a href="${u}" target="_blank" rel="noopener">فتح المسار</a>` }
+            function clearMarkers() { markers.forEach(m => { if (m && map.hasLayer(m)) map.removeLayer(m) }); markers = [] }
+            function createMarker(place) {
+                const content = `${place.extra || ''}${place.url ? `<br><a href="${place.url}" target="_blank" rel="noopener">الموقع الرسمي</a>` : ''}<br>${route(place.lat, place.lng)}`;
+                const marker = addMarker(place.lat, place.lng, `${place.type}: ${place.name}`, content, classForType(place.type));
+                if (marker) markers.push(marker);
+            }
+            function renderCategory() { clearMarkers(); const visible = activeCategory === 'all' ? places : places.filter(p => p.type === activeCategory); visible.forEach(createMarker); status.textContent = `${visible.length.toLocaleString('ar-DZ')} موقع ظاهر على الخريطة` }
+            function filteredPlaces() { return activeCategory === 'all' ? places : places.filter(p => p.type === activeCategory) }
+            function renderResults() {
+                const q = search.value.trim().toLowerCase();
+                if (q.length < 2) { results.style.display = 'none'; search.setAttribute('aria-expanded', 'false'); return }
+                const matches = filteredPlaces().filter(p => `${p.name} ${p.type} ${p.extra}`.toLowerCase().includes(q)).slice(0, 12);
+                results.innerHTML = matches.length ? matches.map(p => `<button type="button" class="search-result-item" role="option" aria-selected="false" data-index="${places.indexOf(p)}"><span class="search-result-icon"><i class="fa-solid ${iconForType(p.type)}"></i></span><span class="search-result-content"><strong>${p.name}</strong><small><span class="search-result-type">${p.type}</span>${p.extra ? ' • ' + p.extra : ''}</small></span><span class="search-result-arrow"><i class="fa-solid fa-chevron-left"></i></span></button>`).join('') : '<div class="search-result-empty">لا توجد نتائج مطابقة</div>';
+                results.style.display = 'block'; search.setAttribute('aria-expanded', 'true');
+            }
+            try {
+                const [u, r, e] = await Promise.all([fetchAppJSON(CONFIG.API.UNIVERSITIES), fetchAppJSON(CONFIG.API.RESIDENCES), fetchAppJSON('data/ecoles.json')]);
+                (u?.universities || []).forEach(x => x.coordinates && addPlaceData(x.name, 'جامعة', x.coordinates.lat, x.coordinates.lng, x.wilaya, x.officialUrl));
+                (r?.residences || []).forEach(x => x.coordinates && addPlaceData(x.name, 'إقامة', x.coordinates.lat, x.coordinates.lng, x.wilaya));
+                (Array.isArray(e) ? e : []).forEach(x => { const p = x.position || x.coordinates; if (p) addPlaceData(x.name, 'مدرسة / معهد', p.lat, p.lng, x.wilaya, x.officialUrl) });
+                renderCategory();
+            } catch (err) { console.error('Map data loading failed:', err); status.textContent = 'تعذر تحميل بعض بيانات الخريطة.' }
+            function addPlaceData(name, type, lat, lng, extra, url) {
+                if (!Number.isFinite(Number(lat)) || !Number.isFinite(Number(lng))) return;
+                places.push({ name, type, lat: Number(lat), lng: Number(lng), extra: extra || '', url: url || '' });
+            }
+            search.addEventListener('input', renderResults);
+            search.addEventListener('keydown', e => {
+                const items = [...results.querySelectorAll('[data-index]')];
+                if (e.key === 'Escape') { results.style.display = 'none'; search.setAttribute('aria-expanded', 'false'); return }
+                if (!items.length) return;
+                const current = items.findIndex(x => x.getAttribute('aria-selected') === 'true');
+                if (e.key === 'ArrowDown' || e.key === 'ArrowUp') {
+                    e.preventDefault(); let next = e.key === 'ArrowDown' ? current + 1 : current - 1; if (next < 0) next = items.length - 1; if (next >= items.length) next = 0; items.forEach((x, i) => x.setAttribute('aria-selected', i === next ? 'true' : 'false')); items[next].scrollIntoView({ block: 'nearest' }); return;
+                }
+                if (e.key === 'Enter' && current >= 0) { e.preventDefault(); items[current].click() }
+            });
+            results.addEventListener('click', e => { const b = e.target.closest('[data-index]'); if (!b) return; const p = places[Number(b.dataset.index)]; if (!p) return; if (activeCategory !== 'all' && p.type !== activeCategory) return; map.setView([p.lat, p.lng], 16); const m = markers.find(x => { const ll = x.getLatLng(); return ll.lat === p.lat && ll.lng === p.lng }); if (m) m.openPopup(); search.value = p.name; results.style.display = 'none'; search.setAttribute('aria-expanded', 'false') });
+            categoryButtons.forEach(button => button.addEventListener('click', () => { activeCategory = button.dataset.category; categoryButtons.forEach(b => { const active = b === button; b.classList.toggle('active', active); b.classList.toggle('btn-outline', !active); b.setAttribute('aria-pressed', active ? 'true' : 'false') }); renderCategory(); renderResults() }));
+            document.addEventListener('click', e => { if (!e.target.closest('.map-search')) { results.style.display = 'none'; search.setAttribute('aria-expanded', 'false') } });
+            document.getElementById('clearMapBtn').addEventListener('click', () => { clearMarkers(); status.textContent = 'تم محو العلامات من الخريطة — البيانات ما زالت محملة.'; search.value = ''; results.style.display = 'none'; search.setAttribute('aria-expanded', 'false') });
+            document.getElementById('btnNearMe').addEventListener('click', () => { if (!navigator.geolocation) return alert('المتصفح لا يدعم تحديد الموقع.'); navigator.geolocation.getCurrentPosition(p => { userLocation = { lat: p.coords.latitude, lng: p.coords.longitude }; map.setView([userLocation.lat, userLocation.lng], 14); const marker = addMarker(userLocation.lat, userLocation.lng, 'موقعك الحالي', '', 'default'); if (marker) marker.openPopup() }, () => alert('تعذر تحديد موقعك. يرجى السماح بالوصول إلى الموقع.')) });
+            document.getElementById('currentYear').textContent = new Date().getFullYear();
+            if (window.StorageApp?.addRecent) StorageApp.addRecent({ id: 'maps', title: 'الخرائط', url: 'tools/maps.html', icon: '🗺️' });
+        });
+    </script>
+
+<script defer src="https://imadtbn.github.io/dz_portal/assets/js/site-tags.js"></script>
+<script defer src="https://imadtbn.github.io/dz_portal/assets/js/ads-stability.js"></script>
+<script defer src="https://imadtbn.github.io/dz_portal/assets/js/dz-share.js"></script>
+<footer class="dz-import-footer"><p>© البوابة الجزائرية للخدمات الرقمية</p><a href="https://imadtbn.github.io/dz_portal/pages/tools/index.html">العودة إلى فهرس الأدوات</a></footer><script defer src="https://imadtbn.github.io/dz_portal/assets/js/tools/imported-tool-shell.js"></script>
+</body>
+
+</html>
