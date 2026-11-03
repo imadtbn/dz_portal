@@ -17,7 +17,7 @@ function cleanupLegacyShareControls(){
   const cls=typeof el.className==='string'?el.className:'';
   const legacyClass=/(?:^|\s)(?:share|share-btn|share-button|share-fab|floating-share|social-share-button|help-btn|help-button|question-btn|question-button)(?:\s|$)/i.test(cls);
   const shareMatch=/(?:مشاركة(?: الصفحة)?|share(?: this page| page)?)/i.test(label);
-  const helpMatch=/(?:مساعدة|لماذا أشارك|استفهام|share help|help button)/i.test(label)||/^\?+$/.test(label.trim());
+  const helpMatch=/(?:مساعدة|لماذا أشارك|استفهام|share help|help button)/i.test(label)||/^[?؟]+$/.test(label.trim());
   if(legacyClass||shareMatch||helpMatch)removeControl(el);
  });
  const nav=document.querySelector('.dz-import-nav');
