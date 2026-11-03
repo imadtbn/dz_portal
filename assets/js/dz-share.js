@@ -72,4 +72,14 @@ function init(){
  });
 }
 if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init,{once:true});else init();
+ // Apply the unified visual template to individual tool pages only.
+ if (location.pathname.indexOf('/pages/tools/') !== -1 && !location.pathname.endsWith('/pages/tools/index.html')) {
+   const src = 'https://imadtbn.github.io/dz_portal/assets/js/tools/unified-tool-template.js';
+   if (!document.querySelector('script[src="' + src + '"]')) {
+     const script = document.createElement('script');
+     script.src = src;
+     document.head.appendChild(script);
+   }
+ }
+
 })();

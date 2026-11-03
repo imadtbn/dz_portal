@@ -50,4 +50,12 @@ function cleanupLegacyShareControls(){
  });
  shareCleanupObserver.observe(document.documentElement,{childList:true,subtree:true});
 
+ // Fallback loader for imported pages.
+ if (location.pathname.indexOf('/pages/tools/') !== -1 && !location.pathname.endsWith('/pages/tools/index.html') && !window.__dzUnifiedTemplateLoader) {
+   window.__dzUnifiedTemplateLoader = true;
+   const template = document.createElement('script');
+   template.src = root + 'assets/js/tools/unified-tool-template.js';
+   document.head.appendChild(template);
+ }
+
 })();
