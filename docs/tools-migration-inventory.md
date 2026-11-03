@@ -122,14 +122,31 @@
 | QR | `tools/qr-generator.html` | `tools/qr-generator.html` | اعتماد نسخة واحدة مع المحافظة على التنزيل والمشاركة والطباعة |
 | القاموس العربي | `tools/arabic-dictionary.html` | لا توجد مطابقة مباشرة مرصودة | نقل القاموس وبياناته التابعة بعد فحص الحجم والمسارات |
 
-## ملفات الأداة التجريبية
+## الدفعة الأولى المنقولة
 
-- المصدر: `tools-dz/tools/number-to-words.html`
-- JavaScript المصدر: `tools-dz/assets/js/number-to-words.js`
-- CSS المصدر: `tools-dz/assets/css/number-to-words.css`
-- المسار الجديد: `pages/tools/calculators/number-to-words.html`
+### الحاسبات والتحويلات
+
+| الأداة | المصدر | المسار داخل البوابة |
+|---|---|---|
+| محول الأرقام إلى الحروف بالدينار الجزائري | `tools-dz/tools/number-to-words.html` | `pages/tools/calculators/number-to-words.html` |
+| حاسبة العمر | `tools-dz/tools/age-calculator.html` | `pages/tools/calculators/age-calculator.html` |
+| حاسبة النسبة المئوية | `student-dz/tools/percentage-calculator.html` | `pages/tools/calculators/percentage-calculator.html` |
+| حاسبة الفرق بين تاريخين | `student-dz/tools/date-difference.html` | `pages/tools/calculators/date-difference.html` |
+
+### الدراسة والطلاب
+
+| الأداة | المصدر | المسار داخل البوابة |
+|---|---|---|
+| مؤقت بومودورو | `student-dz/tools/pomodoro.html` | `pages/tools/study/pomodoro.html` |
+| البطاقات التعليمية والاختبارات | `student-dz/tools/flashcards.html` | `pages/tools/study/flashcards.html` |
+
+### الملفات المشتركة
+
 - الفهرس الموحد: `pages/tools/index.html`
-- الهدف من العينة: اختبار نقل أداة مستقلة دون نقل الهيدر أو الفوتر أو أدوات التتبع الخاصة بالمصدر.
+- التنسيقات المشتركة للحاسبات: `assets/css/tools/simple-calculator.css`
+- منطق البطاقات التعليمية نُقل إلى `assets/js/tools/flashcards.js`، وتنسيقاتها إلى `assets/css/tools/flashcards.css`.
+- أُضيفت صفحات الأدوات الست إلى `sitemap.xml` مع الحفاظ على بيانات الفيديو المنظمة.
+- هذه دفعة أولى؛ بقية الأدوات ما زالت في مرحلة التدقيق ولم تُنقل بعد.
 
 ## قواعد الحماية
 
