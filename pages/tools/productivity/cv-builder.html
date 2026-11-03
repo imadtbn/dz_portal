@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- SEO Foundation -->
+    <link rel="canonical" href="https://imadtbn.github.io/dz_portal/pages/tools/productivity/cv-builder.html">
+    <meta name="description"
+        content="أنشئ سيرة ذاتية احترافية للطالب بسهولة ونظم معلوماتك الدراسية والشخصية والخبرات والمهارات.">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://imadtbn.github.io/dz_portal/pages/tools/productivity/cv-builder.html">
+    <meta property="og:title" content="إنشاء سيرة ذاتية (CV) - Student DZ">
+    <meta property="og:description"
+        content="أنشئ سيرة ذاتية احترافية للطالب بسهولة ونظم معلوماتك الدراسية والشخصية والخبرات والمهارات.">
+    <meta property="og:image"
+        content="https://raw.githubusercontent.com/imadtbn/student-dz/main/assets/images/icon-512.png">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://imadtbn.github.io/dz_portal/pages/tools/productivity/cv-builder.html">
+    <meta name="twitter:title" content="إنشاء سيرة ذاتية (CV) - Student DZ">
+    <meta name="twitter:description"
+        content="أنشئ سيرة ذاتية احترافية للطالب بسهولة ونظم معلوماتك الدراسية والشخصية والخبرات والمهارات.">
+    <meta name="twitter:image"
+        content="https://raw.githubusercontent.com/imadtbn/student-dz/main/assets/images/icon-512.png">
+
+    <!-- SEO Foundation -->
+    <!-- Open Graph -->
+
+
+
+
+    <!-- Twitter -->
+
+
+
+
+    <title>cv builder | البوابة الجزائرية للخدمات الرقمية</title>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://imadtbn.github.io/student-dz/assets/css/main.css">
+    <link rel="stylesheet" href="https://imadtbn.github.io/student-dz/assets/css/responsive.css">
+    <script src="https://imadtbn.github.io/student-dz/assets/js/config.js"></script>
+    <style>
+        .cv-layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        @media (max-width: 900px) {
+            .cv-layout {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .form-section {
+            background: var(--bg-card);
+            padding: 20px;
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-md);
+            max-height: 85vh;
+            overflow-y: auto;
+        }
+
+        .preview-wrapper {
+            background: #e0e0e0;
+            padding: 20px;
+            border-radius: var(--radius-md);
+            display: flex;
+            justify-content: center;
+            overflow-x: auto;
+        }
+
+        .preview-section {
+            background: white;
+            width: 210mm;
+            min-height: 297mm;
+            padding: 20mm;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            color: #333;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            box-sizing: border-box;
+        }
+
+        /* Language Toggle */
+        .lang-toggle {
+            margin-bottom: 20px;
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+        }
+
+        .lang-btn {
+            padding: 5px 15px;
+            border: 1px solid var(--primary-color);
+            background: transparent;
+            color: var(--primary-color);
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .lang-btn.active {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            font-size: 0.9em;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-sm);
+            font-family: inherit;
+        }
+
+        /* Dynamic Direction Classes for Preview */
+        .preview-section.ltr {
+            direction: ltr;
+            text-align: left;
+        }
+
+        .preview-section.rtl {
+            direction: rtl;
+            text-align: right;
+        }
+
+        .preview-section.rtl .cv-header {
+            text-align: right;
+        }
+
+        .preview-section.rtl .cv-contact {
+            justify-content: flex-start;
+        }
+
+        /* Modern CV Template Styles */
+        .cv-header {
+            text-align: left;
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+        }
+
+        .cv-name {
+            font-size: 28px;
+            font-weight: bold;
+            margin: 0;
+            text-transform: uppercase;
+            color: #2c3e50;
+        }
+
+        .cv-contact {
+            font-size: 13px;
+            color: #555;
+            margin-top: 8px;
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .cv-contact i {
+            color: var(--primary-color);
+            margin-right: 5px;
+            margin-left: 5px;
+        }
+
+        .cv-summary {
+            font-size: 14px;
+            line-height: 1.6;
+            margin-bottom: 25px;
+            color: #444;
+        }
+
+        .cv-section-title {
+            font-size: 16px;
+            font-weight: bold;
+            color: var(--primary-color);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .cv-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 30px;
+        }
+
+        .cv-item {
+            margin-bottom: 15px;
+        }
+
+        .cv-item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 5px;
+        }
+
+        .cv-item-title {
+            font-weight: bold;
+            font-size: 15px;
+            color: #2c3e50;
+        }
+
+        .cv-item-subtitle {
+            font-style: italic;
+            font-size: 14px;
+            color: #666;
+        }
+
+        .cv-item-date {
+            color: var(--primary-color);
+            font-size: 13px;
+            font-weight: 500;
+        }
+
+        .cv-item-desc {
+            font-size: 13px;
+            color: #555;
+            margin-top: 5px;
+        }
+
+        .skill-tag {
+            display: inline-block;
+            background: #f0f4f8;
+            color: #2c3e50;
+            padding: 4px 10px;
+            border-radius: 15px;
+            font-size: 12px;
+            margin: 0 5px 8px 0;
+            border: 1px solid #dce4ec;
+        }
+
+        .lang-item {
+            display: flex;
+            justify-content: space-between;
+            font-size: 13px;
+            margin-bottom: 8px;
+            border-bottom: 1px dashed #eee;
+            padding-bottom: 4px;
+        }
+
+        @media print {
+            body * {
+                visibility: hidden;
+            }
+
+            .preview-section,
+            .preview-section * {
+                visibility: visible;
+            }
+
+            .preview-section {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 210mm;
+                min-height: 297mm;
+                padding: 15mm;
+                box-shadow: none;
+                margin: 0;
+                border: none;
+            }
+
+            @page {
+                margin: 0;
+                size: A4 portrait;
+            }
+        }
+    </style>
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" href="https://imadtbn.github.io/student-dz/assets/images/icon.png">
+    <link rel="apple-touch-icon" href="https://imadtbn.github.io/student-dz/assets/images/icon-192.png">
+
+    <!-- Open Graph / Facebook -->
+
+
+
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://imadtbn.github.io/student-dz/">
+    <meta property="twitter:title" content="Student DZ | الطالب الجزائري">
+    <meta property="twitter:description"
+        content="من أول تسجيلك إلى تخرجك، كل ما تحتاجه كطالب جزائري في مكان واحد. أدوات، جامعات، إقامات، خرائط، ومنصات.">
+    <meta property="twitter:image"
+        content="https://raw.githubusercontent.com/imadtbn/student-dz/main/assets/images/icon-512.png">
+
+    <meta name="google-site-verification" content="f5Xi4oFx0v5dN6iPZd9qCw-7vnc3vIbAeYF9jr4vwVM" />
+    <meta name="msvalidate.01" content="9BCA38377A234DCCEB9991EAD1A2F6C2" />
+
+
+    <script type="text/javascript">
+        (function (c, l, a, r, i, t, y) {
+            c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
+            t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
+            y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
+        })(window, document, "clarity", "script", "yi4hhmflse");
+    </script>
+
+    <!-- Google tag (gtag.js) -->
+    
+    
+
+
+    <!-- Google Tag Manager -->
+    
+    <!-- End Google Tag Manager -->
+
+    <!-- Student DZ: WebApplication JSON-LD START -->
+    <script type="application/ld+json" id="studentDzToolSchema">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "@id": "https://imadtbn.github.io/dz_portal/pages/tools/productivity/cv-builder.html#webapplication",
+  "name": "إنشاء سيرة ذاتية (CV)",
+  "url": "https://imadtbn.github.io/dz_portal/pages/tools/productivity/cv-builder.html",
+  "inLanguage": "ar-DZ",
+  "applicationCategory": "EducationalApplication",
+  "operatingSystem": "Web Browser",
+  "isPartOf": {
+    "@id": "https://imadtbn.github.io/student-dz/#website"
+  },
+  "author": {
+    "@id": "https://imadtbn.github.io/student-dz/#organization"
+  },
+  "description": "أنشئ سيرة ذاتية احترافية للطالب بسهولة ونظم معلوماتك الدراسية والشخصية والخبرات والمهارات."
+}
+</script>
+    <!-- Student DZ: WebApplication JSON-LD END -->
+
+</head>
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M27X7VLD" height="0" width="0"
+        style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+
+<body>
+    <header class="site-header">
+        <div class="container">
+            <a href="https://imadtbn.github.io/dz_portal/" class="logo">
+                <img src="https://imadtbn.github.io/student-dz/assets/images/icon.png" alt="Student DZ Logo" width="32" height="32"
+                    style="border-radius: 8px;"> Student DZ
+            </a>
+
+            <nav class="main-nav" id="mainNav">
+                <a href="https://imadtbn.github.io/dz_portal/" class="nav-link">الرئيسية</a>
+                <a href="https://imadtbn.github.io/student-dz/universities/index.html" class="nav-link">جامعات</a>
+                <a href="https://imadtbn.github.io/student-dz/ecoles/index.html" class="nav-link">مدارس ومعاهد</a>
+                <a href="https://imadtbn.github.io/student-dz/residences/index.html" class="nav-link">إقامات</a>
+                <a href="https://imadtbn.github.io/student-dz/transport/index.html" class="nav-link">نقل</a>
+                <a href="../tools/maps.html" class="nav-link">خريطة</a>
+                <a href="https://imadtbn.github.io/student-dz/categories/student-life.html" class="nav-link">حياة جامعية</a>
+                <a href="https://imadtbn.github.io/student-dz/platforms/index.html" class="nav-link">منصات</a>
+                <a href="../pages/favorites.html" class="nav-link">مفضلة</a>
+            </nav>
+
+            <div class="header-actions">
+                <button class="icon-btn" id="themeToggle" aria-label="تبديل الوضع"><i
+                        class="fa-solid fa-moon"></i></button>
+                <button class="hamburger" id="menuToggle" aria-label="القائمة">☰</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="container no-print" style="max-width: 1400px;">
+
+                <nav class="page-breadcrumb" aria-label="مسار التنقل">
+            <a href="https://imadtbn.github.io/dz_portal/">الرئيسية</a><span aria-hidden="true">›</span><span>CV Builder الاحترافي</span>
+        </nav>
+
+        <section class="page-intro" aria-labelledby="print-cv-title">
+            <div class="page-intro-icon" aria-hidden="true"><i class="fa-solid fa-file-invoice"></i></div>
+            <h1 id="print-cv-title"> CV Builder الاحترافي</h1>
+            <p>أداة مساعدة لبناء السيرة الذاتية الاحترافية بسهولة وسرعة.</p>
+        </section>
+
+
+        <div class="lang-toggle">
+            <button class="lang-btn active" onclick="setLang('en')" id="btnEn">English CV</button>
+            <button class="lang-btn" onclick="setLang('ar')" id="btnAr">السيرة الذاتية (عربي)</button>
+        </div>
+
+        <div class="cv-layout">
+            <!-- Form -->
+            <div class="form-section">
+                <h3><i class="fa-solid fa-user"></i> المعلومات الشخصية</h3>
+                <div class="form-group"><label>الاسم الكامل</label><input type="text" id="cvName" oninput="updateCV()">
+                </div>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap:10px;">
+                    <div class="form-group"><label>البريد الإلكتروني</label><input type="email" id="cvEmail"
+                            oninput="updateCV()"></div>
+                    <div class="form-group"><label>الهاتف</label><input type="text" id="cvPhone" oninput="updateCV()">
+                    </div>
+                </div>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap:10px;">
+                    <div class="form-group"><label>العنوان</label><input type="text" id="cvAddress"
+                            oninput="updateCV()"></div>
+                    <div class="form-group"><label>رابط LinkedIn/GitHub</label><input type="text" id="cvLink"
+                            oninput="updateCV()"></div>
+                </div>
+                <div class="form-group"><label>نبذة مهنية</label><textarea id="cvSummary" rows="3"
+                        oninput="updateCV()"></textarea></div>
+
+                <hr style="margin: 20px 0; border: 0; border-top: 1px solid var(--border-color);">
+
+                <h3><i class="fa-solid fa-graduation-cap"></i> التعليم</h3>
+                <div class="form-group"><label>الشهادة / التخصص</label><input type="text" id="cvEduTitle"
+                        oninput="updateCV()"></div>
+                <div class="form-group"><label>الجامعة</label><input type="text" id="cvEduSchool" oninput="updateCV()">
+                </div>
+                <div class="form-group"><label>السنوات</label><input type="text" id="cvEduDate" oninput="updateCV()">
+                </div>
+
+                <hr style="margin: 20px 0; border: 0; border-top: 1px solid var(--border-color);">
+
+                <h3><i class="fa-solid fa-briefcase"></i> الخبرة أو المشاريع الجامعية</h3>
+                <div class="form-group"><label>المسمى الوظيفي / اسم المشروع</label><input type="text" id="cvExpTitle"
+                        oninput="updateCV()"></div>
+                <div class="form-group"><label>الجهة / المؤسسة</label><input type="text" id="cvExpOrg"
+                        oninput="updateCV()"></div>
+                <div class="form-group"><label>التاريخ</label><input type="text" id="cvExpDate" oninput="updateCV()">
+                </div>
+                <div class="form-group"><label>الوصف</label><textarea id="cvExpDesc" rows="3"
+                        oninput="updateCV()"></textarea></div>
+
+                <hr style="margin: 20px 0; border: 0; border-top: 1px solid var(--border-color);">
+
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap:20px;">
+                    <div>
+                        <h3><i class="fa-solid fa-code"></i> المهارات</h3>
+                        <div class="form-group"><label>مفصولة بفاصلة (,)</label><textarea id="cvSkills" rows="3"
+                                oninput="updateCV()"></textarea></div>
+                    </div>
+                    <div>
+                        <h3><i class="fa-solid fa-language"></i> اللغات</h3>
+                        <div class="form-group"><label>مفصولة بفاصلة (,)</label><textarea id="cvLangs" rows="3"
+                                oninput="updateCV()"></textarea></div>
+                    </div>
+                </div>
+
+                <button class="btn" style="width:100%; margin-top:20px; font-size:1.1em;" onclick="window.print()"><i
+                        class="fa-solid fa-print"></i> طباعة / حفظ كـ PDF</button>
+            </div>
+
+            <!-- Preview -->
+            <div class="preview-wrapper">
+                <div class="preview-section ltr" id="cvPreview">
+                    <div class="cv-header">
+                        <div class="cv-name" id="outName"></div>
+                        <div class="cv-contact">
+                            <div><i class="fa-solid fa-envelope"></i> <span id="outEmail"></span></div>
+                            <div><i class="fa-solid fa-phone"></i> <span id="outPhone"></span></div>
+                            <div><i class="fa-solid fa-location-dot"></i> <span id="outAddress"></span></div>
+                            <div><i class="fa-solid fa-link"></i> <span id="outLink"></span></div>
+                        </div>
+                    </div>
+
+                    <div class="cv-summary" id="outSummaryText"></div>
+
+                    <div class="cv-grid">
+                        <div>
+                            <div class="cv-section-title"><i class="fa-solid fa-briefcase"></i> <span
+                                    id="lblExp">EXPERIENCE / PROJECTS</span></div>
+                            <div class="cv-item">
+                                <div class="cv-item-header">
+                                    <div class="cv-item-title" id="outExpTitle"></div>
+                                    <div class="cv-item-date" id="outExpDate"></div>
+                                </div>
+                                <div class="cv-item-subtitle" id="outExpOrg"></div>
+                                <div class="cv-item-desc" id="outExpDesc"></div>
+                            </div>
+
+                            <div style="margin-top: 30px;">
+                                <div class="cv-section-title"><i class="fa-solid fa-graduation-cap"></i> <span
+                                        id="lblEdu">EDUCATION</span></div>
+                                <div class="cv-item">
+                                    <div class="cv-item-header">
+                                        <div class="cv-item-title" id="outEduTitle"></div>
+                                        <div class="cv-item-date" id="outEduDate"></div>
+                                    </div>
+                                    <div class="cv-item-subtitle" id="outEduSchool"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="cv-section-title"><i class="fa-solid fa-code"></i> <span
+                                    id="lblSkills">SKILLS</span></div>
+                            <div id="outSkillsContainer"></div>
+
+                            <div style="margin-top: 30px;">
+                                <div class="cv-section-title"><i class="fa-solid fa-language"></i> <span
+                                        id="lblLangs">LANGUAGES</span></div>
+                                <div id="outLangsContainer"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://imadtbn.github.io/student-dz/assets/js/theme.js"></script>
+    <script src="https://imadtbn.github.io/student-dz/assets/js/storage.js"></script>
+    <script>
+        StorageApp.addRecent({ id: 'cv-builder', title: 'إنشاء CV', url: 'tools/cv-builder.html', icon: 'fa-solid fa-file-invoice' });
+
+        let currentLang = 'en';
+        const defaultData = {
+            en: {
+                name: "Student Name", email: "student@university.dz", phone: "+213 555 000 000", address: "Algiers, Algeria", link: "linkedin.com/in/student",
+                summary: "Motivated university student seeking opportunities to apply academic knowledge in real-world scenarios.",
+                eduTitle: "Bachelor of Computer Science", eduSchool: "University of Algiers 1", eduDate: "2021 - Present",
+                expTitle: "Final Year Project", expOrg: "University Lab", expDate: "2023 - 2024", expDesc: "Developed a web application using modern web technologies.",
+                skills: "HTML, CSS, JavaScript, Teamwork", langs: "Arabic - Native, English - B2",
+                lblExp: "EXPERIENCE / PROJECTS", lblEdu: "EDUCATION", lblSkills: "SKILLS", lblLangs: "LANGUAGES"
+            },
+            ar: {
+                name: "اسم الطالب", email: "student@university.dz", phone: "000 000 555 213+", address: "الجزائر العاصمة", link: "linkedin.com/in/student",
+                summary: "طالب جامعي طموح يبحث عن فرص لتطبيق المعرفة الأكاديمية في بيئة عمل حقيقية.",
+                eduTitle: "ليسانس إعلام آلي", eduSchool: "جامعة الجزائر 1", eduDate: "2021 - الحاضر",
+                expTitle: "مشروع التخرج", expOrg: "مخبر الجامعة", expDate: "2023 - 2024", expDesc: "تطوير تطبيق ويب لإدارة شؤون الطلاب باستخدام تقنيات الويب الحديثة.",
+                skills: "برمجة الويب, العمل الجماعي, حل المشكلات", langs: "العربية - اللغة الأم, الإنجليزية - جيد",
+                lblExp: "الخبرة والمشاريع", lblEdu: "التعليم", lblSkills: "المهارات", lblLangs: "اللغات"
+            }
+        };
+
+        function setLang(lang) {
+            currentLang = lang;
+            document.getElementById('btnEn').classList.toggle('active', lang === 'en');
+            document.getElementById('btnAr').classList.toggle('active', lang === 'ar');
+
+            const pv = document.getElementById('cvPreview');
+            if (lang === 'ar') {
+                pv.classList.remove('ltr'); pv.classList.add('rtl');
+            } else {
+                pv.classList.remove('rtl'); pv.classList.add('ltr');
+            }
+
+            // Fill form with defaults for that lang
+            const d = defaultData[lang];
+            document.getElementById('cvName').value = d.name;
+            document.getElementById('cvEmail').value = d.email;
+            document.getElementById('cvPhone').value = d.phone;
+            document.getElementById('cvAddress').value = d.address;
+            document.getElementById('cvLink').value = d.link;
+            document.getElementById('cvSummary').value = d.summary;
+            document.getElementById('cvEduTitle').value = d.eduTitle;
+            document.getElementById('cvEduSchool').value = d.eduSchool;
+            document.getElementById('cvEduDate').value = d.eduDate;
+            document.getElementById('cvExpTitle').value = d.expTitle;
+            document.getElementById('cvExpOrg').value = d.expOrg;
+            document.getElementById('cvExpDate').value = d.expDate;
+            document.getElementById('cvExpDesc').value = d.expDesc;
+            document.getElementById('cvSkills').value = d.skills;
+            document.getElementById('cvLangs').value = d.langs;
+
+            document.getElementById('lblExp').textContent = d.lblExp;
+            document.getElementById('lblEdu').textContent = d.lblEdu;
+            document.getElementById('lblSkills').textContent = d.lblSkills;
+            document.getElementById('lblLangs').textContent = d.lblLangs;
+
+            updateCV();
+        }
+
+        function updateCV() {
+            const v = (id) => document.getElementById(id).value;
+            const t = (id, val) => document.getElementById(id).textContent = val;
+
+            t('outName', v('cvName'));
+            t('outEmail', v('cvEmail'));
+            t('outPhone', v('cvPhone'));
+            t('outAddress', v('cvAddress'));
+            t('outLink', v('cvLink'));
+            t('outSummaryText', v('cvSummary'));
+
+            t('outEduTitle', v('cvEduTitle'));
+            t('outEduSchool', v('cvEduSchool'));
+            t('outEduDate', v('cvEduDate'));
+
+            t('outExpTitle', v('cvExpTitle'));
+            t('outExpOrg', v('cvExpOrg'));
+            t('outExpDate', v('cvExpDate'));
+            t('outExpDesc', v('cvExpDesc'));
+
+            const skills = v('cvSkills').split(',').map(s => s.trim()).filter(s => s);
+            document.getElementById('outSkillsContainer').innerHTML = skills.map(s => `<span class="skill-tag">${s}</span>`).join('');
+
+            const langs = v('cvLangs').split(',').map(s => s.trim()).filter(s => s);
+            document.getElementById('outLangsContainer').innerHTML = langs.map(l => {
+                const parts = l.split('-');
+                if (parts.length === 2) {
+                    return `<div class="lang-item"><strong>${parts[0].trim()}</strong> <span>${parts[1].trim()}</span></div>`;
+                }
+                return `<div class="lang-item"><strong>${l}</strong></div>`;
+            }).join('');
+        }
+
+        // Init
+        setLang('en');
+    </script>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3><img src="https://imadtbn.github.io/student-dz/assets/images/icon.png" alt="Student DZ Logo" width="24" height="24"
+                            style="border-radius:4px;vertical-align:middle"> Student DZ</h3>
+                    <p>المنصة الرقمية الشاملة للطالب الجزائري. رفيقك من التسجيل إلى التخرج.</p>
+                </div>
+                <div class="footer-col">
+                    <h3>روابط سريعة</h3>
+                    <ul class="footer-links">
+                        <li><a href="https://imadtbn.github.io/student-dz/categories/tools.html">الأدوات</a></li>
+                        <li><a href="https://imadtbn.github.io/student-dz/universities/index.html">الجامعات</a></li>
+                        <li><a href="https://imadtbn.github.io/student-dz/ecoles/index.html">المدارس والمعاهد</a></li>
+                        <li><a href="https://imadtbn.github.io/student-dz/platforms/index.html">المنصات</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>قانوني</h3>
+                    <ul class="footer-links">
+                        <li><a href="../pages/about.html">عن المنصة</a></li>
+                        <li><a href="https://imadtbn.github.io/dz_portal/pages/privacy.html">سياسة الخصوصية</a></li>
+                        <li><a href="https://imadtbn.github.io/dz_portal/pages/contact.html">اتصل بنا</a></li>
+                        <li><a href="../pages/guides.html">دليل المستخدم</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">&copy; <span id="currentYear"></span> Student DZ. جميع الحقوق محفوظة.</div>
+        </div>
+    </footer>
+
+    <script src="https://imadtbn.github.io/student-dz/assets/js/navigation.js"></script>
+
+<script defer src="https://imadtbn.github.io/dz_portal/assets/js/site-tags.js"></script>
+<script defer src="https://imadtbn.github.io/dz_portal/assets/js/ads-stability.js"></script>
+<script defer src="https://imadtbn.github.io/dz_portal/assets/js/dz-share.js"></script>
+</body>
+
+</html>

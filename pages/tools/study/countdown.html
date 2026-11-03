@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- SEO Foundation -->
+    <link rel="canonical" href="https://imadtbn.github.io/dz_portal/pages/tools/study/countdown.html">
+    <meta name="description"
+        content="أنشئ عدادات تنازلية للمواعيد الدراسية الرسمية وتابع التسجيلات والنتائج والامتحانات والتخرج.">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://imadtbn.github.io/dz_portal/pages/tools/study/countdown.html">
+    <meta property="og:title" content="عدّاد المواعيد الدراسية | Student DZ">
+    <meta property="og:description"
+        content="أنشئ عدادات تنازلية للمواعيد الدراسية الرسمية وتابع التسجيلات والنتائج والامتحانات والتخرج.">
+    <meta property="og:image"
+        content="https://raw.githubusercontent.com/imadtbn/student-dz/main/assets/images/icon-512.png">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://imadtbn.github.io/dz_portal/pages/tools/study/countdown.html">
+    <meta name="twitter:title" content="عدّاد المواعيد الدراسية | Student DZ">
+    <meta name="twitter:description"
+        content="أنشئ عدادات تنازلية للمواعيد الدراسية الرسمية وتابع التسجيلات والنتائج والامتحانات والتخرج.">
+    <meta name="twitter:image"
+        content="https://raw.githubusercontent.com/imadtbn/student-dz/main/assets/images/icon-512.png">
+
+    <!-- SEO Foundation -->
+    <!-- Open Graph -->
+
+
+
+
+    <!-- Twitter -->
+
+
+
+
+    <title>countdown | البوابة الجزائرية للخدمات الرقمية</title>
+    <meta name="theme-color" content="#007A5E">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://imadtbn.github.io/student-dz/assets/css/main.css">
+    <link rel="stylesheet" href="https://imadtbn.github.io/student-dz/assets/css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" href="https://imadtbn.github.io/student-dz/assets/images/icon.png">
+    <style>
+        .countdown-hero {
+            background: linear-gradient(135deg, var(--primary-color), #075e4b);
+            color: #fff;
+            border-radius: var(--radius-lg);
+            padding: 28px 20px;
+            margin: 20px 0;
+            text-align: center;
+            box-shadow: var(--shadow-md)
+        }
+
+        .countdown-hero h1 {
+            margin: 0 0 10px;
+            font-size: clamp(1.6rem, 4vw, 2.2rem)
+        }
+
+        .countdown-hero p {
+            margin: 0;
+            opacity: .92
+        }
+
+        .countdown-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+            margin: 18px 0
+        }
+
+        .countdown-actions .btn {
+            min-width: 170px
+        }
+
+        .countdown-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+            gap: 16px
+        }
+
+        .countdown-card {
+            position: relative;
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-lg);
+            padding: 20px;
+            box-shadow: var(--shadow-sm);
+            transition: transform .2s, box-shadow .2s
+        }
+
+        .countdown-card:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md)
+        }
+
+        .countdown-card.is-soon {
+            border-color: var(--primary-color)
+        }
+
+        .countdown-card.is-past {
+            opacity: .7
+        }
+
+        .countdown-card-head {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 15px
+        }
+
+        .countdown-icon {
+            width: 44px;
+            height: 44px;
+            border-radius: 12px;
+            display: grid;
+            place-items: center;
+            background: color-mix(in srgb, var(--primary-color) 12%, transparent);
+            color: var(--primary-color);
+            font-size: 1.15rem;
+            flex: none
+        }
+
+        .countdown-card h3 {
+            margin: 0;
+            font-size: 1.08rem;
+            color: var(--text-main)
+        }
+
+        .countdown-date {
+            font-size: .85rem;
+            color: var(--text-muted);
+            margin-top: 3px
+        }
+
+        .countdown-value {
+            font-weight: 800;
+            font-size: clamp(1.35rem, 4vw, 1.85rem);
+            color: var(--primary-color);
+            margin: 10px 0 4px;
+            line-height: 1.25
+        }
+
+        .countdown-clock {
+            font-variant-numeric: tabular-nums;
+            color: var(--text-muted);
+            font-size: .9rem;
+            direction: ltr;
+            text-align: center
+        }
+
+        .countdown-status {
+            font-size: .82rem;
+            margin-top: 12px;
+            color: var(--text-muted)
+        }
+
+        .card-buttons {
+            display: flex;
+            gap: 8px;
+            margin-top: 15px
+        }
+
+        .card-buttons .btn {
+            flex: 1
+        }
+
+        .empty-state {
+            text-align: center;
+            padding: 38px 20px;
+            border: 1px dashed var(--border-color);
+            border-radius: var(--radius-lg);
+            color: var(--text-muted)
+        }
+
+        .empty-state i {
+            font-size: 2.4rem;
+            color: var(--primary-color);
+            margin-bottom: 12px
+        }
+
+        .modal-backdrop {
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, .5);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 16px;
+            z-index: 1000
+        }
+
+        .modal-backdrop.open {
+            display: flex
+        }
+
+        .countdown-modal {
+            width: min(520px, 100%);
+            max-height: 90vh;
+            overflow: auto;
+            background: var(--bg-card);
+            color: var(--text-main);
+            border-radius: var(--radius-lg);
+            padding: 22px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, .25)
+        }
+
+        .modal-head {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+            margin-bottom: 18px
+        }
+
+        .modal-head h2 {
+            margin: 0;
+            font-size: 1.25rem
+        }
+
+        .modal-close {
+            border: 0;
+            background: transparent;
+            color: var(--text-muted);
+            font-size: 1.25rem;
+            cursor: pointer
+        }
+
+        .form-group {
+            margin-bottom: 14px
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: 700;
+            margin-bottom: 6px
+        }
+
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 11px 12px;
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            background: var(--bg-main, var(--bg-card));
+            color: var(--text-main);
+            font: inherit
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px
+        }
+
+        .notice-box {
+            padding: 11px 13px;
+            border-radius: 10px;
+            background: color-mix(in srgb, var(--primary-color) 8%, transparent);
+            font-size: .85rem;
+            color: var(--text-muted);
+            margin-bottom: 14px
+        }
+
+        .switch-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 15px;
+            padding: 11px 0
+        }
+
+        .switch-row input {
+            width: 20px;
+            height: 20px;
+            accent-color: var(--primary-color)
+        }
+
+        .modal-buttons {
+            display: flex;
+            gap: 10px;
+            margin-top: 18px
+        }
+
+        .modal-buttons .btn {
+            flex: 1
+        }
+
+        @media(max-width:600px) {
+            .countdown-grid {
+                grid-template-columns: 1fr
+            }
+
+            .form-row {
+                grid-template-columns: 1fr
+            }
+
+            .countdown-actions .btn {
+                width: 100%
+            }
+
+            .countdown-card {
+                padding: 17px
+            }
+        }
+    </style>
+
+    <meta name="google-site-verification" content="f5Xi4oFx0v5dN6iPZd9qCw-7vnc3vIbAeYF9jr4vwVM" />
+    <meta name="msvalidate.01" content="9BCA38377A234DCCEB9991EAD1A2F6C2" />
+
+
+    <script type="text/javascript">
+        (function (c, l, a, r, i, t, y) {
+            c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
+            t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
+            y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
+        })(window, document, "clarity", "script", "yi4hhmflse");
+    </script>
+
+    <!-- Google tag (gtag.js) -->
+    
+    
+
+
+    <!-- Google Tag Manager -->
+    
+    <!-- End Google Tag Manager -->
+
+    <!-- Student DZ: WebApplication JSON-LD START -->
+    <script type="application/ld+json" id="studentDzToolSchema">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "@id": "https://imadtbn.github.io/dz_portal/pages/tools/study/countdown.html#webapplication",
+  "name": "عدّاد المواعيد الدراسية",
+  "url": "https://imadtbn.github.io/dz_portal/pages/tools/study/countdown.html",
+  "inLanguage": "ar-DZ",
+  "applicationCategory": "EducationalApplication",
+  "operatingSystem": "Web Browser",
+  "isPartOf": {
+    "@id": "https://imadtbn.github.io/student-dz/#website"
+  },
+  "author": {
+    "@id": "https://imadtbn.github.io/student-dz/#organization"
+  },
+  "description": "أنشئ عدادات تنازلية للمواعيد الدراسية الرسمية وتابع التسجيلات والنتائج والامتحانات والتخرج."
+}
+</script>
+    <!-- Student DZ: WebApplication JSON-LD END -->
+
+</head>
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M27X7VLD" height="0" width="0"
+        style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+
+
+<body>
+    <header class="site-header">
+        <div class="container"><a href="https://imadtbn.github.io/dz_portal/" class="logo"><img src="https://imadtbn.github.io/student-dz/assets/images/icon.png"
+                    alt="Student DZ" width="32" height="32" style="border-radius:8px"> Student DZ</a>
+
+            <nav class="main-nav" id="mainNav">
+                <a href="https://imadtbn.github.io/dz_portal/" class="nav-link">الرئيسية</a>
+                <a href="https://imadtbn.github.io/student-dz/universities/index.html" class="nav-link">جامعات</a>
+                <a href="https://imadtbn.github.io/student-dz/ecoles/index.html" class="nav-link">مدارس ومعاهد</a>
+                <a href="https://imadtbn.github.io/student-dz/residences/index.html" class="nav-link">إقامات</a>
+                <a href="https://imadtbn.github.io/student-dz/transport/index.html" class="nav-link">نقل</a>
+                <a href="../tools/maps.html" class="nav-link">خريطة</a>
+                <a href="https://imadtbn.github.io/student-dz/categories/student-life.html" class="nav-link">حياة جامعية</a>
+                <a href="https://imadtbn.github.io/student-dz/platforms/index.html" class="nav-link">منصات</a>
+                <a href="../pages/favorites.html" class="nav-link">مفضلة</a>
+            </nav>
+
+            <div class="header-actions"><button class="icon-btn" id="themeToggle" aria-label="تبديل الوضع"><i
+                        class="fa-solid fa-moon"></i></button><button class="hamburger" id="menuToggle" type="button"
+                    aria-label="القائمة" aria-expanded="false" aria-controls="mainNav">☰</button></div>
+        </div>
+    </header>
+    <main class="container">
+        <section class="countdown-section" aria-labelledby="countdown-title">
+
+            <nav class="page-breadcrumb" aria-label="مسار التنقل">
+                <a href="https://imadtbn.github.io/dz_portal/">الرئيسية</a><span aria-hidden="true">›</span><span>عدّاد المواعيد
+                    الدراسية</span>
+            </nav>
+
+            <section class="page-intro" aria-labelledby="countdown-title">
+                <div class="page-intro-icon" aria-hidden="true"><i class="fa-solid fa-hourglass-half"></i></div>
+                <h1 id="countdown-title"> عدّاد المواعيد الدراسية</h1>
+                <p>أنشئ رزنامتك الخاصة وحدد مواعيدك حسب جامعتك وتخصصك.</p>
+            </section>
+
+        </section>
+        <div class="countdown-actions"><button class="btn" id="addEventBtn"><i class="fa-solid fa-plus"></i> إضافة
+                موعد</button><button class="btn btn-outline" id="notificationBtn"><i class="fa-regular fa-bell"></i>
+                تفعيل الإشعارات</button></div>
+        <section class="main-section" style="padding-top:0">
+            <div class="container" style="padding:0">
+                <h2 class="section-title"><i class="fa-solid fa-calendar-days"></i> رزنامتي</h2>
+                <div id="eventsGrid" class="countdown-grid"></div>
+                <div id="emptyState" class="empty-state" hidden><i class="fa-regular fa-calendar-plus"></i>
+                    <h3>لم تضف أي موعد بعد</h3>
+                    <p>ابدأ بإنشاء رزنامتك الدراسية الخاصة.</p><button class="btn" id="emptyAddBtn">إضافة أول
+                        موعد</button>
+                </div>
+            </div>
+        </section>
+        <section id="pastSection" class="main-section" style="padding-top:0;display:none">
+            <div class="container" style="padding:0">
+                <h2 class="section-title"><i class="fa-solid fa-clock-rotate-left"></i> المواعيد المنتهية</h2>
+                <div id="pastGrid" class="countdown-grid"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3><img src="https://imadtbn.github.io/student-dz/assets/images/icon.png" alt="Student DZ Logo" width="24" height="24"
+                            style="border-radius:4px;vertical-align:middle"> Student DZ</h3>
+                    <p>المنصة الرقمية الشاملة للطالب الجزائري. رفيقك من التسجيل إلى التخرج.</p>
+                </div>
+                <div class="footer-col">
+                    <h3>روابط سريعة</h3>
+                    <ul class="footer-links">
+                        <li><a href="https://imadtbn.github.io/student-dz/categories/tools.html">الأدوات</a></li>
+                        <li><a href="https://imadtbn.github.io/student-dz/universities/index.html">الجامعات</a></li>
+                        <li><a href="https://imadtbn.github.io/student-dz/ecoles/index.html">المدارس والمعاهد</a></li>
+                        <li><a href="https://imadtbn.github.io/student-dz/platforms/index.html">المنصات</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>قانوني</h3>
+                    <ul class="footer-links">
+                        <li><a href="../pages/about.html">عن المنصة</a></li>
+                        <li><a href="https://imadtbn.github.io/dz_portal/pages/privacy.html">سياسة الخصوصية</a></li>
+                        <li><a href="https://imadtbn.github.io/dz_portal/pages/contact.html">اتصل بنا</a></li>
+                        <li><a href="../pages/guides.html">دليل المستخدم</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">&copy; <span id="currentYear"></span> Student DZ. جميع الحقوق محفوظة.</div>
+        </div>
+    </footer>
+
+    <div class="modal-backdrop" id="modalBackdrop" aria-hidden="true">
+        <div class="countdown-modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+            <div class="modal-head">
+                <h2 id="modalTitle">إضافة موعد</h2><button class="modal-close" id="modalClose" type="button"
+                    aria-label="إغلاق"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <form id="eventForm">
+                <div class="notice-box"><i class="fa-solid fa-circle-info"></i> جميع المواعيد تُحفظ محليًا في هذا
+                    المتصفح، ويمكنك تعديلها أو حذفها في أي وقت.</div>
+                <div class="form-group"><label for="eventName">اسم الموعد</label><input id="eventName" required
+                        maxlength="80" placeholder="مثال: إعلان النتائج"></div>
+                <div class="form-row">
+                    <div class="form-group"><label for="eventDate">التاريخ</label><input id="eventDate" type="date"
+                            required></div>
+                    <div class="form-group"><label for="eventTime">الساعة</label><input id="eventTime" type="time"
+                            value="09:00" required></div>
+                </div>
+                <div class="switch-row"><label for="eventNotify">تفعيل التذكير</label><input id="eventNotify"
+                        type="checkbox"></div>
+                <div class="form-group" id="reminderGroup" style="display:none"><label for="eventReminder">التذكير قبل
+                        الموعد</label><select id="eventReminder">
+                        <option value="0">يوم الموعد</option>
+                        <option value="1">قبل يوم</option>
+                        <option value="3">قبل 3 أيام</option>
+                        <option value="7">قبل أسبوع</option>
+                    </select></div>
+                <div class="modal-buttons"><button class="btn" type="submit"><i class="fa-solid fa-check"></i> حفظ
+                        الموعد</button><button class="btn btn-outline" id="cancelBtn" type="button">إلغاء</button></div>
+            </form>
+        </div>
+    </div>
+    <script src="https://imadtbn.github.io/student-dz/assets/js/theme.js"></script>
+    <script src="https://imadtbn.github.io/student-dz/assets/js/navigation.js"></script>
+    <script src="https://imadtbn.github.io/student-dz/assets/js/storage.js"></script>
+    <script src="https://imadtbn.github.io/student-dz/assets/js/app.js"></script>
+    <script src="https://imadtbn.github.io/student-dz/assets/js/pwa.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const KEY = 'studentDzCountdownEvents';
+            const grid = document.getElementById('eventsGrid'), pastGrid = document.getElementById('pastGrid'), empty = document.getElementById('emptyState'), pastSection = document.getElementById('pastSection');
+            const modal = document.getElementById('modalBackdrop'), form = document.getElementById('eventForm'), title = document.getElementById('modalTitle');
+            const nameInput = document.getElementById('eventName'), dateInput = document.getElementById('eventDate'), timeInput = document.getElementById('eventTime'), notifyInput = document.getElementById('eventNotify'), reminderInput = document.getElementById('eventReminder'), reminderGroup = document.getElementById('reminderGroup');
+            let events = load(), editingId = null, timer;
+            const presets = ['التسجيل الأولي', 'إعلان النتائج', 'امتحانات الفصلية', 'العطلة', 'نهاية الدراسة', 'التخرج'];
+            const icons = { 'التسجيل الأولي': 'fa-file-signature', 'إعلان النتائج': 'fa-square-poll-vertical', 'امتحانات الفصلية': 'fa-pen-to-square', 'العطلة': 'fa-umbrella-beach', 'نهاية الدراسة': 'fa-flag-checkered', 'التخرج': 'fa-graduation-cap' };
+            function load() { try { return JSON.parse(localStorage.getItem(KEY) || '[]').filter(e => e && e.id && e.name && e.date) } catch { return [] } }
+            function save() { localStorage.setItem(KEY, JSON.stringify(events)) }
+            function openModal(event = null) { editingId = event?.id || null; title.textContent = event ? 'تعديل الموعد' : 'إضافة موعد'; nameInput.value = event?.name || ''; dateInput.value = event?.date || ''; timeInput.value = event?.time || '09:00'; notifyInput.checked = !!event?.notify; reminderInput.value = String(event?.reminder ?? 1); reminderGroup.style.display = notifyInput.checked ? 'block' : 'none'; modal.classList.add('open'); modal.setAttribute('aria-hidden', 'false'); setTimeout(() => nameInput.focus(), 50) }
+            function closeModal() { modal.classList.remove('open'); modal.setAttribute('aria-hidden', 'true'); form.reset(); editingId = null; reminderGroup.style.display = 'none' }
+            function dateText(date, time) { const d = new Date(`${date}T${time || '00:00'}:00`); return new Intl.DateTimeFormat('ar-DZ', { dateStyle: 'full', timeStyle: 'short' }).format(d) }
+            function remaining(target) { const diff = target - Date.now(); if (diff <= 0) return null; const days = Math.floor(diff / 86400000), hours = Math.floor(diff % 86400000 / 3600000), mins = Math.floor(diff % 3600000 / 60000), secs = Math.floor(diff % 60000 / 1000); return { diff, days, hours, mins, secs } }
+            function countdownText(r) { if (r.days > 0) return `متبقّي ${r.days.toLocaleString('ar-DZ')} ${r.days === 1 ? 'يوم' : 'يومًا'}`; if (r.hours > 0) return `متبقّي ${r.hours.toLocaleString('ar-DZ')} ساعة`; if (r.mins > 0) return `متبقّي ${r.mins.toLocaleString('ar-DZ')} دقيقة`; return `متبقّي ${r.secs.toLocaleString('ar-DZ')} ثانية` }
+            function iconFor(name) { return icons[name] || 'fa-calendar-day' }
+            function card(e, past = false) { const target = new Date(`${e.date}T${e.time || '00:00'}:00`).getTime(); const r = remaining(target); const div = document.createElement('article'); div.className = 'countdown-card' + (!past && r && r.diff < 604800000 ? ' is-soon' : '') + (past ? ' is-past' : ''); div.dataset.id = e.id; div.innerHTML = `<div class="countdown-card-head"><span class="countdown-icon"><i class="fa-solid ${iconFor(e.name)}"></i></span><div><h3>${escapeHtml(e.name)}</h3><div class="countdown-date">${escapeHtml(dateText(e.date, e.time))}</div></div></div><div class="countdown-value">${past ? 'انتهى الموعد' : countdownText(r)}</div><div class="countdown-clock">${past ? '' : `${String(r.days).padStart(2, '0')} : ${String(r.hours).padStart(2, '0')} : ${String(r.mins).padStart(2, '0')} : ${String(r.secs).padStart(2, '0')}`}</div><div class="countdown-status">${e.notify ? '🔔 التذكير مفعّل' : 'التذكير غير مفعّل'}</div><div class="card-buttons"><button class="btn btn-outline edit-btn" type="button"><i class="fa-solid fa-pen"></i> تعديل</button><button class="btn btn-outline delete-btn" type="button"><i class="fa-solid fa-trash"></i> حذف</button></div>`; return div }
+            function render() { const now = Date.now(); const active = events.filter(e => new Date(`${e.date}T${e.time || '00:00'}:00`).getTime() > now).sort((a, b) => new Date(`${a.date}T${a.time || '00:00'}:00`) - new Date(`${b.date}T${b.time || '00:00'}:00`)); const past = events.filter(e => new Date(`${e.date}T${e.time || '00:00'}:00`).getTime() <= now).sort((a, b) => new Date(`${b.date}T${b.time || '00:00'}:00`) - new Date(`${a.date}T${a.time || '00:00'}:00`)); grid.innerHTML = ''; pastGrid.innerHTML = ''; active.forEach(e => grid.appendChild(card(e))); past.forEach(e => pastGrid.appendChild(card(e, true))); empty.hidden = events.length > 0; pastSection.style.display = past.length ? 'block' : 'none'; bindCards() }
+            function bindCards() { document.querySelectorAll('.edit-btn').forEach(b => b.onclick = () => openModal(events.find(e => e.id === b.closest('.countdown-card').dataset.id))); document.querySelectorAll('.delete-btn').forEach(b => b.onclick = () => { const id = b.closest('.countdown-card').dataset.id; if (confirm('هل تريد حذف هذا الموعد؟')) { events = events.filter(e => e.id !== id); save(); render() } }) }
+            function tick() { document.querySelectorAll('.countdown-card:not(.is-past)').forEach(el => { const e = events.find(x => x.id === el.dataset.id); if (!e) return; const r = remaining(new Date(`${e.date}T${e.time || '00:00'}:00`).getTime()); if (!r) { render(); return } const v = el.querySelector('.countdown-value'), c = el.querySelector('.countdown-clock'); if (v) v.textContent = countdownText(r); if (c) c.textContent = `${String(r.days).padStart(2, '0')} : ${String(r.hours).padStart(2, '0')} : ${String(r.mins).padStart(2, '0')} : ${String(r.secs).padStart(2, '0')}` }) }
+            function escapeHtml(s) { const d = document.createElement('div'); d.textContent = s; return d.innerHTML }
+            async function requestNotifications() { if (!('Notification' in window)) { alert('المتصفح لا يدعم إشعارات الويب.'); return } const p = await Notification.requestPermission(); if (p === 'granted') { alert('تم تفعيل إذن الإشعارات. يمكنك الآن تفعيل التذكير لكل موعد.') } else alert('لم يتم السماح بالإشعارات.') }
+            document.getElementById('addEventBtn').onclick = () => openModal(); document.getElementById('emptyAddBtn').onclick = () => openModal(); document.getElementById('notificationBtn').onclick = requestNotifications; document.getElementById('modalClose').onclick = closeModal; document.getElementById('cancelBtn').onclick = closeModal; modal.onclick = e => { if (e.target === modal) closeModal() }; notifyInput.onchange = () => reminderGroup.style.display = notifyInput.checked ? 'block' : 'none';
+            form.onsubmit = e => { e.preventDefault(); const data = { id: editingId || crypto.randomUUID(), name: nameInput.value.trim(), date: dateInput.value, time: timeInput.value, notify: notifyInput.checked, reminder: Number(reminderInput.value) }; if (!data.name || !data.date || !data.time) return; const i = events.findIndex(x => x.id === data.id); if (i >= 0) events[i] = data; else events.push(data); save(); render(); closeModal() };
+            document.addEventListener('keydown', e => { if (e.key === 'Escape' && modal.classList.contains('open')) closeModal() }); document.getElementById('currentYear').textContent = new Date().getFullYear(); render(); timer = setInterval(tick, 1000); window.addEventListener('beforeunload', () => clearInterval(timer));
+        });
+    </script>
+
+<script defer src="https://imadtbn.github.io/dz_portal/assets/js/site-tags.js"></script>
+<script defer src="https://imadtbn.github.io/dz_portal/assets/js/ads-stability.js"></script>
+<script defer src="https://imadtbn.github.io/dz_portal/assets/js/dz-share.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- SEO Foundation -->
+    <link rel="canonical" href="https://imadtbn.github.io/dz_portal/pages/tools/calculators/average-calculator.html">
+    <meta name="description" content="احسب معدل السداسي الجامعي في الجزائر حسب علامات المقاييس والمعاملات، مع شرح طريقة الحساب ومثال تطبيقي وروابط لأدوات المعدل ذات الصلة.">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://imadtbn.github.io/dz_portal/pages/tools/calculators/average-calculator.html">
+    <meta property="og:title" content="حساب معدل السداسي الجامعي مع مثال توضيحي - Student DZ">
+    <meta property="og:description"
+        content="احسب معدل السداسي الجامعي في الجزائر حسب علامات المقاييس والمعاملات، مع شرح طريقة الحساب ومثال تطبيقي وروابط لأدوات المعدل ذات الصلة.">
+    <meta property="og:image"
+        content="https://raw.githubusercontent.com/imadtbn/student-dz/main/assets/images/icon-512.png">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://imadtbn.github.io/dz_portal/pages/tools/calculators/average-calculator.html">
+    <meta name="twitter:title" content="حساب معدل السداسي الجامعي مع مثال توضيحي - Student DZ">
+    <meta name="twitter:description"
+        content="احسب معدل السداسي والجامعة بدقة اعتماداً على المقاييس والمعاملات والعلامات.">
+    <meta name="twitter:image"
+        content="https://raw.githubusercontent.com/imadtbn/student-dz/main/assets/images/icon-512.png">
+
+    <!-- SEO Foundation -->
+    <!-- Open Graph -->
+
+
+
+
+    <!-- Twitter -->
+
+
+
+
+    <title>average calculator | البوابة الجزائرية للخدمات الرقمية</title>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://imadtbn.github.io/student-dz/assets/css/main.css">
+    <link rel="stylesheet" href="https://imadtbn.github.io/student-dz/assets/css/responsive.css">
+    <link rel="stylesheet" href="https://imadtbn.github.io/student-dz/assets/css/feedback.css">
+    <script src="https://imadtbn.github.io/student-dz/assets/js/config.js"></script>
+    <style>
+        .tool-container {
+            max-width: 800px;
+            margin: 2rem auto;
+            background: var(--bg-card);
+            padding: 2rem;
+            border-radius: var(--radius-lg);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+
+        .module-header {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr 40px;
+            gap: 10px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            padding: 0 2px;
+        }
+
+        .module-row {
+            display: grid;
+            grid-template-columns: minmax(0, 2fr) minmax(70px, 1fr) minmax(90px, 1fr) minmax(90px, 1fr) 40px;
+            gap: 10px;
+            margin-bottom: 10px;
+            align-items: center;
+        }
+
+        .module-row input {
+            width: 100%;
+            min-width: 0;
+            height: 42px;
+            padding: 8px 10px;
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-md);
+            font-family: var(--font-family);
+            font-size: 0.95rem;
+            background: var(--bg-card);
+            color: var(--text-main);
+        }
+
+        .module-row input:focus {
+            outline: 2px solid var(--primary-light);
+            outline-offset: 1px;
+            border-color: var(--primary-color);
+        }
+
+        .remove-btn {
+            background: #ff4d4f;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 32px;
+            height: 32px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 1rem;
+            justify-self: center;
+        }
+
+        .actions {
+            margin-top: 1.25rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+
+        .actions .btn {
+            width: 100%;
+            min-height: 46px;
+            font-family: var(--font-family);
+        }
+
+        .result-box {
+            margin-top: 2rem;
+            padding: 1.5rem;
+            background: var(--primary-light);
+            color: white;
+            border-radius: var(--radius-md);
+            text-align: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            display: none;
+        }
+
+        .average-guide {
+            margin-top: 2rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid var(--border-color);
+            line-height: 1.85;
+            font-size: 0.98rem;
+        }
+
+        .average-guide h2 { font-size: 1.35rem; margin: 0 0 0.75rem; }
+        .average-guide h3 { font-size: 1.08rem; margin: 1.25rem 0 0.5rem; }
+        .average-guide p { margin: 0.5rem 0; }
+
+        .average-guide-note {
+            padding: 0.75rem 1rem;
+            border-right: 3px solid var(--primary-color);
+            background: var(--bg-main);
+            border-radius: var(--radius-sm);
+        }
+
+        .average-example-wrap {
+            max-width: 100%;
+            overflow-x: auto;
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-md);
+        }
+
+        .average-example { width: 100%; border-collapse: collapse; text-align: center; min-width: 460px; }
+        .average-example th, .average-example td { padding: 0.65rem 0.5rem; border-bottom: 1px solid var(--border-color); }
+        .average-example th { background: var(--bg-main); }
+        .average-example tbody tr:last-child td { border-bottom: 0; }
+
+        .average-related-tools {
+            list-style: none; padding: 0; margin: 0.5rem 0 0;
+            display: grid; gap: 0.65rem;
+        }
+
+        .average-related-tools li {
+            display: flex; flex-direction: column; gap: 0.15rem;
+            padding: 0.75rem 1rem; border: 1px solid var(--border-color);
+            border-radius: var(--radius-md);
+        }
+
+        .average-related-tools a { color: var(--primary-color); font-weight: 700; text-decoration: none; }
+        .average-related-tools a:hover { text-decoration: underline; }
+        .average-related-tools span { font-size: 0.9rem; color: var(--text-muted, var(--text-main)); }
+
+        @media (max-width: 700px) {
+            .tool-container {
+                margin: 1rem auto;
+                padding: 1rem;
+                border-radius: var(--radius-md);
+            }
+
+            .tool-container .section-title {
+                font-size: 1.55rem;
+                margin-top: 0.25rem !important;
+                margin-bottom: 0.75rem;
+            }
+
+            .tool-container>p {
+                font-size: 0.9rem;
+                margin-bottom: 1.25rem !important;
+            }
+
+            .module-header {
+                display: none !important;
+            }
+
+            .module-row {
+                grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+                gap: 8px;
+                padding: 10px;
+                margin-bottom: 10px;
+                border: 1px solid var(--border-color);
+                border-radius: var(--radius-md);
+                background: var(--bg-main);
+            }
+
+            .module-row input:first-child {
+                grid-column: 1 / -1;
+            }
+
+            .module-row input {
+                height: 44px;
+                font-size: 0.9rem;
+                padding: 8px;
+            }
+
+            .module-row .remove-btn {
+                grid-column: 1 / -1;
+                width: 100%;
+                height: 38px;
+                border-radius: var(--radius-md);
+            }
+
+            .actions {
+                grid-template-columns: 1fr;
+                gap: 8px;
+            }
+
+            .actions .btn {
+                min-height: 48px;
+            }
+
+            .result-box {
+                margin-top: 1.25rem;
+                padding: 1rem;
+                font-size: 1.25rem;
+            }
+        }
+
+        @media (max-width: 380px) {
+            .tool-container {
+                padding: 0.75rem;
+            }
+
+            .module-row {
+                padding: 8px;
+                gap: 7px;
+            }
+
+            .module-row input {
+                font-size: 0.84rem;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/png" href="https://imadtbn.github.io/student-dz/assets/images/icon.png">
+    <link rel="apple-touch-icon" href="https://imadtbn.github.io/student-dz/assets/images/icon-192.png">
+
+
+
+
+    <meta name="google-site-verification" content="f5Xi4oFx0v5dN6iPZd9qCw-7vnc3vIbAeYF9jr4vwVM" />
+    <meta name="msvalidate.01" content="9BCA38377A234DCCEB9991EAD1A2F6C2" />
+
+
+    <script type="text/javascript">
+        (function (c, l, a, r, i, t, y) {
+            c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
+            t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
+            y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
+        })(window, document, "clarity", "script", "yi4hhmflse");
+    </script>
+
+    <!-- Google tag (gtag.js) -->
+    
+    
+
+
+    <!-- Google Tag Manager -->
+    
+    <!-- End Google Tag Manager -->
+
+    <!-- Student DZ: WebApplication JSON-LD START -->
+    <script type="application/ld+json" id="studentDzToolSchema">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "@id": "https://imadtbn.github.io/dz_portal/pages/tools/calculators/average-calculator.html#webapplication",
+  "name": "حاسبة المعدل الجامعي",
+  "url": "https://imadtbn.github.io/dz_portal/pages/tools/calculators/average-calculator.html",
+  "inLanguage": "ar-DZ",
+  "applicationCategory": "EducationalApplication",
+  "operatingSystem": "Web Browser",
+  "isPartOf": {
+    "@id": "https://imadtbn.github.io/student-dz/#website"
+  },
+  "author": {
+    "@id": "https://imadtbn.github.io/student-dz/#organization"
+  },
+  "description": "احسب معدل السداسي الجامعي في الجزائر حسب علامات المقاييس والمعاملات، مع شرح طريقة الحساب ومثال تطبيقي."
+}
+</script>
+    <!-- Student DZ: WebApplication JSON-LD END -->
+
+</head>
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M27X7VLD" height="0" width="0"
+        style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+
+
+<body>
+    <header class="site-header">
+        <div class="container">
+            <a href="https://imadtbn.github.io/dz_portal/" class="logo">
+                <img src="https://imadtbn.github.io/student-dz/assets/images/icon.png" alt="Student DZ Logo" width="32" height="32"
+                    style="border-radius: 8px;"> Student DZ
+            </a>
+            <nav class="main-nav" id="mainNav">
+                <a href="https://imadtbn.github.io/dz_portal/" class="nav-link">الرئيسية</a>
+                <a href="https://imadtbn.github.io/student-dz/universities/index.html" class="nav-link">جامعات</a>
+                <a href="https://imadtbn.github.io/student-dz/ecoles/index.html" class="nav-link">مدارس ومعاهد</a>
+                <a href="https://imadtbn.github.io/student-dz/residences/index.html" class="nav-link">إقامات</a>
+                <a href="https://imadtbn.github.io/student-dz/transport/index.html" class="nav-link">نقل</a>
+                <a href="../tools/maps.html" class="nav-link">خريطة</a>
+                <a href="https://imadtbn.github.io/student-dz/categories/student-life.html" class="nav-link">حياة جامعية</a>
+                <a href="https://imadtbn.github.io/student-dz/platforms/index.html" class="nav-link">منصات</a>
+                <a href="../pages/favorites.html" class="nav-link">مفضلة</a>
+            </nav>
+            <div class="header-actions">
+                <button class="icon-btn" id="themeToggle" aria-label="تبديل الوضع"><i
+                        class="fa-solid fa-moon"></i></button>
+                <button class="hamburger" id="menuToggle" aria-label="القائمة">☰</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="tool-container">
+            <nav class="page-breadcrumb" aria-label="مسار التنقل">
+                <a href="https://imadtbn.github.io/dz_portal/">الرئيسية</a><span aria-hidden="true">›</span><span>حاسبة معدل السداسي</span>
+            </nav>
+
+            <section class="page-intro" aria-labelledby="apa-title">
+                <div class="page-intro-icon" aria-hidden="true"><i class="fa-solid fa-calculator"></i></div>
+                <h1 id="apa-title">حساب معدل السداسي الجامعي</h1>
+                <p>أدخل علامات المقاييس ومعاملاتها لحساب المعدل الموزون، مع مثال يوضح طريقة الحساب.</p>
+            </section>
+
+            <div class="module-header">
+                <div>المقياس (اختياري)</div>
+                <div>المعامل</div>
+                <div>TD/TP</div>
+                <div>الامتحان</div>
+                <div></div>
+            </div>
+
+            <div id="modulesContainer"></div>
+
+            <div class="actions">
+                <button class="btn btn-outline" id="addModuleBtn"><i class="fa-solid fa-plus"></i> إضافة مقياس</button>
+                <button class="btn" id="calculateBtn"><i class="fa-solid fa-calculator"></i> احسب المعدل</button>
+            </div>
+
+            <div id="resultBox" class="result-box" aria-live="polite">
+                معدلك هو: <span id="finalAverage">0.00</span>
+            </div>
+
+            <section class="average-guide" aria-labelledby="average-guide-title">
+                <h2 id="average-guide-title">كيف تحسب معدل السداسي الجامعي؟</h2>
+                <p>أدخل كل مقياس في سطر مستقل، ثم أضف المعامل وعلامة الامتحان على 20. إذا أدخلت علامة TD/TP، تحسب الأداة معدل المقياس وفق الصيغة المعتمدة داخلها: 60% للامتحان و40% لـ TD/TP. وإذا تركت TD/TP فارغًا، تعتمد علامة الامتحان وحدها.</p>
+
+                <h3>طريقة الحساب</h3>
+                <p>معدل المقياس مع TD/TP = (علامة الامتحان × 0.6) + (علامة TD/TP × 0.4).</p>
+                <p>المعدل العام = مجموع (معدل كل مقياس × معامله) ÷ مجموع معاملات المقاييس التي أُدخلت لها علامة امتحان.</p>
+                <p class="average-guide-note">تنبيه: قد تختلف نسب احتساب TD/TP وطريقة حساب المعدل حسب الجامعة والتخصص ونظام التقييم. تحقّق من دليل مؤسستك، واستخدم الأداة كتقدير وفق الصيغة الموضحة أعلاه.</p>
+
+                <h3>مثال تطبيقي</h3>
+                <div class="average-example-wrap">
+                    <table class="average-example">
+                        <thead><tr><th scope="col">المقياس</th><th scope="col">المعامل</th><th scope="col">TD/TP</th><th scope="col">الامتحان</th><th scope="col">معدل المقياس</th></tr></thead>
+                        <tbody>
+                            <tr><td>رياضيات</td><td>2</td><td>14</td><td>16</td><td>15.20</td></tr>
+                            <tr><td>إعلام آلي</td><td>1</td><td>—</td><td>12</td><td>12.00</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p>في هذا المثال: معدل الرياضيات = (16 × 0.6) + (14 × 0.4) = 15.20. ثم المعدل العام = (15.20 × 2 + 12 × 1) ÷ (2 + 1) = <strong>14.13/20</strong>.</p>
+
+                <h3>أدوات جامعية ذات صلة</h3>
+                <ul class="average-related-tools">
+                    <li><a href="semester-calculator.html">حاسبة المعدل السنوي</a><span>لحساب المعدل السنوي انطلاقًا من معدلات الفصول.</span></li>
+                    <li><a href="percentage-calculator.html">حاسبة النسبة المئوية</a><span>لحساب النسب المئوية في النتائج والدرجات.</span></li>
+                </ul>
+                <p><a class="related-tools-home" href="https://imadtbn.github.io/student-dz/categories/tools.html">استكشف جميع أدوات الطالب الجزائري</a></p>
+            </section>
+        </div>
+    </main>
+
+    <div id="feedbackContainer"></div>
+
+    <script src="https://imadtbn.github.io/student-dz/assets/js/theme.js"></script>
+    <script src="https://imadtbn.github.io/student-dz/assets/js/storage.js"></script>
+    <script src="https://imadtbn.github.io/student-dz/assets/js/feedback.js"></script>
+    <script>
+        StorageApp.addRecent({ id: 'average-calc', title: 'حاسبة المعدل', url: 'tools/average-calculator.html', icon: '🧮' });
+
+        const container = document.getElementById('modulesContainer');
+
+        function createRow() {
+            const row = document.createElement('div');
+            row.className = 'module-row';
+            row.innerHTML = `
+                <input type="text" placeholder="اسم المقياس">
+                <input type="number" class="coef" placeholder="المعامل" min="1" value="1">
+                <input type="number" class="td" placeholder="TD/TP (اختياري)" min="0" max="20" step="0.01">
+                <input type="number" class="exam" placeholder="الامتحان /20" min="0" max="20" step="0.01">
+                <button type="button" class="remove-btn" aria-label="حذف المقياس"><i class="fa-solid fa-trash"></i></button>
+            `;
+
+            row.querySelector('.remove-btn').addEventListener('click', () => {
+                if (container.children.length > 1) {
+                    row.remove();
+                } else {
+                    alert("يجب أن يكون هناك مقياس واحد على الأقل.");
+                }
+            });
+            return row;
+        }
+
+        for (let i = 0; i < 3; i++) container.appendChild(createRow());
+
+        document.getElementById('addModuleBtn').addEventListener('click', () => {
+            container.appendChild(createRow());
+        });
+
+        document.getElementById('calculateBtn').addEventListener('click', () => {
+            let totalScore = 0;
+            let totalCoef = 0;
+            const rows = container.querySelectorAll('.module-row');
+
+            rows.forEach(row => {
+                const coef = parseFloat(row.querySelector('.coef').value) || 0;
+                const td = parseFloat(row.querySelector('.td').value);
+                const exam = parseFloat(row.querySelector('.exam').value);
+
+                if (coef <= 0) return;
+
+                let moduleAvg = 0;
+                if (!isNaN(exam)) {
+                    moduleAvg = !isNaN(td) ? (exam * 0.6) + (td * 0.4) : exam;
+                    totalScore += moduleAvg * coef;
+                    totalCoef += coef;
+                }
+            });
+
+            if (totalCoef > 0) {
+                const final = (totalScore / totalCoef).toFixed(2);
+                document.getElementById('finalAverage').textContent = final;
+                const resultBox = document.getElementById('resultBox');
+                resultBox.style.display = 'block';
+                resultBox.style.backgroundColor = final >= 10 ? 'var(--primary-color)' : 'var(--secondary-color)';
+            } else {
+                alert("يرجى إدخال علامات صالحة ومعاملات.");
+            }
+        });
+    </script>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3><img src="https://imadtbn.github.io/student-dz/assets/images/icon.png" alt="Student DZ Logo" width="24" height="24"
+                            style="border-radius:4px;vertical-align:middle"> Student DZ</h3>
+                    <p>المنصة الرقمية الشاملة للطالب الجزائري. رفيقك من التسجيل إلى التخرج.</p>
+                </div>
+                <div class="footer-col">
+                    <h3>روابط سريعة</h3>
+                    <ul class="footer-links">
+                        <li><a href="https://imadtbn.github.io/student-dz/categories/tools.html">الأدوات</a></li>
+                        <li><a href="https://imadtbn.github.io/student-dz/universities/index.html">الجامعات</a></li>
+                        <li><a href="https://imadtbn.github.io/student-dz/ecoles/index.html">المدارس والمعاهد</a></li>
+                        <li><a href="https://imadtbn.github.io/student-dz/platforms/index.html">المنصات</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>قانوني</h3>
+                    <ul class="footer-links">
+                        <li><a href="../pages/about.html">عن المنصة</a></li>
+                        <li><a href="https://imadtbn.github.io/dz_portal/pages/privacy.html">سياسة الخصوصية</a></li>
+                        <li><a href="https://imadtbn.github.io/dz_portal/pages/contact.html">اتصل بنا</a></li>
+                        <li><a href="../pages/guides.html">دليل المستخدم</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">&copy; <span id="currentYear"></span> Student DZ. جميع الحقوق محفوظة.</div>
+        </div>
+    </footer>
+
+
+    <script src="https://imadtbn.github.io/student-dz/assets/js/navigation.js"></script>
+    <script>document.getElementById('currentYear').textContent = new Date().getFullYear();</script>
+
+<script defer src="https://imadtbn.github.io/dz_portal/assets/js/site-tags.js"></script>
+<script defer src="https://imadtbn.github.io/dz_portal/assets/js/ads-stability.js"></script>
+<script defer src="https://imadtbn.github.io/dz_portal/assets/js/dz-share.js"></script>
+</body>
+
+</html>
