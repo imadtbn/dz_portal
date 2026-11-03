@@ -80,24 +80,55 @@
     const footer = document.querySelector('.dz-unified-footer');
     if (!main || !hero || !footer) return;
 
-    const makeAd = (placement, slot, format, layoutKey) => {
-      const existing = document.querySelector('.dz-tool-ad[data-dz-placement="' + placement + '"]');
-      if (existing) return existing;
+    const candidates = Array.from(document.querySelectorAll('ins.adsbygoogle'))
+      .filter(slot => !slot.closest('header, nav, .dz-unified-header, .dz-unified-footer'));
+    const containers = [];
+    candidates.forEach(slot => {
+      const container = slot.closest('.ad-container, .ads-container, .ads-container--content') || slot.parentElement;
+      if (container && !containers.includes(container)) containers.push(container);
+    });
+
+    const createContainer = placement => {
       const wrap = document.createElement('section');
-      wrap.className = 'ad-container dz-tool-ad dz-tool-ad-' + placement;
-      wrap.dataset.dzPlacement = placement;
+      wrap.className = 'ad-container dz-tool-ad';
       wrap.setAttribute('aria-label', 'إعلان');
-      wrap.innerHTML = '<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5656416032906373" data-ad-slot="' + slot + '" data-ad-format="' + format + '"' +
-        (layoutKey ? ' data-ad-layout-key="' + layoutKey + '"' : '') +
-        (format === 'auto' ? ' data-full-width-responsive="true"' : '') + '></ins>';
+      const ins = document.createElement('ins');
+      ins.className = 'adsbygoogle';
+      ins.style.display = 'block';
+      ins.dataset.adClient = 'ca-pub-5656416032906373';
+      wrap.appendChild(ins);
       return wrap;
     };
 
-    const topAd = makeAd('top', '7867079394', 'fluid', '-fr+57+4a-dc+8g');
-    if (!topAd.isConnected) hero.insertAdjacentElement('afterend', topAd);
+    const topAd = containers[0] || createContainer('top');
+    const bottomAd = containers[1] || createContainer('bottom');
+    containers.slice(2).forEach(container => container.remove());
 
-    const bottomAd = makeAd('bottom', '3143411927', 'auto', '');
-    if (!bottomAd.isConnected) footer.parentNode.insertBefore(bottomAd, footer);
+    const configure = (container, placement) => {
+      container.classList.add('ad-container', 'dz-tool-ad', 'dz-tool-ad-' + placement);
+      container.dataset.dzPlacement = placement;
+      container.setAttribute('aria-label', 'إعلان');
+      const ins = container.querySelector('ins.adsbygoogle') || document.createElement('ins');
+      ins.classList.add('adsbygoogle');
+      ins.style.display = 'block';
+      ins.setAttribute('data-ad-client', 'ca-pub-5656416032906373');
+      ins.setAttribute('data-ad-slot', placement === 'top' ? '7867079394' : '3143411927');
+      ins.setAttribute('data-ad-format', placement === 'top' ? 'fluid' : 'auto');
+      if (placement === 'top') {
+        ins.setAttribute('data-ad-layout-key', '-fr+57+4a-dc+8g');
+        ins.removeAttribute('data-full-width-responsive');
+      } else {
+        ins.removeAttribute('data-ad-layout-key');
+        ins.setAttribute('data-full-width-responsive', 'true');
+      }
+      if (!ins.isConnected) container.appendChild(ins);
+      return container;
+    };
+
+    configure(topAd, 'top');
+    configure(bottomAd, 'bottom');
+    hero.insertAdjacentElement('afterend', topAd);
+    footer.parentNode.insertBefore(bottomAd, footer);
 
     // Reuse the portal's width-aware ad controller; it prevents requests from
     // narrow/hidden containers and observes dynamically inserted units.
