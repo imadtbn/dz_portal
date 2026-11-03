@@ -2,16 +2,24 @@
 // Remove legacy share controls injected by imported tool bundles. Keep exactly
 // the portal's canonical share/help row (or the Qibla page's native row).
 function cleanupLegacyShareControls(){
- const canonical=document.querySelector('.dz-share-slot,.qibla-share-row');
- document.querySelectorAll('button,a,[role="button"]').forEach(el=>{
-  if(el.closest('.dz-share-slot,.qibla-share-row'))return;
-  const label=((el.getAttribute('aria-label')||'')+' '+(el.getAttribute('title')||'')+' '+(el.innerText||el.textContent||'')).replace(/\\s+/g,' ').trim();
-  const legacyClass=/(?:^|\\s)(?:share-button|share-btn|floating-share|social-share-button)(?:\\s|$)/i.test(el.className||'');
-  const shareLabel=/(?:مشاركة الصفحة|مشاركة هذا|share this page|share page)/i.test(label);
-  if(legacyClass||shareLabel)el.remove();
+ const isCanonical=el=>!!el.closest('.dz-share-slot,.qibla-share-row');
+ const removeControl=el=>{
+  if(!el||isCanonical(el))return;
+  const wrapper=el.closest('button,a,[role="button"],.floating-share,.share-fab,.share-widget,.social-share,.share-container');
+  const target=wrapper&&!isCanonical(wrapper)?wrapper:el;
+  if(target!==document.body&&target!==document.documentElement)target.remove();
+ };
+ const iconSelector='.fa-share,.fa-share-alt,.fa-share-nodes,.fa-share-from-square,[data-share-button],[data-action="share"],[aria-label*="share" i],[title*="share" i]';
+ document.querySelectorAll(iconSelector).forEach(removeControl);
+ document.querySelectorAll('button,a,[role="button"],[tabindex="0"],div').forEach(el=>{
+  if(isCanonical(el))return;
+  const label=[el.getAttribute('aria-label'),el.getAttribute('title'),el.getAttribute('data-tooltip'),el.innerText,el.textContent].filter(Boolean).join(' ').replace(/\s+/g,' ').trim();
+  const cls=typeof el.className==='string'?el.className:'';
+  const legacyClass=/(?:^|\s)(?:share|share-btn|share-button|share-fab|floating-share|social-share-button|help-btn|help-button|question-btn|question-button)(?:\s|$)/i.test(cls);
+  const shareMatch=/(?:مشاركة(?: الصفحة)?|share(?: this page| page)?)/i.test(label);
+  const helpMatch=/(?:مساعدة|لماذا أشارك|استفهام|share help|help button)/i.test(label)||/^\?+$/.test(label.trim());
+  if(legacyClass||shareMatch||helpMatch)removeControl(el);
  });
- // Correct the shared navigation destinations consistently, without rewriting
- // links inside the tool's actual content or changing tool-specific routes.
  const nav=document.querySelector('.dz-import-nav');
  if(nav){
   const routes=[['الرئيسية',root],['الأدوات الرقمية',root+'pages/tools/index.html'],['الخصوصية',root+'pages/privacy.html'],['سياسة الخصوصية',root+'pages/privacy.html'],['اتصل بنا',root+'pages/contact.html']];
@@ -20,7 +28,4 @@ function cleanupLegacyShareControls(){
  const crumbs=document.querySelector('.tool-breadcrumb');
  if(crumbs)crumbs.querySelectorAll('a').forEach(a=>{const label=(a.textContent||'').trim();if(label==='الرئيسية')a.href=root;else if(['جميع الأدوات','الأدوات الرقمية','التصنيفات','الأدوات الصحية'].includes(label))a.href=root+'pages/tools/index.html';});
 }
-if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',cleanupLegacyShareControls,{once:true});else cleanupLegacyShareControls();
-const shareObserver=new MutationObserver(()=>cleanupLegacyShareControls());
-shareObserver.observe(document.documentElement,{childList:true,subtree:true});
 })();
