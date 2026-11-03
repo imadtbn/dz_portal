@@ -124,6 +124,23 @@ test('Pomodoro study timer is linked to the study category and uses the portal t
   assert.match(script, /pomodoro_completed/);
 });
 
+test('flashcards tool preserves creation, spaced review, quiz, and backup features', () => {
+  const page = read('pages/tools/study/flashcards.html');
+  const script = read('assets/js/tools/flashcards.js');
+  const styles = read('assets/css/tools/flashcards.css');
+  assert.match(page, /canonical.*pages\/tools\/study\/flashcards\.html/);
+  assert.match(page, /assets\/js\/site-tags\.js/);
+  assert.match(page, /data-ad-client="ca-pub-5656416032906373"/);
+  assert.match(page, /id="create"/);
+  assert.match(page, /id="review"/);
+  assert.match(page, /id="quiz"/);
+  assert.match(script, /studentDzFlashcardsV1/);
+  assert.match(script, /exportJson/);
+  assert.match(script, /saveExtracted/);
+  assert.match(script, /startQuiz/);
+  assert.match(styles, /flash-app/);
+});
+
 test('tools directory and calculator and study tools are present in the existing sitemap', () => {
   const sitemap = read('sitemap.xml');
   assert.match(sitemap, /https:\/\/imadtbn\.github\.io\/dz_portal\/pages\/tools\//);
@@ -132,5 +149,6 @@ test('tools directory and calculator and study tools are present in the existing
   assert.match(sitemap, /https:\/\/imadtbn\.github\.io\/dz_portal\/pages\/tools\/calculators\/percentage-calculator\.html/);
   assert.match(sitemap, /https:\/\/imadtbn\.github\.io\/dz_portal\/pages\/tools\/calculators\/date-difference\.html/);
   assert.match(sitemap, /https:\/\/imadtbn\.github\.io\/dz_portal\/pages\/tools\/study\/pomodoro\.html/);
+  assert.match(sitemap, /https:\/\/imadtbn\.github\.io\/dz_portal\/pages\/tools\/study\/flashcards\.html/);
   assert.match(sitemap, /<video:video>/);
 });
