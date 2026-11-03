@@ -2,6 +2,7 @@ const test = require('node:test');
 const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const path = require('node:path');
+const vm = require('node:vm');
 
 const root = path.resolve(__dirname, '..');
 const read = (file) => fs.readFileSync(path.join(root, file), 'utf8');
@@ -66,6 +67,48 @@ test('percentage and date-difference calculators have local logic and portal tra
   assert.match(datePage, /canonical.*date-difference\.html/);
   assert.match(dateJS, /function parseDay/);
   assert.match(dateJS, /Math\.abs/);
+});
+
+
+function mockDocument(ids) {
+  const elements = {};
+  for (const id of ids) {
+    elements[id] = {
+      value: '', textContent: '', hidden: false, max: '',
+      listeners: {},
+      classList: { remove() {} },
+      addEventListener(type, callback) { this.listeners[type] = callback; },
+      trigger(type, event = {}) { this.listeners[type]?.(event); },
+    };
+  }
+  return { elements, document: { getElementById: (id) => elements[id] } };
+}
+
+test('percentage, date-difference, and age calculator logic runs with valid inputs', () => {
+  const pct = mockDocument(['pct-form','pct-part','pct-total','pct-error','pct-result','pct-value','pct-details']);
+  vm.runInNewContext(read('assets/js/tools/percentage-calculator.js'), { document: pct.document, Number, Intl, console });
+  pct.elements['pct-part'].value = '25';
+  pct.elements['pct-total'].value = '200';
+  pct.elements['pct-form'].trigger('submit', { preventDefault() {} });
+  assert.equal(pct.elements['pct-result'].hidden, false);
+  assert.equal(pct.elements['pct-error'].hidden, true);
+  assert.ok(pct.elements['pct-value'].textContent.length > 0);
+
+  const dates = mockDocument(['date-form','date-start','date-end','date-error','date-result','date-days','date-details']);
+  vm.runInNewContext(read('assets/js/tools/date-difference.js'), { document: dates.document, Date, Math, Number, Intl, console });
+  dates.elements['date-start'].value = '2026-01-01';
+  dates.elements['date-end'].value = '2026-01-15';
+  dates.elements['date-form'].trigger('submit', { preventDefault() {} });
+  assert.equal(dates.elements['date-result'].hidden, false);
+  assert.match(dates.elements['date-days'].textContent, /14|١٤/);
+
+  const age = mockDocument(['age-form','birthdate','age-error','result','years-res','months-res','days-res','total-days','next-bday']);
+  vm.runInNewContext(read('assets/js/tools/age-calculator.js'), { document: age.document, Date, Math, Number, Intl, console });
+  age.elements.birthdate.value = '2000-01-01';
+  age.elements['age-form'].trigger('submit', { preventDefault() {} });
+  assert.equal(age.elements.result.hidden, false);
+  assert.equal(age.elements['age-error'].hidden, true);
+  assert.ok(age.elements['total-days'].textContent.length > 0);
 });
 
 test('tools directory and calculator tools are present in the existing sitemap', () => {
