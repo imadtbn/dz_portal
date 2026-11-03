@@ -26,7 +26,7 @@
 .dz-unified-breadcrumb [aria-current=page]{font-weight:800}
 .dz-unified-tool-page .dz-share-slot{justify-content:center;margin:18px auto 24px}
 .dz-unified-tool-page .qibla-share-row{display:flex;align-items:center;justify-content:center;gap:10px;max-width:100%;margin:18px auto 24px}
-.dz-unified-tool-page .qibla-share-btn,.dz-unified-tool-page .qibla-help-btn{min-height:46px;border-radius:14px;font:800 15px/1.4 inherit}
+.dz-unified-tool-page .qibla-share-btn,.dz-unified-tool-page .qibla-help-btn{min-height:46px;border-radius:14px;font:inherit;font-weight:800;font-size:15px;line-height:1.4}
 .dz-unified-tool-page main section:not(.dz-unified-hero):not(.ad-container):not(.ads-container):not(.ads-container--content){max-width:100%}
 .dz-unified-tool-page .ad-container,.dz-unified-tool-page .ads-container{max-width:100%;min-width:0;overflow:clip}
 .dz-unified-tool-page input,.dz-unified-tool-page select,.dz-unified-tool-page textarea,.dz-unified-tool-page button{max-width:100%}
