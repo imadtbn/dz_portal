@@ -120,7 +120,7 @@ test('Pomodoro study timer is linked to the study category and uses the portal t
   assert.match(page, /data-ad-client="ca-pub-5656416032906373"/);
   assert.match(directory, /href="study\/pomodoro\.html" data-category="study"/);
   assert.match(script, /setInterval/);
-  assert.match(script, /data-minutes/);
+  assert.match(page, /data-minutes="25"/);
   assert.match(script, /pomodoro_completed/);
 });
 
