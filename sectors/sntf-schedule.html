@@ -64,6 +64,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="../assets/css/style-sector.css">
     <link rel="stylesheet" href="../assets/css/sntf-schedule.css?v=20261018-mobile-overflow-fix">
+    <link rel="stylesheet" href="../assets/css/favorites.css?v=20261104-1">
 
     <!-- ==== JSON-LD أساسي (ثابت) ==== -->
     <script id="schedule-schema-base" type="application/ld+json">
@@ -132,7 +133,8 @@
     <link rel="stylesheet" href="../assets/css/style-sector.css">
     <link rel="stylesheet" href="../assets/css/sntf-schedule.css?v=20261004-stable">
     <script id="schedule-schema" type="application/ld+json">{}</script>
-    <script type="module" src="../assets/js/sntf-schedules/page.js?v=20261024-annaba-daily"></script>
+    <script defer src="../assets/js/favorites.js?v=20261104-1"></script>
+    <script type="module" src="../assets/js/sntf-schedules/page.js?v=20261104-favorites"></script>
     <script defer src="../assets/js/deferred-homepage.js"></script>
 
     <!-- Google AdSense -->
@@ -168,7 +170,7 @@
                     <span>للخدمات الرقمية</span>
                 </div>
             </div>
-            <nav class="rail-header-links" aria-label="تنقل القطارات"><a href="sntf.html">الجداول والخدمات</a><a href="sntf-trains.html">بحث الرحلات</a></nav><div class="header-actions">
+            <nav class="rail-header-links" aria-label="تنقل القطارات"><a href="sntf.html">الجداول والخدمات</a><a href="sntf-trains.html">بحث الرحلات</a><a href="../pages/favorites.html">مفضلاتي</a></nav><div class="header-actions">
                 <button class="search-trigger" title="بحث">
                     <i class="fas fa-search" alt="بحث"></i>
                 </button>
@@ -284,6 +286,9 @@
                         <a href="../index.html">
                             <i class="fas fa-home"></i> الصفحة الرئيسية
                         </a>
+                    </li>
+                    <li>
+                        <a href="../pages/favorites.html"><i class="fas fa-heart"></i> مفضلاتي</a>
                     </li>
                     <li>
                         <a href="../pages/about.html">
