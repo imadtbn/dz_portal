@@ -1,4 +1,5 @@
 import {findSchedule} from './sntf-schedules/catalog.js?v=20261104-favorites';
+function initFavoritesPage(){
 const $=id=>document.getElementById(id);
 const icons={sector:'fa-landmark',tool:'fa-toolbox',schedule:'fa-train'};
 const labels={sector:'القطاعات والخدمات',tool:'الأدوات الرقمية',schedule:'جداول القطارات'};
@@ -51,3 +52,6 @@ $('clear-favorites-search').addEventListener('click',()=>{$('favorites-search').
 window.addEventListener('dz:favorites-changed',render);
 window.addEventListener('storage',render);
 render();
+}
+if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',initFavoritesPage,{once:true});
+else initFavoritesPage();
