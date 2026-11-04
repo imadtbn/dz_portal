@@ -42,6 +42,7 @@
     <link rel="stylesheet" href="../assets/css/Alert-Modal.css">
     <link rel="stylesheet" href="../assets/css/Internal-Linking.css">
     <link rel="stylesheet" href="../assets/css/style-train-gallery.css">
+    <link rel="stylesheet" href="../assets/css/favorites.css?v=20261104-1">
 
     <!-- Primary Meta -->
     <meta name="description"
@@ -388,6 +389,7 @@
     <!-- DZ Share: responsive page sharing -->
     <link rel="stylesheet" href="../assets/css/dz-share.css">
     <script defer src="../assets/js/dz-share.js"></script>
+    <script defer src="../assets/js/favorites.js?v=20261104-1"></script>
 </head>
 
 <body>
@@ -467,6 +469,10 @@
         </div>
 
     </section>
+    <div style="width:min(1120px,calc(100% - 28px));margin:12px auto;display:flex;align-items:center;justify-content:center;gap:10px;flex-wrap:wrap">
+      <button type="button" data-favorite-toggle="true" data-favorite-type="sector" data-favorite-id="sntf" data-favorite-title="السكك الحديدية SNTF في الجزائر" data-favorite-url="https://imadtbn.github.io/dz_portal/sectors/sntf.html" data-favorite-category="النقل والمواصلات" data-add-label="إضافة إلى المفضلات" data-remove-label="إزالة من المفضلات"><i class="fa-regular fa-heart" aria-hidden="true"></i> <span data-favorite-label>إضافة للمفضلات</span></button>
+      <a href="../pages/favorites.html" style="font-weight:700;color:#087443;text-decoration:none"><i class="fa-solid fa-heart" aria-hidden="true"></i> عرض مفضلاتي</a>
+    </div>
 
     <!-- SNTF Alert -->
     <!--
@@ -2718,6 +2724,9 @@
                         <a href="../index.html">
                             <i class="fas fa-home"></i> الصفحة الرئيسية
                         </a>
+                    </li>
+                    <li>
+                        <a href="../pages/favorites.html"><i class="fas fa-heart"></i> مفضلاتي</a>
                     </li>
                     <li>
                         <a href="../pages/about.html">
