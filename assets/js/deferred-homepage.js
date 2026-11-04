@@ -78,6 +78,13 @@
     });
   }
 
+  // Local favorites are enabled on sector landing pages without changing their existing layouts.
+  if (location.pathname.includes('/sectors/') && document.querySelector('.sector-hero')) {
+    const loadSectorFavorites = () => loadLocalScript('js/favorites-sector-ui.js');
+    if (window.DZFavorites) loadSectorFavorites();
+    else loadLocalScript('js/favorites.js', loadSectorFavorites);
+  }
+
   // Stable AdSense initialization runs on all standard portal pages, without
   // changing the tracking or ad script already declared in each HTML file.
   if (document.querySelector('ins.adsbygoogle')
