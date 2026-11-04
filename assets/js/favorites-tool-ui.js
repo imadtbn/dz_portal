@@ -9,7 +9,7 @@
  const title=(heading?.textContent||document.title).replace(/\s+/g,' ').trim();
  const category=(document.querySelector('.breadcrumb [aria-current="page"], .breadcrumb .current, .tool-category')?.textContent||'الأدوات الرقمية').replace(/\s+/g,' ').trim();
  if(!document.querySelector('link[href*="favorites.css"]')){
-  const css=document.createElement('link');css.rel='stylesheet';css.href=new URL('../css/favorites.css',document.currentScript?.src||new URL('../js/favorites-tool-ui.js',location.href)).href;document.head.append(css);
+  const css=document.createElement('link');css.rel='stylesheet';css.href=new URL('../css/favorites.css?v=20261104-2',document.currentScript?.src||new URL('../js/favorites-tool-ui.js',location.href)).href;document.head.append(css);
  }
  const bar=document.createElement('div');bar.className='favorites-tool-action';
  const button=document.createElement('button');button.type='button';button.dataset.favoriteToggle='true';button.dataset.favoriteType='tool';button.dataset.favoriteId=url.pathname;button.dataset.favoriteTitle=title;button.dataset.favoriteUrl=url.href;button.dataset.favoriteCategory=category;button.dataset.addLabel='إضافة إلى المفضلات';button.dataset.removeLabel='إزالة من المفضلات';button.innerHTML='<i class="fa-regular fa-heart" aria-hidden="true"></i> <span data-favorite-label>إضافة للمفضلات</span>';
