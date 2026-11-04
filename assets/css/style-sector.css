@@ -2533,3 +2533,23 @@ ins.adsbygoogle iframe,
         height: 2.75rem;
     }
 }
+
+
+/* Unified portal icon in inner-page headers, matching the homepage brand. */
+.header .logo-section h1::before {
+    content: "";
+    display: inline-block;
+    width: 34px;
+    height: 34px;
+    margin-inline-end: 8px;
+    vertical-align: middle;
+    background: url("../images/icon.png") center / contain no-repeat;
+    flex: 0 0 34px;
+}
+@media (max-width: 520px) {
+    .header .logo-section h1::before {
+        width: 30px;
+        height: 30px;
+        margin-inline-end: 6px;
+    }
+}
