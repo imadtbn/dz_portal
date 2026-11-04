@@ -55,3 +55,7 @@ html,body{max-width:100%;overflow-x:clip}
 .favorites-sector-action{width:min(1120px,calc(100% - 28px));margin:12px auto;display:flex;align-items:center;justify-content:center;gap:10px;flex-wrap:wrap}
 .favorites-sector-action>a{font-weight:700;color:#087443;text-decoration:none}
 @media(max-width:520px){.favorites-sector-action{width:calc(100% - 20px)}}
+
+.favorites-tool-action{width:min(1120px,calc(100% - 28px));margin:12px auto;display:flex;align-items:center;justify-content:center;gap:10px;flex-wrap:wrap}
+.favorites-tool-action>a{font-weight:700;color:#087443;text-decoration:none}
+@media(max-width:520px){.favorites-tool-action{width:calc(100% - 20px)}}
