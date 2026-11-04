@@ -81,79 +81,114 @@ document.addEventListener("DOMContentLoaded", function () {
 // تتم إدارة Analytics وGTM وAdSense وMicrosoft Clarity مركزياً عبر site-tags.js.
 
 // ====== تثبيت التطبيق (PWA) ======
-let deferredPrompt;
+let deferredPrompt = null;
 const installBtn = document.getElementById('installAppBtn');
+const installModal = document.getElementById('pwaInstallModal');
+const installNowBtn = document.getElementById('pwaInstallNow');
+const installLaterBtn = document.getElementById('pwaInstallLater');
+const installHelp = document.getElementById('pwaInstallHelp');
+const installDismissKey = 'dzPortalInstallDismissedUntil';
+const installCooldownMs = 7 * 24 * 60 * 60 * 1000;
 
-// The install badge is a <div role="button"> in the existing layout.
- // Keep its styling but enable keyboard activation like a native button.
-if (installBtn && installBtn.getAttribute('role') === 'button') {
+function isPortalInstalled() {
+  return window.matchMedia('(display-mode: standalone)').matches ||
+    window.matchMedia('(display-mode: fullscreen)').matches ||
+    window.navigator.standalone === true;
+}
+
+function openInstallModal() {
+  if (!installModal || isPortalInstalled()) return;
+  installModal.hidden = false;
+  document.body.classList.add('pwa-modal-open');
+  if (installNowBtn) {
+    installNowBtn.textContent = deferredPrompt ? 'تثبيت البوابة الآن' : 'كيفية التثبيت';
+  }
+  if (installHelp) {
+    installHelp.hidden = Boolean(deferredPrompt);
+  }
+}
+
+function closeInstallModal(saveDismissal = true) {
+  if (!installModal) return;
+  installModal.hidden = true;
+  document.body.classList.remove('pwa-modal-open');
+  if (saveDismissal) {
+    try { localStorage.setItem(installDismissKey, String(Date.now() + installCooldownMs)); } catch (_) {}
+  }
+}
+
+if (installBtn) {
   installBtn.addEventListener('keydown', (event) => {
     if (event.key === 'Enter' || event.key === ' ') {
       event.preventDefault();
       installBtn.click();
     }
   });
+  installBtn.addEventListener('click', openInstallModal);
 }
 
-// استقبال حدث beforeinstallprompt
-window.addEventListener('beforeinstallprompt', (e) => {
-  e.preventDefault();
-  deferredPrompt = e;
-  // إظهار الزر إذا كان مخفياً (اختياري)
-  if (installBtn) {
-    installBtn.style.display = 'flex';
-  }
+window.addEventListener('beforeinstallprompt', (event) => {
+  event.preventDefault();
+  deferredPrompt = event;
+  if (installNowBtn) installNowBtn.textContent = 'تثبيت البوابة الآن';
+  if (installHelp) installHelp.hidden = true;
 });
 
-// حدث النقر على زر التثبيت
-if (installBtn) {
-  installBtn.addEventListener('click', async () => {
-    if (deferredPrompt) {
-      if (typeof window.dzTrackEvent === 'function') {
-        window.dzTrackEvent('pwa_prompt_opened');
-      }
-      // عرض نافذة التثبيت
-      deferredPrompt.prompt();
-      const result = await deferredPrompt.userChoice;
-      console.log(`نتيجة التثبيت: ${result.outcome}`);
-      if (typeof window.dzTrackEvent === 'function') {
-        window.dzTrackEvent('pwa_install_outcome', { outcome: result.outcome });
-      }
-      if (result.outcome === 'accepted') {
-        console.log('تم تثبيت التطبيق بنجاح');
-        // إخفاء الزر بعد التثبيت
-        installBtn.style.display = 'none';
-      } else {
-        console.log('تم رفض التثبيت');
-      }
-      deferredPrompt = null;
-    } else {
-      // إذا لم يكن الحدث متاحاً (متصفح غير مدعوم أو تم التثبيت مسبقاً)
-      alert('متصفحك لا يدعم تثبيت التطبيقات أو تم التثبيت مسبقاً.');
-    }
-  });
-}
-
-// في حالة نجاح التثبيت (حدث appinstalled)
 window.addEventListener('appinstalled', () => {
-  console.log('تم تثبيت التطبيق عبر المتصفح');
+  deferredPrompt = null;
+  closeInstallModal(false);
+  if (installBtn) installBtn.style.display = 'none';
+  try { localStorage.removeItem(installDismissKey); } catch (_) {}
   if (typeof window.dzTrackEvent === 'function') {
     window.dzTrackEvent('app_installed', { method: 'pwa' });
   }
-  if (installBtn) installBtn.style.display = 'none';
 });
 
-// إذا كان المتصفح لا يدعم PWA، نخفي الزر
+if (installNowBtn) {
+  installNowBtn.addEventListener('click', async () => {
+    if (deferredPrompt) {
+      const promptEvent = deferredPrompt;
+      deferredPrompt = null;
+      if (typeof window.dzTrackEvent === 'function') window.dzTrackEvent('pwa_prompt_opened');
+      promptEvent.prompt();
+      const choice = await promptEvent.userChoice;
+      if (typeof window.dzTrackEvent === 'function') {
+        window.dzTrackEvent('pwa_install_outcome', { outcome: choice.outcome });
+      }
+      if (choice.outcome === 'accepted') closeInstallModal(false);
+      else closeInstallModal(true);
+      return;
+    }
+    if (installHelp) installHelp.hidden = false;
+    installNowBtn.textContent = 'فهمت';
+    installNowBtn.onclick = () => closeInstallModal(true);
+  });
+}
+
+if (installLaterBtn) installLaterBtn.addEventListener('click', () => closeInstallModal(true));
+if (installModal) {
+  installModal.addEventListener('click', (event) => {
+    if (event.target === installModal) closeInstallModal(true);
+  });
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && !installModal.hidden) closeInstallModal(true);
+  });
+}
+
 window.addEventListener('load', () => {
-  if (!('serviceWorker' in navigator) || !window.matchMedia('(display-mode: standalone)').matches) {
-    // لا تفعل شيئاً، الزر يظهر لكن النقر سيظهر رسالة
-  }
-  // التحقق إذا كان التطبيق مفتوحاً بالفعل كـ PWA
-  if (window.matchMedia('(display-mode: standalone)').matches) {
+  if (isPortalInstalled()) {
     if (installBtn) installBtn.style.display = 'none';
+    if (installModal) installModal.hidden = true;
+    return;
+  }
+  if (installBtn) installBtn.style.display = '';
+  let dismissedUntil = 0;
+  try { dismissedUntil = Number(localStorage.getItem(installDismissKey) || 0); } catch (_) {}
+  // First visit shows the suggestion; after dismissal, remind again after seven days.
+  if (Date.now() >= dismissedUntil) {
+    window.setTimeout(openInstallModal, 1800);
   }
 });
-
 
 // إشعارات الخدمات الجديدة: مدة الظهور 20 يومًا، من سجل مركزي واحد.
 const NEW_SERVICE_WINDOW_DAYS = 20;
