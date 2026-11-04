@@ -236,6 +236,25 @@
     }
   };
 
+  // Add local favorites to individual tool pages. The directory has its own card-level controls.
+  if (location.pathname.includes('/pages/tools/')
+      && !/\/pages\/tools\/(?:index\.html)?$/.test(location.pathname)
+      && !document.querySelector('[data-favorite-type="tool"]')) {
+    const assetBase = new URL('./', document.currentScript?.src || location.href);
+    const loadUi = () => {
+      const ui = document.createElement('script');
+      ui.src = new URL('favorites-tool-ui.js?v=20261104-1', assetBase).href;
+      document.head.appendChild(ui);
+    };
+    if (window.DZFavorites) loadUi();
+    else {
+      const store = document.createElement('script');
+      store.src = new URL('favorites.js?v=20261104-1', assetBase).href;
+      store.onload = loadUi;
+      document.head.appendChild(store);
+    }
+  }
+
   initializeGa4();
   initializeGtm();
 
