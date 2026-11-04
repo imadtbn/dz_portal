@@ -86,6 +86,7 @@ const installBtn = document.getElementById('installAppBtn');
 const installModal = document.getElementById('pwaInstallModal');
 const installNowBtn = document.getElementById('pwaInstallNow');
 const installLaterBtn = document.getElementById('pwaInstallLater');
+const installDismissBtn = document.getElementById('pwaInstallDismiss');
 const installHelp = document.getElementById('pwaInstallHelp');
 const installDismissKey = 'dzPortalInstallDismissedUntil';
 const installCooldownMs = 7 * 24 * 60 * 60 * 1000;
@@ -166,6 +167,7 @@ if (installNowBtn) {
 }
 
 if (installLaterBtn) installLaterBtn.addEventListener('click', () => closeInstallModal(true));
+if (installDismissBtn) installDismissBtn.addEventListener('click', () => closeInstallModal(true));
 if (installModal) {
   installModal.addEventListener('click', (event) => {
     if (event.target === installModal) closeInstallModal(true);
