@@ -85,14 +85,6 @@
     else loadLocalScript('js/favorites.js', loadSectorFavorites);
   }
 
-  // Individual tool pages share the same local favorites control; the directory has its own card buttons.
-  if (location.pathname.includes('/pages/tools/')
-      && !/\/pages\/tools\/(?:index\.html)?$/.test(location.pathname)) {
-    const loadToolFavorites = () => loadLocalScript('js/favorites-tool-ui.js');
-    if (window.DZFavorites) loadToolFavorites();
-    else loadLocalScript('js/favorites.js', loadToolFavorites);
-  }
-
   // Stable AdSense initialization runs on all standard portal pages, without
   // changing the tracking or ad script already declared in each HTML file.
   if (document.querySelector('ins.adsbygoogle')
