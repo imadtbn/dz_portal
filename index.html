@@ -54,7 +54,7 @@
     <link rel="stylesheet" href="assets/css/style-section-header.css">
     <link rel="stylesheet" href="assets/css/Alert-Modal.css">
     <link rel="stylesheet" href="assets/css/rating-panel.css">
-    <link rel="stylesheet" href="assets/css/performance-home.css">
+    <link rel="stylesheet" href="assets/css/performance-home.css">\n    <link rel="stylesheet" href="assets/css/pwa-install-prompt.css?v=20261104-1">
     <!-- Debug-only CLS measurement; normal visits do not load this script. -->
     <script>
         if (new URLSearchParams(location.search).get('cls-debug') === '1') {
@@ -2966,6 +2966,31 @@
             <p style="margin-top: 0.5rem; font-size: 0.85rem;">❀ لا تنسونا من صالح دعائكم ❀</p>
         </div>
     </footer>
+
+    <!-- اقتراح تثبيت البوابة: يظهر للزائر الذي لم يثبت التطبيق -->
+    <div class="pwa-install-modal" id="pwaInstallModal" role="dialog" aria-modal="true" aria-labelledby="pwaInstallTitle" aria-describedby="pwaInstallDescription" hidden>
+        <div class="pwa-install-card" role="document">
+            <button class="pwa-install-close" id="pwaInstallLater" type="button" aria-label="لاحقًا" title="لاحقًا"><i class="fas fa-times" aria-hidden="true"></i></button>
+            <div class="pwa-install-icon"><img src="assets/images/icon-192.png" alt="" width="64" height="64"></div>
+            <h2 id="pwaInstallTitle">ثبّت البوابة على جهازك</h2>
+            <p id="pwaInstallDescription">افتح خدماتك الحكومية بسرعة من الشاشة الرئيسية، واحتفظ بقطاعاتك المفضلة للوصول إليها بسهولة في أي وقت.</p>
+            <ul class="pwa-install-benefits">
+                <li><i class="fas fa-bolt" aria-hidden="true"></i> وصول أسرع إلى الخدمات الرقمية</li>
+                <li><i class="fas fa-heart" aria-hidden="true"></i> الوصول السريع إلى القطاعات المحفوظة في «مفضلاتي»</li>
+                <li><i class="fas fa-mobile-screen-button" aria-hidden="true"></i> تجربة مريحة على الهاتف والكمبيوتر</li>
+            </ul>
+            <div class="pwa-install-help" id="pwaInstallHelp" hidden>
+                <strong>طريقة التثبيت:</strong>
+                <p>على الهاتف: افتح قائمة المتصفح ثم اختر «إضافة إلى الشاشة الرئيسية» أو «تثبيت التطبيق».</p>
+                <p>على الكمبيوتر: افتح قائمة المتصفح وابحث عن «تثبيت البوابة» أو «تثبيت الصفحة كتطبيق».</p>
+            </div>
+            <div class="pwa-install-actions">
+                <button class="pwa-install-primary" id="pwaInstallNow" type="button">تثبيت البوابة الآن</button>
+                <button class="pwa-install-secondary" id="pwaInstallLater" type="button">ليس الآن</button>
+            </div>
+            <p class="pwa-install-note">التثبيت اختياري ومجاني، ويمكنك متابعة استخدام الموقع دون تثبيته.</p>
+        </div>
+    </div>
 
     <!-- Floating Action Button -->
     <button class="fab" onclick="scrollToTop()" title="العودة للأعلى">
