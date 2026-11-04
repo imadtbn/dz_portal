@@ -178,3 +178,10 @@ html,body{max-width:100%;overflow-x:clip}
   .home-topbar-brand small { font-size:.68rem; }
   .home-topbar-favorites { min-height:35px;padding:6px 9px;font-size:.78rem;gap:5px; }
 }
+
+
+/* Keep the homepage dark-mode control below the favorites shortcut. */
+.home-theme-toggle { top: 4.5rem !important; }
+@media (max-width: 420px) {
+  .home-theme-toggle { top: 3.8rem !important; }
+}
