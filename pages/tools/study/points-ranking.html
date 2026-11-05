@@ -40,10 +40,10 @@
 
     <title>points ranking | البوابة الجزائرية للخدمات الرقمية</title>
     <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://imadtbn.github.io/student-dz/assets/css/main.css">
-    <link rel="stylesheet" href="https://imadtbn.github.io/student-dz/assets/css/responsive.css">
+    <link rel="stylesheet" href="/dz_portal/assets/css/tools/legacy/student-main.css">
+    <link rel="stylesheet" href="/dz_portal/assets/css/tools/legacy/student-responsive.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="icon" href="https://imadtbn.github.io/student-dz/assets/images/icon.png">
+    <link rel="icon" href="/dz_portal/assets/images/icon.png">
     <style>
         .tool-container {
             max-width: 850px;
@@ -219,17 +219,17 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-col">
-                    <h3><img src="https://imadtbn.github.io/student-dz/assets/images/icon.png" alt="Student DZ Logo"
+                    <h3><img src="/dz_portal/assets/images/icon.png" alt="Student DZ Logo"
                             width="24" height="24" style="border-radius:4px;vertical-align:middle"> Student DZ</h3>
                     <p>المنصة الرقمية الشاملة للطالب الجزائري. رفيقك من التسجيل إلى التخرج.</p>
                 </div>
                 <div class="footer-col">
                     <h3>روابط سريعة</h3>
                     <ul class="footer-links">
-                        <li><a href="https://imadtbn.github.io/student-dz/categories/tools.html">الأدوات</a></li>
-                        <li><a href="https://imadtbn.github.io/student-dz/universities/index.html">الجامعات</a></li>
-                        <li><a href="https://imadtbn.github.io/student-dz/ecoles/index.html">المدارس والمعاهد</a></li>
-                        <li><a href="https://imadtbn.github.io/student-dz/platforms/index.html">المنصات</a></li>
+                        <li><a href="https://imadtbn.github.io/dz_portal/pages/tools/index.html">الأدوات</a></li>
+                        <li><a href="https://imadtbn.github.io/dz_portal/pages/tools/index.html">الجامعات</a></li>
+                        <li><a href="https://imadtbn.github.io/dz_portal/pages/tools/index.html">المدارس والمعاهد</a></li>
+                        <li><a href="https://imadtbn.github.io/dz_portal/pages/tools/index.html">المنصات</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
@@ -246,8 +246,7 @@
         </div>
     </footer>
 
-    <script src="https://imadtbn.github.io/student-dz/assets/js/theme.js"></script>
-    <script src="https://imadtbn.github.io/student-dz/assets/js/navigation.js"></script>
+    <script defer src="/dz_portal/assets/js/tools/theme.js"></script>
     <script>const rows = document.getElementById('rows'); function addRow() { const r = document.createElement('div'); r.className = 'row'; r.innerHTML = '<input class="name" placeholder="اسم المادة"><input class="mark" type="number" min="0" max="20" step="0.01" placeholder="العلامة /20"><input class="coef" type="number" min="1" value="1" placeholder="المعامل"><button class="remove">×</button>'; r.querySelector('.remove').onclick = () => { if (rows.children.length > 1) r.remove(); else alert('يجب إبقاء مادة واحدة على الأقل.'); }; rows.appendChild(r) } for (let i = 0; i < 3; i++)addRow(); document.getElementById('add').onclick = addRow; document.getElementById('calc').onclick = () => { let points = 0, total = 0; rows.querySelectorAll('.row').forEach(r => { const m = parseFloat(r.querySelector('.mark').value), c = parseFloat(r.querySelector('.coef').value) || 0; if (!Number.isNaN(m) && c > 0) { points += m * c; total += c } }); if (!total) return alert('أدخل علامات ومعاملات صالحة.'); document.getElementById('points').textContent = points.toFixed(2); document.getElementById('avg').textContent = (points / total).toFixed(2); document.getElementById('result').style.display = 'block' };</script>
 
     <script defer src="https://imadtbn.github.io/dz_portal/assets/js/site-tags.js"></script>
