@@ -1,7 +1,7 @@
 (() => {
 'use strict';
 const $=id=>document.getElementById(id);
-const STORAGE='tools-dz-admin-procedures-progress-v1';
+const STORAGE='dz-portal-admin-procedures-progress-v1';
 const DATA_URL='../data/procedures/admin-procedures.json';
 let procedures=[],selectedId=null,progress={};
 const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
