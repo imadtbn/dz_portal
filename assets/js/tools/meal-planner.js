@@ -1,6 +1,6 @@
 (() => {
 'use strict';
-const $=id=>document.getElementById(id),KEY='tools_dz_meal_planner_v1',DAYS=['الأحد','الإثنين','الثلاثاء','الأربعاء','الخميس','الجمعة','السبت'],SLOTS=[['breakfast','الفطور'],['lunch','الغداء'],['dinner','العشاء']];
+const $=id=>document.getElementById(id),KEY='dz_portal_meal_planner_v1',DAYS=['الأحد','الإثنين','الثلاثاء','الأربعاء','الخميس','الجمعة','السبت'],SLOTS=[['breakfast','الفطور'],['lunch','الغداء'],['dinner','العشاء']];
 const recipes=[
 {id:'eggs',name:'بيض وخبز',group:'breakfast',items:[['بيض','حبة',2],['خبز','وحدة',.25],['طماطم','كغ',.1]]},
 {id:'milk-oats',name:'حليب وشوفان',group:'breakfast',items:[['حليب','لتر',.25],['شوفان','كغ',.05],['موز','حبة',1]]},
@@ -34,7 +34,7 @@ $('save-plan').addEventListener('click',()=>{const s=snapshot();s.id='p'+Date.no
 $('clear-week').addEventListener('click',()=>{week=blankWeek();prices={};checked={};renderWeek();renderShopping();persist();$('meal-message').textContent='تم مسح وجبات الأسبوع.'});
 $('household-size').addEventListener('input',()=>{renderShopping();saveDraft()});$('weekly-budget').addEventListener('input',()=>{renderTotalsOnly();saveDraft()});$('plan-name').addEventListener('input',saveDraft);
 $('print-plan').addEventListener('click',()=>window.print());
-$('export-json').addEventListener('click',()=>download(new Blob([JSON.stringify({current:snapshot(),history},null,2)],{type:'application/json'}),'meal-plans-backup.json'));
+$('export-json').addEventListener('click',()=>download(new Blob([JSON.stringify({current:snapshot(),history},null,2)],{type:'application/json'}),'dz-portal-meal-plans-backup.json'));
 try{const data=JSON.parse(localStorage.getItem(KEY)||'null');if(data){week=data.week||blankWeek();prices=data.prices||{};checked=data.checked||{};history=Array.isArray(data.history)?data.history:[];$('household-size').value=data.householdSize||4;$('weekly-budget').value=data.budget??'';$('plan-name').value=data.planName||''}else week=blankWeek()}catch(e){week=blankWeek()}
 renderWeek();renderShopping();renderHistory();
 })();
