@@ -265,7 +265,7 @@
   });
   function summary() {
     return [
-      'خطة السعرات والوجبات - Tools DZ',
+      'خطة السعرات والوجبات - البوابة الجزائرية للخدمات الرقمية',
       'الهدف: '+byId('nutri-goal-label').textContent,
       'السعرات: '+byId('nutri-target').textContent+' سعرة/يوم',
       'BMR: '+byId('nutri-bmr').textContent+' • TDEE: '+byId('nutri-tdee').textContent,
@@ -275,7 +275,7 @@
       'عدد الوجبات: '+state.meals,
       'الماء التقديري: '+byId('nutri-water').textContent+' لتر',
       'الحسابات تقديرية للبالغين وليست بديلاً عن استشارة طبية.',
-      'https://imadtbn.github.io/tools-dz/tools/calorie-calculator.html'
+      'https://imadtbn.github.io/dz_portal/pages/tools/health/calorie-calculator.html'
     ].join('\n');
   }
   byId('nutri-copy').addEventListener('click',async()=>{
