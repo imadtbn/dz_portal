@@ -1,4 +1,4 @@
-/* Interactive nutrition + meal planner — Tools DZ, no external runtime dependencies */
+/* Interactive nutrition + meal planner — البوابة الجزائرية للخدمات الرقمية, no external runtime dependencies */
 (() => {
   'use strict';
   const byId = (id) => document.getElementById(id);
