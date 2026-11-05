@@ -1,0 +1,21 @@
+name: Tool isolation audit
+on:
+  push:
+    branches:
+      - audit/isolate-pages-tools
+  pull_request:
+    paths:
+      - 'pages/tools/**'
+      - 'assets/js/tools/**'
+      - 'assets/css/tools/**'
+      - 'tools/check-tools-isolation.mjs'
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Audit portal tool isolation and metadata
+        run: node tools/check-tools-isolation.mjs
