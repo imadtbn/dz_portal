@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     const themeToggle = document.getElementById('theme-toggle');
-    const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+    
 
     // Check for saved theme in localStorage
     const savedTheme = localStorage.getItem('theme');
@@ -8,10 +8,6 @@ document.addEventListener('DOMContentLoaded', () => {
     if (savedTheme) {
         document.body.setAttribute('data-theme', savedTheme);
         updateToggleIcon(savedTheme);
-    } else if (prefersDarkScheme.matches) {
-        // Fallback to system preference
-        document.body.setAttribute('data-theme', 'dark');
-        updateToggleIcon('dark');
     }
 
     if (themeToggle) {
