@@ -37,7 +37,7 @@ for (const file of htmlFiles) {
     else target = path.resolve(path.dirname(file), clean);
     if (!fs.existsSync(target)) failures.push(rel + ': missing local resource ' + value);
   }
-  if (!rel.endsWith(path.join('pages', 'tools', 'index.html'))) {
+  if (/<header\\b(?=[^>]*(?:id=[\"']main-header[\"']|class=[\"'][^\"']*(?:dz-import-header|site-header|main-header)))/i.test(html)) failures.push(rel + ': contains duplicate legacy header markup');\n  if (/<footer\\b(?=[^>]*(?:id=[\"']main-footer[\"']|class=[\"'][^\"']*(?:dz-import-footer|site-footer|main-footer)))/i.test(html)) failures.push(rel + ': contains duplicate legacy footer markup');\n  if (!rel.endsWith(path.join('pages', 'tools', 'index.html'))) {
     if (!html.includes('assets/js/dz-share.js')) failures.push(rel + ': missing portal share script');
     if (!html.includes('assets/js/tools/imported-tool-shell.js')) failures.push(rel + ': missing unified portal tool shell');
     if (/src=["'][^"']*\/(?:sw|service-worker)\.js/i.test(html)) failures.push(rel + ': page registers an imported service worker');
