@@ -2,7 +2,7 @@
 'use strict';
 (() => {
   const API = 'https://api.frankfurter.dev/v2';
-  const RATE_CACHE = 'tools_dz_currency_v2_rates';
+  const RATE_CACHE = 'dz_portal_currency_v2_rates';
   const selectFrom = document.getElementById('from-currency');
   const selectTo = document.getElementById('to-currency');
   const amount = document.getElementById('amount');
