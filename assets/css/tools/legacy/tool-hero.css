@@ -1,0 +1,566 @@
+/* Shared Hero and breadcrumb design for all Tools DZ tool pages */
+.tool-hero,
+.tool-hero * {
+  box-sizing: border-box;
+}
+
+.tool-hero {
+  display: block;
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  width: 100%;
+  min-width: 0;
+  margin: clamp(.75rem, 2vw, 1.2rem) 0 clamp(1.1rem, 2.5vw, 1.55rem);
+  padding: clamp(1.35rem, 3.8vw, 2.5rem);
+  border: 1px solid rgba(255, 255, 255, .15);
+  border-radius: 24px;
+  background:
+    radial-gradient(circle at 8% 0%, rgba(255,255,255,.10), transparent 34%),
+    linear-gradient(120deg, #123e2e, #278359);
+  color: #fff;
+  text-align: right;
+  box-shadow: 0 10px 28px rgba(18, 62, 46, .15);
+}
+
+.tool-hero::before {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  width: 12rem;
+  height: 12rem;
+  left: -4rem;
+  bottom: -7rem;
+  border: 1px solid rgba(255,255,255,.10);
+  border-radius: 50%;
+  background: rgba(255,255,255,.035);
+  pointer-events: none;
+}
+
+.tool-hero > * {
+  position: relative;
+  z-index: 1;
+  min-width: 0;
+}
+
+.tool-hero .tool-hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  max-width: 100%;
+  margin: 0 0 .65rem;
+  padding: .38rem .85rem;
+  border: 1px solid rgba(255,255,255,.22);
+  border-radius: 999px;
+  background: rgba(255,255,255,.13);
+  color: #f1fff6;
+  font-size: .84rem;
+  font-weight: 750;
+  line-height: 1.55;
+  overflow-wrap: anywhere;
+}
+
+.tool-hero .tool-hero-badge i {
+  flex: 0 0 auto;
+  font-size: .92rem;
+}
+
+.tool-hero h1,
+.tool-hero h2 {
+  margin: 0 0 .65rem;
+  color: #fff !important;
+  font-size: clamp(1.55rem, 3.8vw, 2.4rem);
+  font-weight: 800;
+  line-height: 1.35;
+  letter-spacing: -.02em;
+  overflow-wrap: anywhere;
+}
+
+.tool-hero p {
+  max-width: 72ch;
+  margin: 0;
+  color: #eafff1 !important;
+  font-size: clamp(.98rem, 1.6vw, 1.08rem);
+  line-height: 1.85;
+  overflow-wrap: anywhere;
+}
+
+.tool-hero .tool-breadcrumb {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: .45rem .65rem;
+  min-width: 0;
+  margin: 1rem 0 0;
+  padding-top: .85rem;
+  border-top: 1px solid rgba(255,255,255,.20);
+  color: #e7f8ed;
+  font-size: .86rem;
+  line-height: 1.65;
+}
+
+.tool-hero .tool-breadcrumb a {
+  color: #fff !important;
+  font-weight: 750;
+  text-decoration: underline;
+  text-decoration-color: rgba(255,255,255,.58);
+  text-underline-offset: 3px;
+  border-radius: 3px;
+}
+
+.tool-hero .tool-breadcrumb a:hover {
+  text-decoration-color: #fff;
+}
+
+.tool-hero .tool-breadcrumb a:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 3px;
+}
+
+.tool-hero .tool-breadcrumb i {
+  flex: 0 0 auto;
+  color: rgba(255,255,255,.82);
+  font-size: .68rem;
+}
+
+.tool-hero .tool-breadcrumb [aria-current="page"] {
+  color: #dcfce7;
+  font-weight: 650;
+  overflow-wrap: anywhere;
+}
+
+.tool-hero .nutri-hero-actions,
+.tool-hero .tool-hero-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: .6rem;
+  margin-top: 1rem;
+}
+
+.tool-hero .tool-hero-actions .btn {
+  margin: 0;
+  border: 1px solid rgba(255,255,255,.5);
+  border-radius: 10px;
+  background: #fff;
+  color: #14532d;
+  box-shadow: none;
+}
+
+.tool-hero .tool-hero-actions .btn-secondary {
+  background: rgba(255,255,255,.12);
+  color: #fff;
+  border-color: rgba(255,255,255,.4);
+}
+
+.tool-hero .tool-hero-actions .btn:hover {
+  filter: brightness(.96);
+  transform: translateY(-1px);
+}
+
+.tool-hero .tool-hero-actions .btn:focus-visible {
+  outline: 3px solid #fff;
+  outline-offset: 3px;
+}
+
+.tool-hero .currency-status {
+  margin-top: 1rem;
+}
+
+[data-theme="dark"] .tool-hero {
+  border-color: rgba(157, 219, 178, .22);
+  background:
+    radial-gradient(circle at 8% 0%, rgba(255,255,255,.07), transparent 34%),
+    linear-gradient(120deg, #0d2b1e, #164b32 58%, #1b6240);
+  box-shadow: 0 12px 30px rgba(0,0,0,.24);
+}
+
+[data-theme="dark"] .tool-hero .tool-hero-badge {
+  background: rgba(255,255,255,.09);
+  border-color: rgba(255,255,255,.19);
+  color: #f0fff5;
+}
+
+[data-theme="dark"] .tool-hero .tool-breadcrumb {
+  border-top-color: rgba(255,255,255,.17);
+  color: #e7f8ed;
+}
+
+@media (max-width: 600px) {
+  .tool-hero {
+    margin-block: .65rem 1rem;
+    padding: 1.15rem;
+    border-radius: 17px;
+  }
+
+  .tool-hero .tool-hero-badge {
+    margin-bottom: .55rem;
+    padding: .32rem .72rem;
+    font-size: .8rem;
+  }
+
+  .tool-hero h1,
+  .tool-hero h2 {
+    font-size: clamp(1.4rem, 6vw, 1.85rem);
+    line-height: 1.4;
+  }
+
+  .tool-hero p {
+    font-size: .95rem;
+    line-height: 1.8;
+  }
+
+  .tool-hero .tool-breadcrumb {
+    gap: .35rem .5rem;
+    margin-top: .85rem;
+    padding-top: .7rem;
+    font-size: .79rem;
+  }
+
+  .tool-hero .tool-hero-actions .btn {
+    flex: 1 1 auto;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tool-hero .tool-hero-actions .btn {
+    transition: none !important;
+  }
+}
+
+@media print {
+  .tool-hero {
+    padding: 1rem;
+    border: 1px solid #aaa;
+    border-radius: 12px;
+    background: #fff !important;
+    color: #111 !important;
+    box-shadow: none !important;
+  }
+
+  .tool-hero::before {
+    display: none !important;
+  }
+
+  .tool-hero h1,
+  .tool-hero h2,
+  .tool-hero p,
+  .tool-hero .tool-hero-badge,
+  .tool-hero .tool-breadcrumb,
+  .tool-hero .tool-breadcrumb a,
+  .tool-hero .tool-breadcrumb [aria-current="page"] {
+    color: #111 !important;
+  }
+
+  .tool-hero .tool-hero-badge {
+    background: #fff !important;
+    border-color: #aaa !important;
+  }
+
+  .tool-hero .tool-breadcrumb {
+    border-top-color: #ccc !important;
+  }
+
+  .tool-hero .tool-hero-actions {
+    display: none !important;
+  }
+}
+
+
+/* Procedures directory: shared green hero with a search panel that stays in flow. */
+.procedures-page {
+  padding-top: .85rem;
+  padding-bottom: 3rem;
+}
+
+.procedures-hero {
+  overflow: hidden;
+}
+
+.procedures-hero .procedures-search {
+  width: 100%;
+  max-width: 760px;
+  margin: 1.1rem 0 0;
+  text-align: right;
+}
+
+.procedures-hero .procedures-search > label {
+  display: block;
+  margin-bottom: .5rem;
+  color: #eafff1;
+  font-size: .94rem;
+  font-weight: 750;
+  line-height: 1.6;
+}
+
+.procedures-search-field {
+  position: relative;
+  width: 100%;
+  min-width: 0;
+}
+
+.procedures-hero .procedures-search .procedures-search-icon {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  right: 1.1rem;
+  transform: translateY(-50%);
+  color: #397052;
+  font-size: 1.05rem;
+  pointer-events: none;
+}
+
+.procedures-hero .procedures-search input {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  min-height: 54px;
+  padding: .8rem 3rem .8rem 1rem;
+  border: 1px solid rgba(255,255,255,.65);
+  border-radius: 14px;
+  background: #fff;
+  color: #17291e;
+  font: inherit;
+  font-size: 1rem;
+  box-shadow: 0 8px 20px rgba(0,0,0,.13);
+  transition: box-shadow .2s ease, border-color .2s ease;
+}
+
+.procedures-hero .procedures-search input::placeholder {
+  color: #66756b;
+  opacity: 1;
+}
+
+.procedures-hero .procedures-search input:focus {
+  outline: 3px solid rgba(255,255,255,.72);
+  outline-offset: 2px;
+  border-color: #fff;
+  box-shadow: 0 0 0 4px rgba(255,255,255,.12), 0 8px 20px rgba(0,0,0,.13);
+  transform: none;
+}
+
+.procedures-hero .procedures-search .search-results-dropdown {
+  position: relative;
+  inset: auto;
+  width: 100%;
+  margin-top: .55rem;
+  max-height: min(45vh, 340px);
+  overflow: auto;
+  overscroll-behavior: contain;
+  border-radius: 13px;
+  border-color: rgba(255,255,255,.35);
+  box-shadow: 0 10px 24px rgba(0,0,0,.2);
+  z-index: 2;
+}
+
+.procedures-hero .tool-breadcrumb {
+  margin-top: 1rem;
+}
+
+.procedures-notice {
+  display: flex;
+  align-items: flex-start;
+  gap: .65rem;
+  margin: .25rem 0 1.35rem;
+  padding: .85rem 1rem;
+  line-height: 1.8;
+  overflow-wrap: anywhere;
+}
+
+.procedures-notice > i {
+  flex: 0 0 auto;
+  margin-top: .3rem;
+  color: var(--accent-color);
+}
+
+@media (max-width: 600px) {
+  .procedures-page {
+    padding-top: .4rem;
+  }
+
+  .procedures-hero .procedures-search {
+    margin-top: .9rem;
+  }
+
+  .procedures-hero .procedures-search > label {
+    font-size: .9rem;
+  }
+
+  .procedures-hero .procedures-search input {
+    min-height: 52px;
+    padding-block: .75rem;
+    font-size: 16px;
+    border-radius: 12px;
+  }
+
+  .procedures-hero .procedures-search .search-results-dropdown {
+    max-height: min(42vh, 300px);
+  }
+
+  .procedures-notice {
+    margin-bottom: 1rem;
+    padding: .75rem .85rem;
+    font-size: .92rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .procedures-hero .procedures-search input {
+    transition: none;
+  }
+}
+
+
+/* Favorites page uses the shared tool hero and adapts its spacing on small screens. */
+.favorites-page {
+  padding-top: .25rem;
+  padding-bottom: 2.5rem;
+  min-width: 0;
+}
+
+.favorites-page .favorites-hero {
+  margin-top: .85rem;
+  margin-bottom: 1.1rem;
+}
+
+.favorites-page #favorites-container {
+  min-width: 0;
+  margin-top: 1rem;
+}
+
+.favorites-page .favorites-loading {
+  grid-column: 1 / -1;
+  text-align: center;
+  color: var(--text-muted);
+  padding: 1.5rem .75rem;
+}
+
+@media (max-width: 600px) {
+  .favorites-page {
+    padding-inline: .8rem;
+    padding-top: .15rem;
+    padding-bottom: 1.5rem;
+  }
+
+  .favorites-page .favorites-hero {
+    margin-top: .55rem;
+    margin-bottom: .85rem;
+  }
+
+  .favorites-page #favorites-container {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1rem;
+    margin-top: .75rem;
+  }
+
+  .favorites-page .favorites-loading {
+    padding: 1.1rem .25rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .favorites-page * {
+    scroll-behavior: auto;
+  }
+}
+
+
+/* Shared catalog-page hero spacing for the tools and categories indexes. */
+.tools-index-page,
+.categories-index-page {
+  min-width: 0;
+  padding-top: .15rem;
+  padding-bottom: 2.25rem;
+}
+
+.tools-index-page .catalog-hero,
+.categories-index-page .catalog-hero {
+  margin-top: .85rem;
+  margin-bottom: 1rem;
+}
+
+.tools-index-page #all-tools-container,
+.categories-index-page #categories-container {
+  min-width: 0;
+  margin-top: 1rem;
+}
+
+.tools-index-page #all-tools-container > *,
+.categories-index-page #categories-container > * {
+  min-width: 0;
+}
+
+@media (max-width: 600px) {
+  .tools-index-page,
+  .categories-index-page {
+    padding-inline: .8rem;
+    padding-top: .1rem;
+    padding-bottom: 1.5rem;
+  }
+
+  .tools-index-page .catalog-hero,
+  .categories-index-page .catalog-hero {
+    margin-top: .55rem;
+    margin-bottom: .8rem;
+  }
+
+  .tools-index-page #all-tools-container,
+  .categories-index-page #categories-container {
+    grid-template-columns: minmax(0, 1fr);
+    gap: .9rem;
+    margin-top: .7rem;
+  }
+}
+
+
+/* Shared page hero wrappers and the home-search hero use the same visual system. */
+.page-hero-wrap {
+  width: min(100%, var(--container-width));
+  margin-inline: auto;
+  padding-inline: var(--spacing-md);
+  box-sizing: border-box;
+}
+
+.tool-hero.home-hero {
+  overflow: visible;
+  text-align: center;
+  background: linear-gradient(120deg, #123e2e, #278359);
+  border-radius: 0 0 24px 24px;
+}
+
+.tool-hero.home-hero h1,
+.tool-hero.home-hero p {
+  margin-inline: auto;
+}
+
+.tool-hero.home-hero .search-box {
+  position: relative;
+  z-index: 2;
+  width: min(100%, 760px);
+  margin: 1.25rem auto 0;
+}
+
+.tool-hero.home-hero .search-box > div {
+  min-width: 0;
+}
+
+@media (max-width: 600px) {
+  .page-hero-wrap {
+    padding-inline: .7rem;
+  }
+
+  .tool-hero.home-hero {
+    margin-block: .5rem .85rem;
+    padding: 1.15rem .8rem;
+    border-radius: 0 0 17px 17px;
+  }
+
+  .tool-hero.home-hero .container {
+    padding-inline: .2rem;
+  }
+
+  .tool-hero.home-hero .search-box {
+    margin-top: 1rem;
+  }
+}
