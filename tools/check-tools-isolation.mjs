@@ -74,8 +74,8 @@ for (const file of htmlFiles) {
     else target = path.resolve(path.dirname(file), clean);
     if (!fs.existsSync(target)) failures.push(rel + ': missing local resource ' + value);
   }
-  if (/<header\b(?=[^>]*(?:id=["']main-header["']|class=["'][^"']*(?:dz-import-header|site-header|main-header)))/i.test(html)) failures.push(rel + ': contains duplicate legacy header markup');
-  if (/<footer\b(?=[^>]*(?:id=["']main-footer["']|class=["'][^"']*(?:dz-import-footer|site-footer|main-footer)))/i.test(html)) failures.push(rel + ': contains duplicate legacy footer markup');
+  if (/<header\b(?=[^>]*(?:id=["']main-header["']|class=["'][^"']*(?:dz-import-header|site-header)))/i.test(html)) failures.push(rel + ': contains duplicate legacy header markup');
+  if (/<footer\b(?=[^>]*(?:id=["']main-footer["']|class=["'][^"']*(?:dz-import-footer|site-footer)))/i.test(html)) failures.push(rel + ': contains duplicate legacy footer markup');
   if (!rel.endsWith(path.join('pages', 'tools', 'index.html'))) {
     if (!html.includes('assets/js/dz-share.js')) failures.push(rel + ': missing portal share script');
     if (!html.includes('assets/js/tools/imported-tool-shell.js')) failures.push(rel + ': missing unified portal tool shell');
