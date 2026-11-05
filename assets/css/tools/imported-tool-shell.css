@@ -3,3 +3,6 @@ body{overflow-x:clip;max-width:100%}.dz-import-header{position:relative;z-index:
 /* Prevent legacy upstream header/share controls flashing before the portal shell initializes. */
 body>header.dz-import-header{display:none!important}
 #share-help-tools,.share-help-tools__share,.share-help-tools__help,.share-fab,.floating-share,.social-share,.share-widget,.share-container{display:none!important}
+
+/* Old page-level chrome is removed by the portal template; keep it invisible before initialization. */
+body>header:not(.dz-unified-header),body>footer:not(.dz-unified-footer),body>header#main-header,body>footer#main-footer,main>footer{display:none!important}
