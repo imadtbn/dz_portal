@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded',()=>{
-const KEY='studentDzApaReferences', $=id=>document.getElementById(id); let type='book',refs=load(),last=null;
+const KEY='dzPortalApaReferences', $=id=>document.getElementById(id); let type='book',refs=load(),last=null;
 const fields=$('dynamicFields'),tabs=document.querySelectorAll('.apa-tab');
 const escape=s=>String(s||'').replace(/[&<>\"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','\\':'&#92;','"':'&quot;'}[c]));
 function load(){try{return JSON.parse(localStorage.getItem(KEY)||'[]').filter(x=>x&&x.text)}catch{return[]}}
