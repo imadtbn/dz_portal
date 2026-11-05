@@ -1,4 +1,4 @@
-/* Tools DZ • Nutrition Calculator: isolated styles, using the site design tokens */
+/* DZ Portal • Nutrition Calculator: isolated styles, using the site design tokens */
 .nutrition-page { --nutri-soft: color-mix(in srgb, var(--primary-color) 9%, var(--surface-color)); --nutri-line:var(--border-color); max-width:1200px; margin:2rem auto 3rem; min-width:0; }
 .nutrition-page *, .nutrition-page *::before, .nutrition-page *::after { box-sizing:border-box; }
 .nutrition-page button, .nutrition-page input { font:inherit; }
