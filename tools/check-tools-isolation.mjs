@@ -9,7 +9,7 @@ const legacyPatterns = [
   /https?:\/\/(?:www\.)?imadtbn\.github\.io\/(?:tools-dz|student-dz)\b/i,
   /raw\.githubusercontent\.com\/imadtbn\/(?:tools-dz|student-dz)\b/i,
   /\b(?:Tools DZ|Student DZ|StudentDZFlashcards|studentDzToolSchema)\b/i,
-  /\b(?:tools_dz|toolsdz|studentDz)(?:[_A-Z][\w-]*)?/i
+  /\b(?:tools_dz|toolsdz|studentDz|studentSchedule)(?:[_A-Z][\w-]*)?/i
 ];
 const failures = [];
 const htmlFiles = [];
