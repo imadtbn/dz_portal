@@ -1,7 +1,7 @@
 // LocalStorage Wrapper for Favorites & Recent History
 const StorageApp = {
-    FAV_KEY: 'student_dz_favorites',
-    RECENT_KEY: 'student_dz_recent',
+    FAV_KEY: 'dz_portal_tool_favorites',
+    RECENT_KEY: 'dz_portal_tool_recent',
 
     getFavorites: function() {
         try {
@@ -69,7 +69,7 @@ const StorageApp = {
     }
 };
 
-// Public helper used by cards across Student DZ.
+// Public helper used by cards across البوابة الجزائرية.
 window.StudentFavorites = {
     toggle: function(item) {
         if (!item || !item.id) return false;
