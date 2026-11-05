@@ -28,7 +28,7 @@ function cleanupLegacyShareControls(){
  const crumbs=document.querySelector('.tool-breadcrumb');
  if(crumbs)crumbs.querySelectorAll('a').forEach(a=>{const label=(a.textContent||'').trim();if(label==='الرئيسية')a.href=root;else if(['جميع الأدوات','الأدوات الرقمية','التصنيفات','الأدوات الصحية'].includes(label))a.href=root+'pages/tools/index.html';});
 }
- // The upstream tools-dz app.js injects its own #share-help-tools section.
+ // The legacy imported app runtime injects its own #share-help-tools section.
  // Remove that entire duplicate block (not just its two buttons), including
  // its injected stylesheet, and watch for any late re-injection.
  function removeToolsDzShareBlock(){

@@ -1,0 +1,34 @@
+document.addEventListener('DOMContentLoaded', () => {
+    const themeToggle = document.getElementById('theme-toggle');
+    
+
+    // Check for saved theme in localStorage
+    const savedTheme = localStorage.getItem('dz_portal_tool_theme');
+
+    if (savedTheme) {
+        document.body.setAttribute('data-theme', savedTheme);
+        updateToggleIcon(savedTheme);
+    }
+
+    if (themeToggle) {
+        themeToggle.addEventListener('click', () => {
+            let currentTheme = document.body.getAttribute('data-theme');
+            let newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+
+            document.body.setAttribute('data-theme', newTheme);
+            localStorage.setItem('dz_portal_tool_theme', newTheme);
+            updateToggleIcon(newTheme);
+        });
+    }
+
+    function updateToggleIcon(theme) {
+        if (!themeToggle) return;
+        if (theme === 'dark') {
+            themeToggle.textContent = '☀️';
+            themeToggle.setAttribute('aria-label', 'تفعيل الوضع الفاتح');
+        } else {
+            themeToggle.textContent = '🌙';
+            themeToggle.setAttribute('aria-label', 'تفعيل الوضع الداكن');
+        }
+    }
+});

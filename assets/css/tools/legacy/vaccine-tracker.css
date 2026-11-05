@@ -1,0 +1,95 @@
+/* Vaccine tracker — DZ Portal visual system, farm-planner-inspired compact cards */
+.vax-page{padding-block:1.25rem 3rem;max-width:1000px}
+.vax-hero{padding:clamp(1.25rem,3vw,2.2rem);border-radius:18px;background:linear-gradient(135deg,#e7f5ec,#f4faf6);border:1px solid #d1e8d8;margin:1rem 0 1.25rem}
+[data-theme="dark"] .vax-hero{background:linear-gradient(135deg,#172b20,#1d2a22);border-color:#34513d}
+.vax-tag,.vax-eyebrow{display:inline-flex;align-items:center;gap:.45rem;color:#187a50;font-size:.88rem;font-weight:750}
+[data-theme="dark"] .vax-tag,[data-theme="dark"] .vax-eyebrow{color:#82d6a6}
+.vax-hero h1{font-size:clamp(1.6rem,4vw,2.3rem);line-height:1.3;margin:.6rem 0;color:var(--text-color)}
+.vax-hero>p,.vax-panel-heading p{color:var(--text-muted);max-width:66ch}
+.vax-breadcrumb{display:flex;align-items:center;gap:.55rem;flex-wrap:wrap;margin-top:1.1rem;font-size:.88rem;color:var(--text-muted)}
+.vax-breadcrumb i{font-size:.7rem;color:var(--primary-color)}
+.vax-notice,.vax-reference-note{display:flex;gap:.8rem;align-items:flex-start;padding:1rem 1.1rem;margin:1rem 0;border:1px solid #e9d7a4;border-inline-start:4px solid #c38a18;background:#fff9e9;color:#5c491e;border-radius:12px}
+[data-theme="dark"] .vax-notice,[data-theme="dark"] .vax-reference-note{background:#302a1b;color:#f1dfae;border-color:#66572f}
+.vax-notice>i,.vax-reference-note>h2 i{margin-top:.2rem;color:#a87510}
+.vax-notice p,.vax-reference-note p{margin:.2rem 0 0;line-height:1.65}
+.vax-panel{background:var(--surface-color);border:1px solid var(--border-color);border-radius:18px;padding:clamp(1rem,2.5vw,1.5rem);box-shadow:var(--box-shadow)}
+.vax-panel-heading{display:flex;justify-content:space-between;gap:1rem;align-items:center;margin-bottom:1.2rem}
+.vax-panel-heading h2{font-size:1.4rem;margin:.3rem 0}
+.vax-heading-icon{display:grid;place-items:center;flex:0 0 58px;width:58px;height:58px;border-radius:16px;background:rgba(24,122,80,.1);color:#187a50;font-size:1.8rem}
+.vax-date-card{padding:1rem;border:1px solid var(--border-color);border-radius:14px;background:var(--bg-color)}
+.vax-field-title{display:block;font-weight:750;margin-bottom:.65rem}
+.vax-birth-fields{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.75rem}
+.vax-birth-fields label,.vax-completion-date label{display:block;font-size:.9rem;font-weight:650;margin-bottom:.35rem}
+.vax-birth-fields select,.vax-completion-date input{width:100%;min-width:0;min-height:46px;padding:.65rem;border:1px solid var(--border-color);border-radius:9px;background:var(--surface-color);color:var(--text-color);font:inherit}
+.vax-field-hint,.vax-small-note,.vax-privacy{font-size:.86rem;color:var(--text-muted);margin:.7rem 0}
+.vax-privacy{line-height:1.6}
+.vax-btn{display:inline-flex;justify-content:center;align-items:center;gap:.5rem;min-height:44px;padding:.65rem 1rem;border:1px solid transparent;border-radius:10px;font:inherit;font-weight:700;cursor:pointer;transition:background .15s,border-color .15s}
+.vax-btn:focus-visible,.vax-filter:focus-visible{outline:3px solid #f3b849;outline-offset:2px}
+.vax-btn-primary{background:#187a50;color:#fff}
+.vax-btn-primary:hover{background:#12633f;color:#fff}
+.vax-btn-secondary{background:var(--surface-color);color:var(--text-color);border-color:var(--border-color)}
+.vax-btn-danger{background:#fff0f0;color:#a32222;border-color:#efc6c6}
+[data-theme="dark"] .vax-btn-danger{background:#3b2222;color:#ffbaba;border-color:#6d3939}
+.vax-date-card .vax-btn-primary{margin-top:.3rem}
+.vax-form-message{color:var(--error-color);margin-top:.6rem;font-weight:650}
+.vax-static{margin-top:1.5rem}
+.vax-static h3{font-size:1.1rem;margin-bottom:.8rem}
+.vax-static-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.7rem}
+.vax-static-grid article{display:flex;flex-direction:column;gap:.4rem;padding:.85rem;border:1px solid var(--border-color);border-radius:11px;background:var(--surface-color);min-width:0}
+.vax-static-grid article b{font-size:.94rem}
+.vax-static-grid article span{font-size:.88rem;color:var(--text-muted);overflow-wrap:anywhere}
+.vax-dashboard{margin-top:1.4rem;border-top:1px solid var(--border-color);padding-top:1.2rem}
+.vax-dashboard-top{display:flex;justify-content:space-between;align-items:flex-start;gap:1rem}
+.vax-dashboard-top h3{font-size:1.2rem}
+.vax-dashboard-top p{color:var(--text-muted);margin-top:.3rem;max-width:62ch}
+.vax-kpis{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.7rem;margin:1rem 0}
+.vax-kpi{padding:.9rem;border:1px solid var(--border-color);border-radius:12px;background:var(--bg-color);min-width:0}
+.vax-kpi span{display:block;color:var(--text-muted);font-size:.86rem}
+.vax-kpi strong{display:block;font-size:1.55rem;margin-top:.25rem;color:var(--primary-color)}
+.vax-progress{display:flex;align-items:center;gap:.75rem;flex-wrap:wrap;margin:1rem 0}
+.vax-progress-track{height:9px;flex:1 1 180px;overflow:hidden;border-radius:999px;background:var(--border-color)}
+.vax-progress-track>div{height:100%;width:0;background:var(--primary-color);transition:width .2s}
+.vax-progress>span{font-size:.86rem;color:var(--text-muted)}
+.vax-filters{display:flex;flex-wrap:wrap;gap:.5rem;margin:1.1rem 0}
+.vax-filter{min-height:40px;padding:.45rem .9rem;border:1px solid var(--border-color);border-radius:999px;background:var(--surface-color);color:var(--text-color);font:inherit;cursor:pointer}
+.vax-filter.is-active{background:#187a50;color:#fff;border-color:#187a50}
+.vax-timeline{display:grid;gap:.9rem}
+.vax-stage{border:1px solid var(--border-color);border-radius:13px;overflow:hidden}
+.vax-stage-head{display:flex;justify-content:space-between;gap:.8rem;align-items:center;padding:.9rem 1rem;background:var(--bg-color)}
+.vax-stage-head h4{font-size:1rem}
+.vax-stage-head p{font-size:.84rem;color:var(--text-muted);margin-top:.2rem}
+.vax-2026{font-size:.75rem;font-weight:750;color:#187a50;background:rgba(24,122,80,.1);padding:.3rem .55rem;border-radius:999px}
+.vax-dose-list{padding:.5rem .85rem}
+.vax-dose{padding:.85rem 0;border-bottom:1px solid var(--border-color);display:grid;gap:.6rem}
+.vax-dose:last-child{border-bottom:0}
+.vax-dose-main{display:flex;gap:.7rem;align-items:flex-start;cursor:pointer;min-width:0}
+.vax-dose-main input{width:20px;height:20px;flex:0 0 20px;margin-top:.15rem;accent-color:#187a50}
+.vax-dose-text{min-width:0;overflow-wrap:anywhere}
+.vax-dose-text strong{display:block;font-weight:700}
+.vax-dose-text small{display:block;color:var(--text-muted);margin-top:.3rem;line-height:1.55}
+.vax-code{font-size:.82rem;color:var(--primary-color);margin-inline-start:.25rem}
+.vax-status-area{display:flex;gap:.5rem;align-items:center;flex-wrap:wrap;padding-inline-start:1.8rem}
+.vax-pill{display:inline-flex;padding:.25rem .6rem;border-radius:999px;font-size:.78rem;font-weight:750}
+.vax-pill-done{background:#e3f5e8;color:#176b35}.vax-pill-due,.vax-pill-overdue{background:#fff0d8;color:#80500a}.vax-pill-upcoming{background:#e8f1ff;color:#174f91}.vax-pill-review{background:#eceff1;color:#455a64}
+[data-theme="dark"] .vax-pill-done{background:#1d3c28;color:#a7e9b8}[data-theme="dark"] .vax-pill-due,[data-theme="dark"] .vax-pill-overdue{background:#47351d;color:#f4d18d}[data-theme="dark"] .vax-pill-upcoming{background:#1c3049;color:#a9d0ff}[data-theme="dark"] .vax-pill-review{background:#30373b;color:#d0d8dc}
+.vax-countdown{color:var(--text-muted);font-size:.82rem}
+.vax-completion-date{padding-inline-start:1.8rem;max-width:300px}
+.vax-storage-actions{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1rem}
+.vax-status-message{min-height:1.5em;color:var(--text-muted);font-size:.88rem;margin-top:.5rem}
+.vax-no-results{padding:1rem;text-align:center;color:var(--text-muted)}
+.vax-reference-note{display:block;margin-top:1.25rem}
+.vax-reference-note h2{font-size:1.05rem;margin-bottom:.4rem}
+.vax-reference-note a{font-weight:700;text-decoration:underline}
+.vax-footer{margin-top:1rem;border-top:1px solid var(--border-color);padding:1.5rem 0;background:var(--surface-color)}
+.vax-footer .container{display:flex;justify-content:space-between;align-items:center;gap:1rem}
+.vax-footer .footer-info p{color:var(--text-muted);font-size:.9rem;margin-top:.2rem}
+.vax-footer .footer-links{display:flex;gap:.75rem;flex-wrap:wrap}
+.vax-footer .footer-link{display:inline-flex;align-items:center;gap:.4rem;padding:.5rem;color:var(--text-color)}
+.vax-footer .footer-link:hover{color:var(--primary-color)}
+.vax-ad{margin-block:1.25rem}
+.skip-link{position:absolute;top:-100px;inset-inline-start:1rem;background:var(--surface-color);padding:.7rem 1rem;z-index:2000;border-radius:8px}
+.skip-link:focus{top:1rem}
+@media(max-width:650px){.vax-static-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.vax-panel-heading{align-items:flex-start}.vax-heading-icon{width:46px;height:46px;flex-basis:46px;font-size:1.35rem}.vax-dashboard-top{flex-direction:column}.vax-dashboard-top .vax-btn{width:100%}.vax-kpis{grid-template-columns:repeat(3,minmax(0,1fr));gap:.45rem}.vax-kpi{padding:.65rem}.vax-kpi span{font-size:.76rem}.vax-kpi strong{font-size:1.3rem}.vax-footer .container{flex-direction:column;text-align:center}.vax-footer .footer-links{justify-content:center}}
+@media(max-width:390px){.vax-static-grid{grid-template-columns:1fr}.vax-birth-fields{gap:.4rem}.vax-birth-fields select{padding:.55rem .35rem;font-size:.9rem}.vax-kpis{grid-template-columns:1fr}.vax-kpi{display:flex;align-items:center;justify-content:space-between}.vax-storage-actions .vax-btn{width:100%}}
+@media(prefers-reduced-motion:reduce){.vax-btn,.vax-progress-track>div{transition:none}}
+@media print{#main-header,#main-nav,.vax-ad,.vax-storage-actions,.vax-btn,.vax-breadcrumb,.vax-footer{display:none!important}.vax-page{max-width:none;padding:0}.vax-panel,.vax-hero{box-shadow:none;border:1px solid #aaa}.vax-dose{break-inside:avoid}}

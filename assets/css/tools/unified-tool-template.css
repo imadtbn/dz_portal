@@ -112,3 +112,11 @@
   .dz-unified-tool-page .dz-tool-ad-top { min-height: 210px; }
   .dz-unified-tool-page .dz-tool-ad-bottom { min-height: 115px; }
 }
+
+/* Portal header actions: explicit theme control, never inherit the device theme. */
+.dz-unified-theme{display:inline-flex;align-items:center;justify-content:center;flex:none;width:40px;height:40px;border:1px solid #ffffff75;border-radius:10px;background:#ffffff16;color:#fff;font-size:19px;cursor:pointer}
+.dz-unified-theme:hover,.dz-unified-theme:focus-visible{background:#ffffff28;outline:2px solid #fff;outline-offset:2px}
+.dz-unified-tool-page>.dz-share-slot,.dz-unified-tool-page main>.dz-share-slot{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;max-width:100%;margin:16px auto 24px;padding-inline:10px}
+.dz-unified-tool-page .dz-unified-hero .dz-share-slot{display:none!important}
+.dz-unified-tool-page .dz-share-slot .dz-share-button{min-height:48px}
+@media(max-width:700px){.dz-unified-theme{width:36px;height:36px;font-size:17px}.dz-unified-header-inner{gap:7px}}

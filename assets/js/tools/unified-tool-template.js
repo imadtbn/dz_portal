@@ -17,8 +17,25 @@
     document.querySelectorAll('body > header:not(.dz-unified-header)').forEach(el => el.remove());
     const header = document.createElement('header');
     header.className = 'dz-unified-header';
-    header.innerHTML = '<div class="dz-unified-header-inner"><a class="dz-unified-brand" href="' + ROOT + '" aria-label="الرئيسية - البوابة الجزائرية للخدمات الرقمية"><img src="' + ASSETS + 'images/icon.png" width="40" height="40" alt=""><span><strong>البوابة الجزائرية</strong><small>للخدمات الرقمية</small></span></a><nav class="dz-unified-nav" aria-label="التنقل الرئيسي"><a href="' + ROOT + '">الرئيسية</a><a href="' + ROOT + 'pages/tools/index.html" aria-current="page">الأدوات الرقمية</a></nav><button class="dz-unified-menu" type="button" aria-expanded="false" aria-label="فتح قائمة التنقل">القائمة</button></div>';
+    header.innerHTML = '<div class="dz-unified-header-inner"><a class="dz-unified-brand" href="' + ROOT + '" aria-label="الرئيسية - البوابة الجزائرية للخدمات الرقمية"><img src="' + ASSETS + 'images/icon.png" width="40" height="40" alt=""><span><strong>البوابة الجزائرية</strong><small>للخدمات الرقمية</small></span></a><nav class="dz-unified-nav" aria-label="التنقل الرئيسي"><a href="' + ROOT + '">الرئيسية</a><a href="' + ROOT + 'pages/tools/index.html" aria-current="page">الأدوات الرقمية</a></nav><button id="theme-toggle" class="dz-unified-theme" type="button" aria-label="تغيير المظهر" title="تغيير المظهر">🌙</button><button class="dz-unified-menu" type="button" aria-expanded="false" aria-label="فتح قائمة التنقل">القائمة</button></div>';
     document.body.insertBefore(header, document.body.firstChild);
+    const themeButton = header.querySelector('#theme-toggle');
+    const savedTheme = localStorage.getItem('dz_portal_tool_theme');
+    if (savedTheme === 'dark' || savedTheme === 'light') document.body.setAttribute('data-theme', savedTheme);
+    if (themeButton) {
+      const syncThemeIcon = () => {
+        const dark = document.body.getAttribute('data-theme') === 'dark';
+        themeButton.textContent = dark ? '☀️' : '🌙';
+        themeButton.setAttribute('aria-label', dark ? 'تفعيل الوضع الفاتح' : 'تفعيل الوضع الداكن');
+      };
+      syncThemeIcon();
+      themeButton.addEventListener('click', () => {
+        const next = document.body.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+        document.body.setAttribute('data-theme', next);
+        localStorage.setItem('dz_portal_tool_theme', next);
+        syncThemeIcon();
+      });
+    }
     const menu = header.querySelector('.dz-unified-menu');
     const nav = header.querySelector('.dz-unified-nav');
     menu.addEventListener('click', () => {
@@ -66,7 +83,7 @@
     const shareSlot = document.querySelector('.dz-share-slot');
     if (shareSlot && !hero.contains(shareSlot)) {
       shareSlot.classList.add('dz-share-in-hero');
-      hero.appendChild(shareSlot);
+      hero.insertAdjacentElement('afterend', shareSlot);
     }
     const topAd = document.querySelector('body > .dz-import-ad, body > .ad-container.dz-import-ad');
     if (topAd && topAd !== hero && !hero.contains(topAd)) {

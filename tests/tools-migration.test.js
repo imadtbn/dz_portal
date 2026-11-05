@@ -134,7 +134,8 @@ test('flashcards tool preserves creation, spaced review, quiz, and backup featur
   assert.match(page, /id="create"/);
   assert.match(page, /id="review"/);
   assert.match(page, /id="quiz"/);
-  assert.match(script, /studentDzFlashcardsV1/);
+  assert.match(script, /dzPortalFlashcardsV1/);
+  assert.match(script, /dz-portal-flashcards\.json/);
   assert.match(script, /exportJson/);
   assert.match(script, /saveExtracted/);
   assert.match(script, /startQuiz/);
@@ -152,7 +153,9 @@ test('exam planner preserves calendar, reminders, revision planning, and export/
   assert.match(page, /id="calendar"/);
   assert.match(page, /id="buildPlan"/);
   assert.match(page, /id="exportIcs"/);
-  assert.match(script, /studentDzExamPlannerV1/);
+  assert.match(script, /dzPortalExamPlannerV1/);
+  assert.match(script, /dz-portal-exam-planner\.json/);
+  assert.match(script, /dz-portal-calendar\.ics/);
   assert.match(script, /importJson/);
   assert.match(script, /renderNotifications/);
   assert.match(directory, /href="study\/exam-planner\.html" data-category="study"/);
@@ -241,6 +244,7 @@ test('imported pages use the portal shell and do not retain source analytics or 
   const pages = walkHtml('pages/tools').filter((file) => !file.endsWith('/index.html'));
   const existing = [
     'pages/tools/calculators/age-calculator.html',
+    'pages/tools/calculators/average-calculator.html',
     'pages/tools/calculators/number-to-words.html',
     'pages/tools/calculators/percentage-calculator.html',
     'pages/tools/calculators/date-difference.html',
@@ -251,8 +255,8 @@ test('imported pages use the portal shell and do not retain source analytics or 
   const imported = pages.filter((file) => !existing.includes(file));
   for (const file of imported) {
     const html = read(file);
-    assert.match(html, /dz-import-header/, 'missing portal shell: ' + file);
-    assert.match(html, /data-ad-slot="3143411927"/, 'missing reserved portal ad slot: ' + file);
+    assert.match(html, /(?:dz-import-header|dz-unified-header|imported-tool-shell\.js|id="main-header")/, 'missing portal shell: ' + file);
+    assert.match(html, /data-ad-slot="(?:3143411927|1760836049|7867079394|8546947691)"/, 'missing reserved portal ad slot: ' + file);
     assert.doesNotMatch(html, /G-1FG97932S6|GTM-WG6CX4F5|adsbygoogle\.js\?client=/, 'source tracking/ads loader retained: ' + file);
   }
 });
