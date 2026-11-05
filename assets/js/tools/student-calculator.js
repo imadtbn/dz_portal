@@ -1,8 +1,8 @@
-/* Student DZ — Smart Calculator */
+/* DZ Portal — Smart Calculator */
 (() => {
   'use strict';
 
-  const STORAGE_KEY = 'studentDzSmartCalculatorHistory';
+  const STORAGE_KEY = 'dzPortalSmartCalculatorHistory';
   const MAX_HISTORY = 100;
   const state = { expression: '', result: null, editingId: null };
 
