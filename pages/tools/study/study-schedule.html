@@ -252,19 +252,6 @@
 
 
 <body>
-    <header class="dz-import-header">
-        <div class="dz-import-container"><a class="dz-import-brand" href="https://imadtbn.github.io/dz_portal/"><img
-                    src="https://imadtbn.github.io/dz_portal/assets/images/icon.png" alt="" width="38"
-                    height="38"><span>البوابة الجزائرية للخدمات الرقمية</span></a><button class="dz-import-toggle"
-                id="dz-tools-nav-toggle" type="button" aria-expanded="false"
-                aria-controls="dz-tools-nav">القائمة</button>
-            <nav class="dz-import-nav" id="dz-tools-nav" aria-label="التنقل الرئيسي"><a
-                    href="https://imadtbn.github.io/dz_portal/">الرئيسية</a><a
-                    href="https://imadtbn.github.io/dz_portal/pages/tools/index.html">الأدوات الرقمية</a><a
-                    href="https://imadtbn.github.io/dz_portal/pages/privacy.html">الخصوصية</a><a
-                    href="https://imadtbn.github.io/dz_portal/pages/contact.html">اتصل بنا</a></nav>
-        </div>
-    </header>
     <div class="ad-container dz-import-ad"><ins class="adsbygoogle" style="display:block"
             data-ad-client="ca-pub-5656416032906373" data-ad-slot="3143411927" data-ad-format="auto"
             data-full-width-responsive="true"></ins></div>
@@ -314,47 +301,12 @@
             أدوات الطالب الجزائري</a>
     </section>
 
-    <footer class="site-footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-col">
-                    <h3><img src="/dz_portal/assets/images/icon.png" alt="البوابة الجزائرية للخدمات الرقمية Logo"
-                            width="24" height="24" style="border-radius:4px;vertical-align:middle"> البوابة الجزائرية للخدمات الرقمية</h3>
-                    <p>المنصة الرقمية الشاملة للطالب الجزائري. رفيقك من التسجيل إلى التخرج.</p>
-                </div>
-                <div class="footer-col">
-                    <h3>روابط سريعة</h3>
-                    <ul class="footer-links">
-                        <li><a href="https://imadtbn.github.io/dz_portal/pages/tools/index.html">الأدوات</a></li>
-                        <li><a href="https://imadtbn.github.io/dz_portal/pages/tools/index.html">الجامعات</a></li>
-                        <li><a href="https://imadtbn.github.io/dz_portal/pages/tools/index.html">المدارس والمعاهد</a></li>
-                        <li><a href="https://imadtbn.github.io/dz_portal/pages/tools/index.html">المنصات</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h3>قانوني</h3>
-                    <ul class="footer-links">
-                        <li><a href="https://imadtbn.github.io/dz_portal/pages/tools/index.html">عن المنصة</a></li>
-                        <li><a href="https://imadtbn.github.io/dz_portal/pages/privacy.html">سياسة الخصوصية</a></li>
-                        <li><a href="https://imadtbn.github.io/dz_portal/pages/contact.html">اتصل بنا</a></li>
-                        <li><a href="https://imadtbn.github.io/dz_portal/pages/tools/index.html">دليل المستخدم</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">&copy; <span id="currentYear"></span> البوابة الجزائرية للخدمات الرقمية. جميع الحقوق محفوظة.</div>
-        </div>
-    </footer>
-
     <script defer src="/dz_portal/assets/js/tools/theme.js"></script>
     <script>const days = ['الأحد', 'الإثنين', 'الثلاثاء', 'الأربعاء', 'الخميس', 'الجمعة', 'السبت'], schedule = document.getElementById('schedule'); function render() { schedule.innerHTML = ''; days.forEach(d => { const box = document.createElement('div'); box.className = 'day'; box.innerHTML = '<h3>' + d + '</h3>'; const items = JSON.parse(localStorage.getItem('studentSchedule') || '[]').filter(x => x.day === d).sort((a, b) => a.time.localeCompare(b.time)); items.forEach((x, i) => { const el = document.createElement('div'); el.className = 'lesson'; el.textContent = x.time + ' — ' + x.subject; el.title = 'انقر للحذف'; el.onclick = () => { items.splice(i, 1); const all = JSON.parse(localStorage.getItem('studentSchedule') || '[]').filter(y => !(y.day === d && y.time === x.time && y.subject === x.subject)); localStorage.setItem('studentSchedule', JSON.stringify(all)); render() }; box.appendChild(el) }); schedule.appendChild(box) }) } document.getElementById('add').onclick = () => { const subject = document.getElementById('subject').value.trim(); if (!subject) return alert('أدخل اسم المادة.'); const all = JSON.parse(localStorage.getItem('studentSchedule') || '[]'); all.push({ subject, day: document.getElementById('day').value, time: document.getElementById('time').value }); localStorage.setItem('studentSchedule', JSON.stringify(all)); document.getElementById('subject').value = ''; render() }; document.getElementById('clear').onclick = () => { localStorage.removeItem('studentSchedule'); render() }; render();</script>
 
     <script defer src="https://imadtbn.github.io/dz_portal/assets/js/site-tags.js"></script>
     <script defer src="https://imadtbn.github.io/dz_portal/assets/js/ads-stability.js"></script>
     <script defer src="https://imadtbn.github.io/dz_portal/assets/js/dz-share.js"></script>
-    <footer class="dz-import-footer">
-        <p>© البوابة الجزائرية للخدمات الرقمية</p><a
-            href="https://imadtbn.github.io/dz_portal/pages/tools/index.html">العودة إلى فهرس الأدوات</a>
-    </footer>
     <script defer src="https://imadtbn.github.io/dz_portal/assets/js/tools/imported-tool-shell.js"></script>
 <script defer src="/dz_portal/assets/js/tools/student-study-schedule.js"></script>
 </body>
