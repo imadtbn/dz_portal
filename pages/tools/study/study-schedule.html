@@ -41,10 +41,10 @@
 
     <title>study schedule | البوابة الجزائرية للخدمات الرقمية</title>
     <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://imadtbn.github.io/student-dz/assets/css/main.css">
-    <link rel="stylesheet" href="https://imadtbn.github.io/student-dz/assets/css/responsive.css">
+    <link rel="stylesheet" href="/dz_portal/assets/css/tools/legacy/student-main.css">
+    <link rel="stylesheet" href="/dz_portal/assets/css/tools/legacy/student-responsive.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="icon" href="https://imadtbn.github.io/student-dz/assets/images/icon.png">
+    <link rel="icon" href="/dz_portal/assets/images/icon.png">
     <style>
         .tool-container {
             max-width: 900px;
@@ -310,7 +310,7 @@
                 <p>قسّم المراجعة إلى فترات تركيز واستراحات.</p>
             </li>
         </ul>
-        <a class="related-tools-home" href="https://imadtbn.github.io/student-dz/categories/tools.html">استكشف جميع
+        <a class="related-tools-home" href="https://imadtbn.github.io/dz_portal/pages/tools/index.html">استكشف جميع
             أدوات الطالب الجزائري</a>
     </section>
 
@@ -318,17 +318,17 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-col">
-                    <h3><img src="https://imadtbn.github.io/student-dz/assets/images/icon.png" alt="Student DZ Logo"
+                    <h3><img src="/dz_portal/assets/images/icon.png" alt="Student DZ Logo"
                             width="24" height="24" style="border-radius:4px;vertical-align:middle"> Student DZ</h3>
                     <p>المنصة الرقمية الشاملة للطالب الجزائري. رفيقك من التسجيل إلى التخرج.</p>
                 </div>
                 <div class="footer-col">
                     <h3>روابط سريعة</h3>
                     <ul class="footer-links">
-                        <li><a href="https://imadtbn.github.io/student-dz/categories/tools.html">الأدوات</a></li>
-                        <li><a href="https://imadtbn.github.io/student-dz/universities/index.html">الجامعات</a></li>
-                        <li><a href="https://imadtbn.github.io/student-dz/ecoles/index.html">المدارس والمعاهد</a></li>
-                        <li><a href="https://imadtbn.github.io/student-dz/platforms/index.html">المنصات</a></li>
+                        <li><a href="https://imadtbn.github.io/dz_portal/pages/tools/index.html">الأدوات</a></li>
+                        <li><a href="https://imadtbn.github.io/dz_portal/pages/tools/index.html">الجامعات</a></li>
+                        <li><a href="https://imadtbn.github.io/dz_portal/pages/tools/index.html">المدارس والمعاهد</a></li>
+                        <li><a href="https://imadtbn.github.io/dz_portal/pages/tools/index.html">المنصات</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
@@ -345,8 +345,7 @@
         </div>
     </footer>
 
-    <script src="https://imadtbn.github.io/student-dz/assets/js/theme.js"></script>
-    <script src="https://imadtbn.github.io/student-dz/assets/js/navigation.js"></script>
+    <script defer src="/dz_portal/assets/js/tools/theme.js"></script>
     <script>const days = ['الأحد', 'الإثنين', 'الثلاثاء', 'الأربعاء', 'الخميس', 'الجمعة', 'السبت'], schedule = document.getElementById('schedule'); function render() { schedule.innerHTML = ''; days.forEach(d => { const box = document.createElement('div'); box.className = 'day'; box.innerHTML = '<h3>' + d + '</h3>'; const items = JSON.parse(localStorage.getItem('studentSchedule') || '[]').filter(x => x.day === d).sort((a, b) => a.time.localeCompare(b.time)); items.forEach((x, i) => { const el = document.createElement('div'); el.className = 'lesson'; el.textContent = x.time + ' — ' + x.subject; el.title = 'انقر للحذف'; el.onclick = () => { items.splice(i, 1); const all = JSON.parse(localStorage.getItem('studentSchedule') || '[]').filter(y => !(y.day === d && y.time === x.time && y.subject === x.subject)); localStorage.setItem('studentSchedule', JSON.stringify(all)); render() }; box.appendChild(el) }); schedule.appendChild(box) }) } document.getElementById('add').onclick = () => { const subject = document.getElementById('subject').value.trim(); if (!subject) return alert('أدخل اسم المادة.'); const all = JSON.parse(localStorage.getItem('studentSchedule') || '[]'); all.push({ subject, day: document.getElementById('day').value, time: document.getElementById('time').value }); localStorage.setItem('studentSchedule', JSON.stringify(all)); document.getElementById('subject').value = ''; render() }; document.getElementById('clear').onclick = () => { localStorage.removeItem('studentSchedule'); render() }; render();</script>
 
     <script defer src="https://imadtbn.github.io/dz_portal/assets/js/site-tags.js"></script>
@@ -357,6 +356,7 @@
             href="https://imadtbn.github.io/dz_portal/pages/tools/index.html">العودة إلى فهرس الأدوات</a>
     </footer>
     <script defer src="https://imadtbn.github.io/dz_portal/assets/js/tools/imported-tool-shell.js"></script>
+<script defer src="/dz_portal/assets/js/tools/student-study-schedule.js"></script>
 </body>
 
 </html>
