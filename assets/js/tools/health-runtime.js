@@ -24,7 +24,7 @@
     const singleArgument = text === undefined;
     const message = singleArgument ? String(title || '') : String(text || '');
     const payload = {
-      title: singleArgument ? 'Tools DZ' : String(title || 'Tools DZ'),
+      title: singleArgument ? 'البوابة الجزائرية للخدمات الرقمية' : String(title || 'البوابة الجزائرية للخدمات الرقمية'),
       text: message
     };
     try {
@@ -84,7 +84,7 @@
         .trim();
       if (!report) return;
       const original = button.textContent;
-      const shared = await shareResult('تقرير صحي من Tools DZ', report);
+      const shared = await shareResult('تقرير صحي من البوابة الجزائرية للخدمات الرقمية', report);
       if (shared) {
         button.textContent = navigator.share ? 'تم فتح المشاركة' : 'تم نسخ التقرير';
         window.setTimeout(() => { button.textContent = original; }, 2200);
@@ -126,17 +126,4 @@
     });
   }
 
-  const theme = byId('theme-toggle');
-  if (theme) {
-    let saved = null;
-    try { saved = localStorage.getItem('tools-dz-theme'); } catch (_) { /* Storage may be unavailable in restricted browsers. */ }
-    if (saved === 'dark') document.documentElement.setAttribute('data-theme', 'dark');
-    theme.textContent = saved === 'dark' ? '☀️' : '🌙';
-    theme.addEventListener('click', () => {
-      const dark = document.documentElement.getAttribute('data-theme') !== 'dark';
-      document.documentElement.setAttribute('data-theme', dark ? 'dark' : 'light');
-      try { localStorage.setItem('tools-dz-theme', dark ? 'dark' : 'light'); } catch (_) { /* Keep theme usable without persistence. */ }
-      theme.textContent = dark ? '☀️' : '🌙';
-    });
-  }
 })();
