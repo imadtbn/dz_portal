@@ -1,4 +1,4 @@
-/* Qibla Compass - scoped styles; respects Tools DZ theme tokens. */
+/* Qibla Compass - scoped styles; respects DZ Portal theme tokens. */
 .qibla-page{min-width:0;max-width:100%;overflow-x:clip;padding-bottom:1.5rem}
 .qibla-hero{margin-top:1.25rem;padding:clamp(1.25rem,3vw,2rem);border-radius:18px;background:linear-gradient(135deg,#176747,#25865b);color:#fff;box-shadow:0 8px 24px rgba(23,103,71,.16)}
 .qibla-hero h1{color:#fff;margin:.55rem 0;font-size:clamp(1.55rem,4vw,2.35rem);line-height:1.35}
