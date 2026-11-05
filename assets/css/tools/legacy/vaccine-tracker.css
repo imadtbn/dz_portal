@@ -1,4 +1,4 @@
-/* Vaccine tracker — Tools DZ visual system, farm-planner-inspired compact cards */
+/* Vaccine tracker — DZ Portal visual system, farm-planner-inspired compact cards */
 .vax-page{padding-block:1.25rem 3rem;max-width:1000px}
 .vax-hero{padding:clamp(1.25rem,3vw,2.2rem);border-radius:18px;background:linear-gradient(135deg,#e7f5ec,#f4faf6);border:1px solid #d1e8d8;margin:1rem 0 1.25rem}
 [data-theme="dark"] .vax-hero{background:linear-gradient(135deg,#172b20,#1d2a22);border-color:#34513d}
