@@ -134,7 +134,7 @@ test('flashcards tool preserves creation, spaced review, quiz, and backup featur
   assert.match(page, /id="create"/);
   assert.match(page, /id="review"/);
   assert.match(page, /id="quiz"/);
-  assert.match(script, /studentDzFlashcardsV1/);
+  assert.match(script, /dzPortalFlashcardsV1/);\n  assert.match(script, /dz-portal-flashcards\\.json/);
   assert.match(script, /exportJson/);
   assert.match(script, /saveExtracted/);
   assert.match(script, /startQuiz/);
@@ -152,7 +152,7 @@ test('exam planner preserves calendar, reminders, revision planning, and export/
   assert.match(page, /id="calendar"/);
   assert.match(page, /id="buildPlan"/);
   assert.match(page, /id="exportIcs"/);
-  assert.match(script, /studentDzExamPlannerV1/);
+  assert.match(script, /dzPortalExamPlannerV1/);\n  assert.match(script, /dz-portal-exam-planner\\.json/);\n  assert.match(script, /dz-portal-calendar\\.ics/);
   assert.match(script, /importJson/);
   assert.match(script, /renderNotifications/);
   assert.match(directory, /href="study\/exam-planner\.html" data-category="study"/);
@@ -178,9 +178,9 @@ test('all migrated tool pages have resolvable local asset and navigation paths',
   const pages = [
     'pages/tools/index.html',
     'pages/tools/calculators/number-to-words.html',
-    'pages/tools/calculators/age-calculator.html',
+    'pages/tools/calculators/age-calculator.html',\n    'pages/tools/calculators/average-calculator.html',
     'pages/tools/calculators/percentage-calculator.html',
-    'pages/tools/calculators/date-difference.html',
+    'pages/tools/calculators/date-difference.html',\n    'pages/tools/calculators/number-to-words.html',\n    'pages/tools/calculators/percentage-calculator.html',
     'pages/tools/study/pomodoro.html',
     'pages/tools/study/flashcards.html',
     'pages/tools/study/exam-planner.html',
