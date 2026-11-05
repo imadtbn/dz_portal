@@ -1,0 +1,147 @@
+/* Dedicated, resilient layout for the health tools directory. */
+.health-tools-page {
+  width: min(100% - 2rem, 1200px);
+  max-width: 1200px;
+  min-width: 0;
+  margin-inline: auto;
+  padding: .15rem 0 2.5rem;
+}
+.health-tools-page > * { min-width: 0; }
+.health-tools-page .catalog-hero {
+  width: 100%;
+  margin: .85rem 0 1.25rem;
+}
+.health-directory-section {
+  display: block !important;
+  width: 100%;
+  min-width: 0;
+  margin: 0 auto 1.5rem;
+  padding: 0;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+.health-directory-section .section-heading {
+  display: block;
+  margin: 0 0 1rem;
+  text-align: right;
+}
+.health-directory-section .section-heading h2 {
+  margin: 0 0 .35rem;
+  color: var(--text-color);
+  font-size: clamp(1.25rem, 2.5vw, 1.65rem);
+}
+.health-directory-section .section-heading p {
+  margin: 0;
+  color: var(--text-muted);
+}
+.health-directory-section .search-field {
+  display: block;
+  width: 100%;
+  margin: 0 0 1.25rem;
+}
+.health-directory-section #health-search {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  min-height: 50px;
+  padding: .75rem 1rem;
+  border: 1px solid var(--border-color);
+  border-radius: 13px;
+  background: var(--surface-color);
+  color: var(--text-color);
+  font: inherit;
+  font-size: 16px;
+}
+.health-directory-section #health-search:focus-visible {
+  outline: 3px solid rgba(39,131,89,.22);
+  border-color: var(--primary-color);
+}
+.health-directory-section #health-tools-grid {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 245px), 1fr));
+  align-items: stretch;
+  gap: 1rem;
+  width: 100%;
+  min-width: 0;
+  margin: 0;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+.health-directory-section #health-tools-grid > .tool-card {
+  display: flex !important;
+  flex-direction: column;
+  align-items: stretch;
+  min-width: 0;
+  min-height: 220px;
+  height: auto;
+  padding: 1.2rem;
+  visibility: visible !important;
+  opacity: 1 !important;
+  transform: none;
+}
+.health-directory-section .tool-card[hidden] { display: none !important; }
+.health-directory-section .tool-card h3 {
+  margin: 0 0 .55rem;
+  color: var(--text-color);
+  font-size: 1.08rem;
+  line-height: 1.55;
+}
+.health-directory-section .tool-card p {
+  flex: 1 1 auto;
+  margin: 0 0 1rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+}
+.health-directory-section .tool-card .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 44px;
+  margin-top: auto;
+}
+.health-directory .ads-container {
+  max-width: 100%;
+}
+.health-directory-notice {
+  margin: 1.5rem 0 0;
+}
+.health-directory-notice .notice {
+  line-height: 1.8;
+}
+@media (max-width: 600px) {
+  .health-tools-page {
+    width: calc(100% - 1.2rem);
+    padding-top: .1rem;
+    padding-bottom: 1.5rem;
+  }
+  .health-tools-page .catalog-hero {
+    margin: .55rem 0 .9rem;
+  }
+  .health-directory-section .section-heading { margin-bottom: .85rem; }
+  .health-directory-section #health-tools-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: .85rem;
+  }
+  .health-directory-section #health-tools-grid > .tool-card {
+    min-height: 0;
+    padding: 1rem;
+  }
+}
+@media (min-width: 601px) and (max-width: 900px) {
+  .health-directory-section #health-tools-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* Shared health directory overflow and advertisement safeguards. */
+html, body { width: 100%; max-width: 100%; overflow-x: clip; }
+.health-tools-page, .health-tools-page > *, .health-directory-section,
+.health-directory-section > *, #main-footer, #main-footer .container { min-width: 0; max-width: 100%; }
+.health-tools-page .catalog-hero { overflow-wrap: anywhere; }
+.health-top-ad { width: min(100%, 1232px); max-width: 100%; margin: 14px auto 8px; padding-inline: clamp(8px, 2.5vw, 16px); }
+.health-top-ad .ads-box, .health-top-ad ins.adsbygoogle { width: 100%; max-width: 100%; min-width: 0; overflow: clip; }
+@media (max-width: 600px) {
+  .health-tools-page { width: calc(100% - 1rem); }
+  .health-top-ad { padding-inline: 6px; }
+}
