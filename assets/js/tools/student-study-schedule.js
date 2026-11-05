@@ -1,7 +1,7 @@
 (() => {
   'use strict';
   const DAYS=['الأحد','الإثنين','الثلاثاء','الأربعاء','الخميس','الجمعة','السبت'];
-  const KEY='studentSchedule'; const $=id=>document.getElementById(id);
+  const KEY='dzPortalStudySchedule'; const $=id=>document.getElementById(id);
   let editId=null,dragId=null,pointer=null;
   function setupUI(){
     if(!$('schedule')||!$('subject')||!$('day')||!$('time')) return false;
