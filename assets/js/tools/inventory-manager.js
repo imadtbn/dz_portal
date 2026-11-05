@@ -1,7 +1,7 @@
 (() => {
 'use strict';
 const $ = id => document.getElementById(id);
-const STORAGE_KEY = 'tools-dz-inventory-manager-v1';
+const STORAGE_KEY = 'dz-portal-inventory-manager-v1';
 const state = {products: [], movements: []};
 const money = value => new Intl.NumberFormat('fr-DZ',{maximumFractionDigits:2}).format(Number(value)||0) + ' دج';
 const today = () => { const d = new Date(); return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0'); };
@@ -77,14 +77,14 @@ $('im-products-body').addEventListener('click',e=>{
  }
 });
 function download(filename,content,type){const blob=new Blob(['\ufeff',content],{type});const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download=filename;document.body.appendChild(a);a.click();a.remove();URL.revokeObjectURL(url);}
-$('im-export-json').addEventListener('click',()=>download('tools-dz-inventory-backup-'+today()+'.json',JSON.stringify({schemaVersion:1,exportedAt:new Date().toISOString(),products:state.products,movements:state.movements},null,2),'application/json;charset=utf-8'));
+$('im-export-json').addEventListener('click',()=>download('dz-portal-inventory-backup-'+today()+'.json',JSON.stringify({schemaVersion:1,exportedAt:new Date().toISOString(),products:state.products,movements:state.movements},null,2),'application/json;charset=utf-8'));
 $('im-export-csv').addEventListener('click',()=>{
  const rows=[['التاريخ','نوع الحركة','المنتج','الرمز','الكمية','سعر الوحدة (دج)','الإجمالي (دج)','الربح (دج)','ملاحظة']];
  state.products.forEach(p=>rows.push([today(),'الرصيد الحالي',p.name,p.sku||'',p.stock,p.cost,p.stock*p.cost,'','قيمة المخزون الحالية بالتكلفة']));
  rows.push(['','','','','','','','','']);
  state.movements.forEach(m=>{const p=state.products.find(x=>x.id===m.productId);rows.push([m.date,m.type==='sale'?'بيع':'شراء',m.productName,p?.sku||'',m.quantity,m.unitPrice,m.quantity*m.unitPrice,m.type==='sale'?(m.profit||0):'',m.note||'']);});
  const csv=rows.map(row=>row.map(v=>'"'+String(v??'').replace(/"/g,'""')+'"').join(',')).join('\r\n');
- download('tools-dz-inventory-report-'+today()+'.csv',csv,'text/csv;charset=utf-8');
+ download('dz-portal-inventory-report-'+today()+'.csv',csv,'text/csv;charset=utf-8');
 });
 $('im-import-json').addEventListener('click',()=>$('im-import-file').click());
 $('im-import-file').addEventListener('change',async e=>{
