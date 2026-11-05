@@ -4,9 +4,12 @@ import path from 'node:path';
 
 const root = process.cwd();
 const toolsRoot = path.join(root, 'pages', 'tools');
-const sourcePatterns = [
+const baseUrl = 'https://imadtbn.github.io/dz_portal/';
+const legacyPatterns = [
   /https?:\/\/(?:www\.)?imadtbn\.github\.io\/(?:tools-dz|student-dz)\b/i,
-  /raw\.githubusercontent\.com\/imadtbn\/(?:tools-dz|student-dz)\b/i
+  /raw\.githubusercontent\.com\/imadtbn\/(?:tools-dz|student-dz)\b/i,
+  /\b(?:Tools DZ|Student DZ|StudentDZFlashcards|studentDzToolSchema)\b/i,
+  /\b(?:tools_dz|toolsdz|studentDz)(?:[_A-Z][\w-]*)?/i
 ];
 const failures = [];
 const htmlFiles = [];
@@ -20,12 +23,46 @@ function walk(dir) {
 }
 walk(toolsRoot);
 
+function meta(html, key, attr='property') {
+  const tags = html.match(/<meta\b[^>]*>/gi) || [];
+  const tag = tags.find(item => new RegExp('\\b' + attr + '=["\\']' + key + '["\\']', 'i').test(item));
+  return tag?.match(/\bcontent=["']([^"']+)["']/i)?.[1] || '';
+}
+function walkJson(value, callback) {
+  if (!value || typeof value !== 'object') return;
+  if (Array.isArray(value)) return value.forEach(item => walkJson(item, callback));
+  for (const [key, child] of Object.entries(value)) {
+    if (typeof child === 'string' && /^(?:url|@id|contentUrl)$/i.test(key)) callback(child, key);
+    else walkJson(child, callback);
+  }
+}
+
 for (const file of htmlFiles) {
   const html = fs.readFileSync(file, 'utf8');
   const rel = path.relative(root, file);
-  for (const pattern of sourcePatterns) {
-    if (pattern.test(html)) failures.push(rel + ': contains a live source-repository URL');
+  for (const pattern of legacyPatterns) if (pattern.test(html)) failures.push(rel + ': contains a legacy project identity or storage namespace');
+
+  const canonical = html.match(/<link\b(?=[^>]*\brel=["']canonical["'])(?=[^>]*\bhref=["']([^"']+)["'])[^>]*>/i)?.[1] || '';
+  const ogUrl = meta(html, 'og:url');
+  const ogImage = meta(html, 'og:image');
+  const twitterImage = meta(html, 'twitter:image', 'name');
+
+  if (!canonical.startsWith(baseUrl)) failures.push(rel + ': canonical URL is missing or outside the portal');
+  if (ogUrl !== canonical) failures.push(rel + ': og:url does not match canonical URL');
+  if (!ogImage.startsWith(baseUrl)) failures.push(rel + ': og:image must be an absolute portal image URL');
+  if (!twitterImage.startsWith(baseUrl)) failures.push(rel + ': twitter:image must be an absolute portal image URL');
+
+  for (const match of html.matchAll(/<script\b[^>]*type=["']application\/ld\+json["'][^>]*>([\s\S]*?)<\/script>/gi)) {
+    try {
+      const data = JSON.parse(match[1].trim());
+      walkJson(data, value => {
+        if (/^https?:\/\/(?:www\.)?imadtbn\.github\.io\/(?:tools-dz|student-dz)\b/i.test(value)) failures.push(rel + ': Schema.org still points to a source project');
+      });
+    } catch (error) {
+      failures.push(rel + ': invalid JSON-LD block (' + error.message + ')');
+    }
   }
+
   for (const match of html.matchAll(/(?:src|href)\s*=\s*["']([^"'#]+)["']/gi)) {
     const value = match[1].trim();
     if (!value || /^(?:https?:|data:|mailto:|tel:|javascript:|#|\/\/)/i.test(value)) continue;
@@ -57,7 +94,8 @@ for (const dir of ['assets/js/tools', 'assets/css/tools']) {
       if (entry.isDirectory()) stack.push(full);
       else if (entry.isFile() && /\.(?:js|css)$/.test(entry.name)) {
         const content = fs.readFileSync(full, 'utf8');
-        for (const pattern of sourcePatterns) if (pattern.test(content)) failures.push(path.relative(root, full) + ': contains a source-repository URL');
+        for (const pattern of legacyPatterns) if (pattern.test(content)) failures.push(path.relative(root, full) + ': contains a legacy project identity or storage namespace');
+        if (/\b(?:student-dz|tools-dz)-[^'"\s]+\.(?:json|csv|txt|pdf)/i.test(content)) failures.push(path.relative(root, full) + ': legacy export filename detected');
       }
     }
   }
@@ -68,4 +106,4 @@ if (failures.length) {
   console.error(failures.map(item => '- ' + item).join('\n'));
   process.exit(1);
 }
-console.log('PASS: no source-repository URLs, legacy chrome, or missing local resources detected.');
+console.log('PASS: portal-only social metadata, structured data, storage identity, and local assets.');
