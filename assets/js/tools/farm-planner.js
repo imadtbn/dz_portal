@@ -144,12 +144,12 @@
   form.addEventListener('change',()=>{save();update();});
   $('farm-irrigation-controls').addEventListener('input',calculateIrrigation);
   $('farm-budget-controls').addEventListener('input',calculateBudget);
-  $('farm-export-svg').addEventListener('click',()=>{if(last)download('tools-dz-farm-plan.svg',buildSvg(last),'image/svg+xml;charset=utf-8');});
+  $('farm-export-svg').addEventListener('click',()=>{if(last)download('dz-portal-farm-plan.svg',buildSvg(last),'image/svg+xml;charset=utf-8');});
   $('farm-export-json').addEventListener('click',()=>{
     if(!last)return;
     const {points,...summary}=last;
     const config=Object.fromEntries([...form.elements].filter(el=>el.id).map(el=>[el.id,el.value]));
-    download('tools-dz-farm-plan.json',JSON.stringify({version:1,createdAt:new Date().toISOString(),tree:select.value,config,summary,points},null,2),'application/json;charset=utf-8');
+    download('dz-portal-farm-plan.json',JSON.stringify({version:1,createdAt:new Date().toISOString(),tree:select.value,config,summary,points},null,2),'application/json;charset=utf-8');
   });
   $('farm-print').addEventListener('click',()=>{if(last)window.print();});
   $('farm-reset').addEventListener('click',()=>{form.reset();try{localStorage.removeItem(storageKey);}catch{} update();});
@@ -161,7 +161,7 @@
     try{localStorage.setItem(diaryKey,JSON.stringify(list.slice(0,200)));$('farm-diary-form').reset();renderDiary();}
     catch{alert('تعذر حفظ السجل. قد تكون مساحة التخزين ممتلئة.');}
   });
-  $('farm-diary-export').addEventListener('click',()=>download('tools-dz-farm-diary.json',JSON.stringify(getDiary(),null,2),'application/json;charset=utf-8'));
+  $('farm-diary-export').addEventListener('click',()=>download('dz-portal-farm-diary.json',JSON.stringify(getDiary(),null,2),'application/json;charset=utf-8'));
   $('farm-diary-date').value=new Date().toISOString().slice(0,10);
   load();update();renderDiary();
 })();
