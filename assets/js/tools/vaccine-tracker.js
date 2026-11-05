@@ -3,7 +3,7 @@
    Only calculation and storage occur here; catch-up decisions belong to clinicians. */
 (function () {
     'use strict';
-    const STORAGE_KEY = 'tools-dz-vaccination-v1';
+    const STORAGE_KEY = 'dz-portal-vaccination-v1';
     const DAY = 86400000;
     const NATIONAL_START = Date.UTC(2023, 9, 15);
     const HPV_AMENDMENT = Date.UTC(2026, 4, 17);
@@ -302,7 +302,7 @@
             const url = URL.createObjectURL(new Blob([data], { type: 'application/json;charset=utf-8' }));
             const link = el('a');
             link.href = url;
-            link.download = 'tools-dz-vaccination-' + dateString(birth) + '.json';
+            link.download = 'dz-portal-vaccination-' + dateString(birth) + '.json';
             document.body.append(link);
             link.click();
             link.remove();
