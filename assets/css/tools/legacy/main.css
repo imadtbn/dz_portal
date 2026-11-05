@@ -792,7 +792,7 @@ section {
 }
 
 
-/* Unified Tools DZ header and brand identity (all pages). */
+/* Unified DZ Portal tool header and brand identity. */
 #main-header {
   background: color-mix(in srgb, var(--surface-color) 94%, transparent);
   border-bottom: 1px solid var(--border-color);
