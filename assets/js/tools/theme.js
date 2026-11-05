@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
 
     // Check for saved theme in localStorage
-    const savedTheme = localStorage.getItem('theme');
+    const savedTheme = localStorage.getItem('dz_portal_tool_theme');
 
     if (savedTheme) {
         document.body.setAttribute('data-theme', savedTheme);
@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
             let newTheme = currentTheme === 'dark' ? 'light' : 'dark';
 
             document.body.setAttribute('data-theme', newTheme);
-            localStorage.setItem('theme', newTheme);
+            localStorage.setItem('dz_portal_tool_theme', newTheme);
             updateToggleIcon(newTheme);
         });
     }
