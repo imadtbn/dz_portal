@@ -30,6 +30,7 @@ for (const file of htmlFiles) {
     const value = match[1].trim();
     if (!value || /^(?:https?:|data:|mailto:|tel:|javascript:|#|\/\/)/i.test(value)) continue;
     const clean = value.split(/[?#]/)[0];
+    if (!/\\.(?:js|css|png|jpe?g|webp|svg|ico|woff2?|ttf|json|pdf)$/i.test(clean)) continue;
     let target;
     if (clean.startsWith('/dz_portal/')) target = path.join(root, clean.slice('/dz_portal/'.length));
     else if (clean.startsWith('/')) continue;
