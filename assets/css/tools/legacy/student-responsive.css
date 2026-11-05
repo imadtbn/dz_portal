@@ -1,4 +1,4 @@
-/* Shared responsive rules for every Student DZ page. */
+/* Shared responsive rules for migrated DZ Portal tools. */
 
 /* Unified site header */
 .site-header{width:100%;position:sticky;top:0;z-index:1000;background:var(--bg-card);border-bottom:1px solid var(--border-color)}
