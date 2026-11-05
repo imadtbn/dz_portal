@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded',()=>{
- const KEY='studentDzResearchPlan';
+ const KEY='dzPortalResearchPlan';
  const $=id=>document.getElementById(id);
  const title=$('researchTitle'),level=$('researchLevel'),specialty=$('researchSpecialty'),university=$('researchUniversity'),faculty=$('researchFaculty'),student=$('researchStudent'),supervisor=$('researchSupervisor'),problem=$('researchProblem');
  const tree=$('planTree'),preview=$('previewContent'),progress=$('progressBar'),completion=$('completionText'),toast=$('rpToast');
