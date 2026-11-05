@@ -21,7 +21,7 @@ function copyReference(){if(!last)return;const text=last.raw;navigator.clipboard
 function copyAll(){if(!refs.length)return toast('القائمة فارغة');navigator.clipboard?.writeText(refs.map((r,i)=>`${i+1}. ${r.raw}`).join('\n')).then(()=>toast('تم نسخ قائمة المراجع'))}
 function sortRefs(){refs.sort((a,b)=>a.raw.localeCompare(b.raw,'ar'));save();toast('تم ترتيب المراجع')}
 function download(blob,name){const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1000)}
-function exportJson(){download(new Blob([JSON.stringify(refs,null,2)],{type:'application/json'}),'student-dz-apa-references.json');toast('تم إنشاء النسخة الاحتياطية')}
+function exportJson(){download(new Blob([JSON.stringify(refs,null,2)],{type:'application/json'}),'dz-portal-apa-references.json');toast('تم إنشاء النسخة الاحتياطية')}
 function importJson(e){const f=e.target.files[0];if(!f)return;const r=new FileReader();r.onload=()=>{try{const x=JSON.parse(r.result);if(!Array.isArray(x))throw Error();refs=x.filter(a=>a&&a.text);save();toast('تم استيراد المراجع')}catch{toast('ملف غير صالح')}};r.readAsText(f);e.target.value=''}
 tabs.forEach(b=>b.onclick=()=>{tabs.forEach(x=>x.classList.remove('active'));b.classList.add('active');type=b.dataset.type;clearForm()});$('language').onchange=()=>{};$('generate').onclick=generate;$('clear').onclick=clearForm;$('copyReference').onclick=copyReference;$('addReference').onclick=add;$('copyAll').onclick=copyAll;$('sortRefs').onclick=sortRefs;$('exportJson').onclick=exportJson;$('importJson').onclick=()=>$('jsonFile').click();$('jsonFile').onchange=importJson;
 renderFields();renderRefs();$('currentYear').textContent=new Date().getFullYear();
