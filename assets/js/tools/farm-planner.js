@@ -5,7 +5,7 @@
   const form = $('farm-form'), map = $('farm-map'), msg = $('farm-message');
   const outputIds = ['farm-count','farm-rows','farm-area','farm-density'];
   const maxMarkers = 12000;
-  const storageKey = 'tools_dz_farm_planner_v1', diaryKey = 'tools_dz_farm_diary_v1';
+  const storageKey = 'dz_portal_farm_planner_v1', diaryKey = 'dz_portal_farm_diary_v1';
   const fmt = (n, digits=2) => Number.isFinite(n) ? new Intl.NumberFormat('en-US',{maximumFractionDigits:digits}).format(n) : '—';
   const number = id => Number($(id).value);
   let last = null;
