@@ -38,7 +38,7 @@
     state.bearing=calculate(lat,lon).bearing;
     render();
     $('qibla-search-status').textContent = 'تم تحديد الموقع وحساب اتجاه القبلة.';
-    try { localStorage.setItem('tools-dz-qibla-place', JSON.stringify({lat,lon,name})); } catch (_) {}
+    try { localStorage.setItem('dz-portal-qibla-place', JSON.stringify({lat,lon,name})); } catch (_) {}
   }
   function setStatus(message) { $('qibla-search-status').textContent = message; }
   async function searchCity(query) {
@@ -128,7 +128,7 @@
     render();
   });
   $('qibla-share').addEventListener('click', async () => {
-    const shareData={title:document.title,text:'بوصلة القبلة وتحديد الشمال — Tools DZ',url:location.href};
+    const shareData={title:document.title,text:'بوصلة القبلة وتحديد الشمال — البوابة الجزائرية للخدمات الرقمية',url:location.href};
     try { if (navigator.share) await navigator.share(shareData); else if (navigator.clipboard?.writeText) { await navigator.clipboard.writeText(location.href); $('qibla-share').innerHTML='<i class="fa-solid fa-check" aria-hidden="true"></i> تم نسخ الرابط'; setTimeout(()=>{$('qibla-share').innerHTML='<i class="fa-solid fa-share-nodes" aria-hidden="true"></i> مشاركة'},2200); } else window.prompt('انسخ رابط الأداة:',location.href); } catch (error) { if (error.name!=='AbortError') window.prompt('انسخ رابط الأداة:',location.href); }
   });
   $('qibla-help-toggle').addEventListener('click', () => {
@@ -141,7 +141,7 @@
   });
   $('current-year').textContent=new Date().getFullYear();
   try {
-    const saved=JSON.parse(localStorage.getItem('tools-dz-qibla-place')||'null');
+    const saved=JSON.parse(localStorage.getItem('dz-portal-qibla-place')||'null');
     if (saved && Number.isFinite(saved.lat) && Number.isFinite(saved.lon)) setLocation(saved.lat,saved.lon,saved.name||'الموقع المحفوظ');
   } catch (_) {}
 })();
