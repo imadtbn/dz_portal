@@ -134,7 +134,8 @@ test('flashcards tool preserves creation, spaced review, quiz, and backup featur
   assert.match(page, /id="create"/);
   assert.match(page, /id="review"/);
   assert.match(page, /id="quiz"/);
-  assert.match(script, /dzPortalFlashcardsV1/);\n  assert.match(script, /dz-portal-flashcards\\.json/);
+  assert.match(script, /dzPortalFlashcardsV1/);
+  assert.match(script, /dz-portal-flashcards\.json/);
   assert.match(script, /exportJson/);
   assert.match(script, /saveExtracted/);
   assert.match(script, /startQuiz/);
@@ -152,7 +153,9 @@ test('exam planner preserves calendar, reminders, revision planning, and export/
   assert.match(page, /id="calendar"/);
   assert.match(page, /id="buildPlan"/);
   assert.match(page, /id="exportIcs"/);
-  assert.match(script, /dzPortalExamPlannerV1/);\n  assert.match(script, /dz-portal-exam-planner\\.json/);\n  assert.match(script, /dz-portal-calendar\\.ics/);
+  assert.match(script, /dzPortalExamPlannerV1/);
+  assert.match(script, /dz-portal-exam-planner\.json/);
+  assert.match(script, /dz-portal-calendar\.ics/);
   assert.match(script, /importJson/);
   assert.match(script, /renderNotifications/);
   assert.match(directory, /href="study\/exam-planner\.html" data-category="study"/);
