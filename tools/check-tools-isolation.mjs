@@ -25,7 +25,7 @@ walk(toolsRoot);
 
 function meta(html, key, attr='property') {
   const tags = html.match(/<meta\b[^>]*>/gi) || [];
-  const tag = tags.find(item => new RegExp('\\b' + attr + '=["\\']' + key + '["\\']', 'i').test(item));
+  const tag = tags.find(item => item.includes(attr + '="' + key + '"') || item.includes(attr + "='" + key + "'"));
   return tag?.match(/\bcontent=["']([^"']+)["']/i)?.[1] || '';
 }
 function walkJson(value, callback) {
