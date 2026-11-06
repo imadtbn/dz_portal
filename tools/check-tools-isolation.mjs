@@ -41,6 +41,7 @@ for (const file of htmlFiles) {
   const html = fs.readFileSync(file, 'utf8');
   const rel = path.relative(root, file);
   for (const pattern of legacyPatterns) if (pattern.test(html)) failures.push(rel + ': contains a legacy project identity or storage namespace');
+  if (/imported-tool-shell|tools\/legacy\/|data-shared-header-app/i.test(html)) failures.push(rel + ': references a removed legacy shell or asset path');
 
   const canonical = html.match(/<link\b(?=[^>]*\brel=["']canonical["'])(?=[^>]*\bhref=["']([^"']+)["'])[^>]*>/i)?.[1] || '';
   const ogUrl = meta(html, 'og:url');
