@@ -173,7 +173,7 @@
     document.querySelectorAll('body > footer, main footer').forEach(el => el.remove());
     const footer = document.createElement('footer');
     footer.className = 'dz-unified-footer';
-    footer.innerHTML = '<div class="dz-unified-footer-inner"><div class="dz-unified-footer-brand"><img src="' + ASSETS + 'images/icon.png" width="34" height="34" alt=""><span><strong>البوابة الجزائرية</strong><small>للخدمات الرقمية</small></span></div><nav aria-label="روابط التذييل"><a href="' + ROOT + '">الرئيسية</a><a href="' + ROOT + 'pages/tools/index.html">الأدوات الرقمية</a><a href="' + ROOT + 'pages/privacy.html">سياسة الخصوصية</a><a href="' + ROOT + 'pages/contact.html">اتصل بنا</a></nav><p>© ' + new Date().getFullYear() + ' البوابة الجزائرية للخدمات الرقمية. جميع الحقوق محفوظة.</p></div>';
+    footer.innerHTML = '<div class="dz-unified-footer-inner"><div class="dz-unified-footer-brand"><img src="' + ASSETS + 'images/icon.png" width="34" height="34" alt=""><span><strong>البوابة الجزائرية</strong><small>للخدمات الرقمية</small></span></div><nav aria-label="روابط التذييل"><a href="' + ROOT + '">الرئيسية</a><a href="' + ROOT + 'pages/tools/index.html">الأدوات الرقمية</a><a href="' + ROOT + 'pages/privacy.html">سياسة الخصوصية</a><a href="' + ROOT + 'pages/contact.html">اتصل بنا</a></nav><p>© <span id="currentYear">' + new Date().getFullYear() + '</span> البوابة الجزائرية للخدمات الرقمية. جميع الحقوق محفوظة.</p></div>';
     document.body.appendChild(footer);
   }
   function normalizeLegacyControls() {
