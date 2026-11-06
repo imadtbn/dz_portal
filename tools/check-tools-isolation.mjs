@@ -111,19 +111,19 @@ for (const dir of ['assets/css/tools', 'assets/js/tools']) {
     for (const entry of fs.readdirSync(current, { withFileTypes: true })) {
       const full = path.join(current, entry.name);
       if (entry.isDirectory()) { stack.push(full); continue; }
-      if (!entry.isFile() || !/\\.(?:css|js)$/.test(entry.name)) continue;
+      if (!entry.isFile() || !/\.(?:css|js)$/.test(entry.name)) continue;
       const rel = path.relative(root, full);
       const source = fs.readFileSync(full, 'utf8');
       for (const pattern of legacyPatterns) if (pattern.test(source)) failures.push(rel + ': contains a legacy project identity or storage namespace');
-      if (/imported-tool-shell|tools\\/legacy\\/|data-shared-header-app|student-(?:main|responsive|feedback|calculator|apa-generator|research-plan|arabic-dictionary)\\.css/i.test(source)) failures.push(rel + ': contains a removed legacy dependency');
+      if (/imported-tool-shell|tools\/legacy\/|data-shared-header-app|student-(?:main|responsive|feedback|calculator|apa-generator|research-plan|arabic-dictionary)\.css/i.test(source)) failures.push(rel + ': contains a removed legacy dependency');
       if (entry.name.endsWith('.css')) {
         const refs = [
-          ...[...source.matchAll(/url\\(\\s*(['"]?)([^)'"]+)\\1\\s*\\)/gi)].map(match => match[2]),
-          ...[...source.matchAll(/@import\\s+(?:url\\()?\\s*(['"])([^'"]+)\\1/gi)].map(match => match[2])
+          ...[...source.matchAll(/url\(\s*(['"]?)([^)'"]+)\1\s*\)/gi)].map(match => match[2]),
+          ...[...source.matchAll(/@import\s+(?:url\()?\s*(['"])([^'"]+)\1/gi)].map(match => match[2])
         ];
         for (const ref of refs) {
           const value = ref.trim();
-          if (!value || /^(?:https?:|data:|blob:|#|\\/\\/)/i.test(value)) continue;
+          if (!value || /^(?:https?:|data:|blob:|#|\/\/)/i.test(value)) continue;
           const clean = value.split(/[?#]/)[0];
           const target = path.resolve(path.dirname(full), clean);
           if (!fs.existsSync(target)) failures.push(rel + ': missing CSS asset ' + value);
