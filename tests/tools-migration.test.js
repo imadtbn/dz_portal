@@ -268,3 +268,16 @@ test('sitemap retains video structured entries and has no duplicate URL location
   assert.match(sitemap, /<video:video>/);
   assert.equal(new Set(locations).size, locations.length);
 });
+
+
+test('unified footer exposes the currentYear element used by migrated tool scripts', () => {
+  const template = read('assets/js/tools/unified-tool-template.js');
+  assert.match(template, /<span id="currentYear">/);
+  const pages = walkHtml('pages/tools').filter((file) => !file.endsWith('/index.html'));
+  for (const file of pages) {
+    const html = read(file);
+    if (/getElementById\(['"]currentYear['"]\)/.test(html)) {
+      assert.match(html, /unified-tool-template\.js/, 'currentYear reference requires unified footer: ' + file);
+    }
+  }
+});
