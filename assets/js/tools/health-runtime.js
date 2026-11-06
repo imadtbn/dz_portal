@@ -98,7 +98,7 @@
 
   const toggle = document.querySelector('.mobile-menu-toggle');
   const nav = byId('main-nav');
-  if (toggle && nav && !document.body.hasAttribute('data-shared-header-app')) {
+  if (toggle && nav) {
     toggle.addEventListener('click', () => {
       const open = toggle.getAttribute('aria-expanded') !== 'true';
       toggle.setAttribute('aria-expanded', String(open));
