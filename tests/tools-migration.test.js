@@ -274,6 +274,8 @@ test('unified footer exposes the currentYear element used by migrated tool scrip
   const template = read('assets/js/tools/unified-tool-template.js');
   assert.match(template, /<span id="currentYear">/);
   const pages = walkHtml('pages/tools').filter((file) => !file.endsWith('/index.html'));
+  assert.equal(pages.length, 60);
+  assert.equal(pages.filter((file) => /unified-tool-template\\.js/.test(read(file))).length, 53);
   for (const file of pages) {
     const html = read(file);
     if (/getElementById\(['"]currentYear['"]\)/.test(html)) {
