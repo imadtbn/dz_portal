@@ -255,7 +255,7 @@ test('imported pages use the portal shell and do not retain source analytics or 
   const imported = pages.filter((file) => !existing.includes(file));
   for (const file of imported) {
     const html = read(file);
-    assert.match(html, /(?:dz-import-header|dz-unified-header|imported-tool-shell\.js|id="main-header")/, 'missing portal shell: ' + file);
+    assert.match(html, /(?:(?:dz-unified-header|unified-tool-template\\.js|id="main-header"))/, 'missing portal shell: ' + file);
     assert.match(html, /data-ad-slot="(?:3143411927|1760836049|7867079394|8546947691)"/, 'missing reserved portal ad slot: ' + file);
     assert.doesNotMatch(html, /G-1FG97932S6|GTM-WG6CX4F5|adsbygoogle\.js\?client=/, 'source tracking/ads loader retained: ' + file);
   }
