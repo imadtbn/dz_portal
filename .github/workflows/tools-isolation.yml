@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - audit/isolate-pages-tools
+      - fix/tools-isolation-final
   pull_request:
     branches:
       - main
