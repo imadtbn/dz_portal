@@ -41,6 +41,7 @@ for (const file of htmlFiles) {
   const html = fs.readFileSync(file, 'utf8');
   const rel = path.relative(root, file);
   for (const pattern of legacyPatterns) if (pattern.test(html)) failures.push(rel + ': contains a legacy project identity or storage namespace');
+  if (/imported-tool-shell|tools\/legacy\/|data-shared-header-app/i.test(html)) failures.push(rel + ': references a removed legacy shell or asset path');
 
   const canonical = html.match(/<link\b(?=[^>]*\brel=["']canonical["'])(?=[^>]*\bhref=["']([^"']+)["'])[^>]*>/i)?.[1] || '';
   const ogUrl = meta(html, 'og:url');
@@ -95,6 +96,38 @@ for (const dir of ['assets/js/tools', 'assets/css/tools']) {
         const content = fs.readFileSync(full, 'utf8');
         for (const pattern of legacyPatterns) if (pattern.test(content)) failures.push(path.relative(root, full) + ': contains a legacy project identity or storage namespace');
         if (/\b(?:student-dz|tools-dz)-[^'"\s]+\.(?:json|csv|txt|pdf)/i.test(content)) failures.push(path.relative(root, full) + ': legacy export filename detected');
+      }
+    }
+  }
+}
+
+// Audit CSS imports and url() assets across the complete local tool stylesheet tree.
+for (const dir of ['assets/css/tools', 'assets/js/tools']) {
+  const base = path.join(root, dir);
+  if (!fs.existsSync(base)) continue;
+  const stack = [base];
+  while (stack.length) {
+    const current = stack.pop();
+    for (const entry of fs.readdirSync(current, { withFileTypes: true })) {
+      const full = path.join(current, entry.name);
+      if (entry.isDirectory()) { stack.push(full); continue; }
+      if (!entry.isFile() || !/\.(?:css|js)$/.test(entry.name)) continue;
+      const rel = path.relative(root, full);
+      const source = fs.readFileSync(full, 'utf8');
+      for (const pattern of legacyPatterns) if (pattern.test(source)) failures.push(rel + ': contains a legacy project identity or storage namespace');
+      if (/imported-tool-shell|tools\/legacy\/|data-shared-header-app|student-(?:main|responsive|feedback|calculator|apa-generator|research-plan|arabic-dictionary)\.css/i.test(source)) failures.push(rel + ': contains a removed legacy dependency');
+      if (entry.name.endsWith('.css')) {
+        const refs = [
+          ...[...source.matchAll(/url\(\s*(['"]?)([^)'"]+)\1\s*\)/gi)].map(match => match[2]),
+          ...[...source.matchAll(/@import\s+(?:url\()?\s*(['"])([^'"]+)\1/gi)].map(match => match[2])
+        ];
+        for (const ref of refs) {
+          const value = ref.trim();
+          if (!value || /^(?:https?:|data:|blob:|#|\/\/)/i.test(value)) continue;
+          const clean = value.split(/[?#]/)[0];
+          const target = path.resolve(path.dirname(full), clean);
+          if (!fs.existsSync(target)) failures.push(rel + ': missing CSS asset ' + value);
+        }
       }
     }
   }
