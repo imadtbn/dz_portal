@@ -282,7 +282,6 @@
             document.addEventListener('click', e => { if (!e.target.closest('.map-search')) { results.style.display = 'none'; search.setAttribute('aria-expanded', 'false') } });
             document.getElementById('clearMapBtn').addEventListener('click', () => { clearMarkers(); status.textContent = 'تم محو العلامات من الخريطة — البيانات ما زالت محملة.'; search.value = ''; results.style.display = 'none'; search.setAttribute('aria-expanded', 'false') });
             document.getElementById('btnNearMe').addEventListener('click', () => { if (!navigator.geolocation) return alert('المتصفح لا يدعم تحديد الموقع.'); navigator.geolocation.getCurrentPosition(p => { userLocation = { lat: p.coords.latitude, lng: p.coords.longitude }; map.setView([userLocation.lat, userLocation.lng], 14); const marker = addMarker(userLocation.lat, userLocation.lng, 'موقعك الحالي', '', 'default'); if (marker) marker.openPopup() }, () => alert('تعذر تحديد موقعك. يرجى السماح بالوصول إلى الموقع.')) });
-            document.getElementById('currentYear').textContent = new Date().getFullYear();
             if (window.StorageApp?.addRecent) StorageApp.addRecent({ id: 'maps', title: 'الخرائط', url: 'tools/maps.html', icon: '🗺️' });
         });
     </script>
