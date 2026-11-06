@@ -270,7 +270,7 @@ test('sitemap retains video structured entries and has no duplicate URL location
 });
 
 
-test('unified footer exposes the currentYear element used by migrated tool scripts', () => {
+test('unified footer renders the current year without stale footer DOM references', () => {
   const template = read('assets/js/tools/unified-tool-template.js');
   assert.match(template, /<span id="currentYear">/);
   const pages = walkHtml('pages/tools').filter((file) => !file.endsWith('/index.html'));
@@ -278,8 +278,6 @@ test('unified footer exposes the currentYear element used by migrated tool scrip
   assert.equal(pages.filter((file) => /unified-tool-template\.js/.test(read(file))).length, 53);
   for (const file of pages) {
     const html = read(file);
-    if (/getElementById\(['"]currentYear['"]\)/.test(html)) {
-      assert.match(html, /unified-tool-template\.js/, 'currentYear reference requires unified footer: ' + file);
-    }
+    assert.doesNotMatch(html, /getElementById\(['"]currentYear['"]\)/, 'stale footer year reference: ' + file);
   }
 });
