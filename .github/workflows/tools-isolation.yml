@@ -18,6 +18,8 @@ jobs:
           node-version: 22
       - name: Check tool page isolation and local assets
         run: node tools/check-tools-isolation.mjs
+      - name: Run tool migration tests
+        run: node --test tests/tools-migration.test.js
       - name: Check JavaScript syntax
         shell: bash
         run: |
