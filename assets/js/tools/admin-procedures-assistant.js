@@ -2,7 +2,7 @@
 'use strict';
 const $=id=>document.getElementById(id);
 const STORAGE='dz-portal-admin-procedures-progress-v1';
-const DATA_URL='../data/procedures/admin-procedures.json';
+const DATA_URL='/dz_portal/assets/data/procedures/admin-procedures.json';
 let procedures=[],selectedId=null,progress={};
 const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 function loadProgress(){try{const value=JSON.parse(localStorage.getItem(STORAGE)||'{}');return value&&typeof value==='object'?value:{}}catch{return {}}}
