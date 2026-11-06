@@ -281,3 +281,44 @@ test('unified footer renders the current year without stale footer DOM reference
     assert.doesNotMatch(html, /getElementById\(['"]currentYear['"]\)/, 'stale footer year reference: ' + file);
   }
 });
+
+
+test('all 60 tool pages have unique Arabic SEO metadata and indexable canonical URLs', () => {
+  const pages = walkHtml('pages/tools').filter((file) => !file.endsWith('/index.html'));
+  assert.equal(pages.length, 60);
+  const titles = new Set();
+  const descriptions = new Set();
+  const sitemap = read('sitemap.xml');
+
+  const meta = (html, attr, key) => [...html.matchAll(/<meta\b[^>]*>/gi)]
+    .filter(([tag]) => new RegExp('\\b' + attr + '=["\\x27]' + key + '["\\x27]', 'i').test(tag));
+
+  for (const file of pages) {
+    const html = read(file);
+    const title = html.match(/<title[^>]*>([\s\S]*?)<\/title>/i)?.[1]?.trim() || '';
+    const descriptionTags = meta(html, 'name', 'description');
+    const keywordTags = meta(html, 'name', 'keywords');
+    const robotsTags = meta(html, 'name', 'robots');
+    const ogTitleTags = meta(html, 'property', 'og:title');
+    const ogDescriptionTags = meta(html, 'property', 'og:description');
+    const twitterTitleTags = meta(html, 'name', 'twitter:title');
+    const canonical = html.match(/<link\s+rel=["']canonical["']\s+href=["']([^"']+)["']/i)?.[1] || '';
+    const description = descriptionTags[0]?.[0].match(/content=["']([^"']+)["']/i)?.[1] || '';
+
+    assert.match(title, /[\u0600-\u06FF]/, 'title must be Arabic: ' + file);
+    assert.equal(descriptionTags.length, 1, 'description must be unique: ' + file);
+    assert.equal(keywordTags.length, 1, 'keywords must be unique: ' + file);
+    assert.equal(robotsTags.length, 1, 'robots must be unique: ' + file);
+    assert.equal(ogTitleTags.length, 1, 'OG title must be unique: ' + file);
+    assert.equal(ogDescriptionTags.length, 1, 'OG description must be unique: ' + file);
+    assert.equal(twitterTitleTags.length, 1, 'Twitter title must be unique: ' + file);
+    assert.match(robotsTags[0][0], /index\s*,\s*follow/i, 'page must remain indexable: ' + file);
+    assert.equal(canonical, 'https://imadtbn.github.io/dz_portal/' + file, 'canonical mismatch: ' + file);
+    assert.ok(description.length >= 90, 'description is too short: ' + file);
+    assert.ok(!titles.has(title), 'duplicate title: ' + title);
+    assert.ok(!descriptions.has(description), 'duplicate description: ' + file);
+    assert.ok(sitemap.includes(canonical), 'missing sitemap URL: ' + file);
+    titles.add(title);
+    descriptions.add(description);
+  }
+});
