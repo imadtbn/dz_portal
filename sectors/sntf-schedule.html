@@ -21,6 +21,12 @@
         document.querySelector('meta[name="robots"]')?.setAttribute('content', 'noindex,follow');
       }
     </script>
+    <script>
+      // صفحات عرض الجداول ذات المعامل schedule حالات ديناميكية وليست صفحات مستقلة للفهرسة.
+      if (new URLSearchParams(location.search).has('schedule')) {
+        document.querySelector('meta[name="robots"]')?.setAttribute('content', 'noindex,follow');
+      }
+    </script>
     <meta name="googlebot" content="index, follow">
 
     <!-- ==== Manifest & Icons ==== -->
