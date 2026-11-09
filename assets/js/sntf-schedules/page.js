@@ -8,10 +8,10 @@ if(!schedule){
  const robots=document.createElement('meta');robots.name='robots';robots.content='noindex,follow';document.head.append(robots);
 }else{
  $('schedule-content').hidden=false;
- const url=new URL('sntf-schedule.html',location.href);url.searchParams.set('schedule',schedule.id);
+ const url=new URL('sntf-schedule.html',location.href);url.searchParams.set('schedule',schedule.id);const canonicalURL=new URL('sntf-schedule.html',location.href);
  const imageURL=new URL(schedule.image,location.href).href,title='جدول قطارات '+schedule.title,description='راجع الجدول المصوّر لخط '+schedule.title+' ضمن '+schedule.category+' مع التكبير والسحب وملء الشاشة.';
- document.title=title+' | البوابة الجزائرية';document.querySelector('meta[name="description"]').content=description;document.querySelector('link[rel="canonical"]').href=url.href;
- for(const [key,value] of Object.entries({title:document.title,description,url:url.href,image:imageURL}))document.querySelector('meta[property="og:'+key+'"]').content=value;
+ document.title=title+' | البوابة الجزائرية';document.querySelector('meta[name="description"]').content=description;document.querySelector('link[rel="canonical"]').href=canonicalURL.href;
+ for(const [key,value] of Object.entries({title:document.title,description,url:url.href,image:imageURL}))document.querySelector('meta[property="og:'+key+'"]').content=key==='url'?canonicalURL.href:value;
  for(const [key,value] of Object.entries({title:document.title,description,image:imageURL})){const meta=document.createElement('meta');meta.name='twitter:'+key;meta.content=value;document.head.append(meta)}
  $('schedule-title').textContent=title;$('schedule-category').textContent=schedule.category;$('crumb-category').textContent=schedule.category;$('crumb-category').href='sntf.html#'+schedule.anchor;$('crumb-title').textContent=schedule.title;
  $('info-title').textContent=schedule.title;$('info-category').textContent=schedule.category;$('hero-image').src=schedule.hero;$('hero-image').alt=schedule.anchor==='suburban'?'قطار ضاحية الجزائر':'السكك الحديدية الجزائرية';$('dialog-title').textContent=title;
@@ -22,8 +22,8 @@ if(!schedule){
  image.addEventListener('load',()=>{$('image-status').textContent='الصورة كاملة دون قصّ. الحجم الأصلي: '+image.naturalWidth+' × '+image.naturalHeight+' بكسل.'});
  image.addEventListener('error',()=>{$('image-status').textContent='تعذر تحميل الصورة. أعد تحميل الصفحة أو افتح الصورة الأصلية.'});image.src=schedule.image;$('original-image').href=schedule.image;
  const plan=new URL('sntf-trains.html',location.href);plan.hash='panel-search';if(schedule.fromId&&schedule.toId){plan.searchParams.set('from',schedule.fromId);plan.searchParams.set('to',schedule.toId);$('plan-journey').textContent='خطط رحلة بين '+schedule.from+' و'+schedule.to+' ←'}$('plan-journey').href=plan.href;
- const crumbs=[['الرئيسية',new URL('../index.html',location.href).href],['الجداول والخدمات',new URL('sntf.html',location.href).href],[schedule.category,new URL('sntf.html#'+schedule.anchor,location.href).href],[schedule.title,url.href]];
- $('schedule-schema').textContent=JSON.stringify({'@context':'https://schema.org','@graph':[{'@type':'ImageObject','@id':url.href+'#image',name:title,contentUrl:imageURL,url:url.href,caption:description,inLanguage:'ar',...(schedule.width?{width:schedule.width,height:schedule.height}:{})},{'@type':'BreadcrumbList',itemListElement:crumbs.map(([name,item],i)=>({'@type':'ListItem',position:i+1,name,item}))}]});
+ const crumbs=[['الرئيسية',new URL('../index.html',location.href).href],['الجداول والخدمات',new URL('sntf.html',location.href).href],[schedule.category,new URL('sntf.html#'+schedule.anchor,location.href).href],[schedule.title,canonicalURL.href]];
+ $('schedule-schema').textContent=JSON.stringify({'@context':'https://schema.org','@graph':[{'@type':'ImageObject','@id':canonicalURL.href+'#image',name:title,contentUrl:imageURL,url:canonicalURL.href,caption:description,inLanguage:'ar',...(schedule.width?{width:schedule.width,height:schedule.height}:{})},{'@type':'BreadcrumbList',itemListElement:crumbs.map(([name,item],i)=>({'@type':'ListItem',position:i+1,name,item}))}]});
  const dialog=$('schedule-dialog'),root=$('schedule-viewer'),placeholder=document.createComment('schedule-viewer');root.before(placeholder);
  const restore=()=>{placeholder.after(root);document.body.classList.remove('schedule-dialog-open');requestAnimationFrame(()=>viewer.refresh())};
  dialog.addEventListener('close',restore);$('close-dialog').addEventListener('click',()=>dialog.close());
