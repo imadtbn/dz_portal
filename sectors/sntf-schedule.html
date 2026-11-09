@@ -15,6 +15,12 @@
 
     <!-- ==== توجيهات الفهرسة ==== -->
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <script>
+      // صفحات عرض الجداول ذات المعامل schedule حالات ديناميكية وليست صفحات مستقلة للفهرسة.
+      if (new URLSearchParams(location.search).has('schedule')) {
+        document.querySelector('meta[name="robots"]')?.setAttribute('content', 'noindex,follow');
+      }
+    </script>
     <meta name="googlebot" content="index, follow">
 
     <!-- ==== Manifest & Icons ==== -->
@@ -33,7 +39,7 @@
     <link rel="preconnect" href="https://pagead2.googlesyndication.com" crossorigin>
     <link rel="dns-prefetch" href="https://www.googletagmanager.com">
 
-    <!-- ==== Canonical (يُحدَّث ديناميكياً حسب ?schedule=) ==== -->
+    <!-- ==== Canonical ثابت: جميع حالات عرض الجداول تشير إلى الصفحة الأساسية ==== -->
     <link rel="canonical" id="canonical-link" href="https://imadtbn.github.io/dz_portal/sectors/sntf-schedule.html">
     <link rel="alternate" hreflang="ar-DZ" href="https://imadtbn.github.io/dz_portal/sectors/sntf-schedule.html">
     <link rel="alternate" hreflang="ar" href="https://imadtbn.github.io/dz_portal/sectors/sntf-schedule.html">
