@@ -8,6 +8,12 @@
     <meta name="description"
         content="مواقيت قطارات SNTF في الجزائر: ابحث عن رحلة بين محطتين، وتابع مواعيد المغادرة والوصول حسب المحطة والاتجاه، واستكشف خريطة محطات القطارات والجداول المجدولة.">
     <meta name="robots" content="index, follow, max-image-preview:large">
+    <script>
+      // روابط اختيار المحطة للاستخدام داخل التطبيق فقط؛ لا تُفهرس كصفحات مستقلة.
+      if (new URLSearchParams(location.search).has('station')) {
+        document.querySelector('meta[name="robots"]')?.setAttribute('content', 'noindex,follow');
+      }
+    </script>
     <link rel="icon" href="../assets/images/icon.png">
     <link rel="canonical" href="https://imadtbn.github.io/dz_portal/sectors/sntf-trains.html">
     <link rel="manifest" href="../manifest.json">
