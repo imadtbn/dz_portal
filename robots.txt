@@ -1,6 +1,5 @@
 # robots.txt - البوابة الجزائرية للخدمات الرقمية
 # لا تحظر معاملات URL؛ يجب السماح بالزحف حتى تتمكن محركات البحث من قراءة noindex و canonical.
-# لا تحظر معاملات URL؛ يجب السماح بالزحف حتى تتمكن محركات البحث من قراءة noindex و canonical.
 # https://imadtbn.github.io/dz_portal/
 
 User-agent: *
