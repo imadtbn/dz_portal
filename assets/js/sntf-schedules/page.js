@@ -8,7 +8,7 @@ if(!schedule){
  const robots=document.createElement('meta');robots.name='robots';robots.content='noindex,follow';document.head.append(robots);
 }else{
  $('schedule-content').hidden=false;
- const url=new URL('sntf-schedule.html',location.href);url.searchParams.set('schedule',schedule.id);const canonicalURL=new URL('sntf-schedule.html',location.href);
+ const url=new URL('sntf-schedule.html',location.href);url.searchParams.set('schedule',schedule.id);const canonicalURL=new URL('sntf-schedule.html',location.href);const canonicalURL=new URL('sntf-schedule.html',location.href);
  const imageURL=new URL(schedule.image,location.href).href,title='جدول قطارات '+schedule.title,description='راجع الجدول المصوّر لخط '+schedule.title+' ضمن '+schedule.category+' مع التكبير والسحب وملء الشاشة.';
  document.title=title+' | البوابة الجزائرية';document.querySelector('meta[name="description"]').content=description;document.querySelector('link[rel="canonical"]').href=canonicalURL.href;
  for(const [key,value] of Object.entries({title:document.title,description,url:url.href,image:imageURL}))document.querySelector('meta[property="og:'+key+'"]').content=key==='url'?canonicalURL.href:value;
