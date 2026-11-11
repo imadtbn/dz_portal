@@ -3,6 +3,15 @@
   "updatedAt": "2026-10-21",
   "services": [
     {
+      "id": "مسابقة التوظيف",
+      "title": "الإعلان عن النتائج النهائية لمسابقة التوظيف في منصب - مشرف تربية - مقتصد ونائب- مستشار محلل",
+      "sector": "وزارة التربية الوطنية",
+      "sectorUrl": "../pages/education-notices/index.html",
+      "url": "https://imadtbn.github.io/dz_portal/pages/education-notices/index.html",
+      "addedAt": "2026-11-11",
+      "sourceUrl": "https://imadtbn.github.io/dz_portal/sectors/education.html"
+    },
+    {
       "id": "ramadan-grant-1448",
       "title": "التقويم البيداغوجي المراحل التعليمية الثلاث للسنة الدراسية 2026-2027",
       "sector": "وزارة التربية الوطنية",
@@ -10,14 +19,14 @@
       "url": "https://imadtbn.github.io/dz_portal/pages/education-notices/index.html",
       "addedAt": "2026-10-24",
       "sourceUrl": "https://imadtbn.github.io/dz_portal/sectors/education.html"
-    },    
+    },
     {
       "id": "ramadan-grant-1448",
       "title": "اعلان التسجيلات في منحة التضامن لرمضان 1448 هـ",
       "sector": "وزارة الداخلية والجماعات المحلية والنقل",
       "sectorUrl": "sectors/interieur.html",
       "url": "https://prestations.interieur.gov.dz/solidariteramdhan/",
-      "addedAt": "2026-10-21",
+      "addedAt": "2026-11-11",
       "sourceUrl": "https://prestations.interieur.gov.dz/solidariteramdhan/"
     },
     {
@@ -26,7 +35,7 @@
       "sector": "السكك الحديدية",
       "sectorUrl": "sectors/sntf.html",
       "url": "",
-      "addedAt": "2026-10-21",
+      "addedAt": "2026-11-11",
       "sourceUrl": ""
     }
   ]
