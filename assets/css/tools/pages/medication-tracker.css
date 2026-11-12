@@ -100,3 +100,11 @@
 .dz-medication-page .mt-dose-card,.dz-medication-page .mt-medicine-card,.dz-medication-page .mt-report{overflow-wrap:anywhere}
 .dz-medication-page input,.dz-medication-page select,.dz-medication-page button{max-width:100%;font-family:inherit}
 @media(max-width:520px){.dz-medication-page{width:calc(100% - 1rem);padding-inline:0}.dz-medication-page .mt-panel{padding:.9rem;border-radius:14px}}
+
+/* DZ Portal layout adaptation */
+.dz-medication-page{width:min(100% - 1.5rem,1160px);max-width:1160px;margin-inline:auto;overflow-x:clip}
+.dz-medication-page .mt-hero{margin-top:clamp(.65rem,2vw,1rem)}
+.dz-medication-page .mt-panel,.dz-medication-page .mt-notice,.dz-medication-page .mt-next-dose{min-width:0;max-width:100%}
+.dz-medication-page .mt-dose-card,.dz-medication-page .mt-medicine-card,.dz-medication-page .mt-report{overflow-wrap:anywhere}
+.dz-medication-page input,.dz-medication-page select,.dz-medication-page button{max-width:100%;font-family:inherit}
+@media(max-width:520px){.dz-medication-page{width:calc(100% - 1rem);padding-inline:0}.dz-medication-page .mt-panel{padding:.9rem;border-radius:14px}}
