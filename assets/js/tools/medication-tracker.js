@@ -77,7 +77,7 @@ $('schedule-mode').addEventListener('change',()=>{if($('schedule-mode').value===
 $('medicine-frequency').addEventListener('change',()=>{if($('schedule-mode').value==='auto')$('medicine-times').value=suggestTimes(Number($('medicine-frequency').value)).join(', ');});
 document.querySelectorAll('[data-med-filter]').forEach(b=>b.addEventListener('click',()=>{filter=b.dataset.medFilter;renderMedicines();document.querySelectorAll('[data-med-filter]').forEach(x=>x.classList.toggle('is-active',x===b));}));
 $('medicine-start').value=today();
-$('current-year').textContent=String(new Date().getFullYear());
+if($('current-year'))$('current-year').textContent=String(new Date().getFullYear());
 selectedId=state.profiles[0]?.id||null;
 if(timer)clearInterval(timer);timer=setInterval(checkNotifications,15000);if(countdownTimer)clearInterval(countdownTimer);countdownTimer=setInterval(renderNextDose,1000);
 document.addEventListener('visibilitychange',()=>{if(!document.hidden){checkNotifications();renderNextDose();}});
