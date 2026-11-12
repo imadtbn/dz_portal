@@ -275,7 +275,7 @@ test('unified footer renders the current year without stale footer DOM reference
   assert.match(template, /<span id="currentYear">/);
   const pages = walkHtml('pages/tools').filter((file) => !file.endsWith('/index.html'));
   assert.equal(pages.length, 61);
-  assert.equal(pages.filter((file) => /unified-tool-template\.js/.test(read(file))).length, 53);
+  assert.equal(pages.filter((file) => /unified-tool-template\.js/.test(read(file))).length, 54);
   for (const file of pages) {
     const html = read(file);
     assert.doesNotMatch(html, /getElementById\(['"]currentYear['"]\)/, 'stale footer year reference: ' + file);
