@@ -227,7 +227,7 @@ function walkHtml(dir) {
 test('all migrated tool pages have canonical URLs, portal navigation, and sitemap entries', () => {
   const sitemap = read('sitemap.xml');
   const pages = walkHtml('pages/tools').filter((file) => !file.endsWith('/index.html'));
-  assert.equal(pages.length, 60);
+  assert.equal(pages.length, 61);
   for (const file of pages) {
     const html = read(file);
     const canonical = html.match(/<link\s+rel=["']canonical["']\s+href=["']([^"']+)["']/i);
@@ -274,8 +274,8 @@ test('unified footer renders the current year without stale footer DOM reference
   const template = read('assets/js/tools/unified-tool-template.js');
   assert.match(template, /<span id="currentYear">/);
   const pages = walkHtml('pages/tools').filter((file) => !file.endsWith('/index.html'));
-  assert.equal(pages.length, 60);
-  assert.equal(pages.filter((file) => /unified-tool-template\.js/.test(read(file))).length, 53);
+  assert.equal(pages.length, 61);
+  assert.equal(pages.filter((file) => /unified-tool-template\.js/.test(read(file))).length, 54);
   for (const file of pages) {
     const html = read(file);
     assert.doesNotMatch(html, /getElementById\(['"]currentYear['"]\)/, 'stale footer year reference: ' + file);
@@ -285,7 +285,7 @@ test('unified footer renders the current year without stale footer DOM reference
 
 test('all 60 tool pages have unique Arabic SEO metadata and indexable canonical URLs', () => {
   const pages = walkHtml('pages/tools').filter((file) => !file.endsWith('/index.html'));
-  assert.equal(pages.length, 60);
+  assert.equal(pages.length, 61);
   const titles = new Set();
   const descriptions = new Set();
   const sitemap = read('sitemap.xml');
@@ -321,4 +321,33 @@ test('all 60 tool pages have unique Arabic SEO metadata and indexable canonical 
     titles.add(title);
     descriptions.add(description);
   }
+});
+
+
+test('medication tracker is localized and preserves family, dose history, and backup rules', () => {
+  const page = read('pages/tools/health/medication-tracker.html');
+  const script = read('assets/js/tools/medication-tracker.js');
+  const styles = read('assets/css/tools/pages/medication-tracker.css');
+  const directory = read('pages/tools/index.html');
+  const sitemap = read('sitemap.xml');
+  assert.match(page, /canonical.*pages\/tools\/health\/medication-tracker\.html/);
+  assert.match(page, /assets\/js\/site-tags\.js/);
+  assert.match(page, /assets\/js\/ads-stability\.js/);
+  assert.match(page, /assets\/js\/dz-share\.js/);
+  assert.match(page, /assets\/js\/tools\/unified-tool-template\.js/);
+  assert.match(page, /data-ad-client="ca-pub-5656416032906373"/);
+  assert.match(page, /data-ad-slot="7867079394"/);
+  assert.match(page, /og:url/);
+  assert.match(page, /application\/ld\+json/);
+  assert.match(script, /const MAX_PROFILES=3/);
+  assert.match(script, /p\.medicines\.push\(m\)/);
+  assert.match(script, /const KEY='dzPortalMedicationTracker_v1'/);
+  assert.match(script, /rec\.events\.push/);
+  assert.match(script, /pauseIntervals/);
+  assert.match(script, /function mergeImport/);
+  assert.match(script, /dz-portal-medication-backup-/);
+  assert.doesNotMatch(script, /gtag|dataLayer|dzTrackEvent|toolsDzMedicationTracker_v1/);
+  assert.match(directory, /href="health\/medication-tracker\.html" data-category="health"/);
+  assert.ok(sitemap.includes('https://imadtbn.github.io/dz_portal/pages/tools/health/medication-tracker.html'));
+  assert.match(styles, /dz-medication-page/);
 });

@@ -1,0 +1,110 @@
+/* Medication Tracker - scoped styles, adapted to the portal green design */
+.mt-page{min-width:0;padding-bottom:2.5rem;overflow-x:clip}
+.mt-page *{box-sizing:border-box;min-width:0}
+.mt-hero{margin-top:.85rem}
+.mt-notice{display:flex;gap:.8rem;align-items:flex-start;margin:1rem 0;padding:1rem 1.1rem;border:1px solid #f2d7a2;border-radius:14px;background:#fff9e9;color:#493817;line-height:1.8}
+.mt-notice>i{flex:0 0 auto;margin-top:.25rem;color:#b7791f;font-size:1.15rem}
+.mt-notice p{margin:.2rem 0 0}
+.mt-notice-soft{border-color:var(--border-color);background:var(--surface-color);color:var(--text-color)}
+.mt-notice-soft>i{color:var(--primary-color)}
+.mt-panel{min-width:0;margin:1.1rem 0;padding:clamp(1rem,2.5vw,1.4rem);border:1px solid var(--border-color);border-radius:18px;background:var(--surface-color);box-shadow:0 5px 18px rgba(25,55,35,.045)}
+.mt-section-head{display:flex;align-items:flex-start;justify-content:space-between;gap:1rem;margin-bottom:1rem}
+.mt-section-head h2{margin:.2rem 0 .35rem;color:var(--text-color);font-size:clamp(1.12rem,2.6vw,1.4rem);line-height:1.5}
+.mt-section-head h2 i{color:var(--primary-color);margin-inline-end:.25rem}
+.mt-section-head p{margin:0;color:var(--text-muted);font-size:.9rem;line-height:1.7}
+.mt-eyebrow{color:var(--primary-color);font-size:.76rem;font-weight:800}
+.mt-count,.mt-live-indicator{display:inline-flex;align-items:center;justify-content:center;flex:0 0 auto;padding:.35rem .7rem;border-radius:999px;background:rgba(46,125,50,.1);color:var(--primary-color);font-size:.78rem;font-weight:800}
+.mt-profile-list{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.7rem;margin-bottom:1rem}
+.mt-profile-card{display:flex;align-items:center;gap:.65rem;width:100%;padding:.8rem;border:1px solid var(--border-color);border-radius:13px;background:var(--surface-color);color:var(--text-color);text-align:start;cursor:pointer;transition:border-color .2s,background .2s}
+.mt-profile-card[aria-pressed=true]{border-color:var(--primary-color);background:rgba(46,125,50,.07);box-shadow:inset 0 0 0 1px var(--primary-color)}
+.mt-avatar{display:inline-flex;align-items:center;justify-content:center;flex:0 0 42px;width:42px;height:42px;border-radius:50%;background:rgba(46,125,50,.11);color:var(--primary-color);font-size:1.05rem}
+.mt-profile-card strong{display:block;overflow-wrap:anywhere}
+.mt-profile-card small{display:block;margin-top:.15rem;color:var(--text-muted);font-size:.76rem}
+.mt-inline-form{display:flex;align-items:end;gap:.7rem}
+.mt-field{display:flex;flex-direction:column;gap:.4rem;min-width:0}
+.mt-field label{color:var(--text-color);font-size:.88rem;font-weight:750}
+.mt-field input,.mt-field select{width:100%;min-width:0;min-height:46px;padding:.65rem .8rem;border:1px solid var(--border-color);border-radius:10px;background:var(--bg-color);color:var(--text-color);font:inherit;font-size:16px}
+.mt-field input:focus,.mt-field select:focus{outline:2px solid rgba(46,125,50,.22);border-color:var(--primary-color)}
+.mt-field small{color:var(--text-muted);font-size:.76rem;line-height:1.6}
+.mt-inline-form .mt-field{flex:1}
+.mt-btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;min-height:44px;padding:.65rem .95rem;border:1px solid transparent;border-radius:10px;font:inherit;font-size:.9rem;font-weight:750;line-height:1.4;text-align:center;text-decoration:none;cursor:pointer;transition:filter .15s,transform .15s}
+.mt-btn:hover{filter:brightness(.97)}
+.mt-btn:focus-visible,.mt-filter:focus-visible,.mt-profile-card:focus-visible{outline:3px solid rgba(46,125,50,.25);outline-offset:2px}
+.mt-btn-primary{background:var(--primary-color);color:#fff}
+.mt-btn-outline{border-color:var(--border-color);background:var(--surface-color);color:var(--text-color)}
+.mt-btn-danger-outline{border-color:#e5b8b8;background:var(--surface-color);color:#b3261e}
+.mt-hint{margin:.7rem 0 0;color:var(--text-muted);font-size:.8rem;line-height:1.7}
+.mt-dashboard[hidden]{display:none}
+.mt-profile-panel{margin-top:0}
+.mt-profile-actions,.mt-backup-actions,.mt-report-actions{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1rem}
+.mt-kpis{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:.65rem;margin-top:1rem}
+.mt-kpi{display:flex;flex-direction:column;gap:.2rem;padding:.8rem;border:1px solid var(--border-color);border-radius:12px;background:var(--bg-color)}
+.mt-kpi strong{color:var(--primary-color);font-size:1.45rem;line-height:1.3}
+.mt-kpi span{color:var(--text-muted);font-size:.78rem}
+.mt-form-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.85rem}
+.mt-span-2{grid-column:1/-1}
+.mt-form-note{display:flex;align-items:flex-start;gap:.55rem;padding:.75rem;border-radius:10px;background:rgba(255,143,0,.09);color:var(--text-muted);font-size:.8rem;line-height:1.7}
+.mt-form-note i{color:#c17b12;margin-top:.2rem}
+.mt-filter-row{display:flex;flex-wrap:wrap;gap:.45rem;margin-bottom:1rem}
+.mt-filter{min-height:38px;padding:.45rem .8rem;border:1px solid var(--border-color);border-radius:999px;background:var(--surface-color);color:var(--text-muted);font:inherit;font-size:.82rem;cursor:pointer}
+.mt-filter.is-active{border-color:var(--primary-color);background:rgba(46,125,50,.1);color:var(--primary-color);font-weight:800}
+.mt-medicine-list,.mt-dose-list{display:grid;gap:.7rem}
+.mt-medicine-card,.mt-dose-card{min-width:0;padding:1rem;border:1px solid var(--border-color);border-radius:13px;background:var(--surface-color)}
+.mt-medicine-top,.mt-dose-top{display:flex;align-items:center;justify-content:space-between;gap:.6rem}
+.mt-medicine-top h3,.mt-dose-top strong{margin:0;color:var(--text-color);font-size:1rem;overflow-wrap:anywhere}
+.mt-medicine-meta{margin:.35rem 0;color:var(--text-muted);font-size:.8rem;line-height:1.7}
+.mt-progress{height:8px;margin:.6rem 0 .35rem;overflow:hidden;border-radius:99px;background:var(--border-color)}
+.mt-progress span{display:block;height:100%;border-radius:inherit;background:var(--primary-color)}
+.mt-medicine-actions{display:flex;flex-wrap:wrap;gap:.45rem;margin-top:.75rem}
+.mt-mini-btn{min-height:36px;padding:.4rem .65rem;border:1px solid var(--border-color);border-radius:8px;background:var(--surface-color);color:var(--text-color);font:inherit;font-size:.78rem;font-weight:700;cursor:pointer}
+.mt-mini-btn.danger{color:#b3261e;border-color:#e5b8b8}
+.mt-status{min-height:1.4rem;margin:.5rem 0 0;color:var(--primary-color);font-size:.84rem}
+.mt-pill{display:inline-flex;align-items:center;gap:.3rem;padding:.25rem .55rem;border-radius:999px;background:var(--bg-color);color:var(--text-muted);font-size:.72rem;font-weight:800;white-space:nowrap}
+.mt-pill.success{background:rgba(46,125,50,.11);color:#28733a}
+.mt-pill.warning{background:rgba(255,143,0,.13);color:#9a5b00}
+.mt-pill.danger{background:rgba(198,40,40,.1);color:#b3261e}
+.mt-pill.info{background:rgba(2,119,189,.1);color:#0277bd}
+.mt-dose-card{display:flex;align-items:center;justify-content:space-between;gap:.8rem}
+.mt-dose-info{display:grid;gap:.2rem;min-width:0}
+.mt-dose-info small{color:var(--text-muted);font-size:.78rem}
+.mt-dose-actions{display:flex;flex-wrap:wrap;justify-content:flex-end;gap:.35rem}
+.mt-empty{padding:1.1rem;border:1px dashed var(--border-color);border-radius:12px;color:var(--text-muted);font-size:.88rem;text-align:center}
+.mt-report-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.8rem}
+.mt-report-stat{padding:.85rem;border:1px solid var(--border-color);border-radius:12px;background:var(--bg-color)}
+.mt-report-stat strong{display:block;color:var(--primary-color);font-size:1.35rem}
+.mt-report-stat span{color:var(--text-muted);font-size:.78rem}
+.mt-report-medicine{padding:.8rem 0;border-bottom:1px solid var(--border-color)}
+.mt-report-medicine:last-child{border-bottom:0}
+.mt-report-medicine strong{display:block;margin-bottom:.25rem}
+.mt-report-medicine small{color:var(--text-muted)}
+.mt-chart-row{display:flex;align-items:center;gap:1rem;margin:.8rem 0}
+.mt-donut{display:grid;place-items:center;flex:0 0 92px;width:92px;height:92px;border-radius:50%;background:conic-gradient(var(--primary-color) var(--value,0%),var(--border-color) 0)}
+.mt-donut::before{content:attr(data-value);display:grid;place-items:center;width:66px;height:66px;border-radius:50%;background:var(--surface-color);color:var(--text-color);font-weight:850}
+.mt-chart-caption{display:grid;gap:.2rem}
+.mt-chart-caption small{color:var(--text-muted);font-size:.78rem}
+.mt-import-label{cursor:pointer}
+.mt-backup-panel{margin-top:1.1rem}
+@media(max-width:700px){.mt-profile-list{grid-template-columns:repeat(2,minmax(0,1fr))}.mt-kpis{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:520px){.mt-inline-form{align-items:stretch;flex-direction:column}.mt-inline-form .mt-btn{width:100%}.mt-profile-list{grid-template-columns:1fr}.mt-form-grid{grid-template-columns:minmax(0,1fr)}.mt-span-2{grid-column:auto}.mt-dose-card{align-items:flex-start;flex-direction:column}.mt-dose-actions{justify-content:flex-start;width:100%}.mt-dose-actions .mt-mini-btn{flex:1}.mt-section-head{gap:.5rem}.mt-count{font-size:.7rem}.mt-profile-actions .mt-btn,.mt-backup-actions .mt-btn{flex:1 1 100%}.mt-report-grid{grid-template-columns:1fr 1fr}}
+[data-theme=dark] .mt-notice{background:#332a19;border-color:#66502b;color:#f8e8c8}
+[data-theme=dark] .mt-form-note{background:rgba(255,143,0,.1)}
+@media print{#main-header,#main-footer,.ads-container,#share-help-tools,.mt-profile-actions,.mt-inline-form,.mt-backup-panel,.mt-report-actions,.mt-medicine-actions,.mt-filter-row,.mt-notice-soft{display:none!important}.mt-page{overflow:visible}.mt-panel{break-inside:avoid;box-shadow:none;border-color:#bbb}.mt-hero{box-shadow:none}.mt-dashboard[hidden]{display:block!important}}
+@media(prefers-reduced-motion:reduce){.mt-btn,.mt-profile-card{transition:none}}
+
+.mt-next-dose{display:flex;align-items:center;justify-content:space-between;gap:1rem;margin-top:1rem;padding:1rem;border:1px solid rgba(46,125,50,.22);border-radius:14px;background:rgba(46,125,50,.06)}.mt-next-dose>div{display:grid;gap:.2rem}.mt-next-dose span,.mt-next-dose small{color:var(--text-muted);font-size:.76rem}.mt-next-dose strong{color:var(--text-color)}.mt-next-dose .mt-countdown{color:var(--primary-color);font-size:clamp(1.1rem,4vw,1.55rem);font-variant-numeric:tabular-nums;direction:ltr;white-space:nowrap}@media(max-width:420px){.mt-next-dose{align-items:flex-start;flex-direction:column}.mt-next-dose .mt-countdown{align-self:flex-start}}@media print{.mt-next-dose{border:1px solid #bbb;background:#fff}}
+
+/* DZ Portal layout adaptation */
+.dz-medication-page{width:min(100% - 1.5rem,1160px);max-width:1160px;margin-inline:auto;overflow-x:clip}
+.dz-medication-page .mt-hero{margin-top:clamp(.65rem,2vw,1rem)}
+.dz-medication-page .mt-panel,.dz-medication-page .mt-notice,.dz-medication-page .mt-next-dose{min-width:0;max-width:100%}
+.dz-medication-page .mt-dose-card,.dz-medication-page .mt-medicine-card,.dz-medication-page .mt-report{overflow-wrap:anywhere}
+.dz-medication-page input,.dz-medication-page select,.dz-medication-page button{max-width:100%;font-family:inherit}
+@media(max-width:520px){.dz-medication-page{width:calc(100% - 1rem);padding-inline:0}.dz-medication-page .mt-panel{padding:.9rem;border-radius:14px}}
+
+/* DZ Portal layout adaptation */
+.dz-medication-page{width:min(100% - 1.5rem,1160px);max-width:1160px;margin-inline:auto;overflow-x:clip}
+.dz-medication-page .mt-hero{margin-top:clamp(.65rem,2vw,1rem)}
+.dz-medication-page .mt-panel,.dz-medication-page .mt-notice,.dz-medication-page .mt-next-dose{min-width:0;max-width:100%}
+.dz-medication-page .mt-dose-card,.dz-medication-page .mt-medicine-card,.dz-medication-page .mt-report{overflow-wrap:anywhere}
+.dz-medication-page input,.dz-medication-page select,.dz-medication-page button{max-width:100%;font-family:inherit}
+@media(max-width:520px){.dz-medication-page{width:calc(100% - 1rem);padding-inline:0}.dz-medication-page .mt-panel{padding:.9rem;border-radius:14px}}
