@@ -622,17 +622,7 @@ html {
 }
 
 
-/* Dark mode support */
-
-@media (prefers-color-scheme: dark) {
-    :root {
-        --gray-50: #121212;
-        --gray-100: #1e1e1e;
-        --gray-200: #2d2d2d;
-        --gray-800: #e0e0e0;
-        --white: #1e1e1e;
-    }
-}
+/* Device color-scheme is intentionally ignored. Theme is controlled manually. */
 
 
 /* Footer - 3 Columns */
