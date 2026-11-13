@@ -1,4 +1,4 @@
-const CACHE_NAME = "dz-portal-cache-v4";
+const CACHE_NAME = "dz-portal-cache-v5";
 const OFFLINE_URL = "/dz_portal/index.html";
 
 const urlsToCache = [
