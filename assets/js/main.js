@@ -8,19 +8,40 @@ window.addEventListener('load', () => {
   }, 1000);
 });
 
-// Theme toggle
+// Manual theme preference: light by default, independent of device settings.
+const DZ_THEME_KEY = 'dzPortalTheme';
+
+function applyPortalTheme(theme) {
+  const isDark = theme === 'dark';
+  document.body.classList.toggle('dark-mode', isDark);
+  document.querySelectorAll('.theme-toggle i').forEach(icon => {
+    icon.classList.toggle('fa-moon', !isDark);
+    icon.classList.toggle('fa-sun', isDark);
+  });
+  document.querySelectorAll('.theme-toggle').forEach(button => {
+    button.setAttribute('aria-label', isDark ? 'تفعيل الوضع الفاتح' : 'تفعيل الوضع الليلي');
+    button.setAttribute('aria-pressed', String(isDark));
+    button.title = isDark ? 'تفعيل الوضع الفاتح' : 'تفعيل الوضع الليلي';
+  });
+}
+
 function toggleTheme() {
-  document.body.classList.toggle('dark-mode');
-  const icon = document.querySelector('.theme-toggle i');
-  if (icon) {
-    icon.classList.toggle('fa-moon');
-    icon.classList.toggle('fa-sun');
-  }
-  const currentTheme = document.body.classList.contains('dark-mode') ? 'dark' : 'light';
+  const currentTheme = document.body.classList.contains('dark-mode') ? 'light' : 'dark';
+  applyPortalTheme(currentTheme);
+  try { localStorage.setItem(DZ_THEME_KEY, currentTheme); } catch (_) {}
   if (typeof window.dzTrackEvent === 'function') {
     window.dzTrackEvent('theme_change', { theme: currentTheme });
   }
 }
+
+(function initializePortalTheme() {
+  let savedTheme = 'light';
+  try {
+    const storedTheme = localStorage.getItem(DZ_THEME_KEY);
+    if (storedTheme === 'dark' || storedTheme === 'light') savedTheme = storedTheme;
+  } catch (_) {}
+  applyPortalTheme(savedTheme);
+})();
 
 // Scroll to top
 function scrollToTop() {
