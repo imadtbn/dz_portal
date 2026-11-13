@@ -1547,20 +1547,7 @@ video {
     color-scheme: light;
 }
 
-@media (prefers-color-scheme: dark) {
-
-    html,
-    body,
-    .section-card,
-    .sidebar-card,
-    .service-item,
-    .video-card,
-    .header,
-    .footer {
-        background-color: inherit !important;
-        color: inherit !important;
-    }
-}
+/* Automatic device dark-mode override removed; theme is user-controlled. */
 
 
 /*إعلانات ads*/
@@ -1657,12 +1644,7 @@ video {
     --primary: #006233;
 
     /* الوضع الليلي */
-    @media (prefers-color-scheme: dark) {
-        --bg-body: #0a0a0a;
-        --text-primary: #e0e0e0;
-        --primary: #4caf50;
-    }
-}
+    /* Automatic device dark-mode override removed; theme is user-controlled. */
 
 
 /* البطاقة */
