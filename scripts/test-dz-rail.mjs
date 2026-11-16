@@ -42,8 +42,9 @@ assert(sundayIntl.some(event=>event.serviceDate==="2026-09-27"&&event.trip.route
 const saturdayIntl=engine.recordsAtStation([fromAnnaba,fromTunis],"annaba","departure","2026-10-03",config,new Date("2026-10-03T07:00:00Z"));
 assert(!saturdayIntl.some(event=>event.serviceDate==="2026-10-03"),"No Saturday international service");
 assert(routes.some(r=>r.id==="alger-batna"&&r.schedule_status==="timetable_pending_entry"));
-assert(routes.some(r=>r.id==="batna-alger"&&r.schedule_status==="timetable_pending_entry"));
-assert(!available.some(t=>t.route_id==="alger-batna"||t.route_id==="batna-alger"),"Do not publish Batna draft as real timetable");
+assert(routes.some(r=>r.id==="batna-alger"&&r.schedule_status==="source_transcribed"));
+assert(!available.some(t=>t.route_id==="alger-batna"),"Do not publish the superseded Alger–Batna draft route");
+assert(available.some(t=>t.route_id==="batna-alger"),"Publish the source-transcribed Batna–Agha journey");
 const weekday1051=available.find(t=>t.route_id==="alger-affroun"&&t.train_number==="1051"&&t.service_id==="except_friday");
 const friday1051=available.find(t=>t.route_id==="alger-affroun"&&t.train_number==="1051"&&t.service_id==="friday_only");
 assert(weekday1051&&friday1051,"Separate weekday and Friday-only train 1051 columns");
