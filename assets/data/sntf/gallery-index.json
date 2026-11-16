@@ -14,8 +14,8 @@
       ],
       "source_page": "sectors/sntf.html",
       "issuing_authority": "SNTF",
-      "status": "official_document_validity_confirmed",
-      "notes": "صورة جدول صادرة عن SNTF ؛ تاريخ السريان واستمرار العمل بالمواقيت يحتاجان مراجعة منفصلة، يمكن التأكد من جدول الرحلات."
+      "status": "official_document_validity_unconfirmed",
+      "notes": "صورة جدول صادرة عن SNTF وفق توثيق صاحب المشروع؛ تاريخ السريان واستمرار العمل بالمواقيت يحتاجان مراجعة منفصلة، ولا تُستنتج أوقات الرحلات من اسم الصورة."
     },
     {
       "id": "thenia-alger-suburban",
@@ -28,8 +28,8 @@
       ],
       "source_page": "sectors/sntf.html",
       "issuing_authority": "SNTF",
-      "status": "official_document_validity_confirmed",
-      "notes": "صورة جدول صادرة عن SNTF ؛ تاريخ السريان واستمرار العمل بالمواقيت يحتاجان مراجعة منفصلة، يمكن التأكد من جدول الرحلات."
+      "status": "official_document_validity_unconfirmed",
+      "notes": "صورة جدول صادرة عن SNTF وفق توثيق صاحب المشروع؛ تاريخ السريان واستمرار العمل بالمواقيت يحتاجان مراجعة منفصلة، ولا تُستنتج أوقات الرحلات من اسم الصورة."
     },
     {
       "id": "alger-affroun-suburban",
@@ -41,11 +41,11 @@
       ],
       "source_page": "sectors/sntf.html",
       "issuing_authority": "SNTF",
-      "status": "official_document_validity_confirmed",
-      "notes": "صورة جدول صادرة عن SNTF ؛ تاريخ السريان واستمرار العمل بالمواقيت يحتاجان مراجعة منفصلة، يمكن التأكد من جدول الرحلات."
+      "status": "official_document_validity_unconfirmed",
+      "notes": "صورة جدول صادرة عن SNTF وفق توثيق صاحب المشروع؛ تاريخ السريان واستمرار العمل بالمواقيت يحتاجان مراجعة منفصلة، ولا تُستنتج أوقات الرحلات من اسم الصورة."
     },
     {
-      "id": "affroun-alger-2026-09-19-suburban",
+      "id": "affroun-alger-suburban",
       "path": "assets/train-schedules/suburban/affroun-alger.jpg",
       "category": "suburban",
       "alt": "جدول مواقيت قطارات العفرون إلى الجزائر، ابتداءً من 19 سبتمبر 2026",
@@ -54,8 +54,8 @@
       ],
       "source_page": "sectors/sntf.html",
       "issuing_authority": "SNTF",
-      "status": "official_document_validity_confirmed",
-      "notes": "صورة JPG الأصلية لجدول SNTF ابتداءً من 19 سبتمبر 2026، أوقات الرحلات منقولة منها."
+      "status": "official_document_validity_unconfirmed",
+      "notes": "صورة جدول صادرة عن SNTF وفق توثيق صاحب المشروع؛ تاريخ السريان واستمرار العمل بالمواقيت يحتاجان مراجعة منفصلة، ولا تُستنتج أوقات الرحلات من اسم الصورة."
     },
     {
       "id": "alger-zeralda-suburban",
@@ -67,8 +67,8 @@
       ],
       "source_page": "sectors/sntf.html",
       "issuing_authority": "SNTF",
-      "status": "official_document_validity_confirmed",
-      "notes": "صورة جدول صادرة عن SNTF ؛ تاريخ السريان واستمرار العمل بالمواقيت يحتاجان مراجعة منفصلة، يمكن التأكد من جدول الرحلات."
+      "status": "official_document_validity_unconfirmed",
+      "notes": "صورة جدول صادرة عن SNTF وفق توثيق صاحب المشروع؛ تاريخ السريان واستمرار العمل بالمواقيت يحتاجان مراجعة منفصلة، ولا تُستنتج أوقات الرحلات من اسم الصورة."
     },
     {
       "id": "zeralda-alger-suburban",
@@ -80,8 +80,8 @@
       ],
       "source_page": "sectors/sntf.html",
       "issuing_authority": "SNTF",
-      "status": "official_document_validity_confirmed",
-      "notes": "صورة جدول صادرة عن SNTF ؛ تاريخ السريان واستمرار العمل بالمواقيت يحتاجان مراجعة منفصلة، يمكن التأكد من جدول الرحلات."
+      "status": "official_document_validity_unconfirmed",
+      "notes": "صورة جدول صادرة عن SNTF وفق توثيق صاحب المشروع؛ تاريخ السريان واستمرار العمل بالمواقيت يحتاجان مراجعة منفصلة، ولا تُستنتج أوقات الرحلات من اسم الصورة."
     },
     {
       "id": "alger-oued-aissa-suburban",
@@ -94,8 +94,8 @@
       ],
       "source_page": "sectors/sntf.html",
       "issuing_authority": "SNTF",
-      "status": "official_document_validity_confirmed",
-      "notes": "صورة جدول صادرة عن SNTF ؛ تاريخ السريان واستمرار العمل بالمواقيت يحتاجان مراجعة منفصلة، يمكن التأكد من جدول الرحلات."
+      "status": "official_document_validity_unconfirmed",
+      "notes": "صورة جدول صادرة عن SNTF وفق توثيق صاحب المشروع؛ تاريخ السريان واستمرار العمل بالمواقيت يحتاجان مراجعة منفصلة، ولا تُستنتج أوقات الرحلات من اسم الصورة."
     },
     {
       "id": "oued-aissa-alger-suburban",
@@ -108,8 +108,8 @@
       ],
       "source_page": "sectors/sntf.html",
       "issuing_authority": "SNTF",
-      "status": "official_document_validity_confirmed",
-      "notes": "صورة جدول صادرة عن SNTF ؛ تاريخ السريان واستمرار العمل بالمواقيت يحتاجان مراجعة منفصلة، يمكن التأكد من جدول الرحلات."
+      "status": "official_document_validity_unconfirmed",
+      "notes": "صورة جدول صادرة عن SNTF وفق توثيق صاحب المشروع؛ تاريخ السريان واستمرار العمل بالمواقيت يحتاجان مراجعة منفصلة، ولا تُستنتج أوقات الرحلات من اسم الصورة."
     },
     {
       "id": "alger-airoport-alger-suburban",
@@ -122,24 +122,24 @@
       ],
       "source_page": "sectors/sntf.html",
       "issuing_authority": "SNTF",
-      "status": "official_document_validity_confirmed",
-      "notes": "صورة جدول صادرة عن SNTF ؛ تاريخ السريان واستمرار العمل بالمواقيت يحتاجان مراجعة منفصلة، يمكن التأكد من جدول الرحلات."
+      "status": "official_document_validity_unconfirmed",
+      "notes": "صورة جدول صادرة عن SNTF وفق توثيق صاحب المشروع؛ تاريخ السريان واستمرار العمل بالمواقيت يحتاجان مراجعة منفصلة، ولا تُستنتج أوقات الرحلات من اسم الصورة."
     },
     {
-      "id": "thenia-affroun-thenia-suburban",
+      "id": "thenia-affroune-thenia-suburban",
       "path": "assets/train-schedules/suburban/thenia-affroune-thenia.png",
       "category": "suburban",
-      "alt": "الثنية - العفرون - الثنية",
+      "alt": " الثنية - العفرون - الثنية",
       "route_ids": [
+        "affroun-thenia",
         "thenia-affroun",
         "reghaia-affroun",
-        "affroun-thenia",
         "affroun-reghaia"
       ],
       "source_page": "sectors/sntf.html",
       "issuing_authority": "SNTF",
-      "status": "official_document_validity_confirmed",
-      "notes": "جدول SNTF اليومي المؤرخ 19 سبتمبر 2026، ست رحلات بينها رحلتان من رغاية وإليها؛ نُقلت مواقيت المحطات في بيانات الرحلات."
+      "status": "official_document_validity_unconfirmed",
+      "notes": "صورة جدول صادرة عن SNTF وفق توثيق صاحب المشروع؛ تاريخ السريان واستمرار العمل بالمواقيت يحتاجان مراجعة منفصلة، ولا تُستنتج أوقات الرحلات من اسم الصورة."
     },
     {
       "id": "zeralda-thenia-zeralda-suburban",
@@ -154,8 +154,8 @@
       ],
       "source_page": "sectors/sntf.html",
       "issuing_authority": "SNTF",
-      "status": "official_document_validity_confirmed",
-      "notes": "صورة جدول صادرة عن SNTF ؛ تاريخ السريان واستمرار العمل بالمواقيت يحتاجان مراجعة منفصلة، يمكن التأكد من جدول الرحلات."
+      "status": "official_document_validity_unconfirmed",
+      "notes": "صورة جدول صادرة عن SNTF وفق توثيق صاحب المشروع؛ تاريخ السريان واستمرار العمل بالمواقيت يحتاجان مراجعة منفصلة، ولا تُستنتج أوقات الرحلات من اسم الصورة."
     },
     {
       "id": "alger-bejaia-alger-eastern",
@@ -163,12 +163,14 @@
       "category": "eastern",
       "alt": "الجزائر بجاية الجزائر",
       "route_ids": [
-        "alger-bejaia"
+        "alger-bejaia",
+        "bejaia-alger",
+        "agha-bejaia"
       ],
       "source_page": "sectors/sntf.html",
       "issuing_authority": "SNTF",
-      "status": "official_document_validity_confirmed",
-      "notes": "صورة جدول صادرة عن SNTF ؛ تاريخ السريان واستمرار العمل بالمواقيت يحتاجان مراجعة منفصلة، يمكن التأكد من جدول الرحلات."
+      "status": "official_document_validity_unconfirmed",
+      "notes": "صورة جدول صادرة عن SNTF وفق توثيق صاحب المشروع؛ تاريخ السريان واستمرار العمل بالمواقيت يحتاجان مراجعة منفصلة، ولا تُستنتج أوقات الرحلات من اسم الصورة."
     },
     {
       "id": "alger-batna-alger-eastern",
@@ -177,23 +179,13 @@
       "alt": "الجزائر باتنة الجزائر",
       "route_ids": [
         "alger-batna",
-        "batna-alger"
+        "batna-alger",
+        "agha-batna"
       ],
       "source_page": "sectors/sntf.html",
       "issuing_authority": "SNTF",
-      "status": "official_document_validity_confirmed",
-      "notes": "صورة جدول صادرة عن SNTF ؛ تاريخ السريان واستمرار العمل بالمواقيت يحتاجان مراجعة منفصلة، يمكن التأكد من جدول الرحلات."
-    },
-    {
-      "id": "alger-annaba-eastern",
-      "path": "assets/train-schedules/Eastern/alger-annaba.jpg",
-      "category": "eastern",
-      "alt": "نسخة جدول القطار الجزائر عنابة بأيام محددة",
-      "route_ids": [],
-      "source_page": "sectors/sntf.html",
-      "issuing_authority": "SNTF",
-      "status": "official_document_validity_confirmed",
-      "notes": "صورة جدول صادرة عن SNTF ؛ تاريخ السريان واستمرار العمل بالمواقيت يحتاجان مراجعة منفصلة، يمكن التأكد من جدول الرحلات."
+      "status": "official_document_validity_unconfirmed",
+      "notes": "صورة جدول صادرة عن SNTF وفق توثيق صاحب المشروع؛ تاريخ السريان واستمرار العمل بالمواقيت يحتاجان مراجعة منفصلة، ولا تُستنتج أوقات الرحلات من اسم الصورة."
     },
     {
       "id": "alger-annaba-tj-eastern",
@@ -206,8 +198,19 @@
       ],
       "source_page": "sectors/sntf.html",
       "issuing_authority": "SNTF",
-      "status": "official_document_validity_confirmed",
-      "notes": "صورة جدول صادرة عن SNTF ؛ تاريخ السريان واستمرار العمل بالمواقيت يحتاجان مراجعة منفصلة، يمكن التأكد من جدول الرحلات."
+      "status": "official_document_validity_unconfirmed",
+      "notes": "صورة جدول صادرة عن SNTF وفق توثيق صاحب المشروع؛ تاريخ السريان واستمرار العمل بالمواقيت يحتاجان مراجعة منفصلة، ولا تُستنتج أوقات الرحلات من اسم الصورة."
+    },
+    {
+      "id": "alger-annaba-eastern",
+      "path": "assets/train-schedules/Eastern/alger-annaba.jpg",
+      "category": "eastern",
+      "alt": "نسخة جدول القطار الجزائر عنابة بأيام محددة",
+      "route_ids": [],
+      "source_page": "sectors/sntf.html",
+      "issuing_authority": "SNTF",
+      "status": "official_document_validity_unconfirmed",
+      "notes": "صورة جدول صادرة عن SNTF وفق توثيق صاحب المشروع؛ تاريخ السريان واستمرار العمل بالمواقيت يحتاجان مراجعة منفصلة، ولا تُستنتج أوقات الرحلات من اسم الصورة."
     },
     {
       "id": "alger-tebessa-eastern",
@@ -215,12 +218,13 @@
       "category": "eastern",
       "alt": "الجزائر تبسة الجزائر ليلي",
       "route_ids": [
-        "alger-tebessa"
+        "alger-tebessa",
+        "tebessa-alger"
       ],
       "source_page": "sectors/sntf.html",
       "issuing_authority": "SNTF",
-      "status": "official_document_validity_confirmed",
-      "notes": "صورة جدول صادرة عن SNTF ؛ تاريخ السريان واستمرار العمل بالمواقيت يحتاجان مراجعة منفصلة، يمكن التأكد من جدول الرحلات."
+      "status": "official_document_validity_unconfirmed",
+      "notes": "صورة جدول صادرة عن SNTF وفق توثيق صاحب المشروع؛ تاريخ السريان واستمرار العمل بالمواقيت يحتاجان مراجعة منفصلة، ولا تُستنتج أوقات الرحلات من اسم الصورة."
     },
     {
       "id": "beni-mansour-bedjaia-eastern",
@@ -228,12 +232,15 @@
       "category": "eastern",
       "alt": "بجاية - بني منصور - بجاية",
       "route_ids": [
-        "beni-mansour-bejaia"
+        "beni-mansour-bejaia",
+        "akbou-bejaia",
+        "bejaia-beni-mansour",
+        "bejaia-akbou"
       ],
       "source_page": "sectors/sntf.html",
       "issuing_authority": "SNTF",
-      "status": "official_document_validity_confirmed",
-      "notes": "صورة جدول صادرة عن SNTF ؛ تاريخ السريان واستمرار العمل بالمواقيت يحتاجان مراجعة منفصلة، يمكن التأكد من جدول الرحلات."
+      "status": "official_document_validity_unconfirmed",
+      "notes": "صورة جدول صادرة عن SNTF وفق توثيق صاحب المشروع؛ تاريخ السريان واستمرار العمل بالمواقيت يحتاجان مراجعة منفصلة، ولا تُستنتج أوقات الرحلات من اسم الصورة."
     },
     {
       "id": "alger-oran-alger-western",
@@ -245,8 +252,22 @@
       ],
       "source_page": "sectors/sntf.html",
       "issuing_authority": "SNTF",
-      "status": "official_document_validity_confirmed",
-      "notes": "صورة جدول صادرة عن SNTF ؛ تاريخ السريان واستمرار العمل بالمواقيت يحتاجان مراجعة منفصلة، يمكن التأكد من جدول الرحلات."
+      "status": "official_document_validity_unconfirmed",
+      "notes": "صورة جدول صادرة عن SNTF وفق توثيق صاحب المشروع؛ تاريخ السريان واستمرار العمل بالمواقيت يحتاجان مراجعة منفصلة، ولا تُستنتج أوقات الرحلات من اسم الصورة."
+    },
+    {
+      "id": "chlef-affroun-chlef-western",
+      "path": "assets/train-schedules/Western/chlef-affroun-chlef.jpg",
+      "category": "western",
+      "alt": "الجزائر وهران الجزائر",
+      "route_ids": [
+        "chlef-affroun",
+        "affroun-chlef"
+      ],
+      "source_page": "sectors/sntf.html",
+      "issuing_authority": "SNTF",
+      "status": "official_document_validity_unconfirmed",
+      "notes": "صورة جدول صادرة عن SNTF وفق توثيق صاحب المشروع؛ تاريخ السريان واستمرار العمل بالمواقيت يحتاجان مراجعة منفصلة، ولا تُستنتج أوقات الرحلات من اسم الصورة."
     },
     {
       "id": "oran-bechar-western",
@@ -254,12 +275,13 @@
       "category": "western",
       "alt": "وهران بشار وهران",
       "route_ids": [
-        "oran-bechar"
+        "oran-bechar",
+        "bechar-oran"
       ],
       "source_page": "sectors/sntf.html",
       "issuing_authority": "SNTF",
-      "status": "official_document_validity_confirmed",
-      "notes": "صورة جدول صادرة عن SNTF ؛ تاريخ السريان واستمرار العمل بالمواقيت يحتاجان مراجعة منفصلة، يمكن التأكد من جدول الرحلات."
+      "status": "official_document_validity_unconfirmed",
+      "notes": "صورة جدول صادرة عن SNTF وفق توثيق صاحب المشروع؛ تاريخ السريان واستمرار العمل بالمواقيت يحتاجان مراجعة منفصلة، ولا تُستنتج أوقات الرحلات من اسم الصورة."
     },
     {
       "id": "oran-chlef-agha-western",
@@ -267,12 +289,15 @@
       "category": "western",
       "alt": "وهران - الشلف إلى آغا",
       "route_ids": [
-        "oran-chlef"
+        "legacy-oran-chlef-agha",
+        "oran-agha",
+        "chlef-agha",
+        "chlef-khemis"
       ],
       "source_page": "sectors/sntf.html",
       "issuing_authority": "SNTF",
-      "status": "official_document_validity_confirmed",
-      "notes": "صورة جدول صادرة عن SNTF ؛ تاريخ السريان واستمرار العمل بالمواقيت يحتاجان مراجعة منفصلة، يمكن التأكد من جدول الرحلات."
+      "status": "official_document_validity_unconfirmed",
+      "notes": "صورة جدول صادرة عن SNTF وفق توثيق صاحب المشروع؛ تاريخ السريان واستمرار العمل بالمواقيت يحتاجان مراجعة منفصلة، ولا تُستنتج أوقات الرحلات من اسم الصورة."
     },
     {
       "id": "agha-chlef-oran-western",
@@ -280,12 +305,43 @@
       "category": "western",
       "alt": "آغا إلى وهران - الشلف ",
       "route_ids": [
-        "agha-chlef"
+        "agha-chlef",
+        "agha-oran",
+        "khemis-chlef"
       ],
       "source_page": "sectors/sntf.html",
       "issuing_authority": "SNTF",
-      "status": "official_document_validity_confirmed",
-      "notes": "صورة جدول صادرة عن SNTF ؛ تاريخ السريان واستمرار العمل بالمواقيت يحتاجان مراجعة منفصلة، يمكن التأكد من جدول الرحلات."
+      "status": "official_document_validity_unconfirmed",
+      "notes": "صورة جدول صادرة عن SNTF وفق توثيق صاحب المشروع؛ تاريخ السريان واستمرار العمل بالمواقيت يحتاجان مراجعة منفصلة، ولا تُستنتج أوقات الرحلات من اسم الصورة."
+    },
+    {
+      "id": "oran-chlef-oran-western",
+      "path": "assets/train-schedules/Western/oran-chlef-oran.jpg",
+      "category": "western",
+      "alt": "شلف - وهران - الشلف ",
+      "route_ids": [
+        "oran-chlef",
+        "chlef-oran"
+      ],
+      "source_page": "sectors/sntf.html",
+      "issuing_authority": "SNTF",
+      "status": "official_document_validity_unconfirmed",
+      "notes": "صورة جدول صادرة عن SNTF وفق توثيق صاحب المشروع؛ تاريخ السريان واستمرار العمل بالمواقيت يحتاجان مراجعة منفصلة، ولا تُستنتج أوقات الرحلات من اسم الصورة."
+    },
+    {
+      "id": "telagh-oran-saida-frenda-western",
+      "path": "assets/train-schedules/Western/telagh-oran-saida-frenda.jpg",
+      "category": "western",
+      "alt": "تلاغ-وهران-سعيدة-فرندة",
+      "route_ids": [
+        "telagh-oran",
+        "oran-telagh",
+        "telagh-saida-frenda"
+      ],
+      "source_page": "sectors/sntf.html",
+      "issuing_authority": "SNTF",
+      "status": "official_document_validity_unconfirmed",
+      "notes": "صورة جدول صادرة عن SNTF وفق توثيق صاحب المشروع؛ تاريخ السريان واستمرار العمل بالمواقيت يحتاجان مراجعة منفصلة، ولا تُستنتج أوقات الرحلات من اسم الصورة."
     },
     {
       "id": "bechar-tindouf-sahara",
@@ -293,12 +349,13 @@
       "category": "sahara",
       "alt": "الجزائر بشار تيندوف بشار",
       "route_ids": [
-        "bechar-tindouf"
+        "bechar-tindouf",
+        "tindouf-bechar"
       ],
       "source_page": "sectors/sntf.html",
       "issuing_authority": "SNTF",
-      "status": "official_document_validity_confirmed",
-      "notes": "صورة جدول صادرة عن SNTF ؛ تاريخ السريان واستمرار العمل بالمواقيت يحتاجان مراجعة منفصلة، يمكن التأكد من جدول الرحلات."
+      "status": "official_document_validity_unconfirmed",
+      "notes": "صورة جدول صادرة عن SNTF وفق توثيق صاحب المشروع؛ تاريخ السريان واستمرار العمل بالمواقيت يحتاجان مراجعة منفصلة، ولا تُستنتج أوقات الرحلات من اسم الصورة."
     },
     {
       "id": "alger-teggart-sahara",
@@ -306,12 +363,14 @@
       "category": "sahara",
       "alt": "الجزائر تقرت الجزائر",
       "route_ids": [
-        "alger-touggourt"
+        "alger-touggourt",
+        "agha-touggourt",
+        "touggourt-agha"
       ],
       "source_page": "sectors/sntf.html",
       "issuing_authority": "SNTF",
-      "status": "official_document_validity_confirmed",
-      "notes": "صورة جدول صادرة عن SNTF ؛ تاريخ السريان واستمرار العمل بالمواقيت يحتاجان مراجعة منفصلة، يمكن التأكد من جدول الرحلات."
+      "status": "official_document_validity_unconfirmed",
+      "notes": "صورة جدول صادرة عن SNTF وفق توثيق صاحب المشروع؛ تاريخ السريان واستمرار العمل بالمواقيت يحتاجان مراجعة منفصلة، ولا تُستنتج أوقات الرحلات من اسم الصورة."
     },
     {
       "id": "oran-bechar-sahara",
@@ -321,8 +380,8 @@
       "route_ids": [],
       "source_page": "sectors/sntf.html",
       "issuing_authority": "SNTF",
-      "status": "official_document_validity_confirmed",
-      "notes": "صورة جدول صادرة عن SNTF ؛ تاريخ السريان واستمرار العمل بالمواقيت يحتاجان مراجعة منفصلة، يمكن التأكد من جدول الرحلات."
+      "status": "official_document_validity_unconfirmed",
+      "notes": "صورة جدول صادرة عن SNTF وفق توثيق صاحب المشروع؛ تاريخ السريان واستمرار العمل بالمواقيت يحتاجان مراجعة منفصلة، ولا تُستنتج أوقات الرحلات من اسم الصورة."
     },
     {
       "id": "bougezzoul-djelfa-laghouat-sahara",
@@ -332,8 +391,8 @@
       "route_ids": [],
       "source_page": "sectors/sntf.html",
       "issuing_authority": "SNTF",
-      "status": "official_document_validity_confirmed",
-      "notes": "صورة جدول صادرة عن SNTF ؛ تاريخ السريان واستمرار العمل بالمواقيت يحتاجان مراجعة منفصلة، يمكن التأكد من جدول الرحلات."
+      "status": "official_document_validity_unconfirmed",
+      "notes": "صورة جدول صادرة عن SNTF وفق توثيق صاحب المشروع؛ تاريخ السريان واستمرار العمل بالمواقيت يحتاجان مراجعة منفصلة، ولا تُستنتج أوقات الرحلات من اسم الصورة."
     },
     {
       "id": "bechar-tindouf-tj-sahara",
@@ -343,8 +402,8 @@
       "route_ids": [],
       "source_page": "sectors/sntf.html",
       "issuing_authority": "SNTF",
-      "status": "official_document_validity_confirmed",
-      "notes": "صورة جدول صادرة عن SNTF ؛ تاريخ السريان واستمرار العمل بالمواقيت يحتاجان مراجعة منفصلة، يمكن التأكد من جدول الرحلات."
+      "status": "official_document_validity_unconfirmed",
+      "notes": "صورة جدول صادرة عن SNTF وفق توثيق صاحب المشروع؛ تاريخ السريان واستمرار العمل بالمواقيت يحتاجان مراجعة منفصلة، ولا تُستنتج أوقات الرحلات من اسم الصورة."
     },
     {
       "id": "bba-tisemsilte-sahara",
@@ -352,12 +411,13 @@
       "category": "sahara",
       "alt": "تسيمسيلت برج بوعريريج تيسمسيلت ",
       "route_ids": [
-        "tissemsilt-bordj"
+        "tissemsilt-bordj",
+        "bordj-tissemsilt"
       ],
       "source_page": "sectors/sntf.html",
       "issuing_authority": "SNTF",
-      "status": "official_document_validity_confirmed",
-      "notes": "صورة جدول صادرة عن SNTF ؛ تاريخ السريان واستمرار العمل بالمواقيت يحتاجان مراجعة منفصلة، يمكن التأكد من جدول الرحلات."
+      "status": "official_document_validity_unconfirmed",
+      "notes": "صورة جدول صادرة عن SNTF وفق توثيق صاحب المشروع؛ تاريخ السريان واستمرار العمل بالمواقيت يحتاجان مراجعة منفصلة، ولا تُستنتج أوقات الرحلات من اسم الصورة."
     },
     {
       "id": "boughezoul-laghouat-sahara",
@@ -365,12 +425,15 @@
       "category": "sahara",
       "alt": "بوغزول - الأغواط - بوغزول ",
       "route_ids": [
-        "boughezoul-laghouat"
+        "boughezoul-laghouat",
+        "djelfa-laghouat",
+        "laghouat-djelfa",
+        "laghouat-boughezoul"
       ],
       "source_page": "sectors/sntf.html",
       "issuing_authority": "SNTF",
-      "status": "official_document_validity_confirmed",
-      "notes": "صورة جدول صادرة عن SNTF ؛ تاريخ السريان واستمرار العمل بالمواقيت يحتاجان مراجعة منفصلة، يمكن التأكد من جدول الرحلات."
+      "status": "official_document_validity_unconfirmed",
+      "notes": "صورة جدول صادرة عن SNTF وفق توثيق صاحب المشروع؛ تاريخ السريان واستمرار العمل بالمواقيت يحتاجان مراجعة منفصلة، ولا تُستنتج أوقات الرحلات من اسم الصورة."
     },
     {
       "id": "alger-tunisia-international",
@@ -385,23 +448,8 @@
       ],
       "source_page": "sectors/sntf.html",
       "issuing_authority": "SNTF",
-      "status": "official_document_validity_confirmed",
-      "notes": "صورة جدول صادرة عن SNTF ؛ تاريخ السريان واستمرار العمل بالمواقيت يحتاجان مراجعة منفصلة، يمكن التأكد من جدول الرحلات."
-    },
-    {
-      "id": "telagh-oran-saida-frenda-western",
-      "path": "assets/train-schedules/Western/telagh-oran-saida-frenda.jpg",
-      "category": "western",
-      "alt": "إعلان عودة قطار تلاغ – وهران وقطار تلاغ – سعيدة – فرندة",
-      "route_ids": [
-        "telagh-oran",
-        "oran-telagh",
-        "telagh-saida-frenda"
-      ],
-      "source_page": "sectors/sntf-station.html",
-      "issuing_authority": "SNTF",
-      "status": "official_departures_confirmed",
-      "notes": "انطلاق 07:09 من تلاغ نحو وهران، 15:20 من وهران نحو تلاغ، 17:17 من تلاغ نحو سعيدة وفرندة؛ أوقات الوصول وأيام التشغيل غير مذكورة."
+      "status": "official_document_validity_unconfirmed",
+      "notes": "صورة جدول صادرة عن SNTF وفق توثيق صاحب المشروع؛ تاريخ السريان واستمرار العمل بالمواقيت يحتاجان مراجعة منفصلة، ولا تُستنتج أوقات الرحلات من اسم الصورة."
     }
   ]
 }
