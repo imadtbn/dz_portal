@@ -5,7 +5,7 @@
   window.__dzPortalSiteTagsLoaded = true;
 
   const GTM_ID = 'GTM-NW3BWPF6';
-  const GA4_ID = 'G-K23WYKK60X';
+  const GA4_ID = Array.from(document.scripts).map((script) => script.src.match(/gtag\/js\?id=(G-[A-Z0-9]+)/i)?.[1]).find(Boolean) || '';
   const ADSENSE_CLIENT = 'ca-pub-5656416032906373';
 
   // تهيئة dataLayer وgtag القياسي لضمان وصول الأحداث بدقة إلى GA4 وGTM
@@ -53,7 +53,6 @@
     trackEvent,
   });
 
-  const GA4_SRC = `https://www.googletagmanager.com/gtag/js?id=${GA4_ID}`;
   const GTM_SRC = `https://www.googletagmanager.com/gtm.js?id=${GTM_ID}`;
   const ADSENSE_SRC = `https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADSENSE_CLIENT}`;
   const state = {
@@ -99,51 +98,6 @@
     }
   };
 
-  const sendPageView = () => {
-    if (state.pageViewSent || window.__dzPortalGa4PageViewSent) return;
-
-    state.pageViewSent = true;
-    window.__dzPortalGa4PageViewSent = true;
-
-    const pageHeading = document.querySelector('.sector-hero h1, .sector-hero h2, main h1, h1')?.textContent?.trim() || '';
-
-    window.gtag('event', 'page_view', {
-      send_to: GA4_ID,
-      page_title: document.title,
-      page_location: window.location.href,
-      page_path: window.location.pathname,
-      page_sector: pageHeading,
-      site_language: 'ar',
-    });
-  };
-
-  const initializeGa4 = () => {
-    if (state.ga4Started || window.__dzPortalGa4Initialized) {
-      sendPageView();
-      return;
-    }
-
-    state.ga4Started = true;
-    window.__dzPortalGa4Initialized = true;
-
-    // site-tags.js is the canonical GA4 bootstrap. Disable the automatic
-    // config page_view and send exactly one explicit page_view ourselves.
-    window.gtag('js', new Date());
-    window.gtag('config', GA4_ID, {
-      send_page_view: false,
-      page_title: document.title,
-      page_location: window.location.href,
-      page_path: window.location.pathname,
-    });
-
-    loadExternalScript(GA4_SRC, { onload: sendPageView });
-
-    // gtag queues commands before the library is ready, so this fallback
-    // guarantees that the explicit page_view is queued even if load fires
-    // from an already-cached script.
-    sendPageView();
-  };
-
   // Lightweight diagnostics for GA4 verification from DevTools.
   // Does not create page_view or any additional analytics event.
   const getAnalyticsDiagnostics = () => new Promise((resolve) => {
@@ -158,7 +112,7 @@
       sessionId: null,
     };
 
-    if (typeof window.gtag !== 'function') {
+    if (typeof window.gtag !== 'function' || !GA4_ID) {
       resolve(report);
       return;
     }
@@ -255,7 +209,6 @@
     }
   }
 
-  initializeGa4();
   initializeGtm();
 
   window.addEventListener('load', () => {
