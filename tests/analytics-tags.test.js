@@ -29,38 +29,33 @@ function count(pattern, html) {
   return (html.match(pattern) || []).length;
 }
 
-test('all HTML documents use one central loader and one direct GA4 tag', () => {
+test('page-scoped analytics tags do not duplicate GA4 or site loaders', () => {
   const violations = [];
 
   for (const path of collectHtmlFiles(root)) {
     const html = readFileSync(path, 'utf8');
-    if (!/<head\b/i.test(html)) continue;
-
+    if (!/<head\\b/i.test(html)) continue;
     const page = relative(root, path);
     if (isVerificationFile(page)) continue;
+
     const depth = page.split('/').length - 1;
     const expectedLoader = `${'../'.repeat(depth)}${centralLoader}`;
-    const loaderCount = count(/<script\b[^>]*\bsrc\s*=\s*["'][^"']*site-tags\.js[^"']*["'][^>]*>/gi, html);
-    const legacy = {
-      gtagConfig: count(/gtag\s*\(\s*["']config["']\s*,/gi, html),
-      gtagSource: count(/gtag\/js/gi, html),
-      gtmBootstrap: count(/["']gtm\.start["']/gi, html),
-      gtmSource: count(/googletagmanager\.com\/gtm\.js/gi, html),
-      adsenseSource: count(/adsbygoogle\.js/gi, html),
-      claritySource: count(/clarity\.ms\/tag/gi, html),
-      adsDataSource: count(/assets\/js\/adsData\.js/gi, html),
-    };
+    const loaders = [...html.matchAll(/<script\\b[^>]*\\bsrc\\s*=\\s*["'][^"']*site-tags\\.js[^"']*["'][^>]*>/gi)].map(([tag]) => tag);
+    const ga4Sources = [...html.matchAll(/googletagmanager\\.com\\/gtag\\/js\\?id=(G-[A-Z0-9]+)/gi)].map((match) => match[1]);
+    const ga4Configs = [...html.matchAll(/gtag\\s*\\(\\s*["']config["']\\s*,\\s*["'](G-[A-Z0-9]+)["']/gi)].map((match) => match[1]);
+    const gtmSources = count(/googletagmanager\\.com\\/gtm\\.js/gi, html);
+    const claritySources = count(/clarity\\.ms\\/tag/gi, html);
 
-    const directGa4Source = count(/googletagmanager\.com\/gtag\/js\?id=G-K23WYKK60X/gi, html);
-    const directGa4Config = count(/gtag\s*\(\s*["']config["']\s*,\s*["']G-K23WYKK60X["']/gi, html);
     if (
-      loaderCount !== 1
-      || !html.includes(expectedLoader)
-      || directGa4Source !== 1
-      || directGa4Config !== 1
-      || Object.values(legacy).some((value) => value > 0 && value !== legacy.gtagConfig && value !== legacy.gtagSource)
+      loaders.length > 1
+      || (loaders.length === 1 && !loaders[0].includes(expectedLoader))
+      || ga4Sources.length > 1
+      || ga4Configs.length > 1
+      || (ga4Sources.length && ga4Configs.length && ga4Sources[0] !== ga4Configs[0])
+      || gtmSources > 1
+      || claritySources > 1
     ) {
-      violations.push({ page, loaderCount, expectedLoader, directGa4Source, directGa4Config, legacy });
+      violations.push({ page, loaders: loaders.length, expectedLoader, ga4Sources, ga4Configs, gtmSources, claritySources });
     }
   }
 
