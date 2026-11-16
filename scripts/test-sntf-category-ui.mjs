@@ -109,7 +109,7 @@ page.task("explore");
 assert.equal(page.state.category,"");
 assert.equal(page.get("route-filter").disabled,true,"Route selector waits for railway category");
 assert.equal(page.state.boardStations.length,loadJSON("stations").stations.length,"All stations remain searchable before filtering");
-const totals={suburban:22,eastern:16,western:10,sahara:10,international:2};
+const totals={suburban:22,eastern:16,western:15,sahara:10,international:2};
 for(const cat of network.railwayCategories){
  page.selectCategory(cat.id);
  assert.equal(page.state.category,cat.id);
