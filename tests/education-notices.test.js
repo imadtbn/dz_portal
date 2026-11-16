@@ -3,19 +3,19 @@ import { existsSync, readFileSync } from 'node:fs';
 import { test } from 'node:test';
 
 const load = (file) => readFileSync(new URL('../' + file, import.meta.url), 'utf8');
-const ids = ['07','06','05','04','03','02','01'];
+const ids = ['09','08','07','06','05','04','03','02','01'];
 const images = {
-  '07':'avis7.jpg','06':'avis6.jpg','05':'avis5.jpg','04':'avis4.jpg',
+  '09':'avis9.jpg','08':'avis8.jpg','07':'avis7.jpg','06':'avis6.jpg','05':'avis5.jpg','04':'avis4.jpg',
   '03':'avis3.jpg','02':'avis1.jpg','01':'avis2.jpg'
 };
 const expectedSizes = {
-  '07':[1131,1600],'06':[1449,2048],'05':[1086,1536],
+  '09':[1131,1600],'08':[1131,1600],'07':[1131,1600],'06':[1449,2048],'05':[1086,1536],
   '04':[740,360],'03':[1449,2048],'02':[1449,2048],'01':[1449,2048]
 };
 const education = load('sectors/education.html');
 
-test('seven compact bulletin cards have accessible, distinct reader links', () => {
-  assert.equal((education.match(/class="education-notice-card"/g) || []).length, 7);
+test('nine compact bulletin cards have accessible, distinct reader links', () => {
+  assert.equal((education.match(/class="education-notice-card"/g) || []).length, 9);
   assert.match(education, /id="official-notice"/);
   assert.match(education, /education-notices\.css/);
   assert.match(education, /education-notices\.js/);
@@ -80,12 +80,12 @@ test('reader supports zoom, printing, sharing, keyboard focus, and reduced layou
   assert.match(css, /focus-visible/);
 });
 
-test('shared sector counter detects all seven official bulletins instead of displaying 00', () => {
+test('shared sector counter detects all nine official bulletins instead of displaying 00', () => {
   const sector = load('assets/js/sector.js');
   assert.match(sector, /section\.id === 'official-notice'/);
   assert.match(sector, /querySelectorAll\('\.education-notice-card'\)/);
   assert.match(sector, /String\(bulletinCount \|\| services\.length\)/);
-  assert.ok(education.includes('<span class="service-count">07 بيانات</span>'));
+  assert.ok(education.includes('<span class="service-count">09 بيانات</span>'));
 });
 
 test('SEO sitemap and original ads and services survive the notice redesign', () => {
@@ -95,5 +95,5 @@ test('SEO sitemap and original ads and services survive the notice redesign', ()
   }
   assert.equal((education.match(/class="adsbygoogle"/g) || []).length, 8);
   assert.equal([...education.matchAll(/class=["']([^"']+)["']/g)]
-    .filter(m => m[1].split(/\s+/).includes('service-item')).length, 29);
+    .filter(m => m[1].split(/\s+/).includes('service-item')).length, 32);
 });
