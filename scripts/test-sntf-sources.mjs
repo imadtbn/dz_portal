@@ -40,7 +40,7 @@ assert.throws(()=>mergeApprovedStations(stations,[{...approved,approved:false,ac
 assert.throws(()=>mergeApprovedStations(stations,[{...approved,action:"link_alias",station_id:"thenia",input_name:"OUED AISSI"}]),/alias another station/);
 assert.deepEqual(stations.map(s=>JSON.stringify(lockGeo(s))),stations.map(s=>oldGeo.get(s.id)),"Merge may not mutate input");
 const html=readFileSync("sectors/sntf.html","utf8");
-assert.equal(gallery.images.length,29);
+assert.equal(gallery.images.length,32);
 assert.equal(new Set(gallery.images.map(i=>i.id)).size,gallery.images.length);
 assert(gallery.images.every(i=>html.includes(i.path)&&existsSync(i.path)&&i.status==="official_document_validity_unconfirmed"&&i.issuing_authority==="SNTF"&&i.source_page==="sectors/sntf.html"),"Every indexed gallery image must exist in repository, be referenced on SNTF page and distinguish official origin from schedule validity");
 assert(gallery.images.some(i=>i.route_ids.includes("alger-thenia")),"Gallery must index Alger-Thenia timetable");
