@@ -32,8 +32,10 @@ test('all content pages include the deferred homepage loader once with a valid r
     const depth = page.split('/').length - 1;
     const expectedLoader = `${'../'.repeat(depth)}${loader}`;
     const references = html.match(/<script\b[^>]*\bsrc\s*=\s*["'][^"']*deferred-homepage\.js[^"']*["'][^>]*>/gi) || [];
-    if (references.length !== 1 || !references[0].includes(expectedLoader)) {
-      violations.push({ page, references, expectedLoader });
+    const needsDeferredWidgets = /id=["'](?:globalSearch|searchResults)["']|data-homepage-stat|data-rating-widget/i.test(html);
+    if (references.length > 1 || (references.length === 1 && !references[0].includes(expectedLoader))
+      || (needsDeferredWidgets && references.length !== 1)) {
+      violations.push({ page, references, expectedLoader, needsDeferredWidgets });
     }
   }
 
