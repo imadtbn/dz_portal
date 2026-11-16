@@ -61,7 +61,7 @@ for(const category of network.railwayCategories){
  assert(html.includes('<option value="'+category.id+'">'+category.label+'</option>'),"Category selector label must match official timetable sections: "+category.id);
  assert(category.anchor,"Every category links to an SNTF gallery section");
 }
-const categoryCounts={suburban:22,eastern:16,western:10,sahara:10,international:2};
+const categoryCounts={suburban:22,eastern:16,western:15,sahara:10,international:2};
 for(const [category,count] of Object.entries(categoryCounts)){
  assert.equal(network.categoryRoutes(category,routes).length,count,"Only actual directions of the chosen category are available: "+category);
  assert(network.categoryRoutes(category,routes).every(r=>r.category===category&&!r.alias_of));
