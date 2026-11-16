@@ -50,7 +50,7 @@ function splitReference(reference) {
 function resolveLocalReference(reference, sourceFile) {
     const { target, fragment } = splitReference(reference);
     if (!target) return { file: sourceFile, fragment };
-    let relativeTarget = target;
+    // Query parameters identify dynamic content, not part of the local file path.\n    let relativeTarget = target.split('?', 1)[0];
     if (relativeTarget.startsWith('/')) {
         relativeTarget = relativeTarget.replace(/^\/(?:dz_portal\/)?/, '');
     }
