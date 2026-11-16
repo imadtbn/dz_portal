@@ -21,7 +21,7 @@ assert(routes.some(r=>r.id==="alger-thenia"&&r.stops.includes("rouiba")),"Rouiba
 assert(routes.some(r=>r.id==="thenia-alger"&&r.stops.includes("rouiba")),"Rouiba should be visible in westbound route");
 assert.equal(stations.length,280,"Expanded official station register should include 280 distinct station records");
 assert.equal(stations.filter(s=>s.geo_verified===true).length,263,"All verified station coordinates in the expanded register are preserved");
-assert.equal(routes.length,38,"38 direction-aware route and legacy link records including short turns and legacy aliases");
+assert.equal(routes.length,73,"73 direction-aware route and legacy link records including short turns and legacy aliases");
 for(const [routeId,n] of [["alger-airport",14],["airport-agha",14],["alger-zeralda",14],["alger-affroun",18],["alger-oued-aissi",3],["thenia-oued-aissi",8],["oued-aissi-alger",3],["oued-aissi-thenia",8],["zeralda-thenia",2],["thenia-zeralda",2],["zeralda-reghaia",1],["reghaia-zeralda",1],["alger-thenia",14],["thenia-alger",13],["alger-reghaia",1],["reghaia-alger",1],["affroun-alger",19]]){
  assert.equal(verifiedByUser.filter(t=>t.route_id===routeId).length,n,routeId+" official image-transcribed trains");
 }
@@ -112,4 +112,4 @@ const dawn=new Date("2026-09-24T04:00:00Z"); // 05:00 in Algeria.
 const arrivals=engine.recordsAtStation([night],"bechar","arrival","2026-09-24",config,dawn);
 assert(arrivals.some(e=>e.serviceDate==="2026-09-23"&&e.remaining===2400),"Yesterday's overnight service arrives this morning");
 assert.equal(engine.countdown(3661),"01:01:01");
-console.log("DZ Rail board tests PASS: 211 transcribed services, 280 stations, 38 routes, both-direction airport and eastern commuter timetables, Friday-only schedules, distinct arrival/departure, source isolation, overnight rollover and countdown.");
+console.log("DZ Rail board tests PASS: 211 transcribed services, 280 stations, 73 routes, both-direction airport and eastern commuter timetables, Friday-only schedules, distinct arrival/departure, source isolation, overnight rollover and countdown.");
