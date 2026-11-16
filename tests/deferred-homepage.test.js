@@ -51,9 +51,9 @@ test('deferred homepage loader resolves assets from nested pages', () => {
 test('deferred homepage loader handles optional widgets without duplicating page-scoped analytics', () => {
   const source = readFileSync(join(root, loader), 'utf8');
   const tags = readFileSync(join(root, 'assets/js/site-tags.js'), 'utf8');
-  assert.match(source, /loadLocalScript\('js\\/searchData\\.js'/);
+  assert.match(source, /loadLocalScript\('js\/searchData\.js'/);
   assert.doesNotMatch(source, /trackEvent|contact_click|file_download|outbound_click|scroll_milestone/);
-  assert.match(tags, /window\\.dzTrackEvent = trackEvent/);
-  assert.match(tags, /window\\.gtag\\('event', eventName, payload\\)/);
+  assert.match(tags, /window\.dzTrackEvent = trackEvent/);
+  assert.match(tags, /window\.gtag\('event', eventName, payload\)/);
 });
 
