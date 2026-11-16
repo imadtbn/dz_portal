@@ -48,14 +48,12 @@ test('deferred homepage loader resolves assets from nested pages', () => {
   assert.match(source, /loadLocalScript\('js\/siteRating\.js'/);
 });
 
-test('deferred homepage loader includes automated click, search, and conversion tracking', () => {
+test('deferred homepage loader handles optional widgets without duplicating page-scoped analytics', () => {
   const source = readFileSync(join(root, loader), 'utf8');
-  assert.match(source, /trackEvent/);
-  assert.match(source, /conversion/);
-  assert.match(source, /contact_click/);
-  assert.match(source, /file_download/);
-  assert.match(source, /outbound_click/);
-  assert.match(source, /search/);
-  assert.match(source, /scroll_milestone/);
+  const tags = readFileSync(join(root, 'assets/js/site-tags.js'), 'utf8');
+  assert.match(source, /loadLocalScript\('js\\/searchData\\.js'/);
+  assert.doesNotMatch(source, /trackEvent|contact_click|file_download|outbound_click|scroll_milestone/);
+  assert.match(tags, /window\\.dzTrackEvent = trackEvent/);
+  assert.match(tags, /window\\.gtag\\('event', eventName, payload\\)/);
 });
 
