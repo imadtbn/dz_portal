@@ -329,7 +329,7 @@ function tripTimeline(trip){
 function routeCard(route){
  const summary=routeStopSummary(route,state.trips),ts=routeTrips(route,state.trips),src=state.sources.find(s=>s.id===route.source);
  const schedulePage=schedulePageForImage(route.schedule_image);
- const link=schedulePage?'<a class="photo-source" href="'+esc(schedulePage)+'">الجدول المصور ↗</a>':route.schedule_image?'<a class="photo-source" href="'+esc(route.schedule_image)+'" target="_blank" rel="noopener noreferrer">'+(route.schedule_image.endsWith(".svg")?"نسخة معاد تنسيقها من الجدول ↗":"الجدول المصور ↗")+'</a>':"";
+ const link=schedulePage?'<a class="photo-source" href="'+esc(schedulePage)+'">الجدول المصور ↗</a>':route.schedule_image?'<span class="photo-source" title="مصدر الجدول محفوظ ضمن بيانات الخط">الجدول المصور ضمن بيانات الخط</span>':"";
  const stops=summary.known_stops.map((item,i)=>'<li><span>'+ (i+1)+'. '+esc(name(item.station_id))+'</span><small>'+item.train_count+' قطار يتوقف هنا</small></li>').join("");
  const corridor=summary.corridor_only.length?'<details class="corridor-note"><summary>محطات مذكورة بالممر دون توقف منشور ('+summary.corridor_only.length+')</summary><p class="minor">هذه أسماء ظاهرة في جدول الممر، لكنها غير مدرجة كتوقف مؤقت في أي قطار أدخلناه لهذا المسار.</p><p>'+summary.corridor_only.map(name).map(esc).join(" · ")+'</p></details>':"";
  const routesStatus=ts.length?'<span class="tag">'+ts.length+' رحلة منقولة</span>':'<span class="tag warn">المواقيت والتوقفات قيد الإدخال</span>';
