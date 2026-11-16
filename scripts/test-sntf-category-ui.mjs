@@ -147,7 +147,7 @@ assert.equal(page.state.boardStations.length,2,"Both international termini remai
 assert(page.get("route-catalog").innerHTML.includes("الأحد، الثلاثاء، الخميس"),"International outbound days visible in its route heading");
 page.selectCategory("western");
 assert.equal(page.state.route,"");
-assert.equal(page.optionCount(),10);
+assert.equal(page.optionCount(),15);
 page.selectCategory("suburban");
 page.selectRoute("affroun-alger");
 assert.equal(page.state.route,"affroun-alger");
