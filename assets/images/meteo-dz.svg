@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="الطقس الجزائري">
+  <defs>
+    <linearGradient id="sky" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#dceff2"/>
+      <stop offset="1" stop-color="#0c5b8c"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="32" fill="url(#sky)"/>
+  <circle cx="25" cy="24" r="11" fill="#f2b84b"/>
+  <path d="M18 43c2-7 7-10 14-10 8 0 12 4 14 10H18Z" fill="#fffdf8" opacity=".95"/>
+</svg>
