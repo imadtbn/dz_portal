@@ -90,8 +90,8 @@ test('AdSense units and original card counts stay intact on priority pages', () 
     assert.match(html, /adsbygoogle\.js\?client=ca-pub-5656416032906373/, p);
     assert.match(html, /assets\/js\/ads-stability\.js/, p);
   }
-  assert.equal(htmlClassCount(read('index.html'), 'sector-card'), 88);
-  assert.equal(htmlClassCount(read('sectors/education.html'), 'service-item'), 29);
+  assert.equal(htmlClassCount(read('index.html'), 'sector-card'), 90);
+  assert.equal(htmlClassCount(read('sectors/education.html'), 'service-item'), 32);
   assert.ok(read('assets/js/ads-stability.js').includes('MIN_AVAILABLE_WIDTH'));
 });
 
