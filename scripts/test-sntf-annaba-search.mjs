@@ -22,7 +22,7 @@ for(const trip of selected){
  assert.equal(trip.service_id,"daily","The official daily timetable must activate the trip on all weekdays");
  assert.equal(trip.source_id,"eastern-gallery-annaba-daily");
  assert.equal(trip.operating_days_status,"daily_confirmed_by_official_image");
- assert(trip.operating_days_note.includes("يسير يوميًا"));
+ assert(trip.operating_days_note.includes("يسير القطار يوميًا"));
  assert(trip.stop_times.length>=17);
 }
 const config={calendars,exceptions,holidays:holidayData.dates||[]};
