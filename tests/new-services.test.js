@@ -60,7 +60,7 @@ test('Ramadan grant is present in the central registry and Interior sector page'
   const grant = registry.services.find(service => service.id === 'ramadan-grant-1448');
   assert.ok(grant, 'registry should include Ramadan grant service');
   assert.equal(grant.sector, 'وزارة الداخلية والجماعات المحلية والنقل');
-  assert.equal(grant.addedAt, '2026-10-21');
+  assert.equal(grant.addedAt, '2026-11-11');
   const interior = readFileSync(new URL('sectors/interieur.html', root), 'utf8');
   assert.match(interior, /ramadan-grant-service/);
   assert.match(interior, /https:\/\/prestations\.interieur\.gov\.dz\/solidariteramdhan\//);
