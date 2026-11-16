@@ -49,15 +49,15 @@ export const schedules = [
     "title": "العفرون ← الجزائر — جدول رسمي اعتبارًا من 19 سبتمبر 2026",
     "category": "ضاحية الجزائر",
     "anchor": "suburban",
-    "image": "../assets/train-schedules/suburban/affroun-alger.jpg",
+    "image": "../assets/train-schedules/suburban/affroun-alger-2026-09-19.svg",
     "hero": "../assets/images/sntf-suburban-hero.webp",
     "from": "العفرون",
     "to": "الجزائر",
     "fromId": "el_affroun",
     "toId": "alger",
     "routeId": "affroun-alger",
-    "width": 1536,
-    "height": 885
+    "width": 3000,
+    "height": 1450
   },
   {
     "id": "alger-zeralda",
