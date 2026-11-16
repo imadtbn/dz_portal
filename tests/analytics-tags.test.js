@@ -34,17 +34,17 @@ test('page-scoped analytics tags do not duplicate GA4 or site loaders', () => {
 
   for (const path of collectHtmlFiles(root)) {
     const html = readFileSync(path, 'utf8');
-    if (!/<head\\b/i.test(html)) continue;
+    if (!/<head\b/i.test(html)) continue;
     const page = relative(root, path);
     if (isVerificationFile(page)) continue;
 
     const depth = page.split('/').length - 1;
     const expectedLoader = `${'../'.repeat(depth)}${centralLoader}`;
-    const loaders = [...html.matchAll(/<script\\b[^>]*\\bsrc\\s*=\\s*["'][^"']*site-tags\\.js[^"']*["'][^>]*>/gi)].map(([tag]) => tag);
-    const ga4Sources = [...html.matchAll(/googletagmanager\\.com\\/gtag\\/js\\?id=(G-[A-Z0-9]+)/gi)].map((match) => match[1]);
-    const ga4Configs = [...html.matchAll(/gtag\\s*\\(\\s*["']config["']\\s*,\\s*["'](G-[A-Z0-9]+)["']/gi)].map((match) => match[1]);
-    const gtmSources = count(/googletagmanager\\.com\\/gtm\\.js/gi, html);
-    const claritySources = count(/clarity\\.ms\\/tag/gi, html);
+    const loaders = [...html.matchAll(/<script\b[^>]*\bsrc\s*=\s*["'][^"']*site-tags\.js[^"']*["'][^>]*>/gi)].map(([tag]) => tag);
+    const ga4Sources = [...html.matchAll(/googletagmanager\.com\/gtag\/js\?id=(G-[A-Z0-9]+)/gi)].map((match) => match[1]);
+    const ga4Configs = [...html.matchAll(/gtag\s*\(\s*["']config["']\s*,\s*["'](G-[A-Z0-9]+)["']/gi)].map((match) => match[1]);
+    const gtmSources = count(/googletagmanager\.com\/gtm\.js/gi, html);
+    const claritySources = count(/clarity\.ms\/tag/gi, html);
 
     if (
       loaders.length > 1
