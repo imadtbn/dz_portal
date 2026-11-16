@@ -5,3 +5,39 @@ body>header:not(.dz-unified-header),body>footer:not(.dz-unified-footer),main>foo
 .dz-unified-tool-page,.dz-unified-tool-page *{box-sizing:border-box}
 .dz-unified-tool-page{min-width:0;max-width:100%;overflow-x:clip}
 .dz-unified-tool-page main,.dz-unified-tool-page main>.container{min-width:0;max-width:100%}
+
+
+/* Reserve a stable responsive slot for imported tools using the unified shell. */
+.dz-unified-tool-page .dz-import-ad:has(> ins.adsbygoogle) {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  min-height: 110px;
+  max-width: 100%;
+  margin: 1rem auto;
+  overflow: visible;
+  text-align: center;
+  contain: layout style;
+}
+.dz-unified-tool-page .dz-import-ad:has(> ins.adsbygoogle[data-ad-format="fluid"]),
+.dz-unified-tool-page .dz-import-ad:has(> ins.adsbygoogle[data-ad-format="autorelaxed"]) {
+  min-height: 190px;
+}
+.dz-unified-tool-page .dz-import-ad > ins.adsbygoogle {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
+  margin-inline: auto;
+  box-sizing: border-box;
+}
+@media (max-width: 600px) {
+  .dz-unified-tool-page .dz-import-ad:has(> ins.adsbygoogle) {
+    min-height: 115px;
+    margin-block: .75rem;
+  }
+  .dz-unified-tool-page .dz-import-ad:has(> ins.adsbygoogle[data-ad-format="fluid"]),
+  .dz-unified-tool-page .dz-import-ad:has(> ins.adsbygoogle[data-ad-format="autorelaxed"]) {
+    min-height: 190px;
+  }
+}
