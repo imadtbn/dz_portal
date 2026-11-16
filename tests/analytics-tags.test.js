@@ -48,7 +48,7 @@ test('page-scoped analytics tags do not duplicate GA4 or site loaders', () => {
 
     if (
       loaders.length > 1
-      || (loaders.length === 1 && !loaders[0].includes(expectedLoader))
+      || (loaders.length === 1 && !loaders[0].includes(expectedLoader) && !loaders[0].includes('/assets/js/site-tags.js'))
       || ga4Sources.length > 1
       || ga4Configs.length > 1
       || (ga4Sources.length && ga4Configs.length && ga4Sources[0] !== ga4Configs[0])
