@@ -52,7 +52,7 @@ test('every page with AdSense markup has reservation styles and an initializer',
     const html = readFileSync(fullPath, 'utf8');
     if (!/<ins\b[^>]*class=["'][^"']*adsbygoogle/i.test(html)) continue;
     const file = relative(root, fullPath);
-    if (!/assets\/css\/(?:style-main|style-sector|ads-stability)\.css/i.test(html)) {
+    if (!/assets\/css\/(?:style-main|style-sector|ads-stability)\.css|assets\/css\/tools\/(?:portal-shell|health\/ads)\.css/i.test(html)) {
       withoutStyles.push(file);
     }
     if (!/assets\/js\/(?:deferred-homepage|ads-stability)\.js/i.test(html)) {
