@@ -4,7 +4,7 @@
   "valid_from": "2026-09-19",
   "original_image": "1000014987.jpg",
   "original_image_sha256": "ae9e2ead756452bf24179406f546318d15aa0374dc72078650f8cf6b739c5a76",
-  "original_image_status": "Owner-supplied JPG attached to project conversation; not yet uploaded as a binary repository asset.",
+  "original_image_status": "Original SNTF timetable JPG is stored at assets/train-schedules/suburban/affroun-alger.jpg; its SHA-256 is recorded above.",
   "derived_svg": "assets/train-schedules/suburban/affroun-alger-2026-09-19.svg",
   "published_time_kind": "published_single_time",
   "station_ids": [
@@ -482,5 +482,6 @@
       ]
     }
   ],
-  "notes": "Manual faithful transcription of 19 full-length columns in the SNTF Affroun–Alger image. [*]=daily, [1]=except Friday, [2]=Friday only. Source is official as confirmed by project owner; independent continued timetable validity not rechecked. Publication time does not establish separate dwell/arrival/departure times at intermediate stations."
+  "notes": "Manual faithful transcription of 19 full-length columns in the SNTF Affroun–Alger image. [*]=daily, [1]=except Friday, [2]=Friday only. Source is official as confirmed by project owner; independent continued timetable validity not rechecked. Publication time does not establish separate dwell/arrival/departure times at intermediate stations.",
+  "derived_svg_status": "Faithful digital redraw generated from the 19-train by 16-station manual transcription; this SVG is derived artwork, not the original photograph."
 }
