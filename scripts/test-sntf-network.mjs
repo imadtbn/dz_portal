@@ -6,10 +6,10 @@ const networkSource=readFileSync("assets/js/sntf-trains/network.js","utf8");
 const network=await import("data:text/javascript;base64,"+Buffer.from(networkSource).toString("base64"));
 const active=network.publishedTrips(trips),routeById=new Map(routes.map(r=>[r.id,r]));
 assert(stations.length>=196,"Preserve the original station inventory while allowing new stations");
-assert.equal(lines.length,23,"Twenty grouped geographical lines");
-assert.equal(routes.length,68,"Preserve all routes, including one legacy alias and three new suburban corridors");
-assert.equal(routes.filter(r=>!r.alias_of).length,66,"One legacy alias must not duplicate the real route");
-assert.equal(active.length,206,"No documented train removed or duplicated");
+assert.equal(lines.length,25,"Twenty-five grouped geographical lines");
+assert.equal(routes.length,73,"Preserve all routes, including legacy aliases and newly transcribed corridors");
+assert.equal(routes.filter(r=>!r.alias_of).length,71,"Legacy aliases must not duplicate real routes");
+assert.equal(active.length,211,"No documented train removed or duplicated");
 const membership=new Set();
 for(const line of lines){
  for(const route of network.lineRoutes(line,routes)){
@@ -18,10 +18,10 @@ for(const line of lines){
   assert.equal(route.line_id,line.id,"Each route belongs to its declared line");
  }
 }
-assert.equal(membership.size,60,"Only documented route directions appear in the catalog");
+assert.equal(membership.size,65,"Only documented route directions appear in the catalog");
 assert([...membership].every(id=>network.routeTrips(routeById.get(id),trips).length>0),"No visible direction falsely claims timetable entry is pending");
 assert.equal(routes.filter(r=>r.catalog_status).length,6,"Five replaced gallery placeholders and one historical international draft remain available for audit");
-assert.equal(lines.reduce((n,line)=>n+network.lineSummary(line,routes,trips).train_count,0),206,"Line catalog must count each published train exactly once");
+assert.equal(lines.reduce((n,line)=>n+network.lineSummary(line,routes,trips).train_count,0),211,"Line catalog must count each published train exactly once");
 assert.equal(network.lineSummary(lines.find(l=>l.id==="alger-tunis"),routes,trips).train_count,2,"Only the two official Annaba/Tunis departures count as published, not the legacy draft or alias");
 const intlStops=network.eligibleStationIdsByCategory("international","annaba-tunis",lines,routes,trips);
 assert(intlStops.has("annaba")&&intlStops.has("tunis"),"Both international termini selectable with partial departure-only times");
@@ -66,7 +66,7 @@ for(const [category,count] of Object.entries(categoryCounts)){
  assert.equal(network.categoryRoutes(category,routes).length,count,"Only actual directions of the chosen category are available: "+category);
  assert(network.categoryRoutes(category,routes).every(r=>r.category===category&&!r.alias_of));
 }
-assert.equal(network.categoryRoutes("",routes).length,60,"Only image-transcribed route directions are offered");
+assert.equal(network.categoryRoutes("",routes).length,65,"Only image-transcribed route directions are offered");
 assert.equal(network.eligibleStationIdsByCategory("","",lines,routes,trips),null,"All registered stations remain selectable without a category");
 const easternStops=network.eligibleStationIdsByCategory("eastern","",lines,routes,trips);
 assert(easternStops.has("agha")&&easternStops.has("bejaia")&&!easternStops.has("zeralda"),"Eastern type follows actual image departures from Agha");
@@ -76,4 +76,4 @@ assert.equal(network.eligibleStationIdsByCategory("suburban","affroun-alger",lin
 assert.equal(network.eligibleStationIdsByCategory("western","affroun-alger",lines,routes,trips).size,0,"Mismatched type and route never leak stops");
 assert(app.includes('get("lines","lines")')&&app.includes("eligibleStationIdsByCategory")&&app.includes('$("category-filter")'),"Live frontend must use category-aware route and station selectors");
 assert(app.includes("routeStopSummary")&&app.includes("stationLineServices"),"The catalog and station board continue to use canonical published stop data");
-console.log("SNTF network tests PASS: 23 lines, 60 published catalog directions, 6 archived placeholders, 206 documented trips and no duplicate services.");
+console.log("SNTF network tests PASS: 25 lines, 65 published catalog directions, 6 archived placeholders, 211 documented trips and no duplicate services.");
