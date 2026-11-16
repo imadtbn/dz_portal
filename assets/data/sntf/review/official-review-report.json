@@ -289,8 +289,10 @@
         "name": "AGHA",
         "station_id": "agha"
       },
-      "candidate_route_ids": [],
-      "route_action": "propose_new_route",
+      "candidate_route_ids": [
+        "oran-agha"
+      ],
+      "route_action": "review_existing",
       "intermediate_stops_known": false,
       "trips": [
         {
@@ -319,6 +321,6 @@
     "ambiguous_station_names": 0,
     "source_queries": 6,
     "archived_trip_candidates": 12,
-    "existing_verified_coordinates_preserved": 140
+    "existing_verified_coordinates_preserved": 263
   }
 }
