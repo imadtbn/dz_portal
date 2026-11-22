@@ -61,7 +61,12 @@
     icon.setAttribute("aria-hidden", "true");
     iconWrap.append(icon);
     titleWrap.append(iconWrap, make("strong", "", section));
-    summary.append(titleWrap, make("span", "summary-count", String(items.length)));
+    const meta = make("span", "summary-meta");
+    meta.append(make("span", "summary-count", String(items.length)));
+    const chevron = make("i", "summary-chevron fa-solid fa-chevron-down");
+    chevron.setAttribute("aria-hidden", "true");
+    meta.append(chevron);
+    summary.append(titleWrap, meta);
     details.append(summary);
     const body = make("div", "section-body");
     if (section === "القطاعات والخدمات") {
@@ -80,7 +85,12 @@
         building.className = "fa-solid fa-building";
         building.setAttribute("aria-hidden", "true");
         label.append(building, make("span", "", parent.sector_name || parent.title));
-        head.append(label, make("span", "summary-count", String(related.length + 1)));
+        const meta = make("span", "summary-meta");
+        meta.append(make("span", "summary-count", String(related.length + 1)));
+        const chevron = make("i", "summary-chevron fa-solid fa-chevron-down");
+        chevron.setAttribute("aria-hidden", "true");
+        meta.append(chevron);
+        head.append(label, meta);
         group.append(head);
         const links = make("div", "sector-links");
         links.append(createLink(parent));
