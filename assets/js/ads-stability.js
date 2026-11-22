@@ -38,6 +38,7 @@
   }
 
   function ensureAdsenseLibrary() {
+    window.adsbygoogle = window.adsbygoogle || [];
     if (Array.from(document.scripts).some((script) => script.src.includes('adsbygoogle.js'))) return;
     const script = document.createElement('script');
     script.async = true;
