@@ -403,7 +403,7 @@
     },
     {
       "section_name": "الأدوات الرقمية",
-      "sector_name": "calculators",
+      "sector_name": "الحاسبات",
       "title": "حاسبة العمر بدقة",
       "path": "pages/tools/calculators/age-calculator.html",
       "content_type": "tool",
@@ -416,7 +416,7 @@
     },
     {
       "section_name": "الأدوات الرقمية",
-      "sector_name": "calculators",
+      "sector_name": "الحاسبات",
       "title": "حساب معدل السداسي الجامعي",
       "path": "pages/tools/calculators/average-calculator.html",
       "content_type": "tool",
@@ -429,7 +429,7 @@
     },
     {
       "section_name": "الأدوات الرقمية",
-      "sector_name": "calculators",
+      "sector_name": "الحاسبات",
       "title": "الآلة الحاسبة الذكية",
       "path": "pages/tools/calculators/calculator.html",
       "content_type": "tool",
@@ -442,7 +442,7 @@
     },
     {
       "section_name": "الأدوات الرقمية",
-      "sector_name": "calculators",
+      "sector_name": "الحاسبات",
       "title": "حاسبة مصاريف السيارة الشهرية والسنوية",
       "path": "pages/tools/calculators/car-cost-calculator.html",
       "content_type": "tool",
@@ -455,7 +455,7 @@
     },
     {
       "section_name": "الأدوات الرقمية",
-      "sector_name": "calculators",
+      "sector_name": "الحاسبات",
       "title": "تحويل العملات",
       "path": "pages/tools/calculators/currency-converter.html",
       "content_type": "tool",
@@ -468,7 +468,7 @@
     },
     {
       "section_name": "الأدوات الرقمية",
-      "sector_name": "calculators",
+      "sector_name": "الحاسبات",
       "title": "حاسبة الفرق بين تاريخين",
       "path": "pages/tools/calculators/date-difference.html",
       "content_type": "tool",
@@ -481,7 +481,7 @@
     },
     {
       "section_name": "الأدوات الرقمية",
-      "sector_name": "calculators",
+      "sector_name": "الحاسبات",
       "title": "حاسبة استهلاك الكهرباء وفاتورة سونلغاز",
       "path": "pages/tools/calculators/electricity-calculator.html",
       "content_type": "tool",
@@ -494,7 +494,7 @@
     },
     {
       "section_name": "الأدوات الرقمية",
-      "sector_name": "calculators",
+      "sector_name": "الحاسبات",
       "title": "حاسبة البنزين والوقود وتكلفة الرحلة",
       "path": "pages/tools/calculators/fuel-calculator.html",
       "content_type": "tool",
@@ -506,7 +506,7 @@
     },
     {
       "section_name": "الأدوات الرقمية",
-      "sector_name": "calculators",
+      "sector_name": "الحاسبات",
       "title": "حاسبة القروض والأقساط",
       "path": "pages/tools/calculators/loan-calculator.html",
       "content_type": "tool",
@@ -519,7 +519,7 @@
     },
     {
       "section_name": "الأدوات الرقمية",
-      "sector_name": "calculators",
+      "sector_name": "الحاسبات",
       "title": "محول الأرقام إلى الحروف بالدينار الجزائري",
       "path": "pages/tools/calculators/number-to-words.html",
       "content_type": "tool",
@@ -532,7 +532,7 @@
     },
     {
       "section_name": "الأدوات الرقمية",
-      "sector_name": "calculators",
+      "sector_name": "الحاسبات",
       "title": "حاسبة النسبة المئوية",
       "path": "pages/tools/calculators/percentage-calculator.html",
       "content_type": "tool",
@@ -545,7 +545,7 @@
     },
     {
       "section_name": "الأدوات الرقمية",
-      "sector_name": "calculators",
+      "sector_name": "الحاسبات",
       "title": "حاسبة الراتب الصافي في الجزائر",
       "path": "pages/tools/calculators/salary-calculator.html",
       "content_type": "tool",
@@ -558,7 +558,7 @@
     },
     {
       "section_name": "الأدوات الرقمية",
-      "sector_name": "calculators",
+      "sector_name": "الحاسبات",
       "title": "محول وحدات القياس",
       "path": "pages/tools/calculators/unit-converter.html",
       "content_type": "tool",
@@ -570,7 +570,7 @@
     },
     {
       "section_name": "الأدوات الرقمية",
-      "sector_name": "daily-life",
+      "sector_name": "الحياة اليومية",
       "title": "حاسبة ميزانية الطالب",
       "path": "pages/tools/daily-life/budget-calculator.html",
       "content_type": "tool",
@@ -583,7 +583,7 @@
     },
     {
       "section_name": "الأدوات الرقمية",
-      "sector_name": "daily-life",
+      "sector_name": "الحياة اليومية",
       "title": "ميزانيتي الذكية: تسيير الميزانية الشهرية",
       "path": "pages/tools/daily-life/budget-manager.html",
       "content_type": "tool",
@@ -597,7 +597,7 @@
     },
     {
       "section_name": "الأدوات الرقمية",
-      "sector_name": "daily-life",
+      "sector_name": "الحياة اليومية",
       "title": "المساعد الفلاحي: مخطط غرس الأشجار",
       "path": "pages/tools/daily-life/farm-planner.html",
       "content_type": "tool",
@@ -610,7 +610,7 @@
     },
     {
       "section_name": "الأدوات الرقمية",
-      "sector_name": "daily-life",
+      "sector_name": "الحياة اليومية",
       "title": "خريطة الطالب",
       "path": "pages/tools/daily-life/maps.html",
       "content_type": "tool",
@@ -623,7 +623,7 @@
     },
     {
       "section_name": "الأدوات الرقمية",
-      "sector_name": "daily-life",
+      "sector_name": "الحياة اليومية",
       "title": "مخطط الوجبات وقائمة المشتريات",
       "path": "pages/tools/daily-life/meal-planner.html",
       "content_type": "tool",
@@ -637,7 +637,7 @@
     },
     {
       "section_name": "الأدوات الرقمية",
-      "sector_name": "health",
+      "sector_name": "الصحة",
       "title": "استبيان القلق التوعوي",
       "path": "pages/tools/health/anxiety-screening.html",
       "content_type": "tool",
@@ -650,7 +650,7 @@
     },
     {
       "section_name": "الأدوات الرقمية",
-      "sector_name": "health",
+      "sector_name": "الصحة",
       "title": "اختبار التحكم بالربو",
       "path": "pages/tools/health/asthma-control.html",
       "content_type": "tool",
@@ -663,7 +663,7 @@
     },
     {
       "section_name": "الأدوات الرقمية",
-      "sector_name": "health",
+      "sector_name": "الصحة",
       "title": "حاسبة التغذية والوجبات الذكية",
       "path": "pages/tools/health/calorie-calculator.html",
       "content_type": "tool",
@@ -675,7 +675,7 @@
     },
     {
       "section_name": "الأدوات الرقمية",
-      "sector_name": "health",
+      "sector_name": "الصحة",
       "title": "حاسبة مؤشر كتلة الجسم للأطفال والمراهقين",
       "path": "pages/tools/health/child-bmi-calculator.html",
       "content_type": "tool",
@@ -688,7 +688,7 @@
     },
     {
       "section_name": "الأدوات الرقمية",
-      "sector_name": "health",
+      "sector_name": "الصحة",
       "title": "استبيان المزاج والاكتئاب",
       "path": "pages/tools/health/depression-screening.html",
       "content_type": "tool",
@@ -701,7 +701,7 @@
     },
     {
       "section_name": "الأدوات الرقمية",
-      "sector_name": "health",
+      "sector_name": "الصحة",
       "title": "قائمة التوعية اليومية بالسكري",
       "path": "pages/tools/health/diabetes-awareness.html",
       "content_type": "tool",
@@ -714,7 +714,7 @@
     },
     {
       "section_name": "الأدوات الرقمية",
-      "sector_name": "health",
+      "sector_name": "الصحة",
       "title": "استبيان الوعي بأنماط الأكل",
       "path": "pages/tools/health/eating-awareness.html",
       "content_type": "tool",
@@ -727,7 +727,7 @@
     },
     {
       "section_name": "الأدوات الرقمية",
-      "sector_name": "health",
+      "sector_name": "الصحة",
       "title": "حاسبة نافذة الخصوبة والإباضة",
       "path": "pages/tools/health/fertile-window.html",
       "content_type": "tool",
@@ -740,7 +740,7 @@
     },
     {
       "section_name": "الأدوات الرقمية",
-      "sector_name": "health",
+      "sector_name": "الصحة",
       "title": "الأدوات الصحية والحاسبات التوعوية",
       "path": "pages/tools/health/health-tools.html",
       "content_type": "tool",
@@ -753,7 +753,7 @@
     },
     {
       "section_name": "الأدوات الرقمية",
-      "sector_name": "health",
+      "sector_name": "الصحة",
       "title": "حاسبة الوزن المثالي",
       "path": "pages/tools/health/ideal-weight-calculator.html",
       "content_type": "tool",
@@ -766,7 +766,7 @@
     },
     {
       "section_name": "الأدوات الرقمية",
-      "sector_name": "health",
+      "sector_name": "الصحة",
       "title": "حاسبة نمو الرضع والطول حسب العمر",
       "path": "pages/tools/health/infant-growth-calculator.html",
       "content_type": "tool",
@@ -778,7 +778,7 @@
     },
     {
       "section_name": "الأدوات الرقمية",
-      "sector_name": "health",
+      "sector_name": "الصحة",
       "title": "متابعتي للأدوية",
       "path": "pages/tools/health/medication-tracker.html",
       "content_type": "tool",
@@ -793,7 +793,7 @@
     },
     {
       "section_name": "الأدوات الرقمية",
-      "sector_name": "health",
+      "sector_name": "الصحة",
       "title": "حاسبة التغذية والوجبات الذكية",
       "path": "pages/tools/health/nutrition-calculator.html",
       "content_type": "tool",
@@ -806,7 +806,7 @@
     },
     {
       "section_name": "الأدوات الرقمية",
-      "sector_name": "health",
+      "sector_name": "الصحة",
       "title": "قائمة الاستعداد الصحي للحج",
       "path": "pages/tools/health/pilgrim-health-checklist.html",
       "content_type": "tool",
@@ -819,7 +819,7 @@
     },
     {
       "section_name": "الأدوات الرقمية",
-      "sector_name": "health",
+      "sector_name": "الصحة",
       "title": "اختبار خطر ما قبل السكري",
       "path": "pages/tools/health/prediabetes-risk.html",
       "content_type": "tool",
@@ -832,7 +832,7 @@
     },
     {
       "section_name": "الأدوات الرقمية",
-      "sector_name": "health",
+      "sector_name": "الصحة",
       "title": "حاسبة السعرات الحرارية أثناء الحمل | البوابة الجزائرية",
       "path": "pages/tools/health/pregnancy-calorie-calculator.html",
       "content_type": "tool",
@@ -846,7 +846,7 @@
     },
     {
       "section_name": "الأدوات الرقمية",
-      "sector_name": "health",
+      "sector_name": "الصحة",
       "title": "حاسبة موعد الولادة",
       "path": "pages/tools/health/pregnancy-due-date.html",
       "content_type": "tool",
@@ -859,7 +859,7 @@
     },
     {
       "section_name": "الأدوات الرقمية",
-      "sector_name": "health",
+      "sector_name": "الصحة",
       "title": "تقييم النوم التوعوي",
       "path": "pages/tools/health/sleep-assessment.html",
       "content_type": "tool",
@@ -872,7 +872,7 @@
     },
     {
       "section_name": "الأدوات الرقمية",
-      "sector_name": "health",
+      "sector_name": "الصحة",
       "title": "متابعة تلقيح الأطفال",
       "path": "pages/tools/health/vaccine-tracker.html",
       "content_type": "tool",
@@ -885,7 +885,7 @@
     },
     {
       "section_name": "الأدوات الرقمية",
-      "sector_name": "health",
+      "sector_name": "الصحة",
       "title": "اختبار حدة البصر التقريبي",
       "path": "pages/tools/health/visual-acuity-screening.html",
       "content_type": "tool",
@@ -898,7 +898,7 @@
     },
     {
       "section_name": "الأدوات الرقمية",
-      "sector_name": "health",
+      "sector_name": "الصحة",
       "title": "حاسبة الماء اليومية",
       "path": "pages/tools/health/water-calculator.html",
       "content_type": "tool",
@@ -924,7 +924,7 @@
     },
     {
       "section_name": "الأدوات الرقمية",
-      "sector_name": "islamic",
+      "sector_name": "الأدوات الإسلامية",
       "title": "الرزنامة الهجرية والميلادية",
       "path": "pages/tools/islamic/hijri-calendar.html",
       "content_type": "tool",
@@ -937,7 +937,7 @@
     },
     {
       "section_name": "الأدوات الرقمية",
-      "sector_name": "islamic",
+      "sector_name": "الأدوات الإسلامية",
       "title": "بوصلة القبلة وتحديد الشمال",
       "path": "pages/tools/islamic/qibla-compass.html",
       "content_type": "tool",
@@ -950,7 +950,7 @@
     },
     {
       "section_name": "الأدوات الرقمية",
-      "sector_name": "productivity",
+      "sector_name": "الإنتاجية",
       "title": "مساعد الوثائق والإجراءات الإدارية",
       "path": "pages/tools/productivity/admin-procedures-assistant.html",
       "content_type": "tool",
@@ -963,7 +963,7 @@
     },
     {
       "section_name": "الأدوات الرقمية",
-      "sector_name": "productivity",
+      "sector_name": "الإنتاجية",
       "title": "القاموس العربي — العربي",
       "path": "pages/tools/productivity/arabic-dictionary.html",
       "content_type": "tool",
@@ -976,7 +976,7 @@
     },
     {
       "section_name": "الأدوات الرقمية",
-      "sector_name": "productivity",
+      "sector_name": "الإنتاجية",
       "title": "مولد السيرة الذاتية (CV)",
       "path": "pages/tools/productivity/cv-builder.html",
       "content_type": "tool",
@@ -989,7 +989,7 @@
     },
     {
       "section_name": "الأدوات الرقمية",
-      "sector_name": "productivity",
+      "sector_name": "الإنتاجية",
       "title": "ضغط الصور",
       "path": "pages/tools/productivity/image-compressor.html",
       "content_type": "tool",
@@ -1002,7 +1002,7 @@
     },
     {
       "section_name": "الأدوات الرقمية",
-      "sector_name": "productivity",
+      "sector_name": "الإنتاجية",
       "title": "مسير المخزون والأرباح",
       "path": "pages/tools/productivity/inventory-manager.html",
       "content_type": "tool",
@@ -1015,7 +1015,7 @@
     },
     {
       "section_name": "الأدوات الرقمية",
-      "sector_name": "productivity",
+      "sector_name": "الإنتاجية",
       "title": "مولد الفواتير",
       "path": "pages/tools/productivity/invoice-generator.html",
       "content_type": "tool",
@@ -1028,7 +1028,7 @@
     },
     {
       "section_name": "الأدوات الرقمية",
-      "sector_name": "productivity",
+      "sector_name": "الإنتاجية",
       "title": "أدوات PDF",
       "path": "pages/tools/productivity/pdf-tools.html",
       "content_type": "tool",
@@ -1041,7 +1041,7 @@
     },
     {
       "section_name": "الأدوات الرقمية",
-      "sector_name": "productivity",
+      "sector_name": "الإنتاجية",
       "title": "مولد رموز QR",
       "path": "pages/tools/productivity/qr-generator.html",
       "content_type": "tool",
@@ -1054,7 +1054,7 @@
     },
     {
       "section_name": "الأدوات الرقمية",
-      "sector_name": "productivity",
+      "sector_name": "الإنتاجية",
       "title": "أدوات النصوص والبحوث",
       "path": "pages/tools/productivity/text-tools.html",
       "content_type": "tool",
@@ -1067,7 +1067,7 @@
     },
     {
       "section_name": "الأدوات الرقمية",
-      "sector_name": "study",
+      "sector_name": "الدراسة",
       "title": "مولّد المراجع APA 7",
       "path": "pages/tools/study/apa-generator.html",
       "content_type": "tool",
@@ -1080,7 +1080,7 @@
     },
     {
       "section_name": "الأدوات الرقمية",
-      "sector_name": "study",
+      "sector_name": "الدراسة",
       "title": "عدّاد المواعيد الدراسية",
       "path": "pages/tools/study/countdown.html",
       "content_type": "tool",
@@ -1093,7 +1093,7 @@
     },
     {
       "section_name": "الأدوات الرقمية",
-      "sector_name": "study",
+      "sector_name": "الدراسة",
       "title": "مخطط الامتحانات والمهام الجامعية",
       "path": "pages/tools/study/exam-planner.html",
       "content_type": "tool",
@@ -1106,7 +1106,7 @@
     },
     {
       "section_name": "الأدوات الرقمية",
-      "sector_name": "study",
+      "sector_name": "الدراسة",
       "title": "مخطط المراجعة الذكي للبكالوريا والبيام",
       "path": "pages/tools/study/exam-study-planner.html",
       "content_type": "tool",
@@ -1120,7 +1120,7 @@
     },
     {
       "section_name": "الأدوات الرقمية",
-      "sector_name": "study",
+      "sector_name": "الدراسة",
       "title": "البطاقات التعليمية والاختبارات",
       "path": "pages/tools/study/flashcards.html",
       "content_type": "tool",
@@ -1134,7 +1134,7 @@
     },
     {
       "section_name": "الأدوات الرقمية",
-      "sector_name": "study",
+      "sector_name": "الدراسة",
       "title": "سجل الملاحظات والمواعيد والمهام",
       "path": "pages/tools/study/notes-calendar.html",
       "content_type": "tool",
@@ -1147,7 +1147,7 @@
     },
     {
       "section_name": "الأدوات الرقمية",
-      "sector_name": "study",
+      "sector_name": "الدراسة",
       "title": "حاسبة الترتيب / النقاط",
       "path": "pages/tools/study/points-ranking.html",
       "content_type": "tool",
@@ -1161,7 +1161,7 @@
     },
     {
       "section_name": "الأدوات الرقمية",
-      "sector_name": "study",
+      "sector_name": "الدراسة",
       "title": "مؤقت بومودورو للدراسة",
       "path": "pages/tools/study/pomodoro.html",
       "content_type": "tool",
@@ -1174,7 +1174,7 @@
     },
     {
       "section_name": "الأدوات الرقمية",
-      "sector_name": "study",
+      "sector_name": "الدراسة",
       "title": "مولّد خطة البحث",
       "path": "pages/tools/study/research-plan.html",
       "content_type": "tool",
@@ -1187,7 +1187,7 @@
     },
     {
       "section_name": "الأدوات الرقمية",
-      "sector_name": "study",
+      "sector_name": "الدراسة",
       "title": "حاسبة المعدل السنوي",
       "path": "pages/tools/study/semester-calculator.html",
       "content_type": "tool",
@@ -1200,7 +1200,7 @@
     },
     {
       "section_name": "الأدوات الرقمية",
-      "sector_name": "study",
+      "sector_name": "الدراسة",
       "title": "مولد جدول الدراسة",
       "path": "pages/tools/study/study-schedule.html",
       "content_type": "tool",
@@ -1335,7 +1335,7 @@
     },
     {
       "section_name": "صفحات البوابة",
-      "sector_name": null,
+      "sector_name": "وكالة عدل AADL: منصة عدل 3 ودفع الإيجار والخدمات الرقمية",
       "title": "وكالة عدل AADL: منصة عدل 3 ودفع الإيجار والخدمات الرقمية",
       "path": "sectors/aadl.html",
       "content_type": "page",
@@ -1351,7 +1351,7 @@
     },
     {
       "section_name": "صفحات البوابة",
-      "sector_name": null,
+      "sector_name": "الوكالة الوطنية للإستثمار",
       "title": "الوكالة الوطنية للإستثمار",
       "path": "sectors/aapi.html",
       "content_type": "page",
@@ -1365,7 +1365,7 @@
     },
     {
       "section_name": "القطاعات والخدمات",
-      "sector_name": "ade",
+      "sector_name": "الجزائرية للمياه ADE",
       "title": "الجزائرية للمياه ADE",
       "path": "sectors/ade.html",
       "content_type": "sector",
@@ -1378,7 +1378,7 @@
     },
     {
       "section_name": "القطاعات والخدمات",
-      "sector_name": "algerietelecom",
+      "sector_name": "إتصالات الجزائر",
       "title": "إتصالات الجزائر",
       "path": "sectors/algerietelecom.html",
       "content_type": "sector",
@@ -1395,7 +1395,7 @@
     },
     {
       "section_name": "القطاعات والخدمات",
-      "sector_name": "anae",
+      "sector_name": "الوكالة الوطنية للمقاول الذاتي",
       "title": "الوكالة الوطنية للمقاول الذاتي",
       "path": "sectors/anae.html",
       "content_type": "sector",
@@ -1408,7 +1408,7 @@
     },
     {
       "section_name": "القطاعات والخدمات",
-      "sector_name": "anem",
+      "sector_name": "ANEM DZ 2026: منحة البطالة والتسجيل وعروض العمل",
       "title": "ANEM DZ 2026: منحة البطالة والتسجيل وعروض العمل",
       "path": "sectors/anem.html",
       "content_type": "sector",
@@ -1422,7 +1422,7 @@
     },
     {
       "section_name": "القطاعات والخدمات",
-      "sector_name": "anpdp",
+      "sector_name": "حماية البيانات الشخصية في الجزائر",
       "title": "حماية البيانات الشخصية في الجزائر",
       "path": "sectors/anpdp.html",
       "content_type": "sector",
@@ -1435,7 +1435,7 @@
     },
     {
       "section_name": "القطاعات والخدمات",
-      "sector_name": "arpce",
+      "sector_name": "ARPCE",
       "title": "ARPCE",
       "path": "sectors/arpce.html",
       "content_type": "sector",
@@ -1450,7 +1450,7 @@
     },
     {
       "section_name": "القطاعات والخدمات",
-      "sector_name": "assurance",
+      "sector_name": "وكالات التأمين على الممتلكات",
       "title": "وكالات التأمين على الممتلكات",
       "path": "sectors/assurance.html",
       "content_type": "sector",
@@ -1464,7 +1464,7 @@
     },
     {
       "section_name": "القطاعات والخدمات",
-      "sector_name": "assurance",
+      "sector_name": "وكالات التأمين على الممتلكات",
       "title": "أليانس للتأمينات - MyAlliance",
       "path": "sectors/assurance/alliance-assurances.html",
       "content_type": "service",
@@ -1479,7 +1479,7 @@
     },
     {
       "section_name": "القطاعات والخدمات",
-      "sector_name": "assurance",
+      "sector_name": "وكالات التأمين على الممتلكات",
       "title": "أمانة للتأمينات (Amana Assurances)",
       "path": "sectors/assurance/amana.html",
       "content_type": "service",
@@ -1494,7 +1494,7 @@
     },
     {
       "section_name": "القطاعات والخدمات",
-      "sector_name": "assurance",
+      "sector_name": "وكالات التأمين على الممتلكات",
       "title": "أكسا للتأمينات الجزائر (AXA Assurances Algérie)",
       "path": "sectors/assurance/axa.html",
       "content_type": "service",
@@ -1510,7 +1510,7 @@
     },
     {
       "section_name": "القطاعات والخدمات",
-      "sector_name": "assurance",
+      "sector_name": "وكالات التأمين على الممتلكات",
       "title": "الشركة الجزائرية للتأمين وإعادة التأمين (CAAR)",
       "path": "sectors/assurance/caar.html",
       "content_type": "service",
@@ -1525,7 +1525,7 @@
     },
     {
       "section_name": "القطاعات والخدمات",
-      "sector_name": "assurance",
+      "sector_name": "وكالات التأمين على الممتلكات",
       "title": "CAARAMA | التأمين على السيارات في الجزائر",
       "path": "sectors/assurance/caarama.html",
       "content_type": "service",
@@ -1541,7 +1541,7 @@
     },
     {
       "section_name": "القطاعات والخدمات",
-      "sector_name": "assurance",
+      "sector_name": "وكالات التأمين على الممتلكات",
       "title": "الشركة الجزائرية للتأمينات (CAAT)",
       "path": "sectors/assurance/caat.html",
       "content_type": "service",
@@ -1558,7 +1558,7 @@
     },
     {
       "section_name": "القطاعات والخدمات",
-      "sector_name": "assurance",
+      "sector_name": "وكالات التأمين على الممتلكات",
       "title": "كارديف للتأمينات (Cardif El Djazaïr)",
       "path": "sectors/assurance/cardif-algerie.html",
       "content_type": "service",
@@ -1574,7 +1574,7 @@
     },
     {
       "section_name": "القطاعات والخدمات",
-      "sector_name": "assurance",
+      "sector_name": "وكالات التأمين على الممتلكات",
       "title": "مجموعة الخليج للتأمين (GIG Algeria)",
       "path": "sectors/assurance/gig.html",
       "content_type": "service",
@@ -1591,7 +1591,7 @@
     },
     {
       "section_name": "القطاعات والخدمات",
-      "sector_name": "assurance",
+      "sector_name": "وكالات التأمين على الممتلكات",
       "title": "ماكير في للتأمين على الحياة (Macir Vie)",
       "path": "sectors/assurance/macir-vie.html",
       "content_type": "service",
@@ -1608,7 +1608,7 @@
     },
     {
       "section_name": "القطاعات والخدمات",
-      "sector_name": "assurance",
+      "sector_name": "وكالات التأمين على الممتلكات",
       "title": "الشركة الوطنية للتأمين (SAA)",
       "path": "sectors/assurance/saa.html",
       "content_type": "service",
@@ -1625,7 +1625,7 @@
     },
     {
       "section_name": "القطاعات والخدمات",
-      "sector_name": "assurance",
+      "sector_name": "وكالات التأمين على الممتلكات",
       "title": "سلامة للتأمينات الجزائر",
       "path": "sectors/assurance/salama.html",
       "content_type": "service",
@@ -1639,7 +1639,7 @@
     },
     {
       "section_name": "القطاعات والخدمات",
-      "sector_name": "assurance",
+      "sector_name": "وكالات التأمين على الممتلكات",
       "title": "ترست الجزائر للتأمينات (Trust Algeria Assurances)",
       "path": "sectors/assurance/trust-algeria.html",
       "content_type": "service",
@@ -1655,7 +1655,7 @@
     },
     {
       "section_name": "القطاعات والخدمات",
-      "sector_name": "awlyaa-education",
+      "sector_name": "فضاء الأولياء 2026: نتائج التلاميذ والغيابات والتسجيلات المدرسية",
       "title": "فضاء الأولياء 2026: نتائج التلاميذ والغيابات والتسجيلات المدرسية",
       "path": "sectors/awlyaa-education.html",
       "content_type": "sector",
@@ -1668,7 +1668,7 @@
     },
     {
       "section_name": "القطاعات والخدمات",
-      "sector_name": "bank",
+      "sector_name": "بنوك",
       "title": "بنوك",
       "path": "sectors/bank.html",
       "content_type": "sector",
@@ -1682,7 +1682,7 @@
     },
     {
       "section_name": "القطاعات والخدمات",
-      "sector_name": "bank",
+      "sector_name": "بنوك",
       "title": "بنك الخليج الجزائر AGB",
       "path": "sectors/bank/ag-bank.html",
       "content_type": "service",
@@ -1698,7 +1698,7 @@
     },
     {
       "section_name": "القطاعات والخدمات",
-      "sector_name": "bank",
+      "sector_name": "بنوك",
       "title": "بنك البركة الجزائري (Al Baraka Bank Algeria) - البوابة الجزائرية",
       "path": "sectors/bank/albaraka-bank.html",
       "content_type": "service",
@@ -1716,7 +1716,7 @@
     },
     {
       "section_name": "القطاعات والخدمات",
-      "sector_name": "bank",
+      "sector_name": "بنوك",
       "title": "البنك العربي الجزائر (Arab Bank Algeria) - البوابة الجزائرية",
       "path": "sectors/bank/arabbank.html",
       "content_type": "service",
@@ -1731,7 +1731,7 @@
     },
     {
       "section_name": "القطاعات والخدمات",
-      "sector_name": "bank",
+      "sector_name": "بنوك",
       "title": "بنك الفلاحة والتنمية الريفية BADR",
       "path": "sectors/bank/badr.html",
       "content_type": "service",
@@ -1746,7 +1746,7 @@
     },
     {
       "section_name": "القطاعات والخدمات",
-      "sector_name": "bank",
+      "sector_name": "بنوك",
       "title": "بنك ABC - البوابة الجزائرية",
       "path": "sectors/bank/bank-abc.html",
       "content_type": "service",
@@ -1760,7 +1760,7 @@
     },
     {
       "section_name": "القطاعات والخدمات",
-      "sector_name": "bank",
+      "sector_name": "بنوك",
       "title": "البنوك العمومية الجزائرية",
       "path": "sectors/bank/bankalgeriane.html",
       "content_type": "service",
@@ -1772,7 +1772,7 @@
     },
     {
       "section_name": "القطاعات والخدمات",
-      "sector_name": "bank",
+      "sector_name": "بنوك",
       "title": "البنوك أجنبية بالجزائر",
       "path": "sectors/bank/banketranger.html",
       "content_type": "service",
@@ -1786,7 +1786,7 @@
     },
     {
       "section_name": "القطاعات والخدمات",
-      "sector_name": "bank",
+      "sector_name": "بنوك",
       "title": "بنك التنمية المحلية BDL",
       "path": "sectors/bank/bdl.html",
       "content_type": "service",
@@ -1802,7 +1802,7 @@
     },
     {
       "section_name": "القطاعات والخدمات",
-      "sector_name": "bank",
+      "sector_name": "بنوك",
       "title": "بنك الجزائر الخارجي BEA - البوابة الجزائرية",
       "path": "sectors/bank/bea.html",
       "content_type": "service",
@@ -1817,7 +1817,7 @@
     },
     {
       "section_name": "القطاعات والخدمات",
-      "sector_name": "bank",
+      "sector_name": "بنوك",
       "title": "البنك الوطني الجزائري BNA",
       "path": "sectors/bank/bna.html",
       "content_type": "service",
@@ -1833,7 +1833,7 @@
     },
     {
       "section_name": "القطاعات والخدمات",
-      "sector_name": "bank",
+      "sector_name": "بنوك",
       "title": "البنك الوطني للإسكان BNH - البوابة الجزائرية",
       "path": "sectors/bank/bnh.html",
       "content_type": "service",
@@ -1848,7 +1848,7 @@
     },
     {
       "section_name": "القطاعات والخدمات",
-      "sector_name": "bank",
+      "sector_name": "بنوك",
       "title": "إتش إس بي سي الجزائر (HSBC Algeria) - البوابة الجزائرية",
       "path": "sectors/bank/business.algeria.hsbc.html",
       "content_type": "service",
@@ -1864,7 +1864,7 @@
     },
     {
       "section_name": "القطاعات والخدمات",
-      "sector_name": "bank",
+      "sector_name": "بنوك",
       "title": "سيتي بنك الجزائر (Citibank N.A. Algeria / Citigroup) - البوابة الجزائرية",
       "path": "sectors/bank/citigroup.html",
       "content_type": "service",
@@ -1880,7 +1880,7 @@
     },
     {
       "section_name": "القطاعات والخدمات",
-      "sector_name": "bank",
+      "sector_name": "بنوك",
       "title": "كناب بنك CNEP Banque: الخدمات الرقمية وتطبيقات البنك في الجزائر",
       "path": "sectors/bank/cnep.html",
       "content_type": "service",
@@ -1894,7 +1894,7 @@
     },
     {
       "section_name": "القطاعات والخدمات",
-      "sector_name": "bank",
+      "sector_name": "بنوك",
       "title": "القرض الشعبي الجزائري CPA - البوابة الجزائرية",
       "path": "sectors/bank/cpa.html",
       "content_type": "service",
@@ -1909,7 +1909,7 @@
     },
     {
       "section_name": "القطاعات والخدمات",
-      "sector_name": "bank",
+      "sector_name": "بنوك",
       "title": "Natixis Algérie",
       "path": "sectors/bank/ebanking.algerie.natixis.html",
       "content_type": "service",
@@ -1923,7 +1923,7 @@
     },
     {
       "section_name": "القطاعات والخدمات",
-      "sector_name": "bank",
+      "sector_name": "بنوك",
       "title": "فرنسبنك الجزائر (Fransabank El Djazair) - البوابة الجزائرية",
       "path": "sectors/bank/fransabank.html",
       "content_type": "service",
@@ -1940,7 +1940,7 @@
     },
     {
       "section_name": "القطاعات والخدمات",
-      "sector_name": "bank",
+      "sector_name": "بنوك",
       "title": "بنك سوسيتي جنرال الجزائر (Société Générale Algérie - SGA) - البوابة الجزائرية",
       "path": "sectors/bank/societegenerale.html",
       "content_type": "service",
@@ -1955,7 +1955,7 @@
     },
     {
       "section_name": "القطاعات والخدمات",
-      "sector_name": "campuce.jobs",
+      "sector_name": "منصة توظيف مخصصة للطلبة الجزائريين",
       "title": "منصة توظيف مخصصة للطلبة الجزائريين",
       "path": "sectors/campuce.jobs.html",
       "content_type": "sector",
@@ -1970,7 +1970,7 @@
     },
     {
       "section_name": "القطاعات والخدمات",
-      "sector_name": "casnos",
+      "sector_name": "CASNOS الجزائر | الضمان الاجتماعي للعمال غير الأجراء",
       "title": "CASNOS الجزائر | الضمان الاجتماعي للعمال غير الأجراء",
       "path": "sectors/casnos.html",
       "content_type": "sector",
@@ -1984,7 +1984,7 @@
     },
     {
       "section_name": "القطاعات والخدمات",
-      "sector_name": "cnas",
+      "sector_name": "CNAS الجزائر | الضمان الاجتماعي للعمال الأجراء",
       "title": "CNAS الجزائر | الضمان الاجتماعي للعمال الأجراء",
       "path": "sectors/cnas.html",
       "content_type": "sector",
@@ -1998,7 +1998,7 @@
     },
     {
       "section_name": "القطاعات والخدمات",
-      "sector_name": "cnr",
+      "sector_name": "CNR الجزائر | خدمات التقاعد والضمان الاجتماعي",
       "title": "CNR الجزائر | خدمات التقاعد والضمان الاجتماعي",
       "path": "sectors/cnr.html",
       "content_type": "sector",
@@ -2013,7 +2013,7 @@
     },
     {
       "section_name": "القطاعات والخدمات",
-      "sector_name": "commerce",
+      "sector_name": "وزارة التجارة والجمارك",
       "title": "وزارة التجارة والجمارك",
       "path": "sectors/commerce.html",
       "content_type": "sector",
@@ -2026,7 +2026,7 @@
     },
     {
       "section_name": "القطاعات والخدمات",
-      "sector_name": "creg.gov",
+      "sector_name": "لجنة ضبط الكهرباء والغاز CREG الجزائر | الخدمات الرقمية",
       "title": "لجنة ضبط الكهرباء والغاز CREG الجزائر | الخدمات الرقمية",
       "path": "sectors/creg.gov.html",
       "content_type": "sector",
@@ -2041,7 +2041,7 @@
     },
     {
       "section_name": "القطاعات والخدمات",
-      "sector_name": "dgfp.gov",
+      "sector_name": "الوظيفة العمومية في الجزائر DGFP: المعادلات ومسابقات التوظيف",
       "title": "الوظيفة العمومية في الجزائر DGFP: المعادلات ومسابقات التوظيف",
       "path": "sectors/dgfp.gov.html",
       "content_type": "sector",
@@ -2056,7 +2056,7 @@
     },
     {
       "section_name": "القطاعات والخدمات",
-      "sector_name": "dgsn",
+      "sector_name": "الشرطة الجزائرية",
       "title": "الشرطة الجزائرية",
       "path": "sectors/dgsn.html",
       "content_type": "sector",
@@ -2069,7 +2069,7 @@
     },
     {
       "section_name": "القطاعات والخدمات",
-      "sector_name": "djezzy",
+      "sector_name": "جازي Djezzy الجزائر: تعبئة الرصيد ودفع الفواتير وتطبيق جازي",
       "title": "جازي Djezzy الجزائر: تعبئة الرصيد ودفع الفواتير وتطبيق جازي",
       "path": "sectors/djezzy.html",
       "content_type": "sector",
@@ -2083,7 +2083,7 @@
     },
     {
       "section_name": "القطاعات والخدمات",
-      "sector_name": "douane",
+      "sector_name": "الجمارك الجزائرية: منصة ALCES والخدمات الجمركية الإلكترونية",
       "title": "الجمارك الجزائرية: منصة ALCES والخدمات الجمركية الإلكترونية",
       "path": "sectors/douane.html",
       "content_type": "sector",
@@ -2096,7 +2096,7 @@
     },
     {
       "section_name": "القطاعات والخدمات",
-      "sector_name": "dronet.mdn",
+      "sector_name": "المركز الوطني لمنظومات الطائرات بدون طيار على المتن",
       "title": "المركز الوطني لمنظومات الطائرات بدون طيار على المتن",
       "path": "sectors/dronet.mdn.html",
       "content_type": "sector",
@@ -2112,7 +2112,7 @@
     },
     {
       "section_name": "القطاعات والخدمات",
-      "sector_name": "dzexam1",
+      "sector_name": "DZ Exam 1: بنك الفروض والاختبارات لجميع المستويات في الجزائر",
       "title": "DZ Exam 1: بنك الفروض والاختبارات لجميع المستويات في الجزائر",
       "path": "sectors/dzexam1.html",
       "content_type": "sector",
@@ -2125,7 +2125,7 @@
     },
     {
       "section_name": "القطاعات والخدمات",
-      "sector_name": "dzexams",
+      "sector_name": "DZ Exam 2026 | بنك الفروض والاختبارات لجميع الأطوار في الجزائر",
       "title": "DZ Exam 2026 | بنك الفروض والاختبارات لجميع الأطوار في الجزائر",
       "path": "sectors/dzexams.html",
       "content_type": "sector",
@@ -2138,7 +2138,7 @@
     },
     {
       "section_name": "القطاعات والخدمات",
-      "sector_name": "dzexams.pro",
+      "sector_name": "بنك الفروض والإختبارات dzexams.pro",
       "title": "بنك الفروض والإختبارات dzexams.pro",
       "path": "sectors/dzexams.pro.html",
       "content_type": "sector",
@@ -2152,7 +2152,7 @@
     },
     {
       "section_name": "القطاعات والخدمات",
-      "sector_name": "dztests",
+      "sector_name": "DZTests الجزائر: فروض واختبارات لجميع المستويات مع التصحيح",
       "title": "DZTests الجزائر: فروض واختبارات لجميع المستويات مع التصحيح",
       "path": "sectors/dztests.html",
       "content_type": "sector",
@@ -2166,7 +2166,7 @@
     },
     {
       "section_name": "القطاعات والخدمات",
-      "sector_name": "ecolerradja",
+      "sector_name": "بنك الفروض والإختبارات ecolerradja",
       "title": "بنك الفروض والإختبارات ecolerradja",
       "path": "sectors/ecolerradja.html",
       "content_type": "sector",
@@ -2178,7 +2178,7 @@
     },
     {
       "section_name": "القطاعات والخدمات",
-      "sector_name": "eddirasa",
+      "sector_name": "الدراسة | بنك الفروض والاختبارات لجميع المستويات في الجزائر",
       "title": "الدراسة | بنك الفروض والاختبارات لجميع المستويات في الجزائر",
       "path": "sectors/eddirasa.html",
       "content_type": "sector",
@@ -2191,7 +2191,7 @@
     },
     {
       "section_name": "القطاعات والخدمات",
-      "sector_name": "education",
+      "sector_name": "وزارة التربية الوطنية الجزائرية | فضاء الأستاذ والأولياء والخدمات",
       "title": "وزارة التربية الوطنية الجزائرية | فضاء الأستاذ والأولياء والخدمات",
       "path": "sectors/education.html",
       "content_type": "sector",
@@ -2207,7 +2207,7 @@
     },
     {
       "section_name": "القطاعات والخدمات",
-      "sector_name": "educationdz",
+      "sector_name": "education dz",
       "title": "education dz",
       "path": "sectors/educationdz.html",
       "content_type": "sector",
@@ -2221,7 +2221,7 @@
     },
     {
       "section_name": "القطاعات والخدمات",
-      "sector_name": "emergency",
+      "sector_name": "أرقام الطوارئ في الجزائر 2026: الشرطة والدرك والحماية المدنية",
       "title": "أرقام الطوارئ في الجزائر 2026: الشرطة والدرك والحماية المدنية",
       "path": "sectors/emergency.html",
       "content_type": "sector",
@@ -2235,7 +2235,7 @@
     },
     {
       "section_name": "القطاعات والخدمات",
-      "sector_name": "enpi",
+      "sector_name": "المؤسسة الوطنية للترقية العقارية ENPI: التسجيل في سكنات LPP وLPL",
       "title": "المؤسسة الوطنية للترقية العقارية ENPI: التسجيل في سكنات LPP وLPL",
       "path": "sectors/enpi.html",
       "content_type": "sector",
@@ -2264,7 +2264,7 @@
     },
     {
       "section_name": "القطاعات والخدمات",
-      "sector_name": "exam-compos",
+      "sector_name": "دليل مواقع الفروض والاختبارات وفضاء الأستاذ والأولياء في الجزائر",
       "title": "دليل مواقع الفروض والاختبارات وفضاء الأستاذ والأولياء في الجزائر",
       "path": "sectors/exam-compos.html",
       "content_type": "sector",
@@ -2278,7 +2278,7 @@
     },
     {
       "section_name": "القطاعات والخدمات",
-      "sector_name": "facteur",
+      "sector_name": "دفع فواتير الماء والكهرباء والغاز في الجزائر | روابط التسديد",
       "title": "دفع فواتير الماء والكهرباء والغاز في الجزائر | روابط التسديد",
       "path": "sectors/facteur.html",
       "content_type": "sector",
@@ -2291,7 +2291,7 @@
     },
     {
       "section_name": "القطاعات والخدمات",
-      "sector_name": "facture_loyer",
+      "sector_name": "فواتير استئجار السكن",
       "title": "فواتير استئجار السكن",
       "path": "sectors/facture_loyer.html",
       "content_type": "sector",
@@ -2304,7 +2304,7 @@
     },
     {
       "section_name": "القطاعات والخدمات",
-      "sector_name": "fadaeldjazair",
+      "sector_name": "فضاء الجزائر 2026: خدمات الأملاك الوطنية والوثائق العقارية",
       "title": "فضاء الجزائر 2026: خدمات الأملاك الوطنية والوثائق العقارية",
       "path": "sectors/fadaeldjazair.html",
       "content_type": "sector",
@@ -2316,7 +2316,7 @@
     },
     {
       "section_name": "القطاعات والخدمات",
-      "sector_name": "hatplc",
+      "sector_name": "hatplc DZ",
       "title": "hatplc DZ",
       "path": "sectors/hatplc.html",
       "content_type": "sector",
@@ -2328,7 +2328,7 @@
     },
     {
       "section_name": "القطاعات والخدمات",
-      "sector_name": "hcn",
+      "sector_name": "المحافظة السامية للرقمنة",
       "title": "المحافظة السامية للرقمنة",
       "path": "sectors/hcn.html",
       "content_type": "sector",
@@ -2344,7 +2344,7 @@
     },
     {
       "section_name": "القطاعات والخدمات",
-      "sector_name": "ina-elections",
+      "sector_name": "السلطة الوطنية المستقلة للانتخابات",
       "title": "السلطة الوطنية المستقلة للانتخابات",
       "path": "sectors/ina-elections.html",
       "content_type": "sector",
@@ -2357,7 +2357,7 @@
     },
     {
       "section_name": "القطاعات والخدمات",
-      "sector_name": "interieur",
+      "sector_name": "وزارة الداخلية",
       "title": "وزارة الداخلية",
       "path": "sectors/interieur.html",
       "content_type": "sector",
@@ -2373,7 +2373,7 @@
     },
     {
       "section_name": "القطاعات والخدمات",
-      "sector_name": "madr",
+      "sector_name": "وزارة الفلاحة والتنمية الريفية: منصات الفلاح والخدمات الرقمية",
       "title": "وزارة الفلاحة والتنمية الريفية: منصات الفلاح والخدمات الرقمية",
       "path": "sectors/madr.html",
       "content_type": "sector",
@@ -2390,7 +2390,7 @@
     },
     {
       "section_name": "القطاعات والخدمات",
-      "sector_name": "markabatidz",
+      "sector_name": "منصة فحص المركبات - مركبتي DZ",
       "title": "منصة فحص المركبات - مركبتي DZ",
       "path": "sectors/markabatidz.html",
       "content_type": "sector",
@@ -2403,7 +2403,7 @@
     },
     {
       "section_name": "القطاعات والخدمات",
-      "sector_name": "mdn",
+      "sector_name": "وزارة الدفاع الوطني الجزائرية: التجنيد وأشبال الأمة والخدمات",
       "title": "وزارة الدفاع الوطني الجزائرية: التجنيد وأشبال الأمة والخدمات",
       "path": "sectors/mdn.html",
       "content_type": "sector",
@@ -2419,7 +2419,7 @@
     },
     {
       "section_name": "القطاعات والخدمات",
-      "sector_name": "me.gov",
+      "sector_name": "وزارة البيئة وجودة الحياة الجزائرية",
       "title": "وزارة البيئة وجودة الحياة الجزائرية",
       "path": "sectors/me.gov.html",
       "content_type": "sector",
@@ -2434,7 +2434,7 @@
     },
     {
       "section_name": "القطاعات والخدمات",
-      "sector_name": "medjedel",
+      "sector_name": "Medjedel",
       "title": "Medjedel",
       "path": "sectors/medjedel.html",
       "content_type": "sector",
@@ -2448,7 +2448,7 @@
     },
     {
       "section_name": "القطاعات والخدمات",
-      "sector_name": "mesrs.dz",
+      "sector_name": "وزارة التعليم العالي والبحث العلمي: المنصات والخدمات الجامعية الرقمية",
       "title": "وزارة التعليم العالي والبحث العلمي: المنصات والخدمات الجامعية الرقمية",
       "path": "sectors/mesrs.dz.html",
       "content_type": "sector",
@@ -2465,7 +2465,7 @@
     },
     {
       "section_name": "القطاعات والخدمات",
-      "sector_name": "mf.gov",
+      "sector_name": "المالية - الجباية",
       "title": "المالية - الجباية",
       "path": "sectors/mf.gov.html",
       "content_type": "sector",
@@ -2483,7 +2483,7 @@
     },
     {
       "section_name": "القطاعات والخدمات",
-      "sector_name": "mfa",
+      "sector_name": "الشؤون الخارجية والجالية الجزائرية",
       "title": "الشؤون الخارجية والجالية الجزائرية",
       "path": "sectors/mfa.html",
       "content_type": "sector",
@@ -2496,7 +2496,7 @@
     },
     {
       "section_name": "القطاعات والخدمات",
-      "sector_name": "mfp.gov",
+      "sector_name": "التكوين المهني 2026",
       "title": "التكوين المهني 2026",
       "path": "sectors/mfp.gov.html",
       "content_type": "sector",
@@ -2512,7 +2512,7 @@
     },
     {
       "section_name": "القطاعات والخدمات",
-      "sector_name": "mhuv.gov",
+      "sector_name": "وزارة السكن والعمران والمدينة: الخدمات والمنصات الرقمية",
       "title": "وزارة السكن والعمران والمدينة: الخدمات والمنصات الرقمية",
       "path": "sectors/mhuv.gov.html",
       "content_type": "sector",
@@ -2526,7 +2526,7 @@
     },
     {
       "section_name": "القطاعات والخدمات",
-      "sector_name": "mjeunesse.gov",
+      "sector_name": "وزارة الشباب",
       "title": "وزارة الشباب",
       "path": "sectors/mjeunesse.gov.html",
       "content_type": "sector",
@@ -2542,7 +2542,7 @@
     },
     {
       "section_name": "القطاعات والخدمات",
-      "sector_name": "mjustice",
+      "sector_name": "وزارة العدل الجزائرية: الخدمات القضائية والمنصات الإلكترونية",
       "title": "وزارة العدل الجزائرية: الخدمات القضائية والمنصات الإلكترونية",
       "path": "sectors/mjustice.html",
       "content_type": "sector",
@@ -2556,7 +2556,7 @@
     },
     {
       "section_name": "القطاعات والخدمات",
-      "sector_name": "mobilis",
+      "sector_name": "موبيليس الجزائر: تعبئة الرصيد ودفع الفواتير والعروض وخدمات 4G",
       "title": "موبيليس الجزائر: تعبئة الرصيد ودفع الفواتير والعروض وخدمات 4G",
       "path": "sectors/mobilis.html",
       "content_type": "sector",
@@ -2572,7 +2572,7 @@
     },
     {
       "section_name": "القطاعات والخدمات",
-      "sector_name": "msnfcf.gov",
+      "sector_name": "التضامن والاسرة وقضايا المرأة",
       "title": "التضامن والاسرة وقضايا المرأة",
       "path": "sectors/msnfcf.gov.html",
       "content_type": "sector",
@@ -2588,7 +2588,7 @@
     },
     {
       "section_name": "القطاعات والخدمات",
-      "sector_name": "msport.gov",
+      "sector_name": "وزارة الرياضة",
       "title": "وزارة الرياضة",
       "path": "sectors/msport.gov.html",
       "content_type": "sector",
@@ -2601,7 +2601,7 @@
     },
     {
       "section_name": "القطاعات والخدمات",
-      "sector_name": "mtess",
+      "sector_name": "العمل، التشغيل والضمان الإجتماعي",
       "title": "العمل، التشغيل والضمان الإجتماعي",
       "path": "sectors/mtess.html",
       "content_type": "sector",
@@ -2615,7 +2615,7 @@
     },
     {
       "section_name": "القطاعات والخدمات",
-      "sector_name": "mtpib",
+      "sector_name": "وزارة الأشغال العمومية والمنشآت القاعدية",
       "title": "وزارة الأشغال العمومية والمنشآت القاعدية",
       "path": "sectors/mtpib.html",
       "content_type": "sector",
@@ -2631,7 +2631,7 @@
     },
     {
       "section_name": "القطاعات والخدمات",
-      "sector_name": "naftal",
+      "sector_name": "نفطال 2026: خدمات محطتي وتسجيل اقتناء عجلات السيارات",
       "title": "نفطال 2026: خدمات محطتي وتسجيل اقتناء عجلات السيارات",
       "path": "sectors/naftal.html",
       "content_type": "sector",
@@ -2645,7 +2645,7 @@
     },
     {
       "section_name": "القطاعات والخدمات",
-      "sector_name": "nifenligne",
+      "sector_name": "الترقيم الجبائي",
       "title": "الترقيم الجبائي",
       "path": "sectors/nifenligne.html",
       "content_type": "sector",
@@ -2663,7 +2663,7 @@
     },
     {
       "section_name": "القطاعات والخدمات",
-      "sector_name": "ocrc",
+      "sector_name": "الديوان المركزي لقمع الفساد",
       "title": "الديوان المركزي لقمع الفساد",
       "path": "sectors/ocrc.html",
       "content_type": "sector",
@@ -2676,7 +2676,7 @@
     },
     {
       "section_name": "القطاعات والخدمات",
-      "sector_name": "onpo",
+      "sector_name": "الديوان الوطني للحج والعمرة ONPO: التسجيل والبوابات الرقمية",
       "title": "الديوان الوطني للحج والعمرة ONPO: التسجيل والبوابات الرقمية",
       "path": "sectors/onpo.html",
       "content_type": "sector",
@@ -2692,7 +2692,7 @@
     },
     {
       "section_name": "القطاعات والخدمات",
-      "sector_name": "ooredoo",
+      "sector_name": "أوريدو الجزائر 2026: تعبئة الرصيد وخدمات My Ooredoo",
       "title": "أوريدو الجزائر 2026: تعبئة الرصيد وخدمات My Ooredoo",
       "path": "sectors/ooredoo.html",
       "content_type": "sector",
@@ -2706,7 +2706,7 @@
     },
     {
       "section_name": "القطاعات والخدمات",
-      "sector_name": "opgi",
+      "sector_name": "ديوان الترقية والتسيير العقاري OPGI: دفع الإيجار والخدمات",
       "title": "ديوان الترقية والتسيير العقاري OPGI: دفع الإيجار والخدمات",
       "path": "sectors/opgi.html",
       "content_type": "sector",
@@ -2721,7 +2721,7 @@
     },
     {
       "section_name": "القطاعات والخدمات",
-      "sector_name": "ostad-education",
+      "sector_name": "فضاء الأستاذ – منصات التوظيف، التقييم، والمسابقات",
       "title": "فضاء الأستاذ – منصات التوظيف، التقييم، والمسابقات",
       "path": "sectors/ostad-education.html",
       "content_type": "sector",
@@ -2737,7 +2737,7 @@
     },
     {
       "section_name": "القطاعات والخدمات",
-      "sector_name": "poste",
+      "sector_name": "بريد الجزائر 2026: ECCP والبطاقة الذهبية وبريدي موب",
       "title": "بريد الجزائر 2026: ECCP والبطاقة الذهبية وبريدي موب",
       "path": "sectors/poste.html",
       "content_type": "sector",
@@ -2752,7 +2752,7 @@
     },
     {
       "section_name": "القطاعات والخدمات",
-      "sector_name": "progres.mesrs",
+      "sector_name": "Progres MESRS DZ 2026: التسجيلات الجامعية والخدمات الطلابية في الجزائر",
       "title": "Progres MESRS DZ 2026: التسجيلات الجامعية والخدمات الطلابية في الجزائر",
       "path": "sectors/progres.mesrs.html",
       "content_type": "sector",
@@ -2765,7 +2765,7 @@
     },
     {
       "section_name": "القطاعات والخدمات",
-      "sector_name": "qassimatouka",
+      "sector_name": "قسيمتك 2026: شراء قسيمة السيارات إلكترونيًا في الجزائر",
       "title": "قسيمتك 2026: شراء قسيمة السيارات إلكترونيًا في الجزائر",
       "path": "sectors/qassimatouka.html",
       "content_type": "sector",
@@ -2778,7 +2778,7 @@
     },
     {
       "section_name": "القطاعات والخدمات",
-      "sector_name": "sante",
+      "sector_name": "الصحة العمومية",
       "title": "الصحة العمومية",
       "path": "sectors/sante.html",
       "content_type": "sector",
@@ -2791,7 +2791,7 @@
     },
     {
       "section_name": "القطاعات والخدمات",
-      "sector_name": "seaal",
+      "sector_name": "سيال",
       "title": "سيال",
       "path": "sectors/seaal.html",
       "content_type": "sector",
@@ -2804,7 +2804,7 @@
     },
     {
       "section_name": "القطاعات والخدمات",
-      "sector_name": "seor",
+      "sector_name": "للمياه سيور",
       "title": "للمياه سيور",
       "path": "sectors/seor.html",
       "content_type": "sector",
@@ -2817,7 +2817,7 @@
     },
     {
       "section_name": "القطاعات والخدمات",
-      "sector_name": "sntf-schedule",
+      "sector_name": "عارض جداول مواقيت قطارات SNTF",
       "title": "عارض جداول مواقيت قطارات SNTF",
       "path": "sectors/sntf-schedule.html",
       "content_type": "sector",
@@ -2829,7 +2829,7 @@
     },
     {
       "section_name": "القطاعات والخدمات",
-      "sector_name": "sntf-trains",
+      "sector_name": "مواقيت قطارات SNTF 2026 | البحث عن رحلة ومحطات القطارات",
       "title": "مواقيت قطارات SNTF 2026 | البحث عن رحلة ومحطات القطارات",
       "path": "sectors/sntf-trains.html",
       "content_type": "sector",
@@ -2844,11 +2844,11 @@
     },
     {
       "section_name": "القطاعات والخدمات",
-      "sector_name": "sntf-trip",
+      "sector_name": "مواقيت قطارات SNTF الجزائر | جداول الرحلات الرسمية 2026",
       "title": "تفاصيل رحلة قطار | DZ Rail",
       "path": "sectors/sntf-trip.html",
-      "content_type": "sector",
-      "parent_sector_path": null,
+      "content_type": "dynamic-service",
+      "parent_sector_path": "sectors/sntf.html",
       "keywords": [
         "تفاصيل رحلة قطار",
         "DZ Rail راجع جداول مواقيت قطارات SNTF المصوّرة مع إمكانية التكبير",
@@ -2864,7 +2864,7 @@
     },
     {
       "section_name": "القطاعات والخدمات",
-      "sector_name": "sntf",
+      "sector_name": "مواقيت قطارات SNTF الجزائر | جداول الرحلات الرسمية 2026",
       "title": "مواقيت قطارات SNTF الجزائر | جداول الرحلات الرسمية 2026",
       "path": "sectors/sntf.html",
       "content_type": "sector",
@@ -2879,7 +2879,7 @@
     },
     {
       "section_name": "القطاعات والخدمات",
-      "sector_name": "sonalgaz-bill-guide",
+      "sector_name": "كيف تقرأ فاتورة سونلغاز؟ شرح مبسط للكهرباء والغاز",
       "title": "كيف تقرأ فاتورة سونلغاز؟ شرح مبسط للكهرباء والغاز",
       "path": "sectors/sonalgaz-bill-guide.html",
       "content_type": "sector",
@@ -2896,7 +2896,7 @@
     },
     {
       "section_name": "القطاعات والخدمات",
-      "sector_name": "sonalgaz",
+      "sector_name": "سونلغاز 2026: استخراج وتسديد فاتورة الكهرباء والغاز عبر الإنترنت",
       "title": "سونلغاز 2026: استخراج وتسديد فاتورة الكهرباء والغاز عبر الإنترنت",
       "path": "sectors/sonalgaz.html",
       "content_type": "sector",
@@ -2909,7 +2909,7 @@
     },
     {
       "section_name": "القطاعات والخدمات",
-      "sector_name": "t-onec",
+      "sector_name": "بنك الفروض والإختبارات t-onec",
       "title": "بنك الفروض والإختبارات t-onec",
       "path": "sectors/t-onec.html",
       "content_type": "sector",
@@ -2923,7 +2923,7 @@
     },
     {
       "section_name": "القطاعات والخدمات",
-      "sector_name": "tabioucom",
+      "sector_name": "طابعكم 2026: شراء الطابع الجبائي الإلكتروني لجواز السفر والوثائق",
       "title": "طابعكم 2026: شراء الطابع الجبائي الإلكتروني لجواز السفر والوثائق",
       "path": "sectors/tabioucom.html",
       "content_type": "sector",
@@ -2937,7 +2937,7 @@
     },
     {
       "section_name": "القطاعات والخدمات",
-      "sector_name": "telephon",
+      "sector_name": "خدمات الهاتف النقال",
       "title": "خدمات الهاتف النقال",
       "path": "sectors/telephon.html",
       "content_type": "sector",
@@ -2953,7 +2953,7 @@
     },
     {
       "section_name": "القطاعات والخدمات",
-      "sector_name": "transport",
+      "sector_name": "النقل والمواصلات",
       "title": "النقل والمواصلات",
       "path": "sectors/transport.html",
       "content_type": "sector",
@@ -2967,7 +2967,7 @@
     },
     {
       "section_name": "القطاعات والخدمات",
-      "sector_name": "ufc.dz",
+      "sector_name": "جامع التكوين المتواصل",
       "title": "جامع التكوين المتواصل",
       "path": "sectors/ufc.dz.html",
       "content_type": "sector",
@@ -2993,14 +2993,14 @@
       "keywords": [
         "yandex_eedcfd7f491ddd14.html صفحات البوابة"
       ],
-      "status": "displayable"
+      "status": "excluded"
     }
   ],
   "summary": {
     "html_files_in_tree": 216,
     "records": 216,
-    "displayable": 215,
-    "excluded": 1,
+    "displayable": 214,
+    "excluded": 2,
     "duplicate_paths": 0,
     "missing_records": 0,
     "stale_records": 0,
@@ -3016,8 +3016,9 @@
       "tools-index": 1,
       "video": 9,
       "video-index": 1,
-      "sector": 80,
-      "service": 30
+      "sector": 79,
+      "service": 30,
+      "dynamic-service": 1
     },
     "by_section": {
       "صفحات البوابة": 10,
@@ -3036,6 +3037,6 @@
     "duplicate_paths": [],
     "invalid_parent_paths": [],
     "query_variants_not_represented": true,
-    "query_policy": "كل ملف HTML يسجل مرة واحدة دون معاملات URL؛ معاملات trip في SNTF تبقى جزءاً من الوظيفة الديناميكية ولا تنشئ سجلات إضافية."
+    "query_policy": "كل ملف HTML يسجل مرة واحدة دون معاملات URL؛ صفحة SNTF الديناميكية مدرجة مرة واحدة دون معاملات، مع الإبقاء على معامل trip عند تشغيل تفاصيل الرحلة."
   }
 }
