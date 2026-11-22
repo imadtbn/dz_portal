@@ -2901,6 +2901,94 @@
         "والتسجيل في E-taqaty والوصول إلى خدمات الزبائن. sonalgaz القطاعات والخدمات"
       ],
       "status": "displayable"
+    },
+    {
+      "section_name": "القطاعات والخدمات",
+      "sector_name": "t-onec",
+      "title": "البوابة الجزائرية",
+      "path": "sectors/t-onec.html",
+      "content_type": "sector",
+      "parent_sector_path": null,
+      "keywords": [
+        "البوابة الجزائرية جميع فروض واختبارات شهادة التعليم المتوسط",
+        "البكالوريا",
+        "والابتدائي مع التصحيح النموذجي لجميع المواد والمستويات التعليمية في الجزائر t-onec القطاعات والخدمات"
+      ],
+      "status": "displayable"
+    },
+    {
+      "section_name": "القطاعات والخدمات",
+      "sector_name": "tabioucom",
+      "title": "البوابة الجزائرية",
+      "path": "sectors/tabioucom.html",
+      "content_type": "sector",
+      "parent_sector_path": null,
+      "keywords": [
+        "البوابة الجزائرية استخدم منصة طابعكم لاقتناء الطابع الجبائي الإلكتروني في الجزائر",
+        "خاصة رسوم جواز السفر وبطاقة التعريف ورخصة السياقة",
+        "وتعرّف على الخدمة وروابط الشراء. tabioucom القطاعات والخدمات"
+      ],
+      "status": "displayable"
+    },
+    {
+      "section_name": "القطاعات والخدمات",
+      "sector_name": "telephon",
+      "title": "البوابة الجزائرية",
+      "path": "sectors/telephon.html",
+      "content_type": "sector",
+      "parent_sector_path": null,
+      "keywords": [
+        "البوابة الجزائرية جميع خدمات الهاتف النقال النقال في الجزائر - شحن الرصيد",
+        "تفعيل الخدمات",
+        "تطبيقات الهاتف",
+        "مصلحة خدمة الزبائن",
+        "وغيرها من الخدمات الرقمية المتطورة التي توفر الوقت والجهد وتضم telephon القطاعات والخدمات"
+      ],
+      "status": "displayable"
+    },
+    {
+      "section_name": "القطاعات والخدمات",
+      "sector_name": "transport",
+      "title": "البوابة الجزائرية",
+      "path": "sectors/transport.html",
+      "content_type": "sector",
+      "parent_sector_path": null,
+      "keywords": [
+        "البوابة الجزائرية اكتشف خدمات النقل والمواصلات الرقمية في الجزائر",
+        "من حجز التذاكر إلى تتبع وسائل النقل العام",
+        "كل ما تحتاجه لتسهيل تنقلك اليومي transport القطاعات والخدمات"
+      ],
+      "status": "displayable"
+    },
+    {
+      "section_name": "القطاعات والخدمات",
+      "sector_name": "ufc.dz",
+      "title": "البوابة الجزائرية",
+      "path": "sectors/ufc.dz.html",
+      "content_type": "sector",
+      "parent_sector_path": null,
+      "keywords": [
+        "البوابة الجزائرية اكتشف خدمات المالية والجباية الرقمية في الجزائر. تسجيل في مختلف الصيغ المالية",
+        "دفع الرسوم والضرائب",
+        "قسيمة السيارات",
+        "قسيمية بطاقة التعريف",
+        "رخصة السياقة",
+        "جواز السفر",
+        "عقود ا ufc.dz القطاعات والخدمات"
+      ],
+      "status": "displayable"
+    },
+    {
+      "section_name": "صفحات البوابة",
+      "sector_name": null,
+      "title": "yandex_eedcfd7f491ddd14.html",
+      "path": "yandex_eedcfd7f491ddd14.html",
+      "content_type": "page",
+      "parent_sector_path": null,
+      "keywords": [
+        "yandex_eedcfd7f491ddd14.html صفحات البوابة"
+      ],
+      "status": "displayable"
     }
   ]
 }
