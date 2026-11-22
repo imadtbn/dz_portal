@@ -2462,6 +2462,233 @@
         "التعاون الجامعي وخدمات الطلبة. mesrs.dz القطاعات والخدمات"
       ],
       "status": "displayable"
+    },
+    {
+      "section_name": "القطاعات والخدمات",
+      "sector_name": "mf.gov",
+      "title": "البوابة الجزائرية",
+      "path": "sectors/mf.gov.html",
+      "content_type": "sector",
+      "parent_sector_path": null,
+      "keywords": [
+        "البوابة الجزائرية اكتشف خدمات المالية والجباية الرقمية في الجزائر. تسجيل في مختلف الصيغ المالية",
+        "دفع الرسوم والضرائب",
+        "قسيمة السيارات",
+        "قسيمية بطاقة التعريف",
+        "رخصة السياقة",
+        "جواز السفر",
+        "عقود ا mf.gov القطاعات والخدمات"
+      ],
+      "status": "displayable"
+    },
+    {
+      "section_name": "القطاعات والخدمات",
+      "sector_name": "mfa",
+      "title": "البوابة الجزائرية",
+      "path": "sectors/mfa.html",
+      "content_type": "sector",
+      "parent_sector_path": null,
+      "keywords": [
+        "البوابة الجزائرية خدمات وزارة الشؤون الخارجية الجزائرية عبر الإنترنت",
+        "بما في ذلك التأشيرات والخدمات القنصلية والوثائق الإدارية للمواطنين داخل وخارج الجزائر mfa القطاعات والخدمات"
+      ],
+      "status": "displayable"
+    },
+    {
+      "section_name": "القطاعات والخدمات",
+      "sector_name": "mfp.gov",
+      "title": "البوابة الجزائرية",
+      "path": "sectors/mfp.gov.html",
+      "content_type": "sector",
+      "parent_sector_path": null,
+      "keywords": [
+        "البوابة الجزائرية دليل شامل لخدمات وزارة التكوين والتعليم المهنيين في الجزائر. سجل في الدخول التكويني 2026",
+        "استفد من برامج &#x27",
+        "تعلّم صنعة&#x27",
+        "وتركيب الهواتف الذكية",
+        "وتابع الامتحانات المهنية عبر mfp.gov القطاعات والخدمات"
+      ],
+      "status": "displayable"
+    },
+    {
+      "section_name": "القطاعات والخدمات",
+      "sector_name": "mhuv.gov",
+      "title": "البوابة الجزائرية",
+      "path": "sectors/mhuv.gov.html",
+      "content_type": "sector",
+      "parent_sector_path": null,
+      "keywords": [
+        "البوابة الجزائرية دليل خدمات وزارة السكن والعمران والمدينة في الجزائر",
+        "وروابط الخدمات الإلكترونية المرتبطة باعتماد المرقي والوكيل العقاري والمهندس",
+        "مع الوصول إلى منصات عدل وOPGI وENPI. mhuv.gov القطاعات والخدمات"
+      ],
+      "status": "displayable"
+    },
+    {
+      "section_name": "القطاعات والخدمات",
+      "sector_name": "mjeunesse.gov",
+      "title": "البوابة الجزائرية",
+      "path": "sectors/mjeunesse.gov.html",
+      "content_type": "sector",
+      "parent_sector_path": null,
+      "keywords": [
+        "البوابة الجزائرية وزارة الشباب الجزائرية تقدم خدمات وبرامج للشباب",
+        "بما في ذلك برامج القيادة",
+        "الهاكاثونات",
+        "التخييم",
+        "وبيوت الشباب mjeunesse.gov القطاعات والخدمات"
+      ],
+      "status": "displayable"
+    },
+    {
+      "section_name": "القطاعات والخدمات",
+      "sector_name": "mjustice",
+      "title": "البوابة الجزائرية",
+      "path": "sectors/mjustice.html",
+      "content_type": "sector",
+      "parent_sector_path": null,
+      "keywords": [
+        "البوابة الجزائرية دليل الخدمات الرقمية لوزارة العدل الجزائرية",
+        "بما فيها صحيفة السوابق القضائية وشهادة الجنسية والنيابة الإلكترونية وإيداع الشكاوى ومتابعتها",
+        "مع روابط المنصات والتطبيقات الرسمية. mjustice القطاعات والخدمات"
+      ],
+      "status": "displayable"
+    },
+    {
+      "section_name": "القطاعات والخدمات",
+      "sector_name": "mobilis",
+      "title": "البوابة الجزائرية",
+      "path": "sectors/mobilis.html",
+      "content_type": "sector",
+      "parent_sector_path": null,
+      "keywords": [
+        "البوابة الجزائرية روابط وخدمات موبيليس الجزائر: تعبئة الرصيد",
+        "دفع الفواتير",
+        "تطبيق My Mobilis",
+        "عروض الهاتف والإنترنت",
+        "خدمة الزبائن وخدمات الجيل الرابع 4G. mobilis القطاعات والخدمات"
+      ],
+      "status": "displayable"
+    },
+    {
+      "section_name": "القطاعات والخدمات",
+      "sector_name": "msnfcf.gov",
+      "title": "البوابة الجزائرية",
+      "path": "sectors/msnfcf.gov.html",
+      "content_type": "sector",
+      "parent_sector_path": null,
+      "keywords": [
+        "البوابة الجزائرية اكتشف خدمات وزارة التضامن الوطني والأسرة وقضايا المرأة في الجزائر",
+        "بما في ذلك الدعم الاجتماعي",
+        "حماية المرأة",
+        "برامج الأسرة المنتجة",
+        "التوظيف والخدمات الرقمية الموجهة للمواط msnfcf.gov القطاعات والخدمات"
+      ],
+      "status": "displayable"
+    },
+    {
+      "section_name": "القطاعات والخدمات",
+      "sector_name": "msport.gov",
+      "title": "البوابة الجزائرية",
+      "path": "sectors/msport.gov.html",
+      "content_type": "sector",
+      "parent_sector_path": null,
+      "keywords": [
+        "البوابة الجزائرية اكتشف خدمات وزارة الرياضة الجزائرية الرقمية",
+        "من تسجيل رياضيي النخبة والمستوى العالي والتكوين الرياضي إلى تحميل الشهادات ومتابعة الملفات إلكترونياً msport.gov القطاعات والخدمات"
+      ],
+      "status": "displayable"
+    },
+    {
+      "section_name": "القطاعات والخدمات",
+      "sector_name": "mtess",
+      "title": "البوابة الجزائرية",
+      "path": "sectors/mtess.html",
+      "content_type": "sector",
+      "parent_sector_path": null,
+      "keywords": [
+        "البوابة الجزائرية تقدم وزارة العمل",
+        "التشغيل والضمان الاجتماعي خدمات رقمية للمواطنين",
+        "بما في ذلك منصة تبليغ الرسمية للتبليغ عن المخالفات ومتابعة معالجة البلاغات بسرية وأمان mtess القطاعات والخدمات"
+      ],
+      "status": "displayable"
+    },
+    {
+      "section_name": "القطاعات والخدمات",
+      "sector_name": "mtpib",
+      "title": "البوابة الجزائرية",
+      "path": "sectors/mtpib.html",
+      "content_type": "sector",
+      "parent_sector_path": null,
+      "keywords": [
+        "البوابة الجزائرية البوابة الرقمية لوزارة الأشغال العمومية والمنشآت القاعدية في الجزائر: التأهيل والتصنيف المهني",
+        "اعتماد المهندسين ومكاتب الدراسات",
+        "رخصة شبكة الطرق",
+        "وثيقة تحديد المسافة",
+        "ومحاكاة التصنيف المهني إلكترونياً. mtpib القطاعات والخدمات"
+      ],
+      "status": "displayable"
+    },
+    {
+      "section_name": "القطاعات والخدمات",
+      "sector_name": "naftal",
+      "title": "البوابة الجزائرية",
+      "path": "sectors/naftal.html",
+      "content_type": "sector",
+      "parent_sector_path": null,
+      "keywords": [
+        "البوابة الجزائرية تعرف على خدمات نفطال الرقمية في الجزائر",
+        "ومنها منصة محطتي لاقتناء عجلات السيارات",
+        "وروابط التسجيل والخدمات والتواصل مع مصلحة الزبائن. naftal القطاعات والخدمات"
+      ],
+      "status": "displayable"
+    },
+    {
+      "section_name": "القطاعات والخدمات",
+      "sector_name": "nifenligne",
+      "title": "البوابة الجزائرية",
+      "path": "sectors/nifenligne.html",
+      "content_type": "sector",
+      "parent_sector_path": null,
+      "keywords": [
+        "البوابة الجزائرية اكتشف خدمات المالية والجباية الرقمية في الجزائر. تسجيل في مختلف الصيغ المالية",
+        "دفع الرسوم والضرائب",
+        "قسيمة السيارات",
+        "قسيمية بطاقة التعريف",
+        "رخصة السياقة",
+        "جواز السفر",
+        "عقود ا nifenligne القطاعات والخدمات"
+      ],
+      "status": "displayable"
+    },
+    {
+      "section_name": "القطاعات والخدمات",
+      "sector_name": "ocrc",
+      "title": "البوابة الجزائرية",
+      "path": "sectors/ocrc.html",
+      "content_type": "sector",
+      "parent_sector_path": null,
+      "keywords": [
+        "البوابة الجزائرية دليل خدمات التبليغ عن الفساد والجرائم الاقتصادية والمالية في الجزائر",
+        "مع معلومات حول الهيئات المختصة ووسائل الإبلاغ وحماية المبلغين ocrc القطاعات والخدمات"
+      ],
+      "status": "displayable"
+    },
+    {
+      "section_name": "القطاعات والخدمات",
+      "sector_name": "onpo",
+      "title": "البوابة الجزائرية",
+      "path": "sectors/onpo.html",
+      "content_type": "sector",
+      "parent_sector_path": null,
+      "keywords": [
+        "البوابة الجزائرية تعرّف على خدمات الديوان الوطني للحج والعمرة في الجزائر",
+        "وروابط التسجيل في قرعة الحج",
+        "بوابة الحج",
+        "بوابة العمرة",
+        "والموقع الرسمي ووسائل الاتصال. onpo القطاعات والخدمات"
+      ],
+      "status": "displayable"
     }
   ]
 }
