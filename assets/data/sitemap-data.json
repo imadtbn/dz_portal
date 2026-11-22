@@ -387,6 +387,199 @@
         "البوابة الجزائرية إحصائيات ديناميكية حول عدد الخدمات الرقمية وتوزيعها على قطاعات البوابة الجزائرية للخدمات الرقمية صفحات البوابة"
       ],
       "status": "displayable"
+    },
+    {
+      "section_name": "صفحات البوابة",
+      "sector_name": null,
+      "title": "البوابة الجزائرية",
+      "path": "pages/terms.html",
+      "content_type": "page",
+      "parent_sector_path": null,
+      "keywords": [
+        "البوابة الجزائرية اطلع على شروط الاستخدام والأحكام القانونية الخاصة بالبوابة الجزائرية للخدمات الرقمية",
+        "وحقوق المستخدمين وسياسات الاستفادة من الموقع صفحات البوابة"
+      ],
+      "status": "displayable"
+    },
+    {
+      "section_name": "الأدوات الرقمية",
+      "sector_name": "calculators",
+      "title": "حاسبة العمر بدقة",
+      "path": "pages/tools/calculators/age-calculator.html",
+      "content_type": "tool",
+      "parent_sector_path": null,
+      "keywords": [
+        "حاسبة العمر بدقة احسب عمرك بدقة من تاريخ الميلاد بالسنوات والأشهر والأيام",
+        "واعرف إجمالي الأيام والمدة المتبقية لعيد ميلادك القادم. calculators الأدوات الرقمية"
+      ],
+      "status": "displayable"
+    },
+    {
+      "section_name": "الأدوات الرقمية",
+      "sector_name": "calculators",
+      "title": "حساب معدل السداسي الجامعي",
+      "path": "pages/tools/calculators/average-calculator.html",
+      "content_type": "tool",
+      "parent_sector_path": null,
+      "keywords": [
+        "حساب معدل السداسي الجامعي احسب معدل السداسي الجامعي في الجزائر من علامات المقاييس والمعاملات",
+        "مع شرح المعدل الموزون ومثال تطبيقي وروابط للحسابات الدراسية. calculators الأدوات الرقمية"
+      ],
+      "status": "displayable"
+    },
+    {
+      "section_name": "الأدوات الرقمية",
+      "sector_name": "calculators",
+      "title": "الآلة الحاسبة الذكية",
+      "path": "pages/tools/calculators/calculator.html",
+      "content_type": "tool",
+      "parent_sector_path": null,
+      "keywords": [
+        "الآلة الحاسبة الذكية استخدم آلة حاسبة لإجراء العمليات والمعادلات الحسابية",
+        "واحفظ النتائج والعمليات المهمة في المتصفح للرجوع إليها لاحقًا. calculators الأدوات الرقمية"
+      ],
+      "status": "displayable"
+    },
+    {
+      "section_name": "الأدوات الرقمية",
+      "sector_name": "calculators",
+      "title": "حاسبة مصاريف السيارة الشهرية والسنوية",
+      "path": "pages/tools/calculators/car-cost-calculator.html",
+      "content_type": "tool",
+      "parent_sector_path": null,
+      "keywords": [
+        "حاسبة مصاريف السيارة الشهرية والسنوية احسب تكلفة امتلاك السيارة في الجزائر بالدينار: الوقود والتأمين والصيانة والرسوم",
+        "وقدّر المصاريف الشهرية والسنوية وتكلفة الكيلومتر. calculators الأدوات الرقمية"
+      ],
+      "status": "displayable"
+    },
+    {
+      "section_name": "الأدوات الرقمية",
+      "sector_name": "calculators",
+      "title": "تحويل العملات",
+      "path": "pages/tools/calculators/currency-converter.html",
+      "content_type": "tool",
+      "parent_sector_path": null,
+      "keywords": [
+        "تحويل العملات حوّل الدينار الجزائري إلى العملات العالمية والعكس",
+        "وتابع أسعار الصرف المرجعية ومخطط تغير قيمة العملات عبر فترات زمنية مختلفة. calculators الأدوات الرقمية"
+      ],
+      "status": "displayable"
+    },
+    {
+      "section_name": "الأدوات الرقمية",
+      "sector_name": "calculators",
+      "title": "حاسبة الفرق بين تاريخين",
+      "path": "pages/tools/calculators/date-difference.html",
+      "content_type": "tool",
+      "parent_sector_path": null,
+      "keywords": [
+        "حاسبة الفرق بين تاريخين احسب الفرق بين تاريخين بالأيام والأسابيع",
+        "واعرف المدة الزمنية بينهما بسهولة سواء كان التاريخ الثاني قبل الأول أو بعده. calculators الأدوات الرقمية"
+      ],
+      "status": "displayable"
+    },
+    {
+      "section_name": "الأدوات الرقمية",
+      "sector_name": "calculators",
+      "title": "حاسبة استهلاك الكهرباء وفاتورة سونلغاز",
+      "path": "pages/tools/calculators/electricity-calculator.html",
+      "content_type": "tool",
+      "parent_sector_path": null,
+      "keywords": [
+        "حاسبة استهلاك الكهرباء وفاتورة سونلغاز احسب استهلاك الأجهزة بالكيلوواط ساعي وتكلفة الكهرباء بالدينار الجزائري",
+        "وقدّر فاتورة سونلغاز حسب القدرة ومدة التشغيل والتعريفة المدخلة. calculators الأدوات الرقمية"
+      ],
+      "status": "displayable"
+    },
+    {
+      "section_name": "الأدوات الرقمية",
+      "sector_name": "calculators",
+      "title": "حاسبة البنزين والوقود وتكلفة الرحلة",
+      "path": "pages/tools/calculators/fuel-calculator.html",
+      "content_type": "tool",
+      "parent_sector_path": null,
+      "keywords": [
+        "حاسبة البنزين والوقود وتكلفة الرحلة احسب استهلاك البنزين أو المازوت أو GPL وتكلفة الرحلة بالدينار الجزائري حسب المسافة واستهلاك السيارة وسعر اللتر. calculators الأدوات الرقمية"
+      ],
+      "status": "displayable"
+    },
+    {
+      "section_name": "الأدوات الرقمية",
+      "sector_name": "calculators",
+      "title": "حاسبة القروض والأقساط",
+      "path": "pages/tools/calculators/loan-calculator.html",
+      "content_type": "tool",
+      "parent_sector_path": null,
+      "keywords": [
+        "حاسبة القروض والأقساط احسب القسط الشهري للقرض وإجمالي الفوائد والمبلغ المستحق حسب قيمة التمويل ومعدل الفائدة ومدة السداد",
+        "مع نتيجة تقديرية. calculators الأدوات الرقمية"
+      ],
+      "status": "displayable"
+    },
+    {
+      "section_name": "الأدوات الرقمية",
+      "sector_name": "calculators",
+      "title": "محول الأرقام إلى الحروف بالدينار الجزائري",
+      "path": "pages/tools/calculators/number-to-words.html",
+      "content_type": "tool",
+      "parent_sector_path": null,
+      "keywords": [
+        "محول الأرقام إلى الحروف بالدينار الجزائري حوّل الأرقام إلى الحروف بالدينار الجزائري والسنتيم بصياغة عربية جاهزة للفواتير والوصولات والوثائق الإدارية",
+        "مع النسخ والطباعة مجانًا. calculators الأدوات الرقمية"
+      ],
+      "status": "displayable"
+    },
+    {
+      "section_name": "الأدوات الرقمية",
+      "sector_name": "calculators",
+      "title": "حاسبة النسبة المئوية",
+      "path": "pages/tools/calculators/percentage-calculator.html",
+      "content_type": "tool",
+      "parent_sector_path": null,
+      "keywords": [
+        "حاسبة النسبة المئوية احسب النسبة المئوية لأي قيمة من الإجمالي",
+        "أو استخرج قيمة النسبة ومقدار الزيادة أو النقصان بسرعة وبنتيجة فورية. calculators الأدوات الرقمية"
+      ],
+      "status": "displayable"
+    },
+    {
+      "section_name": "الأدوات الرقمية",
+      "sector_name": "calculators",
+      "title": "حاسبة الراتب الصافي في الجزائر",
+      "path": "pages/tools/calculators/salary-calculator.html",
+      "content_type": "tool",
+      "parent_sector_path": null,
+      "keywords": [
+        "حاسبة الراتب الصافي في الجزائر قدّر الراتب الصافي في الجزائر انطلاقًا من الأجر الخام",
+        "مع تفصيل اقتطاع الضمان الاجتماعي والضريبة على الدخل IRG بالدينار الجزائري. calculators الأدوات الرقمية"
+      ],
+      "status": "displayable"
+    },
+    {
+      "section_name": "الأدوات الرقمية",
+      "sector_name": "calculators",
+      "title": "محول وحدات القياس",
+      "path": "pages/tools/calculators/unit-converter.html",
+      "content_type": "tool",
+      "parent_sector_path": null,
+      "keywords": [
+        "محول وحدات القياس حوّل وحدات الطول والوزن والمساحة والحجم والحرارة والسرعة والطاقة والضغط والوقت والبيانات باستخدام محول وحدات مجاني وسريع. calculators الأدوات الرقمية"
+      ],
+      "status": "displayable"
+    },
+    {
+      "section_name": "الأدوات الرقمية",
+      "sector_name": "daily-life",
+      "title": "حاسبة ميزانية الطالب",
+      "path": "pages/tools/daily-life/budget-calculator.html",
+      "content_type": "tool",
+      "parent_sector_path": null,
+      "keywords": [
+        "حاسبة ميزانية الطالب احسب ميزانية الطالب ومصاريف المعيشة بالدينار الجزائري",
+        "واجمع تكاليف السكن والطعام والنقل والدراسة لمعرفة إجمالي الإنفاق. daily-life الأدوات الرقمية"
+      ],
+      "status": "displayable"
     }
   ]
 }
