@@ -2435,7 +2435,7 @@
     {
       "section_name": "القطاعات والخدمات",
       "sector_name": "medjedel",
-      "title": "البوابة الجزائرية",
+      "title": "Medjedel",
       "path": "sectors/medjedel.html",
       "content_type": "sector",
       "parent_sector_path": null,
@@ -2449,7 +2449,7 @@
     {
       "section_name": "القطاعات والخدمات",
       "sector_name": "mesrs.dz",
-      "title": "البوابة الجزائرية",
+      "title": "وزارة التعليم العالي والبحث العلمي: المنصات والخدمات الجامعية الرقمية",
       "path": "sectors/mesrs.dz.html",
       "content_type": "sector",
       "parent_sector_path": null,
@@ -2466,7 +2466,7 @@
     {
       "section_name": "القطاعات والخدمات",
       "sector_name": "mf.gov",
-      "title": "البوابة الجزائرية",
+      "title": "المالية - الجباية",
       "path": "sectors/mf.gov.html",
       "content_type": "sector",
       "parent_sector_path": null,
@@ -2484,7 +2484,7 @@
     {
       "section_name": "القطاعات والخدمات",
       "sector_name": "mfa",
-      "title": "البوابة الجزائرية",
+      "title": "الشؤون الخارجية والجالية الجزائرية",
       "path": "sectors/mfa.html",
       "content_type": "sector",
       "parent_sector_path": null,
@@ -2497,7 +2497,7 @@
     {
       "section_name": "القطاعات والخدمات",
       "sector_name": "mfp.gov",
-      "title": "البوابة الجزائرية",
+      "title": "التكوين المهني 2026",
       "path": "sectors/mfp.gov.html",
       "content_type": "sector",
       "parent_sector_path": null,
@@ -2513,7 +2513,7 @@
     {
       "section_name": "القطاعات والخدمات",
       "sector_name": "mhuv.gov",
-      "title": "البوابة الجزائرية",
+      "title": "وزارة السكن والعمران والمدينة: الخدمات والمنصات الرقمية",
       "path": "sectors/mhuv.gov.html",
       "content_type": "sector",
       "parent_sector_path": null,
@@ -2527,7 +2527,7 @@
     {
       "section_name": "القطاعات والخدمات",
       "sector_name": "mjeunesse.gov",
-      "title": "البوابة الجزائرية",
+      "title": "وزارة الشباب",
       "path": "sectors/mjeunesse.gov.html",
       "content_type": "sector",
       "parent_sector_path": null,
@@ -2543,7 +2543,7 @@
     {
       "section_name": "القطاعات والخدمات",
       "sector_name": "mjustice",
-      "title": "البوابة الجزائرية",
+      "title": "وزارة العدل الجزائرية: الخدمات القضائية والمنصات الإلكترونية",
       "path": "sectors/mjustice.html",
       "content_type": "sector",
       "parent_sector_path": null,
@@ -2557,7 +2557,7 @@
     {
       "section_name": "القطاعات والخدمات",
       "sector_name": "mobilis",
-      "title": "البوابة الجزائرية",
+      "title": "موبيليس الجزائر: تعبئة الرصيد ودفع الفواتير والعروض وخدمات 4G",
       "path": "sectors/mobilis.html",
       "content_type": "sector",
       "parent_sector_path": null,
@@ -2573,7 +2573,7 @@
     {
       "section_name": "القطاعات والخدمات",
       "sector_name": "msnfcf.gov",
-      "title": "البوابة الجزائرية",
+      "title": "التضامن والاسرة وقضايا المرأة",
       "path": "sectors/msnfcf.gov.html",
       "content_type": "sector",
       "parent_sector_path": null,
@@ -2589,7 +2589,7 @@
     {
       "section_name": "القطاعات والخدمات",
       "sector_name": "msport.gov",
-      "title": "البوابة الجزائرية",
+      "title": "وزارة الرياضة",
       "path": "sectors/msport.gov.html",
       "content_type": "sector",
       "parent_sector_path": null,
@@ -2602,7 +2602,7 @@
     {
       "section_name": "القطاعات والخدمات",
       "sector_name": "mtess",
-      "title": "البوابة الجزائرية",
+      "title": "العمل، التشغيل والضمان الإجتماعي",
       "path": "sectors/mtess.html",
       "content_type": "sector",
       "parent_sector_path": null,
@@ -2616,7 +2616,7 @@
     {
       "section_name": "القطاعات والخدمات",
       "sector_name": "mtpib",
-      "title": "البوابة الجزائرية",
+      "title": "وزارة الأشغال العمومية والمنشآت القاعدية",
       "path": "sectors/mtpib.html",
       "content_type": "sector",
       "parent_sector_path": null,
@@ -2632,7 +2632,7 @@
     {
       "section_name": "القطاعات والخدمات",
       "sector_name": "naftal",
-      "title": "البوابة الجزائرية",
+      "title": "نفطال 2026: خدمات محطتي وتسجيل اقتناء عجلات السيارات",
       "path": "sectors/naftal.html",
       "content_type": "sector",
       "parent_sector_path": null,
@@ -2646,7 +2646,7 @@
     {
       "section_name": "القطاعات والخدمات",
       "sector_name": "nifenligne",
-      "title": "البوابة الجزائرية",
+      "title": "الترقيم الجبائي",
       "path": "sectors/nifenligne.html",
       "content_type": "sector",
       "parent_sector_path": null,
