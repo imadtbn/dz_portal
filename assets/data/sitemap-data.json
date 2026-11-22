@@ -2247,6 +2247,221 @@
         "وتطبيق إنشغال. enpi القطاعات والخدمات"
       ],
       "status": "displayable"
+    },
+    {
+      "section_name": "القطاعات والخدمات",
+      "sector_name": "etudpdf",
+      "title": "البوابة الجزائرية",
+      "path": "sectors/etudpdf.html",
+      "content_type": "sector",
+      "parent_sector_path": null,
+      "keywords": [
+        "البوابة الجزائرية جميع فروض واختبارات شهادة التعليم المتوسط",
+        "البكالوريا",
+        "والابتدائي مع التصحيح النموذجي لجميع المواد والمستويات التعليمية في الجزائر etudpdf القطاعات والخدمات"
+      ],
+      "status": "displayable"
+    },
+    {
+      "section_name": "القطاعات والخدمات",
+      "sector_name": "exam-compos",
+      "title": "البوابة الجزائرية",
+      "path": "sectors/exam-compos.html",
+      "content_type": "sector",
+      "parent_sector_path": null,
+      "keywords": [
+        "البوابة الجزائرية دليل تعليمي يجمع روابط منصات الفروض والاختبارات الجزائرية",
+        "ومواقع التحضير لشهادتي التعليم المتوسط والبكالوريا",
+        "إضافة إلى فضاء الأستاذ وفضاء الأولياء والتلاميذ. exam-compos القطاعات والخدمات"
+      ],
+      "status": "displayable"
+    },
+    {
+      "section_name": "القطاعات والخدمات",
+      "sector_name": "facteur",
+      "title": "البوابة الجزائرية",
+      "path": "sectors/facteur.html",
+      "content_type": "sector",
+      "parent_sector_path": null,
+      "keywords": [
+        "البوابة الجزائرية اجمع روابط دفع فواتير الكهرباء والغاز والماء في الجزائر عبر سونلغاز والجزائرية للمياه وسيال وسيرو",
+        "وانتقل إلى صفحات التسديد والخدمات المرتبطة بكل مؤسسة. facteur القطاعات والخدمات"
+      ],
+      "status": "displayable"
+    },
+    {
+      "section_name": "القطاعات والخدمات",
+      "sector_name": "facture_loyer",
+      "title": "البوابة الجزائرية",
+      "path": "sectors/facture_loyer.html",
+      "content_type": "sector",
+      "parent_sector_path": null,
+      "keywords": [
+        "البوابة الجزائرية دليل دفع الفواتير والإيجار في الجزائر",
+        "يشمل تسديد فواتير الكهرباء والغاز والمياه والإنترنت والهاتف وخدمات الدفع الإلكتروني عبر البطاقة الذهبية facture_loyer القطاعات والخدمات"
+      ],
+      "status": "displayable"
+    },
+    {
+      "section_name": "القطاعات والخدمات",
+      "sector_name": "fadaeldjazair",
+      "title": "البوابة الجزائرية",
+      "path": "sectors/fadaeldjazair.html",
+      "content_type": "sector",
+      "parent_sector_path": null,
+      "keywords": [
+        "البوابة الجزائرية ادخل إلى فضاء الجزائر التابع للمديرية العامة للأملاك الوطنية لطلب مستخرجات الوثائق العقارية وشهادة السلبية والعقود المشهرة والوثائق المسحية مثل CC11 وCC12 وCC15. fadaeldjazair القطاعات والخدمات"
+      ],
+      "status": "displayable"
+    },
+    {
+      "section_name": "القطاعات والخدمات",
+      "sector_name": "hatplc",
+      "title": "البوابة الجزائرية",
+      "path": "sectors/hatplc.html",
+      "content_type": "sector",
+      "parent_sector_path": null,
+      "keywords": [
+        "البوابة الجزائرية تقدم الموقع السلطة العليا للشفافية والوقاية من الفساد ومكافحته خدمات رقمية عن بعد دون الحاجة للتنقل وربح الوقت hatplc القطاعات والخدمات"
+      ],
+      "status": "displayable"
+    },
+    {
+      "section_name": "القطاعات والخدمات",
+      "sector_name": "hcn",
+      "title": "البوابة الجزائرية",
+      "path": "sectors/hcn.html",
+      "content_type": "sector",
+      "parent_sector_path": null,
+      "keywords": [
+        "البوابة الجزائرية المحافظة السامية للرقمنة في الجزائر HCN",
+        "بوابة الخدمات الحكومية الرقمية dzds",
+        "منصة الأبوستيل",
+        "تطبيق الخدمات الرقمية",
+        "ومركز الاتصال 3017. خدمات رقمية شاملة للمواطنين hcn القطاعات والخدمات"
+      ],
+      "status": "displayable"
+    },
+    {
+      "section_name": "القطاعات والخدمات",
+      "sector_name": "ina-elections",
+      "title": "البوابة الجزائرية",
+      "path": "sectors/ina-elections.html",
+      "content_type": "sector",
+      "parent_sector_path": null,
+      "keywords": [
+        "البوابة الجزائرية دليل خدمات الانتخابات والاستفتاءات في الجزائر",
+        "يشمل التسجيل في القوائم الانتخابية والتحقق من بطاقة الناخب وخدمات الهيئة الوطنية المستقلة للانتخابات ina-elections القطاعات والخدمات"
+      ],
+      "status": "displayable"
+    },
+    {
+      "section_name": "القطاعات والخدمات",
+      "sector_name": "interieur",
+      "title": "البوابة الجزائرية",
+      "path": "sectors/interieur.html",
+      "content_type": "sector",
+      "parent_sector_path": null,
+      "keywords": [
+        "البوابة الجزائرية اكتشف خدمات وزارة الداخلية والجماعات المحلية الرقمية: البطاقة بيوميترية جواز السفر",
+        "شهادة الميلاد",
+        "الشباك عن بعد",
+        "منحة رمضان",
+        "وأكثر من ذلك بكثير. الوصول السريع والآمن لجم interieur القطاعات والخدمات"
+      ],
+      "status": "displayable"
+    },
+    {
+      "section_name": "القطاعات والخدمات",
+      "sector_name": "madr",
+      "title": "البوابة الجزائرية",
+      "path": "sectors/madr.html",
+      "content_type": "sector",
+      "parent_sector_path": null,
+      "keywords": [
+        "البوابة الجزائرية دليل خدمات وزارة الفلاحة والتنمية الريفية في الجزائر",
+        "بما فيها منصة حصاد",
+        "التصريح بالإنتاج",
+        "خدمات الطب البيطري",
+        "تراخيص استيراد البذور والشتلات والمنتجات النباتية",
+        "ومنصة أضاحي. madr القطاعات والخدمات"
+      ],
+      "status": "displayable"
+    },
+    {
+      "section_name": "القطاعات والخدمات",
+      "sector_name": "markabatidz",
+      "title": "البوابة الجزائرية",
+      "path": "sectors/markabatidz.html",
+      "content_type": "sector",
+      "parent_sector_path": null,
+      "keywords": [
+        "البوابة الجزائرية منصة فحص المركبات - مركبتي DZ هي منصة موحدة لفحص المركبات وتسجيلها في النظام",
+        "منصة فحص المركبات - مركبتي DZ في خدمة المواطنين الجزائريين لتسهيل الوصول إلى خدمات فحص المرك markabatidz القطاعات والخدمات"
+      ],
+      "status": "displayable"
+    },
+    {
+      "section_name": "القطاعات والخدمات",
+      "sector_name": "mdn",
+      "title": "البوابة الجزائرية",
+      "path": "sectors/mdn.html",
+      "content_type": "sector",
+      "parent_sector_path": null,
+      "keywords": [
+        "البوابة الجزائرية روابط وخدمات وزارة الدفاع الوطني الجزائرية",
+        "بما فيها التسجيل في مدارس أشبال الأمة",
+        "ملفات التجنيد للضباط وضباط الصف ورجال الصف",
+        "دليل التجنيد",
+        "التطبيقات الرسمية وأرقام الاتصال. mdn القطاعات والخدمات"
+      ],
+      "status": "displayable"
+    },
+    {
+      "section_name": "القطاعات والخدمات",
+      "sector_name": "me.gov",
+      "title": "البوابة الجزائرية",
+      "path": "sectors/me.gov.html",
+      "content_type": "sector",
+      "parent_sector_path": null,
+      "keywords": [
+        "البوابة الجزائرية اكتشف الخدمات الرقمية الرسمية التابعة لوزارة البيئة وجودة الحياة الجزائرية",
+        "بما في ذلك بورصة النفايات الصناعية",
+        "التطبيقات الرقمية",
+        "وخدمات التواصل الإلكتروني me.gov القطاعات والخدمات"
+      ],
+      "status": "displayable"
+    },
+    {
+      "section_name": "القطاعات والخدمات",
+      "sector_name": "medjedel",
+      "title": "البوابة الجزائرية",
+      "path": "sectors/medjedel.html",
+      "content_type": "sector",
+      "parent_sector_path": null,
+      "keywords": [
+        "البوابة الجزائرية جميع فروض واختبارات شهادة التعليم المتوسط",
+        "البكالوريا",
+        "والابتدائي مع التصحيح النموذجي لجميع المواد والمستويات التعليمية في الجزائر medjedel القطاعات والخدمات"
+      ],
+      "status": "displayable"
+    },
+    {
+      "section_name": "القطاعات والخدمات",
+      "sector_name": "mesrs.dz",
+      "title": "البوابة الجزائرية",
+      "path": "sectors/mesrs.dz.html",
+      "content_type": "sector",
+      "parent_sector_path": null,
+      "keywords": [
+        "البوابة الجزائرية دليل منصات وزارة التعليم العالي والبحث العلمي في الجزائر: التسجيل وإعادة التسجيل الجامعي",
+        "دفع الحقوق",
+        "التعليم عن بعد",
+        "البحث العلمي",
+        "المنح",
+        "التعاون الجامعي وخدمات الطلبة. mesrs.dz القطاعات والخدمات"
+      ],
+      "status": "displayable"
     }
   ]
 }
