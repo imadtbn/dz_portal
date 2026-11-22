@@ -2222,7 +2222,7 @@
     {
       "section_name": "القطاعات والخدمات",
       "sector_name": "emergency",
-      "title": "البوابة الجزائرية",
+      "title": "أرقام الطوارئ في الجزائر 2026: الشرطة والدرك والحماية المدنية",
       "path": "sectors/emergency.html",
       "content_type": "sector",
       "parent_sector_path": null,
@@ -2236,7 +2236,7 @@
     {
       "section_name": "القطاعات والخدمات",
       "sector_name": "enpi",
-      "title": "البوابة الجزائرية",
+      "title": "المؤسسة الوطنية للترقية العقارية ENPI: التسجيل في سكنات LPP وLPL",
       "path": "sectors/enpi.html",
       "content_type": "sector",
       "parent_sector_path": null,
@@ -2251,7 +2251,7 @@
     {
       "section_name": "القطاعات والخدمات",
       "sector_name": "etudpdf",
-      "title": "البوابة الجزائرية",
+      "title": "etudpdf",
       "path": "sectors/etudpdf.html",
       "content_type": "sector",
       "parent_sector_path": null,
@@ -2265,7 +2265,7 @@
     {
       "section_name": "القطاعات والخدمات",
       "sector_name": "exam-compos",
-      "title": "البوابة الجزائرية",
+      "title": "دليل مواقع الفروض والاختبارات وفضاء الأستاذ والأولياء في الجزائر",
       "path": "sectors/exam-compos.html",
       "content_type": "sector",
       "parent_sector_path": null,
@@ -2279,7 +2279,7 @@
     {
       "section_name": "القطاعات والخدمات",
       "sector_name": "facteur",
-      "title": "البوابة الجزائرية",
+      "title": "دفع فواتير الماء والكهرباء والغاز في الجزائر | روابط التسديد",
       "path": "sectors/facteur.html",
       "content_type": "sector",
       "parent_sector_path": null,
@@ -2292,7 +2292,7 @@
     {
       "section_name": "القطاعات والخدمات",
       "sector_name": "facture_loyer",
-      "title": "البوابة الجزائرية",
+      "title": "فواتير استئجار السكن",
       "path": "sectors/facture_loyer.html",
       "content_type": "sector",
       "parent_sector_path": null,
@@ -2305,7 +2305,7 @@
     {
       "section_name": "القطاعات والخدمات",
       "sector_name": "fadaeldjazair",
-      "title": "البوابة الجزائرية",
+      "title": "فضاء الجزائر 2026: خدمات الأملاك الوطنية والوثائق العقارية",
       "path": "sectors/fadaeldjazair.html",
       "content_type": "sector",
       "parent_sector_path": null,
@@ -2317,7 +2317,7 @@
     {
       "section_name": "القطاعات والخدمات",
       "sector_name": "hatplc",
-      "title": "البوابة الجزائرية",
+      "title": "hatplc DZ",
       "path": "sectors/hatplc.html",
       "content_type": "sector",
       "parent_sector_path": null,
@@ -2329,7 +2329,7 @@
     {
       "section_name": "القطاعات والخدمات",
       "sector_name": "hcn",
-      "title": "البوابة الجزائرية",
+      "title": "المحافظة السامية للرقمنة",
       "path": "sectors/hcn.html",
       "content_type": "sector",
       "parent_sector_path": null,
@@ -2345,7 +2345,7 @@
     {
       "section_name": "القطاعات والخدمات",
       "sector_name": "ina-elections",
-      "title": "البوابة الجزائرية",
+      "title": "السلطة الوطنية المستقلة للانتخابات",
       "path": "sectors/ina-elections.html",
       "content_type": "sector",
       "parent_sector_path": null,
@@ -2358,7 +2358,7 @@
     {
       "section_name": "القطاعات والخدمات",
       "sector_name": "interieur",
-      "title": "البوابة الجزائرية",
+      "title": "وزارة الداخلية",
       "path": "sectors/interieur.html",
       "content_type": "sector",
       "parent_sector_path": null,
@@ -2374,7 +2374,7 @@
     {
       "section_name": "القطاعات والخدمات",
       "sector_name": "madr",
-      "title": "البوابة الجزائرية",
+      "title": "وزارة الفلاحة والتنمية الريفية: منصات الفلاح والخدمات الرقمية",
       "path": "sectors/madr.html",
       "content_type": "sector",
       "parent_sector_path": null,
@@ -2391,7 +2391,7 @@
     {
       "section_name": "القطاعات والخدمات",
       "sector_name": "markabatidz",
-      "title": "البوابة الجزائرية",
+      "title": "منصة فحص المركبات - مركبتي DZ",
       "path": "sectors/markabatidz.html",
       "content_type": "sector",
       "parent_sector_path": null,
@@ -2404,7 +2404,7 @@
     {
       "section_name": "القطاعات والخدمات",
       "sector_name": "mdn",
-      "title": "البوابة الجزائرية",
+      "title": "وزارة الدفاع الوطني الجزائرية: التجنيد وأشبال الأمة والخدمات",
       "path": "sectors/mdn.html",
       "content_type": "sector",
       "parent_sector_path": null,
@@ -2420,7 +2420,7 @@
     {
       "section_name": "القطاعات والخدمات",
       "sector_name": "me.gov",
-      "title": "البوابة الجزائرية",
+      "title": "وزارة البيئة وجودة الحياة الجزائرية",
       "path": "sectors/me.gov.html",
       "content_type": "sector",
       "parent_sector_path": null,
