@@ -2014,7 +2014,7 @@
     {
       "section_name": "القطاعات والخدمات",
       "sector_name": "commerce",
-      "title": "البوابة الجزائرية",
+      "title": "وزارة التجارة والجمارك",
       "path": "sectors/commerce.html",
       "content_type": "sector",
       "parent_sector_path": null,
@@ -2027,7 +2027,7 @@
     {
       "section_name": "القطاعات والخدمات",
       "sector_name": "creg.gov",
-      "title": "البوابة الجزائرية",
+      "title": "لجنة ضبط الكهرباء والغاز CREG الجزائر | الخدمات الرقمية",
       "path": "sectors/creg.gov.html",
       "content_type": "sector",
       "parent_sector_path": null,
@@ -2042,7 +2042,7 @@
     {
       "section_name": "القطاعات والخدمات",
       "sector_name": "dgfp.gov",
-      "title": "البوابة الجزائرية",
+      "title": "الوظيفة العمومية في الجزائر DGFP: المعادلات ومسابقات التوظيف",
       "path": "sectors/dgfp.gov.html",
       "content_type": "sector",
       "parent_sector_path": null,
@@ -2057,7 +2057,7 @@
     {
       "section_name": "القطاعات والخدمات",
       "sector_name": "dgsn",
-      "title": "البوابة الجزائرية",
+      "title": "الشرطة الجزائرية",
       "path": "sectors/dgsn.html",
       "content_type": "sector",
       "parent_sector_path": null,
@@ -2070,7 +2070,7 @@
     {
       "section_name": "القطاعات والخدمات",
       "sector_name": "djezzy",
-      "title": "البوابة الجزائرية",
+      "title": "جازي Djezzy الجزائر: تعبئة الرصيد ودفع الفواتير وتطبيق جازي",
       "path": "sectors/djezzy.html",
       "content_type": "sector",
       "parent_sector_path": null,
@@ -2084,7 +2084,7 @@
     {
       "section_name": "القطاعات والخدمات",
       "sector_name": "douane",
-      "title": "البوابة الجزائرية",
+      "title": "الجمارك الجزائرية: منصة ALCES والخدمات الجمركية الإلكترونية",
       "path": "sectors/douane.html",
       "content_type": "sector",
       "parent_sector_path": null,
@@ -2097,7 +2097,7 @@
     {
       "section_name": "القطاعات والخدمات",
       "sector_name": "dronet.mdn",
-      "title": "البوابة الجزائرية",
+      "title": "المركز الوطني لمنظومات الطائرات بدون طيار على المتن",
       "path": "sectors/dronet.mdn.html",
       "content_type": "sector",
       "parent_sector_path": null,
@@ -2113,7 +2113,7 @@
     {
       "section_name": "القطاعات والخدمات",
       "sector_name": "dzexam1",
-      "title": "البوابة الجزائرية",
+      "title": "DZ Exam 1: بنك الفروض والاختبارات لجميع المستويات في الجزائر",
       "path": "sectors/dzexam1.html",
       "content_type": "sector",
       "parent_sector_path": null,
@@ -2126,7 +2126,7 @@
     {
       "section_name": "القطاعات والخدمات",
       "sector_name": "dzexams",
-      "title": "البوابة الجزائرية",
+      "title": "DZ Exam 2026 | بنك الفروض والاختبارات لجميع الأطوار في الجزائر",
       "path": "sectors/dzexams.html",
       "content_type": "sector",
       "parent_sector_path": null,
@@ -2139,7 +2139,7 @@
     {
       "section_name": "القطاعات والخدمات",
       "sector_name": "dzexams.pro",
-      "title": "البوابة الجزائرية",
+      "title": "بنك الفروض والإختبارات dzexams.pro",
       "path": "sectors/dzexams.pro.html",
       "content_type": "sector",
       "parent_sector_path": null,
@@ -2153,7 +2153,7 @@
     {
       "section_name": "القطاعات والخدمات",
       "sector_name": "dztests",
-      "title": "البوابة الجزائرية",
+      "title": "DZTests الجزائر: فروض واختبارات لجميع المستويات مع التصحيح",
       "path": "sectors/dztests.html",
       "content_type": "sector",
       "parent_sector_path": null,
@@ -2167,7 +2167,7 @@
     {
       "section_name": "القطاعات والخدمات",
       "sector_name": "ecolerradja",
-      "title": "البوابة الجزائرية",
+      "title": "بنك الفروض والإختبارات ecolerradja",
       "path": "sectors/ecolerradja.html",
       "content_type": "sector",
       "parent_sector_path": null,
@@ -2179,7 +2179,7 @@
     {
       "section_name": "القطاعات والخدمات",
       "sector_name": "eddirasa",
-      "title": "البوابة الجزائرية",
+      "title": "الدراسة | بنك الفروض والاختبارات لجميع المستويات في الجزائر",
       "path": "sectors/eddirasa.html",
       "content_type": "sector",
       "parent_sector_path": null,
@@ -2192,7 +2192,7 @@
     {
       "section_name": "القطاعات والخدمات",
       "sector_name": "education",
-      "title": "البوابة الجزائرية",
+      "title": "وزارة التربية الوطنية الجزائرية | فضاء الأستاذ والأولياء والخدمات",
       "path": "sectors/education.html",
       "content_type": "sector",
       "parent_sector_path": null,
@@ -2208,7 +2208,7 @@
     {
       "section_name": "القطاعات والخدمات",
       "sector_name": "educationdz",
-      "title": "البوابة الجزائرية",
+      "title": "education dz",
       "path": "sectors/educationdz.html",
       "content_type": "sector",
       "parent_sector_path": null,
