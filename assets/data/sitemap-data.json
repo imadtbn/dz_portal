@@ -1588,6 +1588,232 @@
         "وتأمين المؤسسات والمهنيين. assurance القطاعات والخدمات"
       ],
       "status": "displayable"
+    },
+    {
+      "section_name": "القطاعات والخدمات",
+      "sector_name": "assurance",
+      "title": "البوابة الجزائرية",
+      "path": "sectors/assurance/macir-vie.html",
+      "content_type": "service",
+      "parent_sector_path": "sectors/assurance.html",
+      "keywords": [
+        "البوابة الجزائرية الدليل الشامل للخدمات الرقمية والتأمينية لشركة ماكير في للتأمين على الحياة (Macir Vie): الاكتتاب الإلكتروني المباشر في تأمين السفر وبطاقة MyM Pass",
+        "تأمين المقترض والقروض المصرفية MyMacir Crédits",
+        "تأمين الحج والعمرة",
+        "تأمين الحوادث المدرسية",
+        "تطبيق MyMacir",
+        "وتأمينات المؤسسات. assurance القطاعات والخدمات"
+      ],
+      "status": "displayable"
+    },
+    {
+      "section_name": "القطاعات والخدمات",
+      "sector_name": "assurance",
+      "title": "البوابة الجزائرية",
+      "path": "sectors/assurance/saa.html",
+      "content_type": "service",
+      "parent_sector_path": "sectors/assurance.html",
+      "keywords": [
+        "البوابة الجزائرية الدليل الشامل للخدمات الرقمية والتأمينية للشركة الوطنية للتأمين (SAA): طلب عروض الأسعار أونلاين",
+        "تأمين السيارات وباقة لالة LÂLLA",
+        "تأمين السكن والكوارث الطبيعية CAT-NAT",
+        "تأمين السفر الدولي وشنغن",
+        "التأمين الفلاحي",
+        "وتأمينات المؤسسات والمهنيين. assurance القطاعات والخدمات"
+      ],
+      "status": "displayable"
+    },
+    {
+      "section_name": "القطاعات والخدمات",
+      "sector_name": "assurance",
+      "title": "البوابة الجزائرية",
+      "path": "sectors/assurance/salama.html",
+      "content_type": "service",
+      "parent_sector_path": "sectors/assurance.html",
+      "keywords": [
+        "البوابة الجزائرية اكتشف الخدمات الرقمية لـ سلامة للتأمينات (Salama Assurances) في الجزائر. طلب عروض أسعار",
+        "تأمين السيارات",
+        "تأمين الممتلكات والتأمين المهني بأسهل الطرق. assurance القطاعات والخدمات"
+      ],
+      "status": "displayable"
+    },
+    {
+      "section_name": "القطاعات والخدمات",
+      "sector_name": "assurance",
+      "title": "البوابة الجزائرية",
+      "path": "sectors/assurance/trust-algeria.html",
+      "content_type": "service",
+      "parent_sector_path": "sectors/assurance.html",
+      "keywords": [
+        "البوابة الجزائرية الدليل الشامل للخدمات التأمينية والرقمية لشركة ترست الجزائر للتأمينات وإعادة التأمين (Trust Algeria Assurances): طلب عروض الأسعار",
+        "تأمين السيارات",
+        "تأمين السكن والكوارث الطبيعية CAT-NAT",
+        "تأمين السفر الدولي",
+        "وتأمينات المؤسسات والمهنيين. assurance القطاعات والخدمات"
+      ],
+      "status": "displayable"
+    },
+    {
+      "section_name": "القطاعات والخدمات",
+      "sector_name": "awlyaa-education",
+      "title": "البوابة الجزائرية",
+      "path": "sectors/awlyaa-education.html",
+      "content_type": "sector",
+      "parent_sector_path": null,
+      "keywords": [
+        "البوابة الجزائرية استخدم فضاء الأولياء لمتابعة نتائج التلاميذ والغيابات والتمدرس والتواصل مع المؤسسات التعليمية",
+        "والاطلاع على التسجيلات المدرسية عبر منصة وزارة التربية الوطنية. awlyaa-education القطاعات والخدمات"
+      ],
+      "status": "displayable"
+    },
+    {
+      "section_name": "القطاعات والخدمات",
+      "sector_name": "bank",
+      "title": "البوابة الجزائرية",
+      "path": "sectors/bank.html",
+      "content_type": "sector",
+      "parent_sector_path": null,
+      "keywords": [
+        "البوابة الجزائرية اكتشف خدمات البنوك والمالية الرقمية في الجزائر",
+        "من حجز القروض إلى تتبع وسائل الاستثمارات",
+        "كل ما تحتاجه لتسهيل حياتك اليومية bank القطاعات والخدمات"
+      ],
+      "status": "displayable"
+    },
+    {
+      "section_name": "القطاعات والخدمات",
+      "sector_name": "bank",
+      "title": "البوابة الجزائرية",
+      "path": "sectors/bank/ag-bank.html",
+      "content_type": "service",
+      "parent_sector_path": "sectors/bank.html",
+      "keywords": [
+        "البوابة الجزائرية دليل الخدمات المصرفية لبنك الخليج الجزائر AGB: تطبيق AGB Online",
+        "منصة الصيرفة الإلكترونية",
+        "الصيرفة والتمويل الإسلامي",
+        "بطاقات CIB وVisa وMastercard",
+        "وقنوات الدعم. bank القطاعات والخدمات"
+      ],
+      "status": "displayable"
+    },
+    {
+      "section_name": "القطاعات والخدمات",
+      "sector_name": "bank",
+      "title": "البوابة الجزائرية",
+      "path": "sectors/bank/albaraka-bank.html",
+      "content_type": "service",
+      "parent_sector_path": "sectors/bank.html",
+      "keywords": [
+        "البوابة الجزائرية دليل الخدمات المصرفية والحلول الرقمية لبنك البركة الجزائري (Al Baraka Bank Algeria): تطبيق الصيرفة Al Baraka Dz",
+        "منصة Al Baraka Net",
+        "صيغ التمويل الإسلامي (مرابحة",
+        "إجارة",
+        "استصناع)",
+        "بطاقات CIB وفيزا",
+        "وحسابات الاستثمار المتوافقة مع الشريعة. bank القطاعات والخدمات"
+      ],
+      "status": "displayable"
+    },
+    {
+      "section_name": "القطاعات والخدمات",
+      "sector_name": "bank",
+      "title": "البوابة الجزائرية",
+      "path": "sectors/bank/arabbank.html",
+      "content_type": "service",
+      "parent_sector_path": "sectors/bank.html",
+      "keywords": [
+        "البوابة الجزائرية دليل الخدمات المصرفية للبنك العربي الجزائر (Arab Bank Algeria): منصة الصيرفة الإلكترونية عربي أونلاين (Arabi Online)",
+        "تطبيق عربي موبايل (Arabi Mobile)",
+        "بطاقات CIB وفيزا الدولية",
+        "وخدمات تمويل الأفراد والشركات. bank القطاعات والخدمات"
+      ],
+      "status": "displayable"
+    },
+    {
+      "section_name": "القطاعات والخدمات",
+      "sector_name": "bank",
+      "title": "البوابة الجزائرية",
+      "path": "sectors/bank/badr.html",
+      "content_type": "service",
+      "parent_sector_path": "sectors/bank.html",
+      "keywords": [
+        "البوابة الجزائرية دليل الخدمات الرقمية لبنك الفلاحة والتنمية الريفية BADR: الدخول لمنصة الصيرفة الإلكترونية MyBADR",
+        "تطبيق الهاتف المحمول",
+        "الصيرفة الإسلامية",
+        "وأرقام الدعم المباشر. bank القطاعات والخدمات"
+      ],
+      "status": "displayable"
+    },
+    {
+      "section_name": "القطاعات والخدمات",
+      "sector_name": "bank",
+      "title": "البوابة الجزائرية",
+      "path": "sectors/bank/bank-abc.html",
+      "content_type": "service",
+      "parent_sector_path": "sectors/bank.html",
+      "keywords": [
+        "البوابة الجزائرية دليل الخدمات المصرفية لبنك ABC الجزائر (المؤسسة العربية المصرفية): منصة ABC Digital للصيرفة الرقمية",
+        "نافذة الصيرفة والتمويل الإسلامي البراق (Al-Buraq)",
+        "بطاقات CIB وبطاقات الدفع الدولية. bank القطاعات والخدمات"
+      ],
+      "status": "displayable"
+    },
+    {
+      "section_name": "القطاعات والخدمات",
+      "sector_name": "bank",
+      "title": "البوابة الجزائرية",
+      "path": "sectors/bank/bankalgeriane.html",
+      "content_type": "service",
+      "parent_sector_path": "sectors/bank.html",
+      "keywords": [
+        "البوابة الجزائرية اكتشف خدمات البنوك العمومية الجزائرية والخدمات البنكية الرقمية كل ما تحتاجه لتسهيل حياتك اليومية bank القطاعات والخدمات"
+      ],
+      "status": "displayable"
+    },
+    {
+      "section_name": "القطاعات والخدمات",
+      "sector_name": "bank",
+      "title": "البوابة الجزائرية",
+      "path": "sectors/bank/banketranger.html",
+      "content_type": "service",
+      "parent_sector_path": "sectors/bank.html",
+      "keywords": [
+        "البوابة الجزائرية اكتشف خدمات البنوك الأجنبية في الجزائر",
+        "مشاريع",
+        "تمويل وكل ما تحتاجه لتسهيل حياتك اليومية. تعرف على البنوك الأجنبية المتاحة في الجزائر وكيفية الاستفادة من خدماتها الرقمية bank القطاعات والخدمات"
+      ],
+      "status": "displayable"
+    },
+    {
+      "section_name": "القطاعات والخدمات",
+      "sector_name": "bank",
+      "title": "البوابة الجزائرية",
+      "path": "sectors/bank/bdl.html",
+      "content_type": "service",
+      "parent_sector_path": "sectors/bank.html",
+      "keywords": [
+        "البوابة الجزائرية دليل الخدمات الرقمية لبنك التنمية المحلية BDL: الدخول لمنصة الصيرفة الإلكترونية E-Banking",
+        "تطبيق الهاتف DIGIT BDL",
+        "الصيرفة الإسلامية",
+        "محاكي القروض",
+        "وأرقام الدعم المباشر. bank القطاعات والخدمات"
+      ],
+      "status": "displayable"
+    },
+    {
+      "section_name": "القطاعات والخدمات",
+      "sector_name": "bank",
+      "title": "البوابة الجزائرية",
+      "path": "sectors/bank/bea.html",
+      "content_type": "service",
+      "parent_sector_path": "sectors/bank.html",
+      "keywords": [
+        "البوابة الجزائرية دليل الخدمات الرقمية لبنك الجزائر الخارجي BEA: الدخول إلى منصة الصيرفة الإلكترونية E-Banking",
+        "تحميل تطبيق BEA MOBILE",
+        "محاكي القروض والتمويل الإسلامي",
+        "وأرقام مركز الاتصال المباشر. bank القطاعات والخدمات"
+      ],
+      "status": "displayable"
     }
   ]
 }
