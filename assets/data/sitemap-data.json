@@ -1334,11 +1334,11 @@
       "status": "displayable"
     },
     {
-      "section_name": "صفحات البوابة",
+      "section_name": "القطاعات والخدمات",
       "sector_name": "وكالة عدل AADL: منصة عدل 3 ودفع الإيجار والخدمات الرقمية",
       "title": "وكالة عدل AADL: منصة عدل 3 ودفع الإيجار والخدمات الرقمية",
       "path": "sectors/aadl.html",
-      "content_type": "page",
+      "content_type": "sector",
       "parent_sector_path": null,
       "keywords": [
         "البوابة الجزائرية الوصول إلى خدمات وكالة عدل في الجزائر: تسجيل الدخول إلى منصة عدل 3",
@@ -1350,11 +1350,11 @@
       "status": "displayable"
     },
     {
-      "section_name": "صفحات البوابة",
+      "section_name": "القطاعات والخدمات",
       "sector_name": "الوكالة الوطنية للإستثمار",
       "title": "الوكالة الوطنية للإستثمار",
       "path": "sectors/aapi.html",
-      "content_type": "page",
+      "content_type": "sector",
       "parent_sector_path": null,
       "keywords": [
         "البوابة الجزائرية الوكالة الجزائرية لترقية الاستثمار AAPI",
@@ -3006,7 +3006,7 @@
     "stale_records": 0,
     "invalid_parent_paths": 0,
     "by_content_type": {
-      "page": 10,
+      "page": 8,
       "guide": 1,
       "home": 1,
       "notices-index": 1,
@@ -3016,19 +3016,19 @@
       "tools-index": 1,
       "video": 9,
       "video-index": 1,
-      "sector": 79,
+      "sector": 81,
       "service": 30,
       "dynamic-service": 1
     },
     "by_section": {
-      "صفحات البوابة": 10,
+      "صفحات البوابة": 8,
       "الأدلة": 1,
       "الصفحة الرئيسية": 1,
       "الإشعارات": 11,
       "الإجراءات الرقمية": 11,
       "الأدوات الرقمية": 62,
       "الفيديوهات والشروحات": 10,
-      "القطاعات والخدمات": 110
+      "القطاعات والخدمات": 112
     }
   },
   "validation": {
