@@ -1336,7 +1336,7 @@
     {
       "section_name": "صفحات البوابة",
       "sector_name": null,
-      "title": "البوابة الجزائرية",
+      "title": "وكالة عدل AADL: منصة عدل 3 ودفع الإيجار والخدمات الرقمية",
       "path": "sectors/aadl.html",
       "content_type": "page",
       "parent_sector_path": null,
@@ -1352,7 +1352,7 @@
     {
       "section_name": "صفحات البوابة",
       "sector_name": null,
-      "title": "البوابة الجزائرية",
+      "title": "الوكالة الوطنية للإستثمار",
       "path": "sectors/aapi.html",
       "content_type": "page",
       "parent_sector_path": null,
@@ -1366,7 +1366,7 @@
     {
       "section_name": "القطاعات والخدمات",
       "sector_name": "ade",
-      "title": "البوابة الجزائرية",
+      "title": "الجزائرية للمياه ADE",
       "path": "sectors/ade.html",
       "content_type": "sector",
       "parent_sector_path": null,
@@ -1379,7 +1379,7 @@
     {
       "section_name": "القطاعات والخدمات",
       "sector_name": "algerietelecom",
-      "title": "البوابة الجزائرية",
+      "title": "إتصالات الجزائر",
       "path": "sectors/algerietelecom.html",
       "content_type": "sector",
       "parent_sector_path": null,
@@ -1396,7 +1396,7 @@
     {
       "section_name": "القطاعات والخدمات",
       "sector_name": "anae",
-      "title": "البوابة الجزائرية",
+      "title": "الوكالة الوطنية للمقاول الذاتي",
       "path": "sectors/anae.html",
       "content_type": "sector",
       "parent_sector_path": null,
@@ -1409,7 +1409,7 @@
     {
       "section_name": "القطاعات والخدمات",
       "sector_name": "anem",
-      "title": "البوابة الجزائرية",
+      "title": "ANEM DZ 2026: منحة البطالة والتسجيل وعروض العمل",
       "path": "sectors/anem.html",
       "content_type": "sector",
       "parent_sector_path": null,
@@ -1423,7 +1423,7 @@
     {
       "section_name": "القطاعات والخدمات",
       "sector_name": "anpdp",
-      "title": "البوابة الجزائرية",
+      "title": "حماية البيانات الشخصية في الجزائر",
       "path": "sectors/anpdp.html",
       "content_type": "sector",
       "parent_sector_path": null,
@@ -1436,7 +1436,7 @@
     {
       "section_name": "القطاعات والخدمات",
       "sector_name": "arpce",
-      "title": "البوابة الجزائرية",
+      "title": "ARPCE",
       "path": "sectors/arpce.html",
       "content_type": "sector",
       "parent_sector_path": null,
@@ -1451,7 +1451,7 @@
     {
       "section_name": "القطاعات والخدمات",
       "sector_name": "assurance",
-      "title": "البوابة الجزائرية",
+      "title": "وكالات التأمين على الممتلكات",
       "path": "sectors/assurance.html",
       "content_type": "sector",
       "parent_sector_path": null,
@@ -1465,7 +1465,7 @@
     {
       "section_name": "القطاعات والخدمات",
       "sector_name": "assurance",
-      "title": "البوابة الجزائرية",
+      "title": "أليانس للتأمينات - MyAlliance",
       "path": "sectors/assurance/alliance-assurances.html",
       "content_type": "service",
       "parent_sector_path": "sectors/assurance.html",
@@ -1480,7 +1480,7 @@
     {
       "section_name": "القطاعات والخدمات",
       "sector_name": "assurance",
-      "title": "البوابة الجزائرية",
+      "title": "أمانة للتأمينات (Amana Assurances)",
       "path": "sectors/assurance/amana.html",
       "content_type": "service",
       "parent_sector_path": "sectors/assurance.html",
@@ -1495,7 +1495,7 @@
     {
       "section_name": "القطاعات والخدمات",
       "sector_name": "assurance",
-      "title": "البوابة الجزائرية",
+      "title": "أكسا للتأمينات الجزائر (AXA Assurances Algérie)",
       "path": "sectors/assurance/axa.html",
       "content_type": "service",
       "parent_sector_path": "sectors/assurance.html",
@@ -1511,7 +1511,7 @@
     {
       "section_name": "القطاعات والخدمات",
       "sector_name": "assurance",
-      "title": "البوابة الجزائرية",
+      "title": "الشركة الجزائرية للتأمين وإعادة التأمين (CAAR)",
       "path": "sectors/assurance/caar.html",
       "content_type": "service",
       "parent_sector_path": "sectors/assurance.html",
@@ -1526,7 +1526,7 @@
     {
       "section_name": "القطاعات والخدمات",
       "sector_name": "assurance",
-      "title": "البوابة الجزائرية",
+      "title": "CAARAMA | التأمين على السيارات في الجزائر",
       "path": "sectors/assurance/caarama.html",
       "content_type": "service",
       "parent_sector_path": "sectors/assurance.html",
@@ -1542,7 +1542,7 @@
     {
       "section_name": "القطاعات والخدمات",
       "sector_name": "assurance",
-      "title": "البوابة الجزائرية",
+      "title": "الشركة الجزائرية للتأمينات (CAAT)",
       "path": "sectors/assurance/caat.html",
       "content_type": "service",
       "parent_sector_path": "sectors/assurance.html",
