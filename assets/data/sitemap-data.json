@@ -1814,6 +1814,230 @@
         "وأرقام مركز الاتصال المباشر. bank القطاعات والخدمات"
       ],
       "status": "displayable"
+    },
+    {
+      "section_name": "القطاعات والخدمات",
+      "sector_name": "bank",
+      "title": "البوابة الجزائرية",
+      "path": "sectors/bank/bna.html",
+      "content_type": "service",
+      "parent_sector_path": "sectors/bank.html",
+      "keywords": [
+        "البوابة الجزائرية دليل الخدمات الرقمية للبنك الوطني الجزائري BNA: فضاء الصيرفة الإلكترونية BNA e-Banking",
+        "تطبيقي BNAtic و Wimpay BNA",
+        "الصيرفة الإسلامية",
+        "محاكي القروض",
+        "وأرقام الدعم المباشر. bank القطاعات والخدمات"
+      ],
+      "status": "displayable"
+    },
+    {
+      "section_name": "القطاعات والخدمات",
+      "sector_name": "bank",
+      "title": "البوابة الجزائرية",
+      "path": "sectors/bank/bnh.html",
+      "content_type": "service",
+      "parent_sector_path": "sectors/bank.html",
+      "keywords": [
+        "البوابة الجزائرية دليل الخدمات المصرفية والتمويلية للبنك الوطني للإسكان BNH: تمويل اقتناء وترميم السكنات",
+        "فتح الحسابات ودفاتر الادخار",
+        "البطاقات البنكية CIB",
+        "مرافقة برامج السكن وشبكة الوكالات. bank القطاعات والخدمات"
+      ],
+      "status": "displayable"
+    },
+    {
+      "section_name": "القطاعات والخدمات",
+      "sector_name": "bank",
+      "title": "البوابة الجزائرية",
+      "path": "sectors/bank/business.algeria.hsbc.html",
+      "content_type": "service",
+      "parent_sector_path": "sectors/bank.html",
+      "keywords": [
+        "البوابة الجزائرية دليل خدمات بنك إتش إس بي سي الجزائر (HSBC Algeria): منصة الصيرفة الرقمية المؤسساتية HSBCnet",
+        "تطبيق الهاتف HSBCnet Mobile",
+        "حلول تمويل التجارة الدولية وسلاسل الإمداد (GTRF)",
+        "إدارة السيولة النقدية والخزينة (GLCM)",
+        "وتمويل الشركات الكبرى والمشاريع الاستثمارية. bank القطاعات والخدمات"
+      ],
+      "status": "displayable"
+    },
+    {
+      "section_name": "القطاعات والخدمات",
+      "sector_name": "bank",
+      "title": "البوابة الجزائرية",
+      "path": "sectors/bank/citigroup.html",
+      "content_type": "service",
+      "parent_sector_path": "sectors/bank.html",
+      "keywords": [
+        "البوابة الجزائرية دليل خدمات سيتي بنك الجزائر (Citibank N.A. Algeria - Citigroup): أول بنك أجنبي معتمد في الجزائر",
+        "منصة الصيرفة الرقمية CitiDirect",
+        "حلول الخزينة والتجارة الدولية (TTS)",
+        "تمويل الشركات الكبرى",
+        "وأسواق المال وتداول العملات. bank القطاعات والخدمات"
+      ],
+      "status": "displayable"
+    },
+    {
+      "section_name": "القطاعات والخدمات",
+      "sector_name": "bank",
+      "title": "البوابة الجزائرية",
+      "path": "sectors/bank/cnep.html",
+      "content_type": "service",
+      "parent_sector_path": "sectors/bank.html",
+      "keywords": [
+        "البوابة الجزائرية دليل خدمات الصندوق الوطني للتوفير والاحتياط كناب بنك CNEP Banque",
+        "ويشمل فضاء CNEP e-Banking وتطبيقي CNEP Connect وWimpay",
+        "وخدمات الادخار والتمويل والصيرفة الإسلامية. bank القطاعات والخدمات"
+      ],
+      "status": "displayable"
+    },
+    {
+      "section_name": "القطاعات والخدمات",
+      "sector_name": "bank",
+      "title": "البوابة الجزائرية",
+      "path": "sectors/bank/cpa.html",
+      "content_type": "service",
+      "parent_sector_path": "sectors/bank.html",
+      "keywords": [
+        "البوابة الجزائرية دليل الخدمات الرقمية للقرض الشعبي الجزائري CPA: الدخول إلى منصة الصيرفة الإلكترونية E-Banking",
+        "تحميل تطبيق CPA Mobile وتطبيق الدفع Wimpay",
+        "الصيرفة الإسلامية",
+        "وأرقام الدعم المباشر. bank القطاعات والخدمات"
+      ],
+      "status": "displayable"
+    },
+    {
+      "section_name": "القطاعات والخدمات",
+      "sector_name": "bank",
+      "title": "البوابة الجزائرية",
+      "path": "sectors/bank/ebanking.algerie.natixis.html",
+      "content_type": "service",
+      "parent_sector_path": "sectors/bank.html",
+      "keywords": [
+        "البوابة الجزائرية اكتشف خدمات Natixis Algérie الرقمية",
+        "وخدمات الاتصال والدعم والتطبيقات البنكية",
+        "في صفحة موحدة داخل البوابة الجزائرية للخدمات الرقمية bank القطاعات والخدمات"
+      ],
+      "status": "displayable"
+    },
+    {
+      "section_name": "القطاعات والخدمات",
+      "sector_name": "bank",
+      "title": "البوابة الجزائرية",
+      "path": "sectors/bank/fransabank.html",
+      "content_type": "service",
+      "parent_sector_path": "sectors/bank.html",
+      "keywords": [
+        "البوابة الجزائرية دليل خدمات فرنسبنك الجزائر (Fransabank El Djazair): الصيرفة الإلكترونية FSBKlic",
+        "تطبيق الهاتف Bank-In-App",
+        "خدمة الرسائل Khebarni",
+        "بطاقات CIB وفيزا الدولية",
+        "قروض السكن والاستهلاك",
+        "وحلول تمويل الشركات والتجارة الدولية. bank القطاعات والخدمات"
+      ],
+      "status": "displayable"
+    },
+    {
+      "section_name": "القطاعات والخدمات",
+      "sector_name": "bank",
+      "title": "البوابة الجزائرية",
+      "path": "sectors/bank/societegenerale.html",
+      "content_type": "service",
+      "parent_sector_path": "sectors/bank.html",
+      "keywords": [
+        "البوابة الجزائرية دليل الخدمات المصرفية لبنك سوسيتي جنرال الجزائر (Société Générale Algérie - SGA): تطبيق الصيرفة الرقمية APPLI SGA",
+        "منصة Sogecash Net لإدارة حسابات الشركات",
+        "بطاقات CIB وفيزا اللاتلامسية",
+        "وحلول التمويل والإيجار المالي. bank القطاعات والخدمات"
+      ],
+      "status": "displayable"
+    },
+    {
+      "section_name": "القطاعات والخدمات",
+      "sector_name": "campuce.jobs",
+      "title": "البوابة الجزائرية",
+      "path": "sectors/campuce.jobs.html",
+      "content_type": "sector",
+      "parent_sector_path": null,
+      "keywords": [
+        "البوابة الجزائرية فرص عمل للطلاب الوصول إلى وظائف بدوام جزئي",
+        "وفرص تدريب",
+        "ومهام تتناسب مع مسارك الدراسي. تقديم سريع. تقديم سريع تقدّم للوظائف في بضع نقرات فقط",
+        "عبر ملف شخصي موحد campuce.jobs القطاعات والخدمات"
+      ],
+      "status": "displayable"
+    },
+    {
+      "section_name": "القطاعات والخدمات",
+      "sector_name": "casnos",
+      "title": "البوابة الجزائرية",
+      "path": "sectors/casnos.html",
+      "content_type": "sector",
+      "parent_sector_path": null,
+      "keywords": [
+        "البوابة الجزائرية دليل خدمات CASNOS في الجزائر: فضاء المؤمن",
+        "الانتساب والتصريح عن بعد",
+        "استخراج الشهادات ومتابعة ملفات الضمان الاجتماعي للعمال غير الأجراء casnos القطاعات والخدمات"
+      ],
+      "status": "displayable"
+    },
+    {
+      "section_name": "القطاعات والخدمات",
+      "sector_name": "cnas",
+      "title": "البوابة الجزائرية",
+      "path": "sectors/cnas.html",
+      "content_type": "sector",
+      "parent_sector_path": null,
+      "keywords": [
+        "البوابة الجزائرية دليل خدمات CNAS في الجزائر: فضاء الهناء",
+        "التصريح عن بعد",
+        "استخراج الشهادات ومتابعة ملفات الضمان الاجتماعي للعمال الأجراء cnas القطاعات والخدمات"
+      ],
+      "status": "displayable"
+    },
+    {
+      "section_name": "القطاعات والخدمات",
+      "sector_name": "cnr",
+      "title": "البوابة الجزائرية",
+      "path": "sectors/cnr.html",
+      "content_type": "sector",
+      "parent_sector_path": null,
+      "keywords": [
+        "البوابة الجزائرية دليل خدمات الصندوق الوطني للتقاعد CNR في الجزائر: حساب التقاعد",
+        "متابعة الملف",
+        "صب المعاش",
+        "تثمين المعاش وخدمات المتقاعدين cnr القطاعات والخدمات"
+      ],
+      "status": "displayable"
+    },
+    {
+      "section_name": "القطاعات والخدمات",
+      "sector_name": "commerce",
+      "title": "البوابة الجزائرية",
+      "path": "sectors/commerce.html",
+      "content_type": "sector",
+      "parent_sector_path": null,
+      "keywords": [
+        "البوابة الجزائرية تقدم وزارة التجارة والجمارك مجموعة من الخدمات الرقمية التي تتيح للمواطنين الجزائريين الوصول إلى خدمات الوزارة بكل سهولة ويسر",
+        "دون الحاجة للتنقل commerce القطاعات والخدمات"
+      ],
+      "status": "displayable"
+    },
+    {
+      "section_name": "القطاعات والخدمات",
+      "sector_name": "creg.gov",
+      "title": "البوابة الجزائرية",
+      "path": "sectors/creg.gov.html",
+      "content_type": "sector",
+      "parent_sector_path": null,
+      "keywords": [
+        "البوابة الجزائرية خدمات لجنة ضبط الكهرباء والغاز CREG في الجزائر: تسعيرة الكهرباء والغاز",
+        "محاكاة الفاتورة",
+        "منصة إلتماس للطعون وطلبات المعلومات",
+        "التوظيف وطرق التواصل creg.gov القطاعات والخدمات"
+      ],
+      "status": "displayable"
     }
   ]
 }
