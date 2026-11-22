@@ -2855,7 +2855,12 @@
         "السحب",
         "وملء الشاشة. اختر الخط لعرض الجدول الرسمي الكامل. sntf-trip القطاعات والخدمات"
       ],
-      "status": "displayable"
+      "status": "displayable",
+      "dynamic": true,
+      "query_parameters": [
+        "trip"
+      ],
+      "note": "عارض تفاصيل الرحلات الديناميكي؛ يسجل مرة واحدة دون معاملات URL مع الحفاظ على وظيفته التشغيلية."
     },
     {
       "section_name": "القطاعات والخدمات",
@@ -2990,5 +2995,47 @@
       ],
       "status": "displayable"
     }
-  ]
+  ],
+  "summary": {
+    "html_files_in_tree": 216,
+    "records": 216,
+    "displayable": 215,
+    "excluded": 1,
+    "duplicate_paths": 0,
+    "missing_records": 0,
+    "stale_records": 0,
+    "invalid_parent_paths": 0,
+    "by_content_type": {
+      "page": 10,
+      "guide": 1,
+      "home": 1,
+      "notices-index": 1,
+      "notice": 10,
+      "procedure": 11,
+      "tool": 61,
+      "tools-index": 1,
+      "video": 9,
+      "video-index": 1,
+      "sector": 80,
+      "service": 30
+    },
+    "by_section": {
+      "صفحات البوابة": 10,
+      "الأدلة": 1,
+      "الصفحة الرئيسية": 1,
+      "الإشعارات": 11,
+      "الإجراءات الرقمية": 11,
+      "الأدوات الرقمية": 62,
+      "الفيديوهات والشروحات": 10,
+      "القطاعات والخدمات": 110
+    }
+  },
+  "validation": {
+    "missing_paths": [],
+    "stale_paths": [],
+    "duplicate_paths": [],
+    "invalid_parent_paths": [],
+    "query_variants_not_represented": true,
+    "query_policy": "كل ملف HTML يسجل مرة واحدة دون معاملات URL؛ معاملات trip في SNTF تبقى جزءاً من الوظيفة الديناميكية ولا تنشئ سجلات إضافية."
+  }
 }
