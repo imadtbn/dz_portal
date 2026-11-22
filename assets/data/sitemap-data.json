@@ -775,6 +775,204 @@
         "حاسبة نمو الرضع والطول حسب العمر تابع نمو الرضيع بمقارنة الطول والوزن الاختياري مع العمر والجنس وفق مخططات نمو منظمة الصحة العالمية من الولادة حتى 24 شهرًا. health الأدوات الرقمية"
       ],
       "status": "displayable"
+    },
+    {
+      "section_name": "الأدوات الرقمية",
+      "sector_name": "health",
+      "title": "متابعتي للأدوية",
+      "path": "pages/tools/health/medication-tracker.html",
+      "content_type": "tool",
+      "parent_sector_path": null,
+      "keywords": [
+        "متابعتي للأدوية أداة محلية لتنظيم علاجات أفراد العائلة ومواعيد الجرعات",
+        "وتسجيل الجرعات المنفذة والفائتة",
+        "وإيقاف العلاج وأرشفته",
+        "مع تقارير ونسخ احتياطية مستقلة. health الأدوات الرقمية"
+      ],
+      "status": "displayable"
+    },
+    {
+      "section_name": "الأدوات الرقمية",
+      "sector_name": "health",
+      "title": "حاسبة التغذية والوجبات الذكية",
+      "path": "pages/tools/health/nutrition-calculator.html",
+      "content_type": "tool",
+      "parent_sector_path": null,
+      "keywords": [
+        "حاسبة التغذية والوجبات الذكية احسب السعرات اليومية واحتياج البروتين والكربوهيدرات والدهون",
+        "وقدّر BMR وTDEE ومؤشر كتلة الجسم للبالغين وفق بياناتك. health الأدوات الرقمية"
+      ],
+      "status": "displayable"
+    },
+    {
+      "section_name": "الأدوات الرقمية",
+      "sector_name": "health",
+      "title": "قائمة الاستعداد الصحي للحج",
+      "path": "pages/tools/health/pilgrim-health-checklist.html",
+      "content_type": "tool",
+      "parent_sector_path": null,
+      "keywords": [
+        "قائمة الاستعداد الصحي للحج جهّز مستلزماتك الصحية قبل السفر للحج باستخدام قائمة تحقق قابلة للتأشير والحفظ",
+        "وراجع الأدوية والوثائق والتجهيزات الضرورية. health الأدوات الرقمية"
+      ],
+      "status": "displayable"
+    },
+    {
+      "section_name": "الأدوات الرقمية",
+      "sector_name": "health",
+      "title": "اختبار خطر ما قبل السكري",
+      "path": "pages/tools/health/prediabetes-risk.html",
+      "content_type": "tool",
+      "parent_sector_path": null,
+      "keywords": [
+        "اختبار خطر ما قبل السكري أجب عن أسئلة توعوية لتقدير بعض عوامل خطر ما قبل السكري",
+        "وتعرّف على أهمية الفحوص الطبية دون اعتبار النتيجة تشخيصًا. health الأدوات الرقمية"
+      ],
+      "status": "displayable"
+    },
+    {
+      "section_name": "الأدوات الرقمية",
+      "sector_name": "health",
+      "title": "حاسبة السعرات الحرارية أثناء الحمل | البوابة الجزائرية",
+      "path": "pages/tools/health/pregnancy-calorie-calculator.html",
+      "content_type": "tool",
+      "parent_sector_path": null,
+      "keywords": [
+        "حاسبة السعرات الحرارية أثناء الحمل",
+        "البوابة الجزائرية قدّري الاحتياج اليومي التقريبي من السعرات أثناء الحمل المفرد حسب الثلث وبيانات خط الأساس",
+        "مع التنبيه إلى استشارة الطبيب أو أخصائي التغذية. health الأدوات الرقمية"
+      ],
+      "status": "displayable"
+    },
+    {
+      "section_name": "الأدوات الرقمية",
+      "sector_name": "health",
+      "title": "حاسبة موعد الولادة",
+      "path": "pages/tools/health/pregnancy-due-date.html",
+      "content_type": "tool",
+      "parent_sector_path": null,
+      "keywords": [
+        "حاسبة موعد الولادة احسبي موعد الولادة المتوقع مبدئيًا انطلاقًا من أول يوم لآخر دورة شهرية",
+        "مع عرض تاريخ تقريبي لا يغني عن متابعة الطبيبة. health الأدوات الرقمية"
+      ],
+      "status": "displayable"
+    },
+    {
+      "section_name": "الأدوات الرقمية",
+      "sector_name": "health",
+      "title": "تقييم النوم التوعوي",
+      "path": "pages/tools/health/sleep-assessment.html",
+      "content_type": "tool",
+      "parent_sector_path": null,
+      "keywords": [
+        "تقييم النوم التوعوي أجب عن ثمانية أسئلة حول عادات النوم خلال الشهر الماضي",
+        "واحصل على مؤشر توعوي ونصائح أولية لتحسين روتين النوم. health الأدوات الرقمية"
+      ],
+      "status": "displayable"
+    },
+    {
+      "section_name": "الأدوات الرقمية",
+      "sector_name": "health",
+      "title": "متابعة تلقيح الأطفال",
+      "path": "pages/tools/health/vaccine-tracker.html",
+      "content_type": "tool",
+      "parent_sector_path": null,
+      "keywords": [
+        "متابعة تلقيح الأطفال تابع مواعيد تلقيح الأطفال في الجزائر انطلاقًا من تاريخ الميلاد",
+        "وسجّل الجرعات التي يؤكدها دفتر الصحة واحتفظ بنسخة من سجل التلقيح. health الأدوات الرقمية"
+      ],
+      "status": "displayable"
+    },
+    {
+      "section_name": "الأدوات الرقمية",
+      "sector_name": "health",
+      "title": "اختبار حدة البصر التقريبي",
+      "path": "pages/tools/health/visual-acuity-screening.html",
+      "content_type": "tool",
+      "parent_sector_path": null,
+      "keywords": [
+        "اختبار حدة البصر التقريبي جرّب اختبارًا تقريبيًا لحدة البصر عبر الشاشة مع توضيح حدود دقة الهاتف والكمبيوتر",
+        "وأنه لا يعوّض فحص النظر لدى مختص العيون. health الأدوات الرقمية"
+      ],
+      "status": "displayable"
+    },
+    {
+      "section_name": "الأدوات الرقمية",
+      "sector_name": "health",
+      "title": "حاسبة الماء اليومية",
+      "path": "pages/tools/health/water-calculator.html",
+      "content_type": "tool",
+      "parent_sector_path": null,
+      "keywords": [
+        "حاسبة الماء اليومية احسب تقديرًا أوليًا لكمية الماء اليومية حسب الوزن ومستوى النشاط",
+        "ثم راعِ الطقس والجهد والحالة الصحية عند تحديد احتياجك الفعلي. health الأدوات الرقمية"
+      ],
+      "status": "displayable"
+    },
+    {
+      "section_name": "الأدوات الرقمية",
+      "sector_name": "الأدوات",
+      "title": "الأدوات الرقمية",
+      "path": "pages/tools/index.html",
+      "content_type": "tools-index",
+      "parent_sector_path": null,
+      "keywords": [
+        "الأدوات الرقمية اكتشف أدوات رقمية مجانية للجزائريين: حاسبات الرواتب والمصاريف والوقود والمعدلات",
+        "وأدوات الدراسة والصحة والإنتاجية وتنظيم الحياة اليومية. الأدوات الأدوات الرقمية"
+      ],
+      "status": "displayable"
+    },
+    {
+      "section_name": "الأدوات الرقمية",
+      "sector_name": "islamic",
+      "title": "الرزنامة الهجرية والميلادية",
+      "path": "pages/tools/islamic/hijri-calendar.html",
+      "content_type": "tool",
+      "parent_sector_path": null,
+      "keywords": [
+        "الرزنامة الهجرية والميلادية حوّل التاريخ بين الهجري والميلادي",
+        "وابحث عن التاريخ الموافق وتصفح التقويم الشهري الهجري مع عرض التاريخ ومشاركته بسهولة. islamic الأدوات الرقمية"
+      ],
+      "status": "displayable"
+    },
+    {
+      "section_name": "الأدوات الرقمية",
+      "sector_name": "islamic",
+      "title": "بوصلة القبلة وتحديد الشمال",
+      "path": "pages/tools/islamic/qibla-compass.html",
+      "content_type": "tool",
+      "parent_sector_path": null,
+      "keywords": [
+        "بوصلة القبلة وتحديد الشمال حدد اتجاه القبلة من موقعك الجغرافي أو ابحث عن مدينتك",
+        "واعرف اتجاه الشمال باستخدام بوصلة تفاعلية وحساب اتجاه مكة على الهاتف والكمبيوتر. islamic الأدوات الرقمية"
+      ],
+      "status": "displayable"
+    },
+    {
+      "section_name": "الأدوات الرقمية",
+      "sector_name": "productivity",
+      "title": "مساعد الوثائق والإجراءات الإدارية",
+      "path": "pages/tools/productivity/admin-procedures-assistant.html",
+      "content_type": "tool",
+      "parent_sector_path": null,
+      "keywords": [
+        "مساعد الوثائق والإجراءات الإدارية اعرف وثائق وخطوات الإجراءات الإدارية في الجزائر والجهة المختصة",
+        "وأنشئ قائمة تحقق قابلة للحفظ والطباعة مع روابط المصادر الرسمية. productivity الأدوات الرقمية"
+      ],
+      "status": "displayable"
+    },
+    {
+      "section_name": "الأدوات الرقمية",
+      "sector_name": "productivity",
+      "title": "القاموس العربي — العربي",
+      "path": "pages/tools/productivity/arabic-dictionary.html",
+      "content_type": "tool",
+      "parent_sector_path": null,
+      "keywords": [
+        "القاموس العربي — العربي ابحث عن معاني الكلمات العربية وجذورها ومرادفاتها وأضدادها",
+        "وتصفح المفردات واحفظ كلماتك لتوسيع الرصيد اللغوي وتحسين الكتابة. productivity الأدوات الرقمية"
+      ],
+      "status": "displayable"
     }
   ]
 }
