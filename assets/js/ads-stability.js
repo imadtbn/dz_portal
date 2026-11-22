@@ -20,6 +20,32 @@
   let running = false;
   const watchers = new WeakSet();
 
+  // Add the requested display unit immediately before the page footer.
+  // Existing ad units and their placements are deliberately left untouched.
+  function ensureFooterAd() {
+    const footers = Array.from(document.querySelectorAll('footer'));
+    const footer = footers[footers.length - 1];
+    if (!footer || !footer.parentNode) return null;
+    const previous = footer.previousElementSibling;
+    if (previous?.querySelector?.('ins.adsbygoogle[data-ad-slot="1760836049"]')) return null;
+
+    const container = document.createElement('div');
+    container.className = 'ad-container dz-footer-ad';
+    container.innerHTML = '<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5656416032906373" data-ad-slot="1760836049" data-ad-format="auto" data-full-width-responsive="true"></ins>';
+    footer.parentNode.insertBefore(container, footer);
+    state.footerAdInserted = true;
+    return container;
+  }
+
+  function ensureAdsenseLibrary() {
+    if (Array.from(document.scripts).some((script) => script.src.includes('adsbygoogle.js'))) return;
+    const script = document.createElement('script');
+    script.async = true;
+    script.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5656416032906373';
+    script.crossOrigin = 'anonymous';
+    document.head.appendChild(script);
+  }
+
   function isExcludedPlacement(slot) {
     // Manual ads belong in the document content, never in structural navigation.
     const structural = slot.closest('header, nav, .header, .site-header, .main-nav, #main-nav, #mainnav, .mainnav, .hero, .sector-hero, .home-hero, [role="banner"], [role="navigation"]');
@@ -112,6 +138,8 @@
   }
 
   function start() {
+    const footerAd = ensureFooterAd();
+    if (footerAd) ensureAdsenseLibrary();
     const slots = Array.from(document.querySelectorAll('ins.adsbygoogle'));
     if (!slots.length) return;
 
@@ -137,6 +165,12 @@
     watchSizes();
     const mo = new MutationObserver((changes) => {
       let foundNewAd = false;
+      const footerAd = ensureFooterAd();
+      if (footerAd) {
+        ensureAdsenseLibrary();
+        state.observeNewContainer?.(footerAd);
+        foundNewAd = true;
+      }
       for (const change of changes) {
         for (const node of change.addedNodes) {
           if (node.nodeType !== 1) continue;
