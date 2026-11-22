@@ -85,12 +85,14 @@
     else loadLocalScript('js/favorites.js', loadSectorFavorites);
   }
 
-  // Stable AdSense initialization runs on all standard portal pages, without
-  // changing the tracking or ad script already declared in each HTML file.
-  if (document.querySelector('ins.adsbygoogle')
-    && !document.querySelector('script[src$="/ads-stability.js"]')) {
-    loadLocalScript('js/ads-stability.js');
-  }
+  // Ensure footer ads also exist on standard pages that do not already
+  // contain an in-content ad. The shared controller preserves all existing units.
+  window.addEventListener('load', () => {
+    if (document.querySelector('footer')
+      && !document.querySelector('script[src$="/ads-stability.js"]')) {
+      loadLocalScript('js/ads-stability.js');
+    }
+  }, { once: true, passive: true });
 
   // Load each optional feature only where its HTML host exists.
   // This avoids downloading homepage stats and rating code on sector pages,
