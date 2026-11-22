@@ -2689,6 +2689,218 @@
         "والموقع الرسمي ووسائل الاتصال. onpo القطاعات والخدمات"
       ],
       "status": "displayable"
+    },
+    {
+      "section_name": "القطاعات والخدمات",
+      "sector_name": "ooredoo",
+      "title": "البوابة الجزائرية",
+      "path": "sectors/ooredoo.html",
+      "content_type": "sector",
+      "parent_sector_path": null,
+      "keywords": [
+        "البوابة الجزائرية روابط خدمات أوريدو الجزائر لتعبئة رصيد الهاتف",
+        "وإدارة الخط والحساب عبر تطبيق My Ooredoo",
+        "والاطلاع على العروض وخدمات الإنترنت والتواصل مع خدمة الزبائن. ooredoo القطاعات والخدمات"
+      ],
+      "status": "displayable"
+    },
+    {
+      "section_name": "القطاعات والخدمات",
+      "sector_name": "opgi",
+      "title": "البوابة الجزائرية",
+      "path": "sectors/opgi.html",
+      "content_type": "sector",
+      "parent_sector_path": null,
+      "keywords": [
+        "البوابة الجزائرية دليل خدمات دواوين الترقية والتسيير العقاري OPGI في الجزائر",
+        "مع روابط المواقع الرسمية",
+        "دفع فواتير كراء السكنات حيث تتوفر الخدمة",
+        "تطبيق OPGI Mobile ووسائل الاتصال. opgi القطاعات والخدمات"
+      ],
+      "status": "displayable"
+    },
+    {
+      "section_name": "القطاعات والخدمات",
+      "sector_name": "ostad-education",
+      "title": "البوابة الجزائرية",
+      "path": "sectors/ostad-education.html",
+      "content_type": "sector",
+      "parent_sector_path": null,
+      "keywords": [
+        "البوابة الجزائرية فضاء الأستاذ في الجزائر: منصة الأستاذ الرقمية",
+        "توظيف الأساتذة المتعاقدين",
+        "مسابقات التوظيف",
+        "تقييم المكتسبات",
+        "والامتحانات المهنية. خدمات رقمية شاملة لقطاع التربية الوطنية ostad-education القطاعات والخدمات"
+      ],
+      "status": "displayable"
+    },
+    {
+      "section_name": "القطاعات والخدمات",
+      "sector_name": "poste",
+      "title": "البوابة الجزائرية",
+      "path": "sectors/poste.html",
+      "content_type": "sector",
+      "parent_sector_path": null,
+      "keywords": [
+        "البوابة الجزائرية ادخل إلى خدمات بريد الجزائر: فضاء ECCP للاطلاع على رصيد CCP",
+        "طلب البطاقة الذهبية",
+        "تطبيق بريدي موب",
+        "تتبع الطرود والخدمات البريدية عبر الروابط الرسمية. poste القطاعات والخدمات"
+      ],
+      "status": "displayable"
+    },
+    {
+      "section_name": "القطاعات والخدمات",
+      "sector_name": "progres.mesrs",
+      "title": "البوابة الجزائرية",
+      "path": "sectors/progres.mesrs.html",
+      "content_type": "sector",
+      "parent_sector_path": null,
+      "keywords": [
+        "البوابة الجزائرية روابط منصة Progres MESRS DZ والخدمات الجامعية في الجزائر: متابعة الملف والتسجيلات الجامعية",
+        "والاطلاع على خدمات الطلبة والمنصات الرقمية التابعة لوزارة التعليم العالي. progres.mesrs القطاعات والخدمات"
+      ],
+      "status": "displayable"
+    },
+    {
+      "section_name": "القطاعات والخدمات",
+      "sector_name": "qassimatouka",
+      "title": "البوابة الجزائرية",
+      "path": "sectors/qassimatouka.html",
+      "content_type": "sector",
+      "parent_sector_path": null,
+      "keywords": [
+        "البوابة الجزائرية تعرف على خدمة قسيمتك لاقتناء قسيمة السيارات في الجزائر",
+        "والاطلاع على خطوات شراء القسيمة وإعادة اقتنائها عبر خدمة الطابع الجبائي الإلكتروني. qassimatouka القطاعات والخدمات"
+      ],
+      "status": "displayable"
+    },
+    {
+      "section_name": "القطاعات والخدمات",
+      "sector_name": "sante",
+      "title": "البوابة الجزائرية",
+      "path": "sectors/sante.html",
+      "content_type": "sector",
+      "parent_sector_path": null,
+      "keywords": [
+        "البوابة الجزائرية دليل خدمات الصحة في الجزائر",
+        "يشمل بطاقة الشفاء والتأمين الصحي والمستشفيات والعيادات والتلقيح والخدمات الطبية الرقمية التابعة لوزارة الصحة sante القطاعات والخدمات"
+      ],
+      "status": "displayable"
+    },
+    {
+      "section_name": "القطاعات والخدمات",
+      "sector_name": "seaal",
+      "title": "البوابة الجزائرية",
+      "path": "sectors/seaal.html",
+      "content_type": "sector",
+      "parent_sector_path": null,
+      "keywords": [
+        "البوابة الجزائرية خدمات شركة المياه والتطهير للجزائر SEAAL",
+        "تشمل دفع فاتورة المياه ومتابعة الاستهلاك وطلبات الاشتراك والتوصيل والتبليغ عن الأعطال والتسربات seaal القطاعات والخدمات"
+      ],
+      "status": "displayable"
+    },
+    {
+      "section_name": "القطاعات والخدمات",
+      "sector_name": "seor",
+      "title": "البوابة الجزائرية",
+      "path": "sectors/seor.html",
+      "content_type": "sector",
+      "parent_sector_path": null,
+      "keywords": [
+        "البوابة الجزائرية خدمات مؤسسة مياه وهران SEOR في الجزائر",
+        "تشمل دفع فواتير المياه ومتابعة الاستهلاك وطلبات الاشتراك والتوصيل والتبليغ عن الأعطال والانقطاعات seor القطاعات والخدمات"
+      ],
+      "status": "displayable"
+    },
+    {
+      "section_name": "القطاعات والخدمات",
+      "sector_name": "sntf-schedule",
+      "title": "البوابة الجزائرية",
+      "path": "sectors/sntf-schedule.html",
+      "content_type": "sector",
+      "parent_sector_path": null,
+      "keywords": [
+        "البوابة الجزائرية راجع جداول مواقيت قطارات SNTF المصوّرة مع إمكانية التكبير والسحب وملء الشاشة. اختر الخط لعرض الجدول الرسمي الكامل. sntf-schedule القطاعات والخدمات"
+      ],
+      "status": "displayable"
+    },
+    {
+      "section_name": "القطاعات والخدمات",
+      "sector_name": "sntf-trains",
+      "title": "رحلتك بالقطار، بخطوات واضحة",
+      "path": "sectors/sntf-trains.html",
+      "content_type": "sector",
+      "parent_sector_path": null,
+      "keywords": [
+        "رحلتك بالقطار",
+        "بخطوات واضحة مواقيت قطارات SNTF في الجزائر: ابحث عن رحلة بين محطتين",
+        "وتابع مواعيد المغادرة والوصول حسب المحطة والاتجاه",
+        "واستكشف خريطة محطات القطارات والجداول المجدولة. sntf-trains القطاعات والخدمات"
+      ],
+      "status": "displayable"
+    },
+    {
+      "section_name": "القطاعات والخدمات",
+      "sector_name": "sntf-trip",
+      "title": "تفاصيل رحلة قطار | DZ Rail",
+      "path": "sectors/sntf-trip.html",
+      "content_type": "sector",
+      "parent_sector_path": null,
+      "keywords": [
+        "تفاصيل رحلة قطار",
+        "DZ Rail راجع جداول مواقيت قطارات SNTF المصوّرة مع إمكانية التكبير",
+        "السحب",
+        "وملء الشاشة. اختر الخط لعرض الجدول الرسمي الكامل. sntf-trip القطاعات والخدمات"
+      ],
+      "status": "displayable"
+    },
+    {
+      "section_name": "القطاعات والخدمات",
+      "sector_name": "sntf",
+      "title": "البوابة الجزائرية",
+      "path": "sectors/sntf.html",
+      "content_type": "sector",
+      "parent_sector_path": null,
+      "keywords": [
+        "البوابة الجزائرية مواقيت سير قطارات SNTF الجزائر 2026: جداول رسمية لقطارات ضاحية الجزائر",
+        "الخطوط الشرقية والغربية",
+        "الصحراء",
+        "والخط الدولي. عرض مباشر للجداول المصوّرة وتحديثات النقل بالسكك الحديدية. sntf القطاعات والخدمات"
+      ],
+      "status": "displayable"
+    },
+    {
+      "section_name": "القطاعات والخدمات",
+      "sector_name": "sonalgaz-bill-guide",
+      "title": "البوابة الجزائرية",
+      "path": "sectors/sonalgaz-bill-guide.html",
+      "content_type": "sector",
+      "parent_sector_path": null,
+      "keywords": [
+        "البوابة الجزائرية دليل مبسط لفهم فاتورة سونلغاز في الجزائر: بيانات الزبون والعداد",
+        "المؤشرات",
+        "رموز القراءة",
+        "حساب الاستهلاك",
+        "الرسوم والمبلغ المستحق",
+        "بالاعتماد على دليل CREG الرسمي. sonalgaz-bill-guide القطاعات والخدمات"
+      ],
+      "status": "displayable"
+    },
+    {
+      "section_name": "القطاعات والخدمات",
+      "sector_name": "sonalgaz",
+      "title": "البوابة الجزائرية",
+      "path": "sectors/sonalgaz.html",
+      "content_type": "sector",
+      "parent_sector_path": null,
+      "keywords": [
+        "البوابة الجزائرية اعثر على روابط خدمات سونلغاز في الجزائر للاطلاع على فاتورة الكهرباء والغاز واستخراجها وتسديدها",
+        "والتسجيل في E-taqaty والوصول إلى خدمات الزبائن. sonalgaz القطاعات والخدمات"
+      ],
+      "status": "displayable"
     }
   ]
 }
