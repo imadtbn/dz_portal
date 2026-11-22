@@ -2880,7 +2880,7 @@
     {
       "section_name": "القطاعات والخدمات",
       "sector_name": "sonalgaz-bill-guide",
-      "title": "البوابة الجزائرية",
+      "title": "كيف تقرأ فاتورة سونلغاز؟ شرح مبسط للكهرباء والغاز",
       "path": "sectors/sonalgaz-bill-guide.html",
       "content_type": "sector",
       "parent_sector_path": null,
@@ -2897,7 +2897,7 @@
     {
       "section_name": "القطاعات والخدمات",
       "sector_name": "sonalgaz",
-      "title": "البوابة الجزائرية",
+      "title": "سونلغاز 2026: استخراج وتسديد فاتورة الكهرباء والغاز عبر الإنترنت",
       "path": "sectors/sonalgaz.html",
       "content_type": "sector",
       "parent_sector_path": null,
@@ -2910,7 +2910,7 @@
     {
       "section_name": "القطاعات والخدمات",
       "sector_name": "t-onec",
-      "title": "البوابة الجزائرية",
+      "title": "بنك الفروض والإختبارات t-onec",
       "path": "sectors/t-onec.html",
       "content_type": "sector",
       "parent_sector_path": null,
@@ -2924,7 +2924,7 @@
     {
       "section_name": "القطاعات والخدمات",
       "sector_name": "tabioucom",
-      "title": "البوابة الجزائرية",
+      "title": "طابعكم 2026: شراء الطابع الجبائي الإلكتروني لجواز السفر والوثائق",
       "path": "sectors/tabioucom.html",
       "content_type": "sector",
       "parent_sector_path": null,
@@ -2938,7 +2938,7 @@
     {
       "section_name": "القطاعات والخدمات",
       "sector_name": "telephon",
-      "title": "البوابة الجزائرية",
+      "title": "خدمات الهاتف النقال",
       "path": "sectors/telephon.html",
       "content_type": "sector",
       "parent_sector_path": null,
@@ -2954,7 +2954,7 @@
     {
       "section_name": "القطاعات والخدمات",
       "sector_name": "transport",
-      "title": "البوابة الجزائرية",
+      "title": "النقل والمواصلات",
       "path": "sectors/transport.html",
       "content_type": "sector",
       "parent_sector_path": null,
@@ -2968,7 +2968,7 @@
     {
       "section_name": "القطاعات والخدمات",
       "sector_name": "ufc.dz",
-      "title": "البوابة الجزائرية",
+      "title": "جامع التكوين المتواصل",
       "path": "sectors/ufc.dz.html",
       "content_type": "sector",
       "parent_sector_path": null,
