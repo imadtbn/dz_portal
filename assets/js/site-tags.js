@@ -7,6 +7,7 @@
   const GTM_ID = 'GTM-NW3BWPF6';
   const GA4_ID = Array.from(document.scripts).map((script) => script.src.match(/gtag\/js\?id=(G-[A-Z0-9]+)/i)?.[1]).find(Boolean) || '';
   const ADSENSE_CLIENT = 'ca-pub-5656416032906373';
+  const SCRIPT_BASE = new URL('./', document.currentScript?.src || window.location.href);
 
   // تهيئة dataLayer وgtag القياسي لضمان وصول الأحداث بدقة إلى GA4 وGTM
   window.dataLayer = window.dataLayer || [];
@@ -212,6 +213,11 @@
   initializeGtm();
 
   window.addEventListener('load', () => {
+    // Ensure the shared footer display unit is present on every page using
+    // the portal tag loader, including pages without an earlier ad slot.
+    if (document.querySelector('footer')) {
+      loadExternalScript(new URL('ads-stability.js', SCRIPT_BASE).href, { async: false });
+    }
     scheduleIdle(initializeAdsense, 100);
   }, { once: true, passive: true });
 })();
