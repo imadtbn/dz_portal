@@ -1362,6 +1362,232 @@
         "إنشاء المشاريع والاطلاع على الفرص الاستثمارية والإجراءات القانونية صفحات البوابة"
       ],
       "status": "displayable"
+    },
+    {
+      "section_name": "القطاعات والخدمات",
+      "sector_name": "ade",
+      "title": "البوابة الجزائرية",
+      "path": "sectors/ade.html",
+      "content_type": "sector",
+      "parent_sector_path": null,
+      "keywords": [
+        "البوابة الجزائرية خدمات الجزائرية للمياه ADE",
+        "تشمل دفع فاتورة المياه إلكترونياً وطلبات الاشتراك والتوصيل ومتابعة الاستهلاك والتبليغ عن الأعطال والانقطاعات ade القطاعات والخدمات"
+      ],
+      "status": "displayable"
+    },
+    {
+      "section_name": "القطاعات والخدمات",
+      "sector_name": "algerietelecom",
+      "title": "البوابة الجزائرية",
+      "path": "sectors/algerietelecom.html",
+      "content_type": "sector",
+      "parent_sector_path": null,
+      "keywords": [
+        "البوابة الجزائرية دليل خدمات اتصالات الجزائر الرقمية",
+        "يشمل فضاء الزبائن",
+        "تحويل خط هاتفي",
+        "تعبئة الإنترنت والهاتف",
+        "دفع الفواتير",
+        "متابعة الاشتراكات والخدمات الإلكترونية المتاحة algerietelecom القطاعات والخدمات"
+      ],
+      "status": "displayable"
+    },
+    {
+      "section_name": "القطاعات والخدمات",
+      "sector_name": "anae",
+      "title": "البوابة الجزائرية",
+      "path": "sectors/anae.html",
+      "content_type": "sector",
+      "parent_sector_path": null,
+      "keywords": [
+        "البوابة الجزائرية توفر البوابة الجزائرية للخدمات الرقمية منصة للوصول إلى خدمات الوكالة الوطنية للمقاول الذاتي",
+        "وتتيح طلب واستخراج بطاقة المقاول الذاتي إلكترونياً anae القطاعات والخدمات"
+      ],
+      "status": "displayable"
+    },
+    {
+      "section_name": "القطاعات والخدمات",
+      "sector_name": "anem",
+      "title": "البوابة الجزائرية",
+      "path": "sectors/anem.html",
+      "content_type": "sector",
+      "parent_sector_path": null,
+      "keywords": [
+        "البوابة الجزائرية روابط الوكالة الوطنية للتشغيل في الجزائر: التسجيل ومتابعة منحة البطالة",
+        "تمديد الطلب",
+        "الاطلاع على عروض العمل والتقدم إليها عبر المنصات الرسمية. anem القطاعات والخدمات"
+      ],
+      "status": "displayable"
+    },
+    {
+      "section_name": "القطاعات والخدمات",
+      "sector_name": "anpdp",
+      "title": "البوابة الجزائرية",
+      "path": "sectors/anpdp.html",
+      "content_type": "sector",
+      "parent_sector_path": null,
+      "keywords": [
+        "البوابة الجزائرية اكتشف خدمات السلطة الوطنية لحماية المعطيات ذات الطابع الشخصي ANPDP في الجزائر",
+        "لتقديم الشكاوى والاحتجاجات وحماية البيانات الشخصية والتواصل والاستشارات القانونية والخدمات anpdp القطاعات والخدمات"
+      ],
+      "status": "displayable"
+    },
+    {
+      "section_name": "القطاعات والخدمات",
+      "sector_name": "arpce",
+      "title": "البوابة الجزائرية",
+      "path": "sectors/arpce.html",
+      "content_type": "sector",
+      "parent_sector_path": null,
+      "keywords": [
+        "البوابة الجزائرية مجموعة من الخدمات عن بعد وتطبيقات تحسين جودة الاتصالات",
+        "توطين",
+        "تطوير البنية التحتية",
+        "ودعم الابتكار في قطاع الاتصالات لضمان تجربة رقمية متطورة وآمنة للمواطن الجزائري arpce القطاعات والخدمات"
+      ],
+      "status": "displayable"
+    },
+    {
+      "section_name": "القطاعات والخدمات",
+      "sector_name": "assurance",
+      "title": "البوابة الجزائرية",
+      "path": "sectors/assurance.html",
+      "content_type": "sector",
+      "parent_sector_path": null,
+      "keywords": [
+        "البوابة الجزائرية اكتشف خدمات التأمين على الممتلكات الرقمية في الجزائر",
+        "من حجز التأمين إلى تتبع وسائل التأمين",
+        "كل ما تحتاجه لتسهيل حياتك اليومية assurance القطاعات والخدمات"
+      ],
+      "status": "displayable"
+    },
+    {
+      "section_name": "القطاعات والخدمات",
+      "sector_name": "assurance",
+      "title": "البوابة الجزائرية",
+      "path": "sectors/assurance/alliance-assurances.html",
+      "content_type": "service",
+      "parent_sector_path": "sectors/assurance.html",
+      "keywords": [
+        "البوابة الجزائرية استكشف الخدمات الرقمية لأليانس للتأمينات (Alliance Assurances) في الجزائر: طلب عرض سعر",
+        "خدمة الدفع بالتقسيط Buy Now-Pay Later",
+        "تطبيق MyAlliance لإدارة عقودك",
+        "وأرقام خدمة الزبائن 3315. assurance القطاعات والخدمات"
+      ],
+      "status": "displayable"
+    },
+    {
+      "section_name": "القطاعات والخدمات",
+      "sector_name": "assurance",
+      "title": "البوابة الجزائرية",
+      "path": "sectors/assurance/amana.html",
+      "content_type": "service",
+      "parent_sector_path": "sectors/assurance.html",
+      "keywords": [
+        "البوابة الجزائرية الدليل الشامل للخدمات الرقمية لشركة أمانة للتأمينات (Amana Assurances): اكتتاب تأمين السفر أونلاين بالدفع الإلكتروني",
+        "فضاء الزبون والمنخرطين",
+        "تطبيق My Amana",
+        "وطلب عروض الأسعار والتكفل الصحي. assurance القطاعات والخدمات"
+      ],
+      "status": "displayable"
+    },
+    {
+      "section_name": "القطاعات والخدمات",
+      "sector_name": "assurance",
+      "title": "البوابة الجزائرية",
+      "path": "sectors/assurance/axa.html",
+      "content_type": "service",
+      "parent_sector_path": "sectors/assurance.html",
+      "keywords": [
+        "البوابة الجزائرية دليل الخدمات الرقمية لشركة أكسا للتأمينات الجزائر (AXA Assurances Algérie): طلب عروض الأسعار الفورية",
+        "تأمين السفر والمسكن",
+        "التصريح بالحادث",
+        "فضاء الزبون",
+        "وتطبيق MyAXA DZ. assurance القطاعات والخدمات"
+      ],
+      "status": "displayable"
+    },
+    {
+      "section_name": "القطاعات والخدمات",
+      "sector_name": "assurance",
+      "title": "البوابة الجزائرية",
+      "path": "sectors/assurance/caar.html",
+      "content_type": "service",
+      "parent_sector_path": "sectors/assurance.html",
+      "keywords": [
+        "البوابة الجزائرية دليل الخدمات الرقمية للشركة الجزائرية للتأمين وإعادة التأمين (CAAR): طلب عروض الأسعار",
+        "الاكتتاب والدفع الإلكتروني لتأمين السكن والكوارث الطبيعية CAT-NAT",
+        "تطبيق CAAR+",
+        "ومنصة e-Transport. assurance القطاعات والخدمات"
+      ],
+      "status": "displayable"
+    },
+    {
+      "section_name": "القطاعات والخدمات",
+      "sector_name": "assurance",
+      "title": "البوابة الجزائرية",
+      "path": "sectors/assurance/caarama.html",
+      "content_type": "service",
+      "parent_sector_path": "sectors/assurance.html",
+      "keywords": [
+        "البوابة الجزائرية الوصول السريع إلى خدمات التأمين على السيارات",
+        "طلب المعلومات",
+        "الدعم",
+        "وروابط التطبيقات الخاصة بـ CAARAMA",
+        "التأمين على السيارات في الجزائر assurance القطاعات والخدمات"
+      ],
+      "status": "displayable"
+    },
+    {
+      "section_name": "القطاعات والخدمات",
+      "sector_name": "assurance",
+      "title": "البوابة الجزائرية",
+      "path": "sectors/assurance/caat.html",
+      "content_type": "service",
+      "parent_sector_path": "sectors/assurance.html",
+      "keywords": [
+        "البوابة الجزائرية الدليل الشامل للخدمات الرقمية للشركة الجزائرية للتأمينات (CAAT): منصة E-Pack للاكتتاب الرقمي",
+        "طلب عروض الأسعار الفورية",
+        "تأمين السكن والكوارث الطبيعية CAT-NAT",
+        "الدفع الإلكتروني CIB",
+        "الذهبية",
+        "وفضاء الزبون. assurance القطاعات والخدمات"
+      ],
+      "status": "displayable"
+    },
+    {
+      "section_name": "القطاعات والخدمات",
+      "sector_name": "assurance",
+      "title": "البوابة الجزائرية",
+      "path": "sectors/assurance/cardif-algerie.html",
+      "content_type": "service",
+      "parent_sector_path": "sectors/assurance.html",
+      "keywords": [
+        "البوابة الجزائرية الدليل الشامل للخدمات الرقمية والتأمينية لشركة كارديف للتأمينات الجزائر (Cardif El Djazaïr): تأمين المقترض والقروض العقارية",
+        "التأمين على الحياة والحماية",
+        "تأمين السفر الدولي وشنغن",
+        "التأمين الصحي",
+        "وشبكة التأمين المصرفي مع CNEP-Banque وBNP Paribas. assurance القطاعات والخدمات"
+      ],
+      "status": "displayable"
+    },
+    {
+      "section_name": "القطاعات والخدمات",
+      "sector_name": "assurance",
+      "title": "البوابة الجزائرية",
+      "path": "sectors/assurance/gig.html",
+      "content_type": "service",
+      "parent_sector_path": "sectors/assurance.html",
+      "keywords": [
+        "البوابة الجزائرية الدليل الشامل للخدمات الرقمية والتأمينية لمجموعة الخليج للتأمين الجزائر (GIG Algeria): طلب عروض الأسعار أونلاين (Devis en ligne)",
+        "تأمين السيارات والدراجات",
+        "تأمين السكن والكوارث الطبيعية CAT-NAT",
+        "تأمين السفر الدولي وشنغن",
+        "تأمين القوارب",
+        "وتأمين المؤسسات والمهنيين. assurance القطاعات والخدمات"
+      ],
+      "status": "displayable"
     }
   ]
 }
