@@ -1559,7 +1559,7 @@
     {
       "section_name": "القطاعات والخدمات",
       "sector_name": "assurance",
-      "title": "البوابة الجزائرية",
+      "title": "كارديف للتأمينات (Cardif El Djazaïr)",
       "path": "sectors/assurance/cardif-algerie.html",
       "content_type": "service",
       "parent_sector_path": "sectors/assurance.html",
@@ -1575,7 +1575,7 @@
     {
       "section_name": "القطاعات والخدمات",
       "sector_name": "assurance",
-      "title": "البوابة الجزائرية",
+      "title": "مجموعة الخليج للتأمين (GIG Algeria)",
       "path": "sectors/assurance/gig.html",
       "content_type": "service",
       "parent_sector_path": "sectors/assurance.html",
@@ -1592,7 +1592,7 @@
     {
       "section_name": "القطاعات والخدمات",
       "sector_name": "assurance",
-      "title": "البوابة الجزائرية",
+      "title": "ماكير في للتأمين على الحياة (Macir Vie)",
       "path": "sectors/assurance/macir-vie.html",
       "content_type": "service",
       "parent_sector_path": "sectors/assurance.html",
@@ -1609,7 +1609,7 @@
     {
       "section_name": "القطاعات والخدمات",
       "sector_name": "assurance",
-      "title": "البوابة الجزائرية",
+      "title": "الشركة الوطنية للتأمين (SAA)",
       "path": "sectors/assurance/saa.html",
       "content_type": "service",
       "parent_sector_path": "sectors/assurance.html",
@@ -1626,7 +1626,7 @@
     {
       "section_name": "القطاعات والخدمات",
       "sector_name": "assurance",
-      "title": "البوابة الجزائرية",
+      "title": "سلامة للتأمينات الجزائر",
       "path": "sectors/assurance/salama.html",
       "content_type": "service",
       "parent_sector_path": "sectors/assurance.html",
@@ -1640,7 +1640,7 @@
     {
       "section_name": "القطاعات والخدمات",
       "sector_name": "assurance",
-      "title": "البوابة الجزائرية",
+      "title": "ترست الجزائر للتأمينات (Trust Algeria Assurances)",
       "path": "sectors/assurance/trust-algeria.html",
       "content_type": "service",
       "parent_sector_path": "sectors/assurance.html",
@@ -1656,7 +1656,7 @@
     {
       "section_name": "القطاعات والخدمات",
       "sector_name": "awlyaa-education",
-      "title": "البوابة الجزائرية",
+      "title": "فضاء الأولياء 2026: نتائج التلاميذ والغيابات والتسجيلات المدرسية",
       "path": "sectors/awlyaa-education.html",
       "content_type": "sector",
       "parent_sector_path": null,
@@ -1669,7 +1669,7 @@
     {
       "section_name": "القطاعات والخدمات",
       "sector_name": "bank",
-      "title": "البوابة الجزائرية",
+      "title": "بنوك",
       "path": "sectors/bank.html",
       "content_type": "sector",
       "parent_sector_path": null,
@@ -1683,7 +1683,7 @@
     {
       "section_name": "القطاعات والخدمات",
       "sector_name": "bank",
-      "title": "البوابة الجزائرية",
+      "title": "بنك الخليج الجزائر AGB",
       "path": "sectors/bank/ag-bank.html",
       "content_type": "service",
       "parent_sector_path": "sectors/bank.html",
@@ -1699,7 +1699,7 @@
     {
       "section_name": "القطاعات والخدمات",
       "sector_name": "bank",
-      "title": "البوابة الجزائرية",
+      "title": "بنك البركة الجزائري (Al Baraka Bank Algeria) - البوابة الجزائرية",
       "path": "sectors/bank/albaraka-bank.html",
       "content_type": "service",
       "parent_sector_path": "sectors/bank.html",
@@ -1717,7 +1717,7 @@
     {
       "section_name": "القطاعات والخدمات",
       "sector_name": "bank",
-      "title": "البوابة الجزائرية",
+      "title": "البنك العربي الجزائر (Arab Bank Algeria) - البوابة الجزائرية",
       "path": "sectors/bank/arabbank.html",
       "content_type": "service",
       "parent_sector_path": "sectors/bank.html",
@@ -1732,7 +1732,7 @@
     {
       "section_name": "القطاعات والخدمات",
       "sector_name": "bank",
-      "title": "البوابة الجزائرية",
+      "title": "بنك الفلاحة والتنمية الريفية BADR",
       "path": "sectors/bank/badr.html",
       "content_type": "service",
       "parent_sector_path": "sectors/bank.html",
@@ -1747,7 +1747,7 @@
     {
       "section_name": "القطاعات والخدمات",
       "sector_name": "bank",
-      "title": "البوابة الجزائرية",
+      "title": "بنك ABC - البوابة الجزائرية",
       "path": "sectors/bank/bank-abc.html",
       "content_type": "service",
       "parent_sector_path": "sectors/bank.html",
@@ -1761,7 +1761,7 @@
     {
       "section_name": "القطاعات والخدمات",
       "sector_name": "bank",
-      "title": "البوابة الجزائرية",
+      "title": "البنوك العمومية الجزائرية",
       "path": "sectors/bank/bankalgeriane.html",
       "content_type": "service",
       "parent_sector_path": "sectors/bank.html",
@@ -1773,7 +1773,7 @@
     {
       "section_name": "القطاعات والخدمات",
       "sector_name": "bank",
-      "title": "البوابة الجزائرية",
+      "title": "البنوك أجنبية بالجزائر",
       "path": "sectors/bank/banketranger.html",
       "content_type": "service",
       "parent_sector_path": "sectors/bank.html",
