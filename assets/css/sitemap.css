@@ -91,3 +91,20 @@ body.dark-mode .summary-count{color:#a9e1b8}
 @media(max-width:650px){.header-inner{min-height:64px;width:calc(100% - 20px)}.brand img{width:36px;height:36px}.brand strong{font-size:15px}.brand small{font-size:11px}.header-actions a{padding:8px 10px;font-size:13px}.sitemap-page{width:calc(100% - 20px)}.page-hero{border-radius:17px}.directory-panel{padding:13px}.section-summary{padding:11px 12px}.section-body{padding:0 10px 10px}.directory-grid,.sector-links{grid-template-columns:1fr}.footer-inner{width:calc(100% - 24px);flex-direction:column;gap:15px}}
 @media(max-width:360px){.header-actions a span{display:none}.header-actions a{width:40px;height:40px;padding:0}.hero-stats div{min-width:calc(50% - 6px);flex:1}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;transition-duration:.01ms!important}}
+
+/* Align item totals directly beside the disclosure indicator. */
+.section-summary:after,.sector-summary:after{content:none}
+.summary-meta{display:inline-flex;align-items:center;justify-content:flex-start;gap:7px;flex:none;white-space:nowrap}
+.summary-chevron{display:inline-grid;place-items:center;width:25px;height:25px;border-radius:8px;background:var(--sm-soft);color:var(--sm-primary);font-size:12px;transition:transform .2s ease}
+.section-group[open]>.section-summary .summary-chevron,.sector-group[open]>.sector-summary .summary-chevron{transform:rotate(180deg)}
+.section-summary,.sector-summary{min-width:0}
+@media(max-width:420px){
+  .section-summary{gap:8px;padding-inline:10px}
+  .summary-title{gap:8px}
+  .summary-title strong{font-size:14px;line-height:1.35}
+  .summary-meta{gap:5px}
+  .summary-count{min-width:27px;padding:3px 7px;text-align:center;font-size:11px}
+  .summary-chevron{width:23px;height:23px}
+  .sector-summary{gap:8px;padding-inline:10px}
+  .sector-label{gap:7px;font-size:13px}
+}
