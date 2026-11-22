@@ -119,7 +119,6 @@
 
     const topAd = containers[0] || createContainer('top');
     const bottomAd = containers[1] || createContainer('bottom');
-    containers.slice(2).forEach(container => container.remove());
 
     const configure = (container, placement) => {
       container.classList.add('ad-container', 'dz-tool-ad', 'dz-tool-ad-' + placement);
@@ -146,6 +145,16 @@
     configure(bottomAd, 'bottom');
     hero.insertAdjacentElement('afterend', topAd);
     footer.parentNode.insertBefore(bottomAd, footer);
+
+    // Keep every existing ad container and append the requested second
+    // display unit as an additional placement immediately above the footer.
+    if (!document.querySelector('ins.adsbygoogle[data-ad-slot="1760836049"]')) {
+      const footerAd = document.createElement('div');
+      footerAd.className = 'ad-container dz-tool-ad dz-tool-ad-footer';
+      footerAd.setAttribute('aria-label', 'إعلان');
+      footerAd.innerHTML = '<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5656416032906373" data-ad-slot="1760836049" data-ad-format="auto" data-full-width-responsive="true"></ins>';
+      footer.parentNode.insertBefore(footerAd, footer);
+    }
 
     // Reuse the portal's width-aware ad controller; it prevents requests from
     // narrow/hidden containers and observes dynamically inserted units.
