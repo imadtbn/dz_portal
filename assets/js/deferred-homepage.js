@@ -1,4 +1,32 @@
 (() => {
+
+  // Keep the sitemap reachable from the different legacy and modern footer templates.
+  function ensureSitemapFooterLink() {
+    const footer = document.querySelector('footer');
+    if (!footer || footer.querySelector('[data-dz-sitemap-link]')) return;
+    const link = document.createElement('a');
+    link.href = new URL('/dz_portal/sitemap.html', location.origin).href;
+    link.textContent = 'خريطة الموقع';
+    link.setAttribute('data-dz-sitemap-link', 'true');
+    link.setAttribute('aria-label', 'خريطة الموقع');
+    const list = footer.querySelector('.footer-links');
+    const nav = footer.querySelector('.reader-footer__links, .footer-inner nav, nav');
+    if (list) {
+      const item = document.createElement('li');
+      item.appendChild(link);
+      list.appendChild(item);
+    } else if (nav) {
+      nav.appendChild(link);
+    } else {
+      (footer.querySelector('.footer-bottom') || footer).appendChild(link);
+    }
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', ensureSitemapFooterLink, { once: true });
+  } else {
+    ensureSitemapFooterLink();
+  }
+
   'use strict';
 
   const loaderScript = document.currentScript;
