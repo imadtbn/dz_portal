@@ -2664,7 +2664,7 @@
     {
       "section_name": "القطاعات والخدمات",
       "sector_name": "ocrc",
-      "title": "البوابة الجزائرية",
+      "title": "الديوان المركزي لقمع الفساد",
       "path": "sectors/ocrc.html",
       "content_type": "sector",
       "parent_sector_path": null,
@@ -2677,7 +2677,7 @@
     {
       "section_name": "القطاعات والخدمات",
       "sector_name": "onpo",
-      "title": "البوابة الجزائرية",
+      "title": "الديوان الوطني للحج والعمرة ONPO: التسجيل والبوابات الرقمية",
       "path": "sectors/onpo.html",
       "content_type": "sector",
       "parent_sector_path": null,
@@ -2693,7 +2693,7 @@
     {
       "section_name": "القطاعات والخدمات",
       "sector_name": "ooredoo",
-      "title": "البوابة الجزائرية",
+      "title": "أوريدو الجزائر 2026: تعبئة الرصيد وخدمات My Ooredoo",
       "path": "sectors/ooredoo.html",
       "content_type": "sector",
       "parent_sector_path": null,
@@ -2707,7 +2707,7 @@
     {
       "section_name": "القطاعات والخدمات",
       "sector_name": "opgi",
-      "title": "البوابة الجزائرية",
+      "title": "ديوان الترقية والتسيير العقاري OPGI: دفع الإيجار والخدمات",
       "path": "sectors/opgi.html",
       "content_type": "sector",
       "parent_sector_path": null,
@@ -2722,7 +2722,7 @@
     {
       "section_name": "القطاعات والخدمات",
       "sector_name": "ostad-education",
-      "title": "البوابة الجزائرية",
+      "title": "فضاء الأستاذ – منصات التوظيف، التقييم، والمسابقات",
       "path": "sectors/ostad-education.html",
       "content_type": "sector",
       "parent_sector_path": null,
@@ -2738,7 +2738,7 @@
     {
       "section_name": "القطاعات والخدمات",
       "sector_name": "poste",
-      "title": "البوابة الجزائرية",
+      "title": "بريد الجزائر 2026: ECCP والبطاقة الذهبية وبريدي موب",
       "path": "sectors/poste.html",
       "content_type": "sector",
       "parent_sector_path": null,
@@ -2753,7 +2753,7 @@
     {
       "section_name": "القطاعات والخدمات",
       "sector_name": "progres.mesrs",
-      "title": "البوابة الجزائرية",
+      "title": "Progres MESRS DZ 2026: التسجيلات الجامعية والخدمات الطلابية في الجزائر",
       "path": "sectors/progres.mesrs.html",
       "content_type": "sector",
       "parent_sector_path": null,
@@ -2766,7 +2766,7 @@
     {
       "section_name": "القطاعات والخدمات",
       "sector_name": "qassimatouka",
-      "title": "البوابة الجزائرية",
+      "title": "قسيمتك 2026: شراء قسيمة السيارات إلكترونيًا في الجزائر",
       "path": "sectors/qassimatouka.html",
       "content_type": "sector",
       "parent_sector_path": null,
@@ -2779,7 +2779,7 @@
     {
       "section_name": "القطاعات والخدمات",
       "sector_name": "sante",
-      "title": "البوابة الجزائرية",
+      "title": "الصحة العمومية",
       "path": "sectors/sante.html",
       "content_type": "sector",
       "parent_sector_path": null,
@@ -2792,7 +2792,7 @@
     {
       "section_name": "القطاعات والخدمات",
       "sector_name": "seaal",
-      "title": "البوابة الجزائرية",
+      "title": "سيال",
       "path": "sectors/seaal.html",
       "content_type": "sector",
       "parent_sector_path": null,
@@ -2805,7 +2805,7 @@
     {
       "section_name": "القطاعات والخدمات",
       "sector_name": "seor",
-      "title": "البوابة الجزائرية",
+      "title": "للمياه سيور",
       "path": "sectors/seor.html",
       "content_type": "sector",
       "parent_sector_path": null,
@@ -2818,7 +2818,7 @@
     {
       "section_name": "القطاعات والخدمات",
       "sector_name": "sntf-schedule",
-      "title": "البوابة الجزائرية",
+      "title": "عارض جداول مواقيت قطارات SNTF",
       "path": "sectors/sntf-schedule.html",
       "content_type": "sector",
       "parent_sector_path": null,
@@ -2830,7 +2830,7 @@
     {
       "section_name": "القطاعات والخدمات",
       "sector_name": "sntf-trains",
-      "title": "رحلتك بالقطار، بخطوات واضحة",
+      "title": "مواقيت قطارات SNTF 2026 | البحث عن رحلة ومحطات القطارات",
       "path": "sectors/sntf-trains.html",
       "content_type": "sector",
       "parent_sector_path": null,
@@ -2865,7 +2865,7 @@
     {
       "section_name": "القطاعات والخدمات",
       "sector_name": "sntf",
-      "title": "البوابة الجزائرية",
+      "title": "مواقيت قطارات SNTF الجزائر | جداول الرحلات الرسمية 2026",
       "path": "sectors/sntf.html",
       "content_type": "sector",
       "parent_sector_path": null,
