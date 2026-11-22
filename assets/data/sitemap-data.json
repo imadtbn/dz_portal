@@ -1171,6 +1171,197 @@
         "واضبط مدة المذاكرة دون تسجيل حساب. study الأدوات الرقمية"
       ],
       "status": "displayable"
+    },
+    {
+      "section_name": "الأدوات الرقمية",
+      "sector_name": "study",
+      "title": "مولّد خطة البحث",
+      "path": "pages/tools/study/research-plan.html",
+      "content_type": "tool",
+      "parent_sector_path": null,
+      "keywords": [
+        "مولّد خطة البحث أنشئ خطة بحث أو مذكرة تخرج تشمل الإشكالية والفرضيات والمقدمة والفصول",
+        "ثم عدّل الهيكل واحفظه أو صدّره بصيغة Word وPDF. study الأدوات الرقمية"
+      ],
+      "status": "displayable"
+    },
+    {
+      "section_name": "الأدوات الرقمية",
+      "sector_name": "study",
+      "title": "حاسبة المعدل السنوي",
+      "path": "pages/tools/study/semester-calculator.html",
+      "content_type": "tool",
+      "parent_sector_path": null,
+      "keywords": [
+        "حاسبة المعدل السنوي احسب المعدل السنوي انطلاقًا من معدلات الفصول الثلاثة",
+        "واعرف المتوسط النهائي بسرعة باستخدام حاسبة المعدل الدراسي. study الأدوات الرقمية"
+      ],
+      "status": "displayable"
+    },
+    {
+      "section_name": "الأدوات الرقمية",
+      "sector_name": "study",
+      "title": "مولد جدول الدراسة",
+      "path": "pages/tools/study/study-schedule.html",
+      "content_type": "tool",
+      "parent_sector_path": null,
+      "keywords": [
+        "مولد جدول الدراسة أنشئ جدول دراسة أسبوعيًا حسب المواد والأيام والساعات",
+        "ونظّم حصص المراجعة والواجبات في برنامج واضح قابل للتعديل. study الأدوات الرقمية"
+      ],
+      "status": "displayable"
+    },
+    {
+      "section_name": "الفيديوهات والشروحات",
+      "sector_name": null,
+      "title": "طريقة التسجيل في المنصة الوطنية الرقمية للأبوستيل",
+      "path": "pages/video/apostille-registration.html",
+      "content_type": "video",
+      "parent_sector_path": null,
+      "keywords": [
+        "طريقة التسجيل في المنصة الوطنية الرقمية للأبوستيل شرح مرئي لطريقة التسجيل في المنصة الوطنية الرقمية للأبوستيل وتصديق الوثائق إلكترونيًا الفيديوهات والشروحات"
+      ],
+      "status": "displayable"
+    },
+    {
+      "section_name": "الفيديوهات والشروحات",
+      "sector_name": null,
+      "title": "برنامج جيل لجيل 777 للإدماج الرقمي",
+      "path": "pages/video/arpce-777.html",
+      "content_type": "video",
+      "parent_sector_path": null,
+      "keywords": [
+        "برنامج جيل لجيل 777 للإدماج الرقمي فيديو يشرح برنامج جيل لجيل 777 للتعلم والإدماج الرقمي وتطوير المهارات عن بعد في الجزائر الفيديوهات والشروحات"
+      ],
+      "status": "displayable"
+    },
+    {
+      "section_name": "الفيديوهات والشروحات",
+      "sector_name": null,
+      "title": "طريقة التسجيل في فضاء الأولياء 2026",
+      "path": "pages/video/awlyaa-registration.html",
+      "content_type": "video",
+      "parent_sector_path": null,
+      "keywords": [
+        "طريقة التسجيل في فضاء الأولياء 2026 شاهد شرحًا مرئيًا لطريقة إنشاء حساب والتسجيل في فضاء الأولياء",
+        "وربط الأبناء بالحساب لمتابعة النتائج والتمدرس عبر المنصة الرسمية. الفيديوهات والشروحات"
+      ],
+      "status": "displayable"
+    },
+    {
+      "section_name": "الفيديوهات والشروحات",
+      "sector_name": null,
+      "title": "تعرف عن المركز الوطني لمنظومات الطائرات بدون طيار على المتن",
+      "path": "pages/video/dronet.mdn.html",
+      "content_type": "video",
+      "parent_sector_path": null,
+      "keywords": [
+        "تعرف عن المركز الوطني لمنظومات الطائرات بدون طيار على المتن شرح مرئي للمركز الوطني لمنظومات الطائرات بدون طيار على المتن الفيديوهات والشروحات"
+      ],
+      "status": "displayable"
+    },
+    {
+      "section_name": "الفيديوهات والشروحات",
+      "sector_name": null,
+      "title": "طريقة التصريح بضياع الوثائق",
+      "path": "pages/video/e-declaration-registration.html",
+      "content_type": "video",
+      "parent_sector_path": null,
+      "keywords": [
+        "طريقة التصريح بضياع الوثائق شرح مرئي لطريقة التسجيل و التصريح بضياع الوثائق الفيديوهات والشروحات"
+      ],
+      "status": "displayable"
+    },
+    {
+      "section_name": "الفيديوهات والشروحات",
+      "sector_name": null,
+      "title": "فيديوهات تعليمية للخدمات الرقمية الجزائرية",
+      "path": "pages/video/index.html",
+      "content_type": "video-index",
+      "parent_sector_path": null,
+      "keywords": [
+        "فيديوهات تعليمية للخدمات الرقمية الجزائرية مكتبة فيديوهات تعليمية تشرح التسجيل واستعمال المنصات الرقمية في الجزائر",
+        "مثل الدخول التكويني وفضاء الأولياء ومنصة محطتي والأبوستيل وبرنامج جيل لجيل 777 الفيديوهات والشروحات"
+      ],
+      "status": "displayable"
+    },
+    {
+      "section_name": "الفيديوهات والشروحات",
+      "sector_name": null,
+      "title": "طريقة حجز موعد فحص المركبات عبر منصة مركبتي DZ",
+      "path": "pages/video/markabatidz-registration.html",
+      "content_type": "video",
+      "parent_sector_path": null,
+      "keywords": [
+        "طريقة حجز موعد فحص المركبات عبر منصة مركبتي DZ شرح مرئي لطريقة التسجيل و حجز موعد فحص المركبات عبر منصة مركبتي DZ الفيديوهات والشروحات"
+      ],
+      "status": "displayable"
+    },
+    {
+      "section_name": "الفيديوهات والشروحات",
+      "sector_name": null,
+      "title": "تعريف بالبوابة الرقمية لوزارة الأشغال العمومية والمنشآت الكبرى",
+      "path": "pages/video/mtpib-presentation.html",
+      "content_type": "video",
+      "parent_sector_path": null,
+      "keywords": [
+        "تعريف بالبوابة الرقمية لوزارة الأشغال العمومية والمنشآت الكبرى شرح مرئي عن البوابة الرقمية لوزارة الأشغال العمومية والمنشآت الكبرى الفيديوهات والشروحات"
+      ],
+      "status": "displayable"
+    },
+    {
+      "section_name": "الفيديوهات والشروحات",
+      "sector_name": null,
+      "title": "طريقة التسجيل في منصة محطتي لاقتناء عجلات السيارات",
+      "path": "pages/video/naftal-tyres.html",
+      "content_type": "video",
+      "parent_sector_path": null,
+      "keywords": [
+        "طريقة التسجيل في منصة محطتي لاقتناء عجلات السيارات شرح مرئي لطريقة التسجيل في منصة محطتي التابعة لنفطال لاقتناء العجلات المطاطية الفيديوهات والشروحات"
+      ],
+      "status": "displayable"
+    },
+    {
+      "section_name": "الفيديوهات والشروحات",
+      "sector_name": null,
+      "title": "طريقة التسجيل في الدخول التكويني 2026",
+      "path": "pages/video/takwin-registration.html",
+      "content_type": "video",
+      "parent_sector_path": null,
+      "keywords": [
+        "طريقة التسجيل في الدخول التكويني 2026 شرح مرئي لطريقة التسجيل في الدخول التكويني وخدمات وزارة التكوين والتعليم المهنيين في الجزائر الفيديوهات والشروحات"
+      ],
+      "status": "displayable"
+    },
+    {
+      "section_name": "صفحات البوابة",
+      "sector_name": null,
+      "title": "البوابة الجزائرية",
+      "path": "sectors/aadl.html",
+      "content_type": "page",
+      "parent_sector_path": null,
+      "keywords": [
+        "البوابة الجزائرية الوصول إلى خدمات وكالة عدل في الجزائر: تسجيل الدخول إلى منصة عدل 3",
+        "متابعة الملفات السكنية",
+        "دفع فواتير الإيجار",
+        "تطبيق AADL Mobile",
+        "وخدمة الزبائن. صفحات البوابة"
+      ],
+      "status": "displayable"
+    },
+    {
+      "section_name": "صفحات البوابة",
+      "sector_name": null,
+      "title": "البوابة الجزائرية",
+      "path": "sectors/aapi.html",
+      "content_type": "page",
+      "parent_sector_path": null,
+      "keywords": [
+        "البوابة الجزائرية الوكالة الجزائرية لترقية الاستثمار AAPI",
+        "توفر خدمات مرافقة المستثمرين",
+        "إنشاء المشاريع والاطلاع على الفرص الاستثمارية والإجراءات القانونية صفحات البوابة"
+      ],
+      "status": "displayable"
     }
   ]
 }
