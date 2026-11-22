@@ -1787,7 +1787,7 @@
     {
       "section_name": "القطاعات والخدمات",
       "sector_name": "bank",
-      "title": "البوابة الجزائرية",
+      "title": "بنك التنمية المحلية BDL",
       "path": "sectors/bank/bdl.html",
       "content_type": "service",
       "parent_sector_path": "sectors/bank.html",
@@ -1803,7 +1803,7 @@
     {
       "section_name": "القطاعات والخدمات",
       "sector_name": "bank",
-      "title": "البوابة الجزائرية",
+      "title": "بنك الجزائر الخارجي BEA - البوابة الجزائرية",
       "path": "sectors/bank/bea.html",
       "content_type": "service",
       "parent_sector_path": "sectors/bank.html",
@@ -1818,7 +1818,7 @@
     {
       "section_name": "القطاعات والخدمات",
       "sector_name": "bank",
-      "title": "البوابة الجزائرية",
+      "title": "البنك الوطني الجزائري BNA",
       "path": "sectors/bank/bna.html",
       "content_type": "service",
       "parent_sector_path": "sectors/bank.html",
@@ -1834,7 +1834,7 @@
     {
       "section_name": "القطاعات والخدمات",
       "sector_name": "bank",
-      "title": "البوابة الجزائرية",
+      "title": "البنك الوطني للإسكان BNH - البوابة الجزائرية",
       "path": "sectors/bank/bnh.html",
       "content_type": "service",
       "parent_sector_path": "sectors/bank.html",
@@ -1849,7 +1849,7 @@
     {
       "section_name": "القطاعات والخدمات",
       "sector_name": "bank",
-      "title": "البوابة الجزائرية",
+      "title": "إتش إس بي سي الجزائر (HSBC Algeria) - البوابة الجزائرية",
       "path": "sectors/bank/business.algeria.hsbc.html",
       "content_type": "service",
       "parent_sector_path": "sectors/bank.html",
@@ -1865,7 +1865,7 @@
     {
       "section_name": "القطاعات والخدمات",
       "sector_name": "bank",
-      "title": "البوابة الجزائرية",
+      "title": "سيتي بنك الجزائر (Citibank N.A. Algeria / Citigroup) - البوابة الجزائرية",
       "path": "sectors/bank/citigroup.html",
       "content_type": "service",
       "parent_sector_path": "sectors/bank.html",
@@ -1881,7 +1881,7 @@
     {
       "section_name": "القطاعات والخدمات",
       "sector_name": "bank",
-      "title": "البوابة الجزائرية",
+      "title": "كناب بنك CNEP Banque: الخدمات الرقمية وتطبيقات البنك في الجزائر",
       "path": "sectors/bank/cnep.html",
       "content_type": "service",
       "parent_sector_path": "sectors/bank.html",
@@ -1895,7 +1895,7 @@
     {
       "section_name": "القطاعات والخدمات",
       "sector_name": "bank",
-      "title": "البوابة الجزائرية",
+      "title": "القرض الشعبي الجزائري CPA - البوابة الجزائرية",
       "path": "sectors/bank/cpa.html",
       "content_type": "service",
       "parent_sector_path": "sectors/bank.html",
@@ -1910,7 +1910,7 @@
     {
       "section_name": "القطاعات والخدمات",
       "sector_name": "bank",
-      "title": "البوابة الجزائرية",
+      "title": "Natixis Algérie",
       "path": "sectors/bank/ebanking.algerie.natixis.html",
       "content_type": "service",
       "parent_sector_path": "sectors/bank.html",
@@ -1924,7 +1924,7 @@
     {
       "section_name": "القطاعات والخدمات",
       "sector_name": "bank",
-      "title": "البوابة الجزائرية",
+      "title": "فرنسبنك الجزائر (Fransabank El Djazair) - البوابة الجزائرية",
       "path": "sectors/bank/fransabank.html",
       "content_type": "service",
       "parent_sector_path": "sectors/bank.html",
@@ -1941,7 +1941,7 @@
     {
       "section_name": "القطاعات والخدمات",
       "sector_name": "bank",
-      "title": "البوابة الجزائرية",
+      "title": "بنك سوسيتي جنرال الجزائر (Société Générale Algérie - SGA) - البوابة الجزائرية",
       "path": "sectors/bank/societegenerale.html",
       "content_type": "service",
       "parent_sector_path": "sectors/bank.html",
@@ -1956,7 +1956,7 @@
     {
       "section_name": "القطاعات والخدمات",
       "sector_name": "campuce.jobs",
-      "title": "البوابة الجزائرية",
+      "title": "منصة توظيف مخصصة للطلبة الجزائريين",
       "path": "sectors/campuce.jobs.html",
       "content_type": "sector",
       "parent_sector_path": null,
@@ -1971,7 +1971,7 @@
     {
       "section_name": "القطاعات والخدمات",
       "sector_name": "casnos",
-      "title": "البوابة الجزائرية",
+      "title": "CASNOS الجزائر | الضمان الاجتماعي للعمال غير الأجراء",
       "path": "sectors/casnos.html",
       "content_type": "sector",
       "parent_sector_path": null,
@@ -1985,7 +1985,7 @@
     {
       "section_name": "القطاعات والخدمات",
       "sector_name": "cnas",
-      "title": "البوابة الجزائرية",
+      "title": "CNAS الجزائر | الضمان الاجتماعي للعمال الأجراء",
       "path": "sectors/cnas.html",
       "content_type": "sector",
       "parent_sector_path": null,
@@ -1999,7 +1999,7 @@
     {
       "section_name": "القطاعات والخدمات",
       "sector_name": "cnr",
-      "title": "البوابة الجزائرية",
+      "title": "CNR الجزائر | خدمات التقاعد والضمان الاجتماعي",
       "path": "sectors/cnr.html",
       "content_type": "sector",
       "parent_sector_path": null,
