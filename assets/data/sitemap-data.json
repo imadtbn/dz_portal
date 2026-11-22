@@ -580,6 +580,201 @@
         "واجمع تكاليف السكن والطعام والنقل والدراسة لمعرفة إجمالي الإنفاق. daily-life الأدوات الرقمية"
       ],
       "status": "displayable"
+    },
+    {
+      "section_name": "الأدوات الرقمية",
+      "sector_name": "daily-life",
+      "title": "ميزانيتي الذكية: تسيير الميزانية الشهرية",
+      "path": "pages/tools/daily-life/budget-manager.html",
+      "content_type": "tool",
+      "parent_sector_path": null,
+      "keywords": [
+        "ميزانيتي الذكية: تسيير الميزانية الشهرية نظّم راتبك ومداخيلك الشهرية",
+        "وسجّل المصاريف والادخار والطوارئ",
+        "وتابع رصيد الميزانية بالدينار الجزائري مع حفظ بياناتك محليًا. daily-life الأدوات الرقمية"
+      ],
+      "status": "displayable"
+    },
+    {
+      "section_name": "الأدوات الرقمية",
+      "sector_name": "daily-life",
+      "title": "المساعد الفلاحي: مخطط غرس الأشجار",
+      "path": "pages/tools/daily-life/farm-planner.html",
+      "content_type": "tool",
+      "parent_sector_path": null,
+      "keywords": [
+        "المساعد الفلاحي: مخطط غرس الأشجار خطط غرس الأشجار حسب أبعاد الأرض والمسافات بين الصفوف",
+        "واحسب عدد الشتلات وقدّر احتياجات الري وتكاليف البستان وسجّل الأعمال. daily-life الأدوات الرقمية"
+      ],
+      "status": "displayable"
+    },
+    {
+      "section_name": "الأدوات الرقمية",
+      "sector_name": "daily-life",
+      "title": "خريطة الطالب",
+      "path": "pages/tools/daily-life/maps.html",
+      "content_type": "tool",
+      "parent_sector_path": null,
+      "keywords": [
+        "خريطة الطالب ابحث عن الجامعات والمدارس العليا والمعاهد والإقامات الجامعية في الجزائر على خريطة تفاعلية",
+        "واعثر على المواقع والمسارات القريبة. daily-life الأدوات الرقمية"
+      ],
+      "status": "displayable"
+    },
+    {
+      "section_name": "الأدوات الرقمية",
+      "sector_name": "daily-life",
+      "title": "مخطط الوجبات وقائمة المشتريات",
+      "path": "pages/tools/daily-life/meal-planner.html",
+      "content_type": "tool",
+      "parent_sector_path": null,
+      "keywords": [
+        "مخطط الوجبات وقائمة المشتريات خطط وجبات الأسبوع للأسرة",
+        "واضبط المقادير حسب عدد الأفراد",
+        "وأنشئ قائمة مشتريات تلقائية وقدّر ميزانية الطعام بالأسعار التي تدخلها. daily-life الأدوات الرقمية"
+      ],
+      "status": "displayable"
+    },
+    {
+      "section_name": "الأدوات الرقمية",
+      "sector_name": "health",
+      "title": "استبيان القلق التوعوي",
+      "path": "pages/tools/health/anxiety-screening.html",
+      "content_type": "tool",
+      "parent_sector_path": null,
+      "keywords": [
+        "استبيان القلق التوعوي أجب عن سبعة أسئلة توعوية حول مشاعر القلق خلال الأسبوعين الماضيين",
+        "واحصل على مؤشر إرشادي غير تشخيصي يساعدك على فهم إجاباتك. health الأدوات الرقمية"
+      ],
+      "status": "displayable"
+    },
+    {
+      "section_name": "الأدوات الرقمية",
+      "sector_name": "health",
+      "title": "اختبار التحكم بالربو",
+      "path": "pages/tools/health/asthma-control.html",
+      "content_type": "tool",
+      "parent_sector_path": null,
+      "keywords": [
+        "اختبار التحكم بالربو قيّم مستوى التحكم بالربو عبر خمسة أسئلة عن الأعراض خلال الأسابيع الأربعة الماضية",
+        "مع نتيجة توعوية لا تغني عن مراجعة الطبيب. health الأدوات الرقمية"
+      ],
+      "status": "displayable"
+    },
+    {
+      "section_name": "الأدوات الرقمية",
+      "sector_name": "health",
+      "title": "حاسبة التغذية والوجبات الذكية",
+      "path": "pages/tools/health/calorie-calculator.html",
+      "content_type": "tool",
+      "parent_sector_path": null,
+      "keywords": [
+        "حاسبة التغذية والوجبات الذكية احسب احتياجك اليومي التقديري من السعرات والبروتين والكربوهيدرات والدهون حسب العمر والوزن والطول والنشاط والهدف الغذائي. health الأدوات الرقمية"
+      ],
+      "status": "displayable"
+    },
+    {
+      "section_name": "الأدوات الرقمية",
+      "sector_name": "health",
+      "title": "حاسبة مؤشر كتلة الجسم للأطفال والمراهقين",
+      "path": "pages/tools/health/child-bmi-calculator.html",
+      "content_type": "tool",
+      "parent_sector_path": null,
+      "keywords": [
+        "حاسبة مؤشر كتلة الجسم للأطفال والمراهقين احسب مؤشر كتلة الجسم BMI للأطفال والمراهقين من عمر سنتين إلى 19 سنة",
+        "مع تقدير المئين حسب العمر والجنس وفق مرجع النمو المستخدم. health الأدوات الرقمية"
+      ],
+      "status": "displayable"
+    },
+    {
+      "section_name": "الأدوات الرقمية",
+      "sector_name": "health",
+      "title": "استبيان المزاج والاكتئاب",
+      "path": "pages/tools/health/depression-screening.html",
+      "content_type": "tool",
+      "parent_sector_path": null,
+      "keywords": [
+        "استبيان المزاج والاكتئاب أجب عن تسعة أسئلة توعوية حول المزاج خلال الأسبوعين الماضيين",
+        "واقرأ نتيجة إرشادية غير تشخيصية مع التنبيه إلى طلب المساعدة عند الحاجة. health الأدوات الرقمية"
+      ],
+      "status": "displayable"
+    },
+    {
+      "section_name": "الأدوات الرقمية",
+      "sector_name": "health",
+      "title": "قائمة التوعية اليومية بالسكري",
+      "path": "pages/tools/health/diabetes-awareness.html",
+      "content_type": "tool",
+      "parent_sector_path": null,
+      "keywords": [
+        "قائمة التوعية اليومية بالسكري تابع عادات يومية مرتبطة بالتوعية بمرض السكري ونمط الحياة الصحي عبر قائمة بسيطة للتأشير",
+        "دون تقديم تشخيص أو بديل عن المتابعة الطبية. health الأدوات الرقمية"
+      ],
+      "status": "displayable"
+    },
+    {
+      "section_name": "الأدوات الرقمية",
+      "sector_name": "health",
+      "title": "استبيان الوعي بأنماط الأكل",
+      "path": "pages/tools/health/eating-awareness.html",
+      "content_type": "tool",
+      "parent_sector_path": null,
+      "keywords": [
+        "استبيان الوعي بأنماط الأكل استكشف بعض العادات وأنماط الأكل من خلال استبيان تثقيفي عام يساعد على زيادة الوعي بالعلاقة مع الطعام",
+        "وليس أداة تشخيصية. health الأدوات الرقمية"
+      ],
+      "status": "displayable"
+    },
+    {
+      "section_name": "الأدوات الرقمية",
+      "sector_name": "health",
+      "title": "حاسبة نافذة الخصوبة والإباضة",
+      "path": "pages/tools/health/fertile-window.html",
+      "content_type": "tool",
+      "parent_sector_path": null,
+      "keywords": [
+        "حاسبة نافذة الخصوبة والإباضة قدّري أيام التبويض ونافذة الخصوبة المحتملة اعتمادًا على تاريخ أول يوم من آخر دورة شهرية ومتوسط طول الدورة",
+        "مع نتائج تقديرية. health الأدوات الرقمية"
+      ],
+      "status": "displayable"
+    },
+    {
+      "section_name": "الأدوات الرقمية",
+      "sector_name": "health",
+      "title": "الأدوات الصحية والحاسبات التوعوية",
+      "path": "pages/tools/health/health-tools.html",
+      "content_type": "tool",
+      "parent_sector_path": null,
+      "keywords": [
+        "الأدوات الصحية والحاسبات التوعوية اكتشفي حاسبات وأدوات صحية عربية لمتابعة النمو والتغذية والحمل والنوم والماء واللقاحات",
+        "مع توضيح أن النتائج تقديرية ولا تشخّص الأمراض. health الأدوات الرقمية"
+      ],
+      "status": "displayable"
+    },
+    {
+      "section_name": "الأدوات الرقمية",
+      "sector_name": "health",
+      "title": "حاسبة الوزن المثالي",
+      "path": "pages/tools/health/ideal-weight-calculator.html",
+      "content_type": "tool",
+      "parent_sector_path": null,
+      "keywords": [
+        "حاسبة الوزن المثالي احسب نطاقًا تقريبيًا للوزن المناسب حسب الطول والجنس",
+        "مع شرح حدود المؤشر والتنبيه إلى أن الوزن الصحي يختلف من شخص لآخر. health الأدوات الرقمية"
+      ],
+      "status": "displayable"
+    },
+    {
+      "section_name": "الأدوات الرقمية",
+      "sector_name": "health",
+      "title": "حاسبة نمو الرضع والطول حسب العمر",
+      "path": "pages/tools/health/infant-growth-calculator.html",
+      "content_type": "tool",
+      "parent_sector_path": null,
+      "keywords": [
+        "حاسبة نمو الرضع والطول حسب العمر تابع نمو الرضيع بمقارنة الطول والوزن الاختياري مع العمر والجنس وفق مخططات نمو منظمة الصحة العالمية من الولادة حتى 24 شهرًا. health الأدوات الرقمية"
+      ],
+      "status": "displayable"
     }
   ]
 }
