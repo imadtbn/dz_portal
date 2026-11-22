@@ -2038,6 +2038,215 @@
         "التوظيف وطرق التواصل creg.gov القطاعات والخدمات"
       ],
       "status": "displayable"
+    },
+    {
+      "section_name": "القطاعات والخدمات",
+      "sector_name": "dgfp.gov",
+      "title": "البوابة الجزائرية",
+      "path": "sectors/dgfp.gov.html",
+      "content_type": "sector",
+      "parent_sector_path": null,
+      "keywords": [
+        "البوابة الجزائرية دليل خدمات المديرية العامة للوظيفة العمومية والإصلاح الإداري DGFP في الجزائر",
+        "بما فيها الأرضية الرقمية لطلب المعادلات الإدارية",
+        "متابعة مسابقات التوظيف",
+        "والاطلاع على النصوص القانونية والتنظيمية. dgfp.gov القطاعات والخدمات"
+      ],
+      "status": "displayable"
+    },
+    {
+      "section_name": "القطاعات والخدمات",
+      "sector_name": "dgsn",
+      "title": "البوابة الجزائرية",
+      "path": "sectors/dgsn.html",
+      "content_type": "sector",
+      "parent_sector_path": null,
+      "keywords": [
+        "البوابة الجزائرية تقدم المديرية العامة العامة للأمن الوطني مجموعة من الخدمات الرقمية التي تهدف إلى تسهيل الوصول إلى الخدمات الأمنية للمواطنين",
+        "تطبيقات . هذه الخدمات تتيح للمواطنين الحصول ع dgsn القطاعات والخدمات"
+      ],
+      "status": "displayable"
+    },
+    {
+      "section_name": "القطاعات والخدمات",
+      "sector_name": "djezzy",
+      "title": "البوابة الجزائرية",
+      "path": "sectors/djezzy.html",
+      "content_type": "sector",
+      "parent_sector_path": null,
+      "keywords": [
+        "البوابة الجزائرية استخدم خدمات جازي Djezzy في الجزائر لتعبئة رصيد الهاتف ودفع الفواتير عبر الإنترنت",
+        "وإدارة خطك من تطبيق Djezzy",
+        "والوصول إلى الموقع الرسمي وخدمة الزبائن. djezzy القطاعات والخدمات"
+      ],
+      "status": "displayable"
+    },
+    {
+      "section_name": "القطاعات والخدمات",
+      "sector_name": "douane",
+      "title": "البوابة الجزائرية",
+      "path": "sectors/douane.html",
+      "content_type": "sector",
+      "parent_sector_path": null,
+      "keywords": [
+        "البوابة الجزائرية استكشف خدمات الجمارك الجزائرية الرقمية",
+        "ومنها منصة ALCES والتصريح الجمركي ومحاكاة الرسوم وتسجيل الشركات وطلبات المعلومات والتواصل عن بعد. douane القطاعات والخدمات"
+      ],
+      "status": "displayable"
+    },
+    {
+      "section_name": "القطاعات والخدمات",
+      "sector_name": "dronet.mdn",
+      "title": "البوابة الجزائرية",
+      "path": "sectors/dronet.mdn.html",
+      "content_type": "sector",
+      "parent_sector_path": null,
+      "keywords": [
+        "البوابة الجزائرية دليل خدمات المركز الوطني لمنظومات الطائرات بدون طيار على المتن (CNSAPB",
+        "dronet.mdn.dz) التابع لوزارة الدفاع الوطني: التصريح بالدرون",
+        "الاعتمادات المهنية",
+        "رخص الاستخدام والتحليق",
+        "تدريب الطيارين وحجز المواعيد. dronet.mdn القطاعات والخدمات"
+      ],
+      "status": "displayable"
+    },
+    {
+      "section_name": "القطاعات والخدمات",
+      "sector_name": "dzexam1",
+      "title": "البوابة الجزائرية",
+      "path": "sectors/dzexam1.html",
+      "content_type": "sector",
+      "parent_sector_path": null,
+      "keywords": [
+        "البوابة الجزائرية تصفح فروض واختبارات التعليم الابتدائي والمتوسط والثانوي في الجزائر حسب المستوى والمادة",
+        "مع نماذج تدريبية ومواضيع للمراجعة والتحضير للامتحانات. dzexam1 القطاعات والخدمات"
+      ],
+      "status": "displayable"
+    },
+    {
+      "section_name": "القطاعات والخدمات",
+      "sector_name": "dzexams",
+      "title": "البوابة الجزائرية",
+      "path": "sectors/dzexams.html",
+      "content_type": "sector",
+      "parent_sector_path": null,
+      "keywords": [
+        "البوابة الجزائرية تصفح بنك الفروض والاختبارات في الجزائر حسب الطور والمستوى والمادة: تمارين ومواضيع التعليم الابتدائي والمتوسط والثانوي",
+        "واختبارات شهادة التعليم المتوسط والبكالوريا. dzexams القطاعات والخدمات"
+      ],
+      "status": "displayable"
+    },
+    {
+      "section_name": "القطاعات والخدمات",
+      "sector_name": "dzexams.pro",
+      "title": "البوابة الجزائرية",
+      "path": "sectors/dzexams.pro.html",
+      "content_type": "sector",
+      "parent_sector_path": null,
+      "keywords": [
+        "البوابة الجزائرية جميع فروض واختبارات شهادة التعليم المتوسط",
+        "البكالوريا",
+        "والابتدائي مع التصحيح النموذجي لجميع المواد والمستويات التعليمية في الجزائر dzexams.pro القطاعات والخدمات"
+      ],
+      "status": "displayable"
+    },
+    {
+      "section_name": "القطاعات والخدمات",
+      "sector_name": "dztests",
+      "title": "البوابة الجزائرية",
+      "path": "sectors/dztests.html",
+      "content_type": "sector",
+      "parent_sector_path": null,
+      "keywords": [
+        "البوابة الجزائرية اكتشف فروض واختبارات التعليم الابتدائي والمتوسط والثانوي عبر DZTests",
+        "مرتبة حسب السنة الدراسية والمستوى",
+        "مع مواضيع شهادة التعليم المتوسط والبكالوريا للمراجعة والتحضير. dztests القطاعات والخدمات"
+      ],
+      "status": "displayable"
+    },
+    {
+      "section_name": "القطاعات والخدمات",
+      "sector_name": "ecolerradja",
+      "title": "البوابة الجزائرية",
+      "path": "sectors/ecolerradja.html",
+      "content_type": "sector",
+      "parent_sector_path": null,
+      "keywords": [
+        "البوابة الجزائرية مواضيع الفروض والاختبارات لجميع الأطوار التعليمية في الجزائر مع دروس ومراجعات مفيدة للتلاميذ ecolerradja القطاعات والخدمات"
+      ],
+      "status": "displayable"
+    },
+    {
+      "section_name": "القطاعات والخدمات",
+      "sector_name": "eddirasa",
+      "title": "البوابة الجزائرية",
+      "path": "sectors/eddirasa.html",
+      "content_type": "sector",
+      "parent_sector_path": null,
+      "keywords": [
+        "البوابة الجزائرية اكتشف عبر صفحة الدراسة بنك الفروض والاختبارات للتعليم الابتدائي والمتوسط والثانوي",
+        "مع نماذج الاختبارات والمواضيع والتصحيحات وشهادة التعليم المتوسط والبكالوريا. eddirasa القطاعات والخدمات"
+      ],
+      "status": "displayable"
+    },
+    {
+      "section_name": "القطاعات والخدمات",
+      "sector_name": "education",
+      "title": "البوابة الجزائرية",
+      "path": "sectors/education.html",
+      "content_type": "sector",
+      "parent_sector_path": null,
+      "keywords": [
+        "البوابة الجزائرية دليل خدمات وزارة التربية الوطنية في الجزائر",
+        "بما يشمل فضاء الأستاذ وفضاء الأولياء",
+        "التسجيل في الامتحانات",
+        "النتائج المدرسية",
+        "التوظيف والتعليم عن بعد. education القطاعات والخدمات"
+      ],
+      "status": "displayable"
+    },
+    {
+      "section_name": "القطاعات والخدمات",
+      "sector_name": "educationdz",
+      "title": "البوابة الجزائرية",
+      "path": "sectors/educationdz.html",
+      "content_type": "sector",
+      "parent_sector_path": null,
+      "keywords": [
+        "البوابة الجزائرية جميع فروض واختبارات شهادة التعليم المتوسط",
+        "البكالوريا",
+        "والابتدائي مع التصحيح النموذجي لجميع المواد والمستويات التعليمية في الجزائر educationdz القطاعات والخدمات"
+      ],
+      "status": "displayable"
+    },
+    {
+      "section_name": "القطاعات والخدمات",
+      "sector_name": "emergency",
+      "title": "البوابة الجزائرية",
+      "path": "sectors/emergency.html",
+      "content_type": "sector",
+      "parent_sector_path": null,
+      "keywords": [
+        "البوابة الجزائرية دليل أرقام الطوارئ والنجدة في الجزائر",
+        "يشمل الشرطة والدرك الوطني والحماية المدنية والإسعاف وخطوط المساعدة",
+        "مع توضيح الجهات التي يمكن الاتصال بها عند الحاجة. emergency القطاعات والخدمات"
+      ],
+      "status": "displayable"
+    },
+    {
+      "section_name": "القطاعات والخدمات",
+      "sector_name": "enpi",
+      "title": "البوابة الجزائرية",
+      "path": "sectors/enpi.html",
+      "content_type": "sector",
+      "parent_sector_path": null,
+      "keywords": [
+        "البوابة الجزائرية دليل خدمات المؤسسة الوطنية للترقية العقارية ENPI في الجزائر: التسجيل في السكن الترقوي العمومي LPP والسكن الترقوي الحر LPL",
+        "فضاء الزبائن",
+        "اقتناء المحلات التجارية",
+        "وتطبيق إنشغال. enpi القطاعات والخدمات"
+      ],
+      "status": "displayable"
     }
   ]
 }
