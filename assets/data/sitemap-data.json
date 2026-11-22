@@ -973,6 +973,204 @@
         "وتصفح المفردات واحفظ كلماتك لتوسيع الرصيد اللغوي وتحسين الكتابة. productivity الأدوات الرقمية"
       ],
       "status": "displayable"
+    },
+    {
+      "section_name": "الأدوات الرقمية",
+      "sector_name": "productivity",
+      "title": "مولد السيرة الذاتية (CV)",
+      "path": "pages/tools/productivity/cv-builder.html",
+      "content_type": "tool",
+      "parent_sector_path": null,
+      "keywords": [
+        "مولد السيرة الذاتية (CV) أنشئ سيرة ذاتية CV منظمة للتقديم إلى الوظائف",
+        "وأدخل خبراتك ومهاراتك وتعليمك ثم اطبعها أو احفظها PDF مجانًا دون تسجيل. productivity الأدوات الرقمية"
+      ],
+      "status": "displayable"
+    },
+    {
+      "section_name": "الأدوات الرقمية",
+      "sector_name": "productivity",
+      "title": "ضغط الصور",
+      "path": "pages/tools/productivity/image-compressor.html",
+      "content_type": "tool",
+      "parent_sector_path": null,
+      "keywords": [
+        "ضغط الصور قلّل حجم صور JPG وPNG وWEBP مباشرة في المتصفح",
+        "واضبط الجودة والأبعاد دون رفع الصور إلى خادم خارجي أو إنشاء حساب. productivity الأدوات الرقمية"
+      ],
+      "status": "displayable"
+    },
+    {
+      "section_name": "الأدوات الرقمية",
+      "sector_name": "productivity",
+      "title": "مسير المخزون والأرباح",
+      "path": "pages/tools/productivity/inventory-manager.html",
+      "content_type": "tool",
+      "parent_sector_path": null,
+      "keywords": [
+        "مسير المخزون والأرباح أدر مخزون المحل وسجّل المنتجات والمشتريات والمبيعات",
+        "وتابع الكميات والتنبيهات واحسب الأرباح واطبع التقارير مع حفظ البيانات على جهازك. productivity الأدوات الرقمية"
+      ],
+      "status": "displayable"
+    },
+    {
+      "section_name": "الأدوات الرقمية",
+      "sector_name": "productivity",
+      "title": "مولد الفواتير",
+      "path": "pages/tools/productivity/invoice-generator.html",
+      "content_type": "tool",
+      "parent_sector_path": null,
+      "keywords": [
+        "مولد الفواتير أنشئ فاتورة قابلة للتعديل بالدينار الجزائري",
+        "وأضف المنتجات والأسعار واحسب TVA والمجموع ثم اطبع الفاتورة أو احفظها PDF. productivity الأدوات الرقمية"
+      ],
+      "status": "displayable"
+    },
+    {
+      "section_name": "الأدوات الرقمية",
+      "sector_name": "productivity",
+      "title": "أدوات PDF",
+      "path": "pages/tools/productivity/pdf-tools.html",
+      "content_type": "tool",
+      "parent_sector_path": null,
+      "keywords": [
+        "أدوات PDF ادمج ملفات PDF أو استخرج صفحات محددة من مستند واحد مباشرة في المتصفح",
+        "دون رفع ملفاتك إلى خادم خارجي أو الحاجة إلى تسجيل. productivity الأدوات الرقمية"
+      ],
+      "status": "displayable"
+    },
+    {
+      "section_name": "الأدوات الرقمية",
+      "sector_name": "productivity",
+      "title": "مولد رموز QR",
+      "path": "pages/tools/productivity/qr-generator.html",
+      "content_type": "tool",
+      "parent_sector_path": null,
+      "keywords": [
+        "مولد رموز QR أنشئ رمز QR Code للرابط أو النص أو شبكة Wi-Fi",
+        "ثم حمّله كصورة PNG وشاركه بسهولة باستخدام مولد رموز QR مجاني. productivity الأدوات الرقمية"
+      ],
+      "status": "displayable"
+    },
+    {
+      "section_name": "الأدوات الرقمية",
+      "sector_name": "productivity",
+      "title": "أدوات النصوص والبحوث",
+      "path": "pages/tools/productivity/text-tools.html",
+      "content_type": "tool",
+      "parent_sector_path": null,
+      "keywords": [
+        "أدوات النصوص والبحوث استخدم أدوات النصوص لمعالجة المحتوى العربي وتنظيمه وتحليل الكلمات والحروف",
+        "وتجهيز النصوص والبحوث بسرعة من المتصفح. productivity الأدوات الرقمية"
+      ],
+      "status": "displayable"
+    },
+    {
+      "section_name": "الأدوات الرقمية",
+      "sector_name": "study",
+      "title": "مولّد المراجع APA 7",
+      "path": "pages/tools/study/apa-generator.html",
+      "content_type": "tool",
+      "parent_sector_path": null,
+      "keywords": [
+        "مولّد المراجع APA 7 أنشئ مراجع APA الإصدار السابع للكتب والمقالات والمواقع",
+        "ونظّم قائمة المصادر بالعربية أو الفرنسية واحفظها محليًا لاستخدامها في البحث. study الأدوات الرقمية"
+      ],
+      "status": "displayable"
+    },
+    {
+      "section_name": "الأدوات الرقمية",
+      "sector_name": "study",
+      "title": "عدّاد المواعيد الدراسية",
+      "path": "pages/tools/study/countdown.html",
+      "content_type": "tool",
+      "parent_sector_path": null,
+      "keywords": [
+        "عدّاد المواعيد الدراسية أنشئ عدادات تنازلية لمواعيد الامتحانات والتسجيلات والنتائج والتخرج",
+        "واحفظ مواعيدك الدراسية وتابع الوقت المتبقي لكل حدث. study الأدوات الرقمية"
+      ],
+      "status": "displayable"
+    },
+    {
+      "section_name": "الأدوات الرقمية",
+      "sector_name": "study",
+      "title": "مخطط الامتحانات والمهام الجامعية",
+      "path": "pages/tools/study/exam-planner.html",
+      "content_type": "tool",
+      "parent_sector_path": null,
+      "keywords": [
+        "مخطط الامتحانات والمهام الجامعية نظّم مواعيد الامتحانات والفروض والبحوث والتسجيلات في تقويم واحد",
+        "وتابع العد التنازلي ووزّع ساعات المراجعة. study الأدوات الرقمية"
+      ],
+      "status": "displayable"
+    },
+    {
+      "section_name": "الأدوات الرقمية",
+      "sector_name": "study",
+      "title": "مخطط المراجعة الذكي للبكالوريا والبيام",
+      "path": "pages/tools/study/exam-study-planner.html",
+      "content_type": "tool",
+      "parent_sector_path": null,
+      "keywords": [
+        "مخطط المراجعة الذكي للبكالوريا والبيام أنشئ برنامج مراجعة للبكالوريا والبيام",
+        "ووزّع المواد وساعات الدراسة على الأيام",
+        "وتابع الإنجاز وأعد جدولة المهام واطبع خطتك. study الأدوات الرقمية"
+      ],
+      "status": "displayable"
+    },
+    {
+      "section_name": "الأدوات الرقمية",
+      "sector_name": "study",
+      "title": "البطاقات التعليمية والاختبارات",
+      "path": "pages/tools/study/flashcards.html",
+      "content_type": "tool",
+      "parent_sector_path": null,
+      "keywords": [
+        "البطاقات التعليمية والاختبارات أنشئ بطاقات سؤال وجواب من ملخصاتك",
+        "وراجع بالتكرار المتباعد",
+        "واختبر معلوماتك في الدراسة الجامعية والثانوية. study الأدوات الرقمية"
+      ],
+      "status": "displayable"
+    },
+    {
+      "section_name": "الأدوات الرقمية",
+      "sector_name": "study",
+      "title": "سجل الملاحظات والمواعيد والمهام",
+      "path": "pages/tools/study/notes-calendar.html",
+      "content_type": "tool",
+      "parent_sector_path": null,
+      "keywords": [
+        "سجل الملاحظات والمواعيد والمهام نظّم الملاحظات والواجبات والمواعيد في تقويم دراسي",
+        "وأضف الأحداث وتابع المهام مع حفظ بياناتك مباشرة داخل المتصفح. study الأدوات الرقمية"
+      ],
+      "status": "displayable"
+    },
+    {
+      "section_name": "الأدوات الرقمية",
+      "sector_name": "study",
+      "title": "حاسبة الترتيب / النقاط",
+      "path": "pages/tools/study/points-ranking.html",
+      "content_type": "tool",
+      "parent_sector_path": null,
+      "keywords": [
+        "حاسبة الترتيب",
+        "النقاط احسب مجموع النقاط والمتوسط الموزون والترتيب حسب العلامات والمعاملات",
+        "ونظّم نتائج المواد في حساب واحد واضح. study الأدوات الرقمية"
+      ],
+      "status": "displayable"
+    },
+    {
+      "section_name": "الأدوات الرقمية",
+      "sector_name": "study",
+      "title": "مؤقت بومودورو للدراسة",
+      "path": "pages/tools/study/pomodoro.html",
+      "content_type": "tool",
+      "parent_sector_path": null,
+      "keywords": [
+        "مؤقت بومودورو للدراسة استخدم مؤقت بومودورو لتقسيم وقت الدراسة إلى جلسات تركيز واستراحات قصيرة وطويلة",
+        "واضبط مدة المذاكرة دون تسجيل حساب. study الأدوات الرقمية"
+      ],
+      "status": "displayable"
     }
   ]
 }
